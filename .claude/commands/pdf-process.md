@@ -1,41 +1,53 @@
 ---
 allowed-tools: Bash, Read, Task, TaskOutput
-argument-hint:
-  - all|split|render|extract|translate|build|manifest
 description: >-
-  Execute PDF processing pipeline steps. Use 'all' for full pipeline or specify individual step
-  (split, render, extract, translate, build, manifest).
+  Run the complete PDF processing pipeline to convert the manual PDF into Next.js application data.
+  This command executes all steps automatically: split, render, extract, translate, build, and
+  manifest.
 ---
 
 # PDF Processing Command
 
-Execute individual steps or the full PDF processing pipeline.
+Run the complete PDF processing pipeline automatically.
 
 ## Usage
 
-Most steps can be run directly:
+Simply run:
 
-```bash
-pnpm run pdf:{{ARGUMENTS}}
+```
+/pdf-process
 ```
 
-**Exception: The `translate` step requires special handling** (see below).
+This will execute all pipeline steps in order:
 
-## Available Steps
+1. Split PDF into parts (30 pages each)
+2. Render pages to PNG images (150 DPI)
+3. Extract text from PDFs
+4. Translate to Japanese using manual-translator subagents
+5. Build final JSON files
+6. Create manifest.json
 
-- `all` - Run complete pipeline (split → render → extract → translate → build → manifest)
-- `split` - Split PDF into parts (30 pages each)
-- `render` - Render pages to PNG images (150 DPI)
-- `extract` - Extract text from PDFs
-- `translate` - Translate to Japanese using Claude Code subagents ⚠️
-- `build` - Build final JSON files
-- `manifest` - Create manifest.json
+The entire process takes approximately 15-30 minutes for a 280-page manual.
 
-## Translation Step (Special Handling)
+---
 
-The `translate` step uses Claude Code's manual-translator subagents and must be handled by Claude Code directly:
+## Internal Steps (For Claude Code Reference Only)
 
-### Steps:
+The pipeline consists of the following steps. **Users should not invoke these individually** - they are documented here for Claude Code's internal use only.
+
+### Step 1-3: Basic Processing (Run via Bash)
+
+These steps can be run directly using pnpm:
+
+- `pnpm run pdf:split` - Split PDF into parts (30 pages each)
+- `pnpm run pdf:render` - Render pages to PNG images (150 DPI)
+- `pnpm run pdf:extract` - Extract text from PDFs
+
+### Step 4: Translation (Special Handling Required)
+
+**IMPORTANT:** The translation step MUST use Claude Code's manual-translator subagents, NOT the script.
+
+#### Translation Process:
 
 1. Read all `data/extracted/part-*.txt` files
 2. For each part file:
@@ -55,7 +67,7 @@ The `translate` step uses Claude Code's manual-translator subagents and must be 
    }
    ```
 
-### Example Task invocation:
+#### Example Task invocation:
 
 ```xml
 <invoke name="Task">
@@ -68,13 +80,7 @@ The `translate` step uses Claude Code's manual-translator subagents and must be 
 </invoke>
 ```
 
-## Examples
+### Step 5-6: Final Processing (Run via Bash)
 
-- `/pdf-process split` - Just split the PDF
-- `/pdf-process render` - Just render pages to images
-- `/pdf-process extract` - Just extract text
-- `/pdf-process translate` - Spawn manual-translator subagents to translate all parts
-- `/pdf-process build` - Build final JSON files from translation drafts
-- `/pdf-process manifest` - Create manifest.json
-
-This will execute the selected step and show progress in the terminal.
+- `pnpm run pdf:build` - Build final JSON files from translation drafts
+- `pnpm run pdf:manifest` - Create manifest.json
