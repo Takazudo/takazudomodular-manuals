@@ -44,10 +44,16 @@
       "bash -c 'cd manuals && eslint --fix'",
       "prettier --write"
     ],
-    "**/*.{md,mdx}": [
+    "*.{md,mdx}": [
       "node scripts/md-formatter/src/cli.js --write"
     ],
-    "**/*.{json,css,yml,yaml}": [
+    "!(worktrees|__inbox)/**/*.{md,mdx}": [
+      "node scripts/md-formatter/src/cli.js --write"
+    ],
+    "*.{json,css,yml,yaml}": [
+      "prettier --write"
+    ],
+    "!(worktrees|__inbox|node_modules)/**/*.{json,css,yml,yaml}": [
       "prettier --write"
     ]
   }
