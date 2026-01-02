@@ -13,7 +13,8 @@
     "japanese"
   ],
   "scripts": {
-    "dev": "next dev -p 3100",
+    "dev": "pnpm run _kill-port && next dev -p 3100",
+    "_kill-port": "lsof -ti:3100 | xargs kill -9 2>/dev/null || true; echo 'Killed processes on port 3100 (if any)'",
     "build": "next build",
     "start": "next start",
     "serve": "cd out && python3 -m http.server 8030",
