@@ -1,8 +1,12 @@
 import type { ManualManifest, ManualPart, ManualPage, PartInfo } from './types/manual';
-import manifestData from '@/data/translations/manifest.json';
+import manifestDataRaw from '@/data/translations/manifest.json';
 
 // Import all part data (for now, only part-01 exists)
-import part01Data from '@/data/translations/part-01.json';
+import part01DataRaw from '@/data/translations/part-01.json';
+
+// Type-safe wrappers for JSON imports
+const manifestData = manifestDataRaw as unknown as ManualManifest;
+const part01Data = part01DataRaw as unknown as ManualPart;
 
 // Cache for loaded parts
 const partDataCache: Record<string, ManualPart> = {};
@@ -11,7 +15,7 @@ const partDataCache: Record<string, ManualPart> = {};
  * Get the manifest
  */
 export function getManifest(): ManualManifest {
-  return manifestData as ManualManifest;
+  return manifestData;
 }
 
 /**
@@ -39,7 +43,7 @@ export function getManualPart(partNum: string): ManualPart {
   let partData: ManualPart;
 
   if (partNum === '01') {
-    partData = part01Data as ManualPart;
+    partData = part01Data;
   } else {
     throw new Error(`Manual part ${partNum} not found`);
   }
