@@ -53,18 +53,16 @@ Example files saved here:
 
 ```
 /
-├── manuals/                 # Main application root
-│   ├── app/                # Next.js app directory
-│   ├── components/         # React components
-│   ├── lib/                # Utilities and libraries
-│   ├── public/             # Static assets
-│   │   └── manual/         # Manual page images
-│   ├── data/               # Translation JSON data
-│   ├── scripts/            # Build and migration scripts
-│   └── doc/                # Docusaurus documentation
-├── worktrees/              # Git worktrees (gitignored)
-├── __inbox/                # Temporary files (gitignored)
-└── scripts/                # Root-level scripts
+├── app/                 # Next.js app directory
+├── components/          # React components (TBD)
+├── lib/                 # Utilities and libraries (TBD)
+├── public/              # Static assets (TBD)
+│   └── manual/          # Manual page images
+├── data/                # Translation JSON data (TBD)
+├── scripts/             # Build and migration scripts
+├── doc/                 # Docusaurus documentation
+├── worktrees/           # Git worktrees (gitignored)
+└── __inbox/             # Temporary files (gitignored)
 ```
 
 ## Command Restrictions
@@ -299,17 +297,17 @@ This port mapping is crucial for human-to-AI communication. When users reference
 
 ### Port Assignment Table
 
-| Port | Service          | Directory       | Purpose                     | Start Command    |
-| ---- | ---------------- | --------------- | --------------------------- | ---------------- |
-| 3000 | Next.js App      | `/manuals/`     | Manual viewer app           | `pnpm dev`       |
-| 3001 | Docusaurus Docs  | `/manuals/doc/` | Technical documentation     | `pnpm doc:dev`   |
-| 8030 | Production Build | `/manuals/out/` | Production build test serve | `pnpm serve`     |
+| Port | Service          | Directory | Purpose                     | Start Command    |
+| ---- | ---------------- | --------- | --------------------------- | ---------------- |
+| 3000 | Next.js App      | `/`       | Manual viewer app           | `pnpm dev`       |
+| 3001 | Docusaurus Docs  | `/doc/`   | Technical documentation     | `pnpm doc:dev`   |
+| 8030 | Production Build | `/out/`   | Production build test serve | `pnpm serve`     |
 
 ### URL to File Mapping Examples
 
-- `http://localhost:3000/` → Next.js app in `/manuals/app/`
+- `http://localhost:3000/` → Next.js app in `/app/`
 - `http://localhost:3000/part-01/page/1` → Manual page viewer
-- `http://localhost:3001/docs/inbox/` → Documentation in `/manuals/doc/docs/inbox/`
+- `http://localhost:3001/doc/inbox/` → Documentation in `/doc/docs/inbox/`
 
 ### Port Management
 
@@ -394,7 +392,7 @@ This project uses the Zudo Design System, a custom Tailwind CSS v4 configuration
 - **Custom utilities**: Defined via `@utility` directive
 - **Dark theme**: Default and enforced
 
-See `/manuals/doc/docs/inbox/design-system.md` for comprehensive documentation.
+See `/doc/docs/inbox/design-system.md` for comprehensive documentation.
 
 ## Data Structure
 
@@ -520,7 +518,7 @@ Key learnings and patterns are adapted from this reference project.
 
 ## Documentation
 
-Comprehensive project documentation is maintained in `/manuals/doc/` using Docusaurus.
+Comprehensive project documentation is maintained in `/doc/` using Docusaurus.
 
 - **INBOX category**: Main development documentation
 - **Japanese locale**: All documentation in Japanese
