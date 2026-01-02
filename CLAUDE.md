@@ -117,6 +117,7 @@ pwd
 ```
 
 **If the output contains `/worktrees/`:**
+
 - ❌ **STOP! You are in a git worktree!**
 - ❌ **Any git operation will affect the WORKTREE BRANCH, not main!**
 - ✅ **Navigate back to repo root first:** `cd /Users/takazudo/repos/personal/manual-oxi-one-mk2`
@@ -124,12 +125,14 @@ pwd
 ### 🔴 Two Different Session Contexts
 
 #### Context 1: Root Session (Manager Role)
+
 **Started from:** `/Users/takazudo/repos/personal/manual-oxi-one-mk2/` (repo root)
 **Purpose:** Manage project, review work, merge PRs
 **Git operations:** Affect `main` branch
 **RULE:** Never cd into `/worktrees/{slug}/` and do git operations
 
 #### Context 2: Worktree Session (Worker Role)
+
 **Started from:** `/Users/takazudo/repos/personal/manual-oxi-one-mk2/worktrees/{slug}/`
 **Purpose:** Work on specific issue/task
 **Git operations:** Affect the worktree's feature branch (e.g., `issue-3--docusaurus-...`)
@@ -138,11 +141,13 @@ pwd
 ### 🚨 CRITICAL WARNING: NEVER Mix Contexts
 
 **If you started in ROOT (manager session):**
+
 - ❌ **NEVER** cd into `/worktrees/{slug}/` and do git operations
 - ✅ **DO** read files from worktrees for reference
 - ✅ **DO** review PRs, merge branches, manage the project
 
 **If you started in WORKTREE (worker session):**
+
 - ✅ All your work happens here
 - ✅ Commits and pushes go to the feature branch
 - ✅ When done, create PR to merge into main
@@ -188,6 +193,7 @@ git worktree list
 ### 🛑 BEFORE ANY GIT COMMAND: Checklist
 
 Before running ANY of these commands:
+
 - `git add`
 - `git commit`
 - `git push`
@@ -204,6 +210,7 @@ pwd
 ```
 
 **Then ask yourself:**
+
 - "Am I in the right context for this operation?"
 - "Is this what I intend to do?"
 - "Will this affect the correct branch?"
@@ -211,6 +218,7 @@ pwd
 ### What Happens When You Make a Mistake
 
 **Scenario:** You started in root, cd'd to worktree, and committed
+
 - ✅ The commit goes to the worktree's feature branch
 - ❌ The commit does NOT go to main
 - ❌ You might have committed to the wrong issue's branch
@@ -234,12 +242,14 @@ pnpm run init-worktree issue-3-docusaurus  # Missing merged PRs!
 ```
 
 **Why this matters:**
+
 - Worktrees created from stale branches are missing merged PRs
 - Implementation sessions fail due to missing dependencies
 - Wasted time reimplementing code that already exists
 - Confusion about what files should exist
 
 **Example of what goes wrong:**
+
 1. PR #14 merged to remote `main` ✅
 2. Local `main` not updated ❌
 3. Worktree created from stale local branch ❌
@@ -247,6 +257,7 @@ pnpm run init-worktree issue-3-docusaurus  # Missing merged PRs!
 5. Implementation fails ❌
 
 **Always follow this sequence:**
+
 1. Merge any pending PRs
 2. Pull latest base branch
 3. Create worktree

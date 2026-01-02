@@ -16,6 +16,7 @@
     "dev": "next dev -p 3100",
     "build": "next build",
     "start": "next start",
+    "serve": "cd out && python3 -m http.server 8030",
     "doc:dev": "cd doc && pnpm run start",
     "doc:build": "cd doc && pnpm run build",
     "doc:serve": "cd doc && pnpm run serve",
@@ -29,6 +30,8 @@
     "check": "pnpm run typecheck && pnpm run lint && pnpm run format",
     "check:fix": "pnpm run lint:fix && pnpm run format:fix",
     "init-worktree": "./scripts/setup-worktree-env.sh",
+    "deploy:preview": "netlify deploy --dir=out --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --alias=preview",
+    "deploy:prod": "netlify deploy --dir=out --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --prod",
     "clean": "rm -rf .next out doc/build doc/.docusaurus",
     "prepare": "husky"
   },

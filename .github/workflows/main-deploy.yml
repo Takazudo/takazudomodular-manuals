@@ -1,0 +1,141 @@
+name: Production Deploy
+
+# Runs on pushes to main branch
+# Includes quality checks, build, and production deployment
+on:
+  push:
+    branches:
+      - main
+
+# Prevent concurrent production deployments
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+# Grant necessary permissions
+permissions:
+  contents: read
+  deployments: write
+  statuses: write
+
+jobs:
+  # Step 1: Build for production
+  build:
+    name: Build Production Site
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          lfs: false
+
+      - name: Build Next.js application
+        uses: ./.github/actions/build-nextjs
+        with:
+          node-version: '20'
+          pnpm-version: '10'
+
+      - name: Monitor Build Performance
+        run: |
+          echo "📊 Build Performance Metrics"
+          echo "================================"
+
+          # Calculate sizes (using portable commands)
+          OUT_SIZE=$(du -sh out 2>/dev/null | cut -f1 || echo "Unknown")
+          MANUAL_SIZE=$(du -sh public/manual 2>/dev/null | cut -f1 || echo "Unknown")
+
+          echo "📁 Output directory: $OUT_SIZE"
+          echo "📚 Manual images: $MANUAL_SIZE"
+          echo "================================"
+
+          # Count files for metrics
+          if [ -d "out" ]; then
+            PAGE_COUNT=$(find out -name "*.html" | wc -l)
+            echo "📄 HTML pages: $PAGE_COUNT"
+          fi
+
+          echo "================================"
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: nextjs-build-production
+          path: out/
+          include-hidden-files: true
+          retention-days: 1
+
+  # Step 2: Deploy to production
+  deploy:
+    name: Deploy to Production
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          lfs: false
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v6
+        with:
+          name: nextjs-build-production
+          path: out
+
+      - name: Deploy to Netlify Production
+        id: deploy
+        uses: ./.github/actions/deploy-netlify
+        with:
+          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          deploy-production: 'true'
+          deploy-message: 'Production deploy: ${{ github.sha }}'
+          build-dir: 'out'
+
+      - name: Create deployment record
+        uses: actions/github-script@v8
+        with:
+          script: |
+            // Create a deployment record
+            const deployment = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.sha,
+              environment: 'production',
+              description: 'Production deployment to Netlify',
+              production_environment: true,
+              auto_merge: false,
+              required_contexts: []
+            });
+
+            // Update deployment status
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deployment.data.id,
+              state: 'success',
+              environment_url: '${{ steps.deploy.outputs.deploy-url }}',
+              description: 'Deployment successful'
+            });
+
+      - name: Notify deployment status
+        if: always()
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const success = '${{ job.status }}' === 'success';
+            const emoji = success ? '✅' : '❌';
+            const status = success ? 'success' : 'failure';
+
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: status,
+              target_url: '${{ steps.deploy.outputs.deploy-url }}',
+              description: success ? 'Production deployment successful' : 'Production deployment failed',
+              context: 'netlify/production'
+            });

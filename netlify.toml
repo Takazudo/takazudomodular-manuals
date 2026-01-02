@@ -1,0 +1,38 @@
+[build]
+  command = "pnpm build"
+  publish = "out"
+
+# Build settings
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_VERSION = "10"
+
+# ============================================
+# Headers
+# ============================================
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache manual images (immutable static assets)
+[[headers]]
+  for = "/manuals/oxi-one-mk2/manual/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache Next.js static assets
+[[headers]]
+  for = "/manuals/oxi-one-mk2/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML pages - always revalidate
+[[headers]]
+  for = "/manuals/oxi-one-mk2/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

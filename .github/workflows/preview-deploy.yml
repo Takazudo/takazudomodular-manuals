@@ -1,0 +1,121 @@
+name: Deploy preview/* to Netlify Preview
+
+# Triggers on pushes to any preview/* branch
+# Builds Next.js and deploys to preview site
+on:
+  push:
+    branches:
+      - 'preview/*'
+
+# Prevent concurrent deployments per branch
+concurrency:
+  group: preview-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+# Grant necessary permissions
+permissions:
+  contents: read # Read access for checkout
+  issues: write # Required for PR comments via Issues API
+  pull-requests: write # Allows creating PR comments for deployment URLs
+  deployments: write
+  statuses: write
+
+jobs:
+  deploy:
+    name: Build and Deploy to Netlify Preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          lfs: false
+
+      - name: Build Next.js application
+        uses: ./.github/actions/build-nextjs
+        with:
+          node-version: '20'
+          pnpm-version: '10'
+
+      - name: Deploy to Netlify Preview
+        id: deploy
+        uses: ./.github/actions/deploy-netlify
+        with:
+          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          deploy-production: 'false'
+          deploy-alias: 'preview'
+          deploy-message: 'Deploy preview branch - ${{ github.sha }}'
+          build-dir: 'out'
+
+      - name: Create deployment record
+        uses: actions/github-script@v8
+        with:
+          script: |
+            // Create a deployment record
+            const deployment = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.sha,
+              environment: 'preview',
+              description: 'Next.js preview deployment to Netlify',
+              production_environment: false,
+              auto_merge: false,
+              required_contexts: []
+            });
+
+            // Update deployment status
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deployment.data.id,
+              state: 'success',
+              environment_url: '${{ steps.deploy.outputs.deploy-url }}',
+              description: 'Preview deployment successful'
+            });
+
+      - name: Comment deployment URL on PR
+        uses: actions/github-script@v8
+        with:
+          script: |
+            // Find PR for this branch
+            const branch = context.ref.replace('refs/heads/', '');
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: `${context.repo.owner}:${branch}`,
+              state: 'open'
+            });
+
+            if (prs.length > 0) {
+              // Comment on the PR
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prs[0].number,
+                body: '✅ **Preview Deployed**\n\n🔗 **URL**: ${{ steps.deploy.outputs.deploy-url }}\n\n📦 **Branch**: `${{ github.ref_name }}`\n🏗️ **Build**: Next.js static export\n⏱️ **Commit**: `${{ github.sha }}`'
+              });
+              console.log(`Posted deployment URL to PR #${prs[0].number}`);
+            } else {
+              console.log('No open PR found for this branch, skipping comment');
+            }
+
+      - name: Notify deployment status
+        if: always()
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const success = '${{ job.status }}' === 'success';
+            const emoji = success ? '✅' : '❌';
+            const status = success ? 'success' : 'failure';
+
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: status,
+              target_url: '${{ steps.deploy.outputs.deploy-url }}',
+              description: success ? 'Preview deployment successful' : 'Preview deployment failed',
+              context: 'netlify/preview'
+            });
