@@ -5,13 +5,12 @@ import ctl from '@netlify/classnames-template-literals';
 
 const markdownStyles = ctl(`
   prose prose-invert max-w-none
-  text-zd-white
 
   [&_h1]:text-2xl [&_h1]:font-bold [&_h1]:mb-vgap-md [&_h1]:text-zd-white
   [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mb-vgap-sm [&_h2]:mt-vgap-md [&_h2]:text-zd-white
   [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mb-vgap-xs [&_h3]:mt-vgap-sm [&_h3]:text-zd-gray7
 
-  [&_p]:mb-vgap-sm [&_p]:text-base [&_p]:leading-relaxed [&_p]:text-zd-gray7
+  [&_p]:mb-vgap-sm [&_p]:text-sm [&_p]:leading-relaxed [&_p]:text-zd-gray7
 
   [&_ul]:list-disc [&_ul]:ml-hgap-md [&_ul]:mb-vgap-sm
   [&_ol]:list-decimal [&_ol]:ml-hgap-md [&_ol]:mb-vgap-sm

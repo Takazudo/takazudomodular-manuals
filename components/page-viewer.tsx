@@ -14,25 +14,26 @@ const containerStyles = ctl(`
 
 const columnStyles = ctl(`
   flex-1
-  overflow-y-auto
+  overflow-y-scroll
+  min-h-0
 `);
 
 const imageColumnStyles = ctl(`
   ${columnStyles}
   flex flex-col items-center
+  bg-zd-white
 `);
 
 const contentColumnStyles = ctl(`
   ${columnStyles}
   bg-zd-gray2
+  px-hgap-sm
 `);
 
 const imageWrapperStyles = ctl(`
-  relative w-full max-w-2xl
+  relative w-full
   bg-zd-gray2
   rounded-md
-  overflow-hidden
-  border border-zd-gray3
 `);
 
 const navigationWrapperStyles = ctl(`
@@ -47,7 +48,6 @@ const pageTitleStyles = ctl(`
   text-zd-white
   mb-vgap-sm
   pb-vgap-sm
-  border-b border-zd-gray3
 `);
 
 interface PageViewerProps {
