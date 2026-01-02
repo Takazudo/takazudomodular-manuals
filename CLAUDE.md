@@ -100,11 +100,13 @@ We use git worktrees under the `worktrees/{tree-name}/` directory for topic-base
 - **Hard to debug**: Changes made in worktrees can break things unexpectedly and are very hard to trace
 
 **When user says "refer to old implementation in git worktree":**
+
 - ✅ **DO**: Read files from worktree for reference (using Read tool)
 - ❌ **DON'T**: Edit, commit, or push any changes there
 - ✅ **DO**: Copy the implementation to the main repo and apply changes there
 
 **How to detect you're in a worktree:**
+
 - Check if current path contains `/worktrees/`
 - Run `pwd` - if it shows `/Users/takazudo/repos/personal/manual-oxi-one-mk2/worktrees/*`, you're in a worktree
 - **If you're in a worktree, navigate back to repo root before any git operations**
@@ -255,11 +257,13 @@ See `/manuals/doc/docs/inbox/design-system.md` for comprehensive documentation.
 **ALWAYS run these commands before pushing to GitHub:**
 
 1. **Run all quality checks:**
+
    ```bash
    pnpm check
    ```
 
 2. **If there are issues, fix them:**
+
    ```bash
    pnpm check:fix
    ```

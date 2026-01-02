@@ -1,0 +1,5 @@
+packages:
+  - '.'
+  - 'manuals'
+  - 'manuals/doc'
+  - 'scripts/md-formatter'

@@ -12,25 +12,43 @@
     "japanese"
   ],
   "scripts": {
-    "dev": "echo 'Next.js app not yet set up. Run: pnpm install in manuals/ first'",
-    "build": "echo 'Build script not yet configured'",
+    "dev": "cd manuals && pnpm run dev",
+    "build": "cd manuals && pnpm run build",
     "doc:dev": "cd manuals/doc && pnpm run start",
     "doc:build": "cd manuals/doc && pnpm run build",
     "doc:serve": "cd manuals/doc && pnpm run serve",
-    "lint": "echo 'Linting not yet configured'",
-    "format": "prettier --check \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml,md}\" \"!node_modules/**\" \"!manuals/.next/**\" \"!manuals/out/**\" \"!worktrees/**\" \"!__inbox/**\"",
-    "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml,md}\" \"!node_modules/**\" \"!manuals/.next/**\" \"!manuals/out/**\" \"!worktrees/**\" \"!__inbox/**\"",
-    "typecheck": "echo 'TypeScript checking not yet configured'",
+    "lint": "cd manuals && pnpm run lint",
+    "lint:fix": "cd manuals && pnpm run lint --fix",
+    "format": "prettier --check \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml}\" \"!**/*.{md,mdx}\" \"!node_modules/**\" \"!manuals/.next/**\" \"!manuals/out/**\" \"!worktrees/**\" \"!__inbox/**\" && pnpm run format:md:check",
+    "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml}\" \"!**/*.{md,mdx}\" \"!node_modules/**\" \"!manuals/.next/**\" \"!manuals/out/**\" \"!worktrees/**\" \"!__inbox/**\" && pnpm run format:md",
+    "format:md": "node scripts/md-formatter/src/cli.js --write \"**/*.{md,mdx}\"",
+    "format:md:check": "node scripts/md-formatter/src/cli.js --check \"**/*.{md,mdx}\"",
+    "typecheck": "cd manuals && pnpm run typecheck",
     "check": "pnpm run typecheck && pnpm run lint && pnpm run format",
     "check:fix": "pnpm run lint:fix && pnpm run format:fix",
     "init-worktree": "./scripts/setup-worktree-env.sh",
-    "clean": "rm -rf manuals/.next manuals/out manuals/doc/build manuals/doc/.docusaurus"
+    "clean": "rm -rf manuals/.next manuals/out manuals/doc/build manuals/doc/.docusaurus",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.2.5"
   },
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
+  },
+  "lint-staged": {
+    "manuals/**/*.{js,jsx,ts,tsx,mjs}": [
+      "bash -c 'cd manuals && eslint --fix'",
+      "prettier --write"
+    ],
+    "**/*.{md,mdx}": [
+      "node scripts/md-formatter/src/cli.js --write"
+    ],
+    "**/*.{json,css,yml,yaml}": [
+      "prettier --write"
+    ]
   }
 }
