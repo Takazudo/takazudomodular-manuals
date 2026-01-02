@@ -1,0 +1,36 @@
+{
+  "name": "manual-oxi-one-mk2",
+  "version": "0.0.1",
+  "private": true,
+  "description": "OXI ONE MKII Manual Viewer - Japanese translation with Next.js",
+  "author": "Takazudo",
+  "keywords": [
+    "manual",
+    "oxi-one-mkii",
+    "synthesizer",
+    "next.js",
+    "japanese"
+  ],
+  "scripts": {
+    "dev": "echo 'Next.js app not yet set up. Run: pnpm install in manuals/ first'",
+    "build": "echo 'Build script not yet configured'",
+    "doc:dev": "cd manuals/doc && pnpm run start",
+    "doc:build": "cd manuals/doc && pnpm run build",
+    "doc:serve": "cd manuals/doc && pnpm run serve",
+    "lint": "echo 'Linting not yet configured'",
+    "format": "prettier --check \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml,md}\" \"!node_modules/**\" \"!manuals/.next/**\" \"!manuals/out/**\" \"!worktrees/**\" \"!__inbox/**\"",
+    "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml,md}\" \"!node_modules/**\" \"!manuals/.next/**\" \"!manuals/out/**\" \"!worktrees/**\" \"!__inbox/**\"",
+    "typecheck": "echo 'TypeScript checking not yet configured'",
+    "check": "pnpm run typecheck && pnpm run lint && pnpm run format",
+    "check:fix": "pnpm run lint:fix && pnpm run format:fix",
+    "init-worktree": "./scripts/setup-worktree-env.sh",
+    "clean": "rm -rf manuals/.next manuals/out manuals/doc/build manuals/doc/.docusaurus"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
