@@ -37,7 +37,7 @@ console.log('   - Rendered images (public/manual/pages/)');
 console.log('   - Extracted text (data/extracted/)');
 console.log('   - Translation drafts (data/translations-draft/)');
 console.log('   - Final translations (data/translations/)');
-console.log('   - Split PDFs (manual-pdf/parts/)');
+console.log('   - Page PDFs (manual-pdf/pages/)');
 console.log('');
 console.log('   Source PDFs in manual-pdf/ will be kept.');
 console.log('');
@@ -125,7 +125,7 @@ cleanDirectory(join(ROOT_DIR, config.output.images), 'Rendered images');
 cleanDirectory(join(ROOT_DIR, config.output.extracted), 'Extracted text');
 cleanDirectory(join(ROOT_DIR, config.output.translationsDraft), 'Translation drafts');
 cleanDirectory(join(ROOT_DIR, config.output.translations), 'Final translations');
-cleanDirectory(join(ROOT_DIR, config.output.parts), 'Split PDFs');
+cleanDirectory(join(ROOT_DIR, config.output.pages), 'Page PDFs');
 
 console.log('');
 console.log('Ensuring directories exist...');
@@ -136,7 +136,7 @@ ensureDirectory(join(ROOT_DIR, config.output.images), 'Rendered images');
 ensureDirectory(join(ROOT_DIR, config.output.extracted), 'Extracted text');
 ensureDirectory(join(ROOT_DIR, config.output.translationsDraft), 'Translation drafts');
 ensureDirectory(join(ROOT_DIR, config.output.translations), 'Final translations');
-ensureDirectory(join(ROOT_DIR, config.output.parts), 'Split PDFs');
+ensureDirectory(join(ROOT_DIR, config.output.pages), 'Page PDFs');
 
 console.log('');
 console.log('='.repeat(50));

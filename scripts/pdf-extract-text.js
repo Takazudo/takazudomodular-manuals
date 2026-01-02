@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 /**
- * PDF Text Extraction Script
- * Extracts text from PDF parts with page boundaries preserved
+ * PDF Text Extraction Script - Page by Page
+ * Extracts text from individual page PDFs
  *
- * Input: manual-pdf/parts/part-*.pdf
- * Output: data/extracted/part-01.txt, part-02.txt, etc.
+ * Input: manual-pdf/pages/page-*.pdf
+ * Output: data/extracted/page-001.txt, page-002.txt, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
@@ -38,15 +38,15 @@ async function extractTextFromPdf(pdfPath) {
 }
 
 async function extractAllText() {
-  console.log('📝 PDF Text Extraction Script');
+  console.log('📝 PDF Text Extraction Script (Page by Page)');
   console.log('='.repeat(50));
 
-  const partsDir = join(ROOT_DIR, config.output.parts);
+  const pagesDir = join(ROOT_DIR, config.output.pages);
   const outputDir = join(ROOT_DIR, config.output.extracted);
 
-  // Check if parts directory exists
-  if (!existsSync(partsDir)) {
-    console.error(`❌ Parts directory not found: ${partsDir}`);
+  // Check if pages directory exists
+  if (!existsSync(pagesDir)) {
+    console.error(`❌ Pages directory not found: ${pagesDir}`);
     console.error('   Please run pdf:split first');
     process.exit(1);
   }
@@ -56,71 +56,53 @@ async function extractAllText() {
     mkdirSync(outputDir, { recursive: true });
   }
 
-  console.log(`📁 Input directory: ${partsDir}`);
+  console.log(`📁 Input directory: ${pagesDir}`);
   console.log(`📁 Output directory: ${outputDir}`);
   console.log('');
 
-  // Get all part PDFs
-  const partFiles = readdirSync(partsDir)
-    .filter((file) => file.startsWith('part-') && file.endsWith('.pdf'))
+  // Get all page PDFs
+  const pageFiles = readdirSync(pagesDir)
+    .filter((file) => file.startsWith('page-') && file.endsWith('.pdf'))
     .sort();
 
-  if (partFiles.length === 0) {
-    console.error(`❌ No part PDFs found in: ${partsDir}`);
+  if (pageFiles.length === 0) {
+    console.error(`❌ No page PDFs found in: ${pagesDir}`);
     console.error('   Please run pdf:split first');
     process.exit(1);
   }
 
-  console.log(`📚 Found ${partFiles.length} part PDFs`);
+  console.log(`📚 Found ${pageFiles.length} page PDFs`);
   console.log('');
 
-  let totalPartsProcessed = 0;
   let totalPagesExtracted = 0;
 
-  // Process each part
-  for (const partFile of partFiles) {
-    const partPath = join(partsDir, partFile);
-    const partNumber = partFile.match(/part-(\d+)\.pdf/)?.[1];
-    const outputFileName = `part-${partNumber}.txt`;
-
-    console.log(`📄 Processing ${partFile}...`);
+  // Process each page
+  for (const pageFile of pageFiles) {
+    const pagePath = join(pagesDir, pageFile);
+    const pageNumber = pageFile.match(/page-(\d+)\.pdf/)?.[1];
+    const outputFileName = `page-${pageNumber}.txt`;
 
     try {
       // Extract text
-      const result = await extractTextFromPdf(partPath);
+      const result = await extractTextFromPdf(pagePath);
 
-      console.log(`   📊 Pages: ${result.numPages}`);
-      console.log(`   📏 Text length: ${result.text.length} characters`);
-
-      // Prepare output with metadata
-      const output = [
-        `=== PART ${partNumber} ===`,
-        `Total Pages: ${result.numPages}`,
-        `Extracted: ${new Date().toISOString()}`,
-        '',
-        '=== EXTRACTED TEXT ===',
-        '',
-        result.text,
-      ].join('\n');
-
-      // Save to file
+      // Save to file (just the raw text, no metadata wrapper)
       const outputPath = join(outputDir, outputFileName);
-      writeFileSync(outputPath, output, 'utf-8');
+      writeFileSync(outputPath, result.text.trim(), 'utf-8');
 
-      console.log(`   ✅ Saved: ${outputPath}`);
-      console.log('');
+      process.stdout.write(`   ✅ Page ${pageNumber}/${pageFiles.length}: ${outputFileName}\r`);
 
-      totalPartsProcessed++;
-      totalPagesExtracted += result.numPages;
+      totalPagesExtracted++;
     } catch (error) {
-      console.error(`   ❌ Error processing ${partFile}:`, error.message);
+      console.error(`\n   ❌ Error processing ${pageFile}:`, error.message);
       process.exit(1);
     }
   }
 
+  console.log(''); // New line after progress
+  console.log('');
   console.log('='.repeat(50));
-  console.log(`✨ Successfully extracted text from ${totalPartsProcessed} parts`);
-  console.log(`📊 Total pages: ${totalPagesExtracted}`);
+  console.log(`✨ Successfully extracted text from ${totalPagesExtracted} pages`);
   console.log(`📁 Output location: ${outputDir}`);
 }
 

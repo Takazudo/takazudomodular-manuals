@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 /**
- * PDF Page Rendering Script
- * Renders PDF pages to PNG images at specified DPI
+ * PDF Page Rendering Script - Page by Page
+ * Renders individual page PDFs to PNG images
  *
- * Input: manual-pdf/parts/part-*.pdf
- * Output: public/manual/pages/page_001.png, page_002.png, etc.
+ * Input: manual-pdf/pages/page-*.pdf
+ * Output: public/manual/pages/page-001.png, page-002.png, etc.
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, renameSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { pdfToPng } from 'pdf-to-png-converter';
@@ -21,16 +21,16 @@ const ROOT_DIR = join(__dirname, '..');
 const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
 
 async function renderPdfPages() {
-  console.log('🖼️  PDF Page Rendering Script');
+  console.log('🖼️  PDF Page Rendering Script (Page by Page)');
   console.log('='.repeat(50));
 
-  const partsDir = join(ROOT_DIR, config.output.parts);
+  const pagesDir = join(ROOT_DIR, config.output.pages);
   const outputDir = join(ROOT_DIR, config.output.images);
   const dpi = config.settings.imageDPI;
 
-  // Check if parts directory exists
-  if (!existsSync(partsDir)) {
-    console.error(`❌ Parts directory not found: ${partsDir}`);
+  // Check if pages directory exists
+  if (!existsSync(pagesDir)) {
+    console.error(`❌ Pages directory not found: ${pagesDir}`);
     console.error('   Please run pdf:split first');
     process.exit(1);
   }
@@ -40,41 +40,37 @@ async function renderPdfPages() {
     mkdirSync(outputDir, { recursive: true });
   }
 
-  console.log(`📁 Input directory: ${partsDir}`);
+  console.log(`📁 Input directory: ${pagesDir}`);
   console.log(`📁 Output directory: ${outputDir}`);
   console.log(`🎨 DPI: ${dpi}`);
   console.log('');
 
-  // Get all part PDFs
-  const partFiles = readdirSync(partsDir)
-    .filter((file) => file.startsWith('part-') && file.endsWith('.pdf'))
+  // Get all page PDFs
+  const pageFiles = readdirSync(pagesDir)
+    .filter((file) => file.startsWith('page-') && file.endsWith('.pdf'))
     .sort();
 
-  if (partFiles.length === 0) {
-    console.error(`❌ No part PDFs found in: ${partsDir}`);
+  if (pageFiles.length === 0) {
+    console.error(`❌ No page PDFs found in: ${pagesDir}`);
     console.error('   Please run pdf:split first');
     process.exit(1);
   }
 
-  console.log(`📚 Found ${partFiles.length} part PDFs`);
+  console.log(`📚 Found ${pageFiles.length} page PDFs`);
   console.log('');
 
-  let globalPageNumber = 1;
   let totalPagesRendered = 0;
 
-  // Process each part
-  for (const partFile of partFiles) {
-    const partPath = join(partsDir, partFile);
-    const partNumber = partFile.match(/part-(\d+)\.pdf/)?.[1];
-
-    console.log(`📄 Processing ${partFile}...`);
+  // Process each page
+  for (const pageFile of pageFiles) {
+    const pagePath = join(pagesDir, pageFile);
+    const pageNumber = pageFile.match(/page-(\d+)\.pdf/)?.[1];
 
     try {
-      // Convert PDF to PNG images
-      // Scale factor: DPI / 72 (PDF default DPI)
+      // Convert PDF to PNG
       const scale = dpi / 72;
 
-      const pngPages = await pdfToPng(partPath, {
+      const pngPages = await pdfToPng(pagePath, {
         outputFolder: outputDir,
         viewportScale: scale,
         pngOptions: {
@@ -84,31 +80,27 @@ async function renderPdfPages() {
         verbosityLevel: 0,
       });
 
-      console.log(`   📊 Pages in this part: ${pngPages.length}`);
-
-      // Save images with global page numbering
-      for (let i = 0; i < pngPages.length; i++) {
-        const finalName = `page_${String(globalPageNumber).padStart(3, '0')}.png`;
-        const finalPath = join(outputDir, finalName);
-
-        // Write the PNG buffer to file
-        writeFileSync(finalPath, pngPages[i].content);
-
-        process.stdout.write(`   ✅ Rendered page ${globalPageNumber} (${partFile} p.${i + 1})\r`);
-
-        globalPageNumber++;
-        totalPagesRendered++;
+      // Should only be one page per file
+      if (pngPages.length !== 1) {
+        console.error(`\n   ⚠️  Warning: ${pageFile} contains ${pngPages.length} pages`);
       }
 
-      console.log(''); // New line after progress
-      console.log(`   ✨ Completed ${partFile}`);
-      console.log('');
+      // Save with correct filename
+      const finalName = `page-${pageNumber}.png`;
+      const finalPath = join(outputDir, finalName);
+      writeFileSync(finalPath, pngPages[0].content);
+
+      process.stdout.write(`   ✅ Page ${pageNumber}/${pageFiles.length}: ${finalName}\r`);
+
+      totalPagesRendered++;
     } catch (error) {
-      console.error(`   ❌ Error processing ${partFile}:`, error.message);
+      console.error(`\n   ❌ Error processing ${pageFile}:`, error.message);
       process.exit(1);
     }
   }
 
+  console.log(''); // New line after progress
+  console.log('');
   console.log('='.repeat(50));
   console.log(`✨ Successfully rendered ${totalPagesRendered} pages`);
   console.log(`📁 Output location: ${outputDir}`);

@@ -55,9 +55,19 @@ Translate English technical documentation into natural, accurate Japanese while 
 
 ## Input/Output Format
 
-**Input:** Raw English text from PDF manual
+**Input:** Raw English text from a single PDF page (page-001.txt, page-002.txt, etc.)
 
-**Output:** Japanese translation only, no preamble or notes
+**Output:** JSON format with translation only:
+```json
+{
+  "pageNum": 1,
+  "totalPages": 30,
+  "translation": "Japanese translation here...",
+  "status": "completed"
+}
+```
+
+**CRITICAL**: Output ONLY the JSON object. No explanations, no markdown code blocks, just the raw JSON.
 
 ## Example
 

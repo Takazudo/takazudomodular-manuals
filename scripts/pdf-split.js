@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 /**
- * PDF Split Script
- * Splits a large PDF into smaller parts based on configuration
+ * PDF Split Script - Page by Page
+ * Splits PDF into individual page files
  *
  * Input: manual-pdf/*.pdf
- * Output: manual-pdf/parts/part-01.pdf, part-02.pdf, etc.
+ * Output: manual-pdf/pages/page-001.pdf, page-002.pdf, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
@@ -22,7 +22,7 @@ const ROOT_DIR = join(__dirname, '..');
 const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
 
 async function splitPDF() {
-  console.log('🔪 PDF Split Script');
+  console.log('🔪 PDF Split Script (Page by Page)');
   console.log('='.repeat(50));
 
   // Find input PDF
@@ -35,8 +35,6 @@ async function splitPDF() {
     process.exit(1);
   }
 
-  // If multiple PDFs found, use the first one (sorted alphabetically)
-  // This allows processing regardless of filename
   const inputPdfPath = pdfFiles[0];
 
   if (pdfFiles.length > 1) {
@@ -55,7 +53,7 @@ async function splitPDF() {
   console.log(`📊 Total pages: ${totalPages}`);
 
   // Create output directory
-  const outputDir = join(ROOT_DIR, config.output.parts);
+  const outputDir = join(ROOT_DIR, config.output.pages);
   if (!existsSync(outputDir)) {
     mkdirSync(outputDir, { recursive: true });
   }
@@ -63,48 +61,31 @@ async function splitPDF() {
   console.log(`📁 Output directory: ${outputDir}`);
   console.log('');
 
-  // Split into parts based on partConfig
-  const partConfig = config.partConfig;
-  let processedParts = 0;
+  // Split into individual page files
+  let processedPages = 0;
 
-  for (const [partKey, partInfo] of Object.entries(partConfig)) {
-    const partNumber = partKey.replace('part', '');
-    const startPage = partInfo.startPage - 1; // 0-indexed
-    const endPage = startPage + partInfo.pages;
+  for (let i = 0; i < totalPages; i++) {
+    const pageNumber = i + 1;
+    const fileName = `page-${String(pageNumber).padStart(3, '0')}.pdf`;
 
-    if (startPage >= totalPages) {
-      console.log(`⏭️  Skipping ${partKey}: start page ${partInfo.startPage} exceeds total pages`);
-      continue;
-    }
+    // Create new PDF for this page
+    const pagePdf = await PDFDocument.create();
+    const [copiedPage] = await pagePdf.copyPages(pdfDoc, [i]);
+    pagePdf.addPage(copiedPage);
 
-    console.log(
-      `✂️  Processing ${partKey}: pages ${partInfo.startPage}-${Math.min(endPage, totalPages)}`,
-    );
+    // Save page PDF
+    const pagePdfBytes = await pagePdf.save();
+    const outputPath = join(outputDir, fileName);
+    writeFileSync(outputPath, pagePdfBytes);
 
-    // Create new PDF for this part
-    const partPdf = await PDFDocument.create();
-
-    // Copy pages
-    const pagesToCopy = Math.min(partInfo.pages, totalPages - startPage);
-    const pageIndices = Array.from({ length: pagesToCopy }, (_, i) => startPage + i);
-    const copiedPages = await partPdf.copyPages(pdfDoc, pageIndices);
-
-    copiedPages.forEach((page) => {
-      partPdf.addPage(page);
-    });
-
-    // Save part PDF
-    const partPdfBytes = await partPdf.save();
-    const outputPath = join(outputDir, `part-${partNumber}.pdf`);
-    writeFileSync(outputPath, partPdfBytes);
-
-    console.log(`   ✅ Saved: ${outputPath} (${pagesToCopy} pages)`);
-    processedParts++;
+    process.stdout.write(`   ✅ Page ${pageNumber}/${totalPages}: ${fileName}\r`);
+    processedPages++;
   }
 
+  console.log(''); // New line after progress
   console.log('');
   console.log('='.repeat(50));
-  console.log(`✨ Successfully split PDF into ${processedParts} parts`);
+  console.log(`✨ Successfully split PDF into ${processedPages} individual pages`);
   console.log(`📁 Output location: ${outputDir}`);
 }
 

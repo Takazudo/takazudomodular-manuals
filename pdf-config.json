@@ -4,7 +4,7 @@
     "pdfPattern": "*.pdf"
   },
   "output": {
-    "parts": "manual-pdf/parts",
+    "pages": "manual-pdf/pages",
     "images": "public/manual/pages",
     "extracted": "data/extracted",
     "translationsDraft": "data/translations-draft",
