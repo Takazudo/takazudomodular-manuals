@@ -4,6 +4,7 @@ import type { ManualPage } from '@/lib/types/manual';
 import { MarkdownRenderer } from './markdown-renderer';
 import { PageNavigation } from './page-navigation';
 import { KeyboardNavigation } from './keyboard-navigation';
+import { withBasePath } from '@/lib/asset-url';
 
 const containerStyles = ctl(`
   flex flex-col lg:flex-row
@@ -67,7 +68,7 @@ export function PageViewer({ page, currentPage, totalPages }: PageViewerProps) {
         <div className={imageColumnStyles}>
           <div className={imageWrapperStyles}>
             <Image
-              src={page.image}
+              src={withBasePath(page.image)}
               alt={`Page ${currentPage}: ${page.title}`}
               width={1200}
               height={1600}
