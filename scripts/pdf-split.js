@@ -35,16 +35,17 @@ async function splitPDF() {
     process.exit(1);
   }
 
-  if (pdfFiles.length > 1) {
-    console.error(`❌ Multiple PDFs found: ${pdfFiles.join(', ')}`);
-    console.error(
-      `   Please ensure only one PDF exists in: ${join(ROOT_DIR, config.input.pdfDirectory)}/`,
-    );
-    process.exit(1);
-  }
-
+  // If multiple PDFs found, use the first one (sorted alphabetically)
+  // This allows processing regardless of filename
   const inputPdfPath = pdfFiles[0];
-  console.log(`📄 Input PDF: ${inputPdfPath}`);
+
+  if (pdfFiles.length > 1) {
+    console.log(`📋 Multiple PDFs found, using: ${inputPdfPath}`);
+    console.log(`   Other files: ${pdfFiles.slice(1).join(', ')}`);
+    console.log('');
+  } else {
+    console.log(`📄 Input PDF: ${inputPdfPath}`);
+  }
 
   // Load PDF
   const pdfBytes = readFileSync(inputPdfPath);
