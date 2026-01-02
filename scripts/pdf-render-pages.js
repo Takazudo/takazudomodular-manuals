@@ -8,12 +8,10 @@
  * Output: public/manual/pages/page_001.png, page_002.png, etc.
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, renameSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
-import { createCanvas } from 'canvas';
-import sharp from 'sharp';
+import { pdfToPng } from 'pdf-to-png-converter';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -21,38 +19,6 @@ const ROOT_DIR = join(__dirname, '..');
 
 // Load configuration
 const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
-
-// Configure PDF.js
-const CMAP_URL = '../node_modules/pdfjs-dist/cmaps/';
-const CMAP_PACKED = true;
-
-async function renderPage(page, pageNumber, outputDir, dpi) {
-  const viewport = page.getViewport({ scale: dpi / 72 });
-  const canvas = createCanvas(viewport.width, viewport.height);
-  const context = canvas.getContext('2d');
-
-  const renderContext = {
-    canvasContext: context,
-    viewport: viewport,
-  };
-
-  await page.render(renderContext).promise;
-
-  // Convert canvas to PNG using sharp for better quality
-  const buffer = canvas.toBuffer('image/png');
-  const outputPath = join(outputDir, `page_${String(pageNumber).padStart(3, '0')}.png`);
-
-  // Use sharp to optimize the PNG
-  await sharp(buffer)
-    .png({
-      compressionLevel: 9,
-      adaptiveFiltering: true,
-      force: true,
-    })
-    .toFile(outputPath);
-
-  return outputPath;
-}
 
 async function renderPdfPages() {
   console.log('🖼️  PDF Page Rendering Script');
@@ -104,28 +70,27 @@ async function renderPdfPages() {
     console.log(`📄 Processing ${partFile}...`);
 
     try {
-      // Load PDF
-      const pdfData = new Uint8Array(readFileSync(partPath));
-      const loadingTask = pdfjsLib.getDocument({
-        data: pdfData,
-        cMapUrl: CMAP_URL,
-        cMapPacked: CMAP_PACKED,
-        standardFontDataUrl: '../node_modules/pdfjs-dist/standard_fonts/',
+      // Convert PDF to PNG images
+      const pngPages = await pdfToPng(partPath, {
+        outputFolder: outputDir,
+        pngOptions: {
+          quality: 100,
+          compression: 9,
+        },
+        verbosityLevel: 0,
       });
 
-      const pdfDocument = await loadingTask.promise;
-      const numPages = pdfDocument.numPages;
+      console.log(`   📊 Pages in this part: ${pngPages.length}`);
 
-      console.log(`   📊 Pages in this part: ${numPages}`);
+      // Save images with global page numbering
+      for (let i = 0; i < pngPages.length; i++) {
+        const finalName = `page_${String(globalPageNumber).padStart(3, '0')}.png`;
+        const finalPath = join(outputDir, finalName);
 
-      // Render each page
-      for (let pageNum = 1; pageNum <= numPages; pageNum++) {
-        const page = await pdfDocument.getPage(pageNum);
-        const outputPath = await renderPage(page, globalPageNumber, outputDir, dpi);
+        // Write the PNG buffer to file
+        writeFileSync(finalPath, pngPages[i].content);
 
-        process.stdout.write(
-          `   ✅ Rendered page ${globalPageNumber} (${partFile} p.${pageNum})\r`,
-        );
+        process.stdout.write(`   ✅ Rendered page ${globalPageNumber} (${partFile} p.${i + 1})\r`);
 
         globalPageNumber++;
         totalPagesRendered++;

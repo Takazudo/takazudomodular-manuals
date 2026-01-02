@@ -51,6 +51,7 @@
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.71.2",
     "@eslint/js": "^9.39.2",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^22",
@@ -69,6 +70,7 @@
     "npm-run-all": "^4.1.5",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^2.4.5",
+    "pdf-to-png-converter": "^3.11.0",
     "pdfjs-dist": "^5.4.530",
     "prettier": "^3.2.5",
     "sharp": "^0.34.5",

@@ -2,7 +2,7 @@
 
 /**
  * PDF Translation Script
- * Translates extracted text using Claude Code subagents (parallel processing)
+ * Translates extracted text using Anthropic API (parallel processing)
  *
  * Input: data/extracted/part-*.txt
  * Output: data/translations-draft/part-*.json
@@ -11,7 +11,10 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { spawn } from 'child_process';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+const Anthropic = require('@anthropic-ai/sdk');
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,14 +23,18 @@ const ROOT_DIR = join(__dirname, '..');
 // Load configuration
 const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
 
-const PARALLEL_AGENTS = 4; // Process 4 parts at a time
+const PARALLEL_TRANSLATIONS = 4; // Process 4 parts at a time
+
+// Initialize Anthropic client
+const anthropic = new Anthropic.Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
 
 /**
- * Translate text using Claude Code subagent
+ * Translate text using Anthropic API
  */
-async function translateWithSubagent(textContent, partNumber) {
-  return new Promise((resolve, reject) => {
-    const prompt = `Translate the following English text from the OXI ONE MKII hardware synthesizer manual to Japanese.
+async function translateWithAPI(textContent, partNumber, retries = 3) {
+  const prompt = `Translate the following English text from the OXI ONE MKII hardware synthesizer manual to Japanese.
 
 Use technical documentation style (です・ます調). Preserve technical terms like MIDI, CV, Gate, Sequencer, BPM, LFO in English. Keep markdown formatting intact.
 
@@ -37,45 +44,41 @@ Output ONLY the Japanese translation without any preamble.
 
 ${textContent}`;
 
-    // Spawn Claude Code agent
-    const claude = spawn('claude', ['--agent', 'manual-translator', '--output', 'text'], {
-      cwd: ROOT_DIR,
-    });
-
-    let stdout = '';
-    let stderr = '';
-
-    // Send prompt to stdin
-    claude.stdin.write(prompt);
-    claude.stdin.end();
-
-    claude.stdout.on('data', (data) => {
-      stdout += data.toString();
-    });
-
-    claude.stderr.on('data', (data) => {
-      stderr += data.toString();
-    });
-
-    claude.on('close', (code) => {
-      if (code !== 0) {
-        reject(new Error(`Agent failed with code ${code}: ${stderr}`));
-      } else {
-        resolve({
-          translation: stdout.trim(),
-          metadata: {
-            translatedAt: new Date().toISOString(),
-            method: 'claude-code-subagent',
-            agent: 'manual-translator',
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const message = await anthropic.messages.create({
+        model: config.settings.translationModel,
+        max_tokens: 16000,
+        messages: [
+          {
+            role: 'user',
+            content: prompt,
           },
-        });
-      }
-    });
+        ],
+      });
 
-    claude.on('error', (error) => {
-      reject(new Error(`Failed to spawn Claude Code: ${error.message}`));
-    });
-  });
+      const translation = message.content[0].text;
+
+      return {
+        translation,
+        metadata: {
+          translatedAt: new Date().toISOString(),
+          method: 'anthropic-api',
+          model: config.settings.translationModel,
+          attempt,
+        },
+      };
+    } catch (error) {
+      console.error(`   ⚠️  Attempt ${attempt}/${retries} failed: ${error.message}`);
+      if (attempt < retries) {
+        const waitTime = Math.pow(2, attempt) * 1000; // Exponential backoff
+        console.log(`   ⏳ Waiting ${waitTime / 1000}s before retry...`);
+        await new Promise((resolve) => setTimeout(resolve, waitTime));
+      } else {
+        throw error;
+      }
+    }
+  }
 }
 
 /**
@@ -109,8 +112,8 @@ async function processBatch(batch, extractedDir, outputDir) {
 
       console.log(`   📏 Part ${partNumber}: ${textContent.length} characters`);
 
-      // Translate using subagent
-      const result = await translateWithSubagent(textContent, partNumber);
+      // Translate using API
+      const result = await translateWithAPI(textContent, partNumber);
 
       // Save to JSON
       const output = {
@@ -147,8 +150,22 @@ async function processBatch(batch, extractedDir, outputDir) {
 }
 
 async function translateAllParts() {
-  console.log('🌐 PDF Translation Script (Subagent Mode)');
+  console.log('🌐 PDF Translation Script (Anthropic API)');
   console.log('='.repeat(50));
+
+  // Check for API key
+  if (!process.env.ANTHROPIC_API_KEY) {
+    console.error('❌ Error: ANTHROPIC_API_KEY environment variable not set');
+    console.error('');
+    console.error('To fix this, either:');
+    console.error('1. Set the environment variable: export ANTHROPIC_API_KEY=your_key_here');
+    console.error(
+      '2. Create a .env file in the project root with: ANTHROPIC_API_KEY=your_key_here',
+    );
+    console.error('');
+    console.error('Get your API key from: https://console.anthropic.com/settings/keys');
+    process.exit(1);
+  }
 
   const extractedDir = join(ROOT_DIR, config.output.extracted);
   const outputDir = join(ROOT_DIR, config.output.translationsDraft);
@@ -167,7 +184,8 @@ async function translateAllParts() {
 
   console.log(`📁 Input directory: ${extractedDir}`);
   console.log(`📁 Output directory: ${outputDir}`);
-  console.log(`🤖 Agents: ${PARALLEL_AGENTS} parallel manual-translator subagents`);
+  console.log(`🤖 Model: ${config.settings.translationModel}`);
+  console.log(`🔄 Parallel translations: ${PARALLEL_TRANSLATIONS}`);
   console.log('');
 
   // Get all extracted text files
@@ -182,13 +200,13 @@ async function translateAllParts() {
   }
 
   console.log(`📚 Found ${textFiles.length} parts to translate`);
-  console.log(`🔄 Processing in batches of ${PARALLEL_AGENTS}`);
+  console.log(`🔄 Processing in batches of ${PARALLEL_TRANSLATIONS}`);
   console.log('');
 
   // Split into batches
   const batches = [];
-  for (let i = 0; i < textFiles.length; i += PARALLEL_AGENTS) {
-    batches.push(textFiles.slice(i, i + PARALLEL_AGENTS));
+  for (let i = 0; i < textFiles.length; i += PARALLEL_TRANSLATIONS) {
+    batches.push(textFiles.slice(i, i + PARALLEL_TRANSLATIONS));
   }
 
   let totalSuccess = 0;

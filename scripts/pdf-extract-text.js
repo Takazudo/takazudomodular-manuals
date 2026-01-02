@@ -11,7 +11,10 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import pdfParse from 'pdf-parse';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+const { PDFParse } = require('pdf-parse');
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -21,14 +24,16 @@ const ROOT_DIR = join(__dirname, '..');
 const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
 
 async function extractTextFromPdf(pdfPath) {
-  const dataBuffer = readFileSync(pdfPath);
-  const data = await pdfParse(dataBuffer);
+  // pdf-parse v2 API
+  const parser = new PDFParse({ data: readFileSync(pdfPath) });
+  const result = await parser.getText();
+  await parser.destroy();
 
   return {
-    text: data.text,
-    numPages: data.numpages,
-    metadata: data.metadata,
-    info: data.info,
+    text: result.text,
+    numPages: result.numPages,
+    metadata: result.metadata || {},
+    info: result.info || {},
   };
 }
 
