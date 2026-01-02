@@ -26,9 +26,6 @@ This skill guides the complete PDF processing pipeline:
 ### Run Full Pipeline
 
 ```bash
-# Set API key for translation
-export ANTHROPIC_API_KEY=sk-ant-...
-
 # Run all steps
 pnpm run pdf:all
 ```
@@ -47,7 +44,7 @@ pnpm run pdf:manifest    # Step 6: Create manifest
 ## Requirements
 
 - PDF file in `manual-pdf/` directory
-- `ANTHROPIC_API_KEY` environment variable (for translation)
+- Claude Code CLI installed (for translation subagents)
 - pnpm package manager
 
 ## Output Structure

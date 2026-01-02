@@ -382,17 +382,14 @@ Automated workflow for converting the OXI ONE MKII PDF manual into Next.js appli
 ### Quick Start
 
 ```bash
-# 1. Set API key (required for translation)
-export ANTHROPIC_API_KEY=sk-ant-...
-
-# 2. Place PDF in manual-pdf directory
+# 1. Place PDF in manual-pdf directory
 cp /path/to/OXI-ONE-MKII-Manual.pdf manual-pdf/
 
-# 3. Run full pipeline
+# 2. Run full pipeline
 pnpm run pdf:all
 
-# OR use the Claude Code skill
-# Type: /apply-pdf-to-app
+# OR use Claude Code slash commands
+# Type: /pdf-process all
 ```
 
 ### Pipeline Overview

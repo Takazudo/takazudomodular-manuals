@@ -109,7 +109,7 @@ Extracted: 2026-01-02T12:34:56.789Z
 
 **Output:** `data/translations-draft/part-*.json`
 
-**Requirements:** `ANTHROPIC_API_KEY` environment variable
+**Requirements:** Claude Code CLI installed
 
 **Configuration:**
 ```json
@@ -124,15 +124,15 @@ Extracted: 2026-01-02T12:34:56.789Z
 **What it does:**
 
 - Reads extracted text files
-- Sends to Claude API with translation prompt
+- Spawns 4 parallel Claude Code subagents (manual-translator)
+- Each agent translates parts independently
 - Uses technical documentation style (です・ます調)
 - Preserves technical terms in English
-- Includes retry logic with exponential backoff
-- Tracks token usage and cost
+- Processes in batches for efficiency
 
-**Time:** ~10-20 minutes (depends on API speed)
+**Time:** ~10-20 minutes (with 4 parallel agents)
 
-**Cost:** ~$5-10 for full 280-page manual
+**Cost:** Free (uses Claude Code subagents, not API)
 
 **Error handling:**
 
