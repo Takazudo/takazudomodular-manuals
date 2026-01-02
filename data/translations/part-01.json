@@ -1,0 +1,46 @@
+{
+  "part": "01",
+  "pageRange": [1, 5],
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/manual/part-01/pages/page_001.svg",
+      "title": "表紙",
+      "sectionName": "表紙・目次",
+      "translation": "# OXI ONE MKII\n\n## ユーザーマニュアル\n\nOXI ONE MKIIは、MIDIシーケンサー、CVシーケンサー、パフォーマンスコントローラーを一体化した強力なハードウェアシーケンサーです。\n\n### 主な機能\n\n- 8トラックポリフォニックシーケンサー\n- CV/Gateアウトプット\n- MIDIインターフェース\n- モジュラーシンセサイザー統合\n\nこのマニュアルでは、OXI ONE MKIIの全機能について詳しく説明します。",
+      "hasContent": true
+    },
+    {
+      "pageNum": 2,
+      "image": "/manual/part-01/pages/page_002.svg",
+      "title": "目次",
+      "sectionName": "表紙・目次",
+      "translation": "# 目次\n\n## Part 01: 基礎編\n\n1. **概要**\n   - 製品について\n   - 主な特徴\n   - 技術仕様\n\n2. **はじめに**\n   - パッケージ内容\n   - セットアップ\n   - 初期設定\n\n3. **基本操作**\n   - インターフェース概要\n   - ナビゲーション\n   - 基本的なシーケンス作成",
+      "hasContent": true
+    },
+    {
+      "pageNum": 3,
+      "image": "/manual/part-01/pages/page_003.svg",
+      "title": "安全上の注意",
+      "sectionName": "表紙・目次",
+      "translation": "# 安全上の注意\n\n## 警告\n\n本機器をご使用の前に、以下の安全上の注意事項をよくお読みください。\n\n### 電源について\n\n- 必ず付属のACアダプターを使用してください\n- 電源電圧は100-240V AC、50/60Hzです\n- 濡れた手で電源プラグを抜き差ししないでください\n\n### 設置について\n\n- 直射日光の当たる場所を避けてください\n- 高温多湿の場所を避けてください\n- 換気の悪い場所を避けてください\n\n### お手入れ\n\n- 清掃の際は必ず電源を切ってください\n- 柔らかい乾いた布で拭いてください\n- シンナーやベンジンは使用しないでください",
+      "hasContent": true
+    },
+    {
+      "pageNum": 4,
+      "image": "/manual/part-01/pages/page_004.svg",
+      "title": "OXI ONE MKIIについて",
+      "sectionName": "概要 (Overview)",
+      "translation": "# OXI ONE MKIIについて\n\n## 製品概要\n\nOXI ONE MKIIは、モダンなハードウェアシーケンサーです。MIDI機器やモジュラーシンセサイザーを制御するための包括的なソリューションを提供します。\n\n## 設計思想\n\n本機は、以下の設計思想に基づいて開発されました：\n\n1. **直感的な操作性** - 音楽制作に集中できるよう、シンプルで分かりやすいインターフェース\n2. **柔軟性** - MIDI、CV/Gate、両方のワークフローに対応\n3. **パフォーマンス性** - ライブパフォーマンスでの使用を想定した堅牢な設計\n4. **拡張性** - 将来的な機能拡張に対応\n\n## 主な用途\n\n- スタジオでのシーケンス制作\n- ライブパフォーマンス\n- モジュラーシステムの制御\n- MIDI機器のコントロール",
+      "hasContent": true
+    },
+    {
+      "pageNum": 5,
+      "image": "/manual/part-01/pages/page_005.svg",
+      "title": "主な特徴",
+      "sectionName": "概要 (Overview)",
+      "translation": "# 主な特徴\n\n## シーケンサー機能\n\n### トラック構成\n\n- **8トラック同時再生**\n- 各トラック最大64ステップ\n- ポリフォニック対応（最大8ボイス）\n- 独立したトラック設定\n\n### ステップエディット\n\n- リアルタイムレコーディング\n- ステップ入力\n- ノートオン/オフタイミング調整\n- ベロシティコントロール\n\n## CV/Gate機能\n\n- 8チャンネルCV出力\n- 精度の高い1V/Octコントロール\n- ゲート/トリガー出力\n- モジュレーション出力\n\n## MIDI機能\n\n- MIDI IN/OUT/THRU\n- USB MIDI対応\n- MIDIクロック送受信\n- CCメッセージ対応",
+      "hasContent": true
+    }
+  ]
+}

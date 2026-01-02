@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 
 export default function Part01Page() {
-  redirect('/part-01/page/1');
+  // Redirect old part-based URL to new continuous page structure
+  redirect('/page/1');
 }

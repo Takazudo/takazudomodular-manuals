@@ -19,7 +19,19 @@ export interface ManualMetadata {
 
 export interface ManualPart {
   part: string;
-  totalPages: number;
-  metadata: ManualMetadata;
+  pageRange: [number, number];
   pages: ManualPage[];
+}
+
+export interface PartInfo {
+  part: string;
+  pageRange: [number, number];
+  file: string;
+}
+
+export interface ManualManifest {
+  title: string;
+  totalPages: number;
+  parts: PartInfo[];
+  _future_parts?: PartInfo[];
 }

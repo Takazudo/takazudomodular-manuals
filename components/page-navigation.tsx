@@ -35,17 +35,16 @@ const selectStyles = ctl(`
 `);
 
 interface PageNavigationProps {
-  partNum: string;
   currentPage: number;
   totalPages: number;
 }
 
-export function PageNavigation({ partNum, currentPage, totalPages }: PageNavigationProps) {
+export function PageNavigation({ currentPage, totalPages }: PageNavigationProps) {
   const router = useRouter();
 
   const handlePageSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const page = parseInt(e.target.value);
-    router.push(`/part-${partNum}/page/${page}`);
+    router.push(`/page/${page}`);
   };
 
   const hasPrev = currentPage > 1;
@@ -54,7 +53,7 @@ export function PageNavigation({ partNum, currentPage, totalPages }: PageNavigat
   return (
     <nav className={navContainerStyles}>
       <Link
-        href={`/part-${partNum}/page/${currentPage - 1}`}
+        href={`/page/${currentPage - 1}`}
         className={buttonStyles}
         aria-disabled={!hasPrev}
         style={{ pointerEvents: hasPrev ? 'auto' : 'none' }}
@@ -80,7 +79,7 @@ export function PageNavigation({ partNum, currentPage, totalPages }: PageNavigat
       </div>
 
       <Link
-        href={`/part-${partNum}/page/${currentPage + 1}`}
+        href={`/page/${currentPage + 1}`}
         className={buttonStyles}
         aria-disabled={!hasNext}
         style={{ pointerEvents: hasNext ? 'auto' : 'none' }}

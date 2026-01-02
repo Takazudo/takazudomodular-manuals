@@ -3,6 +3,7 @@ import ctl from '@netlify/classnames-template-literals';
 import type { ManualPage } from '@/lib/types/manual';
 import { MarkdownRenderer } from './markdown-renderer';
 import { PageNavigation } from './page-navigation';
+import { KeyboardNavigation } from './keyboard-navigation';
 
 const containerStyles = ctl(`
   flex flex-col lg:flex-row
@@ -53,46 +54,49 @@ const pageTitleStyles = ctl(`
 
 interface PageViewerProps {
   page: ManualPage;
-  partNum: string;
+  currentPage: number;
   totalPages: number;
 }
 
-export function PageViewer({ page, partNum, totalPages }: PageViewerProps) {
+export function PageViewer({ page, currentPage, totalPages }: PageViewerProps) {
   return (
-    <div className={containerStyles}>
-      {/* Left Column: PDF Image */}
-      <div className={imageColumnStyles}>
-        <div className={imageWrapperStyles}>
-          <Image
-            src={page.image}
-            alt={`Page ${page.pageNum}: ${page.title}`}
-            width={1200}
-            height={1600}
-            className="w-full h-auto"
-            priority={page.pageNum === 1}
-          />
-        </div>
-      </div>
-
-      {/* Right Column: Translation */}
-      <div className={contentColumnStyles}>
-        <div className={navigationWrapperStyles}>
-          <PageNavigation partNum={partNum} currentPage={page.pageNum} totalPages={totalPages} />
+    <>
+      <KeyboardNavigation currentPage={currentPage} totalPages={totalPages} />
+      <div className={containerStyles}>
+        {/* Left Column: PDF Image */}
+        <div className={imageColumnStyles}>
+          <div className={imageWrapperStyles}>
+            <Image
+              src={page.image}
+              alt={`Page ${currentPage}: ${page.title}`}
+              width={1200}
+              height={1600}
+              className="w-full h-auto"
+              priority={currentPage === 1}
+            />
+          </div>
         </div>
 
-        <div className={pageTitleStyles}>
-          {page.title}
-          {page.sectionName && (
-            <span className="text-sm text-zd-gray6 ml-hgap-sm">({page.sectionName})</span>
+        {/* Right Column: Translation */}
+        <div className={contentColumnStyles}>
+          <div className={navigationWrapperStyles}>
+            <PageNavigation currentPage={currentPage} totalPages={totalPages} />
+          </div>
+
+          <div className={pageTitleStyles}>
+            {page.title}
+            {page.sectionName && (
+              <span className="text-sm text-zd-gray6 ml-hgap-sm">({page.sectionName})</span>
+            )}
+          </div>
+
+          {page.hasContent ? (
+            <MarkdownRenderer content={page.translation} />
+          ) : (
+            <p className="text-zd-gray6 italic">このページには翻訳がありません</p>
           )}
         </div>
-
-        {page.hasContent ? (
-          <MarkdownRenderer content={page.translation} />
-        ) : (
-          <p className="text-zd-gray6 italic">このページには翻訳がありません</p>
-        )}
       </div>
-    </div>
+    </>
   );
 }

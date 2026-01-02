@@ -62,14 +62,14 @@ export default function Home() {
         </p>
 
         <div className={partCardStyles}>
-          <h2 className={partTitleStyles}>Part 01: 基礎編</h2>
+          <h2 className={partTitleStyles}>マニュアルを読む</h2>
           <p className={partDescStyles}>
-            製品概要、セットアップ、基本操作について学びます。
+            OXI ONE MKIIの完全マニュアルをお読みいただけます。
             <br />
-            全30ページ
+            製品概要、セットアップ、基本操作から高度な機能まで網羅しています。
           </p>
-          <Link href="/part-01" className={linkStyles}>
-            Part 01を開く →
+          <Link href="/page/1" className={linkStyles}>
+            マニュアルを開く →
           </Link>
         </div>
       </div>

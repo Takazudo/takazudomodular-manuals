@@ -1,0 +1,58 @@
+{
+  "title": "OXI ONE MKII Manual",
+  "totalPages": 5,
+  "parts": [
+    {
+      "part": "01",
+      "pageRange": [1, 5],
+      "file": "/data/translations/part-01.json"
+    }
+  ],
+  "_future_parts": [
+    {
+      "part": "02",
+      "pageRange": [31, 60],
+      "file": "/data/translations/part-02.json"
+    },
+    {
+      "part": "03",
+      "pageRange": [61, 90],
+      "file": "/data/translations/part-03.json"
+    },
+    {
+      "part": "04",
+      "pageRange": [91, 120],
+      "file": "/data/translations/part-04.json"
+    },
+    {
+      "part": "05",
+      "pageRange": [121, 150],
+      "file": "/data/translations/part-05.json"
+    },
+    {
+      "part": "06",
+      "pageRange": [151, 180],
+      "file": "/data/translations/part-06.json"
+    },
+    {
+      "part": "07",
+      "pageRange": [181, 210],
+      "file": "/data/translations/part-07.json"
+    },
+    {
+      "part": "08",
+      "pageRange": [211, 240],
+      "file": "/data/translations/part-08.json"
+    },
+    {
+      "part": "09",
+      "pageRange": [241, 270],
+      "file": "/data/translations/part-09.json"
+    },
+    {
+      "part": "10",
+      "pageRange": [271, 280],
+      "file": "/data/translations/part-10.json"
+    }
+  ]
+}
