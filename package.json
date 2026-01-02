@@ -2,6 +2,7 @@
   "name": "manual-oxi-one-mk2",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "description": "OXI ONE MKII Manual Viewer - Japanese translation with Next.js",
   "author": "Takazudo",
   "keywords": [
@@ -12,36 +13,53 @@
     "japanese"
   ],
   "scripts": {
-    "dev": "cd manuals && pnpm run dev",
-    "build": "cd manuals && pnpm run build",
-    "doc:dev": "cd manuals/doc && pnpm run start",
-    "doc:build": "cd manuals/doc && pnpm run build",
-    "doc:serve": "cd manuals/doc && pnpm run serve",
-    "lint": "cd manuals && pnpm run lint",
-    "lint:fix": "cd manuals && pnpm run lint --fix",
-    "format": "prettier --check \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml}\" \"!**/*.{md,mdx}\" \"!node_modules/**\" \"!manuals/.next/**\" \"!manuals/out/**\" \"!worktrees/**\" \"!__inbox/**\" && pnpm run format:md:check",
-    "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml}\" \"!**/*.{md,mdx}\" \"!node_modules/**\" \"!manuals/.next/**\" \"!manuals/out/**\" \"!worktrees/**\" \"!__inbox/**\" && pnpm run format:md",
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "doc:dev": "cd doc && pnpm run start",
+    "doc:build": "cd doc && pnpm run build",
+    "doc:serve": "cd doc && pnpm run serve",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --check \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml}\" \"!**/*.{md,mdx}\" \"!node_modules/**\" \"!.next/**\" \"!out/**\" \"!worktrees/**\" \"!__inbox/**\" && pnpm run format:md:check",
+    "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml}\" \"!**/*.{md,mdx}\" \"!node_modules/**\" \"!.next/**\" \"!out/**\" \"!worktrees/**\" \"!__inbox/**\" && pnpm run format:md",
     "format:md": "node scripts/md-formatter/src/cli.js --write \"**/*.{md,mdx}\"",
     "format:md:check": "node scripts/md-formatter/src/cli.js --check \"**/*.{md,mdx}\"",
-    "typecheck": "cd manuals && pnpm run typecheck",
+    "typecheck": "tsc --noEmit",
     "check": "pnpm run typecheck && pnpm run lint && pnpm run format",
     "check:fix": "pnpm run lint:fix && pnpm run format:fix",
     "init-worktree": "./scripts/setup-worktree-env.sh",
-    "clean": "rm -rf manuals/.next manuals/out manuals/doc/build manuals/doc/.docusaurus",
+    "clean": "rm -rf .next out doc/build doc/.docusaurus",
     "prepare": "husky"
   },
+  "dependencies": {
+    "next": "^15.1.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.51.0",
+    "@typescript-eslint/parser": "^8.51.0",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
   },
   "lint-staged": {
-    "manuals/**/*.{js,jsx,ts,tsx,mjs}": [
-      "bash -c 'cd manuals && eslint --fix'",
+    "**/*.{js,jsx,ts,tsx,mjs}": [
+      "eslint --fix",
       "prettier --write"
     ],
     "*.{md,mdx}": [

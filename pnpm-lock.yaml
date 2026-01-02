@@ -7,18 +7,6 @@ settings:
 importers:
 
   .:
-    devDependencies:
-      husky:
-        specifier: ^9.1.7
-        version: 9.1.7
-      lint-staged:
-        specifier: ^16.2.7
-        version: 16.2.7
-      prettier:
-        specifier: ^3.2.5
-        version: 3.7.4
-
-  manuals:
     dependencies:
       next:
         specifier: ^15.1.6
@@ -60,11 +48,20 @@ importers:
       eslint-plugin-react-hooks:
         specifier: ^7.0.1
         version: 7.0.1(eslint@9.39.2(jiti@1.21.7))
+      husky:
+        specifier: ^9.1.7
+        version: 9.1.7
+      lint-staged:
+        specifier: ^16.2.7
+        version: 16.2.7
+      prettier:
+        specifier: ^3.2.5
+        version: 3.7.4
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
 
-  manuals/doc:
+  doc:
     dependencies:
       '@docusaurus/core':
         specifier: ^3.9.2
