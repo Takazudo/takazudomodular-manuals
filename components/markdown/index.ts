@@ -18,6 +18,7 @@ export { Em } from './em';
 export { A } from './a';
 export { Code } from './code';
 export { Pre } from './pre';
+export { Blockquote } from './blockquote';
 export { Ul } from './ul';
 export { Ol } from './ol';
 export { Table } from './table';
