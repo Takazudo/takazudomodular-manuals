@@ -1,0 +1,83 @@
+name: 'Build Next.js Application'
+description: 'Setup environment, run quality checks, and build Next.js app'
+
+inputs:
+  node-version:
+    description: 'Node.js version to use'
+    required: false
+    default: '20'
+  pnpm-version:
+    description: 'pnpm version to use'
+    required: false
+    default: '10'
+
+outputs:
+  build-output-path:
+    description: 'Path to the build output directory'
+    value: 'out'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: ${{ inputs.pnpm-version }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+      shell: bash
+
+    - name: Run code quality checks
+      run: |
+        echo "🔍 Running code quality checks..."
+        pnpm run typecheck
+        pnpm run lint
+        pnpm run format
+        echo "✅ Code quality checks passed"
+      shell: bash
+
+    - name: Cache Next.js build
+      uses: actions/cache@v4
+      with:
+        path: .next/cache
+        key: nextjs-cache-v1-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml', 'next.config.js', 'tsconfig.json') }}
+        restore-keys: nextjs-cache-v1-${{ runner.os }}-
+
+    - name: Build Next.js
+      run: pnpm build
+      shell: bash
+      env:
+        NODE_ENV: production
+        NODE_OPTIONS: '--max-old-space-size=4096'
+
+    - name: Verify build output
+      run: |
+        echo "📦 Build Output Verification"
+        echo "============================"
+
+        if [ ! -d "out" ]; then
+          echo "❌ Error: out/ directory not found"
+          exit 1
+        fi
+
+        # Count output files
+        HTML_COUNT=$(find out -name "*.html" | wc -l)
+        echo "📄 HTML files: $HTML_COUNT"
+
+        if [ -d "out/_next" ]; then
+          echo "✅ Next.js static assets found"
+        else
+          echo "❌ Error: _next/ directory not found"
+          exit 1
+        fi
+
+        echo "============================"
+        echo "✅ Build output verified"
+      shell: bash

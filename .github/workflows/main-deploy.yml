@@ -19,45 +19,9 @@ permissions:
   statuses: write
 
 jobs:
-  # Step 1: Quality checks
-  quality:
-    name: Quality Checks
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-        with:
-          lfs: false
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: '20'
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: TypeScript type checking
-        run: pnpm run typecheck
-
-      - name: Run ESLint
-        run: pnpm run lint
-
-      - name: Check Prettier formatting
-        run: pnpm run format
-
-  # Step 2: Build for production
+  # Step 1: Build for production
   build:
     name: Build Production Site
-    needs: quality
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -67,32 +31,11 @@ jobs:
         with:
           lfs: false
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - name: Build Next.js application
+        uses: ./.github/actions/build-nextjs
         with:
           node-version: '20'
-          cache: 'pnpm'
-
-      - name: Cache Next.js build
-        uses: actions/cache@v4
-        with:
-          path: .next/cache
-          key: nextjs-cache-v1-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml', 'next.config.js', 'tsconfig.json') }}
-          restore-keys: nextjs-cache-v1-${{ runner.os }}-
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Build Next.js site for production
-        run: pnpm run build
-        env:
-          NODE_ENV: production
-          NODE_OPTIONS: '--max-old-space-size=4096'
+          pnpm-version: '10'
 
       - name: Monitor Build Performance
         run: |
@@ -123,10 +66,10 @@ jobs:
           include-hidden-files: true
           retention-days: 1
 
-  # Step 3: Deploy to production
+  # Step 2: Deploy to production
   deploy:
     name: Deploy to Production
-    needs: [quality, build]
+    needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -142,49 +85,15 @@ jobs:
           name: nextjs-build-production
           path: out
 
-      - name: Install Netlify CLI
-        run: npm install -g netlify-cli
-
       - name: Deploy to Netlify Production
         id: deploy
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: |
-          echo "🚀 Deploying to Netlify production..."
-
-          # Copy build output to temp directory outside git repo
-          TEMP_DIR=$(mktemp -d)
-          echo "📂 Copying build output to temporary directory: $TEMP_DIR"
-          cp -r out/* "$TEMP_DIR/"
-
-          # Copy netlify.toml but remove build section
-          cp netlify.toml "$TEMP_DIR/"
-          echo "   - Copied netlify.toml"
-
-          # Remove [build] section since we're deploying pre-built files
-          sed -i.bak '/^\[build\]/,/^$/d' "$TEMP_DIR/netlify.toml" || sed -i '' '/^\[build\]/,/^$/d' "$TEMP_DIR/netlify.toml"
-          echo "   - Removed [build] section"
-
-          # Deploy from the temporary directory
-          cd "$TEMP_DIR"
-
-          DEPLOY_OUTPUT=$(netlify deploy \
-            --dir=. \
-            --site=$NETLIFY_SITE_ID \
-            --auth=$NETLIFY_AUTH_TOKEN \
-            --prod \
-            --message="Production deploy: ${{ github.sha }}")
-
-          echo "$DEPLOY_OUTPUT"
-
-          DEPLOY_URL="https://manual-oxi-one-mk2.netlify.app"
-          echo "DEPLOY_URL=$DEPLOY_URL" >> $GITHUB_OUTPUT
-
-          echo "✅ Deployed to production: $DEPLOY_URL"
-
-          # Clean up temp directory
-          rm -rf "$TEMP_DIR"
+        uses: ./.github/actions/deploy-netlify
+        with:
+          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          deploy-production: 'true'
+          deploy-message: 'Production deploy: ${{ github.sha }}'
+          build-dir: 'out'
 
       - name: Create deployment record
         uses: actions/github-script@v8
@@ -208,7 +117,7 @@ jobs:
               repo: context.repo.repo,
               deployment_id: deployment.data.id,
               state: 'success',
-              environment_url: '${{ steps.deploy.outputs.DEPLOY_URL }}',
+              environment_url: '${{ steps.deploy.outputs.deploy-url }}',
               description: 'Deployment successful'
             });
 
@@ -226,7 +135,7 @@ jobs:
               repo: context.repo.repo,
               sha: context.sha,
               state: status,
-              target_url: '${{ steps.deploy.outputs.DEPLOY_URL }}',
+              target_url: '${{ steps.deploy.outputs.deploy-url }}',
               description: success ? 'Production deployment successful' : 'Production deployment failed',
               context: 'netlify/production'
             });

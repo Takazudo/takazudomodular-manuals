@@ -14,7 +14,8 @@ concurrency:
 
 # Grant necessary permissions
 permissions:
-  contents: write # Allows git operations
+  contents: read # Read access for checkout
+  issues: write # Required for PR comments via Issues API
   pull-requests: write # Allows creating PR comments for deployment URLs
   deployments: write
   statuses: write
@@ -31,107 +32,22 @@ jobs:
         with:
           lfs: false
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - name: Build Next.js application
+        uses: ./.github/actions/build-nextjs
         with:
           node-version: '20'
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Run code quality checks
-        run: |
-          echo "🔍 Running code quality checks..."
-          pnpm run typecheck
-          pnpm run lint
-          pnpm run format
-          echo "✅ Code quality checks passed"
-
-      - name: Cache Next.js build
-        uses: actions/cache@v4
-        with:
-          path: .next/cache
-          key: nextjs-cache-v1-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml', 'next.config.js', 'tsconfig.json') }}
-          restore-keys: nextjs-cache-v1-${{ runner.os }}-
-
-      - name: Build Next.js
-        run: pnpm build
-        env:
-          NODE_ENV: production
-          NODE_OPTIONS: '--max-old-space-size=4096'
-
-      - name: Verify build output
-        run: |
-          echo "📦 Build Output Verification"
-          echo "============================"
-
-          if [ ! -d "out" ]; then
-            echo "❌ Error: out/ directory not found"
-            exit 1
-          fi
-
-          # Count output files
-          HTML_COUNT=$(find out -name "*.html" | wc -l)
-          echo "📄 HTML files: $HTML_COUNT"
-
-          if [ -d "out/_next" ]; then
-            echo "✅ Next.js static assets found"
-          else
-            echo "❌ Error: _next/ directory not found"
-            exit 1
-          fi
-
-          echo "============================"
-          echo "✅ Build output verified"
-
-      - name: Install Netlify CLI
-        run: npm install -g netlify-cli
+          pnpm-version: '10'
 
       - name: Deploy to Netlify Preview
         id: deploy
-        run: |
-          echo "🚀 Deploying to Netlify preview site..."
-
-          # Copy build output to temp directory outside git repo to avoid monorepo detection
-          TEMP_DIR=$(mktemp -d)
-          echo "📂 Copying build output to temporary directory: $TEMP_DIR"
-          cp -r out/* "$TEMP_DIR/"
-
-          # Copy netlify.toml but remove build section for preview
-          cp netlify.toml "$TEMP_DIR/"
-          echo "   - Copied netlify.toml"
-
-          # Remove [build] section since we're deploying pre-built files
-          sed -i.bak '/^\[build\]/,/^$/d' "$TEMP_DIR/netlify.toml" || sed -i '' '/^\[build\]/,/^$/d' "$TEMP_DIR/netlify.toml"
-          echo "   - Removed [build] section"
-
-          # Deploy from the temporary directory
-          cd "$TEMP_DIR"
-
-          DEPLOY_OUTPUT=$(netlify deploy \
-            --dir=. \
-            --site=${{ secrets.NETLIFY_SITE_ID }} \
-            --auth=${{ secrets.NETLIFY_AUTH_TOKEN }} \
-            --alias=preview \
-            --context deploy-preview \
-            --message="Deploy preview branch - ${{ github.sha }}")
-
-          echo "$DEPLOY_OUTPUT"
-
-          # Extract and save the deploy URL
-          DEPLOY_URL="https://preview--manual-oxi-one-mk2.netlify.app"
-          echo "DEPLOY_URL=$DEPLOY_URL" >> $GITHUB_OUTPUT
-
-          echo "✅ Deployed to $DEPLOY_URL"
-
-          # Clean up temp directory
-          rm -rf "$TEMP_DIR"
+        uses: ./.github/actions/deploy-netlify
+        with:
+          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          deploy-production: 'false'
+          deploy-alias: 'preview'
+          deploy-message: 'Deploy preview branch - ${{ github.sha }}'
+          build-dir: 'out'
 
       - name: Create deployment record
         uses: actions/github-script@v8
@@ -155,7 +71,7 @@ jobs:
               repo: context.repo.repo,
               deployment_id: deployment.data.id,
               state: 'success',
-              environment_url: '${{ steps.deploy.outputs.DEPLOY_URL }}',
+              environment_url: '${{ steps.deploy.outputs.deploy-url }}',
               description: 'Preview deployment successful'
             });
 
@@ -178,7 +94,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: prs[0].number,
-                body: '✅ **Preview Deployed**\n\n🔗 **URL**: ${{ steps.deploy.outputs.DEPLOY_URL }}\n\n📦 **Branch**: `${{ github.ref_name }}`\n🏗️ **Build**: Next.js static export\n⏱️ **Commit**: `${{ github.sha }}`'
+                body: '✅ **Preview Deployed**\n\n🔗 **URL**: ${{ steps.deploy.outputs.deploy-url }}\n\n📦 **Branch**: `${{ github.ref_name }}`\n🏗️ **Build**: Next.js static export\n⏱️ **Commit**: `${{ github.sha }}`'
               });
               console.log(`Posted deployment URL to PR #${prs[0].number}`);
             } else {
@@ -199,7 +115,7 @@ jobs:
               repo: context.repo.repo,
               sha: context.sha,
               state: status,
-              target_url: '${{ steps.deploy.outputs.DEPLOY_URL }}',
+              target_url: '${{ steps.deploy.outputs.deploy-url }}',
               description: success ? 'Preview deployment successful' : 'Preview deployment failed',
               context: 'netlify/preview'
             });
