@@ -66,9 +66,15 @@ runs:
         # Copy build output to temp directory outside git repo to avoid monorepo detection
         TEMP_DIR=$(mktemp -d)
         echo "📂 Copying build output to temporary directory: $TEMP_DIR"
-        cp -r ${{ inputs.build-dir }}/* "$TEMP_DIR/"
 
-        # Copy netlify.toml but remove build section for deployment
+        # Create basePath directory structure
+        # Next.js static export with basePath generates files with basePath in asset URLs
+        # but files are at root of out/ directory, so we need to restructure
+        mkdir -p "$TEMP_DIR/manuals/oxi-one-mk2"
+        cp -r ${{ inputs.build-dir }}/* "$TEMP_DIR/manuals/oxi-one-mk2/"
+        echo "   - Restructured output to match basePath: /manuals/oxi-one-mk2"
+
+        # Copy netlify.toml to root
         if [ -f "netlify.toml" ]; then
           cp netlify.toml "$TEMP_DIR/"
           echo "   - Copied netlify.toml"
