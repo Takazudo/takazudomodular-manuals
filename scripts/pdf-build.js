@@ -139,45 +139,38 @@ function splitTranslationIntoPages(translationText, totalPages) {
   const pages = [];
 
   // Split by page markers
+  // Marker "-- N of 30 --" comes BEFORE the content for page N
   const pageMarkerRegex = /--\s*(\d+)\s+of\s+\d+\s*--/g;
-  let currentPage = 1;
-  let lastIndex = 0;
+  let matches = [];
 
   let match;
   while ((match = pageMarkerRegex.exec(translationText)) !== null) {
-    const pageNum = parseInt(match[1]);
-    const markerIndex = match.index;
+    matches.push({
+      pageNum: parseInt(match[1]),
+      index: match.index,
+      length: match[0].length,
+    });
+  }
 
-    // Get content before this marker (belongs to previous page)
-    if (currentPage > 1) {
-      const content = translationText
-        .substring(lastIndex, markerIndex)
-        .trim()
-        .replace(/--\s*\d+\s+of\s+\d+\s*--/g, '')
-        .trim();
+  // Process each page marker
+  for (let i = 0; i < matches.length; i++) {
+    const currentMatch = matches[i];
+    const nextMatch = matches[i + 1];
 
+    // Start position: right after current marker
+    const startPos = currentMatch.index + currentMatch.length;
+    // End position: at next marker, or end of text
+    const endPos = nextMatch ? nextMatch.index : translationText.length;
+
+    // Extract content between markers
+    const content = translationText.substring(startPos, endPos).trim();
+
+    if (content) {
       pages.push({
-        pageNum: currentPage - 1,
+        pageNum: currentMatch.pageNum,
         content: content,
       });
     }
-
-    lastIndex = markerIndex + match[0].length;
-    currentPage = pageNum + 1;
-  }
-
-  // Add the last page
-  const lastContent = translationText
-    .substring(lastIndex)
-    .trim()
-    .replace(/--\s*\d+\s+of\s+\d+\s*--/g, '')
-    .trim();
-
-  if (lastContent) {
-    pages.push({
-      pageNum: currentPage - 1,
-      content: lastContent,
-    });
   }
 
   // If no page markers found, treat entire text as single page
