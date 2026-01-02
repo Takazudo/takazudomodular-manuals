@@ -293,28 +293,28 @@ pnpm run init-worktree issue-2-project-setup  # Missing merged PRs!
 
 ## Localhost Port Mapping for Development
 
-This port mapping is crucial for human-to-AI communication. When users reference localhost URLs (e.g., "check http://localhost:3000/"), use this mapping to understand which service and files are being referenced.
+This port mapping is crucial for human-to-AI communication. When users reference localhost URLs (e.g., "check http://localhost:3100/"), use this mapping to understand which service and files are being referenced.
 
 ### Port Assignment Table
 
 | Port | Service          | Directory | Purpose                     | Start Command    |
 | ---- | ---------------- | --------- | --------------------------- | ---------------- |
-| 3000 | Next.js App      | `/`       | Manual viewer app           | `pnpm dev`       |
-| 3001 | Docusaurus Docs  | `/doc/`   | Technical documentation     | `pnpm doc:dev`   |
+| 3100 | Next.js App      | `/`       | Manual viewer app           | `pnpm dev`       |
+| 3110 | Docusaurus Docs  | `/doc/`   | Technical documentation     | `pnpm doc:dev`   |
 | 8030 | Production Build | `/out/`   | Production build test serve | `pnpm serve`     |
 
 ### URL to File Mapping Examples
 
-- `http://localhost:3000/` → Next.js app in `/app/`
-- `http://localhost:3000/part-01/page/1` → Manual page viewer
-- `http://localhost:3001/doc/inbox/` → Documentation in `/doc/docs/inbox/`
+- `http://localhost:3100/` → Next.js app in `/app/`
+- `http://localhost:3100/part-01/page/1` → Manual page viewer
+- `http://localhost:3110/doc/inbox/` → Documentation in `/doc/docs/inbox/`
 
 ### Port Management
 
 **Automatic port cleanup:**
 
 - Use `lsof -ti:[PORT] | xargs kill -9` for manual cleanup if needed
-- Example: `lsof -ti:3000 | xargs kill -9`
+- Example: `lsof -ti:3100 | xargs kill -9`
 
 ## Development Commands
 
