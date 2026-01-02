@@ -33,9 +33,14 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@netlify/classnames-template-literals": "^1.0.3",
     "next": "^15.1.6",
+    "next-mdx-remote": "^5.0.0",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",

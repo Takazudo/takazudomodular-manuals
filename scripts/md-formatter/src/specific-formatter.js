@@ -378,7 +378,7 @@ export class SpecificFormatter {
           props.forEach((prop) => {
             result += `\n  ${prop}`;
           });
-          result += `\n>\n  ${ innerContent.trim() }\n</${componentName}>`;
+          result += `\n>\n  ${innerContent.trim()}\n</${componentName}>`;
 
           return result;
         }
@@ -507,7 +507,7 @@ export class SpecificFormatter {
           });
 
           // Join with proper newlines
-          const indentedContent = `\n${ indentedLines.join('\n') }\n`;
+          const indentedContent = `\n${indentedLines.join('\n')}\n`;
 
           return `<${componentName}>${indentedContent}</${componentName}>`;
         });

@@ -599,7 +599,7 @@ export class HybridFormatter {
 
     // Check if element has content in the original text
     // This is important for JSX inside admonitions where children might not be in AST
-    const hasClosingTag = originalText.includes(`</${ name }>`);
+    const hasClosingTag = originalText.includes(`</${name}>`);
     // Also check if the original was a single line with content (inline JSX)
     const isInlineWithContent =
       originalText.includes('>{') || (originalText.includes('>') && hasClosingTag);

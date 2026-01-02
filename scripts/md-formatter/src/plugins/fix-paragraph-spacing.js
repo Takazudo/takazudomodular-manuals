@@ -99,7 +99,7 @@ export function fixParagraphSpacing(content) {
       const openingSpaces = openingMatch[0].match(/\n(\s+)</)[1];
       if (openingSpaces.length === spaces.length + 1) {
         // The opening tag has one more space, so add it to closing tag
-        return `\n${ spaces } </${ tag }>`;
+        return `\n${spaces} </${tag}>`;
       }
     }
     return match;
@@ -112,7 +112,7 @@ export function fixParagraphSpacing(content) {
     const trimmedContent = content.trim();
     if (trimmedContent) {
       // Ensure double newlines before and after content
-      return `<Outro>\n\n${ trimmedContent }\n\n</Outro>`;
+      return `<Outro>\n\n${trimmedContent}\n\n</Outro>`;
     }
     return match;
   });
