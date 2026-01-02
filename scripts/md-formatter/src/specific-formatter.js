@@ -378,7 +378,7 @@ export class SpecificFormatter {
           props.forEach((prop) => {
             result += `\n  ${prop}`;
           });
-          result += '\n>\n  ' + innerContent.trim() + `\n</${componentName}>`;
+          result += `\n>\n  ${ innerContent.trim() }\n</${componentName}>`;
 
           return result;
         }
@@ -507,7 +507,7 @@ export class SpecificFormatter {
           });
 
           // Join with proper newlines
-          const indentedContent = '\n' + indentedLines.join('\n') + '\n';
+          const indentedContent = `\n${ indentedLines.join('\n') }\n`;
 
           return `<${componentName}>${indentedContent}</${componentName}>`;
         });
@@ -537,7 +537,7 @@ export class SpecificFormatter {
 
     // Simple check for unclosed quotes - but be more careful with complex props
     const lines = cleanedContent.split('\n');
-    for (let line of lines) {
+    for (const line of lines) {
       // Check for unclosed quotes in simpler cases
       let inString = false;
       let stringChar = '';

@@ -18,6 +18,8 @@ export default [
       '*.min.js',
       'next.config.js',
       'next-env.d.ts',
+      'doc/build/**',
+      'doc/.docusaurus/**',
     ],
   },
 

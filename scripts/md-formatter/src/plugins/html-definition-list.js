@@ -40,7 +40,7 @@ export function htmlDefinitionListPlugin() {
 
         items.push({
           type: 'paragraph',
-          children: [{ type: 'text', value: ': ' + definition }],
+          children: [{ type: 'text', value: `: ${ definition}` }],
         });
       }
 

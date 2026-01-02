@@ -27,9 +27,9 @@ export function preserveJsxPlugin() {
             if (i === startLine) {
               originalJsx += lines[i].substring(startCol);
             } else if (i === endLine) {
-              originalJsx += '\n' + lines[i].substring(0, endCol);
+              originalJsx += `\n${ lines[i].substring(0, endCol)}`;
             } else {
-              originalJsx += '\n' + lines[i];
+              originalJsx += `\n${ lines[i]}`;
             }
           }
         }

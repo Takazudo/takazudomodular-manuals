@@ -316,7 +316,7 @@ export class HtmlBlockFormatter {
                 start: startIndex,
                 end: endIndex,
                 content: content.substring(startIndex, endIndex),
-                tagName: tagName,
+                tagName,
               });
               processedRanges.add([startIndex, endIndex]);
             }
@@ -346,7 +346,7 @@ export class HtmlBlockFormatter {
               start: startIndex,
               end: endIndex,
               content: match[0],
-              tagName: tagName,
+              tagName,
             });
           }
         }

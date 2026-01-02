@@ -256,7 +256,7 @@ export class HybridFormatter {
     });
 
     // Apply operations to lines with deduplication
-    let resultLines = [...this.lines];
+    const resultLines = [...this.lines];
     const appliedOperations = new Set();
 
     for (const op of operations) {
@@ -314,7 +314,7 @@ export class HybridFormatter {
           ) {
             operations.push({
               type: 'insertLine',
-              startLine: startLine,
+              startLine,
               content: '',
             });
           }
@@ -439,7 +439,7 @@ export class HybridFormatter {
           if (currentIndent !== expectedIndent) {
             operations.push({
               type: 'fixListIndent',
-              startLine: startLine,
+              startLine,
               indent: ' '.repeat(expectedIndent),
             });
           }
@@ -481,8 +481,8 @@ export class HybridFormatter {
           if (formatted !== originalText) {
             operations.push({
               type: 'replaceLines',
-              startLine: startLine,
-              endLine: endLine,
+              startLine,
+              endLine,
               lines: formatted.split('\n'),
             });
           }
@@ -599,7 +599,7 @@ export class HybridFormatter {
 
     // Check if element has content in the original text
     // This is important for JSX inside admonitions where children might not be in AST
-    const hasClosingTag = originalText.includes('</' + name + '>');
+    const hasClosingTag = originalText.includes(`</${ name }>`);
     // Also check if the original was a single line with content (inline JSX)
     const isInlineWithContent =
       originalText.includes('>{') || (originalText.includes('>') && hasClosingTag);
@@ -752,7 +752,7 @@ export class HybridFormatter {
           let braceDepth = 1;
           let result = `${attrName}={`;
           let lineIndex = lines.indexOf(line);
-          let charIndex = line.indexOf(`${attrName}={`) + `${attrName}={`.length;
+          const charIndex = line.indexOf(`${attrName}={`) + `${attrName}={`.length;
 
           while (lineIndex < lines.length && braceDepth > 0) {
             const currentLine = lines[lineIndex];
@@ -1048,7 +1048,7 @@ export class HybridFormatter {
               // Replace with multi-line format with empty lines
               operations.push({
                 type: 'replaceLines',
-                startLine: startLine,
+                startLine,
                 endLine: startLine,
                 lines: [openingTag, '', content, '', closingTag],
               });

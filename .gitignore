@@ -70,10 +70,10 @@ settings.local.json
 .playwright-mcp/
 
 # Docusaurus
-/manuals/doc/.docusaurus/
-/manuals/doc/build/
-/manuals/doc/.cache/
-/manuals/doc/node_modules/
+/doc/.docusaurus/
+/doc/build/
+/doc/.cache/
+/doc/node_modules/
 
 # Storybook
 storybook-static/

@@ -117,7 +117,7 @@ class MDXAnalyzer {
           map.admonitions.push({
             type: line.match(/^:::(\w+)/)[1],
             startLine: lineNum,
-            endLine: endLine,
+            endLine,
           });
         }
       }
