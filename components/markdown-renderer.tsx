@@ -1,7 +1,9 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
+import rehypeSlug from 'rehype-slug';
 import {
+  H1,
   H2,
   H3,
   H4,
@@ -12,6 +14,7 @@ import {
   Em,
   A,
   Code,
+  Pre,
   Ul,
   Ol,
   Table,
@@ -26,8 +29,9 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeHighlight]}
+      rehypePlugins={[rehypeSlug, rehypeHighlight]}
       components={{
+        h1: H1,
         h2: H2,
         h3: H3,
         h4: H4,
@@ -38,6 +42,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
         em: Em,
         a: A,
         code: Code,
+        pre: Pre,
         ul: Ul,
         ol: Ol,
         table: Table,

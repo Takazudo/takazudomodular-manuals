@@ -12,15 +12,25 @@ interface AProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'hr
  * Uses Next.js Link for internal navigation, regular anchor for external links
  */
 const A: React.FC<AProps> = ({ children, href = '', className, ...props }) => {
-  const isExternal = href.startsWith('http://') || href.startsWith('https://');
+  // Security: Detect unsafe protocols
+  const isUnsafe = /^javascript:/i.test(href);
+
+  // Protocol detection
+  const isExternal = /^(https?:)?\/\//i.test(href);
+  const isSpecialScheme = /^(mailto:|tel:|ftp:)/i.test(href);
   const isAnchor = href.startsWith('#');
 
   const linkClassName = className
     ? `text-zd-primary underline hover:text-zd-white transition-colors ${className}`
     : 'text-zd-primary underline hover:text-zd-white transition-colors';
 
-  // External links or anchors use regular <a> tag
-  if (isExternal || isAnchor) {
+  // Block unsafe protocols (XSS prevention)
+  if (!href || isUnsafe) {
+    return <span className={linkClassName}>{children}</span>;
+  }
+
+  // External links, anchors, or special schemes use regular <a> tag
+  if (isExternal || isAnchor || isSpecialScheme) {
     return (
       <a
         href={href}

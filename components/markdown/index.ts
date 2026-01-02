@@ -6,6 +6,7 @@
  * with the Zudo Design System styling
  */
 
+export { H1 } from './h1';
 export { H2 } from './h2';
 export { H3 } from './h3';
 export { H4 } from './h4';
@@ -16,6 +17,7 @@ export { Strong } from './strong';
 export { Em } from './em';
 export { A } from './a';
 export { Code } from './code';
+export { Pre } from './pre';
 export { Ul } from './ul';
 export { Ol } from './ol';
 export { Table } from './table';
