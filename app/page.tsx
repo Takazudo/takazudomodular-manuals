@@ -43,7 +43,11 @@ export default function Home() {
         </h1>
         <p className={descriptionStyles}>
           OXI ONE
-          MKIIマニュアルの日本語訳です。翻訳はAIによる自動生成で行われており、正確性を保証するものではありません。公式マニュアルの翻訳参考としてお役立てください。
+          MKIIマニュアルの日本語訳です。翻訳はAIによる自動生成で行われており、正確性を保証するものではありません。
+          <Link href="https://drive.google.com/file/d/1LdJvG-GqzzKI2qw92CyZKklE7kSoZLFE/view">
+            公式マニュアル
+          </Link>
+          の翻訳参考としてお役立てください。
         </p>
         <Link href="/page/1" className={linkStyles}>
           <span className="pr-[7px]">
