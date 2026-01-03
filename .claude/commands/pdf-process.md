@@ -140,11 +140,45 @@ while (workers.some(w => w)) {
 </invoke>
 ```
 
+#### Saving Translation Results (CRITICAL):
+
+**MUST use JSON.stringify() when saving translation results to avoid JSON parsing errors:**
+
+```javascript
+// ✅ CORRECT - Use JSON.stringify() to properly escape special characters
+const result = {
+  pageNum: 1,
+  totalPages: 30,
+  translation: "Text with\nnewlines and special chars",
+  status: "completed"
+};
+
+Write({
+  file_path: "data/translations-draft/page-001.json",
+  content: JSON.stringify(result, null, 2)
+});
+
+// ❌ WRONG - Template literals will create invalid JSON with literal newlines
+Write({
+  file_path: "data/translations-draft/page-001.json",
+  content: `{
+  "translation": "${result.translation}"
+}`
+});
+```
+
+**Why this matters:**
+
+- Translation text contains `\n` newline sequences
+- Template literals write these as literal newline bytes
+- Node.js JSON.parse() fails: "Bad control character in string literal"
+- JSON.stringify() properly escapes newlines as `\\n`
+
 **Key Points:**
 
 - Use `run_in_background=true` for all workers
 - Use `TaskOutput(block=true)` to wait for each completion
-- Save each page result immediately upon completion
+- Save each page result immediately upon completion using **JSON.stringify()**
 - Spawn next worker immediately after one completes
 - This keeps 5 workers busy continuously until all pages done
 
