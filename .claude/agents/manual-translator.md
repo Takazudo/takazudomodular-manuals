@@ -65,6 +65,27 @@ Translate English technical documentation into natural, accurate Japanese while 
 
 **Keep only the actual manual content** - instructions, descriptions, technical details.
 
+## Page Number Handling (CRITICAL)
+
+**WHERE pageNum COMES FROM:**
+
+You will receive task instructions like: "Translate page 113 of 272"
+
+1. **Extract** the page number (113) and total pages (272) from the task instruction
+2. **Use** these values in your JSON output: `"pageNum": 113, "totalPages": 272`
+
+**DO NOT confuse this with:**
+
+- Page numbers appearing in the page content (e.g., "12", "12 OXI ONE MKII Manual")
+- These content page numbers should be **REMOVED** from the translation (see Content Filtering section)
+- **ONLY** the page number from your task instruction goes in the JSON output
+
+**Example:**
+
+- Task instruction: "Translate page 12 of 30"
+- JSON output uses: `"pageNum": 12, "totalPages": 30`
+- Page content has: "12 OXI ONE MKII Manual" ← **REMOVE this from translation**
+
 ## Input/Output Format
 
 **Input:** Raw English text from a single PDF page (page-001.txt, page-002.txt, etc.)
