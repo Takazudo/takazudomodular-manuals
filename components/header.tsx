@@ -4,11 +4,11 @@ import ctl from '@netlify/classnames-template-literals';
 const headerStyles = ctl(`
   fixed top-0 left-0 right-0 z-50
   bg-zd-gray1
-  px-hgap-md
+  px-hgap-sm
   h-[60px]
   flex items-center justify-between
   shadow-lg shadow-zd-white/5
-  z-50
+  font-futura
 `);
 
 const titleStyles = ctl(`

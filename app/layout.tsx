@@ -1,6 +1,15 @@
 import type { Metadata } from 'next';
+import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/header';
+
+const notoSans = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-noto',
+  display: 'swap',
+  preload: true,
+});
 
 export const metadata: Metadata = {
   title: 'OXI ONE MKII Manual',
@@ -10,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body>
+      <body className={notoSans.variable}>
         <Header />
         {children}
       </body>
