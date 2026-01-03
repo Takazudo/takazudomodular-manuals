@@ -472,6 +472,48 @@ Translation using Claude Sonnet 4.5:
 - Scripts can be resumed from failed step
 - Retry logic for API failures
 
+### Translation Verification
+
+**Claude Code Command:** `/verify-translation`
+
+After running the PDF processing pipeline, use this command to verify that translations match the page images.
+
+**What it does:**
+
+1. Starts dev server on port 3100 (if not running)
+2. Captures all 30 pages at high resolution (2000x1600) using `capture-all-pages` skill
+3. Verifies sample pages (1, 10, 15, 21, 30) for translation accuracy
+4. Checks for:
+   - ✅ Translation is present
+   - ✅ Page numbers match
+   - ✅ Content corresponds to image
+   - ❌ No missing translations
+   - ❌ No page number mismatches
+5. Generates verification report
+
+**Usage:**
+
+```bash
+# Ensure dev server is running
+pnpm dev
+
+# Run verification command
+/verify-translation
+```
+
+**Output location:** `__inbox/captures-{date}-{session}/`
+
+**Project-Specific Skill:** `capture-all-pages`
+
+This skill captures screenshots of all manual pages at high resolution for visual verification.
+
+- **Resolution:** 2000x1600 (high detail for inspection)
+- **Pages:** All 30 pages (or configured total)
+- **Output:** `__inbox/captures-{YYYYMMDD}-{session}/`
+- **Format:** PNG files named `page-001.png` to `page-030.png`
+
+The skill embeds Playwright logic directly and saves captures to the project's `__inbox/` directory (gitignored).
+
 **Full Documentation:** See `scripts/README-PDF-PROCESSING.md`
 
 ## Package Manager
