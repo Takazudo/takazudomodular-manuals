@@ -3,7 +3,7 @@
   "pageRange": [1, 30],
   "totalPages": 30,
   "metadata": {
-    "processedAt": "2026-01-03T16:14:14.405Z",
+    "processedAt": "2026-01-03T16:55:27.791Z",
     "translationMethod": "claude-code-subagent-page-by-page",
     "imageFormat": "png",
     "imageDPI": 300

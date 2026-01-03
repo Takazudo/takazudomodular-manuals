@@ -3,7 +3,7 @@
   "pageRange": [91, 120],
   "totalPages": 30,
   "metadata": {
-    "processedAt": "2026-01-03T16:14:14.409Z",
+    "processedAt": "2026-01-03T16:55:27.794Z",
     "translationMethod": "claude-code-subagent-page-by-page",
     "imageFormat": "png",
     "imageDPI": 300
@@ -172,83 +172,11 @@
       "tags": []
     },
     {
-      "pageNum": 101,
-      "image": "/manual/pages/page-101.png",
-      "title": "Page 101",
-      "sectionName": null,
-      "translation": "Arpeggiatorの解剖\n\nG D# F C# G# F# D A A# B E C\nC\nE\nG\n\nコード - キーボードグリッドで演奏されたCメジャー\n\nArpはコードを個別の音符に分解します\n\nクロマティックキーボード\n\nArpeggioは現在のオクターブを超えて拡張できます。\n\n例：16分音符\n\n例：32分音符\n\nこれらの例は、arpeggiatorの動作と、主要な設定がアルペジオ出力に与える影響を示しています。\n\nONE arpeggiatorは、従来のarp機能、Euclideanパルス、グルーブテンプレートを備えた高度なツールです。これは、ONEの内部エコシステムが、より多くの創造性と音楽的インスピレーションのために機能を統合する優れた例です。\n\nスケール：Chromatic Root C2、コードCメジャー\n\nHold & Latch\n\nキーボードarpは、キーボード上で演奏、ホールド、またはラッチされた音符を受け取ります。Holdは[Shift] + [Arp]で選択されます。ホールドされた音符はラッチされますが、別の音符を選択すると解除されます。音符は同時にホールドできます。\n\n音符のラッチングは、arpページ2/2で利用可能なオプションで、選択された音符を段階的に維持します。キーボード上で音符を選択してラッチするには、sequencerが再生されている必要があります。\n\nOctV. アルペジオを再生するためのオクターブ範囲。\n\nAccnt. accentオプションは、アルペジオに適用されるvelocityプロファイルの量を設定します。\n\nプロファイルは、Grovオプションで選択されたテンプレートに基づいており、ソフトまたは強調された音楽的グルーブを作成します。\n\nこのグルーブは、アルペジオ全体のvelocityの変化に基づいています。\n\nGroove Engine\n\n新しいarp音符が適用されたときのarpeggiatorのリセット動作を設定できます。Resetパラメータは、arpパラメータのページ2にあり、(Knob 3)で編集されます。パターンポジション「aPos」のみをリセット、Groove「Grve」のみ、または「All」で両方のグルーブとarpパターンポジションをリセットできます。Resetはオフに設定することもでき、自由に実行できます。\n\nGTime. velocityがリズミックなテクスチャを作成することに加えて、Gtimは一部の音符のマイクロタイミングをオフセットするスイングスタイルのグルーブを適用することもできます。+/-100%の範囲で量を制御します。このリズミックスタイルは、Grovオプションから選択されたテンプレートから取得されます。\n\nDiv. アルペジオのディビジョン、sequencerのタイムインターバルとは独立しています。\n\nGate. 音符のgateのパーセンテージは、タイムディビジョンに関する長さを決定します。\n\nAccent - Velocityプロファイル\n\nGtime - Swingリズム\n\nType - Up\n\n50% 25%\n\n99%\n\nPerformance Tools 5",
-      "hasContent": true,
-      "tags": []
-    },
-    {
-      "pageNum": 102,
-      "image": "/manual/pages/page-102.png",
-      "title": "Page 102",
-      "sectionName": null,
-      "translation": "NOTES\n\nUp\nNOTESは最低音から始まり、選択されたオクターブ全体にわたってスケールを段階的に上昇し、選択された範囲の最低音に戻ります。例では3つの音符があります。\n\nAltern In\nNOTESは上部の音符から始まり、「ジグザグ」スタイルで下方向に順番に交互に鳴り、その後上部の音符から再スタートします。例では4つの音符があります。\n\nThumb\nNOTESは下部の音符を「アンカー」基準として生成され、他のすべての音符は下部の音符と交互に順番に鳴ります。例では4つの音符があります。\n\nUp / Down\nNOTESは最低音から始まり、選択されたオクターブ全体にわたってスケールを段階的に上昇し、その後範囲を下降します。このサイクルを継続的にループします。例では3つの音符があります。\n\nAltern In / Out\nNOTESは上部の音符から始まり、次に下部の音符を鳴らし、その後「ジグザグ」スタイルで内側に向かって進み、上部の音符から再スタートします。例では4つの音符があります。\n\nRand Once\nNOTESは最初のarpeggioサイクル全体でランダムに生成され、その後のarpeggioサイクルでは同じパターンを維持します。例では4つの音符があります。\n\nDown\nNOTESは最高音から始まり、選択されたオクターブ全体にわたってスケールを段階的に下降し、選択された範囲の最高音に戻ります。例では3つの音符があります。\n\nAltern Out\nNOTESは下部の音符から始まり、「ジグザグ」スタイルで上方向に順番に交互に鳴り、その後下部の音符から再スタートします。例では4つの音符があります。\n\nRandom\nNOTESはarpeggio全体でランダムに生成され、予測不可能ながらも進化する形で変化します。例では4つの音符があります。\n\n2 Up / 2 Down\nNOTESはarpタイムインターバルで2倍になり、最低音から始まり、スケールと選択されたオクターブを上昇し、その後範囲を下降します。このサイクルを継続的にループします。例では3つの音符があります。\n\nPinky\nNOTESは上部の音符を「アンカー」基準として生成され、他のすべての音符は上部の音符と交互に順番に鳴ります。例では4つの音符があります。\n\nOrder\nNOTESはキーボードで演奏された順序でarpeggioで演奏されます。例では3つの音符があります。\n\nType. Typeはarpeggiatorのオン/オフを設定し、オンの場合は12のアルゴリズムのいずれかを選択します。アクティブなアルゴリズムはarpページヘッダーに表示されます。これは一般的に、生成されるarpeggio音符の方向とパターンの動作を制御します。arpeggioは選択された音符に基づいてループします。\n\nPerformance Tools 5",
-      "hasContent": true,
-      "tags": []
-    },
-    {
-      "pageNum": 103,
-      "image": "/manual/pages/page-103.png",
-      "title": "Page 103",
-      "sectionName": null,
-      "translation": "注意\n\nピッチベースのアルペジオを生成する標準的なarpeggiator機能に加えて、ONEのarpにはEuclideanリズムジェネレーターが統合されており、より興味深いグルーヴや音楽的なフレーズを作成します。Euclideanジェネレーターは、arpで生成されたノートのタイミングに対して動作し、より複雑なパターン生成のレイヤーを追加します。\n\nEuclideanパターンは、ノートの配置とタイミングに数学的な公式を使用して生成されるパターンです。簡単に言えば、定義された長さの中で等間隔に配置された複数のパルスが生成されます。ONEのarpが最初にアルペジオパターンを生成し、Euclideanジェネレーターがオプションでノートのタイミングにさらに操作を加え、リズムをさらに発展させると考えてください。\n\nEuclideanの概念\n\nONE Euclideanジェネレーター\n\nSteps\nSteps\nSteps\nLength\nPulses 3\nArp\nPulses 4\nLength 4\nPulse 3\nOutput\nPulses\nPulses\nRepeats\n1\n1\n5\n5\n2\n2\n6\n6\n3\n3\n7\n7\n4\n4\n8\n8\n\nEuclideanジェネレーターには時間の長さが必要です。通常は時間間隔内のビート数です。これはステップ単位で設定でき、動作する全体の長さを決定します。\n\nLengthは、Euclideanフレーズ全体のステップ数を決定します。1-32の範囲から選択でき、デフォルトは16です。これはarpのステップ間隔に基づいています。例では4ステップの長さを示しています。\n\nPulsesは、ノートを生成する時間内の実際のトリガーです。Euclideanジェネレーターは、選択されたパルス数を取得し、時間内にできるだけ均等に分散します。\n\nPulsesは、length内に分散されたステップトリガーです。選択肢は利用可能なlengthの範囲に合わせて1-32で、デフォルトは16です。パルスのソースは、lengthによって設定されたバッチで処理されるアルペジオ内のノートから来ます。上記の例では3つのパルス、repeatを0に設定しています。\n\n本質的に、arpの実際の出力は、グルーヴとEuclideanジェネレーターによってさらに影響を受けたアルペジオノートになります。したがって、lengthとpulseが同じ数に設定されている場合、出力はEuclideanの影響が適用されていない純粋なアルペジオになります。例えば、デフォルトではlengthとpulseの両方が16に設定されています。\n\n追加のReptオプションがあり、0-16の間で調整でき、デフォルトは0です。この機能は、Euclideanパルスに追加されるリピート数を選択し、他のEuclidean設定と連携して動作します。これは、多数のパルスが既に生成されている場合やlengthが低く設定されている場合には、簡単には認識できないかもしれません。使用例として、repeatが0、lengthが16、pulseが1の場合、16ステップのフレーズに1つのノートが生成されます。repeatを8に設定すると、元のパルスの後に8つの追加ノートが配置され、arpパターン内に合計9つのノートが生成されます。\n\n1 4\t2 5\t3 6 7\n1 4\t2 5\t3 6\n\nPerformance Tools 5",
-      "hasContent": true,
-      "tags": []
-    },
-    {
-      "pageNum": 104,
-      "image": "/manual/pages/page-104.png",
-      "title": "Page 104",
-      "sectionName": null,
-      "translation": "5.4 Flow\n\nFlowはツールなのか、それともボタンなのか?実は両方です。一般的な概念として、flowは特定のイベントやアクションが特定の条件下でのみ動作するように設定できる機能です。その条件は、flowボタンの状態にリンクされています。例えば、ノートはシーケンスで再生されますが、flowボタンが押されている間のみ再生され、それ以外ではパターン内でこれらのノートは再生されません。\n\nFlowはOXI ONEの機能セット全体のさまざまな場所で設定できます。ノートトリガー専用の機能ではありません。これにより、flowは特にライブパフォーマンスや即興セッションにおいて強力な機能となります。\n\n例として、monoモードのaccumulatorがあります。ステップオプションのAcm%パラメーターにも、FlowとFlowが用意されています。これにより、[Flow]ボタンからのコントロールでaccumulatorを動作させたり、させなかったりすることができます。\n\n一般的に、flowは関数の確率オプション内にあるパラメーターです。\n\nイベントはflowボタンの条件に基づいて動作するように設定できます。\n\n「flow」が割り当てられた関数は、[Flow]ボタンが押されている間のみ動作します。\n\nFlow Step +\n[Flow]を押しながら[Pad]をタップして「flow」ステップを追加します。ステップは、[Flow]ボタンが押されている間のみ、再生中のパターンでトリガーされます。\n\nFlowはステップメニューオプションを含むさまざまなメニューでも適用できます。",
-      "hasContent": true,
-      "tags": []
-    },
-    {
-      "pageNum": 105,
-      "image": "/manual/pages/page-105.png",
-      "title": "Page 105",
-      "sectionName": null,
-      "translation": "Hold Step\n\nTurn (Trig)\n\nNOTES\n\n例: Stepメニューで設定されたNoteイベント\n\nパターンでシーケンスされたNoteは、Noteがトリガーされた時に通常すべて再生されます。Trigのデフォルトは100%で、すべてのNoteに適用されます。\n\nパターンでシーケンスされたNote。一部のTrig設定が「Flow」に設定されています。Trigのデフォルトは100%で、他のNoteに適用されます。\n\nパターンでシーケンスされたNote。一部のTrig設定が「Not Flow」、つまりFLOWに設定されています。Trigのデフォルトは100%で、他のNoteに適用されます。\n\n通常の再生では、Flow Trigが設定されたNote以外のすべてのNoteが再生されます。\n\n[Flow]を押したままにすると、Flow Trig Noteを含むすべてのNoteが再生されます。[Flow]を押していない場合、Flow Noteは再生されません。\n\n[Flow]を押していない場合、すべてのNoteが再生されます。[Flow]を押したままにすると、Flow設定されたNoteを除くNoteが再生されます。\n\nFlowに設定されたイベントは、[Flow]ボタンを押したままにすると有効になります。「Not Flow」オプションは逆の動作をします。Flowに設定されたイベントは、[Flow]ボタンを押したままにすると有効になりません。\n\n► Play\n\n► Play\n\n► Play\n\n► Play\n\n☑\n\n☑\n\n☑\n\n☑\n\n☑\n\n☑\n\n☑\n\n☑\n\n☑ ☑\n\n☑\n\n☑ ☑\n\n☑\n\n☑ ☑\n\n✗\n\n☑ ☑\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\nD2 - Step 2\n\nVel\n75\n\nGate\n50\n\nOct\n+0\n\nTrig\n100%\n\nD2 - Step 2\n\nVel\n75\n\nGate\n50\n\nOct\n+0\n\nTrig\nFLOW\n\nPerformance Tools 5\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\n4",
-      "hasContent": true,
-      "tags": []
-    },
-    {
-      "pageNum": 106,
-      "image": "/manual/pages/page-106.png",
-      "title": "Page 106",
-      "sectionName": null,
-      "translation": "5.5 Roller\n\nRollerは、mono、poly、multitrack、matriceal、stochasticモードで使用できるツールで、定義された音符の間隔でパターンのロールをトリガーします。Rollerはkeyboard viewに配置されており、gridの13列目で制御します。各パッドが音符の間隔をトリガーします。Arpはオフにし、transportを再生しながらkeyboardで音符を演奏します。\n\nRoller. 13列目。\n音符。紫色に点灯\n\n各行は、ロールを適用するための時間分割を選択します。パッドは白色に点灯します。\n\n音符やコードを押したままRollerのパッドを押すと、選択した間隔で一連の音符がトリガーされます。\n\nKeyboard View\n\nRollerの編集と制御\n\n13列目の[Pad]をタップすると、rollerの時間間隔のON/OFFが切り替わります。ボタンは明るく点灯します。非アクティブの場合、ボタンは白色で薄く点灯します。\n\nRollerを使用するには、transportが再生中である必要があります。gridのkeyboardを使用して任意の音符を演奏すると、rollerの音符が再生されます。\n\n例\n\nOff\ngridのkeyboardで押さえた音符とコード。通常通り演奏されます\n\nOn\ngridのkeyboardで押さえた音符とコード。1/16パッドがOnに設定されたRoller。\n\n[Shift]を押しながら[Arp]をタップすると、'hold'のon/offが切り替わります。Holdは、keyboard上で同時に演奏された音符を保持します。音符を押し続ける必要はありません。保持されたパッドは点滅します。",
-      "hasContent": true,
-      "tags": []
-    },
-    {
-      "pageNum": 107,
-      "image": "/manual/pages/page-107.png",
-      "title": "Page 107",
-      "sectionName": null,
-      "translation": "Performance Tools 5\n\n5.6 Random Perform\n\nOXI ONEは、既存のパターンにランダムなバリエーションをその場で作成できます。ライブパフォーマンス、即興演奏、実験、またはジャムセッションに最適です。Random performanceの機能は非破壊的で、元のパターンとそのデータの完全性を保持したまま、パラメータとパターンを一時的に変化させます。Random performは[Randomizer]を押すことで直接アクセスできます。[Randomizer]を使用したランダムパターン生成については、前の章で説明しています。multitrackモードとmatricealモードでは、random performは各トラックに独立して影響します。\n\n[Randomizer]をクイックタップすると、random performメニューページが開きます。\n\n[Randomizer]を押し続けると、メニューが一時的に表示され、離すと終了します。\n\nRandomizer - Performページ\n\n設定されたパラメータは元の値からのバリエーションであり、タイミングは保持されます。\nこれらは、演奏中または演奏前にバリエーションを作成するために調整できます。ノブを押し続けると、その値がリセットされます。これは元の設定を復元するために特に重要です。\n\n* 'Retr'の動作はskipsにも影響します。'Retri'の値が負の場合、skipsはランダムに追加されます。0-32%の範囲では、skipsといくつかのretriggeredがランダムにtriggersに変換されます。33%から100%の値では、retriggersが適用される確率が増加し、skipsがトリガーされる可能性がさらに高くなります。\n\nRandom performメニュー\n\nRandom Perform\nVel      Gate\nNote     Retri\nOct      Rept\nTrig%    -\n\n0%\nNo\n0%\n0%\n0%\n100%\n0%\n\nRandom Perform\n\nrandom performの原理は、ライブパフォーマンス中または既存のパターンを再生しながら、ランダムなリズムとメロディのパターンバリエーションを導入することです。パターンに音楽的に影響を与えるパラメータと設定は、楽器のように「演奏」でき、選択したトラックまたはsequencer内のすべてのステップに影響します。このプロセスにより、元のシーケンス設定を復元できる状態で、元の位置からパラメータを一時的または周期的に変化させることで、実験と探求が可能になります。\n\nRandom Performパラメータ\n\nVel                    Oct                    Gate                   Rept\nRandom velocity量      Random octave量        Random gate length     Repeat randomization\n\nステップのvelocityに適用されるランダムバリエーションの量を設定します。これはpolar 0-100%またはbipolar -100%から+100%で動作できます。デフォルトは0%です。\n\noctaveバリエーションの確率と範囲を設定します。これはpolar 0-100%またはbipolar -100%から+100%で動作できます。デフォルトは0%です。\n\ngate lengthのバリエーションを設定します。これはpolar 0-100%またはbipolar -100%から+100%で動作できます。\n\nトリガーされるrepeatsのランダム化の量を設定します。0-100%、デフォルトは0%です。\n\nNote                   Trig%                  Retri\nNote randomization     Velocity variation     Retrigger randomization *\n\nnotesに適用されるランダムバリエーションの量を設定します。これはpolar 0-100%またはbipolar -100%から+100%で動作できます。デフォルトは0%です。\n\nnotesが再生される確率を設定します。0 - 100%、デフォルトは100%で、すべてのnotesが再生され、ランダム化はありません。\n\nretriggersのランダム化の量を設定し、skipにも影響します。-100%から100%、デフォルトは0%です。\n\nNote\n\nランダムジェネレータ[Randomizer]を選択します。このモードでは、[Randomizer]をタップするか、[Shift] + [Randomizer]を使用して、ランダムジェネレータとrandom performページを切り替えます。",
-      "hasContent": true,
-      "tags": []
-    },
-    {
-      "pageNum": 108,
-      "image": "/manual/pages/page-108.png",
-      "title": "Page 108",
-      "sectionName": null,
-      "translation": "Performance Tools 5\n\nRandom Perfページが表示されている状態で、[Randomizer]を押しながらカラム1の[Pad]をタップすると、ランダム化をミュートまたはミュート解除できます。\n\nRandom Perfミュート済み\nグリーン点灯\n\nRandom Perfミュート解除\nイエロー点灯\n\nMultitrackモードでのRandom Performance\n\nMatricealマトリクスのランダム化\n\nMultitrackモードでは、random perform機能は各トラックに対して動作します。トラックはランダム化のミュートまたはミュート解除が可能です。これはsequencerをミュートするのではなく、適用されるランダム化のみをミュートします。\n\nMatricealモードでは、random performオプションを各トラックのマトリクスに使用できます。これにより、選択したマトリクスにランダムな一連のステップが適用されます。ステップ[Pad]を押しながら(Knob 4)を回すことで設定される「Rnd」%がこの機能で適用されます。ランダム化は元に戻すことができます。\n\nMultitrackランダム化perfのミュート\n\nrandom perf機能で、[Randomize]ボタンを押しながらmultitrackグリッドのカラム1をタップします。multitrackのカラム1はトラック選択機能です。Randomizeを押しながら各トラックをタップすると、適用されたランダム化をミュートして元のシーケンスを再生するか、ランダム化のミュートを解除してrandom perfのバリエーションを適用します。\n\n+\n+\n+\n+\n\n上段16パッドレーンセクションのいずれかの[Pad]を押しながら[Randomizer]をタップします。\n\n上段16パッドレーンセクションのいずれかの[Pad]を押しながら(Knob 4)をタップします。\n\n上段16パッドレーンセクションのいずれかの[Pad]を押しながら(Knob 4)を回してランダム化の量を調整します。適用されるステップ数に反映されます。\n\nor\n\nパラメータページでknob 4に設定されたランダム化の量は、どちらのランダム化オプションを使用する場合でも適用されます。\n\nTRIGGER\nLen    Puls\n16    4    ...    50%\nClr    Rnd\n\nStep Lane\nStep Lane\nStep Lane\n\nNOTES\nMT\nMC\n4\n4",
-      "hasContent": true,
-      "tags": []
-    },
-    {
       "pageNum": 109,
       "image": "/manual/pages/page-109.png",
       "title": "Page 109",
       "sectionName": null,
-      "translation": "Performance Tools 5\n\n5.7 Performance Grid View\n\nOXI ONEには、[Perf]ボタンで直接アクセスできるユニークで強力なパフォーマンスツールがあります。performance viewはgrid上にすべてのsequencerの表示を提供し、演奏中にpadを使用してsequencerのパフォーマンスをコントロールできます。Sequencerをミュート、トランスポーズなどして、ライブで即興的なパフォーマンスを作成できます。\n\n1\n2\n3\n4\n5\n6\n7\n8\nC     C#    F#    D#    G#    A#    E    D     F     G\ncv    gate\nA     B\ncv    gate\n\nMute / Unmute Pads\nColumn 1\nUnmuted = Blue\nMuted = Purple\nMultitrack & Matriceal Tracks = Unmuted, Lit Turquoise, Muted = Dim Turquoise.\n\nTranspose\nWhite Lit - Original State\nTransposeはsequencerのルート/ベースノートに対して相対的です。\n\nRotate\nYellow Lit - Original State\n\nMulti Sequencer\n最初の8つのpad = track 1-8。\nBrightly lit yellow - Soloed Track\n\nTranspose Down\nRed Lit\n\nRotate Left\nYellow Lit\n\nTranspose Up\nBlue Lit\n\nRotate Right\nPurple Lit\n\nPadとgridゾーンはパフォーマンスコントロールを表します\n\nMono Seq 1\nMono Seq 1\nChord Seq 2\nChord Seq 2\nMono Seq 3\nMulti Seq 3\nPoly Seq 4\nMult Seq 5\nMultitrack\nMatriceal\nMult Seq 6\nMatr Seq 7\nStch Seq 8\n\nSequencer 5と6はMultitrackです。これらは行として次のように表示されます:Col 1-8 = TrackのMute、Col 9-12 = Fill、Col 13-16 = Looped。Sequencer 7はmatricealで、最初の4つのpadがmuteです。shiftを押すとmulti track sequencerは最初の8つのpadを表示し、trackをsoloまたはunsolo可能にします。\n\nTrack Mute / Unmute    Track Fill    Capture    Loop\nRandom Triggers\nSolo On/Off\n\n[Perf]をタップしてperformer gridを開きます。\n[Perf]を長押しすると一時的にgridが選択されます。Perfはボタンを離すと終了します。\nperformance viewで、[Shift]を長押しして2次gridパフォーマンスオプションを表示してアクセスします。[Shift]を押しながらpadをタップします。これらのオプションは以下に示されています。\n\nPerform view\nShift - Perform",
+      "translation": "Arpeggiatorの解剖\n\nG D# F C# G# F# D A A# B E C\nC\nE\nG\n\nコード - キーボードグリッドで演奏されたCメジャー\n\nArpはコードを個別の音符に分解します\n\nクロマティックキーボード\n\nArpeggioは現在のオクターブを超えて拡張できます。\n\n例：16分音符\n\n例：32分音符\n\nこれらの例は、arpeggiatorの動作と、主要な設定がアルペジオ出力に与える影響を示しています。\n\nONE arpeggiatorは、従来のarp機能、Euclideanパルス、グルーブテンプレートを備えた高度なツールです。これは、ONEの内部エコシステムが、より多くの創造性と音楽的インスピレーションのために機能を統合する優れた例です。\n\nスケール：Chromatic Root C2、コードCメジャー\n\nHold & Latch\n\nキーボードarpは、キーボード上で演奏、ホールド、またはラッチされた音符を受け取ります。Holdは[Shift] + [Arp]で選択されます。ホールドされた音符はラッチされますが、別の音符を選択すると解除されます。音符は同時にホールドできます。\n\n音符のラッチングは、arpページ2/2で利用可能なオプションで、選択された音符を段階的に維持します。キーボード上で音符を選択してラッチするには、sequencerが再生されている必要があります。\n\nOctV. アルペジオを再生するためのオクターブ範囲。\n\nAccnt. accentオプションは、アルペジオに適用されるvelocityプロファイルの量を設定します。\n\nプロファイルは、Grovオプションで選択されたテンプレートに基づいており、ソフトまたは強調された音楽的グルーブを作成します。\n\nこのグルーブは、アルペジオ全体のvelocityの変化に基づいています。\n\nGroove Engine\n\n新しいarp音符が適用されたときのarpeggiatorのリセット動作を設定できます。Resetパラメータは、arpパラメータのページ2にあり、(Knob 3)で編集されます。パターンポジション「aPos」のみをリセット、Groove「Grve」のみ、または「All」で両方のグルーブとarpパターンポジションをリセットできます。Resetはオフに設定することもでき、自由に実行できます。\n\nGTime. velocityがリズミックなテクスチャを作成することに加えて、Gtimは一部の音符のマイクロタイミングをオフセットするスイングスタイルのグルーブを適用することもできます。+/-100%の範囲で量を制御します。このリズミックスタイルは、Grovオプションから選択されたテンプレートから取得されます。\n\nDiv. アルペジオのディビジョン、sequencerのタイムインターバルとは独立しています。\n\nGate. 音符のgateのパーセンテージは、タイムディビジョンに関する長さを決定します。\n\nAccent - Velocityプロファイル\n\nGtime - Swingリズム\n\nType - Up\n\n50% 25%\n\n99%\n\nPerformance Tools 5",
       "hasContent": true,
       "tags": []
     },
@@ -257,7 +185,7 @@
       "image": "/manual/pages/page-110.png",
       "title": "Page 110",
       "sectionName": null,
-      "translation": "Performance Tools 5\n\nSequencerのミュート\n\nMono、Poly、Chord、Stochastic sequencerモードでは、最初のパッド列がsequencerのミュート/ミュート解除を行います。MultitrackとMatricealモードでは、最初の8列または4列がトラックミュートとして機能します。これによりコントロールが一元化され、パフォーマンス機能としてミュートを使用する際に重要となります。Multitrack sequencerでは、各トラックを個別にミュートできます。各トラックは列1-8で表されます。\n\nSequencerのトランスポーズ\n\nMultitrackとMatriceal以外のすべてのsequencerモードでは、中央のパッドグループが各sequencerのトランスポーズを表します。白く点灯したパッドは元の設定、つまりトランスポーズなしを示します。右側の各パッドは1半音ずつ上昇し、左側の各パッドは1半音ずつ下降します。\n\nSequencerのローテーション\n\nMultitrackとMatriceal以外のすべてのsequencerモードでは、sequencerを1ステップ単位で右または左にシフトできます。元の位置は黄色のパッド列で示されます。ローテーションのオプションにアクセスするには、[Shift]を押しながらパッドを編集します。\n\nパッドをタップしてsequencerまたはマルチトラックをミュート/ミュート解除します。\n\nパッドをタップしてsequencerをトランスポーズします。\n\n[Shift]を押しながらパッドをタップしてsequencerをローテートします。\n\nSequencer ミュート解除 - 青\n\nトランスポーズダウン - 青\n\n左にローテート - 黄色\n\n0\n\n0\n\n-3st\n\n-2 steps\n\n+2st\n\n+3 steps\n\nSequencer ミュート中 - 紫\n\nトランスポーズアップ - 青\n\n右にローテート - 黄色\n\nマルチトラック すべてミュート解除 - ターコイズ\n\nマルチトラック T3ミュート中 - ターコイズ\n\n列1. Mono、Poly、Chord、Stoch\n\n行. Mono、Poly、Chord、Stoch\n\n行. Mono、Poly、Chord、Stoch\n\n列1-8. Multitrackトラック\n\nトランスポーズダウン\n列2-8\n\nローテートダウン\n列2-8\n\nトランスポーズアップ\n列10-16\n\nローテートアップ\n列10-16\n\nNOTES",
+      "translation": "NOTES\n\nUp\nNOTESは最低音から始まり、選択されたオクターブ全体にわたってスケールを段階的に上昇し、選択された範囲の最低音に戻ります。例では3つの音符があります。\n\nAltern In\nNOTESは上部の音符から始まり、「ジグザグ」スタイルで下方向に順番に交互に鳴り、その後上部の音符から再スタートします。例では4つの音符があります。\n\nThumb\nNOTESは下部の音符を「アンカー」基準として生成され、他のすべての音符は下部の音符と交互に順番に鳴ります。例では4つの音符があります。\n\nUp / Down\nNOTESは最低音から始まり、選択されたオクターブ全体にわたってスケールを段階的に上昇し、その後範囲を下降します。このサイクルを継続的にループします。例では3つの音符があります。\n\nAltern In / Out\nNOTESは上部の音符から始まり、次に下部の音符を鳴らし、その後「ジグザグ」スタイルで内側に向かって進み、上部の音符から再スタートします。例では4つの音符があります。\n\nRand Once\nNOTESは最初のarpeggioサイクル全体でランダムに生成され、その後のarpeggioサイクルでは同じパターンを維持します。例では4つの音符があります。\n\nDown\nNOTESは最高音から始まり、選択されたオクターブ全体にわたってスケールを段階的に下降し、選択された範囲の最高音に戻ります。例では3つの音符があります。\n\nAltern Out\nNOTESは下部の音符から始まり、「ジグザグ」スタイルで上方向に順番に交互に鳴り、その後下部の音符から再スタートします。例では4つの音符があります。\n\nRandom\nNOTESはarpeggio全体でランダムに生成され、予測不可能ながらも進化する形で変化します。例では4つの音符があります。\n\n2 Up / 2 Down\nNOTESはarpタイムインターバルで2倍になり、最低音から始まり、スケールと選択されたオクターブを上昇し、その後範囲を下降します。このサイクルを継続的にループします。例では3つの音符があります。\n\nPinky\nNOTESは上部の音符を「アンカー」基準として生成され、他のすべての音符は上部の音符と交互に順番に鳴ります。例では4つの音符があります。\n\nOrder\nNOTESはキーボードで演奏された順序でarpeggioで演奏されます。例では3つの音符があります。\n\nType. Typeはarpeggiatorのオン/オフを設定し、オンの場合は12のアルゴリズムのいずれかを選択します。アクティブなアルゴリズムはarpページヘッダーに表示されます。これは一般的に、生成されるarpeggio音符の方向とパターンの動作を制御します。arpeggioは選択された音符に基づいてループします。\n\nPerformance Tools 5",
       "hasContent": true,
       "tags": []
     },
@@ -266,7 +194,7 @@
       "image": "/manual/pages/page-111.png",
       "title": "Page 111",
       "sectionName": null,
-      "translation": "NOTES\n\nPerformance Tools 5\n\nMultitrack FillsとLoops\n\nmultitrackには、このsequencerモードに固有のperformance viewオプションのセットがあります。各トラックを個別にミュート、ミュート解除できます。さらに、様々な強度のfillを生成する4つのパッドがあります。Fillはfill選択のポイントに基づいて、音楽的な間隔でノートを繰り返します。また、他の4つのパッドは、sequencerの再生中にループをライブでキャプチャして再生します。4つのパッドそれぞれが、定義されたループステップの長さをキャプチャします。Matricealのcolumns 5-16はランダムトリガーfillとして動作します。\n\nLoopは最初、ループが選択されたポイントで実行中のsequenceにキャプチャされます。ループを変更すると、既存のループ範囲内で長さが調整されます。\n\n選択したloopパッドをタップして選択解除します。ループの終了は「loop sync release」設定に基づきます。これはConfig > Performance optionsにあります。No Sync、Bar、Beatのオプションがあります。\n\nパッドをタップしてfillを適用します。\n\nパッドをタップしてloopを適用します。\n\nActive Fill - 紫色に点灯\nActive Loop - 明るい緑色に点灯\nInactive Fill - 暗い紫色\nInactive Loop - 暗い緑色\n\nIntensity of Fill\n\nLoop Length\n\nMultitrack Mode\n\nMultitrack Mode\n\nNo Loop\nTrack\n\nLooped - 3 Steps\nTrack\n\nLooped - 4 Steps\nTrack\n\nLooped - 2 Steps\nTrack\n\nLooped - 1 Step\nTrack\n\nFill\nColumns 9-12.\n\nLoop\nColumns 13-16.",
+      "translation": "注意\n\nピッチベースのアルペジオを生成する標準的なarpeggiator機能に加えて、ONEのarpにはEuclideanリズムジェネレーターが統合されており、より興味深いグルーヴや音楽的なフレーズを作成します。Euclideanジェネレーターは、arpで生成されたノートのタイミングに対して動作し、より複雑なパターン生成のレイヤーを追加します。\n\nEuclideanパターンは、ノートの配置とタイミングに数学的な公式を使用して生成されるパターンです。簡単に言えば、定義された長さの中で等間隔に配置された複数のパルスが生成されます。ONEのarpが最初にアルペジオパターンを生成し、Euclideanジェネレーターがオプションでノートのタイミングにさらに操作を加え、リズムをさらに発展させると考えてください。\n\nEuclideanの概念\n\nONE Euclideanジェネレーター\n\nSteps\nSteps\nSteps\nLength\nPulses 3\nArp\nPulses 4\nLength 4\nPulse 3\nOutput\nPulses\nPulses\nRepeats\n1\n1\n5\n5\n2\n2\n6\n6\n3\n3\n7\n7\n4\n4\n8\n8\n\nEuclideanジェネレーターには時間の長さが必要です。通常は時間間隔内のビート数です。これはステップ単位で設定でき、動作する全体の長さを決定します。\n\nLengthは、Euclideanフレーズ全体のステップ数を決定します。1-32の範囲から選択でき、デフォルトは16です。これはarpのステップ間隔に基づいています。例では4ステップの長さを示しています。\n\nPulsesは、ノートを生成する時間内の実際のトリガーです。Euclideanジェネレーターは、選択されたパルス数を取得し、時間内にできるだけ均等に分散します。\n\nPulsesは、length内に分散されたステップトリガーです。選択肢は利用可能なlengthの範囲に合わせて1-32で、デフォルトは16です。パルスのソースは、lengthによって設定されたバッチで処理されるアルペジオ内のノートから来ます。上記の例では3つのパルス、repeatを0に設定しています。\n\n本質的に、arpの実際の出力は、グルーヴとEuclideanジェネレーターによってさらに影響を受けたアルペジオノートになります。したがって、lengthとpulseが同じ数に設定されている場合、出力はEuclideanの影響が適用されていない純粋なアルペジオになります。例えば、デフォルトではlengthとpulseの両方が16に設定されています。\n\n追加のReptオプションがあり、0-16の間で調整でき、デフォルトは0です。この機能は、Euclideanパルスに追加されるリピート数を選択し、他のEuclidean設定と連携して動作します。これは、多数のパルスが既に生成されている場合やlengthが低く設定されている場合には、簡単には認識できないかもしれません。使用例として、repeatが0、lengthが16、pulseが1の場合、16ステップのフレーズに1つのノートが生成されます。repeatを8に設定すると、元のパルスの後に8つの追加ノートが配置され、arpパターン内に合計9つのノートが生成されます。\n\n1 4\t2 5\t3 6 7\n1 4\t2 5\t3 6\n\nPerformance Tools 5",
       "hasContent": true,
       "tags": []
     },
@@ -274,6 +202,78 @@
       "pageNum": 112,
       "image": "/manual/pages/page-112.png",
       "title": "Page 112",
+      "sectionName": null,
+      "translation": "5.4 Flow\n\nFlowはツールなのか、それともボタンなのか?実は両方です。一般的な概念として、flowは特定のイベントやアクションが特定の条件下でのみ動作するように設定できる機能です。その条件は、flowボタンの状態にリンクされています。例えば、ノートはシーケンスで再生されますが、flowボタンが押されている間のみ再生され、それ以外ではパターン内でこれらのノートは再生されません。\n\nFlowはOXI ONEの機能セット全体のさまざまな場所で設定できます。ノートトリガー専用の機能ではありません。これにより、flowは特にライブパフォーマンスや即興セッションにおいて強力な機能となります。\n\n例として、monoモードのaccumulatorがあります。ステップオプションのAcm%パラメーターにも、FlowとFlowが用意されています。これにより、[Flow]ボタンからのコントロールでaccumulatorを動作させたり、させなかったりすることができます。\n\n一般的に、flowは関数の確率オプション内にあるパラメーターです。\n\nイベントはflowボタンの条件に基づいて動作するように設定できます。\n\n「flow」が割り当てられた関数は、[Flow]ボタンが押されている間のみ動作します。\n\nFlow Step +\n[Flow]を押しながら[Pad]をタップして「flow」ステップを追加します。ステップは、[Flow]ボタンが押されている間のみ、再生中のパターンでトリガーされます。\n\nFlowはステップメニューオプションを含むさまざまなメニューでも適用できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 113,
+      "image": "/manual/pages/page-113.png",
+      "title": "Page 113",
+      "sectionName": null,
+      "translation": "Hold Step\n\nTurn (Trig)\n\nNOTES\n\n例: Stepメニューで設定されたNoteイベント\n\nパターンでシーケンスされたNoteは、Noteがトリガーされた時に通常すべて再生されます。Trigのデフォルトは100%で、すべてのNoteに適用されます。\n\nパターンでシーケンスされたNote。一部のTrig設定が「Flow」に設定されています。Trigのデフォルトは100%で、他のNoteに適用されます。\n\nパターンでシーケンスされたNote。一部のTrig設定が「Not Flow」、つまりFLOWに設定されています。Trigのデフォルトは100%で、他のNoteに適用されます。\n\n通常の再生では、Flow Trigが設定されたNote以外のすべてのNoteが再生されます。\n\n[Flow]を押したままにすると、Flow Trig Noteを含むすべてのNoteが再生されます。[Flow]を押していない場合、Flow Noteは再生されません。\n\n[Flow]を押していない場合、すべてのNoteが再生されます。[Flow]を押したままにすると、Flow設定されたNoteを除くNoteが再生されます。\n\nFlowに設定されたイベントは、[Flow]ボタンを押したままにすると有効になります。「Not Flow」オプションは逆の動作をします。Flowに設定されたイベントは、[Flow]ボタンを押したままにすると有効になりません。\n\n► Play\n\n► Play\n\n► Play\n\n► Play\n\n☑\n\n☑\n\n☑\n\n☑\n\n☑\n\n☑\n\n☑\n\n☑\n\n☑ ☑\n\n☑\n\n☑ ☑\n\n☑\n\n☑ ☑\n\n✗\n\n☑ ☑\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\n✗\n\nD2 - Step 2\n\nVel\n75\n\nGate\n50\n\nOct\n+0\n\nTrig\n100%\n\nD2 - Step 2\n\nVel\n75\n\nGate\n50\n\nOct\n+0\n\nTrig\nFLOW\n\nPerformance Tools 5\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\nFlow\n\n4",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 114,
+      "image": "/manual/pages/page-114.png",
+      "title": "Page 114",
+      "sectionName": null,
+      "translation": "5.5 Roller\n\nRollerは、mono、poly、multitrack、matriceal、stochasticモードで使用できるツールで、定義された音符の間隔でパターンのロールをトリガーします。Rollerはkeyboard viewに配置されており、gridの13列目で制御します。各パッドが音符の間隔をトリガーします。Arpはオフにし、transportを再生しながらkeyboardで音符を演奏します。\n\nRoller. 13列目。\n音符。紫色に点灯\n\n各行は、ロールを適用するための時間分割を選択します。パッドは白色に点灯します。\n\n音符やコードを押したままRollerのパッドを押すと、選択した間隔で一連の音符がトリガーされます。\n\nKeyboard View\n\nRollerの編集と制御\n\n13列目の[Pad]をタップすると、rollerの時間間隔のON/OFFが切り替わります。ボタンは明るく点灯します。非アクティブの場合、ボタンは白色で薄く点灯します。\n\nRollerを使用するには、transportが再生中である必要があります。gridのkeyboardを使用して任意の音符を演奏すると、rollerの音符が再生されます。\n\n例\n\nOff\ngridのkeyboardで押さえた音符とコード。通常通り演奏されます\n\nOn\ngridのkeyboardで押さえた音符とコード。1/16パッドがOnに設定されたRoller。\n\n[Shift]を押しながら[Arp]をタップすると、'hold'のon/offが切り替わります。Holdは、keyboard上で同時に演奏された音符を保持します。音符を押し続ける必要はありません。保持されたパッドは点滅します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 115,
+      "image": "/manual/pages/page-115.png",
+      "title": "Page 115",
+      "sectionName": null,
+      "translation": "Performance Tools 5\n\n5.6 Random Perform\n\nOXI ONEは、既存のパターンにランダムなバリエーションをその場で作成できます。ライブパフォーマンス、即興演奏、実験、またはジャムセッションに最適です。Random performanceの機能は非破壊的で、元のパターンとそのデータの完全性を保持したまま、パラメータとパターンを一時的に変化させます。Random performは[Randomizer]を押すことで直接アクセスできます。[Randomizer]を使用したランダムパターン生成については、前の章で説明しています。multitrackモードとmatricealモードでは、random performは各トラックに独立して影響します。\n\n[Randomizer]をクイックタップすると、random performメニューページが開きます。\n\n[Randomizer]を押し続けると、メニューが一時的に表示され、離すと終了します。\n\nRandomizer - Performページ\n\n設定されたパラメータは元の値からのバリエーションであり、タイミングは保持されます。\nこれらは、演奏中または演奏前にバリエーションを作成するために調整できます。ノブを押し続けると、その値がリセットされます。これは元の設定を復元するために特に重要です。\n\n* 'Retr'の動作はskipsにも影響します。'Retri'の値が負の場合、skipsはランダムに追加されます。0-32%の範囲では、skipsといくつかのretriggeredがランダムにtriggersに変換されます。33%から100%の値では、retriggersが適用される確率が増加し、skipsがトリガーされる可能性がさらに高くなります。\n\nRandom performメニュー\n\nRandom Perform\nVel      Gate\nNote     Retri\nOct      Rept\nTrig%    -\n\n0%\nNo\n0%\n0%\n0%\n100%\n0%\n\nRandom Perform\n\nrandom performの原理は、ライブパフォーマンス中または既存のパターンを再生しながら、ランダムなリズムとメロディのパターンバリエーションを導入することです。パターンに音楽的に影響を与えるパラメータと設定は、楽器のように「演奏」でき、選択したトラックまたはsequencer内のすべてのステップに影響します。このプロセスにより、元のシーケンス設定を復元できる状態で、元の位置からパラメータを一時的または周期的に変化させることで、実験と探求が可能になります。\n\nRandom Performパラメータ\n\nVel                    Oct                    Gate                   Rept\nRandom velocity量      Random octave量        Random gate length     Repeat randomization\n\nステップのvelocityに適用されるランダムバリエーションの量を設定します。これはpolar 0-100%またはbipolar -100%から+100%で動作できます。デフォルトは0%です。\n\noctaveバリエーションの確率と範囲を設定します。これはpolar 0-100%またはbipolar -100%から+100%で動作できます。デフォルトは0%です。\n\ngate lengthのバリエーションを設定します。これはpolar 0-100%またはbipolar -100%から+100%で動作できます。\n\nトリガーされるrepeatsのランダム化の量を設定します。0-100%、デフォルトは0%です。\n\nNote                   Trig%                  Retri\nNote randomization     Velocity variation     Retrigger randomization *\n\nnotesに適用されるランダムバリエーションの量を設定します。これはpolar 0-100%またはbipolar -100%から+100%で動作できます。デフォルトは0%です。\n\nnotesが再生される確率を設定します。0 - 100%、デフォルトは100%で、すべてのnotesが再生され、ランダム化はありません。\n\nretriggersのランダム化の量を設定し、skipにも影響します。-100%から100%、デフォルトは0%です。\n\nNote\n\nランダムジェネレータ[Randomizer]を選択します。このモードでは、[Randomizer]をタップするか、[Shift] + [Randomizer]を使用して、ランダムジェネレータとrandom performページを切り替えます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 116,
+      "image": "/manual/pages/page-116.png",
+      "title": "Page 116",
+      "sectionName": null,
+      "translation": "Performance Tools 5\n\nRandom Perfページが表示されている状態で、[Randomizer]を押しながらカラム1の[Pad]をタップすると、ランダム化をミュートまたはミュート解除できます。\n\nRandom Perfミュート済み\nグリーン点灯\n\nRandom Perfミュート解除\nイエロー点灯\n\nMultitrackモードでのRandom Performance\n\nMatricealマトリクスのランダム化\n\nMultitrackモードでは、random perform機能は各トラックに対して動作します。トラックはランダム化のミュートまたはミュート解除が可能です。これはsequencerをミュートするのではなく、適用されるランダム化のみをミュートします。\n\nMatricealモードでは、random performオプションを各トラックのマトリクスに使用できます。これにより、選択したマトリクスにランダムな一連のステップが適用されます。ステップ[Pad]を押しながら(Knob 4)を回すことで設定される「Rnd」%がこの機能で適用されます。ランダム化は元に戻すことができます。\n\nMultitrackランダム化perfのミュート\n\nrandom perf機能で、[Randomize]ボタンを押しながらmultitrackグリッドのカラム1をタップします。multitrackのカラム1はトラック選択機能です。Randomizeを押しながら各トラックをタップすると、適用されたランダム化をミュートして元のシーケンスを再生するか、ランダム化のミュートを解除してrandom perfのバリエーションを適用します。\n\n+\n+\n+\n+\n\n上段16パッドレーンセクションのいずれかの[Pad]を押しながら[Randomizer]をタップします。\n\n上段16パッドレーンセクションのいずれかの[Pad]を押しながら(Knob 4)をタップします。\n\n上段16パッドレーンセクションのいずれかの[Pad]を押しながら(Knob 4)を回してランダム化の量を調整します。適用されるステップ数に反映されます。\n\nor\n\nパラメータページでknob 4に設定されたランダム化の量は、どちらのランダム化オプションを使用する場合でも適用されます。\n\nTRIGGER\nLen    Puls\n16    4    ...    50%\nClr    Rnd\n\nStep Lane\nStep Lane\nStep Lane\n\nNOTES\nMT\nMC\n4\n4",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 117,
+      "image": "/manual/pages/page-117.png",
+      "title": "Page 117",
+      "sectionName": null,
+      "translation": "Performance Tools 5\n\n5.7 Performance Grid View\n\nOXI ONEには、[Perf]ボタンで直接アクセスできるユニークで強力なパフォーマンスツールがあります。performance viewはgrid上にすべてのsequencerの表示を提供し、演奏中にpadを使用してsequencerのパフォーマンスをコントロールできます。Sequencerをミュート、トランスポーズなどして、ライブで即興的なパフォーマンスを作成できます。\n\n1\n2\n3\n4\n5\n6\n7\n8\nC     C#    F#    D#    G#    A#    E    D     F     G\ncv    gate\nA     B\ncv    gate\n\nMute / Unmute Pads\nColumn 1\nUnmuted = Blue\nMuted = Purple\nMultitrack & Matriceal Tracks = Unmuted, Lit Turquoise, Muted = Dim Turquoise.\n\nTranspose\nWhite Lit - Original State\nTransposeはsequencerのルート/ベースノートに対して相対的です。\n\nRotate\nYellow Lit - Original State\n\nMulti Sequencer\n最初の8つのpad = track 1-8。\nBrightly lit yellow - Soloed Track\n\nTranspose Down\nRed Lit\n\nRotate Left\nYellow Lit\n\nTranspose Up\nBlue Lit\n\nRotate Right\nPurple Lit\n\nPadとgridゾーンはパフォーマンスコントロールを表します\n\nMono Seq 1\nMono Seq 1\nChord Seq 2\nChord Seq 2\nMono Seq 3\nMulti Seq 3\nPoly Seq 4\nMult Seq 5\nMultitrack\nMatriceal\nMult Seq 6\nMatr Seq 7\nStch Seq 8\n\nSequencer 5と6はMultitrackです。これらは行として次のように表示されます:Col 1-8 = TrackのMute、Col 9-12 = Fill、Col 13-16 = Looped。Sequencer 7はmatricealで、最初の4つのpadがmuteです。shiftを押すとmulti track sequencerは最初の8つのpadを表示し、trackをsoloまたはunsolo可能にします。\n\nTrack Mute / Unmute    Track Fill    Capture    Loop\nRandom Triggers\nSolo On/Off\n\n[Perf]をタップしてperformer gridを開きます。\n[Perf]を長押しすると一時的にgridが選択されます。Perfはボタンを離すと終了します。\nperformance viewで、[Shift]を長押しして2次gridパフォーマンスオプションを表示してアクセスします。[Shift]を押しながらpadをタップします。これらのオプションは以下に示されています。\n\nPerform view\nShift - Perform",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 118,
+      "image": "/manual/pages/page-118.png",
+      "title": "Page 118",
+      "sectionName": null,
+      "translation": "Performance Tools 5\n\nSequencerのミュート\n\nMono、Poly、Chord、Stochastic sequencerモードでは、最初のパッド列がsequencerのミュート/ミュート解除を行います。MultitrackとMatricealモードでは、最初の8列または4列がトラックミュートとして機能します。これによりコントロールが一元化され、パフォーマンス機能としてミュートを使用する際に重要となります。Multitrack sequencerでは、各トラックを個別にミュートできます。各トラックは列1-8で表されます。\n\nSequencerのトランスポーズ\n\nMultitrackとMatriceal以外のすべてのsequencerモードでは、中央のパッドグループが各sequencerのトランスポーズを表します。白く点灯したパッドは元の設定、つまりトランスポーズなしを示します。右側の各パッドは1半音ずつ上昇し、左側の各パッドは1半音ずつ下降します。\n\nSequencerのローテーション\n\nMultitrackとMatriceal以外のすべてのsequencerモードでは、sequencerを1ステップ単位で右または左にシフトできます。元の位置は黄色のパッド列で示されます。ローテーションのオプションにアクセスするには、[Shift]を押しながらパッドを編集します。\n\nパッドをタップしてsequencerまたはマルチトラックをミュート/ミュート解除します。\n\nパッドをタップしてsequencerをトランスポーズします。\n\n[Shift]を押しながらパッドをタップしてsequencerをローテートします。\n\nSequencer ミュート解除 - 青\n\nトランスポーズダウン - 青\n\n左にローテート - 黄色\n\n0\n\n0\n\n-3st\n\n-2 steps\n\n+2st\n\n+3 steps\n\nSequencer ミュート中 - 紫\n\nトランスポーズアップ - 青\n\n右にローテート - 黄色\n\nマルチトラック すべてミュート解除 - ターコイズ\n\nマルチトラック T3ミュート中 - ターコイズ\n\n列1. Mono、Poly、Chord、Stoch\n\n行. Mono、Poly、Chord、Stoch\n\n行. Mono、Poly、Chord、Stoch\n\n列1-8. Multitrackトラック\n\nトランスポーズダウン\n列2-8\n\nローテートダウン\n列2-8\n\nトランスポーズアップ\n列10-16\n\nローテートアップ\n列10-16\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 119,
+      "image": "/manual/pages/page-119.png",
+      "title": "Page 119",
+      "sectionName": null,
+      "translation": "NOTES\n\nPerformance Tools 5\n\nMultitrack FillsとLoops\n\nmultitrackには、このsequencerモードに固有のperformance viewオプションのセットがあります。各トラックを個別にミュート、ミュート解除できます。さらに、様々な強度のfillを生成する4つのパッドがあります。Fillはfill選択のポイントに基づいて、音楽的な間隔でノートを繰り返します。また、他の4つのパッドは、sequencerの再生中にループをライブでキャプチャして再生します。4つのパッドそれぞれが、定義されたループステップの長さをキャプチャします。Matricealのcolumns 5-16はランダムトリガーfillとして動作します。\n\nLoopは最初、ループが選択されたポイントで実行中のsequenceにキャプチャされます。ループを変更すると、既存のループ範囲内で長さが調整されます。\n\n選択したloopパッドをタップして選択解除します。ループの終了は「loop sync release」設定に基づきます。これはConfig > Performance optionsにあります。No Sync、Bar、Beatのオプションがあります。\n\nパッドをタップしてfillを適用します。\n\nパッドをタップしてloopを適用します。\n\nActive Fill - 紫色に点灯\nActive Loop - 明るい緑色に点灯\nInactive Fill - 暗い紫色\nInactive Loop - 暗い緑色\n\nIntensity of Fill\n\nLoop Length\n\nMultitrack Mode\n\nMultitrack Mode\n\nNo Loop\nTrack\n\nLooped - 3 Steps\nTrack\n\nLooped - 4 Steps\nTrack\n\nLooped - 2 Steps\nTrack\n\nLooped - 1 Step\nTrack\n\nFill\nColumns 9-12.\n\nLoop\nColumns 13-16.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 120,
+      "image": "/manual/pages/page-120.png",
+      "title": "Page 120",
       "sectionName": null,
       "translation": "5.8 Snapshots\n\nSnapshotは、ある時点でのすべてのsequencerの状態をキャプチャし、sequencerの設定、ノート、ミュート、モジュレーションを一時的に保存するツールです。これにより、すべてのsequencerの以前の状態を呼び出して復元することができます。これは特にライブパフォーマンスにおいて、即興やアドリブの変更、曲の展開を行った後、既知のオリジナルの状態に戻るために非常に便利です。\n\nNOTES\n\nPerformance Tools 5\n\nSnapshotをキャプチャ\n\n[Load]を押しながら[Save]を押すとsnapshotをキャプチャします。\nすべてのsequencerの現在の状態を一時的に保存します。\n\nSnapshotをリリース\n\n[Load]をタップするか、[Undo]をタップしてsnapshotをリリースします。\nすべてのsequencerの編集前のオリジナルの状態が呼び出されます。\n\nSnapshotをキャンセル\n\n[Shift]を押しながら[Load]をタップするか、[Undo]をタップしてアクティブなsnapshotをキャンセルしてクリアします。\n\nMute/Unmuteを設定\n\nSnapshotがアクティブな状態で\n\n[Mute]を押しながらSeq [1] - [8]をダブルタップするか、multitrack sequencerの場合は、各トラックを表す[Pad]列1の行1-8をダブルタップします。\n\nSequencerでのパフォーマンスは継続できます。ライブパフォーマンスに生命感やエネルギーを加えたり、ドロップやブレイクダウンを作成したり、ルーティングパターンアレンジメントから逸脱したりするためのパラメータの編集や調整を行います。オリジナルの状態への復元は迅速かつ簡単です。Sequencerはsnapshotがアクティブな状態で保存することもできますが、現在のパターンはsnapshotパターンのパターンには設定されません。\n\nSnapshotでのMuteの準備\n\nアクティブなsnapshot内でリリース前にミュート状態を準備することが可能です。これにより、オリジナルの状態を適用したままパフォーマンスを継続でき、さらにsnapshot解除時に個々のsequencerやmultitrackトラックをミュートまたはアンミュートできるという追加の利点があります。\n\nSnapshot解除時には、オリジナルまたは編集されたミュート状態が適用されます。これらは[Perf]、performerページでミュートまたはアンミュートできます。Multitracksは通常のメイングリッドでも変更できますが、他のモードのsequencerはperformerページで変更する必要があります。これは、perfとsequencerモードのミュートが異なる方法で処理されるためです。\n\nMain Display\n\nディスプレイはsnapshotがアクティブなときに表示されます。\n\n[Load]と[Undo]ボタンが点滅して、snapshotがアクティブに保存されていることを示します。\n\nSnapshot active\n\nMONO\n105.0\n1/16 CHROMATIC - C2\nPattern 3\n50% INT F\nVEL GATE OCT REPT",
       "hasContent": true,
