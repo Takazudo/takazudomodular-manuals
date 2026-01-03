@@ -98,7 +98,6 @@ data/translations-draft/
 # public/manual/pages/    # Commented out - we need to commit this
 
 # PDF Processing - Test Files (keep test PDFs local)
-manual-pdf/*.pdf
 !manual-pdf/OXI-ONE-MKII-Manual.pdf
 
 # Accidental paths
