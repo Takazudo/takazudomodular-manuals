@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ctl from '@netlify/classnames-template-literals';
+import { ArrowRight } from '@/components/svg';
 
 const containerStyles = ctl(`
   min-h-screen pt-[60px]
@@ -26,7 +27,9 @@ const descriptionStyles = ctl(`
 `);
 
 const linkStyles = ctl(`
+  inline-flex items-center
   text-lg
+  zd-invert-color-link
 `);
 
 export default function Home() {
@@ -43,7 +46,10 @@ export default function Home() {
           MKIIマニュアルの日本語訳です。翻訳はAIによる自動生成で行われており、正確性を保証するものではありません。公式マニュアルの翻訳参考としてお役立てください。
         </p>
         <Link href="/page/1" className={linkStyles}>
-          マニュアルを読む
+          <span className="pr-[7px]">
+            <ArrowRight aria-hidden="true" className="w-[18px] md:w-[24px]" />
+          </span>
+          <span>マニュアルを読む</span>
         </Link>
       </div>
     </main>

@@ -13,6 +13,14 @@ const nextConfig = {
   reactStrictMode: true,
   // Silence workspace root warning when running from worktrees
   outputFileTracingRoot: __dirname,
+  webpack(config) {
+    // SVG as React components
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
 };
 
 export default nextConfig;
