@@ -1,0 +1,31 @@
+{
+  "part": "10",
+  "pageRange": [271, 272],
+  "totalPages": 2,
+  "metadata": {
+    "processedAt": "2026-01-03T16:55:27.797Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 271,
+      "image": "/manual/pages/page-271.png",
+      "title": "Page 271",
+      "sectionName": null,
+      "translation": "Copyright © 2025 by OXI Electronic Instruments SLU\n\n© 2023 OXI ELECTRONIC INSTRUMENTS SLU. All rights reserved. OXIINSTRUMENTSおよびOXIロゴは、EUにおけるOXI INSTRUMENTSの登録商標であり、その他多くの国でも登録されています。OXI ONEはOXI INSTRUMENTSの商標です。デザインおよび仕様は予告なく変更される場合があります。OXI ONEは一部の国では使用が認可されていない場合があります。\n\nOctober 2025 - OXI ONE MKII OS 1.0 Manual Ver j\n\nwww.OXIinstruments.com",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 272,
+      "image": "/manual/pages/page-272.png",
+      "title": "Page 272",
+      "sectionName": null,
+      "translation": "OP-XY Notebook : Reference & Guide\n\nwww.oxiinstruments.com",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
