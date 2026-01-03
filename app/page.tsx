@@ -23,12 +23,11 @@ const titleStyles = ctl(`
 const descriptionStyles = ctl(`
   text-lg mb-vgap-lg
   leading-relaxed
-  text-left
 `);
 
 const linkStyles = ctl(`
   inline-flex items-center
-  text-lg
+  text-xl
   zd-invert-color-link
 `);
 
@@ -51,7 +50,10 @@ export default function Home() {
         </p>
         <Link href="/page/1" className={linkStyles}>
           <span className="pr-[7px]">
-            <ArrowRight aria-hidden="true" className="w-[18px] md:w-[24px]" />
+            <ArrowRight
+              aria-hidden="true"
+              className="w-[18px] md:w-[24px] align-middle inline-block"
+            />
           </span>
           <span>マニュアルを読む</span>
         </Link>
