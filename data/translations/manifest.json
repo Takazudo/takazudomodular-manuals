@@ -1,0 +1,23 @@
+{
+  "title": "OXI ONE MKII Manual",
+  "version": "1.0.0",
+  "totalPages": 30,
+  "contentPages": 29,
+  "lastUpdated": "2026-01-03T11:26:40.906Z",
+  "source": {
+    "filename": "OXI-ONE-MKII-Manual.pdf",
+    "processedAt": "2026-01-03T11:26:40.626Z",
+    "imageDPI": 300,
+    "imageFormat": "png"
+  },
+  "parts": [
+    {
+      "part": "01",
+      "pageRange": [1, 30],
+      "file": "/data/translations/part-01.json",
+      "sections": [],
+      "totalPages": 30,
+      "contentPages": 29
+    }
+  ]
+}
