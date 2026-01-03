@@ -24,15 +24,23 @@ Run the complete PDF processing pipeline automatically.
 
 ### During Execution:
 
+- ✅ **GOAL: Translate ALL 272 pages - continue until done or out of tokens**
 - ✅ Follow the documented process exactly - word for word
 - ✅ Use ONLY the Task tool for translation (NOT MCP Codex)
 - ✅ Execute all steps to completion without stopping
 - ✅ Handle errors by retrying or continuing
+- ✅ **Process pages in batches, spawning workers continuously**
+- ✅ **Continue processing until ALL pages done OR token budget exhausted**
+- ✅ **Save results after each batch and continue to next batch**
 - ❌ DO NOT stop to ask "what approach should we take?"
 - ❌ DO NOT suggest "better ways" mid-process
 - ❌ DO NOT ask for user permission during execution
 - ❌ DO NOT use MCP Codex or any other translation method
 - ❌ DO NOT implement "improvements" you discover mid-process
+- ❌ **NEVER ask user to choose between Options A/B/C**
+- ❌ **NEVER ask "which approach would you prefer?"**
+- ❌ **NEVER stop to explain limitations - just continue working**
+- ❌ **NEVER stop after completing just one batch - keep going**
 
 ### If You Discover Improvements:
 
