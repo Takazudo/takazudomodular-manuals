@@ -33,6 +33,7 @@ This skill guides the complete PDF processing pipeline:
 4. **Translate** - Translate English to Japanese using Claude API
 5. **Build** - Combine data into Next.js JSON structure
 6. **Manifest** - Generate manifest.json with metadata
+7. **Verify** - Run dev server and confirm page 1 displays correctly
 
 ## Quick Reference
 
@@ -52,6 +53,20 @@ pnpm run pdf:extract     # Step 3: Extract text
 pnpm run pdf:translate   # Step 4: Translate (requires API key)
 pnpm run pdf:build       # Step 5: Build JSON
 pnpm run pdf:manifest    # Step 6: Create manifest
+pnpm dev                 # Step 7: Run dev server for verification
+```
+
+### Verification Step
+
+After completing the pipeline, verify the output:
+
+```bash
+# Start dev server
+pnpm dev
+
+# Open browser and verify
+# http://localhost:3100/manuals/oxi-one-mk2/page/1
+# Confirm page 1 displays with translation
 ```
 
 ## Requirements
