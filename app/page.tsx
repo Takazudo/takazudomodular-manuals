@@ -31,6 +31,13 @@ const linkStyles = ctl(`
   zd-invert-color-link
 `);
 
+const codeStyles = ctl(`
+  inline-block
+  font-mono bg-zd-gray2 px-[.5em] py-[.1em] rounded
+  leading-snug
+  border border-zd-white
+`);
+
 export default function Home() {
   return (
     <main className={containerStyles}>
@@ -46,7 +53,8 @@ export default function Home() {
           <Link href="https://drive.google.com/file/d/1LdJvG-GqzzKI2qw92CyZKklE7kSoZLFE/view">
             公式マニュアル
           </Link>
-          の翻訳参考としてお役立てください。
+          の翻訳参考としてお役立てください。ページは <code className={codeStyles}>←</code>{' '}
+          <code className={codeStyles}>→</code> キーで移動可能です。
         </p>
         <Link href="/page/1" className={linkStyles}>
           <span className="pr-[7px]">
@@ -57,6 +65,7 @@ export default function Home() {
           </span>
           <span>マニュアルを読む</span>
         </Link>
+        <p></p>
       </div>
     </main>
   );
