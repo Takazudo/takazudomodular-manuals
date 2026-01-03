@@ -31,12 +31,13 @@ Translate English technical documentation into natural, accurate Japanese while 
 
 ### Formatting
 
-- Preserve all markdown formatting exactly
+- **DO NOT use markdown headings** (`#`, `##`, etc.) - translate as plain text instead
 - **CRITICAL**: Separate numbered items with double newlines (`\n\n`) for readability
 - **CRITICAL**: Separate sections and paragraphs with double newlines (`\n\n`)
 - Keep sub-items (I., II., III., etc.) together with their parent item using single newlines (`\n`)
-- Maintain numbered lists, bullet points, headers
+- Maintain numbered lists and bullet points
 - Do NOT modify code snippets or technical specifications
+- Preserve bold (`**text**`) and italic (`*text*`) formatting only
 
 ### Quality Requirements
 
@@ -52,6 +53,17 @@ Translate English technical documentation into natural, accurate Japanese while 
 3. Do NOT translate brand names or product names
 4. Do NOT change the structure or formatting
 5. Do NOT add extra information
+
+## Content Filtering (CRITICAL)
+
+**Remove these before translating:**
+
+1. **Page numbers** at the start of content (e.g., "12", "43 OXI ONE MKII Manual")
+2. **Recurring PDF title**: "The OXI ONE MKII Manual" (appears on every page)
+3. **Page markers**: "-- 1 of 1 --", "-- 2 of 3 --", etc.
+4. **Section markers**: Large section numbers that are decorative (keep numbered lists)
+
+**Keep only the actual manual content** - instructions, descriptions, technical details.
 
 ## Input/Output Format
 
@@ -71,35 +83,47 @@ Translate English technical documentation into natural, accurate Japanese while 
 
 ## Example
 
-**Input:**
+**Input (with metadata to filter):**
 ```
-1. Connect your synthesizer to the MIDI output.
-Set the MIDI channel to match your device.
+12 The OXI ONE MKII Manual
 
-2. Press [Play] to start the sequencer.
-Adjust the tempo using the BPM knob.
+# Sequencer Basics
 
-3. Configure the track settings:
-I. Select the sequencer mode
-II. Set the scale and root note
-III. Adjust the octave range
+3.1 What is a Sequencer?
+
+From the perspective of ONE, a sequencer manages and enables editing of tracks and patterns.
+
+-- 1 of 1 --
+
+Page number: 12
+Total pages: 30
 ```
 
-**Output:**
+**Output (filtered and translated):**
+```json
+{
+  "pageNum": 12,
+  "totalPages": 30,
+  "translation": "Sequencer Basics\n\n3.1 Sequencerとは?\n\nONEの観点から見ると、sequencerはトラックとパターンを管理、作成し、編集を可能にします。",
+  "status": "completed"
+}
 ```
-1. シンセサイザーをMIDI出力に接続します。
-MIDIチャンネルをデバイスに合わせて設定します。
 
-2. [Play]を押してシーケンサーを開始します。
-BPMノブを使用してテンポを調整します。
+**What was removed:**
 
-3. トラック設定を構成します:
-I. シーケンサーモードを選択します
-II. スケールとルートノートを設定します
-III. オクターブ範囲を調整します
-```
+- Page number "12" at the start
+- "The OXI ONE MKII Manual" title
+- "-- 1 of 1 --" marker
+- "Page number: 12" and "Total pages: 30" metadata
+
+**What was kept:**
+
+- Section title "Sequencer Basics" (as plain text, not markdown heading)
+- Section number "3.1 Sequencerとは?"
+- Main content paragraph
 
 **Note the formatting:**
 
-- Each numbered item (1., 2., 3.) is separated by `\n\n` (blank line)
-- Sub-items (I., II., III.) stay with parent, separated by `\n` (single newline)
+- NO markdown headings (`#`) - just plain text
+- Paragraphs separated by `\n\n` (blank lines)
+- Natural Japanese text flow
