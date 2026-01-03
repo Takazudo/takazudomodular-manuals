@@ -1,0 +1,283 @@
+{
+  "part": "03",
+  "pageRange": [61, 90],
+  "totalPages": 30,
+  "metadata": {
+    "processedAt": "2026-01-03T16:55:27.793Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 61,
+      "image": "/manual/pages/page-061.png",
+      "title": "Page 61",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\nNOTES\n\nNote\n\n論理条件を使用してパターンを構築すると、興味深い、ほぼジェネレーティブなスタイルのパターンを作成できます。特に、シーケンス内の複数のステップにわたって論理条件を組み合わせる場合に効果的です。\n\n1st / 1st Logic Condition\n\n1stは、選択したステップで最初のsequencerサイクルでのみこのトリガーをアクティブにします。このステップは、後続の連続したsequencerサイクルでは再生されません。'Not 1st'(1st)に設定されている場合、このステップは最初のサイクル以外のすべてのsequencerサイクルでトリガーされます。最初のサイクルではトリガーされません。\n\nFlow / Flow Logic Condition\n\nONEには専用の[Flow]ボタンがあり、選択したノート、パッセージ、フィルなど、さまざまなアクションのトリガーに使用されます。基本原理は、trigパラメータがFLOWに設定されているステップは、flowボタンを押している間のみシーケンス順序で再生されるということです。それ以外の場合、flowボタンを離すとステップはトリガーされません。対照的に、'No Flow'(FLOW)に設定されている場合、ステップは通常通り再生されますが、flowボタンを押している間はこれらのステップはシーケンス中にサイレントのままになります。\n\nFixed Logic Condition\n\n'Fixed'に設定すると、ステップは常にトリガーされますが、Euclideanやランダムジェネレーターなどのランダマイゼーションソースによる変調や影響を受けません。通常の動作は、通常100%の確率と同様になります。[Pad]ステップ + Knob 4(Trig)をホールドして、100%確率と固定設定を切り替えます。ステップディスプレイのヘッダーにロックシンボルが表示されます。\n\nLocked Logic Condition\n\n'Locked'に設定すると、ステップは常にトリガーされますが、まったく変調や影響を受けません。Euclideanやランダムジェネレーターなどのソースは、ロックされたステップには影響しません。通常の動作は、通常100%の確率と同様になります。ステップディスプレイのヘッダーにロックシンボルが表示されます。\n\nExamples:\n\nStep 16 set to 1st\n\nステップ14と16は、最初のsequencerサイクルでのみトリガーされ、その後はトリガーされません。\n\nStep 14 set to 1st\n\nステップ3と10は、最初のsequencerサイクルではトリガーされませんが、以降のサイクルではトリガーされます。\n\nSteps 3 & 10 set to 1st\n\nExamples:\n\nSteps Trig set to FLOW\n\nflow条件が割り当てられたステップは、[Flow]を押している間のみ条件が適用されます。\n\n[FLOW]をホールドして、sequencerの再生中にこれらのステップをトリガーします\n\nSteps Trig set to FLOW\n\n[FLOW]をホールドして、sequencerの再生中にこれらのステップをサイレントにします",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 62,
+      "image": "/manual/pages/page-062.png",
+      "title": "Page 62",
+      "sectionName": null,
+      "translation": "Sequencer Basics\n\n3.12 Tempo\n\nTempoは全てのsequencerの再生速度を一括して設定するグローバル機能で、sequencerビューのセカンダリパラメータ内にあります。これは20 BPMから300 BPMの範囲でbeats per minuteで設定されます。デフォルトは80 BPMです。Tempoは内部クロック同期の場合にのみ使用およびアクセス可能で、外部同期が選択されている場合は無視されます。\n\nTempoはプロジェクトと共に保存されます。プロジェクトは再生中にロード可能であり、その場合tempoはロードされたバージョンから適用されます。これは現在のtempoと異なる場合があります。複数のプロジェクトを扱う際にtempoについて考慮すべき2つの主要なオプションがあります：\n\n• Load Project BPM update during playback。config > performance optionsにあり、'Yes'または'No'に設定できます。'Yes'に設定すると、新しいプロジェクトをロードした際に、再生中のプロジェクトのBPMが即座に自動的に変更されます。\n\n• Global Launch Quantization。プロジェクトlaunchを含む、launch状態中の様々な機能の動作を定義します。現在のプロジェクトの再生中に選択された後、新しいプロジェクトがいつロードされるかを決定します。これはarrangerページのlaunch設定で設定され、新しいプロジェクトがlaunchされるまでのパターンサイクルのバー数に設定できます。\n\n+\n+\n+\n+\n+\n\nNote\n\nTempoは外部MIDI CCコントローラーから変調可能なグローバルパラメータです。これはOXI ONEのMIDI mappings設定で設定され、[Shift] + [Mod]でアクセスする'ext mod'オプション内の'PARA'オプションを使用します。\n\ntempoを調整するには、[Shift]を押しながらknob 1 (BPM)を回します。これによりグローバルtempoがbeats per minuteで設定されます。この値はディスプレイに目立つように表示されます。大きな増分の場合は素早く、小さな小数点単位の増分の場合はゆっくりと調整します。\n\ntempoをリセットするには、[Shift]を押しながらknob 1 (BPM)をタップします。これによりグローバルtempoがbeats per minuteでデフォルトの80BPMにリセットされます。\n\ntempo値をタップで入力するには、[Shift]を押しながら[Play]を数回タップします。平均化するタップ数はconfig > performanceメニューで選択できます。\n\ntempoをbeats per minuteで上げるには、[Mute]を押しながら[Play]を押し続けます。ボタンの組み合わせを押している間tempoが上昇します。ボタンを離すと即座に元のBPM tempoに戻ります。\n\ntempoをbeats per minuteで下げるには、[Mute]を押しながら[Rec]を押し続けます。ボタンの組み合わせを押している間tempoが下降します。ボタンを離すと即座に元のBPM tempoに戻ります。\n\nTempoは再生中に調整できますが、再生中にリセットすることはできません。\n\ntempoのnudgeは、DJミキシング時のビートマッチングや他の楽器との同期時に便利です。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 63,
+      "image": "/manual/pages/page-063.png",
+      "title": "Page 63",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\n3.13 Swing\n\nSwingは、パターンのノートを微調整することで、より自然で繊細なリズム感を導入する機能です。これにより、機械的で硬直したスタイルではなく、わずかなシャッフル感が加わります。\n\nSwingはsequencerごと、またはトラックごとに調整でき、10〜90の値に設定されます。デフォルト値は50で、これはswingが適用されていない状態を表します。swingを適用する前に、編集するsequencerを選択してください。\n\nSwingの動作は、time divisionとsignatureにも関連します。一般的なガイドとして、swingは一部のノートを固定されたグリッドから若干後ろまたは前にずらします。\n\n• Swing > 50. swing値を増やすと、一部のノートがグリッドのタイムライン上で遅れて配置され、よりゆったりとしたリラックスした感じになり、予感を加えます。最大値は90です。\n\n• Swing < 50. swing値を減らすと、一部のノートがグリッドのタイムライン上で早めに配置され、より急いだ、速い感じになり、緊迫感を加えます。最小値は10です。\n\n+\n+\n\nswingを調整するには、[Shift]を押しながらknob 2(Swng)を回します。これにより、選択したsequencerのswingが10〜90の間で設定されます。この値はディスプレイに大きく表示されます。\n\nswingをリセットするには、[Shift]を押しながらknob 2(Swng)をタップします。これによりデフォルト値の50(swing無し)にリセットされます。\n\nSwing\n2\n2\n\nTime divisions 例: 1/16th\n\nSwing\n\nNo swing - Original 50\nSwing 90\nSwing 10\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 64,
+      "image": "/manual/pages/page-064.png",
+      "title": "Page 64",
+      "sectionName": null,
+      "translation": "3.14 ScaleとRoot\n\nsequencerビューのグリッド行は、ほとんどのsequencerモードにおいて、特にトラックごとに音符を表します。例えば、monoモードでは、デフォルトのスケールであるChromatic C2に設定されている場合、最下段の行が音符C2から始まり、最上段の行がG2まで続きます。scaleとroot noteは各sequencerごとに変更でき、グリッド上に表示されます。現在選択されているscaleは、sequencerモードを変更しても保持されます。\n\nScaleは、本体内蔵のscaleライブラリ、またはOXI Appから作成・ロードした16個のユーザーscaleから選択できます。Scaleは、scale quantizationとharmonizer機能にも使用されます。\n\nSequencer Basics 3\n\n+\n\n+\n\n+\n\n+\n\nScaleを選択するには、[Shift]を押しながらknob 3 (Scal)を回します。\nこれにより、選択されたsequencerのscaleが設定されます。\n\nRootを選択するには、[Shift]を押しながらknob 4 (Root)を回します。\nこれにより、選択されたsequencerのroot noteが設定されます。\n\nScaleをデフォルトにリセットするには、[Shift]を押しながらknob 3 (Scal)をタップします。\nこれにより、デフォルトのCHROMATICスケールにリセットされます。\n\nconfig > workflowオプションの「confirm scale change and quantize notes」がONに設定されている場合、scaleの編集後にKnob 3を押して確定する必要があります。このモードでは、scaleが変更されたものの未確定の場合、アスタリスク「*」付きで表示され、元のscaleが有効なままになります。\n\nRootをデフォルトにリセットするには、[Shift]を押しながらknob 4 (Root)をタップします。\nこれにより、デフォルトのC2音符にリセットされます。\n\nScale\nRoot Note\n\n例:\n\nC \tC# \tD\tC \tC# \tD\tC \tC# \tD\n\nChromatic, Root C2\n\n選択されたrootとscaleに基づくグリッドレイアウトの例。\n\nMajor, Root G3 Locrian, Root D1\n\nC2 G3 D1\nC#2 A3 D#1\nD#2 C4 G1\nF2 E4 A#1\nD2 B3 F1\nE2 D4 G#1\nF#2 F#4 C2\nG2 G4 D2\n\n3\n4\n\n3\n4\n\n注記\n\nscaleとrootの編集は、再生中にロックすることができます。これにより、ONEでパフォーマンスを行う際に誤って設定を変更してしまうことを防ぎます。この設定はconfig > workflowオプションにあります。\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 65,
+      "image": "/manual/pages/page-065.png",
+      "title": "Page 65",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\nNOTES\n\nScale Options\n\nLabel Scale Label Scale\nHARMON Harmonizer Option PERSIAN Persian\nCHROMATIC Chromatic DIMINISH Diminished\nMAJOR Major PHRYGDOM Phrygian Dominant\nMINOR Minor BYZANTINE Byzantine\nDORIAN Dorian SpainPHRY Spanish Phrygian\nPHRYGIAN Phrygian NeapolMIN Neapolitan Minor\nLYDIAN Lydian NeapolMAJ Neapolitan Minor\nMIXOLYDIAN Mixolydian UKRANDORI Ukranian Dorian\nLOCRIAN Locrian USER 1 User Configurable\nPENTAMAJ Major Pentatonic USER 2 User Configurable\nPENTAMIN Minor Pentatonic USER 3 User Configurable\nHARM MIN Harmonic Minor USER 4 User Configurable\nMELODIC Melodic Minor USER 5 User Configurable\nBLUES Blues USER 6 User Configurable\nARABIAN Arabian USER 7 User Configurable\nROMANIAN Romanian USER 8 User Configurable\nBALINESE Balinese USER 9 User Configurable\nHUNGAR 1 Hungarian 1 USER 10 User Configurable\nHUNGAR 2 Hungarian 2 USER 11 User Configurable\nORIENTAL Oriental USER 12 User Configurable\nRAGATOE Raga Todi USER 13 User Configurable\nCHINESE Chinese USER 14 User Configurable\nJAPAN 1 Japan 1 USER 15 User Configurable\nJAPAN 2 Japan 2 USER 16 User Configurable\n\n+\n+\n\nスケールをコピーするには、[Copy]を押しながらノブ3(Scal)をタップします。\nこれにより、選択したsequencer用のスケールがコピーされます。\nこの操作はノブ4(root)にも適用できます。\n\nスケールをペーストするには、[Paste]を押しながらノブ3(Scal)をタップします。\nこれにより、別の選択したsequencerにスケールがコピーされます。\nこの操作はノブ4(root)にも適用できます。\n\nSequencer間でのScaleとRootのコピー\n\n現在のsequencerのスケールまたはrootをコピーし、copyとpasteコマンドと該当するノブを使用して、選択した別のsequencerにペーストすることができます。\n\nユーザースケールはOXI Appから作成・読み込みが可能です。\n\n3\n3",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 66,
+      "image": "/manual/pages/page-066.png",
+      "title": "Page 66",
+      "sectionName": null,
+      "translation": "Scale Quantization\n\nONEにおけるscaleの動作方法は、scale quantization設定に依存します。config > workflowで2つのオプションのいずれかを設定でき、scaleの動作が決定されます。\n\nConfig > workflowオプション: 'Confirm scale change and quantize notes'\n\nSequencer Basics 3\n\nNOTES\n\nConfirm scale change and quantize notes\n\n設定 説明\n\nOFF - デフォルト Scaleの変更は、'Scal' knob 3で編集すると即座に適用されます。\n確認は必要ありません。\n\n既存のsequencerステップはグリッド上の元の位置に留まります。そのため、既存のステップは新しいscale内の別の音符に設定される可能性があります。インターバルは同じままです。\n\nQuantizationは適用されません。scaleを実験したり、色々試したりするのに適しています。\n\n[Shift] + (Scal) Knob 3を押すと、scaleがクロマティックのデフォルトにリセットされます。\n\nON Scaleの変更は、[Shift]を押しながら(Scal) - knob 3を押して確定した場合にのみ適用されます。scaleが選択されているが未確定の場合、アスタリスク'*'が表示され、元のscaleがアクティブのままとなります。\n\nScaleが確定されると、sequencerステップは新しいscale内の音符にquantizeされます。つまり、既存のステップは移動され、元のscaleで設定された音符にできるだけ近い音符に新しいscaleのグリッド内で再配置されます。scale間を直接切り替えながら音楽的なトランジションを維持するのに適しています。\n\n例:\n\nC     C#    D    C     C#    D    C     C#    D\n\n元の音符\nChromatic, Root C2\n\nScale Quantize\nOFF\nMajor, Root C2\n\nScale Quantize\nON\nMajor, Root C2\n\nC2    C2    C2\n\nC#2   D2    D2\n\nD#2   F2    F2\n\nF2    A2    A2\n\nD2    E2    E2\n\nE2    G2    G2\n\nF#2   B2    B2\n\nG2    C3    C3\n\n注意\n外部MIDIデバイスからの入力音符、またはONE内部のkeyboardを使用した場合も、scale quantize設定に基づいてquantizeされます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 67,
+      "image": "/manual/pages/page-067.png",
+      "title": "Page 67",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\nNOTES\n\n3.15 Sequencerの動作\n\nsequencerの設定には多くの設定項目が含まれており、そのほとんどはマニュアルの関連トピックで説明されています。sequencerの基本的な同期と転調の動作を理解しておくことが重要です。\n\nこれらはsequencer設定ページの一部であり、[Shift] + Seq [1] - [8]を使用してアクセスし、[Page]をタップしてページをナビゲートします。\n\n(In) Knob 1オプションは、パンチイン量子化設定を設定します。このシンボルは、この設定を調整するときにパターンに遅延が発生する可能性があることを示しています。\n\nパンチイン量子化とは、基本的にmuteを使用してsequencerをアクティブにするとき、またはplayを押した後に再生を開始するときに行われるカウントダウンです。例えば、sequencerをミュート解除/アクティブ化するとき、またはリセットするときです。このカウントダウンはsequencerを同期させ、transportバーをステップ1で再スタートするように再生タイミングを管理します。この設定はプロジェクトと共に保存されます。\n\nパンチインパラメータは'In'と呼ばれ、knob 1を使用して設定されます。このシンボルは、この設定をオンザフライで変更すると、再生が中断されるか、わずかに遅延する可能性があることを示しています。\n\nSequencer Settings - Page 2\nPunch-In Quantization.\n\nSEQ1 Setup 2/3\nIn\nGlob\nBnk\nOFF\nReset\nOFF\nTrnsp\nOFF\nMONO\n105.0\n1/16 \tCHROMATIC \t- \tC2\nPattern 3\n50% \tINT\tF\nVEL \tGATE\tOCT \tREPT\n\nパンチイン量子化は、設定されたバー期間またはパターン終了時に決定されます。ロードバーインジケータがガイドとして使用されます。\n\n• Glob. Globalは、プロジェクトに設定されたグローバル/ロード量子化を使用します。グローバル/ロード量子化はarrangerオプションで設定され、プロジェクトとパターンのロードに使用されます。GlobはデフォルトのIn設定です。\n\n• OFF. パンチイン量子化をオフにします。playまたはresetは即座に実行されます。\n\n• P.End. 現在のパターンの終了時にリセットまたは再生を開始します。\n\n• Beat、½ Bar、Bar、2、4、8 Bars. 選択された期間の終了時にリセットまたは再生を開始します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 68,
+      "image": "/manual/pages/page-068.png",
+      "title": "Page 68",
+      "sectionName": null,
+      "translation": "60 The OXI ONE MKII Manual\n\nSequencer Settings - Page 2\n\nReset.\n\n(Reset) Knob 2オプションは、sequencerをリセットするまでの再生時間を設定します。\n\nリセットは、sequencerの再生中に自動的にリセットされるかどうか、またはその方法を定義します。これはOff、1〜64小節の間で設定でき、パターンが開始位置にリセットされるまでの再生時間を定義します。これは、パターンを再同期させるための便利な機能であり、特にタイムディビジョンが調整された場合のマルチトラックトラックに有効です。リセットは(Reset) Knob 2を使用して調整します。これは内部sequencerに関連しており、物理的なアナログ出力には関係しません。\n\nTranspose.\n\n(Trnsp) Knob 4オプションは、sequencerをトランスポーズするためのMIDI動作を設定します。\n\nsequencer上で外部デバイスからのノートトランスポジションを有効または無効にします。トランスポジションはsequencerまたはトラックのルート/ベースノートに基づいています。この機能が動作している場合、入力されたノートはarp、レコーディングなどに影響しません。ノートオフは無視されます。TransposeはMIDIチャンネルフィルタリングがオフの場合でも動作します。\n\n• Off. 無効。\n• Same. 入力されたMIDIノートを評価し、そのチャンネルがトランスポジション用の対応するチャンネルsequencerと一致するかチェックします。\n• Ch 1 - Ch 16. それぞれのチャンネルのすべてのノートがパターンのトランスポーズに使用されます。Sequencerは同じMIDIチャンネルに設定でき、ノートオンメッセージを受信したときに集合的なトランスポジションに使用できます。\n\nBank.\n\n(Bnk) Knob 3オプションはMIDI bankメッセージを送信します。\n\nBankは、パターンが読み込まれたときにsequencerのMIDIチャンネルと出力先に送信されるMIDI bank LSBまたはMSB番号を定義します。arrangerでも動作します。bank設定は、編集後にknobをタップして確定する必要があります。\n\nSEQ1 Setup 2/3\nIn\nGlob\nBnk\nOFF\nReset\nOFF\nTrnsp\nOFF\n\nSEQ1 Setup 2/3\nIn\nGlob\nBnk\nOFF\nReset\nOFF\nTrnsp\nOFF\n\nSEQ1 Setup 2/3\nIn\nGlob\nBnk\nOFF\nReset\nOFF\nTrnsp\nOFF\n\nSequencer Basics\t3\nNOTES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 69,
+      "image": "/manual/pages/page-069.png",
+      "title": "Page 69",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 70,
+      "image": "/manual/pages/page-070.png",
+      "title": "Page 70",
+      "sectionName": null,
+      "translation": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 71,
+      "image": "/manual/pages/page-071.png",
+      "title": "Page 71",
+      "sectionName": null,
+      "translation": "パターンの作成\n\n4\n\nパターンは、シーケンスされた曲やアレンジメントの基本的な構成要素であり、このセクションでは、パターンの包括的な作成、管理、再生に焦点を当てています。これはパターン全般の高レベルな視点であり、ワークフローに焦点を当てており、個々のステップの複雑な詳細を網羅することを目的としていません。ステップレベルの編集とトピックは、他のセクションでより詳しく説明されています。パターン全体に適用される多くの一般的な編集オプションと機能が含まれており、その一部はグローバルにも適用される場合があります。出発点は、パターンの設定、長さ、タイムディビジョン、および既存のステップグループの一般的な編集です。グルーブなど、パターン全体に適用される一般的な機能についても説明されています。さらに、興味深いジェネレーティブおよびパターンオプションも含まれており、特にパターンの「GEN」ジェネレーター機能とパターンの録音プロセスに焦点を当てています。この章は、ステップの手動シーケンス、録音という観点から構築され、完全なパターンの生成と作成全体にわたってワークフローを拡大します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 72,
+      "image": "/manual/pages/page-072.png",
+      "title": "Page 72",
+      "sectionName": null,
+      "translation": "4.1 パターンの長さ\n\nパターンは最大128ステップの長さを設定でき、8ページに分けて構成されます。各ページは最大16ステップで構成されます。\n\nこれらのステップは8 x 16パッドグリッドで表示・編集できます。デフォルトは16ステップです。パターンは初期開始位置から最後まで再生され、その後再スタートし、この前方サイクルで継続します。再生方向は[Track]メニューオプションで設定します。\n\n1 16\n\n65 80\n\n33 48\n\n97 112\n\n17 32\n\n81 96\n\n49 64\n\n113 128\n\nCreating Patterns 4\n\nページ[16] - [64]ボタンをタップしてページ1-4を移動します。ページボタンは白色に点灯します。\n\nseq [1] - [8] + [16] - [64]を2回タップまたは長押ししてページ5-8にアクセスします。ページボタンは青色に点灯します。\n\n初期開始ステップ\n\n[Init] + [Pad]を長押し\n\n例:ステップ1\n\n開始位置と終了位置は薄い紫色の列で表示されます。\n\nこれらは[Init]または[End]のいずれかを長押ししている間表示されます\n\n[Init]または[End]を長押し + ノブ2または3を回す\n\n長さは各sequencerごとに個別に設定できます。また、multitackモードの各トラックは独立した長さに設定できます。\n\n終了/最終ステップ\n\n[End] + [Pad]を長押し\n\n例:ステップ16\n\n開始/終了は別のページに配置できます。\n\n例:ステップ29\n\nPage 1\n\nPage 1 Page 2\n\nPage 5\n\nPage 2\n\nPage 6\n\nPage 3\n\nPage 7\n\nPage 4\n\nPage 8\n\nパターンの長さの編集\n\n2 3",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 73,
+      "image": "/manual/pages/page-073.png",
+      "title": "Page 73",
+      "sectionName": null,
+      "translation": "パターンの作成 4\n\n.\n\n+\n\n+\n\n+\n\nまたは\n\nまたは\n\n+\n\n+\n\n+\n\nパターンの開始ステップ/終了ステップの設定\n\n[Init] + [Pad]を使用して、パターンの最初のステップを選択します。開始位置を表す列のパッドを押してください。Initを押している間、開始位置と終了位置は柔らかい紫色に点灯します。\n\n最初のステップを終了位置より先に設定すると、開始位置と終了位置の両方が相対的に移動します。例えば、1-8ステップの長さが設定されている場合、ステップ17を初期開始位置として選択すると、開始位置はステップ17に移動し、終了位置も元のステップ8からステップ24に移動します。\n\n[Init]または[End]を押しながら(Knob 2)を回す。最初のステップを設定する別の方法です。\n\n[Init]または[End]を押しながら(Knob 3)を回す。最後のステップを設定する別の方法です。\n\n[End] + [Pad]を使用して、パターンの最後のステップを選択します。終了ステップ位置を表す列のパッドを押してください。Initを押している間、開始位置と終了位置は柔らかい紫色に点灯します。\n\nパターンの開始位置と終了位置のシフト\n\n開始位置と終了位置を一緒に上位のページに移動します。\n現在のページから別の上位ページに移動しても、相対的な開始位置と終了位置の関係は維持されます。\n下位ページに移動する場合は、開始位置のみが移動します。\n\n開始位置と終了位置を一緒に下位のページに移動します。\n現在のページから別の下位ページに移動しても、相対的な開始位置と終了位置の関係は維持されます。\n上位ページに移動する場合は、終了位置のみが移動します。\n\nページボタンをダブルタップすると、そのボタンがカバーする範囲が切り替わります。\n例:デフォルトは1-16でボタンは白色に点灯、もう一度タップすると65-80になりボタンはターコイズ色に点灯します。\n\n開始位置と終了位置は、任意のページの任意の場所に設定できます。各sequencerごとに異なる長さを設定でき、multitrackモードでは各トラックごとに異なる長さを設定できます。\n\n2\n\n3\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 74,
+      "image": "/manual/pages/page-074.png",
+      "title": "Page 74",
+      "sectionName": null,
+      "translation": "4.2 Time Division\n\nTime divisionはパターンの音楽的な解像度を設定します。これは1/16、1/8などの音価で設定され、現在の値はONEのメインsequencer表示に表示されます。Time divisionは、multitrackモードとmatricealモードの場合、各sequencerまたはトラックごとに独立して設定できます。\n\nTime signatureは、パターンの音楽的構造に関するものです。これは、1小節あたりのビート数(拍子記号の上の数字で示される)と、各ビートの音価(下の数字で表される)を割り当てます。したがって、time signatureは4/4拍子、3/4拍子、2/4拍子などと表記できます。\n\nTime Divisionの変更\n\n注意\n\nTime divisionは、トラックメニュー内でsequencerごとに設定されます。オクターブ範囲のナビゲート、再生方向、ランダムtime divisionオプションなど、他のsequencer固有のパラメータもメニューで見つけることができます。\n\n1. [Track]をタップしてトラックメニューを開きます。\n長押しすると一時的に表示されます。\n\nTime divisionのオプション:\nBar、1/2、1/4、1/8、1/8t、1/16、1/16t、1/32、1/32t。\n\n3連符が利用可能で、「t」で示されます。3連符は、2つ分の時間に3つの音符を配置します。\n\nデフォルトの1/16 time divisionは、各グリッドページの16ステップで表され、この例では1小節(barまたはmeasureとも呼ばれます)です。\n\n表示のプログレスバーグラフには、sequencerで動的に再生される各音楽的なbar/measureがリアルタイムで表示されます。これにより、load quantizationの識別に役立ちます。\n\n4. 選択したsequencerのトラックメニューで(Div)Knob 4を回してtime divisionを変更します。\n\n[Shift] + [Init]をタップ長押しすることで、現在の値からsequencer time divisionを素早く2倍にするオプションが利用できます。\n\n[Shift] + [End]をタップ長押しすることで、現在の値からsequencer time divisionを素早く半分にするオプションが利用できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 75,
+      "image": "/manual/pages/page-075.png",
+      "title": "Page 75",
+      "sectionName": null,
+      "translation": "Patternの作成 4\n\nSequencerごとの時間分解能はトラックメニューで正確に設定できますが、ファンクションボタンから直接アクセスできるクイック編集オプションもいくつか用意されており、sequencerの時間分解能を拡大または縮小することができます。\n\n+\n\n+\n\nLength拡大\n\n[Shift]を押しながら[Page]をタップすると、時間分解能を半分にしながら長さを2倍にしてpatternを拡大し、ノート分解能を上げます。\n\nLength縮小\n\n[Shift]を押しながら[LFO]をタップすると、時間分解能を2倍にしながら長さを半分にしてpatternを縮小し、ノート分解能を下げます。\n\nPatternは2ページに拡大され、32ステップで時間分解能が1/16から1/32に移動します。終了位置は自動的に再配置され、ノートのタイミングは維持されます。ノートはタイとともに、元の相対位置を基準にシフトします。拡大は最大128ステップまでに制限されています。\n\nPatternは同じページ内で8ステップに縮小され、時間分解能が1/16から1/8に移動します。終了位置は自動的に再配置され、ノートは相対的なタイミングを保持しますが、元の位置を表現するために再配置されます。これは破壊的なプロセスであり、patternを縮小する際に一部のノートが削除される場合があります。\n\nExpandまたはCondense\n\n例\n\n元のPattern 拡大されたPattern\n\n縮小されたPattern\n\n1/16時間分解能 - ページ1\n\n1/16時間分解能 - ページ1\n\n1/32時間分解能 - ページ1と2\n\n1/8時間分解能 - ページ1\n\n一部のノートが失われます。\n\nexpandおよびcondense機能は、undo/redoできます。\n\nLength x 2\n\nLength / 2",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 76,
+      "image": "/manual/pages/page-076.png",
+      "title": "Page 76",
+      "sectionName": null,
+      "translation": "Time Divisionのランダム化\n\nTime divisionは通常、sequencerごとに固定されています。しかし、より予測不可能性を加え、クリエイティブなオプションを拡張するために、track menuにはtime divisionランダム化機能があります。これはOff、1%〜100%の値に設定でき、sequencerパターンの再生中にtime division値にばらつきの量を適用します。デフォルトはOffです。マルチトラックモードでは、各トラックはtrack 'Div'ランダム化を使用して個別にランダム化できます。\n\n[Track]をタップしてtrack menuを開きます。\n押し続けると一時的に表示されます。\n\nTrack Menu\n\nTrack Menu\n0\nDiv\nOFF\nDir    Div\n1/16\n3\n\ntrack menu内で(Div)Knob 3を回して、time divisionにばらつきの量を適用します。(Div)を押し続けると、パラメーターがデフォルトの'OFF'にリセットされます。\n\nsequencerはそのクロックテンポを維持しますが、適用されたランダム化により同期が外れる場合があります。\n\n注意\n\narpのtime divisionは、sequencer divisionとは独立して設定できます。これはArp設定で設定されます。sequencerのtime divisionは、標準的なノートタイミング以外の複数の機能にとって重要です。例えば、repeatsなどです。\n\nCreating Patterns    4\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 77,
+      "image": "/manual/pages/page-077.png",
+      "title": "Page 77",
+      "sectionName": null,
+      "translation": "NOTES\n\nパターンの作成 4\n\n4.3 再生方向\n\n各シーケンサーの再生方向は、トラックメニューから個別に制御できます。これはマルチトラックモードの各トラックにも適用されます。\n\n[Track]をタップしてトラックメニューを開きます。\n長押しすると一時的に表示されます。\n\nTrack Menu\n\nTrack Menu\n0\nDiv\nOFF\nDir\tDiv\n1/16\n\n2 トラックメニューで(Dir) Knob 2を回して、選択したシーケンサーまたはトラックの再生方向を変更します。\n\nForwards - デフォルト\nシーケンサーは順方向に、開始位置から終了位置まで再生され、その後開始位置から継続します。\n\nPendulum\nシーケンサーは順方向に、開始位置から終了位置、そして開始位置へと再生され、このパターンで継続します。サイクルを反転する際、ステップは2回再生されます。\n\nDrunk\nシーケンサーは確率アルゴリズムで再生されます。50%の確率で前進、25%の確率でステップを繰り返し、25%の確率で後退します。\n\nDrunk Pong\n\nReverse\nシーケンサーは逆方向に、終了位置から開始位置まで再生され、その後終了位置から継続します。\n\nRandom\nシーケンサーは個々のステップを予測不可能なランダムな順序で再生します。\n\nPong\nシーケンサーは順方向に、開始位置から終了位置、そして開始位置へと再生され、このパターンで継続します。サイクルを反転する際、ステップは1回再生されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 78,
+      "image": "/manual/pages/page-078.png",
+      "title": "Page 78",
+      "sectionName": null,
+      "translation": "4.4 ステップのShiftとコピー\n\nパターンを作成するための基本的なプロセスは、メロディやビートを作るために、sequencerの適切な位置に個々のステップを追加することです。パターンが作成されたら、ステップをグリッド上で編集、シフト、または一括移動できます。\n\nシーケンス全体をグリッド上で前、後ろ、上、下に移動します。これにより、開始点と終了点の間にあるシーケンス全体が移動し、シーケンスはエッジを超えて折り返されます。ステップは再配置され、前後に移動するとステップタイミングに影響し、上下に移動するとノートのピッチ値に影響します。\n\n現在のシーケンスから、開始点と終了点の間にあるステップを、その直後の範囲に複製することができます。これにより、終了ロケーターは自動的に新しい拡張された位置にリセットされます。複製先の非アクティブな範囲内の既存のノートは上書きされます。複製が利用可能なステップ数を超える場合、128ステップの制限まで複製されます。\n\nシーケンスの移動\n\nシーケンスは、キーコンボを押すたびに1ステップ移動します。\n\n範囲内のアクティブなステップにのみ適用されます。\n\n2つの他のカラムパッドを押したまま、shift + 矢印を使用すると、それらの間のステップのみをシフトできます。\n\nTranspose\nI. Transpose Up/Down\n\nRotate\nI. Rotate Forward/Back\n\nステップの複製\n\nUp Left\n+ +\t+ +\nDown Right\n+",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 79,
+      "image": "/manual/pages/page-079.png",
+      "title": "Page 79",
+      "sectionName": null,
+      "translation": "Patternの作成 4\n\n.\n\n+\n\n+\n\n+\n\n+\n\n+\n\n+\n\n+\n\n+\n\n+\n\n+\n\n+\n\n+\n\nSequenceのシフト\n\nボタンの組み合わせを押すたびに、グリッド上でシーケンスを1ステップずつ前/左または後/右にシフトします。アクティブなスタート/エンド範囲内のステップのみが影響を受けます。\n\nSequenceの複製\n\nスタートとエンドポイント間のシーケンスセクションを複製します。[Shift] + [Copy]を押し続けます。シーケンスが2倍になります。範囲外の既存のノートは上書きされ、エンドポイントが再配置されます。\n\nPattern のコピー/ペースト\n\nパターンをコピーします。ロードまたはセーブメニューで、パターングリッドを使用してコピー&ペーストします。[Copy]を押し続け + コピー元のパターンの[Pad]を押し続けます(任意のsequencer)。完了するとメッセージが表示されます。\n\nStepのコピー/ペースト\n\nステップをコピーします。[Copy]を押し続け + コピー元のステップパッドとそのパラメータの[Pad]を押し続けます。タイされた複数のステップのコピーにも対応します。完了するとメッセージが表示されます。\n\nパターンページをコピーします。[Copy]を押し続け + コピー元のページの[16]、[32]、[48]または[64]を押し続けます。コピーが完了するとメッセージが表示されます。\n\nシーケンサー、全ステップをコピーします。[Copy]を押し続け + コピー元のシーケンスの[1] - [8]を押し続けます。コピーが完了するとメッセージが表示されます。\n\nパターンをペーストします。ロードまたはセーブメニューで、パターングリッドを使用してコピー&ペーストします。[Paste]を押し続け + ペースト先の任意のsequencerスロットの[Pad]を押し続けます。完了するとメッセージが表示されます。\n\nステップをペーストします。[Paste]を押し続け + ペースト先のステップパッドの[Pad]を押し続けます。タイされた複数のステップもペーストされます。ピッチなど、元の値に対して相対的な新しい値がペーストされます。メッセージが表示されます。\n\nパターンページをペーストします。[Paste]を押し続け + ペースト先のページの[16]、[32]、[48]または[64]を押し続けます。ペーストが完了するとメッセージが表示されます。\n\nシーケンサー、全ステップをペーストします。[Paste]を押し続け + コピー先の[1] - [8]を押し続けます。完了するとメッセージが表示されます。\n\nボタンの組み合わせを押すたびに、グリッド上でシーケンスを1音ステップずつ上または下にシフトします。アクティブなスタート/エンド範囲内のステップのみが影響を受けます。\n\nNOTES\n\n列から列にまたがる範囲の2つのパッドを押し続け、上記の[Shift] + [16]、[32]、[48]または[64]コマンドを使用すると、選択した2つの列の間のシーケンス要素のみがシフトされます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 80,
+      "image": "/manual/pages/page-080.png",
+      "title": "Page 80",
+      "sectionName": null,
+      "translation": "NOTES\n\nパターンの作成 4\n\n4.5 ステップのクリア\n\nすべてのステップを消去することは、sequencerから可能です。また、タイムディビジョンや長さなどの設定を含む完全なsequencerのクリアも可能です。個々のステップの削除は、パッドをタップするだけで簡単にできますが、設定によっては以前のパラメーターでステップを再割り当てすることもできます。プロジェクトとパターン全体は、セーブメニューからクリアすることもでき、これはMIDIチャンネルやMODデスティネーションなどの設定もクリアするため、より包括的です。\n\nシーケンスのクリア\n\n選択したsequencerのノートイベントをクリアするには:\n\nI. Hold [Shift] + tap [Clear]。「CLEAR」メッセージが表示されます。このクリアコマンドは[Undo]ボタンで元に戻すことができます。\n\nII. これらの機能は、マルチトラックsequencerで選択した各トラックをクリアするためにも使用できます。\n\n選択したsequencerのノートイベントを完全にクリアし、設定をデフォルト値にリセットするには:\n\nHold [Shift] + hold [Clear]。「FULL CLEAR」メッセージが表示されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 81,
+      "image": "/manual/pages/page-081.png",
+      "title": "Page 81",
+      "sectionName": null,
+      "translation": "NOTES\n\nパターンの作成 4\n\n4.6 Nudge Sequencerタイミング\n\nすべてのsequencerのタイミングを調整することができます。変更はミリ秒単位で行うことができ、すべてのステップに影響し、sequencerを後方/右および前方/左にナッジします。\n\nこれは[Shift] + [Mute]を使用してアクセスするnudgeページから制御されます。これにより、すべてのsequencerを-100から+100ミリ秒の間でナッジします。\n\n[Shift]を押しながら[Mute]をタップすると、8つのsequencerそれぞれをカバーするグローバルnudgeメニューが開きます。\n\nNudge Menu\tTime Offset [ms]\nSQ 1\tSQ 3\nSQ 5\tSQ 7\nSQ 2\tSQ 4\nSQ 6\tSQ 8\n+11\t+0\n+0\t+0\n-25\t+0\n+0\t+0\n\nそれぞれのノブを回して、選択したsequencerのタイミングオフセットを編集します(SQとラベル付けされています)。ノブをタップすると、上段の1-4 sequencerと下段の5-8が切り替わります。\n\nこのメニューでは、[Shift]を押しながら任意のノブを回すと、すべてのsequencerのタイミングオフセットを同時に編集できます。\n\nノブを長押しすると値がリセットされます。\n\n参考として、120 BPMのトラックでは1ビートあたり0.5秒になります。したがって、1/16音符の間隔では各ステップは0.125msです。つまり、最大の+または-ナッジ範囲は1ステップのこの音符間隔内になります。この例でnudgeを編集してもグリッドステップは視覚的な動きを表示しませんが、sequencerのマイクロタイミングは影響を受けます。\n\nNudge",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 82,
+      "image": "/manual/pages/page-082.png",
+      "title": "Page 82",
+      "sectionName": null,
+      "translation": "NOTES\n\nパターンの作成 4\n\n4.7 Time Bend Sequencerスピード\n\n全てのsequencerの再生スピードは、[Shift] + [Mute]をダブルタップしてアクセスできるtime bend機能を使用して調整できます。これにより、グローバルテンポに対してスピードをパーセンテージで上下に調整します。パーセンテージ調整の範囲は-12%から+12%です。\n\n[Shift]を押しながら[Mute]をダブルタップすると、8つのsequencerそれぞれをカバーするグローバルtime bendメニューが開きます。\n\nTime Bendメニュー Time Bend %\nSQ 1 2.1%\nSQ 3 0.0%\nSQ 5 0.0%\nSQ 7 0.0%\nSQ 2 0.0%\nSQ 4 0.0%\nSQ 6 0.0%\nSQ 8 0.0%\n\n選択したsequencer(SQとラベル表示)のtime bendを編集するには、それぞれのKnobを回します。Knobをタップすると、上段の1-4 sequencerと下段の5-8を切り替えます。\n\nこのメニューでは、[Shift]を押しながら任意のKnobを回すと、全てのsequencerのtime bendを同時に編集できます。\n\nKnobを長押しすると値がリセットされます。\n\nTime Bend",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 83,
+      "image": "/manual/pages/page-083.png",
+      "title": "Page 83",
+      "sectionName": null,
+      "translation": "NOTES\n\nCreating Patterns 4\n\n4.8 Swing\n\nパターンは、タイミングが完璧で繰り返しが予測可能な厳格なグリッドに合わせて作成できます。\n\nしかし、これでは面白みに欠け、ロボット的すぎる場合があります。音楽、特にデジタル制作においては、パターンに人間らしい感覚を取り入れることが重要です。Swingは自然なタイミングを加えます。Swingはsequencerごとに調整でき、パターンと共に保存できます。\n\nSwingは、パターン内の特定の音符に自然なオフセットを加えます。これにより、パターンのリズムとビートに自然で堅苦しくない感覚が加わります。Swingは、メインのsequencerビューのセカンダリーパラメーターオプションから簡単にアクセスでき、選択したパターンに対して簡単に編集できます。Swingは10〜90%の範囲で設定され、デフォルトは50%で、これはswingが適用されていないことを意味します。\n\nMONO\n105.0\n1/16 \tCHROMATIC \t- \tC2\nPattern 3\n50% \tINT\nBPM \tSCAL\tSWNG \tROOT\nF\n\nSwing\n\n2\n\nSwing設定\n\nSecondary options\n\nShiftを押してsecondaryパラメーターを開く\n\n(Swng)を回して、選択したsequencerのswingを編集します。Swingはパターンと共に保存されます。\n\n[Shift]を押しながら[Swng]を押したままにすると、値がリセットされます。\n\n+",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 84,
+      "image": "/manual/pages/page-084.png",
+      "title": "Page 84",
+      "sectionName": null,
+      "translation": "パターンの作成 4\n\n4.9 Groove\n\nパターンにより自然な雰囲気を加えるもう一つの機能がgrooveです。Grooveは、特定のステップに予め定義されたタイミングシフトを適用するとともに、リピートを含むステップにgrooveベロシティプロファイルを適用するプリセットテンプレートです。これにより、より自然でありながら予測可能なリズム感が生まれます。Grooveは、パターンのタイミングとベロシティ構造に微妙な影響を与え、個性と特徴を加えます。\n\nGrooveは、sequencer用に編集・調整することができ、grooveテンプレートはmicroSDカードからsequencerにロードできます。OXI Appには統合されたgrooveビルダーもあります。GrooveはAbleton Liveや他のサードパーティツールで作成し、ONEにインポートすることもできます。\n\nGroove\nAccnt\n+0%\nRand\n0%\nTime\n0%\nGrov\nTranc\n\n外部grooveは注意して使用してください。外部grooveの使用は、grooveの作成に使用できるさまざまなサードパーティのオプションとフォーマットがあるため、慎重に扱う必要があります。外部で作成されたgrooveは、OXI ONEで使用する際に予測または保証することができません。\n\nGroove Menu グローバルgroove設定メニューを開きます。他のgrooveオプションは、他の機能に統合されています。\n\nノブを回して各パラメータを編集します。ノブを押したままにすると、値がデフォルト設定にリセットされます。\n\n+\n!\n\nNumber Name\n1 Trancey Groove 16th\n2 Disco Light Swing 16th\n3 Tambourin 16th\n4 Bomba Acc 16th\n5 Shaker ChaCha 16th\n6 Loosely Flow 16th\n7 Claves Accent 16th\n\nNumber Name\n8 Caixa Accent 16th\n9 Charanga Shaker 16th\n10 Dancehall 16th\n11 Disco Indie 16th\n12 Fusion Tight 16th\n13 African Timbales 16th\n14 Quinta Loca 16th\n\nGrov. Grooveテンプレート。工場出荷時のオンボードgrooveテンプレートを以下に示します。OXI Appを使用してOXI ONEに転送されたgrooveは、grooveライブラリリストの番号15から表示されます。grooveパラメータは、グローバルgrooveページパラメータで設定された量でテンプレートプロファイルを適用します\n\nGrooveパラメータ\n\nAccnt Time Rand Grov\nVelocity Accent Amount Note Timing Amount Random Groove Template\ngrooveテンプレートのベロシティプロファイルに基づいて適用されるベロシティアクセントの+または-の量を設定します(リピートを含む)。範囲は-120%から120%で、デフォルトは0%です。 grooveテンプレートに基づいて、実際のパターンノートタイミングに適用されるタイミング(ノートのみ、リピートは含まない)の+または-の量を設定します。範囲は-120%から120%で、デフォルトは0%です。 テンプレートから適用されるgrooveの量をランダム化します。範囲は0-100%です。 オンボードライブラリからgrooveテンプレートを選択します。OXI Appのgrooveブラウザページを使用してさらに追加できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 85,
+      "image": "/manual/pages/page-085.png",
+      "title": "Page 85",
+      "sectionName": null,
+      "translation": "Creating Patterns 4\n\nGrooveテンプレートはOXI Appで作成できます。これらのテンプレートは、Ableton Liveなどの他のテンプレートと同様に、PC/MacのフォルダからmicroSDカードのgrooveフォルダにドラッグアンドドロップすることもできます。テンプレートは、groove「Grov」テンプレートライブラリでアクセスできるようになります。\n\nアプリの操作に関する詳細は、別のセクションで説明します。GrooveはOXI Appを使用してインポートおよびエクスポートできます。\n\nOXI App Grooveテンプレート\n\n+ 新しいgrooveを作成\n\ngrooveを編集\n\ngrooveを削除\n\nPC/MacからgrooveをドラッグしてOXI ONEデバイスにドロップします。\n\ngrooveビルダーは、各ステップにマッピングされたステップ数、velocityおよびステップタイミングを作成します。\n\nGroove名はツール内で編集できます。\n\ngrooveは最初にPC/Macに保存されます。\n\nテンプレートをデバイスにコピーすると、sequencerにロードできます。groove設定により、テンプレートの動作方法が設定され、適用量が決まります。\n\nOXI ONE Appを初めて使用する際は、PC/Macにマスター保存先フォルダを作成することをお勧めします。これは、プロジェクトタブの歯車アイコンから「select a storage directory」オプションを使用して実行します。\n\nmicroSDカードのgrooves ← オンボードOxi ONE → OXI App\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 86,
+      "image": "/manual/pages/page-086.png",
+      "title": "Page 86",
+      "sectionName": null,
+      "translation": "パターンの作成 4\n\n4.10 Euclideanパターンジェネレーター\n\nGeneratorは、パターンシーケンス全体を作成するために使用されるツールです。generatorの中核となるのはEuclideanエンジンで、適用されたパラメーター設定から入力を受け取る数学的モデルに基づいて、選択されたsequencerグリッドにノートを配置します。Generatorは破壊的なツールです。つまり、既存のノートステップは上書きされますが、ロックまたは固定されている場合、これらのステップは保護されます。\n\nGEN\neLen    eRot\nNteR    OctR\nePuls   Dens\nNot%    eInv\n16\n0st\n0\n0oct\n7\n30%\n+0%\nNo\n\nGEN    T:3\neLen    eRot\nNteR    OctR\nePuls   Dens\nNte%    eInv\n16\n0st\n0\n0oct\n7\n30%\n+0%\nNo\n\nEuclidean Generator\n\nGeneratorメニュー。\n[Gen]をタップ\n\nGeneratorメニュー。\n[Gen]をタップ\n\nEuclidean generatorの中核となるコンセプトは、いくつかのパラメーターを取得し、数学的モデルを適用してパターンを生成することです。2つの主要なパラメーターは、長さとパルスです。Euclideanエンジンは、定義された長さ全体にパルスを可能な限り均等に分散させます。例えば回転などの他のパラメーターも適用して、機能をさらに強化することができます。\n\nGeneratorは、現在選択されているsequencerまたはトラック(マルチトラックsequencerの場合)で動作します。\n\n特定のsequencerまたはトラックに対するEuclidean generatorパラメーターオプションを開きます。\n\nGeneratorパラメーター\n\neLen    ePuls    eRot    Dens\nEuclidean Length    Euclidean Pulses    Euclidean Rotation    Density\nEuclideanパターンの長さ(ステップ数)。この範囲にパルスが適用されます。    パターンの長さ全体に均等に分散して生成するEuclideanパルスの数。    Euclideanパターンの回転。すべてのステップが前方または後方にシフトされます。    パターン内のステップの密度。-100%から+100%のパーセンテージで設定します。\n\nNteR    Nte%    OctR    eInv\nNote Randomization    Probability    Octave Range    Euclidean Inversion\nノートのランダム化の範囲(半音単位)。範囲は0から+24st、または+/-24st。    ランダム化の確率を設定します。範囲は0-100%。    生成されたパターンに他のオクターブのノートを追加できるオクターブ範囲。範囲は0から+3、または-/+3 oct。    パターン全体を反転します。アクティブなステップは非アクティブになり、非アクティブなステップはアクティブになります。\n\nトラックに適用せずにEuclideanパラメーターを変更するには、[Shift]を押しながら該当するパラメーターのノブを回します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 87,
+      "image": "/manual/pages/page-087.png",
+      "title": "Page 87",
+      "sectionName": null,
+      "translation": "Patternの作成 4\n\n例: Euclidean Pattern\n\nLength: 16, Pulse: 7\nInvert: Yes\nRotate: +2\nDensity: +15% + +\n\n7つのパルスが、16ステップの範囲内にできるだけ均等に配置されます。\n\nパルスは反転できます。Invが「yes」の場合、非アクティブなパルスがアクティブになり、その逆も同様です。\n\nパルスは左/前方、または右/後方に回転でき、長さの開始/終了位置で折り返します。\n\nDensityはパルスを追加または削除できます。\n\nEuclideanの基本概念\n\nLength ステップ単位の長さ\n\nPulses 3\nPulses 4\nPulses\n1 5    2 6    3 7    4 8\n\nEuclideanジェネレーターには時間の長さが必要です。通常は時間間隔内のビート数です。\nこれをステップ単位で設定し、動作する全体的な長さを決定できます。\n\nパルスは、ノートを生成する時間内の実際のトリガーです。Euclideanジェネレーターは、選択されたパルス数を取り、それらを時間内にできるだけ均等に配置します。\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 88,
+      "image": "/manual/pages/page-088.png",
+      "title": "Page 88",
+      "sectionName": null,
+      "translation": "パターンの作成 4\n\n4.11 Random Generator\n\nOXI ONEはランダマイザーを使用してランダムパターンを生成できます。ランダムパターン生成は破壊的なプロセスであり、以前のデータを上書きします。Random generator機能はランダマイザーのセカンダリオプションであり、[Shift] + [Randomizer]を使用してアクセスします。Random performオプションについては後のセクションで説明します。\n\n+ [Shift]を押しながら[Randomizer]をタップすると、random generatorオプションとメニューが開きます。\n\nまたは、[Randomizer]をタップすると、random performとgeneratorページを切り替えられます。\n\n(Den)、Knob 4をタップするたびに、現在のsequencerで新しいパターンが生成されます。\n\nRandomizer - Pattern Generator\n\nパターンを生成する前にパラメーターを設定することで、メロディックおよびリズミックパターンを作成するためのフレームワークを確立できます。Knobをタップすると、上部と下部のパラメーター間を切り替えられます。Knobを長押しすると、その値がリセットされます。\n\nRandom generatorメニュー\n\nパターンを生成\n\nRandom Generator\nBias Rand\nScal Ties\nRang Den\nVel -\n0\nNo\n25%\n10%\n+12st\n10%\n70%\n 4\n\n生成されるパターンは、random generatorページで設定されたパラメーターの境界内で作成されます。これらは生成される各パターンごとに編集できます。または、単に(Den)を数回タップして、どのようなパターンが生成されるかを確認することもできます。パターンは作成後に手動で編集できます。\n\nRandom Pattern Generator\n\nRandom pattern generatorの原理は、設定されたパラメーターの境界内でランダムなリズミックおよびメロディックパターンを作成することです。その後、パターンをさらに手動で調整および微調整して、コンポジションを形成できます。したがって、開始点はランダマイザーパラメーターを作業用に設定することです。\n\nRandom Generatorパラメーター\n\nBias Rang Rand Den\nRoot noteオフセット Note intervalの範囲 Noteのランダム化 Noteの密度\n\nパターンを構築する中心要素となるroot noteオフセットを設定します。Rangパラメーターはこれを参照として使用します。Biasの範囲は-10から+10、デフォルトは0です。\n\nNote stepのintervalの範囲を設定します。Bias設定を基準として、この定義された範囲内で、上または上+下に新しいnoteを生成します。範囲はセミトーン単位で、-/+24から0から+24です。\n\n生成されるnoteのバリエーションの度合い。低い値ではより一貫性があり反復的なパターンが生成されます。高い値では、より変化に富み、予測しにくいパターンが作成されます。0-100%\n\n生成されるnoteの量を設定します。%として設定するか、生成されるnoteの動作に影響を与えるパラメーターオプションを設定します。\n\n(Den)を押してパターンを生成\n\nScal Vel Ties\nRandom ScaleとRoot Velocityのバリエーション Tied noteの確率\n\nYes - scaleとroot noteをランダム化できます。\nNo - sequencerのscaleとroot noteはランダム化中も維持されます。デフォルトはNoです。\n\n生成されるnoteにvelocity値を適用するためのバリエーションの範囲を設定します。Off、1% - 100%。デフォルトは10%です。\n\n生成されるnoteのうち、tiedになるnoteの量の確率%を設定します。0% - 100%。デフォルトは10%です。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 89,
+      "image": "/manual/pages/page-089.png",
+      "title": "Page 89",
+      "sectionName": null,
+      "translation": "パターンの作成 4\n\nrandomizerのdensityコントロールは非常に重要です。このノブを押すことでランダム化されたパターンが生成されます。パラメータを変更しても、(Den)を押すまでパターンには影響しません。Densityは複数のオプションを持つパラメータ設定です。これには、新しいパターンを生成する際のノートの%量が含まれます。さらに、modifierは(Den)を押したときに既存のパターンに影響を与える動作オプションに作用します。\n\n1-100% - ノブを右に回します。(Den)を押したときに生成されるノートの量を設定します。新しいノートが生成されます。100%ではすべてのステップが埋められ、1%ではごくわずか、またはまったくノートが生成されません。\n\nHuman - ノブを左に回し、1%の値より前にします。既存のパターンのノートに対してhumanizationのレベルを適用します。新しいノートは追加されません。gateとマイクロタイミングに影響します。\n\nOrder - ノブを左に回します。既存のノートを新しいシーケンスに並べ替えます。ノートの値は保持されますが、順序がシャッフルされます。既存のシーケンスのバリエーションを作成します。タイされたノートは保持されません。\n\nPitch - ノブを左に回します。シーケンス内の既存のノートのピッチを変更します。ノートの値は変更されますが、順序は保持されます。既存のシーケンスのバリエーションを作成します。タイされたノートは保持されません。\n\nInvrt - ノブを左に回します。ノートの順序を反転します。開始から終了までの順序でシーケンス全体のステップを逆転させます。これは同じノートのシーケンスですが、逆再生されます。\n\nDensity\n\nUndo\n\nランダムパターン生成のワークフロー例\n\nUndo機能は、randomジェネレータを使用する際に利用できます。\n\nパターンを生成\nSequencerを選択\n再生&テスト\nRandom Genを開く パラメータを調整\nPattern Modifierを適用 パラメータを微調整\n終了&クイックセーブ\n新しいパターンを生成\n現在のパターンをバリエーション\nパターン生成をUndo\t4\n4\n4 4\n\nNote\n\nrandomジェネレータ[Randomizer]を選択します。このビューでは、[Randomizer]をタップするか、[Shift] + [Randomizer]を使用して、randomジェネレータとrandom performページを切り替えます。\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 90,
+      "image": "/manual/pages/page-090.png",
+      "title": "Page 90",
+      "sectionName": null,
+      "translation": "ノート\n\nパターンの作成 4\n\n4.12 パターンの録音\n\nパターンは、内蔵キーボードまたは外部MIDIコントローラーからノートを録音することで作成できます。ライブ録音は、どちらのデバイスを使用しても同じプロセスに従いますが、外部MIDIを使用する場合は設定に違いが生じることがあります。\n\n録音には2つの方法があります。ライブ録音はsequencerをリアルタイムで再生しながらノートを演奏して録音します。ステップ録音は、sequencerが再生中でも停止中でも使用できますが、いずれの場合も1ステップずつ進めながら個別のノート、レストなどを段階的にプログラミングしていきます。\n\nライブ録音\n\nライブ録音は、録音カウントインの有無にかかわらず開始できます。これにより、録音開始後の演奏準備ができます。また、sequencerがすでに再生中の場合でも、パンチイン録音することができます。内蔵キーボードまたはMIDIコントローラーを使用してノートを録音します。\n\nステップ録音\n\nステップ録音では、ステップ間を移動しながら個別のステップにノートデータを段階的に「プログラミング」できます。各ステップは順番にプログラミングされます。この録音プロセスは、クラシックなSH101シンセを使用したことがあるユーザーにとっては馴染みがあるかもしれません。ステップ録音はより正確ですが、時間がかかるプロセスになる場合があります。\n\nライブ録音\n\nsequencerが停止している状態で[Rec]を押し、次に[Play]をタップして録音を開始します。設定されている場合は、録音が自動的に開始される前にカウントが表示されます。Recボタンが赤色に点灯します。\n\nパンチイン録音\n\nsequencerが再生中に[Rec]を押すと、すぐに録音が開始されます。Recボタンが赤色に点灯し、Playが点滅します。\n\n録音停止\n\n[Rec]を押すと録音を停止しますが、再生は続行されます。\n\n[Stop]を押すと、録音を停止して再生も停止します。\n\nステップ録音\n\nsequencerが停止中または再生中に、[Rec]を押しながら[Play]をタップすると、ステップ録音に切り替わります。Recボタンが赤色に点滅し、ステップ録音コントロールが表示されます。\n\nステップ録音停止\n\nsequencerが録音中に、[Rec]を押しながら[Play]をタップすると、ステップ録音を停止して終了します。Recボタンが消灯します。\n\nステップ録音を選択する前に[Keyboard]をタップするか、外部MIDIキーボードを使用します。各ノートを押すとステップ選択が進み、演奏されたノートがアクティブステップに適用されます。\n\n見出しには、ステップ選択位置が「Len X」として表示されます。\n\nStep REC - Len: 0\n\nReset: パターンを位置0にリセット\n\nRest: レストステップを追加\n\nPos: ステップ位置をナビゲート\n\nTie: タイステップを追加\n\n1 2 3 4",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

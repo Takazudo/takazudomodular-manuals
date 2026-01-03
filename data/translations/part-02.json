@@ -1,0 +1,283 @@
+{
+  "part": "02",
+  "pageRange": [31, 60],
+  "totalPages": 30,
+  "metadata": {
+    "processedAt": "2026-01-03T16:55:27.793Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 31,
+      "image": "/manual/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "translation": "► Expressive Mono Sequencerフレーズ\n\n1. シンセサイザーが接続されていることを確認するか、この例ではMIDIを使用してMacまたはPCのDAWに接続します。3つのトラックに音源を設定します。トラック1と2にはパルス/プラック系のサウンド、トラック3にはベースパッドを設定します。以下の各sequencerはこれらのDAWトラックに接続されます。[Shift]を押したまま[Clear]を押し続け、sequencer 1、2、3をクリアします。\n\n2. プロジェクトのテンポを設定します。[Shift]を押したまま(BPM)ノブ1を回して120 beats per minuteに設定します。\n\n3. Sequencer 1を選択し、Monoモードに設定します。Seq [1]をタップします。[Shift] + [1]を押したままsequencer設定を開きます。(Mode)を回してsequencerを'MONO'に設定します。これはSEQ 1の1/3ページにあります。\nI. スケールとルートを設定します。[Shift]を押したまま(Scal)ノブ3と(Root)ノブ4を回します。Minor C2に設定します。オクターブ範囲は(Oct)ノブ2で設定します。\nII. パターン長を6ステップに設定します。[End]を押したまま列6のパッドをタップします。または、[End]を押したままノブ3を回すことでエンドステップを変更できます。[Init]で設定される最初のステップは、デフォルトで1になっているはずです。\nIII. 次のように3つのステップを追加します:ステップ1をC2、ステップ3をF2、ステップ5をG2に設定します。これらのステップを設定するには、列がステップを表すので、列1、3、5を使用します。行は音程を表します。ディスプレイには、ステップの音程を設定するためにパッドをタップしたときに音程が表示されます。音程が割り当てられたパッドは点灯します。\nIV. ステップ3の[Pad]を押したまま[Page]をタップしてaccumulatorページを選択します。ステップ3の[Pad]を押したまま、ノブ1(Amt)を回して+1stに設定します。ステップ5についても同様に繰り返し、accumulator(Amt)を-1stに設定します。\nV. [Play]を押して、6ステップ範囲で作成されたパターンを聴きます。\n\n4. Sequence 1をsequencer 2にコピーします。[Copy]を押したままSeq [1]をタップし、次に[Paste]を押したままSeq [2]をタップします。Sequencerがコピーされます。これがDAWの別のトラックをコントロールしている場合、DAWトラックに合わせてチャンネルを変更する必要があるかもしれません。チャンネルはsequencer設定で設定します。[Shift] + Seq [1]を押し、次に(Ch)ノブ1を回します。\n\n2.2 シンプルで表現力豊かなSequence\n\nMonoはOXI ONE MKIIのシンプルなsequencerモードですが、強力な機能が満載で、完璧な出発点です。ここでは、表現力豊かで演奏可能なsequenceを構築し、OXI ONEでクリエイティブにインスピレーションを得ることがいかに迅速にできるかを実演します。\n\nOoraのワークフロービデオへのリンクはこちら。\n\nWorkflow 2\n\nSEQ1 Setup 1/3\nCh\n1 \tA\nPC\nOFF\nOut\nALL\nMode\nMONO\n+\n+",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 32,
+      "image": "/manual/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "translation": "Ooraのワークフロービデオへのリンクはこちら。\n\n► Expressive Mono Sequencerフレーズ（続き）\n\n5. 両方のsequencerが同じパターンを再生します。しかし、[Perf]を押すとperformanceページが開きます。これにより、各sequencerをその場でトランスポーズまたはローテーションさせることができ、アドリブやパフォーマンスを演奏できます。Row 1はsequencer 1を、row 2はsequencer 2を表します。中央の白い列は元の状態、つまりトランスポーズなしを表します。これらの行のいずれかの側のpadを押すと、上または下にトランスポーズされます。[Shift] + [Pad]をrow 1と2で押したままにすると、パターンがローテーションします。これらを試して、sequencerの再生中にperformerを実験してみてください。\n\n6. track 3に3つ目のmono mode seqを作成します。前のステップに従って、sequencerをmono mode sequencerとして作成し、設定します。C2（最下段）の長い音符を追加します。Step 1を押したまま、step 16をタップしてタイ音符を割り当てます。これは長いbass padを表し、DAWでこのトラックのチャンネルに設定する必要があります。\n\n7. flowボタンでバリエーションを追加しましょう。Flow stepsは、flowボタンを押している間のみ再生されます。steps 4と6をそれぞれG#2とA#2の音符に設定します。これらの音符を追加するには、[Flow]を押したまま[Pad]をタップします。これにより、stepsがflow stepsのみとして割り当てられます。sequenceを再生するときに、[Flow]を押したままにするとこれらのstepsがトリガーされ、離すとこれらのstepsがトリガーされずに再生されます。\n\n8. [Perf]モードで再度実験し、sequencerパターンをハーモニーでトランスポーズしてみてください。\n\n9. プロジェクトが保存されていることを確認してください。[Shift]を押したまま[Save]をタップします。これは、さらに進めるための良い出発点になります。\n\nWorkflow 2\n+",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 33,
+      "image": "/manual/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "translation": "Workflow 2\n\nコードパターンの構築\n\n1. 前のプロジェクトから開始します。\n\n2. Sequencer 4を選択し、Chordモードに設定します。Seq [4]をタップします。[Shift] + [4]を長押しして、sequencer設定を開きます。(Mode)を回して、sequencerを'CHRD'に設定します。これはSEQ 4のpage 1 of 3にあります。\n\n3. 次に、コードを組み立てます。\nI. メインsequencerビューで、スケールとルートを設定します。[Shift]を長押ししながら、(Scal)ノブ3と(Root)ノブ4を回します。Minor C2に設定します。オクターブレンジは(Oct)ノブ2で設定します。\nII. [Keyboard]を押して、スケールpadとコードセレクターを開きます。\nIII. 列13と14はコードタイプを選択し、列15はvoicing/インバージョン、列16はvoice spreadを選択します。16列目の上から2番目の行で、コードバンク間を切り替えます。\nIV. コードを試聴して、保存するものを見つけます。コードを保存するには、コード用のpadキーボードを長押しし、同時に空いている上段のpad 1-12のいずれかを数秒間長押しします。コードが保存されると、padが黄色に点灯します。\n\n4. 保存されたコードを使用して、メロディをシーケンスできるようになりました。sequencerビューからコードを選択して配置するには、[Keyboard]を長押ししてコードビューページを表示し、保存されたコードpad 1-12の上段をタップします。[Keyboard]ボタンを離し、任意のステップpadをタップして、選択したコードをグリッドに配置します。他のコードについても繰り返して、メロディを構築します。\n\n5. 次に、リピートを追加して、より興味深くバリエーションを加えることを検討します。OXI ONEのリピートエンジンは、リピートの追加、間隔の拡散、ランプの追加など、幅広いオプションを提供します。コードステップ[Pad]を長押し + [Page]をタップして、リピート設定用のステップサブメニューを選択します。padを長押ししたまま、ノブ1 (Rept)を回してリピートを設定します。\n\n6. ステップpadを長押ししたまま、他のパラメータを調整してみます。ノブ4でリピート間隔を設定し、ノブ3でランプを調整するとよいでしょう。コードを演奏しながら実験してください。\n\n2.3 Chords、RepetitionsとHarmonization\n\nChordモードでは、利用可能なスケール、コード、voicingのライブラリからコードのメロディを選択し、これらからパターンを構築できます。フローステップを追加してバリエーションを作成し、パターンを前のプロジェクトにリンクして、すべてのパターンをハーモニーで演奏します。\n\nOoraのworkflowビデオへのリンクはこちら。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 34,
+      "image": "/manual/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "translation": "Workflow 2\n\nOoraのワークフロービデオへのリンクはこちら。\n\nコードパターンの構築（続き）\n\n7. 繰り返しの別のコントロール方法として、メインsequencer画面からknob 4の(Rept)を押します。これにより、repeatsのパッドカラムエディターが開きます。[Pad]をタップしてrepeatsを追加し、[Shift] + [Pad]でrepeat durationを調整します。赤く点灯したパッドで示されます。\n\n8. flowを使用して選択したステップの繰り返しのみをトリガーするには、編集するステップを長押し[Pad] + knob 4をタップします。これにより、ステップサブメニューの下部にあるRept%パラメーターの編集にフォーカスが切り替わります。パッドを長押ししたまま、knob 4を回してRept%を'Flow'に設定します。これで、[Flow]ボタンを押している間だけrepeatsが適用されるようになります。\n\n9. chord sequencerの再生をmono sequencersの再生と調和的にリンクさせましょう。まず、sequencer [1]を選択します。[Shift] + (Scal) knob 3を使用してscaleを'HARMON S4'に設定します。これにより、sequencer 1のharmonizationがchord sequencer 4からリードされます。sequencer 2についても同様に繰り返します。\n\n10. [Perf]モードを押して、sequencerパターンをトランスポーズして実験してみましょう。これらは調和してプレイおよびトランスポーズされるようになります。mono sequencers 1と2は、sequencer 4の調和的なリードに従います。performer gridでchord sequencerをトランスポーズすると、chordとmono sequencersのharmonizationがコントロールされます。\n\n11. プロジェクトが保存されていることを確認してください。[Shift]を長押し + [Save]をタップします。プロジェクトの反復的な開発を保存するための良い習慣です。\n\nMONO\n105.0\n1/16 HARMON S4 - C2\nPattern 3\n50% INT F\nVEL GATE OCT REPT\n\nCHRD\n105.0\n1/16 MINOR - C2\nPattern 3\n50% INT F\nVEL GATE OCT REPT",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 35,
+      "image": "/manual/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "translation": "Workflow 2\n\nドラムパターンの構築\n\n1. 前のプロジェクトから開始します。\n\n2. Sequencer 5を選択し、Multitrackモードに設定します。Seq [5]をタップします。[Shift] + [5]を長押ししてsequencer設定を開きます。(Mode)を回してsequencerを'MULT'に設定します。これはSEQ 5の1/3ページにあります。\n\n3. 送信先の音源は、例えばキックをチャンネル5に設定するなど、ドラムごとに1つのMIDIチャンネルを使用して設定できます。ただし、一部の音源は、各ノートがドラム音源を表す単一のチャンネルに応答します。例えば、Elektron Digitaktは各トラックに個別のノートを使用できます。どちらもOXI ONEのmultitrack sequencerで使用できます。\n\n4. Multitrackトラックのセットアップ。\n\nI. トラックメニューを開くには、Sequencer [5]を長押し + 選択するトラックのColumn 1 [Pad]を押します。または、[Track]を押してから、Column 1 [Pad]を押してトラックを選択します。\nII. (Ch) knob 1を回してMIDIチャンネルを設定します。これは選択したトラック用であり、sequencer全体のものではありません。\nIII. [Shift]を長押し + [Keyboard]をタップしてプレビューモードを設定します。MIDI出力からトリガーされたサウンドが聞こえるようになります。\nIV. (Ofs) knob 2を回してノートオフセットを選択します。これは、トラック上のステップがトリガーしてMIDIチャンネルに送信するノートです。ノートは送信先の音源を表す必要があります。例:'C1'。\nV. すべてのトラックについて設定を繰り返します。\n\n5. Multitrackステップをプログラミングする際の動作は、[Shift] + [Config] > workflow optionsで変更できます。これは個人的な好みによります:\n\nTrack Select priority in multitrack.\n• Yes: ステップの最初のタップでトラックを選択し、その後のステップタップで選択したステップにトリガーを割り当てます。\n• No: パッドをタップすると、すぐに任意のトラックにトリガーステップを追加できます。\n\n2.4 ドラム用のMultitrack。\n\nMultitrackモードでは、各行が独立したsequencerとして機能します。行ごとに個別のMIDIチャンネルを設定できます。すべてのsequencerがmultitrackモードに設定されている場合、OXI ONEは64トラックのsequencingを提供します。Multitrack sequencerを使用してドラムパターンを作成しましょう。\n\nOoraのworkflowビデオへのリンクはこちら。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 36,
+      "image": "/manual/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "translation": "Workflow 2\n\n5. 各トラックはドラム楽器(例:キック、スネア、ハイハットなど)を表します。各トラックにステップをプログラムしてドラムパターンを作成します。トラックを再生することで、sequenceオプションをテストできます。\n\n6. 各トラックは独立しているため、長さ、タイムディビジョン、方向を個別に設定できます。また、サウンドのバリエーションも適用できます。例:\n\n• メインページでノブ1(Vel)をタップすると、グリッドパッドのカラムエディタを使用して選択したトラックのベロシティをコントロールできます。\n\n• メインページでノブ4(Rept)をタップすると、グリッドパッドのカラムエディタを使用して選択したトラックの各ステップにリピートを割り当てることができます。\n\n• ノブ3(Gate)をタップしてから回すと、選択したトラックのすべてのgate長を調整できます。\n\n• [Shift]を押しながら[Flow]を押すと、選択したトラックのグルーブエディタが開きます。グルーブはトラックごとに適用することもできます。\n\n7. ドラムプログラミングの代替機能として、ドラムジェネレーターがあります。これは、マルチトラックsequencerの最初の3つのトラックのパターンを自動的に生成します。\n\nI. トラックレイアウトは、トラック1にキック、トラック2にスネア、トラック3にハットを自動的に生成します。\n\nII. [Random]を押しながら、トラック1、2、3のカラム1の[Pad]をタップします。これにより、ステータスがドラムジェネレータートラックに変更されます。アクティブになると、パッドが明るい青色に点灯します。\n\nIII. トラック長を32ステップに設定します。ドラムジェネレーターはこの長さに最適化されています。[32]を押してから、[End]を押しながら3つのトラックの最後のカラムパッド行をタップします。マルチトラックではトラックごとに長さを設定できることを覚えておいてください。\n\nIV. [Play]を押すと、これらのトラックのパターンが生成されます。\n\n8. [Perf]を使用して、ミュートとプリセットバリエーションを使ってアドリブや即興演奏を行い、ドラムトラックをその場で管理してみてください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 37,
+      "image": "/manual/pages/page-037.png",
+      "title": "Page 37",
+      "sectionName": null,
+      "translation": "Workflow 2\n\n► Instrument Definitions\n\n1. OXI ONEはinstrument definitionsをサポートしています。これはどういう意味でしょうか?\nOXI Appを使用してデバイスにいくつかのプロファイルが読み込まれ、これらはMIDIプリセットのように機能します。これらはOXI ONEと外部デバイス間の事前定義されたマッピングを提供します。これにより、すべてのCCコントロールが事前設定され、トラックに簡単に読み込めるため、作業が楽になります。\n\n2. 例として、sequencer [6]に'POLY'トラックを作成します。MIDIとsequencerの設定については、前述のガイダンスに従ってください。\n\n3. seq 6にinstrument definitionを割り当てるには、[Shift] + Sequencer [6]を使用してsequencer setupを開きます。[Page]ボタンをタップしてページ3/3を選択します。\n\n4. 次に(Instr)ノブ3を回します。読み込まれたdefinitionsがリスト表示されます。新しいdefinitionsはアプリからデバイスに追加できます。例として、EurorackエフェクトモジュールであるOXI Instruments Coralを選択します。\n\n5. OXI ONEをCoralデバイスに接続します。この例では、USB接続オプションを使用します。\n\n6. [Mod]を押して、sequencer 6とCoralデバイスのマッピングされたパラメータを表示します。\n\n► Modulation Lanes\n\n1. この例では、トラック6は別のデバイスをmodulateすることに焦点を当てます。この場合、OXI Coralが宛先です。オーディオはCoralを通じてチャンネリングされることを想定しており、他のworkflowの例で生成されたものかもしれません。\n\n2. sequencer 6で[Mod]を押します。これにより、8つの個別のmodulation lanesが利用可能なmodulation機能が開きます。これらをmodulation sequencersとして考えてください。\n\n3. instrument definitionが使用されている場合、宛先は事前にマッピングされています。使用されていない場合、[Shift] + [Mod]でmodulation matrixの設定が開きます。\n\n2.5 Modulation Lanesの魔法\n\nModulationとは、動きと変化を加えるためにパラメータを制御することを指す用語です。例えば、ギターのワーミーバーは弦をmodulateします。エレクトロニックミュージックでは、modulationは通常、エンベロープとlow frequency oscillatorsを通じて適用されます。この例では、OXI ONEのユニークな機能であるmodulation lanesに焦点を当てます。これらは、外部および内部パラメータのmodulationに専用のトラックレーンです。Modulationはアプリケーションとセットアップに固有のものです。したがって、このworkflowはOXI ONEでmodulation lanesを使用する原則の一般的な紹介にすぎません。\n\nOoraのworkflowビデオへのリンクはこちら。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 38,
+      "image": "/manual/pages/page-038.png",
+      "title": "Page 38",
+      "sectionName": null,
+      "translation": "Workflow 2\n\n4. modページでは、4つのknobがそれぞれ1つのレーンを表します。knobをタップ&ホールドすると、そのmodulationレーンのオン/オフを切り替えられます。knobをタップすると、上段の1-4と下段の5-8のレーンのフォーカスが切り替わります。\n\n5. knobをアクティブな状態で回すと、すべてのステップのmodulation量を同時に調整できます。これは、OXI ONEのmodレーンから送信先パラメーターに送られる値です。これは、sequencerが再生される際に各ステップがパラメーター値を調整するステップのセットと考えてください。フィルターカットオフ、reverbの適用量、エフェクトの全体的なdry/wetミックスなどが良い例です。\n\n6. modレーンを選択した状態で、各padをタップして値を割り当てることができます。pad上をスワイプしてmodulationカーブを描くことも可能です。グリッドpadは列エディターとして機能します。\n\n7. 特定のレーンのmodulationマトリックスを編集するには、[Shift]を押しながら編集したいmodulationレーンのknobをタップします。CCの送信先やレンジ設定などのオプションが表示されます。内部の送信先も適用できます。\n\n8. ループや異なるtime divisionを設定してみてください。また、複数のmodレーンを使用して、同じシーケンス内の他のデバイスパラメーターを独立した形状でmodulateすることもできます。\n\n9. modulationルーティングをさらに高度に活用するには、例えばEurorackデバイスからのCV制御などの外部入力をOXI ONEを経由してMIDIの送信先に送ることができます。[Shift] + [Mod]の設定でルーティングとコントロールを試してみてください。これはもちろん、お使いのハードウェア構成とセットアップによって異なります。\n\nMOD Lane 6",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 39,
+      "image": "/manual/pages/page-039.png",
+      "title": "Page 39",
+      "sectionName": null,
+      "translation": "Workflow 2",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 40,
+      "image": "/manual/pages/page-040.png",
+      "title": "Page 40",
+      "sectionName": null,
+      "translation": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 41,
+      "image": "/manual/pages/page-041.png",
+      "title": "Page 41",
+      "sectionName": null,
+      "translation": "Sequencer Basics\n\n3\n\nOXI ONEは、バッテリー駆動のパフォーマンス志向のsequencer、controllerであり、作曲ツールです。ライブパフォーマンスのステージでも、音楽制作やサウンドデザインのためのツールとしてスタジオでも、同様に活躍します。ONE MKIIは、オリジナルモデルからの進化版で、sequencerの進化、ワークフローの強化、新機能の追加に重点を置いています。ONEには8つのsequencerがあり、それぞれ6つのユニークなsequencerモードのいずれかに設定できます。基本的なベースラインの作成、複雑なメロディ、ドラムビートの作曲など、適切なツールがONEツールキットに揃っています。sequencerを使用する際の最も基本的な3つの領域は、ユーザーインターフェースコントロール、padグリッド、ディスプレイ画面です。一部のコントロールは動的で、コンテキストに基づいて変化します。たとえば、4つのコントロールロータリーノブは、選択された機能に基づいてパラメーターに割り当てられ、これらのパラメーターを反映した値を表示します。グリッドはパターン作成のための重要なインターフェースですが、パラメーターの編集にも使用されます。グリッドは多目的であり、sequencerモードと選択された機能に合わせて動的にその機能を変更します。このセクションでは、ONEのsequencerの使用に関する基本に焦点を当てています。ここでの内容は、ほとんどのsequencing環境で適用できる、より一般的なビューとコマンドに焦点を当てています。これらは、後でより高度な詳細に進む前に、慣れておく必要がある基礎的なトピックです。個々のsequencingモードのユニークな複雑さや特定の詳細については、後で説明します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 42,
+      "image": "/manual/pages/page-042.png",
+      "title": "Page 42",
+      "sectionName": null,
+      "translation": "3.1 Sequencerとは?\n\nONEの観点から見ると、sequencerはトラックとパターンを管理、作成し、編集を可能にします。sequencerは、ステップからパターンを構築する際の操作環境であり、全体的なシーケンス再生とパフォーマンスの動作を制御します。編集とトラック構築のために一度に選択できるsequencerは1つだけです。\n\n6つのsequencer動作モードがあります。各モードは、特定のクリエイティブなコンテキストに適合することを目的とした一連のオプションとワークフローツールを提供します。例えば、monoモードはモノフォニックなメロディックラインやベースメロディに最適です。\n\nsequencerで作成される出力は、通常トラックです。トラックは、外部デバイスへの出力を制御する音楽的なタイムライン上に配置された一連のパターン、ステップイベント、パラメータ設定です。通常、各sequencerは1つのトラックを管理しますが、multitrackモードとmatricealモードは例外で、これらのsequencerモードはそれぞれ8つと4つのトラックを管理できます。トラックを1つの楽器として考えると理解しやすいでしょう。ただし、技術的には複数の楽器を1つのONE出力に接続することも可能です。各外部楽器を1つのトラックで表現することが標準的な方法です。例えば、polyモードのsequencerで制御されるpolyシンセ、3つのトラックを使用するキックドラム、スネア、ハットを持つmultitrack sequencer、そしてmonoモードのベースシンセというシンプルな構成が考えられます。\n\nSequencer Basics 3\n\n利用可能な8つのsequencerエンジン\n\nPattern Parameter Automation Lanes\n\nMode Seq Engine User Interface\n\nSequencerあたり最大16パターン\n\nモードに基づくトラック数\n\nInstrument\n\nSequencer\n\nTrack",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 43,
+      "image": "/manual/pages/page-043.png",
+      "title": "Page 43",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\n3.2 Sequencerのナビゲーション\n\n起動時のデフォルトのホーム画面はsequencerビューです。sequencerを操作する際には、いくつかの基本的なコマンドが共通して利用できます。選択したモードに固有のコントロールもありますが、通常、以下のコマンドは共通です。\n\nSequencerビューとコマンドオプション\n\nSequencerの選択\n\n編集するsequencerを選択するには、[1] - [8]をタップします。Sequencerビューでは、パッドを使用してステップを割り当て、グリッドにパターンをプログラムできます。グリッドパッドの色は、選択したsequencerを反映します。\n\n[Mute]ボタンがラッチオンの場合、sequencerを押すとミュート/ミュート解除されます。ミュートがラッチオンの状態でsequencerを選択するには、[Shift]を押しながら[1] - [8]をタップします。\n\nSequencerのアクティブ化/ミュート\n\n[Mute]を押しながら[1] - [8]をタップします。1つ以上のsequencerをミュート/ミュート解除できます。\n\nTransportバーが停止している場合:\n[Mute]を押しながら16 x 8グリッドの列1の任意の[Pad]をタップします。この方法を使用すると、ミュート/ミュート解除は即座に適用されます。Transportの再生ヘッドは継続します。\n\nミュート時、[Mute]を押し続けると、選択したsequencerのミュートアクションは[Mute]ボタンを離すまで遅延され、その後すぐにミュートがアクティブになります。Sequencerボタンは赤く点滅し、sequencerがミュート待機状態であることを示します。(2)\n\nミュート解除時、[Mute]を押し続けると、選択したsequencerのミュート解除アクションは[Mute]ボタンを離すまで遅延され、その後パンチイン/アウトのクオンタイゼーションに基づいて実行されます。Sequencerボタンは緑色に点滅し、sequencerがミュート解除待機状態であることを示します。(2)\n\nSequencerのステータス\n\nSequencerボタンの色は、各sequencerの現在のステータスを示します。編集と表示のために一度に選択できるsequencerは1つだけです。選択されたアクティブなsequencerは、テンポBPM設定に合わせて点滅します。(1)\n\nActive / Unmuted: 白の点滅/色の点滅\nInactive / Muted: 柔らかい静的な色\nSelected: 白の点滅/色の点滅\nDeselected: 消灯\n\nSequencerごとのデフォルトグリッドパッドカラー。これらの色は、オプションでsequencerボタンにも適用できます。このオプションは、config > workflow settingsで選択できます。\n\nPurple 0\nOrange 56\nBlue 14\nPink 70\nMauve 28\nTurquoise 84\nYellow 42\nAqua 98\n\n(1) 1-8 sequencerパッドのカラースキームは、config > workflowメニューオプションで選択できます。したがって、選択時の1-8パッドの色は、マルチカラーまたはデフォルトのターコイズsequencerパッドカラースキームに基づきます。\n\n(2) デフォルトの動作では、muteボタンを離すとsequencerがミュートされます。「待機中」のミュート状態は、sequencerボタンの色で示されます。ミュートの動作は、config > performance settingsで変更できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 44,
+      "image": "/manual/pages/page-044.png",
+      "title": "Page 44",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\n1\n\nモノ、ポリ、コード、マルチトラックモードで動作します。\n\nTip. 列1のステップをミュートする際は、以下の代替方法を使用してください。\n\n[Mute]ボタンと組み合わせて使用すると、列1はアクティブなsequencerをミュートするために予約されており、ソフトホワイトのグリッドパッドで示されます。\n\nミュートされたステップパッドは薄紫色に点灯し、ミュート時にはステップ画面のヘッダーにノートアイコンが表示されます。\n\n+\n\n+\n\nステップをミュート/ミュート解除する\n\n[Mute]を押しながら[Pad]をタップします。\n\n[Pad]を押しながら(Vel)をタップします。\n\nステップをミュートする\n\nミュートの代替オプション。パッドを押している間に表示されるステップパラメータページ内のvelocityノブを使用します。\n\nMO MT CH PO",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 45,
+      "image": "/manual/pages/page-045.png",
+      "title": "Page 45",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\nSequencerビューは、選択したモードに合わせてフォーマットされた一連のステップとしてグリッドを表示します。例えば、monoモードでは各列が時系列で左から右への連続したステップとして表示され、各行は選択された音階内の音程値として表示されます。グリッドのビューの中には、パラメーターコントロール設定を表すものもあり、これらは現在の動作コードに固有のものです。以下は、sequencer用のグリッドを使用する際の一般的な構造とコマンドです。\n\nSequencer Grid View & Navigation\n\nステップ - 時間 / 方向\n視覚範囲の開始\n低い音程\n高い音程\n視覚範囲の終了\nスケールに基づく音程\n\nオクターブルート音。行はソフトホワイトで表示されます。\nアクティブな音符、パッドは選択されたsequencerの色で点灯します。\n消灯、ステップには音符がありません。\n赤: 下のオクターブに追加の音符が存在することを示します。\n白: 上のオクターブに追加の音符が存在することを示します。\nタイで結ばれた音符。\n\nステップは、sequencerごとの合計128ステップをカバーする8ページのシリーズにわたって整理され、パッドグリッド上の各ページに16ステップとして表示されます。\n\nページボタンをタップして、ステップ範囲16、32、48、64をナビゲートします。ボタンは白く点灯します。ダブルタップでページ範囲80、96、112、128にアクセスします。ボタンは青く点灯します。再生中は、アクティブに再生されているページのみが点灯します。\n\nfollowerがアクティブな場合、表示されるページは再生中にプレイヘッド位置を動的に追跡するように自動的に変更されます。これは、[Shift] + [Track]を押したままにすることで、オン/オフを切り替えることができます。followerがアクティブな場合、上部ディスプレイに「F」が表示されます。編集中やsequencerが再生中はページを静的に保つと便利です。\n\nグリッド音符ビュー範囲を調整するには。\n\nKnob 2をタップしてから、↑↓に回します。または、[Track]を押したまま(Knob 1)を回します。\n\n表示されているステップを調整するには。\n\n[Track]をタップしてトラックメニューを開き、[Shift]を押しながら(Knob 1)を回すと、オクターブ単位で調整されます。\n\nグリッド行を垂直方向にスクロールするときに、最大8オクターブをナビゲートできます。オクターブビューを調整すると、オクターブの開始と終了を表す行が点灯します。\n\n垂直位置\n\n水平位置\n\n2 1\n\nF\n\n+\n\n1-16\n65-80\n\n17-32\n81-96\n\n33-48\n97-112\n\n49-64\n113-128",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 46,
+      "image": "/manual/pages/page-046.png",
+      "title": "Page 46",
+      "sectionName": null,
+      "translation": "Sequencer Basics\n\n3.3 Sequencerとステップパラメーターの操作\n\nONE sequencerには、ステップ、トラック、そしてsequencer自体に関するパラメーターがあります。一部のパラメーターは、例えばすべてのステップに影響を与えるグローバル値を制御する一方で、他のパラメーターは個別のステップなど個別の機能に焦点を当てています。これらは同じパラメーターでも、適用方法が異なる場合があります。\n\n全体的なパラメーター構造を理解するために、利用可能なオプションのナビゲーション方法を紹介します。一部のパラメーターとページはsequencerモード間で共通ですが、特定のsequencerモードに固有のものもあり、それらについては後のモード説明で詳しく説明します。\n\nSequencer Setup.\n\nmono、poly、chordなどの動作モードの設定を含む、sequencer全体の最高レベルの設定です。一般的には、MIDIチャンネル、出力ポート、program / bank変更、インストゥルメント定義、色などを含む、複数ページのグローバルsequencer設定を表します。\n\nOpen the sequencer setup. Hold [Shift] + tap [1] - [8]. These are mode dependant but in general consist of several pages of parameters. Once the menu is open, selection can be changed to another sequencer by pressing its button [1] - [8].\n\n[Shift]を押しながら[1] - [8]をタップしてsequencer setupを開きます。これらはモードに依存しますが、一般的には複数ページのパラメーターで構成されています。メニューが開いたら、ボタン[1] - [8]を押すことで別のsequencerに選択を変更できます。\n\nIf additional parameter pages exist, the [Page] button will flash. Press [Page] to cycle through available pages.\n\n追加のパラメーターページが存在する場合、[Page]ボタンが点滅します。[Page]を押して利用可能なページを切り替えます。\n\nAlso use [Shift] + sequencer button to cycle its pages.\n\nまた、[Shift] + sequencerボタンを使用してそのページを循環させることもできます。\n\nExamples: Mono Mode\n\n例:Mono Mode\n\nSEQ1 Setup 1/3\nCh 1 A\nPC OFF\nOut ALL\nMode MONO\n\nSEQ1 Setup 2/3\nIn Glob\nBnk OFF\nReset OFF\nTrnsp OFF\n\nSEQ1 Setup 3/3\n- -\nInstr None\n- -\nColor 20\n\nTrack Setup.\n\n再生方向、タイムディビジョン、グリッドオクターブ範囲の表示ナビゲーションを含む、一般的なトラック指向の設定です。ほとんどのモードには1つのトラックがありますが、multiなどのモードでは、8つのトラックそれぞれのパラメーターを管理するためにtrack menuが重要です。\n\nOpen the track setup. Tap [Track] button.\n\n[Track]ボタンをタップしてtrack setupを開きます。\n\nExample: Mono Mode\n\n例:Mono Mode\n\nTrack Menu\n0\nDiv OFF\nDir Div 1/16\n\nParameters are edited with the respective knob. Some parameters will need to be confirmed once edited by pressing the knob. These are shown with the down arrow symbol. Parameters that have been edited but the change has not been made active will be shown with a * symbol.\n\nパラメーターは対応するノブで編集します。一部のパラメーターは、編集後にノブを押して確定する必要があります。これらは下向き矢印記号で示されます。編集されたが変更がまだ有効になっていないパラメーターは*記号で表示されます。\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 47,
+      "image": "/manual/pages/page-047.png",
+      "title": "Page 47",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\n注意\n\nパラメータ行が2段になっているディスプレイでは、対応するパラメータノブをタップすることで、編集する上段と下段のパラメータを切り替えることができます。\n\nステップのセットアップは通常2つのセクションに分かれています。1つ目はすべてのステップに適用されるグローバル設定です。2つ目は個々のステップに適用されるサブメニューオプションです。一部のジェネレーティブモードはステップ単位で編集されないため、ステップ値が表示されない場合があります。\n\nStep Global。選択したsequencerのグローバルステップ、拡張パラメータにアクセスするには、[Step]ボタンをタップします。\n\nStep Primary Parameters & Step Submenu。選択したステップのみの個別パラメータにアクセスするには、[Step]ボタンを長押しします。場合によっては、複数のステップを長押しして一緒に編集することができます。\n\n選択した個別ステップのステッププライマリーページとステップサブメニューページを切り替えるには、[Step]を長押し + [Page]ボタンをタップします。\n\nプライマリーパラメータのグローバルオプションは、メインのsequencerビューにデフォルトパラメータとして表示され、ノブ1-4で制御されます。\n\nセカンダリーオプション、tempo、swing、scale、rootは、shiftボタンを長押しすることでアクセスできます。\n\n+\n\nD2 - Step 2\n\nVel\n75\n\nGate\n50\n\nOct\n+0\n\nTrig\n100%\n\nStep Submenu\n\nRept\nOffst\tRng\nDurat\nGlid\tRpt%\nNo\n0%\n0%\t+-\t+-\n0st\nx 1\n0%\n0%\n100%\n\nAccuml - Step 2\n\nAmt\tAcml+\nTotal\t%Mde\nMode\tAcml-\nTrig\tAcm%\n+0st\n+0st\n+7st\nlqnor\nWrap\nAll\n-0st\n100%\n\nStep Setup。\n\n一部のパラメータはデフォルトにリセットできます。パラメータをデフォルト設定にリセットするには、パッドを長押ししながら、対応するノブを2秒以上長押しします。\n\n例: Mono Mode - Global\n\n例: Mono Mode - per Step\n\nStep/Accml Global\n\nRept\nOffst\t-\nDurat\nAcmM\t-\n...\n...\n...\t...\n\nStep\n\n...",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 48,
+      "image": "/manual/pages/page-048.png",
+      "title": "Page 48",
+      "sectionName": null,
+      "translation": "Sequencer Basics\n\n3.4 Transport Controls\n\nTransportとは、3つのplay、stop、recordコントロールを指します。これらはパネル上で手動操作できますが、外部クロックなどの外部コントロールによって影響を受ける場合もあることに注意してください。ここでの説明は内部同期に基づいています。\n\n注意\n再生の「reset」オプションはすべてのsequencerをコントロールします。ただし、個別のsequencerをリセットするには、[Shift] + [Mute] + Sequencer [1] - [8]を押し続けてください。リセットの動作はpunch-in quantizationに依存します。\n\nPlay / Pause Button Behavior [Shift] + [Config] > Performanceで設定にアクセス\n\nSetting Command Description\n\nOFF - デフォルト Playボタンは最初のステップから再生を開始します。それ以降のplayの押下は無視されます。\nボタンは白と緑で点滅します\n\nPAUSE Play / Pause ボタンは再生を開始します。もう一度playを押すと再生を一時停止するか、一時停止した位置から再生を再開します。一時停止中はボタンが緑で点滅します。\n\nRESET Play / Reset ボタンは再生を開始します。もう一度playボタンを押すと、punch-in quantizationインターバルが達成された時点で、実行中のsequencerの再生を開始位置にリセットします。Punch in quantizationはsequencerセットアップページの2/3ページで「In」とラベル付けされています。\n\nsequencerを再生するには、[Play]を押します。sequencerは、別の設定をしていない限り、通常はパターンの最初のステップから再生を開始します。playボタンの動作は、config > performanceメニューで再設定できます。\n\n録音オプションは、受信したMIDIデータをsequencerにキャプチャすること、またはグリッド上でステップレコーディングを選択することに基づいています。録音のプロセスは別の場所で説明されており、このセクションでは基本的なコマンドについて説明します。\n\nStopped\nグレー\n\nPlaying\n緑/白で点滅\n\nPlay Button\n\n+\n\nRecord. [Rec]を押すと録音が有効になります。これはMIDI入力またはkeyboard viewデータを録音するために使用されます。もう一度押すと録音を終了します。\n\nStep Recording. ステップレコーディングに入る、または終了するには、[Rec]を押し続けながら[Play]を押します。ステップレコーディングユーティリティが表示され、ノブを使用して録音をコントロールできます。\n\nArm Recording. 録音をアームまたはディスアームするには、[Rec]を押し続けながら[Stop]を押します。\nノート入力を待機する録音をアームします。ノートを受信すると録音が開始されます。\n\nExit Recording. 録音設定に入る、または終了するには、[Shift]を押し続けながら[Rec]を押します。\nまた、[Back]を押してページを終了することもできます。\n\nNot Recording\nグレー\n\nRecording\n赤\n\nStep Recording\nグレー\n\nArm Recording\nグレー\n\nStep Recording\n赤で点滅\n\nArm Recording\nターコイズ\n\nStep Recording\n赤で点滅\n\nRecord Button\n\n+\n\n+",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 49,
+      "image": "/manual/pages/page-049.png",
+      "title": "Page 49",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\nstopボタンはsequencerを停止するだけでなく、sequencerのリセットや同期を制御することもできます。\n\nsequencerは、transportボタンだけでなく、白いplayheadカーソルでも再生状態を表示します。これは再生方向に移動しながら、現在再生中のステップを表示します。パターンがデフォルトの16ステップを超える場合、followerオプションを選択できます。これにより、各ページにわたってplayheadを自動的に追跡します。\n\n注意\nONEがプライマリコントローラーとして設定されておらず、config > MIDI設定で有効になっている場合、Play、Stop、Recordボタンを押すと、ポートAでMIDI CCメッセージを出力できます。これらはStop = CC 105、Play = CC 106、Rec = CC 107です。\n\nsequencerを停止するには、[Stop]を押します。sequencerのplayheadは最初のステップにリセットされます。playを押すと、この位置から開始されます。\n\nダブルタップすると、すべてのMIDIをクリアします。例えば、ノートがハングしている場合などに使用します。\n\n再生中にsequencerをリセットするには、[Shift]を押しながら[Stop]を押します。これは、playボタンについて上記で説明したのと同じpunch-in quantizationの動作に従いますが、playボタンの設定はここでは関係ありません。\n\nfollow機能のオン/オフを切り替えるには、[Shift]を押しながら[Track]をタップします。オンの場合、gridページはplayheadを追跡するように変更されます。オフの場合、ページは選択されたまま静的に保たれます。これは、その場で編集する場合に便利です。オンの場合、ディスプレイのヘッダーに'F'シンボルが表示されます。\n\nClock Synchronization。sequencerが停止している状態で、グローバルクロック同期を変更できます。[Shift]を押しながら[Stop]をタップして、INT - Internal clock syncと外部入力オプション(USB、MIDI Jack、Bluetooth、またはClock input)を切り替えます。現在の設定が表示され、最後に選択されたモードがONEの電源投入時のデフォルトになります。\n\nPlaying / Stopped\nGrey\n\nPlaying\nGrey\n\nStop Button\n\nFollower Option\n+\n\n+",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 50,
+      "image": "/manual/pages/page-050.png",
+      "title": "Page 50",
+      "sectionName": null,
+      "translation": "3.5 MuteとActivationの動作\n\nsequencerはactive、inactive、muted、unmutedの状態を持ちます。これらの状態を制御するmuteボタンの動作は、設定で変更できます。active/inactiveはsequencer全体のトランスポートに関する状態です。inactiveの場合、トランスポートは停止し、ステップはトリガーされず、出力もないためmuteされた状態になります。activeでunmutedなsequencerのみが、MIDIチャンネルと物理出力を通じてコントロール信号とノート信号を送信します。activeなsequencerをmuteすると、トランスポートコントロールは動作し続けますが、コントロール信号やノートは物理出力に送信されません。\nその他のmute設定についても設定を確認してください。\n\nSequencer Activate / Muteコントロールオプション\n\nToggle on Release (デフォルト設定) Activate / Deactivate\n\nHold [Mute] + Tap [1] - [8]。1つまたは複数のsequencerをactivateまたはdeactivateします。\nアクションは[Mute]ボタンを離したときにのみ実行されます。[Mute]を押し続けている間、sequencerは通常通り動作を続け、ボタンは赤く点滅してdeactivation待機中であることを示します。\nトランスポートのプレイヘッドが停止します。再度activateする場合、muteは緑色に点滅してactivation待機中を示します。\nトランスポートはpunch-in quantizationに基づいて再開されます。\n\nNormal\nPending\nInactive\n\nAlternative Mute Sequencer & Mute Track Options (デフォルト)\n\nHold [Mute] + Tap any [Pad] in column 1 if the 16 x 8 grid。トランスポートのプレイヘッドは通常通り動作を続けます。これはsequencerをmuteおよびunmuteする別の方法で、特にmultitrackモードで各トラック行をmute/unmuteする際に便利です。このコマンドはボタンの組み合わせを押したときに即座に適用され、上記のmute動作には従いません。\n\nNormal\n\nMute on Release (設定オプション) Mute / Unmute\n\nHold [Mute] + Tap [1] - [8]。1つまたは複数のsequencerをmuteまたはunmuteします。\nトランスポートのプレイヘッドは動作し続けます。Mute/unmuteは[Mute]ボタンを離したときにのみ実行されます。[Mute]を押し続けている間、sequencerは通常通り動作を続け、ボタンは赤く点滅してmuteコマンド待機中であることを示し、緑色に点滅してunmuteコマンド待機中を示します。\nSequencerはactiveですが、すべての物理出力はサイレンスされます。\n\nNormal\nPending\nMuted\n\nToggle Instant (設定オプション) Activate / Deactivate\n\nHold [Mute] + Tap [1] - [8]。1つまたは複数のsequencerをactivateまたはdeactivateします。\nトランスポートのプレイヘッドが停止します。Mute/unmuteはこのボタンの組み合わせを押したときに即座に適用されます。Unmutedにすると、トランスポートはpunch-in quantizationに基づいて再開されます。\n\nNormal\nInactive\n\nMute Instant (設定オプション) Mute / Unmute\n\nHold [Mute] + Tap [1] - [8]。1つまたは複数のsequencerをmuteまたはunmuteします。\nトランスポートのプレイヘッドは動作し続けます。Mute/unmuteはこのボタンの組み合わせを押したときに即座に適用されます。Sequencerはactiveですが、すべての物理出力はサイレンスされます。\n\nNormal\nMuted\n\n[Mute]ボタンはsequencerのmuteとactivationを制御するために使用されます。通常はsequencer、step、またはtrack padと一緒に押し続けますが、muteボタンはラッチすることもできます。[Mute]をダブルタップしてmuteボタンをラッチオン、またはラッチオフにします。ラッチオン中の後続のコマンド、つまりSeq [1] - [8]をタップすると、muteボタンを押し続けているかのように動作します。\n\nmute動作はConfig > Performance > Mute Behavior設定で変更できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 51,
+      "image": "/manual/pages/page-051.png",
+      "title": "Page 51",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\n3.6 Sequencingステップ\n\nほとんどのモードでは、sequencerのステップのプログラミングは16 x 8のグリッドパッドを使用して行われます。一部のモードやビューでは、パッドはパラメータの変更を適用するためにも使用されますが、ここではグリッド上でステップをプログラミングする一般的なプロセスを説明します。ビューでの配色は選択されたsequencerによって異なることに注意してください。編集する前に、目的のsequencerが選択されていることを確認してください。\n\nグリッドは16列のステップと8行のノートを表します。\nビューはページボタンとオクターブ範囲のスクロールで操作できます。\n\nステップの作成\n\nステップを有効化または無効化する。\n[Pad]を素早くタップします。(1)\n\nステップパラメータの編集\n\nパラメータはホームsequencerビューに表示されます(4)。\nvelocity、octave、gate & trigが含まれ、ノブ1-4で編集されます。\n\n有効なステップのパラメータを編集する。\n有効な[Pad]を押したまま+(ノブ)を回します。\n\n無効なステップのパラメータを編集する。\n無効な[Pad]を押したまま+(ノブ)を回します。\nステップを有効化する前にパラメータを変更する場合に使用します。\nステップをクリアする際にパラメータを削除しない設定になっている場合に使用します。(1)\n\nサブメニューとより高度なパラメータへのアクセス。\n[Shift] + [Pad]を使用してもアクセスできます。\n[Pad] + [Page]を押したままにします。\n\n複数のステップをタイで繋ぐ、同じ行。\n最初の[Pad]を押したまま+最後の[Pad]をタップします。\n2つのパッド間のすべてのステップをタイで繋ぎます(2)。\nパッドは記載された順序で押す必要があります。\n\n逆タイ、同じ行。\n最後の[Pad]を押したまま+最初の[Pad]をタップします。(3)\nパッドは記載された順序で押す必要があります。\n逆タイはOff、Random、またはfillに設定できます。(3)\n\nパッド全体にランダムまたはfill sequenceを作成する。\n\nタイで繋がれたノート\n点灯+ソフトホワイト\n点灯パープル\n点灯\nすべて点灯\n消灯\n\nミュートされたノート\n有効なステップ\n無効なステップ\n\nランダムノート\n\n(1) ステップが無効化されると、適用されていたパラメータはクリアされます。これがデフォルトの動作です。これはconfig > workflowの設定で変更でき、ステップが無効化されたときにパラメータの変更を記憶し、後でステップが再度有効化されたときにそれらを復元することができます。これは、特にライブパフォーマンス時に、ステップを有効化する前に準備する際に便利です。\n\n(2) ステップはページをまたいでタイで繋ぐこともできます。ステップをタイで繋ぐには、最初のページで[Pad]を押したまま、終了位置の[Page]を押します。最初のステップを押したまま、新しいページでタイの終了位置の[Pad]を押します。タイは同じ行と同じoctaveで作成する必要があります。タイの設定はgateパラメータの値でも使用できます。グリッドパッドを使用してタイを設定する場合は、コマンドに記載されている正しい順序でパッドを押したまま/タップしてください。タイ内のパッドをタップすると、タイが分割され、新しいステップが作成されます。\n\n(3) 逆タイを適用する場合、つまり最後+最初のパッドの場合、ステップは2つのパッド間に配置されます。これらのステップの動作は、Config > Workflow > Inverted TIE gesture Fills or Random設定で構成されます。'Random'に設定されている場合、ノートはランダムな値として配置されます。'Fill'に設定されている場合、同等のノート値が各ステップのfillとして配置されます。このオプションは'Off'に設定することもできます。\n\n(4) グリッド上に配置されたステップは、現在のグローバルパラメータ設定を採用します。グローバルパラメータへの編集は、既存のすべてのステップに自動的に適用され、適用される変更は元の値に対して相対的であり、値の範囲が表示されます。ステップは、ステップを押したまま特定の値のノブを調整することで個別に編集できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 52,
+      "image": "/manual/pages/page-052.png",
+      "title": "Page 52",
+      "sectionName": null,
+      "translation": "3.7 Global Sequencer Viewパラメータ\n\nsequencer viewでは、ロータリーエンコーダーノブで直接編集できる汎用パラメータのセットが用意されています。さらに、グリッド列のパッドを、選択された各オプションのパラメータエディターとして使用できます。primaryパラメータは、すべてのステップに対してグローバルに調整することも、ステップパッドを押しながら個別のステップレベルで編集することもできます。secondaryパラメータは主にグローバルまたはsequencerの設定に焦点を当てています。\n\nprimaryのグローバル設定は以下を行います:\n\n• 後続の個別ステップを配置する際のパラメータ値を設定します。\n\n• 既存のステップ値を現在の値に対して相対的に調整します。これがマルチトラックの場合、選択されたトラック上のすべてのステップが影響を受けます。個別のステップ値も別々に編集できます。他のビューやsequencerモードによっては、これらのコントロールのデフォルト機能が変更される場合があります。\n\n1 3 2 4\n\n回転またはShift + 回転\n値を編集\n\nPrimary Parameter\nダイレクトアクセス\n\nSecondary Parameter\n[Shift]を押しながら\nタップ\nエディターを変更\n\nTempo\nVelocity\nSwing\nOctave\nScale\nGate\nRoot\nRepeat\n\nAdjust Value\nPad Column\nVelocity Editor\n\nPad Column\nGate Editor\n\nPad Column\nRepeat/Retrigger Editor\n\nAdjust Value Adjust Value\n\nRange is Root -2 to Root +7\ne.g. C-2 to C7\n\nLower\n既存のステップのvelocityに基づく\nUpper\n\nNavigate View\nUp/Down (1)\n\nAdjust Value\n\nGlobal Controls\n\nOctave Parameter\n\nMONO\n105.0\n1/16 CHROMATIC - C2\nPattern 3\n50% INT F\nVEL GATE OCT REPT\n\nGlobal Vel:\n75 - 100\n\noctaveは[Oct]ノブを使用して調整できます。これは選択されたsequencerのグリッド上のベースoctaveで、選択されたrootに基づいて-2から+7の範囲です。rootを編集するには、shiftを押しながらノブ4 (Root)を回します。各ステップのoctave値は、このベースoctaveからオフセットされます。\n\nVelocity, Gate & Repeats Parameters\n\nvelocity、gate、repeatsのグローバル値は、下限と上限の範囲として表示されます。値は、グリッド上に既に配置されているステップの最低値と最高値に基づいています。ステップが存在しない場合、デフォルトが上限と下限の値に使用されます。これらのグローバル値を編集すると、既存のステップ値は調整に対して相対的に変化します。値の範囲は、上限と下限で調整する際に圧縮され、各ステップ値にも反映されます。たとえば、velocityの上限は127で、グローバルvelocityを最大レベルに編集すると、すべてのステップがこの値に変更されます。\n\n(1) マルチトラックsequencerでは、octaveノブをタップするとpitchエディターが開きます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 53,
+      "image": "/manual/pages/page-053.png",
+      "title": "Page 53",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\nSequencer Viewパラメータ\n\nParameter Label Command Range Description\n\nVelocity VEL (Knob 1) 1 - 127\nDefault 75\nCV出力のレベルに影響するトリガーエンベロープの振幅を制御します。グローバルvelocityは既存のステップ値に基づいて下限と上限の範囲を設定し、相対的な変更を可能にします。ステップパッドをホールドすると個別のステップ値を編集できます。タップすると、ステップvelocityグリッドカラムビューに切り替わり、各ステップのグリッドカラムパッドを使用してアクティブなvelocityを編集できます。\n\nOctave OCT (Knob 2) -4 to +4\nDefault C2\nグローバルoctaveは、sequencerグリッドノートのベースとなるオクターブ範囲(ノートではありません)を割り当てます。個別のステップ値も、このグローバルベースオクターブからのオフセット値として上下に設定できます。タップすると、ノブの機能がグリッドの上下スクロールナビゲーション制御に切り替わるか、デフォルトビューにリセットされます。\n\nGate GATE (Knob 3) 2 - 99, Tie\nor Legato\nDefault 50%\nエンベロープのディケイタイムを使用して、sequencerのノート分割に対するノートの長さを設定します。グローバルオプションは、既存のステップ値に基づいて下限と上限のパーセンテージ範囲として設定され、相対的な変更を可能にします。例えば、1/16分割パターンのノートで50%の値を設定すると、タイムディビジョンの半分の長さとなり、1/32ノートの長さになります。タップするとステップgateビューに切り替わり、グリッドカラムインターフェースを使用してアクティブなステップgate値を編集できます。ステップパッドをホールドすると個別のステップを編集できます。tieまたはlegato設定も適用されます。\n\nRepeat REPT (Knob 4) 1 - 15\nDefault 1\n回すことで、repeatオプションの下限と上限の値を調整します。これにより、ノート間隔で選択した回数のリピートが有効になります。1〜15回のリピートを設定できます。グリッドパッドカラムビューでは、retriggerオプションにもアクセスできます。Retriggerは、ノートの長さ内で1〜8回のラチェットを有効にできます。\n\nTempo BPM [Shift] + (Knob 1) 20 - 300\nDefault 80\nすべてのsequencerのグローバルなビート毎分を設定します。これは内部クロックとして使用されますが、外部クロックが選択されている場合、内部テンポは使用されません。タップテンポも適用できます。\n\nSwing SWNG [Shift] + (Knob 2) 10 - 90\nDefault 50\nSwingは、シーケンスのリズミカルなグルーヴに興味を持たせるために、より自然でわずかにグリッドからずれた感覚を導入します。swingを50以上に増やすと、一部のノートがわずかに遅れ、swingを50以下に下げると、一部のノートがわずかに早くなります。デフォルトの50は、swingが適用されないことを意味します。各sequencerは独自のswing設定を持つことができます。\n\nScale SCAL [Shift] + (Knob 3) Options\nDefault\nChromatic\nsequencerのscaleを選択します。選択可能なライブラリが利用できます。scale機能の動作は、scaleクォンタイゼーション設定にも依存します。\n\nRoot ROOT [Shift] + (Knob 4) C-2 to B7\nDefault C2\nsequencerのルートノートを選択します。これは通常、ほとんどのモードでグリッドの最下行で表されます。\n\nNote\nvelocityとgate設定のデフォルトは、それぞれ75と50です。これらはconfig > workflowオプションで変更できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 54,
+      "image": "/manual/pages/page-054.png",
+      "title": "Page 54",
+      "sectionName": null,
+      "translation": "3.8 Velocity\n\nVelocityは、楽器の音符がどれだけ強く演奏されるかを表します。ピアノの鍵盤を弾くときに加える力を考えてみてください。したがって、Velocityはモジュレーションと見なされ、シーケンス作成時には、音符を1から127の間のグローバル値またはステップ値に設定できます。これは、例えばMIDI経由でシンセに送る場合や、CV出力でモジュラー機器の別のターゲットパラメータをモジュレートする場合など、目的の楽器に適用できます。\n\nVelocityは、エンコーダーノブ1を使用してグローバルに、またはステップごとに編集できます。グリッドパッドカラムエディターを使用してVelocity値を変更することもできます。ノブのデフォルト機能はグローバルVelocityで、回して編集します。ステップVelocityの場合は、ステップをホールドしてVelocityを回し、ノブをタップして対応するパッドカラムエディターを開きます。Velocityは、アタック/ディケイ出力エンベロープの振幅に影響します。\n\n**Velocity**\n\n1\nVEL\n\n**Grid Column Velocity Editor**\n\n**Global Velocity Editing**\n\n**Step Velocity Editing**\n\nSteps - time / direction\n\nVelocity Level\n\n127\n5\n70\n\n出力エンベロープの振幅に影響\n\nグリッドカラムエディターを開く: ノブ1 (Vel)をタップ。エディターを一時的に表示するには、ノブ1 (Vel)をホールド。\n\nノブ1 (Vel)を回す。\n\nステップ[Pad]をホールド + ノブ1 (Vel)を回す。\n\nステップをホールドしてノブ1 (Vel)をタップすると、選択したステップがミュートまたはアンミュートされることに注意してください。\n\n+\n\nカラムの上下のパッドをタップして、対応するステップのVelocityレベルを調整します。空のカラム(ステップがない)をタップすると、選択したVelocityレベルでステップが追加されます。一番下のカラムパッドをタップしてステップを削除することもできます。\n\nグローバルVelocityを変更すると、既存のすべてのパッドにわたって相対的に範囲が動的に変更されるか、後続のステップを配置する際に使用される値が設定されます(範囲内の低いVelocity値が使用されます)。\n\n新しいステップを配置すると、ステップVelocityに現在の低いグローバル値が適用されます。グローバルVelocityを変更すると、既存のステップがすべて相対的に調整されます。選択したステップをホールドしている間に、個々のステップのVelocityを編集することも可能です。\n\nGlobal Vel:\n75 - 100\n\nD2 - Step 2\nVel\n75\n\nGate\n50\n\nOct\n+0\n\nTrig\n100%\n\n1\n\n1\n\nSequencer Basics 3\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 55,
+      "image": "/manual/pages/page-055.png",
+      "title": "Page 55",
+      "sectionName": null,
+      "translation": "NOTES\n\nSequencer Basics 3\n\n3.9 Gate\n\nGateは、ノートが演奏される長さを表し、ステップ単位で制御されるか、同じ行の一連のステップをタイ(tie)でつなげることで複数のステップにまたがって演奏されます。Legatoはステップ間でグライドを作成します。シーケンス操作時、gateはグローバル値またはステップ値として2-99の範囲で設定できます。例えばシンセのオンボードエンベロープなど、目的の音源の設定を全体的なノートの長さに考慮してください。\n\nGateは、エンコーダーノブ3を使ってグローバルに、またはステップ単位で編集できます。グリッドパッドのカラムエディターを使ってgate値を変更することもできます。ノブのデフォルト機能はグローバルgateです。ステップを押しながら回すとステップgate、ノブをタップすると対応するパッドカラムエディターが開きます。Gateはアタック/ディケイ出力エンベロープのディケイに影響します。\n\nGrid Column Velocity Editor\n\nGlobal Gate Editing\n\nノブ3(Gate)をタップしてグリッドカラムエディターを開きます。一時的にエディターを表示するには、ノブ3(Gate)を押し続けます。\n\nノブ3(Gate)をゆっくり回します。\n\nノブ3(Gate)を素早く時計回りに回すとtieを設定します。\n\n[Pad] + ノブ3(Gate)を素早く時計回りに回すとtieを設定します。\n\nノブ3(Gate)を素早く反時計回りに回すとtieを解除します。\n\n[Pad] + ノブ3(Gate)を素早く反時計回りに回すとtieを解除します。\n\nStep Gate Editing\n\nステップ[Pad]を押しながら + ノブ3(Gate)をゆっくり回します。\n\nカラムを上下にタップして、それぞれのステップのgate長を調整します。空のカラムをタップすると、選択したgateレベルでステップが追加されます。最下段のカラムパッドをタップしてステップを削除することもできます。最上段のパッドをタップするとtieされたステップが選択され、続くカラムがtieの長さを設定します。\n\nグローバルgateを変更すると、既存のすべてのパッドの範囲が相対的に動的に変更されるか、その後配置されるステップに使用される値が設定されます(gate範囲の下限値が使用されます)。\n\nGlobal Gate:\n50 - 77\n\nD2 - Step 2\nVel\n75\nGate\n50\nOct\n+0\nTrig\n100%\n\n3\n3\nGate\n3\nGATE\nエンベロープのディケイタイムに影響\nステップ - 時間/方向\n90\nTie\n5\n45\nGate Length\nTie\n\n新しいステップを配置すると、現在のグローバル下限値がステップgateに適用されます。グローバルgateを変更すると、既存のすべてのステップが相対的に調整されます。選択したステップを押しながら、個々のステップのvelocityを編集することも可能です。gate長とtieに加えて、ノートをLEG - Legatoに設定して、連続するノート間でシームレスなピッチグライドを作成することもできます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 56,
+      "image": "/manual/pages/page-056.png",
+      "title": "Page 56",
+      "sectionName": null,
+      "translation": "3.10 Repeat & Retrigger\n\nプレイバック中のトリガーのリピートは、ONEで適用できるクリエイティブな動作オプションであり、2つの方法で制御されます。Repeatはグローバルレベルとステップレベルで設定できます。これにより、トリガーされたノートのプレイバックが、ステップのデュレーション全体にわたって定義された回数だけ複製されます。個別のステップに「skip」オプションを割り当てると、ステップのタイミングが無視され、シーケンスが短縮されます。\n\nRetriggerは、通常グローバルレベルで制御されるrepeat動作のバリエーションで、ステップインターバル全体でラチェット効果を生み出します。Retriggerは、拡張ステップメニューでrepeatに変換できます。\n\nGrid Column Repeat Editor\n\nGlobal Repeat & Retrigger Editing\n\nグリッドカラムエディタを開く:\nKnob 4 (Rept)をタップします。\nKnob 4 (Rept)をホールドすると、エディタを一時的に表示できます。\n\nSequencerビューでは、グローバルrepeats 1-15に影響します。\nRepeatグリッドカラムエディタビューでは、グローバルretriggers 1-8に影響します。\n\nKnob 4 (Rept)を回します。\nKnob 4 (Rept)を回します。\n\nPadカラムエディタで、(Rept) Knob 4を回してretriggerを調整するか、カラムを上下にタップしてそれぞれのステップのretriggerを調整します。カラムエディタビューでrepeatを調整するには、[Shift]をホールドしながらKnob 4を調整するか、カラム[Pad]をタップしてrepeatを調整し、[Shift] + [Pad]でrepeat durationを調整します(赤いpadで表示されます)。\n\nRepeat Knob 4を直接調整すると、すべてのステップのrepeat数に影響します。Knob 4をタップすると、retrig / repeatグリッドカラムエディタに切り替わります。Knob 4を回すと、直接repeatに影響します。設定が1の場合、retriggerやrepeatはなく、元のステップが1回だけプレイバックされます。\n\nGlob Repeat:\n4 - 15\n\nGlobal Retrig:\n8 - 8\n\nRetriggerとrepeatの両方がグリッドに表示されます\n\nTime divisions 例: 1/16th\nRetrigger example\nTime divisions 例: 1/16th\nRepeat example\n\noriginal note\noriginal note\n\n4 retriggers\n4 repeats\nretriggered note\nrepeated note\n\nRepeat\nRepeat Duration\n\nSequencer Basics\n\nRETRIG\n(Shft) REPEAT\nDuration\nRepeats\nSteps - time / direction\n\n15 8\n1 1",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 57,
+      "image": "/manual/pages/page-057.png",
+      "title": "Page 57",
+      "sectionName": null,
+      "translation": "Sequencer Basics 3\n\n個々のステップを操作する際には、より正確なステップリピートコントロールを含む拡張オプションのセットが存在します。\n\nこのサブメニューは、[Pad]を押したまま[Page]をタップしてサイクルすることで、拡張ページオプションを切り替えることができます。\n\nそれぞれのノブをタップして、上部と下部のパラメータの編集を切り替えます。\n\n[Pad]を押したままにして、4つのノブを使用してパラメータを編集します。\n\n+\n\nStep Submenu\n\nRept\nOffst \tRng\nDurat\nGlid \tRpt%\nNo\n0%\n0%\t+- \t+-\n0st\nx 1\n0%\n0%\n100%\n\nステップ固有のリピートコントロール\n\nステップリピートパラメータ\n\nRept Durat Ramp Acceleration\nRepeats for the step Step Duration Repeat velocity ramp Repeat acceleration\nリピートを作成するために、ステップノートの数を設定します。'Off'または定義された数のリピート2-15に設定するか、ステップをスキップします。\tリピートが拡張されるステップ数を設定します。\tリピート全体でベロシティの0から+70%のランプアップまたは0から-70%のランプダウンを適用します。\tリピートタイミングの0から+28%の加速または0から-28%の減速を適用します。\n\nOffst Glid Rng Rpt%\nTiming Offset Glide Randomized Note Range Repeat probability\nノートタイミングオフセット-45%から+45%、グリッドのタイムディビジョンに基づきます。\tリピート間のglide量を設定して、スムーズなノートトランジションを導入します。CVにのみ使用され、MIDIではサポートされません。\tランダム化されたノートが適用されるノート範囲を設定します。範囲は0から7stまたは+/-7stです。\tリピートノートイベントをアクティブにするかどうかのProbabilityとロジック条件。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 58,
+      "image": "/manual/pages/page-058.png",
+      "title": "Page 58",
+      "sectionName": null,
+      "translation": "NOTES\n\nSequencer Basics 3\n\nRepeats. 開始点は設定されたリピート数で、例えば4回でx1ステップdurationをカバーします。\n\nRamp. 開始点は設定されたリピート数で、例えば4回でx8ステップdurationをカバーします。この例のY軸はvelocityレベルを指し、ramp量を設定します。\n\nProbability % & Logic Conditions. トリガー条件パラメーターも設定でき、これによりリピートアクションがステップトリガーと共にアクティブになるか否かが決定されます。\n\n+\n+\n-\n-\n\nDuration. 同じretrigger回数を、より長いステップ長をカバーするdurationを使用して調整できます。\n例は4回のretriggersとx8 durationを示しています。\n\nAcceleration. 同じrepeat回数を、より長いステップ長をカバーするdurationを使用して調整できます。例は6回のrepeatsとx8 durationを示しています。\n\n'Rept'パラメーターは、ステップ期間中に適用されるリピート数を設定します。これはx1 durationで最大8から開始しますが、duration値を増やすと最大15まで拡大します。リピートチェーンの長さは、複数のステップをカバーするdurationで拡張できます。これは'Durat'パラメーターを使用して設定され、x1からx15ステップの範囲のオプションがあります。\n\nリピート動作を変更するオプションも可能で、repeatsのvelocityを+/-70%の範囲で上下にrampさせることができます。ここでは控えめが効果的なので、まず小さい値を試してください。さらに、リピート間隔は初期ステップから+/-28の範囲で加速または減速できます。\n\nRepeats & Duration\n\nVelocity Ramp, Acceleration and Probability\n\noriginal note Examples\n\nExamples\n\nrepeated note 1/16th notes",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 59,
+      "image": "/manual/pages/page-059.png",
+      "title": "Page 59",
+      "sectionName": null,
+      "translation": "Sequencer Basics\n\n3.11 Trigger Probability\n\nTrigger probability、stepパラメータでは'Trig'とラベル付けされているものは、step単位でのみ利用可能です。1つ以上のstepを押し続けると、それらのstepに対してknob 4を使用してtrigパラメータを編集できます。1つのtrig条件がstep毎に設定されます。Trig値はsequencerの各サイクルで評価され、playを押した時点から開始され、stepがtriggerされるかどうかを設定します。同じモデルがrepeatsエンジンやその他のprobability機能にも適用されます。\n\nKnob 4はデフォルトでglobal repeatを設定し、1つ以上のstepを押し続けている間はstep triggersに戻ります。\n\nTrigにはprobability %値を割り当てることができ、stepがtriggerされる可能性を設定します。デフォルトは100%で、stepは通常通り各sequenceサイクルでtriggerされ、0%は決してtriggerされません。その間の値は、%に基づいたランダムスタイルの頻度でtriggerされます。例えば、50%は予測可能な形で2サイクル毎に1回triggerされるわけではありませんが、一般的には平均して50%の確率でtriggerされます。\n\nlogical optionsは、sequencer countサイクルでnoteをtriggerする際に、パターンに予測可能なバリエーションを提供します。Aはstepをtriggerするサイクルの番号を表します。カウントはsequencerがサイクル番号Bを完了した後にリセットされます。\n\nHold step [Pad] + turn knob 4 (Trig).\n\nHold step [Pad] + Push / hold knob 4 (Trig). Trig値を100%またはFixed lock 0%にリセット\n\nProbability %\n\n0% 50% 100%\n\nnever trigger | 50/50 chance | always trigger\n\nA:B Logic Condition\n\nOptions: 1:2, 2:2, 1:3, 2:3, 3:3, 1:4, 2:4, 3:4, 4:4, 1:5, 2:5, 3:5, 4:5, 5:5, 1:6, 2:6, 3:6, 4:6, 5:6, 6:6, 1:7, 2:7, 3:7, 4:7, 5:7, 6:7, 7:7, 1:8, 2:8, 3:8, 4:8, 5:8, 6:8, 7:8, 8:8\n\nExamples:\n\nExample: 2:4\n\n4カウントの2番目のサイクルでtrigger。4番目のサイクルの終わりにリセット。\n\nパターンは全体として2番目、6番目、10番目などでtriggerされます。\n\n1:2\n\nTriggerは最初のloopでアクティブ、2番目ではアクティブではありません。\n\nカウントは2番目のloopの後にリセットされ、このオン/オフのtriggerサイクルパターンが続きます。\n\n3:4\n\nTriggerは3番目のloopでアクティブになり、カウントは4番目の後にリセットされます。パターンは全体として3番目、7番目、11番目などでtriggerされます。\n\nStep 5 Trig\n\nCycle 1 | Cycle 2 | Cycle 3 | Cycle 4 | Count Reset\n\nTrig Condition is True | False",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 60,
+      "image": "/manual/pages/page-060.png",
+      "title": "Page 60",
+      "sectionName": null,
+      "translation": "NOTES\n\nSequencer Basics 3\n\nA:Bモデルと同様の原理ですが、論理的な「not」条件に従います。Aは、ステップをトリガーしないサイクルの番号を表します。その他すべてのサイクルはステップをトリガーします。カウントは、sequencerがサイクル番号Bを完了した後にリセットされます。\n\nA:B Logic Condition\n\nオプション: 1:2, 2:2, 1:3, 2:3, 3:3, 1:4, 2:4, 3:4, 4:4, 1:5, 2:5, 3:5, 4:5, 5:5, 1:6, 2:6, 3:6, 4:6, 5:6, 6:6, 1:7, 2:7, 3:7, 4:7, 5:7, 6:7, 7:7, 1:8, 2:8, 3:8, 4:8, 5:8, 6:8, 7:8, 8:8\n\n例:\n\n1:2\n最初のループではトリガーが非アクティブ、2回目でアクティブになります。カウントは2回目のループの後にリセットされ、このオン/オフトリガーサイクルパターンが続きます。\n\n3:4\n3回目のループでトリガーが非アクティブになり、カウントは4回目の後にリセットされます。パターンは全体として、1回目、2回目、4回目などで効果的にトリガーされます。\n\n例: 2:4\n\n4カウントの2回目のサイクルを除くすべてのサイクルでトリガーします。4回目のサイクルの終わりにリセットされます。パターンは全体として、1回目、3回目、4回目などでトリガーされます。\n\nStep 5 Trig\nCycle 1\nCycle 2\nCycle 3\nCycle 4\nCount Reset\n\nPRE / PRE Logic Condition\n\nPREは、最も近い前のステップの条件がtrueである場合にのみ、選択されたステップでこのtrigをアクティブにします。このチェックは、前の最新のトリガー条件の状態を参照するものであり、前のステップ自体がアクティブかどうかに純粋に基づいているわけではなく、そのトリガー状態に依存します。前のトリガー条件が満たされていない(すなわち「false」)場合、このステップはトリガーされません。「Not Pre」すなわちPREに設定されている場合、前のトリガー条件が「false」であればステップがトリガーされます。\n\n例:\n\nStep 13 set to Trig = PRE\nStep 10 = True, i.e. 100%\nStep 13 will trigger\n\nStep 13 set to Trig = PRE\nStep 10 = False, i.e. 0%\nStep 13 will not trigger\n\nStep 13 set to Trig = PRE\nStep 10 = True, i.e. 100%\nStep 13 will not trigger\n\nStep 13 set to Trig = PRE\nStep 10 = False, i.e. 0%\nStep 13 will trigger\n\nTrig Condition is True False",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

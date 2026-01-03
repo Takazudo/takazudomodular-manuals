@@ -1,0 +1,283 @@
+{
+  "part": "07",
+  "pageRange": [181, 210],
+  "totalPages": 30,
+  "metadata": {
+    "processedAt": "2026-01-03T16:55:27.795Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 181,
+      "image": "/manual/pages/page-181.png",
+      "title": "Page 181",
+      "sectionName": null,
+      "translation": "Modulation 7\n\n7.2 Modulation Laneパラメーター\n\n各sequencerには8つのmodulation laneがあり、それぞれ設定可能で、最大2つの出力先を制御できます。各laneは最大128ステップを持ち、ステップページ16、32、48、64ボタンを使用してアクセスでき、そのステップ長はInitおよびEndボタンで制御されます。modulationパラメーターは[Keyboard]使用時に画面に表示できますが、グリッドは演奏可能なキーボードビューを表します。\n\n127 Max\n\n0 1 選択中のMod Lane\n\nステップごとのパラメーター値\n\n選択中のmod laneは\n列1と16の紫色のパッドで\n示されます。\n各行は下から上へ\nlane 1-8を表します。\n\n5\n3\n7\n2\n6\n4\n8\n\nMin\n\nModulation Lanes\n\n[Mod]をタップしてメインのmodulationページを開きます。\nこれは全8つのlaneの状態を表します。\n\nGridの列\n\nグリッドはmodulation laneシーケンスの各ステップにおけるmodulationソース値を表します。スワイプして描画するか、タップしてmodulation値を設定し、形状を作成します。最大値と最小値はmodulation laneの設定で設定でき、一般的な範囲は0-127です。ページ[16]、[32]、[48]、[64]を使用してmodulationシーケンスページを変更します。laneのノブを回して、すべてのステップを一緒に調整します。\n\n編集用に選択された\nModulation lane\n\nModulation lane\nミュート/非アクティブ\n\nModulation lane\nミュート解除/アクティブ\n\nノブを素早くタップしてmod laneを選択します。\nもう一度タップすると、フォーカスが上部から\n下部のパラメーターに変わります。\n\nノブを長押し/ホールドして\nmodulation laneをミュートまたはミュート解除します。\n\nパラメーターは、ノブを回して値を編集すると、自動的にミュート解除/アクティブ化されます\n\n[Mute]をホールド + タップして\nmodulation laneをミュートまたはミュート解除します。\n\nまたは\n\n空\n塗りつぶし\n\n+\n\nMOD-2 CC 2\nModW CC3\nCC5 CC7\nCC2 Expr\nCC6 CC8\n\nModulation Lane / Parameter。\nターゲットのmodulationパラメーターが\n各laneのディスプレイに表示されます\n\nsequencerごとに\n8つのLane\n\n1 2 3 4\n5 6 7 8\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 182,
+      "image": "/manual/pages/page-182.png",
+      "title": "Page 182",
+      "sectionName": null,
+      "translation": "Modulation 7\n\n点滅する[Page]ボタンは、複数のページが利用可能であることを示します。[Page]をタップしてページを切り替えます。\n\nページ1でハイライトされた4つのmodulationレーンを表すノブ1-4を回します。ディスプレイヘッダーには、フォーカスされているレーンが表示されます。オプションがスクロールし、選択されたパラメータには►のタグが付きます。\n\nグローバル編集。ハイライトされた4つのmodulationレーンを表すノブ1-4を回します。すべてのステップの値が変更され、変更中はグローバル値の範囲が表示されます。\n\nグローバルオフセット。[Shift]を押しながらノブ1-4を回すと、すべてのステップにわたるグローバルオフセット値を編集できます。変更中は値の範囲が表示されます。\n\nノブを長押しすると、値がデフォルトにリセットされます。\n\nノブ1-4をタップすると、タグ付けされたパラメータが選択され、オプションリストが開きます。回して目的のオプションに►タグを付けます。ノブをタップして選択します。必要に応じて[Back]を使用してメニューを戻ります。\n\nMOD-6 CC 6\nModW \tCC3\nCC5 \tCC7\nCC2 \tExpr\nCC6 \tCC8\n\nMOD Lane 6\n\nPage 1 - すべてのModulationレーン\n\nPage 2 - Modulationレーン設定\n\nページ2のmodulationレーン設定をナビゲートする際、4つのロータリーノブは、modulationページ1に表示されている4つのハイライトされたレーンをそれぞれ表します。この例では、8パラメータページでハイライトされているmodレーン1、6、3、4にアクセスします。\n\nレーン設定\n\n[Mod]ページで関連するノブを押してレーンを選択します。[Page]を押してレーン設定のページ2を選択します。レーン設定では、その動作とmodulationの送信先を設定します。優先順位はMIDI / CC 1、次にMIDI / CC 2、Internal 1、Internal 2、そしてOffです。\n\nグローバルパラメータ編集\n\nModビューのページ1で4つのノブのいずれかを回すと、それぞれのノブに対応するフォーカスされたプライマリパラメータのグローバル値が変更されます。これは、すべてのステップの値が、1つのノブ調整によって現在の値に対して相対的に編集されることを意味します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 183,
+      "image": "/manual/pages/page-183.png",
+      "title": "Page 183",
+      "sectionName": null,
+      "translation": "Modulation 7\n\n* Modulationレーン名は4文字のラベルに編集できます。インストゥルメント定義が割り当てられている場合、CCを持つパラメーターに設定された名前が使用されます。\n\n注意\n\nModulationレーン設定オプション\n\n名前 設定オプション\n\nCC Dest 1 CC destination 1 MIDI control change出力メッセージングのDestination 1オプション。CCテーブルを参照してください。offに設定できます。\n\nCC Dest 2 CC destination 2 MIDI control change出力メッセージングのDestination 2オプション。CCテーブルを参照してください。offに設定できます。\n\nMod Max Modulation上限 CC範囲の最大値を設定します。デフォルトは127。範囲は7-127。\n\nMod Min Modulation下限 CC範囲の最小値を設定します。デフォルトは0。範囲は0-120。\n\nMod Offset CC値のオフセット 最大/最小範囲内の全体的なCC値に加算または減算されるCCオフセットを適用します。範囲は-/+127。\n\nMod Random ランダマイゼーション CC出力に適用されるランダマイゼーションの量。範囲は-/+100% - +100%。\n\nInt Dest 1 Internal destination 1 内部modulationのDestination 1オプション。内部destinationテーブルを参照してください。offに設定できます。\n\nInt Amt 1 Internal amount 1 適用されるmodulationの量。範囲と値を微調整するために使用されます。-/+ 100%、デフォルト100%\n\nInt Off 1 Internal offset 1 最大/最小範囲内の全体的な値に加算または減算されるオフセットを適用します。範囲は-/+127。\n\nInt Dest 2 Internal Destination 2 内部modulationのDestination 2オプション。内部destinationテーブルを参照してください。offに設定できます。\n\nInt Amt 2 Internal amount 2 適用されるmodulationの量。範囲と値を微調整するために使用されます。-/+ 100%、デフォルト100%\n\nInt Off 2 Internal offset 2 最大/最小範囲内の全体的な値に加算または減算されるオフセットを適用します。範囲は-/+127。\n\nDivision Time Division modulationレーンのtime divisionを設定します。Bar、½、¼、1/8、1/8t、1/16、1/16t、1/32、1/32t。x2および/2オプションもmodulationレーンで機能します。\n\nSmooth スリュータイム ステップ間のmodulation値をスムーズにします。'0'の値はoffであり、ステップ状の遷移となります。modulationレーンが割り当てられている場合、CV出力にも影響します。\n\nLinked リンクされたsequencer Modulationレーンはデフォルトでsequencerにリンクされています。Init、endなどのsequencer編集はmodulationレーンに適用されます。Modulationレーンの編集はsequencerトラックには影響しません。'No'を選択することでリンクを無効にできます。\n\nInit Modulationレーン開始ステップ modulationレーンの開始ステップ。[Init]ボタンで設定されるのと同じパラメーター。\n\nEnd Modulationレーン終了ステップ 長さを決定するmodulationレーンの終了ステップ。[End]ボタンで設定されるのと同じパラメーター。\n\nRename * 名前変更ツール modulationレーン名を変更できます。最大4文字。命名機能はプロジェクトと同じツールです。\n\nCopy 設定をコピー このmodulationレーンから設定と値をコピーし、後で別のmodulationレーンに貼り付けるために使用します。\n\nPaste 設定を貼り付け 以前に別のmodulationレーンからコピーされた設定と値をこのmodulationレーンに貼り付けます。\n\nClear 設定をクリア このmodulationレーンの値と設定をクリアします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 184,
+      "image": "/manual/pages/page-184.png",
+      "title": "Page 184",
+      "sectionName": null,
+      "translation": "注意事項\n\nModulation\n\n7\n\nmodulationグリッドビューでパッドを長押しします。\n\n各列はステップを表し、垂直位置はパラメータ値を表します。グリッド上の紫色の最初/最後のパッドは、選択されたmodulationレーンを示します。\n\n[Mod]ページで、[Shift]を長押し + [Randomize]を押します。\n\nランダムな値が各modulationステップ列に適用されます。\n\n+\n\n[Pad]を長押ししながら、各ノブを回して値を編集します。\n\nノブをタップすると、上部の1-4レーンと下部の5-8レーンを切り替えます。\n\nノブを長押しすると、値がリセットされます。\n\n値のリセット\n\n値を'0'にリセットするには、下部のパッドをダブルタップします。\n\nMOD-6 Step 4\nModW 93\nCC3 26\nCC5 0\nCC7 6\nCC2 8\nExpr 0\nCC6 46\nCC8 12\n\nグリッド上でModulation値を編集する\n\nModulationグリッド値をランダム化する\n\n7.3 Modulationステップパラメータ\n\nグリッド列の個々のmodulationレーンステップパッドを長押しすると、そのmodulationレーンステップの現在の値が表示されます。パッドを長押ししながら各ノブで調整できます。列パッドの位置は現在の値を反映します。同じステップ列の他のすべてのmodulationレーン値も画面に表示されます。ノブで他のレーンを編集すると、グリッドビューが調整されたレーンを表すように変わります。\n\nLane 1\nLane 5\nStep 4\nMod Lane 6\nLane 4\nLane 8\n127\n0\n6\n\nshift + randomizeを組み合わせて押すたびに、ランダムな値に基づいた新しいmodulationプロファイルが適用されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 185,
+      "image": "/manual/pages/page-185.png",
+      "title": "Page 185",
+      "sectionName": null,
+      "translation": "Modulation\n\nNOTES\n\n7.4 Modulationの記録\n\nSequencerの再生中にロータリーノブを使用して、オートメーション値をリアルタイムで記録することができます。記録はシーケンスの長さに対して行われ、sequencerがループする間、オートメーションを連続して記録できます。\n\nModulationカーブを記録するためのガイド:\n\n1. [Mod]をタップしてメインのmodulationページを開き、記録するmodulationレーンを選択します。例えばKnob 2をタップします。\n\n2. [Play]をタップしてsequencerの再生を開始します。\n\n3. [Rec]をタップしてmodulationレーンへの記録を開始します。\n\n4. パラメータレーンを記録するためのノブを回します。\nどのレーンへの編集も記録されます。\n\n5. [Stop]をタップしてmodulationの記録を終了します。\n記録中は既存のデータを上書きし続けます。\n\nMod Recording Behavior: Sequencerの標準的な記録設定は、MODモードで行われる記録には完全には適用されません。Modの記録動作はlatchとtouchの組み合わせです。記録は、modulationが終了した後も一定のlatch期間継続します。例えばノブの調整を停止した後も継続します。手動またはlatchされた記録が進行中である限り、値は上書きされます。Latchされた記録時間は、パラメータの「Recording」メッセージの表示が見えなくなると終了します。\n\n外部MIDIデバイスを使用してONEにオートメーションを記録することもできます。ONEと外部デバイスのMIDI設定が適切に設定されていることを確認してください。\n\nModulation Mode\nPlay the sequencer\nStart recording\nMIDI CC In",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 186,
+      "image": "/manual/pages/page-186.png",
+      "title": "Page 186",
+      "sectionName": null,
+      "translation": "ノート\n\nModulation 7\n\n7.5 Modulation Matrix\n\nModulation matrixは、外部MIDIおよびCV入出力のルーティングを可能にします。これにより、MIDI TRS、USB、Bluetoothポート、またはCV接続を使用でき、デバイスの入出力の再ルーティングや、ONEのパラメーターをモジュレートするための外部デバイスの接続が可能になります。各sequencerには独自のmod matrixがあります。\n\nMIDI設定可能なマッピングとCV入力\nCV Input 1\nCV Input 2\nMIDI 1\nMIDI 2\nMIDI 3\nMIDI 4\nMIDI 5\nMIDI 6\nMIDI 7\nMIDI 8\nMIDI 9\nMIDI 10\nMIDI 11\nMIDI 12\nMIDI 13\nMIDI 14\nMIDI 15\nMIDI 16\n\n割り当て可能な出力\nCC Destination 1\nCC Destination 2\nInternal Destination 1 *\nInternal Destination 2 *\nParameter Destination 1 **\nParameter Destination 2 **\n\n例: Seq 1: CV 1入力でpitchをコントロール\nCV Input 1 → Pitch → Internal\n\n例: Seq 1: MIDI入力から外部CCへ\nExternal MIDI Controller → MIDI CC → MIDI CC → External Synth Filter Cutoff\n\n例: Seq 1: MIDI入力から内部パラメーターへ\nExternal MIDI Controller → MIDI CC → MIDI CC → Internal LFO Rate\n\n* Internal destinationsはsequencerモード固有のパラメーターを指し、非破壊的です\nCC ModからCVへの動作は、sequencerが停止している場合でも機能します。\n\n** Parameter destinationsはグローバルsequencer(例: グローバルtempo)を指します。Internal destinationsはsequencerモード固有のパラメーターを指します。これらのdestinationsは破壊的です - つまり、既存の設定を上書きします。このような状況ではUndoを使用できます。\n\nModulation matrixを開くには、[Shift]を押しながら[Mod]を押します。\nCV x 2およびMIDI x 16のマッピングオプションにアクセスできます。\n\nMod Matrix",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 187,
+      "image": "/manual/pages/page-187.png",
+      "title": "Page 187",
+      "sectionName": null,
+      "translation": "Modulation 7\n\nNOTES\n\n7.6 CV Input Modulation\n\nOXI ONEには、単一の3.5mm CV入力ポートを通じて接続される2つのCV入力があります。標準のTRパッチケーブルを使用するとCV In 1にアクセスでき、ステレオTRS入力を2つのTRモノ入力に分割すると、CV In 1と2の両方にアクセスできます。ONEのハードウェアCV入力範囲は-3vから+5vです。これは接続性セクションで説明されています。\n\nCV入力は、sequencerモードパラメータの内部パラメータをmodulateするために使用したり、modulationマトリックスで設定することでMIDI CC出力をmodulateするようにルーティングできます。\n\nCV 1 Input - TRモノ。\n通常、Eurorackモジュールまたはアナログデスクトップデバイスから\n\nMIDI Output - USB。\n通常、PC/Mac上のデスクトップデバイスまたはDAWへ\n\n例: CC 74\n\nSequencer Channel 01\n\nリアルタイムの入力電圧は、CV Inパラメータレベルまたはv Inputで監視できます。例えば、モジュラーエンベロープから。\n\nCV\nCC\n-2.2V 4.8V 0.8V\n\nExternal Modulationマトリックスの例。\n[Shift]を押しながら[Mod]をタップします。ノブ1で移動します。\n\nCV IN 1. 0.0V - ノブ1を回してタップして選択します。\nV INPUT: 0.0V\nCC DEST 1: CC74\nCC AMOUNT 1: 50%\nINT DEST 1: OFF\nINT AMOUNT 1: OFF\nCC DEST 2: OFF\nCC AMOUNT 2: OFF\nINT DEST 2: OFF\nINT AMOUNT 2: OFF\n\n入力CVをmodulationソースとして使用する場合、内部パラメータをdestinationとして割り当てることができますが、グローバルsequencerパラメータdestinationは使用できません。また、外部CCもmodulation destinationとして設定でき、CVが実質的にMIDI CCに変換されます。2つの内部destinationと2つのMIDI destinationオプションが利用可能です。MIDIチャンネルはsequencerまたはトラックごとに割り当てられます。\n\n正の値のみがMIDIに変換されるため、負のCV値は0Vでクリップされます。Pitch bendは例外で、バイポーラーMIDI出力を送信します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 188,
+      "image": "/manual/pages/page-188.png",
+      "title": "Page 188",
+      "sectionName": null,
+      "translation": "NOTES\n\nModulation 7\n\n7.7 MIDI Modulation\n\nMIDI CCもmodulationソースとして使用できます。これはmodulation matrixで設定可能で、最大16の入力MIDI信号を扱えます。MIDI入力はUSB、TRS、またはBluetoothからアクセスできます。\n\nMIDI入力は内部パラメータをmodulateするために使用でき、sequencer modeのパラメータに対して使用するか、modulation matrixを使用してMIDI CC出力をmodulateするようにルーティングできます。CVとは異なり、MIDIはglobal sequencerパラメータも制御できます。\n\n注意\n\nMIDIポート経由のデータは、すべてのポートA、B、C間でマージできます。これにより、すべてのメッセージが同等のチャンネルで各ポートを通じて送信されることが保証されます。これはConfig > MIDI > MIDI Port Merge設定で設定されます。\n\nExternal OXI ONE Internal\n\n1-16 Inputs\nPer Sequencer\n\nInternal Seq\nDestinations x2\n\nInternal Global\nParameters x2\n\nExternal MIDI Forwarded\nControl Change - CC x1\n\nCh1\nCh1\n\ne.g. Tempo, Fill\nactivation\n\ne.g. Scale, Root\n\nCC74\nCC80\n\ne.g. CC#74\ne.g. CC#80\n\nMIDI Input\nMIDI Output\n\nModulation Matrix\n\nExample: MIDI Matrix",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 189,
+      "image": "/manual/pages/page-189.png",
+      "title": "Page 189",
+      "sectionName": null,
+      "translation": "Modulation 7\n\nNOTES\n\nMIDI Modulation Mapping - 1-16\n\n設定 オプション 説明\n\nType Off, CC, Note,\nNote - On Toggle\nマッピングで認識され処理されるメッセージのタイプ。Offは使用されないことを意味します。\n\nNumber CC or Note Number\n認識される必要があるCCまたはMIDI標準ノート番号。CCの値またはMIDI標準のノート番号です。\n\nMIDI In Channel Same, All, 1-16\nSameはsequencer(トラックではない)のMIDIチャンネルをリッスンします。Allはすべてのチャンネルをリッスンしますが、CCまたはノートが一致する必要があります。それ以外の場合は特定のチャンネル番号1-16を設定します。\n\nLearn Utility\nONEを着信MIDIメッセージをリッスンするように設定し、認識された入力メッセージに自動的にマッピングします。\n\nTrack Matriceal and Multi\nTracks only\n着信信号によって影響を受けるトラックを選択します。\n\nCC Out CC Number\nsequencerまたはmultitrackの1stトラック / matricealトラックに割り当てられた同じMIDIチャンネルに外部転送されるCC番号またはメッセージを設定します。\n\nCC - Int Amt 1 -100 to +100%\nCC転送メッセージまたはInternal destination 1に適用されるmodulationの量(どちらがアクティブかによります)。\n\nCC - Int Ofst 1 -100 to +100%\nCC転送メッセージまたはInternal destination 1にオフセットを適用します(どちらがアクティブかによります)。\n\nInt Dest 1 Internal destinations\nInternal destination 1。内部destinationsのリストから非破壊的modulationのターゲットを設定します。\n\nInt Dest 2 Internal destinations\nInternal destination 2。内部destinationsのリストから非破壊的modulationのターゲットを設定します。\n\nInt Amt 2 -100 to +100%\nInternal destination 2に適用されるmodulationの量。\n\nInt Ofst 2 -100 to +100%\nInternal destination 2にオフセットを適用します。\n\nPara Dest 1 Global destinations\nInternal global destination 1。グローバルsequencer destinationsのリストからの破壊的modulationのターゲット。\n\nPara Amt 1 -100 to +100%\nGlobal destination 1に適用されるmodulationの量。\n\nPara Ofst 1 -100 to +100%\nInternal global destination 1にオフセットを適用します。\n\nPara Dest 2 Global destinations\nInternal global destination 2。グローバルsequencer destinationsのリストからの破壊的modulationのターゲット。\n\nPara Amt 2 -100 to +100%\nGlobal destination 2に適用されるmodulationの量。\n\nPara Ofst 2 -100 to +100%\nInternal global destination 2にオフセットを適用します。\n\nConsume Yes / No\nYesはMIDIを消費し、他のMIDIマッピングや出力に渡されないことを意味します。MIDIを渡すにはNoに設定します。\n\nCopy Map Utility. Current or All\n現在選択されているマッピングまたはsequencerのすべてのマッピングの設定をコピーします。プロジェクトまたはパターン内の別のマッピングにコピーすることができます。\n\nPaste Map Utility. Current or All\n現在選択されているマッピングまたはsequencerのすべてのマッピングのコピーされた設定を貼り付けます。\n\nClear Map Utility\n現在選択されているマッピングをデフォルトにリセットします。\n\nLast Value Utility\nマッピングで受信された最後の値を表示します。これは認識されるために対応する必要があるMIDIメッセージです。CC - 実際の値、Note Onの値は127、Note Offの値は0です。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 190,
+      "image": "/manual/pages/page-190.png",
+      "title": "Page 190",
+      "sectionName": null,
+      "translation": "NOTES\n\nModulation 7\n\n7.8 LFO Modulation\n\nOXI ONEは各sequencerに2つのLFOを搭載しており、それぞれをmodulationソースとして使用できます。LFOはLow Frequency Oscillatorの略で、定義された速度でLFO波形に沿ってパラメータ値を変調または変更するために使用される、ゆっくりとした周期の波形を生成します。各LFOはLFOページで設定でき、1つの内部パラメータと1つの外部MIDIパラメータをmodulateできます。CVもCV Gateルーティングで送信先として設定できます。\n\nNote\nLFOはsequencerが動作している間のみ動作します。sequencerが停止している場合、LFOは動作しません。playを押してLFO出力の結果を体験してください。\n\n* modulationの量は、knob 4(Amt)を回すことで内部と外部の両方の送信先に対して調整されます。Shift + knob 4(Amt)を回すと、MIDI Externalの量を個別に設定できます。\n\n[LFO]を押すと、low frequency oscillatorのページ1と2にアクセスできます。\n\n[Page]を押すと、LFOページ1と2を切り替えられます。\n\nLFO 1/2\nWave\nTri\nAmt\nOFF\nRetrg\nOFF\nOffst\n+0\n\nRate\n1/2\nInDst\nOFF\nPhase\n0%\nDst\nOFF\n\nLFO 2/2\nWave\nSqur\nAmt\nOFF\nRetrg\nOFF\nOffst\n+0\n\nRate\n1/4\nInDst\nOFF\nPhase\n0%\nDst\nModW\n\nPage 1 - LFO 1 Page 2 - LFO 2\n\nLFO\n1 x External MIDI LFO Settingsで設定\nCVはCV Gate setupでマッピング可能\n1 x Internal LFO Settingsで設定\n\nいずれかのknobをタップすると、上部パラメータと下部パラメータの間でフォーカスが切り替わります。knob (1) - (4)を回して値を編集し、knobを押して確定します。\n\nいずれかのknobをホールドすると、値がデフォルトにリセットされます。\n\nLFO Settings Page 1 & 2\n\nWave Rate Amt InDst\nWave shape Speed Amount of modulation * Internal Destination\n\noscillatorの波形を\n選択します。\n\nLFOの速度。時計回り\nでfree running、反時計\n回りはtempoに同期。\n\nmodulationの範囲の量。\n外部と内部の両方の\n送信先に適用されます。\n\nseqモードに基づいて、\nLFOがmodulateする内部\n送信先パラメータを\n設定します。\n\nRetrig Phase Offst Dst\nOscillator retrigger Oscillation phase Offset MIDI Out Destination\n\nOn - 各sequenceの\nノートでoscを\nretriggerします。\nOff - free running、\nretriggerなし。\n\nLFOサイクルの+/-\nphase位置を設定します。\n\nLFO値にoffset量を\n設定します。unipolar\nアプリケーションに\n便利です。\nCVには適用されません。\n\nLFOがmodulateする\n外部MIDIメッセージの\n送信先を設定します。\nCC、PC、Pitch bendなど。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 191,
+      "image": "/manual/pages/page-191.png",
+      "title": "Page 191",
+      "sectionName": null,
+      "translation": "Modulation 7\n\nWave Shapes\n\n(時間経過に伴う振幅を示す波形図のリスト。以下の波形タイプを含みます:\nTri - Triangle Wave、Sine、Wave 2、Wave 7、Wave 12、S_H - Sample & Hold、Gate - Gated Wave、Wave 4、Wave 9、Wave 14、Squ - Square Wave、Line、Wave 3、Wave 8、Wave 13、Ramp、Nois - Noise、Wave 5、Wave 10、Fall、Wave 1、Wave 6、Wave 11)\n\n* ランダムに生成されます\n\nLFOの範囲は、送り先によって異なります。一般的に、MIDI CCは0-100%の設定に合わせて0-127の範囲で動作します。一方、内部パラメーターは-128から127のバイポーラーで動作します。CCのオフセットを使用して範囲をシフトできます。アマウントは送り先全体で正規化されていません。\n\nMIDI CC: 0-127\nPhase Rate: 0-100%\nInternal Param: -128-127",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 192,
+      "image": "/manual/pages/page-192.png",
+      "title": "Page 192",
+      "sectionName": null,
+      "translation": "Modulation 7\n\nCC Destinations - External MIDI\n\nCC destinationsはMIDI標準の割り当てに基づいており、ONEのCC destination optionsを参考として含んでいます。\n\n接続されたデバイスに特化したdestinationをターゲットにするには、接続されたデバイスのマニュアルにあるMIDIマッピングを参照してください。\n\n多くのデバイスは、MIDI標準で割り当てられた機能とは異なるマッピングになっています - 特に高いCC範囲では顕著です。\n\nController optionsはMIDI 1.0標準では事実上未定義です。その他の一般的で非特異的なCCはgeneral purposeと呼ばれます。\n\n値はMSB orientatedであり、これは通常MIDIギアで使用されます。LSB値については、そのように記載されています。\n\n7.9 Modulation Destination Reference\n\nMIDI Standard CC #\nAftertouch\nProgram Change\nChannel Pressure\nPitch Bend\nOff\nBank Select MSB CC 0\nMod Wheel CC 1\nBreath Control CC 2\nController 3 CC 3\nFoot Control CC 4\nPortamento Time CC 5\nData Entry CC 6\nChannel Volume CC 7\nBalance CC 8\nController 9 CC 9\nPan CC 10\nExpression CC 11\nFX Control 1 CC 12\nFX Control 2 CC 13\nController 14 CC 14\nController 15 CC 15\nGen Purpose 1 CC 16\n\nMIDI Standard CC #\nGen Purpose 2 CC 17\nGen Purpose 3 CC 18\nGen Purpose 4 CC 19\nController 20 CC 20\nController 21 CC 21\nController 22 CC 22\nController 23 CC 23\nController 24 CC 24\nController 25 CC 25\nController 26 CC 26\nController 27 CC 27\nController 28 CC 28\nController 29 CC 29\nController 30 CC 30\nController 31 CC 31\nBank Select LSB CC 32\nMod Wheel LSB CC 33\nBreath Control LSB CC 34\nController 35 CC 35\nFoot Control LSB CC 36\nPortamento LSB CC 37\nData Entry LSB CC 38\n\nMIDI Standard CC #\nChan Vol LSB CC 39\nBalance LSB CC 40\nController 9 LSB CC 41\nPan LSB CC 42\nExp controller LSB CC 43\nFX Control 1 LSB CC 44\nFX Control 2 LSB CC 45\nController 14 LSB CC 46\nController 15 LSB CC 47\nGen Purp Ctrl 1 LSB CC 48\nGen Purp Ctrl 2 LSB CC 49\nGen Purp Ctrl 3 LSB CC 50\nGen Purp Ctrl 4 LSB CC 51\nController 20 LSB CC 52\nController 21 LSB CC 53\nController 22 LSB CC 54\nController 23 LSB CC 55\nController 24 LSB CC 56\nController 25 LSB CC 57\nController 26 LSB CC 58\nController 27 LSB CC 59\nController 28 LSB CC 60",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 193,
+      "image": "/manual/pages/page-193.png",
+      "title": "Page 193",
+      "sectionName": null,
+      "translation": "Modulation 7\n\n(MIDI CCテーブルの続き:コントローラー29-31 LSB、Damper Pedal、Portamento、Sostenuto、Soft Pedal、Legato foot switch、Hold 2、Sound Controllers 1-10、Gen Purpose 5-8、Portamento ctrl、各種Undefined CC、FX Depthコントロール、Data Increment/Decrement、NRPN、RPN、およびAll Sound off、Reset All Ctrls、Local Ctrl、All notes off、Omni modeコントロール、Mono/Poly modeを含むチャンネルモードメッセージ)\n\nCC120 - CC127はチャンネルモードメッセージ用に予約されており、これらは動作モードに影響を与えますが、音には影響しません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 194,
+      "image": "/manual/pages/page-194.png",
+      "title": "Page 194",
+      "sectionName": null,
+      "translation": "Modulation 7\n\nInternal Sequencer Destinations\n\nInternal destinationsは、現在選択されているsequencer内に存在するパラメーターで、編集中のmodulation laneをホストしています。そのため、使用可能なパラメーターは特定のsequencerのModeに基づきます。LFOとExt CVはバイポーラですが、MOD laneはオフセットが適用されない限りユニポーラです。\n\n| Parameter | Optimal Range | LFO | Mod Lane | Mod Matrix MIDI | Mod Matrix CV |\n|-----------|---------------|-----|----------|-----------------|---------------|\n| Off | | | | | |\n| Velocity | 0-100 | Available | Available | Available | Available |\n| Pitch (scale quantized) | 0-36 | Available | Available | Available | Available |\n| Octave | 0-4 | Available | Available | Available | Available |\n| Gate | 0-100 | Available | Available | Available | Available |\n| CV Pitchbend | 0-100 | Available | Available | Available | Available |\n| Division Modulation | 0-100 | Available | Available | Available | Available |\n| Repeat Pulse Count | 0-8 | Available | Available | Available | Available |\n| Repeat Pulse Length | | Available | Available | Available | Available |\n| Repeat Velocity Groove | | Available | Available | Available | Available |\n| Trig Probability | 0-100 | Available | Available | Available | Available |\n| Glide Time | 0-100 | Available | Available | Available | Available |\n| Keyboard Arp Division | 0-3 | Available | Available | Available | Available |\n| Keyboard Arp Voices | 0-3 | Available | Available | Available | Available |\n| Keyboard Arp Octave Type | 0-10 | Available | Available | Available | Available |\n| Keyboard Arp Gate Time | | Available | Available | Available | Available |\n| Keyboard Arp Accent | | Available | Available | Available | Available |\n| Keyboard Arp Euclidean Length | | Available | Available | Available | Available |\n| Keyboard Arp Euclidean Pulses | | Available | Available | Available | Available |\n| Keyboard Arp Repeat | | Available | Available | Available | Available |\n| LFO 1 Wave | 0-10 | Available | Available | Available | Available |\n| LFO 1 Rate | 0-10 Sync 0-100 Free | Available | Available | Available | Available |\n| LFO 1 Amount | 0-100 | Available | Available | Available | Available |\n| LFO 2 Wave | 0-10 | Available | Available | Available | Available |\n| LFO 2 Rate | 0-10 Sync 0-100 Free | Available | Available | Available | Available |\n| LFO 2 Amount | 0-100 | Available | Available | Available | Available |\n\nAll Modes",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 195,
+      "image": "/manual/pages/page-195.png",
+      "title": "Page 195",
+      "sectionName": null,
+      "translation": "Modulation\n\nパラメータ 最適範囲 LFO Mod Lane Mod Matrix MIDI Mod Matrix CV\nAccumulator Amount Available Available Available Available\nAccumulator Positive Limit Available Available Available Available\nAccumulator Negative Limit Available Available Available Available\n\nパラメータ 最適範囲 LFO Mod Lane Mod Matrix MIDI Mod Matrix CV\nPoly Arp Division 0-3 Available Available Available Available\nPoly Arp Octave 0-7 Available Available Available Available\nPoly Arp Type 0-10 Available Available Available Available\nPoly Arp Accent Available Available Available Available\nPoly Arp Euclidean Length Available Available Available Available\nPoly Arp Euclidean Pulses 0-16 Available Available Available Available\nPoly Arp Euclidean Repeats Available Available Available Available\nPoly Arp Euclidean Rotation 0-16 Available Available Available Available\n\nパラメータ 最適範囲 LFO Mod Lane Mod Matrix MIDI Mod Matrix CV\nChord Root 0-7 Available Available Available Available\nChord Type 0-10 Available Available Available Available\nChord Voicing 0-7 Available Available Available Available\nChord Spread 0-7 Available Available Available Available\nChord Strum 0-100 Available Available Available Available\nChord Arp Division 0-3 Available Available Available Available\nChord Arp Octave 0-7 Available Available Available Available\nChord Arp Type 0-10\nChord Arp Accent\nChord Arp Euclidean Length\nChord Arp Euclidean Pulses 0-16\nChord Arp Euclidean Repeats\nChord Arp Euclidean Rotation 0-16\n\nMono Mode - 追加オプション\nPoly Mode - 追加オプション\nChord Mode - 追加オプション",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 196,
+      "image": "/manual/pages/page-196.png",
+      "title": "Page 196",
+      "sectionName": null,
+      "translation": "Modulation 7\n\nParameter Optimal Range LFO Mod Lane Mod Matrix MIDI Mod Matrix CV\nEuclidean Pulse 0-16 Available Available Available Available\nEuclidean Rotation 0-16 Available Available Available Available\nPattern Density kick 0-100 Available Available Available Available\nPattern Density snare 0-100 Available Available Available Available\nPattern Density hat 0-100 Available Available Available Available\nPattern X 0-100 Available Available Available Available\nPattern Y 0-100 Available Available Available Available\nPattern Chaos 0-100 Available Available Available Available\n\nParameter Optimal Range LFO Mod Lane Mod Matrix MIDI Mod Matrix CV\nNote Probability 0-7 Available Available Available Available\nPitch Lock % 0-7 Available Available Available Available\nRhythm Lock % 0-7 Available Available Available Available\nPositive Div % 0-3 Available Available Available Available\nNegative Div % 0-3 Available Available Available Available\nHigher Octave % 0-3 Available Available Available Available\nLower Octave % 0-3 Available Available Available Available\nPattern Chaos 0-3 Available Available Available Available\n\nParameter Optimal Range LFO Mod Lane Mod Matrix MIDI Mod Matrix CV\nNote Interval 0-5 Available Available Available Available\n\nMultitrack - 追加オプション\n\nStochastic - 追加オプション\n\nMatriceal - 追加オプション",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 197,
+      "image": "/manual/pages/page-197.png",
+      "title": "Page 197",
+      "sectionName": null,
+      "translation": "Modulation\n\nParameter Optimal Range LFO Mod Lane Mod Matrix MIDI Mod Matrix CV\n\nOff\n\nSeq Enable On/Off 0-127 >Offset = 無効、それ以外は有効 - - Available -\n\nSeq Mute 0-127 >Offset = ミュート、それ以外はミュート解除 - - Available -\n\nSeq Division 0-8 1Bar,1/2,1/4,1/8,1/12,1/16,1/24,1/32,1/48 - - Available -\n\nSeq Direction 0-3 Fwd, Back, Alternate Random - - Available -\n\nSeq Scale 0-31 スケールリストに基づく - - Available -\n\nSeq Root 0-11 C, C#, D, D#, E, F#, G, G#, A, A#, B - - Available -\n\nSeq Swing -40 to +40 - - Available -\n\nSeq Roll 0-8 Off,1/4,1/6,1/8,1/12,1/16,1/24,1/32,1/48 - - Available -\n\nSeq Loop 0-127 最初から - - Available -\n\nSeq Loop Release 値に依存しない - - Available -\n\nSeq Time Stretch -120 to +120 - - Available -\n\nSeq Time Offset -100 to +100 - - Available -\n\nTrack Init (& Euclidean Length) 0-127 - - Available -\n\nTrack End (& Euclidean Length) 0-127 - - Available -\n\nMOD Lane Enable 0-1 - - Available -\n\nMOD Lane Offset -100 to +100 - - Available -\n\nMOD Lane Division 0-8 1Bar,1/2,1/4,1/8,1/12,1/16,1/24,1/32,1/48 - - Available -\n\nMOD Lane Init 0-127 - - Available -\n\nMOD Lane End 0-127 - - Available -\n\nRandom Velocity -100 to +100 - - Available -\n\nRandom Oct/Gate -100 to +100 - - Available -\n\nRandom Trig Probability 0-100 - - Available -\n\nRandom Retrigger -100 to +100 - - Available -\n\nGlobal Tempo 0-127 offsetを最低BPMに設定、CCが0の時 - - Available -\n\nGlobal Fill 0-1 - - Available -\n\nGlobal Reset 0-1 - - Available -\n\nRandom Generator 0-1 - - Available -\n\nPattern Reload 0-1 - - Available -\n\nTap Tempo 0-1 - - Available -\n\nREC Toggle 0-1 - - Available -\n\nGlobal Mod Matrix Options",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 198,
+      "image": "/manual/pages/page-198.png",
+      "title": "Page 198",
+      "sectionName": null,
+      "translation": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 199,
+      "image": "/manual/pages/page-199.png",
+      "title": "Page 199",
+      "sectionName": null,
+      "translation": "Arrangerは、楽曲の作成、管理、演奏に使用されます。楽曲とは、sequencerに割り当てられた楽器を表す複数のパターンを音楽的な形式で構成した、完全な作品です。例えば、イントロ、ヴァース、コーラス、アウトロといったアレンジを組み立てることは、よく知られた楽曲構成です。Arrangerには主に2つの用途があります。1つ目は、最初から最後まで楽曲全体のシーケンスを作成し、プログラムしたパターンを自動的に再生させることです。これは、完全な作品をエクスポートし、完成したトラックを作るのに最適です。もう1つのシナリオは、ライブパフォーマンス、アドリブ、即興演奏のためのもので、パターンを無限にループするように設定し、進行のコントロールを手動で行います。完全な手動コントロールとフルソングモードの中間的な使い方も、別のユースケースかもしれません。どのアプローチが自分のワークフローに最も適しているかを探ってみる価値があります。Arrangerは、楽曲全体のアレンジを構造化し、整理し、演奏するためにあります。これは、OXI ONEがバックグラウンドで移行を処理する間、あなたが音楽に集中し続けられるようにするツールです。Arrangerを使用するための前提条件として、まずパターンのセットを保存しておく必要があることを認識することが重要です。Arrangerは既存のパターンの選択から曲を構築するため、ワークフローの早い段階でパターンを保存するという良好な管理と規律が推奨されます。プロジェクトごとに最大4つの楽曲を利用でき、これらは保存および読み込みが可能で、プロジェクトを保存する際に保存されます。\n\nArranger\n\n8",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 200,
+      "image": "/manual/pages/page-200.png",
+      "title": "Page 200",
+      "sectionName": null,
+      "translation": "NOTES\n\nArranger 8\n\n8.1 Arrangerの用語\n\nArrangerは、パターンをソングにまとめる完全なプロセスを管理するツールです。いくつかの新しい用語が導入されているため、このセクションの早い段階でこれらのトピックを理解しておくと、ワークフローがスピードアップします。\n\nSong.\n\nSongは、保存されたパターンを音楽的な構造に組み立てることで作成された完全な作曲として保存できるアレンジメントの状態です。したがって、Songは複数の楽器セクションをカバーし、各sequencerによって制御され、イントロ、バース、ビルドアップ、ドロップ、ブレイクダウンなどの関連セクションに時間軸上でレイアウトされます。プロジェクトごとに4つのSongが利用可能です。\n\nArranger.\n\nパターンのコレクションを構築、管理、および演奏してフルアレンジメントにするために使用されるOXI ONEツールです。これは、ソングモードと呼ばれることもあります。Arrangerは、作曲ツールとパフォーマンスツールの両方と考えることができます。\n\nPattern.\n\nPatternは新しい用語ではありませんが、arrangerの重要な要素です。Patternは、音楽的なパッセージやフレーズの中核となる構成要素です。楽器のノート、パラメータ、タイミングなどを演奏する情報が含まれています。\n\nSlot.\n\nSlotは、arranger内で、完全なソング構成における特定のパターンセクションを管理するパッドの列によって表されます。各パッドslotは、各sequencerとその楽器のパターン再生と遷移を制御します。\n\nClip Launch.\n\n各patternは、slot内で手動でトリガーして再生することも、自動的に再生してリピートするように設定することもできます。Arranger slot内でpatternを手動で再生するプロセスは、clip launchと呼ばれます。即興演奏やジャムセッションに最適です。\n\nLaunch Quantization.\n\nLaunch quantizationは、arrangerが「ON」の場合にのみ適用されます。タイミングと同期が管理されるように、slot間の遷移を管理する役割を担います。\n\nMaster Lane.\n\nMaster laneは、他のlaneの主要なコントローラーとして使用される単一のsequencer laneです。Laneは基本的に、ソングの期間にわたって8つのsequencerの1つで表される個々の楽器の音楽的セクションです。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 201,
+      "image": "/manual/pages/page-201.png",
+      "title": "Page 201",
+      "sectionName": null,
+      "translation": "Arranger 8\n\n8.2 Songと楽曲構成\n\nSongはarrangerで作成されます。arrangerは楽曲を構築するために使用されますが、アレンジされたsongを再生するためにも使用されます。個々のパターンではなくsongを再生するには、arrangerが「ON」になっている必要があります。各パターンとslotセクションは、リピート回数の設定により手動または自動で制御できます。\n\n例: 典型的なEDM楽曲のアレンジメント\n\nSeq 1\nInstrument Lane Slot (パターン + リピート回数)\nBass P1\nP4\nP2\nP1\nP3\nP4\nP2\nP1\nP3\nP4\nP2\nP4\nP2\nSeq 5 Pads\nSeq 3 Perc\nSeq 7 Open\nSeq 2 Drums\nSeq 6 Open\nSeq 4 Lead\nSeq 8 Open\nStart Intro 1\nスパースな状態でスタートし、キックとスネアから始まり、\nイントロが進むにつれてベースなどの要素を追加していきます。\n最初のDJの「ミックスイン」時間を考慮した長さにします。\nフルプロダクションへのメロディのヒントやボーカルの手がかりを含む\nメインの「ヴァース」部分。アンティシペーションやテンションを\n構築するためのスペースと要素を残しておきます。\nブレークダウンで一時停止し、エネルギーをリセットする\nチャンスです。いくつかの要素を薄くして一息つき、\nテンションが再び構築され始めるまで待ちます。\nBridgeは何か違う要素を\n提供するセクションになります。\nフルオンのメイントラック。すべての要素が入り、このセクションで\n構築されたテンションが解放されます。\n最初のドロップは時間的にやりすぎないようにします。\nフルオンのメイントラック。すべての要素が入り、構築された\nテンションが再び解放されます。連続性を持たせるために\nbridgeの後に繰り返される可能性があります。\n最後のフルオンセクションで、\nオプションでリピート可能です。\nトラックは徐々にブレークダウンして終わりに向かいます。\n要素が取り除かれ、DJトランジションの「ミックスアウト」を\n考慮したセクションが用意され、キックのみになる可能性があります。\nBreakdown 1\nBreakdown 2\nBridge\nOutro 1\nArrangement SlotとSongセクション\nOutro 2 End\nBuild Up 1\nBuild Up 2\nDrop 1\nDrop 2\nDrop 3\nSlot 1 Slot例\nS5\nS11\nS9\nS15\nS9\nS17\nS8\nS14\nS10\nS16\nS10\nS18\nS19 S21 S20 S22\nS23 S24 S25 S28\nS2 S3 S4",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 202,
+      "image": "/manual/pages/page-202.png",
+      "title": "Page 202",
+      "sectionName": null,
+      "translation": "NOTES\n\nArranger 8\n\n8.3 Arranger View\n\nArrangerは楽曲を管理するためのツールです。専用の[Arranger]ボタンを使用してアクセスします。Arrangerを選択してもソングのarrangerの再生はオンにならず、ツールを開くだけです。これはプロセスの別のステップであり、arrangerは[Shift] + [Arranger]を押し続けることで「ON」になります。\n\nMain Page 1. Editor Page 2.\n\nC \tC# \tF#\tD# \tG# \tA#\tE\tD \tF \tG\ncv \tgate\nA \tB\n1\n2\n3\n4\n5\n6\n7\n8\n\nSlots: 楽曲のセクションを表すパターン構成の列\n\nPadはsequencerのパターンとその再生動作で構成されています。\nアクティブなpadはsequencerの色で点灯します。\n\n明るく点灯しているpadは\n現在再生中\n\nソフトホワイトのpadは\nブランクpad\n\nソフトブルーのpadは\n現在空\n\n点滅しているpadは\n次に再生予定\n\nGlobal Arranger Pages\n\n楽曲を構築・編集するためにarrangerツール、ページ、グリッドビューを選択します。ボタンは白く点灯します。\n\n複数のページが存在する場合、ボタンは点滅します。\n[Page]を押してページをナビゲートします。\n\nSelect Arranger\n\nNavigate Pages\n\nブランクslot padと空のpadには違いがあります。空のpadは開いていて自由に使用できます。ブランクpadはパターン間のスペーサーとして機能するために特別に配置され、再生動作にも影響します。パターンslot padを間隔を空けて配置すると、ブランクが自動的に適用されます。\n\nArranger\n\nInstrument Lane\n\n最大32スロット\n\nあらゆるsequencerレーンを\nマスターレーンとして\n割り当てることができます。\n\n再生は左から右\n\nBlank\n\nEmpty\n\nArranger Grid View.\n\nNavigate Grid\n\n0\n\nARR: OFF \tSong 1\nM:OFF \t0\n1 \t2\tFor each SEQ\n\nSelect Pattern",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 203,
+      "image": "/manual/pages/page-203.png",
+      "title": "Page 203",
+      "sectionName": null,
+      "translation": "Arranger 8\n\nSlot 1 \"Pattern 1\"\n\nPrCh\n\nNext \t-\n\nBank \tPatt \tRept\n\n- \t-\n\nOFF \t1\tOFF\n\nNOTES\n\n8.4 楽曲の作成と編集\n\nメインのarrangerページは、パターンを選択して完全な楽曲やソングとして構成したり、パターンをより小さなグループにまとめてアドリブやライブパフォーマンスで使用したりする場所です。アレンジメントの状態は楽曲(song)と呼ばれます。楽曲は個別に保存およびロードでき、最大4つをパターンやプロジェクトと一緒に保存できます。\n\nArrangerでスロットを編集するには、padを押し続けてパターン、繰り返し、program change、bank設定を変更します。[Arranger]を押して一般的なオプションを設定し、パターンスロット/インストゥルメントレーンの[Pad]を押し続けて特定のパラメーターを編集します。\n\nArrangerツール、ページ、グリッドビューを選択して楽曲を構築および編集します。ボタンは白く点灯します。\n\n[Pad]を押し続けてパターンオプションを編集\n\n現在ロードされている楽曲が、arrangerで作業する際に編集される楽曲になります。これはディスプレイのヘッダーに表示されます。楽曲の名前は変更できません。楽曲を保存するとプロジェクトが保存されます。\n\nグローバルなアレンジメント設定はarrangerビューで利用できますが、スロットpadを押し続けることで、そのパターン固有のオプションにもアクセスできます。これらは、完全な楽曲アレンジメントを構築する際に、各パターンスロット専用に設定されます。これらの個別設定にアクセスするには[Pad]を押し続けます。\n\nベストプラクティスは、アレンジメントを構築する前にスロット設定を行うことです。例えば、繰り返しをデフォルトとして設定しておくと、トラックアレンジメントにパターンを追加する際に適用されます。\n\nArrangerを選択\n\n楽曲を保存\n\n楽曲をロード\n\n楽曲をクリア\n\n楽曲の作成または選択\n\nスロット/パターンページ\n\nArrangerで、(Save)knob 2をタップしてからknob 2を回して楽曲スロットを選択します。(Save)knob 2をもう一度押して、選択したスロットに楽曲を保存します。\n\nArrangerで、(Load)knob 1をタップしてからknob 1を回してロードする楽曲スロットを選択します。(Load)knob 1をもう一度押して、選択した楽曲をロードします。\n\nArrangerで、[Shift] + [Paste]を押し続けて、現在の楽曲を空白の状態にクリアします。Undoが利用可能です。\t\n\n+\n\n2\n\n1\n\n2\n\n1\n\nProgram Change\nMIDI PCメッセージ出力をトリガーするオプションです。\n\nNext Slot\n楽曲シーケンス内で次に再生するスロットを指示します。\n\nBank Change\nMIDI Bankメッセージ出力をトリガーするオプションです。\n\nCurrent Slot & Pattern Repeats\n進行する前に再生するパターンサイクルの回数です。\n\nPattern\nスロットが再生および編集するパターンを選択します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 204,
+      "image": "/manual/pages/page-204.png",
+      "title": "Page 204",
+      "sectionName": null,
+      "translation": "ノート\n\nArranger 8\n\nソングにパターンを追加する方法はいくつかあります。使用するアプローチは、個人の好みやワークフローによって異なります。もちろん、パターンがすでに作成されていること、そしてどのパターンを選択するかについて文書化された、または頭の中でのビューを持っていることが前提条件です。これらは必要に応じて後で編集できます。\n\n各行はsequencerアレンジメントレーン1-8を表します。各列は各sequencerの1-8パターンスロットを表します。アレンジメントスロットをホールドすると、割り当てられたパターンが表示されます。\n\nパターンでソングを構築する\n\nパターンを変更\nスロット番号で\n\nパターンを割り当てる\n作成\nスロットカラム\n\nパターンを変更\nグリッドパターンで\n\nグリッドパターンで\n\n現在のプロジェクトとsequencerパターンリストから、パターンスロット番号でパターンを選択します。\n\n現在のスロットとパターンがアレンジャースロットディスプレイに表示されます。\n\nアレンジャービューで、[Page]を押してパターングリッド選択ページを開きます。\n\nアレンジャービューで、[Arranger]をホールド + 任意のカラム[Pad]をタップして、スロットカラム全体を作成します。\n\nPattern Grid\n\n1  1  1  1\n2  2  2  2\n3  3  4  4\n\nPattern Grid\n\n1  1  1  1\n2  2  2  2\n3  3  4  4\n\nArranger Grid\n\n1\n1\n1\n1\n2\n2\n1\n1\n\nArranger Grid\n\n1\n1\n1\n3\n3\n4\n4\n2\n2\n3\n3\n4\n4\n\nパターングリッドを開くには、アレンジャー[Pad]をホールド + [Page]をタップしてパターン選択グリッドを開きます。\n\n任意のパッドを押してアレンジャーに追加します。パターンは、そのsequencerレーンから選択された順序でアレンジャーに追加されます。パターンを数回タップすると、連続して追加されます。複数のパターンを反復的に選択できます。\n\nスロットは現在のデフォルト設定を使用して作成されます。たとえば、スロットカラムを作成する前にリピートを設定します。ミュートされたsequencerは空のスロットを作成します。\n\nTap 1,1,1\nTap 2\nTap 1\nTap 3,3\nTap 2, 2\nTap 4\n\n現在のパターンは赤く点灯します。選択したsequencerレーンの任意のパッドを押して、選択したアレンジャースロットのパターンを選択します。\n\n3 +\n+\n+\n\nFor each SEQ\nSelect Pattern\n\nFor each SEQ\nSelect Pattern\n\nSlot 1 \"Pattern 1\"\nPrCh\nNext -\nBank    Patt    Rept\n-       -\nOFF     1       OFF",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 205,
+      "image": "/manual/pages/page-205.png",
+      "title": "Page 205",
+      "sectionName": null,
+      "translation": "Arranger 8\n\nSequencerレーンの各スロットにパターンを配置したら、各パターンの再生方法を決定するために個別の動作を設定する必要があります。このプロセスでは、各スロットのパラメータを設定する必要があります。これには、リピートサイクルと進行の方向が含まれます。この作業はArrangementビューで実行されます。設定は、パターンスロットを作成する前または後に設定できます。\n\nRepeatの設定\n\nRepeatは、次のパターンスロットに移動する前にパターンがどのように再生されるかを設定します。Repeatを「Infinite」に設定すると、進行せずに常に繰り返されます。これは無限大記号で表されます。もう1つのオプションは「Off」に設定することで、パターンを空に設定し、アレンジメントの再生時にそのスロットがスキップされます。再生サイクルの回数は1〜19の間で設定することもできます。これは、パターンが割り当てられたスロット、またはパターンが割り当てられていないスロットに設定でき、その場合は空白スロットとなり白く点灯します。空白スロットでも、16ステップの1小節(1/16th)の長さで設定された回数のリピートがアクティブになりますが、実際のパターンのノートやモジュレーションは再生されません。空白スロットと空のスロットの違いは、空のスロットはスキップされるのに対し、空白スロットは、選択したスロットでアレンジャーの再生位置を無音で一定期間、または手動で進めるまで無限に保持するのに便利です。\n\nArrangementスロットの再生方法の設定\n\nSlot Padを長押し\n\nArrangerスロットのパッドを長押ししている間、そのスロットに割り当てられたパターンのパラメータが表示され、編集が可能になります。\n\n[Pad]を長押し + (Rept) Knob 4をタップすると、1とInfiniteの設定を素早く切り替えられます。[Pad]を長押し + (Rept) Knob 4を回すと、特定のオプションを選択できます。\n\n+\n\nSlot 1 \"Pattern 1\"\n\nPrCh\nNext - \nBank Patt Rept\n- -\nOFF 1 OFF\n\nPattern - Slot Parameters\n\nPrCh Bank Patt Rept\nProgram Change Bank Change Pattern Assigned Pattern Repeat Behavior\n\nProgram Changeオプションを設定します。パターン遷移の2tic前にMIDI PCメッセージを送信します。\n\nBanks Select CCメッセージを設定します。パターン遷移の2tic前にMIDI CC#0または#32メッセージを送信します。\n\n選択したSequencerスロットで起動するパターン番号です。\n\nパターンが再生される回数の動作を設定します。これは1〜19の間のリピートサイクルの回数、または無限に再生されます。\n\nNext\nPattern Transition\n\n次に再生するスロットを選択します。次のスロット、前のスロット、1番目のスロット、またはランダム、あるいはランダムに似たその他のスロットを選択できます。\n\nRepeats\n\nInfinite\n\nリピートのカウントダウンなしで無期限に再生されます。進行は、別のスロットパッドを手動でタップすることで実行されます。白く点灯する空白スロットに使用できます。\n\nCountdown\n\nリピートの回数をカウントダウンしながら再生されます。別のスロットパッドを手動でタップすることで、早めに進行できます。白く点灯する空白スロットで使用できます。\n\n1-19\n\nOff\n\nパッドスロットを「空」に設定します。これは、アレンジメントの再生時にこのステップが曲の進行でスキップされることを意味します。\n\nOFF",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 206,
+      "image": "/manual/pages/page-206.png",
+      "title": "Page 206",
+      "sectionName": null,
+      "translation": "NOTES\n\nArranger\n\n8\n\n1\n\nNextはスロットの遷移動作を設定し、ソングシーケンス内で次に再生されるスロットを決定します。パターンとそのリピートが完了すると、ソングは次のスロットに進みます。\n\nNext\n\nNext\nNext Slot\n\n[Pad]を押しながら(Next) Knob 1をタップすると、PrChとNextオプションが切り替わります。'Next'が選択されている状態で(Next) Knob 1を回します。ノブを押したままにするとリセットされます。\n\n+\n\nスロットの最後のリピートサイクル中に、次のスロットが点滅してキューされていることを示します。リピートとパターンが完了すると、ソングシーケンス内の次に利用可能なスロットが再生されます。\n\nPrevious Slot\n\nスロットの最後のリピートサイクル中に、前のスロットが点滅してキューされていることを示します。リピートとパターンが完了すると、ソングシーケンス内の前のスロットが再生されます。\n\nFirst Slot\n1st\n\nスロットの最後のリピートサイクル中に、最初のスロットが点滅してキューされていることを示します。リピートとパターンが完了すると、ソングシーケンス内の最初のスロットが再生されます。\n\nRandom Slot\n\nスロットの最後のリピートサイクル中に、ランダムなスロットが点滅して次にキューされていることを示します。リピートとパターンが完了すると、キューされたスロットが再生されます。任意のパターンをランダムに再生します。\n\nOther Slot\nOTHR\n\nスロットの最後のリピートサイクル中に、ランダムなスロットが点滅して次にキューされていることを示します。リピートとパターンが完了すると、キューされたスロットが再生されます。自分自身のパターンはリピートしません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 207,
+      "image": "/manual/pages/page-207.png",
+      "title": "Page 207",
+      "sectionName": null,
+      "translation": "Arranger 8\n\n3\n\nArranger: メインページ 1.\n\nページ レーン シンボル\n\nM\n\nソング保存オプション。\nKnob 2。\n\nArranger On/Off。\n[Shift] + [Arranger]。\n\nsequencerの行で表されるレーン。\nディスプレイは以下の順序でレーンを表示します。\n\n現在のスロットは無限再生サイクルで動作中です。\n\n無限サイクルのパターンは、別のスロットが手動で選択されない限り、無期限に再生し続けます。\n\nリピートサイクルに設定されたパターンは、ソング内の次のスロットに自動的に進みます。手動で移行することも可能です。\n\n次のキューされたパターンへの移行が差し迫っています。現在、スロットの最後のリピートサイクルを再生中です。\n\n'M'は、レーンがマスターレーンとして割り当てられていることを示します。\n\n進行前のパターンのリピート再生サイクルのカウントダウン。\n\n1\n\n5\n\n2\n\n6\n\n3\n\n7\n\n4\n\n8\n\nマスターレーンの割り当て。\nKnob 3。\n\nグリッドビューをナビゲート。\nKnob 4。\n\n再生ステータス\nレーン 1-8。\n\nソング読み込みオプション。\nKnob 1。\n\n現在読み込まれて編集中のソング。\n\nARR: OFF  Song 1\nM:OFF  0\n1  2\n\n[Shift] + [Arranger] を押してオンにします。\nArrangerボタンは、アーム状態のときに青く点灯します。\n\nソングを再生するには、再生を押す前にarrangerを'ON'にしてアームする必要があります。\narrangerは停止すると自動的にオフになり、アーム解除状態にリセットされます。\n\n+\n\n[Play] を押して、選択したソングを再生します。パターンのみではなくソングを再生するには、arrangerをOn/Armed状態に設定する必要があります。\n\n[Stop] を押して、選択したソングを停止してリセットします。arrangerは自動的にOff/Disarmed状態になります。\n\nArrangerのオン/オフ\n[Shift] + [Arranger]\n\nソングを再生\n[Play]をタップ\n\nソングを停止\n[Stop]をタップ\n\n注意事項\n\n8.5 ソングの再生とコントロール\n\n[Arranger] を押してarrangerオプションを開きます。ただし、ソングアレンジメントを再生するには、arrangerをオン/アーム状態にする必要があります。arrangerは停止すると自動的にアーム解除されます。保存されたパターンは、ソングを再生するときに読み込まれます。そのため、編集したパターンは損失を避けるために保存することが重要です。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 208,
+      "image": "/manual/pages/page-208.png",
+      "title": "Page 208",
+      "sectionName": null,
+      "translation": "NOTES\n\nArranger 8\n\nパターン再生動作は個別に制御できます。各パッドは、arrangerのインストゥルメントレーンに割り当てられたパターンを表しており、再生するように設定したり、次に進む前に設定された回数だけ再生したり、無限に再生したり、まったく再生しないように設定できます。パターンは、スロット列を左から右へ、または手動で選択された順に再生されます。\n\n+\n\n再生中に、スロットとインストゥルメントレーンのパッドをタップして再生します。\n\n再生はlaunch quantizationに基づいて開始されます。ONEはバックグラウンドでパターンの同期とタイミングを管理します。\n\n再生中に、[Shift]を押しながらパッドをタップすると、列全体をキューに入れて再生します。\n\nスロットを再生\nタップ[Pad]\n\nスロット列を再生\nタップ[Pad]\n\n再生中のスロットパターンは明るく点灯します。\n\n再生していないスロットは通常のレーンカラーで点灯します。\n\n次のパターンパッドまたは手動で選択されたスロットパッドは、カラー/ホワイトで点滅して再生待機中であることを示し、再生が開始されると明るく点灯します。\n\n3 - 2 - 1\nARR: OFF Song 1\nM:OFF 0\n1 2\n\nプログレスバー\nLaunch Quantization\nパターンプログレスバー\n現在のスロット再生サイクル\n1 bar\n\nArranger Launch Quantization\n例: 2 Bars\n\nLaunch Quantization\n\nOXI ONE Arrangerは、バックグラウンドで曲全体のパターンの同期と遷移を管理し、曲の再生と作成時のユーザーエクスペリエンスを簡素化します。これを管理する機能がarranger launch quantizationであり、arrangerが有効になるにはOn/Armedに設定されている必要があります。\n\narranger launch quantization設定は、[Shift] + [Perf]でアクセスする「Project」設定内にあります。オプションは、P.End - Pattern End、½ Bar、1 Bar、2 Bars、4 Bars、8 Bars、16 Bars、32 Barsです。\n\nLaunch quantizationは、内部クロックに基づいて、1つのパターン繰り返しサイクルを完了するためのバー数を設定します。launch quantizationは、アレンジメントメインページにプログレスバーとして表示されます。この機能は、曲内のパターン間の遷移タイミングを制御します。\n\nなお、global quantizationまたはload quantizationと呼ばれる別のバージョンが存在し、これはarrangerがオフの場合に、パターンロード動作などに適用されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 209,
+      "image": "/manual/pages/page-209.png",
+      "title": "Page 209",
+      "sectionName": null,
+      "translation": "Arranger\n\nNOTES\n\n8.6 Master LaneとClip Launch\n\nmaster laneは各songに対して利用可能で、sequencerの任意のlaneに割り当てることができます。master laneは他のすべてのlaneの主要なコントローラーとして動作します。masterは他のlaneのrepetitionとpattern length設定を無視して、すべてのslotの進行を決定します。例えば、master laneでslotを再生すると、他のlaneの同等のslotも選択されます。\n\nMaster laneの割り当て。\nsong slotの再生はmaster trackに同期されます。\nRepeat設定とpattern lengthは無視されます。\nmaster laneのみが進行を制御します。\n\nMaster lane 8\n\nARR: IDLE Song 1\nM:S8 0\n1 2\nM\n\nMaster Lane Turn Knob 3 (M:OFF) を回してmaster laneを選択します。\nダブルタップすると値がOFFにリセットされます。\nオプションはOff、Lanes 1-8です。「M」シンボルも\n選択されたlaneを示します。例：lane 8。\n\n3\n\npattern再生を手動で起動するには、任意のarrangement slot [Pad]をタップします。\n切り替えはlaunch quantizationによって管理されます。master laneのslot padをタップすると、そのslotと他のすべてのlaneのslotの再生がトリガーされます。\n\narrangerがオンでsongが再生中の場合、\npatternを変更するには[Load] + [Pad]を長押しします。\n\n+\n\nClip Launch\nPattern Override",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 210,
+      "image": "/manual/pages/page-210.png",
+      "title": "Page 210",
+      "sectionName": null,
+      "translation": "NOTES\n\nArranger 8\n\n8.7 Program ChangeとBank Change\n\nパターン再生の制御に加えて、各スロットにはMIDI Program Change(PCメッセージ)を送信するトリガーとして設定するオプションもあります。Program Changeは接続先デバイスのプリセット、パッチ、またはサウンドを変更するために使用されます。\n\nほとんどのプリセットはバンク内に整理されています。各スロットにはBank Changeメッセージも設定できます。MIDI標準プロトコルでは、Bank Changeを開始するためにControl Change CC#0 MSBまたはCC#32 LSBを使用します。\n\nProgram ChangeとBankオプションは、各sequencerパターンでも利用できます。デフォルトは「=」で、パターン設定を使用します。これらは[Shift] + Seq [1] + [8]で設定され、PCとBankオプションはそれぞれ設定ページ1と2にあります。\n\n受信するProgram Change\n\nArranger Page 2のグリッド上に表示されるパターン列スロットは、受信するMIDI PCメッセージを使用して選択できます。列は左から右に番号が付けられているため、最初の列はPC 1で選択され、2番目の列はPC 2、というように続きます。\n\n前提条件として、受信するProgram Changeに使用されるMIDI Channelを設定メニューで設定してください:Config > MIDI > PC (Program Change) receive global Channel\n\nSlot 1 \"Pattern 1\"\n\nPrCh\n\nNext -\n\nBank Patt Rept\n- -\nOFF 1 OFF\n\nArranger Grid\n\nPrCh\n= パターンのPC値を使用します。\nOff PCは送信されません。\n1-128 PCメッセージ値。\n\nBank\n= パターンのBank値を使用します。\nOff Bankは送信されません。\n1-128 L or M PC LSBまたはMSBメッセージ。\n\nスロットは次のパターンを起動する2クロックティック前にPCとBankメッセージをトリガーします\n\nパターンはProgram ChangeとBank Changeによって起動された新しいプリセットまたはサウンドを再生します。\n\nMIDI Channelはsequencerに設定する必要があります。空白のスロットもパターンを再生せずにPCとBank Changeを送信できます。\n\nNote\n\nProgram ChangeとBank Changeメッセージを外部デバイスと一致させるには、実験とテストが必要な場合があります。一部のプリセット構造は0から始まり、一部は1から始まり、一部は128までカウントしない場合があります。ONEとデバイス間の適切な整合性を見つけるために、バリエーションを試してください。",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

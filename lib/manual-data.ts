@@ -1,12 +1,44 @@
 import type { ManualManifest, ManualPart, ManualPage, PartInfo } from './types/manual';
 import manifestDataRaw from '@/data/translations/manifest.json';
 
-// Import all part data (for now, only part-01 exists)
+// Import all part data
 import part01DataRaw from '@/data/translations/part-01.json';
+import part02DataRaw from '@/data/translations/part-02.json';
+import part03DataRaw from '@/data/translations/part-03.json';
+import part04DataRaw from '@/data/translations/part-04.json';
+import part05DataRaw from '@/data/translations/part-05.json';
+import part06DataRaw from '@/data/translations/part-06.json';
+import part07DataRaw from '@/data/translations/part-07.json';
+import part08DataRaw from '@/data/translations/part-08.json';
+import part09DataRaw from '@/data/translations/part-09.json';
+import part10DataRaw from '@/data/translations/part-10.json';
 
 // Type-safe wrappers for JSON imports
 const manifestData = manifestDataRaw as unknown as ManualManifest;
 const part01Data = part01DataRaw as unknown as ManualPart;
+const part02Data = part02DataRaw as unknown as ManualPart;
+const part03Data = part03DataRaw as unknown as ManualPart;
+const part04Data = part04DataRaw as unknown as ManualPart;
+const part05Data = part05DataRaw as unknown as ManualPart;
+const part06Data = part06DataRaw as unknown as ManualPart;
+const part07Data = part07DataRaw as unknown as ManualPart;
+const part08Data = part08DataRaw as unknown as ManualPart;
+const part09Data = part09DataRaw as unknown as ManualPart;
+const part10Data = part10DataRaw as unknown as ManualPart;
+
+// Part data mapping
+const partDataMap: Record<string, ManualPart> = {
+  '01': part01Data,
+  '02': part02Data,
+  '03': part03Data,
+  '04': part04Data,
+  '05': part05Data,
+  '06': part06Data,
+  '07': part07Data,
+  '08': part08Data,
+  '09': part09Data,
+  '10': part10Data,
+};
 
 // Cache for loaded parts
 const partDataCache: Record<string, ManualPart> = {};
@@ -38,13 +70,10 @@ export function getManualPart(partNum: string): ManualPart {
     return partDataCache[partNum];
   }
 
-  // For now, we only have part 01
-  // In the future, this will dynamically import based on partNum
-  let partData: ManualPart;
+  // Load from part data map
+  const partData = partDataMap[partNum];
 
-  if (partNum === '01') {
-    partData = part01Data;
-  } else {
+  if (!partData) {
     throw new Error(`Manual part ${partNum} not found`);
   }
 

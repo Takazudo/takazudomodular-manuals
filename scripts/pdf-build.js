@@ -104,7 +104,7 @@ for (let partIndex = 0; partIndex < partCount; partIndex++) {
     // Build part output
     const output = {
       part: partNum,
-      pageRange: [startIdx + 1, endIdx],
+      pageRange: [partPages[0].pageNum, partPages[partPages.length - 1].pageNum],
       totalPages: partPages.length,
       metadata: {
         processedAt: new Date().toISOString(),
