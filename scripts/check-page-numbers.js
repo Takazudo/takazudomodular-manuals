@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
 import { readFileSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const draftsDir = '/Users/takazudo/repos/personal/manual-oxi-one-mk2/data/translations-draft';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const draftsDir = join(__dirname, '../public/manuals/oxi-one-mk2/processing/translations-draft');
 
 const mismatches = [];
 

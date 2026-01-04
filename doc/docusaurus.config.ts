@@ -74,6 +74,26 @@ const config: Config = {
         indexPages: true,
       },
     ],
+    // Suppress known webpack warnings from search plugin
+    function suppressSearchPluginWarnings() {
+      return {
+        name: 'suppress-search-plugin-warnings',
+        configureWebpack() {
+          return {
+            ignoreWarnings: [
+              // Suppress warnings from @easyops-cn/docusaurus-search-local
+              (warning) => {
+                return (
+                  warning.message &&
+                  warning.message.includes('proxiedGenerated') &&
+                  warning.message.includes('module has no exports')
+                );
+              },
+            ],
+          };
+        },
+      };
+    },
   ],
 
   themeConfig: {

@@ -92,7 +92,7 @@ for (let partIndex = 0; partIndex < partCount; partIndex++) {
 
       return {
         pageNum: pageNum,
-        image: `/manual/pages/page-${String(pageNum).padStart(3, '0')}.png`,
+        image: `/manuals/oxi-one-mk2/pages/page-${String(pageNum).padStart(3, '0')}.png`,
         title: `Page ${pageNum}`,
         sectionName: null,
         translation: pageData.translation || '',

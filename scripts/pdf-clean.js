@@ -5,11 +5,11 @@
  * Removes all generated files before reprocessing
  *
  * This script deletes:
- * - public/manual/pages/* (rendered images)
- * - data/extracted/* (extracted text)
- * - data/translations-draft/* (translation drafts)
- * - data/translations/* (final JSON files)
- * - manual-pdf/parts/* (split PDFs)
+ * - public/manuals/oxi-one-mk2/pages/* (rendered images)
+ * - public/manuals/oxi-one-mk2/processing/extracted/* (extracted text)
+ * - public/manuals/oxi-one-mk2/processing/translations-draft/* (translation drafts)
+ * - public/manuals/oxi-one-mk2/data/* (final JSON files)
+ * - manual-pdf/pages/* (page PDFs)
  *
  * Keeps:
  * - Source PDF in manual-pdf/
@@ -33,10 +33,10 @@ console.log('🧹 PDF Clean Script');
 console.log('='.repeat(50));
 console.log('');
 console.log('⚠️  This will remove all generated files from PDF processing:');
-console.log('   - Rendered images (public/manual/pages/)');
-console.log('   - Extracted text (data/extracted/)');
-console.log('   - Translation drafts (data/translations-draft/)');
-console.log('   - Final translations (data/translations/)');
+console.log('   - Rendered images (public/manuals/oxi-one-mk2/pages/)');
+console.log('   - Extracted text (public/manuals/oxi-one-mk2/processing/extracted/)');
+console.log('   - Translation drafts (public/manuals/oxi-one-mk2/processing/translations-draft/)');
+console.log('   - Final translations (public/manuals/oxi-one-mk2/data/)');
 console.log('   - Page PDFs (manual-pdf/pages/)');
 console.log('');
 console.log('   Source PDFs in manual-pdf/ will be kept.');
