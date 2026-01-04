@@ -30,16 +30,6 @@ pnpm run build
 echo "✅ Project built successfully"
 echo
 
-# Step 4.5: Reorganize out directory for basePath
-echo "📁 Reorganizing build output for basePath..."
-cd out
-mkdir -p manuals/oxi-one-mk2
-# Move everything except the manuals dir we just created
-find . -maxdepth 1 ! -name . ! -name manuals -exec mv {} manuals/oxi-one-mk2/ \;
-cd ..
-echo "✅ Build output reorganized"
-echo
-
 # Step 5: Run smoke tests with production build
 echo "🎭 Running smoke tests with production build..."
 echo

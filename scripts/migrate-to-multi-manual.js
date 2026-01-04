@@ -16,15 +16,7 @@
  *   node scripts/migrate-to-multi-manual.js            # Execute migration
  */
 
-import {
-  readFileSync,
-  writeFileSync,
-  mkdirSync,
-  readdirSync,
-  statSync,
-  renameSync,
-  cpSync,
-} from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync, cpSync, rmSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -125,6 +117,7 @@ function moveFile(fromDir, toDir, filename) {
 
   // Use copy + delete instead of rename for cross-filesystem compatibility
   cpSync(fromPath, toPath);
+  rmSync(fromPath, { force: true });
   console.log(`  ✓ Moved: ${filename}`);
 }
 
