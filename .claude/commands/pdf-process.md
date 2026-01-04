@@ -55,25 +55,101 @@ Run the complete PDF processing pipeline automatically.
 
 ## Usage
 
-Simply run:
+Run with a manual slug:
 
 ```
-/pdf-process
+/pdf-process <slug>
 ```
+
+## Parameters
+
+- `slug`: Manual slug (e.g., oxi-one-mk2, oxi-coral)
+
+## Examples
+
+```
+/pdf-process oxi-one-mk2
+/pdf-process oxi-coral
+```
+
+## What This Does
 
 This will execute all pipeline steps in order:
 
-1. **Clean** - Remove all existing generated files (images, data, split PDFs)
-2. **Split** - Split PDF into parts (30 pages each)
-3. **Render** - Render pages to PNG images (150 DPI)
-4. **Extract** - Extract text from PDFs
-5. **Translate** - Translate to Japanese using manual-translator subagents (Task tool)
-6. **Build** - Build final JSON files
-7. **Manifest** - Create manifest.json
+1. **Validate** - Check slug parameter and source directory
+2. **Clean** - Remove all existing generated files (images, data, split PDFs)
+3. **Split** - Split PDF into parts (30 pages each)
+4. **Render** - Render pages to PNG images (150 DPI)
+5. **Extract** - Extract text from PDFs
+6. **Translate** - Translate to Japanese using manual-translator subagents (Task tool)
+7. **Build** - Build final JSON files
+8. **Manifest** - Create manifest.json
 
 The entire process takes approximately 15-30 minutes for a 280-page manual.
 
-**Note:** The pipeline will process any PDF file found in `manual-pdf/` directory, regardless of filename.
+## Implementation Logic
+
+**BEFORE starting the pipeline, Claude Code MUST perform these validation steps:**
+
+```bash
+# 1. Extract slug from command arguments
+SLUG=$1
+
+# 2. Validate slug is provided
+if [ -z "$SLUG" ]; then
+  echo "❌ Error: Manual slug required"
+  echo "Usage: /pdf-process <slug>"
+  echo ""
+  echo "Examples:"
+  echo "  /pdf-process oxi-one-mk2"
+  echo "  /pdf-process oxi-coral"
+  exit 1
+fi
+
+# 3. Validate slug format (only lowercase letters, numbers, and hyphens)
+if ! [[ "$SLUG" =~ ^[a-z0-9-]+$ ]]; then
+  echo "❌ Error: Invalid slug format: $SLUG"
+  echo "Slug must contain only lowercase letters, numbers, and hyphens"
+  echo ""
+  echo "Valid examples:"
+  echo "  oxi-one-mk2 ✅"
+  echo "  oxi-coral ✅"
+  echo "  My-Manual ❌ (contains uppercase)"
+  echo "  ../etc/passwd ❌ (contains special characters)"
+  exit 1
+fi
+
+# 4. Check source directory exists
+if [ ! -d "manual-pdf/$SLUG" ]; then
+  echo "❌ Error: Source directory not found: manual-pdf/$SLUG"
+  echo ""
+  echo "Please create the directory and add a PDF file:"
+  echo "  mkdir -p manual-pdf/$SLUG"
+  echo "  cp /path/to/manual.pdf manual-pdf/$SLUG/"
+  exit 1
+fi
+
+# 5. Check if PDF file exists in source directory
+PDF_COUNT=$(find "manual-pdf/$SLUG" -maxdepth 1 -name "*.pdf" | wc -l)
+if [ "$PDF_COUNT" -eq 0 ]; then
+  echo "❌ Error: No PDF file found in manual-pdf/$SLUG"
+  echo ""
+  echo "Please add a PDF file to the directory:"
+  echo "  cp /path/to/manual.pdf manual-pdf/$SLUG/"
+  exit 1
+fi
+
+# 6. All validations passed - proceed with pipeline
+echo "✅ Validation successful"
+echo "Processing manual: $SLUG"
+echo ""
+```
+
+**THEN run the pipeline with the slug parameter:**
+
+```bash
+pnpm run pdf:all --slug "$SLUG"
+```
 
 **Translation Quality:**
 
@@ -92,17 +168,19 @@ The pipeline consists of the following steps. **Users should not invoke these in
 
 **ALWAYS run this first to ensure clean state:**
 
-- `pnpm run pdf:clean` - Remove all generated files (images, extracted text, translations, split PDFs)
+- `pnpm run pdf:clean --slug <slug>` - Remove all generated files for the specified manual
 
 This ensures no stale data from previous runs interferes with the new processing.
 
 ### Step 1-3: Basic Processing (Run via Bash)
 
-These steps can be run directly using pnpm:
+These steps can be run directly using pnpm with the --slug parameter:
 
-- `pnpm run pdf:split` - Split PDF into parts (30 pages each) - processes first PDF found alphabetically
-- `pnpm run pdf:render` - Render pages to PNG images (150 DPI)
-- `pnpm run pdf:extract` - Extract text from PDFs
+- `pnpm run pdf:split --slug <slug>` - Split PDF into parts (30 pages each)
+- `pnpm run pdf:render --slug <slug>` - Render pages to PNG images (150 DPI)
+- `pnpm run pdf:extract --slug <slug>` - Extract text from PDFs
+
+**Note:** All commands now require the --slug parameter to specify which manual to process.
 
 ### Step 4: Translation (Task-Based Worker Pool)
 
@@ -208,5 +286,7 @@ Write({
 
 ### Step 5-6: Final Processing (Run via Bash)
 
-- `pnpm run pdf:build` - Build final JSON files from translation drafts
-- `pnpm run pdf:manifest` - Create manifest.json
+- `pnpm run pdf:build --slug <slug>` - Build final JSON files from translation drafts
+- `pnpm run pdf:manifest --slug <slug>` - Create manifest.json
+
+**Note:** Both commands require the --slug parameter to specify which manual to process.
