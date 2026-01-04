@@ -35,8 +35,8 @@ export function resolveManualConfig(rootDir) {
   if (slugIndex === -1 || !args[slugIndex + 1]) {
     throw new Error(
       '❌ Missing required --slug argument\n\n' +
-      'Usage: node script.js --slug <manual-slug>\n' +
-      'Example: node script.js --slug oxi-one-mk2'
+        'Usage: node script.js --slug <manual-slug>\n' +
+        'Example: node script.js --slug oxi-one-mk2',
     );
   }
 
@@ -48,19 +48,19 @@ export function resolveManualConfig(rootDir) {
   if (!slugPattern.test(slug)) {
     throw new Error(
       `❌ Invalid slug format: "${slug}"\n\n` +
-      'Slug must only contain:\n' +
-      '  - Letters (a-z, A-Z)\n' +
-      '  - Numbers (0-9)\n' +
-      '  - Hyphens (-)\n\n' +
-      'Path traversal patterns (../, ./, etc.) are not allowed.\n\n' +
-      'Valid examples:\n' +
-      '  ✅ oxi-one-mk2\n' +
-      '  ✅ manual-v2\n' +
-      '  ✅ ProductName-2024\n\n' +
-      'Invalid examples:\n' +
-      '  ❌ ../etc/passwd\n' +
-      '  ❌ manual/v2\n' +
-      '  ❌ .hidden'
+        'Slug must only contain:\n' +
+        '  - Letters (a-z, A-Z)\n' +
+        '  - Numbers (0-9)\n' +
+        '  - Hyphens (-)\n\n' +
+        'Path traversal patterns (../, ./, etc.) are not allowed.\n\n' +
+        'Valid examples:\n' +
+        '  ✅ oxi-one-mk2\n' +
+        '  ✅ manual-v2\n' +
+        '  ✅ ProductName-2024\n\n' +
+        'Invalid examples:\n' +
+        '  ❌ ../etc/passwd\n' +
+        '  ❌ manual/v2\n' +
+        '  ❌ .hidden',
     );
   }
 
@@ -70,7 +70,7 @@ export function resolveManualConfig(rootDir) {
   if (!existsSync(configPath)) {
     throw new Error(
       `❌ Configuration file not found: ${configPath}\n\n` +
-      'Please ensure pdf-config.json exists in the project root.'
+        'Please ensure pdf-config.json exists in the project root.',
     );
   }
 
@@ -80,7 +80,7 @@ export function resolveManualConfig(rootDir) {
   } catch (error) {
     throw new Error(
       `❌ Failed to parse pdf-config.json: ${error.message}\n\n` +
-      'Please ensure the file contains valid JSON.'
+        'Please ensure the file contains valid JSON.',
     );
   }
 
@@ -88,7 +88,7 @@ export function resolveManualConfig(rootDir) {
   if (!config.settings) {
     throw new Error(
       '❌ Invalid pdf-config.json: missing "settings" section\n\n' +
-      'Please ensure pdf-config.json has a "settings" object.'
+        'Please ensure pdf-config.json has a "settings" object.',
     );
   }
 
@@ -100,10 +100,10 @@ export function resolveManualConfig(rootDir) {
   if (pdfFiles.length === 0) {
     throw new Error(
       `❌ No PDF file found in: ${pdfDir}\n\n` +
-      `Please ensure your PDF is located at:\n` +
-      `  manual-pdf/${slug}/<filename>.pdf\n\n` +
-      `Example:\n` +
-      `  manual-pdf/${slug}/Manual.pdf`
+        `Please ensure your PDF is located at:\n` +
+        `  manual-pdf/${slug}/<filename>.pdf\n\n` +
+        `Example:\n` +
+        `  manual-pdf/${slug}/Manual.pdf`,
     );
   }
 
@@ -112,8 +112,8 @@ export function resolveManualConfig(rootDir) {
   if (pdfFiles.length > 1) {
     console.warn(
       `⚠️  Multiple PDF files found in ${pdfDir}\n` +
-      `   Using: ${sourcePdf}\n` +
-      `   Other files: ${pdfFiles.slice(1).join(', ')}`
+        `   Using: ${sourcePdf}\n` +
+        `   Other files: ${pdfFiles.slice(1).join(', ')}`,
     );
   }
 
@@ -123,21 +123,21 @@ export function resolveManualConfig(rootDir) {
     sourcePdf,
     input: {
       pdfDirectory: join('manual-pdf', slug),
-      pdfPattern: '*.pdf'
+      pdfPattern: '*.pdf',
     },
     output: {
       pages: join('manual-pdf', slug, 'pages'),
       images: join('public', 'manuals', slug, 'pages'),
       extracted: join('public', 'manuals', slug, 'processing', 'extracted'),
       translationsDraft: join('public', 'manuals', slug, 'processing', 'translations-draft'),
-      translations: join('public', 'manuals', slug, 'data')
-    }
+      translations: join('public', 'manuals', slug, 'data'),
+    },
   };
 
   // Return merged configuration
   return {
     ...paths,
     settings: config.settings,
-    partConfig: config.partConfig
+    partConfig: config.partConfig,
   };
 }

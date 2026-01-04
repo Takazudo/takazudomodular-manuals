@@ -58,6 +58,80 @@ cp /path/to/OXI-ONE-MKII-Manual.pdf manual-pdf/
 pnpm run pdf:all
 ```
 
+## Multi-Manual Support
+
+All PDF processing scripts accept a `--slug` parameter to specify which manual to process. This allows you to manage multiple manuals in the same repository.
+
+### Architecture
+
+Each manual is self-contained under its own slug:
+
+**Directory structure:**
+```
+/manual-pdf/{slug}/              # Source PDF directory
+  └── *.pdf                      # Any PDF file (first one found is used)
+
+/public/manuals/{slug}/          # Output directory
+  ├── data/                      # Final JSON files (committed)
+  ├── pages/                     # Rendered images (committed)
+  └── processing/                # Intermediate files (gitignored)
+```
+
+### Usage
+
+**Process a specific manual:**
+
+```bash
+# Process the OXI ONE MK2 manual
+pnpm run pdf:all --slug oxi-one-mk2
+
+# Process a different manual
+pnpm run pdf:all --slug oxi-coral
+```
+
+**Run individual steps for a specific manual:**
+
+```bash
+pnpm run pdf:split --slug oxi-coral
+pnpm run pdf:render --slug oxi-coral
+pnpm run pdf:extract --slug oxi-coral
+pnpm run pdf:translate --slug oxi-coral
+pnpm run pdf:build --slug oxi-coral
+pnpm run pdf:manifest --slug oxi-coral
+```
+
+### Configuration
+
+**No config files needed!** All paths are computed from the slug:
+
+- **Source PDF**: `/manual-pdf/{slug}/*.pdf` (first PDF found)
+- **Output directory**: `/public/manuals/{slug}/`
+- **Settings**: Shared `pdf-config.json` for all manuals
+
+### Adding a New Manual
+
+1. **Create directory:**
+   ```bash
+   mkdir manual-pdf/new-manual-slug
+   ```
+
+2. **Add PDF file:**
+   ```bash
+   cp ~/path/to/manual.pdf manual-pdf/new-manual-slug/
+   ```
+
+3. **Process:**
+   ```bash
+   /pdf-process new-manual-slug
+   # or
+   pnpm run pdf:all --slug new-manual-slug
+   ```
+
+4. **Update registry** (`lib/manual-registry.ts`):
+   Add explicit imports for the new manual's JSON files.
+
+See main README.md for complete workflow.
+
 ## Individual Scripts
 
 You can run each step individually:

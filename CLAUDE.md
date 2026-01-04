@@ -559,6 +559,139 @@ The skill embeds Playwright logic directly and saves captures to the project's `
 
 **Full Documentation:** See `scripts/README-PDF-PROCESSING.md`
 
+## Multi-Manual Support
+
+The system supports multiple PDF manuals with unique slugs. Each manual is self-contained under `/public/manuals/{manual-id}/` with its own data, images, and processing files.
+
+### Architecture
+
+**Directory structure per manual:**
+
+```
+/manual-pdf/{slug}/              # Source PDF directory
+  └── *.pdf                      # Any PDF file (first one found is used)
+
+/public/manuals/{slug}/          # Output directory
+  ├── data/                      # Final JSON files (committed)
+  │   ├── manifest.json
+  │   ├── part-01.json
+  │   └── ... (part-XX.json)
+  ├── pages/                     # Rendered images (committed)
+  │   ├── page-001.png
+  │   └── ... (page-XXX.png)
+  └── processing/                # Intermediate files (gitignored)
+      ├── extracted/
+      └── translations-draft/
+```
+
+**URL structure:**
+
+- Base: `/manuals/{slug}/`
+- Pages: `/manuals/{slug}/page/{pageNum}`
+- Examples:
+  - `/manuals/oxi-one-mk2/page/1`
+  - `/manuals/oxi-coral/page/1`
+
+### Adding a New Manual
+
+**Step-by-step workflow:**
+
+1. **Create source directory:**
+   ```bash
+   mkdir manual-pdf/{slug}
+   ```
+
+2. **Add PDF file** (any filename works):
+   ```bash
+   cp ~/path/to/manual.pdf manual-pdf/{slug}/
+   ```
+
+3. **Process the PDF:**
+   ```bash
+   /pdf-process {slug}
+   ```
+   This runs all 6 pipeline steps: split, render, extract, translate, build, manifest.
+
+4. **Update manual registry** (`lib/manual-registry.ts`):
+
+   Add explicit imports for the new manual:
+   ```typescript
+   import newManualManifest from '@/public/manuals/new-manual/data/manifest.json';
+   import newManualPart01 from '@/public/manuals/new-manual/data/part-01.json';
+   import newManualPart02 from '@/public/manuals/new-manual/data/part-02.json';
+   // ... import all parts
+
+   const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
+     'new-manual': {
+       manifest: newManualManifest as unknown as ManualManifest,
+       parts: {
+         '01': newManualPart01 as unknown as ManualPartData,
+         '02': newManualPart02 as unknown as ManualPartData,
+         // ... all parts
+       },
+     },
+   };
+   ```
+
+   **Why explicit imports?** This approach ensures:
+
+   - Type safety with TypeScript
+   - Build-time bundling (no runtime fetch)
+   - Compatible with Next.js static export (`output: 'export'`)
+
+5. **Build and deploy:**
+   ```bash
+   pnpm build
+   ```
+
+**Time estimate:** ~30 minutes (excluding translation time ~15-30 min)
+
+### Processing Multiple Manuals
+
+All PDF processing scripts accept a `--slug` parameter:
+
+```bash
+# Process specific manual
+pnpm run pdf:all --slug oxi-one-mk2
+pnpm run pdf:all --slug oxi-coral
+
+# Individual steps
+pnpm run pdf:split --slug oxi-coral
+pnpm run pdf:render --slug oxi-coral
+pnpm run pdf:extract --slug oxi-coral
+pnpm run pdf:translate --slug oxi-coral
+pnpm run pdf:build --slug oxi-coral
+pnpm run pdf:manifest --slug oxi-coral
+```
+
+**Configuration:**
+
+- All paths computed from slug (no config files needed)
+- Source PDF: `/manual-pdf/{slug}/*.pdf` (first PDF found)
+- Output: `/public/manuals/{slug}/`
+- Settings: `pdf-config.json` (shared across all manuals)
+
+### Important Notes
+
+**Manual Registry is Manual:**
+
+- The registry (`lib/manual-registry.ts`) requires explicit imports for each manual
+- This is NOT automatic - you must add imports for each new manual
+- The build will fail if imports are missing
+- This ensures type safety and build-time optimization
+
+**Processing Files are Temporary:**
+
+- Only `data/` and `pages/` directories are committed
+- `processing/` directory is gitignored
+- Can delete processing files after successful deploy
+
+**Backward Compatibility:**
+
+- Existing manual URLs unchanged: `/manuals/oxi-one-mk2/page/1`
+- Each manual is independent
+- No conflicts between manuals
+
 ## Package Manager
 
 This project uses **pnpm** for package management.
