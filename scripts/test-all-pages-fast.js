@@ -3,10 +3,13 @@
 /**
  * Fast smoke test for all manual pages
  * Tests in small batches with progress reporting
+ *
+ * Environment variables:
+ *   BASE_URL - Server URL (default: http://localhost:3100 for production)
  */
 
-const BASE_URL = 'http://localhost:3100';
-const MANUAL_PATH = '/manuals/oxi-one-mk2/page';
+const BASE_URL = process.env.BASE_URL || 'http://localhost:3100/manuals/oxi-one-mk2';
+const MANUAL_PATH = '/page';
 const TOTAL_PAGES = 272;
 const BATCH_SIZE = 10;
 

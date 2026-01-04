@@ -6,9 +6,11 @@
  */
 
 import { readFileSync, writeFileSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const draftsDir = '/Users/takazudo/repos/personal/manual-oxi-one-mk2/data/translations-draft';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const draftsDir = join(__dirname, '../data/translations-draft');
 
 console.log('🔧 Fixing page numbers in translation drafts...\n');
 

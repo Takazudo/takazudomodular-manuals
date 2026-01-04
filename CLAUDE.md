@@ -59,23 +59,41 @@ Example files saved here:
 
 ```
 /
-├── app/                 # Next.js app directory
-│   ├── page/            # Continuous page viewer (/page/[1-280])
-│   └── part-01/         # Legacy redirect
-├── components/          # React components
-├── lib/                 # Utilities and libraries
-│   ├── manual-data.ts   # Data loading logic
-│   └── types/           # TypeScript type definitions
-├── public/              # Static assets
-│   └── manual/          # Manual page images
-├── data/                # Translation JSON data
-│   ├── translations/    # New structure with manifest
-│   └── part-01/         # Legacy data (for reference)
-├── scripts/             # Build and migration scripts
-├── doc/                 # Docusaurus documentation
-├── worktrees/           # Git worktrees (gitignored)
-└── __inbox/             # Temporary files (gitignored)
+├── app/                        # Next.js app directory
+│   ├── page/                   # Continuous page viewer (/page/[1-280])
+│   └── part-01/                # Legacy redirect
+├── components/                 # React components
+├── lib/                        # Utilities and libraries
+│   ├── manual-data.ts          # Data loading logic
+│   └── types/                  # TypeScript type definitions
+├── public/                     # Static assets
+│   └── manuals/                # Multi-manual structure
+│       └── oxi-one-mk2/        # OXI ONE MKII manual
+│           ├── data/           # Final JSON files (imported at build time)
+│           │   ├── manifest.json
+│           │   ├── part-01.json
+│           │   └── ... (part-10.json)
+│           ├── pages/          # Rendered PNG images (150 DPI)
+│           │   ├── page-001.png
+│           │   └── ... (page-272.png)
+│           └── processing/     # Intermediate files (gitignored)
+│               ├── extracted/  # Extracted text from PDF
+│               └── translations-draft/  # Translation drafts
+├── manual-pdf/                 # Source PDFs
+│   ├── pages/                  # Split page PDFs (gitignored)
+│   └── parts/                  # Split part PDFs (gitignored)
+├── scripts/                    # Build and migration scripts
+├── doc/                        # Docusaurus documentation
+├── worktrees/                  # Git worktrees (gitignored)
+└── __inbox/                    # Temporary files (gitignored)
 ```
+
+**Multi-Manual Architecture:**
+
+- Each manual is self-contained under `/public/manuals/{manual-id}/`
+- Final data (JSON + images) committed to repository
+- Processing files are gitignored (can delete after successful deploy)
+- Ready for adding more manuals with same structure
 
 ## Command Restrictions
 
@@ -404,11 +422,12 @@ Automated workflow for converting the OXI ONE MKII PDF manual into Next.js appli
 
 ❌ **Don't maintain (regenerate as needed):**
 
-- `data/extracted/` - Extracted text files
-- `data/translations-draft/` - Translation work-in-progress
-- `data/translations/` - Final JSON output
-- `public/manual/pages/` - Rendered images
-- `manual-pdf/parts/` - Split PDF files
+- `public/manuals/oxi-one-mk2/processing/extracted/` - Extracted text files
+- `public/manuals/oxi-one-mk2/processing/translations-draft/` - Translation work-in-progress
+- `public/manuals/oxi-one-mk2/data/` - Final JSON output
+- `public/manuals/oxi-one-mk2/pages/` - Rendered images
+- `manual-pdf/pages/` - Split page PDFs
+- `manual-pdf/parts/` - Split part PDFs
 
 **When improving translation quality:** Update the translator prompt in `.claude/agents/manual-translator.md`, then regenerate outputs by running the pipeline again. The outputs are disposable - the process is what matters.
 
@@ -440,14 +459,20 @@ The PDF processing pipeline consists of 6 fully automated steps:
 ### Output Structure
 
 ```
-manual-pdf/parts/            # Split PDF files
-public/manual/pages/         # Rendered PNG images (150 DPI)
-data/extracted/              # Extracted text (intermediate)
-data/translations-draft/     # Translation drafts (intermediate)
-data/translations/           # Final JSON files (for Next.js)
-  ├── manifest.json
-  ├── part-01.json
-  └── ...
+manual-pdf/
+  ├── pages/                                    # Split page PDFs (gitignored)
+  └── parts/                                    # Split part PDFs (gitignored)
+public/manuals/oxi-one-mk2/
+  ├── data/                                     # Final JSON files (for Next.js)
+  │   ├── manifest.json
+  │   ├── part-01.json
+  │   └── ... (part-10.json)
+  ├── pages/                                    # Rendered PNG images (150 DPI)
+  │   ├── page-001.png
+  │   └── ... (page-272.png)
+  └── processing/                               # Intermediate files (gitignored)
+      ├── extracted/                            # Extracted text
+      └── translations-draft/                   # Translation drafts
 ```
 
 ### Configuration
@@ -564,10 +589,27 @@ The manual data is split into multiple files for better performance:
 ### Directory Structure
 
 ```
-/data/translations/
+/public/manuals/oxi-one-mk2/data/
 ├── manifest.json         # Master index with all parts
-├── part-01.json          # Pages 1-5 (currently available)
-└── (future parts...)     # Additional parts as they become available
+├── part-01.json          # Pages 1-28
+├── part-02.json          # Pages 29-56
+└── ... (part-10.json)    # Pages 245-272
+```
+
+### How Data is Loaded
+
+**Build-time import (Current Approach):**
+
+- JSON files imported as ES modules in `lib/manual-data.ts`
+- Data bundled into HTML at build time
+- Compatible with Next.js static export (`output: 'export'`)
+- Fast page loads (no runtime fetch)
+
+```typescript
+// lib/manual-data.ts
+import manifestDataRaw from '@/public/manuals/oxi-one-mk2/data/manifest.json';
+import part01DataRaw from '@/public/manuals/oxi-one-mk2/data/part-01.json';
+// ... part-02 through part-10
 ```
 
 ### Manifest Format (`manifest.json`)
@@ -575,13 +617,14 @@ The manual data is split into multiple files for better performance:
 ```json
 {
   "title": "OXI ONE MKII Manual",
-  "totalPages": 5,
+  "totalPages": 272,
   "parts": [
     {
       "part": "01",
-      "pageRange": [1, 5],
-      "file": "/data/translations/part-01.json"
+      "pageRange": [1, 28],
+      "totalPages": 28
     }
+    // ... parts 02-10
   ]
 }
 ```
@@ -591,15 +634,23 @@ The manual data is split into multiple files for better performance:
 ```json
 {
   "part": "01",
-  "pageRange": [1, 5],
+  "pageRange": [1, 28],
+  "totalPages": 28,
+  "metadata": {
+    "processedAt": "2025-01-05T...",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 150
+  },
   "pages": [
     {
       "pageNum": 1,
-      "image": "/manual/part-01/pages/page_001.svg",
-      "title": "表紙",
-      "sectionName": "表紙・目次",
+      "image": "/manuals/oxi-one-mk2/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
       "translation": "# Markdown content here...",
-      "hasContent": true
+      "hasContent": true,
+      "tags": []
     }
   ]
 }
