@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { getNavigationState } from '@/lib/manual-data';
+import { getPagePath } from '@/lib/manual-config';
 
 interface KeyboardNavigationProps {
   currentPage: number;
@@ -36,14 +37,14 @@ export function KeyboardNavigation({ currentPage, totalPages }: KeyboardNavigati
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
         if (canGoToPrev) {
-          router.push(`/page/${currentPage - 1}`);
+          router.push(getPagePath(currentPage - 1));
         }
       }
       // Right arrow: Next page
       else if (e.key === 'ArrowRight') {
         e.preventDefault();
         if (canGoToNext) {
-          router.push(`/page/${currentPage + 1}`);
+          router.push(getPagePath(currentPage + 1));
         }
       }
     };

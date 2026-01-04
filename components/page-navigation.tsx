@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useMemo } from 'react';
 import ctl from '@netlify/classnames-template-literals';
 import { getNavigationState } from '@/lib/manual-data';
+import { getPagePath } from '@/lib/manual-config';
 
 const navContainerStyles = ctl(`
   flex items-center justify-between gap-hgap-sm
@@ -47,7 +48,7 @@ export function PageNavigation({ currentPage, totalPages }: PageNavigationProps)
 
   const handlePageSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const page = parseInt(e.target.value);
-    router.push(`/page/${page}`);
+    router.push(getPagePath(page));
   };
 
   const { canGoToPrev, canGoToNext } = getNavigationState(currentPage, totalPages);
@@ -61,7 +62,7 @@ export function PageNavigation({ currentPage, totalPages }: PageNavigationProps)
   return (
     <nav className={navContainerStyles}>
       {canGoToPrev ? (
-        <Link href={`/page/${currentPage - 1}`} className={buttonStyles}>
+        <Link href={getPagePath(currentPage - 1)} className={buttonStyles}>
           ← 前へ
         </Link>
       ) : (
@@ -88,7 +89,7 @@ export function PageNavigation({ currentPage, totalPages }: PageNavigationProps)
       </div>
 
       {canGoToNext ? (
-        <Link href={`/page/${currentPage + 1}`} className={buttonStyles}>
+        <Link href={getPagePath(currentPage + 1)} className={buttonStyles}>
           次へ →
         </Link>
       ) : (

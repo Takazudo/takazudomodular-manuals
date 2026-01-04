@@ -63,10 +63,12 @@ interface PageViewerProps {
 
 export function PageViewer({ page, currentPage, totalPages }: PageViewerProps) {
   const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
-  // Reset loading state when page changes
+  // Reset loading and error state when page changes
   useEffect(() => {
     setIsLoading(true);
+    setHasError(false);
   }, [currentPage]);
 
   return (
@@ -76,20 +78,33 @@ export function PageViewer({ page, currentPage, totalPages }: PageViewerProps) {
         {/* Left Column: PDF Image */}
         <div className={imageColumnStyles}>
           <div className={imageWrapperStyles}>
-            {isLoading && (
+            {isLoading && !hasError && (
               <div className={loaderWrapperStyles}>
                 <div className="page-image-loader" />
               </div>
             )}
-            <Image
-              src={withBasePath(page.image)}
-              alt={`Page ${currentPage}: ${page.title}`}
-              width={1200}
-              height={1600}
-              className={`w-full h-auto ${!isLoading ? 'page-image-fade-in' : 'opacity-0'}`}
-              priority={currentPage === 1}
-              onLoad={() => setIsLoading(false)}
-            />
+            {hasError ? (
+              <div className={loaderWrapperStyles}>
+                <div className="text-zd-red text-center">
+                  <p className="text-lg font-bold mb-vgap-xs">画像の読み込みに失敗しました</p>
+                  <p className="text-sm text-zd-gray6">ページ {currentPage}</p>
+                </div>
+              </div>
+            ) : (
+              <Image
+                src={withBasePath(page.image)}
+                alt={`Page ${currentPage}: ${page.title}`}
+                width={1200}
+                height={1600}
+                className={`w-full h-auto ${!isLoading ? 'page-image-fade-in' : 'opacity-0'}`}
+                priority={currentPage === 1}
+                onLoad={() => setIsLoading(false)}
+                onError={() => {
+                  setIsLoading(false);
+                  setHasError(true);
+                }}
+              />
+            )}
           </div>
         </div>
 
