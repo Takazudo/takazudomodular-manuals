@@ -5,41 +5,43 @@
  * Removes all generated files before reprocessing
  *
  * This script deletes:
- * - public/manuals/oxi-one-mk2/pages/* (rendered images)
- * - public/manuals/oxi-one-mk2/processing/extracted/* (extracted text)
- * - public/manuals/oxi-one-mk2/processing/translations-draft/* (translation drafts)
- * - public/manuals/oxi-one-mk2/data/* (final JSON files)
- * - manual-pdf/pages/* (page PDFs)
+ * - public/manuals/{slug}/pages/* (rendered images)
+ * - public/manuals/{slug}/processing/extracted/* (extracted text)
+ * - public/manuals/{slug}/processing/translations-draft/* (translation drafts)
+ * - public/manuals/{slug}/data/* (final JSON files)
+ * - manual-pdf/{slug}/pages/* (page PDFs)
  *
  * Keeps:
- * - Source PDF in manual-pdf/
+ * - Source PDF in manual-pdf/{slug}/
  * - Configuration files
  */
 
 import { rmSync, mkdirSync, existsSync, readdirSync, statSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { resolveManualConfig } from './lib/pdf-config-resolver.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..');
 
-// Load configuration
-const config = JSON.parse(
-  await import('fs').then((fs) => fs.readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8')),
-);
+// Load configuration from shared resolver
+const config = resolveManualConfig(ROOT_DIR);
 
 console.log('🧹 PDF Clean Script');
 console.log('='.repeat(50));
+console.log(`📦 Manual: ${config.slug}`);
 console.log('');
 console.log('⚠️  This will remove all generated files from PDF processing:');
-console.log('   - Rendered images (public/manuals/oxi-one-mk2/pages/)');
-console.log('   - Extracted text (public/manuals/oxi-one-mk2/processing/extracted/)');
-console.log('   - Translation drafts (public/manuals/oxi-one-mk2/processing/translations-draft/)');
-console.log('   - Final translations (public/manuals/oxi-one-mk2/data/)');
-console.log('   - Page PDFs (manual-pdf/pages/)');
+console.log(`   - Rendered images (public/manuals/${config.slug}/pages/)`);
+console.log(`   - Extracted text (public/manuals/${config.slug}/processing/extracted/)`);
+console.log(
+  `   - Translation drafts (public/manuals/${config.slug}/processing/translations-draft/)`,
+);
+console.log(`   - Final translations (public/manuals/${config.slug}/data/)`);
+console.log(`   - Page PDFs (manual-pdf/${config.slug}/pages/)`);
 console.log('');
-console.log('   Source PDFs in manual-pdf/ will be kept.');
+console.log(`   Source PDFs in manual-pdf/${config.slug}/ will be kept.`);
 console.log('');
 
 /**

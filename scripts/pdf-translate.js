@@ -4,8 +4,8 @@
  * PDF Translation Script
  * Translates extracted text using Claude Code manual-translator subagents (parallel processing)
  *
- * Input: data/extracted/part-*.txt
- * Output: data/translations-draft/part-*.json
+ * Input: public/manuals/{slug}/processing/extracted/part-*.txt
+ * Output: public/manuals/{slug}/processing/translations-draft/part-*.json
  *
  * This script uses Claude Code's Task tool to spawn manual-translator subagents.
  * It runs 4 translations in parallel to maximize throughput.
@@ -14,13 +14,14 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { resolveManualConfig } from './lib/pdf-config-resolver.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..');
 
-// Load configuration
-const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
+// Load configuration from shared resolver
+const config = resolveManualConfig(ROOT_DIR);
 
 const PARALLEL_AGENTS = 4; // Process 4 parts at a time
 

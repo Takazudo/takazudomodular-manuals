@@ -4,25 +4,27 @@
  * PDF Page Rendering Script - Page by Page
  * Renders individual page PDFs to PNG images
  *
- * Input: manual-pdf/pages/page-*.pdf
- * Output: public/manual/pages/page-001.png, page-002.png, etc.
+ * Input: manual-pdf/{slug}/pages/page-*.pdf
+ * Output: public/manuals/{slug}/pages/page-001.png, page-002.png, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { pdfToPng } from 'pdf-to-png-converter';
+import { resolveManualConfig } from './lib/pdf-config-resolver.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..');
 
-// Load configuration
-const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
+// Load configuration from shared resolver
+const config = resolveManualConfig(ROOT_DIR);
 
 async function renderPdfPages() {
   console.log('🖼️  PDF Page Rendering Script (Page by Page)');
   console.log('='.repeat(50));
+  console.log(`📦 Manual: ${config.slug}`);
 
   const pagesDir = join(ROOT_DIR, config.output.pages);
   const outputDir = join(ROOT_DIR, config.output.images);
