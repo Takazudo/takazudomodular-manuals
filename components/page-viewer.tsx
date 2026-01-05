@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 import ctl from '@netlify/classnames-template-literals';
 import type { ManualPage } from '@/lib/types/manual';
 import { MarkdownRenderer } from './markdown-renderer';
@@ -66,6 +65,20 @@ export function PageViewer({ page, currentPage, totalPages, manualId }: PageView
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const prevPageRef = useRef({ currentPage, manualId });
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  // Handle image load - memoized to avoid recreating on each render
+  const handleImageLoad = useCallback(() => {
+    setIsLoading(false);
+  }, []);
+
+  // Check if image is already loaded on mount (handles cached images)
+  // useLayoutEffect runs before paint, preventing flicker
+  useLayoutEffect(() => {
+    if (imgRef.current?.complete && imgRef.current?.naturalWidth > 0) {
+      setIsLoading(false);
+    }
+  }, [currentPage, manualId]);
 
   // Reset loading state when navigating to a different page
   useEffect(() => {
@@ -107,15 +120,13 @@ export function PageViewer({ page, currentPage, totalPages, manualId }: PageView
                 >
                   <div className="page-image-loader" />
                 </div>
-                {/* Image - always visible, no opacity changes */}
-                <Image
+                {/* Image - using native img with ref to check complete status */}
+                <img
+                  ref={imgRef}
                   src={withBasePath(page.image)}
                   alt={`Page ${currentPage}: ${page.title}`}
-                  width={1200}
-                  height={1600}
                   className="w-full h-auto"
-                  priority={currentPage === 1}
-                  onLoad={() => setIsLoading(false)}
+                  onLoad={handleImageLoad}
                   onError={() => {
                     setIsLoading(false);
                     setHasError(true);
