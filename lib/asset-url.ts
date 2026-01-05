@@ -1,26 +1,20 @@
 /**
- * Get the base path from Next.js config
- * This is used to prefix asset URLs in static export mode
- */
-export const BASE_PATH = '/manuals/oxi-one-mk2';
-
-/**
- * Add base path to an asset URL
- * For static export, Next.js doesn't automatically add basePath to Image src
- * This utility ensures all asset URLs include the basePath
+ * Add base path to an asset URL if needed
+ * In the multi-manual architecture, image paths in JSON data already include
+ * the full correct path (e.g., "/manuals/oxi-one-mk2/pages/page-001.png")
+ * This utility only adds prefix for legacy paths that don't include it
  *
- * @param url - The asset URL (e.g., "/manual/part-01/pages/page_001.svg")
- * @returns URL with basePath prefix (e.g., "/manuals/oxi-one-mk2/manual/part-01/pages/page_001.svg")
+ * @param url - The asset URL
+ * @returns URL with proper prefix if needed
  */
 export function withBasePath(url: string): string {
-  // If URL already has basePath or is external, return as-is
-  if (url.startsWith(BASE_PATH) || url.startsWith('http')) {
+  // If URL already has a manual path or is external, return as-is
+  if (url.startsWith('/manuals/') || url.startsWith('http')) {
     return url;
   }
 
-  // Ensure URL starts with /
+  // For legacy paths without /manuals/ prefix, add oxi-one-mk2 base path
+  // (This maintains backward compatibility with old data)
   const normalizedUrl = url.startsWith('/') ? url : `/${url}`;
-
-  // Add basePath prefix
-  return `${BASE_PATH}${normalizedUrl}`;
+  return `/manuals/oxi-one-mk2${normalizedUrl}`;
 }

@@ -19,12 +19,18 @@ interface KeyboardNavigationProps {
 export function KeyboardNavigation({ currentPage, totalPages, manualId }: KeyboardNavigationProps) {
   const router = useRouter();
   const routerRef = useRef(router);
+  const stateRef = useRef({ currentPage, totalPages, manualId });
 
-  // Keep router ref up to date
+  // Keep refs up to date
   useEffect(() => {
     routerRef.current = router;
   }, [router]);
 
+  useEffect(() => {
+    stateRef.current = { currentPage, totalPages, manualId };
+  }, [currentPage, totalPages, manualId]);
+
+  // Set up keyboard listener only once
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Ignore if user is typing in an input/textarea/select or contentEditable element
@@ -38,6 +44,7 @@ export function KeyboardNavigation({ currentPage, totalPages, manualId }: Keyboa
         return;
       }
 
+      const { currentPage, totalPages, manualId } = stateRef.current;
       const { canGoToPrev, canGoToNext } = getNavigationState(currentPage, totalPages);
 
       // Left arrow: Previous page
@@ -58,7 +65,7 @@ export function KeyboardNavigation({ currentPage, totalPages, manualId }: Keyboa
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentPage, totalPages, manualId]);
+  }, []); // Empty dependency array - listener set up only once
 
   return null; // This component doesn't render anything
 }

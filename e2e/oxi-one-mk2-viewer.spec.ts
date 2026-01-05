@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import manifest from '@/public/manuals/oxi-one-mk2/data/manifest.json';
+import manifest from '../public/manuals/oxi-one-mk2/data/manifest.json';
 
 const MANUAL_ID = 'oxi-one-mk2';
 const MANUAL_PATH = `/manuals/${MANUAL_ID}/page`;
@@ -291,7 +291,7 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
     });
 
     test('should disable next button on last page', async ({ page }) => {
-      await page.goto(`${MANUAL_PATH}/272`);
+      await page.goto(`${MANUAL_PATH}/${TOTAL_PAGES}`);
 
       // Next button should be disabled
       const nextButtonDisabled = page.getByTestId('next-page-button-disabled');

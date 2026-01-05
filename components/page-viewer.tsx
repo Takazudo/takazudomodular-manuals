@@ -91,6 +91,13 @@ export function PageViewer({ page, currentPage, totalPages, manualId }: PageView
                   <p className="text-sm text-zd-gray6">ページ {currentPage}</p>
                 </div>
               </div>
+            ) : !page.image ? (
+              <div className={loaderWrapperStyles} data-testid="page-image-missing">
+                <div className="text-zd-gray6 text-center">
+                  <p className="text-lg mb-vgap-xs">画像がありません</p>
+                  <p className="text-sm">ページ {currentPage}</p>
+                </div>
+              </div>
             ) : (
               <Image
                 src={withBasePath(page.image)}

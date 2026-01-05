@@ -114,3 +114,20 @@ export function getNavigationState(currentPage: number, totalPages: number) {
     canGoToNext: currentPage < totalPages,
   };
 }
+
+/**
+ * Get all page numbers for a manual (for generateStaticParams)
+ */
+export function getAllPageNumbers(manualId: string): { pageNum: string }[] {
+  const manifest = getManifest(manualId);
+  const pageNumbers: { pageNum: string }[] = [];
+
+  for (const part of manifest.parts) {
+    const [startPage, endPage] = part.pageRange;
+    for (let pageNum = startPage; pageNum <= endPage; pageNum++) {
+      pageNumbers.push({ pageNum: pageNum.toString() });
+    }
+  }
+
+  return pageNumbers;
+}

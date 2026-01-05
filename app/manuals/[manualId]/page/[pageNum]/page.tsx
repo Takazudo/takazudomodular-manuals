@@ -1,5 +1,11 @@
 import { notFound } from 'next/navigation';
-import { getManualPage, getTotalPages, pageExists, getManifest } from '@/lib/manual-data';
+import {
+  getManualPage,
+  getTotalPages,
+  pageExists,
+  getAllPageNumbers,
+  getManifest,
+} from '@/lib/manual-data';
 import { isValidManual, getAvailableManuals } from '@/lib/manual-registry';
 import { PageViewer } from '@/components/page-viewer';
 
@@ -18,16 +24,9 @@ export async function generateStaticParams() {
 
   // Generate pages for all manuals
   for (const manualId of manuals) {
-    const manifest = getManifest(manualId);
-
-    // Generate pages for all parts listed in the manifest
-    for (const partInfo of manifest.parts) {
-      for (let i = partInfo.pageRange[0]; i <= partInfo.pageRange[1]; i++) {
-        params.push({
-          manualId,
-          pageNum: i.toString(),
-        });
-      }
+    const pageNumbers = getAllPageNumbers(manualId);
+    for (const { pageNum } of pageNumbers) {
+      params.push({ manualId, pageNum });
     }
   }
 

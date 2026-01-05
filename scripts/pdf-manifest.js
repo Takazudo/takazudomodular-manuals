@@ -115,7 +115,7 @@ function buildManifest() {
       const partEntry = {
         part: partData.part,
         pageRange: partData.pageRange,
-        file: `/data/translations/part-${partNum}.json`,
+        file: `/manuals/${config.slug}/data/part-${partNum}.json`,
         sections: sections,
         totalPages: partData.totalPages,
         contentPages: contentPages,

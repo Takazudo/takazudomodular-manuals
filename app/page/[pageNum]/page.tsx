@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import { getPagePath } from '@/lib/manual-config';
-import { getManifest } from '@/lib/manual-data';
+import { getAllPageNumbers } from '@/lib/manual-data';
 
 interface PageParams {
   pageNum: string;
@@ -11,17 +11,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const manifest = getManifest('oxi-one-mk2');
-  const params: Array<{ pageNum: string }> = [];
-
-  // Generate pages for all parts listed in the manifest
-  for (const partInfo of manifest.parts) {
-    for (let i = partInfo.pageRange[0]; i <= partInfo.pageRange[1]; i++) {
-      params.push({ pageNum: i.toString() });
-    }
-  }
-
-  return params;
+  return getAllPageNumbers('oxi-one-mk2');
 }
 
 export default async function Page({ params }: PageProps) {
