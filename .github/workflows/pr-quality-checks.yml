@@ -1,0 +1,300 @@
+name: PR Quality Checks
+
+# Runs on all pull requests
+# - Basic quality checks (typecheck, lint, format) for all PRs
+# - E2E smoke tests for PRs from preview/* branches
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+# Prevent concurrent checks per PR
+concurrency:
+  group: pr-quality-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+# Grant necessary permissions
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+jobs:
+  # Job 1: Code Quality Checks (runs for all PRs)
+  quality-checks:
+    name: Code Quality Checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          lfs: false
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '10'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run TypeScript type checking
+        run: |
+          echo "🔍 Running TypeScript type checking..."
+          pnpm run typecheck
+          echo "✅ Type checking passed"
+
+      - name: Run ESLint
+        run: |
+          echo "🔍 Running ESLint..."
+          pnpm run lint
+          echo "✅ Linting passed"
+
+      - name: Run Prettier format check
+        run: |
+          echo "🔍 Running Prettier format check..."
+          pnpm run format
+          echo "✅ Format check passed"
+
+      - name: Comment quality check status
+        if: always()
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const success = '${{ job.status }}' === 'success';
+            const emoji = success ? '✅' : '❌';
+            const status = success ? 'passed' : 'failed';
+
+            const body = `${emoji} **Code Quality Checks ${status}**
+
+            - TypeScript: ${success ? '✅' : '❌'}
+            - ESLint: ${success ? '✅' : '❌'}
+            - Prettier: ${success ? '✅' : '❌'}
+
+            ${success ? '' : '⚠️ Please fix the issues above before merging.'}`;
+
+            // Find existing comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number
+            });
+
+            const botComment = comments.find(comment =>
+              comment.user.type === 'Bot' &&
+              comment.body.includes('Code Quality Checks')
+            );
+
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body
+              });
+            }
+
+  # Job 2: Build Check (runs for all PRs)
+  build-check:
+    name: Build Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: quality-checks
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          lfs: false
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '10'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Cache Next.js build
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: nextjs-cache-v1-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml', 'next.config.js', 'tsconfig.json') }}
+          restore-keys: nextjs-cache-v1-${{ runner.os }}-
+
+      - name: Build Next.js
+        run: pnpm build
+        env:
+          NODE_ENV: production
+          NODE_OPTIONS: '--max-old-space-size=4096'
+
+      - name: Verify build output
+        run: |
+          echo "📦 Build Output Verification"
+          echo "============================"
+
+          if [ ! -d "out" ]; then
+            echo "❌ Error: out/ directory not found"
+            exit 1
+          fi
+
+          # Count output files
+          HTML_COUNT=$(find out -name "*.html" | wc -l)
+          echo "📄 HTML files: $HTML_COUNT"
+
+          if [ -d "out/_next" ]; then
+            echo "✅ Next.js static assets found"
+          else
+            echo "❌ Error: _next/ directory not found"
+            exit 1
+          fi
+
+          echo "============================"
+          echo "✅ Build output verified"
+
+      - name: Upload build artifacts (for e2e tests)
+        if: startsWith(github.head_ref, 'preview/')
+        uses: actions/upload-artifact@v5
+        with:
+          name: nextjs-build-pr-${{ github.event.pull_request.number }}
+          path: out/
+          include-hidden-files: true
+          retention-days: 1
+
+  # Job 3: E2E Smoke Tests (only for preview/* branches)
+  e2e-smoke-tests:
+    name: E2E Smoke Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: build-check
+    if: startsWith(github.head_ref, 'preview/')
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          lfs: false
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '10'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v6
+        with:
+          name: nextjs-build-pr-${{ github.event.pull_request.number }}
+          path: out
+
+      - name: Install serve
+        run: pnpm add -g serve
+
+      - name: Start production server
+        run: |
+          echo "🚀 Starting production server on port 3100..."
+          serve out -l 3100 &
+          SERVER_PID=$!
+          echo "SERVER_PID=$SERVER_PID" >> $GITHUB_ENV
+
+          # Wait for server to be ready
+          echo "⏳ Waiting for server to be ready..."
+          for i in {1..30}; do
+            if curl -s http://localhost:3100/ > /dev/null; then
+              echo "✅ Server is ready!"
+              break
+            fi
+            if [ $i -eq 30 ]; then
+              echo "❌ Server failed to start"
+              exit 1
+            fi
+            sleep 1
+          done
+
+      - name: Run smoke tests
+        run: |
+          echo "🧪 Running smoke tests on all 272 pages..."
+          node scripts/test-all-pages-fast.js
+          echo "✅ Smoke tests passed!"
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ ! -z "$SERVER_PID" ]; then
+            kill $SERVER_PID || true
+          fi
+
+      - name: Comment e2e test status
+        if: always()
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const success = '${{ job.status }}' === 'success';
+            const emoji = success ? '✅' : '❌';
+            const status = success ? 'passed' : 'failed';
+
+            const body = `${emoji} **E2E Smoke Tests ${status}**
+
+            Tested all 272 manual pages against production build.
+
+            ${success ? '✅ All pages loaded successfully with HTTP 200.' : '❌ Some pages failed to load. Check the logs for details.'}`;
+
+            // Find existing comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number
+            });
+
+            const botComment = comments.find(comment =>
+              comment.user.type === 'Bot' &&
+              comment.body.includes('E2E Smoke Tests')
+            );
+
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body
+              });
+            }
