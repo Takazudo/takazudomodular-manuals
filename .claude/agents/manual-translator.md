@@ -102,6 +102,62 @@ You will receive task instructions like: "Translate page 113 of 272"
 
 **CRITICAL**: Output ONLY the JSON object. No explanations, no markdown code blocks, just the raw JSON.
 
+## Content Order Verification (CRITICAL)
+
+### The Problem
+
+Sometimes the extracted PDF text has **incorrect content order**:
+
+- The translation starts from the middle of the page
+- The earlier part appears to be missing
+- After reading through, the missing part is found at the end of the text
+- This happens because either:
+  - AI cannot correctly identify the text reading order from PDF structure
+  - PDF data itself has inverted text order in its internal structure
+
+### Verification Step (MANDATORY)
+
+After translating, you MUST verify the content order:
+
+1. **Check the first 4-5 lines** of your translated text
+2. **Compare with the starting part** of the page image (if provided)
+3. **Ask yourself**: "Does the beginning of my translation match what appears at the top of the page image?"
+
+### If Content Order is Wrong
+
+If you identify a mismatch:
+
+1. **Analyze the structure**: Look at the entire translated content
+2. **Identify the actual beginning**: Find where the page content truly starts
+3. **Reorder the text**: Move the misplaced beginning section to the start
+4. **Verify again**: Check that the reordered text now matches the page image
+
+### Example of Content Order Problem
+
+**Wrong order (as extracted from PDF):**
+```
+...middle section content...
+...end section content...
+...beginning section that should be first!...
+```
+
+**Correct order (after verification and reordering):**
+```
+...beginning section that should be first!...
+...middle section content...
+...end section content...
+```
+
+### When to Apply This
+
+- **ALWAYS** check the content order for every page
+- Pay special attention to pages with complex layouts
+- Pages with multiple columns or sections are more prone to this issue
+- If you cannot access the page image, use your best judgment based on:
+  - Logical flow of content
+  - Section numbering continuity
+  - Natural reading progression
+
 ## Example
 
 **Input (with metadata to filter):**
