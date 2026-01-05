@@ -84,11 +84,6 @@ export function PageViewer({ page, currentPage, totalPages, manualId }: PageView
         {/* Left Column: PDF Image */}
         <div className={imageColumnStyles} data-testid="page-image-column">
           <div className={imageWrapperStyles} data-testid="page-image-wrapper">
-            {isLoading && !hasError && (
-              <div className={loaderWrapperStyles}>
-                <div className="page-image-loader" />
-              </div>
-            )}
             {hasError ? (
               <div className={loaderWrapperStyles} data-testid="page-image-error">
                 <div className="text-zd-red text-center">
@@ -104,20 +99,30 @@ export function PageViewer({ page, currentPage, totalPages, manualId }: PageView
                 </div>
               </div>
             ) : (
-              <Image
-                src={withBasePath(page.image)}
-                alt={`Page ${currentPage}: ${page.title}`}
-                width={1200}
-                height={1600}
-                className={`w-full h-auto page-image-transition ${isLoading ? 'page-image-loading' : 'page-image-loaded'}`}
-                priority={currentPage === 1}
-                onLoad={() => setIsLoading(false)}
-                onError={() => {
-                  setIsLoading(false);
-                  setHasError(true);
-                }}
-                data-testid="page-image"
-              />
+              <>
+                {/* Loading overlay - fades out when image loads */}
+                <div
+                  className={`absolute inset-0 bg-zd-white z-10 flex items-center justify-center transition-opacity duration-300 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                  data-testid="page-image-overlay"
+                >
+                  <div className="page-image-loader" />
+                </div>
+                {/* Image - always visible, no opacity changes */}
+                <Image
+                  src={withBasePath(page.image)}
+                  alt={`Page ${currentPage}: ${page.title}`}
+                  width={1200}
+                  height={1600}
+                  className="w-full h-auto"
+                  priority={currentPage === 1}
+                  onLoad={() => setIsLoading(false)}
+                  onError={() => {
+                    setIsLoading(false);
+                    setHasError(true);
+                  }}
+                  data-testid="page-image"
+                />
+              </>
             )}
           </div>
         </div>
