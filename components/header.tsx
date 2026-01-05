@@ -29,8 +29,8 @@ const navLinkStyles = ctl(`
 export function Header() {
   return (
     <header className={headerStyles}>
-      <Link href="/" className={titleStyles}>
-        OXI ONE MKII Manual
+      <Link href="/manuals" className={titleStyles}>
+        Manual Viewer
       </Link>
       <a
         href="https://takazudomodular.com"
