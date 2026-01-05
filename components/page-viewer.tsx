@@ -63,30 +63,19 @@ interface PageViewerProps {
 }
 
 export function PageViewer({ page, currentPage, totalPages, manualId }: PageViewerProps) {
-  // Start with false - on static pages, image is already in HTML and visible
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  // Track if we should animate (only after client-side navigation)
-  const [shouldAnimate, setShouldAnimate] = useState(false);
   const prevPageRef = useRef({ currentPage, manualId });
 
-  // Only show loading state when navigating to a different page (client-side navigation)
+  // Reset loading state when navigating to a different page
   useEffect(() => {
     const prevPage = prevPageRef.current;
     if (prevPage.currentPage !== currentPage || prevPage.manualId !== manualId) {
       setIsLoading(true);
-      setShouldAnimate(true);
       setHasError(false);
     }
     prevPageRef.current = { currentPage, manualId };
   }, [currentPage, manualId]);
-
-  // Determine image class: no animation on initial load, fade-in after navigation
-  const getImageClassName = () => {
-    if (isLoading) return 'opacity-0';
-    if (shouldAnimate) return 'page-image-fade-in';
-    return ''; // No animation on initial load
-  };
 
   return (
     <>
@@ -120,7 +109,7 @@ export function PageViewer({ page, currentPage, totalPages, manualId }: PageView
                 alt={`Page ${currentPage}: ${page.title}`}
                 width={1200}
                 height={1600}
-                className={`w-full h-auto ${getImageClassName()}`}
+                className={`w-full h-auto page-image-transition ${isLoading ? 'page-image-loading' : 'page-image-loaded'}`}
                 priority={currentPage === 1}
                 onLoad={() => setIsLoading(false)}
                 onError={() => {

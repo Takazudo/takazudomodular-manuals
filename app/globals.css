@@ -552,15 +552,15 @@
   }
 }
 
-@keyframes imageLoadFadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Image loading transition - uses explicit opacity values to avoid hydration flicker */
+.page-image-transition {
+  transition: opacity 0.3s ease-in-out;
 }
 
-.page-image-fade-in {
-  animation: imageLoadFadeIn 0.3s ease-in-out forwards;
+.page-image-loading {
+  opacity: 0;
+}
+
+.page-image-loaded {
+  opacity: 1;
 }
