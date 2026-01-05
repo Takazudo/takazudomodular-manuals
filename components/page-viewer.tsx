@@ -63,19 +63,30 @@ interface PageViewerProps {
 }
 
 export function PageViewer({ page, currentPage, totalPages, manualId }: PageViewerProps) {
-  const [isLoading, setIsLoading] = useState(true);
+  // Start with false - on static pages, image is already in HTML and visible
+  const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const isInitialMount = useRef(true);
+  // Track if we should animate (only after client-side navigation)
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+  const prevPageRef = useRef({ currentPage, manualId });
 
-  // Reset loading and error state when page or manual changes (skip initial mount)
+  // Only show loading state when navigating to a different page (client-side navigation)
   useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      return;
+    const prevPage = prevPageRef.current;
+    if (prevPage.currentPage !== currentPage || prevPage.manualId !== manualId) {
+      setIsLoading(true);
+      setShouldAnimate(true);
+      setHasError(false);
     }
-    setIsLoading(true);
-    setHasError(false);
+    prevPageRef.current = { currentPage, manualId };
   }, [currentPage, manualId]);
+
+  // Determine image class: no animation on initial load, fade-in after navigation
+  const getImageClassName = () => {
+    if (isLoading) return 'opacity-0';
+    if (shouldAnimate) return 'page-image-fade-in';
+    return ''; // No animation on initial load
+  };
 
   return (
     <>
@@ -109,7 +120,7 @@ export function PageViewer({ page, currentPage, totalPages, manualId }: PageView
                 alt={`Page ${currentPage}: ${page.title}`}
                 width={1200}
                 height={1600}
-                className={`w-full h-auto ${!isLoading ? 'page-image-fade-in' : 'opacity-0'}`}
+                className={`w-full h-auto ${getImageClassName()}`}
                 priority={currentPage === 1}
                 onLoad={() => setIsLoading(false)}
                 onError={() => {
