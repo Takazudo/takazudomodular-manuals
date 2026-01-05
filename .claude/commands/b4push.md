@@ -29,7 +29,10 @@ pnpm run b4push
 - ✅ ESLint rules
 - ✅ Prettier formatting
 - ✅ Production build succeeds
-- ✅ All 272 manual pages load successfully
+- ✅ All manual pages load successfully (dynamically detects all manuals from registry)
+  - OXI ONE MK2 (272 pages)
+  - OXI Coral (46 pages)
+  - OXI E16 Quick Start (4 pages)
 - ✅ No HTTP errors
 
 ## Time Estimate
@@ -37,7 +40,7 @@ pnpm run b4push
 - **Total:** ~5-10 minutes
   - Code checks: ~30 seconds
   - Build: ~1-2 minutes
-  - Smoke tests: ~3-7 minutes (272 pages)
+  - Smoke tests: ~3-7 minutes (322 pages across all manuals)
 
 ## Notes
 
@@ -46,6 +49,7 @@ pnpm run b4push
 - Uses `serve` package (Next.js recommended)
 - Automatically cleans up after completion
 - Exits with error code if any check fails
+- **Dynamic manual detection**: Automatically tests all manuals from registry - adding new manuals requires no test updates
 
 ## See Also
 

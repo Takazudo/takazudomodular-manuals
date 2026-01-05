@@ -2,38 +2,55 @@
 
 /**
  * Fast smoke test for all manual pages
- * Tests in small batches with progress reporting
+ * Dynamically tests all manuals from the registry
  *
  * Environment variables:
- *   BASE_URL - Server URL (default: http://localhost:3100 for production)
+ *   BASE_URL - Server base URL (default: http://localhost:3100)
  */
 
-const BASE_URL = process.env.BASE_URL || 'http://localhost:3100/manuals/oxi-one-mk2';
-const MANUAL_PATH = '/page';
-const TOTAL_PAGES = 272;
+import { createRequire } from 'module';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const require = createRequire(import.meta.url);
+
+// Read all manifests directly from the data directories
+const oxiOneMk2Manifest = require('../public/manuals/oxi-one-mk2/data/manifest.json');
+const oxiCoralManifest = require('../public/manuals/oxi-coral/data/manifest.json');
+const oxiE16QuickStartManifest = require('../public/manuals/oxi-e16-quick-start/data/manifest.json');
+
+const MANUALS = {
+  'oxi-coral': oxiCoralManifest,
+  'oxi-e16-quick-start': oxiE16QuickStartManifest,
+  'oxi-one-mk2': oxiOneMk2Manifest,
+};
+
+const BASE_URL = process.env.BASE_URL || 'http://localhost:3100';
 const BATCH_SIZE = 10;
 
 const errors = [];
-let tested = 0;
+let totalTested = 0;
+let totalPages = 0;
 
-async function testBatch(start, end) {
+async function testBatch(manualId, start, end, maxPages) {
   const promises = [];
 
-  for (let pageNum = start; pageNum <= end && pageNum <= TOTAL_PAGES; pageNum++) {
-    const url = `${BASE_URL}${MANUAL_PATH}/${pageNum}`;
+  for (let pageNum = start; pageNum <= end && pageNum <= maxPages; pageNum++) {
+    const url = `${BASE_URL}/manuals/${manualId}/page/${pageNum}`;
 
     promises.push(
       fetch(url)
         .then((response) => {
-          tested++;
+          totalTested++;
           if (response.status !== 200) {
-            errors.push({ page: pageNum, status: response.status });
+            errors.push({ manual: manualId, page: pageNum, status: response.status });
           }
           return response.status === 200;
         })
         .catch((error) => {
-          tested++;
-          errors.push({ page: pageNum, status: 'ERROR', error: error.message });
+          totalTested++;
+          errors.push({ manual: manualId, page: pageNum, status: 'ERROR', error: error.message });
           return false;
         }),
     );
@@ -42,27 +59,58 @@ async function testBatch(start, end) {
   await Promise.all(promises);
 }
 
-async function main() {
-  console.log(`Testing all ${TOTAL_PAGES} pages...\n`);
+async function testManual(manualId, manifest) {
+  const pages = manifest.totalPages;
+  console.log(`\n📘 Testing ${manualId} (${pages} pages)...`);
 
-  for (let start = 1; start <= TOTAL_PAGES; start += BATCH_SIZE) {
-    const end = Math.min(start + BATCH_SIZE - 1, TOTAL_PAGES);
-    await testBatch(start, end);
-    process.stdout.write(`\rProgress: ${tested}/${TOTAL_PAGES} pages tested`);
+  for (let start = 1; start <= pages; start += BATCH_SIZE) {
+    const end = Math.min(start + BATCH_SIZE - 1, pages);
+    await testBatch(manualId, start, end, pages);
+    process.stdout.write(`\r   Progress: ${totalTested}/${totalPages} pages tested`);
   }
 
-  console.log('\n\n=== Test Results ===');
-  console.log(`Success: ${TOTAL_PAGES - errors.length}/${TOTAL_PAGES} pages`);
-  console.log(`Errors: ${errors.length}/${TOTAL_PAGES} pages`);
+  console.log('');
+}
+
+async function main() {
+  console.log('🧪 Smoke Test - All Manual Pages');
+  console.log('=====================================\n');
+
+  // Get all manuals
+  const manualIds = Object.keys(MANUALS).sort();
+
+  // Calculate total pages
+  for (const manualId of manualIds) {
+    totalPages += MANUALS[manualId].totalPages;
+  }
+
+  console.log(`📚 Found ${manualIds.length} manuals with ${totalPages} total pages\n`);
+
+  // Test each manual
+  for (const manualId of manualIds) {
+    await testManual(manualId, MANUALS[manualId]);
+  }
+
+  // Report results
+  console.log('\n=====================================');
+  console.log('=== Test Results ===');
+  console.log(`Success: ${totalPages - errors.length}/${totalPages} pages`);
+  console.log(`Errors: ${errors.length}/${totalPages} pages`);
 
   if (errors.length > 0) {
     console.log('\n=== Failed Pages ===');
-    errors.forEach(({ page, status }) => {
-      console.log(`Page ${page}: HTTP ${status}`);
+    errors.forEach(({ manual, page, status, error }) => {
+      if (error) {
+        console.log(`${manual}/page/${page}: ${status} - ${error}`);
+      } else {
+        console.log(`${manual}/page/${page}: HTTP ${status}`);
+      }
     });
+    console.log('');
     process.exit(1);
   } else {
     console.log('\n✅ All pages loaded successfully!');
+    console.log('=====================================\n');
     process.exit(0);
   }
 }

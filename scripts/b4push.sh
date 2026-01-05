@@ -54,7 +54,7 @@ echo
 
 # Run smoke tests
 echo "🧪 Running smoke tests..."
-BASE_URL=http://localhost:3100/manuals/oxi-one-mk2 node scripts/test-all-pages-fast.js
+node scripts/test-all-pages-fast.js
 
 TEST_EXIT=$?
 
