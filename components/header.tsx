@@ -1,5 +1,9 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import ctl from '@netlify/classnames-template-literals';
+import { getManualTitle } from '@/lib/manual-registry';
 
 const headerStyles = ctl(`
   fixed top-0 left-0 right-0 z-50
@@ -38,11 +42,25 @@ const logoStyles = ctl(`
   [mask-position:center]
 `);
 
+/**
+ * Extract manualId from pathname
+ * Matches: /manuals/{manualId} or /manuals/{manualId}/page/{pageNum}
+ */
+function extractManualId(pathname: string): string | null {
+  const match = pathname.match(/^\/manuals\/([^/]+)/);
+  return match ? match[1] : null;
+}
+
 export function Header() {
+  const pathname = usePathname();
+  const manualId = extractManualId(pathname);
+  const title = manualId ? getManualTitle(manualId) : null;
+  const titleHref = manualId ? `/manuals/${manualId}` : '/manuals';
+
   return (
     <header className={headerStyles}>
-      <Link href="/manuals" className={titleStyles}>
-        Manual Viewer
+      <Link href={titleHref} className={titleStyles}>
+        {title || 'Manual Viewer'}
       </Link>
       <a
         href="https://takazudomodular.com"

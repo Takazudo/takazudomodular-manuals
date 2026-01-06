@@ -161,3 +161,12 @@ export function getAvailableManuals(): string[] {
 export function isValidManual(manualId: string): boolean {
   return manualId in MANUAL_REGISTRY;
 }
+
+/**
+ * Get manual title by ID
+ * Returns undefined if manual not found
+ */
+export function getManualTitle(manualId: string): string | undefined {
+  const entry = MANUAL_REGISTRY[manualId];
+  return entry?.manifest.title;
+}
