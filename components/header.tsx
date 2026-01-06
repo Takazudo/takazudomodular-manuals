@@ -39,7 +39,7 @@ const navLinkStyles = ctl(`
 const logoStyles = ctl(`
   w-[1.2em] h-[1.2em]
   bg-current
-  [mask-image:url('/img/takazudo-logo.svg')]
+  [mask-image:url('/manuals/img/takazudo-logo.svg')]
   [mask-size:contain]
   [mask-repeat:no-repeat]
   [mask-position:center]
