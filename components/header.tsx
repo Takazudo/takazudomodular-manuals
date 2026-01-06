@@ -68,12 +68,7 @@ export function Header() {
       <Link href={titleHref} className={titleStyles}>
         {title || 'Manual Index'}
       </Link>
-      <a
-        href="https://takazudomodular.com"
-        className={navLinkStyles}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://takazudomodular.com" className={navLinkStyles}>
         <span className={logoStyles} aria-hidden="true" />
         Takazudo Modular
       </a>
