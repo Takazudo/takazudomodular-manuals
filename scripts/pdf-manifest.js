@@ -4,8 +4,8 @@
  * PDF Manifest Script
  * Generates master manifest.json from all part files
  *
- * Input: data/translations/part-*.json
- * Output: data/translations/manifest.json
+ * Input: public/manuals/{slug}/data/part-*.json
+ * Output: public/manuals/{slug}/data/manifest.json
  *
  * This script:
  * - Scans all part JSON files
@@ -15,18 +15,34 @@
  */
 
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs';
-import { join, dirname } from 'path';
+import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
+import { resolveManualConfig } from './lib/pdf-config-resolver.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..');
 
-// Load configuration
-const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
+// Load configuration from shared resolver
+const config = resolveManualConfig(ROOT_DIR);
+
+/**
+ * Convert slug to manual title
+ * @param {string} slug - Manual slug (e.g., 'oxi-one-mk2')
+ * @returns {string} Manual title (e.g., 'OXI ONE MKII Manual')
+ */
+function slugToTitle(slug) {
+  const titleMap = {
+    'oxi-one-mk2': 'OXI ONE MKII Manual',
+    'oxi-coral': 'OXI Coral Manual',
+  };
+
+  return titleMap[slug] || slug.toUpperCase().replace(/-/g, ' ') + ' Manual';
+}
 
 console.log('📋 PDF Manifest Generator');
 console.log('='.repeat(50));
+console.log(`📦 Manual: ${config.slug}`);
 console.log('');
 
 const translationsDir = join(ROOT_DIR, config.output.translations);
@@ -99,7 +115,7 @@ function buildManifest() {
       const partEntry = {
         part: partData.part,
         pageRange: partData.pageRange,
-        file: `/data/translations/part-${partNum}.json`,
+        file: `/manuals/${config.slug}/data/part-${partNum}.json`,
         sections: sections,
         totalPages: partData.totalPages,
         contentPages: contentPages,
@@ -131,13 +147,13 @@ function buildManifest() {
 
   // Build manifest
   const manifest = {
-    title: 'OXI ONE MKII Manual',
+    title: slugToTitle(config.slug),
     version: '1.0.0',
     totalPages: totalPages,
     contentPages: totalContentPages,
     lastUpdated: new Date().toISOString(),
     source: {
-      filename: 'OXI-ONE-MKII-Manual.pdf',
+      filename: basename(config.sourcePdf),
       processedAt: earliestProcessedAt
         ? earliestProcessedAt.toISOString()
         : new Date().toISOString(),

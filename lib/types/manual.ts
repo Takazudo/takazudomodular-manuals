@@ -32,6 +32,7 @@ export interface PartInfo {
 
 export interface ManualManifest {
   title: string;
+  brand: string;
   version?: string;
   totalPages: number;
   contentPages?: number;

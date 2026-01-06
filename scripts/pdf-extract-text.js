@@ -4,14 +4,15 @@
  * PDF Text Extraction Script - Page by Page
  * Extracts text from individual page PDFs
  *
- * Input: manual-pdf/pages/page-*.pdf
- * Output: data/extracted/page-001.txt, page-002.txt, etc.
+ * Input: manual-pdf/{slug}/pages/page-*.pdf
+ * Output: public/manuals/{slug}/processing/extracted/page-001.txt, page-002.txt, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
+import { resolveManualConfig } from './lib/pdf-config-resolver.js';
 
 const require = createRequire(import.meta.url);
 const { PDFParse } = require('pdf-parse');
@@ -20,8 +21,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..');
 
-// Load configuration
-const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
+// Load configuration from shared resolver
+const config = resolveManualConfig(ROOT_DIR);
 
 async function extractTextFromPdf(pdfPath) {
   // pdf-parse v2 API
@@ -40,6 +41,7 @@ async function extractTextFromPdf(pdfPath) {
 async function extractAllText() {
   console.log('📝 PDF Text Extraction Script (Page by Page)');
   console.log('='.repeat(50));
+  console.log(`📦 Manual: ${config.slug}`);
 
   const pagesDir = join(ROOT_DIR, config.output.pages);
   const outputDir = join(ROOT_DIR, config.output.extracted);

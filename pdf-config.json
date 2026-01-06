@@ -1,15 +1,4 @@
 {
-  "input": {
-    "pdfDirectory": "manual-pdf",
-    "pdfPattern": "*.pdf"
-  },
-  "output": {
-    "pages": "manual-pdf/pages",
-    "images": "public/manual/pages",
-    "extracted": "data/extracted",
-    "translationsDraft": "data/translations-draft",
-    "translations": "data/translations"
-  },
   "settings": {
     "pagesPerPart": 30,
     "imageFormat": "png",

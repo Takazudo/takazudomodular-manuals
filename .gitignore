@@ -88,14 +88,13 @@ package-lock.json
 yarn.lock
 
 # PDF Processing - Generated Files (Temporary/Intermediate)
-manual-pdf/pages/
-manual-pdf/parts/
-data/extracted/
-data/translations-draft/
+manual-pdf/*/pages/
+manual-pdf/*/parts/
+public/manuals/*/processing/
 
 # PDF Processing - Keep final output (commit to repo)
-# data/translations/      # Commented out - we need to commit this
-# public/manual/pages/    # Commented out - we need to commit this
+# public/manuals/*/data/      # Commented out - we need to commit this
+# public/manuals/*/pages/     # Commented out - we need to commit this
 
 # PDF Processing - Test Files (keep test PDFs local)
 !manual-pdf/OXI-ONE-MKII-Manual.pdf

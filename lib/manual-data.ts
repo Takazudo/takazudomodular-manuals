@@ -1,60 +1,28 @@
+/**
+ * Manual Data Access Layer
+ *
+ * Provides functions to access manual data from the registry.
+ * All functions now accept manualId parameter for multi-manual support.
+ */
+
 import type { ManualManifest, ManualPart, ManualPage, PartInfo } from './types/manual';
-import manifestDataRaw from '@/data/translations/manifest.json';
+import { getManifest as getManifestFromRegistry, getPartData } from './manual-registry';
 
-// Import all part data
-import part01DataRaw from '@/data/translations/part-01.json';
-import part02DataRaw from '@/data/translations/part-02.json';
-import part03DataRaw from '@/data/translations/part-03.json';
-import part04DataRaw from '@/data/translations/part-04.json';
-import part05DataRaw from '@/data/translations/part-05.json';
-import part06DataRaw from '@/data/translations/part-06.json';
-import part07DataRaw from '@/data/translations/part-07.json';
-import part08DataRaw from '@/data/translations/part-08.json';
-import part09DataRaw from '@/data/translations/part-09.json';
-import part10DataRaw from '@/data/translations/part-10.json';
-
-// Type-safe wrappers for JSON imports
-const manifestData = manifestDataRaw as unknown as ManualManifest;
-const part01Data = part01DataRaw as unknown as ManualPart;
-const part02Data = part02DataRaw as unknown as ManualPart;
-const part03Data = part03DataRaw as unknown as ManualPart;
-const part04Data = part04DataRaw as unknown as ManualPart;
-const part05Data = part05DataRaw as unknown as ManualPart;
-const part06Data = part06DataRaw as unknown as ManualPart;
-const part07Data = part07DataRaw as unknown as ManualPart;
-const part08Data = part08DataRaw as unknown as ManualPart;
-const part09Data = part09DataRaw as unknown as ManualPart;
-const part10Data = part10DataRaw as unknown as ManualPart;
-
-// Part data mapping
-const partDataMap: Record<string, ManualPart> = {
-  '01': part01Data,
-  '02': part02Data,
-  '03': part03Data,
-  '04': part04Data,
-  '05': part05Data,
-  '06': part06Data,
-  '07': part07Data,
-  '08': part08Data,
-  '09': part09Data,
-  '10': part10Data,
-};
-
-// Cache for loaded parts
-const partDataCache: Record<string, ManualPart> = {};
+// Cache for loaded parts (per manual)
+const partDataCache: Record<string, Record<string, ManualPart>> = {};
 
 /**
- * Get the manifest
+ * Get the manifest for a specific manual
  */
-export function getManifest(): ManualManifest {
-  return manifestData;
+export function getManifest(manualId: string): ManualManifest {
+  return getManifestFromRegistry(manualId);
 }
 
 /**
  * Get the part info for a given global page number
  */
-export function getPartInfoForPage(pageNum: number): PartInfo | null {
-  const manifest = getManifest();
+export function getPartInfoForPage(manualId: string, pageNum: number): PartInfo | null {
+  const manifest = getManifest(manualId);
   const partInfo = manifest.parts.find(
     (part) => pageNum >= part.pageRange[0] && pageNum <= part.pageRange[1],
   );
@@ -64,36 +32,37 @@ export function getPartInfoForPage(pageNum: number): PartInfo | null {
 /**
  * Get manual data for a specific part
  */
-export function getManualPart(partNum: string): ManualPart {
+export function getManualPart(manualId: string, partNum: string): ManualPart {
+  // Initialize cache for this manual if needed
+  if (!partDataCache[manualId]) {
+    partDataCache[manualId] = {};
+  }
+
   // Check cache first
-  if (partDataCache[partNum]) {
-    return partDataCache[partNum];
+  if (partDataCache[manualId][partNum]) {
+    return partDataCache[manualId][partNum];
   }
 
-  // Load from part data map
-  const partData = partDataMap[partNum];
-
-  if (!partData) {
-    throw new Error(`Manual part ${partNum} not found`);
-  }
+  // Load from registry (throws if not found)
+  const partData = getPartData(manualId, partNum);
 
   // Cache the loaded part
-  partDataCache[partNum] = partData;
+  partDataCache[manualId][partNum] = partData;
   return partData;
 }
 
 /**
- * Get a specific page by global page number (1-280)
+ * Get a specific page by global page number
  */
-export function getManualPage(pageNum: number): ManualPage | null {
+export function getManualPage(manualId: string, pageNum: number): ManualPage | null {
   // Find which part contains this page
-  const partInfo = getPartInfoForPage(pageNum);
+  const partInfo = getPartInfoForPage(manualId, pageNum);
   if (!partInfo) {
     return null;
   }
 
   // Load the part data
-  const part = getManualPart(partInfo.part);
+  const part = getManualPart(manualId, partInfo.part);
 
   // Find the page within the part
   const page = part.pages.find((p) => p.pageNum === pageNum);
@@ -101,11 +70,22 @@ export function getManualPage(pageNum: number): ManualPage | null {
 }
 
 /**
+ * Get part data for a specific page number
+ */
+export function getPartForPage(manualId: string, pageNum: number): ManualPart | null {
+  const partInfo = getPartInfoForPage(manualId, pageNum);
+  if (!partInfo) {
+    return null;
+  }
+  return getPartData(manualId, partInfo.part);
+}
+
+/**
  * Get total pages in the manual
  * Derived from the maximum page range in the manifest
  */
-export function getTotalPages(): number {
-  const manifest = getManifest();
+export function getTotalPages(manualId: string): number {
+  const manifest = getManifest(manualId);
   // Calculate total pages from actual part ranges
   if (manifest.parts.length === 0) {
     return 0;
@@ -116,8 +96,8 @@ export function getTotalPages(): number {
 /**
  * Check if a page exists
  */
-export function pageExists(pageNum: number): boolean {
-  const totalPages = getTotalPages();
+export function pageExists(manualId: string, pageNum: number): boolean {
+  const totalPages = getTotalPages(manualId);
   return pageNum >= 1 && pageNum <= totalPages;
 }
 
@@ -129,4 +109,21 @@ export function getNavigationState(currentPage: number, totalPages: number) {
     canGoToPrev: currentPage > 1,
     canGoToNext: currentPage < totalPages,
   };
+}
+
+/**
+ * Get all page numbers for a manual (for generateStaticParams)
+ */
+export function getAllPageNumbers(manualId: string): { pageNum: string }[] {
+  const manifest = getManifest(manualId);
+  const pageNumbers: { pageNum: string }[] = [];
+
+  for (const part of manifest.parts) {
+    const [startPage, endPage] = part.pageRange;
+    for (let pageNum = startPage; pageNum <= endPage; pageNum++) {
+      pageNumbers.push({ pageNum: pageNum.toString() });
+    }
+  }
+
+  return pageNumbers;
 }

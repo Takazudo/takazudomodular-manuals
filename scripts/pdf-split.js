@@ -4,49 +4,31 @@
  * PDF Split Script - Page by Page
  * Splits PDF into individual page files
  *
- * Input: manual-pdf/*.pdf
- * Output: manual-pdf/pages/page-001.pdf, page-002.pdf, etc.
+ * Input: manual-pdf/{slug}/*.pdf
+ * Output: manual-pdf/{slug}/pages/page-001.pdf, page-002.pdf, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { PDFDocument } from 'pdf-lib';
-import { glob } from 'glob';
+import { resolveManualConfig } from './lib/pdf-config-resolver.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..');
 
-// Load configuration
-const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
+// Load configuration from shared resolver
+const config = resolveManualConfig(ROOT_DIR);
 
 async function splitPDF() {
   console.log('🔪 PDF Split Script (Page by Page)');
   console.log('='.repeat(50));
-
-  // Find input PDF
-  const pdfPattern = join(ROOT_DIR, config.input.pdfDirectory, config.input.pdfPattern);
-  const pdfFiles = glob.sync(pdfPattern);
-
-  if (pdfFiles.length === 0) {
-    console.error(`❌ No PDF found matching: ${pdfPattern}`);
-    console.error(`   Please place your PDF in: ${join(ROOT_DIR, config.input.pdfDirectory)}/`);
-    process.exit(1);
-  }
-
-  const inputPdfPath = pdfFiles[0];
-
-  if (pdfFiles.length > 1) {
-    console.log(`📋 Multiple PDFs found, using: ${inputPdfPath}`);
-    console.log(`   Other files: ${pdfFiles.slice(1).join(', ')}`);
-    console.log('');
-  } else {
-    console.log(`📄 Input PDF: ${inputPdfPath}`);
-  }
+  console.log(`📦 Manual: ${config.slug}`);
+  console.log(`📄 Input PDF: ${config.sourcePdf}`);
 
   // Load PDF
-  const pdfBytes = readFileSync(inputPdfPath);
+  const pdfBytes = readFileSync(config.sourcePdf);
   const pdfDoc = await PDFDocument.load(pdfBytes);
   const totalPages = pdfDoc.getPageCount();
 

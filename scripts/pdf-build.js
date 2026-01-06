@@ -4,23 +4,25 @@
  * PDF Build Script - Page by Page
  * Combines individual page translations into part JSON files
  *
- * Input: data/translations-draft/page-*.json
- * Output: data/translations/part-01.json, part-02.json, etc.
+ * Input: public/manuals/{slug}/processing/translations-draft/page-*.json
+ * Output: public/manuals/{slug}/data/part-01.json, part-02.json, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { resolveManualConfig } from './lib/pdf-config-resolver.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..');
 
-// Load configuration
-const config = JSON.parse(readFileSync(join(ROOT_DIR, 'pdf-config.json'), 'utf-8'));
+// Load configuration from shared resolver
+const config = resolveManualConfig(ROOT_DIR);
 
 console.log('🔨 PDF Build Script (Page by Page)');
 console.log('='.repeat(50));
+console.log(`📦 Manual: ${config.slug}`);
 console.log('');
 
 const draftsDir = join(ROOT_DIR, config.output.translationsDraft);
@@ -92,7 +94,7 @@ for (let partIndex = 0; partIndex < partCount; partIndex++) {
 
       return {
         pageNum: pageNum,
-        image: `/manual/pages/page-${String(pageNum).padStart(3, '0')}.png`,
+        image: `/manuals/${config.slug}/pages/page-${String(pageNum).padStart(3, '0')}.png`,
         title: `Page ${pageNum}`,
         sectionName: null,
         translation: pageData.translation || '',
