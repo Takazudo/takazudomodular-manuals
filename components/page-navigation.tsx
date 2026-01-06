@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useMemo } from 'react';
 import ctl from '@netlify/classnames-template-literals';
 import { getNavigationState } from '@/lib/manual-data';
+import { getPagePath } from '@/lib/manual-config';
 
 const navContainerStyles = ctl(`
   flex items-center justify-between gap-hgap-sm
@@ -40,14 +41,15 @@ const selectStyles = ctl(`
 interface PageNavigationProps {
   currentPage: number;
   totalPages: number;
+  manualId: string;
 }
 
-export function PageNavigation({ currentPage, totalPages }: PageNavigationProps) {
+export function PageNavigation({ currentPage, totalPages, manualId }: PageNavigationProps) {
   const router = useRouter();
 
   const handlePageSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const page = parseInt(e.target.value);
-    router.push(`/page/${page}`);
+    router.push(getPagePath(manualId, page));
   };
 
   const { canGoToPrev, canGoToNext } = getNavigationState(currentPage, totalPages);
@@ -59,24 +61,33 @@ export function PageNavigation({ currentPage, totalPages }: PageNavigationProps)
   );
 
   return (
-    <nav className={navContainerStyles}>
+    <nav className={navContainerStyles} data-testid="page-navigation">
       {canGoToPrev ? (
-        <Link href={`/page/${currentPage - 1}`} className={buttonStyles}>
+        <Link
+          href={getPagePath(manualId, currentPage - 1)}
+          className={buttonStyles}
+          data-testid="prev-page-button"
+        >
           ← 前へ
         </Link>
       ) : (
-        <span className={`${buttonStyles} opacity-50 cursor-not-allowed`} aria-disabled="true">
+        <span
+          className={`${buttonStyles} opacity-50 cursor-not-allowed`}
+          aria-disabled="true"
+          data-testid="prev-page-button-disabled"
+        >
           ← 前へ
         </span>
       )}
 
-      <div className={pageInfoStyles}>
+      <div className={pageInfoStyles} data-testid="page-info">
         <span>ページ</span>
         <select
           value={currentPage}
           onChange={handlePageSelect}
           className={selectStyles}
           aria-label="ページを選択"
+          data-testid="page-selector"
         >
           {pageOptions.map((page) => (
             <option key={page} value={page}>
@@ -84,15 +95,23 @@ export function PageNavigation({ currentPage, totalPages }: PageNavigationProps)
             </option>
           ))}
         </select>
-        <span>/ {totalPages}</span>
+        <span data-testid="total-pages">/ {totalPages}</span>
       </div>
 
       {canGoToNext ? (
-        <Link href={`/page/${currentPage + 1}`} className={buttonStyles}>
+        <Link
+          href={getPagePath(manualId, currentPage + 1)}
+          className={buttonStyles}
+          data-testid="next-page-button"
+        >
           次へ →
         </Link>
       ) : (
-        <span className={`${buttonStyles} opacity-50 cursor-not-allowed`} aria-disabled="true">
+        <span
+          className={`${buttonStyles} opacity-50 cursor-not-allowed`}
+          aria-disabled="true"
+          data-testid="next-page-button-disabled"
+        >
           次へ →
         </span>
       )}

@@ -1,12 +1,14 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { getNavigationState } from '@/lib/manual-data';
+import { getPagePath } from '@/lib/manual-config';
 
 interface KeyboardNavigationProps {
   currentPage: number;
   totalPages: number;
+  manualId: string;
 }
 
 /**
@@ -14,9 +16,21 @@ interface KeyboardNavigationProps {
  * - Left arrow: Previous page
  * - Right arrow: Next page
  */
-export function KeyboardNavigation({ currentPage, totalPages }: KeyboardNavigationProps) {
+export function KeyboardNavigation({ currentPage, totalPages, manualId }: KeyboardNavigationProps) {
   const router = useRouter();
+  const routerRef = useRef(router);
+  const stateRef = useRef({ currentPage, totalPages, manualId });
 
+  // Keep refs up to date
+  useEffect(() => {
+    routerRef.current = router;
+  }, [router]);
+
+  useEffect(() => {
+    stateRef.current = { currentPage, totalPages, manualId };
+  }, [currentPage, totalPages, manualId]);
+
+  // Set up keyboard listener only once
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Ignore if user is typing in an input/textarea/select or contentEditable element
@@ -30,27 +44,28 @@ export function KeyboardNavigation({ currentPage, totalPages }: KeyboardNavigati
         return;
       }
 
+      const { currentPage, totalPages, manualId } = stateRef.current;
       const { canGoToPrev, canGoToNext } = getNavigationState(currentPage, totalPages);
 
       // Left arrow: Previous page
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
         if (canGoToPrev) {
-          router.push(`/page/${currentPage - 1}`);
+          routerRef.current.push(getPagePath(manualId, currentPage - 1));
         }
       }
       // Right arrow: Next page
       else if (e.key === 'ArrowRight') {
         e.preventDefault();
         if (canGoToNext) {
-          router.push(`/page/${currentPage + 1}`);
+          routerRef.current.push(getPagePath(manualId, currentPage + 1));
         }
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentPage, totalPages, router]);
+  }, []); // Empty dependency array - listener set up only once
 
   return null; // This component doesn't render anything
 }
