@@ -1,0 +1,24 @@
+{
+  "title": "OXI E16: Manual",
+  "brand": "OXI Instruments",
+  "version": "1.0.0",
+  "totalPages": 4,
+  "contentPages": 4,
+  "lastUpdated": "2026-01-05T11:50:35.689Z",
+  "source": {
+    "filename": "OXI E16 - User Manual.pdf",
+    "processedAt": "2026-01-05T11:50:24.349Z",
+    "imageDPI": 300,
+    "imageFormat": "png"
+  },
+  "parts": [
+    {
+      "part": "01",
+      "pageRange": [1, 4],
+      "file": "/manuals/oxi-e16-manual/data/part-01.json",
+      "sections": [],
+      "totalPages": 4,
+      "contentPages": 4
+    }
+  ]
+}

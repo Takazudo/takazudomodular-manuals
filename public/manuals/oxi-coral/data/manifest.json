@@ -1,0 +1,32 @@
+{
+  "title": "OXI Coral: Manual",
+  "brand": "OXI Instruments",
+  "version": "1.0.0",
+  "totalPages": 46,
+  "contentPages": 46,
+  "lastUpdated": "2026-01-05T09:09:23.553Z",
+  "source": {
+    "filename": "OXI CORAL User Manual.pdf",
+    "processedAt": "2026-01-05T09:09:06.293Z",
+    "imageDPI": 300,
+    "imageFormat": "png"
+  },
+  "parts": [
+    {
+      "part": "01",
+      "pageRange": [1, 30],
+      "file": "/manuals/oxi-coral/data/part-01.json",
+      "sections": [],
+      "totalPages": 30,
+      "contentPages": 30
+    },
+    {
+      "part": "02",
+      "pageRange": [31, 46],
+      "file": "/manuals/oxi-coral/data/part-02.json",
+      "sections": [],
+      "totalPages": 16,
+      "contentPages": 16
+    }
+  ]
+}
