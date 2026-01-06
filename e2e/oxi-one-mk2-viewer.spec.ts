@@ -36,10 +36,10 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
       await expect(readLink).toBeVisible();
     });
 
-    test('root should redirect to manuals index', async ({ page }) => {
-      await page.goto('/');
+    test('manuals index should load', async ({ page }) => {
+      // With basePath: '/manuals', the app root is at /manuals
+      await page.goto('/manuals');
 
-      // Should redirect to /manuals
       await expect(page).toHaveURL('/manuals');
     });
   });

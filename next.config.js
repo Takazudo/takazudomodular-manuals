@@ -6,6 +6,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  // basePath is required because this site is proxied via takazudomodular.com/manuals/*
+  // All assets must be served under /manuals/ for the proxy redirect to work
+  basePath: '/manuals',
   images: {
     unoptimized: true,
   },

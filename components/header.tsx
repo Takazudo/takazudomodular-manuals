@@ -47,10 +47,12 @@ const logoStyles = ctl(`
 
 /**
  * Extract manualId from pathname
- * Matches: /manuals/{manualId} or /manuals/{manualId}/page/{pageNum}
+ * Note: With basePath: '/manuals', usePathname() returns paths WITHOUT the basePath
+ * So /manuals/oxi-one-mk2/page/1 becomes /oxi-one-mk2/page/1
+ * Matches: /{manualId} or /{manualId}/page/{pageNum}
  */
 function extractManualId(pathname: string): string | null {
-  const match = pathname.match(/^\/manuals\/([^/]+)/);
+  const match = pathname.match(/^\/([^/]+)/);
   return match ? match[1] : null;
 }
 
@@ -58,7 +60,8 @@ export function Header() {
   const pathname = usePathname();
   const manualId = extractManualId(pathname);
   const title = manualId ? getManualTitle(manualId) : null;
-  const titleHref = manualId ? `/manuals/${manualId}` : '/manuals';
+  // With basePath, Link paths don't need /manuals prefix
+  const titleHref = manualId ? `/${manualId}` : '/';
 
   return (
     <header className={headerStyles}>

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import ctl from '@netlify/classnames-template-literals';
 import { ArrowLink } from '@/components/arrow-link';
-import { getPagePath } from '@/lib/manual-config';
+import { getPagePath, getManualAssetPath } from '@/lib/manual-config';
 import { isValidManual, getAvailableManuals, getManifest } from '@/lib/manual-registry';
 
 interface ManualLandingPageParams {
@@ -93,7 +93,7 @@ export default async function ManualLandingPage({ params }: ManualLandingPagePro
 
         <nav className={navStyles}>
           <ArrowLink href={getPagePath(manualId, 1)}>日本語訳マニュアルを読む</ArrowLink>
-          <ArrowLink href={`/manuals/${manualId}/original.pdf`} external>
+          <ArrowLink href={getManualAssetPath(manualId, 'original.pdf')} external>
             英語版オリジナル（PDF）
           </ArrowLink>
         </nav>

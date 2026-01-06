@@ -23,6 +23,53 @@ This is a Next.js-based manual viewer for the OXI ONE MKII hardware synthesizer 
 - Preview URLs: `https://*--manual-oxi-one-mk2.netlify.app/manuals/oxi-one-mk2/`
 - We use preview URLs for previewing PRs before merging to main
 
+## basePath Configuration (Critical Architecture Decision)
+
+**This site uses `basePath: '/manuals'` in `next.config.js`.**
+
+### Why basePath is Required
+
+This site is proxied through `takazudomodular.com/manuals/*` via a Netlify redirect:
+
+```
+# From takazudomodular.com/_redirects
+/manuals/*  https://manual-oxi-one-mk2.netlify.app/manuals/:splat  200
+```
+
+This means:
+
+- All requests to `takazudomodular.com/manuals/*` are proxied to this site
+- **Only paths under `/manuals/` are proxied** - paths like `/_next/static/*` are NOT proxied
+- Without basePath, CSS/JS assets at `/_next/static/*` would return 404
+
+### Impact on Development
+
+**Route paths (for `<Link>`, `router.push()`):**
+
+- Don't include `/manuals` prefix - basePath adds it automatically
+- Example: `<Link href="/oxi-one-mk2/page/1">` → URL becomes `/manuals/oxi-one-mk2/page/1`
+
+**Static asset paths (for `<img>`, `<a href>` to files):**
+
+- Must include full `/manuals` prefix - these are served from `/public/manuals/`
+- Example: `<img src="/manuals/oxi-one-mk2/pages/page-001.png">`
+
+**App directory structure:**
+
+- Routes are defined WITHOUT the `/manuals` prefix
+- `/app/page.tsx` → served at `/manuals/`
+- `/app/[manualId]/page.tsx` → served at `/manuals/[manualId]`
+- `/app/[manualId]/page/[pageNum]/page.tsx` → served at `/manuals/[manualId]/page/[pageNum]`
+
+**usePathname() returns paths WITHOUT basePath:**
+
+- URL `/manuals/oxi-one-mk2/page/1` → `usePathname()` returns `/oxi-one-mk2/page/1`
+
+### Configuration References
+
+- `next.config.js`: Contains `basePath: '/manuals'`
+- `lib/manual-config.ts`: Helper functions for route and asset paths
+
 ## Language Guidelines
 
 **Development Language: English**
