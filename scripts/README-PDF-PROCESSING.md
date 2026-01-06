@@ -58,6 +58,80 @@ cp /path/to/OXI-ONE-MKII-Manual.pdf manual-pdf/
 pnpm run pdf:all
 ```
 
+## Multi-Manual Support
+
+All PDF processing scripts accept a `--slug` parameter to specify which manual to process. This allows you to manage multiple manuals in the same repository.
+
+### Architecture
+
+Each manual is self-contained under its own slug:
+
+**Directory structure:**
+```
+/manual-pdf/{slug}/              # Source PDF directory
+  └── *.pdf                      # Any PDF file (first one found is used)
+
+/public/manuals/{slug}/          # Output directory
+  ├── data/                      # Final JSON files (committed)
+  ├── pages/                     # Rendered images (committed)
+  └── processing/                # Intermediate files (gitignored)
+```
+
+### Usage
+
+**Process a specific manual:**
+
+```bash
+# Process the OXI ONE MK2 manual
+pnpm run pdf:all --slug oxi-one-mk2
+
+# Process a different manual
+pnpm run pdf:all --slug oxi-coral
+```
+
+**Run individual steps for a specific manual:**
+
+```bash
+pnpm run pdf:split --slug oxi-coral
+pnpm run pdf:render --slug oxi-coral
+pnpm run pdf:extract --slug oxi-coral
+pnpm run pdf:translate --slug oxi-coral
+pnpm run pdf:build --slug oxi-coral
+pnpm run pdf:manifest --slug oxi-coral
+```
+
+### Configuration
+
+**No config files needed!** All paths are computed from the slug:
+
+- **Source PDF**: `/manual-pdf/{slug}/*.pdf` (first PDF found)
+- **Output directory**: `/public/manuals/{slug}/`
+- **Settings**: Shared `pdf-config.json` for all manuals
+
+### Adding a New Manual
+
+1. **Create directory:**
+   ```bash
+   mkdir manual-pdf/new-manual-slug
+   ```
+
+2. **Add PDF file:**
+   ```bash
+   cp ~/path/to/manual.pdf manual-pdf/new-manual-slug/
+   ```
+
+3. **Process:**
+   ```bash
+   /pdf-process new-manual-slug
+   # or
+   pnpm run pdf:all --slug new-manual-slug
+   ```
+
+4. **Update registry** (`lib/manual-registry.ts`):
+   Add explicit imports for the new manual's JSON files.
+
+See main README.md for complete workflow.
+
 ## Individual Scripts
 
 You can run each step individually:
@@ -80,11 +154,11 @@ pnpm run pdf:render
 ```
 
 **Input:** `manual-pdf/parts/part-*.pdf`
-**Output:** `public/manual/pages/page_001.png` through `page_280.png`
+**Output:** `public/manuals/oxi-one-mk2/pages/page-001.png` through `page-272.png`
 
 Renders each PDF page to PNG format at 150 DPI.
 
-**Note:** This step may take 5-10 minutes for 280 pages.
+**Note:** This step may take 5-10 minutes for 272 pages.
 
 ### 3. Extract Text
 
@@ -92,10 +166,10 @@ Renders each PDF page to PNG format at 150 DPI.
 pnpm run pdf:extract
 ```
 
-**Input:** `manual-pdf/parts/part-*.pdf`
-**Output:** `data/extracted/part-01.txt` through `part-10.txt`
+**Input:** `manual-pdf/pages/page-*.pdf`
+**Output:** `public/manuals/oxi-one-mk2/processing/extracted/page-001.txt` through `page-272.txt`
 
-Extracts all text content from PDFs for translation.
+Extracts text content from each PDF page individually (page-by-page processing).
 
 ### 4. Translate Text
 
@@ -103,16 +177,18 @@ Extracts all text content from PDFs for translation.
 pnpm run pdf:translate
 ```
 
-**Input:** `data/extracted/part-*.txt`
-**Output:** `data/translations-draft/part-*.json`
+**Input:** `public/manuals/oxi-one-mk2/processing/extracted/page-*.txt`
+**Output:** `public/manuals/oxi-one-mk2/processing/translations-draft/page-*.json`
 
 **⚠️ Requires:** `ANTHROPIC_API_KEY` environment variable
 
-Translates extracted text to Japanese using Claude API.
+Translates each page individually to Japanese using Claude Code Task subagents.
 
 **Note:**
 
-- This step may take 10-20 minutes
+- Page-by-page processing (272 pages)
+- Parallel processing with 5 concurrent subagents
+- This step may take 15-30 minutes
 - Costs approximately $5-10 per full manual (estimate)
 - Uses Claude Sonnet 4.5 model
 - Includes retry logic for API failures
@@ -123,15 +199,11 @@ Translates extracted text to Japanese using Claude API.
 pnpm run pdf:build
 ```
 
-**Input:**
+**Input:** `public/manuals/oxi-one-mk2/processing/translations-draft/page-*.json`
 
-- `data/extracted/part-*.txt`
-- `data/translations-draft/part-*.json`
-- `public/manual/pages/page_*.png`
+**Output:** `public/manuals/oxi-one-mk2/data/part-01.json` through `part-10.json`
 
-**Output:** `data/translations/part-01.json` through `part-10.json`
-
-Combines all data into the final JSON structure for Next.js.
+Combines page translations into part JSON files (28 pages per part) for Next.js.
 
 ### 6. Create Manifest
 
@@ -139,8 +211,8 @@ Combines all data into the final JSON structure for Next.js.
 pnpm run pdf:manifest
 ```
 
-**Input:** `data/translations/part-*.json`
-**Output:** `data/translations/manifest.json`
+**Input:** `public/manuals/oxi-one-mk2/data/part-*.json`
+**Output:** `public/manuals/oxi-one-mk2/data/manifest.json`
 
 Generates a manifest file with metadata about all parts.
 
@@ -150,8 +222,19 @@ Edit `pdf-config.json` to customize:
 
 ```json
 {
+  "source": {
+    "pdf": "manual-pdf/OXI-ONE-MKII-Manual.pdf",
+    "totalPages": 272
+  },
+  "output": {
+    "pages": "manual-pdf/pages",
+    "images": "public/manuals/oxi-one-mk2/pages",
+    "extracted": "public/manuals/oxi-one-mk2/processing/extracted",
+    "translationsDraft": "public/manuals/oxi-one-mk2/processing/translations-draft",
+    "translations": "public/manuals/oxi-one-mk2/data"
+  },
   "settings": {
-    "pagesPerPart": 30,
+    "pagesPerPart": 28,
     "imageFormat": "png",
     "imageDPI": 150,
     "translationModel": "claude-sonnet-4-5-20250929",
@@ -160,34 +243,51 @@ Edit `pdf-config.json` to customize:
 }
 ```
 
+**All paths are relative to repository root**
+
 ## Directory Structure
 
 ```
 manual-oxi-one-mk2/
-├── manual-pdf/              # Input PDF
-│   ├── *.pdf                # Original PDF (place here)
-│   └── parts/               # Generated splits
+├── manual-pdf/                                 # Input PDF
+│   ├── OXI-ONE-MKII-Manual.pdf                 # Original PDF (place here)
+│   ├── pages/                                  # Split page PDFs (gitignored)
+│   └── parts/                                  # Split part PDFs (gitignored)
 │       ├── part-01.pdf
 │       └── ...
-├── data/
-│   ├── extracted/           # Extracted text (intermediate)
-│   ├── translations-draft/  # Translation drafts (intermediate)
-│   └── translations/        # Final JSON (for Next.js)
-│       ├── manifest.json
-│       └── part-*.json
 ├── public/
-│   └── manual/
-│       └── pages/           # Rendered page images
-│           ├── page_001.png
-│           └── ...
+│   └── manuals/                                # Multi-manual structure
+│       └── oxi-one-mk2/                        # OXI ONE MKII manual
+│           ├── data/                           # Final JSON (for Next.js)
+│           │   ├── manifest.json
+│           │   └── part-*.json
+│           ├── pages/                          # Rendered page images (150 DPI)
+│           │   ├── page-001.png
+│           │   └── ... (page-272.png)
+│           └── processing/                     # Intermediate files (gitignored)
+│               ├── extracted/                  # Extracted text
+│               │   ├── page-001.txt
+│               │   └── ... (page-272.txt)
+│               └── translations-draft/         # Translation drafts
+│                   ├── page-001.json
+│                   └── ... (page-272.json)
 └── scripts/
     ├── pdf-split.js
     ├── pdf-render-pages.js
     ├── pdf-extract-text.js
-    ├── pdf-translate.js
-    ├── pdf-build-json.js
-    └── pdf-create-manifest.js
+    ├── pdf-translate-page-by-page.js
+    ├── pdf-build.js
+    ├── pdf-manifest.js
+    ├── pdf-clean.js
+    └── migrate-to-multi-manual.js
 ```
+
+**Multi-Manual Architecture:**
+
+- Each manual is self-contained under `/public/manuals/{manual-id}/`
+- Final data (JSON + images) committed to repository
+- Processing files are gitignored (can delete after deploy)
+- Ready for adding more manuals with same structure
 
 ## Error Handling
 
@@ -222,16 +322,24 @@ __inbox/
 
 ## Performance
 
-**Estimated Times (280-page manual):**
+**Estimated Times (272-page manual):**
 
 - Split: ~30 seconds
 - Render: ~5-10 minutes
 - Extract: ~1-2 minutes
-- Translate: ~10-20 minutes (depends on API speed)
+- Translate: ~15-30 minutes (page-by-page with 5 parallel subagents)
 - Build: ~10 seconds
 - Manifest: ~1 second
 
-**Total:** ~15-30 minutes for full pipeline
+**Total:** ~20-40 minutes for full pipeline
+
+**Page-by-Page Processing:**
+
+- Each page is processed individually (not in batches)
+- 272 pages = 272 separate translation tasks
+- Parallel processing with 5 concurrent Claude Code subagents
+- More reliable error recovery (can retry individual pages)
+- Better progress tracking
 
 ## Cost Estimation
 
@@ -239,9 +347,16 @@ Translation costs (using Claude Sonnet 4.5):
 
 - Input: ~$3 per 1M tokens
 - Output: ~$15 per 1M tokens
-- Estimated total for 280-page manual: **$5-10**
+- Estimated total for 272-page manual: **$5-10**
 
 Actual costs depend on text density and complexity.
+
+**Page-by-Page Processing Benefits:**
+
+- Each page is a separate API call (272 calls total)
+- Smaller context per call = more predictable costs
+- Failed pages can be retried without re-processing entire parts
+- Better cost tracking per page
 
 ## Resuming After Failure
 
