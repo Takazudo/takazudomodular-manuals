@@ -33,7 +33,7 @@ const linkStyles = ctl(`
 `);
 
 export const metadata = {
-  title: 'Manual Index - PDF Translation Viewer',
+  title: 'Manual Index | Takazudo Modular',
   description: 'Browse all available translated manuals',
 };
 
@@ -42,7 +42,7 @@ export default function ManualsIndexPage() {
 
   return (
     <main className={containerStyles}>
-      <div className="border border-debug">
+      <div>
         <h1 className={titleStyles}>Manual Index</h1>
         <ul className={listStyles}>
           {manualIds.map((manualId) => {

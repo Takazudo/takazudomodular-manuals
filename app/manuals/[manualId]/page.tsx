@@ -9,23 +9,18 @@ const containerStyles = ctl(`
   min-h-screen pt-[60px]
   bg-zd-gray1
   flex items-center justify-center
-  text-center
 `);
 
 const contentStyles = ctl(`
-  max-w-2xl mx-auto
-  p-hgap-lg
-`);
-
-const titleStyles = ctl(`
-  text-4xl font-bold mb-vgap-md
-  text-zd-white
-  whitespace-nowrap
+  text-left
 `);
 
 const descriptionStyles = ctl(`
-  text-lg mb-vgap-lg
+  text-lg pt-vgap-md
   leading-relaxed
+  font-futura
+  border-t border-zd-white
+  mt-vgap-lg
 `);
 
 const linkStyles = ctl(`
@@ -69,8 +64,8 @@ export async function generateMetadata({ params }: ManualIndexPageProps) {
   const manifest = getManifest(manualId);
 
   return {
-    title: `${manifest.title} - 日本語訳`,
-    description: `${manifest.title}の日本語訳マニュアル`,
+    title: `${manifest.title} 日本語訳`,
+    description: `Takazudo Modularによる${manifest.title}の日本語訳マニュアル`,
   };
 }
 
@@ -88,33 +83,38 @@ export default async function ManualIndexPage({ params }: ManualIndexPageProps) 
   return (
     <main className={containerStyles}>
       <div className={contentStyles}>
-        <h1 className={titleStyles}>
-          {manifest.title}
-          <br />
-          マニュアル 日本語訳
+        <h1 className="pb-vgap-lg font-futura">
+          <span className="block text-4xl pb-vgap-sm">ADDAC System:</span>
+          <span className="block text-5xl">{manifest.title}</span>
+          <span className="block text-3xl pt-vgap-sm">Japanese Translation（日本語訳）</span>
         </h1>
+        <div>
+          <Link href={getPagePath(manualId, 1)} className={linkStyles}>
+            <span className="pr-[7px]">
+              <ArrowRight
+                aria-hidden="true"
+                className="w-[18px] md:w-[24px] align-middle inline-block"
+              />
+            </span>
+            <span>日本語訳マニュアルを読む</span>
+          </Link>
+        </div>
+        <div className="pt-vgap-sm">
+          <Link href={getPagePath(manualId, 1)} className={linkStyles}>
+            <span className="pr-[7px]">
+              <ArrowRight
+                aria-hidden="true"
+                className="w-[18px] md:w-[24px] align-middle inline-block"
+              />
+            </span>
+            <span>英語版オリジナル</span>
+          </Link>
+        </div>
+
         <p className={descriptionStyles}>
-          {manifest.title}
-          マニュアルの日本語訳です。翻訳はAIによる自動生成で行われており、正確性を保証するものではありません。
-          <a
-            href="https://drive.google.com/file/d/1LdJvG-GqzzKI2qw92CyZKklE7kSoZLFE/view"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            公式マニュアル
-          </a>
-          の翻訳参考としてお役立てください。ページは <code className={codeStyles}>←</code>{' '}
-          <code className={codeStyles}>→</code> キーで移動可能です。
+          Navigation: <code className={codeStyles}>←</code> <code className={codeStyles}>→</code>{' '}
+          key
         </p>
-        <Link href={getPagePath(manualId, 1)} className={linkStyles}>
-          <span className="pr-[7px]">
-            <ArrowRight
-              aria-hidden="true"
-              className="w-[18px] md:w-[24px] align-middle inline-block"
-            />
-          </span>
-          <span>マニュアルを読む</span>
-        </Link>
       </div>
     </main>
   );
