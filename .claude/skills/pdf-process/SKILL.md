@@ -1,18 +1,19 @@
 ---
-allowed-tools: Bash, Read, Task, TaskOutput
+name: pdf-process
 description: >-
   Run the complete PDF processing pipeline to convert the manual PDF into Next.js application data.
   This command executes all steps automatically: split, render, extract, translate, build, and
   manifest.
+allowed-tools: Bash, Read, Task, TaskOutput
 ---
 
 # PDF Processing Command
 
 Run the complete PDF processing pipeline automatically.
 
-## 🚨 CRITICAL INSTRUCTION FOR CLAUDE CODE
+## CRITICAL INSTRUCTION FOR CLAUDE CODE
 
-**MANDATORY: You MUST follow the documented translation process EXACTLY as written in this command and in `.claude/skills/pdf-processing/SKILL.md`. NO EXCEPTIONS.**
+**MANDATORY: You MUST follow the documented translation process EXACTLY as written in this skill. NO EXCEPTIONS.**
 
 ### Absolute Requirements During Execution:
 
@@ -24,30 +25,30 @@ Run the complete PDF processing pipeline automatically.
 
 ### During Execution:
 
-- ✅ **GOAL: Translate ALL pages for the specified manual - continue until done or out of tokens**
-- ✅ Follow the documented process exactly - word for word
-- ✅ Use ONLY the Task tool for translation (NOT MCP Codex)
-- ✅ Execute all steps to completion without stopping
-- ✅ Handle errors by retrying or continuing
-- ✅ **Process pages in batches, spawning workers continuously**
-- ✅ **Continue processing until ALL pages done OR token budget exhausted**
-- ✅ **Save results after each batch and continue to next batch**
-- ❌ DO NOT stop to ask "what approach should we take?"
-- ❌ DO NOT suggest "better ways" mid-process
-- ❌ DO NOT ask for user permission during execution
-- ❌ DO NOT use MCP Codex or any other translation method
-- ❌ DO NOT implement "improvements" you discover mid-process
-- ❌ **NEVER ask user to choose between Options A/B/C**
-- ❌ **NEVER ask "which approach would you prefer?"**
-- ❌ **NEVER stop to explain limitations - just continue working**
-- ❌ **NEVER stop after completing just one batch - keep going**
+- GOAL: Translate ALL pages for the specified manual - continue until done or out of tokens
+- Follow the documented process exactly - word for word
+- Use ONLY the Task tool for translation (NOT MCP Codex)
+- Execute all steps to completion without stopping
+- Handle errors by retrying or continuing
+- **Process pages in batches, spawning workers continuously**
+- **Continue processing until ALL pages done OR token budget exhausted**
+- **Save results after each batch and continue to next batch**
+- DO NOT stop to ask "what approach should we take?"
+- DO NOT suggest "better ways" mid-process
+- DO NOT ask for user permission during execution
+- DO NOT use MCP Codex or any other translation method
+- DO NOT implement "improvements" you discover mid-process
+- **NEVER ask user to choose between Options A/B/C**
+- **NEVER ask "which approach would you prefer?"**
+- **NEVER stop to explain limitations - just continue working**
+- **NEVER stop after completing just one batch - keep going**
 
 ### If You Discover Improvements:
 
-- ✅ Note them internally
-- ✅ Report them AFTER all translation is 100% complete
-- ❌ DO NOT implement them during execution
-- ❌ DO NOT stop the process to discuss them
+- Note them internally
+- Report them AFTER all translation is 100% complete
+- DO NOT implement them during execution
+- DO NOT stop the process to discuss them
 
 **This process has been run many times successfully. Trust the documentation and execute it exactly as written.**
 
@@ -129,7 +130,7 @@ SLUG=$1
 
 # 2. Validate slug is provided
 if [ -z "$SLUG" ]; then
-  echo "❌ Error: Manual slug required"
+  echo "Error: Manual slug required"
   echo "Usage: /pdf-process <slug>"
   echo ""
   echo "Examples:"
@@ -140,20 +141,18 @@ fi
 
 # 3. Validate slug format (only lowercase letters, numbers, and hyphens)
 if ! [[ "$SLUG" =~ ^[a-z0-9-]+$ ]]; then
-  echo "❌ Error: Invalid slug format: $SLUG"
+  echo "Error: Invalid slug format: $SLUG"
   echo "Slug must contain only lowercase letters, numbers, and hyphens"
   echo ""
   echo "Valid examples:"
-  echo "  oxi-one-mk2 ✅"
-  echo "  oxi-coral ✅"
-  echo "  My-Manual ❌ (contains uppercase)"
-  echo "  ../etc/passwd ❌ (contains special characters)"
+  echo "  oxi-one-mk2"
+  echo "  oxi-coral"
   exit 1
 fi
 
 # 4. Check source directory exists
 if [ ! -d "manual-pdf/$SLUG" ]; then
-  echo "❌ Error: Source directory not found: manual-pdf/$SLUG"
+  echo "Error: Source directory not found: manual-pdf/$SLUG"
   echo ""
   echo "Please create the directory and add a PDF file:"
   echo "  mkdir -p manual-pdf/$SLUG"
@@ -164,7 +163,7 @@ fi
 # 5. Check if PDF file exists in source directory
 PDF_COUNT=$(find "manual-pdf/$SLUG" -maxdepth 1 -name "*.pdf" | wc -l)
 if [ "$PDF_COUNT" -eq 0 ]; then
-  echo "❌ Error: No PDF file found in manual-pdf/$SLUG"
+  echo "Error: No PDF file found in manual-pdf/$SLUG"
   echo ""
   echo "Please add a PDF file to the directory:"
   echo "  cp /path/to/manual.pdf manual-pdf/$SLUG/"
@@ -172,7 +171,7 @@ if [ "$PDF_COUNT" -eq 0 ]; then
 fi
 
 # 6. All validations passed - proceed with pipeline
-echo "✅ Validation successful"
+echo "Validation successful"
 echo "Processing manual: $SLUG"
 echo ""
 ```
@@ -329,11 +328,11 @@ function retryFailedPages(failures) {
 
 **Key Benefits:**
 
-- ✅ **Token savings**: Workers return only status messages, not full translations
-- ✅ **Autonomous execution**: Workers handle file I/O independently
-- ✅ **Verification**: Main agent checks all files exist after completion
-- ✅ **Retry logic**: Automatic retry for failed translations
-- ✅ **Scalability**: Can process hundreds of pages without token overflow
+- **Token savings**: Workers return only status messages, not full translations
+- **Autonomous execution**: Workers handle file I/O independently
+- **Verification**: Main agent checks all files exist after completion
+- **Retry logic**: Automatic retry for failed translations
+- **Scalability**: Can process hundreds of pages without token overflow
 
 **Key Points:**
 
@@ -371,10 +370,98 @@ Or use the Edit tool to add the brand field after the title:
 ```json
 {
   "title": "OXI E16: Manual",
-  "brand": "OXI Instruments",  // ← Add this line
+  "brand": "OXI Instruments",  // Add this line
   "version": "1.0.0",
   ...
 }
 ```
 
 **This step is REQUIRED to ensure the brand name appears on the manual index page.**
+
+---
+
+## Quick Reference
+
+### Run Full Pipeline
+
+```bash
+# Run all steps
+pnpm run pdf:all --slug <slug>
+```
+
+### Run Individual Steps
+
+```bash
+pnpm run pdf:clean --slug <slug>     # Step 0: Clean existing files
+pnpm run pdf:split --slug <slug>     # Step 1: Split PDF
+pnpm run pdf:render --slug <slug>    # Step 2: Render pages
+pnpm run pdf:extract --slug <slug>   # Step 3: Extract text
+# Step 4: Translation via Task tool (manual-translator subagents)
+pnpm run pdf:build --slug <slug>     # Step 5: Build JSON
+pnpm run pdf:manifest --slug <slug>  # Step 6: Create manifest
+pnpm dev                              # Step 7: Run dev server for verification
+```
+
+### Verification Step
+
+After completing the pipeline, verify the output:
+
+```bash
+# Start dev server
+pnpm dev
+
+# Open browser and verify
+# http://localhost:3100/manuals/{slug}/page/1
+# Confirm page 1 displays with translation
+```
+
+## Requirements
+
+- PDF file in `manual-pdf/{slug}/` directory
+- Claude Code CLI installed (for translation subagents)
+- pnpm package manager
+
+## Output Structure
+
+```
+manual-pdf/{slug}/               # Source PDF directory
+  └── *.pdf                      # Source PDF file
+
+public/{slug}/                   # Output directory
+  ├── data/                      # Final JSON files (committed)
+  │   ├── manifest.json
+  │   ├── part-01.json
+  │   └── ... (part-XX.json)
+  ├── pages/                     # Rendered PNG images (150 DPI)
+  │   ├── page-001.png
+  │   └── ... (page-XXX.png)
+  └── processing/                # Intermediate files (gitignored)
+      ├── extracted/             # Extracted text
+      └── translations-draft/    # Translation drafts
+```
+
+## Configuration
+
+Edit `pdf-config.json` to customize:
+
+- Pages per part (default: 30)
+- Image DPI (default: 150)
+- Translation model
+- Max retry attempts
+
+## Error Handling
+
+- Error reports saved to `__inbox/`
+- Scripts can resume from failed step
+- Retry logic for API failures (3 attempts)
+
+## Performance
+
+**Estimated time (280-page manual):**
+
+- Total: 15-30 minutes
+- Translation: 10-20 minutes (most time-consuming)
+
+**Estimated cost:**
+
+- Translation: Free (uses Claude Code subagents, not API)
