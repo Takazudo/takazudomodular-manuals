@@ -3,9 +3,9 @@ title: Welcome
 sidebar_position: 1
 ---
 
-# OXI ONE MKII Manual Documentation
+# Takazudo Modular: Manuals Documentation
 
-OXI ONE MKII Manualプロジェクトの開発ドキュメントへようこそ。
+マニュアルビューアープロジェクトの開発ドキュメントへようこそ。
 
 ## ドキュメントカテゴリ
 
@@ -17,7 +17,7 @@ OXI ONE MKII Manualプロジェクトの開発ドキュメントへようこそ�
 
 ## プロジェクト概要
 
-このプロジェクトは、OXI ONE MKIIハードウェアシンセサイザーのマニュアルビューアーです。272ページのマニュアルをバイリンガル形式（英語のPDFページ + 日本語翻訳）で提供します。
+このプロジェクトは、ハードウェアシンセサイザーのマニュアルビューアーです。複数のマニュアルをバイリンガル形式（英語のPDFページ + 日本語翻訳）で提供します。
 
 ## 技術スタック
 

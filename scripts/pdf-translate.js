@@ -4,8 +4,8 @@
  * PDF Translation Script
  * Translates extracted text using Claude Code manual-translator subagents (parallel processing)
  *
- * Input: public/manuals/{slug}/processing/extracted/part-*.txt
- * Output: public/manuals/{slug}/processing/translations-draft/part-*.json
+ * Input: public/{slug}/processing/extracted/part-*.txt
+ * Output: public/{slug}/processing/translations-draft/part-*.json
  *
  * This script uses Claude Code's Task tool to spawn manual-translator subagents.
  * It runs 4 translations in parallel to maximize throughput.

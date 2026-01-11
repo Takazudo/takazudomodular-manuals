@@ -25,10 +25,10 @@ This document describes the architecture for processing PDF manuals and integrat
 │ Phase 1: PDF Processing (Intermediate Data)                 │
 │                                                              │
 │  pdf:split    → manual-pdf/parts/part-*.pdf                 │
-│  pdf:render   → public/manuals/oxi-one-mk2/pages/page-*.png │
-│  pdf:extract  → public/manuals/oxi-one-mk2/processing/      │
+│  pdf:render   → public/oxi-one-mk2/pages/page-*.png │
+│  pdf:extract  → public/oxi-one-mk2/processing/      │
 │                 extracted/page-*.txt                         │
-│  pdf:translate→ public/manuals/oxi-one-mk2/processing/      │
+│  pdf:translate→ public/oxi-one-mk2/processing/      │
 │                 translations-draft/page-*.json               │
 └───────────────────────┬─────────────────────────────────────┘
                         │
@@ -36,10 +36,10 @@ This document describes the architecture for processing PDF manuals and integrat
 ┌─────────────────────────────────────────────────────────────┐
 │ Phase 2: Build for Next.js (Final Data)                     │
 │                                                              │
-│  pdf:build    → public/manuals/oxi-one-mk2/data/part-*.json│
+│  pdf:build    → public/oxi-one-mk2/data/part-*.json│
 │               → Combines pages, adds metadata               │
 │                                                              │
-│  pdf:manifest → public/manuals/oxi-one-mk2/data/           │
+│  pdf:manifest → public/oxi-one-mk2/data/           │
 │                 manifest.json                                │
 │               → Master index with all parts                 │
 └───────────────────────┬─────────────────────────────────────┘
@@ -64,7 +64,7 @@ This document describes the architecture for processing PDF manuals and integrat
 │   ├── pages/                              # Split page PDFs (gitignored)
 │   └── parts/                              # Split part PDFs (gitignored)
 │
-├── public/manuals/                         # Multi-manual structure
+├── public/                         # Multi-manual structure
 │   └── oxi-one-mk2/                        # OXI ONE MKII manual
 │       ├── data/                           # Final: Next.js consumable data
 │       │   ├── manifest.json               # Master index
@@ -99,7 +99,7 @@ This document describes the architecture for processing PDF manuals and integrat
 
 **Multi-Manual Architecture:**
 
-- Each manual is self-contained under `/public/manuals/{manual-id}/`
+- Each manual is self-contained under `/public/{manual-id}/`
 - Final data (JSON + images) committed to repository
 - Processing files are gitignored (can delete after deploy)
 - Ready for adding more manuals with same structure
@@ -271,10 +271,10 @@ pnpm run pdf:all
 # Clean all generated files (before reprocessing)
 pnpm run pdf:clean
 # Removes:
-# - public/manuals/oxi-one-mk2/pages/*
-# - public/manuals/oxi-one-mk2/processing/extracted/*
-# - public/manuals/oxi-one-mk2/processing/translations-draft/*
-# - public/manuals/oxi-one-mk2/data/*
+# - public/oxi-one-mk2/pages/*
+# - public/oxi-one-mk2/processing/extracted/*
+# - public/oxi-one-mk2/processing/translations-draft/*
+# - public/oxi-one-mk2/data/*
 # - manual-pdf/pages/*
 # - manual-pdf/parts/*
 ```
@@ -299,9 +299,9 @@ pnpm run pdf:verify      # Validation: Check output
 
 ```typescript
 // lib/manual-data.ts
-import manifestDataRaw from '@/public/manuals/oxi-one-mk2/data/manifest.json';
-import part01DataRaw from '@/public/manuals/oxi-one-mk2/data/part-01.json';
-import part02DataRaw from '@/public/manuals/oxi-one-mk2/data/part-02.json';
+import manifestDataRaw from '@/public/oxi-one-mk2/data/manifest.json';
+import part01DataRaw from '@/public/oxi-one-mk2/data/part-01.json';
+import part02DataRaw from '@/public/oxi-one-mk2/data/part-02.json';
 // ... part-03 through part-10
 
 // Type-safe wrappers
@@ -467,9 +467,9 @@ Generating manifest.json...
 
 **Location**: `scripts/pdf-build.js`
 
-**Input**: `public/manuals/oxi-one-mk2/processing/translations-draft/page-*.json`
+**Input**: `public/oxi-one-mk2/processing/translations-draft/page-*.json`
 
-**Output**: `public/manuals/oxi-one-mk2/data/part-*.json`
+**Output**: `public/oxi-one-mk2/data/part-*.json`
 
 **Responsibilities**:
 
@@ -487,9 +487,9 @@ Generating manifest.json...
 
 **Location**: `scripts/pdf-manifest.js`
 
-**Input**: `public/manuals/oxi-one-mk2/data/part-*.json`
+**Input**: `public/oxi-one-mk2/data/part-*.json`
 
-**Output**: `public/manuals/oxi-one-mk2/data/manifest.json`
+**Output**: `public/oxi-one-mk2/data/manifest.json`
 
 **Responsibilities**:
 
@@ -508,10 +508,10 @@ Generating manifest.json...
 
 **Responsibilities**:
 
-- Delete public/manuals/oxi-one-mk2/pages/*
-- Delete public/manuals/oxi-one-mk2/processing/extracted/*
-- Delete public/manuals/oxi-one-mk2/processing/translations-draft/*
-- Delete public/manuals/oxi-one-mk2/data/*
+- Delete public/oxi-one-mk2/pages/*
+- Delete public/oxi-one-mk2/processing/extracted/*
+- Delete public/oxi-one-mk2/processing/translations-draft/*
+- Delete public/oxi-one-mk2/data/*
 - Delete manual-pdf/pages/*
 - Delete manual-pdf/parts/*
 - Keep source PDF in manual-pdf/
@@ -646,10 +646,10 @@ Central configuration for all processing:
   },
   "output": {
     "pages": "manual-pdf/pages",
-    "images": "public/manuals/oxi-one-mk2/pages",
-    "extracted": "public/manuals/oxi-one-mk2/processing/extracted",
-    "translationsDraft": "public/manuals/oxi-one-mk2/processing/translations-draft",
-    "translations": "public/manuals/oxi-one-mk2/data"
+    "images": "public/oxi-one-mk2/pages",
+    "extracted": "public/oxi-one-mk2/processing/extracted",
+    "translationsDraft": "public/oxi-one-mk2/processing/translations-draft",
+    "translations": "public/oxi-one-mk2/data"
   },
   "settings": {
     "pagesPerPart": 28,
@@ -668,7 +668,7 @@ Central configuration for all processing:
 ### Key Architectural Decisions
 
 1. **Multi-Manual Architecture**
-   - Each manual self-contained under `/public/manuals/{manual-id}/`
+   - Each manual self-contained under `/public/{manual-id}/`
    - Organized by manual ID (e.g., `oxi-one-mk2`)
    - Ready for adding more manuals with same structure
    - Processing files gitignored (`processing/` subdirectory)

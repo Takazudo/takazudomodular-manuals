@@ -4,10 +4,10 @@
  * Migration script: Single manual → Multi-manual structure
  *
  * Migrates files from legacy structure to new multi-manual structure:
- * - /data/translations/* → /public/manuals/oxi-one-mk2/data/*
- * - /public/manual/pages/* → /public/manuals/oxi-one-mk2/pages/*
- * - /data/extracted/* → /public/manuals/oxi-one-mk2/processing/extracted/*
- * - /data/translations-draft/* → /public/manuals/oxi-one-mk2/processing/translations-draft/*
+ * - /data/translations/* → /public/oxi-one-mk2/data/*
+ * - /public/manual/pages/* → /public/oxi-one-mk2/pages/*
+ * - /data/extracted/* → /public/oxi-one-mk2/processing/extracted/*
+ * - /data/translations-draft/* → /public/oxi-one-mk2/processing/translations-draft/*
  *
  * Also updates image paths in JSON files from /manual/pages/ → /manuals/oxi-one-mk2/pages/
  *
@@ -38,25 +38,25 @@ const MIGRATIONS = [
   {
     name: 'Translation JSON files',
     from: 'data/translations',
-    to: `public/manuals/${MANUAL_ID}/data`,
+    to: `public/${MANUAL_ID}/data`,
     pattern: '*.json',
   },
   {
     name: 'Page images',
     from: 'public/manual/pages',
-    to: `public/manuals/${MANUAL_ID}/pages`,
+    to: `public/${MANUAL_ID}/pages`,
     pattern: '*.png',
   },
   {
     name: 'Extracted text (processing)',
     from: 'data/extracted',
-    to: `public/manuals/${MANUAL_ID}/processing/extracted`,
+    to: `public/${MANUAL_ID}/processing/extracted`,
     pattern: '*.txt',
   },
   {
     name: 'Translation drafts (processing)',
     from: 'data/translations-draft',
-    to: `public/manuals/${MANUAL_ID}/processing/translations-draft`,
+    to: `public/${MANUAL_ID}/processing/translations-draft`,
     pattern: '*.json',
   },
 ];
@@ -127,7 +127,7 @@ function moveFile(fromDir, toDir, filename) {
 function updateImagePaths() {
   console.log('\n📝 Updating image paths in JSON files...');
 
-  const jsonDir = DRY_RUN ? 'data/translations' : `public/manuals/${MANUAL_ID}/data`;
+  const jsonDir = DRY_RUN ? 'data/translations' : `public/${MANUAL_ID}/data`;
   const jsonFiles = getFiles(jsonDir, '*.json');
 
   for (const filename of jsonFiles) {

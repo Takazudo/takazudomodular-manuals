@@ -11,7 +11,7 @@ const args = process.argv.slice(2);
 const slugIndex = args.indexOf('--slug');
 const slug = slugIndex !== -1 ? args[slugIndex + 1] : 'oxi-one-mk2';
 
-const draftsDir = join(__dirname, `../public/manuals/${slug}/processing/translations-draft`);
+const draftsDir = join(__dirname, `../public/${slug}/processing/translations-draft`);
 
 // Get list of translation files to determine page count
 let pageFiles;

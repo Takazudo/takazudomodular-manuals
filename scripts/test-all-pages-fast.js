@@ -16,12 +16,16 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
 
 // Read all manifests directly from the data directories
-const oxiOneMk2Manifest = require('../public/manuals/oxi-one-mk2/data/manifest.json');
-const oxiCoralManifest = require('../public/manuals/oxi-coral/data/manifest.json');
-const oxiE16QuickStartManifest = require('../public/manuals/oxi-e16-quick-start/data/manifest.json');
+const oxiOneMk2Manifest = require('../public/oxi-one-mk2/data/manifest.json');
+const oxiCoralManifest = require('../public/oxi-coral/data/manifest.json');
+const oxiE16QuickStartManifest = require('../public/oxi-e16-quick-start/data/manifest.json');
+const oxiE16ManualManifest = require('../public/oxi-e16-manual/data/manifest.json');
+const addac112LooperManifest = require('../public/addac112-looper/data/manifest.json');
 
 const MANUALS = {
+  'addac112-looper': addac112LooperManifest,
   'oxi-coral': oxiCoralManifest,
+  'oxi-e16-manual': oxiE16ManualManifest,
   'oxi-e16-quick-start': oxiE16QuickStartManifest,
   'oxi-one-mk2': oxiOneMk2Manifest,
 };

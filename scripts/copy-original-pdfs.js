@@ -3,8 +3,8 @@
 /**
  * Copy original PDFs to build output directory
  *
- * Copies source PDFs from manual-pdf/{slug}/ to out/manuals/{slug}/original.pdf
- * Run this after `next build` to include original PDFs in the static export.
+ * Copies source PDFs from manual-pdf/{slug}/ to out/{slug}/original.pdf
+ * Run this after `next build` but before restructure-build.js
  */
 
 import fs from 'fs';
@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(__dirname, '..');
 const MANUAL_PDF_DIR = path.join(ROOT_DIR, 'manual-pdf');
-const OUT_DIR = path.join(ROOT_DIR, 'out', 'manuals');
+const OUT_DIR = path.join(ROOT_DIR, 'out');
 
 function findPdfInDir(dir) {
   if (!fs.existsSync(dir)) return null;

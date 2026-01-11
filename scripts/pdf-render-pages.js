@@ -5,7 +5,7 @@
  * Renders individual page PDFs to PNG images
  *
  * Input: manual-pdf/{slug}/pages/page-*.pdf
- * Output: public/manuals/{slug}/pages/page-001.png, page-002.png, etc.
+ * Output: public/{slug}/pages/page-001.png, page-002.png, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';

@@ -90,11 +90,11 @@ yarn.lock
 # PDF Processing - Generated Files (Temporary/Intermediate)
 manual-pdf/*/pages/
 manual-pdf/*/parts/
-public/manuals/*/processing/
+public/*/processing/
 
 # PDF Processing - Keep final output (commit to repo)
-# public/manuals/*/data/      # Commented out - we need to commit this
-# public/manuals/*/pages/     # Commented out - we need to commit this
+# public/*/data/      # Commented out - we need to commit this
+# public/*/pages/     # Commented out - we need to commit this
 
 # PDF Processing - Test Files (keep test PDFs local)
 !manual-pdf/OXI-ONE-MKII-Manual.pdf

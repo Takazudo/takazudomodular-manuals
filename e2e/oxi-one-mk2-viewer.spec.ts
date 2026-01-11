@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import manifest from '../public/manuals/oxi-one-mk2/data/manifest.json';
+import manifest from '../public/oxi-one-mk2/data/manifest.json';
 
 const MANUAL_ID = 'oxi-one-mk2';
 const MANUAL_PATH = `/manuals/${MANUAL_ID}/page`;

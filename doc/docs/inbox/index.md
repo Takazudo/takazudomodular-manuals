@@ -6,7 +6,7 @@ pagination_prev: null
 
 # INBOX
 
-Development documentation for OXI ONE MKII Manual project.
+Development documentation for Takazudo Modular: Manuals project.
 
 ## Current Content
 
@@ -18,10 +18,10 @@ Development documentation for OXI ONE MKII Manual project.
 
 ### Project Goal
 
-Create a web-based manual viewer for the OXI ONE MKII hardware synthesizer that displays:
+Create a web-based manual viewer for hardware synthesizer manuals that displays:
 
-- 272-page manual in bilingual format
-- Original English PDF pages (rendered as PNG images at 150 DPI)
+- Multiple manuals in bilingual format
+- Original English PDF pages (rendered as PNG images at 300 DPI)
 - Japanese translations alongside each page
 - Searchable, user-friendly interface
 
@@ -35,10 +35,9 @@ Create a web-based manual viewer for the OXI ONE MKII hardware synthesizer that 
 
 ### Data Structure
 
-- **JSON format** for translation data
+- **JSON format** for translation data (pages.json per manual)
 - **Markdown/MDX** for translation content
 - **PNG images** for rendered PDF pages
-- 10 parts total (Part 01-10)
 
 ## Documentation Categories
 
