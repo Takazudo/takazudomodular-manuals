@@ -27,6 +27,10 @@ import oxiE16ManualPages from '@/public/oxi-e16-manual/data/pages.json';
 import addac112LooperManifest from '@/public/addac112-looper/data/manifest.json';
 import addac112LooperPages from '@/public/addac112-looper/data/pages.json';
 
+// Import addac107-acids
+import addac107AcidsManifest from '@/public/addac107-acids/data/manifest.json';
+import addac107AcidsPages from '@/public/addac107-acids/data/pages.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -58,6 +62,10 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'addac112-looper': {
     manifest: addac112LooperManifest as unknown as ManualManifest,
     pages: addac112LooperPages as unknown as ManualPagesData,
+  },
+  'addac107-acids': {
+    manifest: addac107AcidsManifest as unknown as ManualManifest,
+    pages: addac107AcidsPages as unknown as ManualPagesData,
   },
 };
 
