@@ -25,6 +25,8 @@ export interface ManualManifest {
   totalPages: number;
   contentPages?: number;
   lastUpdated?: string;
+  /** Date when this translation was last updated (YYYYMMDD format) */
+  updatedAt?: string;
   source?: {
     filename: string;
     processedAt: string;

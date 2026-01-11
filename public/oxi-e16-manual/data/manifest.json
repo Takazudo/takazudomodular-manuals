@@ -1,13 +1,14 @@
 {
-  "title": "OXI E16: Manual",
+  "title": "OXI E16 Manual",
   "brand": "OXI Instruments",
   "version": "1.0.0",
   "totalPages": 74,
   "contentPages": 68,
-  "lastUpdated": "2026-01-11T17:17:49.013Z",
+  "lastUpdated": "2026-01-11T19:05:44.549Z",
+  "updatedAt": "20260112",
   "source": {
     "filename": "OXI E16 - User Manual.pdf",
-    "processedAt": "2026-01-11T17:17:42.510Z",
+    "processedAt": "2026-01-11T19:05:37.506Z",
     "imageDPI": 300,
     "imageFormat": "png"
   }
