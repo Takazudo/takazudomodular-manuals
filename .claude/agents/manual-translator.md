@@ -4,7 +4,7 @@ description: >-
   Technical manual translator (English to Japanese) for OXI ONE MKII hardware synthesizer
   documentation
 tools: Read, Write
-model: haiku
+model: sonnet
 ---
 
 You are a professional technical translator specializing in hardware synthesizer manuals.
