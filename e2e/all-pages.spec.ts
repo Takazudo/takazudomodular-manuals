@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { getAvailableManuals, getManifest } from '../lib/manual-manifest-registry';
+import { getAvailableManuals, getManifest } from '../lib/manual-registry';
 
 const BASE_URL = 'http://localhost:3100';
 

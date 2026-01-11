@@ -10,15 +10,5 @@
     "processedAt": "2026-01-05T11:07:56.001Z",
     "imageDPI": 300,
     "imageFormat": "png"
-  },
-  "parts": [
-    {
-      "part": "01",
-      "pageRange": [1, 4],
-      "file": "/oxi-e16-quick-start/data/part-01.json",
-      "sections": [],
-      "totalPages": 4,
-      "contentPages": 4
-    }
-  ]
+  }
 }

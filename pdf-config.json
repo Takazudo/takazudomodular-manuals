@@ -1,22 +1,9 @@
 {
   "settings": {
-    "pagesPerPart": 30,
     "imageFormat": "png",
     "imageDPI": 300,
     "translationModel": "claude-sonnet-4-5-20250929",
     "maxRetries": 3,
     "parallelProcessing": false
-  },
-  "partConfig": {
-    "part01": { "pages": 30, "startPage": 1 },
-    "part02": { "pages": 30, "startPage": 31 },
-    "part03": { "pages": 30, "startPage": 61 },
-    "part04": { "pages": 30, "startPage": 91 },
-    "part05": { "pages": 30, "startPage": 121 },
-    "part06": { "pages": 30, "startPage": 151 },
-    "part07": { "pages": 30, "startPage": 181 },
-    "part08": { "pages": 30, "startPage": 211 },
-    "part09": { "pages": 30, "startPage": 241 },
-    "part10": { "pages": 32, "startPage": 271 }
   }
 }

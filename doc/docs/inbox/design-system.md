@@ -5,7 +5,7 @@ sidebar_position: 100
 
 # Design System
 
-This document describes the Zudo Design System used in the OXI ONE MKII Manual project, including spacing conventions, color system, and typography.
+This document describes the Zudo Design System used in this project, including spacing conventions, color system, and typography.
 
 ## 🎯 Design System Philosophy
 

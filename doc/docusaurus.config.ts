@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'OXI ONE MKII Manual Documentation',
-  tagline: 'Development documentation for OXI ONE MKII manual viewer',
+  title: 'Takazudo Modular: Manuals',
+  tagline: 'Development documentation for manual viewer',
   // favicon: 'img/favicon.ico', // TODO: Add favicon later
 
   // Set the production url of your site here
@@ -109,7 +109,7 @@ const config: Config = {
       { name: 'googlebot', content: 'noindex, nofollow' },
     ],
     navbar: {
-      title: 'OXI ONE MKII Manual Docs',
+      title: 'Takazudo Modular: Manuals Docs',
       items: [
         {
           type: 'docSidebar',
@@ -122,7 +122,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} OXI ONE MKII Manual Project. Documentation built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Takazudo Modular. Documentation built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

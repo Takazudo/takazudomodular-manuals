@@ -1,7 +1,4 @@
 {
-  "part": "01",
-  "pageRange": [1, 30],
-  "totalPages": 30,
   "metadata": {
     "processedAt": "2026-01-05T15:30:28.316Z",
     "translationMethod": "claude-code-subagent-page-by-page",
@@ -276,6 +273,141 @@
       "title": "Page 30",
       "sectionName": null,
       "translation": "情報スクリーン\n\nCONTROLS 2 ページ:\n\nこのページでは、右側のコントロールのリアルタイム値が表示されます。Knob/CV値とスイッチの状態が含まれます。\n\nスイッチキャリブレーション: (新機能)\n\nこのページでハイライト表示された4つのスイッチは、到着時にキャリブレーションが必要になる場合があります。一度に1つのスイッチを切り替えながら、他のスイッチの値が変化しているのが見える場合は、スイッチのキャリブレーションに進んでください。\n\nキャリブレーションモードに入るには、[NEW REC] + [PLAY]プッシュボタンを押しながらモジュールを起動してください。\n\n起動後、ユーザーは16の可能な組み合わせすべてを通過する必要があります。すべての組み合わせが検出されたら、新しい設定が保存され、モジュールは使用可能になります。\n\n以下は、16進法のすべての組み合わせのチートシートです:\n\n1.\n\n2.\n\n3.\n\n4.\n\n5.\n\n6.\n\n7.\n\n8.\n\n9.\n\n10.\n\n11.\n\n12.\n\n13.\n\n14.\n\n15.\n\n16.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 31,
+      "image": "/addac112-looper/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "translation": "MAIN MENU\n\nMENU\n\n[MENU]ボタンを押すと、メインメニューウィンドウが表示されます。\n\n[MENU]ボタンを長押しすると、変更を加えないでいずれのメニューからも終了します。\n\n1. PRESET:\n\nNEW - 現在の設定で新しいプリセットをプリセットリストに追加します\n\nUPDATE - 現在のプリセットを現在の設定で更新します\n\nADD LOOPS - プリセットはループの選別リストも保存します。このオプションは現在のプリセットループリストをメモリーで利用可能なすべてのループで更新します\n\nDELETE - 現在のプリセットを永久に削除します\n\n2. BANK:\n\nNEW - 2つの選択肢で新しい空のBANKを作成します\n\n- CURRENT CONFIG: すべての現在のBANK設定を使用します\n\n- DEFAULT CONFIG: デフォルトのBANK設定を使用します\n\nLOAD - SD CardからBANKをロードします\n\nSAVE - BANKをSD Cardに保存します\n\nSAVE IN NEW - 現在のBANKを新しい名前のBANKに保存します。新しいBANK名は次の利用可能な番号（例=8）の後に現在のBANK名（例=3）が続きます（例=BANK8>FROM3）\n\n3. LOOP EDITOR:\n\nLOOP Editorページに入ります。\n\n4. OPTIONS:\n\nOptionsページに入ります。\n\n5. SIDECHAIN COMPRESSION: (New 1.7)\n\nSidechain compressionはドライ入力をエンベロープフォロアーを通してルーティングし、そのシグナルを使用してループとグレインのボリュームを圧縮します。\n\nSTATE:\n\n- OFF (デフォルト): 圧縮は適用されません\n\n- LOOP: Loop Volumeに圧縮を適用します\n\n- GRAINS: Grains Volumeに圧縮を適用します\n\n- BOTH: 両方に圧縮を適用します\n\nATTACK: アタック時間（秒）を設定します\n\nRELEASE: リリース時間（秒）を設定します\n\nRATIO: レシオファクターを設定します\n\nTHRESHOLD: しきい値レベル（dB）を設定します\n\nMAKEUP GAIN: メイクアップゲイン（dB）を設定します",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 32,
+      "image": "/addac112-looper/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "translation": "OPTIONS MENU\n\nOPTIONS SUBMENU PAGE 1 - REC SETTINGS\n\nMONO/STEREO:\n\nLooperエンジンをモノまたはステレオレコーディング用に設定します。\n\n\nSAMPLERATE:\n\nモジュールの中核：グローバルサンプルレート設定\n\n8Khz、11khz、16Khz、22khz、32Khz、44.1khz、48khz、96khz\n\n\nBIT DEPTH:\n\nビット深度の解像度\n\n24 bit：この設定ではサンプリングメモリが50%削減されます\n\n16 Bit\n\n8 Bit\n\n\nANTI-ALIASING:\n\nモダンなピッチシフティング補間アルゴリズム用にAnti-Aliasingをオンにするか、補間なしのオールドスクール風味用にオフにします。\n\n\nOPTIONS SUBMENU PAGE 2 - REC OPTIONS\n\nOVERDUB ORIGIN:\n\nPLAY HEAD - オーバーダブはPlayヘッドの位置から来ます\n\nREC HEAD - オーバーダブはRecヘッドの位置から来ます\n\nBOTH - オーバーダブは両方のヘッドの位置から来ます\n\n\nRESAMPLING PITCH:\n\nFIXED AT ZERO - PAGE1のSAMPLERATE設定で録音します\n\nFOLLOWS LOOP - 録音サンプルレートは再生ピッチに応じて変わります\n\n\nREC DIRECTION:\n\nDISABLED - Recヘッドは常に前方に進み、[FORWARD/REVERSE]ボタンを無視します\n\nENABLED - Recヘッドは[FORWARD/REVERSE]ボタンに従います\n\n\nDRY VOLUME PRE/POST:\n\nPRE - オーディオ入力ボリュームは[INPUT GAIN]ノブのみに依存します\n\nPOST - オーディオ入力ボリュームは[INPUT GAIN]および[DRY VOLUME]ノブの両方に依存します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 33,
+      "image": "/addac112-looper/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "translation": "OPTIONS MENU\n\nOPTIONS SUBMENU PAGE 3 - PITCH OPTIONS\n\nLOOP PITCH MODE:\n\nSAMPLERATE- サンプルレート変更を使用してピッチシフティング\n\nPITCH SHIFTING - ループの長さを変更せずにピッチを変更します\n\nTIME STRETCHING - ピッチを変更せずにループの長さを変更します\n\nPITCH/TIME - SAMPLERATEのようにピッチと長さを変更します\n\nPITCH AND TIME - ループピッチと長さの独立した制御\n\nGRAIN PITCH MODE:\n\n1. SAMPLERATE- サンプルレート変更を使用してピッチシフティング\n\n2. PITCH SHIFTING - 元の長さを変更せずにピッチを変更します\n\n3. TIME STRETCHING - ピッチを変更せずに長さを変更します\n\n*警告: モード2と3は可能な粒の総量を減らします\n\nPITCH BUFFER SIZE:\n\nピッチシフティングとタイムストレッチングはバッファを使用して操作を実行します。ここではバッファのサイズを定義できます。異なるサイズは異なるアルゴリズムの「フレーバー」を持ちます。\n\nPITCH RANGE:\n\nピッチレンジは、より小さい範囲でのピッチ制御をより多くするために異なる場合があります。1v/octは最初のオプションでのみ尊重されます。\n\n1. -24 +36: -2から+3オクターブ\n\n2. -12 +12: -1から+1オクターブ\n\n3. -2 +2: -2から+2セント\n\n4. -INF +24: 停止から+2オクターブまで*\n\n[QUANTIZE]をモード2、3、4で有効にするにはOffに設定する必要があります\n\n*警告: このモードでは、ユーザーはGrains ピッチに注意を払う必要があります。-INFに設定された場合、粒はゼロ速度で再生され、粒エンジンがスタールします。これから復帰するには、メニューオプションを設定します: GRAINS PITCH を: CHANGE に。\n\nOPTIONS SUBMENU PAGE 4 - QUANTIZE OPTIONS\n\nPITCH (ZERO) NOTCH:\n\n定量化が有効になっていない場合、ループピッチを完全なゼロに設定することは難しい場合があります。この関数を有効にすると、ピッチを完全なゼロにロックする小さなノッチエリアが作成されます。\n\n完全なゼロピッチが設定されるとスクリーンにピクセルが点灯します。\n\nQUANTIZER:\n\nBOTH - LooperとGrains Enginesの両方に定量化を適用します\n\nLOOPS ONLY - Looper Engineのみに定量化を適用します\n\nGRAINS ONLY - Grains Engineのみに定量化を適用します\n\nSCALES SET:\n\nDEFAULT - デフォルト定量化スケール\n\nCUSTOM - カスタム定量化スケール",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 34,
+      "image": "/addac112-looper/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "translation": "オプション メニュー\n\nオプション サブメニュー ページ 5 - グレイン オプション\n\nGRAIN DEVIATION MODE:\nRANDOM / SPREAD - ページ 7～9 で説明されているデビエーション動作方法を変更します。\n\nGRAIN PAN MODE:\nFIXED / TRAVEL - ページ 18 で説明されているパンニング動作方法を変更します。\n\nGRAINS PITCH:\n[GRAIN PITCH] つまみが移動されるか新しい CV が検出されると、グレイン ピッチを以下のように設定できます。\nKEEP - 各グレインはその長さの終了まで初期ピッチを保ちます\nCHANGE - すべてのグレインのピッチをすぐに同時に変更します\n\nGRAIN TRIGGER:\nON / OFF - ON の場合、[GRAINS N.] CV 入力を使用してゲートを検出し、新しいゲートが検出されるたびに新しいグレインが生成されます。\n\nMAX GRAIN DELAY:\nグレイン間欠性の最大時間を設定します。\nLOOP - 最大時間はループサイズと同じ\n5 SEC - 最大 5 秒\n30 SEC - 最大 30 秒\n\nGRAIN SAMPLERATE:\nグレイン サンプルレートを設定します。これにより、グレイン エンジンの CPU への影響が削減され、より多くのグレインを使用できるようになります。\nFULL - グローバル サンプルレートと同じ\nHALF - グローバル サンプルレートの半分\nQUARTER - グローバル サンプルレートの四分の一\n\nGRAIN LENGTH:\nDEFAULT - 標準サンプラー動作。ピッチが上がるとレングスは減少し、その逆も同様です。低いオクターブはグレインの再生に時間がかかり、高いオクターブはグレインがより速く再生されます。\n\nKEEP LENGTH - グレイン レングスをピッチに相対的に設定します。コントロールで設定されたレングスは常にピッチ ゼロを基準とし、ピッチが変更される場合、グレイン レングスは自動的に増加/減少して、ピッチがゼロのときと同じ全体的な継続時間を保ちます。例えば、ピッチが +12 の場合、レングスは 2 倍になり、ピッチが -24 の場合、継続時間はレングス コントロールで設定された長さの 4 分の 1 になります。\n\nこれにより、グレインはピッチ設定に関わらず同じ継続時間を保ちます。ピッチが高い場合、必要な長い継続時間に対応するのに十分なループ レングスがないと、グレインは可能な限り長く再生されます。\n\nPOSITION FOLLOWS LOOPER: (新機能)\n[GRAIN POSITION] をループレコーダーの Play Head と同期させます。\nON の場合、[GRAIN POSITION] はループレコーダーの Play Head に従って移動します。\n[GRAIN POSITION] つまみはその後 Play Head へのオフセットとして機能します (オフセットなしの場合は 12 時の方向)。\n[GRAIN DEVIATION] は位置にランダム性を追加します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 35,
+      "image": "/addac112-looper/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "translation": "OPTIONS MENU\n\nOPTIONS SUBMENU PAGE 6 - SPECIAL MODE\n\nCLOCKED MODE:\n\nClocked Modeは、ページ14に記載されているLooper Special Functionsの1つで、有効にするにはONを選択します。\n\nPITCH DIRECTION CONTROL:\n\nループのピッチコントロールがループの再生方向もコントロールできる特別なモードで、ターンテーブルのようなコントロールが可能です。0vから+2.5vまでは、ほぼ停止状態までピッチダウンしながら逆方向に再生され、+2.5vから+5vまでは、選択された範囲（NarrowまたはWide）に応じて選択されたピッチまでピッチアップしながら順方向に再生されます。\n\nOFF - 無効\n\nNARROW - 両端ともピッチがゼロになります\n\nWIDE - 両端ともピッチが+12セミトーンになります\n\nこのモード内では、[FORWARD/REVERSE]ボタンは有効ではなく、再生方向をモニターします。\n\nまた、このモードでは1v/octaveはありません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 36,
+      "image": "/addac112-looper/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "translation": "OPTIONS MENU\n\nOPTIONS SUBMENU PAGE 7 - OTHER OPTIONS\n\nSPECIAL FUNCTIONS:\n\nここでは特殊機能を有効化/無効化できます。エンコーダーを操作する際に同じボタンの外部入力を使用するときに誤って起動しないようにするためです。\n\nKILL ALL GRAINS - On/Off - [STOP]ボタン\nDUPLICATE - On/Off - [NEW REC]ボタン\nNORMALIZE - On/Off - [REC]ボタン\n\nPAUSE MODE:\n\nTOGGLE - ポーズと再生の間で切り替わります\nMOMENTARY - ボタンが押されているか、GATEインプットがオンの間、ポーズ状態になります\n\nTRIGGER SIZE:\n\n両方のトリガー出力の長さをミリ秒単位で指定します\n\n1 MS\n10 MS\n100 MS\n500 MS\n\nVOL IN PRESETS:\n\nプリセット変更時にボリュームコントロールがプリセットから読み込まれるか、またはプリセット値が無視されボリュームコントロールノブのみを追跡するかを決定します。プリセット値を読み込む場合はYes、プリセット値を無視する場合はNoを選択します。デフォルト値はNOです。\n\nDRY: YES/NO - ドライボリューム\nLOOP: YES/NO - ループボリューム\nGRAINS: YES/NO - グレインボリューム\nOVERDUB: YES/NO - オーバーダブディケイボリューム\nFEEDBACK: YES/NO - グレインフィードバックボリューム\n\nOPTIONS SUBMENU PAGE 8 - BOOTLOADER\n\nSCREENSAVER: (FW 1.7)\n\nスクリーンセーバーオプションは、使用していない場合の画面焼け込みを防ぎます。スクリーンセーバーを終了するには、エンコーダーを回すか押します。スクリーンセーバーがアクティブになるまでの異なる時間を選択できます：\n\n10秒、1分、2分、5分、10分\n\nUPDATE BOOTLOADER:\n\nこのオプションを押すと、モジュールの動作が中断され、DFUモードに入り、新しいブートローダーがアップロードされるのを待ちます。詳細についてはこのガイドのファームウェアアップデートセクションの指示に従ってください。\n\nINFO:\n\nハードウェアおよびファームウェアバージョンを表示します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 37,
+      "image": "/addac112-looper/pages/page-037.png",
+      "title": "Page 37",
+      "sectionName": null,
+      "translation": "QUANTIZATION\n\nQUANTIZATION\n\n7個のスケールスロットと固定OFFポジションがあります。\n\n7つのスロットはユーザーによって任意の比率でカスタマイズできます。\n\nMENU > OPTIONS > SCALES内で、ユーザーはDEFAULTとCUSTOMスケールの間で選択できます。\n\nDEFAULTはフロントパネルに記載されたデフォルトスケールです。\n\nCUSTOMはユーザーがカスタマイズしたスケールです。\n\nこれらのスケールの両方を全体的に14個のスケールへのカスタマイズに開放することにしました。\n\nQUANTIZATION SCALES FILE:\n\n各BANKフォルダはSCALES.CFGファイルを持っており、このファイルはすべてのスケール比率を含んでおり、シンプルなテキストエディターで編集できます。\n\nプログラミングに慣れていない人にとって、このファイルは少し複雑に見えますが、括弧、カンマ、その他の句読点要素を正しい場所に保つことが重要です。\n\nFILE STRUCTURE:\n\nこれがファイル構造です。各スロットのブロックが繰り返されているのが見えます。ユーザーは比率リストと引用符内の名前のみを編集する必要があります。例えば、クロマチックスケール名の場合:\n\n\"name\": \"chromatic\",\n\nこのように変更されます:\n\n\"name\": \"my custom scale\",\n\nすべてのカンマの場所を保つことを確認してください。\n\nスケールは1オクターブあたり12ノートに限定されません。ユーザーは必要な数の比率を追加できます。\n\nSCALE MODES:\n\n各スケール比率の最後に、「per_octave」というファイナル設定があります。この設定はtrueまたはfalseのいずれかに設定できます:\n\n\"per_octave\": true\n\nこれはオクターブ全体で繰り返される比率のセットに使用されるため、すべてのオクターブにすべての比率が存在します。\n\n\"per_octave\": false\n\nこれはオクターブを尊重しないスケールに使用され、比率は繰り返されません。含まれる比率と同じ数のノートがあります。\n\n例えば、これはHarmonic Series設定です:\n\n\"name\": \"harmonic\",\n\n\"ratios\": [\n\n1,\n\n2,\n\n3,\n\n4,\n\n5,\n\n6,\n\n7,\n\n8,\n\n9,\n\n10,\n\n11,\n\n12,\n\n13,\n\n14,\n\n15,\n\n16\n\n],\n\n\"per_octave\": false\n\n{\n\n\"Default Scales\": [\n\n{\n\n\"name\": \"chromatic\",\n\n\"ratios\": [\n\n1,\n\n1.059460044,\n\n1.122460008,\n\n1.189210057,\n\n1.259920001,\n\n1.334830046,\n\n1.414209962,\n\n1.49830997,\n\n1.58739996,\n\n1.681789994,\n\n1.781800032,\n\n1.88775003\n\n],\n\n\"per_octave\": true\n\n},\n\n{\n\n\"name\": \"major\",\n\n\"ratios\": [\n\n1,\n\n1.122460008,\n\n1.259920001,\n\n1.334830046,\n\n1.49830997,\n\n1.681789994,\n\n1.88775003\n\n],\n\n\"per_octave\": true\n\n},\n\n(A LOT MORE HERE)\n\n]\n\n}",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 38,
+      "image": "/addac112-looper/pages/page-038.png",
+      "title": "Page 38",
+      "sectionName": null,
+      "translation": "QUANTIZATION\n\nROOT SCALES FILE\n\nSD カードのルートにはSCALES.CFGファイルもあります。これはNew Bank をデフォルト設定で作成する際に使用されるデフォルトテンプレートです。このファイルを編集して、お気に入りのスケールをすべて追加できます。ユーザーは毎回編集する必要なく、すべての New Bank で自分のスケールを持つことができるようになります。\n\nNew Bank が作成されると、SCALES.CFG のコピーは BANK フォルダ内に保存されます。\n\n7 つの Standard スケールと 7 つの Custom スケール、合計 14 スケールの両方をカスタマイズできることに注意してください。\n\nCurrent Settings を使用して New Bank を作成する場合、Scales ファイルはルートファイルではなく現在のバンクフォルダから取得されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 39,
+      "image": "/addac112-looper/pages/page-039.png",
+      "title": "Page 39",
+      "sectionName": null,
+      "translation": "最初のステップ\n\nまず新しい空のBANKを作成しましょう\n\nMenuエンコーダーを押すとメニューが画面に表示されます。BANKを選択し、次にNEWを選択してください。\n\nこれで揮発性メモリに新しい空のBankが作成されました。\n\nモジュールの電源を切ると、ここからのすべての操作は保存されません。満足した場合、またはパワーダウンの準備ができたら、メニューを開いて、BANKを選択し、次にSAVEを選択してください。これにより、BANKのすべての内容がSDカードに保存され、起動時に読み込まれます。\n\n[INPUT GAIN]をLED活動が見えるまで調整し、[DRY VOLUME]ノブを上げて入力オーディオを聞いてください。\n\nそれでは最初のループを録音しましょう。\n\nLoop indexに\"-\"が表示されていることに注意してください = ループなし\n\n[NEW REC]または[REC]を押します。ループの長さに満足したら、次のいずれかを押してください:\n\n[REC] Overdub Modeに入ります\n\n[PLAY] 録音を停止してPlayback Modeに入ります\n\n[STOP] 録音と再生を停止します\n\nこれでLoop indexに「1」が表示されます。\n\n2番目のループを録音しましょう。\n\n[NEW REC]に続いて[PLAY]を押します。ループの長さに満足したら、これは録音を停止して再生を開始します。\n\nLoop indexに「2」が表示されることに注意してください。\n\n[LOOP VOLUME]ノブを上げてループの再生を聞いてください。\n\n混乱を減らすために、[DRY VOLUME]ノブを下げてループの再生のみを聞いてください。\n\nこれで[LOOP SELECT]ノブを使用してループ1と2を切り替えることができます。\n\n[LOOP PITCH]ノブを使用して再生サンプルレートを調整することもできます。\n\nそれでは、グラニュラーエンジンを通してループを処理しましょう。\n\n[GRAINS VOLUME]ノブを上げてグラニュル再生を聞き、前述のように定義されたコントロールノブを使用して、満足できる全体的な設定に到達してください。\n\nそれでは、プリセットを作成しましょう。\n\nPRESETインデックスに\"-\"が表示されていることに注意してください = プリセットなし\n\n[MENU]エンコーダーを押して、PRESETSを選択し、次にNEWを選択してください。\n\nこれにより、プリセット番号0(ゼロ)が生成されます。\n\nそれでは、2番目のプリセットを作成しましょう。\n\nコントロールノブを再度使用してグラニュラー設定を変更し、[MENU]エンコーダーを押して、PRESETSを選択し、次にNEWを選択してください。\n\nこれにより、プリセット番号1が生成されます。\n\n[PRESET SELECT]ノブを使用して、プリセット0と1を切り替えることができます。\n\nそれでは、すべてのループとプリセットを備えたこのBankを保存しましょう。\n\n[MENU]エンコーダーを押して、BANKを選択し、次にSAVEを選択してください。この時点で、オーディオ再生が停止され、すべてのデータをSDカードに保存し終わるとすぐに再開されます。すべてのデータが保存されると、画面にメッセージが表示されます。\n\nこれでモジュールをオフにすることができます。すべてのデータは安全です。\n\n便宜上、最後に保存されたBankは起動時に自動的に読み込まれます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 40,
+      "image": "/addac112-looper/pages/page-040.png",
+      "title": "Page 40",
+      "sectionName": null,
+      "translation": "GLOBAL.CFG ファイル構造\n\nSD カードのルートに GLOBAL.CFG ファイルがあります。このファイルは最後に保存されたバンクを記憶し、モジュールの電源投入時に自動的に読み込まれます。\n\nGLOBAL.CFG の説明:\n\nbank=2 > 最後に保存されたバンク\n\n\nSETTINGS.CFG ファイル構造\n\nすべてのバンク フォルダー内に SETTINGS.CFG ファイルがあります。このファイルは、以下で説明するすべての全体的なバンク設定を記憶します。\n\nこれらのファイルは、コンピューター上でシンプルなテキスト エディターを使用してユーザーが編集することもできます。プログラミングに慣れていないユーザーにとってこのファイルは少し複雑に見えるかもしれませんが、すべての括弧、カンマ、および他の句読点要素を正しい場所に整えておくことが重要です。値のみを変更し、その他すべては同じ方法で保持されていることを確認してください。\n\nこれらの設定は、プリセット「-」が選択されているときは常にアクティブになります。\n\nSETTINGS.CFG の説明:\n\ndry_vol_pre_post=0\nquant_mode=0\npause_mode=0\noverdub_origin=0\nscales_set=0\nkeep_grain_pitch=1\nsamplerate=44100\nresampling_pitch=1\npitch_range_octaves=2.500\nclocked_mode=0\ntrigger_size_ms=10\nstereo=1\nbit_depth=2\nrec_dir_en=0\nanti_alias=1\ngrain_dev_mode=1\ngrain_pan_mode=0\nvols_in_presets=255\n\n> ドライ ボリューム プリ/ポスト: 0(プリ), 1(ポスト)\n> 量子化モード: 0 から 7\n> ポーズ モード: 0(トグル) または 1(モーメンタリー)\n> オーバーダブ起点: 0(再生ヘッド) または 1(記録ヘッド)\n> スケール モード: 0(デフォルト) または 1(カスタム)\n> グレイン ピッチ: 0(変更) または 1(保持)\n> サンプル レート: 8k から 96k (編集は推奨されません)\n> リサンプリング ピッチ: 0(固定ゼロ) または 1(ループに追従)\n> ピッチ レンジ: 編集は推奨されません\n> クロック モード: 0(オフ) または 1(オン)\n> トリガー サイズ: 1 または 10\n> モノ/ステレオ: 0(モノ) または 1(ステレオ)\n> ビット深度: 0(24 ビット), 1(8 ビット) または 2(16 ビット)\n> 記録方向: 0(無効) または 1(有効)\n> アンチ エイリアシング: 0(オフ) または 1(オン)\n> グレイン デビエーション: 0(ランダム) または 1(スプレッド)\n> グレイン パン モード: 0(固定) または 1(トラベル)\n> プリセットでコントロールされるボリューム: 編集は推奨されません",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 41,
+      "image": "/addac112-looper/pages/page-041.png",
+      "title": "Page 41",
+      "sectionName": null,
+      "translation": "プリセットファイル構造 1/2\n\nBANKフォルダ内で、プリセットが作成・保存されている場合のみ、数字と\".CFG\"という拡張子を持つ複数のファイルが存在します。これらのファイルは、以下で説明されているすべてのプリセット設定を保存しています。\n\nこれらのファイルはコンピュータ上のシンプルなテキストエディタで、ユーザーが編集することも可能です。プログラミングに慣れていないユーザーにとっては、このファイルは少し複雑に見えるかもしれませんが、すべてのブラケット、カンマ、その他の句読点を正しい場所に保つことが重要です。値だけを変更し、その他のすべては同じ方法で保つようにしてください。\n\nユーザーはファイル名を変更してプリセットを並べ替えることもできます。\n\n0.CFG説明:\n\npos=0.049\npos_quant=0\npos_dev=0.199\nlength=8969\nlength_quant=0\nlength_dev=0.999\ndelay=0\ndelay_quant=8\ndelay_dev=0.000\ndirection=0.733\nrepeat_mode=1\nrepeats=0.000\nvol_min=0.93\nvol_dev=0.787\nn_grains=9\nattack=0.190\ndecay=0.775\ngrain_pitch=1.000\ngrain_pan=0.380\nfeedback=0.000\nselected_loop=0\nquantizer=7\nloop_pitch=0.999\noverdub_decay=1.000\nvol_in=0.606\nvol_loop=0.818\nvol_grains=0.000\nrec_prob=1.000\nrec_delay=0.000\nrec_delay_dev=0.000\nrec_mode=0\nrec_sync=1\npause_retrigger=0\non_loop_change_mode=0\nloop_play_mode=0\nloop_direction=1\n\n次のページに続きます\n\n> Grain Position: 0.0 to 1.0\n> Grain Play Head Size Division: 0(free), 1(/8) or 2(/4)\n> Grain Position Deviation: 0.0 to 1.0\n> Grain Play Length: 0.0 to 1.0\n> Grain Size Division: 0(free), 1(/8) or 2(/4)\n> Grain Length Deviation: 0.0 to 1.0\n> Grain Delay: 0.0 to 1.0\n> Grain Delay Division: 0(free), 1(/8) or 2(/4)\n> Grain Delay Deviation: 0.0 to 1.0\n> Grain Direction: 0.0 to 1.0\n> Grain Repeat Mode: 0(repeat x) or 2(prob.%)\n> Grain Repeat: 0.0 to 1.0\n> Grain Volume Min: 0.0 to 1.0\n> Grain Volume Deviation: 0.0 to 1.0\n> Grain Active: (edit not recommended)\n> Grain Attack: 0.0 to 1.0\n> Grain Decay: 0.0 to 1.0\n> Grain Pitch: (edit not recommended)\n> Grain Panning: 0.0 to 1.0\n> Grains Feedback: 0.0 to 1.0\n> Selected Loop: (edit not recommended)\n> Quantizer: 0 to 7\n> Loop Pitch: (edit not recommended)\n> Overdub Decay: 0.0 to 1.0\n> Dry Volume: 0.0 to 1.0\n> Loop Volume: 0.0 to 1.0\n> Grains Volume: 0.0 to 1.0\n> Rec Probability: 0.0 to 1.0\n> Rec Delay: 0.0 to 1.0\n> Rec Delay Deviation: 0.0 to 1.0\n> Rec Mode: 0(loop), 1(play) or 2(stop)\n> Rec Delay: 0(unsync) or 1(sync rec)\n> Play Mode: 0(retrigger) or 1(pause)\n> Rec Switch: 0(immediate) or 1(on loop)\n> Play Switch: 0(reset) or 1(pause)\n> Play Direction: 0(reverse) or 1(forward)",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 42,
+      "image": "/addac112-looper/pages/page-042.png",
+      "title": "Page 42",
+      "sectionName": null,
+      "translation": "プリセットファイル構造 2/2\n\n\nプリセットファイルの最後の項目はSETTINGS.cfgファイルと同じで、プリセット設定がSettings.cfg設定をオーバーライドします。\n\n0.CFG説明:\n\ndry_vol_pre_post=0\n\nquant_mode=0\n\npause_mode=0\n\noverdub_origin=0\n\nscales_set=0\n\nkeep_grain_pitch=1\n\nsamplerate=44100\n\nresampling_pitch=1\n\npitch_range_octaves=2.500\n\nclocked_mode=0\n\ntrigger_size_ms=10\n\nstereo=1\n\nbit_depth=2\n\nrec_dir_en=0\n\nanti_alias=1\n\ngrain_dev_mode=1\n\ngrain_pan_mode=0\n\nloop_list={0,1,2,3,}\n\n> Dry Volume Pre/Post: 0(pre)、1(post)\n\n> Quantization Mode: 0〜7\n\n> Pause Mode: 0(toggle)または1(momentary)\n\n> Overdub Origin: 0(playback head)または1(recording head)\n\n> Scales Mode: 0(default)または1(custom)\n\n> Grains Pitch: 0(change)または1(keep)\n\n> Sample Rate: 8kから96k(編集は非推奨)\n\n> Resampling Pitch: 0(fixed at zero)または1(follows loop)\n\n> Pitch Range: 編集は非推奨\n\n> Clocked Mode: 0(off)または1(on)\n\n> Trigger Size: 1または10\n\n> Mono/Stereo: 0(mono)または1(stereo)\n\n> Bit Depth: 0(24 bit)、1(8 bit)または2(16 bit)\n\n> Rec Direction: 0(disabled)または1(enabled)\n\n> Anti-Aliasing: 0(off)または1(on)\n\n> Grain Deviation: 0(random)または1(spread)\n\n> Grain Pan Mode: 0(fixed)または1(travel)\n\n> Loop List: BANKのwavフォルダーで利用可能なループの任意の数。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 43,
+      "image": "/addac112-looper/pages/page-043.png",
+      "title": "Page 43",
+      "sectionName": null,
+      "translation": "SCALES ファイル構造\n\nSCALES.CFG ファイルは、使用されるすべてのクォンタイゼーション・スケールを格納します。\n\nこれらのファイルは、ユーザーがコンピューター上のシンプルなテキスト・エディターで編集することもできます。プログラミングに慣れていないユーザーにとっては、このファイルは少し暗号的に見えるかもしれませんが、すべてのブラケット、カンマ、その他の句読点要素を正しい位置に保つことが重要であることを覚えておいてください。値のみを変更し、その他すべてはそのままにしておくようにしてください。\n\nSCALES.CFG\n\nDescription:\n\nDefault\n\nCHROMATIC={ratios={1,1.05946,1.12246,1.18921,1.25992,1.33483,1.41421,1.49831,1.58740,1.68179,1.78180,1.88775,},per_octave=1}\n\nMAJOR={ratios={1,1.12246,1.25992,1.33483,1.49831,1.68179,1.88775,},per_octave=1}\n\nMINOR={ratios={1,1.12246,1.18921,1.33483,1.49831,1.58740,1.88775,},per_octave=1}\n\nPENTA MAJOR={ratios={1,1.12246,1.25992,1.49831,1.68179,},per_octave=1}\n\nPENTA MINOR={ratios={1,1.12246,1.33483,1.49831,1.78180,},per_octave=1}\n\nTIZITA MINOR={ratios={1,1.12246,1.18921,1.33483,1.41421,},per_octave=1}\n\nOCTAVES={ratios={1,},per_octave=1}\n\nCustom\n\nCHROMATIC={ratios={1,1.05946,1.12246,1.18921,1.25992,1.33483,1.41421,1.49831,1.58740,1.68179,1.78180,1.88775,},per_octave=1}\n\nMAJOR={ratios={1,1.12246,1.25992,1.33483,1.49831,1.68179,1.88775,},per_octave=1}\n\nMINOR={ratios={1,1.12246,1.18921,1.33483,1.49831,1.58740,1.88775,},per_octave=1}\n\nHARMONIC={ratios={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,},per_octave=0}\n\nWELL TUNED={ratios={1,1.10742,1.12500,1.14844,1.31250,1.29199,1.47656,1.50000,1.53125,1.75000,1.72266,1.96875,},per_octave=1}\n\nPENTA MAJOR={ratios={1,1.12246,1.25992,1.49831,1.68179,},per_octave=1}\n\nPENTA MINOR={ratios={1,1.12246,1.33483,1.49831,1.78180,},per_octave=1}\n\nすべての音は比率で定義されていることに注意してください。標準的な「平均律」スケールでは、各半音は 2 の 12 乗根、つまり 1.05946 の比率に等しくなっています。たとえば、五度は 1.05946 の 7 乗（音楽的な 5 度における 7 つの半音）、つまり 1.49831 です。すべての値は 5 桁目に丸められた近似値です。\n\nCHROMATIC の比率とスケール間隔:\n\n1 半音 = 12√2 = ~1.05946\n\n5 度 = (12√2)^7 = ~1.49831\n\nC\n\nDb\n\nD\n\nEb\n\nE\n\nF\n\nGb\n\nG\n\nAb\n\nA\n\nBb\n\nB\n\nC\n\n1\n\n1.05946\n\n1.12246\n\n1.18921\n\n1.25992\n\n1.33483\n\n1.41421\n\n1.49831\n\n1.58740\n\n1.68179\n\n1.78180\n\n1.88775\n\n2\n\nRoot\n\nminor 2nd\n\nMajor 2nd\n\nminor 3rd\n\nMajor 3rd\n\nPerfect 4th\n\ndim 5th\n\nPerfect 5th\n\nminor 6th\n\nMajor 6th\n\nminor 7th\n\nMajor 7th\n\nOctave",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 44,
+      "image": "/addac112-looper/pages/page-044.png",
+      "title": "Page 44",
+      "sectionName": null,
+      "translation": "BOOTLOADER & FIRMWARE: CHANGES LOG\n\nBOOTLOADER 1.9\n\n- スタートアップ時にいくつかのユニットが「Starting」メッセージのままフリーズするバグを修正\n- ブートローダーバージョンがスタートアップ時に表示されるようになりました\n\n\n\nFIRMWARE 1.9\n\n新機能:\n\n- GRAIN POSITION FOLLOWS LOOP (ページ 34)\n\nグレインポジションをループの再生ヘッドに同期できます。\nグレインポジションノブはオフセット(12時の位置でオフセットなし)になり、偏差は全体的な位置にランダム性を加えます。\n\n- SWITCHES CALIBRATION\n\nスイッチが正しく応答していない場合のキャリブレーション画面 (ページ 30)\n\n- その他細かいバグも修正されました。\n\n\n\nFIRMWARE 1.8\n\n記録と再生の処理方法に大きな変更を加え、全体的なパフォーマンスが向上しました。これにより以前のファームウェアの2倍のグレインが使用できるようになります。\n\nデフォルトのビット深度も24ビットに改善され、パフォーマンスの低下はありません。\n\n短所としては、ループメモリ全体が短くなり、44.1kHzのステレオで180秒(3分)が可能になります。\n\nこの短所のため、ファームウェアを2つのバージョンに分岐することにしました:\n\nADDAC112_V1.8.bin - 新しい読み/書き方法を使用し、利用可能なメモリが少なくなります\n\nADDAC112_V1.8_legacy.bin - 古い読み/書き方法を保持し、同じ利用可能なメモリを保持します\n\n警告*: 新しいメソッドファームウェアを使用すると、最大記録時間を超える古いバンクとの競合が生じる可能性があります。この場合、ユーザーはノートパソコン上でバンクを編集して余分なループを削除するか、レガシーファームウェアを使用して元の古いバンクをロードおよび編集できます。\n\n新機能:\n\n- グレインの長さがピッチに関連付けられました (ページ 33)\n\n- 新しいLoop / Grains トリガー出力の長さが追加されました(100msおよび500ms) (ページ 35)\n\n- 元のファイルサンプルレートとビット深度がinfoスクリーンに表示されます (ページ 39)\n\n- ロード中のメッセージにバンク名を表示\n\n改善:\n\n- ループのサンプルレートより低いサンプルレートに設定された場合のグレイン再生が改善されました (ページ 33)\n\n- グレイントリガー検出が改善されました (ページ 21 & 33)\n\nバグ修正:\n\n- 44.1kHz以下のサンプルレートで新しいグレインが導入されるときにクリックノイズが聞こえることがありました。\n\n- サンプルレート変更後も永続グレインが消えていない問題\n\n- ループトリガーが出力に失敗することがありました\n\n- クロック モード再生時にメニューが正しく機能しませんでした\n\n- 銀行にループがない場合、空き メモリ情報が表示されないバグを修正\n\n- 記録時間が正しく制限されていたバグを修正\n\n- 最初のグレインが-24ピッチで開始することがあるバグを修正\n\n- ループエディターに表示されるdB値を修正 - 以前は両方のチャネルで左チャネルの値を表示していました",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 45,
+      "image": "/addac112-looper/pages/page-045.png",
+      "title": "Page 45",
+      "sectionName": null,
+      "translation": "ご質問、ご意見、ご不明な点については、以下のアドレスまでお問い合わせください:\n\naddac@addacsystem.com\n\nADDAC112\tUSER'S GUIDE\n\nMarch.2025\tRevision.12",
       "hasContent": true,
       "tags": []
     }

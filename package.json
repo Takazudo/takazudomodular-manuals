@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "description": "OXI ONE MKII Manual Viewer - Japanese translation with Next.js",
+  "description": "Takazudo Modular: Manuals - Hardware synthesizer manuals with Japanese translations",
   "author": "Takazudo",
   "keywords": [
     "manual",
