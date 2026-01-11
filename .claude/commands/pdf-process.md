@@ -76,6 +76,7 @@ Run with a manual slug:
 
 This will execute all pipeline steps in order:
 
+0. **Ask User** - Collect manifest metadata (brand name) from user
 1. **Validate** - Check slug parameter and source directory
 2. **Clean** - Remove all existing generated files (images, data, split PDFs)
 3. **Split** - Split PDF into parts (30 pages each)
@@ -84,12 +85,43 @@ This will execute all pipeline steps in order:
 6. **Translate** - Translate to Japanese using manual-translator subagents (Task tool)
 7. **Build** - Build final JSON files
 8. **Manifest** - Create manifest.json
+9. **Add Brand** - Add brand name to manifest (from Step 0)
 
 The entire process takes approximately 15-30 minutes for a 280-page manual.
 
 ## Implementation Logic
 
-**BEFORE starting the pipeline, Claude Code MUST perform these validation steps:**
+**BEFORE starting the pipeline, Claude Code MUST perform these steps:**
+
+### Step 0: Gather Manifest Metadata (ASK USER)
+
+**Before any processing, ask the user for manifest metadata using AskUserQuestion:**
+
+Required information:
+
+- **Brand name**: The manufacturer/company name (e.g., "OXI Instruments", "ADDAC System")
+
+Use AskUserQuestion tool with these options:
+
+- Question: "What is the brand name for this manual?"
+- Options based on existing brands in the project:
+  - "OXI Instruments" (for OXI products)
+  - "ADDAC System" (for ADDAC products)
+  - Other (user can specify)
+
+Store the brand name for use in manifest creation (Step 6).
+
+**Example existing brands:**
+```bash
+# Check existing manifests for reference
+grep '"brand"' public/*/data/manifest.json
+# OXI Instruments - OXI ONE MKII, OXI Coral, OXI E16
+# ADDAC System - ADDAC112
+```
+
+### Step 1: Validate Source Files
+
+**Then perform these validation steps:**
 
 ```bash
 # 1. Extract slug from command arguments
@@ -317,3 +349,32 @@ function retryFailedPages(failures) {
 - `pnpm run pdf:manifest --slug <slug>` - Create manifest.json
 
 **Note:** Both commands require the --slug parameter to specify which manual to process.
+
+### Step 7: Add Brand to Manifest (REQUIRED)
+
+**After manifest creation, add the brand name collected in Step 0:**
+
+```javascript
+// Read the manifest
+const manifestPath = `public/${slug}/data/manifest.json`;
+const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+
+// Add brand (collected from user in Step 0)
+manifest.brand = brandName; // e.g., "OXI Instruments"
+
+// Write back
+fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+```
+
+Or use the Edit tool to add the brand field after the title:
+
+```json
+{
+  "title": "OXI E16: Manual",
+  "brand": "OXI Instruments",  // ← Add this line
+  "version": "1.0.0",
+  ...
+}
+```
+
+**This step is REQUIRED to ensure the brand name appears on the manual index page.**
