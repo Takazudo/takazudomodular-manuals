@@ -380,7 +380,7 @@ function retryFailedPages(failures) {
 
 ### Step 7: Update Manifest with User-Provided Metadata (REQUIRED)
 
-**After manifest creation, update the manifest with brand name and title collected in Step 0:**
+**After manifest creation, update the manifest with brand name, title, and updatedAt collected in Step 0:**
 
 ```javascript
 // Read the manifest
@@ -391,16 +391,24 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 manifest.title = pdfTitle;   // e.g., "OXI E16: Manual"
 manifest.brand = brandName;  // e.g., "OXI Instruments"
 
+// Add updatedAt with current date in YYYYMMDD format
+const today = new Date();
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, '0');
+const day = String(today.getDate()).padStart(2, '0');
+manifest.updatedAt = `${year}${month}${day}`;  // e.g., "20260112"
+
 // Write back
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
 ```
 
-Or use the Edit tool to update both fields:
+Or use the Edit tool to update all fields:
 
 ```json
 {
   "title": "OXI E16: Manual",      // Update this with user-provided title
   "brand": "OXI Instruments",      // Add this with user-provided brand
+  "updatedAt": "20260112",         // Add current date in YYYYMMDD format
   "version": "1.0.0",
   ...
 }
@@ -410,6 +418,7 @@ Or use the Edit tool to update both fields:
 
 - The correct title appears on the manual page
 - The brand name appears on the manual index page
+- The updatedAt date is displayed on the landing page
 
 ### Step 8-16: Verification Phase (MANDATORY)
 

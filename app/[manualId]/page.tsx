@@ -64,6 +64,7 @@ const footerStyles = ctl(`
   font-futura
   border-t border-zd-white
   mt-vgap-lg
+  flex justify-between
 `);
 
 const codeStyles = ctl(`
@@ -72,6 +73,17 @@ const codeStyles = ctl(`
   leading-snug
   border border-zd-white
 `);
+
+/** Format YYYYMMDD to YYYY/MM/DD */
+function formatUpdatedAt(dateStr: string | undefined): string {
+  if (!dateStr || dateStr.length !== 8) {
+    return '';
+  }
+  const year = dateStr.slice(0, 4);
+  const month = dateStr.slice(4, 6);
+  const day = dateStr.slice(6, 8);
+  return `${year}/${month}/${day}`;
+}
 
 export default async function ManualLandingPage({ params }: ManualLandingPageProps) {
   const { manualId } = await params;
@@ -99,8 +111,11 @@ export default async function ManualLandingPage({ params }: ManualLandingPagePro
         </nav>
 
         <p className={footerStyles}>
-          Navigation: <code className={codeStyles}>←</code> <code className={codeStyles}>→</code>{' '}
-          key
+          <span>
+            Navigation: <code className={codeStyles}>←</code> <code className={codeStyles}>→</code>{' '}
+            key
+          </span>
+          {manifest.updatedAt && <span>Updated: {formatUpdatedAt(manifest.updatedAt)}</span>}
         </p>
       </div>
     </main>
