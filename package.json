@@ -13,7 +13,7 @@
     "japanese"
   ],
   "scripts": {
-    "dev": "pnpm run _kill-port && next dev -p 3100",
+    "dev": "pnpm run _kill-port && next dev -p 3100 --hostname zmodmanuals.localhost",
     "_kill-port": "lsof -ti:3100 | xargs kill -9 2>/dev/null || true; echo 'Killed processes on port 3100 (if any)'",
     "build": "next build && node scripts/copy-original-pdfs.js && node scripts/restructure-build.js",
     "start": "next start",
