@@ -110,6 +110,12 @@ const config: Config = {
     ],
     navbar: {
       title: 'Takazudo Modular: Manuals Docs',
+      logo: {
+        alt: 'Takazudo Modular Logo',
+        src: 'img/logo.svg',
+        width: 32,
+        height: 32,
+      },
       items: [
         {
           type: 'docSidebar',
