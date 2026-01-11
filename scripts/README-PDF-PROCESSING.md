@@ -248,7 +248,7 @@ Edit `pdf-config.json` to customize:
 ## Directory Structure
 
 ```
-manual-oxi-one-mk2/
+zmanuals/
 ├── manual-pdf/                                 # Input PDF
 │   ├── OXI-ONE-MKII-Manual.pdf                 # Original PDF (place here)
 │   ├── pages/                                  # Split page PDFs (gitignored)

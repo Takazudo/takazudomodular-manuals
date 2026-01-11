@@ -316,10 +316,10 @@ if (failures.length > 0) {
   <parameter name="prompt">Translate page 1 of the OXI CORAL manual.
 
 Source text file:
-/Users/takazudo/repos/personal/manual-oxi-one-mk2/public/oxi-coral/processing/extracted/page-001.txt
+/Users/takazudo/repos/personal/zmanuals/public/oxi-coral/processing/extracted/page-001.txt
 
 Output JSON file:
-/Users/takazudo/repos/personal/manual-oxi-one-mk2/public/oxi-coral/processing/translations-draft/page-001.json
+/Users/takazudo/repos/personal/zmanuals/public/oxi-coral/processing/translations-draft/page-001.json
 
 Page: 1
 Total pages: 46

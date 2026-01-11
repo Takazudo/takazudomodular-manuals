@@ -309,7 +309,7 @@ MIT License
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/Takazudo/manual-oxi-one-mk2/issues)
+- **Issues**: [GitHub Issues](https://github.com/Takazudo/takazudomodular-manuals/issues)
 - **Documentation**: [http://localhost:3110](http://localhost:3110) (when running locally)
 
 ---
