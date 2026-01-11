@@ -4,8 +4,8 @@
  * PDF Manifest Script
  * Generates master manifest.json from all part files
  *
- * Input: public/manuals/{slug}/data/part-*.json
- * Output: public/manuals/{slug}/data/manifest.json
+ * Input: public/{slug}/data/part-*.json
+ * Output: public/{slug}/data/manifest.json
  *
  * This script:
  * - Scans all part JSON files

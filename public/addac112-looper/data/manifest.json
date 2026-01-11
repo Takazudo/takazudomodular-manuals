@@ -15,7 +15,7 @@
     {
       "part": "01",
       "pageRange": [1, 30],
-      "file": "/manuals/addac112-looper/data/part-01.json",
+      "file": "/addac112-looper/data/part-01.json",
       "sections": [],
       "totalPages": 30,
       "contentPages": 30
@@ -23,7 +23,7 @@
     {
       "part": "02",
       "pageRange": [31, 45],
-      "file": "/manuals/addac112-looper/data/part-02.json",
+      "file": "/addac112-looper/data/part-02.json",
       "sections": [],
       "totalPages": 15,
       "contentPages": 15

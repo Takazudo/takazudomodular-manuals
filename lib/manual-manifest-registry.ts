@@ -11,11 +11,11 @@
 import type { ManualManifest } from './types/manual';
 
 // Import only manifests (small JSON files)
-import oxiOneMk2Manifest from '@/public/manuals/oxi-one-mk2/data/manifest.json';
-import oxiCoralManifest from '@/public/manuals/oxi-coral/data/manifest.json';
-import oxiE16QuickStartManifest from '@/public/manuals/oxi-e16-quick-start/data/manifest.json';
-import oxiE16ManualManifest from '@/public/manuals/oxi-e16-manual/data/manifest.json';
-import addac112LooperManifest from '@/public/manuals/addac112-looper/data/manifest.json';
+import oxiOneMk2Manifest from '@/public/oxi-one-mk2/data/manifest.json';
+import oxiCoralManifest from '@/public/oxi-coral/data/manifest.json';
+import oxiE16QuickStartManifest from '@/public/oxi-e16-quick-start/data/manifest.json';
+import oxiE16ManualManifest from '@/public/oxi-e16-manual/data/manifest.json';
+import addac112LooperManifest from '@/public/addac112-looper/data/manifest.json';
 
 /**
  * Lightweight registry of manual manifests only

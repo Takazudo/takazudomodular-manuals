@@ -256,10 +256,10 @@ if (failures.length > 0) {
   <parameter name="prompt">Translate page 1 of the OXI CORAL manual.
 
 Source text file:
-/Users/takazudo/repos/personal/manual-oxi-one-mk2/public/manuals/oxi-coral/processing/extracted/page-001.txt
+/Users/takazudo/repos/personal/manual-oxi-one-mk2/public/oxi-coral/processing/extracted/page-001.txt
 
 Output JSON file:
-/Users/takazudo/repos/personal/manual-oxi-one-mk2/public/manuals/oxi-coral/processing/translations-draft/page-001.json
+/Users/takazudo/repos/personal/manual-oxi-one-mk2/public/oxi-coral/processing/translations-draft/page-001.json
 
 Page: 1
 Total pages: 46
@@ -278,7 +278,7 @@ function verifyTranslationFiles(slug, totalPages) {
   const failures = [];
   for (let i = 1; i <= totalPages; i++) {
     const pageStr = String(i).padStart(3, '0');
-    const outputFile = `public/manuals/${slug}/processing/translations-draft/page-${pageStr}.json`;
+    const outputFile = `public/${slug}/processing/translations-draft/page-${pageStr}.json`;
 
     if (!fs.existsSync(outputFile)) {
       failures.push(i);

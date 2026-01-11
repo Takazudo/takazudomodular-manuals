@@ -51,8 +51,9 @@ This means:
 
 **Static asset paths (for `<img>`, `<a href>` to files):**
 
-- Must include full `/manuals` prefix - these are served from `/public/manuals/`
-- Example: `<img src="/manuals/oxi-one-mk2/pages/page-001.png">`
+- Don't include `/manuals` prefix - basePath adds it automatically
+- Files are served from `/public/{manualId}/`
+- Example: `<img src="/oxi-one-mk2/pages/page-001.png">` → URL becomes `/manuals/oxi-one-mk2/pages/page-001.png`
 
 **App directory structure:**
 
@@ -155,7 +156,7 @@ Example files saved here:
 
 **Multi-Manual Architecture:**
 
-- Each manual is self-contained under `/public/manuals/{manual-id}/`
+- Each manual is self-contained under `/public/{manual-id}/`
 - Final data (JSON + images) committed to repository
 - Processing files are gitignored (can delete after successful deploy)
 - Ready for adding more manuals with same structure
@@ -487,10 +488,10 @@ Automated workflow for converting the OXI ONE MKII PDF manual into Next.js appli
 
 ❌ **Don't maintain (regenerate as needed):**
 
-- `public/manuals/oxi-one-mk2/processing/extracted/` - Extracted text files
-- `public/manuals/oxi-one-mk2/processing/translations-draft/` - Translation work-in-progress
-- `public/manuals/oxi-one-mk2/data/` - Final JSON output
-- `public/manuals/oxi-one-mk2/pages/` - Rendered images
+- `public/oxi-one-mk2/processing/extracted/` - Extracted text files
+- `public/oxi-one-mk2/processing/translations-draft/` - Translation work-in-progress
+- `public/oxi-one-mk2/data/` - Final JSON output
+- `public/oxi-one-mk2/pages/` - Rendered images
 - `manual-pdf/pages/` - Split page PDFs
 - `manual-pdf/parts/` - Split part PDFs
 
@@ -527,7 +528,7 @@ The PDF processing pipeline consists of 6 fully automated steps:
 manual-pdf/
   ├── pages/                                    # Split page PDFs (gitignored)
   └── parts/                                    # Split part PDFs (gitignored)
-public/manuals/oxi-one-mk2/
+public/oxi-one-mk2/
   ├── data/                                     # Final JSON files (for Next.js)
   │   ├── manifest.json
   │   ├── part-01.json
@@ -608,7 +609,7 @@ The skill embeds Playwright logic directly and saves captures to the project's `
 
 ## Multi-Manual Support
 
-The system supports multiple PDF manuals with unique slugs. Each manual is self-contained under `/public/manuals/{manual-id}/` with its own data, images, and processing files.
+The system supports multiple PDF manuals with unique slugs. Each manual is self-contained under `/public/{manual-id}/` with its own data, images, and processing files.
 
 ### Architecture
 
@@ -618,7 +619,7 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
 /manual-pdf/{slug}/              # Source PDF directory
   └── *.pdf                      # Any PDF file (first one found is used)
 
-/public/manuals/{slug}/          # Output directory
+/public/{slug}/          # Output directory
   ├── data/                      # Final JSON files (committed)
   │   ├── manifest.json
   │   ├── part-01.json
@@ -663,9 +664,9 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
 
    Add explicit imports for the new manual:
    ```typescript
-   import newManualManifest from '@/public/manuals/new-manual/data/manifest.json';
-   import newManualPart01 from '@/public/manuals/new-manual/data/part-01.json';
-   import newManualPart02 from '@/public/manuals/new-manual/data/part-02.json';
+   import newManualManifest from '@/public/new-manual/data/manifest.json';
+   import newManualPart01 from '@/public/new-manual/data/part-01.json';
+   import newManualPart02 from '@/public/new-manual/data/part-02.json';
    // ... import all parts
 
    const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
@@ -715,7 +716,7 @@ pnpm run pdf:manifest --slug oxi-coral
 
 - All paths computed from slug (no config files needed)
 - Source PDF: `/manual-pdf/{slug}/*.pdf` (first PDF found)
-- Output: `/public/manuals/{slug}/`
+- Output: `/public/{slug}/`
 - Settings: `pdf-config.json` (shared across all manuals)
 
 ### Important Notes
@@ -787,7 +788,7 @@ The manual data is split into multiple files for better performance:
 ### Directory Structure
 
 ```
-/public/manuals/oxi-one-mk2/data/
+/public/oxi-one-mk2/data/
 ├── manifest.json         # Master index with all parts
 ├── part-01.json          # Pages 1-28
 ├── part-02.json          # Pages 29-56
@@ -805,8 +806,8 @@ The manual data is split into multiple files for better performance:
 
 ```typescript
 // lib/manual-data.ts
-import manifestDataRaw from '@/public/manuals/oxi-one-mk2/data/manifest.json';
-import part01DataRaw from '@/public/manuals/oxi-one-mk2/data/part-01.json';
+import manifestDataRaw from '@/public/oxi-one-mk2/data/manifest.json';
+import part01DataRaw from '@/public/oxi-one-mk2/data/part-01.json';
 // ... part-02 through part-10
 ```
 

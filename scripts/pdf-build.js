@@ -4,8 +4,8 @@
  * PDF Build Script - Page by Page
  * Combines individual page translations into part JSON files
  *
- * Input: public/manuals/{slug}/processing/translations-draft/page-*.json
- * Output: public/manuals/{slug}/data/part-01.json, part-02.json, etc.
+ * Input: public/{slug}/processing/translations-draft/page-*.json
+ * Output: public/{slug}/data/part-01.json, part-02.json, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';

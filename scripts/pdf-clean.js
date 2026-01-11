@@ -5,10 +5,10 @@
  * Removes all generated files before reprocessing
  *
  * This script deletes:
- * - public/manuals/{slug}/pages/* (rendered images)
- * - public/manuals/{slug}/processing/extracted/* (extracted text)
- * - public/manuals/{slug}/processing/translations-draft/* (translation drafts)
- * - public/manuals/{slug}/data/* (final JSON files)
+ * - public/{slug}/pages/* (rendered images)
+ * - public/{slug}/processing/extracted/* (extracted text)
+ * - public/{slug}/processing/translations-draft/* (translation drafts)
+ * - public/{slug}/data/* (final JSON files)
  * - manual-pdf/{slug}/pages/* (page PDFs)
  *
  * Keeps:
@@ -33,12 +33,10 @@ console.log('='.repeat(50));
 console.log(`📦 Manual: ${config.slug}`);
 console.log('');
 console.log('⚠️  This will remove all generated files from PDF processing:');
-console.log(`   - Rendered images (public/manuals/${config.slug}/pages/)`);
-console.log(`   - Extracted text (public/manuals/${config.slug}/processing/extracted/)`);
-console.log(
-  `   - Translation drafts (public/manuals/${config.slug}/processing/translations-draft/)`,
-);
-console.log(`   - Final translations (public/manuals/${config.slug}/data/)`);
+console.log(`   - Rendered images (public/${config.slug}/pages/)`);
+console.log(`   - Extracted text (public/${config.slug}/processing/extracted/)`);
+console.log(`   - Translation drafts (public/${config.slug}/processing/translations-draft/)`);
+console.log(`   - Final translations (public/${config.slug}/data/)`);
 console.log(`   - Page PDFs (manual-pdf/${config.slug}/pages/)`);
 console.log('');
 console.log(`   Source PDFs in manual-pdf/${config.slug}/ will be kept.`);

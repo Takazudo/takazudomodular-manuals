@@ -15,7 +15,7 @@
     {
       "part": "01",
       "pageRange": [1, 4],
-      "file": "/manuals/oxi-e16-quick-start/data/part-01.json",
+      "file": "/oxi-e16-quick-start/data/part-01.json",
       "sections": [],
       "totalPages": 4,
       "contentPages": 4

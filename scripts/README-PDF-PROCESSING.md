@@ -71,7 +71,7 @@ Each manual is self-contained under its own slug:
 /manual-pdf/{slug}/              # Source PDF directory
   └── *.pdf                      # Any PDF file (first one found is used)
 
-/public/manuals/{slug}/          # Output directory
+/public/{slug}/          # Output directory
   ├── data/                      # Final JSON files (committed)
   ├── pages/                     # Rendered images (committed)
   └── processing/                # Intermediate files (gitignored)
@@ -105,7 +105,7 @@ pnpm run pdf:manifest --slug oxi-coral
 **No config files needed!** All paths are computed from the slug:
 
 - **Source PDF**: `/manual-pdf/{slug}/*.pdf` (first PDF found)
-- **Output directory**: `/public/manuals/{slug}/`
+- **Output directory**: `/public/{slug}/`
 - **Settings**: Shared `pdf-config.json` for all manuals
 
 ### Adding a New Manual
@@ -154,7 +154,7 @@ pnpm run pdf:render
 ```
 
 **Input:** `manual-pdf/parts/part-*.pdf`
-**Output:** `public/manuals/oxi-one-mk2/pages/page-001.png` through `page-272.png`
+**Output:** `public/oxi-one-mk2/pages/page-001.png` through `page-272.png`
 
 Renders each PDF page to PNG format at 150 DPI.
 
@@ -167,7 +167,7 @@ pnpm run pdf:extract
 ```
 
 **Input:** `manual-pdf/pages/page-*.pdf`
-**Output:** `public/manuals/oxi-one-mk2/processing/extracted/page-001.txt` through `page-272.txt`
+**Output:** `public/oxi-one-mk2/processing/extracted/page-001.txt` through `page-272.txt`
 
 Extracts text content from each PDF page individually (page-by-page processing).
 
@@ -177,8 +177,8 @@ Extracts text content from each PDF page individually (page-by-page processing).
 pnpm run pdf:translate
 ```
 
-**Input:** `public/manuals/oxi-one-mk2/processing/extracted/page-*.txt`
-**Output:** `public/manuals/oxi-one-mk2/processing/translations-draft/page-*.json`
+**Input:** `public/oxi-one-mk2/processing/extracted/page-*.txt`
+**Output:** `public/oxi-one-mk2/processing/translations-draft/page-*.json`
 
 **⚠️ Requires:** `ANTHROPIC_API_KEY` environment variable
 
@@ -199,9 +199,9 @@ Translates each page individually to Japanese using Claude Code Task subagents.
 pnpm run pdf:build
 ```
 
-**Input:** `public/manuals/oxi-one-mk2/processing/translations-draft/page-*.json`
+**Input:** `public/oxi-one-mk2/processing/translations-draft/page-*.json`
 
-**Output:** `public/manuals/oxi-one-mk2/data/part-01.json` through `part-10.json`
+**Output:** `public/oxi-one-mk2/data/part-01.json` through `part-10.json`
 
 Combines page translations into part JSON files (28 pages per part) for Next.js.
 
@@ -211,8 +211,8 @@ Combines page translations into part JSON files (28 pages per part) for Next.js.
 pnpm run pdf:manifest
 ```
 
-**Input:** `public/manuals/oxi-one-mk2/data/part-*.json`
-**Output:** `public/manuals/oxi-one-mk2/data/manifest.json`
+**Input:** `public/oxi-one-mk2/data/part-*.json`
+**Output:** `public/oxi-one-mk2/data/manifest.json`
 
 Generates a manifest file with metadata about all parts.
 
@@ -228,10 +228,10 @@ Edit `pdf-config.json` to customize:
   },
   "output": {
     "pages": "manual-pdf/pages",
-    "images": "public/manuals/oxi-one-mk2/pages",
-    "extracted": "public/manuals/oxi-one-mk2/processing/extracted",
-    "translationsDraft": "public/manuals/oxi-one-mk2/processing/translations-draft",
-    "translations": "public/manuals/oxi-one-mk2/data"
+    "images": "public/oxi-one-mk2/pages",
+    "extracted": "public/oxi-one-mk2/processing/extracted",
+    "translationsDraft": "public/oxi-one-mk2/processing/translations-draft",
+    "translations": "public/oxi-one-mk2/data"
   },
   "settings": {
     "pagesPerPart": 28,
@@ -284,7 +284,7 @@ manual-oxi-one-mk2/
 
 **Multi-Manual Architecture:**
 
-- Each manual is self-contained under `/public/manuals/{manual-id}/`
+- Each manual is self-contained under `/public/{manual-id}/`
 - Final data (JSON + images) committed to repository
 - Processing files are gitignored (can delete after deploy)
 - Ready for adding more manuals with same structure

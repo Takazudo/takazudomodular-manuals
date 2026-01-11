@@ -8,45 +8,47 @@
 import type { ManualManifest, ManualPart } from './types/manual';
 
 // Import oxi-one-mk2 manifest
-import oxiOneMk2Manifest from '@/public/manuals/oxi-one-mk2/data/manifest.json';
+import oxiOneMk2Manifest from '@/public/oxi-one-mk2/data/manifest.json';
 
 // Import all oxi-one-mk2 parts
-import oxiOneMk2Part01 from '@/public/manuals/oxi-one-mk2/data/part-01.json';
-import oxiOneMk2Part02 from '@/public/manuals/oxi-one-mk2/data/part-02.json';
-import oxiOneMk2Part03 from '@/public/manuals/oxi-one-mk2/data/part-03.json';
-import oxiOneMk2Part04 from '@/public/manuals/oxi-one-mk2/data/part-04.json';
-import oxiOneMk2Part05 from '@/public/manuals/oxi-one-mk2/data/part-05.json';
-import oxiOneMk2Part06 from '@/public/manuals/oxi-one-mk2/data/part-06.json';
-import oxiOneMk2Part07 from '@/public/manuals/oxi-one-mk2/data/part-07.json';
-import oxiOneMk2Part08 from '@/public/manuals/oxi-one-mk2/data/part-08.json';
-import oxiOneMk2Part09 from '@/public/manuals/oxi-one-mk2/data/part-09.json';
-import oxiOneMk2Part10 from '@/public/manuals/oxi-one-mk2/data/part-10.json';
+import oxiOneMk2Part01 from '@/public/oxi-one-mk2/data/part-01.json';
+import oxiOneMk2Part02 from '@/public/oxi-one-mk2/data/part-02.json';
+import oxiOneMk2Part03 from '@/public/oxi-one-mk2/data/part-03.json';
+import oxiOneMk2Part04 from '@/public/oxi-one-mk2/data/part-04.json';
+import oxiOneMk2Part05 from '@/public/oxi-one-mk2/data/part-05.json';
+import oxiOneMk2Part06 from '@/public/oxi-one-mk2/data/part-06.json';
+import oxiOneMk2Part07 from '@/public/oxi-one-mk2/data/part-07.json';
+import oxiOneMk2Part08 from '@/public/oxi-one-mk2/data/part-08.json';
+import oxiOneMk2Part09 from '@/public/oxi-one-mk2/data/part-09.json';
+import oxiOneMk2Part10 from '@/public/oxi-one-mk2/data/part-10.json';
 
 // Import oxi-coral manifest
-import oxiCoralManifest from '@/public/manuals/oxi-coral/data/manifest.json';
+import oxiCoralManifest from '@/public/oxi-coral/data/manifest.json';
 
 // Import all oxi-coral parts
-import oxiCoralPart01 from '@/public/manuals/oxi-coral/data/part-01.json';
-import oxiCoralPart02 from '@/public/manuals/oxi-coral/data/part-02.json';
+import oxiCoralPart01 from '@/public/oxi-coral/data/part-01.json';
+import oxiCoralPart02 from '@/public/oxi-coral/data/part-02.json';
 
 // Import oxi-e16-quick-start manifest
-import oxiE16QuickStartManifest from '@/public/manuals/oxi-e16-quick-start/data/manifest.json';
+import oxiE16QuickStartManifest from '@/public/oxi-e16-quick-start/data/manifest.json';
 
 // Import all oxi-e16-quick-start parts
-import oxiE16QuickStartPart01 from '@/public/manuals/oxi-e16-quick-start/data/part-01.json';
+import oxiE16QuickStartPart01 from '@/public/oxi-e16-quick-start/data/part-01.json';
 
 // Import oxi-e16-manual manifest
-import oxiE16ManualManifest from '@/public/manuals/oxi-e16-manual/data/manifest.json';
+import oxiE16ManualManifest from '@/public/oxi-e16-manual/data/manifest.json';
 
 // Import all oxi-e16-manual parts
-import oxiE16ManualPart01 from '@/public/manuals/oxi-e16-manual/data/part-01.json';
+import oxiE16ManualPart01 from '@/public/oxi-e16-manual/data/part-01.json';
+import oxiE16ManualPart02 from '@/public/oxi-e16-manual/data/part-02.json';
+import oxiE16ManualPart03 from '@/public/oxi-e16-manual/data/part-03.json';
 
 // Import addac112-looper manifest
-import addac112LooperManifest from '@/public/manuals/addac112-looper/data/manifest.json';
+import addac112LooperManifest from '@/public/addac112-looper/data/manifest.json';
 
 // Import all addac112-looper parts
-import addac112LooperPart01 from '@/public/manuals/addac112-looper/data/part-01.json';
-import addac112LooperPart02 from '@/public/manuals/addac112-looper/data/part-02.json';
+import addac112LooperPart01 from '@/public/addac112-looper/data/part-01.json';
+import addac112LooperPart02 from '@/public/addac112-looper/data/part-02.json';
 
 // Build part registry for oxi-one-mk2
 // Note: Double-cast needed because JSON imports infer pageRange as number[]
@@ -78,6 +80,8 @@ const OXI_E16_QUICK_START_PARTS: Record<string, ManualPart> = {
 // Build part registry for oxi-e16-manual
 const OXI_E16_MANUAL_PARTS: Record<string, ManualPart> = {
   '01': oxiE16ManualPart01 as unknown as ManualPart,
+  '02': oxiE16ManualPart02 as unknown as ManualPart,
+  '03': oxiE16ManualPart03 as unknown as ManualPart,
 };
 
 // Build part registry for addac112-looper

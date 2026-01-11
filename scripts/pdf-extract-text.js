@@ -5,7 +5,7 @@
  * Extracts text from individual page PDFs
  *
  * Input: manual-pdf/{slug}/pages/page-*.pdf
- * Output: public/manuals/{slug}/processing/extracted/page-001.txt, page-002.txt, etc.
+ * Output: public/{slug}/processing/extracted/page-001.txt, page-002.txt, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';

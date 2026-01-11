@@ -90,9 +90,9 @@ Edit `lib/manual-registry.ts` to import the new manual's data:
 
 ```typescript
 // Add imports for new manual
-import newManualManifest from '@/public/manuals/new-manual-slug/data/manifest.json';
-import newManualPart01 from '@/public/manuals/new-manual-slug/data/part-01.json';
-import newManualPart02 from '@/public/manuals/new-manual-slug/data/part-02.json';
+import newManualManifest from '@/public/new-manual-slug/data/manifest.json';
+import newManualPart01 from '@/public/new-manual-slug/data/part-01.json';
+import newManualPart02 from '@/public/new-manual-slug/data/part-02.json';
 // ... import all parts (check how many parts were created)
 
 // Add to registry
@@ -157,7 +157,7 @@ manual-pdf/new-manual-slug/     # Source (gitignored after processing)
   ├── pages/                    # Split page PDFs
   └── parts/                    # Split part PDFs
 
-public/manuals/new-manual-slug/ # Output (committed to git)
+public/new-manual-slug/ # Output (committed to git)
   ├── data/                     # Final JSON files
   │   ├── manifest.json
   │   ├── part-01.json
@@ -172,11 +172,11 @@ public/manuals/new-manual-slug/ # Output (committed to git)
 
 **What to commit:**
 
-- ✅ `public/manuals/{slug}/data/` - Final JSON files
-- ✅ `public/manuals/{slug}/pages/` - Rendered images
+- ✅ `public/{slug}/data/` - Final JSON files
+- ✅ `public/{slug}/pages/` - Rendered images
 - ✅ `lib/manual-registry.ts` - Updated registry
 - ❌ `manual-pdf/{slug}/` - Source PDFs (gitignored)
-- ❌ `public/manuals/{slug}/processing/` - Temp files (gitignored)
+- ❌ `public/{slug}/processing/` - Temp files (gitignored)
 
 ## Development
 
@@ -238,7 +238,7 @@ cd worktrees/issue-X-feature-name
 │   ├── manual-data.ts          # Data loading logic
 │   ├── manual-registry.ts      # Manual registry (update for new manuals)
 │   └── types/                  # TypeScript types
-├── public/manuals/             # Static manual assets
+├── public/             # Static manual assets
 │   └── {slug}/                 # Per-manual directories
 │       ├── data/               # JSON files (committed)
 │       ├── pages/              # Images (committed)
