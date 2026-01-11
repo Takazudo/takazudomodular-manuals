@@ -126,8 +126,7 @@ Example files saved here:
 ```
 /
 ├── app/                        # Next.js app directory
-│   ├── page/                   # Continuous page viewer (/page/[1-280])
-│   └── part-01/                # Legacy redirect
+│   └── page/                   # Continuous page viewer (/page/[1-280])
 ├── components/                 # React components
 ├── lib/                        # Utilities and libraries
 │   ├── manual-data.ts          # Data loading logic
