@@ -12,13 +12,13 @@ const notoSans = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: 'OXI ONE MKII Manual',
-  description: 'OXI ONE MKII Hardware Synthesizer Manual - Japanese Translation',
+  title: 'Takazudo Modular: Manuals',
+  description: 'Hardware synthesizer manuals with Japanese translations',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja">
+    <html lang="ja" data-scroll-behavior="smooth">
       <body className={notoSans.variable}>
         <Header />
         {children}
