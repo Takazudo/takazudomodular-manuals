@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ctl from '@netlify/classnames-template-literals';
-import { getManualTitle } from '@/lib/manual-manifest-registry';
+import { getManualTitle } from '@/lib/manual-registry';
 
 const headerStyles = ctl(`
   fixed top-0 left-0 right-0 z-50

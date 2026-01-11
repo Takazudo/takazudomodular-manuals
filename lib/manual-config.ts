@@ -54,8 +54,8 @@ export function getManualProcessingPath(manualId: string): string {
 }
 
 /**
- * Get the data file path for a given part in a specific manual (filesystem path)
+ * Get the pages data file path for a specific manual (filesystem path)
  */
-export function getPartDataPath(manualId: string, partNum: string): string {
-  return `${getManualDataPath(manualId)}/part-${partNum}.json`;
+export function getPagesDataPath(manualId: string): string {
+  return `${getManualDataPath(manualId)}/pages.json`;
 }

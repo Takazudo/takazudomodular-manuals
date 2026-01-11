@@ -137,8 +137,7 @@ Example files saved here:
 │       └── oxi-one-mk2/        # OXI ONE MKII manual
 │           ├── data/           # Final JSON files (imported at build time)
 │           │   ├── manifest.json
-│           │   ├── part-01.json
-│           │   └── ... (part-10.json)
+│           │   └── pages.json
 │           ├── pages/          # Rendered PNG images (150 DPI)
 │           │   ├── page-001.png
 │           │   └── ... (page-272.png)
@@ -531,8 +530,7 @@ manual-pdf/
 public/oxi-one-mk2/
   ├── data/                                     # Final JSON files (for Next.js)
   │   ├── manifest.json
-  │   ├── part-01.json
-  │   └── ... (part-10.json)
+  │   └── pages.json
   ├── pages/                                    # Rendered PNG images (150 DPI)
   │   ├── page-001.png
   │   └── ... (page-272.png)
@@ -545,7 +543,6 @@ public/oxi-one-mk2/
 
 Edit `pdf-config.json` to customize settings:
 
-- Pages per part
 - Image DPI and format
 - Translation model
 - Max retries
@@ -622,8 +619,7 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
 /public/{slug}/          # Output directory
   ├── data/                      # Final JSON files (committed)
   │   ├── manifest.json
-  │   ├── part-01.json
-  │   └── ... (part-XX.json)
+  │   └── pages.json
   ├── pages/                     # Rendered images (committed)
   │   ├── page-001.png
   │   └── ... (page-XXX.png)
@@ -662,21 +658,15 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
 
 4. **Update manual registry** (`lib/manual-registry.ts`):
 
-   Add explicit imports for the new manual:
+   Add imports for the new manual:
    ```typescript
    import newManualManifest from '@/public/new-manual/data/manifest.json';
-   import newManualPart01 from '@/public/new-manual/data/part-01.json';
-   import newManualPart02 from '@/public/new-manual/data/part-02.json';
-   // ... import all parts
+   import newManualPages from '@/public/new-manual/data/pages.json';
 
    const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
      'new-manual': {
        manifest: newManualManifest as unknown as ManualManifest,
-       parts: {
-         '01': newManualPart01 as unknown as ManualPartData,
-         '02': newManualPart02 as unknown as ManualPartData,
-         // ... all parts
-       },
+       pages: newManualPages as unknown as ManualPagesData,
      },
    };
    ```
@@ -783,68 +773,64 @@ See `/doc/docs/inbox/design-system.md` for comprehensive documentation.
 
 ## Data Structure
 
-The manual data is split into multiple files for better performance:
+Each manual has two JSON files: manifest.json (metadata) and pages.json (all pages):
 
 ### Directory Structure
 
 ```
 /public/oxi-one-mk2/data/
-├── manifest.json         # Master index with all parts
-├── part-01.json          # Pages 1-28
-├── part-02.json          # Pages 29-56
-└── ... (part-10.json)    # Pages 245-272
+├── manifest.json         # Master index with metadata
+└── pages.json            # All pages in single array
 ```
 
 ### How Data is Loaded
 
 **Build-time import (Current Approach):**
 
-- JSON files imported as ES modules in `lib/manual-data.ts`
+- JSON files imported as ES modules in `lib/manual-registry.ts`
 - Data bundled into HTML at build time
 - Compatible with Next.js static export (`output: 'export'`)
 - Fast page loads (no runtime fetch)
 
 ```typescript
-// lib/manual-data.ts
-import manifestDataRaw from '@/public/oxi-one-mk2/data/manifest.json';
-import part01DataRaw from '@/public/oxi-one-mk2/data/part-01.json';
-// ... part-02 through part-10
+// lib/manual-registry.ts
+import oxiOneMk2Manifest from '@/public/oxi-one-mk2/data/manifest.json';
+import oxiOneMk2Pages from '@/public/oxi-one-mk2/data/pages.json';
 ```
 
 ### Manifest Format (`manifest.json`)
 
 ```json
 {
-  "title": "OXI ONE MKII Manual",
+  "title": "OXI ONE MKII: Manual",
+  "brand": "OXI Instruments",
+  "version": "1.0.0",
   "totalPages": 272,
-  "parts": [
-    {
-      "part": "01",
-      "pageRange": [1, 28],
-      "totalPages": 28
-    }
-    // ... parts 02-10
-  ]
+  "contentPages": 260,
+  "lastUpdated": "2026-01-12T...",
+  "source": {
+    "filename": "OXI-ONE-MKII-Manual.pdf",
+    "processedAt": "2026-01-12T...",
+    "imageDPI": 300,
+    "imageFormat": "png"
+  }
 }
 ```
 
-### Part JSON Format
+### Pages Format (`pages.json`)
 
 ```json
 {
-  "part": "01",
-  "pageRange": [1, 28],
-  "totalPages": 28,
   "metadata": {
-    "processedAt": "2025-01-05T...",
+    "processedAt": "2026-01-12T...",
     "translationMethod": "claude-code-subagent-page-by-page",
     "imageFormat": "png",
-    "imageDPI": 150
+    "imageDPI": 300
   },
   "pages": [
     {
       "pageNum": 1,
-      "image": "/manuals/oxi-one-mk2/pages/page-001.png",
+      "image": "/oxi-one-mk2/pages/page-001.png",
       "title": "Page 1",
       "sectionName": null,
       "translation": "# Markdown content here...",

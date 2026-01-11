@@ -451,9 +451,8 @@ manual-pdf/{slug}/               # Source PDF directory
 public/{slug}/                   # Output directory
   ├── data/                      # Final JSON files (committed)
   │   ├── manifest.json
-  │   ├── part-01.json
-  │   └── ... (part-XX.json)
-  ├── pages/                     # Rendered PNG images (150 DPI)
+  │   └── pages.json
+  ├── pages/                     # Rendered PNG images (300 DPI)
   │   ├── page-001.png
   │   └── ... (page-XXX.png)
   └── processing/                # Intermediate files (gitignored)
@@ -465,8 +464,7 @@ public/{slug}/                   # Output directory
 
 Edit `pdf-config.json` to customize:
 
-- Pages per part (default: 30)
-- Image DPI (default: 150)
+- Image DPI (default: 300)
 - Translation model
 - Max retry attempts
 

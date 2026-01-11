@@ -8,26 +8,14 @@ export interface ManualPage {
   tags?: string[];
 }
 
-export interface ManualPart {
-  part: string;
-  pageRange: [number, number];
-  totalPages?: number;
-  metadata?: {
+export interface ManualPagesData {
+  metadata: {
     processedAt: string;
     translationMethod: string;
     imageFormat: string;
     imageDPI: number;
   };
   pages: ManualPage[];
-}
-
-export interface PartInfo {
-  part: string;
-  pageRange: [number, number];
-  file: string;
-  sections?: string[];
-  totalPages?: number;
-  contentPages?: number;
 }
 
 export interface ManualManifest {
@@ -43,6 +31,4 @@ export interface ManualManifest {
     imageDPI: number;
     imageFormat: string;
   };
-  parts: PartInfo[];
-  _future_parts?: PartInfo[];
 }
