@@ -96,7 +96,7 @@ export default async function ManualLandingPage({ params }: ManualLandingPagePro
 
   return (
     <main className={pageStyles}>
-      <div>
+      <div className="lg:-mx-hgap-2xl">
         <h1 className={headingStyles}>
           <span className={brandStyles}>{manifest.brand}:</span>
           <span className={titleStyles}>{manifest.title}</span>
