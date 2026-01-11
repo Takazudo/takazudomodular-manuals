@@ -35,6 +35,10 @@ import addac107AcidsPages from '@/public/addac107-acids/data/pages.json';
 import addac106TnoiseManifest from '@/public/addac106-tnoise/data/manifest.json';
 import addac106TnoisePages from '@/public/addac106-tnoise/data/pages.json';
 
+// Import addac104-tnetw
+import addac104TnetwManifest from '@/public/addac104-tnetw/data/manifest.json';
+import addac104TnetwPages from '@/public/addac104-tnetw/data/pages.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -74,6 +78,10 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'addac106-tnoise': {
     manifest: addac106TnoiseManifest as unknown as ManualManifest,
     pages: addac106TnoisePages as unknown as ManualPagesData,
+  },
+  'addac104-tnetw': {
+    manifest: addac104TnetwManifest as unknown as ManualManifest,
+    pages: addac104TnetwPages as unknown as ManualPagesData,
   },
 };
 
