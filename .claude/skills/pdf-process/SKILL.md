@@ -77,7 +77,7 @@ Run with a manual slug:
 
 This will execute all pipeline steps in order:
 
-0. **Ask User** - Collect manifest metadata (brand name) from user
+0. **Ask User** - Collect manifest metadata (brand name, PDF title) from user
 1. **Validate** - Check slug parameter and source directory
 2. **Clean** - Remove all existing generated files (images, data, split PDFs)
 3. **Split** - Split PDF into parts (30 pages each)
@@ -86,7 +86,7 @@ This will execute all pipeline steps in order:
 6. **Translate** - Translate to Japanese using manual-translator subagents (Task tool)
 7. **Build** - Build final JSON files
 8. **Manifest** - Create manifest.json
-9. **Add Brand** - Add brand name to manifest (from Step 0)
+9. **Update Manifest** - Add brand name and title to manifest (from Step 0)
 
 The entire process takes approximately 15-30 minutes for a 280-page manual.
 
@@ -100,22 +100,39 @@ The entire process takes approximately 15-30 minutes for a 280-page manual.
 
 Required information:
 
-- **Brand name**: The manufacturer/company name (e.g., "OXI Instruments", "ADDAC System")
+1. **Brand name**: The manufacturer/company name (e.g., "OXI Instruments", "ADDAC System")
+2. **PDF title**: The title for the manual (e.g., "OXI E16: Manual", "OXI ONE MKII: Manual")
 
-Use AskUserQuestion tool with these options:
+#### Question 1: Brand Name
+
+Use AskUserQuestion tool to ask for brand name:
 
 - Question: "What is the brand name for this manual?"
-- Options based on existing brands in the project:
+- Options based on existing brands in the project (run `grep '"brand"' public/*/data/manifest.json` to find existing brands):
   - "OXI Instruments" (for OXI products)
   - "ADDAC System" (for ADDAC products)
-  - Other (user can specify)
+  - Other (user can specify custom brand)
 
-Store the brand name for use in manifest creation (Step 6).
+#### Question 2: PDF Title
 
-**Example existing brands:**
+Use AskUserQuestion tool to ask for PDF title:
+
+- Question: "What is the title for this manual?"
+- This should be a free-form text input (use "Other" option for custom input)
+- Example titles from existing manuals:
+  - "OXI ONE MKII: Manual"
+  - "OXI Coral: Manual"
+  - "OXI E16: Manual"
+  - "ADDAC112 VC Looper: Manual"
+
+**Note:** Both questions can be asked in a single AskUserQuestion call with multiple questions.
+
+Store both values for use in manifest creation (Step 7).
+
+**Example existing manifests:**
 ```bash
 # Check existing manifests for reference
-grep '"brand"' public/*/data/manifest.json
+grep -E '"(brand|title)"' public/*/data/manifest.json
 # OXI Instruments - OXI ONE MKII, OXI Coral, OXI E16
 # ADDAC System - ADDAC112
 ```
@@ -349,34 +366,38 @@ function retryFailedPages(failures) {
 
 **Note:** Both commands require the --slug parameter to specify which manual to process.
 
-### Step 7: Add Brand to Manifest (REQUIRED)
+### Step 7: Update Manifest with User-Provided Metadata (REQUIRED)
 
-**After manifest creation, add the brand name collected in Step 0:**
+**After manifest creation, update the manifest with brand name and title collected in Step 0:**
 
 ```javascript
 // Read the manifest
 const manifestPath = `public/${slug}/data/manifest.json`;
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
-// Add brand (collected from user in Step 0)
-manifest.brand = brandName; // e.g., "OXI Instruments"
+// Update with user-provided values (collected in Step 0)
+manifest.title = pdfTitle;   // e.g., "OXI E16: Manual"
+manifest.brand = brandName;  // e.g., "OXI Instruments"
 
 // Write back
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
 ```
 
-Or use the Edit tool to add the brand field after the title:
+Or use the Edit tool to update both fields:
 
 ```json
 {
-  "title": "OXI E16: Manual",
-  "brand": "OXI Instruments",  // Add this line
+  "title": "OXI E16: Manual",      // Update this with user-provided title
+  "brand": "OXI Instruments",      // Add this with user-provided brand
   "version": "1.0.0",
   ...
 }
 ```
 
-**This step is REQUIRED to ensure the brand name appears on the manual index page.**
+**This step is REQUIRED to ensure:**
+
+- The correct title appears on the manual page
+- The brand name appears on the manual index page
 
 ---
 
