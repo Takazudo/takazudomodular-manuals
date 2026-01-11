@@ -1,0 +1,283 @@
+{
+  "part": "02",
+  "pageRange": [31, 60],
+  "totalPages": 30,
+  "metadata": {
+    "processedAt": "2026-01-11T11:04:54.560Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 31,
+      "image": "/oxi-e16-manual/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "translation": "Connect & Control 2\n\nNOTES\n\nAT\n\nFunction Description\n\nType Parameter Type Off, CC Rel1, CC Rel2, CC Abs, CC14 (High Resolution), PC, PB, AT, Note, NRPN, Snapshot\n\nOutput Output & Port MIDI物理出力とポート。以下に設定できます: Same as page、TRS1、TRS2、USB1、USB2、USB3、BLE、ALL-BLE (bluetooth以外のすべて)、ALL-USB (USBを除く)、またはOff\n\nChannel MIDI Channel このチャンネルでMIDIメッセージを通信します。以下に設定できます: Same as page、1-16\n\nMinimum Min value CCノブが送信する最小値。0-127の標準値です。\n\nMaximum Max value CCノブが送信する最大値。0-127の標準値です。\n\nDefault Default value 初回起動時または値がクリアされた時のデフォルト開始値です。\n\nMode Encoder behavior\n\nエンコーダーの回転動作を設定します。オプションは以下の通りです: Div8、Div4、Div2 - エンコーダー解像度を8、4、または2で除算します。Acc0、Acc1、Acc2、Acc3 - エンコーダーアクセラレーション。0 = デフォルト加速なし、通常動作、3 = 最大加速時。LSp2、LSp4、LSp6 - ラージステップモード - 選択した2、4、または6の単位で値を増加させます。\n\nDisplay Encoder Scale\n\nエンコーダースケールの表示方法。以下に設定できます: Off - ブランク表示、127 - デフォルト、100、1000 - CC14やB63に便利です。B63 両極 +/-、B50 両極 +/-、B500 両極 CC14 +/-、On/Off バイナリオンが0-63、オフが64-127。9999はCC14に便利です。\n\nAT - アフタータッチ\n\nアフタータッチは、多くのシンセサイザーとオーディオデバイスの一般的な機能です。アフタータッチは、初期ノートをトリガーした後にキーボードキーが押される硬さを表します。チャンネルプレッシャーとも呼ばれ、アフタータッチは0-127の範囲で機能します。E16はコントロールノブを使用してアフタータッチメッセージを送信できます。アフタータッチメッセージはMIDI標準の一部であるため、互換性のある宛先デバイスで簡単に認識されるはずです。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 32,
+      "image": "/oxi-e16-manual/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "translation": "Connect & Control\n\nNOTES\n\nNote - ミュージカルノート値\n\nNoteメッセージはミュージカルノート値を表します。キーボードキーを押すか、シーケンサーノートをトリガーするのと同様です。Note Onメッセージは、コントロールノブを回すときにC-2からG8の範囲で固定速度100で送信され、その後にNote Offメッセージが続きます。\n\nNote\n\nFunction Description\n\nInstr. Instrument Def\n\n選択した宛先楽器に対するプリセット設定が含まれた楽器定義を選択します。これらはOXI Appで管理できます。デフォルトの「Off」に設定するオプションもあります。\n\nParam. Parameter\n\n楽器定義を選択してパラメーターオプションへのアクセスを有効にします。楽器定義がロードされると、マップされたパラメーターがこの設定で利用可能になります。\n\nType Parameter Type Off、CC Rel1、CC Rel2、CC Abs、CC14（高解像度）、PC、PB、AT、Note、NRPN、Snapshot\n\nOutput Output & Port\n\nMIDI物理出力とポート。設定可能な値：Same as Page、TRS1、TRS2、USB1、USB2、USB3、BLE、ALL-BLE（Bluetooth以外すべて）、ALL-USB（USB以外すべて）、またはOff。\n\nChannel MIDI Channel\n\nこのチャンネルでMIDIメッセージを送信します。設定可能な値：Same as Page、1-16\n\nMin Note Min note value\n\nノブが送信する最小ノート値。C-2（0）からG8（127）の間の値です。\n\nMax Note Max note value\n\nノブが送信する最大ノート値。C-2（0）からG8（127）の間の値です。\n\nDefault Default value\n\n初回起動時またはリセット時のデフォルト開始値。\n\nMode Encoder behavior\n\nエンコーダーの回転動作を設定します。オプション：Div8、Div4、Div2 - エンコーダーの分解能を8、4、または2で除算します。Acc0、Acc1、Acc2、Acc3 - エンコーダー加速。0 = デフォルト加速なし、通常動作、3 = 回転時の最大加速。LSp2、LSp4、LSp6 - 大きなステップモード - 選択した2、4、または6の増分でステップ値を設定します。\n\nDisplay Encoder Scale\n\nエンコーダースケールの表示方法。設定可能な値：Off - ブランク表示、127 - デフォルト、100、1000 - CC14に有用、B63 双極+/-、B50 双極+/-、B500 双極CC14+/-、On/Off バイナリ 0-63でオン、64-127でオフ。9999 はCC14に有用です。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 33,
+      "image": "/oxi-e16-manual/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "translation": "Connect & Control 2\n\nNOTES\n\nSnapshot\n\nコントローラーをスナップショットとして設定するオプションも、宛先オプションにあります。この機能の詳細は、特別なパラメーター設定オプションで説明されています。\n\nNRPN\n\nFunction（機能） Description（説明）\n\nInstr. Instrument Def\n\n選択した宛先機器のプリセット設定を含む機器定義を選択します。これらはOXI Appで管理できます。デフォルトの「Off」に設定するオプションもあります。\n\nParam. Parameter（パラメーター）\n\n機器定義を選択して、パラメーターオプションへのアクセスを有効にします。機器定義が読み込まれると、マップされたパラメーターがこの設定で利用可能になります。\n\nType Parameter Type（パラメータータイプ） Off、CC Rel1、CC Rel2、CC Abs、CC14（高解像度）、PC、PB、AT、Note、NRPN、Snapshot\n\nOutput Output & Port（出力とポート）\n\nMIDI物理出力とポート。設定：「~」ページと同じ、TRS1、TRS2、USB1、USB2、USB3、BLE、ALL-BLE（Bluetooth以外のすべて）、ALL-USB（USB以外のすべて）、または Off。\n\nChannel MIDI Channel（MIDIチャネル） このチャネルでMIDIメッセージを通信します。設定：「~」ページと同じ、1-16\n\nLSB Least Significant Byte（最下位バイト） 微調整。LSBメッセージの宛先に使用される数値。\n\nMSB Most Significant Byte（最上位バイト） 粗調整。MSBメッセージの宛先に使用される数値。\n\nMinimum Min value（最小値） CCノブが送信する下限の最小値。標準の0～127の範囲の値です。\n\nMaximum Max value（最大値） CCノブが送信する上限の最大値。標準の0～127の範囲の値です。\n\nDefault Default value（デフォルト値） 初回起動時または値がクリアされたときのデフォルトの開始値。\n\nMode Encoder behavior（エンコーダー動作）\n\nエンコーダーの回転動作を設定します。オプション：Div8、Div4、Div 2 - エンコーダーの解像度を8、4、または2で除算します。Acc0、Acc1、Acc2、Acc3 - エンコーダーアクセラレーション。0 = デフォルトで加速なし、通常動作、3 = 回転時の最大加速。LSp2、LSp4、LSp6 - ラージステップモード - 選択した2、4、または6の増分でステップ値を変更します。\n\nDisplay Encoder Scale（エンコーダースケール表示）\n\nエンコーダースケールの表示方法。設定：Off - 空白表示、127 - デフォルト、100、1000 - CC14、B63に便利なバイポーラ+/-、B50バイポーラ+/-、B500バイポーラCC14+/-、On/Offバイナリ 0-63でオン、64-127でオフ。9999はCC14に便利です。\n\nNRPN - Non-Registered Parameter Number（非登録パラメーター番号）\n\nNRPNはMIDI CC標準の代替メッセージング方法であり、より高い解像度のコントロールを提供します。すべてのデバイスがNRPN互換ではないため、メーカーのMIDI実装ドキュメントで確認してください。NRPNと高解像度CC14は、MSB/LSBメッセージングアプローチで同様の方法で動作します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 34,
+      "image": "/oxi-e16-manual/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "translation": "Connect & Control\n\nNOTES\n\nPush Control Options\n\nEach control can be set to 2 destinations using the rotary knob and 1 destination for the push command from the knob. The push control sends a MIDI message when the knob is quickly pressed. Slow / long presses may select a secondary function rather than trigger the push option. Once a type has been selected, the available settings will present the configuration options including the behavior mode of the knob press.\n\nCC\n\nFunction Description\n\nInstr. Instrument Def\nSelect an instrument definition which contains preset settings for a selected destination instrument. These can be managed in the OXI App. Option also to set to the default 'Off'.\n\nParam. Parameter\nSelect an instrument definition to enable access to the parameter option. When an instrument definition is loaded the parameter mapped will be available in this setting.\n\nType Parameter Type Off, Note, CC, PC, Set to Default, AT, Page, Record. PlayPause Rec.\n\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1, TRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth, ALL-USB all except USB, or to Off.\n\nChannel MIDI Channel\nCommunicates MIDI messages on this channel. Set to: Same as Page, 1-16\n\nCC nr. CC Number\nControl Change Number. Sets the number for the CC mapping to a destination parameter. This will match the destination device parameter CC number.\n\nMode Behavior\nPress only - 127 value sent on press. Press & release - 127 value sent when pressed and 0 sent when released. Toggle - each push will change the state between 0 & 127.\n\nNote\n\nFunction Description\n\nType Parameter Type Off, Note, CC, PC, Set to Default, AT, Page, Record. PlayPause Rec.\n\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1, TRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth, ALL-USB all except USB, or to Off.\n\nChannel MIDI Channel\nCommunicates MIDI messages on this channel. Set to: Same as Page, 1-16\n\nNote Note value\nSets the note value to send on the press of the knob. Options C-2 (0) to G8 (127)\n\nVelocity Note Velocity\nSets the MIDI output velocity level 0-127 that is sent with the note message.\n\nMode Behavior\nPress only - note on + velocity sent on press followed by note off. Press & release - note on + velocity sent when pressed and note off when released. Toggle - Note on + velocity sent on first press and note off on next press. State changes per press.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 35,
+      "image": "/oxi-e16-manual/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "translation": "NOTES\n\nPC\n\n機能説明\n\nタイプパラメータータイプOff、Note、CC、PC、デフォルトに設定、AT、Page、Record、PlayPause\n\nRec.\n\n出力出力とポート\n\nMIDI物理出力とポート。設定:\nページと同じ、TRS1、TRS2、USB1、USB2、USB3、BLE、ALL-BLE(Bluetooth以外すべて)、ALL-USB(USB以外すべて)、またはOff。\n\nチャンネルMIDIチャンネルこのチャンネルでMIDIメッセージを通信します。\n\n設定:\nページと同じ、1-16\n\nPC nr.PC番号つまみが押されるたびに送信されるプログラムチェンジ番号。\n\nAT\n\n機能説明\n\nタイプパラメータータイプOff、Note、CC、PC、デフォルトに設定、AT、Page、Record、PlayPause\n\nRec.\n\n出力出力とポート\n\nMIDI物理出力とポート。設定:\nページと同じ、TRS1、TRS2、USB1、USB2、USB3、BLE、ALL-BLE(Bluetooth以外すべて)、ALL-USB(USB以外すべて)、またはOff。\n\nチャンネルMIDIチャンネルこのチャンネルでMIDIメッセージを通信します。\n\n設定:\nページと同じ、1-16\n\nAT ValaAftertouchValueつまみが押されたときにチャンネルプレッシャー/アフタータッチとして送信される値です。\n\nモード動作\n\nPress only - アフタータッチ値が押時に送信されます。Press & release - アフタータッチ値が押時に送信されます。Toggle - アフタータッチ値が押時に送信されます。\n\nPage\n\n機能説明\n\nタイプパラメータータイプOff、Note、CC、PC、デフォルトに設定、AT、Page、Record、PlayPause\n\nRec.\n\nページページ番号\n\nこれは現在のシーンページから定義された別のページ番号に切り替えるための内部コマンドを選択します。したがって、つまみを素早く押すことでページナビゲーションを構成できます。必要に応じて、宛先ページのつまみも元のページ番号に戻るように構成することを忘れないでください。\n\nレコード再生/一時停止Rec\n\nつまみ押下は、オートメーションレコーディングトランスポートを制御するようにも構成できます。詳細については、オートメーションレコーディングセクションを参照してください。\n\nPushの動作について:デスティネーションに対して設定されたプッシュつまみを使用する場合、プッシュには素早い押下が必要です。一部のコマンドはつまみを保持/長押しして動作することもあるため、これは重要です。たとえば、デスティネーションとして設定されている場合は素早くタップしてページを変更するか、コントロールページからグループに制御を割り当てるために長押します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 36,
+      "image": "/oxi-e16-manual/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "translation": "Connect & Control\n\n2.10 Special Functions\n\nE16のSpecial Functionsはコントロール設定でアクセスでき、ノブとそのコントロール操作の動作に影響します。各コントロールに対して、標準的なリニアまたはバイポーラ範囲、スナップショット選択A-B範囲、またはパラメーターオートメーション記録を有効にして制御するなど、4つのSpecial Functionsを選択できます。'Special'メニューオプションは以下の通りです：\n\nControl Range\n\nノブの動作は、通常0〜127範囲を表示するか、バイポーラ-63〜64範囲に設定できます。LEDリングは値および表示スクリーンとして機能します。この設定は表示およびコントロール動作にのみ影響します。どちらの場合でも、物理的な出力は同じになります。例えば、CC場合、両方とも0〜127の範囲です。\n\nスナップショットおよび記録機能については、次のセクションで詳しく説明します。\n\nSpecial Options  ノブを回してナビゲートし、ノブをタップして変更します。\n\nFunction  Description\n\nOff  Rotate 0-127  コントロールはデフォルト動作で動作します。ノブを回すと、0〜127範囲で出力を制御します。\n\nBipolar  Rotate -63 to 64  コントロールはバイポーラ動作で動作します。ノブを回すと、-63〜0〜64範囲で出力を制御します。\n\nSnapshot  A to B range  スナップショットでは、2つのノブ値をキャプチャできます。これらはposition Aおよびposition Bとして保存されます。A-B値はコントロールの範囲を設定します。\n\nRec  Rec enables automation recording  Recはコントロールビューでノブに自動化を記録できるようにします。記録中、ノブ回転値がコントロールに記録されます。その後、ループで再生できます。\n\nPlay/Pause Rec  コントロールレコード  このオプションはコントロールビューでノブを押したときの動作を設定します。このオプションは、記録されたオートメーション記録の開始/一時停止と、その後の記録された値の変更の再生を有効にします。\n\nNOTES\n\nOff  Bipolar\n\nOutput  Output\n\n0-127  0-127\n\n0  127  -63\n\n0\n\n+64",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 37,
+      "image": "/oxi-e16-manual/pages/page-037.png",
+      "title": "Page 37",
+      "sectionName": null,
+      "translation": "Connect & Control 2\n\n注記\n\n2.11 Snapshot - 特殊機能\n\nいずれかのコントロール・ノブをスナップショット・モードに設定すると、1つ以上の他の選択された二次コントロールの主要なコントローラーとして機能させることができます。プライマリー・スナップショットは接続された二次コントロールのみに影響を与え、それ自体は出力を送信しません。二次コントロールは、各コントロールまたはプライマリー・スナップショット・コントローラーにより生成された独自の出力を送信します。各二次コントローラーの範囲の下限値と上限値を、プライマリー・スナップショットのAおよびB値に割り当てることができます。これにより、プライマリー・スナップショットの完全な範囲を、定義された範囲内の二次コントロールに影響を与えることができます。\n\nSnapshot\n\n例\n\nプライマリー・コントロール\n\n二次コントロール\n\nプライマリー・スナップショット・コントロールは、その完全な範囲で動作し、割り当てられた各二次パラメーターを定義されたスナップショット範囲内で制御します。\n\nSnapshot A - 選択された二次コントロールの下限値をキャプチャします。\n\nSnapshot B - 選択された二次コントロールの上限値をキャプチャします。\n\nプライマリー・スナップショット・コントロールは、定義されたA-B範囲内で二次コントロールに影響を与えます。\n\n個々の二次コントロールは、手動で完全な範囲内で調整することができます。\n\n0 127\n\nA B\n\n10\n\n50\n\n0\n\n110\n\n30\n\n127\n\nS. 1-P. 1\n\nA B CC2 CC3 CC4\n\nCC9 CC10 CC11 CC12\n\nCC5 CC6 CC7 CC8\n\nCC13 CC14 CC15 CC16",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 38,
+      "image": "/oxi-e16-manual/pages/page-038.png",
+      "title": "Page 38",
+      "sectionName": null,
+      "translation": "接続とコントロール\n\nスナップショット設定\n\n1. スナップショットの設定は、設定エディターで見つかります。スペシャルセクションはコントロールビューからアクセスできます。必要に応じて[Shift]をタップしてメニューをメインホーム画面に戻します。関連するノブをタップしてシーンを選択し、そのコントロールビューを選択します。\n\n2. 設定メニューを開くには、[Shift] + [Knob 15]を長押しします。これはコントロールビューから実行します。エディターは以前に選択したコントロール用に開きます。エディターを開く前にノブを回転させると、このノブの設定が選択されます。\n\n3. エディタータブは「Ctrl」に対して開かれている必要があります。そうでない場合は、[Shift]を長押しして[Knob 1]をタップし、コントローラーの設定を選択します。ページとシーンの設定タブも利用できます。\n\n4. プライマリスナップショットコントロールとして割り当てるノブを最初にセットアップする必要があります。\n\n• ノブをタップしてコントロールを選択して編集するか、現在選択されているコントロールを使用します。\n例: (Knob 1)。\n\n• ナビゲートするには、[Knob 1]を回転させます。「Special」オプションまでスクロールして、[Knob 1]をタップして編集します。\n選択されたオプションがハイライト表示され、編集モードでは「►」タグラベルが表示されます。\n\n• スペシャル設定として「Snapshot」オプションを選択します。これにより、「Destination 1」がスナップショットに設定されることに注意してください。プライマリスナップショットコントロールは他のコントロールに影響を与えるだけで、MIDIメッセージは出力されません。\n\n• 完了したら、[Shift]をタップしてバックアップしてメニューを終了します。\n\n5. プライマリスナップショットコントロールが割り当てられると、画面に「A-B」シンボルが表示されます。次のステップは、プライマリスナップショットの影響を受けるセカンダリコントロールを接続することです。\n\n• プライマリスナップショットノブを長押しし、スナップショットコントロールに追加するノブをタップします。\n例: (Knob 1)を長押ししながら、(Knob 5)、(Knob 9)、(Knob 13)をタップします。セカンダリコントロールはプライマリノブが長押しされた状態でハイライト表示されます。\n\n• 各ノブの範囲の開始ポイントである下限値を調整します。\n\n• プライマリスナップショットノブを長押ししながら、反時計回りに回転させます。次に、ノブを離して、値をスロット「A」にキャプチャして保存します。\n\n• 同じセカンダリノブを調整して、各ノブの範囲の上限値を設定します。\n\n• プライマリスナップショットノブを長押ししながら、時計回りに回転させます。次に、ノブを離して、値をスロット「B」にキャプチャして保存します。\n\n6. A-Bプライマリスナップショットノブを調整すると、設定されたセカンダリコントロールノブの値が、設定された個別の範囲内でコントロールされます。\n\n注記",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 39,
+      "image": "/oxi-e16-manual/pages/page-039.png",
+      "title": "Page 39",
+      "sectionName": null,
+      "translation": "Connect & Control 2\n\nNOTES\n\n2.12 オートメーション記録\n\nコントロールオートメーションは、パラメーター変更の記録と、その再生によって制御動作を繰り返す機能を指します。E16では、各ノブの回転をフリースタイルで記録し、ループで再生することができます。これにより、記録されたオートメーションパターンを目的のパラメーターに適用します。以下の2つのワークフローオプションがあります。\n\n1. クイック記録。制御画面にいるときの設定メニューで制御されるダイレクトな汎用記録です。[Shift] + (ノブ13)を押したままタップして記録エディターにアクセスし、記録を開始・停止します。\n\n2. トランスポートノブコントロール。記録トランスポートコントロールを1つ以上のノブに割り当てることにより記録を行います。この操作はコントロールビューからアクセスするエディターで実行されます。「Rec」または「Play/Pause rec」割り当ては「special」設定で設定することができます。\n\nどちらのワークフローの場合でも、通常モードでノブを手動で調整するとオートメーション記録がクリアされます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 40,
+      "image": "/oxi-e16-manual/pages/page-040.png",
+      "title": "Page 40",
+      "sectionName": null,
+      "translation": "Quick Recording\n\nクイック レコーディング\n\nノブの調整をクイック レコーディング モードで素早くアクティベートし、レコーディング バッファーにキャプチャします。その後、シンプルにプレイバック モードに切り替えてノブのオートメーションを再生します。コントロール ビューでオートメーションを記録します。\n\nQuick Recording\n\n1. クイック レコーディングはシフト メニューに含まれており、コントロール ビューから[Shift]を押したままアクセスします。\n\n2. レコーディングを開始するには、[Shift] + Tap (Knob 13)、「REC」を押したままにしてください。Knob 13 と回転する赤色の LED で示されるようにレコーディングが開始されます。\n\n3. レコーディングが開始されたら、ボタンを離してメニューを終了します。レコーディングは続行されます。記録シンボルが左上に表示されます。\n\n4. レコーディングはフリースタイルで行われるため、レコーディング中にいつでもコントロール用のノブを調整すると、値の変化サイクルがレコーディング バッファーにキャプチャされます。レコーディングを停止して個別のノブの再生を続行するには、ノブをタップします。\n\n5. ノブが記録されたら、もう一度[Shift] + tap (Knob 13)、「REC」を押したままにしてレコーディングを停止し、記録されたオートメーションの再生を続行します。ノブの LED が値の変化をアニメートします。\n\n6. ノブに記録されたオートメーションをクリアするには、(Knob)を回して消去します。個別のノブへの手動調整も記録されたオートメーションをクリアしてオーバーライドします。手動設定が適用されます。\n\nオートメーションが再生中のときに、エンコーダーを回すと個別のレコーディングをキャンセルして削除できます。すべてのレコーディングを停止してクリアするには、[Shift]を押したままに保ち、Knob 13 を押したままにしてください。\n\nConnect & Control\n\n2\n\nREC\n\nSTOP\n\nRecording Active - Start / Stop Recording\n\nStart / Play Recording\n\n+\n\nコントロール ビューから\n\n[Shift] + Tap (Knob 13)\n\nノブを回すとオートメーションが記録されます\n\n0\n\n127\n\n30\n\n127\n\nRecording Stopped / Paused - Start / Stop Recording\n\nレコーディング中に個別のノブをタップすると、レコーディングが停止し、特定のノブ コントロールの再生が開始されます。\n\n+\n\n[Shift] + Tap (Knob 13)\n\nオートメーションが再生されます\n\nClear +\n\n[Shift] + Hold (Knob 13) Turn Knob\n\nor\n\n0\n\n127",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 41,
+      "image": "/oxi-e16-manual/pages/page-041.png",
+      "title": "Page 41",
+      "sectionName": null,
+      "translation": "Transport Knob Control Recording\n\nレコーディングプロセスをより詳細にコントロールするために、1つ以上のKnobをrecord/stop/playトランスポートプロセスをコントロールするように設定できます。これはコントロールエディターで設定され、コントロールの「special」設定に含まれます。\n\nTransport Control Recording\n\n1. トランスポート用のレコーディング設定はコントロールエディターのオプションに含まれており、コントロールビューから[Shift]を保持してアクセスできます。シーンが選択され、そのコントロールビューが開いていることを確認してください。\n\n2. Knobトランスポート設定を編集するには、Knob + [Shift]をタップして選択されたコントロールを編集します。または、[Shift] + (Knob 13)をタップして「Edit」を選択します。\n\n3. 「Ctrl」タブが選択されていることを確認してください。選択されていない場合は、[Shift]を保持して(Knob 1)をタップします。\n\n4. Knobをタップして編集し、Knobを回転させてオプションをスクロールします。「Special」オプションをハイライトして、Knobをタップして設定を編集します。\n\n5. Knobに割り当てることができる2つのトランスポートオプションがあります。\n\n• Rec. このオプションでは、Knobでオートメーションレコーディングの開始と停止ができます。コントロールビューでこのKnobをタップして、任意のKnobのオートメーション記録の開始と停止を行います。レコーディング中、任意のKnobを調整して、そのオートメーション値を記録することができます。Knob値はトランスポートレコード記号タグ付きで表示されます。レコーディングは左上に表示されるレコード記号で示されます。\n\n• Play/Pause Rec. このオプションでは、Knobでオートメーション再生の開始と一時停止ができます。コントロールビューでこのKnobをタップして、全KnobのオートメーションをPauseまたはPlay状態に切り替えます。再生時、記録されたすべてのオートメーションが再生されます。Knobは一時停止/再生トランスポート記号で表示されます。\n\n6. レコーディングと再生は、コントロールビューで設定されたKnobをタップしてトランスポートをコントロールすることにより実行されます。\n\n7. Knobに記録されたオートメーションをクリアするには、(Knob)を回して消去します。手動調整は記録されたオートメーションをオーバーライドし、手動で入力された値を適用します。すべてのレコーディングを停止してクリアするには、[Shift]を保持してKnob 13を保持します。\n\nS.    1-P.    1\nCC1    CC2    CC3    CC4\n78    CC10    CC11    18\n111    12    CC7    CC8\nCC13    CC14    CC15    CC16\n\nREC Mode knob\nCurrent State\nFlash - Recording Active\nFlash - Playback Active\nTap knob to Play\nTap to start / stop recording\nTap knob to Pause\nPlay/Pause Mode knob\nGeneral Recording Status Knob Transport Controls\nHold [Shift] to see knob 13 recording status\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 42,
+      "image": "/oxi-e16-manual/pages/page-042.png",
+      "title": "Page 42",
+      "sectionName": null,
+      "translation": "Connect & Control\n\nNOTES\n\n2.13 Groups\n\nそれぞれの個別パラメーターをグループに追加することもできます。グループは、2つ以上のパラメーターの集合で、まとめてコントロールできます。エンコーダーノブを押して保持するとグループステータスが表示されます。最大4つのグループが利用可能です。\n\nグループに割り当てられたコントロールノブは、2つの役割のいずれかを果たします。\n\n• Primary lead。調整すると、同じグループ内の他のすべてのノブの値も同時に変わるコントロール。Primary leadノブは自身の値と、グループ内の他のノブの相対値を変更します。\n\n• Secondary follower。Lead ノブによって値を変更できるコントロールノブ。同じグループのLead ノブを回すと、このノブの値が変わります。Secondary follower ノブは、独立して手動で調整することもできます。\n\nグループの作成\n\n1. グループはコントロールビューからノブを押し続けることで設定されます。ノブを押し続けている間、グループ番号が表示されます。ノブを押して保持します。通常は点線ボーダーで表示され、ノブのLEDリングが完全に点灯しているprimary leadです。\n例：(Knob 1)を押し続けます。\n\n2. Lead ノブを押し続けながら、他のノブをタップして同じグループに追加します。例：(Knob 1)を押し続け、(Knob 2)と(Knob 3)をタップします。最初のタップでコントロールがSecondary followerとして追加され、実線ボーダーとLEDリング右側が部分的に点灯して表示されます。\n\n3. Lead ノブを押し続けながら、他のノブを2回目にタップして、グループ割り当てをFollowerからLeadに変更します。例：(Knob 1)を押し続け、(Knob 2)をタップします。2回目のタップでコントロールモードがFollowerからLeadに変更され、点線ボーダーとLEDリングが完全に点灯して表示されます。\n\n4. グループからコントロールを削除するには。Lead ノブを押し続けながら、他のノブを3回目にタップしてグループから削除します。例：(Knob 1)を押し続け、(Knob 2)をタップします。グループに入っていないノブは通常通り表示され、ハイライトされず、LEDリングは点灯しません。実線ボーダーとLEDリング右側が部分的に点灯して表示されます。\n\n5. これらの例の最後に、Knob 1がPrimary leadになり、Knob 3がFollowerコントロールになります。\n\nグループを作成\n\nコントロールビューで、最初のノブを押し続け、ノブをタップします\n\nCC4    CC3    CC2    CC1\n\nGroup    1\n\nCC1    CC2    CC3    CC4\n\nCC9    CC10    CC11    CC12\n\nCC5    CC6    CC7    CC8\n\nCC13    CC14    CC15    CC16",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 43,
+      "image": "/oxi-e16-manual/pages/page-043.png",
+      "title": "Page 43",
+      "sectionName": null,
+      "translation": "Connect & Control 2\n\n注記\n\n「点線」の境界ボックスで表示されたパラメーターは、プライマリーリード制御として機能します。これらを調整すると、同じグループ内の他のパラメーターの値も調和して調整されます。値の変更は各パラメーターの元の値に対して相対的です。以下の例では、3つのノブすべてが自身の値と他の2つのパラメーターの値に影響します。\n\n「実線」の境界ボックスで表示されたパラメーターは、プライマリーリード制御による変更に従いますが、独立して調整することもできます。プライマリーリード制御は「点線」の境界ボックスで示されます。以下の例では、CC1を調整した場合のみ、自身の値と他の2つのパラメーターの値に影響します。CC2またはCC3のノブを変更した場合、その個々の値のみが変更されます。グループ内の他のパラメーターは影響を受けません。\n\nプライマリーリードがフォロワーに適用する制御量は、フォロワーパラメーターごとに設定できます。この量は各フォロワーのノブを保持して回転させることで設定されます。この例では、ノブ2（CC2）を保持して回転させて量を設定し、CC3に対しても同じ操作を繰り返します。\n\nノブ保持 + ノブを2回目にタップ\n\nグループの設定中にリードノブを保持している場合、フォロワーノブへのその後のタップごとに、その機能モードが循環します。\n\nプライマリーリード保持\n\nLED全体が点灯\n\n別のノブをタップ（1回目）\n\n+ LED半分が点灯、セカンダリーフォロワー\n\nプライマリーリード\n\nもう一度タップ（2回目）\n\nLED全体が点灯\n\nグループ\n\nもう一度タップ（3回目）\n\n消灯\n\nグループから削除\n\nグループ1\n\nグループ1\n\nリード\n\nリード＆フォロー\n\nフォロワー\n\nリード＆フォロー\n\nフォロワー\n\nリード＆フォロー\n\nノブ保持 + ノブを最初にタップ\n\nグループ操作動作\n\nCC1\n\nCC1\n\nCC2\n\nCC2\n\nCC3\n\nCC3\n\nフォロワー量\n\nプッシュ＆ターン\n\n55%\n\nCC1\n\nCC2\n\nCC2",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 44,
+      "image": "/oxi-e16-manual/pages/page-044.png",
+      "title": "Page 44",
+      "sectionName": null,
+      "translation": "Connect & Control\n\nNOTES\n\n2.14 MIDI In\n\nE16は受信したMIDIを選択した出力にチャネルして通すことができます。これはSettings > MIDIセクションで設定します。さらに、外部MIDI PCプログラムチェンジメッセージを使用してデバイスのシーンを変更することができます。この目的用に専用MIDIチャネルが利用可能で、これもMIDI設定で設定します。\n\nPCでシーンを変更する\n\n1. 外部制御デバイスをE16のMIDI入力に接続します。例えば、PC/MacをE16に接続します。PCメッセージを送信するために、外部デバイスの一般的なMIDI設定が正しいことを確認してください。\n\n2. E16でシステム設定を開きます。ホーム画面でKnob 8を押します。\n\n3. MIDI設定に移動してタップして開きます。「PC Receive Channel」に移動して、外部デバイスがPCメッセージを送信する専用MIDIチャネルに設定します。例えば、チャネル8に設定します。\n\n4. 定義されたチャネルでPCメッセージを送信すると、シーンがPCメッセージ値に変更されます。例えば、PC 1はScene 1を選択し、PC 4はScene 4を選択します。Scenes 1-16はPCで直接選択できます。\n\nRouting\n\nMIDI Thru\n\nTRS\n\nBLE\n\nUSB\n\nScene 1\n\nScene 2\n\nScene 3\n\nThru\n\nProgram Change - PC\n\nProgram Changeはシーン間を切り替え、Settings > MIDIメニューで設定された専用MIDIチャネルで定義されます。\n\n通常はCCまたはNoteデータです。\n\n例: MIDI Input\n\nE16 External Device",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 45,
+      "image": "/oxi-e16-manual/pages/page-045.png",
+      "title": "Page 45",
+      "sectionName": null,
+      "translation": "Connect & Control 2\n\nNOTES",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 46,
+      "image": "/oxi-e16-manual/pages/page-046.png",
+      "title": "Page 46",
+      "sectionName": null,
+      "translation": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 47,
+      "image": "/oxi-e16-manual/pages/page-047.png",
+      "title": "Page 47",
+      "sectionName": null,
+      "translation": "シーン\n\n3\n\nシーンはE16における最高レベルの組織構造です。各シーンは16ページのパラメーターを保持できます。7つのシーンはホームページからアクセス可能ですが、E16はデバイス内に合計16個のシーンを保持できます。これらはホームページから[Shift]+(Knob)を使用してシーンを再割り当てするためにアクセスされます。シーンはすべての設定を保存し、コントロールの整理に役立ちます。\n\nシーン選択はE16の電源投入時に表示される最初のページから利用可能であり、システム構成設定メニューとともに提供されます。開始するには、作業対象のシーンを選択するか、セットアップします。シーン切り替えはPC(Program Change)メッセージングを使用して外部デバイスからも可能です。E16は着信PC変更メッセージをリッスンするための専用MIDIチャネルを使用します。各シーンには16個のプリセットも含まれています。プリセットはすべてのノブの現在の値を保存し、後で呼び出すことができます。したがって、様々なハードウェアセットアップに合わせるために異なる構成を使用することが可能です。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 48,
+      "image": "/oxi-e16-manual/pages/page-048.png",
+      "title": "Page 48",
+      "sectionName": null,
+      "translation": "Main Home View - Scenes / System\n\nSave Yes\tSave No\n\nSave on Exit\n\nシーンを編集してホーム画面にバックアップした後、シーンを保存するかどうかのオプションが表示されます。ノブをタップして保存オプションを選択します。\n\nScene Select\n\nScene / Page / Controller Settings\n\nControl Page\n\n設定されたコントロールが表示されます。ノブはMIDIコントロールメッセージを定義された目的地に送信します。\n\nChange Page\n\n[Shift]を保持してページ選択画面とシーン設定にアクセスします。[Shift] + Tap (Knob X) 1-12でページを変更します。\n\nメニュー / ページ構造でバックアップするには[Shift]をタップします。\n\nS. 1\nS. 5\nS. 3\nS. 7\nS. 2\nS. 6\nS. 4\nCONF\n\nS. 1-P. 1\n\nCC1 CC2 CC3 CC4\nCC9 CC10 CC11 CC12\nCC5 CC6 CC7 CC8\nCC13 CC14 CC15 CC16\n\nS. 1\n\nP.1 P.2 P.3 P.4\nP.9 P.10 P.11 P.12\nP.5 P.6 P.7 P.8\n\nREC Lock Edit Prst\n\nS.1 CC1\nP.1\n\nPage Scene\n\nAbbr.\n\nCtrl 3\nCC3\n\nSpecial Off\n\nColor 12\n\n+ + Edit 1 2 3",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 49,
+      "image": "/oxi-e16-manual/pages/page-049.png",
+      "title": "Page 49",
+      "sectionName": null,
+      "translation": "1→S. 1-P. 1\n2→CC1 \tCC6 \tCC3 \tCC4\n3→CC9 \tCC10 \tCC11 \tCC12\n4→CC5 \tCC6 \tCC7 \tCC8\n5→CC13 \tCC14 \tCC15 \tCC16\n6→S. \t1\n7→P.1 \tP.2 \tP.3 \tP.4\n8→P.9 \tP.10 \tP.11 \tP.12\n9→P.5 \tP.6 \tP.7 \tP.8\n10→REC \tLock \tEdit \tPrst\n11→+ S.1\n12→Note\n13→「Push」コントロール オプションはページの割り当てに使用できます。これはコントロール構成で設定され、pushオプションをタイプ「page」に設定することで行われます。ページ番号を割り当てることができ、knobのpushで現在のページから切り替え、割り当てられたコントロール ビューに直接ジャンプすることができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 50,
+      "image": "/oxi-e16-manual/pages/page-050.png",
+      "title": "Page 50",
+      "sectionName": null,
+      "translation": "シーン\n\nページオプションは編集することができます。これによりページの名前変更、MIDIチャンネルとポートの設定が可能になります。エディター内からのページコピーも可能です。エディターはコントロールビューからアクセスできます。まず編集するページを選択してください。\n\nページ設定を編集する\n\n1. ページはコントロールビューからアクセスできます。必要に応じて[Shift]をタップしてメニューをメインホーム画面にバックアップします。関連するノブをタップしてシーンを選択し、そのコントロールビューを選択します。\n\n2. 編集するページを選択します。[Shift]を押したまま(Knob 1)～(Knob 12)をタップします。\n\n3. エディターを開きます。[Shift]を押したまま(Knob 15)、「Edit」をタップします。\n\n4. ページタブを選択します。[Shift]を押したまま(Knob 2)、「Page」をタップします。編集オプションには、Knob 1でのコントロールとKnob 3でのシーンも含まれます。\n\n5. オプションをナビゲートしてスクロールするには、(Knob 2)を回します。編集するオプションを選択するには(Knob 2)を押して、回して設定を変更します。「►」タグラベルはそのパラメーターが編集可能であることを示します。もう一度押して変更を確認します。\n\n6. コントロールビューをバックアップして[Shift]を使用して終了する場合、「Save Scene?」オプションが表示されます。保存せずに終了するには赤く点灯した(Knob 2)をタップするか、シーンを保存するには緑く点灯した(Knob 3)をタップします。\n\nシーン ページ\n\nName\n\nCtrl 3\n\nP.1\n\nOutput TRS1\n\nChannel 1\n\n注記\n\n[Shift] + (Knob 15)を押したままでエディターを開く [Shift] + (Knob 2)を押したままでページオプションを開く\n\nS. 1\n\nP.1 P.2 P.3 P.4\n\nP.9 P.10 P.11 P.12\n\nP.5 P.6 P.7 P.8\n\nREC Lock Edit Prst\n\n+ Edit + Page\n\nページ設定 エディター内で、[Shift] + (Knob 2)で設定にアクセスします。\n\nSetting Options Description\n\nName Text Entry エディターを開いて、ページの名前を変更します。ページ名は最大7文字です。名前はコントロールビューのヘッダーとページリストの最初の4文字で表示されます。\n\nChannel 1-16 選択したページで設定されたコントロールのMIDIチャンネルを選択します。\n\nOutput All, TRS, USB, All-BLE, All-USB, OFF TRSとUSBのMIDIアウトプットポート1または2を設定するか、オフにします。USBまたはBLEを除くすべてのポートも選択できます。\n\nCopy Command 現在のページとコントロールをクリップボードにコピーします。\n\nPaste Command クリップボードからコピーされたページとコントロールを、現在選択されているページに貼り付けます。\n\nClear Command 現在のページの設定をデフォルトにクリアします。緑の(Knob 3)でアクションを確認するか、赤の(Knob 2)でキャンセルする必要があります。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 51,
+      "image": "/oxi-e16-manual/pages/page-051.png",
+      "title": "Page 51",
+      "sectionName": null,
+      "translation": "Scenes 3\n\n3.3 すべてのシーンにアクセスする\n\nE16には16個のシーンスロットが保存されており、そのうち7個はホーム画面から直接アクセスできます。シーンはOXI Appで管理することもできますが、E16デバイス上で設定することもできます。合計16個の中からのシーンの割り当ては、shiftを使用してホーム画面で実行されます。\n\nシーンを直接アクセスとして割り当てる\n\n1. ホーム画面のシーンページでknobs 1-7に割り当てられている7個のシーンがあります。これらはデフォルトで構成されていますが、16個のオンボードシーンの別のものに変更できます。ホーム画面に移動して開始します。必要に応じて [Shift] をタップしてメニュー構造を確認します。\n\n2. [Shift] を押しながら (Knob 1) から (Knob 7) までをタップします。これらには割り当てられたシーンが含まれています。「Select Scene」画面が表示されます。\n\n3. 選択したknobを回して、利用可能な16個のシーンをナビゲートします。選択したknobに読み込まれたシーンがリストに表示されます。\n\n4. 目的のシーンには「>」シンボルがタグ付けされます。knobをタップして、選択したknobに選択して割り当てます。\n\n5. メニューは自動的に終了し、ディスプレイはホーム画面に戻ります。knobに割り当てられたシーンが表示されます。\n\n注記\n\n[Shift] + Tap (Knob)\n\nホーム/シーン画面からシーンの割り当てを変更します。\n\nTurn + Tap (Knob)\n\nS. 1\n\nS. 5\n\nS. 3\n\nS. 7\n\nS. 2\n\nS. 6\n\nS. 4\n\nCONF\n\nS. 11\n\nS. 5\n\nS. 3\n\nS. 7\n\nS. 2\n\nS. 6\n\nS. 4\n\nSYS\n\nSelect Scene\n\n10.S10\n\n11 S.11 - Loaded\n\n12 S.12\n\n+ S.1",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 52,
+      "image": "/oxi-e16-manual/pages/page-052.png",
+      "title": "Page 52",
+      "sectionName": null,
+      "translation": "Scenes\n\n3.4 Scene Settings\n\nシーンの設定を編集することができます。これによってシーン名の短縮形を変更できます。また、このメニューからシーンをリロードまたはリセットするオプションも利用できます。\n\nSceneの設定を編集する\n\n1. シーン設定へのアクセスはコントロールビューから管理されます。必要に応じて [Shift] をタップしてメニューをメインホーム画面にバックアップしてください。関連するknobをタップしてシーンを選択し、そのコントロールビューを選択してください。\n\n2. エディターを開くには、[Shift] + (Knob 15) を押したままにして、'Edit'をタップします。\n\n3. シーンタブを選択してください。[Shift] + (Knob 3) を押したままにして、'Scene'をタップします。編集オプションには knob 1 によるコントロールと knob 2 によるページも含まれています。\n\n4. オプションを移動およびスクロールするには、(Knob 3) を回します。編集用のオプションを選択するか、メニューコマンドを選択するには (Knob 3) を押します。一部のコマンドは no/赤 knob または yes/緑 knob を押すことで確認が必要な場合があります。\n\n5. [Shift] を使用してコントロールビューをバックアップして終了する場合、'Save Scene?' オプションが表示されます。赤くライトアップされた (Knob 2) をタップして保存せずに終了するか、緑くライトアップされた (Knob 3) をタップしてシーンを保存してください。\n\nPage   Scene\nName\nCtrl 3\nS.1\nReset\nReload\n\nNOTES\n\nエディターのために [Shift] + Tap (Knob 15) を押したままにしてください。シーンオプションのために [Shift] + Tap (Knob 3) を押したままにしてください。\n\nS.   1\nP.1   P.2   P.3   P.4\nP.9   P.10   P.11   P.12\nP.5   P.6   P.7   P.8\nREC   Lock   Edit   Prst\n+ Edit + Scene\n\nScene Settings エディターでは、[Shift] + (Knob 3) で設定にアクセスします\n\n設定オプション 説明\n\nAbbr. テキスト入力\n\nシーンをリネームするためのテキストエディターを開きます。シーン名は最大7文字です。名前はコントロールビューヘッダーに表示され、シーンリストの最初の4文字が表示されます。\n\nReload コマンド\n\nE16メモリーから保存されたシーンとその設定をリロードします。ライトアップされたknobをタップして確認し、Yes/緑で確認し、No/赤でキャンセルしてください。\n\nReset コマンド\n\nシーンをデフォルト設定にリセットします。ライトアップされたknobをタップして確認し、Yes/緑で確認し、No/赤でキャンセルしてください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 53,
+      "image": "/oxi-e16-manual/pages/page-053.png",
+      "title": "Page 53",
+      "sectionName": null,
+      "translation": "Scenes 3\n\n3.5 Presets\n\nEach sceneには16個のプリセットスロットがあります。各プリセットは、シーンのすべてのコントロールノブ値の現在の状態を保存できます。プリセットは後で呼び出すことができます。プリセットメニューはコントロールビューから[Shift]を押しながら(Knob 16)「Prst」を押すことでアクセスできます。プリセット管理メニューはKnob 1を使って操作されます。これは点灯して表示されます。\n\nプリセットの保存\n\n1. Knob値をスナップショットとして設定または構成するか、オートメーション付きで設定し、目的の状態にします。これが保存される状態となります。\n\n2. プリセットマネージャーを開きます。コントロールビューで[Shift] + (Knob 16)「Prst」をタップします。\n\n3. 保存する場合:\n\n• 現在のスロットに保存する場合。(Knob 16)を回してメニューで操作します。「►」タグで「Save」オプションをハイライトします。(Knob 16)をタップして保存を選択します。\n\n• 別のスロットに保存してプリセットの名前を変更する場合。(Knob 16)を回してメニューで操作します。「►」タグで「Save As」オプションをハイライトします。(Knob 16)をタップして保存を選択します。スロットセレクターが開き、新しいスロットを選択できます。保存時に名前も編集できます。\n\nプリセットの読み込み\n\n1. プリセットマネージャーを開きます。コントロールビューで[Shift] + (Knob 16)「Prst」をタップします。\n\n2. プリセットを読み込む場合。(Knob 16)を回してメニューで操作します。「►」タグで「Load」オプションをハイライトします。(Knob 16)をタップして読み込みを選択します。\n\n3. プリセットスロットセレクターが開き、リストからプリセットを選択できます。現在アクティブなプリセットはリストに「loaded」として表示されます。「►」でプリセットを読み込むに操作し、(Knob 16)を押します。\n\n4. 現在アクティブなプリセットが変更されている場合、新しいプリセットを読み込む前に保存するというオプションが表示されます。保存せずにキャンセルするには赤い(Knob 2)をタップし、現在のスロットに保存してから読み込むには緑色の(Knob 3)をタップします。\n\n5. 選択したプリセットが読み込まれ、そのコントロール値が復元されます。\n\nNOTES\n\nNote\n\n現在選択されているプリセットスロットをクリアするか、プリセットの名前を変更するオプションもプリセットメニューに表示されます。点灯しているknobを使って操作し、knobをタップして選択します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 54,
+      "image": "/oxi-e16-manual/pages/page-054.png",
+      "title": "Page 54",
+      "sectionName": null,
+      "translation": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 55,
+      "image": "/oxi-e16-manual/pages/page-055.png",
+      "title": "Page 55",
+      "sectionName": null,
+      "translation": "この最終セクションは、OXI E16の設定とセットアップに関するものになります。\n\nただし、これらのトピックを見過ごさないでください。ファームウェアアップデート、OXI App、および設定オプションの完全な概要など、ワークフロー向上に役立つ多くの有用なトピックが含まれています。ここで取り上げられている有用な要素や機能は、今すぐではなくても将来必ず役立つ知識となります。少なくともこれらのコンテンツと機能に目を通し、将来の参考と認識のために備えることをお勧めします。最後に、OXI Instrumentsから、OXI E16をご購入いただき、OXI ONE、Coral、Meta、その他すべてのOXI ファミリーのデバイスや関連するギアのエコシステムの成長をサポートいただいたことへの心からの感謝の意を表します。音楽的な冒険に幸運を祈ります。OXI E16がOXI ONE、Coral、Metaおよび他のすべてのギアとともに、あなたの音楽的な旅をサポートすることを期待しています。覚えておいてください。ここで終わるのはマニュアルだけです。本当の冒険はこれからが本番です。楽しんでください！\n\nSystem & App\n\n4",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 56,
+      "image": "/oxi-e16-manual/pages/page-056.png",
+      "title": "Page 56",
+      "sectionName": null,
+      "translation": "NOTES\n\nSystem\n\n4.1 OXI App\n\nOXI機器を使用する際のほとんどのデバイス管理活動はOXI Appを使用して行われます。これはOXI機器に接続されたときに、デバイスとPCまたはMac間のアップデート、バックアップ、データ転送を支援するスタンドアロンユーティリティです。このアプリには、E16をアプリから直接設定する機能や、楽器定義を作成・ロードする機能などの便利なツールも含まれています。OXI Siteからアプリをダウンロードしてください。\n\nOXI AppはPCやMacとE16の間で以下の操作を管理できます:-\n\n• シーンを管理およびバックアップします。\n\n• オンボードシーンエディターでシーンを編集・作成します。\n\n• デバイス間で楽器CC定義ファイルを管理します。\n\n• 利用可能なファームウェアとE16にインストールされているOSを比較し、デバイスのファームウェアを更新します。\n\n\nストレージディレクトリを選択\n\nプロジェクトをドラッグアンドドロップしてアップロードまたはダウンロード\n\nOXI E16\n\n注\n\nOXI Appは複数のOXIデバイス用のツールです。デバイスは左上の「+」ボタンで選択できます。たとえば、OXI ONEとONE MkIIはすべてこのアプリに接続できます。また、楽器定義はアプリで管理でき、アプリで直接作成することもできます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 57,
+      "image": "/oxi-e16-manual/pages/page-057.png",
+      "title": "Page 57",
+      "sectionName": null,
+      "translation": "System 4\n\nシーン管理\n\nシーンをドラッグ&ドロップしてアップロードまたはダウンロードする\n\nデバイス上\t\tコンピューター上\n\n機器上のシーンと\nコンピューター間で\nシーンをドラッグ&ドロップ\n\nPCまたはMacから\nシーンをインポート\n\nシーンエディターで\n新しいシーンを作成\n\nシーンエディターで\nシーンを編集\n\nシーンを削除\n\nビューを更新\n\nE16デバイスのオンボード\nストレージメモリ\n\nPC/Macのオンボード\nハードドライブ\n\nPC/Macフォルダを開く\n\nシーンタブ\n\nシーンエディター\n\nPC/Macフォルダを割り当て\t\tデバイスを追加\n\n注釈\n\nストレージディレクトリを設定するオプションが利用可能であり、PC/Macに割り当てたフォルダをE16ファイルとデータのストレージロケーションとします。シーン「Scene」タブメニューのドラッグ&ドロップオプションを使用して、E16とPC/Mac間でシーンをコピーできます。\n\nAppシーンエディターはE16の設定とワークフローを大幅に高速化します。デバイスでの編集は非常に簡単ですが、Appは全てのセットアップデータを一箇所に表示し、更に素早く開始できるようにしています。E16を最初に設定するときはAppを使用し、その後に必要な個別の変更をデバイスで行うことをお勧めします。\n\nシーンアイコンは利用可能なシンボルライブラリから変更することもでき、またはアプリでアイコンをクリックして新しいアイコンを作成することができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 58,
+      "image": "/oxi-e16-manual/pages/page-058.png",
+      "title": "Page 58",
+      "sectionName": null,
+      "translation": "System\n\nNOTES\n\n4.2 Instrument Definitions\n\nInstrument Definitionは、MIDI CCマッピングを外部デバイスに事前に設定した構成です。外部デバイスのパラメーターを制御するために各CCを手動で設定する代わりに、選択されたEquipmentのInstrument Definitionがパラメーターを自動的にマッピングし、それらの名前を適用します。これにより時間が節約され、外部ギアに対するMIDI継続制御メッセージを使用する効率的な方法となります。\n\nOXI E16 Instrument Definitionは、任意のコントロールのDestination 1、2またはPush Destinationの設定で選択されます。このサンプルはMIDIで接続されたAudiothingies MicroMonsta2を示しており、CCコントロールはManual ConfigurationなしでE16から実行できます。Instrument Definitionを転送した後、E16を再起動して、E16で表示および利用可能にします。\n\nOXI AppはデータベースからInstrument Definitionをダウンロードし、定義ファイルをOXI E16とPC/Mac間で転送するために使用できます。\n\nデバイスのInstrument DefinitionはDestination 'Instrument'オプションで選択されます。\n\nコントロールのマッピングされたパラメーターは、'Parameter'の下でも利用可能です。\n\nDestination 1\n\nInstr.\n\nParam.\n\nType\n\nMicromons\n\nBank SEL\n\nCC　Abs\n\n+\n\nDrag and drop instruments to upload to device\n\nMicromonsta　Micromonsta\n\nLXR-02\n\nAnalog Heat\n\nFH-2\n\nDigitakt II\n\nMicrocost\n\nDigitone\n\nUno Drum\n\nOctatrack\n\nBass Station II\n\nOn Device　On Computer\n\nEmpty\n\nEmpty\n\nEmpty\n\nEmpty\n\nEmpty\n\nEmpty\n\nEmpty\n\nEmpty\n\nEmpty\n\n1\n\n2\n\n3\n\n4\n\n5\n\n6\n\n7\n\n8\n\n9\n\n10\n\nInstruments　Scenes　Firmware\n\nOXI E16\n\nNote\n\nInstrument Definitionはデバイス上でユーザーが設定できるものではありませんが、OXI Appで作成できます。これらは個別に作成してからAppを使用してOXI E16に読み込むことができます。メーカーがデバイスのCCマッピングを変更した場合、Instrument Definitionが元々設定されたとおりに機能しない可能性があります。Instrument Definitionはシーンとともに保存され、Appでバックアップできます。Instrument Editorに関するOXI Appマニュアルを参照してください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 59,
+      "image": "/oxi-e16-manual/pages/page-059.png",
+      "title": "Page 59",
+      "sectionName": null,
+      "translation": "System 4\n\nインストゥルメント定義\n\n現在、アプリを通じてダウンロード可能なインストゥルメント定義は以下のとおりです。このリストは利用可能な定義の大部分をキャプチャしていますが、さらに追加されるため、いつでも変更される可能性があります :-\n\nメーカー デバイス\n\nHologram Microcosm\n\nIK Multimedia Uno Synth Pro X\n\nIK Multimedia Uno Drum\n\nIK Multimedia Uno Synth\n\nIntelijel uMidi\n\nJomox Airbase 99\n\nKorg Arp 2600 M\n\nKorg Electribe ER-1\n\nKorg MS2000\n\nKorg NTS-1\n\nKorg Opsix\n\nKorg Wavestate\n\nKorg Minilogue\n\nKorg Minilogue XD\n\nKorg Monologue\n\nKorg Volca Bass\n\nKorg Volca Beats\n\nKorg Volca Drum\n\nKorg Volca FM\n\nKorg Volca Keys\n\nKorg Volca Kick\n\nKorg Volca Nubass\n\nKorg Volca Sample\n\nKorg Prologue\n\nKodamo Essence FM\n\nKurzweil K2661\n\nLPZW Tram 8\n\nMFB Synth II\n\nMFB Tanzbar 1\n\nMFB TanzbarLite\n\nMFB Tanzmous\n\nMake Noise O-Coast\n\nMeeBlip Geode\n\nMeeBlip Triode\n\nMelbourne Instruments Nina\n\nMeris LVX\n\nMeris Ottobit Jr\n\nMeris Polymoon\n\nModal Electronics ARGON8M\n\nModal Electronics COBALT5S\n\nModal Electronics CRAFTsynth2\n\nModal Electronics Craft\n\nModal Electronics Skulpt\n\nModor NF-1\n\nMoog Grandmother\n\nMoog Matriarch\n\nMoog Minitaur\n\nMoog Mother 32\n\nメーカー デバイス\n\nASM Hydrasynth\n\nAbildgaard Droid-3\n\nAccess Virus A\n\nAccess Virus TI\n\nArturia Microfreak\n\nArturia Minifreak\n\nArturia Polybrute\n\nAudiothingies Doctor A\n\nAudiothingies Micromonsta\n\nBehringer Deepmind 12\n\nBehringer Neutron\n\nBehringer Pro 800\n\nBehringer TD-3-MO\n\nBlack Corporation Deckard's Dream\n\nBlack Corporation Deckard's Dream Mk2\n\nConductive Labs NDLR\n\nDave Smith Instruments Evolver\n\nDave Smith Instruments OB-6\n\nDave Smith Instruments Prophet '08\n\nDave Smith Instruments Prophet 12\n\nDave Smith Instruments Prophet Rev 2\n\nDave Smith Instruments Prophet X (XL)\n\nDreadbox Nymphes\n\nDreadbox Typhon\n\nElektron Analog 4 MKII\n\nElektron Analog Heat\n\nElektron Analog Heat +FX\n\nElektron Analog Rtm MKII\n\nElektron Digitakt\n\nElektron Digitakt II\n\nElektron Digitone\n\nElektron MachineDrum\n\nElektron Model Cycles\n\nElektron MonoMachine\n\nElektron Octatrack\n\nElektron Syntakt\n\nElektron Model Samples\n\nEmpress Echosystem\n\nEmpress Reverb\n\nEnsoniq ASR-X Pro\n\nErica Synths LXR-02\n\nExpert Sleepers FH-2\n\nFlame Curve\n\nFlame Maander\n\nFred's Lab Buzzzy!\n\nGEM rp-x\n\nGSmusic E7\n\nGotharman Spazedrum Black",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 60,
+      "image": "/oxi-e16-manual/pages/page-060.png",
+      "title": "Page 60",
+      "sectionName": null,
+      "translation": "System 4\n\nメーカー\tデバイス\nMoog\tSirin\nMoog\tSub-Phatty\nMoog\tSubsequent 25\nMoog\tSubsequent 37\nMoog\tVoyager\nMutable Instruments\tShruthi\nNorand\tMono\nNord\tDrum 2\nNord\tDrum 3P\nNord Lead\t(Rack)\nNord Lead\t(Rack) 2x\nNord\tWave 2\nNovation\tBass Station II\nNovation\tBass Station Rack\nNovation\tCircuit\nNovation\tNova\nNovation\tSummit\nNovation\tPeak\nOTO Machines\tFX BAM\nOTO Machines\tFX BIM\nOTO Machines\tFX BOUM\nOXI Instruments\tCoral\nOberheim\tOB-6\nOberheim\tOB-X8\nPioneer\tToraiz AS-1\nPolyend\tTracker\nRed Panda\tParticle\nRed Panda\tRaster\nRoland\tD-05\nRoland\tGAIA SH-01\nRoland\tJD-XA\nRoland\tJD-XI\nRoland\tJP-08\nRoland\tJU-06\nRoland\tJU-06A\nRoland\tJV1010\nRoland\tJX-03\nRoland\tJX-08\nRoland\tJuno 60 Minerva\nRoland\tJupiter X (xM)\nRoland\tMC-101\nRoland\tMC-202\nRoland\tMKS-50\nRoland\tMX-1\nRoland\tS-1\nRoland\tSE-02\nRoland\tSH-01A\nRoland\tSH-4d\nRoland\tSystem 1 (1M)\nRoland\tSystem 8\n\nメーカー\tデバイス\nRoland\tTB-03\nRoland\tTB-3\nRoland\tTR-06\nRoland\tTR-08\nRoland\tTR-09\nRoland\tTR-6S\nRoland\tTR-8\nRoland\tTR-8S\nRoland\tVP-03\nRoland\tXV-5050\nSequential\tPro 3\nSequential\tProphet-6\nSequential\tTAKE 5\nSherman\tFilterbank\nSonicware\tLiven Lofi 12\nSonicware\tLiven XFM\nSonicware\tSmpltrek\nStrymon\tNightsky\nStrymon\tVolante\nStudio Electronics\tATC-1\nStudio Electronics\tSE-1X\nStudiologic\tSledge\nTC Electronic\tD-Two\nTasty Chips\tGr-1\nTeenage Engineering\tOP-1\nTeenage Engineering\tOP-Z\nTwisted Electronics\tMEGAfm\nTwisted Electronics\tTherapSID\nUDO Audio\tSuper 6\nWaldorf\tBlofeld\nWaldorf\tIridium\nWaldorf\tM\nWaldorf\tPulse 2\nWaldorf\tRocket\nWaldorf\tStreichfett\nYamaha\tReface CP\nYamaha\tReface CS\nYamaha\tReface DX\nYamaha\tReface YC",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

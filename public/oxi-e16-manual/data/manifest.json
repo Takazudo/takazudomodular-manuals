@@ -1,0 +1,40 @@
+{
+  "title": "OXI E16: Manual",
+  "brand": "OXI Instruments",
+  "version": "1.0.0",
+  "totalPages": 74,
+  "contentPages": 69,
+  "lastUpdated": "2026-01-11T11:05:12.293Z",
+  "source": {
+    "filename": "OXI E16 - User Manual.pdf",
+    "processedAt": "2026-01-11T11:04:54.552Z",
+    "imageDPI": 300,
+    "imageFormat": "png"
+  },
+  "parts": [
+    {
+      "part": "01",
+      "pageRange": [1, 30],
+      "file": "/oxi-e16-manual/data/part-01.json",
+      "sections": [],
+      "totalPages": 30,
+      "contentPages": 28
+    },
+    {
+      "part": "02",
+      "pageRange": [31, 60],
+      "file": "/oxi-e16-manual/data/part-02.json",
+      "sections": [],
+      "totalPages": 30,
+      "contentPages": 28
+    },
+    {
+      "part": "03",
+      "pageRange": [61, 74],
+      "file": "/oxi-e16-manual/data/part-03.json",
+      "sections": [],
+      "totalPages": 14,
+      "contentPages": 13
+    }
+  ]
+}
