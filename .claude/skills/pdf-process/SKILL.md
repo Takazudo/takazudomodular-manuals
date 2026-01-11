@@ -77,6 +77,8 @@ Run with a manual slug:
 
 This will execute all pipeline steps in order:
 
+**Phase 1: PDF Processing**
+
 0. **Ask User** - Collect manifest metadata (brand name, PDF title) from user
 1. **Validate** - Check slug parameter and source directory
 2. **Clean** - Remove all existing generated files (images, data, split PDFs)
@@ -88,7 +90,17 @@ This will execute all pipeline steps in order:
 8. **Manifest** - Create manifest.json
 9. **Update Manifest** - Add brand name and title to manifest (from Step 0)
 
-The entire process takes approximately 15-30 minutes for a 280-page manual.
+**Phase 2: Verification (AI-Powered)**
+
+10. **Build Production** - Run `pnpm build` for production build
+11. **Serve** - Start production server on port 8030
+12. **Capture** - Capture all pages using lightweight script
+13. **Verify** - AI verification of each page (compare PDF image vs translation)
+14. **Fix** - Fix extraction failures by regenerating text from images
+15. **Re-translate** - Re-translate pages that had extraction issues
+16. **Report** - Generate verification report
+
+The entire process takes approximately 20-40 minutes for a 280-page manual.
 
 ## Implementation Logic
 
@@ -399,6 +411,164 @@ Or use the Edit tool to update both fields:
 - The correct title appears on the manual page
 - The brand name appears on the manual index page
 
+### Step 8-16: Verification Phase (MANDATORY)
+
+**After all translation and build steps are complete, execute the verification phase directly (do NOT call /verify-translation as a separate skill).**
+
+#### Step 8: Build Production
+
+```bash
+pnpm build
+```
+
+This creates an optimized production build in `/out/` directory.
+
+#### Step 9: Start Production Server
+
+```bash
+# Start serve in background
+pnpm serve &
+
+# Wait for server to be ready
+sleep 3
+
+# Verify server is running (port 8030)
+curl -s -o /dev/null -w "%{http_code}" http://localhost:8030/manuals/$SLUG/page/1
+```
+
+#### Step 10: Capture All Pages
+
+**Use the lightweight capture script (NOT MCP Playwright):**
+
+```bash
+node .claude/skills/verify-translation/scripts/capture-pages.js \
+  --slug $SLUG \
+  --pages $TOTAL_PAGES \
+  --port 8030
+```
+
+This script:
+
+- Uses direct Playwright scripting (much lighter than MCP)
+- Captures all pages at 2000x1600 resolution
+- Saves to `__inbox/verify-{slug}-{date}-{session}/`
+- Outputs summary.json with results
+
+#### Step 11: AI-Powered Verification
+
+**For EACH captured page, perform visual verification:**
+
+1. **Read the screenshot** using the Read tool
+2. **Compare** the LEFT side (PDF image) with RIGHT side (translation)
+3. **Check** if translation covers ALL visible content in PDF image
+
+**Issues to detect:**
+
+| Issue | Description |
+|-------|-------------|
+| Missing header | PDF shows section header but translation starts mid-content |
+| Missing paragraphs | PDF has more paragraphs than translation shows |
+| Content order wrong | Translation starts from middle of page |
+| Extraction failure | Large portions of PDF text not in translation |
+
+**Record findings for each page:**
+
+```json
+{
+  "pageNum": 49,
+  "status": "needs_fix",
+  "issues": ["Missing header: 'Scenes 3'", "Missing paragraph"]
+}
+```
+
+#### Step 12: Fix Extraction Failures
+
+For each page flagged as needing fix:
+
+**12.1 Regenerate extracted text from PDF image:**
+
+Look at the PDF image (left side of screenshot) and extract ALL visible English text in correct reading order.
+
+**12.2 Update the extracted text file:**
+
+```bash
+Write to: public/$SLUG/processing/extracted/page-XXX.txt
+```
+
+**12.3 Re-translate the page:**
+
+```xml
+<invoke name="Task">
+  <parameter name="subagent_type">manual-translator</parameter>
+  <parameter name="description">Re-translate page XXX</parameter>
+  <parameter name="prompt">Translate page XXX of the manual.
+Source: /path/to/extracted/page-XXX.txt
+Output: /path/to/translations-draft/page-XXX.json
+Page: XXX, Total: YYY</parameter>
+</invoke>
+```
+
+#### Step 13: Rebuild After Fixes
+
+If any pages were fixed:
+
+```bash
+# Copy translations to expected location
+mkdir -p public/manuals/$SLUG/processing/translations-draft
+cp public/$SLUG/processing/translations-draft/*.json public/manuals/$SLUG/processing/translations-draft/
+
+# Rebuild pages.json
+pnpm run pdf:build --slug $SLUG
+
+# Copy back to correct location
+cp public/manuals/$SLUG/data/pages.json public/$SLUG/data/pages.json
+rm -rf public/manuals/
+
+# Format
+pnpm format:fix
+```
+
+#### Step 14: Stop Serve Process
+
+```bash
+lsof -ti:8030 | xargs kill -9 2>/dev/null || true
+```
+
+#### Step 15: Generate Report
+
+Output a verification report:
+
+```markdown
+## Translation Verification Report
+
+**Manual:** {slug}
+**Total Pages:** {totalPages}
+**Date:** {date}
+
+### Verification Results
+
+| Status | Count |
+|--------|-------|
+| Passed | XX |
+| Fixed | XX |
+
+### Pages Fixed
+
+| Page | Issues Found | Fix Applied |
+|------|--------------|-------------|
+| 35 | Missing header | Regenerated, re-translated |
+| 49 | Missing paragraph | Regenerated, re-translated |
+
+### Verification Complete
+
+All pages now match their PDF images.
+Manual is ready for deployment.
+```
+
+**Why verification is mandatory:**
+
+PDF text extraction (`pdf-parse`) can fail silently. The `manual-translator` subagent only sees extracted text, not images, so it cannot detect missing content. This verification step catches those failures.
+
 ---
 
 ## Quick Reference
@@ -406,34 +576,30 @@ Or use the Edit tool to update both fields:
 ### Run Full Pipeline
 
 ```bash
-# Run all steps
-pnpm run pdf:all --slug <slug>
+/pdf-process <slug>
 ```
 
-### Run Individual Steps
+This runs everything automatically including verification.
+
+### Individual Steps (for debugging)
 
 ```bash
-pnpm run pdf:clean --slug <slug>     # Step 0: Clean existing files
-pnpm run pdf:split --slug <slug>     # Step 1: Split PDF
-pnpm run pdf:render --slug <slug>    # Step 2: Render pages
-pnpm run pdf:extract --slug <slug>   # Step 3: Extract text
-# Step 4: Translation via Task tool (manual-translator subagents)
-pnpm run pdf:build --slug <slug>     # Step 5: Build JSON
-pnpm run pdf:manifest --slug <slug>  # Step 6: Create manifest
-pnpm dev                              # Step 7: Run dev server for verification
+pnpm run pdf:clean --slug <slug>     # Clean existing files
+pnpm run pdf:split --slug <slug>     # Split PDF
+pnpm run pdf:render --slug <slug>    # Render pages
+pnpm run pdf:extract --slug <slug>   # Extract text
+# Translation via Task tool (manual-translator subagents)
+pnpm run pdf:build --slug <slug>     # Build JSON
+pnpm run pdf:manifest --slug <slug>  # Create manifest
 ```
 
-### Verification Step
-
-After completing the pipeline, verify the output:
+### Manual Verification (if needed separately)
 
 ```bash
-# Start dev server
-pnpm dev
-
-# Open browser and verify
-# http://localhost:3100/manuals/{slug}/page/1
-# Confirm page 1 displays with translation
+pnpm build
+pnpm serve &
+node .claude/skills/verify-translation/scripts/capture-pages.js --slug <slug> --pages <total>
+# Then manually verify captured screenshots
 ```
 
 ## Requirements
