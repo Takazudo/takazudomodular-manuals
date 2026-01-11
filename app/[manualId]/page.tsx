@@ -92,7 +92,7 @@ export default async function ManualLandingPage({ params }: ManualLandingPagePro
         </h1>
 
         <nav className={navStyles}>
-          <ArrowLink href={getPagePath(manualId, 1)}>日本語訳マニュアルを読む</ArrowLink>
+          <ArrowLink href={getPagePath(manualId, 1)}>日本語訳付きマニュアルを読む</ArrowLink>
           <ArrowLink href={getManualAssetPath(manualId, 'original.pdf')} external>
             英語版オリジナル（PDF）
           </ArrowLink>
