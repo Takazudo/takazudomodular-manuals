@@ -399,7 +399,7 @@ pnpm run init-worktree issue-2-project-setup  # Missing merged PRs!
 
 ## Localhost Port Mapping for Development
 
-This port mapping is crucial for human-to-AI communication. When users reference localhost URLs (e.g., "check http://localhost:3100/"), use this mapping to understand which service and files are being referenced.
+This port mapping is crucial for human-to-AI communication. When users reference localhost URLs (e.g., "check http://localhost:3100/" or "check http://zmodmanuals.localhost:3100/"), use this mapping to understand which service and files are being referenced.
 
 ### Port Assignment Table
 
@@ -411,8 +411,8 @@ This port mapping is crucial for human-to-AI communication. When users reference
 
 ### URL to File Mapping Examples
 
-- `http://localhost:3100/manuals/oxi-one-mk2/` → Next.js app in `/app/`
-- `http://localhost:3100/manuals/oxi-one-mk2/page/1` → Manual page viewer
+- `http://localhost:3100/manuals/oxi-one-mk2/` or `http://zmodmanuals.localhost:3100/manuals/oxi-one-mk2/` → Next.js app in `/app/`
+- `http://zmodmanuals.localhost:3100/manuals/oxi-one-mk2/page/1` → Manual page viewer
 - `http://localhost:3110/doc/inbox/` → Documentation in `/doc/docs/inbox/`
 
 ### Port Management
