@@ -1,0 +1,17 @@
+{
+  "inbox": {
+    "pages": [
+      {
+        "docId": "inbox/design-system",
+        "title": "Design System",
+        "position": 100
+      },
+      {
+        "docId": "inbox/pdf-to-nextjs-architecture",
+        "title": "PDF Processing to Next.js Architecture",
+        "position": 999
+      }
+    ],
+    "subcategories": []
+  }
+}

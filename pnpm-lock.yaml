@@ -166,6 +166,9 @@ importers:
       '@docusaurus/types':
         specifier: ^3.9.2
         version: 3.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      gray-matter:
+        specifier: ^4.0.3
+        version: 4.0.3
       typescript:
         specifier: ~5.9.3
         version: 5.9.3
