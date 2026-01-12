@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 import { getNavigationState } from '@/lib/manual-data';
-import { getPagePath } from '@/lib/manual-config';
+import { getPagePath, getManualBasePath } from '@/lib/manual-config';
 
 interface KeyboardNavigationProps {
   currentPage: number;
@@ -13,7 +13,7 @@ interface KeyboardNavigationProps {
 
 /**
  * Keyboard navigation for manual pages
- * - Left arrow: Previous page
+ * - Left arrow: Previous page (or top page if on page 1)
  * - Right arrow: Next page
  */
 export function KeyboardNavigation({ currentPage, totalPages, manualId }: KeyboardNavigationProps) {
@@ -34,7 +34,10 @@ export function KeyboardNavigation({ currentPage, totalPages, manualId }: Keyboa
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Ignore if user is typing in an input/textarea/select or contentEditable element
-      const target = e.target as HTMLElement;
+      const target = e.target;
+      if (!(target instanceof HTMLElement)) {
+        return;
+      }
       if (
         target.tagName === 'INPUT' ||
         target.tagName === 'TEXTAREA' ||
@@ -47,11 +50,14 @@ export function KeyboardNavigation({ currentPage, totalPages, manualId }: Keyboa
       const { currentPage, totalPages, manualId } = stateRef.current;
       const { canGoToPrev, canGoToNext } = getNavigationState(currentPage, totalPages);
 
-      // Left arrow: Previous page
+      // Left arrow: Previous page (or top page if on page 1)
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
         if (canGoToPrev) {
           routerRef.current.push(getPagePath(manualId, currentPage - 1));
+        } else if (currentPage === 1) {
+          // On first page, go back to manual top page
+          routerRef.current.push(getManualBasePath(manualId));
         }
       }
       // Right arrow: Next page
