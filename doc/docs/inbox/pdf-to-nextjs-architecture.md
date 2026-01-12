@@ -2,56 +2,55 @@
 
 ## Overview
 
-This document describes the architecture for processing PDF manuals and integrating them with the Next.js application. The system is designed to handle complete PDF updates, ensuring all data is regenerated cleanly when a new manual version is released.
+This document describes the architecture for processing PDF manuals and integrating them with the Next.js application. The system supports **multiple manuals** with independent processing pipelines, producing self-contained data for each manual.
 
 ## Design Goals
 
-1. **Complete Rebuild**: When PDF updates, regenerate ALL data (images, translations, metadata)
-2. **Clean Separation**: Clear boundary between PDF processing and Next.js data consumption
-3. **Atomic Updates**: All-or-nothing approach - either complete success or rollback
-4. **Verifiable Output**: Built-in validation to ensure data integrity
-5. **Simple Workflow**: Single command to process entire PDF
+1. **Multi-Manual Support**: Process any number of PDF manuals with identical workflows
+2. **Slug-Based Architecture**: All paths computed dynamically from manual slug
+3. **Clean Separation**: Clear boundary between PDF processing and Next.js data consumption
+4. **Build-Time Bundling**: JSON data imported as ES modules (static export compatible)
+5. **Simple Workflow**: Single command to process entire PDF (`/pdf-process {slug}`)
 
 ## Architecture Diagram
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Source PDF                                                   │
-│ manual-pdf/OXI-ONE-MKII-Manual.pdf (272 pages)              │
+│ manual-pdf/{slug}/*.pdf (any filename)                      │
 └───────────────────────┬─────────────────────────────────────┘
                         │
                         ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Phase 1: PDF Processing (Intermediate Data)                 │
 │                                                              │
-│  pdf:split    → manual-pdf/parts/part-*.pdf                 │
-│  pdf:render   → public/oxi-one-mk2/pages/page-*.png │
-│  pdf:extract  → public/oxi-one-mk2/processing/      │
-│                 extracted/page-*.txt                         │
-│  pdf:translate→ public/oxi-one-mk2/processing/      │
-│                 translations-draft/page-*.json               │
+│  pdf:split    → manual-pdf/{slug}/pages/page-*.pdf          │
+│  pdf:render   → public/{slug}/pages/page-*.png              │
+│  pdf:extract  → public/{slug}/processing/extracted/         │
+│                 page-*.txt                                   │
+│  pdf:translate→ public/{slug}/processing/translations-draft/│
+│                 page-*.json                                  │
 └───────────────────────┬─────────────────────────────────────┘
                         │
                         ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Phase 2: Build for Next.js (Final Data)                     │
 │                                                              │
-│  pdf:build    → public/oxi-one-mk2/data/part-*.json│
-│               → Combines pages, adds metadata               │
+│  pdf:build    → public/{slug}/data/pages.json               │
+│               → Combines all pages with translations        │
 │                                                              │
-│  pdf:manifest → public/oxi-one-mk2/data/           │
-│                 manifest.json                                │
-│               → Master index with all parts                 │
+│  pdf:manifest → public/{slug}/data/manifest.json            │
+│               → Metadata about the manual                   │
 └───────────────────────┬─────────────────────────────────────┘
                         │
                         ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Next.js Application (Data Consumer)                         │
 │                                                              │
-│  • Imports JSON at build time (ES modules)                  │
-│  • Data bundled into HTML (static export)                   │
-│  • Serves images from /manuals/oxi-one-mk2/pages/          │
-│  • Renders pages at /manuals/oxi-one-mk2/page/[1-272]      │
+│  • Imports JSON via manual-registry.ts (ES modules)         │
+│  • Data bundled into HTML at build time                     │
+│  • Serves images from /manuals/{slug}/pages/                │
+│  • Renders pages at /manuals/{slug}/page/[1-N]              │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -60,142 +59,136 @@ This document describes the architecture for processing PDF manuals and integrat
 ```
 /
 ├── manual-pdf/                             # Source PDFs
-│   ├── OXI-ONE-MKII-Manual.pdf             # Original PDF (272 pages)
-│   ├── pages/                              # Split page PDFs (gitignored)
-│   └── parts/                              # Split part PDFs (gitignored)
+│   └── {slug}/                             # Per-manual directory
+│       ├── *.pdf                           # Source PDF (any filename)
+│       └── pages/                          # Split page PDFs (gitignored)
+│           ├── page-001.pdf
+│           └── ... (page-XXX.pdf)
 │
-├── public/                         # Multi-manual structure
-│   └── oxi-one-mk2/                        # OXI ONE MKII manual
+├── public/                                 # Output directory
+│   └── {slug}/                             # Per-manual data
 │       ├── data/                           # Final: Next.js consumable data
-│       │   ├── manifest.json               # Master index
-│       │   ├── part-01.json                # Pages 1-28 with full metadata
-│       │   ├── part-02.json                # Pages 29-56 with full metadata
-│       │   └── ... (part-10.json)          # Pages 245-272
+│       │   ├── manifest.json               # Manual metadata
+│       │   └── pages.json                  # All pages with translations
 │       │
-│       ├── pages/                          # Page images (150 DPI, PNG)
-│       │   ├── page-001.png                # Global page numbering
-│       │   ├── page-002.png
-│       │   └── ... (page-272.png)
+│       ├── pages/                          # Page images (300 DPI, PNG)
+│       │   ├── page-001.png
+│       │   └── ... (page-XXX.png)
 │       │
 │       └── processing/                     # Intermediate files (gitignored)
 │           ├── extracted/                  # Raw text from PDF
 │           │   ├── page-001.txt
-│           │   └── ... (page-272.txt)
+│           │   └── ... (page-XXX.txt)
 │           │
-│           └── translations-draft/         # Raw translations
+│           └── translations-draft/         # Translation drafts
 │               ├── page-001.json
-│               └── ... (page-272.json)
+│               └── ... (page-XXX.json)
+│
+├── lib/                                    # Next.js data access layer
+│   ├── manual-registry.ts                  # Central registry of all manuals
+│   ├── manual-data.ts                      # Data access functions
+│   ├── manual-config.ts                    # Route/asset path helpers
+│   └── types/
+│       └── manual.ts                       # TypeScript interfaces
 │
 └── scripts/
-    ├── pdf-split.js
-    ├── pdf-render-pages.js
-    ├── pdf-extract-text.js
-    ├── pdf-translate-page-by-page.js
-    ├── pdf-build.js                        # Build final JSON from drafts
-    ├── pdf-manifest.js                     # Generate manifest
+    ├── pdf-split.js                        # Split PDF into pages
+    ├── pdf-render-pages.js                 # Render pages to PNG
+    ├── pdf-extract-text.js                 # Extract text per page
+    ├── pdf-build.js                        # Build pages.json
+    ├── pdf-manifest.js                     # Generate manifest.json
     ├── pdf-clean.js                        # Clean generated files
-    └── migrate-to-multi-manual.js          # Migration script
+    └── lib/
+        └── pdf-config-resolver.js          # Slug-based path resolution
 ```
 
-**Multi-Manual Architecture:**
+## Currently Supported Manuals
 
-- Each manual is self-contained under `/public/{manual-id}/`
-- Final data (JSON + images) committed to repository
-- Processing files are gitignored (can delete after deploy)
-- Ready for adding more manuals with same structure
+The system currently supports **8 manuals**:
 
-**Page-by-Page Processing:**
-
-- Extract text per page (not per part) → `page-001.txt`
-- Translate each page individually → `page-001.json`
-- Build combines pages into parts → `part-01.json` (28 pages each)
+| Slug | Manual | Pages |
+|------|--------|-------|
+| `oxi-one-mk2` | OXI ONE MKII Manual | 272 |
+| `oxi-coral` | OXI Coral Manual | - |
+| `oxi-e16-manual` | OXI E16 Manual | - |
+| `oxi-e16-quick-start` | OXI E16 Quick Start | - |
+| `addac104-tnetw` | ADDAC104 VC T-Networks | 5 |
+| `addac106-tnoise` | ADDAC106 T-Noise | - |
+| `addac107-acids` | ADDAC107 Acids | - |
+| `addac112-looper` | ADDAC112 Looper | - |
 
 ## Data Formats
 
 ### manifest.json
 
-Master index file that Next.js reads to understand the manual structure.
+Metadata file describing the manual.
 
 ```json
 {
-  "title": "OXI ONE MKII Manual",
+  "title": "OXI ONE MKII: Manual",
+  "brand": "OXI Instruments",
   "version": "1.0.0",
   "totalPages": 272,
-  "lastUpdated": "2026-01-03T00:00:00Z",
+  "contentPages": 260,
+  "lastUpdated": "2026-01-03T16:35:35.555Z",
+  "updatedAt": "20260112",
   "source": {
     "filename": "OXI-ONE-MKII-Manual.pdf",
-    "processedAt": "2026-01-03T00:00:00Z"
-  },
-  "parts": [
-    {
-      "part": "01",
-      "pageRange": [1, 30],
-      "file": "/data/translations/part-01.json",
-      "sections": ["Introduction", "Getting Started"]
-    },
-    {
-      "part": "02",
-      "pageRange": [31, 60],
-      "file": "/data/translations/part-02.json",
-      "sections": ["Sequencer Basics"]
-    }
-  ]
+    "processedAt": "2026-01-03T16:35:30.894Z",
+    "imageDPI": 300,
+    "imageFormat": "png"
+  }
 }
 ```
 
-### part-XX.json
+### pages.json
 
-Per-part data file with page-level details.
+Single file containing all pages with translations.
 
 ```json
 {
-  "part": "01",
-  "pageRange": [1, 28],
-  "totalPages": 28,
   "metadata": {
-    "processedAt": "2025-01-05T00:00:00Z",
+    "processedAt": "2026-01-03T16:55:27.791Z",
     "translationMethod": "claude-code-subagent-page-by-page",
     "imageFormat": "png",
-    "imageDPI": 150
+    "imageDPI": 300
   },
   "pages": [
     {
       "pageNum": 1,
-      "image": "/manuals/oxi-one-mk2/pages/page-001.png",
+      "image": "/oxi-one-mk2/pages/page-001.png",
       "title": "Page 1",
       "sectionName": null,
-      "translation": "# OXI ONE MKII Manual\n\n## 表紙\n\n...",
+      "translation": "OXI ONE MKII公式ユーザーマニュアル v1.0",
       "hasContent": true,
       "tags": []
     },
     {
       "pageNum": 2,
-      "image": "/manuals/oxi-one-mk2/pages/page-002.png",
+      "image": "/oxi-one-mk2/pages/page-002.png",
       "title": "Page 2",
       "sectionName": null,
-      "translation": "## ワークフロー 2\n\n...",
-      "hasContent": true,
+      "translation": "",
+      "hasContent": false,
       "tags": []
     }
   ]
 }
 ```
 
-### translations-draft/part-XX.json (Intermediate)
+### translations-draft/page-XXX.json (Intermediate)
 
-Raw translation output before building final format.
+Per-page translation output from Claude Code subagents.
 
 ```json
 {
-  "part": "01",
-  "pageRange": [1, 30],
-  "originalText": "...",
-  "translation": "...",
+  "pageNum": 1,
+  "originalText": "OXI ONE MKII Official User Manual v1.0...",
+  "translation": "OXI ONE MKII公式ユーザーマニュアル v1.0...",
   "metadata": {
-    "translatedAt": "2026-01-03T00:00:00Z",
+    "translatedAt": "2026-01-03T16:35:30.894Z",
     "method": "claude-code-subagent",
-    "agent": "manual-translator",
-    "taskId": "a974a4d"
+    "agent": "manual-translator"
   }
 }
 ```
@@ -204,59 +197,49 @@ Raw translation output before building final format.
 
 ### Phase 1: PDF Processing (Intermediate Data)
 
-These steps create intermediate data that will be refined in Phase 2.
-
 ```bash
-# 1. Split PDF into parts (30 pages each)
-pnpm run pdf:split
-# Output: manual-pdf/parts/part-01.pdf, part-02.pdf, ...
+# 1. Split PDF into individual page PDFs
+pnpm run pdf:split --slug oxi-one-mk2
+# Output: manual-pdf/oxi-one-mk2/pages/page-001.pdf, page-002.pdf, ...
 
 # 2. Render pages to PNG images at 300 DPI
-pnpm run pdf:render
-# Output: public/manual/pages/page_001.png, page_002.png, ...
+pnpm run pdf:render --slug oxi-one-mk2
+# Output: public/oxi-one-mk2/pages/page-001.png, page-002.png, ...
 
-# 3. Extract text from each part
-pnpm run pdf:extract
-# Output: data/extracted/part-01.txt, part-02.txt, ...
+# 3. Extract text from each page
+pnpm run pdf:extract --slug oxi-one-mk2
+# Output: public/oxi-one-mk2/processing/extracted/page-001.txt, ...
 
-# 4. Translate text to Japanese using subagents
-pnpm run pdf:translate
-# Output: data/translations-draft/part-01.json, part-02.json, ...
+# 4. Translate pages to Japanese using Claude Code subagents
+pnpm run pdf:translate --slug oxi-one-mk2
+# Output: public/oxi-one-mk2/processing/translations-draft/page-001.json, ...
+# Uses 5 parallel workers
+# Cost: ~$5-10 per 280-page manual
+# Time: 15-30 minutes
 ```
 
 ### Phase 2: Build for Next.js (Final Data)
 
-These steps transform intermediate data into Next.js-consumable format.
-
 ```bash
-# 5. Build final part JSON files with metadata
-pnpm run pdf:build
-# Input:  data/translations-draft/part-*.json
-# Output: data/translations/part-01.json, part-02.json, ...
-# - Adds page titles, section names, tags
-# - Restructures translation text
-# - Adds metadata fields
+# 5. Build pages.json from translation drafts
+pnpm run pdf:build --slug oxi-one-mk2
+# Input:  public/oxi-one-mk2/processing/translations-draft/page-*.json
+# Output: public/oxi-one-mk2/data/pages.json
 
 # 6. Generate manifest.json
-pnpm run pdf:manifest
-# Input:  data/translations/part-*.json
-# Output: data/translations/manifest.json
-# - Scans all part files
-# - Generates master index
-# - Calculates totals
+pnpm run pdf:manifest --slug oxi-one-mk2
+# Input:  public/oxi-one-mk2/data/pages.json
+# Output: public/oxi-one-mk2/data/manifest.json
 ```
 
-### Phase 3: Verification (Optional)
+### Complete Pipeline
 
 ```bash
-# Verify all generated files
-pnpm run pdf:verify
-# Checks:
-# - All expected files exist
-# - JSON structure is valid
-# - Image files have correct dimensions
-# - Page numbering is continuous
-# - No missing translations
+# Process entire manual (all 6 steps)
+pnpm run pdf:all --slug oxi-one-mk2
+
+# Or use Claude Code skill (recommended)
+/pdf-process oxi-one-mk2
 ```
 
 ## Command Reference
@@ -264,124 +247,222 @@ pnpm run pdf:verify
 ### Main Workflow
 
 ```bash
-# Complete PDF processing (recommended)
-pnpm run pdf:all
-# Runs: split → render → extract → translate → build → manifest
+# Complete PDF processing (all steps)
+pnpm run pdf:all --slug {slug}
 
-# Clean all generated files (before reprocessing)
-pnpm run pdf:clean
-# Removes:
-# - public/oxi-one-mk2/pages/*
-# - public/oxi-one-mk2/processing/extracted/*
-# - public/oxi-one-mk2/processing/translations-draft/*
-# - public/oxi-one-mk2/data/*
-# - manual-pdf/pages/*
-# - manual-pdf/parts/*
+# Claude Code skill (same as above but with progress tracking)
+/pdf-process {slug}
+
+# Clean all generated files
+pnpm run pdf:clean --slug {slug}
 ```
 
 ### Individual Steps
 
+All scripts accept `--slug` parameter:
+
 ```bash
-pnpm run pdf:split       # Step 1: Split PDF
-pnpm run pdf:render      # Step 2: Render images
-pnpm run pdf:extract     # Step 3: Extract text
-pnpm run pdf:translate   # Step 4: Translate to Japanese
-pnpm run pdf:build       # Step 5: Build final JSON
-pnpm run pdf:manifest    # Step 6: Generate manifest
-pnpm run pdf:verify      # Validation: Check output
+pnpm run pdf:split --slug {slug}       # Step 1: Split PDF
+pnpm run pdf:render --slug {slug}      # Step 2: Render images
+pnpm run pdf:extract --slug {slug}     # Step 3: Extract text
+pnpm run pdf:translate --slug {slug}   # Step 4: Translate
+pnpm run pdf:build --slug {slug}       # Step 5: Build pages.json
+pnpm run pdf:manifest --slug {slug}    # Step 6: Generate manifest
 ```
+
+## Configuration
+
+### pdf-config.json
+
+Global settings for all manuals:
+
+```json
+{
+  "settings": {
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "translationModel": "claude-sonnet-4-5-20250929",
+    "maxRetries": 3,
+    "parallelProcessing": false
+  }
+}
+```
+
+### pdf-config-resolver.js
+
+Dynamically computes all paths from slug:
+
+```javascript
+// Example resolved config for slug "oxi-one-mk2"
+{
+  slug: 'oxi-one-mk2',
+  sourcePdf: '/root/manual-pdf/oxi-one-mk2/OXI ONE MKII Manual.pdf',
+  input: {
+    pdfDirectory: 'manual-pdf/oxi-one-mk2',
+    pdfPattern: '*.pdf'
+  },
+  output: {
+    pages: 'manual-pdf/oxi-one-mk2/pages',
+    images: 'public/oxi-one-mk2/pages',
+    extracted: 'public/oxi-one-mk2/processing/extracted',
+    translationsDraft: 'public/oxi-one-mk2/processing/translations-draft',
+    translations: 'public/oxi-one-mk2/data'
+  },
+  settings: { /* from pdf-config.json */ }
+}
+```
+
+**Key features:**
+
+- No hardcoded paths in scripts
+- Validates slug format (alphanumeric + hyphens only)
+- Finds first PDF file in source directory
+- All paths computed from slug
 
 ## Next.js Integration
 
-### How Next.js Consumes the Data
+### Manual Registry (lib/manual-registry.ts)
 
-#### 1. Build-Time Data Import (Static Export Compatible)
+Central hub that imports all manual data at build time:
 
 ```typescript
-// lib/manual-data.ts
-import manifestDataRaw from '@/public/oxi-one-mk2/data/manifest.json';
-import part01DataRaw from '@/public/oxi-one-mk2/data/part-01.json';
-import part02DataRaw from '@/public/oxi-one-mk2/data/part-02.json';
-// ... part-03 through part-10
+// Explicit imports for each manual
+import oxiOneMk2Manifest from '@/public/oxi-one-mk2/data/manifest.json';
+import oxiOneMk2Pages from '@/public/oxi-one-mk2/data/pages.json';
+import addac104Manifest from '@/public/addac104-tnetw/data/manifest.json';
+import addac104Pages from '@/public/addac104-tnetw/data/pages.json';
+// ... more manuals
 
-// Type-safe wrappers
-const manifestData = manifestDataRaw as unknown as ManualManifest;
-const part01Data = part01DataRaw as unknown as ManualPart;
-// ... part-02 through part-10
-
-// Part data mapping
-const partDataMap: Record<string, ManualPart> = {
-  '01': part01Data,
-  '02': part02Data,
-  // ... 03 through 10
+const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
+  'oxi-one-mk2': {
+    manifest: oxiOneMk2Manifest as unknown as ManualManifest,
+    pages: oxiOneMk2Pages as unknown as ManualPagesData,
+  },
+  'addac104-tnetw': {
+    manifest: addac104Manifest as unknown as ManualManifest,
+    pages: addac104Pages as unknown as ManualPagesData,
+  },
+  // ... more manuals
 };
 
-export function getManifest(): ManualManifest {
-  return manifestData;
+// Exported functions
+export function getManifest(manualId: string): ManualManifest;
+export function getPagesData(manualId: string): ManualPagesData;
+export function getAvailableManuals(): string[];
+export function isValidManual(manualId: string): boolean;
+```
+
+**Why explicit imports:**
+
+- Required for Next.js static export (`output: 'export'`)
+- Type-safe with TypeScript
+- Data bundled into HTML at build time
+- No runtime fetch needed
+
+### Data Access Layer (lib/manual-data.ts)
+
+Wrapper around registry with utility functions:
+
+```typescript
+// Get manifest for a manual
+export function getManifest(manualId: string): ManualManifest;
+
+// Get all pages (cached per manual)
+export function getAllPages(manualId: string): ManualPage[];
+
+// Get single page
+export function getManualPage(manualId: string, pageNum: number): ManualPage | null;
+
+// Get total page count
+export function getTotalPages(manualId: string): number;
+
+// Check if page exists
+export function pageExists(manualId: string, pageNum: number): boolean;
+
+// For generateStaticParams()
+export function getAllPageNumbers(manualId: string): number[];
+```
+
+### TypeScript Interfaces (lib/types/manual.ts)
+
+```typescript
+export interface ManualPage {
+  pageNum: number;
+  image: string;
+  title: string;
+  sectionName: string | null;
+  translation: string;
+  hasContent: boolean;
+  tags?: string[];
 }
 
-export function getManualPart(partNum: string): ManualPart {
-  const partData = partDataMap[partNum];
-  if (!partData) {
-    throw new Error(`Manual part ${partNum} not found`);
-  }
-  return partData;
+export interface ManualPagesData {
+  metadata: {
+    processedAt: string;
+    translationMethod: string;
+    imageFormat: string;
+    imageDPI: number;
+  };
+  pages: ManualPage[];
 }
 
-export function getManualPage(pageNum: number): ManualPage | null {
-  // Find which part contains this page
-  const partInfo = getPartInfoForPage(pageNum);
-  if (!partInfo) return null;
-
-  // Load the part data
-  const part = getManualPart(partInfo.part);
-
-  // Find the page within the part
-  const page = part.pages.find(p => p.pageNum === pageNum);
-  return page || null;
+export interface ManualManifest {
+  title: string;
+  brand: string;
+  version?: string;
+  totalPages: number;
+  contentPages?: number;
+  lastUpdated?: string;
+  updatedAt?: string;
+  source?: {
+    filename: string;
+    processedAt: string;
+    imageDPI: number;
+    imageFormat: string;
+  };
 }
 ```
 
-**Why Build-Time Imports:**
-
-- ✅ Compatible with Next.js static export (`output: 'export'`)
-- ✅ Data bundled into HTML at build time (no runtime fetch)
-- ✅ Fast page loads (no network requests)
-- ✅ Works offline after initial load
-
-#### 2. Page Component
+### Page Component
 
 ```typescript
-// app/manuals/oxi-one-mk2/page/[pageNum]/page.tsx
-export async function generateStaticParams() {
-  const manifest = await getManifestData();
+// app/[manualId]/page/[pageNum]/page.tsx
 
-  return Array.from({ length: manifest.totalPages }, (_, i) => ({
-    pageNum: String(i + 1),
-  }));
+export async function generateStaticParams() {
+  const manuals = getAvailableManuals();
+  const params = [];
+
+  for (const manualId of manuals) {
+    const totalPages = getTotalPages(manualId);
+    for (let i = 1; i <= totalPages; i++) {
+      params.push({ manualId, pageNum: String(i) });
+    }
+  }
+
+  return params;
 }
 
 export default async function ManualPage({
   params
 }: {
-  params: { pageNum: string }
+  params: Promise<{ manualId: string; pageNum: string }>
 }) {
-  const pageNum = parseInt(params.pageNum);
-  const pageData = await getPageData(pageNum);
+  const { manualId, pageNum: pageNumStr } = await params;
+  const pageNum = parseInt(pageNumStr);
 
+  if (!isValidManual(manualId)) {
+    notFound();
+  }
+
+  const pageData = getManualPage(manualId, pageNum);
   if (!pageData) {
     notFound();
   }
 
   return (
     <div className="manual-page">
-      <img
-        src={pageData.image}
-        alt={`Page ${pageNum}`}
-        className="page-image"
-      />
-      <div className="page-translation">
-        <h1>{pageData.title}</h1>
+      <img src={pageData.image} alt={`Page ${pageNum}`} />
+      <div className="translation">
         <MarkdownRenderer content={pageData.translation} />
       </div>
     </div>
@@ -389,13 +470,52 @@ export default async function ManualPage({
 }
 ```
 
-#### 3. Runtime (Client-side Navigation)
+## Adding a New Manual
 
-When user navigates between pages, Next.js:
+### Step-by-Step Workflow
 
-1. Uses pre-rendered static pages (fast)
-2. Lazy-loads part JSON only when needed
-3. Caches loaded parts for subsequent pages in same part
+1. **Create source directory:**
+
+   ```bash
+   mkdir manual-pdf/{new-slug}
+   ```
+
+2. **Add PDF file** (any filename):
+
+   ```bash
+   cp ~/path/to/manual.pdf manual-pdf/{new-slug}/
+   ```
+
+3. **Process the PDF:**
+
+   ```bash
+   /pdf-process {new-slug}
+   ```
+
+4. **Update manual registry** (`lib/manual-registry.ts`):
+
+   ```typescript
+   // Add imports
+   import newManualManifest from '@/public/new-slug/data/manifest.json';
+   import newManualPages from '@/public/new-slug/data/pages.json';
+
+   // Add to registry
+   const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
+     // ... existing manuals
+     'new-slug': {
+       manifest: newManualManifest as unknown as ManualManifest,
+       pages: newManualPages as unknown as ManualPagesData,
+     },
+   };
+   ```
+
+5. **Build and deploy:**
+
+   ```bash
+   pnpm build
+   ```
+
+**Time estimate:** ~30 minutes (translation: 15-30 min, other steps: ~5 min)
 
 ## Update Workflow
 
@@ -403,319 +523,139 @@ When user navigates between pages, Next.js:
 
 ```bash
 # 1. Place new PDF (overwrites old one)
-cp ~/Downloads/OXI-ONE-MKII-Manual-v2.0.pdf \
-   manual-pdf/OXI-ONE-MKII-Manual.pdf
+cp ~/Downloads/Manual-v2.0.pdf manual-pdf/{slug}/
 
-# 2. Clean all old generated files
-pnpm run pdf:clean
+# 2. Clean old generated files
+pnpm run pdf:clean --slug {slug}
 
-# 3. Process entire PDF (recreate everything)
-pnpm run pdf:all
+# 3. Process entire PDF
+/pdf-process {slug}
 
-# 4. Verify output
-pnpm run pdf:verify
-
-# 5. Test locally
+# 4. Test locally
 pnpm dev
-# Navigate to http://localhost:3100/manuals/oxi-one-mk2/page/1
-# Check a few pages to ensure rendering is correct
+# Navigate to http://localhost:3100/manuals/{slug}/page/1
 
-# 6. Commit and deploy
+# 5. Commit and deploy
 git add .
-git commit -m "docs: update manual to version 2.0"
+git commit -m "docs: update {slug} manual to version 2.0"
 git push origin main
 ```
 
-### What Happens During `pdf:all`
+## Git Ignore Strategy
 
-```bash
-# 1. Split (5 seconds)
-Splitting manual-pdf/OXI-ONE-MKII-Manual.pdf...
-✓ Created 10 parts (30 pages each)
+**Committed to Git:**
 
-# 2. Render (2-3 minutes)
-Rendering 272 pages at 300 DPI...
-✓ Rendered 272 PNG images (total: ~200MB)
+- `/public/{slug}/data/` - Final JSON files (manifest.json, pages.json)
+- `/public/{slug}/pages/` - Rendered PNG images
+- `/lib/` - Data loading code
+- `/scripts/` - Processing scripts
 
-# 3. Extract (30 seconds)
-Extracting text from 10 parts...
-✓ Extracted 10 text files
+**Gitignored (Temporary):**
 
-# 4. Translate (15-30 minutes)
-Translating 10 parts using 4 parallel subagents...
-Batch 1: parts 01-04 (4 agents in parallel)
-Batch 2: parts 05-08 (4 agents in parallel)
-Batch 3: parts 09-10 (2 agents in parallel)
-✓ Translated 272 pages to Japanese
+- `/manual-pdf/{slug}/pages/` - Split page PDFs
+- `/public/{slug}/processing/` - Intermediate files
+- `/__inbox/` - Temporary reports
+- `/.next/`, `/out/` - Build outputs
 
-# 5. Build (10 seconds)
-Building final JSON files with metadata...
-✓ Created 10 part JSON files
+## File Naming Conventions
 
-# 6. Manifest (2 seconds)
-Generating manifest.json...
-✓ Created manifest with 272 pages
+### Page Files
 
-# Total time: ~20-35 minutes
-```
+- **PDFs:** `page-001.pdf`, `page-002.pdf`, ... (zero-padded, 3 digits)
+- **PNG Images:** `page-001.png`, `page-002.png`, ...
+- **Text:** `page-001.txt`, `page-002.txt`, ...
+- **Translations:** `page-001.json`, `page-002.json`, ...
 
-## Missing Pieces (To Implement)
+### Manual Slugs
 
-### 1. pdf:build script ✅ IMPLEMENTED
+- **Format:** Lowercase with hyphens (e.g., `oxi-one-mk2`, `addac104-tnetw`)
+- **Validation:** Alphanumeric + hyphens only
+- **Used in:** Directory names, URLs, registry keys
 
-**Purpose**: Combine page-by-page translations into part JSON files
+## URL Structure
 
-**Location**: `scripts/pdf-build.js`
+- **Base path:** `/manuals/` (configured in `next.config.js`)
+- **Manual index:** `/manuals/{slug}/`
+- **Page viewer:** `/manuals/{slug}/page/{pageNum}`
 
-**Input**: `public/oxi-one-mk2/processing/translations-draft/page-*.json`
+**Examples:**
 
-**Output**: `public/oxi-one-mk2/data/part-*.json`
-
-**Responsibilities**:
-
-- Read all page translation drafts (page-001.json to page-272.json)
-- Group pages into parts (28 pages per part)
-- Add metadata fields for each page
-- Build part JSON structure with all pages
-- Handle missing translations gracefully
-
-**Status**: ✅ Fully implemented, page-by-page processing
-
-### 2. pdf:manifest script ✅ IMPLEMENTED
-
-**Purpose**: Generate master manifest.json
-
-**Location**: `scripts/pdf-manifest.js`
-
-**Input**: `public/oxi-one-mk2/data/part-*.json`
-
-**Output**: `public/oxi-one-mk2/data/manifest.json`
-
-**Responsibilities**:
-
-- Scan all part JSON files
-- Extract page ranges and metadata
-- Calculate total pages
-- Generate master index with part information
-
-**Status**: ✅ Fully implemented
-
-### 3. pdf:clean script ✅ IMPLEMENTED
-
-**Purpose**: Remove all generated files before reprocessing
-
-**Location**: `scripts/pdf-clean.js`
-
-**Responsibilities**:
-
-- Delete public/oxi-one-mk2/pages/*
-- Delete public/oxi-one-mk2/processing/extracted/*
-- Delete public/oxi-one-mk2/processing/translations-draft/*
-- Delete public/oxi-one-mk2/data/*
-- Delete manual-pdf/pages/*
-- Delete manual-pdf/parts/*
-- Keep source PDF in manual-pdf/
-- Recreate empty directories for next processing
-
-**Status**: ✅ Fully implemented, using paths from pdf-config.json
-
-### 4. pdf:verify script
-
-**Purpose**: Validate all generated files
-
-**Checks**:
-
-- All expected files exist
-- JSON structure is valid
-- Images have correct dimensions (300 DPI)
-- Page numbering is continuous
-- No missing translations
-- manifest.json matches part files
-
-**Implementation**:
-```javascript
-// scripts/pdf-verify.js
-// Check file existence
-// Validate JSON schemas
-// Check image dimensions
-// Verify page count matches
-```
-
-### 5. Page Metadata Extraction
-
-**Challenge**: How to determine page titles and section names?
-
-**Options**:
-
-**Option A: Heuristic Parsing**
-
-- Parse first heading from translation markdown
-- Use page number patterns to detect sections
-- Pros: Fully automated
-- Cons: May not be 100% accurate
-
-**Option B: Manual Configuration**
-
-- Create `page-metadata.json` with manual annotations
-- Reference during build
-- Pros: Accurate, controlled
-- Cons: Manual work required
-
-**Option C: Hybrid**
-
-- Auto-extract titles from markdown
-- Allow manual overrides via config file
-- Pros: Best of both worlds
-- Cons: More complex implementation
-
-**Recommended**: Start with Option A, add Option C later if needed
+- `/manuals/oxi-one-mk2/` - Manual index
+- `/manuals/oxi-one-mk2/page/1` - First page
+- `/manuals/oxi-one-mk2/page/272` - Last page
 
 ## Error Handling
 
 ### During Processing
 
 ```bash
-# If any step fails, show clear error
-❌ Error in pdf:translate (part-05)
+# If translation fails
+❌ Error in pdf:translate (page-145)
    Translation failed: API timeout
 
    To retry:
-   1. Fix the issue
-   2. Re-run: pnpm run pdf:translate
+   1. Re-run: pnpm run pdf:translate --slug {slug}
 
    To start over:
-   pnpm run pdf:clean && pnpm run pdf:all
+   pnpm run pdf:clean --slug {slug} && /pdf-process {slug}
 ```
 
-### Data Validation
+### Error Reports
 
-```bash
-# pdf:verify catches issues
-pnpm run pdf:verify
+Error reports are saved to `__inbox/` with timestamps:
 
-✓ All 272 images exist
-✓ All 10 part JSON files valid
-✗ Page 145 missing title
-✗ Page 203 missing translation
+- `__inbox/translation-errors-2026-01-12-14-30-00.json`
 
-Fix these issues in data/translations/ then re-run verify.
-```
+## Performance
 
-## Performance Considerations
+### Translation Performance
 
-### Parallel Processing
+- **Model:** Claude Sonnet 4.5
+- **Workers:** 5 parallel subagents
+- **Cost:** ~$5-10 per 280-page manual
+- **Time:** 15-30 minutes total
 
-```javascript
-// pdf-translate.js
-// Process 4 parts in parallel
-const PARALLEL_AGENTS = 4;
+### Image Rendering
 
-for (let i = 0; i < parts.length; i += PARALLEL_AGENTS) {
-  const batch = parts.slice(i, i + PARALLEL_AGENTS);
-  await Promise.all(
-    batch.map(part => translatePart(part))
-  );
-}
-```
-
-### Caching
-
-- Keep intermediate files (extracted/, translations-draft/)
-- Only re-run failed steps
-- Allow partial regeneration
-
-```bash
-# Only re-translate part-05
-pnpm run pdf:translate -- --part=05
-
-# Only re-render images
-pnpm run pdf:render
-```
-
-## Configuration
-
-### pdf-config.json
-
-Central configuration for all processing:
-
-```json
-{
-  "source": {
-    "pdf": "manual-pdf/OXI-ONE-MKII-Manual.pdf",
-    "totalPages": 272
-  },
-  "output": {
-    "pages": "manual-pdf/pages",
-    "images": "public/oxi-one-mk2/pages",
-    "extracted": "public/oxi-one-mk2/processing/extracted",
-    "translationsDraft": "public/oxi-one-mk2/processing/translations-draft",
-    "translations": "public/oxi-one-mk2/data"
-  },
-  "settings": {
-    "pagesPerPart": 28,
-    "imageFormat": "png",
-    "imageDPI": 150,
-    "translationModel": "claude-sonnet-4-5-20250929",
-    "maxRetries": 3
-  }
-}
-```
-
-**Output paths are all relative to repository root**
+- **DPI:** 300 (high quality)
+- **Format:** PNG
+- **Size:** ~200MB for 272 pages
 
 ## Summary
 
 ### Key Architectural Decisions
 
-1. **Multi-Manual Architecture**
-   - Each manual self-contained under `/public/{manual-id}/`
-   - Organized by manual ID (e.g., `oxi-one-mk2`)
-   - Ready for adding more manuals with same structure
-   - Processing files gitignored (`processing/` subdirectory)
+1. **Slug-Based Path Resolution**
+   - No hardcoded paths in scripts
+   - `pdf-config-resolver.js` computes all paths from slug
+   - Supports any number of manuals
 
-2. **Build-Time Data Import**
-   - JSON files imported as ES modules at build time
-   - Data bundled into HTML (no runtime fetch)
-   - Compatible with Next.js static export (`output: 'export'`)
-   - Fast page loads, works offline
+2. **Single pages.json File**
+   - All pages in one file per manual
+   - Simpler than part-based organization
+   - Imported as ES module at build time
 
-3. **Page-by-Page Processing**
-   - Extract text per page (`page-001.txt` to `page-272.txt`)
-   - Translate each page individually (`page-001.json` to `page-272.json`)
-   - Build combines pages into parts (28 pages per part)
-   - Enables parallel translation with Claude Code subagents
+3. **Manual Registry**
+   - Explicit imports in `lib/manual-registry.ts`
+   - Required for static export compatibility
+   - Type-safe with TypeScript
 
-4. **Global Page Numbering**
-   - Images: `page-001.png` to `page-272.png`
-   - Translations: `page-001.json` to `page-272.json`
-   - Consistent across entire manual
+4. **Page-by-Page Processing**
+   - Extract text per page
+   - Translate each page individually
+   - Build combines into single pages.json
 
-5. **Part-Based Organization**
-   - Data split into manageable parts (28 pages each)
-   - Parts: `part-01.json` (pages 1-28) to `part-10.json` (pages 245-272)
-   - Imported at build time, not lazy-loaded
-
-6. **Manifest-Driven**
-   - manifest.json is source of truth
-   - Next.js imports manifest at build time
-   - Contains metadata for all parts and pages
-
-7. **Clean Rebuild**
-   - `pdf:clean` removes all generated files
-   - `pdf:all` regenerates everything
-   - Ensures consistency on updates
-   - Processing files can be deleted after successful deploy
+5. **Processing Files are Temporary**
+   - Only `data/` and `pages/` committed to Git
+   - `processing/` directory gitignored
+   - Can delete after successful deploy
 
 ### Benefits
 
-- ✅ **Multi-Manual Ready**: Easy to add more manuals with same structure
-- ✅ **Self-Contained**: All manual data in one location per manual
-- ✅ **Simple Updates**: One command rebuilds everything
-- ✅ **Clean Separation**: PDF processing ↔ Next.js consumption
-- ✅ **Static Export Compatible**: Build-time imports work with static export
-- ✅ **Fast Performance**: No runtime fetch, data bundled at build time
-- ✅ **Scalable**: Works for any PDF size, page-by-page processing
-- ✅ **Maintainable**: Clear data flow, centralized configuration
-- ✅ **Type-Safe**: TypeScript types for all data structures
-- ✅ **Parallel Processing**: Multiple Claude Code subagents for translation
-- ✅ **Clean Deployment**: Processing files can be deleted after deploy
+- **Multi-Manual Ready**: Easy to add more manuals
+- **Self-Contained**: All manual data in one location per manual
+- **Simple Updates**: Single command rebuilds everything
+- **Static Export Compatible**: Build-time imports
+- **Fast Performance**: No runtime fetch
+- **Scalable**: Works for any PDF size
+- **Type-Safe**: Full TypeScript support
