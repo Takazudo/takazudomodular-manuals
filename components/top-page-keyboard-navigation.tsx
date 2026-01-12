@@ -30,7 +30,10 @@ export function TopPageKeyboardNavigation({ manualId }: TopPageKeyboardNavigatio
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Ignore if user is typing in an input/textarea/select or contentEditable element
-      const target = e.target as HTMLElement;
+      const target = e.target;
+      if (!(target instanceof HTMLElement)) {
+        return;
+      }
       if (
         target.tagName === 'INPUT' ||
         target.tagName === 'TEXTAREA' ||
