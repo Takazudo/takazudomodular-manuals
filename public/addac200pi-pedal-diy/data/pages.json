@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-12T21:07:17.291Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac200pi-pedal-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "translation": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac200pi-pedal-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "translation": "October.2023\nADDAC200PI 組み立てガイド\nADDAC SYSTEM",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac200pi-pedal-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "translation": "ステップ1:\n\n以下のように4つのコンデンサの位置を確認し、はんだ付けします。\n\nADDAC200PI 組み立てガイド",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac200pi-pedal-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "translation": "ステップ 3:\n\n下図のように2x5ボックス型ピンヘッダーを配置してハンダ付けします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac200pi-pedal-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "translation": "STEP 6:\n\n残りのピンヘッダーを配置し、下図のようにはんだ付けします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac200pi-pedal-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "translation": "STEP 12:\n3.5mmジャックを見つけ、以下の図のように最も細い脚をカットします。\n\nSTEP 13:\n以下の図のようにすべてのジャックを配置します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac200pi-pedal-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "translation": "STEP 14:\n\n小さい方のPCBをパネルに配置し、ナットを締めてパッドをハンダ付けします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac200pi-pedal-diy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "translation": "STEP 15:\n\n大きい方のPCBを取り付け、ナットを締めて、最後のパッドをはんだ付けします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac200pi-pedal-diy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "translation": "おめでとうございます、完成です！\n\nHappy Patching!!",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac200pi-pedal-diy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "translation": "フィードバック、コメント、または問題については、下記までご連絡ください:\naddac@addacsystem.com\n\nADDAC200PI 組み立てガイド\n2023年10月 リビジョン02",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

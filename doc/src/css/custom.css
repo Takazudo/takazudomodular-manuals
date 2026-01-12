@@ -244,9 +244,27 @@ article.theme-doc-markdown {
   color: oklch(65% 0.14 48.998);
 }
 
-/* Logo styling - make it white */
-.navbar__logo {
-  color: white !important;
+/* Takazudo Modular right-side nav link */
+.navbar__takazudo-modular {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ifm-navbar-link-color);
+  text-decoration: none;
+  font-family: Futura, 'Century Gothic', 'Trebuchet MS', Arial, sans-serif;
+  font-weight: var(--ifm-font-weight-semibold);
+  transition: color var(--ifm-transition-fast);
+}
+
+.navbar__takazudo-modular:hover,
+.navbar__takazudo-modular:focus-visible {
+  color: var(--ifm-color-primary);
+  outline: none;
+}
+
+.navbar__takazudo-modular img {
+  width: 24px;
+  height: 24px;
   filter: brightness(0) invert(1);
 }
 

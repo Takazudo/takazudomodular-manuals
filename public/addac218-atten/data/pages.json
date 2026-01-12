@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-12T19:47:06.509Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac218-atten/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "translation": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac218-atten/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "translation": "ADDAC218 ATTENUVERTERS ユーザーガイド\nDecember.2020 Revision.01\n\nようこそ:\n\n説明\n\nADDAC200シリーズのCV Utilitiesに新たに追加されたモジュールです。\n\nこのモジュールは3つの独立したAttenuverterを搭載しており、それぞれに入力、出力、13mmのKnobが備わっています。\n\n白い領域により、ユーザーは各チャンネルに何が接続されているかを書き込むことができます。\n\nChannel 1はChannel 2とChannel 3にノーマル接続されています。\n\n仕様:\n\n4hp\n\n±40mA\n\n2.5cm深さ",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac218-atten/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "translation": "コントロールの説明\n\nChannel 3\nATTENUVERTER\n\nChannel 1 Input\n\nChannel 2 Input\n\nChannel 3 Input\n\nChannel 1 Output\n\nChannel 2 Output\n\nChannel 3 Output\n\nChannel 1\nATTENUVERTER\n\nChannel 2\nATTENUVERTER\n\n機能の注釈を記入できる\nエリア（消えないマーカー\nで記入してください）",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac218-atten/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "translation": "ADDAC218\n\nATTENUVERTERの信号フロー図\n\nCHANNEL 1 OUTPUT\n\nATTENUVERTER 1\n\nCHANNEL 1 INPUT ATTENUVERTER\n\nCHANNEL 2 OUTPUT\n\nATTENUVERTER 2\n\nCHANNEL 2 INPUT ATTENUVERTER\n\nCHANNEL 3 OUTPUT\n\nATTENUVERTER 3\n\nCHANNEL 3 INPUT ATTENUVERTER",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac218-atten/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "translation": "フィードバック、コメント、または問題がございましたら、以下までご連絡ください:\naddac@addacsystem.com\n\nADDAC218 ユーザーガイド\nDecember.2020 Revision.01",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

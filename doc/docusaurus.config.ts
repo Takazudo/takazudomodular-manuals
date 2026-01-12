@@ -110,12 +110,6 @@ const config: Config = {
     ],
     navbar: {
       title: 'Takazudo Modular: Manuals Docs',
-      logo: {
-        alt: 'Takazudo Modular Logo',
-        src: 'img/logo.svg',
-        width: 32,
-        height: 32,
-      },
       items: [
         {
           type: 'docSidebar',
@@ -123,6 +117,12 @@ const config: Config = {
           position: 'left',
           label: 'INBOX',
           docsPluginId: 'default',
+        },
+        {
+          type: 'html',
+          position: 'right',
+          value:
+            '<a href="https://takazudomodular.com/" class="navbar__takazudo-modular" rel="noopener noreferrer"><img src="/doc/img/logo.svg" alt="" /><span>Takazudo Modular</span></a>',
         },
       ],
     },
