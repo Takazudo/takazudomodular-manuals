@@ -99,6 +99,10 @@ import addac210OpenHeartPages from '@/public/addac210-open-heart/data/pages.json
 import addac200piPedalDiyManifest from '@/public/addac200pi-pedal-diy/data/manifest.json';
 import addac200piPedalDiyPages from '@/public/addac200pi-pedal-diy/data/pages.json';
 
+// Import addac511-svgen
+import addac511SvgenManifest from '@/public/addac511-svgen/data/manifest.json';
+import addac511SvgenPages from '@/public/addac511-svgen/data/pages.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -202,6 +206,10 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'addac200pi-pedal-diy': {
     manifest: addac200piPedalDiyManifest as unknown as ManualManifest,
     pages: addac200piPedalDiyPages as unknown as ManualPagesData,
+  },
+  'addac511-svgen': {
+    manifest: addac511SvgenManifest as unknown as ManualManifest,
+    pages: addac511SvgenPages as unknown as ManualPagesData,
   },
 };
 
