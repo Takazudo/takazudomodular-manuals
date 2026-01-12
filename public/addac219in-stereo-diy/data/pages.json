@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-12T19:35:00.371Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac219in-stereo-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "translation": "(このページは空白です)",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac219in-stereo-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "translation": "March.2025\n\nADDAC219IN Assembly Guide\n\nADDAC SYSTEM",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac219in-stereo-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "translation": "ADDAC219IN アセンブリガイド\n\nステップ1:\n\nPCBを手に取り、オスとメスのピンヘッダーを見つけます。\n\nステップ2:\n\n対応するメスピンヘッダーにオスピンヘッダーを挿入し、両方のPCBの間に配置してハンダ付けします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac219in-stereo-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "translation": "STEP 4:\n\nPower IDCコネクタを配置し、ハンダ付けします。\n\nIDCコネクタの向きに注意してください。\n\nSTEP 6:\n\n下図に示されているカラー配置に従って、フロントPCBにジャックを配置します。\n\nフロントパネルを配置し、すべてのジャックナットを締めてから、脚をハンダ付けします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac219in-stereo-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "translation": "完成です！\n\nHappy Patching!\n\nADDAC219IN 組み立てガイド",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac219in-stereo-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "translation": "フィードバック、コメント、または問題については以下までご連絡ください:\naddac@addacsystem.com\n\nADDAC219IN ASSEMBLY GUIDE\nMarch.2025 Revision.01",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac219in-stereo-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "translation": "STEP 4:\n\n前面と背面のPCBを両方取り付けて完成させます。",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

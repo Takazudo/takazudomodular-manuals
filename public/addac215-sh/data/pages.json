@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-12T20:23:12.646Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac215-sh/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "translation": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac215-sh/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "translation": "ADDAC215 DUAL S&H+ ユーザーズガイド\n\nOctober.2019 Revision.02\n\nWelcome to:\n\n全体的な機能\n\nこのモジュールは、そのサイズで判断されるべきではありません。6hpという小型サイズながら、多くの機能が詰め込まれています。\n\nその中核には、ノイズソースと2つの精密Sample & Holdが搭載されており、入力からの最大偏差は0.01%です。これにより、量子化された信号を送っても、目立った音程のずれや、時間経過による典型的な電圧降下が発生することはありません。\n\nSample & Holdセクションは、Track & Holdとしても使用できます。これは、Trigger入力がONの間は入力信号をホールドし、Trigger入力がOFFの時は入力が出力にそのまま流れることを意味します。\n\n各セクションには独自のSlewプロセッサーが搭載されており、attack/decayを1つのコントロールで調整でき、ON/OFFスイッチも備えています。\n\nノイズ信号は両方のセクションの入力にノーマル接続されています。つまり、入力にジャックが接続されていない場合、Sample & Hold機能は入力されるノイズ信号に作用し、ランダムなCV値を生成します。\n\n[Trigger A Alternate]スイッチを使用すると、両方のセクションをリンクできます。これにより、Trigger Aへのトリガー入力はAセクションとBセクションを交互にトリガーするようになります。\n\n各セクションの出力に加えて、4つの追加出力があります：Noise、Difference、Average、Sumです。[Noise]出力はノイズソースからの信号、[Difference]出力はセクションAからセクションBを減算したもの、[Average]出力はAとBの合計を2で割ったもの、そして[Sum]出力はAとBの両セクションの合計です。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac215-sh/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "translation": "コントロール説明\n\nセクションA SLEW\n\nS&H A信号に適用するSlew Decayの量を設定します。\n\nALTERNATE/SEPARATE\n\n全体の動作モードを設定します。\n\nセクションA Trigger入力:\n\nあらゆるCVタイプを受け付けます（Trigger/Gate/CV）\n（Trigger Bにノーマル接続）\n\nセクションA Output\n\nセクションA Input\n（Input Bにノーマル接続）\n\nセクション(A-B) Diference Output\n\nセクションA SLEWスイッチ\n\nDECAY SlewのOn/Offを設定します。\n\nセクションB SLEWスイッチ\n\nDECAY SlewのOn/Offを設定します。\n\nSAMPLE/TRACK & HOLD\n\n各セクションの動作モードを設定します。\n\nセクション(A+B)/2 Average Output\n\nセクションB Trigger入力:\n\nあらゆるCVタイプを受け付けます（Trigger/Gate/CV）\n\nセクションB Output\n\nNoise Output\n\nセクションB SLEW\n\nS&H B信号に適用するSlew Decayの量を設定します。\n\nSAMPLE/TRACK & HOLD\n\n各セクションの動作モードを設定します。\n\nセクションB Input\n\nセクション(A+B) SUM Output",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac215-sh/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "translation": "コントロールの詳細説明\n\n入力のノーマリング\n\nこのモジュールには3つのノーマル接続された入力があり、ジャックが挿入されて物理的な接続が切断されるまで、一部の入力が物理的に別の入力に接続されていることを意味します。\n\n1. NoiseはINPUT Aにノーマル接続されています\n\n2. INPUT AはINPUT Bにノーマル接続されています\n\n3. TRIGGER AはTRIGGER Bにノーマル接続されています\n\nSlew\n\nSlewは各S&Hセクションの出力に適用され、すべての出力に影響を与えます。ON/OFFスイッチでSlew回路を有効化または無効化します。コントロールノブでSlewのAttackとDecayの両方を設定します。\n\nTrigger A Alternate 1>2 vs. Individual Channels\n\nこのスイッチはモジュールの全体的な動作モードを設定します。\n\nIndividual Channelsの位置では、モジュールはトリガーと信号の入力がノーマル接続されたデュアルS&Hとして動作します。\n\nTrigger A Alternate 1>2の位置で、Trigger B入力に何も接続されていない場合、Trigger AはセクションAまたはBをトリガーするフリップフロップとして動作します。つまり、セクションAへのトリガー入力があると、セクションAまたはBを連続的にトリガーします。\n\nTrigger B入力が接続されている場合、Alternate動作は機能しなくなり、Trigger Aのクロック分周器(2分周)として動作します。\n\nSample & Hold vs. Track & Hold\n\nこのスイッチは各チャンネルの動作モードを設定します。\n\nSample & Holdモードでは、Trigger入力での電圧上昇(0Vから+5V)により、次の電圧上昇が検出されるまで、その入力の瞬間的な状態が保持されます。\n\nTrack & Holdモードでは、Trigger入力で+5V信号が検出されるまで、入力信号が直接出力に流れます。この時点で、信号がHIGHの間、入力の瞬間的な状態が信号がLOWになるまで保持されます。\n\nTrigger入力\n\nTrigger入力は、Trigger、Gate、または任意のCVソースで使用できます。コンパレーターは約+3Vで動作するため、この電圧を超えるCVはS&HのTriggerとみなされます。\n\nInput & Output\n\n任意のソースをInputに接続し、処理された信号をOutputから取り出します。\n\nDifference、Average & Sum\n\nこれらの出力は2つの独立した出力を使用し、それらをさまざまな方法で組み合わせます。\n\nDifferenceはセクションAマイナスセクションBで、全波整流器を使用してすべての結果が正になるようにします。\n\nAverageはセクションAとBのミックスで、2倍に減衰され、2つの+5V信号を加算した場合により高い電圧になることを回避します。\n\nSumは両方のA&B出力信号の単純なミックスです。\n\nNoise\n\nこれはINPUT Aにノーマル接続されているノイズジェネレーターの出力です。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac215-sh/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "translation": "SAMPLE & HOLDを超えて\n\nDual Analog Random:\n\nこのモジュールにはノイズジェネレーターが搭載されており、デュアルS&Hランダムとして動作することができます。ノイズソースは[INPUT A]にノーマル接続されており、[INPUT A]は[INPUT B]にノーマル接続されています。これにより、信号入力にパッチケーブルを接続しない状態でも、任意のTrigger入力がその瞬間のノイズ値を出力でホールドします。\n\nSample Rate Reducer:\n\nもう一つの興味深い機能は、オーディオレートでSample Rate Reducerとして使用することです。Trigger入力にOscillatorを使用すると、入力信号のSample Rateをコントロールできます。20kHzでは、入力されるオーディオ信号は目立ったアーティファクトなしに通過します。Oscillatorの周波数を下げると、S&Hが信号を「ホールド」するサンプルレートが低下し、よりステップ状の信号を生成し、典型的なBit Crusherアーティファクトが導入されます。\n\nRate of Change (RoC):\n\nこのモジュールを使用すると、Rate-of-Change（変化率）パッチと呼ばれるものを簡単に構築できます。このパッチは、入力CV信号が時間の経過とともにどれだけ速く変化しているかを追跡し、この速度を0〜+5VのCV値として出力します。この出力信号は、入力CVが変化する速度に比例します。入力CVの速い変化はより高い電圧を生成し、遅いCV変化はより低い電圧を生成します。\n\nこれを実現するために、両方のSample-&-Holdセクションを一定のクロックレートで交互に使用します。これにより、常に2つの時点（前回のクロックと新しいクロック）からの電圧を「ホールド」しています。一方の値から他方の値を減算することで、2つのホールドされた電圧間の差分が得られます。特定の電圧範囲内で移動する速い入力信号は、同じ電圧範囲内で移動する遅い入力信号と比較して、より大きな差分を出力します。\n\nこの差分は常に正の信号になります（例：入力CVの変化が1Vから3V、または3Vから1Vになった場合でも、絶対差は常に2Vです）。\n\n[Slew]セクションを活用すると、劇的な効果が得られます。クロックティックごとの安定した電圧ではなく、完全にダイナミックな出力を得ることができます。\n\nRoCパッチ:\n\nモジュールのノーマル接続を活用して、両方のセクションを使用します！\n\n1. 分析する入力CVを[INPUT A]にパッチします。これは[INPUT B]にノーマル接続されています。\n\n2. スイッチを[TRIGGER A ALTERNATE]ポジションに設定して、[TRIGGER A]入力のクロックがセクションAとセクションBを交互にトリガーするようにします。\n\n3. [TRIGGER A]入力にクロックをパッチし、良い結果が得られる安定した周波数に設定します。これは電圧変化をサンプリングする頻度（分析時間ウィンドウ）を設定するサンプリングレートです。\n\n4. 両方のSlewを希望の値に設定し、[DIFFERENCE]出力から出力信号を取得します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac215-sh/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "translation": "ADDAC215\nDUAL S&H+ SIGNAL FLOW DIAGRAM\n\nCONTROLS PATH\n\nSIGNAL PATH\n\nINPUT 1\n\nSAMPLE/\nTRACK &\nHOLD 1\n\n1 - 2\nLATCH    TRIGGER IN 1\n\nINPUT 2\n\nSAMPLE/\nTRACK &\nHOLD 2\n\nTRIGGER IN 2\n\nOUTPUT 1\n\nNOISE OUTPUT\n\nWHITE NOISE\nGENERATOR\n\nAVERAGE OUTPUT\n\nOUTPUT 2\n\nSLEW\n\nSLEW\n\nMIX\n\nSUM OUTPUT\n\nDIFFERENCE OUTPUT\n\nALTERNATE / SEPARATE    SAMPLE / TRACK & HOLD    ON / OFF\nON / OFF    SAMPLE / TRACK & HOLD\n\n(Normalled)\n(Normalled)\n(Normalled)\n\nPOSSIBILITIES:\n\nDual Sample / Track & Hold\n\nDual Sample and Hold Analog Random\n\nDual Slew Processor\n\nStereo or Dual Mono Analog Decimator (Bit Crusher)\n\nRate of Change : 時間の経過とともにCV入力を比較し、入力CVが変化する速度に比例したCV出力を生成します",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac215-sh/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "translation": "フィードバック、コメント、問題については以下までご連絡ください：\naddac@addacsystem.com\n\nADDAC215 ユーザーズガイド\nOctober.2019 Revision.02",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

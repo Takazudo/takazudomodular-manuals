@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-12T20:00:18.537Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac217-gate2trig/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "translation": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac217-gate2trig/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "translation": "Welcome to:\n\n全体的な説明\n\nT-Networksシリーズを開発する中で、ドラムモジュールやエンベロープをトリガーする際に、適切な入力信号を持つことがいかに重要であるかを認識しました。GateとTriggerは似た信号として扱われることが多いですが、時にはそれが大きな違いを生み、そのようなモジュールの入力にGateまたはTriggerのどちらを送るかによって結果は劇的に変化します。\n\nこのことから、私たちはこのシンプルながら効果的なGate to Triggerを開発しました。各チャンネルにバイパススイッチを備えた4チャンネルのコンバーターです。\n\nすべての入力Gateは1msのTriggerに制限されます。\n\nこのモジュールは、フルDIYキットとしても入手可能です。\n\n技術仕様:\n6HP\n4cm深さ\n70mA +12V\n70mA -12V",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac217-gate2trig/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "translation": "コントロール説明\n\nGate Input 1\n\nBypass Switch\n\nOutput 1\n\nGate Input 2\n\nBypass Switch\n\nOutput 2\n\nGate Input 3\n\nBypass Switch\n\nOutput 3\n\nGate Input 4\n\nBypass Switch\n\nOutput 4\n\nCHANNEL 1\n\nCHANNEL 2\n\nCHANNEL 3\n\nCHANNEL 4",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac217-gate2trig/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "translation": "ADDAC217\nQUAD GATE TO TRIGGER 信号フロー図\n\nCHANNEL 4\n\nCHANNEL 3\n\nCHANNEL 2\n\nCONVERTER\n\nCHANNEL 1\n\nBYPASS\n\nOUTPUT 1\tGATE INPUT",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac217-gate2trig/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "translation": "フィードバック、コメント、または問題がある場合は、以下までご連絡ください:\naddac@addacsystem.com\n\nADDAC217 ユーザーガイド\n2020年1月 リビジョン.01",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

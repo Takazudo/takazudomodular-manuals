@@ -39,6 +39,66 @@ import addac106TnoisePages from '@/public/addac106-tnoise/data/pages.json';
 import addac104TnetwManifest from '@/public/addac104-tnetw/data/manifest.json';
 import addac104TnetwPages from '@/public/addac104-tnetw/data/pages.json';
 
+// Import addac207-quantizer
+import addac207QuantizerManifest from '@/public/addac207-quantizer/data/manifest.json';
+import addac207QuantizerPages from '@/public/addac207-quantizer/data/pages.json';
+
+// Import addac714-vintclip
+import addac714VintclipManifest from '@/public/addac714-vintclip/data/manifest.json';
+import addac714VintclipPages from '@/public/addac714-vintclip/data/pages.json';
+
+// Import addac713-stereomix
+import addac713StereomixManifest from '@/public/addac713-stereomix/data/manifest.json';
+import addac713StereomixPages from '@/public/addac713-stereomix/data/pages.json';
+
+// Import addac712-vintpre
+import addac712VintpreManifest from '@/public/addac712-vintpre/data/manifest.json';
+import addac712VintprePages from '@/public/addac712-vintpre/data/pages.json';
+
+// Import addac604-filter
+import addac604FilterManifest from '@/public/addac604-filter/data/manifest.json';
+import addac604FilterPages from '@/public/addac604-filter/data/pages.json';
+
+// Import addac305-latches-diy
+import addac305LatchesDiyManifest from '@/public/addac305-latches-diy/data/manifest.json';
+import addac305LatchesDiyPages from '@/public/addac305-latches-diy/data/pages.json';
+
+// Import addac304-manualgates-diy
+import addac304ManualGatesDiyManifest from '@/public/addac304-manualgates-diy/data/manifest.json';
+import addac304ManualGatesDiyPages from '@/public/addac304-manualgates-diy/data/pages.json';
+
+// Import addac219out-stereo-diy
+import addac219outStereoDiyManifest from '@/public/addac219out-stereo-diy/data/manifest.json';
+import addac219outStereoDiyPages from '@/public/addac219out-stereo-diy/data/pages.json';
+
+// Import addac219in-stereo-diy
+import addac219inStereoDiyManifest from '@/public/addac219in-stereo-diy/data/manifest.json';
+import addac219inStereoDiyPages from '@/public/addac219in-stereo-diy/data/pages.json';
+
+// Import addac218-atten
+import addac218AttenManifest from '@/public/addac218-atten/data/manifest.json';
+import addac218AttenPages from '@/public/addac218-atten/data/pages.json';
+
+// Import addac217-gate2trig
+import addac217Gate2trigManifest from '@/public/addac217-gate2trig/data/manifest.json';
+import addac217Gate2trigPages from '@/public/addac217-gate2trig/data/pages.json';
+
+// Import addac216-sumdiff
+import addac216SumdiffManifest from '@/public/addac216-sumdiff/data/manifest.json';
+import addac216SumdiffPages from '@/public/addac216-sumdiff/data/pages.json';
+
+// Import addac215-sh
+import addac215ShManifest from '@/public/addac215-sh/data/manifest.json';
+import addac215ShPages from '@/public/addac215-sh/data/pages.json';
+
+// Import addac210-open-heart
+import addac210OpenHeartManifest from '@/public/addac210-open-heart/data/manifest.json';
+import addac210OpenHeartPages from '@/public/addac210-open-heart/data/pages.json';
+
+// Import addac200pi-pedal-diy
+import addac200piPedalDiyManifest from '@/public/addac200pi-pedal-diy/data/manifest.json';
+import addac200piPedalDiyPages from '@/public/addac200pi-pedal-diy/data/pages.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -82,6 +142,66 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'addac104-tnetw': {
     manifest: addac104TnetwManifest as unknown as ManualManifest,
     pages: addac104TnetwPages as unknown as ManualPagesData,
+  },
+  'addac207-quantizer': {
+    manifest: addac207QuantizerManifest as unknown as ManualManifest,
+    pages: addac207QuantizerPages as unknown as ManualPagesData,
+  },
+  'addac714-vintclip': {
+    manifest: addac714VintclipManifest as unknown as ManualManifest,
+    pages: addac714VintclipPages as unknown as ManualPagesData,
+  },
+  'addac713-stereomix': {
+    manifest: addac713StereomixManifest as unknown as ManualManifest,
+    pages: addac713StereomixPages as unknown as ManualPagesData,
+  },
+  'addac712-vintpre': {
+    manifest: addac712VintpreManifest as unknown as ManualManifest,
+    pages: addac712VintprePages as unknown as ManualPagesData,
+  },
+  'addac604-filter': {
+    manifest: addac604FilterManifest as unknown as ManualManifest,
+    pages: addac604FilterPages as unknown as ManualPagesData,
+  },
+  'addac305-latches-diy': {
+    manifest: addac305LatchesDiyManifest as unknown as ManualManifest,
+    pages: addac305LatchesDiyPages as unknown as ManualPagesData,
+  },
+  'addac304-manualgates-diy': {
+    manifest: addac304ManualGatesDiyManifest as unknown as ManualManifest,
+    pages: addac304ManualGatesDiyPages as unknown as ManualPagesData,
+  },
+  'addac219out-stereo-diy': {
+    manifest: addac219outStereoDiyManifest as unknown as ManualManifest,
+    pages: addac219outStereoDiyPages as unknown as ManualPagesData,
+  },
+  'addac219in-stereo-diy': {
+    manifest: addac219inStereoDiyManifest as unknown as ManualManifest,
+    pages: addac219inStereoDiyPages as unknown as ManualPagesData,
+  },
+  'addac218-atten': {
+    manifest: addac218AttenManifest as unknown as ManualManifest,
+    pages: addac218AttenPages as unknown as ManualPagesData,
+  },
+  'addac217-gate2trig': {
+    manifest: addac217Gate2trigManifest as unknown as ManualManifest,
+    pages: addac217Gate2trigPages as unknown as ManualPagesData,
+  },
+  'addac216-sumdiff': {
+    manifest: addac216SumdiffManifest as unknown as ManualManifest,
+    pages: addac216SumdiffPages as unknown as ManualPagesData,
+  },
+  'addac215-sh': {
+    manifest: addac215ShManifest as unknown as ManualManifest,
+    pages: addac215ShPages as unknown as ManualPagesData,
+  },
+  'addac210-open-heart': {
+    manifest: addac210OpenHeartManifest as unknown as ManualManifest,
+    pages: addac210OpenHeartPages as unknown as ManualPagesData,
+  },
+  'addac200pi-pedal-diy': {
+    manifest: addac200piPedalDiyManifest as unknown as ManualManifest,
+    pages: addac200piPedalDiyPages as unknown as ManualPagesData,
   },
 };
 
