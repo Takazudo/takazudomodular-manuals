@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-13T19:07:58.003Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-h1/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "translation": "H1\n\nAnalog Harmonizer\n\nEurorackモジュール\n\nユーザーマニュアル\n\nWeston Precision Audio\n\nDesigned In Portland, Oregon\n\nRevision 04 - April 22, 2024",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-h1/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "translation": "目次\n\nQuick Start Diagram…………………..…3\n\n概要と仕様………………………4\n\nコントロール……………………………………..5\n\n入出力…………………………..6\n\nH1の使用方法\n\nモードの説明……………8\n\nMainモード (Main/Chord)…….9\n\nDiatonic Chordモード….10\n\nTrack/Freeチャンネル設定……11\n\nQuantizing……………………..…12\n\nOscillator Sync……………..……12\n\nOscillator Detune………………..13\n\nMix Pad……………………………14\n\nOctaveコントロール…………………..14\n\nOsc In Tunerモード……..……….14\n\nAppendix\n\nA: Firmwareの更新………….15\n\nB: Calibration/Serviceモード…16",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-h1/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "translation": "H1 クイックスタート\n\n(マニュアルを読むのは雨の日に取っておきましょう！)\n\nまず、クイックスタートのために、optionボタンを押したままにして、このボタンが消灯していることを確認してください。消灯していない場合は、消灯するまで押してください。これにより、クイックスタート用のMain/Normalモードになります。\n\nこれがoptionボタンです。\nこれを押したままにすると、該当するオプションが点灯し、それらのボタンのセカンダリー機能にアクセスできます。\n\noptionを押したまま、黄色は現在のチャンネルがfreeモード（通常のVCOのように動作）であることを意味し、白色はtrackモード（チャンネルが「Osc In」の周波数に追従）を意味します。\n\n12個の「keys」ボタンのいずれかで、アクティブチャンネルのベースインターバルを「Osc In」（Trackモード）または中央のC（Freeモード）（C、C#、D、など）に対して相対的に選択します。\n\nこのボタン（A/B / Display）でアクティブチャンネルを切り替えます。\n\nOption + A/Bで、アクティブチャンネルのベースインターバルの表示とquantizer用のアクティブステップのコントロールを切り替えます。\n\nこれらのLEDは編集中のアクティブチャンネルを表示します。\n\nクリーンな周期的波形を持つVCOの出力をここにプラグインすると、H1がその周波数を追跡します。\n\nCV出力は、「Osc In」周波数に比例した電圧、またはCV inの量子化された電圧を出力します（option + CV Outで切り替え）。\n\nすべての出力（OUTPUTS）には周囲にボックスが描かれています。すべての入力（INPUTS）にはありません。\n\nMix出力には「Osc In」（左knob）とチャンネルA+Bのtriangle、saw、square（右3つのknobs）のミックスが含まれます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-h1/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "translation": "概要\n\nH1は、モジュラーパッチにハーモニックレイヤーや基本的なポリフォニーを簡単に追加できるように設計されたEurorackモジュールです。主な使用方法は、VCOの出力を\"osc in\"入力にパッチし、H1がそのオシレーターのピッチに関連する2つの音程(例えばメジャートライアドを形成する3度と5度)を生成するというものです。しかし、H1はデュアルクオンタイザー、フリケンシー・トゥ・ボルテージコンバーター、または単純に2つのアナログVCOとしても使用できます。選択はあなた次第です。\n\nH1の中核には、デジタル制御のピッチトラッキング機能を持つ2つの同一チャンネルのアナログオシレーターと2つのクオンタイザーがあります。オシレーターは精密な乗算DAC(デジタル・トゥ・アナログコンバーター)と安定したリファレンス回路を使用しているため、ピッチとトラッキングが極めて安定していますが、同時に信号生成部は完全にアナログであるため、アナログオシレーター本来の豊かさを備えています。明確にしておくと、H1はデジタルオシレーターやウェーブテーブルオシレーターではありません。\n\n出力ミキサーセクションがパッケージを完成させ、ピッチトラッキングされた入力信号と2つのオシレーターチャンネルの3つの波形をミックスすることで、パッチケーブルの乱雑さを最小限に抑えます。\n\n各チャンネルは、真のアナログスルーゼロFMでモジュレーションすることもできます。\n\n重要または役立つ情報は赤字で表示されています。\n\n仕様\n\nモジュールサイズ: 18HP\n\n奥行き: 25mm(背面PCBまで)、33mm(電源コネクタの端まで)\n\nオーディオ出力:\n<=1kOhm出力インピーダンス\n\n入力(すべての入力>=100kOhmインピーダンス): CV、Trigger、Lin FM、Osc In。\n\n電源入力:\n+12V & -12V、標準10ピンEurorackコネクタ経由。内部および被覆コネクタで逆極性保護。\n\n消費電力 (+12V / -12V):\n標準: 185mA / 75mA\n最大: 200mA / 85mA\n\nADC解像度 (CV入力):\n12-bit\n\nDAC解像度:\nメインオシレーターチャンネル: 16-bit\nCV出力: 14-bit\n\nUSBファームウェアアップデートポート:\nMicro Type-B\n\n最大制限値\n\n電源電圧: +13.5V / -13.5V\n\nすべての入力: 電源電圧レベルまで。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-h1/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "translation": "メインコントロール\n\nH1のほとんどの機能は、モジュール上部にあるLEDバックライト付きボタンの列で操作します。\n\n一番左の12個のボタンは、標準的なピアノ鍵盤の1オクターブの配列になっていることにお気づきでしょう。その隣の列のボタンはオクターブコントロールです。最後に、display/ABボタンとOption(丸)ボタンがあります。\n\nボタンの上または下に書かれたテキストは、Optionボタンを押したままにしたときのボタンの機能を示しています。たとえば、A/Bボタン単体ではチャンネルAまたはBを切り替えます。Option(丸)ボタンを押しながら同じボタンを押すと、「display」機能が呼び出されます。これについては後で詳しく説明します。\n\nその他のコントロール\n\nDetune:\n\n選択したチャンネルのdetuneが有効になっている場合、このポットは選択したチャンネルに対して±1半音の範囲で微調整を行います。チャンネルAのdetuneを調整してから、チャンネルBを選択してノブを回した場合、チャンネルAに戻ってもノブがチャンネルAのdetuneに影響を与えるのは、チャンネルがアクティブだったときに設定されていた位置までノブを戻した後になります。チャンネルのdetuneが無効になっている場合、detuneノブは効果がありません。\n\nFM input attenuator:\n\n各チャンネルには、アナログスルーゼロ周波数変調(TZFM)用の入力があります。各ジャックの隣にあるノブは、適用されるFM信号の量をコントロールします。つまり、入力信号の単純なアッテネーターです。\n\nMixer:\n\nH1には、「Osc In」に入力された信号と各オシレーターの3つの主要な波形をミックスしたミックス出力があります。左から右へ4つのポテンショメーターは、「Osc In」、Triangle A + Triangle B、Saw A + Saw B、Square A + Square Bの量をコントロールします。ミキサーセクションのゲインは1(0dB)、または「Mix Pad」機能が有効になっている場合は-9dBです。Mix Padオプションを使用すると、より効果的なヘッドルームが得られ、クリッピングなしでミキサーコントロールをより上げることができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-h1/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "translation": "INPUTS\n\nQuick Startで説明したように、すべての出力はパネル上に枠線が描かれており、入力には枠線がありません。この規格は今後のWestonモジュールでも適用されます。\n\nOscillator In (Osc In)\n\nOsc In入力は、約1Vppから20Vppまでの振幅を持つ周期的な波形を受け付け、その波形の周波数を判定します。\n\n良好な周波数トラッキング結果を得るためには、信号入力は単一の基本周波数（例：VCOや自己発振フィルターからの信号）である必要があります。信号が高度にウェーブフォールディングされていたり、他の強い周波数成分で満たされていたりすると、グリッチやジャンプが発生する可能性があります。ただし、これを楽しむユーザーもいるかもしれませんので、自由に実験してこの入力を試してみてください！\n\nトラックモードでは、検出された入力信号の最も近い音符が、キーパッド上で白/黄色の点滅ライトとして表示されます。\n\n要するに、正確に周波数トラッキングされる波形は、一貫したゼロクロッシングを持つ必要があります。いくつかの例については、以下の表を参照してください：\n\nPrimary CVとTrigger\n\n各チャンネルには、そのチャンネルの相対ピッチをコントロールするprimary CV入力があります。これは量子化可能（詳細は後述）で、入力範囲は-3Vから7Vです。\n\n各チャンネルのクオンタイザーにはtrigger入力もあります。trigger inが有効な場合、クオンタイザーはtrigger入力の立ち上がりエッジを検出した場合のみ、次の量子化ステップを出力します。このtrigger電圧は約1Vから12Vまでの範囲です。\n\nLinear FM\n\n各チャンネルにはLin FM入力があり、このジャックへの信号入力によって、そのチャンネルのオシレーターをスルーゼロ周波数変調することができます。\n\nAuxiliary CV (CV2)\n\nまた、補助CV入力（CV2とラベル付け）があり、有効にすると、1つまたは両方のチャンネルのベース音を移調したり、Chord Modeの場合はコードペアの2つの音を一緒に移調したりできます（詳細は後述）。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-h1/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "translation": "OUTPUTS\n\nCV Out & Trigger Out\n\n各チャンネルには、2つの異なる動作モードで設定可能なCV出力があります。Optionキーを押しながら「CV Out」ボタンを押すと、2つのモードが切り替わり、ボタンのステータスカラーが以下のように変化します。\n\n白く点灯している場合、アクティブチャンネルのCV出力は、「Osc In」信号の周波数に比例した電圧を1 Volt/Octaveスケールで出力します。このモードでは、H1は本質的にFREQUENCY TO VOLTAGE（周波数-電圧）コンバーターとして機能します。\n\n黄色く点灯している場合、アクティブチャンネルのCV出力は、対応するCV入力に入力された電圧のクオンタイズ版を出力します。その動作は、後述の「UsingThe H1」セクションで説明するクオンタイズモードに依存します。\n\n各CV Out端子の横には、Trigger Out端子があります。H1をクオンタイザーとして使用し、Trig Outオプションが有効になっている場合、アクティブなクオンタイズステップが変わるたびに、ここにトリガーパルスが出力されます。信号振幅は5Vで、パルス幅は1ミリ秒です。\n\nIndividual Wave Outs\n\n各チャンネルには、そのチャンネルのオシレーターから生成される3つの主要な波形（Triangle、Sawtooth、Square）の出力があります。これらは、H1の外部でより複雑なパッチングやミックスを行うために使用できます。\n\nMix Out\n\nよりシンプルなパッチングやパッチケーブルの乱雑さを最小限に抑えるために、ミックス出力を使用できます。コントロールセクションで説明したように、このミックスには「Osc In」と、チャンネルAとBの主要波形を組み合わせたもの（Triangle A + Triangle B、Saw A + Saw B、Square A + Square B）が含まれ、ミックス出力のすぐ上にあるノブでコントロールされます。ミキサーセクションのゲインは1（0db）、または「Mix Pad」機能が有効になっている場合は-9dBです。Mix Padオプションは、クリッピングを起こすことなくミキサーコントロールをより高く上げられるよう、より効果的なヘッドルームを提供します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/weston-h1/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "translation": "H1モードとインプット機能のまとめ\n\nChord\nModes\n\n|  | Track | Free | Track | Free | Track | Free | Track | Free |\n|--|-------|------|-------|------|-------|------|-------|------|\n|  | Osc In | | CV In A | | CV In B | | CV In 2 (Aux CV) | |\n| Main/Normal Mode | Pitch basis for channel A/B or both. | Nothing | Ch. A Note Interval | Ch. B Note Interval | Transposes Ch. A/B or both note intervals | |\n| Stored Chord | Pitch basis for both ch. | Nothing | Nothing | Pitch basis for both ch. | Selects chord 1-12 | Transposes active chord (If CV2 Option is on) |\n| Diatonic Chord | Pitch basis for both ch. | Nothing | Nothing | Pitch basis for both ch. | Selects key of diatonic scale | Selects major or minor diatonic (If CV2 Option is on) |\n\nH1の使用方法 - モードの説明\n\nH1には2つの異なる動作モードがあります：NormalとChordです。ChordモードにはStored ChordとDiatonic Chordの2つのバージョンがあります。\n\nMainモード：\n各チャンネルのオシレーターのノートインターバルは、キーパッドで選択するだけです。このインターバルは、チャンネルのCV Inで選択でき、ノートのenable/disableページでクオンタイザーのように使用できます。\n\nStored Chordモード：\n各チャンネルのオシレーターのノートインターバルは、保存されたコードテーブルによって決定されます。コードを保存するための12個のスロットがあり、これらはチャンネルBのCV Inで選択できます。\n\nDiatonic Chordモード：\n各チャンネルのオシレーターのノートインターバルは、ピッチベースが何であるか（TrackモードではOsc In、FreeモードではCV A In）に応じた適切なダイアトニックトライアドによって決定されます。ダイアトニックスケールのキーは、チャンネルBのCV Inで選択できます。キーは、Option + Octave upまたはdownを押すことで、マイナーまたはメジャーにすることができます。\n\nこれらのモードの要約は、上の表に記載されています。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/weston-h1/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "translation": "H1の使用方法 - OPTIONキーとメインモード（NORMAL/CHORD）\n\nH1を使用中、いつでもOptionボタン（円で囲まれているボタン）を押し続けることで、適用可能なオプションとモードを確認できます。まず、主要な動作モードから始めましょう。Optionを押しながらE♭キー（上に「chord」と表示されているキー）を確認してください：\n\nNormal Modeの場合：\n\nStored Chord Modeの場合：\n\n両方のモードは非常に似ていますが、次の点で異なります：\n\nNORMAL MODE：各チャンネルのベースインターバルは、最初のディスプレイページ（「DISPLAY」が消灯）の12個の「key」ボタンのいずれかで選択され、この音程はそのチャンネルのCV入力によって変調でき、オプションでクオンタイズすることもできます。クオンタイズされている場合、クオンタイズステップは2番目のディスプレイページ（「DISPLAY」が黄色に点灯）で選択できます。Option + A/Bでディスプレイページを切り替えます。\n\nCHORD MODE：両方のチャンネルのベースインターバルが最初のディスプレイページに表示され、コントロールされます。アクティブなコードは2番目のディスプレイページに表示されます。これらの「コード」または2音の組み合わせを保存するための12個の「スロット」があり、12個の「key」ボタンに対応しています。チャンネルBのCV入力はCVを使用してコードスロットを選択するために使用され、CV2はCVを使用してアクティブなコードをトランスポーズするために使用できます。\n\n各メインモードでのページ1ビューの例：\n\nNormal Modeの場合：\n\nアクティブなチャンネルのベースインターバルが黄色に点灯します。この場合、3度または「E」に設定されています。\n\nStored Chord Modeの場合：\n\nチャンネルAのベースインターバルは黄色に点灯し、チャンネルBのベースインターバルは白色に点灯します。アクティブなチャンネルは、Normal Modeと同様にA/Bボタンで選択されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/weston-h1/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "translation": "各プライマリーモードにおけるページ2表示の例:\n\nNormal Mode:\nアクティブなChannelのアクティブな量子化ステップが黄色で点灯し、有効化された量子化ステップが白色で点灯します。この例では、すべてのステップが有効化されています。\n\nStored Chord Mode:\nベースコードスロットが黄色で点灯し(この場合はスロット6)、CVシフトされたアクティブコードスロットが白色で点灯します(この場合はスロット9、または6 + 3)。\n\nStored Chord Modeでページ2表示の時(上記のように)、ベースコードスロットはキー1-12を押すことで選択されます。そのキーを2秒間長押しすると、そのコードが不揮発性メモリに保存されます。キーパッドが数回白く点滅して、保存されたことを示します。\n\nDIATONIC CHORD MODE\n\nOptionを長押ししている時、CHORDボタン(E flat)はDiatonic Chord Modeの場合、黄色の代わりにYELLOWで点灯します。このモードは、ルート入力(TrackモードではOsc Inから、FreeモードではCV A Inから)を受け取り、そのノートのダイアトニックトライアドを生成します。これは非常に便利です。なぜなら、すべてのダイアトニックコードは常にその特定のスケールのノートを含んでおり、音楽的に悪い響きになることがないからです。\n\nDiatonic Chord Modeの2ページ目(Option + Displayでページ切り替え)では、スケールのキーが表示されます。例えば、キーパッドで「C」が選択されていて、Osc Inに「C」が入力されると、H1はEとGを生成します。なぜなら、CメジャーはCメジャースケールの最初のダイアトニックコードだからです。同じスケール設定でOsc Inに「D」が入力されると、H1はDマイナー(FとA)を生成します。以下同様です。\n\nダイアトニックスケールのキーは、上記のようにページ2のキーパッドから選択でき、さらにCV In B経由でも選択できます。\n\n最後に、生成されるダイアトニックコードは、メジャースケールまたはマイナースケールのいずれかになります。メジャーはOption + Octave Upを押すことで選択され、マイナーはOptions + Octave Downを押すことで選択されます。これはCV 2 In(Aux CV In)経由のCVでも選択できます。「白鍵」のCVはスケールをメジャーにし、「黒鍵」のCVはスケールをマイナーにします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/weston-h1/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "translation": "H1の使用方法 - TRACK MODEとFREE MODE\n\nOptionを押しながらC#（Track/Free）ボタンを押すと、アクティブなチャンネルがtrack modeとfree modeの間で切り替わります。\n\n（点滅する白色）TRACK MODE\n\nアクティブなチャンネルは、ベース周波数を「Osc In」で測定された周波数に設定します。「Osc In」信号が取り除かれた場合、最後に測定された周波数が無期限に保持されます。page 1のビュー（Optionを押しながら「Display」キーが消灯している状態）では、H1は「Osc In」からトラッキングされた最も近い音程をキーパッド上に白色と黄色の脈動する光で表示します。\n\n（点灯する黄色）FREE MODE\n\nアクティブなチャンネルは、ベース周波数をC 65.41Hzに設定します。ユニットがNORMAL MODEで、Channel Aが選択されており、そのベースインターバルが「C」（最初のボタンが選択された状態）に設定されている場合、そのチャンネルは65.41Hzで動作します。\n\nCHORD MODESのいずれかで、FREEが選択されている場合、Channel A CV Inが両方のチャンネルのピッチベースを提供します。つまり、コードのルートはOsc Inのピッチ（Track）、またはCV A In（Free）に基づいて設定されます。page 1のビュー（Optionを押しながら「Display」キーが消灯している状態）では、H1はCV入力から導き出された該当する音程インターバルをキーパッド上に白色と黄色の脈動する光で表示します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/weston-h1/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "translation": "H1の使い方 - QUANTIZING\n\nNORMAL MODEでは、各チャンネルへの入力CVをクオンタイズすることができます。3つのオプション12T、uT、Offがあり、Optionを押しながら該当するボタン12T、uT、またはOffを押すことで選択します。\n\n12T: これは通常の12平均律クオンタイズです。つまり、電圧は音楽的な鍵盤のステップ(C、C#、Dなど)にクオンタイズされます。クオンタイズステップは、このページの左側に示されているように、page 2ビューでボタンを押すことで有効/無効を切り替えられます。\n\nuT: 電圧は24ステップまたは「マイクロチューニング」インターバルにクオンタイズされます。クオンタイズステップは12Tクオンタイズと同じ方法で有効/無効を切り替えられますが、24ステップあるため、2ページに分けて表示されます。マイクロチューニングクオンタイゼーションでは、Option + Octave Upを押すことでステップ1-12と13-24を切り替えます。\n\nOff: 電圧はまったくクオンタイズされず、trigger inは無視されます。このモードでは、FREE MODEのチャンネルは通常のアナログVCOと同じように動作します。\n\nTrig In: Optionを押しながらD (Trig In)を押すと、アクティブチャンネルのtrigger inのオン/オフが切り替わります。Trig Inが有効になっている場合、クオンタイザーは次の有効なクオンタイズステップへの変更を、trigger inが検出された場合にのみ行います。これは、LFOのようなランダムまたはセミランダムな電圧をCV Inに送っているが、ノートの変更をシーケンサーなどと同期させたい場合に便利です。\n\nCV2: NORMAL MODEでは、CV2入力を使用して選択したチャンネルのベースインターバルをトランスポーズすることもできます。この機能は、Optionを押しながらC (CV2)を押すことでオン/オフを切り替えます。H1は常にCV2を12TETクオンタイズにクオンタイズします。CHORD MODEでは、CV2入力を使用してアクティブなコードをCVで上下にトランスポーズできます。NORMAL MODEと同じ方法でオン/オフを切り替えます。\n\nCHORD MODEでは、CV1は常に12TETにクオンタイズされ、CVを使用してアクティブなコードスロットを選択するために使用できます。CV2はCHORD MODEでは無視されます。\n\nH1の使い方 - SYNC\n\nCHORDまたはNORMAL MODEのいずれにおいても、各チャンネルのオシレーターは2つの異なるソース信号オプションによってソフトシンク(リバーシングシンク)させることができます。これは、Option + G (Sync)を押すことで選択されます。syncの3つのモードは以下の通りです:\n\nSync off。このチャンネルにはソフトシンクはありません。\n\nチャンネルは「Osc In」への入力信号の周波数でsync'dされます。\n\nチャンネルはもう一方のチャンネルの周波数でsync'dされます(例: Channel AはChannel Bの周波数でsync'dされます)。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/weston-h1/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "translation": "H1の使用 - DETUNE\n\n各チャンネルのオシレーターは±1半音の範囲でデチューンすることができます。デチューンが無効の場合、チャンネルは通常の440Hz Aの音楽的チューニングに対して1〜2セント以内で調律された状態を保ちますが、特にH1を使用して元の信号を僅かにデチューンしたバージョンをミックスし、リッチなフェージング効果を得るために信号を「ダブル」または「トリプル」にする場合など、ファインチューンが必要になることがあります。デチューンはOption + A（Detune）を押すことで、アクティブなチャンネルに対して有効/無効を切り替えられます:\n\nデチューンが無効で、detuneノブは効果がありません。\n\nデチューンが有効です。detuneノブを回して量をコントロールします。**アクティブチャンネルを切り替えてノブを調整し、その後再びチャンネルを切り替えた場合、detuneノブは再度動かすまでロックされます。**デチューン情報は電源のオン/オフ時に保存されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/weston-h1/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "translation": "H1の使用 - MIX PAD\n\nH1のMix出力は、1または-9dBのいずれかに選択可能なゲインを持っています。-9dBの「Mix Pad」オプションをオンにするには、Option + B (Mix Pad) を押します。\n\nMix Padが無効で、Mix出力ステージのゲインは1です。\n\nMix Padが有効で、Mix出力ステージのゲインは-9dBです。\n\nH1の使用 - OCTAVE CONTROL\n\noctave + および - ボタンは、選択したチャンネルのオクターブをコントロールします。CHORD MODEの場合、そのコードのオクターブ情報はコードと共に保存されます。\n\nOct + および Oct - ボタンのLEDは、オクターブの状態を次のように示します。\n\nこのチャンネルにはオクターブシフトがありません。\n\nオクターブが1シフトされています。\n\nオクターブが2または3シフトされています。\n\nオクターブコントロールは、+ または - 3オクターブまで調整可能です。\n\nH1の使用 - TUNER MODE\n\nH1にはチューナーモードもあり、Optionを押しながら下部ボタンの中央(「F」キー)を押すことでアクセスできます。チューナーモードに入ると、H1はOsc inが調整されている最も近い半音階の音符(C、C#、Dなど)をキーパッドに表示し、octave + と octave - キーに微調整の差分を表示します(+はシャープ、-はフラットを意味します)。\n\nチューニング誤差が8セント以上の場合、octaveキーは黄色に点滅し、シャープまたはフラットを示します。チューニングが改善されると、octaveキーは白色に点滅し、その後ゆっくりと白色に点滅します。Osc Inに存在する信号が最も近い半音階の音符から2セント以内に調整されると、両方のoctaveキーが白色に点灯します。\n\nチューニングモードでは、H1はチャンネルAとBのオシレーターを1Hzに設定するため、チューニング中にOsc In信号をミキサー経由で聴きやすくなります。\n\nチューナーモードは、入る時と同じ方法で終了します。Optionを押しながら「F」キーを押します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/weston-h1/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "translation": "付録A: ファームウェアのアップデート\n\nH1のファームウェアは、ユーザーが比較的簡単にアップデートできます。Weston Precision Audioから新しいファームウェアが入手可能な場合、アップデート手順は以下の通りです:\n\n1) ファームウェア(.UF2)ファイルをダウンロードします。\n\n2) H1がラックに装着されている場合は取り外し、ケースまたは電源からのリボンケーブルに接続されていないことを確認してください。\n\n3) USB micro BケーブルをH1底面背面のUSBポートに接続します。\n\n4) 下図に示すボタンを押したまま、USBケーブルのもう一方の端をPCまたはMacに接続します。\n\n5) H1はPCまたはMacに「RP2040」というタイトルのサムドライブのように表示されます。Weston Audioからダウンロードした*.UF2ファイルを「RPI-RP2」にドロップするだけです。これでファームウェアのアップデートは完了です。USBケーブルを外し、モジュールを再びラックに装着してください。\n\nシリアルナンバー10004以前のファームウェアアップデート補足:\n\nシリアルナンバーが10004より前のH1ユニットの場合、ファームウェアアップデートの手順は左記と同じですが、手順(4)のボタンがより内側にあるため、舌圧子、プラスチック製のペンの柄、アイスキャンディーの棒などの平らで非導電性の工具で押す必要があります。シリアルナンバー10004以前のユニットのボタンの位置は以下の通りです:",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/weston-h1/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "translation": "APPENDIX B: CALIBRATION/SERVICE MODE\n\nH1には隠されたキャリブレーションモードがあります。通常の使用では、このモードにアクセスする必要はありません。しかし、このモードを使用する必要が生じた場合のために、このセクションでは操作方法を説明します。\n\nキャリブレーションモードへの入り方:\n\nOPTIONとOCTAVE +を押したまま、\"C\"(CV2)キーを押します。\n\nH1はOPTIONとDISPLAYボタンを連続的に点滅させ、キャリブレーションモードに入ったことを示します。上段5つのキーのいずれかが黄色で点滅し、どのキャリブレーションサブモードがアクティブであるかを示します。これらのモードは右の表にまとめられています。\n\nサブモードを切り替えるには、OPTION + (上段5つのキーのいずれか)を押します。\n\n*変更を保存せずにキャリブレーションモードを終了するには: モジュールの電源を切ります\n\n*すべての変更を保存してキャリブレーションモードを終了するには: OPTIONと\"C#\"(TRACK/FREE)を押したまま、\"Eb\"(CHORD)を押します。H1はメインキーすべてを白色で数秒間素早く点滅させ、キャリブレーションの変更が行われたことを示します。\n\n次のページでは、各キャリブレーションサブモードについて説明します。\n\nCALIBRATION SUB-MODES\n(YELLOW LIGHT SHOWN WILL BLINK)\n\nOscillator DAC Calibration Low Range\n\nOscillator DAC Calibration High Range\n\nCV DAC Calibration\n\nADC Scale/Offset Calibration\n\nDetune Pot Center Calibration",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/weston-h1/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "translation": "CALIBRATION MODE: OSCILLATOR\nDAC SUB-MODE\n\nこのキャリブレーションは通常使用する必要はありません。各オシレーターに供給するDACのリニアリティテーブルをキャリブレーションするために使用します。\n\n*キャリブレーションを調整する前に、ユニットを少なくとも15分間ウォームアップしてください。\n\nこのモードがアクティブな間、H1はTRIG OUT A出力に正確なテスト周波数の矩形波を出力し、各オシレーターはこれらの周波数で動作しようとします。各モード（LOW RANGE、HIGH RANGE）には12のテスト周波数があり、キーパッドの12のメインキーのいずれかを押すことで選択されます。周波数は以下の通りです：\n\nLOW RANGE: 10Hz、20Hz、35Hz、60Hz、90Hz、130Hz、170Hz、225Hz、285Hz、350Hz、420Hz、500Hz\n\nHIGH RANGE: 501Hz、1kHz、1.5kHz、2kHz、2.7kHz、3.7kHz、4.7kHz、6kHz、7kHz、8kHz、9kHz、10kHz\n\nキャリブレーションテーブルポイントのいずれかを調整するには、目的のオシレーター三角波出力（AまたはB）とTRIG OUT Aを2チャンネルオシロスコープでモニターします。次に、調整したいオシレーターチャンネルがLEDを確認してアクティブ（A/B）であることを確認し、OCTAVE +またはOCTAVE -を押してそのステップのDAC設定を増減し、2つの信号の周波数ができるだけ一致するようにします。OPTION + OCTAVE +または-を押し続けると、1ステップではなく10ステップジャンプします。\n\nこのキャリブレーションまたは他のキャリブレーションSUB-MODEの調整が完了したら：\n\n*変更を保存せずにキャリブレーションモードを終了するには：モジュールの電源を切ります\n\n*すべての変更を保存してキャリブレーションモードを終了するには：OPTIONと「C#」（TRACK/FREE）を押したまま、「Eb」（CHORD）を押します。H1はメインキーをすべて白色で数秒間素早く点滅させ、キャリブレーションの変更が行われたことを示します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 18,
+      "image": "/weston-h1/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "translation": "CALIBRATION MODE: CV DAC CALIBRATION\n\nこのキャリブレーションモードは、2つのCV出力（ChannelAおよびB）のリニアリティテーブルを調整するために使用されます。\n\n*キャリブレーションを調整する前に、最低15分間ユニットをウォームアップしてください。\n\nこのサブモードがアクティブな間、各CVアウトは現在のテーブルエントリーの電圧を出力します。これらの値は以下の通りです：\n\n-8.0V, -7.0V, -6.0V, -5.0V, -4.0V, -3.0V, -2.0V, -1.0V, 0.0V, 1.0V, 2.0V, 3.0V, 4.0V, 5.0V, 6.0V, 7.0V, 8.0V\n\n次に高いテーブルエントリーに移動するには「Bb」（MIX PAD）を押し、次に低いテーブルエントリーに移動するには「C」（CV2）を押します。\n\n調整するアクティブなCVアウトのテーブルを変更するには、通常の使用と同じ方法でDisplay/ A/BキーでChannelA/Bを切り替えます。\n\n次に、調整するCVアウトを高精度のDMMでモニターし、**他のパッチコードをH1に接続せずに**、OCTAVE +またはOCTAVE -を押して現在のテーブルエントリーのDACカウント値を上げ下げし、出力電圧をノミナル値（-8.0V、-7.0Vなど）にできるだけ近づけます。OscillatorのDACキャリブレーションと同様に、OPTIONとOCTAVE +またはOCTAVE -を押し続けると、1カウントではなく10DACカウントずつジャンプします。\n\nこのまたは他のキャリブレーションサブモードの調整が完了したら：\n\n*変更を保存せずにキャリブレーションモードを終了するには：モジュールの電源を切ります\n\n*すべての変更を保存してキャリブレーションモードを終了するには：OPTIONと「C#」（TRACK/FREE）を押しながら「Eb」（CHORD）を押します。H1はメインキーすべてを数秒間白く高速点滅させ、キャリブレーション変更が行われたことを示します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 19,
+      "image": "/weston-h1/pages/page-019.png",
+      "title": "Page 19",
+      "sectionName": null,
+      "translation": "CALIBRATION MODE: ADC SCALE/OFFSET CALIBRATION\n\nこのキャリブレーションモードは、3つのアナログ入力（Channel A CV In、Channel B CV In、CV2 Input (Aux CV)）のそれぞれのスケールとオフセットを調整するために使用します。\n\nA/Bキーを押すと、このモードで3つのCV入力を順番に切り替えます（CVA -> CVB -> CV2 (Aux CV)）。切り替わりはOSC SELECT LEDで表示されます。CV2 (Aux CV) は両方のLEDが点灯している時にアクティブであることを示します。\n\n*キャリブレーションを調整する前に、少なくとも15分間はユニットをウォームアップしてください。\n\nまず、channel Aがアクティブであることを確認します（A LEDが点灯）\n\n(1) (Offset) channel Aの三角波出力を正確なチューナーに接続します。H1で使用するMIDI to CVデバイスの出力を、測定/キャリブレーション中のchannel AのCV入力に接続し、正確に0.000Vに設定します。Channel Aのオシレーター出力は32.7Hz Cになるはずです。そうでない場合は、「Bb」（MIX PAD）と「C」（CV2）キーを使用してADC Aオフセットを増減し、可能な限り32.7Hz Cに近づけます。1〜2セント以内に収める必要があります。\n\n(2) (Scale) 次に、MIDI to CVデバイスを前のステップから5オクターブ上の音（つまり5.000ボルト）を出力するように設定します。OCTAVE +とOCTAVE -キーを使用してこのチャンネルのADC Aスケールを調整し、C 1046Hzにチューニングできるようにします。これも1〜2セント以内に収める必要があります。\n\n(3) (1)(Offset)と(1)(Scale)のステップを繰り返し、channel Aで両方の基準が満たされるまで調整します。\n\n(4) ステップ1-3を繰り返しますが、channel B用に行います。channel Bの三角波出力を測定し、CV入力源をchannel B CV inに接続します。channel Bがアクティブであることを確認してください（B LEDが点灯）\n\n(5) CV2 (Aux CV) がアクティブであることを確認し（両方のLEDが点灯）、ステップ1-3を繰り返しますが、CV2 (Aux CV) 用に行い、5Vの代わりに4.000Vを使用します（この入力の最大範囲は-5Vから+5Vのため）。このステップでは、オシレーターAの三角波出力をモニターします。\n\nこのまたは他のキャリブレーション・サブモードの調整が終了したら:\n\n*変更を保存せずにキャリブレーションモードを終了するには: モジュールの電源を切ります\n\n*すべての変更を保存してキャリブレーションモードを終了するには: OPTIONと「C#」（TRACK/FREE）を押したまま、「Eb」（CHORD）を押します。H1は数秒間、メインキーすべてを白色で素早く点滅させ、キャリブレーションの変更が行われたことを示します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 20,
+      "image": "/weston-h1/pages/page-020.png",
+      "title": "Page 20",
+      "sectionName": null,
+      "translation": "リビジョン履歴\n\n04: キャリブレーション/サービスモードについて説明するセクションを追加しました。\n\n03: trackとfreeの新しいキー照明、およびv1.0.7 FWアップデートに基づくdetune動作/キー照明の説明を更新しました。\n\n02: FWアップデート手順におけるブートマウントデバイスの説明を修正しました。\nコードモードでCVB入力が使用されないという誤った記述を削除しました。\n\n01: 初回リリース。",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

@@ -103,6 +103,38 @@ import addac200piPedalDiyPages from '@/public/addac200pi-pedal-diy/data/pages.js
 import addac511SvgenManifest from '@/public/addac511-svgen/data/manifest.json';
 import addac511SvgenPages from '@/public/addac511-svgen/data/pages.json';
 
+// Import weston-hv1
+import westonHv1Manifest from '@/public/weston-hv1/data/manifest.json';
+import westonHv1Pages from '@/public/weston-hv1/data/pages.json';
+
+// Import weston-tz0
+import westonTz0Manifest from '@/public/weston-tz0/data/manifest.json';
+import westonTz0Pages from '@/public/weston-tz0/data/pages.json';
+
+// Import weston-se1
+import westonSe1Manifest from '@/public/weston-se1/data/manifest.json';
+import westonSe1Pages from '@/public/weston-se1/data/pages.json';
+
+// Import weston-2v2
+import weston2v2Manifest from '@/public/weston-2v2/data/manifest.json';
+import weston2v2Pages from '@/public/weston-2v2/data/pages.json';
+
+// Import weston-sf1
+import westonSf1Manifest from '@/public/weston-sf1/data/manifest.json';
+import westonSf1Pages from '@/public/weston-sf1/data/pages.json';
+
+// Import weston-pa0
+import westonPa0Manifest from '@/public/weston-pa0/data/manifest.json';
+import westonPa0Pages from '@/public/weston-pa0/data/pages.json';
+
+// Import weston-h1
+import westonH1Manifest from '@/public/weston-h1/data/manifest.json';
+import westonH1Pages from '@/public/weston-h1/data/pages.json';
+
+// Import weston-sv1
+import westonSv1Manifest from '@/public/weston-sv1/data/manifest.json';
+import westonSv1Pages from '@/public/weston-sv1/data/pages.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -210,6 +242,38 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'addac511-svgen': {
     manifest: addac511SvgenManifest as unknown as ManualManifest,
     pages: addac511SvgenPages as unknown as ManualPagesData,
+  },
+  'weston-hv1': {
+    manifest: westonHv1Manifest as unknown as ManualManifest,
+    pages: westonHv1Pages as unknown as ManualPagesData,
+  },
+  'weston-tz0': {
+    manifest: westonTz0Manifest as unknown as ManualManifest,
+    pages: westonTz0Pages as unknown as ManualPagesData,
+  },
+  'weston-se1': {
+    manifest: westonSe1Manifest as unknown as ManualManifest,
+    pages: westonSe1Pages as unknown as ManualPagesData,
+  },
+  'weston-2v2': {
+    manifest: weston2v2Manifest as unknown as ManualManifest,
+    pages: weston2v2Pages as unknown as ManualPagesData,
+  },
+  'weston-sf1': {
+    manifest: westonSf1Manifest as unknown as ManualManifest,
+    pages: westonSf1Pages as unknown as ManualPagesData,
+  },
+  'weston-pa0': {
+    manifest: westonPa0Manifest as unknown as ManualManifest,
+    pages: westonPa0Pages as unknown as ManualPagesData,
+  },
+  'weston-h1': {
+    manifest: westonH1Manifest as unknown as ManualManifest,
+    pages: westonH1Pages as unknown as ManualPagesData,
+  },
+  'weston-sv1': {
+    manifest: westonSv1Manifest as unknown as ManualManifest,
+    pages: westonSv1Pages as unknown as ManualPagesData,
   },
 };
 

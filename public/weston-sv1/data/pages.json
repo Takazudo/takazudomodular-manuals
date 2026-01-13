@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-13T19:23:48.474Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-sv1/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "translation": "SV1\n\nDual / Stereo VCA\n\nEurorackモジュール\n\nユーザーマニュアル\n\nWeston Precision Audio\n\nDesigned In Portland, Oregon\n\nRevision 01 - May 31, 2024",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-sv1/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "translation": "目次\n\nPanel Overview……………………….. 3\n\nDescription & Specs………………….. 4\n\nUsing SV1\n\nGetting Started……………… 5\n\nBias……………………………. 5\n\nOutput Normal……………… 5\n\nCV Input………………………. 5\n\nOverdrive…………………….. 6\n\nZero-Cross Detect…………… 6\n\nClip Indicators.................... 6\n\nLink (Stereo Mode)…………. 6\n\nOther Ideas………………….. 7\n\nAppendix\n\nTrimmer Adjustments\n(Service Only).................... 8",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-sv1/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "translation": "SV1 概要\n\nA, D, S, & R CV コントロール\n\nエンベロープコントロール用のCV入力です。\n\nInput Level Attenuator\n\n-∞から+6dBまで調整可能で、中央のデテントでユニティ(0dB)になります。\n\nBias Level\n\n0〜5VのオフセットまたはバイアスをVCAへのCVに追加します。\n\nLink Button\n\nオンにすると(LEDが点灯)、左側のすべてのコントロールがLとR両方のチャンネルをコントロールします。\n\nOverdrive スイッチ\n\nオンにすると、VCAの入力に+6dBを追加します。Vintage出力から素晴らしいディストーションを得るのに最適です!\n\nCV Attenuator\n\nVCAに送られるCVの量を0〜2倍まで調整でき、中央のデテントでユニティ(1倍)になります。\n\nLeft CV Input\n\n左VCA用のCVコントロールです。右CV入力にケーブルが挿入されていない場合、右側にノーマル接続されます。\n\nZero Cross Detect\n\nオンにすると、ゼロクロス時にのみCVがVCAを開くことを許可します。低音信号における高速エンベロープからのクリックノイズを除去します。\n\nRight CV Input\n\n右VCA用のCVコントロールです。\n\nAudio Outputs\n\nL入力にケーブルが挿入されていない場合、R出力にはLとRのオーディオ入力のミックスが出力されます。\n\nLeft Audio Input\n\nオーディオ信号をここに入力してください!\n\nRight Audio Input\n\nオーディオ信号をここに入力してください!\n\nInput Clip Indicators\n\n入力信号が入力段でクリッピングしている時に点灯します。入力段は大きな(レール・トゥ・レール)入力処理能力を持っています。\n\nOutput Clip Indicators\n\n「Clean」(下側)VCAの出力段がクリッピングしている時に点灯します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-sv1/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "translation": "概要\n\nSV1はEurorack形式のVCA(Voltage Controlled Amplifier)シンセサイザーモジュールです。SV1は実際にチャンネルごとに2つのVCAを搭載しており、これらの出力は独立して利用可能です。\n\n一方のVCAペアは、ヴィンテージスタイルのディスクリートバイポーラトランジスタVCAで、ヴィンテージOPアンプ出力段を使用しています。もう一方のVCAペアは、モダンな2164ベースのチップVCAで、より現代的なOPアンプを出力段に使用しています。「Clean」VCAは低歪みと精度に優れており、一方「Vintage」VCAは音色の彩りと、プッシュされたときの適度な歪みを提供します。\n\nSV1は2つの独立したVCAとして使用することも、ステレオペアとして使用することもできます。「Link」ボタンを有効にすると、両方のVCAのAudio In Level、CVアッテネーター、およびBiasコントロールを、左側のコントロールセットで制御できるようになります。\n\nこのモジュールは、信号をブーストおよびドライブする複数の方法を備えており、さらにゼロクロス検出器により、高速エンベロープを使用した低周波信号のクリックフリーVCA処理が可能です。これらの機能により、SV1はあらゆるモジュラーシンセサイザーセットアップに対応する、非常に汎用性の高いデュアルまたはステレオVCAとなっています。\n\n重要または役立つ情報は赤字で表示されます。\n\n仕様\n\nモジュールサイズ: 12HP\n\nDepth: 25mm(背面PCBまで)、33mm(電源コネクタの端まで)\n\nVCA Response Type:\nLinear\n\nAudio Outputs:\n250 Ohm Output Impedance\n\nInputs:\n>= 100kOhm Input impedance\n\nAudio Inputs: DC Coupled\n\nPower input:\n+12V & -12V via standard 10 pin Eurorack connector. Protected against reverse polarity internally and with shrouded connector.\n\nPower consumption (+12V / -12V):\nTyp: 65mA / 60mA\nMax: 75mA / 70mA\n\nCV Input Voltage:\n5V = 100% (0dB), 0V = 0% (-∞dB)\n\n最大定格\n\nSupply Voltage: +13.5V / -13.5V\n\nAll inputs: Up to power supply levels.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-sv1/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "translation": "SV1の使い方：はじめに\n\nラックにSE1を設置して電源を投入した後、SV1の使用はモジュールの左下と右下の隅にある「In」入力の片方または両方にオーディオ信号をパッチすることで簡単に行えます。まずは左側のオーディオ入力にオーディオ信号を接続してください。\n\nSV1の使い方：BIAS\n\nすべてのポテンショメーターを完全に反時計回り（CCW）にし、「Link」ボタンが押されていない状態（LEDが消灯）で、左側の「In Level」ポットを中央のデテントまで上げ、左側の「Bias」ポットを完全に時計回り（CW）にします。これで、両方の左側出力（CleanとVintage）からユニティゲインで信号が聞こえるはずです。「Bias」は単純に0-5Vの固定電圧で、各VCAのコントロール電圧に**加算**されます。\n\nSV1の使い方：OUTPUT NORMAL\n\n前のステップと同じパッチで、右側のオーディオ入力に別のオーディオ信号を追加し、右側の出力のいずれかをリスニング（またはオシロスコープで観察）しながら、右側の「Bias」ポットを上げます。2つのオーディオ信号のミックスが聞こえるはずです。SV1は左側の出力が使用されていない場合に信号を「output normal」し、ミキサーのように動作します。\n\n次に、パッチケーブルを左側の出力のいずれかに挿入します。これにより、左側のオーディオが右側のVCAから消えます。言い換えれば、左側の出力にケーブルを挿入すると、右側の出力へのoutput normalが解除されます。左から右の出力に向かう小さな三角形は、このVCA出力のノーマライジングチェーンを示しています。\n\nSV1の使い方：CV INPUT\n\nオーディオ信号を左側の入力にパッチした状態で、オーディオの「In Level」ポットを中央（12時の位置）に、「Bias」を完全にCCWにします。次にLFOのサイン波または三角波を「Level CV」入力にパッチし、入力アッテネーターを中央（1Xラベル）まで上げます。LFO信号の正のピークでオーディオ信号が変調されているのが聞こえるはずです。次にCVアッテネーターを7時の位置あたり（つまりノブの移動量の1/4）まで戻し、その後「Bias」ポットを徐々に上げて、LFO CVの完全な正と負の振幅を使って信号を変調させます。これがBiasコントロールの用途の1つです - バイポーラ信号にオフセットを与えるか、DCオフセットを加えて活用することです。以下のオシロスコープのトレースは結果を示しています。\n\nFIG 1: NO BIAS",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-sv1/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "translation": "SV1の使い方：OVERDRIVE\n\nSV1の「Overdrive」スイッチは、各チャンネルのVCAへの入力信号を2倍（+6dB）にします。この結果は、VCAのタイプごとに異なります。Vintage VCAでは、入力セクションがオーバードライブされた際に信号に大きな歪みを追加しますが、Clean VCAはより広い入力範囲を持ち、「Overdrive」を有効にすると主に単純に音量が大きくなります（出力段がクリップするまで）。\n\n以下のオシロスコープの波形は、入力信号として10Vピークトゥピークの三角波を使用した場合の違いを示しています。Biasは最大CWに設定されています。図3の青色の波形の平らな頂点は、Clean VCAの出力段がクリップし始めたことを示しています。\n\nSV1の使い方：ZERO-CROSS DETECT\n\n「Zero Cross Detect」とマークされたスイッチ（フロントパネル上でゼロを通過する波のシンボルとして表示されます）は、そのチャンネルのVCAが入力波がゼロボルトを横切っているときにのみコントロール電圧をサンプリングできる回路を有効または無効にします。\n\nこの機能の理由は、非常に速いアタックエンベロープがクリーンな入力信号（特に正弦波や三角波のような低周波ベース）を持つVCAに送られた場合、VCAが入力波形の様々な急激な遷移時に開くため、かなりの量の「クリック」ノイズが発生するためです。zero-cross detect回路は、高速エンベロープCV状況においてこれらのクリックを排除します。各チャンネルのzero-cross detect回路は、そのチャンネルのVintageとClean VCAの両方に影響することに注意してください。\n\nFIG 2: 2.5V BIAS ADDED (BIAS AT ABOUT CENTER)\n\nFIG 3: OVERDRIVE. BLUE TRACE IS CLEAN OUTPUT AND RED IS VINTAGE. NOTE THAT CLEARLY THE CLEAN VAC'S OUTPUT STAGE HAS BEGUN TO CLIP",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-sv1/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "translation": "以下のオシロスコープのトレースは、この効果を視覚的に示しています：\n\nSV1の使用方法：CLIPインジケーター\n\nSV1には2セットのクリップインジケーターがあります。上部のインジケーターは、そのチャンネルの入力バッファーステージ（VCA入力の前段）がクリッピングしているかどうかを示します。入力バッファーはレールtoレール信号処理であるため、このライトは約24Vピークtoピークの信号を受けた時のみ点灯し、Eurorackフォーマットで最大限の入力ヘッドルームを提供します。\n\n下部のクリップインジケーターは、そのチャンネルのCLEAN VCAがクリッピングを開始したときに示します。CleanとVintage VCAは同じクリップ電圧範囲を持っていますが、異なるトポロジーと入力ステージにより、Clean VCAの出力はVintageよりも先にクリッピングします。そのため、LEDインジケーターはClean VCAのクリップ状態を示します。\n\nなお、どちらか一方または両方のステージがクリッピングしてもモジュールが損傷することはありませんので、サウンドを大きく歪ませたい場合でも、LEDクリップインジケーターを点灯させることを心配する必要はありません。\n\nSV1の使用方法：LINK（ステレオモード）\n\n「LINK」と表示されたボタンは、SV1をデュアルVCAからステレオVCAに切り替えるものです。「LINK」が有効な場合（LEDが点灯し、ボタンが押し込まれた状態）、LEFTチャンネルのAudio Input Attenuator、Biasノブ、およびCV Input Attenuatorが両方のチャンネルをコントロールします。\n\n言い換えると、「LINK」はSV1をステレオペアのVCAとして動作させ、左側のコントロールすべてがステレオペアに適用されます。\n\nFIG 4: ZERO-CROSS DETECT OFF。赤のトレースはCV信号、青はCLEAN VCA出力。波形の開始と終了が荒く一貫していないことに注目。これによりクリックノイズが発生します。\n\nFIG 5: ZERO-CROSS DETECT ON。波形の開始と終了がクリーンで一貫し、ゼロボルトから始まっていることに注目。クリックノイズはもうありません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/weston-sv1/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "translation": "SV1の使用方法: その他のアイデア\n\nSV1の基本的な使い方をご理解いただけたところで、モジュラーシステムでパッチを組んで遊んでみたくなったことでしょう。以下、試していただける いくつかのアイデアをご紹介します:\n\n- シリーズでのエクストラディストーション: 左チャンネルのVintage outputを右チャンネルのaudio inputにパッチします。両チャンネルのOverdriveをオンにします。\n\n- ステレオウェーブシェイピング: VCOのsineまたはtriangle outputを両方のaudio inputsにパッチし、その後、他の異なるoutputs(saws、squaresなど)を左右チャンネルのCVsにパッチして遊んでみてください。\n\n- Amplitude Modulation: audio rate signalsをCV inputにパッチして、他のaudio signalsを「刻む」ことができます。これはAMまたはAmplitude Modulationとして知られています。\n\nこのVCAモジュールの他の使い方もきっと見つかることでしょう...お楽しみください!",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/weston-sv1/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "translation": "付録: トリマー（サービスのみ）\n\nSV1は各チャンネルに複数のトリマーを備えており、工場出荷時に調整済みです。通常、これらを調整する必要はありませんが、このセクションでは調整が必要な場合に備えて、その目的を説明します。\n\nINPUT GAIN（ポットPCB上に配置。左チャンネル用に1つ、右チャンネル用に2つ）\nこれらのトリマーは入力ステージのゲインを調整します。入力ステージの出力は、左チャンネルの場合はテストポイントTS1、右チャンネルの場合はTS2でモニターできます。入力レベルポットが中央（クリック）位置にあるときにユニティ（1.0）ゲインが得られるように調整する必要があります。右チャンネルには2つのトリマーがあり、1つは右入力レベルポットを経由する右チャンネル用、もう1つは左入力レベルポットを経由する場合用です。これらはそれぞれ「UNLINKED」と「LINKED」とラベル付けされています。\n\nVINTAGE VCA GAIN（メイン（下部）PCBの上端に配置）\nこれらのトリマーは、左右のVINTAGE VCAのゲインを調整します。調整するには、両方のオーディオ入力に10 Vppの波形をパッチし、入力を中央に調整します。Biasを完全にCWに調整します。各Vintageの出力をモニターし、出力が入力振幅と一致するようにゲインを調整します。\n\nVINTAGE VCA CVR（メイン（下部）PCBの上端に配置）\nこれらのトリマーは、VINTAGE VCAのControl Voltage Rejection（CVR）を調整します。これを調整するには、オーディオ入力にオーディオがパッチされていないことを確認し、Audio Input AttenuatorとBias knobsを完全にCCWにします。オシレーターからオーディオレートの矩形波を各CV入力にパッチし、CV Input Attenuatorsを中央に設定します。各チャンネルのVintage出力をモニターし、CVのスループットを最小化するようにトリマーを調整します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/weston-sv1/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "translation": "改訂履歴\n\n01: 初版リリース。",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
