@@ -114,6 +114,7 @@ Required information:
 
 1. **Brand name**: The manufacturer/company name (e.g., "OXI Instruments", "ADDAC System")
 2. **PDF title**: The title for the manual (e.g., "OXI E16: Manual", "OXI ONE MKII: Manual")
+3. **Product slug**: The product identifier from takazudomodular repo (for linking manual to product)
 
 #### Question 1: Brand Name
 
@@ -137,9 +138,54 @@ Use AskUserQuestion tool to ask for PDF title:
   - "OXI E16: Manual"
   - "ADDAC112 VC Looper: Manual"
 
-**Note:** Both questions can be asked in a single AskUserQuestion call with multiple questions.
+#### Question 3: Product Slug (Auto-Detect with User Confirmation)
 
-Store both values for use in manifest creation (Step 7).
+**Environment variable required:** `TAKAZUDO_MODULAR_REPO_PATH` must be set in `.env`
+
+1. **Read product data** from takazudomodular repo:
+   ```bash
+   # Read product slugs from product-master-data.mjs
+   grep -o "slug: '[^']*'" ${TAKAZUDO_MODULAR_REPO_PATH}/src/data/product-master-data.mjs | \
+     sed "s/slug: '//g" | sed "s/'//g"
+   ```
+
+2. **Auto-detect matching product** based on manual slug:
+   - Extract base name from manual slug (e.g., `oxi-e16-manual` → `oxi-e16`)
+   - Search for matching product slug in product data
+   - If found, suggest as default option
+
+3. **Ask user to confirm or select product:**
+   - Question: "Which product does this manual belong to?"
+   - Options:
+     - Auto-detected product (if found, marked as recommended)
+     - Other matching products (if slug pattern matches multiple)
+     - "None / Not applicable" (for standalone manuals)
+     - "Other" (user can specify custom slug)
+
+**Example logic:**
+```javascript
+// Read .env
+const envPath = '/Users/takazudo/repos/personal/zmanuals/.env';
+const envContent = fs.readFileSync(envPath, 'utf8');
+const repoPath = envContent.match(/TAKAZUDO_MODULAR_REPO_PATH=(.+)/)?.[1];
+
+// Read product-master-data.mjs
+const productDataPath = `${repoPath}/src/data/product-master-data.mjs`;
+const productData = fs.readFileSync(productDataPath, 'utf8');
+
+// Extract all product slugs
+const slugMatches = productData.match(/slug: '([^']+)'/g);
+const productSlugs = slugMatches?.map(s => s.replace("slug: '", '').replace("'", ''));
+
+// Find matching product for manual slug
+const manualSlug = 'oxi-e16-manual';  // from command argument
+const baseSlug = manualSlug.replace(/-manual|-quick-start|-guide/g, '');
+const matchedProduct = productSlugs?.find(p => baseSlug.includes(p) || p.includes(baseSlug));
+```
+
+**Note:** All three questions can be asked in a single AskUserQuestion call with multiple questions.
+
+Store all values for use in manifest creation (Step 7).
 
 **Example existing manifests:**
 ```bash
@@ -380,7 +426,7 @@ function retryFailedPages(failures) {
 
 ### Step 7: Update Manifest with User-Provided Metadata (REQUIRED)
 
-**After manifest creation, update the manifest with brand name, title, and updatedAt collected in Step 0:**
+**After manifest creation, update the manifest with brand name, title, productSlug, and updatedAt collected in Step 0:**
 
 ```javascript
 // Read the manifest
@@ -388,8 +434,9 @@ const manifestPath = `public/${slug}/data/manifest.json`;
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
 // Update with user-provided values (collected in Step 0)
-manifest.title = pdfTitle;   // e.g., "OXI E16: Manual"
-manifest.brand = brandName;  // e.g., "OXI Instruments"
+manifest.title = pdfTitle;         // e.g., "OXI E16: Manual"
+manifest.brand = brandName;        // e.g., "OXI Instruments"
+manifest.productSlug = productSlug; // e.g., "oxi-e16" (from takazudomodular product data)
 
 // Add updatedAt with current date in YYYYMMDD format
 const today = new Date();
@@ -408,6 +455,7 @@ Or use the Edit tool to update all fields:
 {
   "title": "OXI E16: Manual",      // Update this with user-provided title
   "brand": "OXI Instruments",      // Add this with user-provided brand
+  "productSlug": "oxi-e16",        // Add product slug from takazudomodular
   "updatedAt": "20260112",         // Add current date in YYYYMMDD format
   "version": "1.0.0",
   ...
@@ -419,6 +467,7 @@ Or use the Edit tool to update all fields:
 - The correct title appears on the manual page
 - The brand name appears on the manual index page
 - The updatedAt date is displayed on the landing page
+- The productSlug links this manual to the product in takazudomodular (for auto-sync)
 
 ### Step 8-16: Verification Phase (MANDATORY)
 
