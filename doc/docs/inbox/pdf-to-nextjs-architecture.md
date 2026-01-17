@@ -22,13 +22,14 @@ This document describes the architecture for processing PDF manuals and integrat
                         │
                         ▼
 ┌─────────────────────────────────────────────────────────────┐
-│ Phase 1: PDF Processing (Intermediate Data)                 │
+│ Phase 1: PDF Processing (Temporary Data)                    │
 │                                                              │
-│  pdf:split    → manual-pdf/{slug}/pages/page-*.pdf          │
+│  pdf:split    → temp-processing/{slug}/split-pdf/           │
+│                 page-*.pdf                                   │
 │  pdf:render   → public/{slug}/pages/page-*.png              │
-│  pdf:extract  → public/{slug}/processing/extracted/         │
+│  pdf:extract  → temp-processing/{slug}/extracted/           │
 │                 page-*.txt                                   │
-│  pdf:translate→ public/{slug}/processing/translations-draft/│
+│  pdf:translate→ temp-processing/{slug}/translations-draft/  │
 │                 page-*.json                                  │
 └───────────────────────┬─────────────────────────────────────┘
                         │
@@ -36,11 +37,10 @@ This document describes the architecture for processing PDF manuals and integrat
 ┌─────────────────────────────────────────────────────────────┐
 │ Phase 2: Build for Next.js (Final Data)                     │
 │                                                              │
-│  pdf:build    → public/{slug}/data/pages.json               │
-│               → Combines all pages with translations        │
+│  pdf:build    → public/{slug}/data/pages-ja.json            │
+│               → public/{slug}/data/pages-en.json            │
 │                                                              │
 │  pdf:manifest → public/{slug}/data/manifest.json            │
-│               → Metadata about the manual                   │
 └───────────────────────┬─────────────────────────────────────┘
                         │
                         ▼
@@ -48,7 +48,7 @@ This document describes the architecture for processing PDF manuals and integrat
 │ Next.js Application (Data Consumer)                         │
 │                                                              │
 │  • Imports JSON via manual-registry.ts (ES modules)         │
-│  • Data bundled into HTML at build time                     │
+│  • User selects language (ja/en), loads only that file      │
 │  • Serves images from /manuals/{slug}/pages/                │
 │  • Renders pages at /manuals/{slug}/page/[1-N]              │
 └─────────────────────────────────────────────────────────────┘
@@ -58,31 +58,34 @@ This document describes the architecture for processing PDF manuals and integrat
 
 ```
 /
-├── manual-pdf/                             # Source PDFs
+├── manual-pdf/                             # SOURCE PDFs only
 │   └── {slug}/                             # Per-manual directory
-│       ├── *.pdf                           # Source PDF (any filename)
-│       └── pages/                          # Split page PDFs (gitignored)
-│           ├── page-001.pdf
-│           └── ... (page-XXX.pdf)
+│       └── *.pdf                           # Original PDF file (any filename)
 │
-├── public/                                 # Output directory
+├── public/                                 # WEB APP OUTPUT (served to users)
 │   └── {slug}/                             # Per-manual data
-│       ├── data/                           # Final: Next.js consumable data
+│       ├── data/                           # JSON data files (COMMITTED)
 │       │   ├── manifest.json               # Manual metadata
-│       │   └── pages.json                  # All pages with translations
+│       │   ├── pages-ja.json               # Japanese translation (default)
+│       │   └── pages-en.json               # Original English text
 │       │
-│       ├── pages/                          # Page images (300 DPI, PNG)
-│       │   ├── page-001.png
-│       │   └── ... (page-XXX.png)
+│       └── pages/                          # Page images (300 DPI, PNG) (COMMITTED)
+│           ├── page-001.png
+│           └── ... (page-XXX.png)
+│
+├── temp-processing/                        # ALL TEMPORARY FILES (GITIGNORED)
+│   └── {slug}/                             # Per-manual processing
+│       ├── split-pdf/                      # Split page PDFs
+│       │   ├── page-001.pdf
+│       │   └── ... (page-XXX.pdf)
 │       │
-│       └── processing/                     # Intermediate files (gitignored)
-│           ├── extracted/                  # Raw text from PDF
-│           │   ├── page-001.txt
-│           │   └── ... (page-XXX.txt)
-│           │
-│           └── translations-draft/         # Translation drafts
-│               ├── page-001.json
-│               └── ... (page-XXX.json)
+│       ├── extracted/                      # Raw English text from PDF
+│       │   ├── page-001.txt                #   → pages-en.json
+│       │   └── ... (page-XXX.txt)
+│       │
+│       └── translations-draft/             # Translation drafts
+│           ├── page-001.json               #   → pages-ja.json
+│           └── ... (page-XXX.json)
 │
 ├── lib/                                    # Next.js data access layer
 │   ├── manual-registry.ts                  # Central registry of all manuals
@@ -95,12 +98,20 @@ This document describes the architecture for processing PDF manuals and integrat
     ├── pdf-split.js                        # Split PDF into pages
     ├── pdf-render-pages.js                 # Render pages to PNG
     ├── pdf-extract-text.js                 # Extract text per page
-    ├── pdf-build.js                        # Build pages.json
+    ├── pdf-build.js                        # Build pages-ja.json & pages-en.json
     ├── pdf-manifest.js                     # Generate manifest.json
     ├── pdf-clean.js                        # Clean generated files
     └── lib/
         └── pdf-config-resolver.js          # Slug-based path resolution
 ```
+
+### Directory Purpose Summary
+
+| Directory | Purpose | Git Status |
+|-----------|---------|------------|
+| `manual-pdf/{slug}/` | Source PDF only | Committed (or gitignored if large) |
+| `public/{slug}/` | Final web app output | **Committed** |
+| `temp-processing/{slug}/` | All intermediate files | **Gitignored** |
 
 ## Currently Supported Manuals
 
@@ -141,15 +152,15 @@ Metadata file describing the manual.
 }
 ```
 
-### pages.json
+### pages-ja.json (Default)
 
-Single file containing all pages with translations.
+Japanese translation file. This is what most users need.
 
 ```json
 {
   "metadata": {
     "processedAt": "2026-01-03T16:55:27.791Z",
-    "translationMethod": "claude-code-subagent-page-by-page",
+    "language": "ja",
     "imageFormat": "png",
     "imageDPI": 300
   },
@@ -159,26 +170,57 @@ Single file containing all pages with translations.
       "image": "/oxi-one-mk2/pages/page-001.png",
       "title": "Page 1",
       "sectionName": null,
-      "translation": "OXI ONE MKII公式ユーザーマニュアル v1.0",
+      "content": "OXI ONE MKII公式ユーザーマニュアル v1.0",
       "hasContent": true,
-      "tags": []
-    },
-    {
-      "pageNum": 2,
-      "image": "/oxi-one-mk2/pages/page-002.png",
-      "title": "Page 2",
-      "sectionName": null,
-      "translation": "",
-      "hasContent": false,
       "tags": []
     }
   ]
 }
 ```
 
+### pages-en.json (Optional)
+
+Original English text file. For users who prefer English or want to reference original text.
+
+```json
+{
+  "metadata": {
+    "processedAt": "2026-01-03T16:55:27.791Z",
+    "language": "en",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/oxi-one-mk2/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "OXI ONE MKII Official User Manual v1.0...",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
+```
+
+### Language File Strategy
+
+| File | Purpose | Loaded When |
+|------|---------|-------------|
+| `pages-ja.json` | Japanese translation (default) | User selects Japanese or no preference |
+| `pages-en.json` | Original English text | User explicitly selects English |
+
+**Benefits:**
+
+- **Smaller payload**: Users only load the language they need
+- **Faster initial load**: Japanese users don't download English data
+- **Clear separation**: Each file is self-contained
+- **Easy to add languages**: Future languages follow same pattern
+
 ### translations-draft/page-XXX.json (Intermediate)
 
-Per-page translation output from Claude Code subagents.
+Per-page translation output from Claude Code subagents. This intermediate format already contains both texts.
 
 ```json
 {
@@ -195,12 +237,12 @@ Per-page translation output from Claude Code subagents.
 
 ## Processing Pipeline
 
-### Phase 1: PDF Processing (Intermediate Data)
+### Phase 1: PDF Processing (Temporary Data)
 
 ```bash
 # 1. Split PDF into individual page PDFs
 pnpm run pdf:split --slug oxi-one-mk2
-# Output: manual-pdf/oxi-one-mk2/pages/page-001.pdf, page-002.pdf, ...
+# Output: temp-processing/oxi-one-mk2/split-pdf/page-001.pdf, ...
 
 # 2. Render pages to PNG images at 300 DPI
 pnpm run pdf:render --slug oxi-one-mk2
@@ -208,11 +250,11 @@ pnpm run pdf:render --slug oxi-one-mk2
 
 # 3. Extract text from each page
 pnpm run pdf:extract --slug oxi-one-mk2
-# Output: public/oxi-one-mk2/processing/extracted/page-001.txt, ...
+# Output: temp-processing/oxi-one-mk2/extracted/page-001.txt, ...
 
 # 4. Translate pages to Japanese using Claude Code subagents
 pnpm run pdf:translate --slug oxi-one-mk2
-# Output: public/oxi-one-mk2/processing/translations-draft/page-001.json, ...
+# Output: temp-processing/oxi-one-mk2/translations-draft/page-001.json, ...
 # Uses 5 parallel workers
 # Cost: ~$5-10 per 280-page manual
 # Time: 15-30 minutes
@@ -221,15 +263,28 @@ pnpm run pdf:translate --slug oxi-one-mk2
 ### Phase 2: Build for Next.js (Final Data)
 
 ```bash
-# 5. Build pages.json from translation drafts
+# 5. Build pages-ja.json and pages-en.json
 pnpm run pdf:build --slug oxi-one-mk2
-# Input:  public/oxi-one-mk2/processing/translations-draft/page-*.json
-# Output: public/oxi-one-mk2/data/pages.json
+# Input:  temp-processing/oxi-one-mk2/extracted/page-*.txt
+#         temp-processing/oxi-one-mk2/translations-draft/page-*.json
+# Output: public/oxi-one-mk2/data/pages-ja.json
+#         public/oxi-one-mk2/data/pages-en.json
 
 # 6. Generate manifest.json
 pnpm run pdf:manifest --slug oxi-one-mk2
-# Input:  public/oxi-one-mk2/data/pages.json
 # Output: public/oxi-one-mk2/data/manifest.json
+```
+
+### Cleanup (Optional)
+
+After successful build and deploy, temporary files can be deleted:
+
+```bash
+# Clean temp files for a specific manual
+rm -rf ./temp-processing/oxi-one-mk2/
+
+# Clean ALL temp files
+rm -rf ./temp-processing/
 ```
 
 ### Complete Pipeline
@@ -302,11 +357,13 @@ Dynamically computes all paths from slug:
     pdfPattern: '*.pdf'
   },
   output: {
-    pages: 'manual-pdf/oxi-one-mk2/pages',
+    // Final output (committed)
     images: 'public/oxi-one-mk2/pages',
-    extracted: 'public/oxi-one-mk2/processing/extracted',
-    translationsDraft: 'public/oxi-one-mk2/processing/translations-draft',
-    translations: 'public/oxi-one-mk2/data'
+    data: 'public/oxi-one-mk2/data',
+    // Temporary files (gitignored)
+    splitPdf: 'temp-processing/oxi-one-mk2/split-pdf',
+    extracted: 'temp-processing/oxi-one-mk2/extracted',
+    translationsDraft: 'temp-processing/oxi-one-mk2/translations-draft'
   },
   settings: { /* from pdf-config.json */ }
 }
@@ -391,7 +448,7 @@ export interface ManualPage {
   image: string;
   title: string;
   sectionName: string | null;
-  translation: string;
+  content: string;         // Text content (language depends on loaded file)
   hasContent: boolean;
   tags?: string[];
 }
@@ -545,17 +602,28 @@ git push origin main
 
 **Committed to Git:**
 
-- `/public/{slug}/data/` - Final JSON files (manifest.json, pages.json)
+- `/manual-pdf/{slug}/` - Source PDF files
+- `/public/{slug}/data/` - Final JSON files
+  - `manifest.json` - Manual metadata
+  - `pages-ja.json` - Japanese translations
+  - `pages-en.json` - Original English text
 - `/public/{slug}/pages/` - Rendered PNG images
 - `/lib/` - Data loading code
 - `/scripts/` - Processing scripts
 
 **Gitignored (Temporary):**
 
-- `/manual-pdf/{slug}/pages/` - Split page PDFs
-- `/public/{slug}/processing/` - Intermediate files
-- `/__inbox/` - Temporary reports
+- `/temp-processing/` - All intermediate processing files
+  - `{slug}/split-pdf/` - Split page PDFs
+  - `{slug}/extracted/` - Extracted English text
+  - `{slug}/translations-draft/` - Translation drafts
+- `/__inbox/` - Temporary reports and screenshots
 - `/.next/`, `/out/` - Build outputs
+
+**Key Principle:**
+
+- `public/` = Web app output only (served to users)
+- `temp-processing/` = All temporary files (never served, safe to delete)
 
 ## File Naming Conventions
 
@@ -621,6 +689,77 @@ Error reports are saved to `__inbox/` with timestamps:
 - **Format:** PNG
 - **Size:** ~200MB for 272 pages
 
+## Language Selection (UI)
+
+The application supports multiple languages with **separate data files per language**. Users choose their preferred language, and only that language's data is loaded.
+
+### Why Separate Files?
+
+| Approach | Pros | Cons |
+|----------|------|------|
+| ~~Single file with both languages~~ | Simple code | Larger download for everyone |
+| **Separate files per language** | Optimal payload size | Slightly more complex loading |
+
+Most users only need Japanese. They shouldn't download English data they'll never use.
+
+### Available Languages
+
+| Language | File | Description |
+|----------|------|-------------|
+| **Japanese** (default) | `pages-ja.json` | Translated content for Japanese users |
+| **English** | `pages-en.json` | Original PDF text for reference/learning |
+
+### Implementation Notes
+
+```typescript
+// Language type
+type Language = 'ja' | 'en';
+
+// Load language-specific data
+function getPagesByLanguage(manualId: string, lang: Language): ManualPagesData {
+  // Implementation loads pages-ja.json or pages-en.json
+  // based on user preference
+}
+
+// Example: Page component
+interface PageViewerProps {
+  page: ManualPage;  // Contains `content` field (language-specific)
+}
+
+function PageViewer({ page }: PageViewerProps) {
+  return (
+    <div className="page-content">
+      <MarkdownRenderer content={page.content} />
+    </div>
+  );
+}
+```
+
+### User Language Preference
+
+Language preference handling:
+
+- Stored in localStorage for persistence
+- Selectable via UI dropdown/toggle
+- Can be set via URL parameter (e.g., `?lang=en`)
+- Default: Japanese (`ja`)
+
+### Loading Strategy Options
+
+**Option A: Build-time (Static)**
+
+- Generate separate HTML pages per language
+- URL: `/manuals/{slug}/page/1` (ja) vs `/manuals/{slug}/en/page/1` (en)
+- Pros: Fast, SEO-friendly
+- Cons: Doubles build output
+
+**Option B: Runtime (Dynamic)**
+
+- Single page structure, fetch language data on demand
+- URL: `/manuals/{slug}/page/1?lang=en`
+- Pros: Smaller build, flexible
+- Cons: Requires client-side data fetching
+
 ## Summary
 
 ### Key Architectural Decisions
@@ -650,10 +789,18 @@ Error reports are saved to `__inbox/` with timestamps:
    - `processing/` directory gitignored
    - Can delete after successful deploy
 
+6. **Multi-Language Support**
+   - Separate files per language (`pages-ja.json`, `pages-en.json`)
+   - Users only download the language they need
+   - English text committed to Git (not gitignored)
+   - Easy to add more languages in the future
+
 ### Benefits
 
 - **Multi-Manual Ready**: Easy to add more manuals
 - **Self-Contained**: All manual data in one location per manual
+- **Multi-Language**: Japanese and English available separately
+- **Optimal Payload**: Users only load their chosen language
 - **Simple Updates**: Single command rebuilds everything
 - **Static Export Compatible**: Build-time imports
 - **Fast Performance**: No runtime fetch
