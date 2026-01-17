@@ -6,10 +6,10 @@
  *
  * This script deletes:
  * - public/{slug}/pages/* (rendered images)
- * - public/{slug}/processing/extracted/* (extracted text)
- * - public/{slug}/processing/translations-draft/* (translation drafts)
  * - public/{slug}/data/* (final JSON files)
- * - manual-pdf/{slug}/pages/* (page PDFs)
+ * - temp-processing/{slug}/split-pdf/* (split page PDFs)
+ * - temp-processing/{slug}/extracted/* (extracted text)
+ * - temp-processing/{slug}/translations-draft/* (translation drafts)
  *
  * Keeps:
  * - Source PDF in manual-pdf/{slug}/
@@ -34,10 +34,10 @@ console.log(`📦 Manual: ${config.slug}`);
 console.log('');
 console.log('⚠️  This will remove all generated files from PDF processing:');
 console.log(`   - Rendered images (public/${config.slug}/pages/)`);
-console.log(`   - Extracted text (public/${config.slug}/processing/extracted/)`);
-console.log(`   - Translation drafts (public/${config.slug}/processing/translations-draft/)`);
-console.log(`   - Final translations (public/${config.slug}/data/)`);
-console.log(`   - Page PDFs (manual-pdf/${config.slug}/pages/)`);
+console.log(`   - Final data (public/${config.slug}/data/)`);
+console.log(`   - Split PDFs (temp-processing/${config.slug}/split-pdf/)`);
+console.log(`   - Extracted text (temp-processing/${config.slug}/extracted/)`);
+console.log(`   - Translation drafts (temp-processing/${config.slug}/translations-draft/)`);
 console.log('');
 console.log(`   Source PDFs in manual-pdf/${config.slug}/ will be kept.`);
 console.log('');
@@ -122,10 +122,10 @@ console.log('Starting cleanup...');
 console.log('');
 
 cleanDirectory(join(ROOT_DIR, config.output.images), 'Rendered images');
+cleanDirectory(join(ROOT_DIR, config.output.data), 'Final data');
+cleanDirectory(join(ROOT_DIR, config.output.splitPdf), 'Split PDFs');
 cleanDirectory(join(ROOT_DIR, config.output.extracted), 'Extracted text');
 cleanDirectory(join(ROOT_DIR, config.output.translationsDraft), 'Translation drafts');
-cleanDirectory(join(ROOT_DIR, config.output.translations), 'Final translations');
-cleanDirectory(join(ROOT_DIR, config.output.pages), 'Page PDFs');
 
 console.log('');
 console.log('Ensuring directories exist...');
@@ -133,10 +133,10 @@ console.log('');
 
 // Recreate empty directories
 ensureDirectory(join(ROOT_DIR, config.output.images), 'Rendered images');
+ensureDirectory(join(ROOT_DIR, config.output.data), 'Final data');
+ensureDirectory(join(ROOT_DIR, config.output.splitPdf), 'Split PDFs');
 ensureDirectory(join(ROOT_DIR, config.output.extracted), 'Extracted text');
 ensureDirectory(join(ROOT_DIR, config.output.translationsDraft), 'Translation drafts');
-ensureDirectory(join(ROOT_DIR, config.output.translations), 'Final translations');
-ensureDirectory(join(ROOT_DIR, config.output.pages), 'Page PDFs');
 
 console.log('');
 console.log('='.repeat(50));

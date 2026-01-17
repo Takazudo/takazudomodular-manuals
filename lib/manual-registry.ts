@@ -9,131 +9,131 @@ import type { ManualManifest, ManualPagesData } from './types/manual';
 
 // Import oxi-one-mk2
 import oxiOneMk2Manifest from '@/public/oxi-one-mk2/data/manifest.json';
-import oxiOneMk2Pages from '@/public/oxi-one-mk2/data/pages.json';
+import oxiOneMk2Pages from '@/public/oxi-one-mk2/data/pages-ja.json';
 
 // Import oxi-coral
 import oxiCoralManifest from '@/public/oxi-coral/data/manifest.json';
-import oxiCoralPages from '@/public/oxi-coral/data/pages.json';
+import oxiCoralPages from '@/public/oxi-coral/data/pages-ja.json';
 
 // Import oxi-e16-quick-start
 import oxiE16QuickStartManifest from '@/public/oxi-e16-quick-start/data/manifest.json';
-import oxiE16QuickStartPages from '@/public/oxi-e16-quick-start/data/pages.json';
+import oxiE16QuickStartPages from '@/public/oxi-e16-quick-start/data/pages-ja.json';
 
 // Import oxi-e16-manual
 import oxiE16ManualManifest from '@/public/oxi-e16-manual/data/manifest.json';
-import oxiE16ManualPages from '@/public/oxi-e16-manual/data/pages.json';
+import oxiE16ManualPages from '@/public/oxi-e16-manual/data/pages-ja.json';
 
 // Import addac112-looper
 import addac112LooperManifest from '@/public/addac112-looper/data/manifest.json';
-import addac112LooperPages from '@/public/addac112-looper/data/pages.json';
+import addac112LooperPages from '@/public/addac112-looper/data/pages-ja.json';
 
 // Import addac107-acids
 import addac107AcidsManifest from '@/public/addac107-acids/data/manifest.json';
-import addac107AcidsPages from '@/public/addac107-acids/data/pages.json';
+import addac107AcidsPages from '@/public/addac107-acids/data/pages-ja.json';
 
 // Import addac106-tnoise
 import addac106TnoiseManifest from '@/public/addac106-tnoise/data/manifest.json';
-import addac106TnoisePages from '@/public/addac106-tnoise/data/pages.json';
+import addac106TnoisePages from '@/public/addac106-tnoise/data/pages-ja.json';
 
 // Import addac104-tnetw
 import addac104TnetwManifest from '@/public/addac104-tnetw/data/manifest.json';
-import addac104TnetwPages from '@/public/addac104-tnetw/data/pages.json';
+import addac104TnetwPages from '@/public/addac104-tnetw/data/pages-ja.json';
 
 // Import addac207-quantizer
 import addac207QuantizerManifest from '@/public/addac207-quantizer/data/manifest.json';
-import addac207QuantizerPages from '@/public/addac207-quantizer/data/pages.json';
+import addac207QuantizerPages from '@/public/addac207-quantizer/data/pages-ja.json';
 
 // Import addac714-vintclip
 import addac714VintclipManifest from '@/public/addac714-vintclip/data/manifest.json';
-import addac714VintclipPages from '@/public/addac714-vintclip/data/pages.json';
+import addac714VintclipPages from '@/public/addac714-vintclip/data/pages-ja.json';
 
 // Import addac713-stereomix
 import addac713StereomixManifest from '@/public/addac713-stereomix/data/manifest.json';
-import addac713StereomixPages from '@/public/addac713-stereomix/data/pages.json';
+import addac713StereomixPages from '@/public/addac713-stereomix/data/pages-ja.json';
 
 // Import addac712-vintpre
 import addac712VintpreManifest from '@/public/addac712-vintpre/data/manifest.json';
-import addac712VintprePages from '@/public/addac712-vintpre/data/pages.json';
+import addac712VintprePages from '@/public/addac712-vintpre/data/pages-ja.json';
 
 // Import addac604-filter
 import addac604FilterManifest from '@/public/addac604-filter/data/manifest.json';
-import addac604FilterPages from '@/public/addac604-filter/data/pages.json';
+import addac604FilterPages from '@/public/addac604-filter/data/pages-ja.json';
 
 // Import addac305-latches-diy
 import addac305LatchesDiyManifest from '@/public/addac305-latches-diy/data/manifest.json';
-import addac305LatchesDiyPages from '@/public/addac305-latches-diy/data/pages.json';
+import addac305LatchesDiyPages from '@/public/addac305-latches-diy/data/pages-ja.json';
 
 // Import addac304-manualgates-diy
 import addac304ManualGatesDiyManifest from '@/public/addac304-manualgates-diy/data/manifest.json';
-import addac304ManualGatesDiyPages from '@/public/addac304-manualgates-diy/data/pages.json';
+import addac304ManualGatesDiyPages from '@/public/addac304-manualgates-diy/data/pages-ja.json';
 
 // Import addac219out-stereo-diy
 import addac219outStereoDiyManifest from '@/public/addac219out-stereo-diy/data/manifest.json';
-import addac219outStereoDiyPages from '@/public/addac219out-stereo-diy/data/pages.json';
+import addac219outStereoDiyPages from '@/public/addac219out-stereo-diy/data/pages-ja.json';
 
 // Import addac219in-stereo-diy
 import addac219inStereoDiyManifest from '@/public/addac219in-stereo-diy/data/manifest.json';
-import addac219inStereoDiyPages from '@/public/addac219in-stereo-diy/data/pages.json';
+import addac219inStereoDiyPages from '@/public/addac219in-stereo-diy/data/pages-ja.json';
 
 // Import addac218-atten
 import addac218AttenManifest from '@/public/addac218-atten/data/manifest.json';
-import addac218AttenPages from '@/public/addac218-atten/data/pages.json';
+import addac218AttenPages from '@/public/addac218-atten/data/pages-ja.json';
 
 // Import addac217-gate2trig
 import addac217Gate2trigManifest from '@/public/addac217-gate2trig/data/manifest.json';
-import addac217Gate2trigPages from '@/public/addac217-gate2trig/data/pages.json';
+import addac217Gate2trigPages from '@/public/addac217-gate2trig/data/pages-ja.json';
 
 // Import addac216-sumdiff
 import addac216SumdiffManifest from '@/public/addac216-sumdiff/data/manifest.json';
-import addac216SumdiffPages from '@/public/addac216-sumdiff/data/pages.json';
+import addac216SumdiffPages from '@/public/addac216-sumdiff/data/pages-ja.json';
 
 // Import addac215-sh
 import addac215ShManifest from '@/public/addac215-sh/data/manifest.json';
-import addac215ShPages from '@/public/addac215-sh/data/pages.json';
+import addac215ShPages from '@/public/addac215-sh/data/pages-ja.json';
 
 // Import addac210-open-heart
 import addac210OpenHeartManifest from '@/public/addac210-open-heart/data/manifest.json';
-import addac210OpenHeartPages from '@/public/addac210-open-heart/data/pages.json';
+import addac210OpenHeartPages from '@/public/addac210-open-heart/data/pages-ja.json';
 
 // Import addac200pi-pedal-diy
 import addac200piPedalDiyManifest from '@/public/addac200pi-pedal-diy/data/manifest.json';
-import addac200piPedalDiyPages from '@/public/addac200pi-pedal-diy/data/pages.json';
+import addac200piPedalDiyPages from '@/public/addac200pi-pedal-diy/data/pages-ja.json';
 
 // Import addac511-svgen
 import addac511SvgenManifest from '@/public/addac511-svgen/data/manifest.json';
-import addac511SvgenPages from '@/public/addac511-svgen/data/pages.json';
+import addac511SvgenPages from '@/public/addac511-svgen/data/pages-ja.json';
 
 // Import weston-hv1
 import westonHv1Manifest from '@/public/weston-hv1/data/manifest.json';
-import westonHv1Pages from '@/public/weston-hv1/data/pages.json';
+import westonHv1Pages from '@/public/weston-hv1/data/pages-ja.json';
 
 // Import weston-tz0
 import westonTz0Manifest from '@/public/weston-tz0/data/manifest.json';
-import westonTz0Pages from '@/public/weston-tz0/data/pages.json';
+import westonTz0Pages from '@/public/weston-tz0/data/pages-ja.json';
 
 // Import weston-se1
 import westonSe1Manifest from '@/public/weston-se1/data/manifest.json';
-import westonSe1Pages from '@/public/weston-se1/data/pages.json';
+import westonSe1Pages from '@/public/weston-se1/data/pages-ja.json';
 
 // Import weston-2v2
 import weston2v2Manifest from '@/public/weston-2v2/data/manifest.json';
-import weston2v2Pages from '@/public/weston-2v2/data/pages.json';
+import weston2v2Pages from '@/public/weston-2v2/data/pages-ja.json';
 
 // Import weston-sf1
 import westonSf1Manifest from '@/public/weston-sf1/data/manifest.json';
-import westonSf1Pages from '@/public/weston-sf1/data/pages.json';
+import westonSf1Pages from '@/public/weston-sf1/data/pages-ja.json';
 
 // Import weston-pa0
 import westonPa0Manifest from '@/public/weston-pa0/data/manifest.json';
-import westonPa0Pages from '@/public/weston-pa0/data/pages.json';
+import westonPa0Pages from '@/public/weston-pa0/data/pages-ja.json';
 
 // Import weston-h1
 import westonH1Manifest from '@/public/weston-h1/data/manifest.json';
-import westonH1Pages from '@/public/weston-h1/data/pages.json';
+import westonH1Pages from '@/public/weston-h1/data/pages-ja.json';
 
 // Import weston-sv1
 import westonSv1Manifest from '@/public/weston-sv1/data/manifest.json';
-import westonSv1Pages from '@/public/weston-sv1/data/pages.json';
+import westonSv1Pages from '@/public/weston-sv1/data/pages-ja.json';
 
 export interface ManualRegistryEntry {
   manifest: ManualManifest;

@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:13.093Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac604-filter/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac604-filter/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC604 DUAL FILTER \tUSER’S GUIDE\nJanuary.2020\tRevision.01\nWelcome to:\npage 2\tADDAC SYSTEM\nOVERALL DESCRIPTION\nWhile developing our ADDAC105 4 Voice Cluster module we made a new multimode filter to place after\nthe summing mix stage. We were so pleased with it’s sound that decided to release it as a dedicated\nfilter. To make it more interesting we duplicated it’s circuitry to be able to use it in a stereo signal path.\nTo make it more versatile we added a switch to set the working mode from Stereo to Dual Mono where\nboth filters can be used independently.\nIn Stereo Mode the Left Cutoff is used to control the Right Cutoff. In this case the Right Cutoff Knob and\nCV Input are simply bypassed and will have no impact on the Right Channel operation. This allows\nimmediate sync of both filter frequencies when the Stereo position is engaged. Optionally there’s a\njumper in it’s back that, when placed, connects the Right Controls back to the Right CV control allowing\nthe possibility to control the offset of the Right Channel Cutoff.\nResonance is independent on both Modes and still has to be set manually to match both channels.\nBoth the Audio and CV inputs are normalled from the Left into the Right channels. As standard plugging\nany input to the Right channels removes this connection.\nThis module will also be available as a full DIY kit..\nTech Specs:\n6HP\n4 cm deep 7\n0mA +12V\n70mA -12V\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac604-filter/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "CONTROLS DESCRIPTION\nADDAC604 User’s Guide\npage 3\tADDAC SYSTEM\nCutoff Initial Control\nOperation Mode\nDUAL MONO / STEREO\nResonance Control\nAudio Input\nHighPass Output\nBandPass Output\nRIGHT CONTROLS\nLowPass Output\nLEFT CONTROLS\nLowPass Output\nBandPass Output\nHighPass Output\nAudio Input\nCutoff CV Input\nCutoff CV Attenuverter\nCutoff Initial Control\nResonance Control\nCutoff CV Attenuverter\nCutoff CV Input\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac604-filter/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "page 4\tADDAC SYSTEM\nADDAC604 User’s Guide\nADDAC604\nDUAL FILTER SIGNAL FLOW DIAGRAM\nLEFT\nFILTER\nHIGHPASS\nBANDPASS\nLOWPASS\nAUDIO INPUT\nCUTOFF\nCV INPUT \tCUTOFF\nATTENUVERTER\nRESONANCE\nRIGHT\nFILTER\nHIGHPASS\nBANDPASS\nLOWPASS\nAUDIO INPUT\nCUTOFF\nCV INPUT \tCUTOFF\nATTENUVERTER\nRESONANCE\nSTEREO\nDUAL\nMONO\nBACK\nJUMPER\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac604-filter/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC604 \tUSER’S GUIDE\nJanuary.2020\tRevision.01\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

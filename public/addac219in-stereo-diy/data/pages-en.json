@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:12.683Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac219in-stereo-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac219in-stereo-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "March.2025\nADDAC219IN Assembly Guide\nADDAC SYSTEM \tpage 2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac219in-stereo-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 3\nADDAC219IN Assembly Guide\nSTEP 1:\nGrab the pcb, and locate the male and female pinheaders.\nSTEP 2:\nInsert the male pinheaders on corresponding female pinheaders, place them between both pcbs\nand solder them.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac219in-stereo-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "STEP 4:\nPlace the Power IDC connector and solder it.\nNotice the orientation of the IDC connector\nADDAC SYSTEM \tpage 4\nADDAC219IN Assembly Guide\nSTEP 6:\nPlace the jacks on the front pcb following the color placement shown below.\nPlace the front panel and tighten all the jack nuts, then proceed by soldering their legs.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac219in-stereo-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 5\nYou’re all done!\nHappy Patching!\nADDAC219IN Assembly Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac219in-stereo-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC219IN \tASSEMBLY GUIDE\nMarch.2025\tRevision.01\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac219in-stereo-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "STEP 4:\nFinish it by attaching both front and back pcbs.\nADDAC SYSTEM \tpage 4\nADDAC219IN Assembly Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

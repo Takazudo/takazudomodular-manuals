@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-12T20:11:34.646Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "language": "ja"
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac216-sumdiff/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac216-sumdiff/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "全体的な説明\n\nこのモジュールには、AとBとラベル付けされた2つの同一セクションがあります。\n\nこのモジュールは、2つの入力信号(X & Y)を単に合計するだけでなく、2つの信号を減算する可能性も提供する特殊なタイプのミキサーです。オーディオ信号とCV信号の両方で動作するため、2つのCVの差分を取得したり、2つのオーディオ信号の位相をキャンセルしたりすることが可能です。\n\n合計または減算の結果信号は、その後、スイッチ可能(on/off)な全波整流回路を通過します。これはAbsoluteとラベル付けされています。この後、ミックスされた信号のゲインは、Amplitudeとラベル付けされた別のアッテニュバーターを通過し、結果信号のゲインをコントロールします。これはアッテニュバーターであるため、入力信号を反転させる可能性も提供します。Amplitudeの後には、AC/DCカップリングスイッチがあり、その後にバイポーラOffsetノブが続きます。\n\n通常の出力に加えて、A & Bセクションのそれぞれに反転出力もあります。\n\nセクションAとBの出力も合算され、Average Outputに送信されます。\n\n単一入力(XまたはY入力のいずれか)を使用すると、このモジュールは、全波整流とACカップリングオプションを備えたシンプルなデュアルアッテニュバーター & Offset CVプロセッサーとしても使用できます。\n\n機能:\n\n2つの独立したセクション、それぞれに:\nI. ゲインアッテニュバーター付き2入力\nII. AmplitudeアッテニュバーターとバイポーラOffset\nIII. Absolute/BipolarおよびAC/DCスイッチ\nIV. 出力と反転出力\nV. 出力の極性とゲインをモニターする2つのLED\n\n両セクションのAverageミックス出力",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac216-sumdiff/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "コントロール説明\n\nセクションA 振幅Attenuverter\n\nセクションA 入力\n\nセクションA モニターLED\n\nセクションA Attenuverter Offset\n\nセクションA X&Y Attenuverter入力\n\n振幅Attenuverter セクションB\n\nモニターLED セクションB\n\nAttenuverter Offset セクションB\n\n入力 セクションB\n\nAC / DC Coupling セクションB\n\n平均出力 セクションA&B\n\nAbsolute / Bipolar セクションB\n\nAC / DC Coupling セクションA\n\nAbsolute / Bipolar セクションA\n\n出力 セクションB\t\tセクションA 出力\n\nセクションA 反転出力\n\n反転出力 セクションB\n\nセクションB X&Y Attenuverter入力\n\nセクションA\n\nセクションB",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac216-sumdiff/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "ADDAC216 ユーザーガイド\n\nADDAC216\n\nSUM & DIFFERENCE\n\n信号フロー図\n\nセクションA\n\nIN Y\n\nIN X\n\nATTENU\nVERTER\nGAIN\n\nATTENU\nVERTER\nGAIN\n\nMIX\n\nABSOLUTE\n-\nBIPOLAR\n(FULL RECTIFICATION)\n\nINVER\nTER\n\nOUT\n\nLEDs\n\nINVER\nTED\nOUT\n\nAC / DC\nCOUPLING\n\nOFFSET\n\nATTENUVERTER\nGAIN\n\nAVERAGE OUTPUT\n\nセクションB\n\nIN Y\n\nIN X\n\nATTENU\nVERTER\nGAIN\n\nATTENU\nVERTER\nGAIN\n\nMIX\n\nABSOLUTE\n-\nBIPOLAR\n(FULL RECTIFICATION)\n\nAC / DC\nCOUPLING\n\nOFFSET\n\nATTENUVERTER\nGAIN\n\nOUT\n\nINVER\nTER\n\nINVER\nTED\nOUT\n\nLEDs",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac216-sumdiff/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "フィードバック、コメント、問題については、以下までご連絡ください:\naddac@addacsystem.com\n\nADDAC216 ユーザーガイド\nOctober.2019 Revision.01",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

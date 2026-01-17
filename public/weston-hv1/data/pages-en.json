@@ -1,0 +1,191 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:13.837Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-hv1/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "© 2023 Weston Precision Audio \t1\nHV1\nHybrid Oscillator\nEurorack Module\nUser Manual\nWeston Precision Audio\nDesigned In Portland, Oregon\nRevision 03 - July 18, 2025\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-hv1/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "TABLE OF CONTENTS\nPanel Overview……………………….. \t3\nDescription & Specs………………….. \t4\nBlock Diagram………………………… \t5\nUsing HV1\nHome Screen & Menu/Tune \t6\nTuning Screen……………….. \t6\nHV1 Menus\nWavetable View................. \t7\nOptions View………………… \t8\nTuner View……………………. \t8\nHV1 Sounds\nModulation........................ \t9\nFold & Bitcrush................... 10\nWT Chord & Cluster……… \t11\nWavetable Morph………….. 12\nDigital Detune……………….. 13\nSync.................................. 13\nPulse Width Modulation…… 13\nAppendix\nRemoving/Installing SD\nCard..................................\n14\nUpdating Firmware............. 16\nCalibrations………………….. 18\n© 2023 Weston Precision Audio \t2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-hv1/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "© 2023 Weston Precision Audio \t3\nHV1 Overview\nEncoder\nA smoothly rotating\n360 analog encoder\nused for adjusting\nand selecting things.\nTune/Menu Button\nAlways toggles between\ntuning screen and menu\ndisplay modes.\n+/- / Up/Down Buttons\nAdjusts octave when in tuning\ndisplay mode and other\nfunctions when on menu\nscreens.\nLeft/Right\nButtons\nWhen in tuning\ndisplay mode, left\nbutton toggles\nbetween VCO and\nLFO range. If in\nLFO range, right\nbutton toggles LFO\nwaveform view.\nWhen in menu\ndisplay, pages\nbetween menu\nscreens.\nFM Input and\nAttenuator\nFM of oscillator core,\neither thru-zero\nlinear or exponential.\nSync Input\nSync oscillator core\nwith external signal.\nEither reversing or\nresetting type.\nPWM Input/PW\nKnob\nPWM (Pulse Width\nModulator) and base\nPW control for both\npulse outputs\nPhase Controls\nLeft knob adjusts\nphase offset of right\nwaves to left. Right\nknob is attenuator\nfor PM (Phase\nModulation) signal\nthat goes in “Lin\nPM” jack.\nMorph Controls\nLeft knob adjusts\nmorph position of\nWT output. Right\nknob is attenuator\nfor Morph CV\nsignal.\nAux CV Input\nCan be assigned to wavefolding\nor bitcrushing of right outputs.\nCore\nOutputs\nOutputs from\noscillator core.\n100% Analog.\nHybrid Outputs\nOutputs from digital\nphase shifter\n(triangle & derived\nwaveforms plus WT\noutput)\nSD Card Slot\nFor loading\nwavetables and\nupdating\nfirmware.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-hv1/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "DESCRIPTION\nHV1 is a VCO (Voltage Controlled\nOscillator) Eurorack module that\ncontains the best of both the analog and\ndigital worlds. The oscillator core is an\nincredibly stable and well-tracking\ntriangle-core analog VCO which outputs\ntriangle, sine, sawtooth, and pulse\nwaveforms. The triangle of the core is\npassed into a “digital phase shifter”\nwhich outputs a phase-shifted wavetable-\nbased triangle which is parsed into\nsawtooth, sine, and pulse waveforms\nthrough traditional analog circuitry. The\ndigital phase information is also mapped\nto the “WT” (wavetable) output, which\ncan output user wavetables loaded from\nthe SD card on the front of the module.\nAll waveforms can be modulated with\nlinear through-zero FM and exponential\nFM, while all the right-side outputs can\nalso be modulated with pure linear\nphase modulation (PM). This linear PM\nworks like that of PA0, but it has a\nlarger range, spanning +/- 720 degrees.\nThe Wavetable output supports 16-way\ncv-controllable morphing, and tables can\nbe loaded in WaveEdit or Serum format.\nThe digital section of HV1 runs at 16-bit\nand an extremely brisk 150kHz\nsampling rate for high fidelity and low\naliasing.\nImportant or helpful bits will be in red.\nSPECS\nModule Size: 16HP\nDepth: 25mm (To back PCB), 33mm (To end of\npower connector)\nVCO Tracking:\nAt least 8 octaves with +/- 2 cents error\nInputs:\n>= 100kOhm Input impedance\nCV Inputs: DC Coupled, FM Input: AC/DC\nCoupled\nPower input:\n+12V & -12V via standard 10 pin Eurorack\nconnector. Protected against reverse polarity\ninternally and with shrouded connector.\nPower consumption:\n+12V: 125mA\n-12V: \t45mA\nDAC:\n2 channels 16-bit / 150kHz\nInternal WT Format:\n1024 sample\nUser Wavetable Format:\n16-bit WaveEdit (256 sample, 64 bank)\n32-bit Serum (2048 sample, bank size depends\non file length).\nAll must have standard WAV file headers to\nload. 32-bit files should be regular 32-bit, not\n32-bit float format.\nMAXIMUM LIMITS\nSupply Voltage: +13.5V / -13.5V\nAll inputs: Up to power supply levels.\n© 2023 Weston Precision Audio \t4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-hv1/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "© 2023 Weston Precision Audio \t5\nHV1 Hybrid Oscillator:\nBlock Diagram\nTriangle Core\nAnalog VCO\nLinear FM Input\nV/Oct CV Input\nSync Input \tTriangle to saw\nconverter\nPulse\nSine\nTriangle\nSawtooth\nLeft Side (Core) Outputs\nProcessor\nTuning\nPot CV\nTriangle to saw\nconverter\nPWM Comparator\nTriangle to sine\nconverter\nDigital to analog\nconverter (DAC)\nWavetable\nWavetable\nRight Side (Hybrid) Outputs\nSawtooth\nPulse\nSine\nAnalog stuff\nDigital stuff\nOutput\nInput\nTriangle\nPhase Modulation\nInput\nOctave volts\ngenerator\nKey:\n0-7VDC\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-hv1/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "USING HV1: GETTING STARTED\nAfter installing and powering up SE1 in\nyour rack, using HV1 is as easy as any\noscillator: Just pick an output or 2 and\npatch a pitch CV into the V/oct input.\nHV1 comes pre-loaded with wavetables\nfor the WT (Wavetable) output, but if\nthe module is turned on with an empty\nSD card or no SD card, the WT output\nwill be loaded with a alternating sine/\nsaw/square/tri morph waveform.\nUSING HV1: \tHOME SCREEN &\nMENU/TUNE\nHV1 always starts up with the tuning\nscreen which looks like this:\nFIG 1: TUNING SCREEN WITH TUNING LOCK ON\nPressing the MENU/TUNE button\nalways toggles between displaying this\nscreen and the menu screens.\nUSING SV1: TUNE SCREEN\nThe tuning screen (shown above in fig.\n1) shows the overall oscillator tuning,\noctave, and phase angle between the\nleft and right outputs. Here’s what you\ncan do in this screen:\n* Press the encoder to lock/unlock\ntuning\nFIG 2: TUNING SCREEN WITH TUNING ENABLED\n* If tuning is unlocked, turn encoder to\ntune oscillator core.\n* Press +/- keys to increase or decrease\noctave.\n* Press and hold encoder for 1 second\nto toggle between oscillator core\ntuning and detune of digital outputs\nrelative to analog core. (Details in\nsection XXX).\n* If detune is displayed, press encoder\nto lock/unlock digital detuning, same\nas how it works for tuning.\nFIG 3: TUNING SCREEN WITH DETUNE DISPLAY\n* Press LEFT button to toggle between\nVCO and LFO range for oscillator\ncore.\n© 2023 Weston Precision Audio \t6\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-hv1/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "* If RANGE is set to LFO, pressing the\nRIGHT button toggles display of the\nLFO wave forms. 2 waveforms will\ndisplay in this view:\n* The output of the core’s sine wave\nwith a small square drawn at the\ncurrent voltage.\n* The output of the WT (wavetable).\nFIG 4: LFO WAVEFORM DISPLAY SCREEN\nMENU SCREENS: WAVETABLE\nVIEW\nWhen toggled to menu display by hitting\nthe MENU/TUNE button, the first screen\nshown is the wavetable view:\nFIG 5: WAVETABLE VIEW\nAssuming there is an SD card inserted in\nHV1 with some valid wavetable files,\nhere is what can be done on this screen:\n* Turn the encoder to increment or\ndecrement wavetable banks.\n* Press UP or DOWN keys to jump to\nnext WAV file containing wavetable\nbanks.\nWavetable banks are organized as\nfollows on HV1:\n* For WaveEdit format files, HV1\nassumes each table is 256 samples,\nand each bank has 64 tables. Since\nHV1 has a 16-way wavetable morph,\neach file will show up as FOUR banks.\nHV1 will interpolate each table from\n256-long to the 1024-long HV1 tables\nwhile loading.\n* For Serum files, HV1 assumes that\nthese are large, finely interpolated\nbanks, with each table having the\nstandard 2048 samples and chooses\nto interleave and build a 16-table bank\nbased on the length of the file. So for\nexample, if the table was 256 tables\nlong, HV1 would build a bank out of\nevery 256/16 = 16th table, and then\ndownsample each of those 2048-long\ntables into a 1024-long HV1 table.\n**NOTE: It is very common that Serum\nwavetables have non-standard data written\ninto the file header which can cause HV1 to\nnot load the file. If this is the case, it is\nrecommended to open the WAVE file in an\neditor such as TwistedWave (Mac) and re-\nsave out the file as a standard 16-bit\nmonophonic wave file so that the header\ninformation is compliant and the file can be\nloaded. Also, make sure any 32-bit files are\nnot 32-bit FLOAT, but just 32-bit (integer).\n© 2023 Weston Precision Audio \t7\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/weston-hv1/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "MENU SCREENS: OPTIONS VIEW\nPressing the RIGHT key while in the\nwavetable view will bring up the next\nmenu page: Options:\nFIG 6: OPTIONS VIEW\nIn this screen, press UP and DOWN\nkeys to scroll to the active option, and\nturn the encoder to change the setting.\nThere are 8 options here:\n1) \tType of FM for the oscillator core: LINEAR\nTZ or EXPONENTIAL\n2) \tFM Input coupling: AC or DC.\n3) \tType of sync for the oscillator core: RESET\nor REVERSE\n4) \tWave-folding algorithm for digital outputs.\n1) \t#1 is sinusoidal\n2) \t#2 is straight multiplication of phase\n3) \t#3 is triangular\n4) \t#4 multiplies phase by noise\n5) \t#5 is low-fi bit-crushed added phase\n5) \tRouting of the “Aux CV” input.\n1) \tAux CV routed to wave folding\n2) \tAux CV routed to bit-crushing.\n3) \tAux CV routed to Wavetable chord.\n4) \tAux CV routed to Wavetable cluster.\n6) \tShifting the octave of the righthand (digital)\ntriangle output up by +1 relative to the VCO\ncore.\n7) \tShifting the octave of the wavetable output\nby +1 relative to VCO core.\n8) \tAntialiasing for the WT output on or off*\n* Note that when switching banks/files, HV1\ntakes a few seconds to construct the high-\noctave antialiased wavetables if WT\nAntialiasing is turned on.\nMENU SCREENS: TUNER VIEW\nPressing the RIGHT key while in the\noptions view will bring up the last menu\npage: Tuner:\nFIG 7: TUNER VIEW\nThis is a handy tuner which continually\nmeasures the pitch of the core oscillator.\nThe closest note is displayed in the\ncenter, as well as the cents pitch off from\nthat note as both a number and a bar\ndisplayed above the note.\nThe bottom of the screen shows the\ncurrent position of the tuning knob within\nit’s total range, and the lower right\ncorner shows the octave selected.\n+/- keys still adjust the octave up and\ndown just like in the tuning screen while\non this screen.\n© 2023 Weston Precision Audio \t8\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/weston-hv1/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "HV1 SOUNDS: MODULATION\nHV1 has 2 types of modulation which\ncan vastly vary the timbre of the sound.\nFirstly, the main VCO core can be\nmodulated via FM (Frequency\nModulation). There are 2 types of FM\navailable; Linear Through-Zero, and\nExponential (Selection described in the\n“OPTIONS VIEW” section on page 8).\nThe graphs below show FM via a\ntriangular modulating signal. Yellow\nwave is the triangle from the core (left)\nand magenta is the hybrid (right)\ntriangle output.\nFIG 8: THROUGH ZERO LINEAR FM VIA TRIANGLE\nFIG 9: EXPONENTIAL FM VIA TRIANGLE\nBesides the fact that these 2 type of\nmodulation sound very different, one\nwill notice that the FM signals affect ALL\nwaveforms, because the oscillator core\nfeeds into the digital phase shifter (see\nblock diagram on page 5).\nThe other type of modulation available\nis through-zero PM (Phase Modulation).\nThe “Phase Angle” pot and “Lin PM”\ninput are summed (added) together to\nmodulate the phase of the righthand\nwaves relative to the lefthand waves.\nNote again that PM only applies to the\nrighthand waves labeled “Digital Phase\nShifter”. The sound of PM varies a lot\ndepending on the modulating wave.\nHere are 2 examples:\nFIG 9: PM WITH TRIANGLE AS MODULATOR\nFIG 10: PM WITH SQUARE AS MODULATOR\n© 2023 Weston Precision Audio \t9\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/weston-hv1/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "HV1 SOUNDS: AUX CV ROUTING\n(FOLD & BITCRUSH)\nThe “Aux CV” input on HV1 can be\nrouted to several functions: . If Aux CV\nin is routed to “Fold”, then a CV applied\nto this input will fold the righthand\nwave’s phase by an amount\nproportional to the CV. There are 5\nalgorithms available and 3 are shown\nbelow:\nFIG 10/11/12: FOLD ALGO 1, 2, AND 3.\n1 IS SINUSOIDAL, 2 IS LINEAR MULTIPLICATION, AND 3 IS\nTRIANGULAR.\nWhen Aux Cv is set to be routed to\n“Bitcrush”, the righthand waves will all\nbe bit crushed (bit-reduced) by an\namount proportional to the CV. Note\nthat the Aux CV is unipolar and\nresponds to CVs in the range of 0 to 5V.\nFIG 13/14/15: AUX CV ROUTED TO BITCRUSH;\nCV = ~1.5V\nCV = ~2.5V\nCV = TRIANGULAR WAVE\n© 2023 Weston Precision Audio \t10\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/weston-hv1/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "HV1 SOUNDS: AUX CV ROUTING\n(WT CHORD & WT CLUSTER)\nIf Aux CV in is routed to “WT Chord”,\nthe aux CV is quantized to traditional\n1V per octave (0.083V) steps,\nrepresenting 5 octaves on a keyboard.\nThe Wavetable output (Only the WT\nout, not the phase-shifted triangle) will\nexpand from 1 to 5 oscillators and play\na chord which is selected by the\nquantized CV. Note that not all chords\nuse all 5 oscillators. The chart to the\nright shows the available chords. Try\npatching your same pitch CV into the\naux CV in chord mode for interesting\ninspiration.\n(WT CHORD & WT CLUSTER)\nIf Aux CV is routed to “WT Cluster”,\nHV1 expands the WT output again to 5\noscillators, but the amount of relative\ndetuning of the extra 4 oscillators to the\noriginal (the “spread”) is proportionate\nto the aux CV. 0V means all 5 oscillators\nare in tune. 5V means the max spread is\n1 octave and a 5th (up and down). Try\nlow values of spread on drones for a\nsuper thick sound.\n© 2023 Weston Precision Audio \t11\nNote \tVolts \tChord\nC0 \t0.000 \tMajor\nC#0 \t0.083 \tAdd 4\nD0 \t0.166 \tSixth\nD#0 \t0.249 \tSix Nine\nE0 \t0.332 \tMajor 7th\nF0 \t0.415 \tMajor 9th\nF#0 \t0.498 \tMajor 7 Sharp 11\nG0 \t0.581 \tMinor\nG#0 \t0.664 \tMinor Add 4\nA0 \t0.747 \tMinor Sixth\nBb0 \t0.830 \tMinor 7th\nB0 \t0.913 \tMinor Add 9\nC1 \t0.996 \tMinor Sixth Add 9\nC#1 \t1.079 \tMinor 9th\nD1 \t1.162 \tMinor 11th\nD#1 \t1.245 \tMinor / Major 7th\nE1 \t1.328 \tMinor / Major 9th\nF1 \t1.411 \tMinor / Major 11th\nF#1 \t1.494 \tMinor 7 Flat 5 (Half Dim)\nG1 \t1.577 \tDominant 7th\nG#1 \t1.660 \tDominant 9th\nA1 \t1.743 \tDominant 11th\nBb1 \t1.826 \tSeven Sharp 5\nB1 \t1.909 \tSeven Flat 5\nC2 \t1.992 \tSeven Flat 9th\nC#2 \t2.075 \tSeven Sharp 9th\nD2 \t2.158 \tNine Sharp 5\nD#2 \t2.241 \tNine Flat 5\nE2 \t2.324 \t7 Sharp 5 Sharp 9\nF2 \t2.407 \t7 Sharp 5 Flat 9\nF#2 \t2.490 \tFlat 5 Sharp 9\nG2 \t2.573 \t7 Flat 5 Flat 9\nG#2 \t2.656 \t7 Sharp 11\nA2 \t2.739 \tDiminished 7th\nBb2 \t2.822 \tAugmented\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/weston-hv1/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "HV1 SOUNDS: WAVETABLE\nMORPH\nThe “WT” (wavetable) output of HV1\nalways loads an array of 16 wavetables\ninto its memory. These 16 wavetables\nare continuously morphed in an amount\nproportional to the CV applied. So, 0%\nCV means 100% of the 1st table is\nloaded, and 100% CV means that 100%\nof the 16th table is loaded. The CV from\nthe “Morph” input is summed (added) to\nthe CV from the “Morph” potentiometer.\nVery interesting results can be had by\nslowly modulating the morph CV with an\nLFO or envelope. However, morph can\nalso be modulated with audio-rate\nsignals all the way up to 20kHz!.\nBelow is a capture of a triangle LFO\n(yellow signal) morphing the WT output\n(magenta signal). The Morph\npotentiometer is set to 50% so that the\nCV will morph on both the negative and\npositive excursions of the input bipolar\nsignal.\nFIG 16: WT MORPH VIA LFO CV\n© 2023 Weston Precision Audio \t12\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/weston-hv1/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "HV1 SOUNDS: DETUNE\nGoing back to the home screen with the\ntuning knob and octave/phase angle/\nrange display, as mentioned on page 6,\nholding the encoder button down for 1\nseconds flips the “knob” display &\ncontrol from oscillator tuning to digital\ndetune.\nFIG 17A: DETUNE DISPLAY (DETUNE OFF)\nWhen digital detune is OFF, the\nrighthand (hybrid) outputs remain\nphase-locked with the analog VCO and\nthus at the same frequency. When\ndigital detune is ON, the hybrid outputs\nphase becomes unlocked form the\nanalog VCO and can be detuned\nrelative to the analog VCO by around\n+/- one octave.\nTo toggle detune on and off, simply\npress the encoder button once when in\nthe detune display as shown above.\nDetune allows you to use HV1 like 2\noscillators tuned to a parallel interval\nlike a 5th or 7th, or to slightly detune\nthem for additional phasing effects.\nFIG 17B: DETUNE DISPLAY (DETUNE ON)\nHV1 SOUNDS: SYNC\nHV1’s analog oscillator can be sync’d to\nanother oscillator via the “SYNC” input\non the front panel. 2 different options\ncan be selected via the options menu\n(see page 8):\n1) \tRESET: The VCO’s integrating\ncapacitor is discharged on each\nrising pulse of the sync input.\n2) \tRVERSE: The VCO’s integrating\ncapacitor reverses the direction of\ncharging on each rising pulse of the\nsync input.\nHV1 SOUNDS: PWM\nFinally, HV1 has a PWM input, which\nmodulates the pulse width of both of the\npulse inputs. This signal is simply\nsummed with the voltage from the PW\n(Pulse Width) potentiometer. The range\nof the PW potentiometer is a little bit\npast 0% duty cycle and a little bit past\n100% duty cycle.\n© 2023 Weston Precision Audio \t13\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/weston-hv1/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "APPENDIX: INSTALLING/\nREMOVING THE SD CARD\nIf you are updating firmware, first turn\nthe module off. If you are simply loading\ndifferent wavetables, you can “hot\nswap” the card doing the following:\nUNMOUNTING THE SDCARD\nWHILE HV1 IS ON:\nWhile in the wavetable morph screen,\nhold the encoder down for 2 seconds\nand HV1 will attempt to unmount the SD\ncard. The following text should appear\n(SD CARD NOT MOUNTED). It is now\nsave to remove the card:\nFIG 18: SD CARD DISMOUNTED\nREMOVING THE SD CAD:\nAssuming that either the card has been\nsafely unmounted as described above\nOR the HV1 is shut down, to remove the\nSD card, simply put on the edge of the\nSD card until a slight click is heard and\nthe retention is released. Then let go\nand the card should push out a few\nmillimeters and be easy to pull out.\nFIG 19: REMOVING THE CARD\nINSTALLING THE SD CARD:\nTo install a card, simply reverse the\ninstallation process. Make sure the little\nnotch on the card is facing upward:\nFIG 20: INSTALLING THE CARD\n…and slide the card in. Then push on\nthe end until the retention latch is\nactuated.\nThe card should stick out about 2mm or\nso when installed.\n© 2023 Weston Precision Audio \t14\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/weston-hv1/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "APPENDIX: INSTALLING/\nREMOVING THE SD CARD\n(continued).\nFIG 21: SD CARD INSTALLED\nMOUNTING A SD CARD WHILE\nHV1 IS ON:\nIf you unmounted a card while HV1 was\non, you can mount an installed card the\nsame way. Just hold the encoder for 2\nseconds and HV1 will attempt to mount\nthe card and parse the files on it. If all\ngoes well, you’ll see the first file on the\ncard loaded up like this:\nFIG 21: SD CARD SUCCESSFULLY MOUNTED\n© 2023 Weston Precision Audio \t15\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/weston-hv1/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "APPENDIX: FIRMWARE UPDATING\nHV1’s internal firmware can be updated\nvia the SD card. Before updating, check\nand see if you already have the newest\nfirmware. The info screen can be\naccessed by navigating to the TUNER\nscreen and then holding the RIGHT\nbutton for 3 seconds:\nFIG 22: INFO SCREEN\nIf a newer update is available, follow\nthe steps below:\n1) \tPower down HV1 and remove the\nSD card. Download the FW update\nand copy the .BIN file to the root\n(not in a folder) of the SD card.\nMake sure your card has only\nONE .BIN FW file on it, since the\nupdater cannot parse files and will\nselect the first one it finds for update.\n2) \tRe-insert the SD card and power up\nHV1 *while holding the RIGHT and\nDOWN buttons simultaneously*.\n3) \tHV1 will boot to this screen:\nFIG 23: FIRMWARE UPDATE SCREEN FIRST SCREEN\nAssuming the SD card is inserted and a\nvalid .BIN file is on the card, you will\nsee the screen shown in fig 23.\n4) \tPress + to start the update. First the\napplication block of flash memory\nwill be briefly erased and this will be\ndisplayed:\nFIG 24: FW UPDATE, FLASH MEM SUCCESSFULLY ERASED\n5) \tPress + again to write the BIN file to\nflash memory. This will be displayed:\nBriefly, and then this:\nFIG 25/26: FW UPDATING COPYING FW\n6) \tThe firmware update is now\ncomplete. You should see the screen\nshown in figure 26. Assuming the\n© 2023 Weston Precision Audio \t16\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/weston-hv1/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "update went OK, “FW Update\nComplete” and “Copy Errors: 0”\nshould be displayed.\n7) \tSimply power down the module and\nrestart it as normal, without holding\nany keys down, and HV1 should\nboot with the newly updated\nfirmware. You can check the version\nthe same way you did in the\nbeginning by going to the tuner and\nholding the RIGHT key for 3\nseconds.\n© 2023 Weston Precision Audio \t17\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 18,
+      "image": "/weston-hv1/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "APPENDIX: CALIBRATIONS\nIn normal use, HV1 shouldn’t need to be\ncalibrated, but if for some reason\nsomething needs to be adjusted, this\nsection explains the available options.\nSome are adjusted physically/\nmechanically, and some in software.\nStarting with the physical trimmer pots:\nVCO Volts/Octave and HF Trim:\nLocated on the upper right corner of the\nrear of the module are the V/oct and HF\ntrim. These adjust the scale and high-\nfrequency response of the analog VCO.\nA 1.5mm flat screwdriver is needed to\nadjust the HF trim, and a 2.0mm for the\nV/octave.\nOctave Voltage Trim:\nThis trimmer, located on the right side of\nthe rear of the module is for adjusting\nthe scale of the octave voltage. Only\nadjust this after ensuring the VCO V/oct\nscale is perfectly adjusted.\nRight Sine Trim:\nThis trimmer, located on the left side of\nthe rear of the module adjusts the shape\nof the sine on the digital (righthand)\noutput. Adjust by ear or by using a\nfrequency analyzer. This normally will\nnot ever need to be adjusted.\n© 2023 Weston Precision Audio \t18\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 19,
+      "image": "/weston-hv1/pages/page-019.png",
+      "title": "Page 19",
+      "sectionName": null,
+      "content": "APPENDIX: CALIBRATIONS\n(DIGITAL)\nTuning offset and phase offset trim:\nWhen on the main tuning screen,\nholding the +/UP button for 3 seconds\nwill enter a calibration mode and a “C”\nwill show in the upper left as shown:\nThe numbers at the bottom left are the\nvalues of tuning offset and phase offset,\nrespectively (shown here as 267 and\n2000).\nPressing + or - will adjust the tuning\noffset. If, for example you had tuning set\nto 0 and your “C” was 5 cents off, you\ncan use this adjustment to set it perfect.\nPressing LEFT or RIGHT will adjust the\nphase 0 offset. Monitoring the left and\nright triangles on an oscilloscope, turn\nthe phase potentiometer to full counter-\nclockwise. The 2 triangles should be\ncoincident (on top of each other). If not,\npress LEFT and RIGHT until they are.\nWhen finished, simply hold +/UP for 3\nseconds until the “C” disappears. The\ntuning offset and phase offset will be\nsaved to internal non-volatile memory.\n© 2023 Weston Precision Audio \t19\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 20,
+      "image": "/weston-hv1/pages/page-020.png",
+      "title": "Page 20",
+      "sectionName": null,
+      "content": "REVISION HISTORY\n03: Added explanations of new Aux CV\nrouting options in FW 0.2.0.\n02: FW update procedure erroneously\nreferenced fig 19 but should be 23.\n01: Initial release.\n© 2023 Weston Precision Audio \t20\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

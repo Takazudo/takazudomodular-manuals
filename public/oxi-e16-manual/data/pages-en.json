@@ -1,0 +1,677 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:13.524Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/oxi-e16-manual/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "I\tThe OXI E16 Manual I\tThe OP-XY Notebook : Reference & Guide\nOfficial User Manual v 0.5.0a\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/oxi-e16-manual/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "II The OXI E16 Manual\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/oxi-e16-manual/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "III\tThe OXI E16 Manual\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/oxi-e16-manual/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "IV The OXI E16 Manual\nContents\n1. Overview ................................................................................. 1\n1.1 Introduction ........................................................................ 2\n1.2 How To Use This Manual ................................................... 3\n1.3 Hardware Overview ........................................................... 4\n1.4 Powering Up ...................................................................... 5\n1.5 Navigating the E16 ............................................................ 6\n1.6 Architecture ....................................................................... 7\n1.7 Naming Editor .................................................................... 8\n2. Connect & Control ..................................................................11\n2.1 Connectivity Overview ..................................................... 12\n2.2 MIDI USB Connectivity .................................................... 13\n2.3 MIDI TRS Connectivity .................................................... 14\n2.5 MIDI Ports & Channels .................................................... 16\n2.6 Control Settings Overview ............................................... 17\n2.7 Configuring a Control ...................................................... 18\n2.8 Control Colors ................................................................. 19\n2.9 Controller Destination Options ........................................ 20\n2.10 Special Functions .......................................................... 30\n2.11 Snapshot - Special Function .......................................... 31\n2.12 Recording Automation ................................................... 33\n2.13 Groups ........................................................................... 36\n2.14 MIDI In ........................................................................... 38\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/oxi-e16-manual/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "V\tThe OXI E16 Manual\nContents\n3. Scenes .................................................................................. 41\n3.1 Scene Navigation ............................................................ 42\n3.2 Scene Pages ................................................................... 43\n3.3 Accessing All Scenes ...................................................... 45\n3.4 Scene Settings ................................................................ 46\n3.5 Presets ............................................................................ 47\n4. System & App ........................................................................ 49\n4.1 OXI App ........................................................................... 50\n4.2 Instrument Definitions ...................................................... 52\n4.3 System Settings .............................................................. 55\n4.4 Firmware Update ............................................................. 56\n4.5 Troubleshooting Updates ................................................ 57\n4.6 MIDI Input Monitor ........................................................... 58\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/oxi-e16-manual/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "VI The OXI E16 Manual\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/oxi-e16-manual/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "1\tThe OXI E16 Manual\nThe E16 is a compact yet advanced MIDI parameter controller which can\ncommunicate MIDI over TRS, USB or Bluetooth connections. MIDI input also\naccepts messaging from external devices. There are 16 push/turn endless\nencoders immediately available on the panel which can be configured for\ncontrol of a destination device’s MIDI functions such as CC - Control Change ,\nPC - Program Change, note data and many other MIDI parameters. The E16\ncan record and play back parameter automation, operate with parameter\ngroups and provide precise individual parameter control and function selection.\nControls are organised in Scenes. A maximum of 16 Scenes are available on\nboard the E16, 7 of which are presented for immediate access in the home\nscreen at power on. A scene stores the E16 settings and each scene has 16\npresets which can be used to capture and store the current parameter settings.\nPresets can be used to recall stored parameter states. A scene contains 12\npages, each with 16 parameter controls. A scene can hold 192 parameters each\nwith 2 destination controls and a push value. Navigating the menus and options\nis also performed using the 16 push/turn encoder knobs along with the multi-\nfunctional shift button. The E16 is a great tool in the MIDI armoury either as a\ncreative contributor to your setup or as a flexible and practical utility tool. The\nimportant thing is that the E16 contributes to you making great music, being\ncreative with live performances, and generally having fun!\nOverview\n1\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/oxi-e16-manual/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "2 The OXI E16 Manual\nOverview\t1\n1.1 Introduction\nE16 is the latest part of the OXI family of audio products and the perfect compliment to OXI ONE. E16 is an\nadvanced MIDI performance controller consisting of 16, configurable push / turn rotary encoders. Control over MIDI\nUSB, TRS and Bluetooth is possible.\nE16 is a MIDI controller and in itself does not generate any audio output. Audio is generated from the connected\ndevices where E16 will control the synth, effect or sequencer parameters and pattern values.\nSpecifications\nElectrical specifications:\n• 5V DC 1.7A (USB type C supply)\nRadio equipment:\n• Bluetooth 5.0, 2.4GHz, Tx Max: 4 dBm\nMechanical specifications:\n• Aluminium chassis.\n• Dimensions: 143 x 114 x 19mm / 30mm incl knobs\n• Weight: 950 gr.\nOperating temperature:\n• 10 ºC to 36 ºC\nUser interface\n• 16x push / rotary encoders with LED indication. Detented or Non-Detented options available.\n• Single power on button, also serves as a user interface navigation aid.\n• OLED Display\nInputs & Outputs\n• USB C for 5V power supply and MIDI USB.\n• MIDI TRS input x1 & output x2. MIDI Out is 5V, MIDI IN accepts 5V and 3.3V\n• MIDI Bluetooth BLE 5.0 bidirectional, peripheral and central roles.\nWhat’s In The Box\nSupplied with the device are the following components:-\n• 1 x OXI E16 Controller device.\n• 1 x OXI E16 Protective Case.\n• 1 x Quick start instruction leaflet. Main manual is downloadable.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/oxi-e16-manual/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "3\tThe OXI E16 Manual\nOverview 1\n1.2 How To Use This Manual\nThis manual combines a formal reference with detailed instructions, illustrations, guides,\nworkflows and tips for your device. You can add your own notes which personalises this\ninto a comprehensive and unique guide book. For clarity, OXI E16 device will simply be\ncalled E16 in this manual.\nWhile the Icons and graphics will be used in the diagrams that reflect the faceplate and\ndisplay of the device. Controls on the E16 are multi functional, used for device control,\nnavigation and setup. Therefore it is important to follow a clear convention in the\nterminology. Any walkthroughs and instructions will refer to these functions in text format.\n[Shift]\nThe multi-functional button located within the OXI ‘O’ will be called [Shift]. This is also the\npower on and off button and is used to action a backup in menus and for other\nnavigation commands. This is described in square brackets.\n(Knob X)\nThe 16 Front panel push / encoders generally control the CC or MIDI parameter values.\nAlso they may be presented as menu and function selection or navigation buttons and\ncontrols. In order to differentiate, a name will be used as the parameter is dynamically\ndisplayed or a knob number relevant to the control position in the description text. It is\npossible to change these value so they will be referred to by their knob position in the\ndescriptions. Encoder type can be changed to match your version in the config between\nnormal, non-detended and detented.\nS. 1-P. 1\nCC1 \tCC6 \tCC3 \tCC4\nCC9 \tCC10 \tCC11 \tCC12\nCC5 \tCC6 \tCC7 \tCC8\nCC13 \tCC14 \tCC15 \tCC16\nYour Notes Can be written in any designated note section\nExample: Power On, Hold [Shift]\nExamples: Control Change, (Knob 1) for default CC1 encoder, (Knob 5) to edit the default CC5.\n(Knob 1) CC1\n(Knob 16) CC16\nDefault Knobs may also be\nlabelled as the displayed\nfunction on the screen.\nIn many displays, the displayed\nparameters match the position of\nits associated control encoder.\n1\n5\n9\n13\n2\n6\n10\n14\n3\n7\n11\n15\n4\n8\n12\n16\nNOTES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/oxi-e16-manual/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "4 The OXI E16 Manual\n1.3 Hardware Overview\nImportant. Encoder Type\nKnob behavior should be configured in the settings to match your hardware version.\nSelect in the config settings between the default normal, smooth non-detented control or detented encoder type.\nMIDI 1x In, 2x Out\nRear / Edge\tLeft / Side Right / Side\nUSB-C\nShift Button\nControls\n114 mm\n143 mm\n19 mm\t\n30 mm\nTRS Type ‘A’\tPower & MIDI\nMultifunctional button\nOperates.\n- Power On/Off.\n- Shift button.\n- Navigation backup.\nOperates.\n- Direct control.\n- Navigate & select.\n16 Push / Turn\nendless encoders\nout 1 \tout 2 \tin\nFront / Edge\nFront Panel\nOLED\nDisplay\nOverview\t1\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/oxi-e16-manual/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "5\tThe OXI E16 Manual\nOverview 1\nNOTES\n 1.4 Powering Up\nThe E16 is powered using the USB-C connection. A standard USB Mains charger, PC /\nMacbook connection or a power bank can be used. The E16 has a low power rating and\nit is recommended to use a supply with a minimum of 200mA.\nMains to USB adapter\nConnect the device to a mains connected\nUSB power supply adapter.\nIt is also possible to use a power\nbank with a USB output and also use\nUSB-C to various USB cable types.\nUSB power connection\nConnect the other end of the USB-C\ncable to the E16 USB Socket\nTurn On / Off\nThe E16 will power directly from the USB power supply. There is no onboard rechargeable\nbattery or charging option. To turn the device on, tap the shift button located in the OXI ‘O’.\n2\n1\n3\nout 1\t \tout 2\t \tin\nPower On\nPower Off\n+\nHold the multifunctional [Shift] button.\nHold the [Shift] button + hold (Knob 16), red lit encoder.\nTo turn off, navigate to the main, top level menu.\nMain ‘Home’ Screen.\nAvailable at power up and\nthe location from where to\npower off. Tap [Shift] to\nbackup in the menus.\nS. \t1\nS. \t5\nS. 3\nS. 7\nS. 2\nS. 6\nS. \t4\nCONF\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/oxi-e16-manual/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "6 The OXI E16 Manual\n1.5 Navigating the E16\nThe main ‘home’ screen location in the structure of OXI E16 is presented when first powering on. This display will\nshow the 7 available scenes labelled S.1 to S.7. The encoder knobs will perform selection of each scene. Any knob\nwhich is controlling a menu command will be lit. Tap a knob to select the option and tap shift to backup in the menu\nstructure. In the home screen, knob 8 selects the system options.. Tap a knob to select the option and tap shift to\nbackup in the menu structure. Turning a knob selects a value or option.\nThe option to save or not is presented on occasions, for\nexample when exiting scene editing. Press a knob to select\nyes to save or no to backup without saving.\nOverview\t1\nSystem config menu\nand global settings.\nScenes 1-7\n16 tap / turn encoders\nIn several screens, the knob position matches the position of the displayed elements. For example the scenes presented\nfrom the home page match the 1-7 knob positions and the configuration access.\nAny knob which has a\ncurrently selectable menu\noption will be lit.\nThe [Shift] button is used as a classic shift, to access\nsecondary parameters or to backup or exit menus as\nwell as operating as the on/off command.\nThe rotary LEDs will indicate\na parameter value setting.\nS. \t1\nS. \t5\nS. 3\nS. 7\nS. 2\nS. 6\nS. \t4\nCONF\nS.4\nConf\nTurn\nEdit or change value of the\nthe respective parameter\nSave No\nTap or Press\nSelect the respective\ndisplayed option.\nSave Yes\n[Shift] + Turn or Turn\nEdit or select some secondary\nvalues and options.\nTap [Shift]\nNavigate backup in the\nmenu hierarchy structure\nS.3\nS.7\nS.2\nS.6\nS.1\nS.5\nEncoder Type\nKnob behavior must be set in the config settings for the\nencoder types on your controller hardware to the default\nnormal, non-detented control or to the detented style.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/oxi-e16-manual/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "7\tThe OXI E16 Manual\nOverview 1\n1.6 Architecture\nThe highest elements in the E16 organisational structure are scenes. There are a total of 16 scenes on board with\n7 available for direct access from the home screen and the interface knobs. A scene contains 12 pages each with\n16 control parameters. Scenes can also be managed and setup on a PC/Mac by using the OXI App.\nScene 2\tScene 1 Scene 3 Scene 4 Scene 5 Scene 6 Scene 7 Scene 8\nScene 9 Scene 10 Scene 11 Scene 12 Scene 13 Scene 14 Scene 15 Scene 16\nControl 5 Control 7\nControl 1\nIndividual Control\nSettings\nPage 1\nControl 3\tControl 3\tControl 3\nPage Settings\nMIDI Output Port & Channel\nControl 6 Control 8\nControl 2 Control 4\nControl 9 Control 11\tControl 10 Control 12\nControl 13 Control 15\tControl 14 Control 16\nPage 1\nPreset 1 Preset 2 Preset 3 Preset 4\nPreset 5 Preset 6 Preset 7 Preset 8\nPreset 9 Preset 10 Preset 11 Preset 12\nPreset 13 Preset 14 Preset 15 Preset 16\nPage 3\nPage 5 Page 11\nPage 8\tPage 2\nPage 4 Page 10\nPage 6 Page 12\nPage 7\nPage 9\nA scene is a function to help organise the controls and saves all of the E16 settings. The scene options are found in the main, home screen, presented on power up. To start,\nselect a scene to work with or to setup. Within the control view one of the 16 pages of parameters can also be selected. You can open one of the 7 direct access scenes from\nthe main, home menu or exchange the accessible scenes with one of the other 16 stored scenes by holding [Shift] and clicking any scene button in the home screen.\nChoose a Scene.\nTap to select a scene from the\nhome screen or hold shift + tap\nfor other scenes.\nHome / Scenes Control View Shift Menu / Page Selection\nSave Yes\tSave No\nThis is the main, home screen and is available\nupon power up. If any scene parameters have\nbeen edited, backing up to the home screen\nwill prompt to save the scene.\nView or Change Controls.\nHold [Shift] to select a page or to\naccess the controls menu options. +\nTurn a knob to adjust the\nMIDI output value for the\nrespective parameter. REC - Record. Records parameter\nautomation. Will capture the control value\nchanges while turning a knob. Tap to stop.\nLock. Retains screen location to prevent\nbacking up to the main, home menu.\nEdit. Opens the edit menu for configuring\neach CC parameter.\nPrst - Preset. Opens the load and save\npreset management menu.\nPage or Menu Option.\nTap a knob to change the page\ngroup or to choose an option.\nMenu Options: Knobs 13-16\nS. \t1\nS. \t5\nS. 3\nS. 7\nS. 2\nS. 6\nS. \t4\nCONF\nS. \t1-P. \t1\nCC1 \tCC2 \tCC3 \tCC4\nCC9 \tCC10 \tCC11 \tCC12\nCC5 \tCC6 \tCC7 \tCC8\nCC13 \tCC14 \tCC15 \tCC16\nS. \t1\nP.1 \tP.2 \tP.3 \tP.4\nP.9 \tP.10 \tP.11 \tP.12\nP.5 \tP.6 \tP.7 \tP.8\nREC \tLock \tEdit \tPrst\nS.1\nCC1\nNavigating Scenes\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/oxi-e16-manual/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "8 The OXI E16 Manual\nOverview\t1\n1.7 Naming Editor\nAt various points in the workflow the option to save as or rename something will be\npresented. This includes scenes and presets. The text editing interface is the same for all\nnaming options and requires turning and tapping the knobs to edit and navigate in the\ntext string.\nThe top four encoder knobs are used to perform changes in the text editor.\n• Knob 1 - Turn to scroll the selection of the alpha-numeric options.\nTap to change the character.\n• Knob 2 - Turn to move the edit cursor in the text body being edited.\nTap to backspace and clear the previous character.\n• Knob 3 - Press to cancel and return to the sub-menu.\n• Knob 4 - Press to confirm editing and complete the changes.\n• Press [Shift] at anytime to backup, cancel or exit.\n1 2 3 4\nPreset 2\n7 \t8 \t9 \tA \tB \tC \tD \tE \tF\nCANCEL\nSelect a\ncharacter\n-\nTurn\nTap\nName editor option found in several menus\nMove the\nedit cursor\n-\nTurn\nTap\nCancel &\nbackup\nChange &\nconfirm\nTurn\nTap\nConfirm\tBackspace\nand clear\nTurn\nTap\nNOTES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/oxi-e16-manual/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "9\tThe OXI E16 Manual\nOverview 1\nNOTES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/oxi-e16-manual/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "10 The OXI E16 Manual\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/oxi-e16-manual/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "11\tThe OXI E16 Manual\nConnect & Control\n2\nThe OXI E16 is focussed on MIDI parameter control of one or more external\ndevices, whether a PC/Mac Digital Audio Workstation, synths or audio effects.\nMultiple connectivity options are available for a high level of flexibility across\ndevices. These include USB-C, Bluetooth Low Energy or MIDI TRS In and Out.\nThe target device MIDI accessible parameters such as CC - Control Change,\nPC - Program Change, Pitch Bend, Notes and more can be controlled by the\nE16. The choice of connectivity method will depend on the application and the\ndevices to connect with. It is important that you have knowledge on the\ndestination device MIDI parameter mappings to align the E16 controls. It is also\npossible to use instrument definitions with the E16 to quickly set predefined\nparameter mappings. The MIDI configuration documentation from the\nequipment manufacturer will provide details of the MIDI Mappings, especially\nthe CC definitions used with each device.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 18,
+      "image": "/oxi-e16-manual/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "12 The OXI E16 Manual\nConnect & Control\t2\n2.1 Connectivity Overview\nOXI E16 has a variety of connection options including Bluetooth Light Energy, TRS MIDI and USB MIDI. This\nallows multiple devices to be connected and the choice of connection gives flexibility for the application required. A\ntypical setup is shown in the illustration although many other options are possible.\nout 1\t \tout 2\t \tin\nRear View\nBluetooth LE operates over short\nranges and is useful for connecting to\nmobile devices and tablets.\nThe E16 uses TRS Type A MIDI I/O\nconnections. A MIDI convertor or TRS\nDongle for MIDI 5 Pin connections.\nTRS Type A allows Stereo cables to be\nused for MIDI. Mini jacks 3.5mm / 1/8th\nare typically the size used for TRS MIDI.\nThe E16 has 2 x TRS MIDI Outputs.\nEach can be configured as ‘thru’. This\npasses any incoming MIDI data directly\nto the assigned output,\n1\n2\n3\n4\n5\n6\n7\n8\nBACK\nsync \ttap\nX2\nINSTRUMENTS\nC \tC# \tF#\tD# \tG# \tA#\tE\tD \tF \tG\ncv \tgate\nA \tB\nInput\nMix\nSettings\nMacro\nPreset\nTempo\nTap Tempo \tOn \tPlay\nMulti-Effect Step Sequencer \tMess\n1\n2\n3\n4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 19,
+      "image": "/oxi-e16-manual/pages/page-019.png",
+      "title": "Page 19",
+      "sectionName": null,
+      "content": "13\tThe OXI E16 Manual\nConnect & Control 2\n2.2 MIDI USB Connectivity\nIt is possible to connect the E16 to another device directly with the USB-C connection.\nBear in mind that this is also the power supply input so any connected device, for\nexample a PC or Mac, must be able to supply the 5V, 200mA source..\nout 1\t \tout 2\t \tin\nUSB Type C can be connected between devices,\nideal for PC/Mac hosted DAWs or applications. The\nconfig options can be set for the USB behavior where\nit is also used as the charge supply for the device.\nMIDI USB\nRear Edge\nNOTES\nExample: MIDI USB OXI E16 to Mac / PC Ableton Live DAW\n1 Lead\nMIDI From\nOXI E16 (Port 1)\nMaster\nAll Channels\nIn\n1\ns\n60\n48\n36\n24\n12\n-inf 0\nAuto\nMonitor\nAudio To\nMIDI can be connected directly using the USB-C connection on OXI\nE16 and the USB on the target PC/Mac. This provides MIDI In and Out\nmessaging. OXI E16 should be configurable in the DAW settings.\nControls such as the level, sends etc can be set with the Ableton Live MIDI Map\noption. For more precise setup with a destination, the E16 options can be\nconfigured for the specific parameter on a device if they have fixed mappings.\nOff\nA\nSends\nB\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 20,
+      "image": "/oxi-e16-manual/pages/page-020.png",
+      "title": "Page 20",
+      "sectionName": null,
+      "content": "14 The OXI E16 Manual\nConnect & Control\t2\n2.3 MIDI TRS Connectivity\nOXI E16 can be used to control MIDI devices using a TRS MIDI connection in and out.\nThis can also connect to the classic MIDI 5 Pin Din style connections with a type ‘A’\nadapter / interface or by using a TRS Stereo cable if both devices are type A compatible.\nTRS can be connected TRS to TRS between compatible\ndevices or by using a 5-Pin Din style adapter. MIDI TRS\nType ‘A’ is the adopted OXI standard.\nMIDI In / Out / Thru\nMIDI Thru can be set in the Conf > MIDI settings for TRS, USB or BLE. If set to On, MIDI\nmessages from this input will be echoed to the other MIDI outputs. If set to off MIDI inputs will not\nbe automatically be passed through the device to an output and only E16 generated messages\nare output.\nIn Out\nMIDI TRS\nout 1\t \tout 2\t \tin\nRear Edge\nNOTES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 21,
+      "image": "/oxi-e16-manual/pages/page-021.png",
+      "title": "Page 21",
+      "sectionName": null,
+      "content": "15\tThe OXI E16 Manual\nConnect & Control 2\n2.4 MIDI Bluetooth Connectivity\nOXI ONE uses BLE MIDI or Bluetooth Low Energy for wireless communications. BLE\ncan sometimes be technically challenging to set up on some devices so it is advised to\nuse a MIDI dongle such as WIDI Master, WIDI Jack or WIDI uHost when using devices\nlike iPads. Android can be more robust for MIDI BLE.\nEnsure the external device has bluetooth turned on in order to pair. The pairing process\nwill be determined by the device itself and may be different between devices. The E16\nwill show up as a Bluetooth central MIDI device not a peripheral.\nOn the OXI E16, turn Bluetooth on in: Conf > Bluetooth > On/Off.\nNOTES\nOnce the option is selected, turn the lit knob to select On\nor Off and then tap the knob to confirm. The bluetooth\nconnection will be active or inactive.\nExample: MIDI Bluetooth OXI E16 to iPad AUM App.\nConf > Bluetooth > On/Off = ON\nIn AUM: Wireless MIDI\nBluetooth Central = OXI E16 BLE\niPad is the peripheral device\nIn the AUM MIDI Routing matrix connect between\nOXI E16 BLE and the loaded device in the track\nBluetooth\nOff\nOn\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 22,
+      "image": "/oxi-e16-manual/pages/page-022.png",
+      "title": "Page 22",
+      "sectionName": null,
+      "content": "16 The OXI E16 Manual\n2.5 MIDI Ports & Channels\nOXI E16 has the ability to interface with multiple MIDI ports, each with 16 MIDI channels.\nPort A and B are the available ports integral to the E16 device but use the same physical\noutput. These may be identified as 1 and 2 on some external DAWs and devices. Ports\ncan be expanded with the OXI Split accessory. The output ports and the 16 channels in\nE16 can be assigned at a page level for all controls within that page or at an individual\ncontrol level, per destination.\nConnect & Control\t2\nNOTES\nOutput Channel\nPage Settings\nIndividual Controls\nDestination 1\nDestination 1\nDestination 2\nPage\n~ ~\n~ ~\nTRS 8\nTRS 10\nTRS 11\nTRS 1\nPage level output and channel can be set at the individual control level, tagged '~'. This means the\ncontrol destination uses the collective page level settings. If the control destination setting has a\ndedicated output and channel number assigned then this will be used for this destination.\nIndividual outputs\nset per destination.\nTypically page channel is used\nfor each individual device.\nExample: Channel and Output Configuration\nE16 Page Device\n1\n14\n15\n16\n.....\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 23,
+      "image": "/oxi-e16-manual/pages/page-023.png",
+      "title": "Page 23",
+      "sectionName": null,
+      "content": "17\tThe OXI E16 Manual\nConnect & Control 2\n2.6 Control Settings Overview\nThe E16 can control a variety of MIDI message formats. The default parameter configuration is control change can\nbe configured individually. The configuration and setup options will depend on the parameter type. Controls are\nconfigured in the control settings, accessed from the control view.\nEach parameter can control:-\n• 2 x Control Destinations - Variable MIDI message sent by turning the rotary knob.\n• 1 x Push Control - Discrete MIDI message sent by pushing the rotary knob.\nDestination 1\nPush Hi\nLo\nDestination 2\nPage \tScene\nAbbr.\nCtrl 3\nCC3\nSpecial \tOff\nColor \t12\nPage \tScene\nAbbr.\nCtrl 3\nCC3\nSpecial \tOff\nColor \t12\nHold (Knob) to edit + Tap [Shift].\nDirectly Edit a Control\nTap a (Knob) to change selection\nOutput operates over a defined range to affect a\ndestination parameter. For example, CC over a\n0-127 range for a filter cutoff control.\nOutput operates over a defined range to affect a\ndestination parameter. For example, CC over a\n0-127 range for filter cutoff control.\nOutput operates similar to on/off behavior with\ntwo values. For example, Note value on or off,\nor CC On/Hi value 127 and Off/Low value 0.\nS. \t1-P. \t1\nCC1 \tCC2 \tCC3 \tCC4\nCC9 \tCC10 \tCC11 \tCC12\nCC5 \tCC6 \tCC7 \tCC8\nCC13 \tCC14 \tCC15 \tCC16\n+\t CC3\nHold [Shift] + Tap (Knob 15) for the editor\nAlternatively\nHold [Shift] + Tap (Knob) 1, 2 or 3 to change tab.\nS. \t1\nP.1 \tP.2 \tP.3 \tP.4\nP.9 \tP.10 \tP.11 \tP.12\nP.5 \tP.6 \tP.7 \tP.8\nREC \tLock \tEdit \tPrst\n+ Edit\nControl Knob\nE16 Device\nTURN\nPUSH\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 24,
+      "image": "/oxi-e16-manual/pages/page-024.png",
+      "title": "Page 24",
+      "sectionName": null,
+      "content": "18 The OXI E16 Manual\nConnect & Control\t2\n2.7 Configuring a Control\nThe E16 can control a variety of control types. The settings menu is the starting point for\nconfiguring on board the device. Also a quicker solution is to use the OXI App which\ncontains a dedicated scene editor, used to configure the pages and controls.\nThe control settings are accessed from the control view. Hold (Knob) + Tap [Shift] to edit\nthe selected control. This will configure the control in the current scene and page of\nparameters. Turn the lit knob to scroll and tap to select an option to edit.\n► Editing a Control\n1. The settings edit menu is accessible from the control view. Tap [Shift] if necessary to\nbackup the menu to the main home screen. Select a scene by tapping the associated\nknob to choose the scene and its control view.\n2. To directly edit a control hold the (Knob) + Tap [Shift]. This is performed from the\nscreen view. The editor will open for the selected control. Alternatively open the\nsettings menu, hold [Shift] + Tap (Knob 15).\n3. The editor tab should be open for 'Ctrl'. If not, hold [Shift] and tap (Knob 1) to choose\nthe controller settings. The page and scene settings tabs are also available.\n4. To navigate, turn (Knob 1). Scroll to the desired option and tap (Knob 1) to edit. The\nselected option is highlighted and when in edit mode the '►' tag label is shown.\n5. Once editing is complete tap [Shift] to backup and exit. After any edits the scene can\nbe saved. This option is presented when backing up to the home screen.\n6. Note that a controllers settings can also be cleared, copied and pasted to another\ncontrol from within this menu.\nGeneric Parameter Options Turn knob to navigate, tap knob to change.\nFunction Description\nAbbr Name Abbreviation Allows editing of up to 4 characters. This is the label used on the\ncontrol view for the parameter.\nColor LED ring color Assigns the color for the LED indicators. These are displayed\naround the specific control encoder knob to represent its value.\nSpecial Encoder Options\nSets the behavior of the control knob. Can be set to off (standard\n0-127 rotary operation), bipolar, snapshot, rec or play / pause\nrecording.\nDest1 Destination 1 Configure the destination device settings when rotating the control.\nTwo device destinations can be assigned to each parameter. If\ndestination 1 is set to Off, destination 2 will be unavailable.\tDest2 Destination 2\nPush Knob push\nbehavior\nConfigure the destination device settings when pushing the\ncontrol. Sets the behavior of the push command on the encoder\nand its associated display.\nCopy Copy Settings Copies the control settings.\nPaste Paste Settings Pastes previously copied settings to the selected control\nClear Clear settings Clears the settings to defaults.\nNOTES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 25,
+      "image": "/oxi-e16-manual/pages/page-025.png",
+      "title": "Page 25",
+      "sectionName": null,
+      "content": "19\tThe OXI E16 Manual\nConnect & Control 2\nNOTES\n 2.8 Control Colors\nEach control can be set with its own color scheme for the control functions. This sets the\ncolor of the rotary LED ring for each control knob and is useful as a visual reference. The\ncolor setting is defined at a control level for each control knob and is set in the control\neditor. The color spectrum is chosen within a parameter range of 0 to 100.\nWhen setting the color value in the edit menu, the knob LED color will change while\nediting making it easy to select visually rather than by numbers.\n0 10 20 30 40 50 60 70 80 90 100\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 26,
+      "image": "/oxi-e16-manual/pages/page-026.png",
+      "title": "Page 26",
+      "sectionName": null,
+      "content": "20 The OXI E16 Manual\nConnect & Control\t2\nNOTES\t\n2.9 Controller Destination Options\nA variety of parameter types can be controlled by the E16. These are setup based on the\ntarget device and parameter to modulate. The type of control is set up per destination.\nThere are three options, two rotary controls and one push control. Select 'Dest 1', 'Dest 2'\nor 'Push' to configure each destination for the selected knob. If destination 1 is set to Off,\ndestination 2 will be unavailable.\nThe destination menu options available will change depending on the destination.\nCC Abs\nFunction Description\nInstr. Instrument Def\nSelect an instrument definition which contains preset settings\nfor a selected destination instrument. These can be managed in\nthe OXI App. Option also to set to the default 'Off'.\nParam. Parameter\nSelect an instrument definition to enable access to the\nparameter option. When an instrument definition is loaded the\nparameter mapped will be available in this setting.\nType Parameter Type Off, CC Rel1, CC Rel2, CC Abs, CC14 (High Resolution), PC,\nPB, AT, Note, NRPN, Snapshot\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth,\nALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as Page, 1-16\nCC nr. CC Number\nControl Change Number. Sets the number for the CC mapping\nto a destination parameter. This will match the destination\ndevice parameter CC number.\nMinimum Min value The lower minimum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nMaximum Max value The upper maximum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nDefault Default value Default starting value when first started up or when the value is\ncleared.\nMode Encoder behavior.\nSets the behavior of the encoder rotation. Options are: Div8,\nDiv4 and Div 2 - Divides the encoder resolution by 8, 4 or 2.\nAcc0,Acc1, Acc2, Acc3 - Encoder acceleration. 0 = default no\nacceleration, normal operation, 3 is max acceleration when\nrotating. LSp2, LSp4, LSp6 - large step mode - steps values in\nthe 2, 4 or 6 increments selected.\nDisplay Encoder Scale\nHow the encoder scale is displayed. Set to : Off - blank display,\n127 - Default, 100, 1000 - useful for CC14, B63 bipolar +/-,\nB50 bipolar +/-, B500 bipolar CC14 +/-, On/Off binary on 0-63,\noff 64-127. 9999 useful for CC14.\nCC Abs - Control Change Absolute\nControl change sends a value that is used to affect a destination parameter over a defined\nrange. Absolute is the most common application of CC control. The maximum range for\nabsolute control is from 0-127. An example is to control a filter cutoff sweep with a CC\nparameter. The control sends an absolute value between 0-127 to the destination.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 27,
+      "image": "/oxi-e16-manual/pages/page-027.png",
+      "title": "Page 27",
+      "sectionName": null,
+      "content": "21\tThe OXI E16 Manual\nConnect & Control 2\nNOTES\nCC Rel\nFunction Description\nInstr. Instrument Def\nSelect an instrument definition which contains preset settings\nfor a selected destination instrument. These can be managed in\nthe OXI App. Option also to set to the default 'Off'.\nParam. Parameter\nSelect an instrument definition to enable access to the\nparameter option. When an instrument definition is loaded the\nparameter mapped will be available in this setting.\nType Parameter Type Off, CC Rel1, CC Rel2, CC Abs, CC14 (High Resolution), PC,\nPB, AT, Note, NRPN, Snapshot\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth,\nALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as Page, 1-16\nCC nr. CC Number\nControl Change Number. Sets the number for the CC mapping\nto a destination parameter. This will match the destination\ndevice parameter CC number.\nMinimum Min value The lower minimum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nMaximum Max value The upper maximum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nDefault Default value Default starting value when first started up or when the value is\ncleared.\nMode Encoder behavior.\nSets the behavior of the encoder rotation. Options are: Div8,\nDiv4 and Div 2 - Divides the encoder resolution by 8, 4 or 2.\nAcc0,Acc1, Acc2, Acc3 - Encoder acceleration. 0 = default no\nacceleration, normal operation, 3 is max acceleration when\nrotating. LSp2, LSp4, LSp6 - large step mode - steps values in\nthe 2, 4 or 6 increments selected.\nDisplay Encoder Scale\nHow the encoder scale is displayed. Set to : Off - blank display,\n127 - Default, 100, 1000 - useful for CC14, B63 bipolar +/-,\nB50 bipolar +/-, B500 bipolar CC14 +/-, On/Off binary on 0-63,\noff 64-127. 9999 useful for CC14.\nCC Rel 1 & 2 - Control Change Relative\nControl change sends a value that is used to affect a destination parameter over a defined\nrange. Relative mode is useful for interfacing to DAWs and other devices where an\nincremental change iteration is required. Relative 1 will send a value of 1to increment the\ncontrol and 127 to decrement. Relative 2 operates the same but uses 63 to increment and\n65 to decrement the destination.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 28,
+      "image": "/oxi-e16-manual/pages/page-028.png",
+      "title": "Page 28",
+      "sectionName": null,
+      "content": "22 The OXI E16 Manual\nConnect & Control\t2\nNOTES\nCC14 High Resolution\nFunction Description\nInstr. Instrument Def\nSelect an instrument definition which contains preset settings\nfor a selected destination instrument. These can be managed\nin the OXI App. Option also to set to the default 'Off'.\nParam. Parameter\nSelect an instrument definition to enable access to the\nparameter option. When an instrument definition is loaded the\nparameter mapped will be available in this setting.\nType Parameter Type Off, CC Rel1, CC Rel2, CC Abs, CC14 (High Resolution), PC,\nPB, AT, Note, NRPN, Snapshot\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except\nbluetooth, ALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as Page, 1-16\nLSB Least Significant Byte\nFine adjustment. CC number used for the LSB message\ndestination. Typically this uses CC 32-63, but check with the\ndestination device to pair correctly.\nMSB Most Significant Byte\nCoarse adjustment. CC number used for the MSB message\ndestination. Typically this uses CC 0-31, but check with the\ndestination device to pair correctly.\nMinimum Min value The lower minimum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nMaximum Max value The upper maximum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nDefault Default value Default starting value when first started up or when the value\nis cleared.\nMode Encoder behavior.\nSets the behavior of the encoder rotation. Options are: Div8,\nDiv4 and Div 2 - Divides the encoder resolution by 8, 4 or 2.\nAcc0,Acc1, Acc2, Acc3 - Encoder acceleration. 0 = default no\nacceleration, normal operation, 3 is max acceleration when\nrotating. LSp2, LSp4, LSp6 - large step mode - steps values in\nthe 2, 4 or 6 increments selected.\nDisplay Encoder Scale\nHow the encoder scale is displayed. Set to : Off - blank\ndisplay, 127 - Default, 100, 1000 - useful for CC14, B63\nbipolar +/-, B50 bipolar +/-, B500 bipolar CC14 +/-, On/Off\nbinary on 0-63, off 64-127. 9999 useful for CC14.\nCC 14 (High Res) - Control Change Absolute - High Resolution\nControl change sends a value that is used to affect a destination parameter over a defined\nrange, the standard being 7 bit 0-127. High resolution refers to the ability to send more\nprecise, smoother controlled absolute CC values over a range of 0-16,383. This is\nimplemented using MSB and LSB messaging to the CC numbers.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 29,
+      "image": "/oxi-e16-manual/pages/page-029.png",
+      "title": "Page 29",
+      "sectionName": null,
+      "content": "23\tThe OXI E16 Manual\nConnect & Control 2\nNOTES\nPC - Program Change\nProgram change messages also called PC, are used to change a destination device\npreset, bank, patch or program using values between 1-128. The actual impact and\nnumerical alignment of a PC message from the E16 will depend on how the destination\ndevice is designed. Refer to the manufacturers MIDI implementation guide.\nPC\nFunction Description\nInstr. Instrument Def\nSelect an instrument definition which contains preset settings\nfor a selected destination instrument. These can be managed in\nthe OXI App. Option also to set to the default 'Off'.\nParam. Parameter\nSelect an instrument definition to enable access to the\nparameter option. When an instrument definition is loaded the\nparameter mapped will be available in this setting.\nType Parameter Type Off, CC Rel1, CC Rel2, CC Abs, CC14 (High Resolution), PC,\nPB, AT, Note, NRPN, Snapshot\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth,\nALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as Page, 1-16\nMinimum Min value The lower minimum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nMaximum Max value The upper maximum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nDefault Default value Default starting value when first started up or when the value is\ncleared.\nMode Encoder behavior.\nSets the behavior of the encoder rotation. Options are: Div8,\nDiv4 and Div 2 - Divides the encoder resolution by 8, 4 or 2.\nAcc0,Acc1, Acc2, Acc3 - Encoder acceleration. 0 = default no\nacceleration, normal operation, 3 is max acceleration when\nrotating. LSp2, LSp4, LSp6 - large step mode - steps values in\nthe 2, 4 or 6 increments selected.\nDisplay Encoder Scale\nHow the encoder scale is displayed. Set to : Off - blank display,\n127 - Default, 100, 1000 - useful for CC14, B63 bipolar +/-,\nB50 bipolar +/-, B500 bipolar CC14 +/-, On/Off binary on 0-63,\noff 64-127. 9999 useful for CC14.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 30,
+      "image": "/oxi-e16-manual/pages/page-030.png",
+      "title": "Page 30",
+      "sectionName": null,
+      "content": "24 The OXI E16 Manual\nConnect & Control\t2\nNOTES\nPB - Pitch Bend\nPitch bend refers to the adjustment of the note pitch up or down while it plays by use of a\nmodulation control. On many synths this would be represented by a pitch bend wheel. On\nthe E16 a knob can be set to operate the pitch bend command for MIDI out configured\nover a note range of C-2 to G8.\nPB\nFunction Description\nType Parameter Type Off, CC Rel1, CC Rel2, CC Abs, CC14 (High Resolution), PC,\nPB, AT, Note, NRPN, Snapshot\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth,\nALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as Page, 1-16\nMinimum Min PB value The lower PB value that the knob will send out.\nMaximum Max PB value The upper PB value that the knob will send out.\nDefault Default value Default starting value when first started up or when the value is\ncleared.\nMode Encoder behavior.\nSets the behavior of the encoder rotation. Options are: Div8,\nDiv4 and Div 2 - Divides the encoder resolution by 8, 4 or 2.\nAcc0,Acc1, Acc2, Acc3 - Encoder acceleration. 0 = default no\nacceleration, normal operation, 3 is max acceleration when\nrotating. LSp2, LSp4, LSp6 - large step mode - steps values in\nthe 2, 4 or 6 increments selected.\nDisplay Encoder Scale\nHow the encoder scale is displayed. Set to : Off - blank display,\n127 - Default, 100, 1000 - useful for CC14, B63 bipolar +/-,\nB50 bipolar +/-, B500 bipolar CC14 +/-, On/Off binary on 0-63,\noff 64-127. 9999 useful for CC14.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 31,
+      "image": "/oxi-e16-manual/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "content": "25\tThe OXI E16 Manual\nConnect & Control 2\nNOTES\nAT\nFunction Description\nType Parameter Type Off, CC Rel1, CC Rel2, CC Abs, CC14 (High Resolution), PC,\nPB, AT, Note, NRPN, Snapshot\nOutput Output & Port\nMIDI physical output and port. Set to: Same as page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except\nbluetooth, ALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as page, 1-16\nMinimum Min value The lower minimum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nMaximum Max value The upper maximum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nDefault Default value Default starting value when first started up or when the value\nis cleared.\nMode Encoder behavior.\nSets the behavior of the encoder rotation. Options are: Div8,\nDiv4 and Div 2 - Divides the encoder resolution by 8, 4 or 2.\nAcc0,Acc1, Acc2, Acc3 - Encoder acceleration. 0 = default no\nacceleration, normal operation, 3 is max acceleration when\nrotating. LSp2, LSp4, LSp6 - large step mode - steps values in\nthe 2, 4 or 6 increments selected.\nDisplay Encoder Scale\nHow the encoder scale is displayed. Set to : Off - blank\ndisplay, 127 - Default, 100, 1000 - useful for CC14, B63\nbipolar +/-, B50 bipolar +/-, B500 bipolar CC14 +/-, On/Off\nbinary on 0-63, off 64-127. 9999 useful for CC14.\nAT - Aftertouch\nAftertouch is a common feature on many synths and audio devices. Aftertouch represents\nhow hard a keyboard key is pressed after triggering the initial note. Sometimes called\nchannel pressure, aftertouch operates over a 0-127 range. The E16 can send an\naftertouch message by using a control knob. Aftertouch messages are part of the MIDI\nstandard so should easily be recognised by a compatible destination device.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 32,
+      "image": "/oxi-e16-manual/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "content": "26 The OXI E16 Manual\nConnect & Control\t2\nNOTES\nNote - Musical Note Values\nNote messages represent a musical note value, similar to pressing a keyboard key or\ntriggering a sequencer note. A Note On message is sent at a fixed velocity of 100 over a\nrange of C-2 up to G8 when turning the control knob followed by a Note Off message.\nNote\nFunction Description\nInstr. Instrument Def\nSelect an instrument definition which contains preset settings\nfor a selected destination instrument. These can be managed in\nthe OXI App. Option also to set to the default 'Off'.\nParam. Parameter\nSelect an instrument definition to enable access to the\nparameter option. When an instrument definition is loaded the\nparameter mapped will be available in this setting.\nType Parameter Type Off, CC Rel1, CC Rel2, CC Abs, CC14 (High Resolution), PC,\nPB, AT, Note, NRPN, Snapshot\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth,\nALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as Page, 1-16\nMin Note Min note value The lower note value that the knob will send out. This is a value\nbetween the between C-2(0) and G8 (127).\nMax Note Max note value The upper note value that the knob will send out. This is a value\nbetween the between C-2 (0) and G8 (127).\nDefault Default value Default starting value when first started up or when the value is\ncleared.\nMode Encoder behavior.\nSets the behavior of the encoder rotation. Options are: Div8,\nDiv4 and Div 2 - Divides the encoder resolution by 8, 4 or 2.\nAcc0,Acc1, Acc2, Acc3 - Encoder acceleration. 0 = default no\nacceleration, normal operation, 3 is max acceleration when\nrotating. LSp2, LSp4, LSp6 - large step mode - steps values in\nthe 2, 4 or 6 increments selected.\nDisplay Encoder Scale\nHow the encoder scale is displayed. Set to : Off - blank display,\n127 - Default, 100, 1000 - useful for CC14, B63 bipolar +/-,\nB50 bipolar +/-, B500 bipolar CC14 +/-, On/Off binary on 0-63,\noff 64-127. 9999 useful for CC14.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 33,
+      "image": "/oxi-e16-manual/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "content": "27\tThe OXI E16 Manual\nConnect & Control 2\nNOTES\nSnapshot\nThe option to set a controller as a snapshot is also found in the destination options. The\ndetails of this function are covered in the special parameter setting options.\nNRPN\nFunction Description\nInstr. Instrument Def\nSelect an instrument definition which contains preset settings\nfor a selected destination instrument. These can be managed\nin the OXI App. Option also to set to the default 'Off'.\nParam. Parameter\nSelect an instrument definition to enable access to the\nparameter option. When an instrument definition is loaded the\nparameter mapped will be available in this setting.\nType Parameter Type Off, CC Rel1, CC Rel2, CC Abs, CC14 (High Resolution), PC,\nPB, AT, Note, NRPN, Snapshot\nOutput Output & Port\nMIDI physical output and port. Set to: '~' same as page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except\nbluetooth, ALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: '~' same as page, 1-16\nLSB Least Significant Byte Fine adjustment. Number used for the LSB message\ndestination.\nMSB Most Significant Byte Coarse adjustment. Number used for the MSB message\ndestination.\nMinimum Min value The lower minimum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nMaximum Max value The upper maximum value that the CC knob will send out. This\nis a value between the standard 0-127 standard.\nDefault Default value Default starting value when first started up or when the value\nis cleared.\nMode Encoder behavior.\nSets the behavior of the encoder rotation. Options are: Div8,\nDiv4 and Div 2 - Divides the encoder resolution by 8, 4 or 2.\nAcc0,Acc1, Acc2, Acc3 - Encoder acceleration. 0 = default no\nacceleration, normal operation, 3 is max acceleration when\nrotating. LSp2, LSp4, LSp6 - large step mode - steps values in\nthe 2, 4 or 6 increments selected.\nDisplay Encoder Scale\nHow the encoder scale is displayed. Set to : Off - blank\ndisplay, 127 - Default, 100, 1000 - useful for CC14, B63\nbipolar +/-, B50 bipolar +/-, B500 bipolar CC14 +/-, On/Off\nbinary on 0-63, off 64-127. 9999 useful for CC14.\nNRPN - Non-Registered Parameter Number\nNRPN is an alternative messaging to the MIDI CC standard and offers a higher resolution\nof control. Not all devices are NRPN compatible so check with the manufacturers MIDI\nimplementation documentation. NRPN and High Resolution CC14 operate in a similar way\nwith an MSB / LSB messaging approach.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 34,
+      "image": "/oxi-e16-manual/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "content": "28 The OXI E16 Manual\nConnect & Control\t2\nNOTES\nPush Control Options\nEach control can be set to 2 destinations using the rotary knob and 1 destination for the\npush command from the knob. The push control sends a MIDI message when the knob is\nquickly pressed. Slow / long presses may select a secondary function rather than trigger\nthe push option. Once a type has been selected, the available settings will present the\nconfiguration options including the behavior mode of the knob press.\nCC\nFunction Description\nInstr. Instrument Def\nSelect an instrument definition which contains preset settings\nfor a selected destination instrument. These can be managed in\nthe OXI App. Option also to set to the default 'Off'.\nParam. Parameter\nSelect an instrument definition to enable access to the\nparameter option. When an instrument definition is loaded the\nparameter mapped will be available in this setting.\nType Parameter Type Off, Note, CC, PC, Set to Default, AT, Page, Record. PlayPause\nRec.\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth,\nALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as Page, 1-16\nCC nr. CC Number\nControl Change Number. Sets the number for the CC mapping\nto a destination parameter. This will match the destination\ndevice parameter CC number.\nMode Behavior\nPress only - 127 value sent on press. Press & release - 127\nvalue sent when pressed and 0 sent when released. Toggle -\neach push will change the state between 0 & 127.\nNote\nFunction Description\nType Parameter Type Off, Note, CC, PC, Set to Default, AT, Page, Record. PlayPause\nRec.\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth,\nALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as Page, 1-16\nNote Note value Sets the note value to send on the press of the knob. Options\nC-2 (0) to G8 (127)\nVelocity Note Velocity Sets the MIDI output velocity level 0-127 that is sent with the\nnote message.\nMode Behavior\nPress only - note on + velocity sent on press followed by note\noff. Press & release - note on + velocity sent when pressed\nand note off when released. Toggle - Note on + velocity sent\non first press and note off on next press. State changes per\npress.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 35,
+      "image": "/oxi-e16-manual/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "content": "29\tThe OXI E16 Manual\nConnect & Control 2\nNOTES\t\nPC\nFunction Description\nType Parameter Type Off, Note, CC, PC, Set to Default, AT, Page, Record. PlayPause\nRec.\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth,\nALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as Page, 1-16\nPC nr. PC Number Program Change number sent each time the knob is pressed.\nAT\nFunction Description\nType Parameter Type Off, Note, CC, PC, Set to Default, AT, Page, Record. PlayPause\nRec.\nOutput Output & Port\nMIDI physical output and port. Set to: Same as Page, TRS1,\nTRS2, USB1, USB2, USB3, BLE, ALL-BLE all except bluetooth,\nALL-USB all except USB, or to Off.\nChannel MIDI Channel Communicates MIDI messages on this channel.\nSet to: Same as Page, 1-16\nAT Val Aftertouch Value Value sent as channel pressure / aftertouch when the knob is\npressed.\nMode Behavior\nPress only - aftertouch value sent on press. Press & release -\naftertouch value sent on press. Toggle - aftertouch value sent\non press\nPage\nFunction Description\nType Parameter Type Off, Note, CC, PC, Set to Default, AT, Page, Record. PlayPause\nRec.\nPage Page Number\nThis selects an internal command to switch from the current\nscene page to another page number as defined. Quickly\npressing knobs can therefore be configured to navigate pages.\nRemember to also configure the destination page knobs to\nreturn back to the original page number if required.\nRecord and Play / Pause Rec\nThe knob press can also be configured to control automation recording transport. See the\nautomation recording section for more details..\nAbout the Push behavior: When using the push knob configured for a destination, the push\nrequires a quick press. This is important as some commands also operate by holding / long pressing\na knob. So for example, tap quickly to change page if set as destination or long press to assign a\ncontrol to a group from the control page.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 36,
+      "image": "/oxi-e16-manual/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "content": "30 The OXI E16 Manual\nConnect & Control\t2\n2.10 Special Functions\nThe E16 special functions, accessible in the control settings, affects the behavior of the\nknob and its control operation. Four special functions can be selected for each control\nincluding standard linear or bipolar range, a snapshot selected A-B range or to enable\nand control parameter automation recording. The 'Special' menu options are:-\nControl Range\nThe knob behavior can be set to display a normal 0 to 127 range or a bipolar -63 to 64\nrange. The LED ring will represent the value as well as the display screen. This setting\naffects only the display and control behavior. In both instances the physical output would\nbe the same, for example for CC, both are ranged over 0-127.\nThe snapshot and recording functions are covered in more detail in the next section.\nSpecial Options Turn knob to navigate, tap knob to change.\nFunction Description\nOff Rotate 0-127 Control will operate with default behavior. Turning the knob will\ncontrol the output over a 0-127 range.\nBipolar Rotate -63 to 64 Control will operate with bipolar behavior. Turning the knob will\ncontrol the output over a -63 - 0 - 64 range.\nSnapshot A to B range\nSnapshot allows two knob values to be captured. These are\nstored as position A and position B. The A-B values then set the\nrange of control.\nRec\nEnables\nautomation\nrecording\nRec enables automation to be recorded to the knob when in the\ncontrol view. When recording, the knob rotation value is\nrecorded to the control. Can then be replayed on loop.\nPlay/Pause Rec Controls record\nSets the behaviour when pressing the knob in the control view.\nThis option enables the start / pause of automation recording\nand subsequent playback of the recorded value changes.\nNOTES\nOff Bipolar\nOutput Output\n0-127 0-127\n0 127 -63\n0\n+64\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 37,
+      "image": "/oxi-e16-manual/pages/page-037.png",
+      "title": "Page 37",
+      "sectionName": null,
+      "content": "31\tThe OXI E16 Manual\nConnect & Control 2\nNOTES\n 2.11 Snapshot - Special Function\nAny control knob can be set to snapshot mode and act as the primary control over one or\nmore other selected secondary controls. The primary snapshot only affects the\nconnected secondary controls and does not in itself send any output. The secondary\ncontrols do send their own outputs generated by each control or by the primary snapshot\ncontroller. The lower and upper values of each secondary controller's range can be\nassigned to the A and B values of the primary snapshot. This allows the full range of the\nprimary snapshot to affect the secondary control over its defined range.\nSnapshot\nExample\nPrimary Control\nSecondary Controls\nThe primary snapshot control will operate over its full range,\ncontrolling each of the assigned secondary parameters over\nits defined snapshot range.\nSnapshot A - Captures the lower value of selected secondary controls.\nSnapshot B - Captures the upper value of the selected secondary controls.\nThe primary snapshot control will affect the secondary controls across their defined A-B Ranges.\nIndividual secondary controls can still be adjusted across its full range manually.\n0 127\nA B\n10\n50\n0\n110\n30\n127\nS. \t1-P. \t1\nA \tB \tCC2 \tCC3 \tCC4\nCC9 \tCC10 \tCC11 \tCC12\nCC5 \tCC6 \tCC7 \tCC8\nCC13 \tCC14 \tCC15 \tCC16\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 38,
+      "image": "/oxi-e16-manual/pages/page-038.png",
+      "title": "Page 38",
+      "sectionName": null,
+      "content": "32 The OXI E16 Manual\nConnect & Control\t2\n► Setting Up a Snapshot\n1. The settings for snapshots is found in the settings editor, in the special section this is\naccessed from the control view. Tap [Shift] if necessary to backup the menu to the\nmain home screen. Select a scene by tapping the associated knob to choose the\nscene and its control view.\n2. To open the settings menu, hold [Shift] + Tap (Knob 15). This is performed from the\ncontrol view. The editor will open for the previously selected control so turning a knob\nprior to opening the editor will select the settings for this selected knob.\n3. The editor tab should be open for 'Ctrl'. If not, hold [Shift] and tap (Knob 1) to choose\nthe controller settings. The page and scene settings tabs are also available.\n4. The knob which will be assigned as the primary snapshot control should be setup\nfirst.\n• Tap a knob to select a control to edit or use the currently selected control.\nExample (Knob 1).\n• To navigate, turn (Knob 1). Scroll to the 'Special' option and tap (Knob 1) to edit.\nThe selected option is highlighted and when in edit mode the '►' tag label is\nshown.\n• Select the 'Snapshot' option for the special setting. Note also that this sets the\n'Destination 1' to snapshot. A primary snapshot control only affects other controls\nand does not output MIDI messages.\n• When complete, tap [Shift] to backup and exit the edit menu.\n5. Once a primary snapshot control is assigned, the A-B symbol is displayed on the\nscreen for the control. The next step is to connect the secondary controls that will be\naffected by the primary snapshot.\n• Hold the Primary Snapshot knob + Tap the knobs to add to the snapshot control.\nExample: Hold (Knob 1) + Tap (Knob 5), (Knob 9) and (Knob 13). The secondary\ncontrols are displayed highlighted with the primary knob held.\n• Adjust the lower value for the starting point of each knobs range.\n• Hold + Turn counter-clockwise the primary snapshot knob. Then release the\nknob to capture and save the values into the slot 'A'.\n• Adjust the same secondary knobs to set the upper value for each knobs range.\n• Hold + Turn clockwise the primary snapshot knob. Then release the knob to\ncapture and save the values into the slot 'B'.\n6. Adjusting the A-B Primary Snapshot knob will now control the values of the assigned\nsecondary control knobs within their discrete ranges set.\nNOTES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 39,
+      "image": "/oxi-e16-manual/pages/page-039.png",
+      "title": "Page 39",
+      "sectionName": null,
+      "content": "33\tThe OXI E16 Manual\nConnect & Control 2\nNOTES\n 2.12 Recording Automation\nControl automation refers to the recording of parameter changes and then playing these\nback to replay the control behavior. In the E16 each knob turn can be freestyle recorded\nand then played back in a loop. This will then apply the automated control pattern to the\ndestination parameter. There are 2 workflow options to consider:\n1. Quick recording. Direct and generic recording controlled in the settings menu when\nin the control screen. Access the editor from the control view by holding [Shift] + tap\n(Knob 13) to start and stop recording.\n2. Transport knob controls. Recording by assigning the recording transport controls to\none or more of the knobs. This is performed in the editor, accessed from the control\nview. The 'Rec' or to 'Play/Pause rec' assignment can be set in the 'special' settings.\nIn both workflow cases, manually adjusting a knob in normal mode will clear the\nautomation recorded.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 40,
+      "image": "/oxi-e16-manual/pages/page-040.png",
+      "title": "Page 40",
+      "sectionName": null,
+      "content": "34 The OXI E16 Manual\nQuick Recording\nQuickly activate recording mode to record and capture any knob adjustment into the recording buffer. Then simply\nswitch to playback mode to playback the automation for the knobs. Record automation in the control view.\n► Quick Recording\n1. Quick recording is found in the shift menu, accessed from the control view by holding [Shift].\n2. To start recording hold [Shift] + Tap (Knob 13), 'REC'. Recording will commence as indicated by Knob 13 and\nits rotating red LEDs.\n3. Once recording is started, release the buttons to exit the menu. Recording will continue. The record symbol will\nbe displayed top left.\n4. Recording is made freestyle, so adjusting any knob for the controls at any time while recording will capture the\nvalue change cycles to the recording buffer. To stop recording and continue playback for the individual knob,\ntap the knob.\n5. Once knobs have been recorded, hold [Shift] + tap (Knob 13), 'REC' again to stop recording and continue\nplaying the recorded automation. The knob LEDs will animate the value changes.\n6. To clear automation recorded to a knob, turn the (Knob) to erase. Any manual adjustments to an individual\nknob will also clear and override the recorded automation. The manual setting and will be applied.\nWhile automation plays, turn an encoder to cancel\nand delete its individual recording. To stop and clear\nall recordings, Hold [Shift] and Keep Hold of Knob 13.\nConnect & Control\t2\nREC\nSTOP\nRecording Active\tStart / Stop Recording\nStart / Play Recording\n+\nFrom the control view\n[Shift] + Tap (Knob 13)\nTurn any knob to record its automation\n0\n127\n30\n127\nRecording Stopped / Paused\tStart / Stop Recording\nTap an individual knob when recording to stop the recording and start playback for the specific knob control.\n+\n[Shift] + Tap (Knob 13)\nAutomation will play\nClear +\n[Shift] + Hold (Knob 13) Turn Knob\nor\n0\n127\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 41,
+      "image": "/oxi-e16-manual/pages/page-041.png",
+      "title": "Page 41",
+      "sectionName": null,
+      "content": "35\tThe OXI E16 Manual\nConnect & Control 2\nTransport Knob Control Recording\nIn order to offer more control over the recording process, one or more knobs can be\nassigned to control the record / stop / play transport process. This is set up in the control\neditor and is found in the 'special' settings for the control.\n► Transport Control Recording\n1. Transport for recording is found in the control editor options, accessed from the\ncontrol view by holding [Shift]. Ensure a scene is selected and its control view.\n2. To edit the knob transport settings hold a Knob + tap [Shift] to edit the selected\ncontrol. Alternatively, hold [Shift] + Tap (Knob 13), 'Edit'.\n3. Ensure the 'Ctrl' tab is selected. If not, hold [Shift] and tap (Knob 1).\n4. Tap a knob to edit and scroll through the options by turning the knob. Highlight the\n'Special' option and tap the knob to edit the setting.\n5. Two transport options are available for assignment to the knob.\n• Rec. This allows the knob to to start and stop automation recording. In control\nview, tap this knob to start and stop recording of any knobs automation. When\nrecording any knob can be adjusted to record its automation values. The knob\nvalue is shown with a transport record symbol tag. Recording is shown by the\ntop left displayed record symbol.\n• Play/ Pause Rec. This allows the knob to start or pause automation playback. In\ncontrol view, tap this knob to start and pause playback of automation for all\nknobs. When playing, any recorded automation is replayed. The knob is\ndisplayed with a pause / play transport symbol.\n6. Recording and playback is then performed by tapping the configured knobs to\ncontrol the transport in the control view.\n7. To clear automation recorded to a knob, turn the (Knob) to erase. Any manual\nadjustments will override the recorded automation and apply the manually entered\nvalue. To stop and clear all recordings, Hold [Shift] and Keep Hold of Knob 13.\nS. \t1-P. \t1\nCC1 \tCC2 \tCC3 \tCC4\n78 \tCC10 \tCC11 \t18\n111 \t12 \tCC7 \tCC8\nCC13 \tCC14 \tCC15 \tCC16\nREC Mode knob\nCurrent State\nFlash - Recording Active\nFlash - Playback Active\nTap knob to Play\nTap to start / stop recording\nTap knob to Pause\nPlay/Pause Mode knob\nGeneral Recording Status Knob Transport Controls\nHold [Shift] to see knob 13 recording status\nNOTES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 42,
+      "image": "/oxi-e16-manual/pages/page-042.png",
+      "title": "Page 42",
+      "sectionName": null,
+      "content": "36 The OXI E16 Manual\nConnect & Control\t2\nNOTES\t\n2.13 Groups\nEach of the individual parameters can also be added to a ‘group’. A group is a collection\nof 2 or more parameters that can be controlled together as a collective set. Push and hold\nan encoder knob to view the group status. A maximum of 4 groups are available. A\nmaximum of 4 groups are available.\nA control knob can play one of two roles if assigned into a group.\n• Primary lead. A control which, when adjusted, will also change the value of all other\nknobs in the same group at the same time. Primary lead knobs will change its own\nvalue and the relative values of the others in its group.\n• Secondary follower. A control knob who's value can be changed by the lead knob.\nTurning a lead knob in the same group will change the value of this knob. A secondary\nfollower knob can also be adjusted manually in isolation.\n► Creating a group\n1. Groups are set from the control view by holding a knob. The group number is\ndisplayed while holding a knob. Push and hold a knob, typically this will be the\nprimary lead, displayed by the dotted border and fully lit LED ring for the knob.\nExample: Keep hold of (Knob 1).\n2. While holding the lead knob, tap any other knob to add to the same group. Example:\nHold (Knob 1) + Tap (Knob 2) & (Knob 3). The first tap will add controls as secondary\nfollowers, indicated by the solid border and the LED ring partially lit, right side.\n3. While still holding the lead knob, tap any other knob a second time to change the\ngroup assignment from a follower to a lead. Example: Hold (Knob 1) + Tap (Knob 2).\nThe second tap will change its control mode from follower to lead, indicated by the\ndotted border and fully lit LED ring.\n4. To remove a control from the group. While holding the lead knob, tap any other knob\na third time to remove it from the group. Example: Hold (Knob 1) + Tap (Knob 2).\nKnobs that are not in the group are shown as normal, not highlighted and the LED\nring unlit while holding the indicated by the solid border and the LED ring partially lit,\n5. At the conclusion of these examples, Knob 1 will be the primary lead and Knob 3 a\nfollower control.\nCreate a group.\nIn the control view, push and\nhold first knob + tap knob(s) CC4\tCC3\tCC2\tCC1\nGroup \t1\nCC1 \tCC2 \tCC3 \tCC4\nCC9 \tCC10 \tCC11 \tCC12\nCC5 \tCC6 \tCC7 \tCC8\nCC13 \tCC14 \tCC15 \tCC16\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 43,
+      "image": "/oxi-e16-manual/pages/page-043.png",
+      "title": "Page 43",
+      "sectionName": null,
+      "content": "37\tThe OXI E16 Manual\nConnect & Control 2\nNOTES\nParameters displayed with a ‘dotted’ bounding box will act as a primary lead\ncontrol. If any of these are adjusted, the values of the other parameters in\nthe same group are also adjusted in harmony. The value change is relative\nto each of the parameter’s original value. In the example below, all three\nknobs will affect the value of itself and the other two parameters.\nParameters displayed with a ‘solid’ bounding box will follow any changes made by a\nprimary lead control, but can also be adjusted independently. The primary lead\ncontrols are shown with a ‘dotted’ boundary box. In the example below only CC1,\nwhen adjusted, will affect its own value plus the value of the other 2 parameters.\nWhen changing the CC2 or CC3 knob, only its own individual value is changed.\nOther parameters in the group are not affected.\nThe amount of control applied by the primary lead to a follower can be set for each\nfollower parameter. The amount is set on each follower by holding & turning its knob.\nIn this example hold + turn knob 2 (CC2) to set the amount, then repeat for CC3.\nHold Knob + Tap knob a second time.\nWhile setting up a group and holding the lead\nknob - each subsequent tap of the follower\nknob will cycle through its functional mode.\nHold Primary Lead\nFull LED ring\nTap another knob\t1st Tap\n+\nHalf LED ring\tSecondary Follower\nPrimary lead\nTap again\t2nd Tap\nfull LED ring\nGroup\nTap again\t3rd Tap\nUnlit\tRemove from group\nGroup 1\nGroup 1\nLead\nLead &\nFollow\nFollower\nLead &\nFollow\nFollower\nLead &\nFollow\nHold Knob + Tap the knob first time\nGroup Operating Behavior\nCC1\nCC1\nCC2\nCC2\nCC3\nCC3\nFollower Amount\npush & turn\n55%\nCC1\nCC2\nCC2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 44,
+      "image": "/oxi-e16-manual/pages/page-044.png",
+      "title": "Page 44",
+      "sectionName": null,
+      "content": "38 The OXI E16 Manual\nConnect & Control\t2\nNOTES\t\n2.14 MIDI In\nThe E16 can channel incoming MIDI through to the selected outputs. This is configured in\nthe Settings > MIDI section. In addition external MIDI PC - Program Change messages\ncan be used to change scenes on the device. A dedicated MIDI channel is available for\nthis purpose, also set in the MIDI settings.\n► Changing the Scene by PC\n1. Connect the externally controlling device to a MIDI input on the E16, for example\nfrom PC/Mac to the E16. Ensure the general MIDI settings are correct on the external\ndevice in order to send a PC message.\n2. On the E16, open the system config. In the home screen, press (Knob 8).\n3. Navigate to the MIDI settings, tap to open. Navigate to 'PC Receive Channel' and set\nthis to a dedicated MIDI channel that the external device will send the PC message.\nExample, set to channel 8.\n4. Sending a PC message on the defined channel will then change the scene to the PC\nmessage value. For example PC 1 will select Scene 1, PC 4, selects Scene 4.\nScenes 1-16 can be selected directly by PC.\nRouting\nMIDI Thru\nTRS\nBLE\nUSB\nScene 1\nScene 2\nScene 3\nThru\nProgram Change - PC\nProgram Change switches between\nscenes and is defined on a\ndedicated MIDI channel as set in\nthe Settings > MIDI menu.\nTypically CC or Note data.\nExample: MIDI Input\nE16 External Device\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 45,
+      "image": "/oxi-e16-manual/pages/page-045.png",
+      "title": "Page 45",
+      "sectionName": null,
+      "content": "39\tThe OXI E16 Manual\nConnect & Control 2\nNOTES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 46,
+      "image": "/oxi-e16-manual/pages/page-046.png",
+      "title": "Page 46",
+      "sectionName": null,
+      "content": "40 The OXI E16 Manual\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 47,
+      "image": "/oxi-e16-manual/pages/page-047.png",
+      "title": "Page 47",
+      "sectionName": null,
+      "content": "41\tThe OXI E16 Manual\nScenes\n3\nScenes are the highest order of organisation in the E16, each scene can hold\n16 pages of parameters. Seven scenes are presented for access from the main\nhome page but the E16 can hold 16 Scenes in total on the device. These are\naccessed using [Shift] + (Knob) from the home page in order to re-allocate a\nscene. A scene stores all of the settings and helps to organise the controls.\nScene selection is available from the first page presented when powering up the\nE16 along with the system configuration settings menu. To start, select a scene\nto work with or to setup. Scene switching is also possible from an external\ndevice by using PC - Program Change messaging. The E16 uses a dedicated\nMIDI channel to listen for incoming PC change messages. Each scene also\ncontains 16 presets. A preset stores the current values of all the knobs which\ncan then be recalled. Different configurations are therefore possible in order to\nmatch various hardware setups.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 48,
+      "image": "/oxi-e16-manual/pages/page-048.png",
+      "title": "Page 48",
+      "sectionName": null,
+      "content": "Main Home View - Scenes / System\nSave Yes\tSave No\nSave on Exit\nAfter editing a scene and backing up to\nthe home screen the option to save the\nscene or not is presented. Tap the\nknob to choose the save option.\nScene Select\nScene / Page / Controller Settings\nControl Page\nThe configured controls are presented. The knobs will\nsend a MIDI control message to the defined destination\nChange Page\nHold [Shift] to access the page selection screen along with the\nscene settings. Hold [Shift] + Tap (Knob X) 1-12 to change page.\nTap [Shift] to backup in\nthe menu / page structure\n+\nS. \t1\nS. \t5\nS. 3\nS. 7\nS. 2\nS. 6\nS. \t4\nCONF\nS. \t1-P. \t1\nCC1 \tCC2 \tCC3 \tCC4\nCC9 \tCC10 \tCC11 \tCC12\nCC5 \tCC6 \tCC7 \tCC8\nCC13 \tCC14 \tCC15 \tCC16\nS. \t1\nP.1 \tP.2 \tP.3 \tP.4\nP.9 \tP.10 \tP.11 \tP.12\nP.5 \tP.6 \tP.7 \tP.8\nREC \tLock \tEdit \tPrst\nS.1 CC1\nP.1\nPage \tScene\nAbbr.\nCtrl 3\nCC3\nSpecial \tOff\nColor \t12\n+ +\tEdit 1 2 3\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 49,
+      "image": "/oxi-e16-manual/pages/page-049.png",
+      "title": "Page 49",
+      "sectionName": null,
+      "content": "Scenes 3\n\n3.2 Scene Pages\n\nEach scene has 12 pages which contains 16 parameters. A total of 192 parameters are therefore available in each scene. Organising parameters in pages allows them to be managed in an easy and structured way.\n\nS. 1-P. 1\nCC1 \tCC6 \tCC3 \tCC4\nCC9 \tCC10 \tCC11 \tCC12\nCC5 \tCC6 \tCC7 \tCC8\nCC13 \tCC14 \tCC15 \tCC16\nS. \t1\nP.1 \tP.2 \tP.3 \tP.4\nP.9 \tP.10 \tP.11 \tP.12\nP.5 \tP.6 \tP.7 \tP.8\nREC \tLock \tEdit \tPrst\n+ S.1\nNote\nThe 'Push' control option can be used to assign a page. This is setup in the control configuration and by setting the push option to type 'page'. A page number can be assigned which allows the knob push to switch from the current page and jump directly to the assigned control view.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 50,
+      "image": "/oxi-e16-manual/pages/page-050.png",
+      "title": "Page 50",
+      "sectionName": null,
+      "content": "44 The OXI E16 Manual\nScenes\t3\nThe page options can be edited. This allows the page to be renamed and the MIDI\nchannel and port to be set. Copying pages is also possible from within the editor. The\neditor is accessible from the control view. Select a page to edit first.\n► Edit the Page Settings\n1. Pages are accessible from the control view. Tap [Shift] if necessary to backup the\nmenu to the main home screen. Select a scene by tapping the associated knob to\nchoose the scene and its control view.\n2. Select a page to edit, hold [Shift] + tap (Knob 1) - (Knob 12).\n3. Open the editor, hold [Shift] + tap (Knob 15), 'Edit'.\n4. Select the page tab. Hold [Shift] + tap (Knob 2), 'Page'. The edit options also include\ncontrols with knob 1 and scene with knob 3.\n5. To navigate and scroll the options, turn (Knob 2). To select an option for editing press\n(Knob 2) then turn to change the setting. The '►' tag label indicates that the\nparameter is editable. Press again to confirm the change.\n6. When backing up and exiting the control view using [Shift], a 'Save Scene?' option is\npresented. Tap the red lit (Knob 2) to exit without saving or tap the green lit (Knob 3)\nto save the scene.\nScene\tPage\nName\nCtrl 3\nP.1\nOutput \tTRS1\nChannel \t1\nNOTES\nHold [Shift] + Tap (Knob 15) for the editor Hold [Shift] + Tap (Knob 2) for the page options\nS. \t1\nP.1 \tP.2 \tP.3 \tP.4\nP.9 \tP.10 \tP.11 \tP.12\nP.5 \tP.6 \tP.7 \tP.8\nREC \tLock \tEdit \tPrst\n+ Edit + Page\nPage Settings In the editor, access settings by [Shift] + (Knob 2)\nSetting Options Description\nName Text Entry\nOpens the text editor for renaming the page. The page name has a\nmaximum of 7 characters. The name is presented on the control view\nheader and the first 4 characters in the page list.\nChannel 1-16 Select MIDI channel for the controls set in the selected page..\nOutput All, TRS, USB, All-\nBLE, All-USB, OFF\nSets the MIDI Output port 1 or 2 for TRS and USB or Off. Also all ports\nexcluding USB or excluding BLE can be selected.\nCopy Command Copies the current page and controls to the clipboard.\nPaste Command Pastes the copied page and controls from the clipboard into the\ncurrently selected page.\nClear Command Clears settings for the current page to defaults. Requires the action\nto be confirmed by the green (Knob 3) or cancel with red (Knob 2).\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 51,
+      "image": "/oxi-e16-manual/pages/page-051.png",
+      "title": "Page 51",
+      "sectionName": null,
+      "content": "45\tThe OXI E16 Manual\nScenes 3\n3.3 Accessing All Scenes\nThere are 16 scene slots stored on the E16, 7 of which are directly accessible from the\nhome screen. Scenes can be managed in the OXI App but also can be configured on\nboard the E16 device. Assignment of the scenes from the total 16 is performed in the\nhome screen using shift.\n► Assigning a scene as direct access\n1. There are 7 scenes that are assigned to knobs 1-7 in the home screen, scene page.\nThese are configured by default, but can be changed to another one from the 16\nonboard scenes. Navigate to the home screen to start. Tap [Shift] if needed to\nbackup the menu and screen structure.\n2. Hold [Shift] + Tap (Knob 1) to (Knob 7). These contain the assigned scenes.\nThe 'Select Scene' screen is displayed.\n3. Turn the selected knob to navigate the 16 available scenes. The scene currently\nloaded to the selected knob is shown in the list.\n4. The desired scene will be tagged with the '>' symbol. Tap the knob to select and\nassign to the chosen knob.\n5. The menu is automatically exited and the display returns to the home screen. The\nassigned scenes to knobs are shown.\nNOTES\n[Shift] + Tap (Knob)\nChange Scene Assignments - from the home / scene screen.\nTurn + Tap (Knob)\nS. \t1\nS. \t5\nS. 3\nS. 7\nS. 2\nS. 6\nS. \t4\nCONF\nS. \t11\nS. \t5\nS. 3\nS. 7\nS. 2\nS. 6\nS. \t4\nSYS\nSelect Scene\n10.S10\n11 S.11 \t- Loaded\n12 S.12\t\n+ S.1\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 52,
+      "image": "/oxi-e16-manual/pages/page-052.png",
+      "title": "Page 52",
+      "sectionName": null,
+      "content": "46 The OXI E16 Manual\nScenes\t3\n3.4 Scene Settings\nThe scene settings can be edited. This allows the scene name abbreviation to be\nchanged. Also the options to reload or reset the scene are possible from this menu.\n► Edit the Scene Settings\n1. Accessing the scene settings is managed from the control view. Tap [Shift] if\nnecessary to backup the menu to the main home screen. Select a scene by tapping\nthe associated knob to choose the scene and its control view.\n2. Open the editor, hold [Shift] + tap (Knob 15), 'Edit'.\n3. Select the scene tab. Hold [Shift] + tap (Knob 3), 'Scene'. The edit options also\ninclude controls with knob 1 and page with knob 2.\n4. To navigate and scroll the options, turn (Knob 3). To select an option for editing or\nchoose a menu command press (Knob 3). Some commands may need confirmation\nby pressing no/red knob or yes/green knob.\n5. When backing up and exiting the control view using [Shift], a 'Save Scene?' option is\npresented. Tap the red lit (Knob 2) to exit without saving or tap the green lit (Knob 3)\nto save the scene.\nPage \tScene\nName\nCtrl 3\nS.1\nReset\nReload\nNOTES\nHold [Shift] + Tap (Knob 15) for the editor Hold [Shift] + Tap (Knob 3) for the scene options\nS. \t1\nP.1 \tP.2 \tP.3 \tP.4\nP.9 \tP.10 \tP.11 \tP.12\nP.5 \tP.6 \tP.7 \tP.8\nREC \tLock \tEdit \tPrst\n+ Edit + Scene\nScene Settings In the editor, access settings by [Shift] + (Knob 3)\nSetting Options Description\nAbbr. Text Entry\nOpens the text editor for renaming the scene. The scene name has\na maximum of 7 characters. The name is presented on the control\nview header and the first 4 characters in the scene list.\nReload Command Reloads the saved scene and its setting from the E16 memory. Tap\nthe lit knob to confirm, Yes/Green to confirm, No/Red to cancel.\nReset Command Resets the scene to the default settings. Tap the lit knob to confirm,\nYes/Green to confirm, No/Red to cancel.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 53,
+      "image": "/oxi-e16-manual/pages/page-053.png",
+      "title": "Page 53",
+      "sectionName": null,
+      "content": "47\tThe OXI E16 Manual\nScenes 3\n3.5 Presets\nEach scene has 16 preset slots. Each preset can store the current state of all of the\ncontrol knob values from the scene. Presets can be recalled later. The preset menu is\naccessible from the control view by holding [Shift] and pressing (Knob 16), 'Prst'. The\npreset management menu is then navigated using Knob 1 which will be shown lit.\n► Saving a Preset\n1. Ensure the knob values are set or configured as snapshots or with automation as\ndesired. This will be the state saved.\n2. Open the preset manager. In the control view, hold [Shift] + tap (Knob 16), 'Prst'.\n3. To Save:\n• To save to the current slot. Navigate in the menu by turning (Knob 16). Highlight\nwith the '►' tag the 'Save' option. Tap (Knob 16) to select save.\n• To save to another slot and rename the preset. Navigate in the menu by turning\n(Knob 16). Highlight with the '►' tag the 'Save As' option. Tap (Knob 16) to\nselect save. The slot selector will open and a new slot can be selected. The\nname can also be edited when saving.\n► Loading a Preset\n1. Open the preset manager. In the control view, hold [Shift] + tap (Knob 16), 'Prst'.\n2. To Load a preset. Navigate in the menu by turning (Knob 16). Highlight with the '►'\ntag the 'Load' option. Tap (Knob 16) to select load.\n3. The preset slot selector will open and a preset from the list can be selected. The\ncurrently active preset will be displayed in the list as 'loaded'. Navigate th the '►' to\nthe preset to load and press (Knob 16).\n4. If the currently active preset has been changed, the option to save prior to loading\nthe new preset is presented. Tap red (Knob 2) to cancel without saving and green\n(Knob 3) to save to the current slot prior to loading.\n5. The selected preset will be loaded, restoring its control values.\nNOTES\nNote\nThe options to clear the currently selected preset slot or to rename the preset are also presented in the preset\nmenu. Navigate using the lit knob and select by tapping the knob.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 54,
+      "image": "/oxi-e16-manual/pages/page-054.png",
+      "title": "Page 54",
+      "sectionName": null,
+      "content": "48 The OXI E16 Manual\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 55,
+      "image": "/oxi-e16-manual/pages/page-055.png",
+      "title": "Page 55",
+      "sectionName": null,
+      "content": "49\tThe OXI E16 Manual\nThis final section if more about configuration and setup of the OXI E16.\nHowever don't overlook these topics as there are lots of useful topics that\nwill be valuable and help your workflow. Here, the firmware updates are\ncovered along with the OXI App and a complete overview of the\nconfiguration options. There are some useful elements that will be\nimportant to know, if not now, then certainly in the future. It is\nrecommended that you at least familiarise yourself with the content and\nfeatures covered here for future reference and awareness. To finish, OXI\nInstruments would like to issue a heartfelt and big thank you for buying OXI\nE16 and following our journey as new devices join the OXI family and its\nassociated ecosystem of gear. Good luck with your musical adventures;\nhopefully, OXI E16 will join the OXI ONE, Coral, Meta and all the other\ngear to help your musical journey. Remember, things don't end here; only\nthe manual does. The real journey is only just starting. Have fun!\nSystem & App\n4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 56,
+      "image": "/oxi-e16-manual/pages/page-056.png",
+      "title": "Page 56",
+      "sectionName": null,
+      "content": "50 The OXI E16 Manual\nNOTES\nSystem\t4\n4.1 OXI App\nMost device management activities when working with the OXI gear is handled using the\nOXI App. This is a stand alone utility that, when connected to an OXI device will help\nupdate, backup and transfer data between the device and a PC or Mac. The app also\ncontains some useful tools such as the ability to configure the E16 directly from the App\nand to create and load instrument definitions. Download the App from the OXI site.\nThe OXI App can manage operations between a PC / Mac and E16:-\n• Manage and backup scenes.\n• Edit and create scenes in the on-board scene editor.\n• Manage instrument CC definition files between devices.\n• Check the available firmware in comparison with the OS installed on the\nconnected e16 and perform an update to the firmware on the device.\nClick Here to Download the App\n+\nSelect a storage directory\nDrag and drop projects to upload or download\nS. 1\nOn Device\tOn Computer \tDownload \tAll\nS. 2\nS. 3\nS. 4\nS. 5\nS. 6\nS. 7\nS. 8\nS. 9\nS. 10\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nInstruments\tScenes \tFirmware\nOXI E16\nNote\nTeh OXI App is a tool used for several OXI devices. The devices can be selected with the '+' button top left. For\nexample the OXI ONE and ONE MkII can all be connected to the App. Also instrument definitions are managed\nand can be created directly in the App.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 57,
+      "image": "/oxi-e16-manual/pages/page-057.png",
+      "title": "Page 57",
+      "sectionName": null,
+      "content": "51\tThe OXI E16 Manual\nSystem 4\n+\n+\nDrag and drop scenes to upload or download\nS. 1\nOn Device\tOn Computer\nS. 2\nS. 1\nScene2\nS. 3\nS. 4\nS. 5\nS. 6\nS. 7\nS. 8\nS. 9\nS. 10\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nInstruments\tScenes \tFirmware\nOXI E16\nScene \tPages\nScene Editor\nPage\nControl\nCancel\nP.1 \tP.2 \tP.3 \tP.4\nP.5 \tP.6 \tP.7 \tP.8\nP.9 \tP.10 \tP.11 \tP.12\nSet \tSet as Next\nSave\nInstruments\nGB Glide\nVolume\nOSC \tTrns\nDLY Time\nName \tName\nAbbr\nName\nChannel\nCC\nOutput\nType\nColor\nScene \tP.1\nCC1\nCC1\nCCAb\nDestination\nTurn \tPush\n~Same\n~Same\n0\nALL\n1 \t+\n+\n-\n-\nMicromonsta\nBank SEL\nMOD WHL\nGB EQ OF\nIcon \tOutput\nChannel\nScene \t- \tP. 1\t\nCC1 \tCC2 \tCC3 \tCC4\nCC9 \tCC10 \tCC11 \tCC12\t\nCC5 \tCC6 \tCC7 \tCC8\nCC13 \tCC14 \tCC15 \tCC16\nNOTES\t\nScene Management\nThe option to set a storage directory is available which assigns a folder on the PC/Mac as the storage\nlocation for E16 files and data. Scenes can be copied from E16 to / from a PC/Mac using the drag and\ndrop options in the ‘Scene’ tab menu.\nThe App scene editor speeds up the E16 configuration and workflow enormously. While editing on the\ndevice is quite easy, the App presents all of the setup data in one place and makes it even quicker to\nget going. It is recommended to use the App for getting the E16 initially configured and then make any\nrequired individual changes on the device going forwards.\nThe scene icon can also be changed from the available symbol library or new icons created when\nclicking the icon in the app.\nDrag and drop scenes between\nthe E16 and the computer\nImport a scene from\nthe PC or Mac.\nCreate a new scene\nin the scene editor\nEdit the scene in the\nscene editor Delete scene\nRefresh Views\nE16 Device on-board\nstorage memory\nPC/Mac on-board\nhard drive\nOpen PC/Mac folder\nScenes Tab\nScenes Editor\nAssign PC/Mac folder Add device\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 58,
+      "image": "/oxi-e16-manual/pages/page-058.png",
+      "title": "Page 58",
+      "sectionName": null,
+      "content": "52 The OXI E16 Manual\nSystem\t4\nNOTES\t\n4.2 Instrument Definitions\nAn instrument definition is a predefined configuration for MIDI CC mapping to external\ndevices. Instead of manually setting up each CC to control an external device parameter,\nthe instrument definition for that selected equipment will map the parameters\nautomatically and apply their names. This saves time and is an efficient way to work with\nMIDI continuous control messages for external gear.\nOXI E16 Instrument definition is selected in the destination 1, 2 or push destination settings for any of the\ncontrols. This examples show Audiothingies MicroMonsta2 connected by MIDI and the CC control can be\nperformed from E16 without manual configuration. Restart the E16 after transferring instrument definitions for\nthem to be visible and accessible in the E16.\nThe OXI App can be used to download instrument definitions from the database and transfer the definition\nfiles between the OXI E16 and a PC/Mac.\nThe instrument definition for a device is\nselected in the destination 'Instrument' option.\nThe mapped parameter for the control is also\navailable under 'Parameter'.\nDestination 1\nInstr.\nParam.\nType\nMicromons\nBank SEL\nCC \tAbs\n+\nDrag and drop instruments to upload to device\nMicromonsta\tMicromonsta\nLXR-02\nAnalog Heat\nFH-2\nDigitakt II\nMicrocost\nDigitone\nUno Drum\nOctatrack\nBass Station II\nOn Device\tOn Computer\nEmpty\nEmpty\nEmpty\nEmpty\nEmpty\nEmpty\nEmpty\nEmpty\nEmpty\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nInstruments\tScenes \tFirmware\nOXI E16\nNote\nInstrument definitions are not user configurable on the device but can be created in the OXI App. These can be\ncreated individually and then loaded to OXI OE16 using the app. If the manufacturer changes the CC mapping\nof the device the instrument definition may not work as originally configured. Instrument definitions are saved\nwith the scene and can be backed up with the app. See the OXI App manual regarding the instrument editor.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 59,
+      "image": "/oxi-e16-manual/pages/page-059.png",
+      "title": "Page 59",
+      "sectionName": null,
+      "content": "53\tThe OXI E16 Manual\nSystem 4\nInstrument Definitions\nThe currently available instrument definitions to download via the App are listed. The list captures most definitions available but is\nalways likely to change at any time as more are added :-\nManufacturer Device\nHologram Microcosm\nIK Multimedia Uno Synth Pro X\nIK Multimedia Uno Drum\nIK Multimedia Uno Synth\nIntellĳel uMidi\nJomox Airbase 99\nKorg Arp 2600 M\nKorg Electribe ER-1\nKorg MS2000\nKorg NTS-1\nKorg Opsix\nKorg Wavestate\nKorg Minilogue\nKorg Minilogue XD\nKorg Monologue\nKorg Volca Bass\nKorg Volca Beats\nKorg Volca Drum\nKorg Volca FM\nKorg Volca Keys\nKorg Volca Kick\nKorg Volca Nubass\nKorg Volca Sample\nKorg Prologue\nKodamo Essence FM\nKurzweil K2661\nLPZW Tram 8\nMFB Synth II\nMFB Tanzbar 1\nMFB TanzbarLite\nMFB Tanzmous\nMake Noise O-Coast\nMeeBlip Geode\nMeeBlip Triode\nMelbourne Instruments Nina\nMeris LVX\nMeris Ottobit Jr\nMeris Polymoon\nModal Electronics ARGON8M\nModal Electronics COBALT5S\nModal Electronics CRAFTsynth2\nModal Electronics Craft\nModal Electronics Skulpt\nModor NF-1\nMoog Grandmother\nMoog Matriarch\nMoog Minitaur\nMoog Mother 32\nManufacturer Device\nASM Hydrasynth\nAbildgaard Droid-3\nAccess Virus A\nAccess Virus TI\nArturia Microfreak\nArturia Minifreak\nArturia Polybrute\nAudiothingies Doctor A\nAudiothingies Micromonsta\nBehringer Deepmind 12\nBehringer Neutron\nBehringer Pro 800\nBehringer TD-3-MO\nBlack Corporation Deckard’s Dream\nBlack Corporation Deckard’s Dream Mk2\nConductive Labs NDLR\nDave Smith Instruments Evolver\nDave Smith Instruments OB-6\nDave Smith Instruments Prophet ‘08\nDave Smith Instruments Prophet 12\nDave Smith Instruments Prophet Rev 2\nDave Smith Instruments Prophet X (XL)\nDreadbox Nymphes\nDreadbox Typhon\nElektron Analog 4 MKII\nElektron Analog Heat\nElektron Analog Heat +FX\nElektron Analog Rtm MKII\nElektron Digitakt\nElektron Digitakt II\nElektron Digitone\nElektron MachineDrum\nElektron Model Cycles\nElektron MonoMachine\nElektron Octatrack\nElektron Syntakt\nElektron Model Samples\nEmpress Echosystem\nEmpress Reverb\nEnsoniq ASR-X Pro\nErica Synths LXR-02\nExpert Sleepers FH-2\nFlame Curve\nFlame Maander\nFred’s Lab Buzzzy!\nGEM rp-x\nGSmusic E7\nGotharman Spazedrum Black\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 60,
+      "image": "/oxi-e16-manual/pages/page-060.png",
+      "title": "Page 60",
+      "sectionName": null,
+      "content": "54 The OXI E16 Manual\nSystem\t4\nManufacturer Device\nMoog Sirin\nMoog Sub-Phatty\nMoog Subsequent 25\nMoog Subsequent 37\nMoog Voyager\nMutable Instruments Shruthi\nNorand Mono\nNord Drum 2\nNord Drum 3P\nNord Lead (Rack)\nNord Lead (Rack) 2x\nNord Wave 2\nNovation Bass Station II\nNovation Bass Station Rack\nNovation Circuit\nNovation Nova\nNovation Summit\nNovation Peak\nOTO Machines FX BAM\nOTO Machines FX BIM\nOTO Machines FX BOUM\nOXI Instruments Coral\nOberheim OB-6\nOberheim OB-X8\nPioneer Toraiz AS-1\nPolyend Tracker\nRed Panda Particle\nRed Panda Raster\nRoland D-05\nRoland GAIA SH-01\nRoland JD-XA\nRoland JD-XI\nRoland JP-08\nRoland JU-06\nRoland JU-06A\nRoland JV1010\nRoland JX-03\nRoland JX-08\nRoland Juno 60 Minerva\nRoland Jupiter X (xM)\nRoland MC-101\nRoland MC-2oh2\nRoland MKS-50\nRoland MX-1\nRoland S-1\nRoland SE-02\nRoland SH-01A\nRoland SH-4d\nRoland System 1 (1M)\nRoland System 8\nManufacturer Device\nRoland TB-03\nRoland TB-3\nRoland TR-06\nRoland TR-08\nRoland TR-09\nRoland TR-6S\nRoland TR-8\nRoland TR-8S\nRoland VP-03\nRoland XV-5050\nSequential Pro 3\nSequential Prophet-6\nSequential TAKE 5\nSherman Filterbank\nSonicware Liven Lofi 12\nSonicware Liven XFM\nSonicware Smpltrek\nStrymon Nightsky\nStrymon Volante\nStudio Electronics ATC-1\nStudio Electronics SE-1X\nStudiologic Sledge\nTC Electronic D-Two\nTasty Chips Gr-1\nTeenage Engineering OP-1\nTeenage Engineering OP-Z\nTwisted Electronics MEGAfm\nTwisted Electronics TherapSID\nUDO Audio Super 6\nWaldorf Blofeld\nWaldorf Iridium\nWaldorf M\nWaldorf Pulse 2\nWaldorf Rocket\nWaldorf Streichfett\nYamaha Reface CP\nYamaha Reface CS\nYamaha Reface DX\nYamaha Reface YC\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 61,
+      "image": "/oxi-e16-manual/pages/page-061.png",
+      "title": "Page 61",
+      "sectionName": null,
+      "content": "55\tThe OXI E16 Manual\nSystem 4\n4.3 System Settings\nThe global settings for the device can be accessed from the main home page by using\n(Knob 8). The user interface settings include: Interface brightness, auto save option,\nscreen saver and auto turn off timer. Also firmware options and a MIDI monitor are\navailable. Other menus include MIDI and Bluetooth settings. These are found in the\nSystem sub-menu.\nS. \t1\nS. \t5\nS. 3\nS. 7\nS. 2\nS. 6\nS. \t4\nCONF\nNOTES\nTap (Knob 8) to open the system settings.\nTurn to navigate and tap to access sub-menus.\nMIDI\nSetting Options Description\nBLE Thru On/Off Sets if the incoming MIDI from the bluetooth interface is\npassed thru to the MIDI output or is set to off - no thru.\nTRS Thru On/Off Sets if the incoming MIDI from the TRS interface is passed\nthru to the MIDI output or is set to off - no thru.\nUSB Thru On/Off Sets if the incoming MIDI from the USB interface is passed\nthru to the MIDI output or is set to off - no thru.\nPC Receive Channel Off, 1-16\nSets the MIDI channel that the E16 will listen to for\nprogram change messages. Incoming program change\nmessages will switch scenes in the E16.\nBluetooth\nSetting Options Description\nBluetooth Various Bluetooth can be set to off. Alternatively bluetooth can be\nset as a central interface, peripheral interface or both.\nSystem\nSetting Options Description\nMIDI Monitor On/Off MIDI monitor is a tool that will display in real-time any\nincoming MIDI messages. Used as a diagnostic tool.\nBrightness Low, Med, High Sets the rotary LED brightness level for the control knobs.\nAuto Save All Off, All On,\nScenes, Presets\nThe device will automatically save everything, just scenes\nor just presets. Can also be set to off.\nScreensaver Animation Off or Timed Enable or disable the screen saver animation. Timer can\nbe set to start the screensaver to 10 MIns, 30 Min or 1 hr.\nAuto Turn Off Off or Timed Enable or disable the automatic shutdown time. Timer can\nbe set to off or power down after 30 Min or 1,2 or 4 hrs.\nEncoder Type Normal or\nDetented\nSets the encoder behavior from a normal non-detented\nstyle or a detented style encoder. This must be set to\nmatch the hardware encoders for your specific E16.\nFactory Reset Initiate reset Initiate a factory reset to the original defaults. Will erase\nany existing settings and data.\nHW/FW Version View only Display the current firmware version.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 62,
+      "image": "/oxi-e16-manual/pages/page-062.png",
+      "title": "Page 62",
+      "sectionName": null,
+      "content": "56 The OXI E16 Manual\nNOTES\nSystem\t4\n4.4 Firmware Update\nUpdates to OXI E16 firmware are released from time to time to add new features,\nimprove performance and fix bugs. The update process is automated within the OXI App.\nSimply connect the PC/Mac to OXI E16 and open the ‘Firmware’ page. The current\nstatus of the device and any available firmware versions will be displayed.\n► Update Firmware\n1. Connect OXI E16 to the PC or Mac which hosts the OXI App using the USB\nconnection.\n2. Open the OXI App.\n3. In the ‘Firmware’ page the currently installed firmware will be displayed as well as\nthe latest available firmware. It is possible to update from this page.\n4. Any newly available updates will be displayed in the pop-up message. Click ‘View’ to\nsee more information and to proceed to perform the update.\n5. While updating the update progress bar will be displayed on E16. Do not disconnect\nthe devices while updating.\n6. Once complete, E16 will reboot. Update takes between 15 - 60 seconds.\n7. Note that the option to update a specific firmware version from a update file is also\npossible. Click the 3 dots under the E16 image and the options to update the\nfirmware from a file will be available. The file must have been previously downloaded\nto a location on the PC/Mac.\nClick Here to Download the App\n+\nInstruments\tScenes\n- Feature X\t\n- Feature \tY\t\n- Feature Z\nLatest Release\n0.4.6\nFirmware\nUpdate\nOXI E16\nFirmware Update Available\n0.13.5\nView\nThe currently installed firmware version and hardware version can be viewed in the\nSys Settings > System > HW & FW Version.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 63,
+      "image": "/oxi-e16-manual/pages/page-063.png",
+      "title": "Page 63",
+      "sectionName": null,
+      "content": "57\tThe OXI E16 Manual\nSystem 4\nNOTES\n 4.5 Troubleshooting Updates\nIt is unusual for the OXI E16 to freeze or to get locked into a ‘bricked’ condition while\nupdating. Should this situation occur the following steps should be followed.\n► Update Mode Recovery\n1. Connect OXI E16 to the PC or Mac which hosts the OXI App using the USB\nconnection. Also ensure the PC / Mac is connected to the internet.\n2. Push and hold the power button of OXI E16 to force it to off.\n3. Power up in update mode. Hold {Knob 15) + (Knob 16) while pressing the power on\nbutton. The E16 should power up in update mode.\n4. Try updating again using the App but use a downloaded OS version. This could be an\nolder revision or the latest version.\n5. Try powering off / on. Repeat the procedure.\nA factory reset is also an option to return the E16 to its original state. Be careful in using\nthis function as any configurations and settings will be permanently cleared.\n► Factory Reset\n1. In the main home page, tap (Knob 8), 'Sys' for the settings menu.\n2. Navigate to 'System' and tap (Knob 8) to open the sub-menu.\n3. Navigate to 'Factory Reset' and tap (Knob 8) to initiate the command.\n4. Confirm by pressing the green lit (Knob 3) for 'Yes' or tap red lit (Knob 2) for 'No' and\nto exit back to the menu.\n5. A factory reset will be performed if choosing 'Yes' and the unit will restart.\nNote\nThe Sysex Librarian utility can be used if the PC/Mac OS doesn't support the App.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 64,
+      "image": "/oxi-e16-manual/pages/page-064.png",
+      "title": "Page 64",
+      "sectionName": null,
+      "content": "58 The OXI E16 Manual\nSystem\t4\n4.6 MIDI Input Monitor\nMIDI Monitor is a utility used for checking incoming MIDI activity within OXI E16 from all\nroutes and channels. It is a simple, yet highly useful tool available when needed from the\nconfig menu or directly on the user panel.\nTurn MIDI Monitor on in: Conf Settings > System > MIDI Monitor.\nNOTES\nShift \tHold\nOct - \tOct +\nMINILAB \t3 \tARTURIA\nMIDI IN Monitor\nUSB Ch 1: N.Off 64\nUSB Ch 1: N.On 65 110\nUSB Ch 1: N.Off 65\nLast 3 messages are displayed.\nIf a clock is monitored this may\noverwrite any notes or cc information.\nShows Connection, Channel\nand message. Example is Note\nnumbers + velocity with a note\n‘on’ message.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 65,
+      "image": "/oxi-e16-manual/pages/page-065.png",
+      "title": "Page 65",
+      "sectionName": null,
+      "content": "59\tThe OXI E16 Manual\nSystem 4\nNOTES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 66,
+      "image": "/oxi-e16-manual/pages/page-066.png",
+      "title": "Page 66",
+      "sectionName": null,
+      "content": "60 The OXI E16 Manual\nIndex\nA\nAftertouch 25\nApp 50\nArchitecture 7\nB\nBipolar 30\nBluetooth 2, 12, 15\nBrightness 55\nC\nCC 21\nColors 19\nCV Gate 12\nD\nDestinations 17, 20\nF\nFirmware Update 56\nG\nGroups 36\nH\nHardware 4\nHome 5\nI\nInstrument Definitions 52\nL\nLoad 18\nM\nMIDI 13, 38\nMIDI Input monitor 58\nMIDI Monitor 55\nN\nName 8\nNote 26\nNRPN 27\nO\nOXI App 50, 52, 56\nP\nPage 7, 43\nPC 23, 38, 55\nPorts 16\nPower 4–5\nPreset 7, 47\nPush 28\nR\nRecord 30, 33\nReset 55, 57\nS\nSave 18\nScene 7, 41–42, 51\nScenes Editor 51\nShift 3–4, 6\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 67,
+      "image": "/oxi-e16-manual/pages/page-067.png",
+      "title": "Page 67",
+      "sectionName": null,
+      "content": "61\tThe OXI E16 Manual\nIndex\nSnapshot 30–31\nSpecial Functions 30\nSpecifications 2\nSystem 55\nT\nThru 55\nTroubleshooting 57\nTRS 12\nTRS Adapter 4, 12, 14\nU\nUSB 5, 12–13\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 68,
+      "image": "/oxi-e16-manual/pages/page-068.png",
+      "title": "Page 68",
+      "sectionName": null,
+      "content": "62 The OXI E16 Manual\nWarranty & Conformance\nDECLARATION OF CONFORMITY\nSPECIAL MESSAGE SECTION\nThis product utilizes rechargeable batteries. DO NOT connect this product to any power supply or\nadapter different than one described in the manual or specifically recommended by OXI Instruments.\nThis product should be used only with the components supplied or, in case a non-official accessory is\nused, please observe that the specifications are the same as the official ones.\nIMPORTANT: Don’t try to open or disassembly the OXI One. For any technical problem it may have,\nplease contact OXI Instruments for further information. Opening or disassembling the OXI One will void\nyour warranty.\nFCC INFORMATION (U.S.A)\n1. IMPORTANT NOTICE: DO NOT MODIFY THIS UNIT!\nThis product meets FCC requirements once it is produced and assembled. Modifications not expressly\napproved by OXI Instruments may void your authority, granted by the FCC, to use the product.\nThis device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions:\n(1) This device may not cause harmful interference, and (2) this device must accept any interference\nreceived, including interference that may cause undesired operation.\nContains FCC ID: 2A094-MK02\n2. IMPORTANT\nWhen connecting this product to accessories and/or another product use only high- quality shielded\ncables. Cable/s supplied with this product MUST be used. Follow all installation instructions. Failure to\nfollow instructions could void your FCC authorization to use this product in the USA.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 69,
+      "image": "/oxi-e16-manual/pages/page-069.png",
+      "title": "Page 69",
+      "sectionName": null,
+      "content": "63\tThe OXI E16 Manual\nWarranty & Conformance\n3. NOTE\nThis equipment has been tested and found to comply with the limits for a Class B digital device,\npursuant to part 15 of the FCC Rules.\nThese limits are designed to provide reasonable protection against harmful interference in a residential\ninstallation.\nThis equipment generates, uses and can radiate radio frequency energy and, if not installed and used in\naccordance with the instructions, may cause harmful interference to radio communications.\nHowever, there is no guarantee that interference will not occur in a particular installation. If this\nequipment does cause harmful interference to radio or television reception, which can be determined by\nturning the equipment off and on, the user is encouraged to try to correct the interference by one or\nmore of the following measures:\n• Reorient or relocate the receiving antenna.\n• Increase the separation between the equipment and receiver.\n• Connect the equipment into an outlet on a circuit different from that to which the receiver is connected.\n• Consult the dealer or an experienced radio/TV technician for help.devices.\nDECLARATION OF CONFORMITY\nThe full text of the US declaration of conformity is available at the following internet address: www.\noxiinstruments.com/\nEUROPE\nThis product complies with the requirements of European Directive 2014/53/EU & Directive\n2011/65/EU.\nThe full text of the EU declaration of conformity is available at the following internet address www.\noxiinstruments.com/\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 70,
+      "image": "/oxi-e16-manual/pages/page-070.png",
+      "title": "Page 70",
+      "sectionName": null,
+      "content": "64 The OXI E16 Manual\nWarranty & Conformance\nENVIRONMENTAL ISSUES:\nThis symbol indicates that this product should not be treated as domestic waste.\nOnce its useful life has ended, it must be taken to a relevant collection point for the\nrecycling of electrical appliances. Through the correct recycling of batteries and\nelectrical devices, we contribute to avoiding risks to environmental health and safety.\nProduct Disposal Note: If this product is damaged beyond repair or, for any reason, its useful life is\ndeemed to have expired, please inform yourself about local, state and European regulations regarding\nthe proper disposal and recycling of products containing lead, batteries, plastics, among other materials,\nas well as collection points for these types of products.\nThese symbols indicate that this product contains batteries and cannot be\ndisposed as domestic waste. Once its useful life has ended, it must be taken\nto a relevant collection point for the correct recycling of its batteries.\nThis product is classified as Radio Equipment.\nSERIAL NUMBER LOCATION:\nThe serial number is located on the instrument body, in the label placed in the bottom side.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 71,
+      "image": "/oxi-e16-manual/pages/page-071.png",
+      "title": "Page 71",
+      "sectionName": null,
+      "content": "65\tThe OXI E16 Manual\nWarranty & Conformance\nTERMS OF WARRANTY\nREFUND POLICY (only in European Union)\nThe consumer has a total of 14 days from the acquisition of the OXI One to be able to return the product\nthus receiving a full refund of the price of it. The product must be in the same state and with all the\noriginal content in order to receive a full refund.\nShipping costs will be paid by the customer.\nWARRANTY\nOXI Instruments warrants the included hardware product and accessories against defects in materials\nand workmanship for two years from the date of original purchase. Unless proven otherwise, it will be\npresumed that the breaches of conformity manifested in a period of six months from the delivery of the\nproduct already existed on that date.\nThe warranty will not cover the repairing costs of the following cases:\nMisuse of OXI One, whether subject to extreme conditions, as using it incorrectly.\nImproper handling of the product.\nNormal wear and tear, nor damage caused by accident or abuse.\nMalfunction due to the use of accessories not authorized by OXI Instruments.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 72,
+      "image": "/oxi-e16-manual/pages/page-072.png",
+      "title": "Page 72",
+      "sectionName": null,
+      "content": "66 The OXI E16 Manual\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 73,
+      "image": "/oxi-e16-manual/pages/page-073.png",
+      "title": "Page 73",
+      "sectionName": null,
+      "content": "67\tThe OXI E16 Manual\nCopyright © 2025 by OXI Electronic Instruments SLU\n© 2023 OXI ELECTRONIC INSTRUMENTS SLU. All rights reserved. OXI\nINSTRUMENTS and the OXI logo are registered trademarks of OXI INSTRUMENTS\nin the UE and registered in many other countries. OXI ONE is a trademark of OXI\nINSTRUMENTS. Design and specifications subject to change without notice. The OXI\nONE may not be authorized for use in some countries.\nDecember 2025 - OXI ONE MKII OS 0.5.0 a\nwww.OXIinstruments.com\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 74,
+      "image": "/oxi-e16-manual/pages/page-074.png",
+      "title": "Page 74",
+      "sectionName": null,
+      "content": "68 The OP-XY Notebook : Reference & Guide\nwww.oxiinstruments.com\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

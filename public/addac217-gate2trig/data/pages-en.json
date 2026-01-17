@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:12.654Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac217-gate2trig/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac217-gate2trig/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC217 QUAD GATE TO TRIGGER \tUSER’S GUIDE\nJanuary.2020\tRevision.01\nWelcome to:\npage 2\tADDAC SYSTEM\nOVERALL DESCRIPTION\nFollowing our T-Networks series we came to realize how important it is to have the right input signal for\nfiring drum modules or envelopes, Gates and Triggers are often looked at as similar signals but at times\nit really makes a difference and results will change drastically depending if a Gate or a Trigger is fed to\nthe input of such modules.\nThis led us to develop this simple yet effective Gate to Trigger. A four channel converter with bypass\nswitch for each channel.\nAny input Gate will be limited to a 1ms Trigger.\nThis module will also be available as a full DIY kit.\nTech Specs:\n6HP\n4 cm deep 7\n0mA +12V\n70mA -12V\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac217-gate2trig/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "ADDAC217 User’s Guide\npage 3\tADDAC SYSTEM\nCONTROLS DESCRIPTION\nGate Input 1\nBypass Switch\nOutput 1\nGate Input 2\nBypass Switch\nOutput 2\nGate Input 3\nBypass Switch\nOutput 3\nGate Input 4\nBypass Switch\nOutput 4\nCHANNEL 1\nCHANNEL 2\nCHANNEL 3\nCHANNEL 4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac217-gate2trig/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "page 4\tADDAC SYSTEM\nADDAC217 User’s Guide\nADDAC217\nQUAD GATE TO TRIGGER SIGNAL FLOW DIAGRAM\nCHANNEL 4\nCHANNEL 3\nCHANNEL 2\nCONVERTER\nCHANNEL 1\nBYPASS\nOUTPUT 1\tGATE INPUT\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac217-gate2trig/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC217 \tUSER’S GUIDE\nJanuary.2020\tRevision.01\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:13.908Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-pa0/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "© 2021 Weston Precision Audio \t1\nPA0\nPhase Animated Oscillator\nEurorack Module\nUser Manual\nWeston Precision Audio\nDesigned In Portland, Oregon\nRevision 03 - April 29, 2022\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-pa0/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "DESCRIPTION\nPA0 is an analog VCO (Voltage\nControlled Oscillator) module. This\noscillator is a fairly traditional “triangle-\ncore” design, but has an additional sub\ncircuit known as a “triangle phase\nanimator” which produces a secondary\noutput, which is frequency-locked to the\nprimary output, but is adjustable in\nphase, lagging the primary wave 0\ndegrees to 180 degrees. The phase lag\ncan also be pushed beyond the 0°,180°\nbounds of the phase animator, creating\nadditional harmonics.\nOne of the most useful attributes of the\n2nd phase outputs is that they may be\nmodulated “through-zero”, creating\nTZPM (through-zero phase modulation)\neffects, which are similar, but different to\nTZFM (through-zero frequency\nmodulation). PA0 does also include\nexceptionally good TZFM capabilities,\nas well as traditional exponential FM.\nPA0 has been engineered to have good\ntemperature stability and volts per\noctave tracking, making this oscillator a\ngreat choice for a general-purpose VCO\nin any setup, but you will likely find the\nmodulation capabilities are most useful\nand rewarding to experiment with!\nSPECS\nModule Size: 18HP\nVCO Output (All outputs ~1kOhm\nImpedance): Core Triangle, Square, Sub-\nOctave Square, Sawtooth and Sine.\nAdjustable-phase Triangle, “MW” wave,\n“PWM”, Sawtooth, Sine, and Square.\nInputs (All inputs >=100kOhm\nImpedance): Volts/octave, TZPM, TZFM,\nExponential FM, Sync.\nAll individual wave outputs: 10 Volts\npeak-to-peak nominally.\nPower input: +12V & -12V via standard\n10 pin Eurorack connector.\nPower consumption (+12V / -12V):\nTyp: 100mA / 85mA\nMax: 110mA / 95mA\nMAXIMUM LIMITS\nSupply Voltage: +13.5V / -13.5V\nAny inputs: Supply limits.\n© 2021 Weston Precision Audio \t2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-pa0/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "MAIN CONTROLS\nOctave:\nThis 8 position encoder changes the\nbase pitch of the oscillator by precision\n1 octave steps.\nTuning:\nThis is a fine tuning knob, which can\nmove the base pitch by a little over 1\noctave.\nFM Index:\nThis essentially sets the baseline for\nlinear frequency modulation, and thus\nalso affects base pitch. Sweeping this\nknob from CW to CCW will pass\nthrough zero-frequency, and then start\nup again “backwards”. The lower the\nFM index, the deeper the possible\nfrequency modulation. There is a slight\neffect of FM index to change the V/oct\nslope, but PA0 maintains good V/oct\nresponse over 7 octaves for settings\nfrom 2 to 10. See Appendix B for typical\nfigures of a calibrated new unit.\nFM Index Lock:\nIn the upper 2 positions, locks the FM\nIndex at +2 and +4, respectively, so that\nthe FM Index knob does not affect\nanything. The lowest position returns FM\nIndex control back to the FM Index\nknob. +2 and +4 conveniently are 1\noctave apart!\nForward/Reverse LEDs:\nThe orange and yellow LEDs just above\nthe FM Index knob show whether the\noscillator is “spinning” forward or\nbackwards. When you dip into through-\nzero FM, both LEDs will begin to glow.\nPITCH & SYNC INPUTS\nV/Oct:\nThis is a standard 1 Volt/\nOctave input for pitch control.\nSync:\nThe sync input behaves\ndepending on the switch\npositioned directly above it. In\nthe center, no sync is applied.\nThe oscillator may be synced from any\nother oscillator either as “hard” sync or\n“soft” sync. The two types of sync have\ndifferent effects on the primary output vs\nthe phase-animated output, and this is\nbest shown with some images of the\nresultant wave forms.\n© 2021 Weston Precision Audio \t3\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-pa0/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "Figure 2: Soft sync applied to triangle. Blue is primary (core)\noutput. Red is phase animated output.\nFigure 3: Hard sync applied to triangle. Blue is primary\n(core) output. Red is phase animated output.\nMODULATION INPUTS\nLinear FM:\nThis input is for linear frequency\nmodulation. The amount of FM is\ncontrolled by the knob associated with\nit. This is a through-zero type linear FM\nand applies to all wave forms, both from\nthe core and the phase-modulated\nportions.\nFigure 4: Through-zero FM of triangle. Blue is primary (core)\noutput. Red is phase animated output.\nExponential FM:\nThis input applies frequency modulation,\nbut exponentially. This is not through-\nzero, as TZFM in the exponential\ndomain does not exist.\nPhase Knob & Lock Button:\nThe phase knob controls the phase lag\namount of all the phase-animated waves\n(except the pulse) from 0 to 180\ndegrees. Beyond those extremes,\nadditional harmonics are added. Please\nsee the next section “Outputs and\nwaveforms” for a clear discussion of\nhow this works.\nThe phase lock button renders the phase\nknob inactive and locks all the phase-\nanimated waveforms at exactly 90\ndegrees (quadrature). The LED\nimmediately above the button will\nilluminate when phase lock is engaged.\n© 2021 Weston Precision Audio \t4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-pa0/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "Linear PM:\nThe linear PM (phase modulation) input\napplies a through-zero modulation\nsignal to all the phase-animated outputs\nand the amount is controlled by the\nassociated knob to the right of this jack.\nLinear PM and linear FM are very\nsimilar because simply put, phase shift is\nthe derivative of frequency. Since the\nderivative of trig functions are just other\ntrig functions, the implication is that for a\nSINE modulation source, through-zero\nPM and through zero FM will yield the\nsame sonic results. However, for\nmodulation sources which are of other\ncharacter (saws, squares, etc..), the\nresults of linear PM and linear FM will\nbe very different.\nAdditionally, it should be noted that just\nlike the phase knob, the phase\nmodulation input only affects the phase-\nanimated waves. The differences in the\ntwo types of modulation are best shown\nin pictures (Figures 5-8).\nFigure 5: Linear PM of the triangle waves with a SINE source\nof modulation. Blue is primary (core) output. Red is phase\nanimated output.\nFigure 6: Linear FM of the triangle waves with a SINE source\nof modulation. Blue is primary (core) output. Red is phase\nanimated output.\nFigure 7: Linear PM of the triangle waves with a SQUARE\nsource of modulation. Blue is primary (core) output. Red is\nphase animated output.\nFigure 8: Linear FM of the triangle waves with a SQUARE\nsource of modulation. Blue is primary (core) output. Red is\nphase animated output.\n© 2021 Weston Precision Audio \t5\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-pa0/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "THE OUTPUTS AND PHASE\nThe wave outputs on PA0 are organized\ninto 2 groups. The left are all at 0°\nphase and can be considered to come\nstraight from the VCO core. The right\ngroup are all phase modulated, or at\nleast effected by the TZPM input and the\nphase knob.\nLooking at the primary triangle outputs,\nwe can see the following results (blue is\nleft (0°) output, red is right (variable\nphase) output.\nPhase knob set at center (90°):\nPhase knob set at 0°:\nPhase knob set at 180°:\nAs mentioned in the intro, the phase\nknob can continue past 0° and 180°,\nbut since the phase animator is only\ndefined within these limits, the resultant\ntriangle wave begins to be “lopped off”\nmore and more as the phase knob is\nturned, adding additional harmonics\n(and a harsher sound as TZPM is pushed\ninto this regime). Below is a picture of\nthe phase knob at full CCW:\n© 2021 Weston Precision Audio \t6\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-pa0/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "MAINTANENCE\nPA0, like most modular synth equipment\nwill not need any particular\nmaintenance. However, some people\nmay want to adjust the trimmer pots on\nthe module, such as perfecting the V/oct\nresponse for your particular case, MIDI\nconverter, etc.. The following trimmer\npots are located on the rear PCB of PA0\nand are labeled on the top side of the\nboard with their function:\n- \tV/oct trimmer\n- \tHigh Frequency compensation trimmer\n(Present on SN10011 and newer)\n- OTA Null Trimmer (Only present on\nearly models SN10010 and less.\nRecommended to not touch this!)\n- Sine shape 0 degree trimmer\n- Sine shape 90 degree trimmer\n- Saw offset 0 degree trimmer\n- Saw offset 90 degree trimmer\n- Trapezoid flatness 0 degree trimmer\n(Not present on newer models SN10018\nand later.)\nCONCLUSIONS\nAs with any piece of modular synth\nequipment, it is best to just play with it\nby itself and with other modules. Find\nwhat you like and most importunely,\nhave fun making music!!\n© 2021 Weston Precision Audio \t7\n-12V Node4.7k\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/weston-pa0/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "Appendix A: BLOCK DIAGRAM\n© 2021 Weston Precision Audio \t8\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/weston-pa0/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "Appendix B: TYPICAL TUNING\n+10:\n+6:\n© 2021 Weston Precision Audio \t9\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/weston-pa0/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "Appendix B: TYPICAL TUNING\n+2:\nAs can be seen, the V/Oct curve tips\nslightly up or down on either side of FM\nindex value away from where it was\ncalibrated at (+6), but good usable\ntuning is still achieved over 7 octaves.\nThermal stability is very good,\nmeasuring only a couple of cents\nchange over a 20C ambient\ntemperature swing.\n© 2021 Weston Precision Audio \t10\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/weston-pa0/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "REVISION HISTORY\n03: Deleted small unreadable tuning\nplot and added some typical V/Oct\ntuning plots to Appendix B in the rear of\ndocument.\n02: Module size was incorrectly listed as\n16HP, but it is 18HP.\n01: Initial release.\n© 2021 Weston Precision Audio \t11\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

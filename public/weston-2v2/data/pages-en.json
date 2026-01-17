@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:13.598Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-2v2/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "© 2022 Weston Precision Audio \t1\n2V2\nDual Analog Oscillator\nEurorack Module\nUser Manual\nWeston Precision Audio\nDesigned In Portland, Oregon\nRevision 02 - May 21, 2024\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-2v2/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "DESCRIPTION\n2V2 is a dual voltage controlled\noscillator (VCO) module in Eurorack\nformat. This VCO is available as a pre-\nbuilt unit as well as a Through-hole DIY\npanel and PCB set. This document is the\nuser manual for the pre-assembled unit.\nHowever, the functions described,\nexcept for the trimmer locations, are the\nsame for the DIY version and the\nprebuilt version.\n2V2 contains 2 analog triangle-core\nVCO units. Each VCO core on 2V2 is\nfunctionally identical, with the exception\nthat VCO B contains a small bit of extra\ncircuitry that allow it to be sync’d (both\n“hard” and “soft”) to VCO A.\nAdditionally, each VCO may be\nswitched to LFO (low frequency\noscillator) operation.\nBoth VCOs can be modulated externally\nin a standard exponential manner, as\nwell as “through zero” linearly. There\nare also 2 VCAs on board for shaping\nFM modulation with an external\nenvelope or signal!\n2V2 has been engineered using\ntemperature-compensated VCA modules\nso that it is extremely stable under\nambient temperature changes. Each\nVCO is capable of good VCO tracking\nover 7 octaves or more. Each VCO\ncontains the “standard” host of outputs\n(triangle, sine, pulse, saw), as well as\nsub-octave square outputs.\nSPECS\nModule Size: 16HP\nVCO Output (All outputs ~1kOhm\nImpedance): Triangle, Square, Sub-\nOctave Square, Sawtooth and Sine.\nInputs (All inputs >=100kOhm\nImpedance): Volts/octave, FM,\nEnvelope In.\nAll individual wave outputs: 10 Volts\npeak-to-peak nominally.\nPower input: +12V & -12V via standard\n10 pin Eurorack connector.\nPower consumption (+12V / -12V):\nTyp: 115mA / 85mA\nMax: 125mA / 95mA\nMAXIMUM LIMITS\nSupply Voltage: +13.5V / -13.5V\nAny inputs: Supply limits.\n© 2022 Weston Precision Audio \t2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-2v2/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "MAIN CONTROLS & I/O\nEach VCO is functionally identical and\ncontains the same inputs and outputs.\nThus, one can simply draw and\nimaginary vertical line down the center\nof the module. Everything on the left\nside is the same as the right.\nTuning:\nThese are standard tuning pots, the\nupper one being a very coarse\nadjustment, and the other being a fine\n(about 27:1 ratio) adjustment.\n1 V/Oct Input:\nThis is a standard 1 Volt per Octave\ninput for pitch control of the VCO.\nLFO Button:\nThis is a toggling-type button, which\nwhen depressed will cause the amber\nLED next to it to light, and that VCO’s\ncore will oscillate about 0.015 of the\nfrequency as in normal mode and thus\nbecome an LFO (Low Frequency\nOscillator)\nFM Input:\nThis is the input for Frequency\nModulation signals (FM). The switch\nimmediately to the right (or left for the\nright-hand VCO) selects whether the\nmodulation will be exponential in\nresponse, or through-zero linear.\nFM Amount Potentiometer:\nThe pot to the right of the FM input\nshown above (or to the left for the right-\nhand VCO) attenuates the amount of\nsignal sent to modulate the VCO.\nEnv In Input:\nA signal inputted here will modulate the\n*amount* of signal sent to modulate the\nVCO. The overall amount of modulation\nis still governed by the FM amount pot.\nThe input could be an envelope or any\nother signal, but it must be unipolar (0\nto 5V for 0% to 100% modulation).\nLarger voltages can be inputted to “Env\nIn”, but the FM-shaping VCA cuts off at\n100%, which is about a 5V input to “Env\nIn”\n© 2022 Weston Precision Audio \t3\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-2v2/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "PW Potentiometer:\nThis pot adjusts the nominal pulse width\nof the Pulse output of each VCO core\nfrom 0 to 100%, with the center (high\nnoon) position being 50% or a square\nwave.\nWAVE OUTPUTS\nEach VCO core has 5 outputs. From top\nto bottom, left to right:\nSine:\nAn approximate sine wave formed by\nfeeding the triangle output to an\noverdriven matched differential pair\ncircuit.\nTriangle:\nThe triangle wave from the VCO core.\nSawtooth:\nSawtooth wave converted from VCO\ncore’s triangle and square outputs.\nPulse:\nA standard pulse output from feeding a\nPW + PWM signal and the triangle to a\ncomparator.\nSub-Octave Square (1/2f):\nA square wave of 1/2 the frequency of\nall the other wave outputs.\nSYNCING AND MODULATION\nUsing the 3-position sync switch, the\nright-hand VCO core can be synced to\nthe left-hand VCO core. In the center\nposition, sync is disabled. In the upper\nposition, the right VCO is “soft-synced”\n© 2022 Weston Precision Audio \t4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-2v2/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "to the left, meaning the triangle reverses\non each positive zero-crossing of the left\nVCO. In the lower position, the right\nVCO is “hard-synced” to the left,\nmeaning that the capacitor is discharged\nto zero on each positive zero-crossing of\nthe left VCO. The following scope shots\nshow the difference. The blue wave is\nVCO A (left VCO) and the red wave is\nVCO B (right VCO):\nHard Sync\nSoft Sync\nAs described on page 3, each VCO has\na modulation switch which can be\nswitched to exponential or through-zero\nlinear (TZFM) type of frequency\nmodulation. The following scope shots\nshow the difference. The modulating\nwave (red) has been patched to the FM\ninput of the carrier wave (blue). Due to\nits balanced nature, the fundamental\nobserved frequency of the carrier wave\nstays relatively constant when using\nTZFM. This is not true with exponential\nFM.\nThrough-Zero Linear FM\nExponential FM\n© 2022 Weston Precision Audio \t5\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-2v2/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "USER CONFIGURATION OPTION:\nCVB JACK NORMAL\nThere is a solder jumper on the back\nside of the jacks PCB which selects the\n“normalling” of the right VCO (VCO B)\nCV jack, which means what happens to\nthis jack when nothing is plugged in.\nThere are 2 options as described below.\n2V2 comes configured with option (2):\n1) \t“CVA”. If you select this option, the\nright VCO will inherit the CV signal\ninserted into the left CV jack when\nthere is nothing inserted in to the\nright CV jack.\n2) \t“0V”. If you select this option, the\nright VCO will receive no CV voltage\nwhen there is nothing inserted into\nthe right CV jack.\nThe image to the right shows the jumper\nconfigured for option “2”.\nTo change the setting on your 2V2,\nsimply remove the 4 screws on the back\nof the module and carefully pull off the\nrear PCB. Melt the solder jumper with a\nsoldering iron and remove the solder\nwith a solder-sucker or wick. Then,\nreapply a blob of solder shorting across\nthe option (1) or (2) location.\n© 2022 Weston Precision Audio \t6\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-2v2/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "MAINTANENCE\n2V2, like most modular synth equipment\nwill not need any particular periodic\nmaintenance. However, some people\nmay want to adjust the trimmer pots on\nthe module, such as perfecting the V/oct\nresponse for your particular case, MIDI\nconverter, etc.. The following trimmer\npots are located on the rear PCB of 2V2\nand are labeled on the top side of the\nboard with their function:\nOn the top edge of the rear PCB:\n- \tV/oct trimmer VCO A (VOA)\n- \tHigh Frequency compensation trimmer\nVCO A (HFA)\n- \tV/oct trimmer VCO B (VOB)\n- \tHigh Frequency compensation trimmer\nVCO B (HFB)\nOn the bottom edge of the rear PCB:\n- \tSine shape trimmer VCO A (SINA)\n- \tSine shape trimmer VCO B (SINB)\nCONCLUSIONS\nAs with any piece of modular synth\nequipment, it is best to just play with it\nby itself and with other modules. Find\nwhat you like and most importunely,\nhave fun making music!!\n© 2022 Weston Precision Audio \t7\n-12V Node\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/weston-2v2/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "REVISION HISTORY\n02: Add description of CVB normal\nsolder jumper.\n01: Initial release.\n© 2022 Weston Precision Audio \t8\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

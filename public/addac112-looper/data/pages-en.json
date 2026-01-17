@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:12.439Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac112-looper/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "Instruments for Sonic Expression\nEst.2009\nMarch.2025\nUSER’S GUIDE . REV12\nFIRMWARE 1.9\nADDAC112\nVC LOOPER &\nGRANULAR\nPROCESSOR\nINTRODUCING\nFrom Portugal with Love!\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac112-looper/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "BOOTLOADER & FIRMWARE UPDATE: Version 1.9\nADDAC112 User’s Guide\nADDAC SYSTEM\nDOWNLOAD V1.9 UPDATE PACKAGE\nDownload the .zip file containing both the Bootloader and Firmware:\nhttps://media.addacsystem.com/firmwares/ADDAC112_Update_V19.zip\nContents:\nADDAC112_UpdateInstructions.txt - Instructions file\nADDAC112_Bootloader_V1.9.bin - New Bootloader\nADDAC112_Firmware_V1.9.bin - Uses the new read/write method with less available memory\nADDAC112_Firmware_V1.9_legacy.bin - Keeps the old read/write method with the same available memory\nNew features:\n- GRAIN POSITION FOLLOWS LOOP (Page 34)\nAllows to sync the Grains Position to the Looper’s Play Head.\nThe Grain Position knob becames an offset (12 o’clock for no offset), deviation adds randomness to the overall position.\n- SWITCHES CALIBRATION\nCalibration screen for switches not responding correctly (Page 30)\n- Other minor bugs were also fixed.\n--------------------------------------------------------------------------------------------------\nBOOTLOADER UPDATE INSTRUCTIONS\nTo update the bootloader you need to detach the 112A from your frame but leave the ribbon power cable connected and the\nPower ON. Once lifted from the frame locate the Micro USB input between the two pcbs on the right side of the module. Plug a\ncable to it and to your computer.\nBefore starting the process make sure your cable is a proper standard USB cable.\nSome cables look just like a USB cable but they are used to charge/power other devices and do not have the necessary USB\ntransmission lines.\n1. On the module press encoder > OPTIONS > UPLOAD BOOTLOADER\n2 .Using the Chrome browser go here:\n(You will need an up-to-date version of Chrome, at least version 61 or newer)\nhttps://electro-smith.github.io/Programmer/\n3. Press the “Connect” button and, from the options, choose the one called \"DFU in FS Mode - paired\"\n(ignore platform and example drop menus)\n4. Press “Choose file” and choose the downloaded “ADDAC112_Bootloader_V1.9.bin“ file.\n5. Press ”Program” and it will show some progress bars on the browser, wait until done.\n6. Once finished disconnect the USB cable\nThe module is now ready to receive the new ADDAC112 firmware.\n--------------------------------------------------------------------------------------------------\nFIRMWARE UPDATE INSTRUCTIONS\n1. Using a computer copy the firmware \"ADDAC112_Firmware_V1.9.bin\" to the root of the micro SD card\n2. Insert the SD card in the SD card slot in ADDAC112\n3. Power off\n4. Power on\n---- DO NOT REMOVE THE SD CARD OR POWER OFF DURING THE NEXT STEP ----\n5. The screen will show the uploading progress:\n\"Uploading firmware...\"\n\"23% \t\"\n6. When finished, the main screen should appear. The update was successful.\n7. Power Off, Power On and you’re all set!\n--------------------------------------------------------------------------------------------------\nThanks to all users who reported bugs!\nIf you think you found a bug plese report it to us and we’ll look into it.\nPlease always give a clear description on how to reproduce the error consistently.\nVideos are always appreciated.\nNew\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac112-looper/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "ADDAC112 VC LOOPER &\nGRANULAR PROCESSOR \tUSER’S GUIDE\nMarch.2025\tRevision.11\nWelcome to:\npage 3\tADDAC SYSTEM\nWELCOME\nThere’s a long history behind the granular concept and many reinterpretations of it’s core principles, this\nis our take on it.\nIn a loose description digital Granular refer to pieces of sound files being played at the same time with\nslight or completelly diferent parameters originating what is commonly refered to as granular clouds.\nNormally there’s a buffer size from which the granular engine snips it’s pieces from and plays them\naccording to the parameters set. This buffer size is normally small in size where grains are so small\nthat can reach the hearing spectrum and be heard as a sort of ever changing complex wavetable, this is\nthe principle behind granular synthesis.\nIn our vision we added the possibility of long buffer sizes up to 5 minutes, allowing “softer” aproaches\nto the granular principle using it as an effect that can generate from “accidental” effects like slight\n“stutters” to extreme processing and transformation of any incoming audio signal.\nThis module is conceptually deep but easy to grasp and operate as all controls are in it’s dedicated\npanel, all jack inputs and outputs have it’s own separate panel to allow no compromise when playing\nit’s controls.\nSome info stated in this document is still subject to change as new firmwares are released.\nFor the first time we sacrificed the module width to leave more space between controls.\n32HP \t13HP\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac112-looper/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "DESCRIPTION\nADDAC112 User’s Guide\npage 4\tADDAC SYSTEM\nThere are three main sections in this module:\nLooper Engine:\nThe Looper is where all the Real-Time recording happens.\nThe audio input feeds the recording buffer, multiple controls allow to record and play loops into a list so that any\nsample in the list can be accessed at ay time\nand more acting as a standard looper\nGranular Engine:\nThe Granular acts upon the buffer of whatever LOOP is selected.\nOutput Mix\nThe output mix allow individual control for the Dry Input, Looper Volume and Grains Volume.\nBesides these main sections there’s also a simple strip down MENU mainly used to LOAD and SAVE Banks, no\nMenu diving guaranteed.\nTech Specs:\n32HP + 13HP\n4.5cm deep\n240mA +12V\n70mA -12V\nAudio Specs:\nStereo audio input and output\n32-bit floating point DSP\nBit Depth: 8 or 16bit\nSample Rates: 8Khz, 11.025Khz, 16Khz, 22.05Khz, 36Khz,\n44.1Khz, 48Khz 96Khz\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac112-looper/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 5\tADDAC SYSTEM\nRIBBON CONNECTIONS\n!!! WARNING !!! \t- \t!!! RED STRIPE DOWN ON ALL CONNECTORS !!!\nAlso notice the indentation of the boxed headers!\nINPUTS TO CONTROLS - A\nINPUTS TO CONTROLS - B\nPOWER RAILS\tPOWER RAILS\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac112-looper/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "BANKS and PRESETS\nADDAC112 User’s Guide\npage 6\tADDAC SYSTEM\nBANKS:\nIn order to make the LOAD/SAVE process simple one can only LOAD BANKS from the SD Card.\nBANKS contain a list of PRESETS and a folder with a list of LOOPS.\nEach BANK is saved into a folder in the SD CARD, inside the folder, together with a document contain-\ning all presets configurations, the user will find a second folder with all LOOPS in separate.WAV files.\nWhile Saving or Loading from the SD Card the audio processing will be suspended, it may take up to\n10 seconds to save a full Bank.\nOnce the BANK is loaded to memory jumping between LOOPS will be immediate.\nA new BANK can be created at any time using the MENU: NEW BANK.\nBANKS initialize with an empty list of PRESETS and LOOPS.\nAt the moment of creating a new BANK the user will be asked to choose from 2 options:\n1. Current Config, copies the current BANK settings into the new BANK\n2. Default Config, creates a new BANK with factory default settings.\nPowering up the module without any SD Card will automatically create a new Bank, this Bank will be\ninitialized with factory default settings.\nEach BANK stores a list of up to 99 PRESETS as well as all loops used by all these PRESETS.\nUpon startup the module will automatically load the last BANK saved.\nAll recording is written and read from volatile memory if the BANK is not saved to the SD ard Card all\ndata will be lost once a new BANK is loaded or power is turned off!\nUsers can share Banks among themselves by sharing the Bank folder.\nPRESETS:\nEach PRESET contains a list of LOOPS and all Granular Settings.\nEach PRESET can have shared or unique LOOP lists.\nPRESETS can be added to the list using the MENU: NEW PRESET, this new PRESET will be created\nwith the current Granular settings.\nPRESETS can be saved at any time using the MENU: UPDATE PRESET\nAs PRESETS are changed via the [PRESET SELECT] control knobs will not reflect the current values of\nthe front panel controls and, in this case, they will seem not to have any effect, to make them\neffective once again the user must rotate the knob until it crosses the preset setting and then the\nknob will become active once again.\nAt all times rotating the [PRESET SELECT] to the left most position will enter preset “-” in this state all\nknobs always correspond to the front panel controls.\nIf new LOOPS or PRESETS are recorded at any point in time remember that they are not yet saved to\nthe SD Card, saving the current BANK before loading a new BANK or before power down is necessary\nto keep all it’s contents safe in the SD Card!\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac112-looper/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "LOOPS\nADDAC112 User’s Guide\npage 7\tADDAC SYSTEM\nLOOPS:\nA list of .WAV files up to 99 files per BANK\nLOOPS can be added to a folder using a computer or recorded in real-time using the LOOPER Engine.\naprox. 60Mb of maximum sampling time shared for all loops in a BANK.\nRecording time will be diferent depending on the Sample Rate selected, as a reference at 44.1Khz will\nallow for 11:40 minutes (MONO) or 5:50 minutes (STEREO).\nLoops recorded using the module Looper Engine will either be Mono or Stereo and have the Sample\nRate and Bit Depth defined by the settings chosen in the module’s options menu, default setting is\nStereo 44.1K 16 bit.\nThe total ammount of recording time will depend on these 3 settings: Channels (Mono/Stereo),\nSample Rate and Bit Depth.\nLOOPS & PRESETS Can be Accessed in real-time with the dedicated [LOOP SELECT] & [PRESET\nSELECT] knobs and/or CV inputs.\nIf new LOOPS or PRESETS are recorded at any point in time remember that they are not yet saved to\nthe SD Card, saving the current BANK before loading a new BANK or before power down is necessary\nto keep all it’s contents safe in the SD Card!\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac112-looper/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "SD CARD FILE STRUCTURE\nADDAC112 User’s Guide\npage 8\tADDAC SYSTEM\nAt the Root of the SD Card any folder named “BANK” proceeded by a number will be eligible to be loaded.\nTo create a new BANK directly on the SD Card simply create a new folder and name it, for example: BANK1.\nNext, inside this BANK1 folder, create another folder named “WAV”, inside this WAV folder put any number of .wav\nfiles as long as the whole folder is below 60Mb.\nLoops indexation will respect the number at the start of the file name, if no number is present the file name will\nbe renamed by the module and a number at the start will be automatically attributed.\nManually changing these numbers on a computer will change the order by which they are selected by the [LOOP\nSELECT].\nBANK Folders are named “BANK” proceeded by a number, after the number the user can use more\ncharacters to label the bank and make it easier to identify it when loading the bank on the module.\nBANK naming examples below.\nSaving a Bank on the module will add extra files:\nSETTINGS.CFG stores the main configuration settings\nSCALES.CFG stores the Quantization scales both Default and Custom\nX.CFG stores all presets settings\nDELETED folder stores all deleted loops\n.WAV FILES\nWhen adding .WAV files to the SD Card from a computer it’s important that the files have clean .WAV headers and\nNO METADATA, some softwares can export without adding extra data to the file.\nIf errors are shown or if files are not loaded correctly you can always use a batch media converter like\nMediaHuman to automate and make this task a simple process:\nhttps://www.mediahuman.com/download.html\nSD CARD STRUCTURE Description:\n- GLOBAL.CFG\n- BANK0 MyFirstSet\n- BANK1NiceOne\n- BANK2_vcoWaves\n- SETTINGS.CFG\n- SCALES.CFG\n- 0.CFG\n- 1.CFG\n- 2.CFG\n- 3.CFG\n- DELETED\n- 6.WAV\n- 7.WAV\n- WAV\n- 1_MYLONGFILE.WAV\n- 2_MYSHORTLOOP.WAV\n- 3_ANOTHERLOOP.WAV\n- 4_ONEMOREFILE.WAV\n- 5_LOOP234.WAV\n- BANK3 AcousticSET\n...\n> AUTOLOAD BANK FILE\n> BANK0 FOLDER\n> BANK1 FOLDER\n> BANK2 FOLDER\n> BANK SETTINGS FILE\n> SCALES FILE\n> PRESET 0 CONFIG FILE\n> PRESET 1 CONFIG FILE\n> PRESET 2 CONFIG FILE\n> PRESET 3 CONFIG FILE\n> DELETED FILES FOLDER\n- 1st file in index\n- 2nd file in index\n> WAV FILES FOLDER\n- 1st file in index\n- 2nd file in index\n- 3rd file in index\n- 4th file in index\n- 5th file in index\n> BANK3 FOLDER\n> ...\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac112-looper/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "INITIAL POT SETTING: 50%\n0% \t25% \t50% \t75%\n100% \t100%\n100%\n50% \t50% \t50%\t50%\nDEVIATION RANGE\nDEVIATION POT SETTING: 50%\nFUNCTION\nRANGE\nINITIAL POT SETTING: 80%\n0% \t25% \t50% \t75% 80%\n100% \t100%\n100%\n50% \t50%\t50%\t50%\nDEVIATION RANGE\nDEVIATION POT SETTING: 50%\nFUNCTION\nRANGE\nINITIAL POT SETTING: 25%\n0% \t25% \t50% \t75%\n100% \t100%\n100%\n20%\t20% \t80%\t80%\nDEVIATION RANGE\nDEVIATION POT SETTING: 20%\nFUNCTION\nRANGE\nDEVIATION\nADDAC112 User’s Guide\npage 9\tADDAC SYSTEM\nDEVIATION is used throughout this guide to refer to a deviation from the Initial knob.\nThere are TWO operation modes for this setting:\nRANDOM MODE\nIn this mode Deviation is a random function kept inside a range based on a percent-\nage spread centered on the Initial knob setting. This keeps all random values inside\nthe main range of the knob never going above or below the range limits eliminating\n“dead spots”.\nThe examples below will graphically exemplify this concept:\nINITIAL\nKNOB\nDEVIATION\nKNOB\nINITIAL\nKNOB\nDEVIATION\nKNOB\nINITIAL\nKNOB\nDEVIATION\nKNOB\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac112-looper/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "0% \t25% \t50% \t75% \t100%\nLOOP LENGTH\nGRAIN1\nGRAIN2\nGRAIN3\nGRAIN4\nGRAIN5\nGRAIN6\n...\nGRAIN1: POS:10% / LENGTH:10%\nGRAINX: POS <=> ABSOLUTE( INITIAL POSITION + DEVIATION\nGRAIN2: POS:10% + (5%*1)=15% | LENGTH:10% + (5%*1)=15%\nGRAIN3: POS:10% + (5%*2)=20% | LENGTH:10% + (5%*2)=20%\nGRAIN4: POS:10% + (5%*3)=25% | LENGTH:10% + (5%*3)=25%\nGRAIN5: POS:10% + (5%*4)=30% | LENGTH:10% + (5%*4)=30%\nGRAIN6: POS:10% + (5%*5)=35% | LENGTH:10% + (5%*5)=35%\nGRAIN7: POS:10% + (5%*6)=40% | LENGTH:10% + (5%*6)=40%\n0% \t25% \t50% \t75% \t100%\nLOOP LENGTH\nGRAIN1\nGRAIN2\nGRAIN3\nGRAIN4\nGRAIN5\nGRAIN6\n...\nSTART\n\tLENGTH\n\t+INC\n\tTOTAL\n\tLENGTH\nWRAP\nAROUND\n100%*\n30% \t0%\t0\nSTART\n\tPOSITION\n\tEND\nPOSITION\n10% \t40%\n30% \t60%\t30 \t10% \t70%\n30% \t90%\t60 \t10% \t100%\n30%\n\t120%\n\t90 \t20%\n50%\n80%\n10%\n10% \t30%\n30%\n\t150%\n\t120 \t10% \t60%\n30%\n\t180%\n\t150 \t10% \t90%\n30%\n\t210%\n\t180 \t10% \t20%\nDEVIATION\nADDAC112 User’s Guide\npage 10\tADDAC SYSTEM\nSPREAD MODE - [GRAIN PLAY HEAD] [GRAIN SIZE] [GRAIN INTERMITENCY]\nIn this mode Deviation sets an increment used to spread the corresponding function\nover the grains index.\nGrain 1 always keep the initial settings without any increment.\nThis mode will work best for longer loops 10 - 20 - 40 seconds or more.\nThe examples below will graphically exemplify this concept applied to [GRAIN PLAY\nHEAD] and [GRAIN SIZE] (although not shown below [GRAIN INTERMITENCY] follows\nthe same principles):\nExample A:\nPosition at 10% - Position Deviation at 5%\nLength at 10% - Length Deviation at 5%\nExample B:\nPosition at 10% - Position Deviation at 0%\nLength at 30% - Length Deviation at 30%\n*Wrap around is a modulus operation\nwhich, simply put, means no value can\nbe greater than 100% and if so it will\nsimply read the two lowest numbers,\nex: 110% = 10%\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/addac112-looper/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "0% \t25% \t50% \t75% \t100%\nVOLUME\nGRAIN1\nGRAIN2\nGRAIN3\nGRAIN4\nGRAIN5\nGRAIN6\n...\nSTART\n\tVOLUME\n\t+INC\n\tFINAL\n\tVOLUME\nWRAP\nAROUND\n100%\n60% \t60%\t0\n60% \t75%\t15\n60% \t90%\t30\n60%\n\t105%\n\t45 \t5%\n20%\n35%\n50%\n60%\n\t120%\n\t60\n60%\n\t135%\n\t75\n60%\n\t150%\n\t90\nDEVIATION\nADDAC112 User’s Guide\npage 11\tADDAC SYSTEM\nSPREAD MODE - [GRAIN VOLUME]\nIn this mode [VOLUME DEVIATION] sets an increment used to spread the volume over\nthe grains index.\nGrain 1 always keep the [VOLUME MIN] setting without any increment.\nThe [VOLUME DEVIATION] knob will be at 0% at 12 o’clock, going counter clockwise\nwill subtract, clockwise will sum.\nExample A:\nVolume Min at 60% - Volume Deviation at +15%\nExample B:\nVolume Min at 90% - Volume Deviation at -25%\n*Wrap around is a modulus operation\nwhich, simply put, means no value can\nbe greater than 100% and if so it will\nsimply read the two lowest numbers,\nex: 110% = 10%\n0%\n100%\n0% \t25% \t50% \t75% \t100%\nVOLUME\nGRAIN1\nGRAIN2\nGRAIN3\nGRAIN4\nGRAIN5\nGRAIN6\n...\nSTART\n\tVOLUME\n\tSUBTRACT\n\tFINAL\n\tVOLUME\nWRAP\nAROUND\n100%*\n90% \t90%\t0\n90% \t65%\t-25\n90% \t40%\n15%\n-50\n90% \t-75\n90%\n65%\n40%\n90%\n\t-0%\n\t-100\n90%\n\t-25%\n\t-125\n90%\n\t-50%\n\t-150\n0%\n-100%\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/addac112-looper/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "page 12\tADDAC SYSTEM\nADDAC112 User’s Guide\nSIGNAL FLOW DIAGRAM\nLOOP START TRIGGER\nGRAIN START TRIGGER\nINS MONO OUTPUT\nMIX\nGRAIN\n\tPLAY HEAD\nGRANULAR\n\tENGINE\nDIVISION: FREE/8/16\nPOSITION\nCV INPUT\nPOSITION DEVIATION\nCV INPUT\nGRAIN\nSIZE\nDIVISION: FREE/8/16\nPLAY LENGTH\nCV INPUT\nLENGTH DEVIATION\nCV INPUT\nGRAIN DIRECTION\nCV INPUT\nGRAINS ACTIVE\nCV INPUT\nGRAIN\n\tENVELOPE\nATTACK\nCV INPUT\nDECAY\nCV INPUT\nGRAIN PITCH\nCV INPUT\nDIVISION: FREE/8/16\nGRAIN LOOP DELAY\nCV INPUT\nDELAY DEVIATION\nCV INPUT\nGRAIN PANNING\nCV INPUT\nGRAIN VOLUME\nCV INPUT\nVOLUME DEVIATION\nCV INPUT\nMODE: % / X\nGRAIN REPEAT\nCV INPUT\nGRAIN\n\tINTERMITENCY\nGRAIN\n\tREPEAT\nGRAIN\n\tFEEDBACK\nGRAINS\n\tVOLUME\nLOOP\n\tVOLUME\nDRY\n\tVOLUME\nGRAIN\n\tVOLUME\n&\nPANNING\nIN 1 LEFT\nIN 2 RIGHT\n\t(NORMALLED TO IN 1)\n\tMONO MIX\nINPUTS GAIN\nIN STEREO \tLINE TO SYNTH\nINPUTS MIX\nRIGHT\nLEFT\nLEFT OUTPUT\nMONO OUTPUT\tMONO MIX\nRIGHT OUTPUT\nMASTER\n\tMIX\nLOOPER\n\tENGINE\nREC MODE:\n\tSTOP/LOOP/OVERDUB\nREC STATE:\n\tPUNCH IN/OVERDUB\nPLAY BUTTON:\n\tRETRIGGER/PAUSE\nREC PROBABILITY\nCV INPUT\nDELAY DEVIATION\nCV INPUT\nDELAY DIVISION\nCV INPUT\nNEW REC\nSTOP\nTRIGGER INPUT\nCLEAR BUFFER\nLOOP PITCH\nCV INPUT\nTRIGGER INPUT\nTRIGGER INPUT\nREC\nTRIGGER INPUT\nPLAY\nTRIGGER INPUT\nFORWARD / REVERSE\nTRIGGER INPUT\nDRY VOLUME\nCV INPUT\nGRAINS VOLUME\nCV INPUT\nLOOP VOLUME\nCV INPUT\nGRAIN FEEDBACK\nCV INPUT\nOVERDUB\n\tDECAY\nOVERDUB DECAY\nCV INPUT\nPRESET SELECT\nCV INPUT\nMENU ENCODER\nQUANTIZE\nCV INPUT\nLOOP SELECT\nCV INPUT\nCONTROL\n\tUNIT\nON LOOP CHANGE:\n\tON LOOP END/IMMEDIATE\nRESUME LOOP:\n\tFROM START/FROM PAUSE\nSD CARD\nSCREEN\nAUDIO STEREO INPUT SECTION\nGRANULAR SECTION\nLOOPER SECTION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/addac112-looper/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "LOOPER ENGINE\nADDAC112 User’s Guide\npage 13\tADDAC SYSTEM\nThe Looper section is where all Recording action happens,\nIt can record up to 99 LOOPS per PRESET\nLOOPS are recorded in a list and selectable with the [LOOP SELECT] Knob or CV input\nThe Looper playback volume is set using the [LOOP VOLUME] KNOB or CV input\nSWITCHES SETTINGS:\n[RETRIG. / PAUSE] determines how PLAY works while already playing the LOOP\n[RETRIG.] Pressing PLAY while retrigger the LOOP from the start\n[PAUSE] will toggle between Play and Pause states\n[SYNC REC / UNSYNC] determines how the Recording Head works\n[SYNC REC] Rec Head follows the Play Head\n[UNSYNC] Independent Rec Head.\n[REC MODE] : [OVERDUB / LOOP / STOP] determines what happens when finishes recording\n[LOOP] records continuously in a loop\n[PLAY] finishes recording and starts playback\n[STOP] finishes recording and stops playback\n[STOP] mode will also stop playback at the end of the loop to\nallow ”One Shot” loop playback\nLOOPER PUSH-BUTTON CONTROLS:\n[CLEAR] Clears the Entire LOOP buffer and resets the Recording and\nPlayback heads to the start point. A long Press erases LOOP from list.\n[STOP] Stops playback or recording\n[REC NEW] Starts recording a new LOOP and adds it to the list.\n[REC] Records on the current LOOP buffer.\n[PLAY] Play / Pause / Retrigger the current LOOP\n[FORWARD/REVERSE] determines the playback direction\nFor Ping-Pong mode simply patch the [LOOP TRIG.] output to [FORWARD/REVERSE] trigger input.\nSTARTS RECORDING\nPRESS\nREC NEW\nPRESS\nREC\nPRESS\nPLAY or STOP\nSAVES RECORDED LOOP\nAND STARTS RECORDING\nNEW LOOP\nLOCKS LOOP LENGTH\nAND KEEPS RECORDING\nFROM THE START POINT\nLOCKS LOOP LENGTH\nAND STOPS RECORDING\nPRESS NEW REC or REC\nLOOPER INITIALIZATION\nRECORDER WORKING METHOD DIAGRAM\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/addac112-looper/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "LOOPER ENGINE\nADDAC112 User’s Guide\npage 14\tADDAC SYSTEM\nLOOPER CONTROLS:\n[LOOP VOLUME] sets the LOOP playback overall volume.\n[LOOP SELECT] Determines which LOOP to play from the list in the\ncurrent PRESET.\n[LOOP PITCH] Determines the buffer playback rate setting the Pitch\nof the Loop from -2 to +3 octaves. The QUANTIZE Settings will influence\nthis setting.\n[OVERDUB DECAY] while recording determines the ammount of the\nprevious buffer content to be kept in the new buffer.\nCONTINUOUS RECORDING SETTINGS:\nContinuous recording is vital to apply a granular effect to an\nincoming audio source, adding some indeterminancy to the\nrecording timing can create very interesting results we added\ntwo methods for this, Probability and Delay.\nRECORDING PROBABILITY:\n[REC PROBABILITY] Determines the probability that the recording\nwill happen.\nRecording is happening in a loop depending on the probability\nset here it will either record through the buffer or will REST and go\nthrough the buffer without recording at the end of the buffer it will\ncalculate the new probability and record or rest for the next buffer\nperiod.\nRANGE: 0 to 100%\nRECORDING DELAY:\n[DELAY DIVISION] Determines the ammount of delay to pause for\nupon reaching the end of the buffer, meaning the continuous\nrecording will pause at every recording loop for a multiple of\n1/32 of the buffer length.\nThe DELAY led will light up while in this recording delay state\nRANGE: 1 to 32\n[DELAY DEVIATION] sets the ammount of deviation from the [DELAY DIVISION] setting.\nRANGE: 0 to 100%\nREC/PLAY MODES & ON LOOP CHANGE SETTINGS:\nThese options are shared for REC/PLAY modes as well as to define what happens whenever a new LOOP is\nselected using the [LOOP SELECT] knob or CV input.\n[IMMEDIATE / ON LOOP]\nREC: Determines if whenever a Recording is enabled it will start recording immediatelly or when the Play\nhead crosses the end of the loop point and start recording from the beginning of the loop.\nON LOOP CHANGE: Determines if the new selected LOOP plays immediately after being selected or if it\nwaits for the current LOOP to reach the end point and then make the LOOP change.\n[RESET / PAUSE]\nPLAY: Determines if when PLAY is engaged the loop will start from it’s current position or if it resets to it’s\nstart position.\nPAUSE: Determines if the new selected LOOP plays back from it’s start point or resumes at the previous\npaused point\nIf a LOOP is changed while Recording the [LOOP SELECT] control will be ignored.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/addac112-looper/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 15\tADDAC SYSTEM\nLOOPER ENGINE (PLAYBACK & RECORDING)\nPLAYBACK & RECORDING\nIn earlier firmware revisions Loop Playback and Recording were exclusive,\ni.e. recording would stop playback.\nNow Loop Playback, Grains Processing and Recording are independent\nand work in parallel. This allows to keep playing a loop granular process\nit while recording a new loop that, in turn, can also feed from these\nsources.\nRECORDING INPUTS MIX:\nAt all times the signal that will be recorded is a mix of 3 sources with\nindividual volume controls:\n1. The Input audio volume is controlled by the [INPUT GAIN] pre-amp\nknob. The [DRY VOLUME] will also have control over the input gain if set\nto Post in the options menu.\n2. The current Loop being played volume is controlled by the [OVERDUB\nDECAY] knob.\n3. The Grains volume is controlled by the [GRAINS FEEDBACK] knob.\nThe sum of these 3 inputs will be sent to the recording head.\nRECORDING:\nThere are mainly 3 different recording methods:\n1. New Rec - Immediate (variable length)\nPressing [NEW REC] immediatelly starts recording a new loop with no\ndefined end point, can be locked into a loop by pressing any of the four\nbottom buttons (Stop, New Rec, Rec or Play) each with it’s diferent\nfunction.\n2. New Rec - On Loop (fixed length)\nPressing [NEW REC] starts recording a new loop whenever the current\nloop playing crosses the start point (i.e. when it loops), the new loop\nbeing recorded will also stop recording whenever the current loop still\nplaying crosses the start point once again.\nThe length of the new loop recorded will then be the same as the\nprevious loop.\nIf, while already recording, the switch is changed to immediate then the\nend point of the new loop becomes free and won’t stop until one of the\nfour bottom buttons is pressed.\nIf the switch is changed back to On Loop later on than it will again start\ntracking the current loop still playing and stop the recording at the end\npoint of the loop. This can also be used to multiply the length of the\ncurrent loop by an X ammount of loops: engage the recording with the\nswitch on the On Loop position, once it starts recording change it to\nImmediate and after X loops change the switch back to On Loop, the\nrecording will then stop once the looper reaches the end of the loop.\n3. Overdub\nPressing [REC] will simply overdub the current loop, the 3 knobs\ncontrolling the recording inputs mix will determine what’s being\noverdubbed.\n[REC] button will also follow the settings from [REC MODE] and [Imme-\ndiate/On Loop] switches\nEvery time the New Rec recording stops, it immediatelly changes the\nselected loop to the new loop.\nDepending on the [REC MODE] switch when it stops recording will either\nenter Overdub, Playback or simply Stop the looper playback.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/addac112-looper/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 16\tADDAC SYSTEM\nLOOPER ENGINE (SPECIAL FUNCTIONS)\nSD CARD\nDUPLICATE LOOP:\nLoops can be duplicated by pushing and holding the [MENU] encoder\nbutton and then press [NEW REC].\nThe copied loop will appear at the last position in the loop index.\nA message will appear stating: LOOP DUPLICATED\nLOOP SIZE:\nUsing this shortcut will enter the Loop Editor, described further down in\nthis guide.\nCLOCKED MODE:\nIn Clocked Mode the Stop Button and respective trigger input will work\nas a Clock Input.\nClocked Mode changes the way the Looper Engine push buttons works,\nIn this mode buttons [NEW REC] [REC] [PLAY] [FORWARD/REVERSE] (and\ntheir dedicated trigger inputs) instead of executing the actions immedi-\natelly they will engage once activated (shown by blinking) and will only\nexecute when the [STOP] button is pressed or a trigger on the Stop\nTrigger input is detected.\nThis way a clock input can be plugged in the Stop Trigger Input and all\nother Looper push buttons will be synced to the incoming clock, quantiz-\ning the timing of the user actions to the incoming clock.\nNORMALIZE:\nThe loop volume can be normalized to -9db by pushing and holding the\n[MENU] encoder button and then press [REC].\nSD CARD:\nAny SD Card can be used but we recommend “Class 10” SD Cards, these will save/load Banks faster.\nCards above Class 10 won’t have any significant impact on the save/load times.\nSD Cards should be formatted in FAT32 format.\nIf not saving or loading a Bank you can remove/insert an SD Card at any time.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/addac112-looper/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 17\tADDAC SYSTEM\nLOOP EDITOR\nThe Loop Editor page allows to trim the current selected loop in\ndifferent ways allowing flexibility and precision.\nAll settings operate in real-time so besides precision editing it can\nalso be used as a playable feature.\nScroll up and down with the encoder, click the encoder to edit the\nvalue, click once again to go back to parameter choice, hold the\nencoder to exit Loop Editor.\nThe low resolution loop wave representation, Start and End points\ncan be seen at the bottom on the screen.\nWhen changing values a dynamic zoomed visualization will appear,\nfocusing on the crossing point, the zoom factor is independent for\neach channel and continuously adjusts itself to fit the screen area.\nTIME\nSets the total time of the loop in seconds\nSAMPLES\nSets the total time of the loop in samples\n(1 sample = 1/samplerate)\nBPM\nSets the total time of the loop in BPMs\nSTART\nSets the start position in samples\nEND\nSets the end position in samples\nEDIT WITH POTS\nThis setting allows the user to use the Rec Delay knobs: [REC DIVISION], [REC DEVIATION] and respective CV inputs; as\nthe start and end point controllers.\nRec Delay and Start/End points knob and cv input controls are exclusive and they’ll only work for one of the functions\nat any time.\nWhen this setting is set to ON the Rec Delay feature will keep the settings defined at that moment, the knob controls\nwill become inactive and not able to change the parameters until this setting is turned OFF.\nThis option is a global option and also apply while outside the Loop Editor Page.\nCONSOLIDATE LOOP\nUpdates the current loop to the selected loop region, deleting everything not between the Start and End points.\nNEW LOOP FROM EDIT\nCreates a new loop with the selected loop region and places it at the end of the loop index.\nLENGTH IN SAMPLES\tCROSS POINT VOLUMES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 18,
+      "image": "/addac112-looper/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 18\tADDAC SYSTEM\nPITCH SHIFTING MODES\nThere are 5 different Pitch Modes available for the Looper Engine, these can be found in:\nMENU > OPTIONS > LOOP PITCH MODE\n1. Samplerate:\nUses a simpler sample rate change approach to change the pitch, in this mode the loop length is also affected by\nthe pitch.\n2. Pitch Shifting:\nThis mode only changes Pitch without changing the loop length\n3. Time Stretching\nThis mode only changes the loop length without changing the pitch\n4. Pitch/Time:\nThis mode changes both the Pitch and Loop length, similar to the Samplerate option but using the Pitch Shifting/-\nTime Stretching methods.\n5. Pitch and Time:\nThis mode separatelly changes both the Pitch and Loop length.\nWhen this mode is selected the [LOOP PITCH] controls the pitch and [REC DELAY DEV.] controls the time stretching.\nThe Rec Delay Deviation function becomes innactive but the [REC DELAY] is still active.\n---\nAll modes above except the Samplerate use a buffer to make it’s operations, the user can also define the size of\nthe buffer, diferent sizes have different algorithm “flavours”, these can be found in:\nMENU > OPTIONS > PITCH BUFFER SIZE\n---\nThe Granular Engine can be set to the first 3 Modes although mode 2 and 3 will greatly reduce the maximum\nammount of Grains Active possible.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 19,
+      "image": "/addac112-looper/pages/page-019.png",
+      "title": "Page 19",
+      "sectionName": null,
+      "content": "GRANULAR ENGINE\nADDAC112 User’s Guide\npage 19\tADDAC SYSTEM\nOur Granular Engine features a deep set of controls to allow a wide range of results.\nIt was designed to be fully hands-on and have all controls available in the front panel.\nOnly minor settings were left in the menu alongside with Save/Load functions.\nThe Granular Engine feeds from whatever LOOP buffer is selected, hence the size of any grain is dependent of the LOOP\nsize.\nAll grains will play with the current settings at the time of their initialization. Besides pitch, changes on the panel\ncontrols will not have an effect on the grains already playing. Once grains reach their end they will once again use the\ncurrent setting and initialize a new grain.\nGRAINS ACTIVE:\n[GRAINS ACTIVE] Determines how many grains are being played at once\nRange depends on the the SAMPLERATE and LOOP PITCH MODE options\nGRAIN PLAY HEAD:\n[POSITION] will determine the grain Start Point:\nRANGE: 0-32\n[SIZE DIVISION] : [FREE/8/16] will add a time quantization to the LOOP Buffer\n[16] will divide the LOOP by 8 playing only from these start points\n[8] will divide the LOOP by 4 playing only from these start points\n[FREE] will apply no division\n[POSITION DEVIATION] will determine the deviation to the Start Point:\nRANGE: 0-100%\nGRAIN SIZE:\n[PLAY LENGTH] will determine the length of the grain:\nRANGE: 0-100%\n[SIZE DIVISION] : [FREE/8/16] will add a time quantization to the Length\n[16] the length will always be multiples of 1/16v of the LOOP Length\n[8] the length will always be multiples of 1/8 of the LOOP Length\n[FREE] will apply no division\n[LENGTH DEVIATION] will determine the deviation to the Play Length:\nRANGE: 0-100%\nGRAIN INTERMITENCY:\n[GRAIN LOOP DELAY] will determine the length of the delay (wait in silence)\nafter the grain finishes playing and before it plays again:\n[SIZE DIVISION] : [FREE/8/16] will add a time quantization to the Delay\n[16] the delay will always be multiples of 1/16 of the LOOP Length\n[8] the delay will always be multiples of 1/8 of the LOOP Length\n[FREE] will apply no division and set range from 0 to 5 seconds\n[LENGTH DEVIATION] will determine the deviation to the Delay applied above:\nRANGE: 0-100%\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 20,
+      "image": "/addac112-looper/pages/page-020.png",
+      "title": "Page 20",
+      "sectionName": null,
+      "content": "GRANULAR ENGINE\nADDAC112 User’s Guide\nADDAC SYSTEM\nGRAIN DIRECTION:\n[GRAIN DIRECTIONS] Sets the probability of the Grain Play Direction (Forward/Reverse)\nFull Left only plays in Reverse, Full Right only plays Forward\nGRAIN REPEAT:\nGrain Repeat will determine if the sample plays with the exactly same setting as the\npreviously time played or if it calculates new parameters.\nThere are 2 modes selected by the [REPEAT MODE] switch\n[REPEAT MODE] : [PROBABILITY / REPEAT X] there are 2 Modes for this feature\n[PROBABILITY] sets the probability of repeat: 0 to 100%\n[REPEAT X] repeats the grain for X times: 0 to 16\n[PROB.% / REPEAT] sets the value for the Mode selected.\nGRAIN VOLUME:\n[VOLUME MIN] sets the Minimum Volume for the grains\n[VOLUME DEVIATION] sets the ammount of deviation from the Minimum Volume.\nGRAIN PANNING:\n[GRAIN PANNING] sets the Panning Probability based on the behaviour pictured below\nGRAIN PANNING BEHAVIOUR\n0%\nLEFT\nMONO\nRIGHT\nLEFT\nMONO \tFULL STEREO \tHARD PAN\nMONO\nRIGHT\n50% \t100%\nGRAIN PANNING POT POSITION: LEFT TO RIGHT\nSTEREO\nFIELD\nGRANULAR ENGINE\nADDAC112 User’s Guide\npage 20\tADDAC SYSTEM\nGRAIN DIRECTION:\n[GRAIN DIRECTIONS] Sets the probability of the Grain Play Direction (Forward/Reverse)\nFull Left only plays in Reverse, Full Right only plays Forward\nGRAIN REPEAT:\nGrain Repeat will determine if the sample plays with the exactly same setting as the\npreviously time played or if it calculates new parameters.\nThere are 2 modes selected by the [REPEAT MODE] switch\n[REPEAT MODE] : [PROBABILITY / REPEAT X] there are 2 Modes for this feature\n[PROBABILITY] sets the probability of repeat: 0 to 100%\n[REPEAT X] repeats the grain for X times: 0 to 16\n[PROB.% / REPEAT] sets the value for the Mode selected.\nGRAIN VOLUME:\n[VOLUME MIN] sets the Minimum Volume for the grains\n[VOLUME DEVIATION] sets the ammount of deviation from the Minimum Volume.\nGRAIN PANNING:\n[GRAIN PANNING] sets the Panning Probability based on the behaviour pictured below\nGRAIN PANNING BEHAVIOUR\n0%\nLEFT\nMONO\nRIGHT\nLEFT\nMONO \tFULL STEREO \tHARD PAN\nMONO\nRIGHT\n50% \t100%\nGRAIN PANNING POT POSITION: LEFT TO RIGHT\nRANDOM RANGE\nSTEREO\nFIELD\nGRAIN PITCH:\n[GRAIN PITCH] setting for the Grains Pitch: from -2 to +3 octaves\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 21,
+      "image": "/addac112-looper/pages/page-021.png",
+      "title": "Page 21",
+      "sectionName": null,
+      "content": "To summarize here’s a diagram showing the working method:\nGRANULAR ENGINE\nADDAC112 User’s Guide\npage 21\tADDAC SYSTEM\nGRAIN ENVELOPE:\nEnvelope is applied throughout the full length of the grain to be played\n[ATTACK] sets the Attack percentage\n[DECAY] sets the Decay percentage\nPLAYS GRAIN\nINTERMITENCY SILENCE DELAY\n\tREPEAT GRAIN\nNO \tYES\nCALCULATE PARAMETERS\nGRAIN INITIALIZATION\nGRAINS WORKING METHOD DIAGRAM\nGRAIN POSITION\nGRAIN LENGTH\nPLAY DIRECTION\nPITCH\nENVELOPE\nVOLUME\nPANNING\nINTERMITENCY DELAY\nENVELOPE BEHAVIOUR\n0% \t25% \t50% \t75% \t100%\nATTACK POT SETTING: 50% \t- \tDECAY POT SETTING: 50%\nGRAIN\nLENGTH\n0% \t25% \t50% \t75% \t100%\nATTACK POT SETTING: 20% \t- \tDECAY POT SETTING: 40%\nGRAIN\nLENGTH\n0% \t25% \t50% \t75% \t100%\nATTACK POT SETTING: 100% - \tDECAY POT SETTING: 0%\nGRAIN\nLENGTH\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 22,
+      "image": "/addac112-looper/pages/page-022.png",
+      "title": "Page 22",
+      "sectionName": null,
+      "content": "GRANULAR ENGINE\nADDAC112 User’s Guide\npage 22\tADDAC SYSTEM\nGRAIN PANNING MODES\nThere are 2 panning modes: Fixed and Travel, both share the same principle of\npanning distribution as shown in the graphic below\nGRAIN TRIGGERING\nThis feature allows to trigger grains into life using the [GRAINS N.] input.\nThis input can diferentiate between CV and Gate signals and will auto-\nmatically adjust it’s function to the input detected.\nWhen using a CV the input will respond normally and add/subtract\ngrains according to the CV amplitude and the [GRAINS ACTIVE] knob\nposition.\nWhen using a Gate signal (10ms minimum) at every ON signal it will\nincrease the grain count by 1 until the maximum grains count is reached.\nFor this Gate detection to be effective the [GRAINS ACTIVE] knob must be\nbelow 1/4 of it’s range, at it’s leftmost point it will have no permanent\ngrains and will trigger them according to the Gate detection, up to 1/4\nof the knob range it will add some permanent grains and still add more\naccording to the Gate detection. Beyond the 1/4 range the Gate signal\nwill be interpreted as a CV input.\nWhen these grains finish playing they will be erased and wait for more\ngate signals.\nThis mode needs to be turned ON on the Options Menu the setting can be\nfound in Page 5: Grain Trigger\nIn both modes a new random value is generated at the start of the grain\n- FIXED MODE\nThe grain will be positioned on the stereo field as indicated by the\nrandom value generated at the start and will remain static until the end\nof the grain. In other words the grains will always appear in a new\nrandom position.\n- TRAVEL MODE\nThe grain will start wherever it was positioned at the end of the previous\ngrain and, during it’s length, it will travel on the stereo field towards the\nposition indicated by the random value generated. In other words the\ngrains will always be moving in the stereo field.\nGRAIN PANNING STEREO FIELD DISTRIBUTION\n0%\nLEFT\nMONO\nRIGHT\nLEFT\nMONO \tFULL STEREO \tHARD PAN\nMONO\nRIGHT\n50% \t100%\nGRAIN PANNING POT POSITION: LEFT TO RIGHT\nRANDOM RANGE\nSTEREO\nFIELD\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 23,
+      "image": "/addac112-looper/pages/page-023.png",
+      "title": "Page 23",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 23\tADDAC SYSTEM\nGRANULAR ENGINE (SPECIAL FUNCTION)\nKILL ALL GRAINS:\nBy pushing and holding the [MENU] encoder button and then pressing\n[STOP] all grains will be instantly stopped.\nA message will appear stating: ALL GRAINS STOPPED\nThis can be helpful to immediately stop long grains playing on long\nloops.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 24,
+      "image": "/addac112-looper/pages/page-024.png",
+      "title": "Page 24",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 24\tADDAC SYSTEM\nAUDIO INPUTS, OUTPUTS & FEEDBACK\nINPUTS:\nThere are 2 input pairs on ADDAC112B:\n2 Mono inputs at Synth Level (IN 1 is normalled to In 2)\n1 Stereo input at Line Level\nThese inputs are mixed to a Stereo signal after which the\n[INPUT GAIN] knob sets the final gain sent to the Looper\nEngine.\nAn Led acts as a visual display for the level set.\nAll inputs are also mixed down to a mono signal\navailable at the [INS MONO OUT] jack\nMAIN OUTPUTS MIX:\nThe Master Outputs sums the Looper and\nGranular Engine together with the Dry signal\ninto a Stereo Output.\n[DRY VOLUME] Sets the volume for\nthe DRY Input into the Outputs.\n[LOOP VOLUME] sets the volume for\nthe LOOPER Engine into the Outputs.\n[GRAINS VOLUME] sets the volume for\nthe Granular Engine into the Outputs.\n[GRAINS FEEDBACK] Sets the volume\nof the Granular Engine Mix sent into the\nLooper Audio Input\nThere are 3 physical outputs for the Main Mix:\nLeft Output\nRight Output\nMono Output (L+R)\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 25,
+      "image": "/addac112-looper/pages/page-025.png",
+      "title": "Page 25",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 25\tADDAC SYSTEM\nCV & TRIGGER INPUTS\nAll of the front panel Control Knobs have their own CV Input\nAll Controls on the left block can be found in the same matrix configuration on the Inputs Module\nA\nA\n1\n1\n2\n3\n4\n5\n2\n3\n4\n5\nB\nB\nC\nC\nD\nD\nAll Controls on the right block can be found vertically from the top right corner\nAll Trigger inputs for the Looper controls can be found at the bottom of the module\nThe [CLEAR BUFFER] control is the only push button without a Trigger input.\nEncoder and Toggle switches have no CV inputs.\n1\n1\n3 \t2\t4\n5\nA \tA \tB \tC \tD \tE\n\tB \tC \tD\nE\n6 \t7\n2\n3\n4\n5\n6\n7\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 26,
+      "image": "/addac112-looper/pages/page-026.png",
+      "title": "Page 26",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 26\tADDAC SYSTEM\nOLED MONITOR\nLOOPER STATE\nShows REC / PLAY / PAUSE / STOP states\nINPUT VOLUME MONITOR\nA real-time input level monitoring in decibels, above -5db the colors will invert to represent clipping\nQUANTIZATION SCALE\nScale selected\nGRAINS ACTIVE\nNumber of active Grains\nMONO/STEREO INDICATOR\nS = Stereo file\nM = Mono file\nLOOP SELECTED\nThe current loop being played,\ninverted colors show up when using the On Loop feature,\nmeaning it will show the loop it will jump to as soon\nas it crosses the current loop end point.\nGRAINS VOLUME & DEVIATION\nThe white bar shows the [VOLUME MIN] setting\nThe traces on top shows the maximum random set by\n[VOLUME DEVIATION]\nWAVEFORM REPRESENTATION\nLow resolution representation of the waveform\nATTACK & DECAY\nGrains envelope representation\nGRAINS PITCH\nThe current grains pitch, the small rectangle at the end shows the\ncents diference from the perfect note\nLOOP PITCH\nThe current loop pitch, the small rectangle at the end shows the\ncents diference from the perfect note\nGRAIN DIRECTION\nPRESET SELECTED\nGRAINS PANNING\nThe vertical bar represents the stereo field, the white area(s) show the range of the randomization\napplied to the grains panning\nMAIN SCREEN:\nThe Main Screen shows the most important info for overall operation.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 27,
+      "image": "/addac112-looper/pages/page-027.png",
+      "title": "Page 27",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 27\tADDAC SYSTEM\nOLED MONITOR\nOLED MONITOR (SPECIAL FUNCTIONS)\nPLAY HEAD\nShows the current position of the playback head\nRECORDING HEAD\nShows the current position of the recording head\nGRAINS LENGTH\nSecond vertical bar shows the setting defined by [LENGTH]\nGRAINS POSITION\nFirst vertical bar shows the setting defined by [POSITION]\nGRAINS DISPLAY\nRepresents all active grains\nLength in the X axis\nPanning in the Y axis\nVolume in thickness\nSMALL DOT\nWhenever this dot appears it means that the loop\nselected is either not saved in the SD Card or it has\nbeen changed since it was loaded from the SD Card\nLOOP SELECTED WHITE AREA\nThis color inversion will be shown whenever the\n[On Loop] switch setting is engaged, where the user\nhas already selected a new loop but it will only effectivelly\njump to it once the current loop reaches it’s end.\nINPUT VOLUME MONITOR WHITE AREA\nWhenever the input volume goes above -5db it will\ninvert the colors to show it’s close to clipping.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 28,
+      "image": "/addac112-looper/pages/page-028.png",
+      "title": "Page 28",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 28\tADDAC SYSTEM\nMAXIMUM ACTIVE GRAINS & CPU OVERLOAD\nCPU overload will cause undesired audio glitches and drastrically slow down the module’s responsive-\nness. We implemented a method that automatically reduces the number of active grains in order to\nkeep the CPU at a safe level however in some conditions some glitches may still occur.\nCPU WARNING:\nIn order to monitor the CPU state whenever the CPU\ngoes above 90% a warning message appears on the\ntop right corner\nGRAINS ACTIVE VISUALIZATION:\nThe number in this area will always show the grains\nactive setting set by the knob and cv input, although\nthere will be times when, for example, if the user\nreduces the ammount of grains, at these times while\nthe number shown already reflects the control\nchanges there will still be grains playing.\nWhen this happens the area colors will invert\nshowing a white background and black number,\ngoing back to the regular color state once the grains\nsetting matches the active grains playing.\nThis also happens when are automatically reduced\nto avoid CPU stalling.\nCPU USAGE:\nThe small bar rising vertically represents the CPU percentage in Y axis\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 29,
+      "image": "/addac112-looper/pages/page-029.png",
+      "title": "Page 29",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 29\tADDAC SYSTEM\nINFO SCREENS\nRotating the [MENU] encoder at any point while on the main screen leads you into the info screens\nINFO PAGE:\nThis will show the current configuration general settings:\nStereo or Mono Recording\nSample Rate\nBit Depth\nCurrent Bank\nNumber of Loops in current Bank\nSelected Loop audio settings\nSelected Loop duration in seconds\nSelected Loop duration in samples\nSelected Loop duration in BPM\nFree Memory in seconds\nMaster Out dB meter\nCONTROLS 1 PAGE:\nThis will show the left side controls real-time values,\nincludes Knob/CV values and switches state.t\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 30,
+      "image": "/addac112-looper/pages/page-030.png",
+      "title": "Page 30",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 30\tADDAC SYSTEM\nEdited\nINFO SCREENS\nCONTROLS 2 PAGE:\nThis will show the right side controls real-time values,\nincludes Knob/CV values and switches state.\nSWITCHES CALIBRATION: (New)\nThe 4 switches highlighted in this page may need calibra-\ntion upon arrival. If while toggling one switch at a time the\nuser can see other switches values changing then proceed\nto calibrate your switches.\nTo enter calibration mode, startup your module while\npressing [NEW REC] + [PLAY] push buttons.\nAfter starting up the user needs to go through all 16 possible\ncombination of positions, once all combinations are detected\nthe new settings are saved and the module will be ready to\nuse.\nBelow a cheat sheet for all 16 binary combinations:\n1.\n2.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11.\n12.\n13.\n14.\n15.\n16.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 31,
+      "image": "/addac112-looper/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 31\tADDAC SYSTEM\nMAIN MENU\nMENU\nPressing the [MENU] button shows the main menu window:\nA long press of the [MENU] button exits whichever Menu\nwithout making changes\n1. PRESET:\nNEW - Adds a new preset to the Presets list with the current\nsettings\nUPDATE - Updates the current preset to the current settings\nADD LOOPS - Presets also store a selective list of loops, this\nupdates the current preset loop list to all loops available in\nmemory\nDELETE - Permanently deletes the current Preset\n2. BANK:\nNEW - Creates a new empty Bank with 2 choices\n- CURRENT CONFIG: Uses all current BANK settings\n- DEFAULT CONFIG: Uses default BANK settings\nLOAD - Loads a Bank from the SD Card\nSAVE - Saves a bank to the SD Card\nSAVE IN NEW - Saves the current bank to a newly named\nbank, the new bank name will be the next available number\n(example =8) followed by the current bank name (example =\n3) BANK8>FROM3\n3. LOOP EDITOR:\nEnters Loop Editor page.\n4. OPTIONS:\nEnters Options page.\n5. SIDECHAIN COMPRESSION: (New 1.7)\nSidechain compression routes the dry input through an\nenvelope follower and uses that signal to compress the loop\nand grains volumes.\nSTATE:\n- OFF (default): No compression applied\n- LOOP: Applies compression to the Loop Volume\n- GRAINS: Applies compression to the Grains Volume\n- BOTH: Applies compression to Both\nATTACK: Sets the Attack time in seconds\nRELEASE: Sets the Release time in seconds\nRATIO: Sets the Ratio factor\nTHRESHOLD: Sets the threshold level in dB\nMAKEUP GAIN: Sets the makeup gain in dB\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 32,
+      "image": "/addac112-looper/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 32\tADDAC SYSTEM\nOPTIONS MENU\nOPTIONS SUBMENU PAGE 1 - REC SETTINGS\nMONO/STEREO:\nSets the Looper Engine for Mono or Stereo Recording\nSAMPLERATE:\nThe heart of the module: global samplerate setting:\n8Khz, 11khz, 16Khz, 22khz, 32Khz, 44.1khz, 48khz, 96khz\nBIT DEPTH:\nThe bit depth resolution:\n24 bit: In this setting the sampling memory is reduced by 50%\n16 Bit\n8 Bit\nANTI-ALIASING:\nUse Anti-Aliasing On for a modern pitch shifting interpolated\nalgorithm, Off for an old school flavour without interpolation.\nOPTIONS SUBMENU PAGE 2 - REC OPTIONS\nOVERDUB ORIGIN:\nPLAY HEAD - Overdub comes from the Play Head position\nREC HEAD - Overdub comes from the Rec Head position\nBOTH - Overdub comes from the Both Heads positions\nRESAMPLING PITCH:\nFIXED AT ZERO - Recording at the PAGE1:SAMPLERATE setting\nFOLLOWS LOOP- Recording samplerate varies according to the\nplayback pitch\nREC DIRECTION:\nDISABLED - Rec Head always goes forward and ignores\n[FORWARD/REVERSE] button\nENABLED - Rec Head follows [FORWARD/REVERSE] button\nDRY VOLUME PRE/POST:\nPRE - AUDIO INPUT volume only depends on the [INPUT GAIN] knob\nPOST - AUDIO INPUT volume depends on both the [INPUT GAIN] and\n[DRY VOLUME] knobs.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 33,
+      "image": "/addac112-looper/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 33\tADDAC SYSTEM\nOPTIONS MENU\nOPTIONS SUBMENU PAGE 3 - PITCH OPTIONS\nLOOP PITCH MODE:\nSAMPLERATE- Pitch shifting using sample rate change\nPITCH SHIFTING - Changes pitch without changing the loop length\nTIME STRETCHING - Changes the loop length without changing pitch\nPITCH/TIME - Changes Pitch and Length as in SAMPLERATE\nPITCH AND TIME - Independent control of loop Pitch and Length\nGRAIN PITCH MODE:\n1. SAMPLERATE- Pitch shifting using sample rate change\n2. PITCH SHIFTING - Changes pitch without changing the original\nlength\n3. TIME STRETCHING - Changes the length without changing the\n*WARNING: Mode 2 & 3 reduce the total ammount of grains possible\nPITCH BUFFER SIZE:\nPitch shifting and Time stretching use a buffer to make it’s opera-\ntions, here you can define the size of the buffer, diferent sizes have\ndifferent algorithm “flavours”.\nPITCH RANGE:\nPitch ranges can vary to have more pitch control over smaller\nranges. 1v/oct is only respected on the first option!\n1. -24 +36 : -2 to +3 octaves\n2. -12 +12 : -1 to +1 octaves\n3. -2 +2 : -2 to +2 semitones\n4. -INF +24 : from stop to +2 octaves*\n[QUANTIZE] needs to be set to Off for mode 2, 3, 4 to engage\n*WARNING: In this mode the user needs to pay attention to the\nGrains pitch, if set to -INF the grains will play at zero speed and will\nstall the grains engine. To recover from this set the menu option:\nGRAINS PITCH to: CHANGE.\nOPTIONS SUBMENU PAGE 4 - QUANTIZE OPTIONS\nPITCH (ZERO) NOTCH:\nIf quantization is not engaged it can be hard to set the loop pitch\nfor perfect zero, engaging this function creates a small notch area\nwhere it locks the pitch to perfect zero.\nA pixel lights up on the screen when perfect zero pitch is set.\nQUANTIZER:\nBOTH - Applies quantization to both the Looper and the Grains\nEngines\nLOOPS ONLY - Only applies quantization to the Looper Engine\nGRAINS ONLY - Only applies quantization to the Grains Engine\nSCALES SET:\nDEFAULT - Default quantization scales\nCUSTOM - custom quantization scales\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 34,
+      "image": "/addac112-looper/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 34\tADDAC SYSTEM\nOPTIONS MENU\nOPTIONS SUBMENU PAGE 5 - GRAINS OPTIONS\nGRAIN DEVIATION MODE:\nRANDOM / SPREAD - Changes the Deviation working method as\npreviously described in pages 7 through 9.\nGRAIN PAN MODE:\nFIXED / TRAVEL - Changes the Panning working method as previously\ndescribed in page 18.\nGRAINS PITCH:\nWhen either the [GRAIN PITCH] knob is moved or a new CV is detect-\ned the grains pitch can be set to:\nKEEP - each grain keeps the initial pitch until the end of it’s length\nCHANGE - immediatelly changes the pitch of all grains at once\nGRAIN TRIGGER:\nON / OFF - When ON uses [GRAINS N.] CV input to detect a gate,\neverytime a new Gate is detected a new grain will be generated.\nMAX GRAIN DELAY:\nSets the maximum time for the Grain Intermitency:\nLOOP - Maximum time equals loop size\n5 SEC - Maximum of 5 seconds\n30 SEC - Maximum of 30 seconds\nGRAIN SAMPLERATE:\nSets the Grain Samplerate, this will reduce the impact of the grain\nengine on the CPU and allow more grains to be used.\nFULL - Same as global Samplerate\nHALF - Half of global Samplerate\nQUARTER - Quarter of global Samplerate\nGRAIN LENGTH:\nDEFAULT - Standard sampler behaviour, when the pitch increases the length decreases and vice-versa. Lower octaves\nwill take longer to play the grain while higher octaves will play the grain faster.\nKEEP LENGTH - Sets the Grain Length relative to pitch, the length set by the controls is always referenced to pitch\nzero, if the pitch changes the grain length will automatically increase/decrease to keep the same overall duration as\nwhen the pitch is at zero. For example if the pitch is at +12 the length will double and if the pitch is -24 then the\nduration will be a quarter of the length set by the length controls.\nThis makes grains keep the same duration no matter the pitch that is set.\nIn case of higher pitches if there is not enough loop length to accomodate the necessary longer duration the grain\nwill play as long as possible.\nPOSITION FOLLOWS LOOPER: (New)\nSyncs the [GRAIN POSITION] with the Looper’s Play Head.\nWhen ON the [GRAIN POSITION] will move according to the Looper’s Play Head,\nThe [GRAIN POSITION] knob will then behave as an offset to the Play Head (12 o’clock for no offset).\n[GRAIN DEVIATION] adds randomness to the position.\nEdited\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 35,
+      "image": "/addac112-looper/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 35\tADDAC SYSTEM\nOPTIONS MENU\nOPTIONS SUBMENU PAGE 6 - SPECIAL MODE\nCLOCKED MODE:\nClocked Mode is one of the Looper Special Functions described in\npage 14, to activate select ON.\nPITCH DIRECTION CONTROL:\nA special mode that allows the loop pitch control to also control the\nlooper playback direction somewhat resembling controlling a\nturntable. From 0v to +2.5v it will play in reverse while pitching\ndown to an almost stop, from +2.5v to +5v will play forward\npitching up to the pitch chosen by the range selected: Narrow or\nWide.\nOFF - disabled\nNARROW - At both ends pitch will be at zero\nWIDE - At both ends pitch will be +12 semitones\nIn this mode the [FORWARD/REVERSE] button is not active instead it\nmonitors the playback direction.\nAlso there is no 1v/octave in this mode.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 36,
+      "image": "/addac112-looper/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 36\tADDAC SYSTEM\nOPTIONS MENU\nOPTIONS SUBMENU PAGE 7 - OTHER OPTIONS\nSPECIAL FUNCTIONS:\nHere special functions can be activated/deactivated so that they\nwon’t be mistakenly activated when using external inputs for the\nsame buttons while operating the encoder.\nKILL ALL GRAINS - On/Off - [STOP] button\nDUPLICATE - On/Off - [NEW REC] button\nNORMALIZE - On/Off - [REC] button\nPAUSE MODE:\nTOGGLE - toggles between pause and play\nMOMENTARY - pauses while button is pressed or GATE Input is On\nTRIGGER SIZE:\nThe length of both trigger outputs in milliseconds\n1 MS\n10 MS\n100 MS\n500 MS\nVOL IN PRESETS:\nApplies to weather the Volume controls will be loaded from Presets\nat every Preset change or if the Preset value is ignored and only\nkeeps track of the volume control knobs. Yes for loading the preset\nvalue, No to ignore the preset value. Default value is NO.\nDRY: YES/NO - Dry volume\nLOOP: YES/NO - Loop volume\nGRAINS: YES/NO - Grains volume\nOVERDUB: YES/NO - Overdub Decay volume\nFEEDBACK: YES/NO - Grains Feedback volume\nOPTIONS SUBMENU PAGE 8 - BOOTLOADER\nSCREENSAVER: (FW 1.7)\nScreensavers option prevents screen burn over time when not in use.\nTo exit Screensaver just turn or press the encoder.\nDiferent times can be chosen for the Screensaver to become active:\n10 seconds, 1 minute, 2 minutes, 5 minutes, 10 minutes.\nUPDATE BOOTLOADER:\nPressing this option will suspend the module operation and enter\nDFU mode waiting for the new bootloader to be uploaded.\nFollow the instructions in the Firmware Update section of this guide\nfor more detailed information.\nINFO:\nShow Hardware and Firmware versions\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 37,
+      "image": "/addac112-looper/pages/page-037.png",
+      "title": "Page 37",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 37\tADDAC SYSTEM\nQUANTIZATION\nQUANTIZATION\nThere are 7 scales slots and a fixed OFF Position.\nThe 7 Slots can be customized to any ratio by the user.\nInside MENU > OPTIONS > SCALES SET the user can choose between\nDEFAULT and CUSTOM scales:\nDEFAULT are the default scales written on the front panel\nCUSTOM are user customized scales\nWe decided to leave both of these scales open to customization to an\noverall number of 14 scales.\nQUANTIZATION SCALES FILE:\nEvery BANK folder has a SCALES.CFG file, this file contains all scales\nratios and can be edited in a simple text editor.\nFor anyone not used to programming this file will look a bit criptic and\nremember it is important to keep it tidy with all the brackets, commas\nand other punctuation elements in their correct place.\nFILE STRUCTURE:\nThis is the file structure, you can see that there are repeated blocks for\neach of the slots, the user should only edit the ratios list and the name\ninside the quotation marks, for example the chromatic scale name:\n\"name\": \"chromatic\",\nwould be changed to:\n\"name\": \"my custom scale\",\nMake sure to keep all commas in their place!\nScales are not limited to 12 notes per octave, the user can add as many\nratios as notes wanted.\nSCALE MODES:\nThere’s a final setting at the end of each scale ratios titled \"per_octave\",\nthis setting can only be set to true or false:\n\"per_octave\": true\nused for any set of ratios to be repeated across octaves, so every ratio is\npresent in every octave.\n\"per_octave\": false\nused for any scale that does not respect octaves, ratios will not be\nrepeated. There will be as many notes as ratios included.\nfor example this is the Harmonic Series setting:\n\"name\": \"harmonic\",\n\"ratios\": [\n1,\n2,\n3,\n4,\n5,\n6,\n7,\n8,\n9,\n10,\n11,\n12,\n13,\n14,\n15,\n16\n],\n\"per_octave\": false\n{\n\"Default Scales\": [\n{\n\"name\": \"chromatic\",\n\"ratios\": [\n1,\n1.059460044,\n1.122460008,\n1.189210057,\n1.259920001,\n1.334830046,\n1.414209962,\n1.49830997,\n1.58739996,\n1.681789994,\n1.781800032,\n1.88775003\n],\n\"per_octave\": true\n},\n{\n\"name\": \"major\",\n\"ratios\": [\n1,\n1.122460008,\n1.259920001,\n1.334830046,\n1.49830997,\n1.681789994,\n1.88775003\n],\n\"per_octave\": true\n},\n(A LOT MORE HERE)\n]\n}\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 38,
+      "image": "/addac112-looper/pages/page-038.png",
+      "title": "Page 38",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 38\tADDAC SYSTEM\nQUANTIZATION\nROOT SCALES FILE\nYou will also find a SCALES.CFG file on the root of the SD Card, this is\nthe default template that is used when creating a New Bank with\nDefault Configuration. This is the file to edit and add all your favorite\nscales. Making it easier for the user to have all his scales at every New\nBank without the need to edit it every time.\nAfter the New Bank is created a copy of the SCALES.CFG will be stored\ninside the BANK folder.\nRemember you can customize both the 7 Standard and the 7 Custom\nscales, to a total of 14 scales.\nWhen creating a New Bank with Current Settings the Scales file comes\nfrom the current bank folder instead of the root file.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 39,
+      "image": "/addac112-looper/pages/page-039.png",
+      "title": "Page 39",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 39\tADDAC SYSTEM\nFIRST STEPS\nFirst let’s create a new empty BANK\nPress the Menu Encoder and the Menu will appear on the screen, select BANK then select NEW\nWe now have a new empty Bank in volatile memory\nEverything done from now on will not be saved it you turn the module off, when you’re happy or ready to power\ndown open the Menu, select BANK and then SAVE, this will save all the contents of the BANK to the SD CARD and\nwill be loaded upon startup.\nSet the [INPUT GAIN] until you see some LED activity and bring the [DRY VOLUME] knob up to hear the incoming\naudio\nNext let’s record our first loop,\nNotice the Loop index displays “-” = No Loops\nPress [NEW REC] or [REC] when you’re happy with the length of the loop press one of the following:\n[REC] enters Overdub Mode\n[PLAY] Stops recording and enters Playback Mode\n[STOP] Stops recording and playback\nNow the Loop index will display “1”\nLet’s record a second loop,\nPress [NEW REC] followed by [PLAY] when you’re happy with the length of the loop, this will stop recording and\nstart Playback.\nNotice the Loop index will display “2”\nBring the [LOOP VOLUME] knob up to hear the loop playback\nTo be less confusing bring the [DRY VOLUME] knob down to hear only the loop playback\nNow you can use the [LOOP SELECT] knob to switch between loop 1 and 2\nYou can also use the [LOOP PITCH] knob to adjust the playback samplerate\nNow let’s process the loop playing through the granular engine,\nBring the [GRAINS VOLUME] knob up to hear the grains playback and use the control knobs as defined before to get\nto an overall setting that you’re happy with\nNow le’ts create a Preset,\nNotice the PRESET index displays “-” = No Presets\nPress the [MENU] encoder, select PRESETS and then select NEW\nThis will generate Preset number 0 (zero)\nNow le’ts create a second Preset,\nUse the control knobs once again to change the granular settings and then press the [MENU] encoder, select\nPRESETS and then select NEW\nThis will generate Preset number 1\nNow you can use the [PRESET SELECT] knob to switch between preset 0 and 1\nNext let’s save this Bank with all it’s loops and presets,\npress the [MENU] encoder, select BANK and then select SAVE, audio playback will stop at this point and will resume\nas soon as it finishes saving all the data to the SD CARD. Once all data is saved a message will appear on the\nscreen.\nYou can now switch off the module all the data is safe.\nFor convenience the last Bank saved will be automatically loaded on startup.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 40,
+      "image": "/addac112-looper/pages/page-040.png",
+      "title": "Page 40",
+      "sectionName": null,
+      "content": "GLOBAL.CFG FILE STRUCTURE\nADDAC112 User’s Guide\npage 40\tADDAC SYSTEM\nAt the Root of the SD Card any there’s a GLOBAL.CFG file, this file stores the last BANK saved and will automati-\ncally load it when the module is powered up.\nGLOBAL.CFG Description:\nbank=2 \t> Last BANK saved\nSETTINGS.CFG FILE STRUCTURE\nInside any BANK folder there’s a SETTINGS.CFG file, this file stores all overall bank settings as described below.\nThese files can also be edited by the user on a computer in a simple text editor, for users not used to program-\nming this file will look a bit criptic but remember it is important to keep it tidy with all the brackets, commas and\nother punctuation elements in their correct place. make sure only to change the values and everything else is\nkept with the same way.\nThese settings will always be active when preset ”-” is selected.\nSETTINGS.CFG Description:\ndry_vol_pre_post=0\nquant_mode=0\npause_mode=0\noverdub_origin=0\nscales_set=0\nkeep_grain_pitch=1\nsamplerate=44100\nresampling_pitch=1\npitch_range_octaves=2.500\nclocked_mode=0\ntrigger_size_ms=10\nstereo=1\nbit_depth=2\nrec_dir_en=0\nanti_alias=1\ngrain_dev_mode=1\ngrain_pan_mode=0\nvols_in_presets=255\n> Dry Volume Pre/Post: 0(pre), 1(post)\n> Quantization Mode: 0 to 7\n> Pause Mode: 0(toggle) or 1(momentary)\n> Overdub Origin: 0(playback head) or 1(recording head)\n> Scales Mode: 0(default) or 1(custom)\n> Grain Pitch: 0(change) or 1(keep)\n> Sample Rate: 8k to 96k (editing not recommended)\n> Resampling Pitch: 0(fixed at zero) or 1(follows loop)\n> Pitch Range: editing not recommended\n> Clocked Mode: 0(off) or 1(on)\n> Trigger Size: 1 or 10\n> Mono/Stereo: 0(mono) or 1(stereo)\n> Bit Depth: 0(24 bit), 1(8 bit) or 2(16 bit)\n> Rec Direction: 0(disabled) or 1(enabled)\n> Anti-Aliasing: 0(off) or 1(on)\n> Grain Deviation: 0(random) or 1(spread)\n> Grain Pan Mode: 0(fixed) or 1(travel)\n> Volume Controlled by Presets: editing not recommended\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 41,
+      "image": "/addac112-looper/pages/page-041.png",
+      "title": "Page 41",
+      "sectionName": null,
+      "content": "PRESETS FILE STRUCTURE 1/2\nADDAC112 User’s Guide\npage 41\tADDAC SYSTEM\nInside any BANK folder and only if PRESETS were created and saved there will be a number of files named with\na number and a “.CFG” termination, these files store all presets settings as described below.\nOnce again, these files can also be edited by the user on a computer in a simple text editor, for users not used to\nprogramming this file will look a bit criptic but remember it is important to keep it tidy with all the brackets,\ncommas and other punctuation elements in their correct place. make sure only to change the values and every-\nthing else is kept with the same way.\nUsers can also change the files names to reorder the presets.\n0.CFG Description:\npos=0.049\npos_quant=0\npos_dev=0.199\nlength=8969\nlength_quant=0\nlength_dev=0.999\ndelay=0\ndelay_quant=8\ndelay_dev=0.000\ndirection=0.733\nrepeat_mode=1\nrepeats=0.000\nvol_min=0.93\nvol_dev=0.787\nn_grains=9\nattack=0.190\ndecay=0.775\ngrain_pitch=1.000\ngrain_pan=0.380\nfeedback=0.000\nselected_loop=0\nquantizer=7\nloop_pitch=0.999\noverdub_decay=1.000\nvol_in=0.606\nvol_loop=0.818\nvol_grains=0.000\nrec_prob=1.000\nrec_delay=0.000\nrec_delay_dev=0.000\nrec_mode=0\nrec_sync=1\npause_retrigger=0\non_loop_change_mode=0\nloop_play_mode=0\nloop_direction=1\nContinues in the next page\n> Grain Position: 0.0 to 1.0\n> Grain Play Head Size Division: 0(free), 1(/8) or 2(/4)\n> Grain Position Deviation: 0.0 to 1.0\n> Grain Play Length: 0.0 to 1.0\n> Grain Size Division: 0(free), 1(/8) or 2(/4)\n> Grain Length Deviation: 0.0 to 1.0\n> Grain Delay: 0.0 to 1.0\n> Grain Delay Division: 0(free), 1(/8) or 2(/4)\n> Grain Delay Deviation: 0.0 to 1.0\n> Grain Direction: 0.0 to 1.0\n> Grain Repeat Mode: 0(repeat x) or 2(prob.%)\n> Grain Repeat: 0.0 to 1.0\n> Grain Volume Min: 0.0 to 1.0\n> Grain Volume Deviation: 0.0 to 1.0\n> Grain Active: (edit not recommended)\n> Grain Attack: 0.0 to 1.0\n> Grain Decay: 0.0 to 1.0\n> Grain Pitch: (edit not recommended)\n> Grain Panning: 0.0 to 1.0\n> Grains Feedback: 0.0 to 1.0\n> Selected Loop: (edit not recommended)\n> Quantizer: 0 to 7\n> Loop Pitch: (edit not recommended)\n> Overdub Decay: 0.0 to 1.0\n> Dry Volume: 0.0 to 1.0\n> Loop Volume: 0.0 to 1.0\n> Grains Volume: 0.0 to 1.0\n> Rec Probability: 0.0 to 1.0\n> Rec Delay: 0.0 to 1.0\n> Rec Delay Deviation: 0.0 to 1.0\n> Rec Mode: 0(loop), 1(play) or 2(stop)\n> Rec Delay: 0(unsync) or 1(sync rec)\n> Play Mode: 0(retrigger) or 1(pause)\n> Rec Switch: 0(immediate) or 1(on loop)\n> Play Switch: 0(reset) or 1(pause)\n> Play Direction: 0(reverse) or 1(forward)\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 42,
+      "image": "/addac112-looper/pages/page-042.png",
+      "title": "Page 42",
+      "sectionName": null,
+      "content": "PRESETS FILE STRUCTURE 2/2\nADDAC112 User’s Guide\npage 42\tADDAC SYSTEM\nThe last items on the preset file are the same as in the SETTINGS.cfg file, the preset settings override the\nSettings.cfg configuration.\n0.CFG Description:\ndry_vol_pre_post=0\nquant_mode=0\npause_mode=0\noverdub_origin=0\nscales_set=0\nkeep_grain_pitch=1\nsamplerate=44100\nresampling_pitch=1\npitch_range_octaves=2.500\nclocked_mode=0\ntrigger_size_ms=10\nstereo=1\nbit_depth=2\nrec_dir_en=0\nanti_alias=1\ngrain_dev_mode=1\ngrain_pan_mode=0\nloop_list={0,1,2,3,}\n> Dry Volume Pre/Post: 0(pre), 1(post)\n> Quantization Mode: 0 to 7\n> Pause Mode: 0(toggle) or 1(momentary)\n> Overdub Origin: 0(playback head) or 1(recording head)\n> Scales Mode: 0(default) or 1(custom)\n> Grains Pitch: 0(change) or 1(keep)\n> Sample Rate: 8k to 96k (editing not recommended)\n> Resampling Pitch: 0(fixed at zero) or 1(follows loop)\n> Pitch Range: editing not recommended\n> Clocked Mode: 0(off) or 1(on)\n> Trigger Size: 1 or 10\n> Mono/Stereo: 0(mono) or 1(stereo)\n> Bit Depth: 0(24 bit), 1(8 bit) or 2(16 bit)\n> Rec Direction: 0(disabled) or 1(enabled)\n> Anti-Aliasing: 0(off) or 1(on)\n> Grain Deviation: 0(random) or 1(spread)\n> Grain Pan Mode: 0(fixed) or 1(travel)\n> Loop List: Any number of loops available in the BANK wav\nfolder.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 43,
+      "image": "/addac112-looper/pages/page-043.png",
+      "title": "Page 43",
+      "sectionName": null,
+      "content": "SCALES FILE STRUCTURE\nADDAC112 User’s Guide\npage 43\tADDAC SYSTEM\nThe SCALES.CFG file stores all quantization scales used.\nOnce again, these files can also be edited by the user on a computer in a simple text editor, for users not used to\nprogramming this file will look a bit criptic but remember it is important to keep it tidy with all the brackets,\ncommas and other punctuation elements in their correct place. make sure only to change the values and every-\nthing else is kept the same way.\nSCALES.CFG\nDescription:\nDefault\nCHROMATIC={ratios={1,1.05946,1.12246,1.18921,1.25992,1.33483,1.41421,1.49831,1.58740,1.68179,1.78180,1.88775,},per_octave=1}\nMAJOR={ratios={1,1.12246,1.25992,1.33483,1.49831,1.68179,1.88775,},per_octave=1}\nMINOR={ratios={1,1.12246,1.18921,1.33483,1.49831,1.58740,1.88775,},per_octave=1}\nPENTA MAJOR={ratios={1,1.12246,1.25992,1.49831,1.68179,},per_octave=1}\nPENTA MINOR={ratios={1,1.12246,1.33483,1.49831,1.78180,},per_octave=1}\nTIZITA MINOR={ratios={1,1.12246,1.18921,1.33483,1.41421,},per_octave=1}\nOCTAVES={ratios={1,},per_octave=1}\nCustom\nCHROMATIC={ratios={1,1.05946,1.12246,1.18921,1.25992,1.33483,1.41421,1.49831,1.58740,1.68179,1.78180,1.88775,},per_octave=1}\nMAJOR={ratios={1,1.12246,1.25992,1.33483,1.49831,1.68179,1.88775,},per_octave=1}\nMINOR={ratios={1,1.12246,1.18921,1.33483,1.49831,1.58740,1.88775,},per_octave=1}\nHARMONIC={ratios={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,},per_octave=0}\nWELL TUNED={ratios={1,1.10742,1.12500,1.14844,1.31250,1.29199,1.47656,1.50000,1.53125,1.75000,1.72266,1.96875,},per_octave=1}\nPENTA MAJOR={ratios={1,1.12246,1.25992,1.49831,1.68179,},per_octave=1}\nPENTA MINOR={ratios={1,1.12246,1.33483,1.49831,1.78180,},per_octave=1}\nNotice that all notes are defined in ratios, the standard \"equal-tempered\" scale has each semitone equal to a ratio of\nthe twelfth root of 2, or 1.05946. So, for example, a fifth is 1.05946 to the 7th power (seven semitones in a musical\nfifth) or 1.49831. All values are aproximate numbers rounded to the 5th decimal digit.\nCHROMATIC Ratios & Scale Intervals:\n12\n2\n1 semitone = \t= ~1.05946 12 7\n2\nA fifth = \t= ~1.49831\nC\nDb\nD\nEb\nE\nF\nGb\nG\nAb\nA\nBb\nB\nC\n1\n1.05946\n1.12246\n1.18921\n1.25992\n1.33483\n1.41421\n1.49831\n1.58740\n1.68179\n1.78180\n1.88775\n2\nRoot\nminor 2nd\nMajor 2nd\nminor 3rd\nMajor 3rd\nPerfect 4th\ndim 5th\nPerfect 5th\nminor 6th\nMajor 6th\nminor 7th\nMajor 7th\nOctave\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n=\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 44,
+      "image": "/addac112-looper/pages/page-044.png",
+      "title": "Page 44",
+      "sectionName": null,
+      "content": "ADDAC112 User’s Guide\npage 44\tADDAC SYSTEM\nBOOTLOADER & FIRMWARE: CHANGES LOG\nBOOTLOADER 1.9\n- Fixes a bug where some units would freeze at startup leaving the screen with the “Starting” message\n- Bootloader version now shows at startup\n--------------------------------------------------------------------------------------------------\nFIRMWARE 1.9\nNew feature:\n- GRAIN POSITION FOLLOWS LOOP (Page 34)\nAllows to sync the Grains Position to the Looper’s Play Head.\nThe Grain Position knob becames an offset (12 o’clock for no offset), deviation adds randomness to the overall position.\n- SWITCHES CALIBRATION\nCalibration screen for switches not responding correctly (Page 30)\n- Other minor bugs were also fixed.\n--------------------------------------------------------------------------------------------------\nFIRMWARE 1.8\nWe made major changes in the way the recording and playback is processed improving the overall performance which\nnow allows for twice the grains of previous firmwares.\nAlso improved default bit depth to 24 bits without performance loss.\nThe downside is overall loop memory is now shorter, allowing 180s (3 minutes) in stereo, at 44.1khz.\nDue to this downside we decided to branch the firmware into two versions:\nADDAC112_V1.8.bin - Uses the new read/write method with less available memory\nADDAC112_V1.8_legacy.bin - Keeps the old read/write method with the same available memory\nWarning* : Using the new method firmware can cause conflicts with older banks that will now exceed the maximum\nrecording time. In these cases users can edit the banks on a laptop removing excess loops or use the legacy firmware to\nload and edit the original old banks.\nNew features:\n- Grains length related to pitch (Page 33)\n- New Loop / Grains trigger outputs lengths, added 100ms and 500ms (Page 35)\n- Original file samplerate and bit depth shown in info screen (Page 39)\n- Show bank name in loading message\nImprovements\n- Improved grains playback when set to a samplerate lower than the looper samplerate (Page 33)\n- improved grain triggering detection (Page 21 & 33)\nBug fixes:\n- Clicks could be heard when new grains would be introduced at sample rates below 44.1khz.\n- Persistant Grains not disappearing after changing sample rate\n- Loop trigger would sometimes fail to output\n- Menu not working correctly when playing in clocked mode\n- Fixed free mem info not showing if the bank had no loops\n- Fixed bug where recording time was incorrectly limited\n- Fixed first grain sometimes starting at -24 pitch\n- Fixed the dB value shown in loop editor - before, it showed the left channel value on both channels\nEdited\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 45,
+      "image": "/addac112-looper/pages/page-045.png",
+      "title": "Page 45",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC112 \tUSER’S GUIDE\nMarch.2025\tRevision.12\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

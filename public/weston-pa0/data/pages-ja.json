@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-13T18:19:53.889Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "language": "ja"
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-pa0/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "PA0\n\nPhase Animated Oscillator\n\nEurorackモジュール\n\nユーザーマニュアル\n\nWeston Precision Audio\n\nDesigned In Portland, Oregon\n\nRevision 03 - April 29, 2022",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-pa0/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "概要\n\nPA0はアナログVCO(Voltage Controlled Oscillator)モジュールです。このオシレーターはかなり伝統的な「トライアングルコア」設計ですが、「トライアングル・フェーズ・アニメーター」として知られる追加のサブ回路を持っており、これによりセカンダリー出力が生成されます。このセカンダリー出力はプライマリー出力と周波数ロックされていますが、位相を調整可能で、プライマリー波形に対して0度から180度遅延します。位相遅延はフェーズ・アニメーターの0°、180°の範囲を超えてプッシュすることもでき、追加の倍音を生成します。\n\n2ndフェーズ出力の最も有用な特性の1つは、「スルー・ゼロ」でモジュレーション可能であることです。これによりTZPM(through-zero phase modulation)エフェクトが生成されます。これはTZFM(through-zero frequency modulation)と似ていますが異なります。PA0は非常に優れたTZFM機能も備えており、伝統的なエクスポネンシャルFMにも対応しています。\n\nPA0は優れた温度安定性とvolts per octaveトラッキングを持つように設計されており、このオシレーターはあらゆるセットアップにおいて汎用VCOとしての優れた選択肢となります。しかし、モジュレーション機能が最も有用で実験しがいがあることに気づくでしょう!\n\nスペック\n\nモジュールサイズ: 18HP\n\nVCO出力(すべての出力 ~1kOhm インピーダンス): コアTriangle、Square、Sub-Octave Square、SawtoothおよびSine。調整可能位相Triangle、「MW」wave、「PWM」、Sawtooth、SineおよびSquare。\n\n入力(すべての入力 >=100kOhm インピーダンス): Volts/octave、TZPM、TZFM、Exponential FM、Sync。\n\nすべての個別波形出力: 公称10 Volts peak-to-peak。\n\n電源入力: 標準10ピンEurorackコネクタ経由で+12Vおよび-12V。\n\n消費電力(+12V / -12V):\nTyp: 100mA / 85mA\nMax: 110mA / 95mA\n\n最大定格\n\n電源電圧: +13.5V / -13.5V\n\nすべての入力: 電源定格範囲内。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-pa0/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "メインコントロール\n\nOctave:\n\nこの8ポジションエンコーダーは、オシレーターのベースピッチを正確に1オクターブ単位で変更します。\n\nTuning:\n\nこれはファインチューニングノブで、ベースピッチを1オクターブ強の範囲で調整できます。\n\nFM Index:\n\nこれは基本的にリニアフリケンシーモジュレーションのベースラインを設定し、ベースピッチにも影響します。このノブを時計回りから反時計回りにスイープすると、ゼロ周波数を通過し、その後「逆方向」に再び立ち上がります。FM Indexが低いほど、より深いフリケンシーモジュレーションが可能になります。FM IndexによってV/octスロープがわずかに変化しますが、PA0は2から10の設定範囲で7オクターブにわたって良好なV/oct応答を維持します。キャリブレーションされた新品ユニットの典型的な数値については、Appendix Bを参照してください。\n\nFM Index Lock:\n\n上部の2つのポジションでは、FM Indexをそれぞれ+2と+4にロックするため、FM Indexノブは何も影響しません。最下部のポジションでは、FM Indexコントロールが再びFM Indexノブに戻ります。+2と+4は便利なことに1オクターブ離れています!\n\nForward/Reverse LED:\n\nFM Indexノブのすぐ上にあるオレンジとイエローのLEDは、オシレーターが順方向または逆方向に「回転」しているかを示します。スルーゼロFMに入ると、両方のLEDが点灯し始めます。\n\nピッチ & SYNCインプット\n\nV/Oct:\n\nこれはピッチコントロール用の標準的な1 Volt/Octaveインプットです。\n\nSync:\n\nSyncインプットは、直上にあるスイッチの位置によって動作が変わります。中央では、Syncは適用されません。\n\nオシレーターは、「Hard」Syncまたは「Soft」Syncのいずれかとして、他の任意のオシレーターからSyncすることができます。2種類のSyncは、プライマリアウトプットとPhase-Animatedアウトプットにそれぞれ異なる効果をもたらします。これは結果として得られる波形の画像で最もよく示されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-pa0/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "図2: Triangleに適用されたソフトシンク。青がプライマリ（コア）出力。赤がフェーズアニメーテッド出力。\n\n図3: Triangleに適用されたハードシンク。青がプライマリ（コア）出力。赤がフェーズアニメーテッド出力。\n\nモジュレーション入力\n\nLinear FM:\n\nこの入力はリニアな周波数モジュレーションのためのものです。FMの量は、それに関連付けられたKnobによってコントロールされます。これはスルーゼロタイプのlinear FMで、コアとフェーズモジュレーションされた部分の両方からのすべての波形に適用されます。\n\n図4: TriangleのスルーゼロFM。青がプライマリ（コア）出力。赤がフェーズアニメーテッド出力。\n\nExponential FM:\n\nこの入力は周波数モジュレーションを適用しますが、エクスポネンシャルです。エクスポネンシャルドメインではTZFMが存在しないため、これはスルーゼロではありません。\n\nPhase KnobとLockボタン:\n\nPhase Knobは、すべてのフェーズアニメーテッド波形（パルスを除く）のフェーズラグ量を0度から180度までコントロールします。これらの極値を超えると、追加の高調波が加えられます。これがどのように機能するかについての明確な説明については、次のセクション「出力と波形」を参照してください。\n\nPhase Lockボタンは、Phase Knobを無効にし、すべてのフェーズアニメーテッド波形を正確に90度（直交）でロックします。Phase Lockが有効になると、ボタンの真上のLEDが点灯します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-pa0/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "Linear PM:\n\nLinear PM（フェーズモジュレーション）入力は、スルーゼロモジュレーション信号をすべてのフェーズアニメーテッド出力に適用します。その量はこのジャックの右側にある関連するノブでコントロールされます。\n\nLinear PMとLinear FMは非常に似ています。なぜなら、簡単に言えば、位相シフトは周波数の微分だからです。三角関数の微分は単に他の三角関数であるため、SINE波のモジュレーションソースの場合、スルーゼロPMとスルーゼロFMは同じサウンド結果をもたらすことになります。しかし、他の特性を持つモジュレーションソース（のこぎり波、矩形波など）の場合、Linear PMとLinear FMの結果は非常に異なるものになります。\n\nさらに、フェーズノブと同様に、フェーズモジュレーション入力はフェーズアニメーテッド波にのみ影響することに注意する必要があります。2種類のモジュレーションの違いは、図で示すのが最も分かりやすいです（図5-8）。\n\n図5：SINE波ソースによる三角波のLinear PM。青がプライマリー（コア）出力。赤がフェーズアニメーテッド出力。\n\n図6：SINE波ソースによる三角波のLinear FM。青がプライマリー（コア）出力。赤がフェーズアニメーテッド出力。\n\n図7：矩形波ソースによる三角波のLinear PM。青がプライマリー（コア）出力。赤がフェーズアニメーテッド出力。\n\n図8：矩形波ソースによる三角波のLinear FM。青がプライマリー（コア）出力。赤がフェーズアニメーテッド出力。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-pa0/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "出力と位相\n\nPA0の波形出力は2つのグループに分かれています。左側は全て0°の位相で、VCOコアから直接出力されていると考えることができます。右側のグループは全て位相変調されているか、少なくともTZPM入力とPhaseノブの影響を受けています。\n\n主要なTriangle出力を見ると、以下の結果が得られます（青は左側(0°)の出力、赤は右側(可変位相)の出力です）。\n\nPhaseノブを中央(90°)に設定:\n\nPhaseノブを0°に設定:\n\nPhaseノブを180°に設定:\n\nイントロダクションで述べたように、Phaseノブは0°と180°を超えて回すことができますが、Phase Animatorはこれらの範囲内でのみ定義されているため、結果として得られるTriangle波は、Phaseノブを回すにつれてますます「削られて」いき、追加の高調波が加わります（そしてTZPMがこの領域に押し込まれると、より荒々しいサウンドになります）。以下はPhaseノブを完全に反時計回りに回した時の画像です:",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-pa0/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "メンテナンス\n\nPA0は、ほとんどのモジュラーシンセ機器と同様に、特別なメンテナンスは必要ありません。ただし、モジュール上のトリマーポットを調整したい方もいるかもしれません。例えば、お使いのケース、MIDIコンバーターなどに合わせてV/octレスポンスを完璧に調整することができます。以下のトリマーポットはPA0のリアPCB上にあり、ボードの上面にその機能がラベル付けされています：\n\n- V/octトリマー\n\n- High Frequency compensationトリマー（SN10011以降のモデルに搭載）\n\n- OTA Nullトリマー（初期モデルSN10010以前のみに搭載。触らないことを推奨します！）\n\n- Sine shape 0度トリマー\n\n- Sine shape 90度トリマー\n\n- Saw offset 0度トリマー\n\n- Saw offset 90度トリマー\n\n- Trapezoid flatness 0度トリマー（新しいモデルSN10018以降には搭載されていません。）\n\n結論\n\nどのモジュラーシンセ機器でもそうですが、単体で、または他のモジュールと一緒に、とにかく触って遊んでみるのが一番です。自分の好きなものを見つけて、そして最も重要なことは、音楽を作ることを楽しんでください！！",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/weston-pa0/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "付録A: ブロックダイアグラム",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/weston-pa0/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "Appendix B: 一般的なチューニング\n\n+10:\n\n+6:",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/weston-pa0/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "Appendix B: 典型的なチューニング\n\n+2:\n\nご覧のように、V/Octカーブはキャリブレーションされた位置(+6)から離れたFM indexの値の両側でわずかに上下に傾きますが、7オクターブにわたって良好で使用可能なチューニングが得られます。\n\n温度安定性は非常に良好で、周囲温度20Cの変化に対してわずか数セントの変化しか測定されません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/weston-pa0/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "改訂履歴\n\n03: 読みにくい小さなチューニングプロットを削除し、ドキュメント後部の付録Bにいくつかの典型的なV/Octチューニングプロットを追加しました。\n\n02: モジュールサイズが誤って16HPと記載されていましたが、正しくは18HPです。\n\n01: 初回リリース。\n\n© 2021 Weston Precision Audio",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

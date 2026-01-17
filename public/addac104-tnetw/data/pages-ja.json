@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-11T20:38:14.200Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "language": "ja"
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac104-tnetw/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac104-tnetw/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "Welcome to:\n\n全体的な特徴\n\nADDAC103 T-Networksに続くこの新しいモジュールは、多くの伝説的なドラムマシンで使用されているTwin T-Networks回路にインスパイアされています。各ボイスに周波数コントロールを備えたシンプルな4ボイスモジュールです。この新しいモジュールは、各ボイスの周波数用のCV入力とアッテニュバーターも搭載しています。回路の特性上、およびモジュールを低価格に保つため、これらの入力は1v/octaveにキャリブレートされていません。\n\n各ボイス入力には、Gate to Triggerコンバーターがあるため、どのような入力ソースも使用可能です。\n\nオーディオ入力も入力として使用できます。この場合、Gate to Triggerコンバーターの性質上、各ボイスは非常に破壊的なフィルターとして使用できます。\n\nこのモジュールは、完全なDIYキットとしても入手可能です。\n\n機能:\n\n4ボイス、それぞれに以下を搭載:\nCV入力とアッテニュバーター付き周波数コントロール\n周波数レンジスイッチ、Low/Mod/High\nTrigger入力\nAudio出力\n\nボリュームコントロール付きサミングミックス出力",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac104-tnetw/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "コントロールの説明\n\nFrequency\n各ボイスのピッチを調整します\n\nSumming Mix Gain\n全体のサミングミックスの出力ゲインを設定します\n\nIndependent trigger inputs\n各ボイス独立したトリガー入力\n\nFrequency CV Attenuverter\n入力されるCV信号の極性とゲインを設定します\n\nLow/Mod/High range switches\n周波数レンジを設定します\n\nSumming Mix Output\nサミングミックス出力\n\nIndependent voices outputs\n各ボイス独立した出力\n\nIndependent frequency CV inputs\n各ボイス独立した周波数CV入力",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac104-tnetw/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "ADDAC104\nVC T-NETWORKS 信号フロー図\n\nVOICE 4\n\nVOICE 3\n\nVOICE 2\n\nGENERATOR\n\nFREQUENCY RANGE\nLOW/MOD/HIGH\n\nVOICE 1\n\nTRIGGER 1\n\nFREQUENCY\n\nOUTPUT 1\n\nAUDIO SUM MIX OUTPUT\n\nMIX VOLUME\n\nCV INPUT FREQUENCY\n\nATTENUVERTER",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac104-tnetw/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "フィードバック、コメント、問題については下記までご連絡ください:\naddac@addacsystem.com\n\nADDAC104 ユーザーガイド\nOctober.2019 Revision.01",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

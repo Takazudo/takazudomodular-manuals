@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:12.698Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac219out-stereo-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac219out-stereo-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "March.2025\nADDAC219OUT Assembly Guide\nADDAC SYSTEM \tpage 2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac219out-stereo-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 3\nADDAC219OUT Assembly Guide\nSTEP 1:\nThis is our simplest DIY kit, simply place the jacks on the pcb in the color order indicated below, place the front-\npanel and tighten the jack nuts. Then solder all jack legs.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac219out-stereo-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 5\nYou’re all done!\nHappy Patching!\nADDAC219OUT Assembly Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac219out-stereo-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC219OUT \tASSEMBLY GUIDE\nMarch.2025\tRevision.01\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:12.591Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac207-quantizer/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac207-quantizer/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\nIdentifying the Firmware Version:\nFrom M1 firmware and above the Firmware version is shown at startup.\nOnce power is provided the 207 will flash all leds from top to bottom.\nThen will briefly double blink 2 single leds, in the M1 case the first led to blink will be\nButton 5 (which also has an M letter by it’s side), then it will blink Button 1.\nSo button 5-3 can be decoded as Firmware M3.\nAfter the 2 single leds blink the module will flash all buttons from the bottom to the top\nand will be ready to use.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac207-quantizer/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "PAGE INDEX\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\nWelcome to:\n3. \tOVERVIEW\n4. \tINTRODUCTION\n5. \tVCO’s SIMPLE SETUP\n6. \tQUANTIZER BABY STEPS\n7. \tQUANTIZER / KEYBOARD MODES\n8. \tKEY / SCALE SET & SETTINGS\n9. \tQUANTIZER VOICES\nINTUITIVE MENU\n10-13. \tOVERVIEW\n14-24. \tEXAMPLES\n14. \tNOTES 2-3-4\n15. \tQUANTIZATION TYPE\n16. \tGATE LENGTH\n17. \tTRIGGER REPEAT\n18. \tREACTION TIME\n19. \tOCTAVE OFFSET\n20-23. \tTUNING\n24. \tPRESETS\n25-28. \tASSIGN & TRANSPOSE\n29. \tTUNING RESET\n30. \tREMARKS ON TEMPERAMENTS\n31. \tMEMORY & TECH SPECS\n32. \tHELPFUL TABLES\n33-34. \tSCALES TABLES\n- EX.I\n- EX.II\n- EX.III\n- EX.IV\n- EX.V\n- EX.VI\n- EX.VII\n- EX.VIII\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac207-quantizer/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "ADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\npage 3\tADDAC SYSTEM\nOVERVIEW\nFRONTPANEL:\n1 Rotary Switch Button with 7 Positions\n1 Toggle Switch Button with 3 Positions\n1 Toggle Switch Button with 2 Positions\n12 Illuminated Buttons\n17 Jacks I/O\nFEATURES:\n4 Voices of Quantization with 10 Octaves range\nKeyboard Mode, using Buttons as triggers\nUser definable Scales: any scale is possible.\nSimple Intuitive menu with settings such as:\nUser definable NOTES Intervals for Chord generation\nQuantization types: Above, Below, Ignore\nDefinable Gate Out Length\nOctave Offsets\nMenu Reaction Time can be adjusted and saved.\nAssignable CV Input for Menu Functions\n5 Different Scale Temperaments including\nBohlen-Pierce\nMicrotonal options for more than 48 notes per Octave\nTranspose through CV input\nCompatible with both Moog and Buchla Standards\nIndependent Voice Fine Tuning\nTuning Reset to 1v/perOctave\nTuning settings safely stored in non-volatile memory.\n11 User Presets for easy recalling User’s favorite scales\nand settings.\nPOWERING UP\nAfter power has been provided the Module will display\na brief animation on the leds and load the last select-\ned Preset. It will also load all Fine Tuning Settings.\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac207-quantizer/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "page 4\tADDAC SYSTEM\nINTRODUCTION\nWe know this Guide isn’t not the best literature we\ncould be reading but it will be extremely important to\nhave an overall understanding all of the fundamental\noperational procedures and getting full potential out of\nit.\nSo we fully recommend that you read the whole\ndocument at some point, most things you’ll only need\nto read once, cause once you understand the opera-\ntional procedures every feature is right there at the tip\nof your fingers.\nNevertheless you can start by reading the first pages\nthat will already put you up and quantizing.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac207-quantizer/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "page 5\tADDAC SYSTEM\nSIMPLE VCO’s SETUP\nSo you just installed the Intuitive Quantizer in your\nsystem and powered it up for the first time!\nYou saw the lights blinking showing the default\nfactory presets after which the default C Major scale\nlits up on the keyboard area.\nAssuming you immediately want to plug it to your\nVCO’s you should plug cables from OUTS 1 to 4 to your\nVCO’s (showing red in the image on the left). If you\nhave less than 4 VCO’s plug them 1 to X depending on\nthe VCO’s you have available at the moment.\nAfter this Set all your VCO’s to the lowest Octave\npossible and/or desired.\nNext step to take is to tune all VCO’s among them-\nselves. For this you’ll need to go into Keyboard Mode\npressing Button 1 for a couple seconds. Lights will go\nall On besides the Active note being played.\n(Read\nAt this point you should rotate the KEY/OCTAVE Knob to\nF5 label and press C note in the keyboard (Button 1).\nThis will generate a 4V output in all OUT Jacks which\nrelates to a C note 4 octaves above the main octave\nthat you set your VCO to in the previous step.\nSo now that you have the same 4V going in all your\nVCO’s Tune all them all to the same C note until they\nplay in Unison.\nAfter this you can start playing a major C Scale in your\nkeyboard (like defined by the scale setting in the initial\nQuantizer Mode) and all your VCO’s should still be in\ntune.\nNow you can also change the KEY/OCTAVE Knob to\nplay lower or higher octaves.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac207-quantizer/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "page 6\tADDAC SYSTEM\nQUANTIZER BABY STEPS\nSo now that VCO’s are tuned we want to start quantiz-\ning some signals.\nFirst we need to get out of Keyboard Mode back to\nQuantizer Mode. For this we need to press Button 1 for\na couple seconds. Lights will change and display the\nActive Notes selected, should still show C Major Key.\nAt this point you should plug any CV signal into IN jack\nof NOTE 1 (top left jack).\nImmediately all outputs will send the same voltages\nto all VCO’s and they all should play tuned.\nNow we’re able turn notes On and Off by pressing the\ncorresponding keyboard buttons.\nAfter this we could also plug more CV signals to NOTE\n2-3-4 Inputs and have them all quantizing a diferent\nCV source to the same scale.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac207-quantizer/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "page 7\tADDAC SYSTEM\nQUANTIZER / KEYBOARD\nThe Intuitive Quantizer can be used in two Main Opera-\ntion Modes QUANTIZER and KEYBOARD selectable\nthrough the Menu and described further ahead in this\ndocument, for now let’s explain the 2 MAIN MODES:\nQUANTIZER MODE:\nIn Quantizer Mode the Input Voltage is used to trigger\nthe Quantization Process comparing and adjusting the\ninput voltage to the closest note actively selected.\nLet’s call these sets of Active Notes the Active Scale.\nThe Active Scale, represented by the Menu Buttons, will\nlight up according to these selected notes (drawn in\nred in the image on the left).\nEvery time a new note is quantized on Voice 1 the\ncorrespondent button will blink momentarily.\nTo avoid visual confusion other Voices will not blink.\nKEYBOARD MODE:\nIn Keyboard Mode it’s the User who manually controls\nwhich note will be playing\nIt acts as a Monophonic Keyboard and all leds are lit\nbesides the one note playing. Once a note is played the\noutput will stay on that note until another note is\nplayed.\nThere is no OFF in an analogue quantizer!\nIn Keyboard Mode, VOICES 2-3-4 will only play the\nnotes selected in Quantizer Mode, this allows for chord\nplaying using notes intervals. This means that in\nKeyboard Mode Notes 2-3-4 will still respect the notes\nselected in Quantizer Mode and will not play any note\nthat is not selected in Quantizer Mode.\nVoice 1 will play all notes.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac207-quantizer/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "page 8\tADDAC SYSTEM\nSCALE SETTINGS\nWith Scale Settings the user may set the scale to obtain.\nMINOR/MAJOR toggle switch defines of the two main\ntypes of tonal scale.\nMINOR here will always refer to a natural minor scale.\nThe b/N/# toggle switch lets you choose between\na flat (b), natural (N) or sharp (#) root note.\nScale Settings changes are not real-time after the desired\nscale is selected the user needs to press the [SET KEY]\nbutton for the changes to take effect.\nKEY/OCTAVE\nThe KEY/OCTAVE switch relates to the MAIN MODE selected.\nIn QUANTIZER MODE it’s used to select the Key or Root Note\nIn KEYBOARD MODE it’s used to select the Keyboard Octave\nSET KEY\nThe Set Key Button changes the Active Scale to the one\nselected through all the above mentioned settings.\nFor example, the red buttons in the image show the scale\ndefined by:\nKEY: C\nSetting 1: # (sharp)\nSetting 2: Major\nBesides this automatical method for setting a scale the\nUser can as well and at any point change the\nActive Buttons toggling them On(Lit) or Off(Unlit) to\nselect the quantization notes.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac207-quantizer/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "page 9\tADDAC SYSTEM\nQUANTIZER\nVOICES 1-4\nThere are 4 Quantization Voices, these can be used\neither Independentely: when an Input is plugged in the\nIN Jack or related to Voice 1: when no input is connect-\ned on either Voice 2, 3 or 4.\nIf no voltage input is used voices 2, 3 and 4 will\nautomatically relate to Voice 1.\nThey will then mirror Voice 1 input or be used for\nChords Generation as described in the NOTE 2/3/4\nsection of the Intuitive Menu chapter.\nThis function of Voice 1 as Master can be toggled\nON/OFF as described in the TRIG.R. menu\nEach Voice features 4 jacks I/O:\nIN (-5v +5v): Voltage Input for Quantization\nOUT (0v +10v): Quantized Voltage Output\nGATE IN (0 +5v): Trigger Input for External\nQuantization timing. If this input is used it only Quan-\ntizes the next note when a trigger is received.\nIf it’s not used then it will quantize depending to CV\nchanges only.\nThis Gate In ON/OFF detection is made in the software.\nAfter the detection goes On, if no gate in is detected\nwithin the next 60 seconds it will automatically go to\nOff. If the user want to reset voices before the 60\nseconds period Button 6 (Gate L.) can be pressed at\nthe same time as the voice number Button (1 to 4).\nFor example to Reset voice 2 Gate In, the user needs to\npress Button 6 then press 2 and immediatelly release\nboth buttons.\nThis will resume the behaviour without regarding the\nGate In until a new gate in is detected.\nThe automatic reset can be disabled as described in\nthe TRIG.R. menu\nGATE OUT (0 +5v): Gate Output for ADSR’s\nOutputs everytime a new quantization is calculated.\nIt respects the incoming Trigger Input Gate, while it’s\nOn the Gate Out will remain On.\nThe Gate Out will go Off when Trigger In is Off and the\nGate Length time as passed as described in the Gate\nLength section of the Intuitive Menu Chapter.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/addac207-quantizer/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "page 10\tADDAC SYSTEM\nINTUITIVE MENU\nOVERALL OPERATION PROCEDURES\nAll Quantizer Operation Settings are defined through\nthe same Push-Buttons as Scale selection and\nKeyboard.\nFor Menu related Access the Push-Button needs to be\npressed for aprox. 1 second after which the Leds\nchange to give User the necessary feedback to\nacknowledge his input.\nOnce this happens the Module is already in the Menu\nWindows recalled by the User.\nIn these Windows you’ll see the active setting identi-\nfied by the only button that will be lit.\nPressing a non-lit button changes the setting to that\nselection while, at the same time, changes the lit\nbutton for visual feedback.\nPressing a lit button is always the confirmation of the\ndesired setting and it automatically jumps out of the\nMenu Window back to the previous Main Mode (QUAN-\nTIZER / KEYBOARD) Window changing the leds as\nwell.\nWhile in any Menu Window, after 5 seconds of inactiv-\nity with the Menu Buttons the Module automatically\njumps out of the Menu Window back to the previous\nMain Mode (QUANTIZER / KEYBOARD) Window chang-\ning the leds as well.\nThe User can jump to Menu Windows from inside other\nMenu Windows using the same Press and Hold for\naprox. 1 second procedure. However if settings were\nchanged they will not be saved.\nCOLOR CODING\nButtons are numbered in Yellow from 1 to 12, other\ncolor engravings are coded depending on their func-\ntion:\nBlack is used for Overall settings\nYellow is used for Chords Generation Settings\nBlue is used for Scale Temeprament and Fine Tunning\nSettings\nWhite is used for Scale Mode Settings (Iorian, Dorian...)\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/addac207-quantizer/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "page 11\tADDAC SYSTEM\nHere’s a complete description of the Menu functions:\nBUTTON 1 (QUANTIZER / KEYBOARD)\nPushing this button for aprox. 1 second changes between QUANTIZ-\nER and KEYBOARD Mode.\nBUTTON 2 = NOTE 2 (BUTTONS 1 to 12)\nPushing this button for aprox. 1 second will define the interval for\nNOTE 2 or Quantizer output 2.\nIntervals can be selected from buttons 1 to 12 referring to an\ninterval from 0 to +12. Major/Minor 3rds will be automatically\nselected depending on the scale defined (assuming you choose\na 7 note scale).\nIn this window you’ll see only one button lit indicating which\ninterval is selected.\nPressing a non-lit button changes the setting to that selection and\nchanges the lit key for visual feedback.\nPressing a lit key is the confirmation of the desired setting and it\nautomatically jumps back to the previous Main Mode (QUANTIZER /\nKEYBOARD) window changing the leds as well.\nBUTTON 3 = NOTE 3 (BUTTONS 1 to 12)\nSame as NOTE 2 for Quantizer Output 3\nBUTTON 4 = NOTE 4 (BUTTONS 1 to 12)\nSame as NOTE 2 for Quantizer Output 4\nBUTTON 5 = Q.TYPE = QUANTIZER TYPE (BUTTONS 3, 5 and 6)\nOnly Buttons 3, 5 and 6 can be selected in this window.\nQuantizer Type defines how the quantization process occurs. There’s\n3 methods for Quantizing the input voltage to the closest note:\nAbove (BUTTON 3), Below (BUTTON 6) or if it omits any voltage that\nis not in the scale range (BUTTON 5).\nIn this window you’ll see only one of the 3 buttons lit indicating\nwhich setting is selected.\nBUTTON 6 = GATE L. = GATE LENGTH (BUTTONS 1 to 12)\nGate Length defines to size of the Gate Output from 10 to 10000ms,\nselectable from buttons 1 to 12.\nIn this window you’ll see only one of the buttons lit indicating\nwhich setting is selected.\nINTUITIVE MENU(cont.)\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/addac207-quantizer/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "page 12\tADDAC SYSTEM\nINTUITIVE MENU(cont.)\nBUTTON 7 = TRIG.R. = TRIGGER REPEAT (BUTTON 7)\n+ VOICE 1 MASTER (BUTTON 2)\nImagine an analog keyboard and you’re pressing C4 over and over, if\nthis voltage would be sent to the Quantizer voltage input and it\nwould quantize its output to C4 and output a Gate On, the second\ntime you’d press the C4 key, if the Trigger Repeat setting was on, it\nwould do exactly the same thing, although the Output would\nalready be in C4 so no change there but it would give a new Gate\nOn, retriggering your external ADSR.\nIf Trigger Repeat would be Off then it would not output gates when\nquantizing to the same note it already is quantizing to.\nIn this window only regards to button 7, if Lit setting is ON.\nButton 2 Activates (led on) and de-activates (led off) the Voice 1 as\na Master for the remaining voices.\nTo exit this window press any other Button than 2 and 7.\nBUTTON 8 = REACT.T. = MENU REACTION TIME (BUTTONS 1 to 12)\nReaction Time defines how long it takes until it enters in a Menu\nWindow. So far we’ve stated you need to press a button for 3\nseconds, with this setting you can change this value from 500ms\nto 5 seconds to adjust it to your personal preference.\nBUTTON 9 = OCT.OFS. = OCTAVE OFFSET (BUTTONS 1 to 12)\nOctave Offset defines the 1v/octave offset from the input to output.\nMeaning you can: send a 3v input and quantize it to a 1v output,\noffsetting the output to -2octaves; or send a -3v input and quantize\nit to a 2v output, offsetting the output to +5octaves.\nThe Range is from -3 to +8 octaves. Button 4 for is for 0 Offset.\nBUTTON 10 = TUNNING (BUTTONS 1 to 12)\nThis Window is a particular window and shares functions with the\nFINE-TUNING function described further down.\n1. SCALE TEMPERAMENT(BUTTONS 5 to 9)\nOnly Buttons 5 to 9 can be selected for this function.\nScale Temperaments defines the ratios used to calculate the scale\nsemitones. In a standard EqualTempered scale (our standard scale)\nall notes interval are equal This is meant to be easy to transpose a\nscale to any key without the need to retune the whole instrument.\nIn Non-Equal scales the intervals ratios are calculated from the Root\nnote or the scale key,\nUser’s can select from 5 different temperaments:\nPURE: The Mitical La Monte Young’s Well Tunner Piano temperament\nEQUAL: Our standard scale\nB-P: Bohlen-Pierce\nJUST: Just Temperament\nEX: Exotic\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/addac207-quantizer/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "page 13\tADDAC SYSTEM\nINTUITIVE MENU(cont.)\n2. MOOG / BUCHLA Standard (BUTTON 10)\nIn Eurorack we use the Moog 1v/octave standard but in Buchla land\nthey use 1.2v/octave.\nButton 10 is an indicator for which standard the quantizer operates\nto.\nPressing Button 11 & 12 at the same time will change Button 10\nstate, Off is for Moog Standard, On is Buchla\n3. FINE TUNING (BUTTONS 1 to 4, 11 and 12)\nThis is the Function for User’s fine tuning to adjust it’s 1v/octave\nratio to any particular VCO reaction.\nFine Tuning is independent for each voice.\nButtons 1 to 4 show which voice is active, pressing each of these\nButtons selects a new voice for Fine Tuning.\nAfter the voice is selected, pressing button 11 will increase the\n1v/octave relation in intervals of 0.001mV; Pressing button 12 will\ndecrease the 1v/octave relation in intervals of 0.001mV.\nThese settings can be saved permanently in non-volatile memory\npressing button 10. This will also Exit the Menu Window.\nBUTTON 11 = SCALE MODE(BUTTONS 1 to 7 and 11)\nScale Mode defines which Mode (Ionian, Dorian, Phrygian, Lydian,\nMixolydian, Aeolian, Locrian) abreviated in White to match mode\nnumbers in Yellow ( 1=I, 2=D, 3=P, 4=L, 5=M, 6=A, 7=L).\nThis Setting is only used when Pressing the Set Key Button and\nnormally is Byppassed.\nTo activate the Scale Mode function press Button 11 and its light\nwill change state, Lit is ON.\nBUTTON 12 = PRESETS (BUTTONS 1 to 11)\nPresets Store all the information related to the Scale defined in\nQuantizer Main Mode as well as the main Menu settings (page 26).\nWhen entering this window there will be only one led lit indicating\nwhich preset is currently being edited.\nTo select and change settings to a new preset just press the\ndesired one, the button will light up and pressing again will load it\nand exit the Menu Window.\nTo save a preset, select the preset button you wish to save to and\nhold the PRESET Button (12) for aprox. 3 seconds, after which it will\nexit the Menu Window.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/addac207-quantizer/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "page 14\tADDAC SYSTEM\nThis settings allow for easy chord generation assuming you choose a 7 note\nscale.\n1. Let’s imagine we’re in QUANTIZER MODE and have the C Maj Scale Active\nThis Menu Function Works the same way for NOTE 2, NOTE 3 and NOTE 4 Windows.\nDefault value is Root Note (Button 1).\n2. If the User Holds the NOTE 2 Button for aprox. 1\nsecond, the Menu Buttons will change to the configura-\ntion shown in image 2. Indicating Interval for NOTE 2 is\ncurrently set to its default value of 1 or 0 Semitones.\nAs a mnemonic, while in this Menu Window buttons\nnumbers are related to the desired interval from the Root\nNote (Voice 1). So, Button 5 relates with a Fifth or Button\n11 stands for the Eleventh note from the Root.\n3. If it’s the User’s wish to\nchange the second Voice\noutput to a 5th (Fifth) (relat-\ned to the Root note defined\nby Voice 1) then press button\n5 once. This action will set\nthe interval to a 5th and the\nled will change accordingly\n(Image 3).\nOnce Button 5 is Active\npressing it once again\nconfirms the new setting\nchange and Exits the Menu\nWindow back to Quantizer\nMode (Image 1).\nImage 3\nImage 2\nImage 1\nINTUITIVE MENU\nNOTE 2, 3 and 4 Operation - Buttons 1 to 12\nEx. I\nBUTTON 1 \tRoot\nInterval\nBUTTON 2 \t2nd\nBUTTON 3 \t3rd\nBUTTON 4 \t4th\nBUTTON 5 \t5th\nBUTTON 6 \t6th\nBUTTON 7 \t7th\nBUTTON 8 \t8th\nBUTTON 9 \t9th\nBUTTON 10 \t10th\nBUTTON 11 \t11th\nBUTTON 12 \t12th\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/addac207-quantizer/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "page 15\tADDAC SYSTEM\nImage 2\nImage 1\nINTUITIVE MENU\nQ.TYPE - Quantization Type Operation - Buttons 3, 5 and 6\nThis setting is shared by all 4 Voices.\nDefault value is Above Method (Button 3).\nEx. II\nBUTTON 3 \tABOVE\nQ.Type\nBUTTON 5 \tIGNORE\nBUTTON 6 \tBELOW\n1. Let’s imagine we’re still in QUANTIZER MODE and have the C Maj Scale Active\n(image 1). It’s the User’s decision to change the Quantization Type, please keep\nin mind that there are 3 methods for Quantizing the input voltage to the closest\nnote: Above (BUTTON 3), Below (BUTTON 6) or if it ignores any voltage that is\nnot in the scale range (BUTTON 5).\nAs a mnemonic, always remember that Button 3-Above is Above the Q.TYPE\nButton and that Button 6 - Below is Below the Q.TYPE Button.\nLet’s assume the Active Method is Above (Button 3).\nIf the User Holds the Q.TYPE Button for aprox. 1\nsecond, the Menu Buttons will change to the config-\nuration shown in image 2. Indicating setting for\nQuantization Type is currently set to 3 or Above\nMethod.\nWhile in this Menu Window all buttons other than 3,\n5 and 6 will be inactive. Pressing any of the grey\nButtons shown in image 2 for less than 3 seconds\nwon’t cause any reaction .\nA. BELOW\nif the User wants to change the Quantization type to\nthe closest note Below(Button 6) he just needs to\npress it once and the led beneath will light up,\npressing a second time confirms the setting and\nexits the Menu Window back to the Main Window.\nB. IGNORE\nif the User wants to change the Quantization type\nignoring all voltages that are not in the selected\nScale note, meaning it won’t quantize to any note\nabove or below. He needs to press Button 5 once and\nthe led beneath will light up, pressing a second time\nconfirms the setting and exits the Menu Window\nback to the Main Window.\nA. ABOVE\nif the User wants to change the Quantization type to\nthe closest note Above(Button 3) he just follows the\nsame process as above options, select and confirm\nButton 3.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/addac207-quantizer/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "page 16\tADDAC SYSTEM\nThis setting is shared by all 4 Voices.\nDefault value is 40 milliseconds (Button 3).\nImage 2\tImage 1\nINTUITIVE MENU\nGATE L.- Gate Length Operation - Buttons 1 to 11 and 12\nEx. III\nBUTTON 1 \t10 ms\nGATE LENGTH\nBUTTON 2 \t20 ms\nBUTTON 3 \t40 ms\nBUTTON 4 \t80 ms\nBUTTON 5 \t160 ms\nBUTTON 6 \t320 ms\nBUTTON 7 \t640 ms\nBUTTON 8 \t1280 ms\nBUTTON 9 \t2560 ms\nBUTTON 10 \t5120 ms\nBUTTON 11 \t10240 ms\nThe Minimum value for this setting is 10 milliseconds (Button 1) the maximum is\n10240 miliseconds (Button 11).\nTime intervals increase multiplying by 2, meaning the next button is twice the size\nof its previous one: Button 1=10 Milliseconds ; 2=20; 3=40; 4=80... and so on.\nIt can also be calculated with the formula:\nMilliseconds = 10*2^(ButtonX-1)\nButton 12 is used for a GATE OFF CONDITION before Quantizing a new note\n(described below).\nSo let’s imagine we have already pressed the GATE L. Button for aprox. 1 second\nand entered in its Menu Window, the Menu Buttons already changed to the configu-\nration shown in image 1, displaying the default setting for Gate Length or Button 3.\nIf it’s the User’s wish to change the Gate Length to any\nother size he’ll need to press the desired length button\ntwice. Let’s assume Button 7 (640 miliseconds)\nOnce Button 7 is lit (image 2) pressing it once again\nconfirms the new setting and Exits the Menu Window.\nGATE OFF CONDITION\nButton 12 acts as a Toggle (Lit = On, Unlit = Off).\nIt limits the quantization process to happen only when\nthe gate Out is Off.\nFor ex. Imagine the User had already pressed Button 12\n(image 2) setting the Gate Length to be 10 seconds.\nAs soon as the module quantizes a new note it will set\nthe Gate Out to +5v and hold it there for the pre-defined\ntime of 10 seconds.\nWith Button 12 Lit (Condition On) it will ignore any input\nand will not quantize any note until the 10 seconds pass\nand the Gate set to 0v.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 18,
+      "image": "/addac207-quantizer/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "page 17\tADDAC SYSTEM\nSo let’s imagine we have already pressed the TRIG.R. Button for aprox. 1 second and\nentered in its Menu Window, the Button’s leds change but no led is lit (image 1).\nIn this Menu Window only Button 2 and 7 can be lit and works as a selector: Unlit =\nOff, Lit is On.\nPressing Button 7 once will activate the Trigger Repeat option and activate the\naccording led (image 2).\nSaving this setting is done in this order, select the state\nyou wish to save pressing Button 7 to be either lit(On) or\nUnlit (Off) then press any key other then key 7 (black\nkeys in image 2).\nWhen this happens the User confirms the key 7 state as\nthe new setting and returns to the Main Window.\nImage 2\nImage 1\nINTUITIVE MENU\nTRIG.R. - Trigger Repeat Operation - Button 7\nThis setting is shared by all 4 Voices.\nDefault value is Off.\nVoice 1 as Master Button 2\nExtra Functions in this Menu:\nThis setting defines if voices 2-3-4 behave as slaves to\nvoice 1 or if all voices are independent.\nIf voice 1 is set to Master then all voices without cv inputs\nplugged in will follow the output of voice 1.\nThis is especially useful to generate chords, the user can\noffset voice 2 by a 3rd, voice 3 by a 5th and voice 4 by a\n7th then the CV input in channel 1 will set the root note\nwhile the other channels will output the other chord notes\n(3rrd, 5th, and 7th). These chords will be generated from\nthe root note and according to the scale defined.\nFor ex. depending on the scale and the root note the chord\nwill have a minor or major 3rd.\nAt any point if a CV input is detected in voice 2-3-4 then\nthis voice will loose the connection to voice 1 and will\nbehave as an independet voice.\nGate In Mode Button 3 (FIRMWARE M1 and above)\nWhen ON the Gate In will be automatically detected and\nreset after 1 minute. When OFF the Gate In will be automati-\ncally detected but will not reset automatically.\nTranspose Tune Button 4 (FIRMWARE M1 and above)\nThis setting will be explained in the Transpose pages.\nThis setting is callibrated by us and should not be changed.\nEx. IV\nBUTTON 2 \tVoice1 Master\nFunction\nBUTTON 4 \tTranspose Tune\nBUTTON 7 \tTrig. Repeat\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 19,
+      "image": "/addac207-quantizer/pages/page-019.png",
+      "title": "Page 19",
+      "sectionName": null,
+      "content": "page 18\tADDAC SYSTEM\nThis setting is used to adjust the way the Menu responds to the User input, how\nlong the User needs to Hold buttons to enter in the Menu Windows and how\nlong it will take for the menu buttons to be idle until the module automatically\nexits to the Main Window.\nSo let’s imagine we have already pressed the REACT.T. Button for aprox. 1\nsecond and entered in its Menu Window, the Menu Buttons already changed to\nthe configuration shown in image 1, displaying the default setting for Menu\nReaction Time or Button 2.\nAs in previous Menu Windows, pressing another Button selects it, pressing it a\nsecond time Saves the setting in the non-volatile memory and Exits to the Main\nWindow.\nBelow is a table with the times defined by the Menu Buttons:\nThe Hold Time value shown on the table above, triples while in KEYBOARD Mode,\nso Hold Time * 3. By slowing this reaction time when the User is most likely to\nbe playing the keyboard it adds some extra time proven to avoid entering\nunwanted Menu Windows.\nImage 1\nDefault value is 700 miliseconds (Button 2).\nThis setting is independentely saved and kept safe in non-volatile memory.\nINTUITIVE MENU\nREACT.T. - Reaction Time Operation - Buttons 1 to 12\nEx. V\nBUTTON 1 \t500 ms\nHold Time\nBUTTON 2 \t700 ms\nBUTTON 3 \t900 ms\nBUTTON 4 \t1100 ms\nBUTTON 5 \t1300 ms\nBUTTON 6 \t1500 ms\nBUTTON 7 \t1700 ms\nBUTTON 8 \t1900 ms\nBUTTON 9 \t2100 ms\nBUTTON 10 \t2300 ms\nBUTTON 11 \t2500 ms\nBUTTON 12 \t2700 ms\n5000 ms\nIdle Time\n6000 ms\n7000 ms\n8000 ms\n9000 ms\n10000 ms\n11000 ms\n12000 ms\n13000 ms\n14000 ms\n15000 ms\n16000 ms\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 20,
+      "image": "/addac207-quantizer/pages/page-020.png",
+      "title": "Page 20",
+      "sectionName": null,
+      "content": "page 19\tADDAC SYSTEM\nThe Minimum value for this setting is 0 Octaves (Button 1) and the maximum is +9\nOctaves (Button 10).\nThis allows for negative voltages up to -5v to be quantized as well. In this case if\nOct.Ofs setting is set to 5 octaves -5v will be quantized to 0v, -4v to 1v and so on.\nIf Quantized Notes fall off the modules voltage range they will be quantized to the\nlowest or highest note possible.\nSo let’s imagine we have already pressed the OCT.OFS. Button for aprox. 1 second\nand entered in its Menu Window, the Menu Buttons already changed to the configu-\nration shown in image 1, displaying the default setting for Octave Offset or Button 1\n(0 Octaves Offset).\nThis setting is shared by all 4 Voices.\nDefault value is 0 Octaves Offset (Button 1).\nIf it’s the User’s wish to change the Octave Offset to any\nother value he’ll need to press the desired button twice.\nLet’s assume Button 2 (1 octaves Offset)\nOnce Button 2 is lit (image 2) pressing it once again\nconfirms the new setting and Exits the Menu Window.\nHere’s a Table With the Offset values for each Menu\nButton:\nImage 2\nImage 1\nINTUITIVE MENU\nOCT.OFS.- Octave Offset Operation - Buttons 1 to 10\nEx. VI\nBUTTON 1 \t0 Octaves\nBUTTON 2 \t1 Octaves\nBUTTON 3 \t2 Octaves\nBUTTON 4 \t3 Octaves\nBUTTON 5 \t4 Octaves\nBUTTON 6 \t5 Octaves\nBUTTON 7 \t6 Octaves\nBUTTON 8 \t7 Octaves\nBUTTON 9 \t8 Octaves\nBUTTON 10 \t9 Octaves\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 21,
+      "image": "/addac207-quantizer/pages/page-021.png",
+      "title": "Page 21",
+      "sectionName": null,
+      "content": "page 20\tADDAC SYSTEM\nThis Menu Window has 4 different functions:\nScale Temperament (Buttons 5 to 9)\nIndependent Voice Fine Tuning (Buttons 1 to 4, 11 and 12)\nMoog/Buchla Standard Definition (Buttons 11 and 12)\nSaving Fine Tuning Settings (Button 10)\nSo let’s imagine we have already pressed the TUNING Button for aprox. 1 second\nand entered in its Menu Window, the Menu Buttons already changed to the configu-\nration shown in image 1, displaying both the default settings for Active Voice\nTuning (Button 1) and Scale Temperament (Button 6).\nActive Voice Tuning is the Quantizer Voice that is currently set to be tuned.\nImage 1\nINTUITIVE MENU\nTUNING Operations - Buttons 1 to 4 and 6 to 12\nEx. VII - part A\nBUTTON 1 \tTune Voice 1\nFunction\nBUTTON 2 \tTune Voice 2\nBUTTON 3 \tTune Voice 3\nBUTTON 4 \tTune Voice 4\nBUTTON 5 \tWell Tunned\nBUTTON 6 \tEqual\nBUTTON 7 \tBohlen-Pierce\nBUTTON 8 \tJust\nBUTTON 9 \tExotic\nBUTTON 10 \tSave F.Tune\nBUTTON 11 \t+\nBUTTON 12 \t-\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 22,
+      "image": "/addac207-quantizer/pages/page-022.png",
+      "title": "Page 22",
+      "sectionName": null,
+      "content": "page 21\tADDAC SYSTEM\nImage 2\nImage 1\nAs in part A we have already pressed the TUNING Button for aprox. 1 second and\nentered in its Menu Window, the Menu Buttons already changed to the configura-\ntion shown in image 1, displaying both the default settings for Active Voice Tuning\n(Button 1) and Scale Temperament (Button 6).\nThis setting is shared by all 4 Voices.\nDefault value is EQUAL Temperament (Button 6).\nUsers can select from 5 different temperaments:\nPURE: La Monte Young’s Well Tunned Piano temperament\nEQUAL: Standard Equal Temperament\nB-P: Dr. Boulanger 12 Note Bohlen-Pierce Temperament\nJUST: Just Temperament\nAFR: African Temperament\nIf it’s the User’s wish to change the Scale Temperament\nto a different one he’ll need to press the respective\nbutton color coded in blue. Just like any other Menu\nWindow pressing it twice will save the setting and Exit\nback to the Main Window.\nLet’s assume Button 8 (Just Temperament). Once Button\n8 is lit (image 2) pressing it once again confirms the\nnew setting and Exits the Menu Window. This is the best\nway to Exit this particular Menu Window.\nSet Scale Temperament Procedure- Buttons 5 to 9\nEx. VII - part B\nINTUITIVE MENU\nTUNING Operations\nFunction\nBUTTON 5 \tPure\nBUTTON 6 \tEqual\nBUTTON 7 \tB-P\nBUTTON 8 \tJust\nBUTTON 9 \tExotic\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 23,
+      "image": "/addac207-quantizer/pages/page-023.png",
+      "title": "Page 23",
+      "sectionName": null,
+      "content": "page 22\tADDAC SYSTEM\nImage 2\nImage 1\nThis Setting can be used to adjust the 1v/octave ratio.\nSo let’s imagine we have already pressed the TUNING Button for aprox. 1 second\nand entered in it’s Menu Window, the Menu Buttons already changed to the config-\nuration shown in image 1, displaying both the default settings for Active Voice\nTuning (Button 1) and Scale Temperament (Button 6).\nDefault value for Active Voice Fine Tuning is Voice 1 (Button 1).\nThis is the Function for User’s fine tuning to adjust its\n1v/octave ratio to any particular VCO reaction.\nFine Tuning is independent for each voice.\nButtons 1 to 4 show which Voice is active for Fine\nTuning, pressing each of these Buttons selects a new\nVoice. Let’s assume Voice 2 (image 2).\nAfter the desired Voice is selected the User can then Fine\nTune with Buttons 11 and 12, color coded in blue, these\nbuttons will also blink everytime they are pressed:\nButton 11 (+) will increase the 1v/octave relation in\nintervals of 0.001mV;\nButton 12 (-) will decrese the 1v/octave relation in\nintervals of 0.001mV.\nThese settings can be saved permanently in non-volatile\nmemory simply pressing TUNING Button (10). This will\nalso Exit the Menu Window.\nMICROTONAL SCALES\nThis setting also opens the possibility to more than 12\nnote equal tempered scales.\nBringing down the 1v/octave value to 1/2 will set the\nscale to a 24 note scale, bringing it further down to 1/4\nwill set it to a 48 note scale or any combination in\nbetween.\nFINE - TUNING Procedure- Buttons 1 to 4, 11 and 12\nEx. VII - part C\nINTUITIVE MENU\nTUNING Operations\tBUTTON 1 \tTune Voice 1\nFunction\nBUTTON 2 \tTune Voice 2\nBUTTON 3 \tTune Voice 3\nBUTTON 4 \tTune Voice 4\nBUTTON 10 \tSave\nBUTTON 11 \t+\nBUTTON 12 \t-\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 24,
+      "image": "/addac207-quantizer/pages/page-024.png",
+      "title": "Page 24",
+      "sectionName": null,
+      "content": "page 23\tADDAC SYSTEM\nImage 1\nSo let’s imagine we have already pressed the TUNING Button for aprox. 1 second\nand entered in its Menu Window, the Menu Buttons already changed to the configu-\nration shown in image 1, displaying both the default settings for Active Voice\nTunning (Button 1) and Scale Temperament (Button 6).\nTo Save simply Press the TUNING Button (10).\nAfter Saving, the Menu will Exit to the Main Window.\nThis setting Writes the User’s current Fine-Tuning settings to non-volatile memory.\nThis will be loaded automatically every time you power up your system.\nFine Tuning settings will not be saved with the User’s Presets.\nSAVE TUNING SETTINGS Procedure- Buttons 1 to 4, 11 and 12\nThe TUNING Button (10) is the monitor for this setting:\nIf Button 10 led is Off then 1v/octave Moog Standard is selected.\nIf Button 10 led is On then 1.2v/octave Buchla Standard is selected.\nSo let’s imagine we have already pressed the TUNING Button for aprox. 1 second\nand entered in its Menu Window, the Menu Buttons already changed to the configu-\nration shown in image 1, displaying both the default settings for Active Voice\nTuning (Button 1), Scale Temperament (Button 6) and Moog Standard (Button 10).\nTo change this state simply Press both Buttons 11 and 12 at the same time,\nTUNING Button (10) will change state.\nThis setting is shared by all 4 Voices.\nDefault value is Moog (1v/octave).\nMOOG/BUCHLA v/octave Procedure - Buttons 11 and 12\nEx. VII - part D\nINTUITIVE MENU\nTUNING Operations\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 25,
+      "image": "/addac207-quantizer/pages/page-025.png",
+      "title": "Page 25",
+      "sectionName": null,
+      "content": "page 24\tADDAC SYSTEM\nImagine the User has already pressed the PRESETS Button for aprox. 1\nsecond and entered in its Menu Window, the Menu Buttons already\nchanged to the configuration shown in image 1, displaying the default\nActive Preset (Button 1).\nImage 2\nImage 1\nDefault value is PRESET 1 (Button 1).\nINTUITIVE MENU\nPRESETS Operation - Buttons 1 to 11\nEx. IX\nA. LOADING\nIf it’s the User’s wish to Load, for Ex., Preset 4 he\njust needs to press Button 4 twice.\nOnce the first push occurs the led below will\nlight up. After the second push it will load\nPreset 4 and Exit to the Main Mode Window.\nIf Preset 4 was already selected pressing it a\nsecond time will not load it again but rather\nreturn to the Main Window leaving the volatile\nmemory intact, meaning that any settings that\nmight have been changed in the meantime are\nkept changed and not freshly loaded from\nPreset 4 saved data.\nIf the User needs to clean all changes made\nand load back Preset 4, he just needs to load\nany other preset and then load back Preset 4.\nB. SAVING\nIf it’s the User’s wish to Save the current config-\nuration in Preset 5 he just needs to light Button\n5 and after that Push and Hold the PRESETS\nButton (12) for 3 seconds, after which the\nbutton’s leds will blink and exit to the Main\nWindow.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 26,
+      "image": "/addac207-quantizer/pages/page-026.png",
+      "title": "Page 26",
+      "sectionName": null,
+      "content": "page 25\tADDAC SYSTEM\nASSIGNING ASSIGN\nINPUT TO CONTROL\nMENU FUNCTIONS\nASSIGN 1v/Octave CV Input\nThis CV input can be assigned to control 8 of the Menu\nFunctions.\nTo do this the User needs to access the Assign\nWindow momentarily pressing both Button 4 and 7 at\nthe same time.\nHere’s a Table with the Button Assignments\nLighting On any of the corresponding Buttons will\nroute the incoming CV to control that particular\nfunction.\nMultiple Leds can be chosen at the same time.\nTo Exit the Assign Window press any of the unused\nbuttons: Button 8 or 10.\nIn this input negative voltages are fully rectified and\nwill be interpreted as positive ones.\nBUTTON 1 \tINPUT TRANSPOSE\nBUTTON 2 \tNOTE 2 OFFSET\nBUTTON 3 \tNOTE 3 OFFSET\nBUTTON 4 \tNOTE 4 OFFSET\nBUTTON 5 \tQUANTIZATION TYPE\nBUTTON 6 \tGATE LENGTH\nBUTTON 7 \tTRIGGER REPEAT\nBUTTON 9 \tOCTAVE OFFSET\nBUTTON 11 \tSCALE TRANSPOSE\nBUTTON 12 \tCHANGE PRESET\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 27,
+      "image": "/addac207-quantizer/pages/page-027.png",
+      "title": "Page 27",
+      "sectionName": null,
+      "content": "page 26\tADDAC SYSTEM\nTRANSPOSE OPERATIONS\nThe ADDAC207 features 2 transposition methods:\nINPUT TRANSPOSE (Button 1 = C)\n1v/Octave CV Input (0 to +5v range)\nIf Assigned, this CV input allows a positive 1v/octave\nsignal to transpose the channel’s input CV.\nThe Channels input CV is immediately transposed\nwhile keeping it inside the selected scale.\nOutput will be equal to the Input CV + the Assign CV.\nSCALE TRANSPOSE (Button 11 = A#)\n1v/Octave CV Input (0 to +5v range)\nIf Assigned, this CV input allows a positive 1v/octave\nCV to be connected for external Scale Transposition.\nIncoming CV is divided in 12 semitones for every 1v,\nlet’s assume X semitones. The scale is immediately\ntransposed offsetting the Root note by the same X\nsemitones.\nIn Scale Transpose mode the CV input voltage range is\nnot important by itself, meaning that +1v will result in\nthe same transposition as +3v which would be zero or\nno transposition.\nThis operation is visible in the Scale Leds but it only\nupdates when receiving a new input on Channnel 1.\nTRANSPOSE TUNE Setting (FIRMWARE M1 and above)\nThe Transpose Tune setting (defined by selecting\nButton 4 in the TRIG.R. Menu is used to calibrate the\nAssign 1v/oct CV input.\nThere’s only 2 options (On or Off)\nIf you play a C on your keyboard and the 207 outputs\na B then the Transpose Tune setting should be set to\nOn, otherwise set it to Off.\nWe calibrate this setting before shipping, please\nchange it only if you’re experiencing tuning issues\nwith your CV keyboard.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 28,
+      "image": "/addac207-quantizer/pages/page-028.png",
+      "title": "Page 28",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM page 27\nCHANNEL INPUT (Quantizing Mode = UP)\nQuantized\nNote OUT\nASSIGN CV INPUT (ASSIGNED TO CV INPUT TRANSPOSITION)\nCV INPUT TRANSPOSE METHOD\nBelow you’ll find a table with 12 examples, each column is an example, in the top you can find the chan-\nnel’s CV input and on the bottom the CV input inserted into the assign input.\nThe red circle shows the note that will appear at the Channel’s output.\nNotice that we wanted to show how the assign input relates with the Channel’s inputs so we kept the CV\nInput at the same value: C or zero volts.\nAll examples assume the Quantizing Mode is set to UP.\nExample - Channel input = C and Transpose Input = D#\nIn this example the Channel’s CV input will be transposed by the Assign CV.\nIn this case, the Channel CV input is a C and the transpose input is a D# or 3 semitones up.\nC + 3 semitones = D#\nHowever, the selected scale (C Major) does not contain a D# and so the 207 will quantize the D# to the\nclosest note above which, in this case, is an E.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 29,
+      "image": "/addac207-quantizer/pages/page-029.png",
+      "title": "Page 29",
+      "sectionName": null,
+      "content": "ADDAC SYSTEMpage 28\nCHANNEL INPUT (Quantizing Mode = UP)\nQuantized\nNote OUT\nASSIGN CV INPUT (ASSIGNED TO SCALE TRANSPOSITION)\nSCALE TRANSPOSE METHOD\nBelow you’ll find a table with 12 examples, each column is an example.\nIn the top you can find the Channel CV input and on the bottom the CV input inserted into the Assign input.\nThe red circle shows the note that will appear at the Channel output.\nNotice that we wanted to show how the Assign input relates to the Channel inputs so we kept the CV Input\nat the same value: C or zero volts.\nAll examples assume the Quantizing Mode is set to UP.\nExample - Channel input = C and Transpose Input = E\nIn this example, the selected scale will be transposed by the Assign CV, in this case, the Channel CV input is\na C and the scale transpose input is an E or 4 semitones up.\nC Major scale + 4 semitones = E Major scale\nNotice that our Channel’s input CV will not be transposed only the scale (shown in black circles).\nIn this case our Channel input is a C, once the scale transposition is done and the scale is updated we can\nnotice that there is no C in the E Major scale, in this case, the 207 will quantize the input C to the closest\nnote above which belong to the new scale, in this case, a C#.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 30,
+      "image": "/addac207-quantizer/pages/page-030.png",
+      "title": "Page 30",
+      "sectionName": null,
+      "content": "ADDAC SYSTEMpage 29\nTUNING RESET\nTuning Reset is the procedure where the module\ncalibrate its 4 Voices to the 1v/octave standard.\nThis procedure will overwrite the User’s Fine-Tuning\nsettings but will not save itself to the non-volatile\nmemory, so it won’t affect the User’s previously saved\nsettings if he restarts his system.\nIf it’s the User’s wish to save the calibration results he\ncan do so as described in EX.VII - part D.\nTo execute this procedure Press and Hold the SET KEY\nbutton for 5 seconds.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 31,
+      "image": "/addac207-quantizer/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "content": "ADDAC SYSTEMpage 30\nREMARKS ON TEMPERAMENTS\nTemperaments are just a different way of tuning the intervals between notes.\nOur common Equal Temperament scale defines that every interval is Equal which translates to 1v/octave\nequals (1v/12notes) 0.08333333v between each note. This is refered to as the Interval Ratio.\nThe Equal Temperament that we are so used to is atributed to Johann Faulhaber circa 1630 and it survived all\nthese years because it is the easiest way to tune an instrument so that any scale can be played without the\nneed to calculate and retune everytime you change the scale Root.\nThis was strictly a functional decision and in disagreement with the nature and mathematics of music.\nSo everything comes down to Ratios.\nImagine that we’re on A4 minor scale and we want to calculate the frequency of the 3rd from the Root or C5\nEx. I - Equal Temperament\nIn Equal Temperament to calculate any desired note frequency we simply multiply the Root frequency by 2\npowered to the semitone divided by 12:\nRoot * 2^(3/12)\nif our A4 is 440Hz then C is:\n440* (2^(3/12))\n440*1.1892\n=\n523.25Hz C5, which is also true for the frequency we tune C5 in a piano.\nAlthough valid in our Equal Temperament system this is not true in other Temperaments.\nEx. II - Just Temperament\nIn Just Temperament every interval has its own ratio and none of them are equal.\nThese are the Ratios used for the Just Temperament:\n16/15, 9/8, 6/5, 5/4, 4/3, 7/5, 3/2, 8/5, 5/3, 7/4, 15/8\nIf we try making the same calculation from the previous example we’ll find that:\n440* (6/5) = 528 C5\nSo C5 in Just Temperament does not have the same frequency as pure C5.\nThe implications of this example is that if you tune an instrument in Just Temperament it will only be valid\nfor the Root you tune it to. To play in any other scale the whole instrument needs to be tuned accordingly.\nWhich leads us to a particular function:\nFor any Temperament other than EQUAL the b/N/# + KEY / OCTAVE Switches will set the Root for the tuning\nto comply with the procedure described above.\nAlthough this will change the Tuning it will not change the keyboard layout and led indicators.\nAs an example if the User selects the Natural A Root selecting a C on the keyboard is actually selecting an A\nnote. So all Roots are relative to the same C keyboard layout.\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 32,
+      "image": "/addac207-quantizer/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM page 31\nTECH SPECS\nMECHANICAL:\nFormat: Eurorack\nWidth: 10 HP\nDepth: 6 cm\nCONTROL VOLTAGE I/O:\nCV inputs: ± 5v\nAssign input: + 5v\nCV outputs: 0 +10v\nELECTRICAL:\nMax current: 150mA\nBus Board Cable: 8 × 2 IDC (Doepfer style) connector\nNon-Volatile MEMORY\nThere are two different locations in memory:\n- Main Memory, stores overall settings\n- Presets Memory, stores 11 User Presets\nNOTE 3\nNOTE 4\nQUANTIZING TYPE\nGATE LENGTH\nTRIGGER RESET\nOCTAVE OFFSET\nScale Temperament\nGate Off Condition\nCV Assigns\nNOTE 2\nScale Notes\nWHAT’S KEPT IN PRESETS MEMORY\nWHAT’S KEPT IN MAIN MEMORY\nFine Tunings\nMoog/Buchla\nReaction Time\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 33,
+      "image": "/addac207-quantizer/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "content": "HELPFUL TABLES\nADDAC SYSTEM\nBUTTON 1 \t500 ms\nBUTTON 2 \t700 ms\nBUTTON 3 \t900 ms\nBUTTON 4 \t1100 ms\nBUTTON 5 \t1300 ms\nBUTTON 6 \t1500 ms\nBUTTON 7 \t1700 ms\nBUTTON 8 \t1900 ms\nBUTTON 9 \t2100 ms\nBUTTON 10 \t2300 ms\nBUTTON 11 \t2500 ms\nBUTTON 12 \t2700 ms\n5000 ms\n6000 ms\n7000 ms\n8000 ms\n9000 ms\n10000 ms\n11000 ms\n12000 ms\n13000 ms\n14000 ms\n15000 ms\n16000 ms\nBUTTON 2 \tVOICE 1 MASTER ON/OFF\nBUTTON 7 \tTrigger Repeat ON/OFF\nF# = TRIG.R. : Trigger Repeat\nNOTE 3\nNOTE 4\nQUANTIZING TYPE\nGATE LENGTH\nTRIGGER REPEAT\nOCTAVE OFFSET\nScale Temperament\nGate Off Condition\nCV Assigns\nNOTE 2\nScale Notes\nPRESETS MEMORY\nBUTTON 1 \t0 Octaves\nBUTTON 2 \t1 Octaves\nBUTTON 3 \t2 Octaves\nBUTTON 4 \t3 Octaves\nBUTTON 5 \t4 Octaves\nBUTTON 6 \t5 Octaves\nBUTTON 7 \t6 Octaves\nBUTTON 8 \t7 Octaves\nBUTTON 9 \t8 Octaves\nBUTTON 10 \t9 Octaves\nBUTTON 1 \tRoot\nBUTTON 2 \t2nd\nBUTTON 3 \t3rd\nBUTTON 4 \t4th\nBUTTON 5 \t5th\nBUTTON 6 \t6th\nBUTTON 7 \t7th\nBUTTON 8 \t8th\nBUTTON 9 \t9th\nBUTTON 10 \t10th\nBUTTON 11 \t11th\nBUTTON 12 \t12th\nBUTTON 3 \tABOVE\nBUTTON 5 \tIGNORE\nBUTTON 6 \tBELOW\nBUTTON 1 \t10 ms\nBUTTON 2 \t20 ms\nBUTTON 3 \t40 ms\nBUTTON 4 \t80 ms\nBUTTON 5 \t160 ms\nBUTTON 6 \t320 ms\nBUTTON 7 \t640 ms\nBUTTON 8 \t1280 ms\nBUTTON 9 \t2560 ms\nBUTTON 10 \t5120 ms\nBUTTON 11 \t10240 ms\nBUTTON 12 \tGateCondition\nBUTTON 1 \tTranspose Inputs\nD# + F# = \tAssigns\nBUTTON 2 \tNOTE 2\nBUTTON 3 \tNOTE 3\nBUTTON 4 \tNOTE 4\nBUTTON 5 \tQ.TYPE\nBUTTON 6 \tGATE L.\nBUTTON 7 \tTRIG.R.\nBUTTON 9 \tOCT.OFS.\nBUTTON 11 \tTranspose Scale\nBUTTON 12 \tPresets\nBUTTON 1 \tTune Voice 1\nBUTTON 2 \tTune Voice 2\nBUTTON 3 \tTune Voice 3\nBUTTON 4 \tTune Voice 4\nBUTTON 5 \tWell Tuned\nBUTTON 6 \tEqual\nBUTTON 7 \tBohlen-Pierce\nBUTTON 8 \tJust\nBUTTON 9 \tExotic\nBUTTON 10 \tSave F.Tune\nBUTTON 11 \t+\nBUTTON 12 \t-\nMAIN MEMORY\nFine Tunings\nMoog/Buchla\nReaction Time\nHold Time\tG=ReactionTime \tIdle Time\nInterval\tNOTE 2/3/4 \tFunction\nG# = OCT.OFS. : Octave Offset\nE = Q.TYPE : Quantization Type\nF = GATE L. : Gate Length\nA = Tunning\npage 32\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 34,
+      "image": "/addac207-quantizer/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM page 33\nMAJOR SCALES\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 35,
+      "image": "/addac207-quantizer/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM page 34\nNATURAL MINOR SCALES\nADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 36,
+      "image": "/addac207-quantizer/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "content": "ADDAC207 INTUITIVE QUANTIZER \tUSER’S GUIDE\nApril.2021\tRevision.05\nFor feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

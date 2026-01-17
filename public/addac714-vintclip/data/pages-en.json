@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:13.149Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac714-vintclip/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "Instruments for Sonic Expression\nEst.2009\nDecember.2022\nUSER’S GUIDE . REV01\nADDAC714\nVINTAGE\nCLIPPER\nINTRODUCING\nFrom Portugal with Love!\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac714-vintclip/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC714 is a dual channel soft clipping module.\nDiode based passive clipping acts as a “brick wall” limiter\nwith a fixed knee given by the inherent diode physics. A\npassive RC low pass circuit adds a 3.3KHz -3db low pass\nfilter which sculpts the overall tone while also adding\nfurther character to the effect.\nAt the top an On/Off [BYPASS] switch routes the signal\ninto the Effect (Up: Active) or to the bottom output gain\nstage (Down: Bypassed).\nThe ammount of clipping is set by the [GAIN] control,\nit mostly works as a threshold control for how much\nclipping will be applied.\nAs more clipping is applied the signal’s amplitude will\nalso decrease, to compensate for this we set up a gain\ncompensation stage to keep the output amplitude\nbalanced across the Gain range.\nSymmetry chooses between bipolar clipping or positive\nclipping, this relates to the harmonics generated, bipolar\nfor odd and even harmonics (up position) and unipolar for\nodd harmonics only (down position).\nAt the second stage, an opamp based x2 output gain\nwith a clipping led, which monitors the clipping at the\noutput, and an [Output] control to set the output volume.\nHaving the top and middle gain stages provides flexibili-\nty allowing the user to completelly distort the signal on\nthe top stage and tame it’s output level with the second\nstage.\nAt the bottom, Input jacks for both channels (Left input is\nnormalled into Right input) and output jacks\nThis module will also be available as a full DIY kit..\nTech Specs:\n6HP\n4 cm deep\n40mA +12V\n40mA -12V\nADDAC714 VINTAGE CLIPPER \tUSER’S GUIDE\nDecember.2022\tRevision.01\nWelcome to:\npage 2\tADDAC SYSTEM\nDESCRIPTION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac714-vintclip/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "page 3\tADDAC SYSTEM\nADDAC714 User’s Guide\nADDAC714\nVINTAGE CLIPPER SIGNAL FLOW DIAGRAM\nINPUT 1\nCLIPPER\nGAIN\nCONTROL\nSYMMETRY\nOUTPUT 1\nOUTPUT\nGAIN\nCONTROL\nCLIPPING\nLED\nMONITOR\nBYPASS\nON\nOFF\nINPUT 2\nCLIPPER\nGAIN\nCONTROL\nSYMMETRY\nOUTPUT 2\nOUTPUT\nGAIN\nCONTROL\nCLIPPING\nLED\nMONITOR\nBYPASS\nON\nOFF\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac714-vintclip/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC714 \tUSER’S GUIDE\nDecember.2022\tRevision.01\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac714-vintclip/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "CONTROLS DESCRIPTION\nADDAC714 User’s Guide\npage 4\tADDAC SYSTEM\nChannel 1 BYPASS\nUp: Active\nDown: Bypassed\nChannel 1 Gain\nChannel 2 Clipping Symmetry\nUp: Symmetrical Clipping\nDown: Unsymmetrical Clipping\nChannel 2 Output Gain\nChannel 1 Output Gaint Channel 2 Clipping Led\nChannel 1 Clipping Ledt\nChannel 1 Clipping Symmetry\nUp: Symmetrical Clipping\nDown: Unsymmetrical Clipping\nChannel 2 BYPASS\nUp: Active\nDown: Bypassed\nChannel 1 Input \tChannel 2 Input\nChannel 1 Output \tChannel 2 Output\nChannel 2 Gain\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

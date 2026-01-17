@@ -1,0 +1,191 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:13.748Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-h1/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "© 2023 Weston Precision Audio \t1\nH1\nAnalog Harmonizer\nEurorack Module\nUser Manual\nWeston Precision Audio\nDesigned In Portland, Oregon\nRevision 04 - April 22, 2024\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-h1/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "TABLE OF CONTENTS\nQuick Start Diagram…………………..…3\nDescription & Specs………………………4\nControls……………………………………..5\nInputs & Outputs…………………………..6\nUsing H1\nDescription Of Modes……………8\nMain Modes (Main/Chord)…….9\nDiatonic Chord Mode….10\nTrack/Free Channel Setting……11\nQuantizing……………………..…12\nOscillator Sync……………..……12\nOscillator Detune………………..13\nMix Pad……………………………14\nOctave Control…………………..14\nOsc In Tuner Mode……..……….14\nAppendix\nA: Updating Firmware………….15\nB: Calibration/Service Mode…16\n© 2023 Weston Precision Audio \t2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-h1/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "© 2023 Weston Precision Audio \t3\nPlug output of VCO\nwith clean periodic\nwaveform here to\nhave H1 track its\nfrequency\nFirst, for quick start, hold the option button and make sure\nthis button is unlit. If not, press it until it is unlit. This will put\nus in Main/Normal mode for quick start purposes.\nThis is the option button.\nHold it to see applicable\noptions illuminated and\naccess the secondary\nfunctions of those buttons\nWith option held, yellow\nmeans active channel is in\nfree mode (acts like\nregular VCO), white\nmeans track mode\n(channel follows frequency\nof “Osc In”)\nAny of the 12\n“keys” buttons\nselects base interval\nof active channel\nrelative to “Osc In”\n(Track Mode) or to\nmiddle C (Free\nMode) (C, C#, D,\netc..)\nMix output contains a mix\nof “Osc In” (left knob) and\nmix of channel A+B\ntriangle, saw, and square\n(right 3 knobs)\nOption + A/B flips\nbetween viewing base\ninterval of active channel\nand control of active\nsteps for quantizer\nCV output gives either\nvoltage proportional to\n“Osc In” frequency OR\nquantized voltage of CV\nin (option + CV Out) to\ntoggle\nAll OUTPUTS have a box\ndrawn around them. All\nINPUTS do not\nThese LEDs show active\nchannel being edited\nH1 Quick Start\n(Save the manual reading for a rainy day, right!?)\nThis button (A/B /\nDisplay) toggles\nactive channel\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-h1/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "DESCRIPTION\nH1 is a Eurorack module designed to\nmake it easy to add harmonic layers or\nbasic polyphony to your modular\npatches. It is primarily designed to be\nused by patching the output of a VCO to\nthe “osc in” input and letting the H1\nderive 2 notes that are related to the\npitch of that oscillator (ie a 3rd and 5th\nto form a major triad for example).\nHowever, H1 can also be used as a dual\nquantizer, a frequency-to-voltage\nconverter, or simply as 2 analog VCOs.\nThe choice is yours.\nAt its heart are two identical channels of\ndigitally-controlled, pitch-tracking\nanalog oscillators and 2 quantizers. The\noscillators make use of precision\nmultiplying DACs (digital to analog\nconverters) and stable reference\ncircuitry so they are extremely stable in\npitch and tracking, but at the same time\ntheir signal-generating parts are\ncompletely analog so they impart the\nfull richness of an analog oscillator. To\nbe clear, H1 is NOT a digital or\nwavetable oscillator.\nAn output mixer section completes the\npackage and minimizes patch cord\nclutter by giving a mix of the pitch-\ntracked input signal and the 3\nwaveforms of the 2 oscillator channels.\nEach channel also can be modulated\nwith true analog through-zero FM.\nImportant or helpful bits will be in red.\nSPECS\nModule Size: 18HP\nDepth: 25mm (To back PCB), 33mm (To\nend of power connector)\nAudio Outputs:\n<=1kOhm Output Impedance\nInputs (All inputs >=100kOhm\nImpedance): CV, Trigger, Lin FM, Osc In.\nPower input:\n+12V & -12V via standard 10 pin\nEurorack connector. Protected against\nreverse polarity internally and with\nshrouded connector.\nPower consumption (+12V / -12V):\nTyp: 185mA / 75mA\nMax: 200mA / 85mA\nADC Resolution (CV ins):\n12-bit\nDAC Resolution:\nMain osc. channels: 16-bit\nCV outputs: 14-bit\nUSB firmware update port:\nMicro Type-B\nMAXIMUM LIMITS\nSupply Voltage: +13.5V / -13.5V\nAll inputs: Up to power supply levels.\n© 2023 Weston Precision Audio \t4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-h1/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "MAIN CONTROLS\nMost functions of H1 are controlled\nthrough the row of LED-backlit buttons\non the top of the module:\nYou may notice the leftmost group of 12\nbuttons is arranged as an octave of a\nstandard piano keyboard. The next\ncolumn of buttons is an octave control.\nFinally, there is the display/AB button\nand the Option or “circle” button.\nText written above or below a button\nrefers to the button’s function while\nHOLDING the Option button. For\nexample, the A/B button on its own\ntoggles between selecting channel A or\nB. If Option/circle is held and this same\nbutton is hit, the “display” function is\ninvoked. More in this later.\nOTHER CONTROLS\nDetune:\nIf detune is enabled for the\nselected channel, this pot\nprovides a fine detune for the\nselected channel with a\nrange of +/- one semitone. If\ndetune for channel A is\nadjusted, and then channel B is selected\nand the knob is turned, the knob will not\neffect channel A’s detune when\nreturning to channel A until the knob is\nturned back to the point at which it was\nset while the channel was active. If\ndetune is disabled for the channel, the\ndetune knob will have no effect.\nFM input attenuator:\nEach channel has an input for analog\nthrough-zero frequency modulation\n(TZFM). The knob next to each jack\ncontrols the amount of FM signal\napplied. That is to say it is simply an\nattenuator for the input signal.\nMixer:\nH1 has a mix output which contains a\nmix of whatever signal is input to “Osc\nIn” and the 3 primary waveforms from\neach oscillator. The 4 potentiometers,\nfrom left to right, control the amount of\n“Osc In”, Triangle A + Triangle B, Saw\nA + Saw B, and Square A + Square B.\nThe mixer section has a gain of either 1\n(0db), or -9dB if the “Mix Pad” feature\nis enabled. The Mix Pad option gives\nmore effective headroom to crank the\nmixer controls up more without clipping.\n© 2023 Weston Precision Audio \t5\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-h1/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "INPUTS\nAs noted in the Quick Start, all outputs have a border\ndrawn around them on the panel, and inputs do not.\nThis standard will be adhered to on future Weston\nmodules.\nOscillator In (Osc In)\nThe Osc In input\naccepts a periodic\nwaveform with\namplitude ranging from\naround 1Vpp to 20Vpp\nand determine’s that\nwaveform’s frequency.\nThe signal input must be of a single\nprimary frequency (e.g. from a VCO or\nself-oscillating filter) in order to get good\nfrequency-tracking results. If the signal is\nhighly wave-folded or filled with other\nstrong frequency content, glitching and\njumping can occur. This may be enjoyed\nby some users though, so by all means\nexperiment and abuse this input if you\nwish!\nIn track modes, the closest note of the detected\ninput signal will be displayed as a pulsating\nwhite/yellow light on the keypad\nIn short, the waveform to be accurately\nfrequency-tracked must have consistent\nzero-crossings. See table below for\nsome examples:\nPrimary CV and Trigger\nEach channel has a primary CV input\nwhich controls the relative pitch of that\nchannel. It can be quantized (more on\nthat later) and has an input range of -3V\nto 7V.\nEach channel’s quantizer also has a\ntrigger input. When trigger in is\nenabled, the quantizer will only output\nthe next quantize step if a rising edge of\nthe trigger input is seen. This trigger\nvoltage can be anywhere from around\n1V to 12V.\nLinear FM\nEach channel has a Lin FM input which\nallows that channel’s oscillator to be\nthrough-zero frequency modulated by\nthe signal input to this jack.\nAuxiliary CV (CV2)\nThere is also an auxiliary CV input\n(labeled CV2) which, when enabled,\ncan either transpose the base note of\none or both channels, or transpose the 2\nnotes of a chord pair together when in\nChord Mode (more on this later).\n© 2023 Weston Precision Audio \t6\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-h1/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "OUTPUTS\nCV Out & Trigger Out\nEach channel has a CV output which\ncan be set to operate in 2 different\nways. Holding the Option key and\npressing “CV Out” will toggle between\nthe 2 and change the status color of that\nbutton as follows:\nWhen illuminated white, the active\nchannel’s CV output will present a\nvoltage which is proportional to the\nfrequency of the “Osc In” signal, in a 1\nVolt/Octave scale. Thus, in this mode,\nH1 is essentially functioning as a\nFREQUENCY TO VOLTAGE converter.\nWhen illuminated yellow, the\nactive channel’s CV output will\npresent a quantized version of the\nvoltage input to the corresponding CV\ninput. It’s behavior depends on the\nquantize mode described later in the\n“UsingThe H1” section.\nNext to each CV Out jack is a Trigger\nOut jack. If the H1 is being used as a\nquantizer and the Trig Out option is\nenabled, a trigger pulse will appear\nhere each time the active quantize step\nchanges. The signal amplitude is 5V and\nhas a pulse width of 1millisecond.\nIndividual Wave Outs\nEach channel has outputs for the 3\nprimary waveforms from that channel’s\noscillator: Triangle, Sawtooth, and\nSquare. These can be used for more\ncomplex patching and mixes outside the\nH1.\nMix Out\nFor simpler patches and for keeping\npatch cord clutter minimized, the mix\noutput can be used. As described in the\ncontrols section, this mix contains a mix\nof “Osc In” and the combined primary\nwaves from channel A and B (Triangle A\n+ Triangle B, Saw A + Saw B, and\nSquare A + Square B) which are\ncontrolled by the knobs immediately\nabove the mix out. The mixer section has\na gain of either 1 (0db), or -9dB if the\n“Mix Pad” feature is enabled. The Mix\nPad option gives more effective\nheadroom to crank the mixer controls up\nmore without clipping.\n© 2023 Weston Precision Audio \t7\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/weston-h1/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "USING H1 - DESCRIPTION OF\nMODES\nH1 has 2 distinct modes of operation:\nNormal, and Chord. Chord mode has 2\nversions: Stored Chord and Diatonic\nChord.\nMain Mode:\nEach channel’s oscillator note interval is\nsimply selected with the keypad. This\ninterval can be selected with the\nchannel’s CV in and used like a\nquantizer with the note enable/disable\npage.\nStored Chord Mode:\nEach channel’s oscillator note interval is\ndetermined by a stored chord table.\nThere are 12 slots to store chords and\nthese can be selected with channel B’s\nCV in.\nDiatonic Chord Mode:\nEach channel’s oscillator note interval is\ndetermined by the appropriate diatonic\ntriad for whatever the pitch basis is\n(either Osc In in track mode or CV A in\nin free mode). The key of the diatonic\nscale can be selected with channel B’s\nCV in. The key can be minor or major by\npressing Option + Octave up or down.\nA summary of these modes is provided\nin the table above.\n© 2023 Weston Precision Audio \t8\nSummary of H1 modes and input functions\nTrack \tFree \tTrack \tFree \tTrack \tFree \tTrack \tFree\nOsc In \tCV In A \tCV In B \tCV In 2 (Aux CV)\nMain/Normal Mode\nPitch basis\nfor\nchannel\nA/B or\nboth.\nNothing \tCh. A Note Interval \tCh. B Note Interval Transposes Ch. A/B or\nboth note intervals\nChord\nModes\nStored Chord \tPitch basis\nfor both\nch.\nNothing \tNothing\nPitch basis\nfor both\nch.\nSelects chord 1-12 Transposes active chord\n(If CV2 Option is on)\nDiatonic Chord \tPitch basis\nfor both\nch.\nNothing \tNothing\nPitch basis\nfor both\nch.\nSelects key of diatonic\nscale\nSelects major or minor\ndiatonic\n(If CV2 Option is on)\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/weston-h1/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "USING H1 - OPTION KEY AND\nMAIN MODES (NORMAL/CHORD)\nAt any point while using H1, you can\nhold the Option button (the one with the\ncircle around it) and see applicable\noptions and modes. Let us start with the\nprimary modes of operation. Holding\nOption look at the E-flat key (with\n“chord” above it):\nIn Normal Mode:\nIn Stored Chord Mode:\nBoth modes are fairly similar and differ\nin this way:\nNORMAL MODE: Each channel’s base\ninterval is selected with one of the 12\n“key” buttons on the first display page\n(“DISPLAY” is unlit) and this note can be\nmodulated by that channel’s CV input\nand optionally quantized. If it is\nquantized, the quantize steps can be\nselected on the second display page\n(“DISPLAY is lit yellow). Option + A/B\ntoggles display page\nCHORD MODE: Both channel’s base\nintervals are displayed and controlled\non the first display page and the active\nchord is displayed on the second display\npage. There are 12 “slots” to store these\n“chords” or 2 note combinations in,\ncorresponding to the 12 “key” buttons.\nChanel B’s CV input is used to select a\nchord slot using CV and CV2 can be\nused to transpose the active chord with\nCV.\nExamples of page 1 view in each\nprimary mode:\nIn Normal Mode:\nActive channel’s base interval is lit in yellow. In this case it is\nset to a 3rd or “E”\nIn Stored Chord Mode:\nChannel A’s base interval is lit in yellow and Channel B’s\nbase interval is lit in white. Active channel is still selected\nwith the A/B button just as in Normal Mode.\n© 2023 Weston Precision Audio \t9\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/weston-h1/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "Examples of page 2 view in each\nprimary mode:\nIn Normal Mode:\nThe active Chanel’s active quantize step is lit in yellow and\nthe enabled quantize steps are lit in white. All steps are\nenabled in this example.\nIn Stored Chord Mode:\nThe base chord slot is lit in yellow (in this case slot 6) and the\nCV-shifted active chord slot is lit in white (in this case slot 9\nor 6 + 3).\nWhen in stored chord mode and in\npage 2 view as shown above, the base\nchord slot is selected by pressing a key\n1-12. Holding that key for 2 seconds\nsaves that chord to non-volatile memory.\nThe keypad will blink white a few times\nto signify it has been saved.\nDIATONIC CHORD MODE\nWhen holding Option, the\nCHORD button (E flat) will light up\nYELLOW instead of yellow if in\nDiatonic Chord Mode. This mode takes\nthe root input (From either Osc In when\nin track mode or CV A In when in free\nmode) and generates the diatonic triad\nfor that note. This is very helpful\nbecause all diatonic chords always have\nthe notes of that particular scale in them\nand thus they never sound musically\nbad.\nOn the second page of Diatonic chord\nmode (Option + Display to toggle\npages), the key of the scale is shown. So\nfor example, if “C” is selected on the\nkeypad, and a “C” is provided to Osc\nIn, then H1 will generate an E and a G,\nbecause a C major is the first diatonic\nchord of the C major scale. If a “D” is\nprovided to Osc in with the same scale\nsetting, H1 will generate a D minor (F\nand A), and so forth.\nThe key of the diatonic scale can be\nselected through the keypad on page 2\nas described above, and can\nadditionally be selected via CV In B.\nFinally, the diatonic chords generated\ncan be of a major or minor scale. Major\nis selected by pressing Option + Octave\nUp, and Minor is selected by pressing\nOptions + Octave Down. This can also\nbe selected via CV via CV 2 In (Aux CV\nIn). Any “white key” CV will cause the\nscale to be major, and any “black key”\nCV will cause the scale to be minor.\n© 2023 Weston Precision Audio \t10\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/weston-h1/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "USING H1 - TRACK MODE AND\nFREE MODE\nHolding Option and pressing C# (Track/\nFree) button toggles the active channel\nbetween track and free mode.\n(Blinking White) TRACK MODE\nmeans the active channel will set\nits base frequency to the measured\nfrequency of “Osc In”. If the “Osc In”\nsignal is removed, the last measured\nfrequency will simply be held\nindefinitely. When in page 1 view\n(“Display” key unlit while holding\nOption), H1 will display the closest note\ntracked from “Osc In” on the key pad\nwith a pulsating white/yellow light.\n(Solid Yellow) FREE MODE\nmeans the active channel will set\nits base frequency to a C 65.41Hz. So if\nthe unit is in NORMAL MODE and\nChannel A is selected and it’s base\ninterval is set to “C” (first button\nselected) than that channel will run at\n65.41Hz.\nIf in either of the CHORD\nMODES, and FREE is selected, Channel\nA CV In will provide the pitch basis for\nboth channels. That is to say, the root of\nthe chord can be either the pitch of Osc\nIn (Track) or based on CV A In (Free).\nWhen in page 1 view (“Display” key\nunlit while holding Option), H1 will\ndisplay the applicable note interval\nderived from the CV input on the key\npad with a pulsating white/yellow light.\n© 2023 Weston Precision Audio \t11\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/weston-h1/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "USING H1 - QUANTIZING\nWhen in NORMAL MODE, the incoming\nCV for each channel can be quantized.\nThe three options are 12T, uT, and Off\nand are selected by holding Option and\npressing the applicable button 12T, uT,\nor Off.\n12T: This is normal 12 equally-tempered\nquantizing, meaning the voltage will be\nquantized to the steps on a musical\nkeyboard (C, C#, D, etc..). Quantize\nsteps are enabled/disabled by pressing\nthe buttons in page 2 view as shown on\nthe left of this page.\nuT: The voltage will be quantized to 24\nsteps or “micro tuning” intervals.\nQuantize steps are enabled/disabled in\nthe same way as 12T quantizing, but\nsince there are 24 steps, they are\ndisplayed in 2 pages. For micro-tuning\nquantization, alternate between steps\n1-12 and 13-24 by pressing Option +\nOctave Up.\nOff: The voltage will not be quantized\nat all and trigger in will be ignored. In\nthis mode, a channel in FREE MODE will\nact just like an a regular analog VCO.\nTrig In: Holding option and pressing D\n(Trig In) toggles trigger in on or off for\nthe active channel. If Trig In is enabled,\nthe quantizer will only change to the\nnext enabled quantize step if a trigger in\nis seen. This is useful when feeding a\nrandom or semi-random voltage like an\nLFO to the CV In but you would like the\nnotes to only change in sync with your\nsequencer etc…\nCV2: When in NORMAL MODE, the\nCV2 Input can also be used to transpose\nthe base interval of the selected\nchannel. This feature is toggled on and\noff by holding Option and pressing C\n(CV2). H1 always quantizes CV2 to\n12TET quantizing. When in CHORD\nMODE, the CV2 input can be used to\ntranspose the active chord up or down\nusing a CV. It is toggled on or off in the\nsame manner as in NORMAL MODE.\nWhen in CHORD MODE, CV1 is\nalways quantized to 12TET and\ncan be used to select the active chord\nslot using a CV. CV2 is ignored in\nCHORD MODE.\nUSING H1 - SYNC\nIn either CHORD or NORMAL MODE,\neach channel’s oscillator can be soft-\nsynced (reversing sync) by 2 different\nsource signal options. This is selected by\npressing Option + G (Sync). The 3\nmodes for sync are as follows:\nSync off. No soft sync for this\nchannel.\nChannel is sync’d at the frequency\nof the signal input to “Osc In”\nChannel is sync’d at the frequency\nof the other channel (e.g. Channel\nA is sync’d at Channel B’s frequency).\n© 2023 Weston Precision Audio \t12\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/weston-h1/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "USING H1 - DETUNE\nEach channel’s oscillator can be\ndetuned + or - 1 whole half tone. If\ndetune is disabled, the channel should\nstay in tune to normal 440Hz A musical\ntuning to within a cent or 2, but\nsometimes having a fine tune is called\nfor, especially when using H1 to\n“double” or “triple” a signal by mixing\ncopies of slightly detuned versions of the\noriginal signal together for rich phasing\neffects. Detune is toggled enabled/\ndisabled for the active channel by\npressing Option + A (Detune):\nDetune disabled and detune knob\nhas no effect.\nDetune is enabled. Turn the\ndetune knob to control amount. If\nyou have switched active channels\nand adjusted the knob and then\nswitched channels back again, detune\nknob is locked until it is moved again.\nDetune information is stored when unit is\npower cycled.\n© 2023 Weston Precision Audio \t13\n-12V Node\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/weston-h1/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "USING H1 - MIX PAD\nThe Mix output of H1 has a selectable\ngain of either 1 or -9dB. Turning the\n-9db “Mix Pad” option on is\naccomplished by pressing Option + B\n(Mix Pad):\nMix Pad is disabled and Mix\noutput stage has a gain of 1.\nMix Pad is enabled and Mix\noutput stage has a gain of -9dB.\nUSING H1 - OCTAVE CONTROL\nThe octave + and - buttons control the\noctave for selected channel. When in\nCHORD MODE, the octave information\nfor that chord is saved with the chord.\nThe LED on the Oct + and Oct - buttons\nindicate the octave status as follows:\nNo octave shift for this channel.\nOctave shifted by 1.\nOctave shifted by 2 or 3.\nThe octave control has a max adjustment\nof + or - 3 octaves.\nUSING H1 - TUNER MODE\nH1 also has a tuner mode, which can be\naccessed by holding Option and\npressing the middle of the lower buttons\n(The “F” key). Once in tuner mode, H1\nwill show the closest chromatic note that\nOsc in is tuned to (C, C#, D, etc..) on\nthe keypad, and will show the fine\ntuning difference on the octave + and\noctave - keys (where + means sharp,\nand - means flat).\nAt tuning errors of 8 cents or more, the\noctave keys will blink yellow, sharp or\nflat. As the tuning is improved, the\noctave keys will blink white, then blink\nslower white. When the signal present at\nOsc In is tuned to within 2 cents of the\nclosest chromatic note, both octave keys\nwill light up solid white.\nWhen in tuning mode, H1 will set\nChannel A and B oscillators to 1Hz so\nthat it is easy to monitor the Osc In\nsignal through the mixer by ear during\ntuning.\nTuner mode is exited the same way it is\nentered: Holding Option and hitting the\n“F” key.\n© 2023 Weston Precision Audio \t14\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/weston-h1/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "APPENDIX A: UPDATING\nFIRMWARE\nThe firmware of H1 can be user updated\nfairly easily. In the even that a new\nfirmware is available from Weston\nPrecision Audio, the update procedure is\nas follows:\n1) \tDownload the firmware (.UF2) file.\n2) Take H1 out of your rack if not\nalready, and make sure it is NOT\nconnected to the ribbon cable from your\ncase or power supply.\n3) Connect a USB micro B cable to the\nUSB port on the bottom rear of H1.\n4) While HOLDING the button shown\nbelow, connect the other end of the USB\ncord to your PC or Mac.\n5) H1 should show up on your PC or\nMac like a thumb drive does, titled\n“RP2040”. Simply drop the downloaded\n*.UF2 file downloaded from Weston\nAudio onto “RPI-RP2”. FW update is\nnow complete. Disconnect the USB\ncable and re-rack the module.\nFW UPDATE ADDENDUM FOR PRE\n10004 SERIAL NUMBERS:\nFor H1 units with S/N earlier than\n10004, the procedure for firmware\nupdating is identical to the one on the\nleft, but the button from step (4) is more\ninboard and thus must be pressed with a\nflat, non-conductive tool such as a\ntongue depressor, plastic pen handle, or\npopsicle stick. The locating of the\npre-10004 S/N unit’s button is shown\nbelow:\n© 2023 Weston Precision Audio \t15\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/weston-h1/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "APPENDIX B: CALIBRATION/\nSERVICE MODE\nH1 has a hidden calibration mode\nwhich, in normal use should not need to\nbe accessed. In the event that this mode\nshould need to be used, however, this\nsection of the manual will explain it.\nTo enter calibration mode:\nHold OPTION and OCTAVE +, then\npress “C” (CV2) key.\nH1 will blink the OPTION and DISPLAY\nbuttons continuously, indicating that\ncalibration mode has been entered. One\nof the 5 upper row keys will blink\nyellow, indicating which calibration sub-\nmode is active. These modes are\nsummarized in the table to the right.\nTo switch sub-modes, press OPTION +\n(one of the 5 upper keys).\n*To exit calibration mode without saving\nany changes: power down the module\n*To exit calibration mode WITH saving\nall changes: Hold OPTION and “C#”\n(TRACK/FREE), then press “Eb”\n(CHORD). H1 will rapidly flash all of the\nmain keys white for a few seconds to\nindicate the calibration changes were\nmade.\nThe following pages will explain each\ncalibration sub-mode.\nCALIBRATION SUB-MODES\n(YELLOW LIGHT SHOWN WILL\nBLINK)\n© 2023 Weston Precision Audio \t16\nOscillator DAC Calibration Low Range\nOscillator DAC Calibration High Range\nCV DAC Calibration\nADC Scale/Offset Calibration\nDetune Pot Center Calibration\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/weston-h1/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "CALIBRATION MODE: OSCILLATOR\nDAC SUB-MODE\nThis calibration normally won’t need to\nbe used. It is used to calibrate the\nlinearity tables for the DACs which feed\neach oscillator.\n*make sure the unit has warmed up for at least\n15 minutes before adjusting any calibrations.\nWhile this mode is active, H1 will output\nprecise test frequency square waves on\nthe TRIG OUT A output, and each\noscillator will attempt to run at these\nfrequencies. Each mode (LOW RANGE,\nand HIGH RANGE) has 12 test\nfrequencies and they are selected by\npressing one of the 12 main keys on the\nkey pad. The frequencies are as follows:\nLOW RANGE: 10Hz, 20Hz, 35Hz,\n60Hz, 90Hz, 130Hz, 170Hz, 225Hz,\n285Hz, 350Hz, 420Hz, 500Hz\nHIGH RANGE: 501Hz, 1kHz, 1.5kHz,\n2kHz, 2.7kHz, 3.7kHz, 4.7kHz, 6kHz,\n7kHz, 8kHz, 9kHz, 10kHz\nTo adjust any of the calibration table\npoints, simply monitor the desired\noscillator triangle output (A or B) and\nTRIG OUT A with a 2 channel\noscilloscope. Then make sure the\noscillator channel you want to adjust is\nactive (A/B) by looking at the LED and\npress OCTAVE + or OCTAVE - to\nincrement or decrement that step’s DAC\nsetting until the 2 signals match\nfrequency as close as possible. Holding\nOPTION + OCTAVE + or - will jump 10\nsteps instead of 1.\nWHEN FINISHED ADJUSTING THIS OR\nANY CALIBRATION SUB-MODE:\n*To exit calibration mode without saving\nany changes: power down the module\n*To exit calibration mode WITH saving\nall changes: Hold OPTION and “C#”\n(TRACK/FREE), then press “Eb”\n(CHORD). H1 will rapidly flash all of the\nmain keys white for a few seconds to\nindicate the calibration changes were\nmade.\n© 2023 Weston Precision Audio \t17\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 18,
+      "image": "/weston-h1/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "CALIBRATION MODE: CV DAC\nCALIBRATION\nThis calibration mode is used to adjust\nthe linearity tables for the 2 CV outputs\n(Channel A and B).\n*make sure the unit has warmed up for at least\n15 minutes before adjusting any calibrations.\nWhile this sub-mode is active, each CV\nout will output the current table entry’s\nvoltage. These values are:\n-8.0V, -7.0V, -6.0V, -5.0V, -4.0V, -3.0V,\n-2.0V, -1.0V, 0.0V, 1.0V, 2.0V, 3.0V,\n4.0V, 5.0V, 6.0V, 7.0V, 8.0V\nTo go to the next higher table entry,\npress “Bb” (MIX PAD), and to go to the\nnext lower table entry, press “C” (CV2).\nTo change the active CV output’s table\nbeing adjusted, toggle channels A/B\nwith the Display/ A/B key just the same\nway as in normal use.\nThen, simply monitor the CV out to be\nadjusted with a high-accuracy DMM,\nand NO OTHER PATCH CORDS\nCONNECTED TO H1 and press\nOCTAVE + or OCTAVE - to raise or\nlower the current table entry’s DAC\ncount value to get the output’s voltage\nas close as possible to the nominal value\n(-8.0V, -7.0V, etc..). Just as in the the\noscillator DAC cal, holding OPTION and\nOCTAVE + or OCTAVE - jumps 10 DAC\ncounts instead of 1.\nWHEN FINISHED ADJUSTING THIS OR\nANY CALIBRATION SUB-MODE:\n*To exit calibration mode without saving\nany changes: power down the module\n*To exit calibration mode WITH saving\nall changes: Hold OPTION and “C#”\n(TRACK/FREE), then press “Eb”\n(CHORD). H1 will rapidly flash all of the\nmain keys white for a few seconds to\nindicate the calibration changes were\nmade.\n© 2023 Weston Precision Audio \t18\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 19,
+      "image": "/weston-h1/pages/page-019.png",
+      "title": "Page 19",
+      "sectionName": null,
+      "content": "CALIBRATION MODE: ADC SCALE/\nOFFSET CALIBATION\nThis calibration mode is used to adjust\nthe scale and offset of each of the 3\nanalog inputs (Channel A CV In,\nChannel B CV In, and CV2 Input (Aux\nCV).\nThe A/B key will cycle through the 3 CV\ninputs in this mode (CVA -> CVB -> CV2\n(Aux CV)) and indicated by the OSC\nSELECT LEDs. CV2 (Aux CV) is indicated\nactive when BOTH LEDs are lit.\n*make sure the unit has warmed up for at least\n15 minutes before adjusting any calibrations.\nFirst, make sure channel A is active (A\nLED is lit)\n(1) (Offset) Plug the output of the\nchannel A triangle wave into an\naccurate tuner. Connect your MIDI to\nCV device that will be used with H1 to\nthe CV input for channel A being\nmeasured/calibrated and set to exactly\n0.000V. Channel A oscillator output\nshould be at a 32.7Hz C. If not, use\n“Bb” (MIX PAD) and “C” (CV2) keys to\nincrement and decrement the ADC A\noffset until it’s as close as possible to\n32.7Hz C. It should be within 1 or 2\ncents.\n(2) (Scale) Now make your MIDI to CV\ndevice output a note 5 octaves up from\nthe last step (so, 5.000 Volts). Adjust the\nADC A scale for this channel with the\nOCTAVE + and OCTAVE - keys until\ntuning to a C 1046Hz is achieved.\nAgain it should be within 1 or 2 cents.\n(3) Repeat (1)(Offset) and (1)(Scale)\nsteps until both criteria are satisfied for\nchannel A.\n(4) Repeat steps 1-3 but for channel B.\nSo measure triangle output from channel\nB and connect CV source into channel B\nCV in. Make sure channel B is active (B\nLED is lit)\n(5) Make sure CV2 (Aux CV) is active\n(both LEDs are lit) and then repeat steps\n1-3 but for CV2 (Aux CV), and using\n4.000V instead of 5V (since this input\nhas a max range of -5V to +5V). In this\nstep you will monitor the triangle output\nof oscillator A.\nWHEN FINISHED ADJUSTING THIS OR\nANY CALIBRATION SUB-MODE:\n*To exit calibration mode without saving\nany changes: power down the module\n*To exit calibration mode WITH saving\nall changes: Hold OPTION and “C#”\n(TRACK/FREE), then press “Eb”\n(CHORD). H1 will rapidly flash all of the\nmain keys white for a few seconds to\nindicate the calibration changes were\nmade.\n© 2023 Weston Precision Audio \t19\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 20,
+      "image": "/weston-h1/pages/page-020.png",
+      "title": "Page 20",
+      "sectionName": null,
+      "content": "REVISION HISTORY\n04: Added section explaining calibration\n/service mode.\n03: Updated description of new key\nillumination for track and free, and\ndetune behavior/key illumination based\non v1.0.7 FW update.\n02: Corrected description of boot mount\ndevice in FW update procedure.\nRemoved incorrect line about CVB input\nnot used in chord modes.\n01: Initial release.\n© 2023 Weston Precision Audio \t20\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
