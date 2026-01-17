@@ -4,8 +4,8 @@
  * PDF Translation Script
  * Translates extracted text using Claude Code manual-translator subagents (parallel processing)
  *
- * Input: public/{slug}/processing/extracted/part-*.txt
- * Output: public/{slug}/processing/translations-draft/part-*.json
+ * Input: temp-processing/{slug}/extracted/page-*.txt
+ * Output: temp-processing/{slug}/translations-draft/page-*.json
  *
  * This script uses Claude Code's Task tool to spawn manual-translator subagents.
  * It runs 4 translations in parallel to maximize throughput.
@@ -23,8 +23,6 @@ const ROOT_DIR = join(__dirname, '..');
 // Load configuration from shared resolver
 const config = resolveManualConfig(ROOT_DIR);
 
-const PARALLEL_AGENTS = 4; // Process 4 parts at a time
-
 console.log('🌐 PDF Translation Script (Claude Code Subagents)');
 console.log('='.repeat(50));
 console.log('');
@@ -35,7 +33,7 @@ console.log('');
 console.log('This script is designed to be invoked by Claude Code agents that can:');
 console.log('1. Spawn manual-translator subagents using the Task tool');
 console.log('2. Run 4 parallel translations');
-console.log('3. Save results to data/translations-draft/');
+console.log(`3. Save results to temp-processing/${config.slug}/translations-draft/`);
 console.log('');
 console.log('To run translation, ask Claude Code:');
 console.log('  "Run pdf translation using 4 parallel manual-translator subagents"');
@@ -53,14 +51,14 @@ process.exit(1);
  * NOTE: The actual translation logic should be implemented by a Claude Code agent
  * that has access to the Task tool. The agent will:
  *
- * 1. Read all part-*.txt files from data/extracted/
- * 2. For each batch of 4 parts:
+ * 1. Read all page-*.txt files from temp-processing/{slug}/extracted/
+ * 2. For each batch of 4 pages:
  *    - Spawn 4 manual-translator subagents in parallel using Task tool
- *    - Each subagent receives one part's text with the prompt:
- *      "Translate the following English text from the OXI ONE MKII manual to Japanese: [text]"
+ *    - Each subagent receives one page's text with the prompt:
+ *      "Translate the following English text from the manual to Japanese: [text]"
  *    - Wait for all 4 agents to complete
- *    - Save each translation to data/translations-draft/part-*.json
- * 3. Continue with next batch until all parts are translated
+ *    - Save each translation to temp-processing/{slug}/translations-draft/page-*.json
+ * 3. Continue with next batch until all pages are translated
  *
  * Example Task tool invocation (parallel):
  *

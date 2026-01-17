@@ -35,7 +35,7 @@ node .claude/skills/capture-all-pages/scripts/capture.js
 node .claude/skills/capture-all-pages/scripts/capture.js --pages 280
 
 # Custom base URL
-node .claude/skills/capture-all-pages/scripts/capture.js --base-url http://localhost:3100/manuals/oxi-one-mk2/page
+node .claude/skills/capture-all-pages/scripts/capture.js --base-url http://zmanuals.localhost:3100/manuals/oxi-one-mk2/page
 ```
 
 ## Configuration
@@ -43,7 +43,7 @@ node .claude/skills/capture-all-pages/scripts/capture.js --base-url http://local
 The capture script supports these options:
 
 - `--pages <number>` - Total pages to capture (default: 30)
-- `--base-url <url>` - Base URL for pages (default: http://localhost:3100/manuals/oxi-one-mk2/page)
+- `--base-url <url>` - Base URL for pages (default: http://zmanuals.localhost:3100/manuals/oxi-one-mk2/page)
 - `--output-dir <path>` - Custom output directory (default: __inbox/captures-{timestamp})
 
 **Default settings:**
@@ -59,7 +59,7 @@ The capture script supports these options:
 1. **Verify dev server is running**
 
    ```bash
-   curl -s -o /dev/null -w "%{http_code}" http://localhost:3100/manuals/oxi-one-mk2/page/1
+   curl -s -o /dev/null -w "%{http_code}" http://zmanuals.localhost:3100/manuals/oxi-one-mk2/page/1
    # Should return 200
    ```
 

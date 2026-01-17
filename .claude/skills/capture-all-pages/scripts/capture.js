@@ -8,7 +8,7 @@
  * Usage:
  *   node scripts/capture.js
  *   node scripts/capture.js --pages 30
- *   node scripts/capture.js --base-url http://localhost:3100
+ *   node scripts/capture.js --base-url http://zmanuals.localhost:3100
  */
 
 const { chromium } = require('playwright');
@@ -18,7 +18,7 @@ const path = require('path');
 // Configuration
 const DEFAULT_CONFIG = {
   totalPages: 30,
-  baseUrl: 'http://localhost:3100/manuals/oxi-one-mk2/page',
+  baseUrl: 'http://zmanuals.localhost:3100/manuals/oxi-one-mk2/page',
   viewport: { width: 2000, height: 1600 },
   timeout: 15000,
   waitAfterLoad: 2000,

@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T17:49:53.317Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ai008-matrix-mixer/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "AI Synthesis AI008 Matrix Mixerユーザーズマニュアル\n\nこれは、aisynthesis.com/product/ai008-eurorack-matrix-mixerで購入できるAI008 Eurorack Matrix MixerのManualです。\n\n1. AI008 Eurorack Matrix Mixerについて\n\nDIY電子工作が初めての方にとって、これは2つ目のモジュールとして最適です。最初のモジュールであるAI001 Multipleは、ハンダ付けと信号フローの学習に理想的な初心者向けモジュールです。AI008 Matrix Mixerでは、一般的な電子部品に慣れることができ、電源供給も必要です。\n\nAI008 Eurorack Matrix Mixerは、4入力・3出力のコンパクトなMatrix Mixerです。Matrix Mixerは、複数のソースからのオーディオやCV信号を異なる出力先にルーティングするために使用されます。12個のポテンショメーターがあり、各ポテンショメーターは特定の入力(1-4)が特定の出力(A-C)に送られる量をコントロールします。\n\nAI008はA+B+Cの合計出力も備えています。AI008の一般的な使用方法としては、1つ以上の入力と1つ以上のエフェクト入出力を持つエフェクトセンドがあります。この方法でAI008 Matrix Mixerを使用すると、入力を複数のエフェクトに送ることができ、エフェクト同士を相互に接続したり、自分自身にフィードバックすることもでき、エフェクトの深さを拡張できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ai008-matrix-mixer/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2. AI008コントロール\n\n1. Input 1 Mixingロウ。このロウのKnobは、Input 1ジャックからの信号が出力A-Cにミックスされる量をコントロールします。A1はOutput Aに現れるInput 1の量をコントロールします。B1はOutput Bに現れるInput 1の量をコントロールします。C1はOutput Cに現れるInput 1の量をコントロールします。\n\n2. Input 2 Mixingロウ。このロウのKnobは、Input 2ジャックからの信号が出力A-Cにミックスされる量をコントロールします。A2はOutput Aに現れるInput 2の量をコントロールします。B2はOutput Bに現れるInput 2の量をコントロールします。C2はOutput Cに現れるInput 2の量をコントロールします。\n\n3. Input 3 Mixingロウ。このロウのKnobは、Input 3ジャックからの信号が出力A-Cにミックスされる量をコントロールします。A3はOutput Aに現れるInput 3の量をコントロールします。B3はOutput Bに現れるInput 3の量をコントロールします。C3はOutput Cに現れるInput 3の量をコントロールします。\n\n4. Input 4 Mixingロウ。このロウのKnobは、Input 4ジャックからの信号が出力A-Cにミックスされる量をコントロールします。A4はOutput Aに現れるInput 4の量をコントロールします。B4はOutput Bに現れるInput 4の量をコントロールします。C4はOutput Cに現れるInput 4の量をコントロールします。\n\n5. Inputs。これらはMatrix Mixerの4つの入力です。これらの入力から渡される信号の量は、Mixingロウによってコントロールされます。\n\n6. Outputs。これらは個別のミックス出力です。各出力は、Mixingロウによって定義されたInputs 1-4のミックスをコントロールします。A+B+C出力は、A、B、Cの出力を合計したミックスです。\n\n3. Power\n\nAI008は、ケーブルが誤った方向に接続されることを防ぐためにシュラウド付きヘッダーを使用しています。このユニットは正負側でそれぞれ17mAを消費します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/ai008-matrix-mixer/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "4. ゲインステージング\n\nAI008のミキシングステージは「ユニティ」ベースで設計されていますが、サム出力は例外です。つまり、Input 1に5V peak to peakの信号があり、A1が100%に設定されている場合、Output Aはその5V peak to peak信号の同位相バージョンになります。\n\nこの画像では、緑と青の波形が完全に重なっています。緑はInput 1に入る前の信号で、10V peak to peakです。入力のA1は100%です。青い波はOutput Aで、完全に同位相で10V peak to peakです。赤い波形はサム出力です。同位相ですが約5V peak to peakです。私がこのように設計したのは、サム出力はほとんどの場合多くの信号が混ざるため、クリッピングを避けたかったからです。フィードバック抵抗を1つ変更することで、好みに合わせて変更できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/ai008-matrix-mixer/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "5. パッチのアイデア/使用例\n\nフィードバック・パッチ\n\nこのパッチでは、アンビエントなサウンドスケープを作り出すために、エフェクトをそれ自体にフィードバックさせています。エフェクトの種類は任意ですが、Delayを含めることが重要です。このパッチで使用するエフェクトは、ディストーション、ディレイ、リバーブです。それぞれがMatrix Mixerに入出力されます。A、B、Cの各出力は、入力1-3（ディストーション、ディレイ、リバーブ）のミックスを出力し、再びDistortion、Delay、Reverbに戻すことができます。まず、ディレイをディレイにミックスして、キーンという音が出るまでフィードバックさせ、その後ミックスノブを戻します。次に、他のエフェクトをミックスイン（およびアウト）し始めます。これはライブ環境でクールなトランジションを作る素晴らしい方法です。入力4はミキサーのaux sendから供給することができ、1つのパッチが終わったら、新しいパッチを作成している間にフィードバック・パッチを作ることができます。\n\nフィードバック・オシレーター・パッチ\n\nこのパッチでは、2つのオシレーターがAI008 Matrix Mixerに入力されます。このパッチは、CV入力を持つ任意の電圧制御オシレーターで実現可能です。Matrix Mixerの出力はオシレーターにフィードバックされ、1つのオシレーターはFrequency Modulation入力にミックスされた信号のフィードバックを受け、もう1つのオシレーターはFrequency ModulationとPulse Width Modulation入力にミックスされた信号のフィードバックを受けます。合成されたA+B+C出力は、従来のfilter/VCAに送ることができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/ai008-matrix-mixer/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "モノシンセのフィードバックパッチに組み合わせたり、ドローンソースとしてパッチアウトしたり、あるいは音源として何にでも出力できます。\n\nCVフィードバックパッチ\n\nこのパッチでは、Matrix Mixerを使用してボルテージジェネレーターからの電圧をそれ自体にフィードバックします。この例ではMathsとVCLFOを使用していますが、これはCVでコントロール可能なLFO、エンベロープジェネレーター、またはその他のボルテージソースでも実行できます。VCLFOからのランプ波はInput 1に送られ、そこから3つの出力（A、B、C）すべてに分配できます。MATHSからの合成波形はMatrix MixerのInput 2に送られ、同様に異なる出力にミックスできます。Output Aのミックス（MATHSとVCLFOを含むことができます）はCVLFOのCVinに送られ、そこで常に進化し続けるボルテージソースを作り出します。Matrix MixerのOut BはMathsのRise CVに送られ、VCLFOからのSine出力はFall CV入力に送られます。これらすべてのCVの狂乱にもかかわらず、Matrix Mixerには混乱を引き起こすために使用できる入力がまだ2つ開いています。",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

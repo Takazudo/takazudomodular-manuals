@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T17:55:05.087Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ai106-west-coast-mixer/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "AI Synthesis AI106 West Coast Mixerユーザーズマニュアル\n\nこれはAI022 Harmonic Mixerのマニュアルです。購入については以下のURLをご覧ください:\nhttps://aisynthesis.com/product/ai106-west-coast-eurorack-mixer/\n\n1. AI106 West Coast Mixerについて\n\nAI106 West Coast Mixerは、ICを使用しないディスクリート構成のミキサーです。ゲインを上げると倍音とアナログの温かみが加わります。ゲインをさらに上げると歪みと位相変化が加わり、既存の波形から新しい波形が生成されます。\n\nAI106は、1960年代にアメリカ西海岸で製造されたシンセサイザーで使用された伝説的ながらもプリミティブなミキサーからインスピレーションを得ていますが、Eurorack用にアップデートされており、ユーザーが回路をカスタマイズできるようになっています。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ai106-west-coast-mixer/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2. AI106 コントロール\n\n1. Mono Input\n\nこれらの入力はモノラルオーディオまたは電圧信号を受け付けます。\n\n2. Mix Out\n\nこれが主要な電圧出力です。1960年代のビンテージミキサーと同様に、出力は反転されます。\n\n4. Input Volume\n\nこれらのノブの位置は各入力の音量をコントロールします。これらのノブはパッシブアッテネーターです。音量が増加するにつれて、より多くの高調波歪みが加わります。\n\n5. Master Volume\n\nこのノブの位置はMix Outのオーディオおよび/または電圧の音量をコントロールします。音量が増加するにつれて、より多くの高調波歪みが加わります。\n\n3. Power\n\nAI106はケーブルが誤った方向に接続されるのを防ぐためにシュラウド付きヘッダーを使用しています。本機はプラス側のレールで12 mA、マイナス側で0 mAを消費します。",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

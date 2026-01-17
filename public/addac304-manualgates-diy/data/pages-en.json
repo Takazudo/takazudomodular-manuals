@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:12.734Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac304-manualgates-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac304-manualgates-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "November.2017\nADDAC304 Assembly Guide\nADDAC SYSTEM \tpage 2\nParts included in the kit:\n1x Front Panel\n1x Pcb\n3x 10uF SMD Capacitors\n4x 100nF SMD Capacitors\n8x 1k SMD Resistors\n1x 78M05 IC\n2x 10mm female/female spacer\n4x M3 fiber washer\n4x M3 screws\n3x Nutted Jacks\n9x No-nut Jacks\n3x Jack nuts\n8x Push Buttons\n1x 2x5 IDC Connector\n1x Ribbon cable\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac304-manualgates-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "ADDAC304 Assembly Guide\nADDAC SYSTEM \tpage 3\nSTEP 1:\nLocate Pcb and surface mount parts.\nSTEP 2:\nStart by adding a bit of solder to every smd part right pads, this will make it easier to solder the surface\nmount parts. If you’re left handed then add solder to the left pads.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac304-manualgates-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 4\nSTEP 3:\nNow let’s place all 4 of the 100nF capacitors, use a tweezer and solder the right pad of each by heating\nthe already added solder and place the part in place.\nSTEP 4:\nNext solder all 4 left pads.\nADDAC304 Assembly Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac304-manualgates-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 5\nSTEP 5:\nRepeat the process for all the 1k resistors.\nSTEP 6:\nFinally solder the 78M05 and the 3 10uF capacitors.\nADDAC304 Assembly Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac304-manualgates-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 6\nSTEP 7:\nPlace and solder the IDC power connnector, note that the indent faces down.\nSTEP 8:\nNext place the spacers adding a washer between the pcb and the spacer.\nADDAC304 Assembly Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac304-manualgates-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "STEP 9:\nLocate the jacks and cut the smallest legs like shown below.\nADDAC SYSTEM \tpage 7\nSTEP 10:\nLocate and place the 3 jacks with threaded shaft.\nSTEP 11:\nPlace the remaining jacks.\nADDAC304 Assembly Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac304-manualgates-diy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 8\nSTEP 15:\nNext place all the remaining push buttons, keep paying attention to the button’s orientation.\nADDAC304 Assembly Guide\nSTEP 13:\nWe’ll have to trim 2 legs of only one of the push buttons, cut 2mm of each of the legs further away\nfrom the button’s flat face. Note that you only need to do this to 1 button.\nSTEP 14:\nPlace the button with the trimmed legs in the position shown below.\nSTEP 12:\nNow let’s place the push buttons, note that there’s a specific orientation look for the button’s flat face\nand match it with the pcb print.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac304-manualgates-diy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 9\nSTEP 16:\nNext let’s place the front panel, use a tweezer to help getting all the jacks in their holes.\nSTEP 17:\nTighten the jack nuts and the 2 screws.\nSTEP 18:\nNext we’ll solder the jacks.\nADDAC304 Assembly Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac304-manualgates-diy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 10\nWe’ll now describe s a good practice that minimizes any damage that may occur to all\nfront panel parts for continued exposure to the soldering iron heat.\nIt happens often that users not very used to soldering spend too much time on each pad.\nAn experienced solderer will take 1-2 seconds for each pad, this minimizes the heat the\npart is exposed to.\nIf the solderer takes too much time on each pad the part may heat to a point where the\nplastic will start melting/deforming and may render the part useless.\nRespecting this very simple process for all parts will guarantee no part will be\ndamaged as they’ll have time to cool down between every soldered pad.\nSTEP 19:\nStart by soldering only one pad of each jack first.\nSTEP 20:\nThen solder a second pad of each jack.\nSTEP 21:\nFinally solder the remaining pads of all jacks.\nADDAC304 Assembly Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/addac304-manualgates-diy/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "ADDAC SYSTEM \tpage 11\nSTEP 22:\nNext lay the module facing down on a flat surface (this will allow the push buttons to be alligned) and\nsolder their pads.\nSTEP 23:\nFinally solder a small wire between the 2 jack pads like shown below.\nCongratulations, you’re done!\nADDAC304 Assembly Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/addac304-manualgates-diy/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "ADDAC304 \tASSEMBLY GUIDE\nFor feedback, comments or problems please contact us at:\naddac@addacsystem.com\nNovember.2017\tRevision.02\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

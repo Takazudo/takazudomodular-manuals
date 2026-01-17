@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-12T17:40:31.773Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "language": "ja"
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac712-vintpre/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "Instruments for Sonic Expression\nEst.2009\n\nDecember.2022\n\nUSER'S GUIDE . REV01\n\nADDAC712\nVINTAGE\nPREAMP\n\nINTRODUCING\n\nFrom Portugal with Love!",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac712-vintpre/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "説明\n\nADDAC712は、70年代の伝説的な機器で使用された有名なディスクリートプリアンプボードをベースにした、デュアルチャンネルのディスクリートゲインステージアンプです。\n\n私たちの注目を集めたのは、そのクリッピングと結果として生じるサチュレーション/ディストーションの特性でした。\n\nこのモジュールは、モジュラーシグナルにディストーション/ファズキャラクターを追加するために使用できます。また、ラインソース、キーボード、ギターなどの外部ソースのプリアンプとしても使用できます。\n\nADDAC711 Balanced Inputsの優れたサイドコンパニオンでもあります。\n\n上部にあるOn/Off [BYPASS]スイッチは、シグナルをエフェクト(上:アクティブ)または下部の出力ゲインステージ(下:バイパス)にルーティングします。\n\n増幅量は[GAIN]コントロールで設定し、最大増幅量はユーザーが[MAX GAIN]トリマーで設定できます。\n\n±5.5vまでは、入力シグナルはその完全性を保ちます。この値を超えると、サチュレーションが増加し始めます。\n\n約±6vで、ハードクリッピングが発生し始めます。このクリッピングには独特の特性があり、極端なレベルでは、オーディオ0vバイアスリファレンスをドリフトさせ、上方に移動させます。これにより、Gateエフェクトに似た結果が得られます。\n\n中央には、出力のクリッピングをモニタリングするクリッピングLEDを備えたx2オペアンプベースの出力ゲインステージと、出力ボリュームを設定する[OUTPUT]コントロールがあります。\n\n上部と中央のゲインステージを持つことで柔軟性が得られ、ユーザーは上部ステージでシグナルを完全にディストーションさせ、2番目のステージで出力レベルをコントロールすることができます。\n\n下部には、両チャンネルのInputとOutputがあります(Left inputはRight inputにノーマル接続されています)。\n\nこのモジュールは、フルDIYキットとしても入手可能です。\n\nテクニカル仕様:\n\n6HP\n\n4 cm deep\n\n40mA +12V\n\n40mA -12V",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac712-vintpre/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "ADDAC712\nVINTAGE PREAMP 信号フロー図\n\nINPUT 1\n\nOUTPUT\nGAIN\nCONTROL\n\nPREAMP\nGAIN\nCONTROL\n\nMAXIMUM\nGAIN\nCONTROL\n\nOUTPUT 1\n\nOUTPUT\nGAIN\nCONTROL\n\nCLIPPING\nLED\nMONITOR\n\nBYPASS\nON\nOFF\n\nINPUT 2\n\nOUTPUT\nGAIN\nCONTROL\n\nPREAMP\nGAIN\nCONTROL\n\nMAXIMUM\nGAIN\nCONTROL\n\nOUTPUT 2\n\nOUTPUT\nGAIN\nCONTROL\n\nCLIPPING\nLED\nMONITOR\n\nBYPASS\nON\nOFF",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac712-vintpre/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "フィードバック、コメント、問題等は下記までご連絡ください：\naddac@addacsystem.com\n\nADDAC712 ユーザーガイド\nDecember.2022 Revision.01",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac712-vintpre/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "コントロールの説明\n\nChannel 1 BYPASS\n上: アクティブ\n下: バイパス\n\nChannel 1 Gain\n\nChannel 2 Maximum Gain\n\nChannel 2 Output Gain\n\nChannel 1 Output Gain\n\nChannel 2 Clipping Led\n\nChannel 1 Clipping Led\n\nChannel 1 Maximum Gain\n\nChannel 2 BYPASS\n上: アクティブ\n下: バイパス\n\nChannel 1 Input / Channel 2 Input\n\nChannel 1 Output / Channel 2 Output\n\nChannel 2 Gain",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

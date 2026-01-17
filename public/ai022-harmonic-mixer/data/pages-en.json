@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T17:55:02.452Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ai022-harmonic-mixer/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "AI Synthesis AI022 Harmonic Mixer\nUser’s Manual\nThis is the Manual for the AI022 Harmonic Mixer you can purchase it by going to:\nhttps://aisynthesis.com/product/harmonic-cp3-style-mixer/.\n1. About the AI022 Harmonic Mixer\nThe AI022 Harmonic Mixer is a discreet mixer using no ICs. As gain increases harmonics and\nanalog warmth are added. As gain increases more, distortion and phasing is added, creating new\nwaveforms from old ones.\nThe AI022 takes inspiration from the legendary Moog Modular CP3 style mixer, but updates it for\neurorack and allows for user customization of the circuit. Many Moog Modular users attribute the\nCP3 mixer module to providing much of the warmth of the Moog Modular sound.\nAn exposed Bias knob allows abuse of the circuit, and allows for faithful replication of incoming\naudio, or radical analog wave shaping and distortion. It is also possible to use the Bias knob to\nadjust a +/- 5V signal into a 0/+ or 0/- signal.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ai022-harmonic-mixer/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2. AI022 Controls\n1. Mono Inputs. These inputs\naccept mono audio or voltage\nsignals.\n2. Bias Knob. This knob adjusts\nthe voltage bias of the circuit.\nTurning this knob can change\nthe offset of incoming audio or\ncontrol voltage and cause\nanalog wave shaping.\n3. Mix Out. This is the primary\nvoltage output.\n4. Input Volume. The position\nof these knobs control the\nvolume of each input. These\nknobs are passive attenuators.\nAs volume increases more\nharmonic distortion is added.\n5. Master Volume. The position\nof this knob controls the\nvolume of audio and or voltage\nof the Mix Out. As volume\nincreases more harmonic\ndistortion is added.\n3. Power\nThe AI022 uses a shrouded header to prevent the cable being plugged in the wrong way. The unit\ndraws 9 mA on the positive rail, and 9 mA on the negative side.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

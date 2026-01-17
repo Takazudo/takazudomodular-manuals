@@ -44,8 +44,8 @@ console.log('='.repeat(50));
 console.log(`📦 Manual: ${config.slug}`);
 console.log('');
 
-const translationsDir = join(ROOT_DIR, config.output.translations);
-const pagesPath = join(translationsDir, 'pages.json');
+const dataDir = join(ROOT_DIR, config.output.data);
+const pagesPath = join(dataDir, 'pages-ja.json');
 
 // Check if pages.json exists
 if (!existsSync(pagesPath)) {
@@ -100,7 +100,7 @@ function buildManifest() {
 const manifest = buildManifest();
 
 // Write manifest file
-const manifestPath = join(translationsDir, 'manifest.json');
+const manifestPath = join(dataDir, 'manifest.json');
 writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf-8');
 
 console.log(`✨ Manifest generated successfully!`);

@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:14.009Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-sf1/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "© 2022 Weston Precision Audio \t1\nSF1\nStereo / Dual Filter\nEurorack Module\nUser Manual\nWeston Precision Audio\nDesigned In Portland, Oregon\nRevision 01 - September 16, 2022\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-sf1/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "DESCRIPTION\nSF1 is a dual voltage controlled filter\n(VCF) module designed to be used\neither as a pair of identical, but\nseparate VCFs, or as a stereo filter,\naccepting its input as 2 mono (L/R)\ninputs through standard 3.5mm TS\nconnections.\nThe core of SF1 is a 4-pole voltage-\ncontrolled lowpass filter which uses\nprecise “pole-mixing” to provide a\nmultitude of outputs from each filter.\nEach filter has TWO outputs which are\navailable concurrently. The first set of\noutputs (L1/R1) may be selected to\noutput Low Pass, High Pass, or Band\nPass responses. At each one of these\nselections, the cutoff curve may be\nselected between “2 pole” (12 db/\noctave) or “4 pole” (24 db/octave).\nThe second set of outputs (L2/R2) may\nbe selected to output a single pole\nNotch, 2 pole All-pass, or 4-stage\nPhaser response.\nFinally, each pair of outputs (L1/R1 and\nL2/R2) feeds into a set of 2 voltage\ncontrolled crossfaders which may be\nused to modulate the amount of panning\nbetween the 2 sides of SF1.\nSF1’s output and linking options make\nSF1 a highly versatile module. From a\nstereo VCF, to a dual sine wave V/\noctave synth voice, all the way to a\nphase-modulator, the SF1 can do it!\nSPECS\nModule Size: 18HP\nDepth: 25mm (To back PCB), 33mm (To\nend of power connector)\nAudio Outputs:\n~1kOhm Output Impedance\nInputs (All inputs >=100kOhm\nImpedance): Volts/octave 1&2,\nResonance 1&2, Frequency cutoff 1&2,\nPanning CV.\nPower input:\n+12V & -12V via standard 10 pin\nEurorack connector. Protected against\nreverse polarity internally and with\nshrouded connector.\nPower consumption (+12V / -12V):\nTyp: 120mA / 120mA\nMax: 135mA / 135mA\nMAXIMUM LIMITS\nSupply Voltage: +13.5V / -13.5V\nAll inputs: Up to power supply levels.\n© 2022 Weston Precision Audio \t2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-sf1/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "MAIN CONTROLS\nCutoff:\nThese pots controls the “cutoff\nfrequencies” of the left and right filter\ncores.\nResonance:\nThese pots control the amount of\nresonance or Q-value of the left and\nright filter cores. Using one of the low-\npass modes on L1 or R1 outputs and\nputting the corresponding resonance pot\nto full CW will result in self-oscillation\nand the filter will act as a sine wave\noscillator.\nAudio In Level:\nEach filter’s audio input’s amount is\ncontrolled by these pots. There is a\ndetent at the center (“high noon”) of\neach pot which corresponds to exactly\nunity (gain of 1) of the audio input\nsignal. Turning the pot past center results\nin progressively more overdrive.\nCutoff CV Input:\nSignals input to these jacks will control\nthe cutoff frequency of each filter. The\ncontrol pots are “attenuverters”,\nmeaning that the center (which also has\na detent) is 0. Turning the pot CW\nmeans positive voltages add to the\ncutoff frequency, and negative voltages\nsubtract to the cutoff frequency. Turning\nthe pot CCW reverses this, e.g., a\npositive-going envelope would tend to\n“close off” a low pass filter when turning\nCCW.\nResonance CV:\nSignals input to these jacks will control\nthe amount of resonance of each filter.\nThese inputs to not have an attenuator\nso they work “full strength”.\nV/Oct:\nThese inputs are simply another\nfrequency CV which is calibrated to 1\nVolt/octave. Use these to control pitch\nwhen self-oscillating.\n© 2022 Weston Precision Audio \t3\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-sf1/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "OUTPUTS\nEach filter has 2 outputs that are\navailable at the same time. The “1”\noutputs (L1 & R1) have 2 switches which\ncontrol their output type. The “2”\noutputs (L2 & R2) have 1 switch which\ncontrols their output type. The selections\navailable are summarized in the table\nbelow:\nFinally, each pair of outputs is routed\nthrough the voltage-controlled panner/\ncrossfader:\nWhen the “Pan” pot is full counter-\nclockwise, the “L/m” audio input is\nrouted to the L1 and L2 outputs, and the\n“R” to R1/R2. When the “Pan” pot is\nfull clockwise, the “L/m” audio input is\nrouted to the R1 and R2 outputs, and\nthe “R” to L1/L2. When the “Pan” pot is\nin the center, each output will receive\n50% of the “L/m” input signal and 50%\nof the “R” input signal.\nA signal applied to the “Pan CV” jack\nwill serve to control the panning in the\nsame manner as the “Pan” pot and is\nattenuated by the “Pan CV” pot.\nSo, if the “Pan” pot is in the dead-\ncenter, a positive-going voltage applied\nto “Pan CV” will do the equivalent of\nturning the “Pan” pot clockwise, and a\nnegative-going voltage will do the\nequivalent of turning the “pan” pot\ncounter-clockwise. Thus, the position of a\nsound within the L/R audio space can\neasily be modulated via a control signal.\n© 2022 Weston Precision Audio \t4\nSF1 Output Modes\nL1 or R1\nSlope\nL1 or R1\nType\nL1 or R1 Output\nResult\nUp \tUp \t12 dB/oct. Low Pass\nUp \tMiddle \t12 dB/oct. High Pass\nUp \tDown \t12 dB/oct. Bandpass\nDown \tUp \t24 dB/oct. Low Pass\nDown \tMiddle \t24 dB/oct. High Pass\nDown \tDown \t24 dB/oct. Bandpass\nL2 or R2\nType\nL2 or R2 Output\nResult\nUp \t6 dB/oct. Notch\nMiddle \t12 dB/oct. All-Pass\nDown \t24 dB/oct. Phaser (2\n“combs”)\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-sf1/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "Bode plots of the nominal output\nresponses from all 9 settings of SF1 are\nincluded in the appendix at the end of\nthis document.\nLINK BUTTON\nThe “Link” button provides a convenient\nway to use the SF1 with a stereo audio\nsignal present as a dual mono pair to\nthe L and R inputs.\nWhen the “Link” button is engaged and\nthe orange LED above it is lit, the LEFT\nside…\n- \tFrequency pot\n- \tResonance pot\n- \tFrequency CV input / attenuverter\n- \tResonance CV\n…will control BOTH filters.\nThe illustration on this page shows the\nlink function more graphically.\n© 2022 Weston Precision Audio \t5\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-sf1/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "MAINTANENCE\nSF1 will not require any particular\nmaintenance, but there are 2 sets of\ntrimmers which are adjustable during\nservice.\nAlong the top edge of the unit are the\nVolts per octave trimmers for each filter,\nwhich work like a V/oct trimmer on any\noscillator.\nAlong the bottom edge of the unit are 2\ntrimmers which are used to calibrate the\naudio input stages so that they are\nexactly unity when the audio input pots\nare centered. These are adjusted upon\nassembly and would normally not need\nto be adjusted.\nCONCLUSIONS\nAs with any piece of modular synth\nequipment, it is best to just play with it\nby itself and with other modules. Find\nwhat you like and most importunely,\nhave fun making music!! There is no\nwrong answer!\n...IDEAS?!…\n- \tSend two different oscillator\nwaveforms to the audio inputs, center\nthe pan pot, and send an audio rate\nsignal to pan CV for cool AM\n(amplitude modulation) effects. At fast\nrates you will get a fun tremolo effect.\n- \tUse both filters as oscillators (self-\noscillation) and tune them to a musical\ninterval (third, fifth, octave, etc..) and\ncontrol both with the 1 V/oct inputs\nfor a sine-wave synth voice.\n- \tYou can route both VCFs in series by\npatching L1 out to R audio and use L2\nout to get 8 pole LP, HP, or BP filter.\nOr patch L2 out to R audio in and use\nR2 out to get a 2 pole notch, an all-\npass filter with 720 degrees of phase\ndisplacement, or a phaser with 4\n“combs”!\n© 2022 Weston Precision Audio \t6\nOld\nGround Hole\n-12V Node\nR21\n4.7k\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-sf1/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "APPENDIX: BLOCK DIAGRAM\n© 2022 Weston Precision Audio \t7\nLeft Audio In\nSF1 Dual/Stereo VCF:\t\nBlock Diagram\nInput Stage\t\nw/ Overdrive\n4 Pole Voltage\nControlled\nLowpass Filter\nL1 Outs Pole\nMixer\nL2 Outs Pole\nMixer\n4P or 2P Lowpass\t\n4P or 2P\n Highpass\n4P or 2P Bandpass\n1P Notch\t\n2P All Pass\t\n4P Phaser\nL1 Select Switches\t\nR1 Select Switch\nVoltage Controlled\t\nPanner/Crossfader\t\nVoltage Controlled\t\nPanner/Crossfader\nL1 Output\t\nL2 Output\t\nR1 Output\t\nR2 Output\nRight Audio In\n \nInput Stage\t\nw/ Overdrive\n4 Pole Voltage\nControlled\nLowpass Filter\nR1 Outs Pole\nMixer\nR2 Outs Pole\nMixer\n4P or 2P Lowpass\t\n4P or 2P\n Highpass\n4P or 2P Bandpass\n1P Notch\t\n2P All Pass\t\n4P Phaser\nR1 Select Switches\t\nR2 Select Switch\n(Right audio in\t\njack\n normalling\n)\nLeft Freq CV In\t\nAttenuverter\t\nLeft Res CV In\t\nLeft Freq Pot\t\nLeft Res Pot\t\nLeft 1 V/Oct In\t\nRight Freq CV In\t\nAttenuverter\t\nRight Res CV In\t\nRight Freq Pot\t\nRight Res Pot\t\nRight1 V/Oct In\nLINK Button\nPan Pot\t\nPan CV\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/weston-sf1/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "APPENDIX: L1/R1 OUTPUT\nNOMINAL RESPONSES\nLow pass (2 pole and 4 pole):\nHigh pass (2 pole and 4 pole):\n© 2022 Weston Precision Audio \t8\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/weston-sf1/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "APPENDIX: L1/R1 OUTPUT\nNOMINAL RESPONSES\nBand pass (2 pole and 4 pole):\n© 2022 Weston Precision Audio \t9\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/weston-sf1/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "APPENDIX: L2/R2 OUTPUT\nNOMINAL RESPONSES\n1 Pole Notch:\n2 Pole All-Pass:\n© 2022 Weston Precision Audio \t10\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/weston-sf1/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "APPENDIX: L2/R2 OUTPUT\nNOMINAL RESPONSES\n4 Pole Phaser:\n© 2022 Weston Precision Audio \t11\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/weston-sf1/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "REVISION HISTORY\n01: Initial release.\n© 2022 Weston Precision Audio \t12\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

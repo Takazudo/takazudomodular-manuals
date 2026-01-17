@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-12T18:08:50.056Z",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "language": "ja"
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac305-latches-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac305-latches-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC305 組み立てガイド\n\nキットに含まれる部品:\n\n1x フロントパネル\n\n1x PCB\n\n3x 10uF SMDコンデンサー\n\n4x 100nF SMDコンデンサー\n\n8x 1k SMD抵抗\n\n8x 470R SMD抵抗\n\n1x 78M05 IC\n\n2x 10mm メス/メス スペーサー\n\n4x M3 ファイバーワッシャー\n\n6x M3 ネジ\n\n3x ナット付きジャック\n\n9x ナットなしジャック\n\n3x ジャックナット\n\n8x プッシュボタン\n\n1x 2x5 IDCコネクタ\n\n1x リボンケーブル",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac305-latches-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "ADDAC305 組み立てガイド\n\nSTEP 1:\n\nPCBと表面実装部品を用意します。\n\nSTEP 2:\n\n全ての表面実装部品の右側のパッドに少量のはんだを予め付けておきます。これにより表面実装部品のはんだ付けが容易になります。左利きの方は左側のパッドにはんだを付けてください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac305-latches-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "STEP 3:\n\n次に8つの1kΩ抵抗をすべて配置します。ピンセットを使用し、既に追加されたはんだを加熱しながら各部品の右側のパッドをはんだ付けし、部品を所定の位置に配置します。\n\nSTEP 4:\n\n次に4つの100nFコンデンサすべての右側のパッドをはんだ付けします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac305-latches-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "ステップ5:\n\n8個の470R抵抗についても同じプロセスを繰り返します。\n\nステップ6:\n\n最後にPCBを180度回転させ、全てのSMD部品の左側のパッドを全てハンダ付けします。\n\nADDAC305 組み立てガイド",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac305-latches-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "STEP 7:\n\n78M05 ICを配置し、ハンダ付けします。\n\nSTEP 8:\n\n次に、3つの10uFコンデンサを配置し、ハンダ付けします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac305-latches-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "STEP 9:\n\nIDC電源コネクタを配置してハンダ付けします。切り欠きが下向きになるように注意してください。\n\nSTEP 10:\n\n次にスペーサーを配置します。PCBとスペーサーの間にファイバーワッシャーを追加してください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac305-latches-diy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "STEP 11:\nJackを探し、下図のように最も小さい脚を切断します。\n\nSTEP 12:\nネジ付きシャフトの3つのJackを底部に配置します。まだハンダ付けしないでください。\nこれからフロントパネルの全てのパーツを取り付けます:\nすべてのパーツを配置するまで、どのパーツもハンダ付けしないでください!\n\nSTEP 13:\n残りのJackを配置します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac305-latches-diy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "STEP 14:\n\n次にラッチボタンを配置します。ボタンには内部にLEDがあるため極性があることに注意してください。長い方の脚が正（+）側です。ボタンの底面にも極性を示す+と-のマーキングがあります。\nPCBにプリントされたマーキングに合わせてボタンの極性を合わせて配置してください。\n\nSTEP 15:\n\n次にフロントパネルを配置します。すべてのジャックを穴に通すためにピンセットを使用してください。\n\nSTEP 16:\n\n3つのジャックナットと2つのネジを締めます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac305-latches-diy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "ここでは、はんだごての熱に継続的にさらされることによるフロントパネル部品への損傷を最小限に抑えるための良い方法について説明します。\n\nはんだ付けに慣れていないユーザーは、各パッドに時間をかけすぎることがよくあります。\n\n経験豊富なはんだ付け作業者は、各パッドに1〜2秒しかかけません。これにより、部品が熱にさらされる時間を最小限に抑えることができます。\n\nはんだ付け作業者が各パッドに時間をかけすぎると、部品がプラスチックが溶け始めたり変形したりする温度まで加熱され、部品が使用できなくなる可能性があります。\n\nこのプロセスをjackを例に説明します。\n\nステップ1: まず、各jackの1つのパッドのみをはんだ付けします。\n\nステップ2: 次に、各jackの2つ目のパッドをはんだ付けします。\n\nステップ3: 最後に、すべてのjackの残りのパッドをはんだ付けします。\n\nすべての部品に対してこの非常にシンプルなプロセスを守ることで、はんだ付けしたパッド間で冷却する時間が確保され、部品が損傷しないことが保証されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/addac305-latches-diy/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "STEP 17:\n\n全てのパーツを配置した後、全てのパッドをはんだ付けします。\n\n前のページで説明したプロセスに従ってください。\n\nSTEP 18:\n\n完成すると、このような見た目になります。\n\nおめでとうございます、完成です！\n\nADDAC305 組み立てガイド",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/addac305-latches-diy/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "ADDAC305 組み立てガイド\n\nフィードバック、コメント、または問題については、下記までご連絡ください:\naddac@addacsystem.com\n\nNovember.2017 Revision.01",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

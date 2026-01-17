@@ -4,7 +4,7 @@
  * PDF Page Rendering Script - Page by Page
  * Renders individual page PDFs to PNG images
  *
- * Input: manual-pdf/{slug}/pages/page-*.pdf
+ * Input: temp-processing/{slug}/split-pdf/page-*.pdf
  * Output: public/{slug}/pages/page-001.png, page-002.png, etc.
  */
 
@@ -26,7 +26,7 @@ async function renderPdfPages() {
   console.log('='.repeat(50));
   console.log(`📦 Manual: ${config.slug}`);
 
-  const pagesDir = join(ROOT_DIR, config.output.pages);
+  const pagesDir = join(ROOT_DIR, config.output.splitPdf);
   const outputDir = join(ROOT_DIR, config.output.images);
   const dpi = config.settings.imageDPI;
 

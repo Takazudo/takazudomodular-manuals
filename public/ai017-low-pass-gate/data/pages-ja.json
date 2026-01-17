@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T17:52:04.236Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ai017-low-pass-gate/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "AI Synthesis AI017 Low Pass Gate\nユーザーマニュアル\n\nこれは、AI017 Eurorack Low Pass Gateのマニュアルです。製品は以下のサイトから購入できます：\nhttps://aisynthesis.com/product/ai011-voltage-co…olled-oscillator/.\n\n1. AI017 Low Pass Gateについて\n\nDIY電子工作が初めての方は、オシレーターは最初に作るべきものではありません。最初のモジュールとしては、AI001 Multipleが初心者に最適です。はんだ付けと信号の流れを学ぶことができます。\n\nAI017 Low Pass Gate Eurorackモジュールは、Voltage Controlled Filter、Voltage Controlled Amplifier、またはその両方として使用できます。AI017は、クラシックなBuchla 200シリーズLow Pass Gateを改良したもので、チューナブル・レゾナンス回路とDepthコントロールを追加しています。コントロール電圧にはVactrolを使用しており、クラシックな「リンギング」や「ボンゴ」エフェクトを実現します。\n\nDepthコントロールは、Vactrolが100オーム以下に下がらないという特性を補正し、従来のLow Pass Gateで発生しがちなオーディオの漏れを防ぎます。このエフェクトはスイッチでオン/オフできます。Depthを使用すると、クラシックなリンギングやボンゴエフェクトが減衰します。これにより、スイッチ一つで「ヴィンテージ」Low Pass Gateから「モダン」Low Pass Gateへ簡単に切り替えることができます。背面のトリマーでレゾナンスを調整できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ai017-low-pass-gate/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2. AI017 コントロール\n\n1. Resonance. VCFモード時（VCA/VCFではない - コントロール#3を参照）、このKnobはResonant Voltage Controlled Filterのレゾナンスをコントロールします。\nゲインは、モジュール背面のresonance trimmerを使用して好みに合わせて微調整できます。\n\n2. Level. VCAモード時（コントロール#3を参照）、このKnobはVCAのベースレベルを設定します。CVがなく0に設定されている場合、VCAは閉じた状態になります。時計回りに回すとVCAが開きます。\nDepthモード（コントロール#8）がOffまたはOnでDepth Knobが0の場合、クラシックなビンテージVactrol VCAと同様に、多少のブリードが発生する可能性があることに注意してください。VCA/VCFモード（コントロール#3）でも同様の動作をします。VCFモードでは、Knobはベースカットオフをコントロールし、フィルターが低周波数を通過させる周波数を制御します。Knobを時計回りに回すと、より高い周波数が通過するようになります。\n\n3. Mode Switch. このスイッチはモジュールの「モード」をコントロールします。\n上の位置ではVCFモードとなり、モジュールはResonant Low Pass Gateとして機能します。中央の位置では、非レゾナントのVCA/VCFコンビネーションとなり、VCAが閉じるにつれて高周波数がフィルタリングされます。下の位置ではモジュールはVCAとなり、高周波数のフィルタリングは行われません。\n\n4. Audio Input attenuator. このKnobは、Input jack #5に入力される信号をパッシブにアッテネートします。\n\n5. Audio Input. オーディオ信号（またはCV、自由に使ってください）をこのジャックに接続してモジュールで処理します。\nショートトリガーを接続して、クラシックな「pinging」エフェクトを得ることもできます。\n\n6. Output. モジュールで処理された信号は、このOutput jackから出力されます。\n\n7. Depth Knob. このKnobは、Depth Switch（#8）が上の位置にない限り効果がありません。有効な場合、Knobは回路にネガティブバイアスを追加し、ベースレベルを通常よりも低くすることができます。なぜこれを行うのか？良い質問です。Depthがオフの場合、回路はクラシックなLow Pass Gateとなり、欠点も含めてすべてそのままです。つまり、低周波数がvactrolを通じてブリードする可能性があります。ブリードを減らしたい場合、DepthによってLow Pass Gateをよりモダンでクリーンにすることができます。CV入力と組み合わせて、サウンドを整形することもできます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/ai017-low-pass-gate/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "8. Depth On/Off。Upポジションでは、このスイッチによりDepth Knob (#7) が信号に対してネガティブバイアスをかけることができます。「Down」ポジションでは、Depth Knobは効果がありません。\n\n9. CV1 Input。これはモジュールのレベルをコントロールする、アッテネートされていないControl Voltage入力です（モードに依存）。\n\n10. CV 2 Knob。このKnobはCV2ジャック (#11) に入力される電圧をコントロールするパッシブアッテネーターです。\n\n11. CV 2 Input。これはモジュールのレベルをコントロールする、アッテネートされたControl Voltage入力です（モードに依存）。信号はCV 2 Knob (#10) によってアッテネートされます。\n\n3. 電源\n\nAI017はシュラウド付きヘッダーを使用しており、ケーブルが逆向きに接続されることを防ぎます。本ユニットは正電源側で19mA、負電源側で16mAを消費します。\n\n5. パッチのアイデア/使い方\n\nComing soon...",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

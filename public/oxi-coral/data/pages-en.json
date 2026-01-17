@@ -1,0 +1,425 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:13.286Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/oxi-coral/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "V 2.1\nUSER GUIDE\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/oxi-coral/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2\n© OXI ELECTRONIC INSTRUMENTS SLU – 2023 – All rights reserved.\nwww.oxiinstruments.com\nInformation contained in this manual is subject to change without notice and does not represent a\ncommitment on the part of OXI ELECTRONIC INSTRUMENTS SLU, hereby OXI Instruments. The\nsoftware described in this manual is provided under the terms of a license agreement or non-\ndisclosure agreement. The software license agreement specifies the terms and conditions for its\nlawful use. No part of this manual may be reproduced or transmitted in any form or by any purpose\nother than purchaser’s personal use, without the express written permission of OXI INSTRUMENTS.\nAll other products, logos or company names quoted in this manual are trademarks or registered\ntrademarks of their respective owners.\nManual version: 2.1\nRevision date: 20 Jan 2025\nHardware version: OXI CORAL v1.0\nManufacturer: OXI Instruments\nSpecifications Subject to Change:\nThe information contained in this manual is believed to be correct at the time of printing. However,\nOXI Instruments reserves the right to change or modify any of the specifications without notice or\nobligation to update the hardware that has been purchased.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/oxi-coral/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "3\nWELCOME\nThank you for purchasing OXI Coral.\nThe introduction of the Mutable Instruments Plaits module was a revolution in terms of compact,\nmulti-engine synth voice modules. Thanks to MI’s open source contributions, we have taken\nsome of their algorithms and put them into a compact package that contains 8 “instances” of the\nmodule. We’ve added some new ingredients like independent envelopes and a filter per voice, FX,\nfull MIDI implementation and a colorful organic interface. On top of that you have custom\nwavetables and a sample playback engine available per voice.\nBut we didn’t want to create just another polyphonic synth. So, to allow you to make the most out\nof every voice, we’ve introduced the multipart concept. This means you can arrange and use the\n8 voices as you want: 8 monophonic parts, 1 polyphonic part of 8 voices, or any combination of\nthose. Flexible setups like 2 polyphonic parts of 3 voices each plus 2 monophonic voices in the\nsame module are possible.\nThis makes the CORAL a versatile and powerful Polysynth, Drum Machine, Groovebox and Sound\nExploration module at the same time!\nWe won’t stop here and we’ll add more engines in the future with firmware updates as we have\nbeen doing with the OXI ONE!\n–– OXI team\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/oxi-coral/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "4\nINDEX\nWELCOME 3\nINDEX 4\nSPECIFICATIONS 7\nPANEL OVERVIEW 8\nINTRODUCTION 9\nPOLYPHONIC SYNTH 9\nMULTIPART BOX 11\nSIGNAL FLOW 12\nINTERFACE 13\nMAIN VIEW 13\nENGINE SELECTION 13\nPRIMARY CONTROLS 14\nSECONDARY CONTROLS 15\nPART / VOICE SELECTION 17\nPART CREATION 19\nVOICES-PART RESET 20\nCV and MIDI MODULATION 21\nCV MODULATION 21\nMIDI MODULATION 23\nENGINES 24\nVIRTUAL ANALOG 24\nWAVESHAPER 24\nFM 25\nWAVETABLE 25\nMDO 25\nSTRING 26\nADDITIVE DISTORTION 26\nACID 27\nHI HAT SYNTH 27\nSNARE SYNTH 27\nHI HAT / SNARE SYNTH 28\nKICK MODEL 28\nWAV PLAYER 28\nENGINE CONFIGURATIONS 30\nSOUND EFFECTS 31\nMIDI IMPLEMENTATION 32\nPRESETS 35\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/oxi-coral/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "5\nSD CARD 36\nCALIBRATION 40\nACKNOWLEDGMENT 42\nDECLARATION OF CONFORMITY 43\nTERMS OF WARRANTY 44\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/oxi-coral/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "6\nPage left intentionally blank.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/oxi-coral/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "7\nSPECIFICATIONS\nDimensions\n14 Hp\n3 cm deep\nPanel\nBlack anodized aluminum with color silkprint.\nConsumption\n+12V - 110 mA\n-12V - 10 mA\n+5V - 0 mA\nOutputs\n2x Mono DC coupled outputs (±5 V)\nInputs\n1x MIDI TRS (Type A and B compatible).\n8x CV inputs ±5 V (±10V max).\n1x Gate input\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/oxi-coral/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "8\nPANEL OVERVIEW\nEncoder with push button:\n- Engine selection\n- Push & Hold for Voice/Part selection\n- Push & Hold + Knob turn to change secondary parameter\n- Tap to toggle between Load, Save, CV Assign and Main views.\nMicro SD card socket:\n- A Micro SD card with factory content Must be always inserted.\n- A fast SD card (class 10 or higher) is required to use the wav player intensively.\nCV Inputs:\n- CV inputs affect the selected part (all voices by default)\n- Part can be addressed with Part CV or in the CV Assign screen.\n- The ADSR envelope trimmers work as bipolar CV attenuators in their secondary function.\nLEDs Ring:\n- Provides visual feedback of the different screens of the module.\n- By default each LED represents the amplifier value of each voice.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/oxi-coral/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "9\nINTRODUCTION\nCORAL is a polyphonic multipart synthesizer.\nIt is polyphonic because it can play up to 8 different voices or notes at once.\nAnd it is multipart because each of the 8 available voices can be set to a different engine, midi\nchannel and have a different set of values for each parameter (filter, sound controls, envelopes,\neffect sends, etc.).\nThe most straightforward way to play the Coral is like an 8 voice polyphonic MIDI synth or like a\nsingle voice via CV listening to channel 1. This is how the module works when you turn it on for the\nfirst time. You should start here to understand the basic concepts.\nYou can also try to patch a pair of Gate CV/Oct signals to trigger the internal envelopes and hear\nhow Coral sounds.\nPOLYPHONIC SYNTH\nLike in any polyphonic synth, Coral has multiple voices ( 8 more specifically ) that are able to play\ndifferent notes.\nIn general, when a poly synth receives a new note, it assigns one of its voices to play it. One voice\nmay be composed of one or more oscillators, a VCA, envelope, filter, etc.\nTo use CORAL like a poly synth the easiest way to start is by using the MIDI input. By default, all\nthe voices listen to MIDI channel 1. Every new note will be assigned a new voice. If more than 8\nnotes are held together, the least recent note will be “stolen” (LRU strategy).\nThe AMP value of the active voices will be represented in the LED Ring.\nMIDI CHANNEL\nFrom this point, to change the MIDI channel (of all voices), simply keep the Push Encoder Knob\n(center pink knob) pressed and turn the harm knob, whose secondary parameter is effectively midi\nchannel.\nThe 16 available MIDI channels will be shown in 2 pages of 8 channels. The second page is\nindicated with two delimiter points.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/oxi-coral/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "10\nPRIMARY AND SECONDARY PARAMETERS\nEach knob controls one main parameter and one secondary parameter. Using this strategy has\nallowed us to pack a lot of functionality in a smaller footprint.\nTo modify a secondary parameter, push and hold the encoder and turn the corresponding knob.\nThe knob position and the parameter value may not match, so in order to avoid sudden changes of\nthe value of the parameter, you have to first “catch up” the stored value. This applies both to the\nmain and the secondary parameters.\n–––––––––––––––––––––\nYou need to get familiar with “catching up” knob values to move between main and secondary\nparameters with ease.\n–––––––––––––––––––––\nFor the primary parameters, the stored value is represented in the color of the parameter section\nwhile the current position of the knob is shown in white:\nFor the secondary parameters, their stored value is shown in white color meanwhile the current\nposition of the knob is indicated in orange:\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/oxi-coral/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "11\n–––––––––––––––––––––\nWhen the module starts up, you may need to catch up the main or secondary values since the\nposition of the knob and the stored parameter values may not match.\n–––––––––––––––––––––\nVOICE ALLOCATION\nHow do I know which note is played by which voice?\nEvery time Coral receives a new MIDI note, it assigns it whatever voice is free or steals one if\nnecessary.\nIf you want to access an exact voice with a certain synth-engine using MIDI, you need to assign a\ncertain midi-channel, and therefore create a part (more about this later).\nOn the contrary, the Trigger patch input triggers all the voices of the selected part. More on this\nlater.\nMULTIPART BOX\nPARTS CONCEPT\nThe 8 available voices in Coral can be grouped into parts. The strategy is that voices set to the\nsame MIDI channel belong to one part.\nBy default all voices are assigned to MIDI channel 1. This means that there is only one part. As soon\nas you assign one voice to a different MIDI channel, a new part will be created.\nEach part can be addressed via its MIDI channel or with the Part CV input. The former is very\nobvious, the latter will be explained in the CV section.\nTo reset voices to default state (1 part), hold the encoder for at least 5 seconds until you see the\nLED animation in red.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/oxi-coral/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "12\nGETTING TO KNOW MULTIPART\nCoral is meant to offer flexibility. Being able to decide how many voices you want for your Lead or\nyour Chords is fantastic and that mixed with the vast sonic palette of the module makes it a really\npowerful tool.\nBut flexibility comes to a price.\nWe recommend in the beginning that you start playing with one single part. Once you get\ncomfortable using the module, create more parts.\nStart simple, create two parts and get used to switching from one part to another and playing with\nthe parameters of each one.\nFor example, you can create one part with one voice for a bassline and another part with the\nremaining voices for chords or any other polyphonic use.\nIn order to create parts, we need to learn first how to navigate between voices and parts. We will\nsee how in the following chapters.\nSIGNAL FLOW\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/oxi-coral/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "13\nINTERFACE\nMAIN VIEW - Voice Status\nIn the main view, the AMP value of the active voices will be represented in the LED Ring.\nENGINE SELECTION\nTurn the encoder to change the engine of the selected Voice or Part. The new engine will be\nautomatically applied.\nThe active engine of the selected part is shown in Pink as in the diagram.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/oxi-coral/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "14\nPRIMARY CONTROLS\nEither primary or secondary controls will affect the selected Voice or the voices in the selected Part\nonly!\nharm\nControls the first parameter of the selected engine. In the case of the Wav Player, it acts as an\noverdrive control.\noct\nSets the base octave of the sound. It acts as an offset of the input MIDI note or CV pitch (oct) input.\ntimbre\nSecond parameter of the engine. In the case of the Wav Player, it is the sample selection.\nmorph\nThird parameter of the engine. In the case of the Wav Player, it is the sample folder selection.\nf.env\nSets the amount of the MODulation ADSR envelope applied to the filter frequency.\n- At 12 o’clock it’s 0%.\n- Fully Clockwise is 100% and\n- Fully counter clockwise is -100%.\n–––––––––––––––––––––\nThe MODulation ADSR envelope is by default linked to the filter cutoff.\nBut the MOD controls can also have an impact on the sound depending on the selected engine.\n–––––––––––––––––––––\nfilter\nSets the frequency of the low pass filter.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/oxi-coral/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "15\nf.reso\nSet the resonance and drive control of the filter.\namp atk\nSets the attack time of the amplifier ADSR envelope.\namp dr\nSets the time of the Decay and Release stages of the amplifier ADSR envelope.\nsust\nSets the sustain level of the amplifier and the modulation ADSR envelopes.\nmod atk\nSets the attack time of the modulation ADSR envelope.\nmod dr\nSets the time of the Decay and release stages of the modulation ADSR envelope.\nSECONDARY CONTROLS\nmidi\nSelects the MIDI channel.\nfreq\nFine control of the base frequency.\n- At 12 o’clock there is no detuning.\n- Fully Clockwise is 100% and\n- Fully counter clockwise is -100%.\nnoise\nControls the level of the white noise internal source. This level is not affected by the voice level so\nyou can have an independent noise source.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/oxi-coral/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "16\nIf the Delay effect is enabled in settings (options.txt file), this control sets the delay send amount.\nThe delay send amount can be independent per voice.\nchorus\nSets the send amount to the Chorus FX engine.\nIf the High Pass Filter is enabled in settings (options.txt file), this control sets the frequency of the\nfilter instead. There’s an independent HP Filter per voice.\nlevel\nSets the maximum amplitude level.\nspace\nSets the send amount to the Space FX engine.\npan\nSets the stereo pan following a constant power pan law.\ncv attenuators\nThe envelope trimmers’ secondary functions are bipolar attenuators for the CV inputs that are just\nbelow them.\namp atk: affects the atkdec CV\namp dec: affects the filter CV\nsust: affects the harm CV\nmod atk: affects the timbre CV\nmod dec: affects the morph CV\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/oxi-coral/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "17\nPART / VOICE SELECTION\nVOICES with the same MIDI channel assigned are grouped into PARTS.\n–––––––––––––––––––––\nYou can have your 8 voices divided in different parts, for example 1 part of one voice for your\nbass, another part with 3 voices for a lead and the remaining 4 voices in another part for the\nchords.\n–––––––––––––––––––––\nTo navigate through the different voices and parts, push, hold and turn the Encoder.\n1. When the module is in its default state (after first startup or after a reset), if you hold the encoder\nfor half a second, the LED ring will look as follows.\nThis means all the voices are selected, from 1 to 8. Any change in the controls, potentiometers or\nencoder will be applied to all voices.\n2. Release the encoder to go back to the main view, the voice AMP visualization.\n3. Push and hold the encoder again and then turn it clockwise 1 tick.\nYou will see that the LEDs go from “All VOICES” selection to PART selection.\nSince by default there’s only one part, all the LEDs will light up in the same turquoise color.\n4. Push and hold the encoder and turn it clockwise 1 extra tick to navigate to voice 1, 2, etc until\nreaching the last 8th voice.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 18,
+      "image": "/oxi-coral/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "18\n5. Once the 8th voice has been reached, another encoder tick clockwise and the selection goes\nback to All VOICES and then to PART selection.\nNote: Voice N means N voice from 1 to 8\n6. As soon as there is more than one part available, the PART selection will navigate through the\ndifferent parts. In case we had 3 parts, it could look as follows.\n–––––––––––––––––––––\nTurning the encoder Counterclockwise allows you to navigate in the opposite direction.\n–––––––––––––––––––––\nPART CREATION\nTo illustrate this process, we will use the following example. Let’s create three different parts for\nthe following instruments:\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 19,
+      "image": "/oxi-coral/pages/page-019.png",
+      "title": "Page 19",
+      "sectionName": null,
+      "content": "19\n- 1st voice: mono Bassline. MIDI channel 1 ( part 1 )\n- 2nd voice: mono Lead. MIDI channel 2 ( part 2 )\n- 3 to 8th voices: 6 voices for chords, pads or any other polyphonic usage. MIDI channel 3 ( part 3\n)\nFor simplicity and to avoid changing the MIDI channel of all the voices one by one, let’s change the\nMIDI channel of all the voices to channel 3. To do so, press and hold the encoder.\nThe LED ring should look like this, showing that all the voices are selected. If that’s not the case,\nhold and turn the encoder until the 8 first LEDs are lit in a blueish color.\nThen turn the harm/midi encoder to adjust the secondary parameter, which is effectively the MIDI\nchannel.\nYou may need to catch up to the previous value. Take control of the MIDI parameter and turn the\nknob until the LED ring looks like this:\nNow release the encoder. All voices are set to MIDI channel 3.\nNavigate to voice 1 by holding the encoder and turning it until the LED ring shows the voice 1\nselection:\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 20,
+      "image": "/oxi-coral/pages/page-020.png",
+      "title": "Page 20",
+      "sectionName": null,
+      "content": "20\nYou don’t need to release the encoder, simply turn the harm/midi knob until MIDI channel 1 is\nshown. Release the encoder and the new MIDI channel will be assigned to voice 1, thus creating a\nseparate part.\nRepeat the process with voice 2, selecting this voice and assigning MIDI channel 2.\nDuring Part selection the available parts should look as follows.\nVOICES-PART RESET\nYou can easily reset Coral to the default state where all voices are assigned to MIDI channel 1 and\nparameters are set to init values.\nFrom the main view (voice status), hold the encoder for at least 5 seconds until you see the LED\nanimation in red color.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 21,
+      "image": "/oxi-coral/pages/page-021.png",
+      "title": "Page 21",
+      "sectionName": null,
+      "content": "21\nCV and MIDI MODULATION\nThere are two different sources of modulation: MIDI CC and Pitch Bend messages and the CV\ninputs.\nThe resulting value of any voice’s parameter is calculated by adding the knob position (or last\nreceived CC value) and the CV input value (if the CV is assigned to this voice or part).\n- knob value is unipolar (unless in the bipolar parameters: PAN, Filter envelope, Frequency)\n- CV modulation is bipolar: +-5V\n- CC is unipolar and overrides the parameter’s knob value.\nParameter value = knob or corresponding CC value + CV modulation\nIt is possible to modulate each part’s parameters separately to create richer and more complex\nsounds.\nCV MODULATION\nThe CV modulation: atkdec, filter, harm, timbre, morph, trig, amp and oct inputs affect the voices\nof the selected part only.\nBy default, there’s only one part, thus all the voices will be triggered or affected by any of the\nmodulation CVs.\nPOLY OR UNISON CV MODES\nIf “polycv” setting is set to “1”, different CV pitch values will trigger different voices thus allowing\nto play Coral polyphonically with 1 oct CV and 1 trigger.\nIf “polycv” setting is set to “0”, all voices will play in unison.\nThis setting can be found in the options.txt file in the SD Card under the System folder.\nCV INPUTS\natkdec\nIncreases or decreases the duration of attack, decay and release of both AMP and MOD ADSR\nenvelopes. Negative voltages will make the sound “pluckier” and positive voltages will create softer\nand longer sounds.\nfilter\nPositive voltages increase the filter frequency cutoff and viceversa.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 22,
+      "image": "/oxi-coral/pages/page-022.png",
+      "title": "Page 22",
+      "sectionName": null,
+      "content": "22\nharm, timbre, morph\nPositive voltages apply positive modulation on these parameters. Negative voltages apply negative\nmodulations.\ntrig\nTriggers the internal envelopes.\namp\nControls the amplifier level.\noct\nCV/Oct input. The octave (oct) and frequency (freq) knob parameters are taken into account to get\nthe final pitch of the voices.\npart\nThe voltage on this CV input determines which Part is affected by the rest of the CV inputs.\nPART CV INPUT\nPART MODULATION\nOne way to choose which part is affected by the external CV modulation is by using the PART CV\ninput. The affected part by the CV modulation can be addressed with the PART CV input. (Only 0\nto +5V voltages are considered).\nExample:\nIf you have two PARTS, the first part will be addressed if the voltage in PART CV is between 0 and\n2.5V.\nOtherwise the second PART will be addressed if the voltage is between 2.5 and 5V.\nNOTE: There’s a little hysteresis to avoid continuous jumps of the selected part on the voltage\nedges.\nThe behavior of the PART CV input can be changed in the options.txt file in the SD Card.\nIf “cvpart” setting is set to “0”, PART CV selects which part is affected by CV modulation as\nexplained above.\nENGINE MODULATION\nIif “cvpart” setting is set to “1”, PART CV selects which engine is used instead.\nThis setting can be found in the options.txt file in the SD Card under System folder.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 23,
+      "image": "/oxi-coral/pages/page-023.png",
+      "title": "Page 23",
+      "sectionName": null,
+      "content": "23\nCV ASSIGN SCREEN\nHow to assign cv modulation to parts ?\nWhen there’s no voltage sent to the Part CV, the modulation of the front panel CVs can be routed\nto one specific PART using the CV Assign screen.\nQuick tap the encoder 3 times to access this screen from the main default view, right after save\nscreen. Once in the CV Assign screen (purple color), turn the encoder to choose the part that will\nbe affected by the CV modulation. Tap again to confirm the selection, and you will see the\nconfirmation animation.\nNOTE: if any voltage is applied to the PART CV, the part selection made on this screen will be\noverridden.\nMIDI MODULATION\nWith MIDI CC messages you can modulate any parameter inside Coral.\nThe messages will be filtered by the MIDI channel and the CC values will be applied to the Part that\nhas the same MIDI channel.\n- CC is unipolar and overrides the knob value.\nCheck the MIDI Implementation section for more information.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 24,
+      "image": "/oxi-coral/pages/page-024.png",
+      "title": "Page 24",
+      "sectionName": null,
+      "content": "24\nENGINES\nThere are different configurations of engines available in the form of various firmwares. They can\nbe downloaded in the Coral’s update website.\nEngines configuration of the No drums version\nThe engines are explained next.\nVIRTUAL ANALOG\nTwo detuned virtual analog oscillators with continuously variable waveforms. The Second oscillator\nis synced to the first one\nVirtual-analog synthesis of classic waveforms.\nCONTROLS:\nharm: detuning between the two oscillators following predictable musical intervals.\ntimbre: variable square, from narrow pulse to full square to hard sync formants.\nmorph: variable saw, from triangle to saw with an increasingly wide notch.\nWAVESHAPER\nAn asymmetric triangle processed by a waveshaper and a wavefolder.\nCONTROLS:\nharm: waveshaper waveform.\ntimbre: wavefolder amount.\nmorph: waveform asymmetry.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 25,
+      "image": "/oxi-coral/pages/page-025.png",
+      "title": "Page 25",
+      "sectionName": null,
+      "content": "25\nFM\nTwo sine-wave oscillators modulate each other’s phase.\nCONTROLS:\nharm: frequency ratio.\ntimbre: modulation index.\nmorph: feedback, in the form of operator 2 modulating its own phase (past 12 o’clock, rough) or\noperator 1’s phase (before 12 o’clock, chaotic).\nWAVETABLE\nharm, timbre and morph are used to navigate in the 3 dimensions of the wavetable, Z, X, and Y\nrespectively. Three waves are combined and cross-faded to generate the sound.\nOnly one wavetable can be loaded at a time, it’s the same wavetable file for all the voices. You can\nstore more than one wavetable file in the SD card but only one will be loaded. The wavetable\nfilename must contain the prefix “WAVETABLE” and the extension must be “.wav”.\nYou can create and export your wavetables using the OXI Wave desktop App. X, Y and Z controls\nin the module correspond to the controls in the “Grid View” of the app.\n–––––––––––––––––––––\nSince you can set different parameters for each voice, each one can have different positions in the\nwavetable creating richer sounds.\n–––––––––––––––––––––\nDUAL WAVETABLE OSC\nTwo Wavetable Oscillators that can be detuned following predictable intervals. Load or Design your\ncustom Wavetable and create complex lead sounds.\nCONTROLS:\nharm: detuning between the two oscillators following predictable musical intervals.\nBy manipulating this setting, you can vary the pitch of the second oscillator to create harmonic or\ndissonant effects in relation to the main oscillator.\ntimbre: wavetable position of the First oscillator.\nmorph: wavetable position of the Second oscillator.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 26,
+      "image": "/oxi-coral/pages/page-026.png",
+      "title": "Page 26",
+      "sectionName": null,
+      "content": "26\n–––––––––––––––––––––\nIn this engine, the wavetable is navigated in a single dimension.\n–––––––––––––––––––––\nMDO\nMDO stands for: Multiple Detuned Oscillator.\nEach voice contains 8 detuned oscillators that morph between SAW, SQUARE and PWM.\nCONTROLS:\nharm: detuning amount\ntimbre: waveform morph from saw to square\nmorph: PWM of the square waveform\nSTRING\nDigital string / resonator modeling.\nCONTROLS:\nharm: amount of inharmonicity, or material selection.\ntimbre: excitation brightness and dust density.\nmorph: decay time (energy absorption).\nADDITIVE DISTORTION\nHarmonic / additive synthesis with two kinds of distortion, Wavefolding and Diode emulation.\nThe different ways the distortions hit the harmonic content creates a larger palette of sound, from\nmild tones to highly distorted basslines.\nCONTROLS:\nharm: harmonic content center\ntimbre: wavefolding amount\nmorph: diode distortion amount\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 27,
+      "image": "/oxi-coral/pages/page-027.png",
+      "title": "Page 27",
+      "sectionName": null,
+      "content": "27\n3VCO\n3x variable-saw virtual analog oscillators that seamlessly morph from Triangle to Saw, to Square\nand Pulse waveforms with dynamic PWM capabilities. 2 of the 3 oscillators can be detuned in\nrelation to the main oscillator.\nCONTROLS:\nharm: adjusts the detuning of the second oscillator. By manipulating this setting, you can vary the\npitch of the second oscillator to create harmonic or dissonant effects in relation to the main\noscillator.\ntimbre: defines the waveform of the oscillators, offering a range from triangle, to saw, square, and\nPWM (Pulse Width Modulation) waveforms.\nmorph: manages the detuning of the third oscillator. Similar to the Harm control, but for the third\noscillator, it allows for the creation of complex sonic layers by detuning from the main oscillator.\nNOTES:\nThe detuning controls (Harm and Morph) are finely calibrated to easily align with musical intervals,\nsuch as +7 and +12 semitones. This feature facilitates the creation of musically coherent detuning\neffects, while still providing the flexibility to detune by a few cents.\nACID\nIt’s our take on the 303 style synth. A variable-shape virtual analog oscillator that seamlessly\nmorphs from the classic Saw to Square and Pulse waveforms with dynamic PWM capabilities.\nThere is one post-filter distortion and the edgy filter has been finely tuned for a gritty sound.\nYou can add accents via MIDI or via the AMP CV input. Morph controls the accent amount.\nCONTROLS:\nharm: controls the overdrive distortion\ntimbre: defines the oscillator waveform\nmorph: sets the accent amount\nNOTES:\nHow to get glides?\n● Use a pair of V/oct CV and Gate and send glides from your sequencer or change the pitch\nwhile gate is active.\n● If using MIDI, create a MONO (1-voice) part and send legato notes (almost overlapping\nnotes should be also enough to trigger a glide).\nHow to get accents?\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 28,
+      "image": "/oxi-coral/pages/page-028.png",
+      "title": "Page 28",
+      "sectionName": null,
+      "content": "28\n● You can feed CV modulation to any of these (for example the Vel or Mod outputs of a\nsequencer).\n● With MIDI you can play with the velocity levels.\nHI HAT SYNTH\nTwo hi hat models blend together.\nharm: balance of the metallic and filtered noise.\ntimbre: high-pass filter cutoff.\nmorph: crossfade between both models.\nmod dr: affects the decay of the internal envelope that has an overall impact on the amplitude and\ncharacteristics of the sound. The AMP envelope can be further adjusted with amp dr.\nSNARE SYNTH\nTwo analog snare drum models blend together.\nharm: balance of the harmonic and noisy components.\ntimbre: balance between the different sound components of the drum, body and noise.\nmorph: crossfade between both models.\nmod dr: affects the decay of the internal envelope that has an overall impact on the amplitude and\ncharacteristics of the sound. The AMP envelope can be further adjusted with amp dr.\nHI HAT / SNARE SYNTH\nIt offers a combination of one analog snare drum and one hi-hat model.\nharm: balance of the harmonic and noisy components.\ntimbre: balance between the different sound components of the snare or high pass filter for the hi-\nhat.\nmorph: crossfade between snare and hi-hat sound model.\nKICK MODEL\nTwo kick / bass drum digital emulations blend together.\nharm: attack sharpness and overdrive.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 29,
+      "image": "/oxi-coral/pages/page-029.png",
+      "title": "Page 29",
+      "sectionName": null,
+      "content": "29\ntimbre: brightness.\nmorph: crossfade between both models.\nmod dr: affects the decay of the internal envelope that has an overall impact on the amplitude and\ncharacteristics of the sound. The AMP envelope can be further adjusted with amp dr.\nWAV PLAYER\nPlay any sample of any bit depth, sample rate and length, mono or stereo.\nYou can play your samples polyphonically. One shot is currently the only way to play samples.\nYou can organize your samples in 10 folders with 32 samples maximum per folder. If the folder is\nempty, Coral ignores it. Since Firmware 0.7.0 folders and samples are alphabetically ordered.\nEach voice can have any sample from any folder. Furthermore, sample and folder selection are\nmodulable. Changing the sample introduces 1-2 ms of latency with a suitable SD card.\nharm: overdrive.\ntimbre: sample selection.\nmorph: folder selection.\n16 bit, 24 bit, 32 bit and 32 float bit depths as well as 44100 or 48000 sample rates are supported.\nSamples can be pitched up to 18 semitones and down to 24 semitones by internally adjusting the\nplayback speed. Coral doesn’t include any audio warping algorithm.\nSamples can also be played polyphonically.\nIntensive use of the sampler may result in sound artifacts. It will depend on the bitrate of the\nsample, the playback speed, audio channels, etc. The speed of the SD card has a great\nimpact on the sample player performance. You can get a U3 class card for optimal results.\nIf you are experiencing sound artifacts, try reducing the number of voices that use the sampler\nengine or that access the same sample, especially when using long samples. Also, converting\nthe samples to 16 bit depth improves the processing speed.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 30,
+      "image": "/oxi-coral/pages/page-030.png",
+      "title": "Page 30",
+      "sectionName": null,
+      "content": "30\nENGINE CONFIGURATIONS\nIn the Update section of the Coral website, you can get different combinations of engines.\nNO DRUMS VERSION\n1. Virtual Analog\n2. Waveshape\n3. 2op FM\n4. Wavetable\n5. MDO\n6. String\n7. Additive oscillator with 2 types of distortion\n8. ACID\n9. 3 Osc Virtual Analog\n10. Wavplayer\nDRUMS VERSION\n1. Virtual Analog\n2. Waveshape\n3. 2op FM\n4. Wavetable\n5. MDO\n6. Additive oscillator with 2 types of distortion\n7. Hihat synth\n8. Snare synth\n9. 2 Model Bassdrum Synth\n10. Wavplayer\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 31,
+      "image": "/oxi-coral/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "content": "31\nDRUMS ACID 3VCO VERSION\n1. Virtual Analog\n2. Waveshape\n3. 2op FM\n4. Wavetable\n5. MDO\n6. ACID\n7. 3 Osc Virtual Analog\n8. Snare Hihat Synth\n9. 2 Model Bassdrum Synth\n10. Wavplayer\nDUAL WAVETABLE (NO DRUMS)\n1. Virtual Analog\n2. Dual Oscillator Wavetable (2 wavetable oscillators per voice)\n3. 2op FM\n4. Wavetable (with custom waveforms)\n5. MDO\n6. String\n7. Additive oscillator with 2 types of distortion\n8. ACID\n9. 3 VCO Virtual Analog\n10. Wavplayer\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 32,
+      "image": "/oxi-coral/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "content": "32\nSOUND EFFECTS\nThere are three effects, Space/reverb, Chorus/ensemble and Delay (Overrides Noise).\nAll the effects act as send effects and are common for all the voices. The amount of each effect\ndepends on the level of each voice and the send amount.\nThe space engine is not only a reverb but also improves the stereo image of the dry signal.\nAlternative to Chorus, you can have a High Pass filter (stereo) adjustable per voice that can be\nenabled in the options.txt file. Check the options section to know all the details.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 33,
+      "image": "/oxi-coral/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "content": "33\nMIDI IMPLEMENTATION\nCC’S TABLE\nWith MIDI CC messages you can modulate any parameter inside Coral.\nThe messages will be filtered by the MIDI channel and the CC values will be applied to the Part that\nhas the same MIDI channel.\nCC is unipolar and overrides the internal parameter value.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 34,
+      "image": "/oxi-coral/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "content": "34\nPROGRAM CHANGE\nProgram Change messages with a value 1 to 10, received from any MIDI channel, will make the\nCoral to load a preset from 1 to 10 respectively.\nYou can disable this feature in the options.txt file.\nPITCH BEND\nPitch bend will be applied to the part whose MIDI channel matches the one of the message.\nPitch bend range is by default ±2 semitones. It can be changed in the options file.\nGLIDE\nSmooth transition of voice’s pitch from one note to the next.\nIn polyphonic mode where 1 part can have more than one voice assigned, thus different notes\ncan trigger different voices, the GLIDE effect may not be obvious. If you want a deterministic way\nof getting a glide effect, you should try with a single-voice (mono) part.\nTo change this glide time send MIDI CC values to the CC 07.\nGLIDE MODE\n0 selects glide ALWAYS, from 1 to 127 glide LEGATO on MIDI CC 08.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 35,
+      "image": "/oxi-coral/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "content": "35\nMPE\nCoral now supports MPE controllers!\nMPE allows you to control pitch bend or horizontal finger movement, poly aftertouch or pressure,\nand slide or vertical finger movement on a per-note basis.\nAftertouch is mapped to modulate the filter cutoff and volume for immediate playability.\nYou can assign slide, or any other expressive dimension from your controller, to any of the CC\nparameters of Coral.\nTo enable MPE on your device you need to add the following line to the options.txt file: mpeena 1\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 36,
+      "image": "/oxi-coral/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "content": "36\nPRESETS\nYou can Save and Load / recall all the parameters and voice configuration of the module in 10\npreset slots. Everything will be saved so it is found exactly as you left it when you saved it.\nPresets can be manually loaded or recalled with Program Change MIDI messages.\nRemember, the screen navigation sequence is as follows. Tap the encoder to sequentially jump\nbetween screens. Turning the encoder in any of the screens activates the selection mode, which\nmeans that the next encoder tap will confirm the selection.\nTurn any knob to exit and go back to the main view (voice status).\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 37,
+      "image": "/oxi-coral/pages/page-037.png",
+      "title": "Page 37",
+      "sectionName": null,
+      "content": "37\nSD CARD\nThe Micro SD card with factory content Must be always inserted. A Class 10 or preferably higher\nwith a reading speed of at least 70 Mb/s is required to use the wav player intensively.\nIf you want to use a larger or faster SD Card than the one provided with the module, ensure that it\nis formatted to FAT32. Then, copy all the files from the original factory card to the new one.\nThe folder structure required in the SD Card looks as follows:\nThe System folder contains data required for the proper operation of the module, the Calibration\nand the options.txt file with the user settings.\nFactory content download: LINK\nWAVETABLE\nThe Wavetables folder should contain at least one .wav wavetable file. You can make your own\nusing the OXI Wave App.\nAs long as the naming is right: WAVETABLE + your name.wav, Coral will load one wavetable file for\nthe wavetable engine.\nAt the moment, only one wavetable will be loaded that will be played by all voices.\nOPTIONS.TXT\nTo further customize the behavior of Coral, you can place a “options.txt” plain text file in the\nSystem folder of the SD card (if it’s not already been added in production).\nAs of today, there are the following settings available. You can simply copy these lines and write a\n0 or 1 depending on what you want. The order in which the options appear in the “options.txt” file\ndoes not matter!\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 38,
+      "image": "/oxi-coral/pages/page-038.png",
+      "title": "Page 38",
+      "sectionName": null,
+      "content": "38\npolycv\nIf “polycv 1” setting is set to 1, different CV pitch values will trigger different voices thus allowing\nto play Coral polyphonically with 1 oct CV and 1 trigger.\nIf “polycv 0” setting is set to 0, all voices will play in unison.\nencpri\nIf “encpri 0” encoder turn selects engine (push and turn for voice/part selection)\nIf “encpri 1” encoder turn select voice/part (push and turn for engine selection)\ncvpart\nIf “cvpart 0” setting is set to 0, PART CV selects which part is affected by CV modulation as\nexplained above.\nIf “cvpart 1” setting is set to 1, PART CV modulates the selected engine instead.\nmpeena\nAdd “mpeena 1” to enable MPE on Coral. Otherwise, MPE would be disabled.\nNOTE: On MPE mode, you cannot select the MIDI channels of the different voices since that’s\nautomatically done by the MPE engine.\npbrang\nThe Pitch Bend ( PB ) range can be adjusted in semitones using this option. It can go from 1 to 48.\nPitch bend can be set using this option: pbrang 24\nYou can change it to any pitch bend range like: 2, 12, 24, 48, etc.\nhpfilt\nAdd a High Pass filter (stereo) adjustable per voice that may help to better fit Coral in your mix.\nThe HP filter replaces the Chorus and takes over its control (the \"chorus\" secondary parameter).\nHP filter can be enabled in the options.txt file adding the following line: hpfilt 1\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 39,
+      "image": "/oxi-coral/pages/page-039.png",
+      "title": "Page 39",
+      "sectionName": null,
+      "content": "39\ndelena\nIf “delena 1” Delay enabled. The Noise secondary parameter is overridden by the Delay send\namount.\nDelay can be enabled in the options.txt file adding the following line: delena 1\nvumetr\nEnables the master VU Meter. LEDs 9 and 10 represent the master level.\nVU Meter can be enabled in the options.txt file adding the following line: vumetr 1\nledalw\nShow a subtle indication of the selected part of voice in the main screen, can be enabled in the\noptions.txt file adding the following line: ledalw 1\npcigno\nWhen set to “pcigno 1”, Coral ignores Program Change MIDI messages.\nextpre\nWhen set to “extpre 1”, Enable up to 100 presets divided in 10 groups of 10.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 40,
+      "image": "/oxi-coral/pages/page-040.png",
+      "title": "Page 40",
+      "sectionName": null,
+      "content": "40\nOXI WAVE APP\nThe wave table used by the Wavetable engine in Coral can be edited and replaced by a custom\none. For this purpose you can use the OXI Wave software for Win and Mac, based on the Wave\nEdit App by Andrew Belt and Sphere Edit by Dan Green.\nIn the top menu click ‘Open wavetable’ to open a Wavetable created for the CORAL.\nIf you want to start from scratch, you need to fill all the 27 waves that make up the wavetable.\nOtherwise there may be silent areas in the wave table.\nOnce you are happy with your wavetable, click ‘Save Wavetable As…’.\nIn the GRID VIEW of the app you can visualize the 3 blocks of 3 by 3 waves. Remember that harm,\ntimbre and morph correspond to the 3 dimensions of the wavetable, Z, X, and Y respectively.\nIt’s important that every waveform of the wavetable has its volume normalized (the amplitude of the\nwaveform is the maximum possible without clipping). Otherwise there may be louder and softer\nregions or the Wavetable engine will sound quieter compared to other Engines.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 41,
+      "image": "/oxi-coral/pages/page-041.png",
+      "title": "Page 41",
+      "sectionName": null,
+      "content": "41\nCALIBRATION\nSTEP 1\nTurn the following potentiometers fully clockwise:\n- Amp atk\n- Amp dr\n- Sust\n- Mod atk\n- Mod dr\n- F reso\nTurn the following Trimmer fully counter clockwise:\n- F env\nSTEP 2\nUNPLUG all the patch cables from the module.\nSTEP 3\nKeep pressed the encoder for 5 seconds until the ring looks like:\nSTEP 4\nTap again and the LED ring should look like:\nSTEP 5\nPatch the OCT CV input and send -1V from a well calibrated source.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 42,
+      "image": "/oxi-coral/pages/page-042.png",
+      "title": "Page 42",
+      "sectionName": null,
+      "content": "42\nDepending on the Voltage source (CV sequencer or keyboard), -1V may correspond to a different\nMIDI Note. On the OXI One C1 note outputs -1V.\nSTEP 6\nTap the encoder once and the ring should look like:\nSTEP 7\nSend +1V to the OCT input from a well calibrated source and tap the encoder again. On the OXI\nOne C3 note outputs +1V.\nSTEP 8\nTap the encoder again. If the process was done successfully, the confirmation animation should\nappear:\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 43,
+      "image": "/oxi-coral/pages/page-043.png",
+      "title": "Page 43",
+      "sectionName": null,
+      "content": "43\nACKNOWLEDGMENT\nSpecial thanks to Mutable Instruments for open sourcing their modules, some engines have been\ntaken from there. This module wouldn’t be possible without that.\nThanks to NANO Modules for building the Digimon, the developing platform where the Coral was\nborn.\nThanks to our Beta Testers for the feedback and bug hunting.\nThanks to Andrew Belt for the beautiful Wave Edit App.\nThanks to everyone that contributes to making the Eurorack world so fantastic.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 44,
+      "image": "/oxi-coral/pages/page-044.png",
+      "title": "Page 44",
+      "sectionName": null,
+      "content": "44\nDECLARATION OF CONFORMITY\nThis product complies with the requirements of European Directive 2014/53/EU & Directive\n2011/65/EU.\nThe full text of the EU declaration of conformity is available at the following internet address\nwww.oxiinstruments.com/\nENVIRONMENTAL ISSUES:\nThis symbol indicates that this product should not be treated as domestic waste.\nOnce its useful life has ended, it must be taken to a relevant collection point for the\nrecycling of electrical appliances. Through the correct recycling of batteries and\nelectrical devices, we contribute to avoiding risks to environmental health and safety.\nProduct Disposal Note: If this product is damaged beyond repair or, for any reason, its useful life is\ndeemed to have expired, please inform yourself about local, state and European regulations\nregarding the proper disposal and recycling of products containing lead, batteries, plastics, among\nother materials, as well as collection points for these types of products.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 45,
+      "image": "/oxi-coral/pages/page-045.png",
+      "title": "Page 45",
+      "sectionName": null,
+      "content": "45\nTERMS OF WARRANTY\nREFUND POLICY (only in European Union)\nThe consumer has a total of 14 days from the acquisition of the product to be able to return the\nproduct thus receiving a full refund of the price of it. The product must be in the same state and\nwith all the original content in order to receive a full refund.\nShipping costs will be paid by the customer.\nWARRANTY\nOXI Instruments warrants the included hardware product and accessories against defects in\nmaterials and workmanship for two years from the date of original purchase. Unless proven\notherwise, it will be presumed that the breaches of conformity manifested in a period of six months\nfrom the delivery of the product already existed on that date.\nThe warranty will not cover the repairing costs of the following cases:\n● Misuse of OXI Coral, whether subject to extreme conditions, as using it incorrectly.\n● Improper handling of the product.\n● Normal wear and tear, nor damage caused by accident or abuse.\n● Malfunction due to the use of accessories not authorized by OXI Instruments.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 46,
+      "image": "/oxi-coral/pages/page-046.png",
+      "title": "Page 46",
+      "sectionName": null,
+      "content": "46\n© 2023 OXI ELECTRONIC INSTRUMENTS SLU. All rights reserved. OXI INSTRUMENTS and the\nOXI logo are registered trademarks of OXI INSTRUMENTS in the UE and registered in many other\ncountries. OXI CORAL is a trademark of OXI INSTRUMENTS. Design and specifications subject to\nchange without notice.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

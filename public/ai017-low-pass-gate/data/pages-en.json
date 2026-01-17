@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T17:52:04.237Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ai017-low-pass-gate/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "AI Synthesis AI017 Low Pass Gate\nUser’s Manual\nThis is the Manual for the AI017 Eurorack Low Pass Gate you can purchase it by going to:\nhttps://aisynthesis.com/product/ai011-voltage-co…olled-oscillator/.\n1. About the AI017 Low Pass Gate\nIf you are new to DIY electronics, an oscillator is not the first thing you should build. The first\nmodule, the AI001 Multiple is ideal for beginners, as it teaches how to solder and signal flow.\nThe AI017 Low Pass Gate Eurorack Module can be used as a Voltage Controlled Filter, Voltage\ncontrolled Amplifier, or both. The AI017 is an updated variation of the classic Buchla 200 Series\nLow Pass Gate, updated with a tunable resonance circuit, and a Depth control. Vactrols are used\nfor control voltage, allowing for classic \"ringing\" and \"bongo\" effects.\nThe Depth control compensates the vactrols inability to drop lower than 100 ohms, which can\nallow audio bleed on traditional Low Pass Gates. The effect can be switched on or off, as depth\nwill attenuate the classic ringing and bongo effect. This gives the user an easy way to go from a\n\"vintage\" Low Pass Gate to a \"modern\" Low Pass Gate with a flick of the switch. A rear trimmer\nallows for the tuning of the resonance.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ai017-low-pass-gate/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2. AI017 Controls\n1. Resonance. In VCF mode (not\nVCA/VCF - see control #3,) this knob\ncontrols the resonance of the\nResonant Voltage Controlled Filter.\nGain can be fine tuned to taste using\nthe resonance trimmer on the back of\nthe module.\n2. Level. In VCA mode (see control\n#3).this knob sets the base level of\nthe VCA. With no CV and set at 0, the\nVCA will be closed, turning it\nclockwise will open the VCA. Note\nthat with with Depth mode (Control\n#8) set to Off or On with the Depth\nKnob at 0 there may be some bleed,\nconsistent with classic vintage Vactrol\nVCAs. It acts similar in VCA/VCF\nmode (Control #3). In VCF Mode, the\nknob controls the base cutoff, and\ncontrols at what frequency the filter\nallows low frequencies to pass. As\nthe knob is turned clockwise, it allows\nhigher frequencies to pass.\n3. Mode Switch. This switch\ncontrols the “mode” of the module.\nWhen it is up it is in VCF mode and\nthe module is a Resonant Low Pass\nGate. In the middle it is a non\nresonant combination VCA/VCF, with\nhigh frequencies being filtered as the VCA closes. In the Down mode the module is a VCA, with no\nfiltering of high frequencies.\n4. Audio Input attenuator. This knob passively attenuates the signal coming in at Input jack #5,\n5. Audio Input. Plug audio signals (or CV, go nuts) into this jack to process them in the module.\nShort triggers can also be plugged in for classic “pinging” effects.\n6. Output. Signal processed through the module is present at this Output jack.\n7. Depth Knob. This knob has no effect unless the Depth Switch (#8) is Up. When active, the knob\nadds negative bias to the circuit, allowing the base level to go lower than normal. Why do this? Good\nQuestion. With Depth off, the circuit is a classic Low Pass Gate, warts and all, meaning that Low\nFrequencies can bleed through the vactrols. If you want to reduce bleed, Depth can be used to make\nthe Low Pass Gare more modern and clean. You can also use it with the CV inputs to shape the\nsound.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/ai017-low-pass-gate/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "8. Depth On/Off. When in the Up position, this switch allows the Depth Knob (#7) to allow negative\nbias to the signal. In the “Down” position, the Depth knob has no effect.\n9. CV1 Input. This is an un-attenuated Control Voltage input that controls the Level of the module,\ndepending on mode.\n10. CV 2 Knob. This Knob is a passive attenuator controlling the voltage input into the CV2 jack\n(#11).\n11. CV 2 Input. This is an attenuated Control Voltage input that controls the Level of the module,\ndepending on mode. The signal is attenuated by the CV 2 knob (#10)\n3. Power\nThe AI017 uses a shrouded header to prevent the cable being plugged in the wrong way. The unit\ndraws 19mA on the positive rail, and 16v on the negative side.\n5. Patch Ideas/Uses\nComing soon...\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

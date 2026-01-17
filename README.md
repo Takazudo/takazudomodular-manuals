@@ -257,7 +257,7 @@ Comprehensive documentation is available in the `/doc/` directory:
 # Start documentation server
 pnpm doc:dev
 
-# Visit: http://localhost:3110
+# Visit: http://doc-zmanuals.localhost:3100
 ```
 
 Topics covered:
@@ -310,7 +310,7 @@ MIT License
 ## Support
 
 - **Issues**: [GitHub Issues](https://github.com/Takazudo/takazudomodular-manuals/issues)
-- **Documentation**: [http://localhost:3110](http://localhost:3110) (when running locally)
+- **Documentation**: [http://doc-zmanuals.localhost:3100](http://doc-zmanuals.localhost:3100) (when running locally)
 
 ---
 

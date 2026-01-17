@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:13.132Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac713-stereomix/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "Instruments for Sonic Expression\nEst.2009\nAugust.2022\nUSER’S GUIDE . REV01\nADDAC713\nSTEREO\nDISCRETE\nMIXER\nINTRODUCING\nFrom Portugal with Love!\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac713-stereomix/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC713 STEREO DISCRETE MIXER \tUSER’S GUIDE\nAugust.2022\tRevision.01\nWelcome to:\npage 2\tADDAC SYSTEM\nDESCRIPTION\nADDAC713 is the stereo version of our 703 Discrete Mixer.\nInspired by Moog’s CP3 mixer, this is a fully discrete\nanalog mixer and it's not, by any means, your standard\nbreakfast mixer, although it can behave like one.\nThis is a wolf in sheep's clothing. Despite its harmless\nlooks there's a dark snarly soul behind that panel that\nwants to take your sounds into a realm of gritty gnarly\ngrowls.\nThis new version was initially thought of as a percussion\nmixer, with mono inputs and panning, to allow placing\npercussive voices in the stereo field, while keeping\nchannel 4 in mono for low end sources like a kick drum\nor Bass. In the developement process we slightly\nchanged this initial idea, adding stereo inputs for the first\n3 channels, but still kept the 4th channel in mono.\nAll four [GAIN] controls go to extreme levels, the first 3\nchannels also feature [PAN] controls.\nFeedback is used to overdrive the whole mix. As the\ncontrol is turned clockwise the sound will be clipped\nharder until it goes completely off, this happens as\nfeedback is increased the audio bias reference also\nmoves up, at extreme levels it offsets the whole signal\nupwards until it completely goes above the top rail\nclipping the whole signal hence the resulting gate effect.\nThe [MASTER OUTPUT] sets the overall output gain of the\nmixer, the two leds monitor the audio output signal.\nThe Soft clipping switch engages an anti-click circuit\nwhich adds a low pass before the output, the switch\nallows 3 states: Soft low pass / Off / Hard low pass\nFeatures:\n.Three channels with stereo inputs, gain and pan knob\n.One channel with mono input and gainknob\n.Feedback/gate knob\n.Master output volume knob\n.Soft clipping switch\n.Two Led Monitors for Left and Right channels\nThis module will also be available as a full DIY kit..\nTech Specs:\n8HP\n4 cm deep\n80mA +12V\n80mA -12V\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac713-stereomix/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "page 3\tADDAC SYSTEM\nADDAC713 User’s Guide\nADDAC713\nSTEREO DISCRETE MIXER SIGNAL FLOW DIAGRAM\nLEFT OUTPUT\nRIGHT OUTPUT\nCH1 LEFT INPUT\nCH1 RIGHT INPUT\nMASTER MIX\nPANNING\nCONTROL\nCH2 LEFT INPUT\nCH2 RIGHT INPUT\nPANNING\nCONTROL\nCH3 LEFT INPUT\nCH3 RIGHT INPUT\nPANNING\nCONTROL\nGAIN\nCONTROL\nGAIN\nCONTROL\nGAIN\nCONTROL\nFEEDBACK\nGAIN\nCONTROL\nCH4 LEFT INPUT \tGAIN\nCONTROL\nLOW PASS\nSOFT/OFF/HARD\nSOFT CLIP\n&\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac713-stereomix/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "CONTROLS DESCRIPTION\nADDAC713 User’s Guide\npage 4\tADDAC SYSTEM\nChannel 1 Gain control\nChannel 1 Pan control\nSoft Clipping + Low Pass\nChannel 4 Input\nLeft Output\nRight Output\tChannel 3 Inputs\n(Left normalled to Right)\nChannel 2 Inputs\n(Left normalled to Right)\nChannel 1 Inputs\n(Left normalled to Right)\nFeedback Gain control\nChannel 3 Pan control\nChannel 3 Gain control\nChannel 2 Gain control\nChannel 2 Pan control\nChannel 4 Gain control\nMaster Gain control\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac713-stereomix/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC713 \tUSER’S GUIDE\nAugust.2022\tRevision.01\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

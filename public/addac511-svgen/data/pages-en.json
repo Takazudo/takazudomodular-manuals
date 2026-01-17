@@ -1,0 +1,596 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:13.077Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac511-svgen/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "December.2024\nUSER’S GUIDE . REV01\nFIRMWARE 1.0\nADDAC511\nVC STOCHASTIC\nVOLTAGE\nGENERATOR\nINTRODUCING\nFrom Portugal with Love!\nInstruments for Sonic Expression\nEst.2009\n1515th Year Anniversary\n\t12.2009-12.2024\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac511-svgen/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "PAGE INDEX\n3.\n4.\n5.\n6.\n7.\n9.\n10.\n11.\n12.\n13.\n16.\n17.\n18.\n19.\n20.\n21.\n23.\n24.\n25.\n26.\n28.\n29.\n32.\n33.\n36.\n37.\n38.\n39.\nINTRO & FEATURES\nSIGNAL FLOW DIAGRAM\nFRONT PANEL LAYOUT\nOLED SCREEN\nBUTTONS LONG PRESSES\nSTATES\nMODES\nVOLTAGE SETTINGS\nOVERVIEW\nVOLTAGE SETTINGS\nVOLTAGE & GATE OUT\nVOLTAGE PROBABILITY\nVOLTAGE & TIME DISTRIBUTION\nSMOOTH INTERPOLATION\nSTEPPED INTERPOLATION\nTIME SETTINGS\nOVERVIEW\nTIME SETTINGS\nCLOCK\nCLOCK MASTER/SLAVE\nCLOCK FOLLOW\nCLOCK DELAY\nCLOCK EXAMPLES\nLOCK\nENVELOPE SETTINGS\nOVERVIEW\nENVELOPE SETTINGS\nENVELOPE QUANTIZER\nTIME SETTINGS\nOVERVIEW\nTIME SETTINGS\nCLOCK\n40.\n41.\n42.\n43.\n44.\n45.\n46.\n47.\n48.\n49.\n52.\n56.\n58.\n59.\n60.\nQUANTIZER\nQUANTIZER OVERVIEW\nINTERNAL/EXTERNAL QUANTIZATION\nQUANTIZER SOURCES\nROUNDING & NOTE PROBABILITY\nQUANTIZER & SMOOTH\nEXTERNAL QUANTIZATION\nQUANTIZER TRANSPOSE\nCHORD GENERATION EXAMPLE\nPRESETS\nCV ASSIGNS\nLOGIC ASSIGNS\nMENU\nFIRMWARE UPDATES\nSPECIAL START-UPS\nPATCH EXAMPLES\nADDAC511 VC STOCHASTIC\nVOLTAGE GENERATOR \tUSER’S GUIDE\nDecember.2024\tRevision.01\nWelcome to:\nVOLTAGE MODE\nENVELOPE MODE\nQUANTIZER\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac511-svgen/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "ADDAC511 VC STOCHASTIC\nVOLTAGE GENERATOR \tUSER’S GUIDE\nRevision.01\nWelcome to:\npage 3\tADDAC SYSTEM\nWELCOME\n20HP\nTech Specs:\n20HP\n4.5cm deep\n200mA +12V\n100mA -12V\nFEATURES\n4 independent channels with bipolar CV / Gate outputs and\nClock Input that allow all things random.\nEach channel can be set to generate either continuous\nVoltages, Envelopes or as a Quantizer.\nMutes and Holds per channel\n3 States per channel allow very fast settings changes,\nallowing from smooth to drastic transitions.\nControls over Voltage Range, Quantization with custom\nscales, Probability, Distribution curves and Smoothing, plus\ntime and bpm ranges, time distribution curves and several\nclock sources.\nA 32 step sequencer per channel that can work completely\nindependent or in sync.\n8 Assignable CV inputs and 4 Gate inputs can be internally\nmapped to any setting of any channel.\n3 configurable Logic outputs allows complex logic events\ncomparing different channel states.\nAverage CV output of all 4 CV outputs.\nEasy VCO tuning available in the Menu.\nCalibration and mapping of all 4 CV outputs is also allowed\nthrought the Menu\nAt ADDAC System we love all sources of unpredictability be it by randomness or signal complexity.\nThis module greatly expands on the principles of our ADDAC501 Complex Random from 2013.\nThis is a fully fledged 4 channel voltage generator capable of all things random, with quantization,\nprobability, distribution, interpolation, time control, clock, states and a 32 step sequencer.\nThe module operation relies on its screen for all parameter editing, each button accesses one single\npage where parameters can be changed allowing a fast and fluid workflow across all settings.\nLong presses on all buttons have a secondary function allowing fast Channel selection plus Mute and\nHold functions.\nThe combination of having 2 Encoders with Push buttons allow swift navigation and editing across all\npages and their settings.\nDecember.2024\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac511-svgen/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "CV INPUT 8\nCV INPUT 7\nCV INPUT 6\nCV INPUT 5\nCV INPUT 4\nCV INPUT 3\npage 4\tADDAC SYSTEM\nSIGNAL FLOW DIAGRAM\nSTATE C\nSTATE B\nSTATE A\nPRESETS\nSMOOTH\nDISTRIBUTION\nPROBABILITY\nCV & LOGIC\nCLOCK\nDISTRIBUTION\nTIME\nMENU\nUSER\nINTERFACE\nMANAGER\nCONTROL\nUNIT\nLOGIC OUT 3\nGATE OUT 4\nCV OUT 4\nAVERAGE\nMIX OUT\nLOGIC OUT 2\nLOGIC OUT 1\nGATE OUT 3\nGATE OUT 2\nGATE OUT 1\nCV OUT 3\nCV OUT 2\nCV OUT 1\nCONTROL ENCODER 2\nCONTROL ENCODER 1\nCV INPUT 2\nCLOCK INPUT 4\nCLOCK INPUT 3\nCLOCK INPUT 2\nCLOCK INPUT 1\nINPUTS\nMANAGER\nOUTPUT\nINSPECTOR\nLOCK\nGATE OUT\nQUANTIZATION\nVOLTAGE\nCV INPUT 1\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac511-svgen/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "FRONT PANEL LAYOUT\nADDAC511 User’s Guide\npage 5\tADDAC SYSTEM\nThere are several distinct sections in this module:\nAVERAGE MIX: CV output\nCV INPUTS: 8 CV inputs\nCONTROLS: Encoders & Menu\nSTATES\nPRESETS & ASSIGNS\nLOCK / SEQUENCER\nLOGIC OUTPUTS: 3 configurable logic outputs\nCV OUTPUTS: 4 CV outputs\nGATE OUTPUTS: 4 Gate outputs\nCLOCK / GATE INPUTS: 4 Gate inputs\nVOLTAGE SETTINGS\nTIME SETTINGS\nAVG\nMIX\t\nLOGIC OUTS\nCV OUTPUTS\nGATE OUTPUTS\nCLOCK/GATE INS\nCV INPUTS\nCONTROLS\nSTATES\nVOLTAGE\nSETTINGS\nTIME\nSETT-\nINGS\nLOCK PRESETS\n& ASSIGNS\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac511-svgen/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "MAIN SCREEN:\nThe Main Screen shows the most important info for overall operation.\nCHANNELS GATES & SPECIAL STATES\nFour top squares shows the 4 channels Gate Output state as well as special states:\n0 = Mute (0v), H = Hold\nACTIVE CHANNEL & STATE\nShows the active channel and state\nSELECTED QUANTIZATION\nScale selected\nSCREEN TITLE\nShows the Screen name\nVOLTAGE SETTINGS\nMinimum and Maximum voltage range\nTIME SETTINGS\nMinimum and Maximum time range\nPROBABILITY & SMOOTH DURATION SETTINGS\nShows the Probability and\nDISTRIBUTION CURVE\nLow resolution representation of the waveform\nWEIGHT CURVE\nGrains envelope representation\nSELECTED CHANNEL OSCILLOSCOPE\nShows the history and polarity of the selected channel.\nRotating Encoder 2 allows zooming in and out on the display buffer.\nCHANNELS REAL TIME STATE\nThe current CV state of all 4 channels\nPOLARITY SETTING\nShows the polarity setting: + or ±\nMAIN SCREEN ENCODER BEHAVIOUR\nRotating Encoder 1 selects shown values, Encoder 2 edits the settings.\nPressing Encoder 2 deselects any selected setting\nRotating Encoder 2 with no selected setting zooms in and out on the oscilloscope screen\npage 6\tADDAC SYSTEM\nOLED MONITOR\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac511-svgen/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "page 7\tADDAC SYSTEM\nLONG PRESSES\nCHANNEL SELECTION, HOLDS & MUTES\nEvery column of the main interface features a secondary\nfunction when pressed for over 1 second.\nCHANNEL SELECTION\nThe first column selects the channel to be edited.\nThe change can be seen at the top right corner as shown\nhere\nHOLD FUNCTION\nThe second column activates the Hold function which\nholds the CV output current value until the button is\npressed again.\nWhen active the respective channel will display its state\non the top right corner with the letter “H”\nMUTE FUNCTION\nThe third column activates the Mute function which sets\nthe CV output to 0v until the button is pressed again.\nWhen active the respective channel will display its state\non the top right corner with the number “0”.\nEvery row corresponds to a channel.\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac511-svgen/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "page 8\tADDAC SYSTEM\nLONG PRESSES\nPASTE, RANDOM & RESET\nThe 3 State buttons have a secondary function when\npressed for longer than 1 second.\nSTATE A - PASTE\nA long press on this button enters the Copy screen.\nThe Copy function is screen dependent meaning that will\ncopy different settings depending on the screen state.\nIt is also Channel and State dependent meaning every\nState of every Channel can be accessed as a block to be\ncopied from.\nIf the screen is in Main then Copy will change all setting\non the current Channel and State from the selection made\non the Copy screen.\nIf the screen is in any other page, the copy function will\nonly copy the settings of that particular page.\nThe Copy screen shows:\nThe current Channel and State\nThe current Screen page\nThe Channel from which to copy\nThe State from which to copy related to the channel\nselected above.\nThe two Encoders buttons choose between Cancel to exit\nthe copy screen without making changes and Enter to\nexecute the copy process.\nSTATE B - RANDOM\nRandomizes the current screen settings to all new random\nvalues, only on the currently selected channel.\nIf used in the Main Screen it will randomize only the\nsettings available on the Main Screen.\nSTATE C - RESET\nResets the current screen settings to the loaded preset\nsettings and only on the currently selected channel.\nIf used in the Main Screen it will reset all of the selected\nchannel’s settings.\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac511-svgen/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "page 9\tADDAC SYSTEM\nSTATES\nEvery channel has 3 States, every State is independent\nand can have completely diferent settings.\nThink of them as instantly accessible channel presets.\nThey can be used to create drastic or slight changes to a\nCV output.\nState changes are immediate, once engaged the new\nsettings take control.\nThey can be assigned to a CV input, the incoming voltage\nlevel will trigger the corresponding state:\nSTATE A < 1.6v\nSTATE B > 1.6v & < 3.3v\nSTATE C > 3.3v\nSTATES PROBABILITY\nStates can also be configured to automatically change, at\nevery clock cycle, according to probability settings.\nTo enter this screen users can double click on any State\nbutton.\nConfiguring the ammount of probability for each state\nallows to fine tune the preponderancy of each channel.\nEncoder 1 configures the threshold point between State A\nand State B while Encoder 2 configures the point between\nState B and State C.\nOnce engaged the States will be changing automatically,\nif the user presses a State button it will momentarily\nchange to the selected state until the next clock cycle\ntriggers the new state probability and eventually change\nthe state once again.\nStates Probability activity is suspended everytime the user\nexits the main screen to enter any other screen, it’s\nimportant to suspend the activity to be able to edit the\nparameter of the current state without jumping to another\nstate while in the editing process.\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac511-svgen/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "page 10\tADDAC SYSTEM\nADDAC511 User’s Guide\nOPERATION MODES\nThere are 2 main operation modes, independently selected for each channel.\nChoosing the Mode can be done in the [VOLTAGE] screen.\nFully featured random voltage generation in the time and voltage domain with fully controlled range, probability,\nrandom distribution, smooth, quantization and a 32 step sequencer.\n+5v\n-5v\n0v\n+5v\n-5v\n0v\nFully featured random envelope generation in the time and voltage domain with fully controlled range,\nprobability, random distribution, curve control.\n1. RANDOM VOLTAGE GENERATION\n2. RANDOM ENVELOPE GENERATION\n+5v\n-5v\n0v\nTIME\nVOLTAGE\nMAIN SECTIONS\nNo matter the mode selected there are two main sections which define how each channel operate:\nVoltage & Time\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/addac511-svgen/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "1. RANDOM VOLTAGE GENERATION\n+5v\n-5v\n0v\nHere’s an example plot of a Voltage generated output\npage 11\tADDAC SYSTEM\nADDAC511 User’s Guide\nVOLTAGE\nMIN / MAX\nPOLARITY\nRESOLUTION\nPROBABILITY\nCHANCE\nLINEARITY\nDISTRIBUTION\nMODE\nLINEARITY\nSMOOTH\nQUANTIZER POST SMOOTH\nQUANTIZER PRE SMOOTH\nCURVE TYPE\nPRE QUANTIZE\nSMOOTH\nCURVE TYPE\nPOST QUANTIZE\nQUANTIZE\nSCALE\nSOURCE\nROOT\nTRANSPOSE\nQUANTIZE\nSCALE\nSOURCE\nROOT\nTRANSPOSE\nCV OUTPUT\nGATE OUT\nMODE\nSIZE\nPROBABILITY\nVOLTAGE SETTINGS : SIGNAL FLOW\nVOLTAGE GENERATION\nThe voltage generation process is made of a number of functions in a chain.\nEach function features it’s own fast recall push button and configuration screen.\nAt every clock tick a new voltage will be generated by this chain.\nThe [SMOOTH] and [QUANTIZE] order (A to B, B to A) can be altered in the [SMOOTH] window.\nCV OUTPUT\tGATE\nOUTPUT\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/addac511-svgen/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "QUANTIZATION SCREENS:\nThere are 2 Quantization screens, pressing the\n[QUANTIZATION] button will change between the 2\nscreens.\nSCALE\nSelect from a few standard scales plus a custom\nsetting where the user can freely choose the scale\nnotes.\nSOURCE\nThe source to be quantized, by default is set to the\ncurrent channel although it can be set to any of the\nother channels or cv inputs working as a quantizer\nROOT NOTE The scale Root note\nTRANSPOSE MODE\nSEMITONES: Transposition in semitones intervals\nSCALE DEGREE: The scale degree transposition, transposes\nwithin the scale notes, in case of standard 7 note scales it\ncan be used for modes:1=Ionian, 2=Dorian and so on.\nOCTAVES: Transposition in octave intervals\nCENTS: Transposition in cents intervals\nTRANSPOSE\nThe transposition value\nMore info regarding the quantizer operation on page 39.\nSTEPS\nSets the number of steps to divide the MIN/MAX range\ndefined from 2 to 320 or MAX (full 16bit resolution\nRANGE LOCK\nOFF: [V. MAX] & [V. MIN] defines the range minimum and maximum boundaries independently\nON: Locks the current range defined, editing [V. MAX] will also change [V. MIN] and vice-versa.\npage 12\tADDAC SYSTEM\nRANDOM VOLTAGE SETTINGS\n1. RANDOM VOLTAGE GENERATION\nVOLTAGE SCREEN:\nVoltage range settings\nMODE\nThe channels’ operating Mode\nVOLTAGE MAXIMUM\nSets the maximum voltage of the randomization range\nVOLTAGE MINIMUM\nSets the minimum voltage of the randomization range\nCV POLARITY\nSets a Positive (0 > +5V) or Bipolar range (-5V > +5V)\nADDAC511 User’s Guide\nEx: C Major scale - 7 notes scales behaves as standard scale modes\nSCALE DEGREES TRANSPOSITION\n1 = IONIAN\n2 = DORIAN\n3 = PHRYGIAN\n4 = LYDIAN\n...\n-1 = LOCRIAN\n-2 = AEOLIAN\n-3 = MIXOLYDIAN\nC D E F G A B\nD E F G A B C\nE F G A B C D\nF G A B C D E\nB C D E F G A\nA B C D E F G\nG A B C D E F\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/addac511-svgen/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "GATE OUT SCREEN:\nSettings control the Gate Out behaviour\nSIZE\nPercentage of gate ON time in relation to the step size\nPROBABILITY\nOutput probability from 0% (no output) to 100% (always\noutputs). Also available is 1ms and 10ms for triggers.\nSKIP STEPS\nThis feature introduces some disruption on the Gate Out\nbehaviour, keeping its output low at every X steps.\nOUTPUT ORDER\nThe order at which the CV and Gate is sent to the physical outputs. Although the time difference between the two\noutputs will still be microseconds apart this order may be important depending on what is being patched to.\nCV/GATE: CV before the Gate Output\nGATE/CV: Gate before the CV output\nRANDOM VOLTAGE SETTINGS\nPROBABILITY SCREEN\nOutput probability settings, determines if it will generate a new CV at the current step or skip it and hold the current value\nuntil the next step.\nPROBABILITY\nSets the probability of new generated voltages to be\ninterrupted and not sent to the output\n0% = All new voltages will be canceled\n100% = No new voltages will be canceled\nSKIP STEPS\nThis feature introduces some disruption on the CV output\nbehaviour, skipping the CV generation at every X steps.\nAPPLY TO\nCV: only applies the probability to the CV output, Gate Out\nwill still be generated.\nCV+GATE: applies the probability to both the CV and Gate\noutput\nLINEARITY\nSets the probability distribution curve\n(same as in other modes)\n(same as in other modes)\npage 13\tADDAC SYSTEM\n1. RANDOM VOLTAGE GENERATION\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/addac511-svgen/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "SMOOTH SCREEN\nSettings control the interpolation between each two random points\nCURVE TYPE\nThe type of curve used for the interpolation\nLIN: Linear interpolation\nLOG: Logarithmic interpolation\nEXP: Exponential interpolation\nBEZIER: Bezier curve interpolation\nDURATION\nThe duration of the interpolation as a percentage of\nthe step size\nQUANTIZE\nQuantizer Pre/Post setting:\nPre: Quantizer into Smooth for glissando type effect\nPost: Smooth into Quantizer for arpeggio type effect\nTRIGGER GATE\nYES / NO: When Yes is chosen this feature triggers the\nGate output at every interpolation step change\nRESOLUTION\nA bitcrusher applied on the incoming value, limiting the\nDAC resolution from 16 bit to 2 bit, at 2 bit the DAC range\nis limited to 4 values, 8 at 3 bit, 16 at 4 bit, 32 at 5 bit\nand so on up to 16 bit where the resolution is 65536\nSTEP MODE\nThis feature tranforms the linear interpolation in user\ndefined interval steps:\nOFF: No stepping, smooth interpolation\nVOLTAGE STEPS: interpolates at defined voltage steps\nTIME: interpolates at defined time steps\nSTEPS / STEP TIME\nSTEPS: Sets the number of steps to divide the interpolation distance\nSTEP TIME: Sets the time interval between interpolation changes\nRANDOM VOLTAGE SETTINGS\npage 14\tADDAC SYSTEM\nADDAC511 User’s Guide\nVOLTAGE DISTRIBUTION SCREEN\nAllows for non-linear distribution of the voltage randomized as described in Page 10.\nMODE\nOFF, FREE & WALK\nPOSITION\nPositions the distribution peak.\nSPREAD\nSets the Q factor for the distribution curve.\nLINEARITY\nSets the overall distribution curve.\n1. RANDOM VOLTAGE GENERATION\nUSING SMOOTH WITH CLOCK INPUTS\nMAY RESULT IN BAD TIMINGS AS THE\nMCU IS CONSIDERING THE LAST\nINTERVAL BETWEEN 2 GATES, IF\nTHE EXTERNAL CLOCK ISN’T STEADY\nTHE INTERPOLATION DURATION WILL\nNOT MATCH\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/addac511-svgen/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "GATE\n +5v\n0v\nGATE OUTPUT : SIZE = 25%\nGATE\n +5v\n0v\nGATE OUTPUT : SIZE = 10 milliseconds\npage 15\tADDAC SYSTEM\nADDAC511 User’s Guide\nVOLTAGE & GATE OUT EXAMPLES\nHere’s a few graphical examples of the Voltage and Gate Out settings.\n1. RANDOM VOLTAGE GENERATION\nGATE\n +5v\n0v\nGATE OUTPUT : SKIP STEP = 1\nGATE\n +5v\n0v\nGATE OUTPUT : SKIP STEP = 2\nGATE\n +5v\n0v\nGATE OUTPUT : SKIP STEP = 3\n+5v\nMIN: -2v\n-5v\n0v\nVOLTAGE RANGE: BIPOLAR -2v to +5v\tMAX:\n+5v\nMAX: +3v\nMIN: +1v\n-5v\n0v\nVOLTAGE RANGE: POSITIVE +1v to +3v\n+5v\nMAX: +3v\nMIN: +1v\n-5v\n0v\nVOLTAGE RANGE: POSITIVE +1v to +3v\n+5v\nMIN: -2v\n-5v\n0v\nVOLTAGE RANGE: BIPOLAR -2v to +5v\tMAX:\nGATE\n +5v\n0v\nGATE OUTPUT : PROBABILITY = 50%\nGATE\n +5v\n0v\nGATE OUTPUT : PROBABILITY = 80%\nGATE\n +5v\n0v\nGATE OUTPUT : SIZE = 50%\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/addac511-svgen/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "page 16\tADDAC SYSTEM\nADDAC511 User’s Guide\nVOLTAGE PROBABILITY\nAPPLY TO\nHere’s a few graphical examples of the Voltage and Gate Out [PROBABILITY] settings.\nNotice how they can be dependent or independent.\nWhen [APPLY TO] is set to CV+GATE the Gate only outputs\nwhen the probability is true.\nApplying the probability only to CV leaves the Gate intact,\noutputting every clock tick. This makes the Voltage Probabili-\nty independent from the Gate Probability.\nGATE PROBABILITY\nThe Probability function in the Probability Screen is the\nmaster probability, The one inside the Gate Out Screen\n1. RANDOM VOLTAGE GENERATION\n+5v\n-5v\n0v\nVOLTAGE PROBABILITY 100%\n+5v\n-5v\n0v\nVOLTAGE PROBABILITY 50%\nGATE\n +5v\n0v\nAPPLY TO = CV+GATE\nGATE\n +5v\n0v\nAPPLY TO = CV+GATE & GATE PROBABILITY = 100%\nGATE\n +5v\n0v\nGATE OUTPUT : GATE PROBABILITY = 100%\nGATE SIZE: 50%\nGATE\n +5v\n0v\nAPPLY TO = CV\nGATE\n +5v\n0v\nAPPLY TO = CV+GATE & GATE PROBABILITY = 50%\nGATE\n +5v\n0v\nAPPLY TO = CV+GATE & GATE PROBABILITY = 0%\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/addac511-svgen/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "page 17\tADDAC SYSTEM\nThese screens set the probability distribution for each random\ngeneration made in the time and voltage domain.\nEvery new random value by default is generated using a\nprinciple of uniform distribution (equal probability for all\npossibilities) however these can be weighted, meaning that\nthey can be defined to make a certain range area more\npredominant, while always keeping the result within the\nvoltage range defined in the [VOLTAGE] screen.\nThe weighted generation may follow three types of probabilis-\ntic distributions: uniform distribution, a slightly modified normal\ndistribution and walk/drunk distribution (walk mode).\nUniform distribution (OFF), as mentioned above, has no weight,\nany value within the defined range has equal probability of\nbeing selected.\nNormal distribution (FREE) is bell shaped, it can be described by\nits mean value and a deviation around that value defined by\n[POSITION]. Most random values will be around this position\nwith more or less deviation depending on the [SPREAD] value. In\nour modified version of the normal distribution, if the calculated\nvalue is outside the selected voltage range, it is brought back\ninside the range.\nWalk (WALK), like uniform distribution has equal probability for\nall possible values but restrains it’s range within a proximity to\nthe previous value, resulting in a plot similar to the stock\nmarket as an example.\nThe probabilistic distribution is further influenced by the\nlinearity parameter, which tilts the probability distribution either\ntowards the lower or higher ranges.\nMODES\nThe CV out value will have different probability characteristics,\ndepending on the mode setting:\n1. OFF\nUniform distribution (equal probability for all CV values)\n2. FREE\nNormal distribution, folding back at the upper and lower limits,\nparameters:\nPOSITION - Central value of probability distribution (mean)\nSPREAD - Allowed deviation relative to the position (deviation)\n3. WALK\nThe next value has a maximum deviation from the last value,\nparameters:\nSPREAD - Allowed deviation relative to the last CV out value\nLINEARITY\nThis parameter is independent of the mode selected, it further\nweights the probability distribution to give preference to lower\nor higher values, as if tilting the distribution.\nVOLTAGE AND TIME DISTRIBUTION\nADDAC511 User’s Guide\n1. RANDOM VOLTAGE GENERATION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 18,
+      "image": "/addac511-svgen/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "GATE\n +5v\n0v\nGATE OUTPUT: 10 millis\nGATE\n +5v\n0v\npage 18\tADDAC SYSTEM\nADDAC511 User’s Guide\nSMOOTH INTERPOLATION\nSmooth allows to interpolate between the generated values at every clock tick. The user can set the duration\nof the interpolation between 0 and 100%, this duration is in sync with the clock keeping correct timing even\nwith a random clock.\n1. RANDOM VOLTAGE GENERATION\n+5v\n-5v\n0v\nVOLTAGE\nCHANNEL’S RANDOM VOLTAGE\n+5v\n-5v\n0v\nSMOOTH\nSMOOTHED VOLTAGE : Linear - Duration changes the interpolation/slew size\n50% \t25% \t100%\nGATE\n +5v\n0v\n+5v\n-5v\n0v\nSMOOTH\nSMOOTHED VOLTAGE : Exponential\n50% \t25% \t100%\n+5v\n-5v\n0v\nSMOOTH\nSMOOTHED VOLTAGE : Bezier\n50% \t25% \t100%\nGATE\n +5v\n0v\nGATE\n +5v\n0v\nTRIGGER GATE: OFF \tTRIGGER GATE: OFF\tTRIGGER GATE: ON\n+5v\n-5v\n0v\nSMOOTH\nSMOOTHED VOLTAGE : Logarithmic\n50% \t25% \t100%\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 19,
+      "image": "/addac511-svgen/pages/page-019.png",
+      "title": "Page 19",
+      "sectionName": null,
+      "content": "GATE\n +5v\n0v\nGATE OUTPUT: 10 millis\n\tTRIGGER GATE: OFF\nGATE\n +5v\n0v\nTRIGGER GATE: OFF \tTRIGGER GATE: OFF\tTRIGGER GATE: ON\n\tOUTPUTS A GATE ON EVERY CV CHANGE\npage 19\tADDAC SYSTEM\nADDAC511 User’s Guide\nSTEPPED INTERPOLATION\nBesides smoothing in between each voltage step, smooth can\nbe used to create stepped interpolations using [RESOLUTION]\nand [STEP MODE]. [TRIGGER GATE] is used to trigger at every\ninterpolation step.\nHere we’re showing graphical examples of these in action.\nQuantization is set to PRE if set to POST all these examples\nwould be quantized to the scale defined in the Quantization\nscreen.\n1. RANDOM VOLTAGE GENERATION\n+5v\n-5v\n0v\nVOLTAGE\n+5v\n-5v\n0v\nSMOOTH\nCHANNEL’S RANDOM VOLTAGE\nSMOOTHED VOLTAGE : Linear - 50% Duration\n+5v\n-5v\n0v\nSMOOTH\n2 bit \t3 bit\nSMOOTHED & RESOLUTION = VOLTAGE OUTPUT RESOLUTION\n+5v\n-5v\n0v\nSMOOTH\n2 STEPS\n1\n1\n1 \t1\n1\n2\n2 \t2\n2 \t2\n3\n3\n3\n4\n4\n5\n5 STEPS\nSMOOTHED & STEP MODE: VOLTAGE\n+5v\n-5v\n0v\nSMOOTH\n500ms\n200ms \t100ms \t50ms \t10ms\nSMOOTHED & STEP MODE: TIME\n4 bit \t5 bit \t6 bit\n500ms\n50%\nGATE\n +5v\n0v\nTRIGGER GATE: OFF \tTRIGGER GATE: OFF\tTRIGGER GATE: ON\n3 STEPS \t4 STEPS\nGATE\n +5v\n0v\nTRIGGER GATE: OFF \tTRIGGER GATE: OFF\tTRIGGER GATE: ON\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 20,
+      "image": "/addac511-svgen/pages/page-020.png",
+      "title": "Page 20",
+      "sectionName": null,
+      "content": "1. RANDOM VOLTAGE GENERATION\npage 20\tADDAC SYSTEM\nADDAC511 User’s Guide\nTIME\nMIN / MAX\nPOLARITY\nRESOLUTION\nCLOCK\nSOURCE\nDISTRIBUTION\nMODE\nLINEARITY\nVIRTUAL\nCLOCK\nTICK\nTIME SETTINGS : SIGNAL FLOW\nTIMING GENERATION\nTime settings determines the rate at which the voltage and gate are generated, the interval between every genera-\ntion step is defined by the setting in the [TIME] screen, That value is then “balenced” by the [DISTRIBUTION] screen\nsettings and a virtual clock tick is generated.\nCLOCK SOURCES\nThere are 3 main sources to trigger each channel timing.\n1. 4 virtual clocks, one per channel. Each channel can select itself (INTERNAL) or any other channel.\n2. The 3 Logic Outputs, whenever the logic output goes high it triggers the channel’s clock.\n3. The 4 Clock inputs, any input can be routed to any channel.\nCHANNEL 4 CLOCK\nCHANNEL 3 CLOCK\nCHANNEL 2 CLOCK\nCLOCK INPUT 4\nCLOCK INPUT 3\nCLOCK INPUT 2\nCLOCK INPUT 1\nLOGIC OUT 3\nLOGIC OUT 2\nLOGIC OUT 1 \tCHANNEL 1\nAVAILABLE\nCLOCK\nSOURCES\nCHANNEL 1 CLOCK\n(INTERNAL)\nVIRTUAL\nSOURCES\nPHYSICAL\nSOURCES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 21,
+      "image": "/addac511-svgen/pages/page-021.png",
+      "title": "Page 21",
+      "sectionName": null,
+      "content": "page 21\tADDAC SYSTEM\nTIME SETTINGS : TIME MODE (milliseconds)\nTIME DISTRIBUTION SCREEN\nAllows for non-linear distribution of the time randomized\nMODE\nFREE\nWALK\nPOSITION\nPositions the distribution peak.\nQ FACTOR\nSets the Q factor for the distribution curve.\nLINEARITY\nSets the overall distribution curve.\nADDAC511 User’s Guide\nTIME MODE\nTime mode uses seconds as a reference, at every cycle it\nrandomizes a new value in the range defined by the Time\nMin / Max settings.\nTIME MAXIMUM\nSets the maximum step time in milliseconds.\nTIME MINIMUM\nSets the minimum step time in milliseconds.\nRANGE MODE\nRelative: Allow independent changes to Max and Min\nvalues\nAbsolute: Keeps the range defined, changing Max or Min\nwill also affect the other parameter, one pushes the other\nto keep the same range.\nIn Time Mode the clock is defined in milliseconds, the step length will be randomized from the interval defined by\nthe Time Min & Time Max parameters.\nSetting the Time Minimum higher than Time Maximum will result in a steady clock at a fixed rate without any\nrandomization.\nTIME SCREEN:\n1. RANDOM VOLTAGE GENERATION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 22,
+      "image": "/addac511-svgen/pages/page-022.png",
+      "title": "Page 22",
+      "sectionName": null,
+      "content": "page 22\tADDAC SYSTEM\nTIME SETTINGS : BPM MODE\nIn BPM Mode the clock works as a standard BPM clock, the step length will be randomized from the intervals\ndefined in the Distribution screen.\nThe SYNC slot output division is variable, it outputs the required time until the next beat. This will make sure the\nnext step falls back on the beat. This is especially usefull when using odd time divisions as it resets any offset,\nyou can see a graphical example below.\nBPM DISTRIBUTION SCREEN\nIn BPM Mode the user can set up to a total of 11\ndivisions, any division from 32/1 to 1/32 is possible, all\nodd combinations included.\nA second parameter visualised as a white bar sets the\nprobability / predominancy of each division active.\nOnly ratios with probability above zero will be active.\nRepeated ratios can be used.\nThe Menu button is used for clearing the edited value to\nthe default 1/1 with 0% probability.\nBoth encoders push button will exit the screen.\nADDAC511 User’s Guide\nTIME SCREEN:\nBPM MODE\nIn BPM mode the clock uses a constant timing value.\nIt can also be set to follow another channel BPM\nchoosing BPM CH2, BPM CH3, BPM CH4. In this case\nthe BPM field is not selectable and will show the value\nof the chosen follow channel.\nBPM\nSets the clock’s Beats Per Minute.\n1/1\nSHOWING GATE OUT AT 50% STEP SIZE\n1/1 \t1/1 \t1/1 \t1/1 \t1/1 \t1/1 \t1/1\t1/1\nSYNC\nCLOCK BEAT\n2/3\n2/3 ODD DIVISION IS GENERATED:\nNEXT STEPS WILL FALL OFF THE BEAT\nSTARTING WITH 1/1 \tSYNC GENERATED:\nNEXT STEPS WILL BE BACK ON THE BEAT\n1. RANDOM VOLTAGE GENERATION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 23,
+      "image": "/addac511-svgen/pages/page-023.png",
+      "title": "Page 23",
+      "sectionName": null,
+      "content": "page 23\tADDAC SYSTEM\nCLOCK\nADDAC511 User’s Guide\nCLOCK SCREEN:\nConfiguring the selected channel’s clock origin.\nCLOCK SOURCE\nSets the origin of the Clock, options are:\nINTERNAL (default): uses its own channel clock.\nCHANNEL X: chooses one of the other channels clocks.\nCLOCK IN X: chooses one of the 4 clock physical jack inputs\nLOGIC X: chooses one of the 3 Logic outputs\nINTERNAL\nkeeps the channel independent from other channels.\nAll other options makes the channel dependent to the\nsource chosen. In these cases the clock parameters avail-\nable will change according to the clock source selected.\nCHANNEL 1 to 4\nSyncs to any other channel: slave mode.\nCLOCK IN 1 to 4\nUses the frontpanel clock inputs to sync to\nexternal sources.\nLOGIC 1 to 3\nUses the internal logic outputs as a clock.\nThe grey area shows parameters that are defined outside the clock configuration\nscreen, these parameters are defined in the time screen.\nCLK SOURCE\nCHANNEL 1 SELECTED\nINTERNAL\nCHANNEL X\nCLOCK IN X\nLOGIC X\nTIME\nBPM\nTIME \tUSE TIME\nCH BPM / CH OUT\nWHEN OFF: MULT/DIV\nWHEN OFF: MULT/DIV\nUSE TIME\nUSE TIME\nUSE TIME\nFOLLOW\nUSE TIME\nBPM\nTIME\nBPM\nCHANNEL X\nTIME MODE\nCHANNEL 1\nTIME MODE\nEXTRA\nPARAMETERS\nAVAILABLE\nPARAMETERS\n1. RANDOM VOLTAGE GENERATION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 24,
+      "image": "/addac511-svgen/pages/page-024.png",
+      "title": "Page 24",
+      "sectionName": null,
+      "content": "page 24\tADDAC SYSTEM\nCLOCK MASTER/SLAVE\nADDAC511 User’s Guide\nSync Channels\nChannels can be sync’ed to other channels using the\n[CLOCK SOURCE] setting in the [CLOCK] screen.\nBy default every channel is a Master channel, indepen-\ndent from all others.\nTo change any channel to Slave the user just needs to\nselect to any other channel in the [CLOCK SOURCE]\nparameter, this will make that channel follow the\nselected clock.\nWhen set to Slave the [TIME] and [DISTRIBUTION]\nscreens will then be used to set the parameters for a\nnew function: Clock Delays. When active [CLOCK\nDELAY] will use the slave channel’s [TIME] and\n[DISTRIBUTION] parameters to generate a delay value\nthat will be added to the clock tick, efectively delay-\ning the incoming clock.\nThis delay can be steady or random depending on the\n[TIME] and [DISTRIBUTION] settings selected.\n1. RANDOM VOLTAGE GENERATION\nTIME \tCLOCK\nSOURCE: INTERNAL\nDISTRIBUTION\nVIRTUAL\nCLOCK\nTICK\nCHANNEL 1 : MASTER \tCHANNEL 2 : SLAVE\nTIME\nCLOCK DELAY\nDISTRIBUTION\nVIRTUAL\nCLOCK\nTICK\nCLOCK\nSOURCE: CHANNEL 1\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 25,
+      "image": "/addac511-svgen/pages/page-025.png",
+      "title": "Page 25",
+      "sectionName": null,
+      "content": "page 25\tADDAC SYSTEM\nCLOCK FOLLOW\nADDAC511 User’s Guide\nSync Channels: BPM Mode\nThe best practice to sync channels is to choose one to be\nthe master channel setting its [CLK SOURCE] to\n[INTERNAL]. The remaining channels can then refer to this\nmaster channel.\nIn this example Channel 1 is set as [INTERNAL]\nChannel 1 [TIME MODE] is set to BPM\nThe [TIME MODE] setting is very important here as it will\nshow different options if set to [BPM] or [TIME].\nChannel 2 [CLK SOURCE] is set to sync to Channel 1\nFOLLOW\nFollow will determine the sync mode.\nThe slave channel can sync to:\n[CH BPM] the virtual grid of the master channel BPM\n[CH OUT] the real-time gate output.\nThis would be the Channel 1 real-time Gate Output.\nThis output will depend on all other parameters on\nChannel 1, for simplicity in the example above it’s\nrandomizing whole and half notes.\n[MULT / DIV]\nWhen [USE TIME] is Off, the virtual BPM can be:\n. Multiplied (x1, x2, x3, x4, x5, x6, x7, x8, x16, x32)\n. Divided (/2, /3, /4, /5, /6, /7, /8, /16, /32)\nThis would be the Channel 1 virtual BPM.\nVirtual here means this is not the Channel 1 real output\nbut instead the BPM grid to which channel 1 is syncing\nto. Channel 2 will then follow this virtual grid depending\nof the [USE TIME] and [MULT/DIV] settings.\n[MULT / DIV]\nWhen [USE TIME] is Off, the virtual BPM can be:\n. Multiplied (x1, x2, x3, x4, x5, x6, x7, x8, x16, x32)\n. Divided (/2, /3, /4, /5, /6, /7, /8, /16, /32)\nCHANNEL 2 - FOLLOW CH BPM\nMULT/DIV = *1\nMULT/DIV = *3\nMULT/DIV = *2\nMULT/DIV = /3\nMULT/DIV = /2\nCHANNEL 2 - FOLLOW CH OUT\nMULT/DIV = x1\nMULT/DIV = /2\nMULT/DIV = /3\nMULT/DIV = x2\nMULT/DIV = x3\nCHANNEL 1 Virtual BPM\nFOLLOW EXAMPLE\nHere is a side by side comparison of both [FOLLOW] options including examples for diferent [MULT/DIV] values.\nCHANNEL 1 Virtual BPM\nFOLLOW CHANNEL BPM \tFOLLOW CHANNEL OUTPUT\nCHANNEL 1 Real-time GATE OUTPUT\nCHANNEL 1 Real-time GATE OUTPUT\n1. RANDOM VOLTAGE GENERATION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 26,
+      "image": "/addac511-svgen/pages/page-026.png",
+      "title": "Page 26",
+      "sectionName": null,
+      "content": "page 26\tADDAC SYSTEM\nCLOCK DELAY: BPM\nADDAC511 User’s Guide\nSync Channels: Slave TIME MODE = BPM\n[CLOCK DELAY]\nThe [CLOCK DELAY] parameter is used to cause deviation/delay to the incoming clock timing.\nIn this case the Channel 2 [TIME MODE] setting is very important as it will behave differently if set\nto [BPM] or [TIME].\nWhen using BPM the engine will use the time divisions set on the [TIME DISTRIBUTION] screen and\ngenerate a new interval from the divisions pool always using the Channel 1 BPM as reference\nignoring the channel’s own BPM setting.\n[CLOCK DELAY] = ON & CHANNEL TIME MODE = BPM\nIn this example Channel 2 [TIME MODE] is set to [BPM]\nFOLLOW\nFollow will then determine the sync mode.\nThe slave channel can sync to:\n[CH BPM] the virtual grid of the master channel BPM\n[CH OUT] the real-time gate output.\nWhen [USE TIME] is On there is no [MULT/DIV] option.\nThis will create a delay to every incoming clock, the\ndelay length is randomized from the [TIME DIVISIONS]\npool. Time divisions longer than the incoming clock are\ncanceled by the next incoming clock and will not\noutput.\nThis will generate a consecutive stream of notes which\nlengths are randomized from the [TIME DIVISIONS] pool.\nAs the current note reaches its final length a new note\nis imediatelly generated.\nCHANNEL 2 - 1/2 & 1/4 Notes \tCHANNEL 2 - 1/2 Notes\nCHANNEL 2 - 1/4 Notes\nFOLLOW EXAMPLE\nHere is a side by side comparison of both [FOLLOW] options, notice the time divisions selected\nCHANNEL 1 Virtual BPM\nFOLLOW CHANNEL BPM \tFOLLOW CHANNEL OUTPUT\nCHANNEL 1 Real-time GATE OUTPUT 1/1 & 1/2 Notes\n1. RANDOM VOLTAGE GENERATION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 27,
+      "image": "/addac511-svgen/pages/page-027.png",
+      "title": "Page 27",
+      "sectionName": null,
+      "content": "page 27\tADDAC SYSTEM\nCLOCK DELAY: TIME\nADDAC511 User’s Guide\nSync Channels: Slave TIME MODE = TIME\nWhen using [TIME MODE] set to [TIME] the engine will simply add a delay to the incoming clock source.\nThis setting is usefull used for generating time based delays, fixed or random, in this case although it is being\ntriggered by the master channel BPM grid the delays are set in seconds and will most probabbly fall out of the grid\ncreating odd delays.\nThe delay time is randomized from the range defined by the [TIME MIN] [TIME MAX] settings in the [TIME] screen.\nDelay times longer than the incoming clock are canceled by the next incoming clock and will not output.\nIn this example Channel 2 [TIME MODE] is set to [TIME]\nKeep in mind that Channel 1 [TIME MODE] is still set to\n[BPM].\nFOLLOW\nFollow will then determine the sync mode.\nThe slave channel can sync to:\n[CH BPM] the virtual grid of the master channel BPM\n[CH OUT] the real-time gate output.\nWhen [CLOCK DELAY] is On there is no [MULT/DIV] option.\nCHANNEL 2 - 10ms to 1s Random Clock Delay\nCHANNEL 1 Virtual BPM\nFOLLOW CHANNEL BPM \tFOLLOW CHANNEL OUTPUT\nCHANNEL 1 Real-time GATE OUTPUT 1/1 & 1/2 Notes\nCHANNEL 2 - 200ms Fixed Clock Delay\nCHANNEL 2 - 10ms to 1s Random Clock Delay\nCHANNEL 2 - 200ms Fixed Clock Delay\n1. RANDOM VOLTAGE GENERATION\nFOLLOW EXAMPLE\nHere is a side by side comparison of both [FOLLOW] options, notice the time settings.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 28,
+      "image": "/addac511-svgen/pages/page-028.png",
+      "title": "Page 28",
+      "sectionName": null,
+      "content": "CLOCK DELAY = OFF & MULT/DIV\nMULT/DIV = *1\nMULT/DIV = *3\nMULT/DIV = *2\nMULT/DIV = /3\nMULT/DIV = /2\nCLOCK DELAY = OFF & MULT/DIV\nMULT/DIV = x1\nMULT/DIV = /2\nMULT/DIV = /3\nMULT/DIV = x2\nMULT/DIV = x3\nCHANNEL 1 MASTER : BPM \tCHANNEL 1 MASTER : GATE OUTPUT\npage 28\tADDAC SYSTEM\nCLOCK FOLLOW: More Examples\nADDAC511 User’s Guide\nSync Channels > Follow: CH BPM vs CH OUT\nWhen setting an external clock the user can choose to follow the Master Channel BPM or Gate Output.\nFollowing the Master BPM will set a steady BPM for the Slave channel\nFollowing the Gate Output of the Master channel creates complex changes on the Slave channel period.\nBelow you can find graphical examples with all the different possible settings.\nFor easier visualization all gate representations show the Gate On time, Gate Length is always at 50%.\nMaster channel in RED : Slave channel in GREEN.\nTIME MODE = BPM & CLOCK DELAY = ON\nDelay 1/2 & 1/4 Notes\nTIME MODE = BPM & CLOCK DELAY = ON\nDelay 1/2 Note\nDelay 1/4 Note\nTIME MODE = TIME & CLOCK DELAY = ON\n10ms to 1s Random Clock Delay\n200ms Fixed Clock Delay (min > max: fixed speed)\nTIME MODE = TIME & CLOCK DELAY = ON\n10ms to 1s Random Clock Delay\n200ms Fixed Clock Delay (min > max: fixed speed)\nCHANNEL 2 SLAVE - FOLLOW CH BPM \tCHANNEL 2 SLAVE - FOLLOW CH OUT\nFollow: CH BPM \tFollow: CH OUT\n1. RANDOM VOLTAGE GENERATION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 29,
+      "image": "/addac511-svgen/pages/page-029.png",
+      "title": "Page 29",
+      "sectionName": null,
+      "content": "ACTIVE\nThe state of the Lock function: TRACK/HOLD/ON\nSTEPS\nThe number of steps in the sequence\nSEQUENCER MODE\nUsing the Mode parameter users can choose to:\n- Use the sequence voltage values but keep the time\nbetween steps random.\n- Keep random voltages happening but keep the\ntiming locked to the sequence values\n- Have both voltage and time coming from the\nsequence.\nDIRECTION\nFORWARD: Plays sequence forward\nREVERSE: Plays sequence backwards\nPING-PONG: Plays sequence in both directions\nOFFSET\nOffsets the sequence by X steps\nTRANSPORT CONTROLS\nPressing [ENCODER B] triggers transport controls.\nPLAY: Plays the sequence\nPLAY ALL: Plays all channels\nSTOP: Stops the sequence\nSTOP ALL: Stops all channels\nRESET: Resets sequence to first step\nRESET ALL: Resets all channels\nSTEP EDITOR\nStep Selection\nGate Output\nStep Voltage\nStep Time/Length\nStep Probability\nCurrent step playing\npage 29\tADDAC SYSTEM\nThere are 2 Lock screens, pressing the [LOCK] button will alternate between these screens.\nThe Lock function is at heart a shift register, similar to the Turing Machine, once engaged instead of generating new\nrandom steps it locks to a sequence of up to 32 steps.\nUsers can also precisely edit the voltage and time values turning it into a full 32 step sequencer.\nWhenever Sequence Lock [ACTIVE] is set to ON then the Voltage Mode if set to ENVELOPE will be forced to NORMAL\nENCODERS BEHAVIOUR\nIn these screens rotating [ENCODER A] scrolls through the parameters, [ENCODER B] edits their values.\nSCREEN 1\nSCREEN 2\n1. RANDOM VOLTAGE GENERATION\nADDAC511 User’s Guide\nLOCK : SEQUENCER\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 30,
+      "image": "/addac511-svgen/pages/page-030.png",
+      "title": "Page 30",
+      "sectionName": null,
+      "content": "LOCK : STEP SETTINGS\npage 30\tADDAC SYSTEM\nLOCK : STATE\nADDAC511 User’s Guide\nThe channel’s internal generation and lock feature are not active at the same time, although the internal generation can\ninfluence and write values into the lock sequence. For this there are 3 Lock States:\nTRACK\nWhen in Track mode the lock sequence is disabled and not editable. The internal generation is active and continuously\nstores its output into the lock sequence active steps in a loop.\nAs an example, if Steps are set to 8 then it will iterate over these 8 steps storing the new value over the oldest step.\nHOLD\nIn Hold mode the sequence is locked, not playing but still editable.\nThe channel internal generation is active\nAs an example, if you have a sequence you don’t want to erase but want to use the internal generation for a transition\nthe Hold mode will keep your sequence safe.\nON\nIn ON mode the sequencer takes over, the internal generation is disabled unless special changes (Change Once /\nChange Allways) are programmed, the sequence can be played and edited in real-time.\nGATE:\nThe Gate can be set to either On or OFF\nStep Voltage:\nThe step voltage can be set in Volts (ex. 2v) or Notes (ex. C2)\n+ Cents, the Cents parameter allows for step microtunning.\nStep Time:\nUnlike a conventional sequencer each step can have different\nlengths, this can be set in milliseconds or as a time division\ndepending if the [TIME] is set to time or BPM.\nThis allows programming complex phrases where any time\ndivision can be set, ex. 1/16, 1/9 and 15/1 and where each\nstep can have its own BPM.\nStep Probability:\nSets the probability for the step to be outputted, if the\nprobability is false then the sequencer will hold the last step\nvoltage for the time defined in the current not outputted step.\n1. RANDOM VOLTAGE GENERATION\nINTERNAL\nGENERATION\nSEQUENCE\nEDITABLE\nSEQUENCE\nPLAYBACK\nSEQUENCE\nLOCKED\nTRACK \tYES\nHOLD \tYES\nX\nX \tX \tX\nX\tYES\tYES\nON \tYES \tYES\tYES\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 31,
+      "image": "/addac511-svgen/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "content": "page 31\tADDAC SYSTEM\nLOCK : Transport Controls\nADDAC511 User’s Guide\nSTEPS GRAPHICS\nHere’s the different graphics used and their functions\nLOCK : TRANSPOSITION\nThe user can transpose any programmed sequence simply by using the transpose features in\nthe [QUANTIZER] screen.\nSTEP SELECTION\nWith [ENCODER A] set the cursor on the grid then use [ENCODER B] to select the desired step.\nSPECIAL CHANGES\nPressing [ENCODER B] when the cursor is on the grid will create Special Changes on the\nselected step. At each press it iterates between: normal step, change once or change allways.\nEDITING STEPS\nAfter selecting the step to edit then scroll to the parameter to edit with [ENCODER A], use\n[ENCODER B] to edit the GATE, STEP V, STEP T and STEP P values.\nCURSOR POSITION AND SHOWN VALUES\nif the cursor is selecting the grid then the values dieplayed will show the settings for the\ncurrent step being played.\nIf the cursor is on a step value ( GATE, STEP V, STEP T, STEP P) then it will show the selected\nstep values, pressing [ENCODER B] advances to the next step.\nSTEP T\nStep Time is dependent on the [TIME] mode selected in the Time Screen.\nIf BPM mode is selected the steps’ time are defined as fractions (1/1, 1/2, 1/4...),\nIf TIME mode is selected the steps’ time are defined in milliseconds.\nPLAYBACK POSITION\nThe current playback step\nCHOSEN STEP\nThe current step chosen to edit\nGATE ENGAGED\nShows Gate On\nCHANGE ONCE\nThis step will randomize the voltage/note value next time it plays\nCHANGE ALLWAYS\nThis step will randomize the voltage/note value every time it plays\nNOT ACTIVE\nStep not in use\n1. RANDOM VOLTAGE GENERATION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 32,
+      "image": "/addac511-svgen/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "content": "2. RANDOM ENVELOPE GENERATION\npage 32\tADDAC SYSTEM\nADDAC511 User’s Guide\nVOLTAGE\nMIN / MAX\nPOLARITY\nRESOLUTION\nPROBABILITY\nCHANCE\nLINEARITY\nDISTRIBUTION\nMODE\nLINEARITY\nSMOOTH\nCURVE TYPE\nPOST QUANTIZE\nQUANTIZE\nSCALE\nSOURCE\nROOT\nTRANSPOSE\nCV OUTPUT\nSMOOTH\nENVELOPE CURVES\nQUANTIZE\nSCALE\nSOURCE\nROOT\nTRANSPOSE\nGATE OUT\nMODE\nSIZE\nPROBABILITY\nVOLTAGE SETTINGS : SIGNAL FLOW\nENVELOPE GENERATION\nThe envelope generation process is made of a number of functions in a chain.\nEach function features it’s own fast recall push button and configuration screen.\nAt every cycle a new Envelope will be generated by this chain.\nCV OUTPUT\tGATE\nOUTPUT\n+5v\n0v\nHere’s an example plot of an Envelope generated output\n*NEGATIVE VALUES ARE\nALSO POSSIBLE\nGATE\n+5v\n-5v\n0v\nOUTPUT\n+5v\n0v\nGATE OUTPUT: SUSTAIN SIZE\nATTACK \tSUSTAIN \tRELEASE \tREST\nVOLTAGE MINIMUM = 2v\nREST = 0v\nVOLTAGE MAXIMUM = 4v\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 33,
+      "image": "/addac511-svgen/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "content": "QUANTIZATION SCREEN\nVoltage quantization settings same as in random mode\nSCALE\nSelect from a few standard scales plus a custom\nsetting where the user can freely choose the scale\nnotes.\nSOURCE\nThe source to be quantized, by default is set to the\ncurrent channel although it can be set to any of the\nother channels or cv inputs working as a quantizer\nROOT NOTE The scale Root note\nTRANSPOSE MODE\nSEMITONES: Transposition in semitones intervals\nSCALE DEGREE: The scale degree transposition, transposes\nwithin the scale notes, in case of standard 7 note scales it\ncan be used for modes:1=Ionian, 2=Dorian and so on.\nOCTAVES: Transposition in octave intervals\nCENTS: Transposition in cents intervals\nTRANSPOSE\nThe transposition value\nSTEPS\nSets the number of steps to divide the MIN/MAX range\ndefined from 2 to 320 or MAX (full 16bit resolution\nRANGE LOCK\nOFF: [V. MAX] & [V. MIN] defines the range minimum and maximum boundaries independently\nON: Locks the current range defined, editing [V. MAX] will also change [V. MIN] and vice-versa.\npage 33\tADDAC SYSTEM\nENVELOPE VOLTAGE SETTINGS\nVOLTAGE SCREEN:\nVoltage range settings\nMODE\nThe channels’ operating Mode\nVOLTAGE MAXIMUM\nSets the maximum voltage of the randomization range\nVOLTAGE MINIMUM\nSets the minimum voltage of the randomization range\nVOLTAGE REST\nSets the voltage for when the envelope is in rest state\nCV POLARITY\nSets a Positive (0 > +5V) or Bipolar range (-5V > +5V)\nADDAC511 User’s Guide\n2. RANDOM ENVELOPE GENERATION\n(same as in voltage mode)\n+5v\n0v\nATTACK \tSUSTAIN \tRELEASE \tREST\nV MIN = 2v\nV REST = 0v\nV MAX = 4v\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 34,
+      "image": "/addac511-svgen/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "content": "GATE OUT SCREEN\nSettings control the Gate Out behaviour\nSIZE\nThe Gate out length, it can be set to match the length\nof the envelope Attack (A), Attack and Sustain (AS) or\nAttack, Sustain and Release (ASR), as a 1ms or 10ms\nfixed output or as a percentage of the envelope\noverall length.\nPROBABILITY\nOutput probability from 0% (no output) to 100% (always\noutputs). Also available is 1ms and 10ms for triggers.\nSKIP STEPS\nThis feature introduces some disruption on the Gate Out\nbehaviour, canceling it at every X steps.\nOUTPUT ORDER\nThe order at which the CV and Gate is sent to the physical\noutputs. Although the time difference between the two\noutputs will still be microseconds apart this order may be\nimportant depending on what is being patched to.\nCV/GATE: CV before the Gate Output\nGATE/CV: Gate before the CV output\nTRIGGER ON QUANTIZATION\nWhen enabled it will output a 1ms Trigger at every new\nquantized note. It has no effect when Quantization is Off.\nENVELOPE VOLTAGE SETTINGS\nPROBABILITY SCREEN\nOutput probability settings, determines if it will generate a new CV at the current step or skip it and hold the current value\nuntil the next step.\nPROBABILITY\nSets the probability of new generated voltages to be\ninterrupted and not sent to the output\n0% = All new voltages will be canceled\n100% = No new voltages will be canceled\nSKIP STEPS\nThis feature introduces some disruption on the CV output\nbehaviour, skipping the CV generation at every X steps.\nAPPLY TO\nCV: only applies the probability to the CV output, Gate Out\nwill still be generated.\nCV+GATE: applies the probability to both the CV and Gate\noutput\nLINEARITY\nSets the probability distribution curve\npage 34\tADDAC SYSTEM\nADDAC511 User’s Guide\n2. RANDOM ENVELOPE GENERATION\n(same as in voltage mode)\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 35,
+      "image": "/addac511-svgen/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "content": "SMOOTH SCREEN\nSettings control the Envelope shape\nATTACK CURVE\nSets the Attack curve from Log (1.00) to Exp (-1.00)\nLinear at 0.00\nRELEASE CURVE\nSets the Release curve from Log (1.00) to Exp (-1.00)\nLinear at 0.00\nENVELOPE SHAPE VISUALIZATION\nHere you can see the Envelope shape\nENVELOPE VOLTAGE SETTINGS\npage 35\tADDAC SYSTEM\nADDAC511 User’s Guide\nVOLTAGE DISTRIBUTION SCREEN\nAllows for non-linear distribution of the voltage randomized\nMODE\nFREE\nWALK\nPOSITION\nPositions the distribution peak.\nQ FACTOR\nSets the Q factor for the distribution curve.\nLINEARITY\nSets the overall distribution curve.\n2. RANDOM ENVELOPE GENERATION\n(same as in voltage mode)\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 36,
+      "image": "/addac511-svgen/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "content": "page 36\tADDAC SYSTEM\nQUANTIZING ENVELOPESIt is possible to quantize the envelope generated allowing arpeggio like effects.\nBelow you can see some graphical examples, here the quantizer is set to octaves for better readability\nQuantized to: nearest note above.\n+5v\n-5v\n0v\n1v\n-1v\n-2v\n-3v\n-4v\n2v\n3v\n4v\nVOLTAGE\nGATE\n+5v\n-5v\n0v\nQUANTIZATION\n+5v\n0v\nGATE OUTPUT: 25% \tGATE OUTPUT: ATTACK + SUSTAIN\nADDAC511 User’s Guide\nTRIGGER ON QUANTIZATION\nIgnores the [SIZE] setting and outputs\n1ms Triggers at every new quantized note.\nGATE SIZE\n3 options:\nSync to Envelope: A, AS, ASR\nFixed size: 1ms or 10ms\nAs a percentage: 0% to 90%\nCHANNEL 1 ENVELOPE\nQUANTIZED ENVELOPE\n+5v\n-5v\n0v\n1v\n-1v\n-2v\n-3v\n-4v\n2v\n3v\n4v\nVOLTAGE\nGATE\n+5v\n-5v\n0v\nQUANTIZATION\n+5v\n0v\nGATE OUTPUT: 1ms\nCHANNEL 1 ENVELOPE\nQUANTIZED ENVELOPE\n2. RANDOM ENVELOPE GENERATION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 37,
+      "image": "/addac511-svgen/pages/page-037.png",
+      "title": "Page 37",
+      "sectionName": null,
+      "content": "2. RANDOM ENVELOPE GENERATION\npage 37\tADDAC SYSTEM\nADDAC511 User’s Guide\nTIME\nMIN / MAX\nPOLARITY\nRESOLUTION\nCLOCK\nSOURCE\nDISTRIBUTION\nMODE\nLINEARITY\nVIRTUAL\nCLOCK\nTICK\nTIME SETTINGS : SIGNAL FLOW\nTIMING GENERATION\nTime settings determines the rate at which the voltage and gate are generated, the interval between every genera-\ntion step is defined by the setting in the [TIME] screen, That value is then “balenced” by the [DISTRIBUTION] screen\nsettings and a virtual clock tick is generated.\nGATE\n+5v\n-5v\n0v\nOUTPUT\n+5v\n0v\nGATE OUTPUT: SUSTAIN SIZE\nATTACK \tSUSTAIN \tRELEASE \tREST\nVOLTAGE MINIMUM = 2v\nREST = 0v\nVOLTAGE MAXIMUM = 4v\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 38,
+      "image": "/addac511-svgen/pages/page-038.png",
+      "title": "Page 38",
+      "sectionName": null,
+      "content": "page 38\tADDAC SYSTEM\nTIME SETTINGS : TIME MODE (milliseconds)\nADDAC511 User’s Guide\nTIME MODE\nSets the Time Mode to: Time or BPM\nATTACK MINIMUM & MAXIMUM\nSets the Attack Min & Max time in milliseconds.\nSUSTAIN MINIMUM & MAXIMUM\nSets the Sustain Min & Max time in milliseconds.\nRELEASE MINIMUM & MAXIMUM\nSets the Release Min & Max time in milliseconds.\nREST MINIMUM & MAXIMUM\nSets the Release Min & Max time in milliseconds.\nSCALE MINIMUM & MAXIMUM\nSets the Scale Min & Max multiplication factor.\nThis setting allows to stretch/compress the length of the\nenvelope keeping the proportion of all time settings.\nHere’s an example of the same envelope shape with\ndifferent scale settings.\nTIME SCREEN:\nIn Time Mode the clock is defined in milliseconds, the step lengths will be randomized from the interval defined\nby the Minimum & Maximum parameters.\nSetting the Minimum value higher than Maximum will result in a fixed time without any randomization.\n2. RANDOM ENVELOPE GENERATION\nTIME DISTRIBUTION SCREEN\nAllows for non-linear distribution of the randomized [TIME] screen settings.\nEqually affects all random generations: Attack, Sustain, Release, Rest and Scale.\nMODE\nFREE\nWALK\nPOSITION\nPositions the distribution peak.\nSPREAD\nSets the Q factor for the distribution curve.\nLINEARITY\nSets the overall distribution curve.\n+5v\n0v\nATTACK \tSUSTAIN \tRELEASE \tREST\nV MIN = 2v\nV REST = 0v\nV MAX = 4v\nSCALE: 1.000\n+5v\n0v\nA\nSCALE: 0.500\nS \tR \tR +5v\n0v\nATTACK\nSCALE: 1.500\nSUSTAIN \tRELEASE \tREST\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 39,
+      "image": "/addac511-svgen/pages/page-039.png",
+      "title": "Page 39",
+      "sectionName": null,
+      "content": "page 39\tADDAC SYSTEM\nCLOCK\nADDAC511 User’s Guide\nCLOCK SCREEN\nConfiguring the selected channel’s clock origin.\nCLOCK SOURCE\nSets the origin of the Clock, options are:\nINTERNAL (default): uses its own channel clock.\nCHANNEL X: chooses one of the other channels clocks.\nCLOCK IN X: chooses one of the 4 clock physical jack inputs\nLOGIC X: chooses one of the 3 Logic outputs\nINTERNAL\nkeeps the channel independent from other channels.\nAll other options makes the channel dependent to the\nsource chosen. In these cases the clock parameters avail-\nable will change according to the clock source selected.\nCHANNEL 1 to 4\nSyncs to any other channel: slave mode.\nCLOCK IN 1 to 4\nUses the frontpanel clock inputs to sync to\nexternal sources.\nCLOCK IN MODES:\nGATE: In Gate mode it will sustain the envelope until the\nGate goes off.\nTRIGGER: In Trigger mode will not consider the\ntrigger/gate length.\nLOGIC 1 to 3\nUses the internal logic outputs as a clock.\n2. RANDOM ENVELOPE GENERATION\n(same as in voltage mode)\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 40,
+      "image": "/addac511-svgen/pages/page-040.png",
+      "title": "Page 40",
+      "sectionName": null,
+      "content": "QUANTIZER POTENTIAL\nThe Quantizing engine is extremely powerful and can be used in many creative ways.\nIt features 16 bit DACs making it also very accurate.\nPossibilities include linking all channels for chord generation or, using 4 CV inputs and 4 clock inputs, becomes a\nfully independent 4 channel quantizer, each with its own scale, outputing 4 CVs and 4 gate signals working as a\nfully featured 4 channel quantizer.\nin the next pages we’ll describe in detail all its possibilities.\npage 40\tADDAC SYSTEM\nADDAC511 User’s Guide\nQUANTIZER\nQUANTIZER ROUNDING\nIn the [MENU] the user can find a quantization rounding setting that will\ndetermine how the incoming voltage will be quantized:\nNEAREST NOTE: Quantizes to the nearest note no matter if above or below.\nNOTE ABOVE: Quantizes to the closest note above\nNOTE BELLOW: Quantizes to the closest note bellow\nNOTE PROBABILITY: Quantizes to a set of pre-defined probabilities\nSCALES:\nAs default we offer a few standard scales, we also\nadded a custom setting where the user can freely\nchoose the scale notes.\nSOURCE\nThe source to be quantized, by default is set to the\ncurrent channel although it can be set to any of the\nother channels or cv inputs working as a quantizer.\nROOT NOTE The scale Root note\nTRANSPOSE MODE\nSEMITONES: Transposition in semitones intervals\nSCALE DEGREE: The scale degree transposition,\ntransposes\nwithin the scale notes, in case of standard 7 note\nscales it\ncan be used for modes:1=Ionian, 2=Dorian and so on.\nOCTAVES: Transposition in octave intervals\nCENTS: Transposition in cents intervals\nTRANSPOSE\nThe transposition value\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 41,
+      "image": "/addac511-svgen/pages/page-041.png",
+      "title": "Page 41",
+      "sectionName": null,
+      "content": "page 41\tADDAC SYSTEM\nADDAC511 User’s Guide\nOTHER CHANNELS QUANT.\nQUANTIZING OTHER CHANNEL’S VOLTAGE\nSELF QUANTIZATION\nQUANTIZING CHANNEL’S VOLTAGE GENERATION\nCHANNEL 1 QUANTIZING CHANNEL 1 VOLTAGE \tCHANNEL 1 QUANTIZING CHANNEL 2 VOLTAGE\nCHANNEL 1 VOLTAGE GENERATION IS BYPASSED\nEXTERNAL QUANTIZATION\nQUANTIZING CV INPUTS\nCHANNEL 1 QUANTIZING CV INPUT 1 VOLTAGE\nCHANNEL 1 VOLTAGE GENERATION IS BYPASSED\nQUANTIZER\nVOLTAGE\nMIN / MAX\nPOLARITY\nRESOLUTION\nPROBABILITY\nCHANCE\nLINEARITY\nDISTRIBUTION\nMODE\nLINEARITY\nVOLTAGE\nMIN / MAX\nPOLARITY\nRESOLUTION\nPROBABILITY\nCHANCE\nLINEARITY\nDISTRIBUTION\nMODE\nLINEARITY\nSAME CHANNEL\nANY OTHER CHANNEL\nEXTERNAL CV INPUT\nCV INPUT\nANY CV INPUT\nOTHER\nCHANNELS\nQUANTIZATION\nEXTERNAL\nQUANTIZATION\nANY OTHER CHANNEL\nSELF\nQUANTIZATION\nQUANTIZATION SOURCE VIRTUAL ROUTING\nSAME CHANNEL\nANY CV INPUT\nCLOCK/GATE\nINPUT\nANY CLOCK INPUT\nSMOOTH\nQUANTIZER POST SMOOTH\nQUANTIZER PRE SMOOTH\nCURVE TYPE\nPRE QUANTIZE\nSMOOTH\nCURVE TYPE\nPOST QUANTIZE\nQUANTIZE\nSCALE\nSOURCE\nROOT\nTRANSPOSE\nQUANTIZE\nSCALE\nSOURCE\nROOT\nTRANSPOSE\nCV OUTPUT\nGATE OUT\nMODE\nSIZE\nPROBABILITY\nINTERNAL vs. EXTERNAL QUANTIZATION\nQUANTIZER SOURCES:\nThe Quantizing function is normally used following the channel’s mode chain but it can be routed to accept any\nother channel or an external CV as its input allowing 4 quantization channels thatcan be linked in order to create\nchords or totally independent with different scales for each channels.\nChanging the quantizer [SOURCE] to any other option than the channel’s own input will render the channel’s [VOLT-\nAGE], [PROBABILITY] and [DISTRIBUTION] to be bypassed and will have no influence on the channel’s output.\nBellow you can find examples and a diagram with both internal and external quantization.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 42,
+      "image": "/addac511-svgen/pages/page-042.png",
+      "title": "Page 42",
+      "sectionName": null,
+      "content": "page 42\tADDAC SYSTEM\nQUANTIZER SOURCES GRAPHICAL EXAMPLES\nBellow you can find graphical examples with both internal and external quantization.\nQuantizer set to octaves for better readabillity. Quantized to closest note above.\nADDAC511 User’s Guide\nQUANTIZER\n+5v\n-5v\n0v\n1v\n-1v\n-2v\n-3v\n-4v\n2v\n3v\n4v\nVOLTAGE\nGATE\n+5v\n-5v\n0v\nQUANTIZATION\n+5v\n0v\nGATE OUTPUT: 25%\nSELF QUANTIZATION\nQUANTIZING CH1 VOLTAGE GENERATION\nCHANNEL 1 RANDOMIZED VOLTAGE\nQUANTIZED VOLTAGE GOING OUT ON CHANNEL 1\n1v\n-1v\n-2v\n-3v\n-4v\n2v\n3v\n4v\n+5v\n-5v\n0v\nVOLTAGE\nGATE\n \nQUANTIZATION\n+5v\n-5v\n0v\n+5v\n0v\nGATE OUTPUT: 10ms\nOTHER CHANNELS QUANTIZATION\nQUANTIZING OTHER CHANNELS VOLTAGE\nCHANNEL 2 INCOMING VOLTAGE\nQUANTIZED VOLTAGE GOING OUT ON CHANNEL 1\nQuantizer set to octaves for better\nreadabillity.\nQuantized to closest note above.\n+5v\n-5v\n0v\n1v\n-1v\n-2v\n-3v\n-4v\n2v\n3v\n4v\nVOLTAGE\nGATE\n+5v\n-5v\n0v\nQUANTIZATION\n+5v\n0v\nGATE OUTPUT: 25%\nEXTERNAL QUANTIZATION\nQUANTIZING CV INPUT 1\nCV INPUT 1 INCOMING VOLTAGE\nQUANTIZED VOLTAGE GOING OUT ON CHANNEL 1\n1v\n-1v\n-2v\n-3v\n-4v\n2v\n3v\n4v\n+5v\n-5v\n0v\nVOLTAGE\nGATE\n \nQUANTIZATION\n+5v\n-5v\n0v\n+5v\n0v\nGATE OUTPUT: 10ms\nGATE\nIN\n+5v\n0v\nINCOMING GATE ON CLOCK INPUT 1\nEXTERNAL QUANTIZATION\nWITH GATE INPUT\nQUANTIZING CV INPUT 1 USING CLOCK IN 1\nCV INPUT 1 INCOMING VOLTAGE\nQUANTIZED VOLTAGE GOING OUT ON CHANNEL 1\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 43,
+      "image": "/addac511-svgen/pages/page-043.png",
+      "title": "Page 43",
+      "sectionName": null,
+      "content": "page 43\tADDAC SYSTEM\nQUANTIZER ROUNDING & NOTE PROBABILITY\nBellow you can find graphical examples with all 3 quantizer rounding standards as well as the note\nprobability method\nADDAC511 User’s Guide\nQUANTIZER\nSTANDARD QUANTIZER ROUNDING\nQuantizer set to octaves of C and voltage range restricted to 2V\nThe incoming voltage in this case will be quantized to C Octaves, meaning the\noutput will be a multiple of 1v (0v, 1v, 2v, 3v, 4v)\nIf a voltage of 1.2v is detected then:\nClosest note above will be: \t2v\nNearest note will be: \t1v\nClosest note below will be: \t1v\nIf a voltage of 1.7v is detected then:\nClosest note above will be: \t2v\nNearest note will be: \t2v\nClosest note below will be: \t1v\nNote Probability rounding will force quantization to a set of note defined probabilities.\nThe incoming voltage only defines the octave output, the probability outcome will set the note.\nThe note in this case can be furthest from the incoming voltage.\nNotes not present in the selected scale appear checkered.\nIf a voltage of 1.2v is detected then:\nThe output will be any note in the Major C scale in the octave between 1v and 2v.\nROUNDING TO NOTE PROBABILITY\nQuantizer set to Major C and voltage range restricted to 2V\nABOVE\nNEAREST NOTE\nBELOW\n1.2v\n0.8v\n0.6v\n0.4v\n0.2v\n1.4v\n1.6v\n1.8v\nVOLTAGE\nQUANTIZATION\n+2.0v\n0v\n1.0v\nCHANNEL 1 RANDOMIZED VOLTAGE (2v RANGE)\nQUANTIZED VOLTAGE GOING OUT ON CHANNEL 1 (2v RANGE)\n1.2v\n0.8v\n0.6v\n0.4v\n0.2v\n1.4v\n1.6v\n1.8v\n\t+2.0v\n0v\n1.0v\nSMOOTH\n\tSECTION:\n\tLOG\n100%\n+2v\n0v\n+1v\nVOLTAGE\n+2v\n0v\n+1v\nQUANTIZATION\nCHANNEL 1 RANDOMIZED VOLTAGE\nG\nA\nE\nG\nF\nD\nA\nF\nC#\nD#\nF\nF#\nG#\nA#\nB\nC#\nD#\nF\nF#\nG#\nA#\nB\nC\nC\nD\nE\nG\nA\nD\nE\nG\nA\nC\nQUANTIZATION OUTPUTS - C MAJOR SCALE\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 44,
+      "image": "/addac511-svgen/pages/page-044.png",
+      "title": "Page 44",
+      "sectionName": null,
+      "content": "QUANTIZER PRE / POST SMOOTH\nThe [SMOOTH] and [QUANTIZE] order (A to B, B to A) can be altered in the [SMOOTH] window.\nQUANTIZER PRE SMOOTH will result in glide effects\nQUANTIZER POST SMOOTH will result in arpeggio effects\nBelow you can see some graphical examples with both options\nQuantizer set to octaves for better readability\nOn the bottom right you’ll find an example of the [TRIGGER GATE] function.\n+5v\n-5v\n0v\n1v\n-1v\n-2v\n-3v\n-4v\n2v\n3v\n4v\n1v\n-1v\n-2v\n-3v\n-4v\n2v\n3v\n4v\nVOLTAGE\nGATE\n+5v\n-5v\n0v\nQUANTIZATION\n+5v\n-5v\n0v\nSMOOTH\n+5v\n0v\n+5v\n-5v\n0v\nVOLTAGE\nGATE\n+5v\n-5v\n0v\nQUANTIZATION\n+5v\n-5v\n0v\nSMOOTH\n+5v\n0v\nGATE OUTPUT: 25% \tGATE OUTPUT: 10ms\nADDAC511 User’s Guide\nQUANTIZER POST SMOOTH\nSMOOTH\n\tSECTION:\n\tLIN\n50%\nSMOOTH\n\tSECTION:\n\tLIN\n50%\nQUANTIZER PRE SMOOTH\nQUANTIZE SOURCE\nQuantizer set to octaves (for better\ngraphical readabillity below).\nQuantized to: nearest note.\nSmooth duration set to 50%\nGate size set to 25%\nQUANTIZE SOURCE\nQuantizer set to Major scale.\nQuantized to: nearest note.\nCHANNEL 1 RANDOMIZED VOLTAGE\nQUANTIZED VOLTAGE\nSMOOTHED VOLTAGE\nCHANNEL 1 RANDOMIZED VOLTAGE\nQUANTIZED VOLTAGE\nSMOOTHED VOLTAGE\nTRIGGER GATE\nGate Out triggered at every\nquantized CV change.\npage 44\tADDAC SYSTEM\nVOLTAGE \tPROBABILITY \tDISTRIBUTION\nSMOOTH\nSMOOTH\tQUANTIZE\nQUANTIZE \tCV OUTPUT\nGATE OUT\nQUANTIZER\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 45,
+      "image": "/addac511-svgen/pages/page-045.png",
+      "title": "Page 45",
+      "sectionName": null,
+      "content": "EXTERNAL QUANTIZER\nWhen quantizing external CV inputs the smooth effect will be bypassed.\nBelow a graphical example\nADDAC511 User’s Guide\n+5v\n-5v\n0v\n1v\n-1v\n-2v\n-3v\n-4v\n2v\n3v\n4v\nCV INPUT\nGATE\n+5v\n-5v\n0v\nQUANTIZATION\n+5v\n0v\nGATE OUTPUT: 25%\nQUANTIZING WITH INTERNAL CLOCK\nCV INPUT INCOMING VOLTAGE\nQUANTIZED VOLTAGE\nINT. CLOCK\nUsing the internal Clock\nto quantize the cv input\nat the rate defined.\n+5v\n-5v\n0v\n1v\n-1v\n-2v\n-3v\n-4v\n2v\n3v\n4v\nCV INPUT\nGATE\n+5v\n-5v\n0v\nQUANTIZATION\n+5v\n0v\nCLOCK\nIN\n+5v\n0v\nGATE OUTPUT: 1 millisecond \tGATE OUTPUT: FOLLOW\nQUANTIZING WITH EXTERNAL CLOCK\nEXT. CLOCK\nWhen set to Clock In there are two\nquantization modes: Real-time and\nClocked\nREAL-TIME\nOnce the user chooses\na clock input the\nquantization will start\nworking in real-time,\nno clock is used, the\nquantization happens\nas a new value is\ndetected.\nEXTERNAL CLOCK\nOnce the clock input receives\na Gate input the quantization\nwill sync to and be clocked\nby the Gate input.\nTo go back to real-time choose\ninternal clock and then Clock In\nonce again.\nFOLLOW\nWhen the Gate Out size is\nset to Follow the Gate Out\nwill have the same size as\nthe Clock Input.\nCV INPUT INCOMING VOLTAGE\nQUANTIZED VOLTAGE\nCV INPUT \tQUANTIZE\nCV OUTPUT\nGATE OUT\npage 45\tADDAC SYSTEM\nQUANTIZER\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 46,
+      "image": "/addac511-svgen/pages/page-046.png",
+      "title": "Page 46",
+      "sectionName": null,
+      "content": "C#\nD#\nF\nF#\nG#\nA#\nB\nC#\nD#\nF\nF#\nG#\nA#\nB\nC\nC\nD\nE\nG \tG\nE\nF\n\tE + 50 cents\n\tE\nA\nD\nE\nG\nA\nC\npage 46\tADDAC SYSTEM\nQUANTIZER TRANSPOSE\nADDAC511 User’s Guide\nC MAJOR PENTATONIC - E NOTE EXAMPLE\nE Note\nNo Transposition\nE Note\n+50 Cents\n= F \t= G\tE Note\n+1 Semi\nE Note\n2nd Degree\nE Note\n+1 Octave\nE\nG\nA\nC MAJOR PENTATONIC - SMALL PATTERN EXAMPLE\nNo Transposition \t+50 Cents \t+1 Semi \t2nd Degree \t+1 Octave\nC\nD\nE \tG \tA\tC \tD \tE +50 G +50 \tA +50\tC +50 \tD +50 F \tG# \tA#\tC# \tD# \tF \tA \tC\tD \tE \tE \tG \tA\tC \tD\nC#\nD#\nF\nF#\nG#\nA#\nB\nC#\nD#\nF\nF#\nG#\nA#\nB\nC\nC\nD\nE\nG\nA\nD\nE\nG\nA\nC\nThere are 4 Transposition modes:\nCENTS\nMicrotonal detune, -50 to +50 cents.\nThe Cents mode is cumulative with any of the next 3 modes\nSEMITONES\nSemitone transposition\nSCALE DEGREES\nTransposition within the scale selected\nOCTAVES\nOctave transposition\nQUANTIZER TRANSPOSITION\nSEMIS\nSCALE DGRE \tCENTS\tINPUT\nOCTAVES\nOUTPUT\nQUANTIZER\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 47,
+      "image": "/addac511-svgen/pages/page-047.png",
+      "title": "Page 47",
+      "sectionName": null,
+      "content": "page 47\tADDAC SYSTEM\nQUANTIZER : CHORD GENERATION EXAMPLE\nADDAC511 User’s Guide\nMAIN SCREEN\nCHANNEL 2\n3rd SCALE DEGREE\nSMOOTH\n\tSECTION:\n\tLOG\n100%\nMAIN SCREEN\nCHANNEL 3\n5th SCALE DEGREE\nMAIN SCREEN\nCHANNEL 1\nGENERATING CHORD ROOT NOTE\nVOLTAGE SETTINGS \tTIME SETTINGS\nMAIN SCREEN\nCHANNEL 4\n7th SCALE DEGREE\n+2v\n0v\n+1v\nVOLTAGE\n+2v\n0v\n+1v\nQUANTIZATION\nCHANNEL 1 RANDOMIZED VOLTAGE\nE : CHANNEL 1\nEm7 \tDm7 \tCmaj7 \tGmaj7 \tBm7b5 \tFmaj7 \tAm7 \tEm7\nG : CHANNEL 2\nB : CHANNEL 3\nD : CHANNEL 4 \tD : CHANNEL 1\nF : CHANNEL 2\nA : CHANNEL 3\nC : CHANNEL 4\nC : CHANNEL 1\nE : CHANNEL 2\nG : CHANNEL 3\nB : CHANNEL 4\nG : CHANNEL 1\nB : CHANNEL 2\nD : CHANNEL 3\nF : CHANNEL 4\nB : CHANNEL 1\nD : CHANNEL 2\nF : CHANNEL 3\nA : CHANNEL 4\nF : CHANNEL 1\nA : CHANNEL 2\nC : CHANNEL 3\nE : CHANNEL 4\nA : CHANNEL 1\nC : CHANNEL 2\nE : CHANNEL 3\nG : CHANNEL 4\nE : CHANNEL 1\nG : CHANNEL 2\nB : CHANNEL 3\nD : CHANNEL 4\nC#\nD#\nF\nF#\nG#\nA#\nB\nC#\nD#\nF\nF#\nG#\nA#\nB\nC\nC\nD\nE\nG\nA\nD\nE\nG\nA\nC\nQUANTIZATION OUTPUTS - C MAJOR SCALE SELECTED ON ALL CHANNELS (QUANTIZING TO CLOSEST NOTE ABOVE)\n\t4 NOTE CHORDS\nC Major scale is chosen for all channels.\nChannel 1 is used to generate the chord root note.\nChannels 2, 3 and 4 get their Clock and Quantization\nsource from Channel 1.\nChannels 2, 3 and 4 transpose the incoming Channel 1\nroot note to its 3rd, 5th and 7th degree, generating chords\nalways in the scale.\nThe transpose values can be independently assigned to\ndiferent CV inputs to be modulated.\nQUANTIZER\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 48,
+      "image": "/addac511-svgen/pages/page-048.png",
+      "title": "Page 48",
+      "sectionName": null,
+      "content": "page 48\tADDAC SYSTEM\nPRESETS\nThe Presets screen allows to scroll through the list with any\nof the Encoders and Load or Save by pressing the respective\nLeft / Right Encoder.\nThere are 75 available slots to save Presets.\nSAVING\nWhen saving the user can select the preset name using the\nEncoders: Left Encoder selects which character to edit, Right\nEncoder selects the character.\nCHANNEL 4\nSTATE C\nSTATE B\nSTATE A\nCHANNEL 3\nSTATE C\nSTATE B\nSTATE A\nCHANNEL 2\nSTATE C\nSTATE B\nSTATE A\nPRESET X\nCHANNEL 1\nSTATE C\nSTATE B\nSTATE A\nEvery Preset stores all info of all channels.\nThere are 16 slots available, these can be downloaded as a one single file\nBank to a computer allowing users to manage their Banks in the computer.\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 49,
+      "image": "/addac511-svgen/pages/page-049.png",
+      "title": "Page 49",
+      "sectionName": null,
+      "content": "page 49\tADDAC SYSTEM\nCV ASSIGNMENTS\nThere are 8 CV Inputs on the top right corner of the\nmodule which can be assigned to any parameter of any\noutput channel.\nTo assign them just enter the Assign Screen and press the\nRight Encoder to ADD a new assign.\nHere’s the description of all configuration settings:\nINPUT CHANNEL\nThe CV Input channel to be used\nCHANNEL TO ASSIGN\nThe channel to be affected by the CV input\nFUNCTION\nThe function to be affected by the CV input\nINPUT GAIN\nThe Gain of the CV Input, from 0 to times 10\nOFFSET\nThe Offset applied to the CV Input, from -1.0 to 1.0\nPHASE INVERSION\nInvert the Phase of the incoming signal\nIn this screen rotating the Left encoder chooses the\nparameter to edit, rotating the Right Encoder edits the\nparameter value.\nOnce configured pressing the Enter button (right encoder)\nsaves the settings, exits to the main screen and\ndisplays the assign as a new line.\nThe same input can be assigned to multiple functions\nbecoming more like a macro controller.\nFifty assignements can be added,\nCV ASSIGNMENTS\nThere are 8 CV Inputs on the top right corner of the\nmodule which can be assigned to any parameter of any\noutput channel.\nTo assign them just enter the Assign Screen and press the\nRight Encoder to ADD a new assign.\nHere’s the description of all configuration settings:\nINPUT CHANNEL\nThe CV Input channel to be used\nCHANNEL TO ASSIGN\nThe channel to be affected by the CV input\nFUNCTION\nThe function to be affected by the CV input\nINPUT GAIN\nThe Gain of the CV Input, from 0 to times 10\nOFFSET\nThe Offset applied to the CV Input, from -1.0 to 1.0\nPHASE INVERSION\nInvert the Phase of the incoming signal\nIn this screen rotating the Left encoder chooses the\nparameter to edit, rotating the Right Encoder edits the\nparameter value.\nOnce configured pressing the Enter button (right encoder)\nsaves the settings, exits to the main screen and\ndisplays the assign as a new line.\nThe same input can be assigned to multiple functions\nbecoming more like a macro controller.\nFifty assignements can be added,\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 50,
+      "image": "/addac511-svgen/pages/page-050.png",
+      "title": "Page 50",
+      "sectionName": null,
+      "content": "page 50\tADDAC SYSTEM\nCV ASSIGNMENTS\nENCODERS INTERACTION\nThe virtual buttons on the screen show the current\nfunction for what the encoders will do when pressed.\nRotating any of the Encoders will select and scroll\nthrough already assigned lines.\nSelected line appears with white background\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 51,
+      "image": "/addac511-svgen/pages/page-051.png",
+      "title": "Page 51",
+      "sectionName": null,
+      "content": "page 51\tADDAC SYSTEM\nCV assignments allow to access most functions on the 511,\ndue to space available these names where shortened,\nhere’s a list of the functions and how they appear on the\ndisplay:\nVMIN\nVMAX\nVSTEPS\nQSCALE\nQSRC\nQROOT\nQMODE\nQSTEPS\nGATE SIZE\nGATE PROB\nTRG QUANT\nPROB\nPROBSTPS\nPROBAPP\nPROBLIN\nDISTMODE\nDISTPOS\nDISTSPREAD\nDISTLIN\nSMCURVE\nSMDUR\nSMQUAPP\nSMRES\nSMSTMOD\nSMSTEPS\nTMODE\nTMIN\nTMAX\nTBPM\nTDMODE\nTDPOS\nTDSPREAD\nTDLIN\n“CLKSRC\"\nCLKMULTDIV\nCLKFOLL\nCLKUSET\nSYNCBPM\nVOLTAGE MINIMUM (NORMAL & ENVELOPE)\nVOLTAGE MAXIMUM (NORMAL & ENVELOPE)\nVOLTAGE STEPS\nQUANTIZER SCALE\nQUANTIZER SOURCE\nQUANTIZER ROOT NOTE\nQUANTIZER TRANSPOSE MODE\nQUANTIZER TRANSPOSE STEPS\nGATE LENGTH\nGATE PROBABILITY\nTRIGGER OUT AT NEW QUANTIZATION\nPROBABILITY\nPROBABILITY SKIP STEPS\nPROBABILITY APPLY TO (CV/CV+GATE)\nPROBABILITY LINEARITY\nDISTRIBUTION MODE\nDISTRIBUTION POSITION\nDISTRIBUTION SPREAD (Q)\nDISTRIBUTION LINEARITY\nSMOOTH CURVE TYPE\nSMOOTH DURATION\nSMOOTH QUANTIZER ORDER PRE/POST\nSMOOTH RESOLUTION\nSMOOTH STEP MODE\nSMOOTH SKIP STEPS\nTIME MODE (TIME/BPM)\nTIME MINIMUM\nTIME MAXIMUM\nTIME BPM\nTIME DISTRIBUTION MODE\nTIME DISTRIBUTION POSITION\nTIME DISTRIBUTION SPREAD (Q)\nTIME DISTRIBUTION LINEARITY\nCLOCK SOURCE\nCLOCK MULTIPLIER/DIVIDER\nCLOCK FOLLOW CH (BPM/OUT)\nCLOCK USE TIME (DELAY)\nCLOCK SYNC BPM\nE REST V\nE AMIN\nE AMAX\nE SMIN\nE SMAX\nE RMIN\nE RMAX\nE RTMIN\nE RTMAX\nE SCAL MIN\nE SCAL MAX\nE ASHAPE\nE RSHAPE\nE SIZE\nHOLD\nMUTE\nSTATE\nSTATE A\nSTATE B\nSTATE C\nL PLAY\nL PLAYALL\nL STOP\nL STOPALL\nL RESET\nL RSTALL\nSTEP SELECT\nSTEP VOLT\nSTEP TIM\nSTEP NUM\nSTEP DIV\nSTEP NOTE\nSTEP CENTS\nENV. REST VOLTAGE\nENV. TIME ATTACK MIN\nENV. TIME ATTACK MAX\nENV. TIME SUSTAIN MIN\nENV. TIME SUSTAIN MAX\nENV. TIME RELEASE MIN\nENV. TIME RELEASE MAX\nENV. TIME REST MIN\nENV. TIME REST MAX\nENV. SCALE MIN\nENV. SCALE MAX\nENV. ATTACK SHAPE\nENV. RELEASE SHAPE\nENV. SIZE\nHOLD STATE\nMUTE STATE\nSTATE CV\nSTATE A\nSTATEB\nSTATE C\nLOCK: PLAY\nLOCK: PLAY ALL\nLOCK: STOP\nLOCK: STOP ALL\nLOCK: RESET\nLOCK: RESET ALL\nLOCK: SELECT STEP\nLOCK: SELECTED STEP VOLTAGE\nLOCK: SELECTED STEP TIME MILLIS\nLOCK: STEP TIME NUMERATOR\nLOCK: STEP TIME DENOMINATOR\nLOCK: SELECTED STEP NOTE\nLOCK: SELECTED STEP CENTS\nCV ASSIGNMENTS - FUNCTIONS\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 52,
+      "image": "/addac511-svgen/pages/page-052.png",
+      "title": "Page 52",
+      "sectionName": null,
+      "content": "page 52\tADDAC SYSTEM\nLOGIC ASSIGNMENTS\nThere are 3 Logic Outputs, pressing the [CV & LOGIC]\nbutton iterates throught the each Logic screen, you can\nsee the selected Logic on the top left corner of the screen.\nLogic operations compare 2 variables and output a true or\nfalse statement. Think of it as a gate output where true\nwill output +5V, false outputs 0V.\nThe user can configure these operations with any of the CV\ninputs, Clock Inputs, CV outputs or Logic outputs.\nSo it can be used to process External sources as well as\ninternal sources.\nWhen CV sources are used the logic threshold is 2.5v,\ncrossing the threshold while rising or falling triggers the\nlogic comparison.\nBesides Logic operations these outputs can also be\nconfigured as counters or clock outputs.\nTo assign them just enter the Logic Assignment Screen,\nselect the channel page, press the right encoder to\nADD a new assign:\nOPERATION\nThe Operation to be performed:\nNOT, AND, NAND, OR, NOR, XOR, XNOR, COUNTER, CLOCK\nOUTPUT\nCHANGE\nChange defines which variable triggers the logic\ncomparison: ON X ONLY, ON X & Y\nVARIABLE X\nThe source to be used for Input X\nVARIABLE Y\nThe source to be used for Input Y\nIn this screen rotating the Left encoder chooses the\nparameter to edit, rotating the Right Encoder edits the\nparameter value.\nOnce configured pressing the ADD button [ENCODER B]\nsaves the settings and will display the assign as a new\nline in the main Logic Assignments screen\nThe output is the result of all lines added.\nTRUTH TABLE\nAdding more than one line allows for more complex Logic\noperations. When setting a second line choosing OP1\n(Operation 1) uses the result from the first operation as an\ninput for the second operation.\nLogic operatrions on wikipedia:\nhttps://en.wikipedia.org/wiki/Logic_gate\nADDAC511 User’s Guide\nINPUT\nX \tAND \tNAND \tNOR \tXOR \tXNOR\tOR\tY\n0 \t0 \t1 \t1 \t0 \t1\t0\t0\n0 \t0 \t1 \t0 \t1 \t0\t1\t1\n1 \t0 \t1 \t0 \t1 \t0\t1\t0\n1 \t1 \t0 \t0 \t0 \t1\t1\t1\nOUTPUT\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 53,
+      "image": "/addac511-svgen/pages/page-053.png",
+      "title": "Page 53",
+      "sectionName": null,
+      "content": "page 53\tADDAC SYSTEM\nLOGIC ASSIGNMENTS\nEXAMPLES OF LOGIC OPERATIONS\nNotice that NOT operations only use input variable X and\nsimply inverts the input signal.\nHere we configured one logic output to compare Gate\noutput 1 and Gate output 2.\nBelow you can find graphical examples of all possible\noperations.\nADDAC511 User’s Guide\nCHANNEL 1 GATE OUTPUT\nOR\nNOR\nXOR\nXNOR\nCHANNEL 2 GATE OUTPUT\nAND\nNAND\nCHANGE: ON X & Y\nCHANNEL 1 GATE OUTPUT\nOR\nNOR\nXOR\nXNOR\nCHANNEL 2 GATE OUTPUT\nAND\nNAND\nCHANGE: ON X ONLY\nCHANNEL 1 GATE OUTPUT\nNOT (INVERTER)\nLOGIC NOT\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 54,
+      "image": "/addac511-svgen/pages/page-054.png",
+      "title": "Page 54",
+      "sectionName": null,
+      "content": "page 54\tADDAC SYSTEM\nLOGIC ASSIGNMENTS\nADDAC511 User’s Guide\nX = CHANNEL 1 GATE OUTPUT\nY = CHANNEL 3 GATE OUTPUT\nY = CHANNEL 4 GATE OUTPUT\nAND RESULT\nXOR RESULT\nX = OP2 (OPERATION 2 RESULT)\nY = CHANNEL 2 GATE OUTPUT\nNAND RESULT\nX = OP1 (OPERATION 1 RESULT)\nALL OPERATIONS SET TO CHANGE ON X & Y\nINPUTS\nOPERATION 1\nOPERATION 2\nOPERATION 3\nOP1\nOP2\n \nINPUTS\nOUT\n \nINPUTS\nCASCADING OPERATIONS\nAdding more than one line allows for more complex Logic\noperations. When setting a second line choosing OP1\n(Operation 1) uses the result from the first operation as an\ninput for the second operation. It is also possible to choose\nother Logic channels to cascade between channels.\nBelow a graphical example of this process with the\nconfiguration shown on the left.\nENCODERS INTERACTION\nRotating any of the Encoders will scroll through already\nassigned lines.\nThe virtual buttons on the screen show the current function\nfor what the encoders ane [MENU] button will do when\npressed.\nTo exit this screen press any other function button.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 55,
+      "image": "/addac511-svgen/pages/page-055.png",
+      "title": "Page 55",
+      "sectionName": null,
+      "content": "page 55\tADDAC SYSTEM\nSPECIAL NON-LOGIC ASSIGNMENTS\nCOUNTER\nThe counter function allows to output a gate or trigger at\nevery X pulses. Any of the CV inputs, Clock Inputs, CV\noutputs or Logic outputs can be used as an input.\nBPM - CLOCK OUTPUT\nThe BPM function allows to output a clock signal at a\nmultiplication (up to x 32) or division (up to /32) of the\nselected channel BPM.\nThis feature can be used to sync other modules to the\nADDAC511.\nMIDI CLOCK OUTPUT\nThe BPM function allows to output a standard midi clock\nsignal when set to x24, which will output a standard 24\npulse per quarter note midi clock.\nADDAC511 User’s Guide\nCOUNTER: 5\nCHANNEL 1 GATE OUTPUT\nCOUNTER USING GATE OUTPUT\nCOUNTER USING TRIGGER OUTPUT\nCOUNTER: 3\nCOUNTER OUTPUT EXAMPLE\nBPM /2\nCHANNEL 1 BPM\nCLOCK USING GATE OUTPUT\nCLOCK USING TRIGGER OUTPUT\nBPM x2\nBPM /2\nBPM x2\nBPM OUTPUT EXAMPLE\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 56,
+      "image": "/addac511-svgen/pages/page-056.png",
+      "title": "Page 56",
+      "sectionName": null,
+      "content": "page 56\tADDAC SYSTEM\nMENU\nThe Menu has 4 features:\nVCO Tuning - Utility program to help calibration of VCOs\nCalibrate CV Outputs - CV Output calibration / mapping\nScreensaver - Extends screen longevity\nAuto Return to Main - Automatically exits to main screen\nQuantizer Rounding - Quantize to closest note, above or below.\nUpdate Firmware - Enter firmware update process\nVCO TUNING\nThis is a utility feature which allows to easily tune VCOs when\nyou’re using the 511 as a 1v/oct generator.\nIt will override the main program and force all outputs to the\nsame voltage defined as a musical note.\nOctave (0 to 4): raises the voltage in intervals of 1v\nNote (C to B): raises the voltage in semitones\nA voltage output monitor and keyboard monitors the parame-\nters selected.\nCALIBRATE CV OUTS\nThis screen allows to easily calibrate the 1v per octave\nstandard.\nOFFSET: This value offsets the whole CV output in very fine\nintervals of ~0,00076v\nGAIN: Amplify or attenuate the 1v/oct scaling\nCANCEL: Exits the screen without saving.\nRESET: resets calibration to the factory values.\nSAVE: Saves and exits the screen.\nSCREENSAVER\nThe screensaver is used to save the screen life over periods\nwhen the modules is not in use.\nWhen set to ON the screen will go black after the Wait Time\nis elapsed and no button is pressed during this time.\nPressing any button will exit the screensaver mode and\nresume the regular screen operation.\nWait Time can be set to: 10 seconds, 1 minute, 2 minutes or 5\nminutes.\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 57,
+      "image": "/addac511-svgen/pages/page-057.png",
+      "title": "Page 57",
+      "sectionName": null,
+      "content": "page 57\tADDAC SYSTEM\nMENU\nAUTO RETURN TO MAIN\nBy default after 30 seconds of physical inactivity the screen\nwill automatically return to the Main screen, this function can\nbe turned ON/OFF.\nThe user can also define the auto return time:\n10 seconds, 30 seconds, 1 minute.\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 58,
+      "image": "/addac511-svgen/pages/page-058.png",
+      "title": "Page 58",
+      "sectionName": null,
+      "content": "page 58\tADDAC SYSTEM\nMENU : FIRMWARE UPDATES\nFIRMWARE UPDATE INSTRUCTIONS\n1. Remove your 511 from your rack while leaving the ribbon\npower cable connected and the frame On.\n2. Connect the module to your computer through the\nmodule’s back USB connector.\n3. Using an up-to-date Google Chrome browser (you will\nneed at least version 61 or newer) go to this address:\nhttps://media.addacsystem.com/ADDAC511\n4. Press the Connect button on the webpage, notice the list of devices, among the devices list it should show:\n“ADDAC511 STOCHASTIC VOLTAGE GENERATOR”\nDo not select the device at this moment.\n5. On your module click the [MENU] button and select: [UPDATE FIRMWARE], click [ENCODER B] to enter firmware update\nmode, after which Press & Hold [ENCODER A]\n6. On your browser notice the list will change:\n“ADDAC511 STOCHASTIC VOLTAGE GENERATOR” will disappear and a new device will appear:\n“ADDAC511 - FIRMWARE UPDATE MODE”\nRelease [ENCODER A], select this new device and press connect.\nThe firmware update process status can be followed on the browser. Once finished the usb cable can be removed and the\nmodule can be placed back in your eurorack frame.\nAUTO RESTART\nIf the device “ADDAC511 - FIRMWARE UPDATE MODE - Paired” is not selected within 30 seconds the module will auto\nrestart and disappear from the browser devices list. If this happen you can repeat step 5 and 6.\nWINDOWS TROUBLESHOOTING\nIf “ADDAC511 - FIRMWARE UPDATE MODE” device does not appear in the devices list please follow the steps below:\n1. Press <win key> + R\n2. Write \"devmgmt.msc\" in the text box and press OK\nThis will open the device manager. Under Universal Serial Bus devices check that “ADDAC511 - FIRMWARE UPDATE MODE”\nappears. If the device icon has an exclamation mark, that means the driver must be installed. If you haven't done it\nbefore, go to https://zadig.akeo.ie and follow the instructions to install it.\nAfter this, follow these steps:\n1. Select Menu > Update Firmware\n2. While module reboots, keep [ENCODER A] pressed\n3, Re-install the driver for the “ADDAC511 - FIRMWARE UPDATE MODE” device:\n3a. Right-click and select update driver\n3b. Select \"Browse my computer for drivers\"\n3c. Select \"Let me pick form a list of available drivers on my computer\"\n4. Select \"Universal Serial Bus devices\"\n5. Select (Undefined Vendor) and WinUSB Generic Device\n6. Select YES on the Update Driver Warning\n7. Allow module to restart\n8. Select Menu > Update Firmware\n9. While module reboots, keep Encoder A pressed\n10. On the ADDAC511 website refresh the webpage and press the Connect button, the “ADDAC511 - FIRMWARE UPDATE\nMODE” device should now be listed. You can now follow the regular update steps at the top of the page.\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 59,
+      "image": "/addac511-svgen/pages/page-059.png",
+      "title": "Page 59",
+      "sectionName": null,
+      "content": "page 59\tADDAC SYSTEM\nSPECIAL STARTUPS\nOn power up there are 2 special startups, they can be accessed by Pressing and Holding the highlighted buttons during\npower up as shown here:\nMENU:\nstart with default preset (bypasses previously selected preset)\nMENU + STATE C:\ndelete all stored presets\nADDAC511 User’s Guide\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 60,
+      "image": "/addac511-svgen/pages/page-060.png",
+      "title": "Page 60",
+      "sectionName": null,
+      "content": "MAIN SCREEN \tMAIN SCREEN \tMAIN SCREEN\nPATCH 1\nSIMPLEST FULL RANGE RANDOM VOLTAGE AT 1/4 BEAT\nPATCH 2\nPOSITIVE RANDOM VOLTAGE AT RANDOM BEAT\nVOLTAGE SETTINGS \tTIME SETTINGS\npage 60\tADDAC SYSTEM\nPATCH EXAMPLES\n+5v\n-5v\n0v\n1/4 \t1/4 \t1/4 \t1/4 \t1/4 \t1/8 \t1/8\nNO\nGATE\nNO GATES: “MUTED” BY GATE PROBABILITY\nNO CHANGE: “MUTED” BY VOLTAGE PROBABILITY\nNO\nGATE\n\tNO\nGATE\n\tNO\nGATE\nNO\nGATE\n\tNO\nGATE\n\tNO\nGATE\n1/4 \t1/4\t1/16 1/16 \t1/8\t1/16 \t1/16 1/16 1/16\nNO\nCHANGE\nPROBABILITY\n\t“MUTE”\n\tPROBABILITY\n\t“MUTE”\n\tPROBABILITY\n\t“MUTE”\nNO\nCHANGE\nNO\nCHANGE\n1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16\nGATE OUTPUT: SYNC 50%\nVOLTAGE\nGATE\nGATE OUTPUT: SYNC 25%\n+5v\n0v\nGATE OUTPUT: SYNC 10ms\nADDAC511 User’s Guide\nVOLTAGE SETTINGS \tTIME SETTINGS\nPATCH 3\nRANDOM VOLTAGE WITH PROBABILITY AT 1/16 BEAT\nVOLTAGE SETTINGS \tTIME SETTINGS\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 61,
+      "image": "/addac511-svgen/pages/page-061.png",
+      "title": "Page 61",
+      "sectionName": null,
+      "content": "page 61\tADDAC SYSTEM\nPATCH EXAMPLES\n+5v\n-5v\n0v\nVOLTAGE\nGATE\n +5v\n0v\n1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16\n1/32\tGATE OUTPUT: SYNC 75%\nADDAC511 User’s Guide\nMAIN SCREEN\nPATCH 4\nRANDOM VOLTAGE WITH EXPONENTIAL DISTRIBUTION\nVOLTAGE SETTINGS \tTIME SETTINGS\nMAIN SCREEN\nPATCH 5\nRANDOM VOLTAGE WITH LOGARITHMIC DISTRIBUTION\nVOLTAGE SETTINGS \tTIME SETTINGS\nMAIN SCREEN\nPATCH 6\nRANDOM VOLTAGE WITH WALK DISTRIBUTION\nVOLTAGE SETTINGS \tTIME SETTINGS\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 62,
+      "image": "/addac511-svgen/pages/page-062.png",
+      "title": "Page 62",
+      "sectionName": null,
+      "content": "page 62\tADDAC SYSTEM\nPATCH EXAMPLES\n+5v\n-5v\n0v\nVOLTAGE\nGATE\n +5v\n0v\n1/32\nGATE OUTPUT: SYNC 75%\nADDAC511 User’s Guide\nMAIN SCREEN\nPATCH 7A\nRANDOM VOLTAGE WITH WEIGHTED DISTRIBUTION\nVOLTAGE SETTINGS \tTIME SETTINGS\nMAIN SCREEN\nPATCH 7B\nRANDOM VOLTAGE WITH WEIGHTED DISTRIBUTION\nVOLTAGE SETTINGS \tTIME SETTINGS\nMAIN SCREEN\nPATCH 7C\nRANDOM VOLTAGE WITH WEIGHTED DISTRIBUTION\nVOLTAGE SETTINGS \tTIME SETTINGS\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 63,
+      "image": "/addac511-svgen/pages/page-063.png",
+      "title": "Page 63",
+      "sectionName": null,
+      "content": "page 63\tADDAC SYSTEM\nPATCH EXAMPLES\n+5v\n-5v\n0v\nVOLTAGE\nGATE\n +5v\n0v\n1/4 \t1/8\nGATE OUTPUT: 50%\nADDAC511 User’s Guide\nMAIN SCREEN\nPATCH 8A\nRANDOM VOLTAGE WITH LINEAR SMOOTH\nVOLTAGE SETTINGS \tTIME SETTINGS\nMAIN SCREEN\nPATCH 8B\nRANDOM VOLTAGE WITH LINEAR SMOOTH\nVOLTAGE SETTINGS \tTIME SETTINGS\nMAIN SCREEN\nPATCH 8C\nRANDOM VOLTAGE WITH LINEAR SMOOTH\nVOLTAGE SETTINGS \tTIME SETTINGS\nSMOOTH\n\tSECTION:\n\tLINEAR\n\t50%\nSMOOTH\n\tSECTION:\n\tLINEAR\n\t25%\nSMOOTH\n\tSECTION:\n\tLINEAR\n\t100%\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 64,
+      "image": "/addac511-svgen/pages/page-064.png",
+      "title": "Page 64",
+      "sectionName": null,
+      "content": "page 64\tADDAC SYSTEM\nPATCH EXAMPLES\n+5v\n-5v\n0v\nVOLTAGE\nGATE\n +5v\n0v\n1/8\nGATE OUTPUT: 50%\nADDAC511 User’s Guide\nMAIN SCREEN\nPATCH 10\nRANDOM VOLTAGE WITH EXPONENTIAL SMOOTH\nVOLTAGE SETTINGS \tTIME SETTINGS\nSMOOTH\n\tSECTION:\n\tLOG\n100%\nSMOOTH\n\tSECTION:\n\tEXP\n100%\nSMOOTH\n\tSECTION:\n\tBEZIER\n\t100%\nMAIN SCREEN\nPATCH 11\nRANDOM VOLTAGE WITH BEZIER SMOOTH\nVOLTAGE SETTINGS \tTIME SETTINGS\nMAIN SCREEN\nPATCH 9\nRANDOM VOLTAGE WITH LOGARITHMIC SMOOTH\nVOLTAGE SETTINGS \tTIME SETTINGS\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 65,
+      "image": "/addac511-svgen/pages/page-065.png",
+      "title": "Page 65",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC511 \tUSER’S GUIDE\nDecember.2024\tRevision.01\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

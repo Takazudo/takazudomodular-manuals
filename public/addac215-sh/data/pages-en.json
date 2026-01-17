@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:12.618Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac215-sh/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac215-sh/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC215 DUAL S&H+ \tUSER’S GUIDE\nOctober.2019\tRevision.02\nWelcome to:\npage 2\tADDAC SYSTEM\nOVERALL FEATURES\nThis module should not be judged by it’s size, at 6hp it’s packed with features.\nAt it’s core it features a noise source and two precision Sample & Holds with 0.01% of maximum devia-\ntion from the Input which allows for quantized signals to be sent through without any noticeable detun-\ning or the typical over time voltage drop.\nThe Sample & Hold sections can also be used as a Track & Hold meaning it holds the incoming input\nwhile the Trigger input is ON and lets the input flow to the output when the Trigger input is OFF.\nEach section also features it’s own slew processor with a single control over attack/decay and an\nON/OFF switch.\nThe noise signal is normalled to both sections inputs, meaning that without a jack plugged into the Input\nthe sample and hold function will act upon the incoming noise signal generating random CV values.\nThe [Trigger A Alternate] switch allows to Link both sections so that any trigger input in Trigger A will\nalternate between triggering the A and B section.\nBesides each section output there’s also 4 extra outputs: Noise, Difference, Average and Sum. The [Noise]\noutput is coming from the noise source, the [Difference] output is the subtraction of section A minus\nsection B, the [Average] output is the sum of both A plus B and then divided by 2 and finally the [Sum]\noutput is the sum of both A plus B sections.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac215-sh/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "CONTROLS DESCRIPTION\nADDAC215 User’s Guide\npage 3\tADDAC SYSTEM\nSection A SLEW\nSet the Slew Decay ammount\napplied to the S&H A signal\nALTERNATE/SEPARATE\nSets overall operating mode\nSection A Trigger Input:\nAny CV type is accepted Trigger/Gate/CV\n(Normalled to Trigger B)\nSection A Output\nSection A Input\n(Normalled to Input B)\nSection (A-B) Diference Output\nSection A SLEW switch\nSets the DECAY Slew On or Off\nSection B SLEW switch\nSets the DECAY Slew On or Off\nSAMPLE/TRACK & HOLD\nSets the operating mode of each\nsection\nSection (A+B)/2 Average Output\nSection B Trigger Input:\nAny CV type is accepted Trigger/Gate/CV\nSection B Output\nNoise Output\nSection B SLEW\nSet the Slew Decay ammount\napplied to the S&H B signal\nSAMPLE/TRACK & HOLD\nSets the operating mode of each\nsection\nSection B Input\nSection (A+B) SUM Output\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac215-sh/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "ADDAC215 User’s Guide\npage 4\tADDAC SYSTEM\nCONTROLS IN-DEPTH DESCRIPTION\nInputs Normalization\nThere are 3 normalled inputs in this module, meaning that some inputs are physically connected to\nanother input until a jack is patched in breaking the physical connection.\n1. Noise is normalled to [INPUT A]\n2. [INPUT A] is normalled to [INPUT B]\n3. [TRIGGER A] is normalled to [TRIGGER B]\nSlew\nSlew is applied at the output of each S&H sections and will influence all outputs. The [ON/OFF] switch\nactivates or de-activates the Slew circuitry. The control knob sets both the slew’s Attack and Decay.\nTrigger A Alternate 1>2 vs. Individual Channels\nThis switch sets the overall operation mode of the module.\nIn [Individual Channels] position the module behaves as a dual S&H with normalled inputs for trigger and\nsignal.\nIn [Trigger A Alternate 1>2] with nothing patched to Trigger B input, trigger A will work as a flip flop\nbetween triggering section A or B, in other words at any trigger input at section A it consecutively trigger\nsection A or B.\nif the Trigger B input is patched then the Alternate action won’t work any longer and it will work as a\nclock divider (divided by 2) for Trigger A.\nSample & Hold vs. Track & Hold\nThis switch sets the operation mode for each channel.\nIn Sample & Hold mode any voltage rise (from 0 to +5v) at the Trigger input will hold the momentary\nstate of it’s input until a next voltage rise is detected.\nIn Track & Hold mode any incoming signal will be flowing directly to the ouput until a +5v signal is\ndetected at the Trigger input, at this time and while the signal is HIGH the momentary state of it’s input\nwill be held until the signal goes LOW.\nTrigger Inputs\nTrigger inputs can be used with a Trigger, Gate or any CV source, the comparator works at about +3v so\nany CV above this voltage will be considered a Trigger for the S&H.\nInput & Output\nPlug any source to the Input and take the processed signal from the Output.\nDifference, Average & Sum\nThese outputs use the 2 independent outputs and combine them in diferent ways.\nDifference is section A minus section B with a full wave rectifier making sure all results are positive.\nAverage is a mix between section A plus B and attenuated by a factor of 2, avoiding higher voltages if\nsumming 2 +5v signals.\nSum is the simple mix of both A&B output signals.\nNoise\nThis is the output for the noise generator that is normalled to the [INPUT A].\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac215-sh/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "page 5\tADDAC SYSTEM\nADDAC215 User’s Guide\nBEYOND SAMPLE & HOLD\nDual Analog Random:\nWe included a noise generator in the module so that it can work as a dual S&H random, the noise source\nis normalled to [INPUT A] which in turn is normalled to [INPUT B] this allows that with no patch cable at\nthe signal inputs any Trigger input will hold the momentary noise value at the output.\nSample Rate Reducer:\nAnother interesting feature is to use it at audio rates as a Sample Rate reducer. Using an Oscillator at the\nTrigger input will control the Sample Rate of the incoming signal, at 20khz any incoming audio signal\nwill pass through without any noticeable artifacts, reducing the Oscillator frequency will lower the\nsample rate at which the S&H is “holding” the signal generating a more “steppy” signal and introducing\nall those typical Bit Crusher artifacts.\nRate of Change (RoC):\nThis module allows you to easily patch up what we call a Rate-of-Change patch. This patch tracks how\nquickly an incoming CV signal is changing over time and outputs this speed as a CV value between 0 and\n+5V. This output signal will be proportional to the speed which the incoming CV is changing: faster\nchanges of the incoming CV will generate higher voltages, while slower CV changes will generate lower\nvoltages.\nTo achieve this, we’ll be using both Sample-&-Hold sections alternating at a constant clock rate. This way\nwe are always “holding” voltages from two points in time: the last clock and the new clock. Subtracting\none value from the other, gives us the difference between the two held voltages. A fast incoming signal\nmoving within a specific voltage range will output a bigger difference, compared to a slower incoming\nsignal moving within the same voltage range.\nThis difference will always be a positive signal (e.g. if the incoming CV changes goes from 1V to 3V or 3V\nto 1V, the absolute difference is always 2V).\nUtilizing the [Slew] sections has a drastic impact. It allows to get a fully dynamic output instead of\nsteady voltages at every clock tick.\nRoC patch:\nUse both sections, taking advantage of the normalizations of the module!\n1. Patch the incoming CV to be analyzed, to [INPUT A]. This is normalized to [INPUT B].\n2. Set the switch to [TRIGGER A ALTERNATE] position to let your clock at [TRIGGER A] input trigger section\nA and then section B in an alternate fashion.\n3. Patch a clock at [TRIGGER A] input, and set it a steady frequency that gives good results. This is the\nSampling Rate that sets how often we’re sampling the voltage changes (our analysis time window).\n4. Set both slews at a desired value and get your output signal from the [DIFFERENCE] output.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac215-sh/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "page 6\tADDAC SYSTEM\nADDAC215 User’s Guide\nCONTROLS PATH\nSIGNAL PATH\nINPUT 1\nSAMPLE/\nTRACK &\nHOLD 1\n1 - 2\nLATCH\tTRIGGER IN 1\nINPUT 2\nSAMPLE/\nTRACK &\nHOLD 2\nTRIGGER IN 2\nOUTPUT 1\nNOISE OUTPUT\n\tWHITE NOISE\nGENERATOR\nAVERAGE OUTPUT\nOUTPUT 2\nSLEW\nSLEW\nMIX\nSUM OUTPUT\nDIFFERENCE OUTPUT\nALTERNATE / SEPARATE \tSAMPLE / TRACK & HOLD \tON / OFF\nON / OFF\tSAMPLE / TRACK & HOLD\n(Normalled)\n(Normalled)\n(Normalled)\nPOSSIBILITIES:\nDual Sample / Track & Hold\nDual Sample and Hold Analog Random\nDual Slew Processor\nStereo or Dual Mono Analog Decimator (Bit Crusher)\nRate of Change : compares a CV input over time and outputs a CV proportional\nto the speed which the incoming CV is changing\nADDAC215\nDUAL S&H+ SIGNAL FLOW DIAGRAM\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac215-sh/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC215 \tUSER’S GUIDE\nOctober.2019\tRevision.02\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T16:33:12.634Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac216-sumdiff/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac216-sumdiff/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC216 SUM & DIFFERENCE \tUSER’S GUIDE\nOctober.2019\tRevision.01\nWelcome to:\npage 2\tADDAC SYSTEM\nOVERALL DESCRIPTION\nThere are two equal sections in this module labeled A and B.\nThis module is a peculiar type of mixer that instead of just summing two input signals (X & Y) it also\nallows the possibility to subtract the two signals. It works both for audio and CV signals and hence the\npossibility to get the diference of two CVs or cancel the phase of two audio signals.\nThe resulting signal, of sum or subtraction, is then routed through a switchable (on/off) full rectification\ncircuit labeled: Absolute. After this the gain of the mixed signal goes through another attenuverter\nlabeled: Amplitude to control the resulting signal gain which, being an attenuverter, also allows the\npossibility to invert the incoming signal. After the Amplitude comes an AC/DC coupling switch followed\nby an bipolar Offset knob.\nBesides the normal output there’s also an inverted output for each of the A & B sections.\nThe outputs of section A & B are also summed and sent to the Average Output.\nUsing a single input, just the X or Y input, the module can also be used as a simple dual Attenuverter &\nOffset CV processor with full rectification and AC coupling options.\nFeatures;\n2 independent sections each with:\n2 inputs with gain attenuverters\nAmplitude attenuverter and bipolar Offset\nAbsolute/Bipolar and AC/DC switches\nOutput and inverted output\n2 leds monitor the Output polarities and gain.\nAverage mix output of both sections\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac216-sumdiff/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "CONTROLS DESCRIPTION\nADDAC216 User’s Guide\npage 3\tADDAC SYSTEM\nSection A Amplitude Attenuverter\nSection A Inputs\nSection A Monitor Leds\nSection A Attenuverter Offset\nSection A X&Y Attenuverter Inputs\nAmplitude Attenuverter Section B\nMonitor Leds Section B\nAttenuverter Offset Section B\nInputs Section B\nAC / DC Coupling Section B\nAverage Output Section A&B\nAbsolute / Bipolar Section B\nAC / DC Coupling Section A\nAbsolute / Bipolar Section A\nOutput Section B\tSection A Output\nSection A Inverted Output\nInverted Output Section B\nSection B X&Y Attenuverter Inputs\nSECTION A\nSECTION B\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac216-sumdiff/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "page 4\tADDAC SYSTEM\nADDAC216 User’s Guide\nADDAC216\nSUM & DIFFERENCE\nSIGNAL FLOW DIAGRAM \tIN Y\nSECTION A\n \tIN X\nATTENU\nVERTER\nGAIN\nATTENU\nVERTER\nGAIN\nMIX\nABSOLUTE\n-\nBIPOLAR\n(FULL RECTIFICATION)\nINVER\nTER\nOUT\nLEDs\nINVER\nTED\nOUT\nAC / DC\nCOUPLING\nOFFSET\nATTENUVERTER\nGAIN\nAVERAGE OUTPUT\nIN Y\nSECTION B\nIN X\nATTENU\nVERTER\nGAIN\nATTENU\nVERTER\nGAIN\nMIX\nABSOLUTE\n-\nBIPOLAR\n(FULL RECTIFICATION)\nAC / DC\nCOUPLING\nOFFSET\nATTENUVERTER\nGAIN\nOUT\nINVER\nTER\nINVER\nTED\nOUT\nLEDs\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac216-sumdiff/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC216 \tUSER’S GUIDE\nOctober.2019\tRevision.01\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
