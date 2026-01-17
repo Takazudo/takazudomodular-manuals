@@ -24,13 +24,12 @@ import { glob } from 'glob';
  * //   sourcePdf: '/path/to/manual-pdf/oxi-one-mk2/OXI-ONE-MKII.pdf',
  * //   input: { pdfDirectory: 'manual-pdf/oxi-one-mk2', pdfPattern: '*.pdf' },
  * //   output: {
- * //     images: 'public/oxi-one-mk2/pages',           // Final (committed)
- * //     data: 'public/oxi-one-mk2/data',              // Final (committed)
- * //     splitPdf: 'temp-processing/oxi-one-mk2/split-pdf',        // Temp
- * //     extracted: 'temp-processing/oxi-one-mk2/extracted',       // Temp
- * //     translationsDraft: 'temp-processing/oxi-one-mk2/translations-draft' // Temp
+ * //     images: 'public/oxi-one-mk2/pages',                       // Final (committed)
+ * //     data: 'public/oxi-one-mk2/data',                          // Final (committed)
+ * //     splitPdf: 'temp-processing/oxi-one-mk2/split-pdf',        // Temp (gitignored)
+ * //     extracted: 'temp-processing/oxi-one-mk2/extracted',       // Temp (gitignored)
+ * //     translationsDraft: 'temp-processing/oxi-one-mk2/translations-draft' // Temp (gitignored)
  * //   },
- * //   legacy: { ... },  // Old paths for migration
  * //   settings: { ... }
  * // }
  */
@@ -140,12 +139,6 @@ export function resolveManualConfig(rootDir) {
       splitPdf: join('temp-processing', slug, 'split-pdf'),
       extracted: join('temp-processing', slug, 'extracted'),
       translationsDraft: join('temp-processing', slug, 'translations-draft'),
-    },
-    // Legacy paths (for backward compatibility during migration)
-    legacy: {
-      pages: join('manual-pdf', slug, 'pages'),
-      extracted: join('public', slug, 'processing', 'extracted'),
-      translationsDraft: join('public', slug, 'processing', 'translations-draft'),
     },
   };
 
