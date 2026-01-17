@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T17:49:53.318Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ai008-matrix-mixer/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "AI Synthesis AI008 Matrix Mixer User’s\nManual\nThis is the Manual for the AI008 Eurorack Matrix Mixer you can purchase by going to:\naisynthesis.com/product/ai008-eurorack-matrix-mixer.\n1. About the AI008 Eurorack Matrix Mixer\nIf you are new to DIY electronics, this is a great second module to build. The first module, the\nAI001 Multiple is ideal for beginners, as it teaches how to solder and signal flow. The AI008\nMatrix Mixer familiarizes you with common electronic components, and is powered.\nThe AI008 Eurorack Matrix Mixer is a compact 4-in, 3-out matrix mixer. A matrix mixer is used to\nroute audio or cv signals from multiple sources to different destinations. There are twelve\npotentiometers, with each potentiometer controlling the amount a given input (1-4) will be sent\nto a given output (A-C).\nThe AI008 also contains a summed output of A+B+C. A common usage for the AI008 would be\nas an effects send, with one or more inputs, and one or more effect inputs and outputs. Using the\nAI008 Matrix Mixer in this way, inputs can be sent to multiple effects, and the effects can be sent\nto each other, and even back into themselves, expanding the depth of the effects.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ai008-matrix-mixer/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2. AI008 Controls\n1. Input 1 Mixing Row. This row of knobs\ncontrols the amount of signal from the Input 1\njack will be mixed to outputs A-C. A1 controls\nthe amount of Input 1 that appears at output\nA. B1 controls the amount of Input 1 that\nappears at output B. C1 controls the amount\nof Input 1 that appears at output C.\n2. Input 2 Mixing Row. This row of knobs\ncontrols the amount of signal from the Input\n2 jack will be mixed to outputs A-C. A2\ncontrols the amount of Input 2 that appears\nat output A. B2 controls the amount of Input 2\nthat appears at output B. C2 controls the\namount of Input 2 that appears at output C.\n3. Input 3 Mixing Row. This row of knobs\ncontrols the amount of signal from the Input\n3 jack will be mixed to outputs A-C. A3\ncontrols the amount of Input 3 that appears\nat output A. B3 controls the amount of Input 3\nthat appears at output B. C3 controls the\namount of Input 3 that appears at output C.\n4. Input 4 Mixing Row. This row of knobs\ncontrols the amount of signal from the Input\n4 jack will be mixed to outputs A-C. A4\ncontrols the amount of Input 4 that appears\nat output A. B4 controls the amount of Input 4\nthat appears at output B. C4 controls the\namount of Input 4 that appears at output C.\n5. Inputs. These are the four inputs of the\nMatrix Mixer. The amount of signal passed\nfrom these inputs are controlled by the\nMixing rows.\n6. Outputs. These are the separate mix outputs. Each output controls a mix of Inputs 1-4 as defined\nby the mixing rows. The A+B+C output is a summed mix of the A, B, and C outputs.\n3. Power\nThe AI008 uses a shrouded header to prevent the cable being plugged in the wrong way. The unit\ndraws 17mA on the positive and negative side.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/ai008-matrix-mixer/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "4. Gain Staging\nThe AI008 mixing stages are “unity” based, with the exception of the summed output. So if you have a\n5V peak to peak signal at Input 1, and A1 is set to 100%, then Output A will be an in phase version of\nthat 5V Peak to Peak signal.\nIn this picture, the Green and Blue waveform overlap completely. The Green is the signal before going\ninto input 1, at 10v peak to peak. The input is 100% for A1. The Blue wave is output A, perfectly in\nphase, and at 10V peak to peak. The Red waveform is the summed output. In Phase but at about 5V\npeak to peak. I designed it that way because that summed output is going to have a lot going on\nmost of the time, and I didn't want it to clip. Changing a single feedback resistor can change that to\ntaste.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/ai008-matrix-mixer/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "5. Patch Ideas/Uses\nFeedback Patch\nIn this patch, we are feeding effects back into themselves in order to create an ambient soundscape.\nThe effects are arbitrary, but having a Delay is important. The effects in this patch are a distortion, a\ndelay, and a reverb. Each is patched in, and out of the Matrix Mixer. Each output of A, B, and C can\nhave a mix of Inputs 1-3 (distortion, delay, and reverb) sent out of it back into the Distortion, Delay, and\nReverb. Start by mixing the delay into the delay until it feeds back into a squeal, and then back off of\nthe mix knob. Then start mixing in (and out) the other effects. This can be a wonderful way to create\ncool transitions in a live environment. Input 4 could be fed from a mixer’s aux send, and when one\npatch is done, a feedback patch could be created while a new patch is made.\nFeedback Oscillator Patch\nIn this patch, two oscillators are fed into the AI008 Matrix Mixer. This patch should be doable with any\nvoltage controlled oscillator that has CV inputs. The outputs of the Matrix mixer are fed back into the\noscillators, with one oscillator getting a mix of signals fed back into its Frequency Modulation input,\nand the other oscillator getting a mix of signals fed back into its Frequency Modulation and Pulse\nWidth Modulation inputs. The summed A+B+C output, could then be fed to a traditional filter/VCA\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/ai008-matrix-mixer/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "combo for a feedbacking mono synth patch, or patched out as a drone source, or out to anything as a\nsound source.\nCV Feedback Patch\nIn this patch, we are using the Matrix Mixer to feed voltage from voltage generators back into them. In\nthis case I’m using a Maths and a VCLFO, but this can be done with any CV controllable LFO,\nEnvelope Generator, or other Voltage Source. The ramp wave from the VCLFO is fed into Input 1\nwhere it can be distributed to all three outputs (A, B, and C). A summed waveform from MATHs is fed\ninto Input 2 of the Matrix Mixer, where it can also be mixed to different outputs. The Output A mix\n(which can contain MATHS and the VCLFO) is sent to the CVin of the CVLFO, creating a constantly\nevolving voltage source there. Out B of the Matrix Mixer is sent to the Rise CV of Maths, and the Sine\noutput from the VCLFO is sent to the Fall CV input. With all of this CV madness, there are still two\ninputs open on the Matrix Mixer with which to cause havoc.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

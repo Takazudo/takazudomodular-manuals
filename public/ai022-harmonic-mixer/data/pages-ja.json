@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T17:55:02.451Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ai022-harmonic-mixer/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "AI Synthesis AI022 Harmonic Mixer\nユーザーマニュアル\n\nこちらはAI022 Harmonic Mixerのマニュアルです。製品は以下のURLからご購入いただけます：\nhttps://aisynthesis.com/product/harmonic-cp3-style-mixer/\n\n1. AI022 Harmonic Mixerについて\n\nAI022 Harmonic Mixerは、ICを使用しないディスクリート回路のミキサーです。ゲインを上げると倍音とアナログの温かみが加わります。さらにゲインを上げると、ディストーションとフェージングが加わり、既存の波形から新しい波形を生成します。\n\nAI022は伝説的なMoog Modular CP3スタイルミキサーからインスピレーションを得ていますが、Eurorack向けにアップデートされ、回路のユーザーカスタマイズが可能になっています。多くのMoog Modularユーザーは、CP3ミキサーモジュールがMoog Modularサウンドの温かみの多くを提供していると考えています。\n\n露出したBias Knobにより回路を積極的に活用でき、入力オーディオの忠実な再現から、過激なアナログウェーブシェイピングやディストーションまで可能です。また、Bias Knobを使用して+/- 5V信号を0/+または0/-信号に調整することもできます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ai022-harmonic-mixer/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2. AI022のコントロール\n\n1. Mono Inputs\nこれらの入力端子はモノラルオーディオまたは電圧信号を受け付けます。\n\n2. Bias Knob\nこのノブは回路の電圧バイアスを調整します。このノブを回すと、入力されるオーディオまたはコントロール電圧のオフセットを変更でき、アナログ波形整形を引き起こします。\n\n3. Mix Out\nこれは主要な電圧出力です。\n\n4. Input Volume\nこれらのノブの位置は、各入力のボリュームをコントロールします。これらのノブはパッシブアッテネーターです。ボリュームが増加すると、より多くの高調波歪みが加わります。\n\n5. Master Volume\nこのノブの位置は、Mix Outのオーディオおよび/または電圧のボリュームをコントロールします。ボリュームが増加すると、より多くの高調波歪みが加わります。\n\n3. 電源\n\nAI022は、ケーブルが誤った向きで接続されるのを防ぐため、シュラウド付きヘッダーを使用しています。このユニットは、正電源レールで9mA、負電源側で9mAを消費します。",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T17:55:05.089Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ai106-west-coast-mixer/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "AI Synthesis AI106 West Coast\nMixer User’s Manual\nThis is the Manual for the AI022 Harmonic Mixer you can purchase it by going to:\nhttps://aisynthesis.com/product/ai106-west-coast-eurorack-mixer/.\n1. About the AI106 West Coast Mixer\nThe AI106 West Coast Mixer is a discrete mixer using no ICs. As gain increases harmonics and\nanalog warmth are added. As gain increases more, distortion and phasing is added, creating new\nwaveforms from old ones.\nThe AI106 takes inspiration from the legendary but primitive mixers used in 1960s synthesizers\nbuilt on the West Coast of the United States, but updates it for eurorack and allows for user\ncustomization of the circuit.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ai106-west-coast-mixer/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2. AI106 Controls\n1. Mono Inputs. These inputs\naccept mono audio or voltage\nsignals.\n2. Mix Out. This is the primary\nvoltage output. Just like the\nvintage 1960s mixers, the\noutput is inverted.\n4. Input Volume. The position\nof these knobs control the\nvolume of each input. These\nknobs are passive attenuators.\nAs volume increases more\nharmonic distortion is added.\n5. Master Volume. The position\nof this knob controls the\nvolume of audio and or voltage\nof the Mix Out. As volume\nincreases more harmonic\ndistortion is added.\n3. Power\nThe AI106 uses a shrouded header to prevent the cable being plugged in the wrong way. The unit\ndraws 12 mA on the positive rail, and 0 mA on the negative side.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

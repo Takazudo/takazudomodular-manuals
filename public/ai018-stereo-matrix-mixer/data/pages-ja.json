@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T17:55:00.827Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ai018-stereo-matrix-mixer/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "AI Synthesis AI018 Stereo Matrix Mixer ユーザーマニュアル\n\nこちらは、AI018 Eurorack Stereo Matrix Mixerのマニュアルです。製品は以下のURLから購入できます：\nhttps://aisynthesis.com/product/ai018-eurorack-stereo-matrix-mixer/\n\n1. AI018 Eurorack Stereo Matrix Mixerについて\n\nAI018 Eurorack Stereo Matrix Mixerは、コンパクトな8入力、8出力のマトリックスミキサーです。マトリックスミキサーは、複数のソースからのオーディオまたはCV信号を異なる出力先にルーティングするために使用されます。16個のポテンシオメーターを搭載しており、各ポテンシオメーターは特定のステレオ入力ペア（1-4）から特定のステレオ出力（A-D）へ送信される信号量をコントロールします。\n\nAI018の一般的な使用方法は、1つ以上の入力と1つ以上のエフェクト入出力を使用したエフェクトセンドです。AI018 Stereo Matrix Mixerをこのように使用することで、入力を複数のエフェクトに送信でき、エフェクト同士を相互に接続したり、さらには自身にフィードバックさせることも可能になり、エフェクトの深さを拡張できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ai018-stereo-matrix-mixer/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2. AI018 コントロール\n\n1. Inputs\n\n4つのステレオ入力があり、1-4の番号が付けられています。(L) Right入力はLeft (R)にノーマル接続されているため、R Inputにプラグが挿入されていない場合、LジャックからのInputがRチャンネルに複製されます。\n\n2. Input 1 Mixing Row\n\nこのKnobの列は、Input 1ジャックからの信号が出力A-Dにミックスされる量をコントロールします。\n\n3. Input 2 Mixing Row\n\nこのKnobの列は、Input 2ジャックからの信号が出力A-Dにミックスされる量をコントロールします。\n\n4. Input 3 Mixing Row\n\nこのKnobの列は、Input 3ジャックからの信号が出力A-Dにミックスされる量をコントロールします。\n\n5. Input 4 Mixing Row\n\nこのKnobの列は、Input 4ジャックからの信号が出力A-Dにミックスされる量をコントロールします。\n\n6. Outputs\n\nこれらは個別のミックス出力です。各出力は、Mixing Rowで定義されたInputs 1-4のステレオミックスです。\n\n3. Power",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/ai018-stereo-matrix-mixer/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "AI008は、ケーブルが誤った向きで接続されないように、シュラウド付きヘッダーを使用しています。本ユニットは、正極側で20mA、負極側で15mAを消費します。",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "processedAt": "2026-01-17T17:55:00.828Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ai018-stereo-matrix-mixer/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "AI Synthesis AI018 Stereo Matrix\nMixer User’s Manual\nThis is the Manual for the AI018 Eurorack Stereo Matrix Mixer you can purchase by going to:\nhttps://aisynthesis.com/product/ai018-eurorack-stereo-matrix-mixer/.\n1. About the AI018 Eurorack Stereo Matrix Mixer\nThe AI018 Eurorack Stereo Matrix Mixer is a compact 8-in, 8-out matrix mixer. A matrix mixer is\nused to route audio or cv signals from multiple sources to different destinations. There are\nsixteen potentiometers, with each potentiometer controlling the amount a given stereo input pair\n(1-4) will be sent to a given stereo output (A-D).\nA common usage for the AI018 would be as an effects send, with one or more inputs, and one or\nmore effect inputs and outputs. Using the AI018 Stereo Matrix Mixer in this way, inputs can be\nsent to multiple effects, and the effects can be sent to each other, and even back into\nthemselves, expanding the depth of the effects.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ai018-stereo-matrix-mixer/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "2. AI018 Controls\n1. Inputs\nThere are four\nstereo inputs\nnumbered 1-4.\nThe (L) Right\ninput is\nnormalled to\nthe Left (R) so\nthat if no plug is\ninserted into\nthe R Input, the\nInput from the\nL jack will\nduplicate itself\non the R\nChannel.\n2. Input 1\nMixing Row.\nThis row of\nknobs controls\nthe amount of\nsignal from the\nInput 1 jacks\nwill be mixed to\noutputs A-D.\n3. Input 2\nMixing Row.\nThis row of\nknobs controls\nthe amount of\nsignal from the Input 2 jacks will be mixed to outputs A-D.\n4. Input 3 Mixing Row. This row of knobs controls the amount of signal from the Input 3 jacks will\nbe mixed to outputs A-D.\n5. Input 4 Mixing Row. This row of knobs controls the amount of signal from the Input 4 jacks will\nbe mixed to outputs A-D.\n6. Outputs. These are the separate mix outputs. Each output is a stereo mix of Inputs 1-4 as defined\nby the mixing rows.\n3. Power\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/ai018-stereo-matrix-mixer/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "The AI008 uses a shrouded header to prevent the cable being plugged in the wrong way. The unit\ndraws 20mA on the positive rail and 15mA on the negative side.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

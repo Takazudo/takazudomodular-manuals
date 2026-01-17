@@ -135,6 +135,30 @@ import westonH1Pages from '@/public/weston-h1/data/pages-ja.json';
 import westonSv1Manifest from '@/public/weston-sv1/data/manifest.json';
 import westonSv1Pages from '@/public/weston-sv1/data/pages-ja.json';
 
+// Import ai008-matrix-mixer
+import ai008MatrixMixerManifest from '@/public/ai008-matrix-mixer/data/manifest.json';
+import ai008MatrixMixerPages from '@/public/ai008-matrix-mixer/data/pages-ja.json';
+
+// Import ai017-low-pass-gate
+import ai017LowPassGateManifest from '@/public/ai017-low-pass-gate/data/manifest.json';
+import ai017LowPassGatePages from '@/public/ai017-low-pass-gate/data/pages-ja.json';
+
+// Import ai018-stereo-matrix-mixer
+import ai018StereoMatrixMixerManifest from '@/public/ai018-stereo-matrix-mixer/data/manifest.json';
+import ai018StereoMatrixMixerPages from '@/public/ai018-stereo-matrix-mixer/data/pages-ja.json';
+
+// Import ai022-harmonic-mixer
+import ai022HarmonicMixerManifest from '@/public/ai022-harmonic-mixer/data/manifest.json';
+import ai022HarmonicMixerPages from '@/public/ai022-harmonic-mixer/data/pages-ja.json';
+
+// Import ai026-line-io-interface
+import ai026LineIoInterfaceManifest from '@/public/ai026-line-io-interface/data/manifest.json';
+import ai026LineIoInterfacePages from '@/public/ai026-line-io-interface/data/pages-ja.json';
+
+// Import ai106-west-coast-mixer
+import ai106WestCoastMixerManifest from '@/public/ai106-west-coast-mixer/data/manifest.json';
+import ai106WestCoastMixerPages from '@/public/ai106-west-coast-mixer/data/pages-ja.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -274,6 +298,30 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'weston-sv1': {
     manifest: westonSv1Manifest as unknown as ManualManifest,
     pages: westonSv1Pages as unknown as ManualPagesData,
+  },
+  'ai008-matrix-mixer': {
+    manifest: ai008MatrixMixerManifest as unknown as ManualManifest,
+    pages: ai008MatrixMixerPages as unknown as ManualPagesData,
+  },
+  'ai017-low-pass-gate': {
+    manifest: ai017LowPassGateManifest as unknown as ManualManifest,
+    pages: ai017LowPassGatePages as unknown as ManualPagesData,
+  },
+  'ai018-stereo-matrix-mixer': {
+    manifest: ai018StereoMatrixMixerManifest as unknown as ManualManifest,
+    pages: ai018StereoMatrixMixerPages as unknown as ManualPagesData,
+  },
+  'ai022-harmonic-mixer': {
+    manifest: ai022HarmonicMixerManifest as unknown as ManualManifest,
+    pages: ai022HarmonicMixerPages as unknown as ManualPagesData,
+  },
+  'ai026-line-io-interface': {
+    manifest: ai026LineIoInterfaceManifest as unknown as ManualManifest,
+    pages: ai026LineIoInterfacePages as unknown as ManualPagesData,
+  },
+  'ai106-west-coast-mixer': {
+    manifest: ai106WestCoastMixerManifest as unknown as ManualManifest,
+    pages: ai106WestCoastMixerPages as unknown as ManualPagesData,
   },
 };
 

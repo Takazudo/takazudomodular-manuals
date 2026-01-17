@@ -89,16 +89,17 @@ This will execute all pipeline steps in order:
 7. **Build** - Build final JSON files
 8. **Manifest** - Create manifest.json
 9. **Update Manifest** - Add brand name and title to manifest (from Step 0)
+10. **Update Registry** - Add manual to `lib/manual-registry.ts` for Next.js build
 
 **Phase 2: Verification (AI-Powered)**
 
-10. **Build Production** - Run `pnpm build` for production build
-11. **Serve** - Start production server on port 8030
-12. **Capture** - Capture all pages using lightweight script
-13. **Verify** - AI verification of each page (compare PDF image vs translation)
-14. **Fix** - Fix extraction failures by regenerating text from images
-15. **Re-translate** - Re-translate pages that had extraction issues
-16. **Report** - Generate verification report
+11. **Build Production** - Run `pnpm build` for production build
+12. **Serve** - Start production server on port 8030
+13. **Capture** - Capture all pages using lightweight script
+14. **Verify** - AI verification of each page (compare PDF image vs translation)
+15. **Fix** - Fix extraction failures by regenerating text from images
+16. **Re-translate** - Re-translate pages that had extraction issues
+17. **Report** - Generate verification report
 
 The entire process takes approximately 20-40 minutes for a 280-page manual.
 
@@ -469,11 +470,107 @@ Or use the Edit tool to update all fields:
 - The updatedAt date is displayed on the landing page
 - The productSlug links this manual to the product in takazudomodular (for auto-sync)
 
-### Step 8-16: Verification Phase (MANDATORY)
+### Step 8: Update Manual Registry (REQUIRED)
+
+**After manifest update, add the new manual to `lib/manual-registry.ts` so Next.js can generate pages for it.**
+
+This step is CRITICAL - without it, the build will not generate HTML pages for the new manual.
+
+#### 8.1 Generate Variable Name from Slug
+
+Convert the slug to a camelCase variable name:
+```javascript
+// Example: "ai008-matrix-mixer" → "ai008MatrixMixer"
+function slugToVarName(slug) {
+  return slug.replace(/-([a-z0-9])/g, (_, char) => char.toUpperCase());
+}
+```
+
+#### 8.2 Check if Already Registered
+
+Read `lib/manual-registry.ts` and check if the manual is already imported:
+```javascript
+const registryPath = 'lib/manual-registry.ts';
+const content = fs.readFileSync(registryPath, 'utf8');
+const isAlreadyRegistered = content.includes(`'${slug}':`);
+```
+
+If already registered, skip this step.
+
+#### 8.3 Add Import Statements
+
+Find the last import block and add new imports after it:
+```typescript
+// Import {slug}
+import {varName}Manifest from '@/public/{slug}/data/manifest.json';
+import {varName}Pages from '@/public/{slug}/data/pages-ja.json';
+```
+
+**Example:**
+```typescript
+// Import ai008-matrix-mixer
+import ai008MatrixMixerManifest from '@/public/ai008-matrix-mixer/data/manifest.json';
+import ai008MatrixMixerPages from '@/public/ai008-matrix-mixer/data/pages-ja.json';
+```
+
+Use the Edit tool to insert after the last existing import (before `export interface ManualRegistryEntry`).
+
+#### 8.4 Add Registry Entry
+
+Find the closing `};` of the MANUAL_REGISTRY object and add new entry before it:
+```typescript
+  '{slug}': {
+    manifest: {varName}Manifest as unknown as ManualManifest,
+    pages: {varName}Pages as unknown as ManualPagesData,
+  },
+```
+
+**Example:**
+```typescript
+  'ai008-matrix-mixer': {
+    manifest: ai008MatrixMixerManifest as unknown as ManualManifest,
+    pages: ai008MatrixMixerPages as unknown as ManualPagesData,
+  },
+```
+
+Use the Edit tool to insert before the closing `};` of MANUAL_REGISTRY.
+
+#### Implementation Example:
+
+```javascript
+const slug = 'ai008-matrix-mixer';
+const varName = 'ai008MatrixMixer';  // converted from slug
+
+// 1. Add imports (find last import, add after it)
+const importBlock = `
+// Import ${slug}
+import ${varName}Manifest from '@/public/${slug}/data/manifest.json';
+import ${varName}Pages from '@/public/${slug}/data/pages-ja.json';
+`;
+
+// 2. Add registry entry
+const registryEntry = `  '${slug}': {
+    manifest: ${varName}Manifest as unknown as ManualManifest,
+    pages: ${varName}Pages as unknown as ManualPagesData,
+  },`;
+
+// Use Edit tool to:
+// - Insert importBlock before "export interface ManualRegistryEntry"
+// - Insert registryEntry before the closing "};" of MANUAL_REGISTRY
+```
+
+**Why this step is REQUIRED:**
+
+- Next.js static export requires explicit imports (no dynamic require())
+- Without registry entry, `generateStaticParams()` won't include this manual
+- Build will succeed but the manual pages won't be generated
+- Users will see 404 when accessing the manual URL
+
+### Steps 9-16: Verification Phase (MANDATORY)
 
 **After all translation and build steps are complete, execute the verification phase directly (do NOT call /verify-translation as a separate skill).**
 
-#### Step 8: Build Production
+#### Step 9: Build Production
 
 ```bash
 pnpm build
@@ -481,7 +578,7 @@ pnpm build
 
 This creates an optimized production build in `/out/` directory.
 
-#### Step 9: Start Production Server
+#### Step 10: Start Production Server
 
 ```bash
 # Start serve in background
@@ -494,7 +591,7 @@ sleep 3
 curl -s -o /dev/null -w "%{http_code}" http://localhost:8030/manuals/$SLUG/page/1
 ```
 
-#### Step 10: Capture All Pages
+#### Step 11: Capture All Pages
 
 **Use the lightweight capture script (NOT MCP Playwright):**
 
@@ -512,7 +609,7 @@ This script:
 - Saves to `__inbox/verify-{slug}-{date}-{session}/`
 - Outputs summary.json with results
 
-#### Step 11: AI-Powered Verification
+#### Step 12: AI-Powered Verification
 
 **For EACH captured page, perform visual verification:**
 
@@ -539,21 +636,21 @@ This script:
 }
 ```
 
-#### Step 12: Fix Extraction Failures
+#### Step 13: Fix Extraction Failures
 
 For each page flagged as needing fix:
 
-**12.1 Regenerate extracted text from PDF image:**
+**13.1 Regenerate extracted text from PDF image:**
 
 Look at the PDF image (left side of screenshot) and extract ALL visible English text in correct reading order.
 
-**12.2 Update the extracted text file:**
+**13.2 Update the extracted text file:**
 
 ```bash
 Write to: public/$SLUG/processing/extracted/page-XXX.txt
 ```
 
-**12.3 Re-translate the page:**
+**13.3 Re-translate the page:**
 
 ```xml
 <invoke name="Task">
@@ -566,7 +663,7 @@ Page: XXX, Total: YYY</parameter>
 </invoke>
 ```
 
-#### Step 13: Rebuild After Fixes
+#### Step 14: Rebuild After Fixes
 
 If any pages were fixed:
 
@@ -586,13 +683,13 @@ rm -rf public/manuals/
 pnpm format:fix
 ```
 
-#### Step 14: Stop Serve Process
+#### Step 15: Stop Serve Process
 
 ```bash
 lsof -ti:8030 | xargs kill -9 2>/dev/null || true
 ```
 
-#### Step 15: Generate Report
+#### Step 16: Generate Report
 
 Output a verification report:
 
