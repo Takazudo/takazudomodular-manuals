@@ -4,8 +4,8 @@
  * PDF Text Extraction Script - Page by Page
  * Extracts text from individual page PDFs
  *
- * Input: manual-pdf/{slug}/pages/page-*.pdf
- * Output: public/{slug}/processing/extracted/page-001.txt, page-002.txt, etc.
+ * Input: temp-processing/{slug}/split-pdf/page-*.pdf
+ * Output: temp-processing/{slug}/extracted/page-001.txt, page-002.txt, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
@@ -43,7 +43,7 @@ async function extractAllText() {
   console.log('='.repeat(50));
   console.log(`📦 Manual: ${config.slug}`);
 
-  const pagesDir = join(ROOT_DIR, config.output.pages);
+  const pagesDir = join(ROOT_DIR, config.output.splitPdf);
   const outputDir = join(ROOT_DIR, config.output.extracted);
 
   // Check if pages directory exists

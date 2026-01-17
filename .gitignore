@@ -87,17 +87,13 @@ dist/
 package-lock.json
 yarn.lock
 
-# PDF Processing - Generated Files (Temporary/Intermediate)
+# PDF Processing - Temporary Files (all intermediate processing data)
+temp-processing/
+
+# PDF Processing - Legacy paths (to be removed after migration)
 manual-pdf/*/pages/
 manual-pdf/*/parts/
 public/*/processing/
-
-# PDF Processing - Keep final output (commit to repo)
-# public/*/data/      # Commented out - we need to commit this
-# public/*/pages/     # Commented out - we need to commit this
-
-# PDF Processing - Test Files (keep test PDFs local)
-!manual-pdf/OXI-ONE-MKII-Manual.pdf
 
 # Accidental paths
 Users/

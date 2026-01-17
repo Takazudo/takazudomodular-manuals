@@ -146,7 +146,7 @@ export function PageViewer({ page, currentPage, totalPages, manualId }: PageView
 
           {page.hasContent ? (
             <div data-testid="translation-panel">
-              <MarkdownRenderer content={page.translation} />
+              <MarkdownRenderer content={page.content} />
             </div>
           ) : (
             <p className="text-zd-gray6 italic" data-testid="no-translation-message">

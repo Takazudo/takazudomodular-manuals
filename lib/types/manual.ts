@@ -3,7 +3,8 @@ export interface ManualPage {
   image: string;
   title: string;
   sectionName: string | null;
-  translation: string;
+  /** Text content - language depends on which file was loaded (pages-ja.json or pages-en.json) */
+  content: string;
   hasContent: boolean;
   tags?: string[];
 }
@@ -11,7 +12,11 @@ export interface ManualPage {
 export interface ManualPagesData {
   metadata: {
     processedAt: string;
-    translationMethod: string;
+    /** Language code: 'ja' for Japanese, 'en' for English */
+    language: 'ja' | 'en';
+    /** Method used to generate this content */
+    translationMethod?: string;
+    extractionMethod?: string;
     imageFormat: string;
     imageDPI: number;
   };

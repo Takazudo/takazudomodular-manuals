@@ -5,7 +5,7 @@
  * Splits PDF into individual page files
  *
  * Input: manual-pdf/{slug}/*.pdf
- * Output: manual-pdf/{slug}/pages/page-001.pdf, page-002.pdf, etc.
+ * Output: temp-processing/{slug}/split-pdf/page-001.pdf, page-002.pdf, etc.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
@@ -35,7 +35,7 @@ async function splitPDF() {
   console.log(`📊 Total pages: ${totalPages}`);
 
   // Create output directory
-  const outputDir = join(ROOT_DIR, config.output.pages);
+  const outputDir = join(ROOT_DIR, config.output.splitPdf);
   if (!existsSync(outputDir)) {
     mkdirSync(outputDir, { recursive: true });
   }
