@@ -23,8 +23,6 @@ const ROOT_DIR = join(__dirname, '..');
 // Load configuration from shared resolver
 const config = resolveManualConfig(ROOT_DIR);
 
-const PARALLEL_AGENTS = 4; // Process 4 parts at a time
-
 console.log('🌐 PDF Translation Script (Claude Code Subagents)');
 console.log('='.repeat(50));
 console.log('');
@@ -35,7 +33,7 @@ console.log('');
 console.log('This script is designed to be invoked by Claude Code agents that can:');
 console.log('1. Spawn manual-translator subagents using the Task tool');
 console.log('2. Run 4 parallel translations');
-console.log('3. Save results to data/translations-draft/');
+console.log(`3. Save results to temp-processing/${config.slug}/translations-draft/`);
 console.log('');
 console.log('To run translation, ask Claude Code:');
 console.log('  "Run pdf translation using 4 parallel manual-translator subagents"');
