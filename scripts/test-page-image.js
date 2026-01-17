@@ -6,7 +6,7 @@
  */
 
 const pageNum = process.argv[2] || 2;
-const BASE_URL = process.env.BASE_URL || 'http://localhost:3100';
+const BASE_URL = process.env.BASE_URL || 'http://zmanuals.localhost:3100';
 
 async function testPageImage(pageNum) {
   console.log(`Testing page ${pageNum} image load...\n`);

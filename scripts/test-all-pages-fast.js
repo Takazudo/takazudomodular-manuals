@@ -5,7 +5,7 @@
  * Dynamically tests all manuals from the registry
  *
  * Environment variables:
- *   BASE_URL - Server base URL (default: http://localhost:3100)
+ *   BASE_URL - Server base URL (default: http://zmanuals.localhost:3100)
  */
 
 import { createRequire } from 'module';
@@ -30,7 +30,7 @@ const MANUALS = {
   'oxi-one-mk2': oxiOneMk2Manifest,
 };
 
-const BASE_URL = process.env.BASE_URL || 'http://localhost:3100';
+const BASE_URL = process.env.BASE_URL || 'http://zmanuals.localhost:3100';
 const BATCH_SIZE = 10;
 
 const errors = [];

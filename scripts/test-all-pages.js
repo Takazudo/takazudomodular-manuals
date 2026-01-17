@@ -5,7 +5,7 @@
  * Checks that all 272 pages return HTTP 200
  */
 
-const BASE_URL = 'http://localhost:3100';
+const BASE_URL = 'http://zmanuals.localhost:3100';
 const MANUAL_PATH = '/manuals/oxi-one-mk2/page';
 const TOTAL_PAGES = 272;
 

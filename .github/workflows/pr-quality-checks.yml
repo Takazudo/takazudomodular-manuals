@@ -231,7 +231,7 @@ jobs:
           # Wait for server to be ready
           echo "⏳ Waiting for server to be ready..."
           for i in {1..30}; do
-            if curl -s http://localhost:3100/ > /dev/null; then
+            if curl -s http://zmanuals.localhost:3100/ > /dev/null; then
               echo "✅ Server is ready!"
               break
             fi
