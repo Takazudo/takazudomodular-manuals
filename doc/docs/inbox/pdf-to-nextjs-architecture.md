@@ -590,7 +590,7 @@ pnpm run pdf:clean --slug {slug}
 
 # 4. Test locally
 pnpm dev
-# Navigate to http://localhost:3100/manuals/{slug}/page/1
+# Navigate to http://zmanuals.localhost:3100/manuals/{slug}/page/1
 
 # 5. Commit and deploy
 git add .

@@ -43,7 +43,7 @@ echo "⏳ Waiting for production server..."
 sleep 5
 
 # Check if server is running
-if ! curl -s http://localhost:3100 > /dev/null; then
+if ! curl -s http://zmanuals.localhost:3100 > /dev/null; then
   echo "❌ Production server failed to start"
   kill $SERVER_PID 2>/dev/null || true
   exit 1

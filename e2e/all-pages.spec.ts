@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { getAvailableManuals, getManifest } from '../lib/manual-registry';
 
-const BASE_URL = 'http://localhost:3100';
+const BASE_URL = 'http://zmanuals.localhost:3100';
 
 /**
  * Dynamic E2E Smoke Tests for All Manuals

@@ -398,21 +398,21 @@ pnpm run init-worktree issue-2-project-setup  # Missing merged PRs!
 
 ## Localhost Port Mapping for Development
 
-This port mapping is crucial for human-to-AI communication. When users reference localhost URLs (e.g., "check http://localhost:3100/" or "check http://zmodmanuals.localhost:3100/"), use this mapping to understand which service and files are being referenced.
+This port mapping is crucial for human-to-AI communication. When users reference localhost URLs (e.g., "check http://zmanuals.localhost:3100/"), use this mapping to understand which service and files are being referenced.
 
 ### Port Assignment Table
 
-| Port | Service          | Directory | Purpose                     | Start Command    |
-| ---- | ---------------- | --------- | --------------------------- | ---------------- |
-| 3100 | Next.js App      | `/`       | Manual viewer app           | `pnpm dev`       |
-| 3110 | Docusaurus Docs  | `/doc/`   | Technical documentation     | `pnpm doc:dev`   |
-| 8030 | Production Build | `/out/`   | Production build test serve | `pnpm serve`     |
+| Port | Service          | Domain                          | Directory | Purpose                     | Start Command    |
+| ---- | ---------------- | ------------------------------- | --------- | --------------------------- | ---------------- |
+| 3100 | Next.js App      | `zmanuals.localhost`            | `/`       | Manual viewer app           | `pnpm dev`       |
+| 3100 | Docusaurus Docs  | `doc-zmanuals.localhost`        | `/doc/`   | Technical documentation     | `pnpm doc:dev`   |
+| 8030 | Production Build | `localhost`                     | `/out/`   | Production build test serve | `pnpm serve`     |
 
 ### URL to File Mapping Examples
 
-- `http://localhost:3100/manuals/oxi-one-mk2/` or `http://zmodmanuals.localhost:3100/manuals/oxi-one-mk2/` → Next.js app in `/app/`
-- `http://zmodmanuals.localhost:3100/manuals/oxi-one-mk2/page/1` → Manual page viewer
-- `http://localhost:3110/doc/inbox/` → Documentation in `/doc/docs/inbox/`
+- `http://zmanuals.localhost:3100/manuals/oxi-one-mk2/` → Next.js app in `/app/`
+- `http://zmanuals.localhost:3100/manuals/oxi-one-mk2/page/1` → Manual page viewer
+- `http://doc-zmanuals.localhost:3100/docs/inbox/` → Documentation in `/doc/docs/inbox/`
 
 ### Port Management
 
