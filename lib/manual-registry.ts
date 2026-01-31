@@ -159,6 +159,10 @@ import ai026LineIoInterfacePages from '@/public/ai026-line-io-interface/data/pag
 import ai106WestCoastMixerManifest from '@/public/ai106-west-coast-mixer/data/manifest.json';
 import ai106WestCoastMixerPages from '@/public/ai106-west-coast-mixer/data/pages-ja.json';
 
+// Import shik-n32b-slim
+import shikN32bSlimManifest from '@/public/shik-n32b-slim/data/manifest.json';
+import shikN32bSlimPages from '@/public/shik-n32b-slim/data/pages-ja.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -322,6 +326,10 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'ai106-west-coast-mixer': {
     manifest: ai106WestCoastMixerManifest as unknown as ManualManifest,
     pages: ai106WestCoastMixerPages as unknown as ManualPagesData,
+  },
+  'shik-n32b-slim': {
+    manifest: shikN32bSlimManifest as unknown as ManualManifest,
+    pages: shikN32bSlimPages as unknown as ManualPagesData,
   },
 };
 
