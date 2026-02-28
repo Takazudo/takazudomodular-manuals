@@ -1,9 +1,9 @@
 {
   "name": "takazudomodular-manuals",
   "version": "0.0.1",
+  "description": "Takazudo Modular: Manuals - Hardware synthesizer manuals with Japanese translations",
   "private": true,
   "type": "module",
-  "description": "Takazudo Modular: Manuals - Hardware synthesizer manuals with Japanese translations",
   "author": "Takazudo",
   "keywords": [
     "manual",
@@ -12,9 +12,13 @@
     "next.js",
     "japanese"
   ],
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
   "scripts": {
-    "dev": "pnpm run _kill-port && next dev -p 3100 --hostname zmanuals.localhost",
     "_kill-port": "lsof -ti:3100 | xargs kill -9 2>/dev/null || true; echo 'Killed processes on port 3100 (if any)'",
+    "dev": "pnpm run _kill-port && next dev -p 3100 --hostname zmanuals.localhost",
     "build": "next build && node scripts/copy-original-pdfs.js && node scripts/restructure-build.js && pnpm run doc:build && mkdir -p out/manuals/doc && cp -r doc/build/* out/manuals/doc/",
     "start": "next start",
     "serve": "pnpm dlx serve out -l 3100",
@@ -32,24 +36,24 @@
     "pdf:clean": "node scripts/pdf-clean.js",
     "pdf:verify": "node scripts/pdf-verify.js",
     "pdf:all": "run-s pdf:split pdf:render pdf:extract pdf:translate pdf:validate pdf:build pdf:manifest",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --check \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml}\" \"!**/*.{md,mdx}\" \"!node_modules/**\" \"!.next/**\" \"!out/**\" \"!worktrees/**\" \"!__inbox/**\" && pnpm run format:md:check",
     "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,json,css,yml,yaml}\" \"!**/*.{md,mdx}\" \"!node_modules/**\" \"!.next/**\" \"!out/**\" \"!worktrees/**\" \"!__inbox/**\" && pnpm run format:md",
     "format:md": "node scripts/md-formatter/src/cli.js --write \"**/*.{md,mdx}\"",
     "format:md:check": "node scripts/md-formatter/src/cli.js --check \"**/*.{md,mdx}\"",
-    "typecheck": "tsc --noEmit",
+    "check": "pnpm run typecheck && pnpm run lint && pnpm run format",
+    "check:fix": "pnpm run lint:fix && pnpm run format:fix",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:smoke": "node scripts/test-all-pages-fast.js",
     "test:e2e": "playwright test e2e/all-pages.spec.ts",
-    "check": "pnpm run typecheck && pnpm run lint && pnpm run format",
-    "check:fix": "pnpm run lint:fix && pnpm run format:fix",
-    "b4push": "./scripts/b4push.sh",
-    "init-worktree": "./scripts/setup-worktree-env.sh",
     "deploy:preview": "netlify deploy --dir=out --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --alias=preview",
     "deploy:prod": "netlify deploy --dir=out --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --prod",
     "clean": "rm -rf .next out doc/build doc/.docusaurus",
+    "init-worktree": "./scripts/setup-worktree-env.sh",
+    "b4push": "./scripts/b4push.sh",
     "prepare": "husky"
   },
   "dependencies": {
@@ -92,10 +96,6 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.0.0"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,mjs}": [
