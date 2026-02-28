@@ -122,7 +122,7 @@ pnpm run pdf:manifest --slug oxi-coral
 
 3. **Process:**
    ```bash
-   /pdf-process new-manual-slug
+   /l-pdf-process new-manual-slug
    # or
    pnpm run pdf:all --slug new-manual-slug
    ```

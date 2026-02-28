@@ -163,6 +163,10 @@ import ai106WestCoastMixerPages from '@/public/ai106-west-coast-mixer/data/pages
 import shikN32bSlimManifest from '@/public/shik-n32b-slim/data/manifest.json';
 import shikN32bSlimPages from '@/public/shik-n32b-slim/data/pages-ja.json';
 
+// Import weston-trivium
+import westonTriviumManifest from '@/public/weston-trivium/data/manifest.json';
+import westonTriviumPages from '@/public/weston-trivium/data/pages-ja.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -330,6 +334,10 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'shik-n32b-slim': {
     manifest: shikN32bSlimManifest as unknown as ManualManifest,
     pages: shikN32bSlimPages as unknown as ManualPagesData,
+  },
+  'weston-trivium': {
+    manifest: westonTriviumManifest as unknown as ManualManifest,
+    pages: westonTriviumPages as unknown as ManualPagesData,
   },
 };
 

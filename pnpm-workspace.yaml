@@ -5,3 +5,13 @@ packages:
 
 onlyBuiltDependencies:
   - canvas
+  - sharp
+  - esbuild
+  - unrs-resolver
+
+# Multiple packages have trust downgrade issues (missing provenance attestation)
+# https://github.com/nodejs/undici/issues/4666
+trustPolicyExclude:
+  - 'undici-types@6.21.0'
+  - 'eslint-import-resolver-typescript@3.10.1'
+  - 'semver@6.3.1'

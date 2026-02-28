@@ -69,7 +69,7 @@ The filename doesn't matter - the first PDF found in the directory will be used.
 ### 3. Process the PDF
 
 ```bash
-/pdf-process new-manual-slug
+/l-pdf-process new-manual-slug
 ```
 
 This runs the full pipeline:

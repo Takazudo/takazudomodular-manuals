@@ -10,7 +10,7 @@ This document describes the architecture for processing PDF manuals and integrat
 2. **Slug-Based Architecture**: All paths computed dynamically from manual slug
 3. **Clean Separation**: Clear boundary between PDF processing and Next.js data consumption
 4. **Build-Time Bundling**: JSON data imported as ES modules (static export compatible)
-5. **Simple Workflow**: Single command to process entire PDF (`/pdf-process {slug}`)
+5. **Simple Workflow**: Single command to process entire PDF (`/l-pdf-process {slug}`)
 
 ## Architecture Diagram
 
@@ -294,7 +294,7 @@ rm -rf ./temp-processing/
 pnpm run pdf:all --slug oxi-one-mk2
 
 # Or use Claude Code skill (recommended)
-/pdf-process oxi-one-mk2
+/l-pdf-process oxi-one-mk2
 ```
 
 ## Command Reference
@@ -306,7 +306,7 @@ pnpm run pdf:all --slug oxi-one-mk2
 pnpm run pdf:all --slug {slug}
 
 # Claude Code skill (same as above but with progress tracking)
-/pdf-process {slug}
+/l-pdf-process {slug}
 
 # Clean all generated files
 pnpm run pdf:clean --slug {slug}
@@ -546,7 +546,7 @@ export default async function ManualPage({
 3. **Process the PDF:**
 
    ```bash
-   /pdf-process {new-slug}
+   /l-pdf-process {new-slug}
    ```
 
 4. **Update manual registry** (`lib/manual-registry.ts`):
@@ -586,7 +586,7 @@ cp ~/Downloads/Manual-v2.0.pdf manual-pdf/{slug}/
 pnpm run pdf:clean --slug {slug}
 
 # 3. Process entire PDF
-/pdf-process {slug}
+/l-pdf-process {slug}
 
 # 4. Test locally
 pnpm dev
@@ -665,7 +665,7 @@ git push origin main
    1. Re-run: pnpm run pdf:translate --slug {slug}
 
    To start over:
-   pnpm run pdf:clean --slug {slug} && /pdf-process {slug}
+   pnpm run pdf:clean --slug {slug} && /l-pdf-process {slug}
 ```
 
 ### Error Reports

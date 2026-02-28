@@ -1,5 +1,5 @@
 ---
-name: verify-translation
+name: l-verify-translation
 description: >-
   Capture all manual pages and verify translations match page images using AI-powered checking.
   Identifies extraction failures and can regenerate extracted text from images.
@@ -22,14 +22,14 @@ After translation is complete, this skill:
 
 ## When to Use
 
-- After running `/pdf-process` to translate a manual
+- After running `/l-pdf-process` to translate a manual
 - As the final verification step before deployment
 - When users report translation issues
 
 ## Arguments
 
 ```
-/verify-translation <slug>
+/l-verify-translation <slug>
 ```
 
 - `slug`: Manual slug (e.g., `oxi-e16-manual`, `oxi-coral`)
@@ -45,7 +45,7 @@ SLUG=$1
 # Check if slug is provided
 if [ -z "$SLUG" ]; then
   echo "Error: Manual slug required"
-  echo "Usage: /verify-translation <slug>"
+  echo "Usage: /l-verify-translation <slug>"
   exit 1
 fi
 ```

@@ -1,22 +1,25 @@
 /**
  * Custom CSS for Takazudo Modular: Manuals Documentation
- * Base color: oklch(55.5% 0.163 48.998) - vibrant orange
+ * Base color: oklch(44.8% 0.119 151.328) - green
  */
 
-/* Light mode color palette based on oklch(55.5% 0.163 48.998) */
+/* Light mode color palette based on oklch(44.8% 0.119 151.328) */
 :root {
-  --ifm-color-primary: oklch(55.5% 0.163 48.998);
-  --ifm-color-primary-dark: oklch(50% 0.163 48.998);
-  --ifm-color-primary-darker: oklch(47% 0.163 48.998);
-  --ifm-color-primary-darkest: oklch(40% 0.163 48.998);
-  --ifm-color-primary-light: oklch(60% 0.163 48.998);
-  --ifm-color-primary-lighter: oklch(63% 0.163 48.998);
-  --ifm-color-primary-lightest: oklch(70% 0.163 48.998);
+  --ifm-color-primary: oklch(44.8% 0.119 151.328);
+  --ifm-color-primary-dark: oklch(40% 0.119 151.328);
+  --ifm-color-primary-darker: oklch(37% 0.119 151.328);
+  --ifm-color-primary-darkest: oklch(30% 0.119 151.328);
+  --ifm-color-primary-light: oklch(50% 0.119 151.328);
+  --ifm-color-primary-lighter: oklch(53% 0.119 151.328);
+  --ifm-color-primary-lightest: oklch(60% 0.119 151.328);
 
   /* Additional settings */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-container-width-xl: 1800px;
+
+  /* Noto Sans JP for Japanese text */
+  --ifm-font-family-base: 'Noto Sans JP', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   /* Japanese-optimized typography */
   --ifm-line-height-base: 1.7;
@@ -25,13 +28,13 @@
 
 /* Dark mode color palette - brighter and less saturated for readability */
 [data-theme='dark'] {
-  --ifm-color-primary: oklch(65% 0.14 48.998);
-  --ifm-color-primary-dark: oklch(60% 0.14 48.998);
-  --ifm-color-primary-darker: oklch(57% 0.14 48.998);
-  --ifm-color-primary-darkest: oklch(50% 0.14 48.998);
-  --ifm-color-primary-light: oklch(70% 0.14 48.998);
-  --ifm-color-primary-lighter: oklch(73% 0.14 48.998);
-  --ifm-color-primary-lightest: oklch(80% 0.14 48.998);
+  --ifm-color-primary: oklch(65% 0.1 151.328);
+  --ifm-color-primary-dark: oklch(60% 0.1 151.328);
+  --ifm-color-primary-darker: oklch(57% 0.1 151.328);
+  --ifm-color-primary-darkest: oklch(50% 0.1 151.328);
+  --ifm-color-primary-light: oklch(70% 0.1 151.328);
+  --ifm-color-primary-lighter: oklch(73% 0.1 151.328);
+  --ifm-color-primary-lightest: oklch(80% 0.1 151.328);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -161,22 +164,22 @@ article.theme-doc-markdown {
 }
 
 .markdown th {
-  background-color: oklch(55.5% 0.163 48.998 / 0.1);
+  background-color: oklch(44.8% 0.119 151.328 / 0.1);
 }
 
 [data-theme='dark'] .markdown th {
-  background-color: oklch(65% 0.14 48.998 / 0.2);
+  background-color: oklch(65% 0.1 151.328 / 0.2);
 }
 
 /* Blockquote styling */
 .markdown blockquote {
-  border-left-color: oklch(55.5% 0.163 48.998);
-  background-color: oklch(55.5% 0.163 48.998 / 0.05);
+  border-left-color: oklch(44.8% 0.119 151.328);
+  background-color: oklch(44.8% 0.119 151.328 / 0.05);
 }
 
 [data-theme='dark'] .markdown blockquote {
-  border-left-color: oklch(65% 0.14 48.998);
-  background-color: oklch(65% 0.14 48.998 / 0.1);
+  border-left-color: oklch(65% 0.1 151.328);
+  background-color: oklch(65% 0.1 151.328 / 0.1);
 }
 
 /* Responsive breakpoints */
@@ -228,20 +231,20 @@ article.theme-doc-markdown {
 
 /* Search plugin styling */
 .navbar__search-input {
-  background-color: oklch(55.5% 0.163 48.998 / 0.1);
+  background-color: oklch(44.8% 0.119 151.328 / 0.1);
 }
 
 [data-theme='dark'] .navbar__search-input {
-  background-color: oklch(65% 0.14 48.998 / 0.15);
+  background-color: oklch(65% 0.1 151.328 / 0.15);
 }
 
 /* Navbar brand color */
 .navbar__brand {
-  color: oklch(55.5% 0.163 48.998);
+  color: oklch(44.8% 0.119 151.328);
 }
 
 [data-theme='dark'] .navbar__brand {
-  color: oklch(65% 0.14 48.998);
+  color: oklch(65% 0.1 151.328);
 }
 
 /* Takazudo Modular right-side nav link */
@@ -270,11 +273,11 @@ article.theme-doc-markdown {
 
 /* Footer styling */
 .footer {
-  background-color: oklch(30% 0.163 48.998);
+  background-color: oklch(30% 0.119 151.328);
 }
 
 [data-theme='dark'] .footer {
-  background-color: oklch(20% 0.14 48.998);
+  background-color: oklch(20% 0.1 151.328);
 }
 
 /* Document dates container (created + updated) */

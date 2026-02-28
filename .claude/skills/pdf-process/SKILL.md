@@ -1,5 +1,5 @@
 ---
-name: pdf-process
+name: l-pdf-process
 description: >-
   Run the complete PDF processing pipeline to convert the manual PDF into Next.js application data.
   This command executes all steps automatically: split, render, extract, translate, build, and
@@ -59,7 +59,7 @@ Run the complete PDF processing pipeline automatically.
 Run with a manual slug:
 
 ```
-/pdf-process <slug>
+/l-pdf-process <slug>
 ```
 
 ## Parameters
@@ -69,8 +69,8 @@ Run with a manual slug:
 ## Examples
 
 ```
-/pdf-process oxi-one-mk2
-/pdf-process oxi-coral
+/l-pdf-process oxi-one-mk2
+/l-pdf-process oxi-coral
 ```
 
 ## What This Does
@@ -207,11 +207,11 @@ SLUG=$1
 # 2. Validate slug is provided
 if [ -z "$SLUG" ]; then
   echo "Error: Manual slug required"
-  echo "Usage: /pdf-process <slug>"
+  echo "Usage: /l-pdf-process <slug>"
   echo ""
   echo "Examples:"
-  echo "  /pdf-process oxi-one-mk2"
-  echo "  /pdf-process oxi-coral"
+  echo "  /l-pdf-process oxi-one-mk2"
+  echo "  /l-pdf-process oxi-coral"
   exit 1
 fi
 
@@ -568,7 +568,7 @@ const registryEntry = `  '${slug}': {
 
 ### Steps 9-16: Verification Phase (MANDATORY)
 
-**After all translation and build steps are complete, execute the verification phase directly (do NOT call /verify-translation as a separate skill).**
+**After all translation and build steps are complete, execute the verification phase directly (do NOT call /l-verify-translation as a separate skill).**
 
 #### Step 9: Build Production
 
@@ -731,7 +731,7 @@ PDF text extraction (`pdf-parse`) can fail silently. The `manual-translator` sub
 ### Run Full Pipeline
 
 ```bash
-/pdf-process <slug>
+/l-pdf-process <slug>
 ```
 
 This runs everything automatically including verification.
