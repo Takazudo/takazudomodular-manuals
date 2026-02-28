@@ -46,29 +46,6 @@ export default function Home(): ReactNode {
                   </li>
                 </ul>
               </section>
-
-              {/* Tech Stack Section */}
-              <section className={styles.statsSection}>
-                <h2>Tech Stack</h2>
-                <div className={styles.statsGrid}>
-                  <div className={styles.statItem}>
-                    <div className={styles.statNumber}>Next.js</div>
-                    <div className={styles.statLabel}>Framework</div>
-                  </div>
-                  <div className={styles.statItem}>
-                    <div className={styles.statNumber}>React 19</div>
-                    <div className={styles.statLabel}>UI Library</div>
-                  </div>
-                  <div className={styles.statItem}>
-                    <div className={styles.statNumber}>TypeScript</div>
-                    <div className={styles.statLabel}>Language</div>
-                  </div>
-                  <div className={styles.statItem}>
-                    <div className={styles.statNumber}>Tailwind v4</div>
-                    <div className={styles.statLabel}>Styling</div>
-                  </div>
-                </div>
-              </section>
             </div>
           </aside>
 
