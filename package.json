@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "pnpm run _kill-port && next dev -p 3100 --hostname zmanuals.localhost",
     "_kill-port": "lsof -ti:3100 | xargs kill -9 2>/dev/null || true; echo 'Killed processes on port 3100 (if any)'",
-    "build": "next build && node scripts/copy-original-pdfs.js && node scripts/restructure-build.js && pnpm run doc:build && cp -r doc/build/* out/manuals/doc/",
+    "build": "next build && node scripts/copy-original-pdfs.js && node scripts/restructure-build.js && pnpm run doc:build && mkdir -p out/manuals/doc && cp -r doc/build/* out/manuals/doc/",
     "start": "next start",
     "serve": "pnpm dlx serve out -l 3100",
     "doc:dev": "cd doc && pnpm run start",
