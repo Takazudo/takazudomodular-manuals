@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "processedAt": "2026-02-28T22:31:39.234Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-m3s/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "M3S\n\nStereo Mixer\n\nEurorack Module\n\nユーザーマニュアル\n\nWeston Precision Audio\n\nDesigned In Portland, Oregon\n\nRevision 01 - October 6, 2025",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-m3s/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "目次\n\n説明と仕様………………….. 3\n\nM3Sの使い方\nはじめに……………………… 4\nInput Normal………………… 4\nConfiguration………………… 4\n\nM3Sの設定\nMK1 Units……………………. 5\nMK2 Units……………………. 6",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-m3s/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "説明\n\nM3S は Eurorack 用のステレオミキシングユーティリティモジュールです。このミキサーは、コンパクトな6HP フォーマットに3チャンネルのステレオ入力を備えています。\n\nM3S は高品質・低ノイズ・低オフセットのオーディオグレードオペアンプと、優れた性能と透明感を実現する低ノイズシグナルパスを全体にわたって採用しています。\n\nこのモジュールは、信号の AC または DC カップリング、およびポテンショメーターのリニアまたはログ応答のいずれかに設定できます（MK2バージョン。4ページ参照）。\n\n重要または役立つ情報は赤字で記載されています。\n\nスペック\n\nモジュールサイズ: 6HP\n奥行き: 25mm\nオーディオ出力:\n270 Ohm 出力インピーダンス\n入力:\n100kOhm 入力インピーダンス\n電源入力:\n標準10ピン Eurorack コネクター経由で +12V および -12V。逆極性保護を内部およびシュラウドコネクターで実装。\n電力消費 (+12V / -12V):\n+12V: 26mA\n-12V: 26mA\n\n最大定格\n\n電源電圧: +13.5V / -13.5V\n全入力: 電源レベルまで。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-m3s/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "M3Sの使い方: はじめに\n\nM3SをラックにインストールしてパワーアップしたあとはIn」入力の1つ以上にオーディオ信号をパッチするだけで使用できます。Left入力の総和がLeft出力に、Right入力の総和がRight出力に現れます。\n\nM3Sの使い方: 入力ノーマル\n\nRight入力にジャックが挿入されていない場合、そのチャンネルのLeft入力の信号を継承します。これにより、モノラル信号を1〜3系統のみ使用している場合、M3Sをミキシングマルチプルとして機能させることができます。\n\nM3S設定\n\nM3Sにはユーザーが設定できる項目がいくつかあります。MK1ユニット（シリアル番号10020以下）では、オーディオ信号のカップリングをACまたはDCで設定できます。MK2ユニット（シリアル番号10020以上）では、MK1と同様にオーディオ信号のカップリングを設定できるほか、ポテンショメーターの応答をリニアまたはログとして設定することもできます。右の画像は、旧型のMK1ユニットと新型のMK2ユニットの外観の違いを示しています。\n\nFig. 2: MK2ユニット\n\nFig 1: MK1ユニット",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-m3s/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "MK1ユニットの設定\n\nAC結合に変更するには、右の画像に示されている両方のジャンパーが「AC」と表示されたピンに取り付けられていることを確認してください（上側のジャンパーは上の位置、下側のジャンパーは左の位置）。\n\nDC結合に設定するには、画像に示されている両方のジャンパーが「DC」と表示されたピンに取り付けられていることを確認してください（上側のジャンパーは下の位置、下側のジャンパーは右の位置）。\n\nUpper jumper\n\nLower jumper",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-m3s/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "MK2ユニットの設定\n\nまず、モジュール背面のプラスネジを1本外し、リアPCBを慎重に取り外してください。次に、以下の画像を参考に設定を選択してください。完了したら、リアPCBとネジを元に戻してください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-m3s/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "改訂履歴\n\n01: 初回リリース。\n\n© 2023 Weston Precision Audio",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
