@@ -24,7 +24,7 @@
     "pdf:split": "node scripts/pdf-split.js",
     "pdf:render": "node scripts/pdf-render-pages.js",
     "pdf:extract": "node scripts/pdf-extract-text.js",
-    "pdf:translate": "echo 'Translation is handled by Claude Code Task subagents during /pdf-process execution' && exit 1",
+    "pdf:translate": "echo 'Translation is handled by Claude Code Task subagents during /l-pdf-process execution' && exit 1",
     "pdf:validate": "node scripts/check-page-numbers.js",
     "pdf:fix": "node scripts/fix-page-numbers.js",
     "pdf:build": "node scripts/check-page-numbers.js && node scripts/pdf-build.js",

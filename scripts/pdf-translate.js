@@ -39,7 +39,7 @@ console.log('To run translation, ask Claude Code:');
 console.log('  "Run pdf translation using 4 parallel manual-translator subagents"');
 console.log('');
 console.log('Or use the slash command:');
-console.log('  /pdf-process translate');
+console.log('  /l-pdf-process translate');
 console.log('');
 console.log('='.repeat(50));
 console.log('');
