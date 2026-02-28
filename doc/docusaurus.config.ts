@@ -8,14 +8,17 @@ const config: Config = {
   // favicon: 'img/favicon.ico', // TODO: Add favicon later
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://manual-oxi-one-mk2.netlify.app',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/doc/',
+  // Must include /manuals/ prefix because the whole site is served under basePath /manuals/
+  baseUrl: '/manuals/doc/',
 
   // Don't add trailing slash
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'warn',
+  onDuplicateRoutes: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang.
@@ -34,6 +37,32 @@ const config: Config = {
     },
   },
   themes: ['@docusaurus/theme-mermaid'],
+
+  // Load Noto Sans JP font from Google Fonts
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap',
+      },
+    },
+  ],
 
   presets: [
     [
@@ -122,7 +151,7 @@ const config: Config = {
           type: 'html',
           position: 'right',
           value:
-            '<a href="https://takazudomodular.com/" class="navbar__takazudo-modular" rel="noopener noreferrer"><img src="/doc/img/logo.svg" alt="" /><span>Takazudo Modular</span></a>',
+            '<a href="https://takazudomodular.com/" class="navbar__takazudo-modular" rel="noopener noreferrer"><img src="/manuals/doc/img/logo.svg" alt="" /><span>Takazudo Modular</span></a>',
         },
       ],
     },
