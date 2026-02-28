@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "processedAt": "2026-02-28T16:22:29.409Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-trivium/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "Trivium\nAnalog Multifunction\nEurorack Module\nユーザーマニュアル\n\nWeston Precision Audio\nDesigned In Portland, Oregon\n\nRevision 01 - February 5, 2026",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-trivium/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "目次\n\nパネル概要……………………….. 3\n\nBasic Block Diagram…………………. 4\n\n説明 & 仕様………………….. 5\n\nTriviumの使い方\n使い始める……………… 6\nルーティング: Pre/Post……………. 6\nルーティング: VCA/VCF CV……. 6\nルーティング: フィルタータイプ………… 6\nエンベロープ……………….. 7\n追加のCV入力……….. 8\n\n付録\nトリマー調整\n(サービス専用).................... 9",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-trivium/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "Trivium 概要\n\nADSRエンベロープのエンベロープタイム及びSustainレベルコントロール\n\nAD/ARエンベロープのエンベロープタイム\n\nAD/ARエンベロープの動作をDecayとReleaseの間で切り替えるトグル\n\nFilter コントロール: Cutoff、Resonance、エンベロープアッテニュバーター\n\nルーティング選択スイッチ\n\nアウトプット: エンベロープ & オーディオアウト\n\nCV インプット: ADSR Decay、ADSR Release、AD/AR Attack、AD/AR Dec/Rel、Filter Cutoff、Filter Resonance、VCA Envelope\n\nオーディオインプット & Gate インプット",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-trivium/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-trivium/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "概要\n\nTriviumは、Weston Precision Audioとモジュラーおよびハイブリッド音楽のパフォーマー・プロデューサーであるTrovarsiによるコラボレーション製品です。最も基本的なレベルでは、TriviumはVCOなどの任意の信号源を追加するだけで、コンパクトな12HPパッケージの中に、モジュラーシンセサイザーで多目的なボイスを構築するために必要なすべてを提供します。さらに、Triviumはドラムやパーカッシブなサウンド、モジュレーションソースなど、様々な用途にも活用できます。\n\nコンパクトなパフォーマンスケースでの使用を当初から想定して設計されたTriviumは、かなりタイトでコンパクトなレイアウトを採用しており、電源コネクターが突出しない構造となっています。これにより、利用可能な最も薄いEurorackケースにも収納することができます。\n\nTriviumの中核となる機能は以下の通りです。ディスクリートOTAステートバリアブル電圧制御フィルター、VCA、ADSRタイプエンベロープ、AD/ARエンベロープ、そしてエンベロープの割り当てとフィルターおよびVCAのプリ/ポスト配置を設定できるルーティングセクションです。\n\nTriviumのディスクリートVCFは、クリーンでウォームなサウンドを提供します。VCAのオーバードライブセクションと組み合わせることで、クリーンで精緻なサウンドからダーティでディストーションのかかったサウンドまで、幅広いサウンドメイクが可能です。\n\n重要または有用な情報は赤色で表示されます。\n\nスペック\n\nモジュールサイズ: 12HP\n\n奥行き: 26mm\n\nOutput:\n250 Ohm出力インピーダンス\n\nInput:\n>= 100kOhm入力インピーダンス\nオーディオInput: ACカップリング\nGate Input: 0V = オフ、>1.5V = オン\n\n電源入力:\n標準10ピンEurorackコネクター経由の+12Vおよび-12V。内部整流方式のため、ケーブル接続時の極性はどちらでも問題ありません。\n\n消費電流:\n+12V: 60mA\n-12V: 60mA\n\nエンベロープタイム（ポット使用時）:\n（CVを追加することでさらに高速・低速にも対応）\nADSR:\n- Attack: 1ms〜7s\n- Release: 2ms〜7s\nAD/AR:\n- Attack: 1ms〜7s\n- Decay/Release: 2ms〜7s\n\nエンベロープレベル（両方）: 8ボルト\n\n最大定格\n\n電源電圧: +13.5V / -13.5V\nすべてのInput: 電源電圧レベルまで",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-trivium/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "Triviumの使い方:\nはじめに\n\nTriviumをラックに取り付けて電源を入れたら、モジュール左下の「In」入力にオーディオ信号をパッチするだけで使用できます。また、「Gate」入力にGate信号を接続することもできます。これにより、2つのエンベロープのトリガーをコントロールします。\n\nルーティング: PRE/POST\n\nルーティングスイッチを左から右に見ていくと、最初のスイッチは信号がVCAとVCFをどのように通過するかをコントロールします。以下の図にこの配置を視覚的に示しています。\n\n「PRE」では、オーバードライブした信号をフィルターに入力することができます。フィルターのディスクリートトランジスタートポロジーにより信号は自然にサチュレートされ、レゾナンスのピークが独特な方法で抑制されます。「POST」では、フィルターの出力をモジュールから出力される前に最大+17.2dBまで減衰またはブーストすることができます。\n\nルーティング: VCA/VCF CV\n\n2番目のスイッチは、VCAをコントロールするためにルーティングするコントロール電圧を選択します。ADSRエンベロープ、AD/ARエンベロープ、または「HOLD」（VCAを開いたまま保持する）を選択できます。\n\n選択されたCVは「VCA Env」入力によってモジュレートされるVCAを通過します。これはページ4のブロック図に示されています。\n\n3番目のスイッチは、フィルター（VCF）にルーティングするコントロール電圧を選択します。ADSRエンベロープまたはAD/ARエンベロープのいずれかを選択できます。このCVはVCFに送られる前に「Attenuverter」を通過します。このAttenuverterは「Filter Env」とラベルされた右下のポテンショメーターです。このポットのセンター（12時の位置）はCV 0を意味します。最大右回り（CW）で選択されたCVの+100%、最大左回り（CCW）で-100%（つまり反転したコピー）になります。\n\nルーティング: フィルターレスポンスタイプ\n\n4番目で最後のスイッチは、フィルターからどの出力を取り出すかをコントロールします。「State Variable」タイプのフィルターは、Low Pass、Band Pass、High Passの3つのレスポンスを生成します。フィルターは高いレゾナンス設定で自己発振しますが、レスポンスタイプによって振幅と波形がやや変化します。LP（Low Pass）は発振時に最も美しいサイン波を生成し、ピークツーピークで約5Vになります。\n\nFIG 1: PRE/POSTルーティング",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-trivium/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "エンベロープ\n\nTriviumには2つのエンベロープが搭載されています。ADSR（Attack/Decay/Sustain/Release）と、AD/AR（Attack-DecayまたはAttack Release）です。前のページで説明したVCAおよびVCFへのルーティングに加え、両エンベロープはフロントパネルの出力端子としても利用できます。これにより、エンベロープを他のモジュールにパッチしたり、Triviumの入力端子にパッチバックして追加のパッチングオプションとして活用することができます。以下の2つのオシロスコープ画像は、Gate信号とともに2つのエンベロープの波形を示しています。\n\n上の2つの図において、青のトレースはTriviumに入力されたGate信号です。緑のトレースはADSRの出力（サスティンはおよそ50%）、赤のトレースはAD/ARの出力です。2つの赤のトレースを比較するとわかるように、フロントパネルの白いボタンがAD/ARエンベロープの動作を切り替えます。\n\nまた、ADSRエンベロープのトランジションが従来の対数カーブを描くのに対し、AD/ARエンベロープのアタック部分はわずかに凸形（擬似指数）になっていることも観察できます。これは、この形状が打撃系サウンドのアタック形状を模倣しており、サウンドシェイピングの柔軟性を高めるためです。例えば、このAD/ARエンベロープは、短いアタックタイムで内部フィルターや外部フィルターを「ピング」し、キックドラムサウンドを作成するのに非常に優れています。\n\nエンベロープ: CV\n\n各エンベロープのパラメーター（A/D/S/RおよびA/D(R)）は、フロントパネルのポテンショメーターから直接コントロールできます。さらに、以下のパラメーターに対してCV入力が用意されています。\n\nADSR DECAY TIME\nADSR RELEASE TIME\nAD/AR ATTACK TIME\nAD/AR DECAY（またはRELEASE）TIME\n\nこれらのCVは、対応するポテンショメーターの電圧に単純に加算されます。電圧が高い（+方向）ほど時間が長くなり、電圧が低い（-方向）ほど時間が短くなります。\n\n図2: AD/ARエンベロープに「RELEASE」が選択された状態のエンベロープ波形。\n\n図3: AD/ARエンベロープに「DECAY」が選択された状態のエンベロープ波形。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/weston-trivium/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "追加のCV入力\n\nTriviumのフロントパネルには、他に3つのCV入力があります。このセクションではそれらについて説明します。\n\nCUTOFF\n\nこの入力は、フィルターのカットオフ周波数をコントロールするCVです。フィルターに送られる前に、対応するポテンショメーターのCVと加算されます。\n\nRES\n\nこの入力は、フィルターのレゾナンス（Q）をコントロールするCVです。フィルターに送られる前に、対応するポテンショメーターのCVと加算されます。\n\nVCA ENV\n\nVCA ENVは、VCAに送られるCVのレベルを変調します。このCVは、前のセクションで説明したように、2つのエンベロープのどちらか、または固定の8V（「HOLD」）のいずれかになります。以下の図はこの入力の接続方法を示しています。\n\nFIGURE 4: 「VCA ENV」入力ダイアグラム",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/weston-trivium/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "付録：トリマー（サービス専用）\n\nTriviumには2つのトリマーが搭載されており、工場出荷時に調整済みです。通常、これらを調整する必要は一切ありませんが、調整が必要な場合に備えて、それぞれの目的を説明します。\n\nVolts/Octave（以下の写真に示すモジュール上部に位置）：\nこのトリマーは、Triviumのフィルターのボルト/オクターブスケールを調整します。このフィルターはディスクリートトランジスタ方式であるため、実際には4〜5オクターブのトラッキングにしか対応していませんが、ここで調整することができます。調整する場合は、レゾナンスを100%に設定し、Pre/Postスイッチを「PRE」に、フィルタータイプスイッチを「LP」に設定してください。ピッチCV入力を「CUTOFF」インプットに接続し、好みの方法でオシレーターと同様にレスポンスをチューニングしてください。\n\nVCA Null Trim（以下の写真に示すモジュール底部に位置）：\nこのトリマーは通常、一切調整する必要はありません。ただし、調整が必要な場合は以下の手順に従ってください。Pre/PostスイッチをPOSTに、フィルタータイプを「LP」に設定してください。レゾナンスを0%、カットオフを100%に設定します。Triviumからすべてのパッチケーブルを外し、オーディオ入力に可聴オシレーターを接続します。AD/ARエンベロープを選択してVCAとフィルターの両方にルーティングします。VCAゲインをセンター（12時位置）に設定します。スピーカーのボリュームを上げてオーディオ出力をモニタリングしながら、VCA nullトリマーを時計回りに回し、入力したオシレーターの音がリークして聞こえるまで回してください。その後、反時計回りに1/2回転戻すと音が消えます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/weston-trivium/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "改訂履歴\n\n01: 初版リリース。\n\n© 2023 Weston Precision Audio",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
