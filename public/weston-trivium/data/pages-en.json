@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "processedAt": "2026-02-28T16:22:29.414Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/weston-trivium/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "© 2023 Weston Precision Audio \t1\nTrivium\nAnalog Multifunction\nEurorack Module\nUser Manual\nWeston Precision Audio\nDesigned In Portland, Oregon\nRevision 01 - February 5, 2026\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/weston-trivium/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "TABLE OF CONTENTS\nPanel Overview……………………….. \t3\nBasic Block Diagram…………………. \t4\nDescription & Specs………………….. \t5\nUsing Trivium\nGetting Started……………… \t6\nRouting: Pre/Post……………. \t6\nRouting: VCA/VCF CV……. \t6\nRouting: Filter Type………… \t6\nThe Envelopes……………….. \t7\nAdditional CV Inputs……….. \t8\nAppendix\nTrimmer Adjustments\n(Service Only).................... \t9\n© 2023 Weston Precision Audio \t2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/weston-trivium/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "© 2023 Weston Precision Audio \t3\nTrivium Overview\nEnvelope times\nand sustain level\ncontrol for ADSR\nenvelope\nEnvelope times\nfor AD/AR\nenvelope\nToggles AD/AR\nenvelope behavior\nbetween Decay and\nRelease\nFilter Controls:\nCutoff,\nResonance\n&\nEnvelope\nAttenuverter\nRouting selection\nswitches\nOutputs:\nEnvelopes &\nAudio Out\nCV Inputs:\nADSR Decay,\nADSR Release,\nAD/AR Attack,\nAD/AR Dec/Rel,\nFilter Cutoff,\nFilter Resonance,\n&\nVCA Envelope\nAudio Input\n&\nGate Input\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/weston-trivium/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "© 2023 Weston Precision Audio \t4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/weston-trivium/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "DESCRIPTION\nTrivium is a collaboration between\nWeston Precision Audio and modular/\nhybrid music performer and producer\nTrovarsi. At the most basic level, Trivium\nprovides all that you need to make a\nversatile voice in your modular\nsynthesizer with the addition of any\nsignal source such as a VCO, all in a\ncompact 12HP package. But, Trivium\ncan be used for many other purposes:\nDrum and percussive sounds, a\nmodulation source, and more.\nHaving been designed from the\nbeginning for usage in compact\nperformance cases, Trivium was created\nwith a fairly tight and compact layout\nand has no protruding power connector,\nallowing it to fit in the shallowest\navailable Eurorack cases.\nThe core functions inside Trivium are as\nfollows: A discrete OTA state variable\nvoltage-controlled filter, a VCA, a ADSR\ntype envelope, a AD/AR envelope, and\na routing section allowing assignment of\nthe envelopes as well as the pre/post\narrangement of the filter and VCA.\nTrivium’s discrete VCF provides a clean\nbut warm sound. Coupled with the\nVCA’s overdrive section, a lot of sonic\nground can be covered, from clean and\nprecise to dirty and distorted.\nImportant or helpful bits will be in red.\nSPECS\nModule Size: 12HP\nDepth: 26mm\nOutputs:\n250 Ohm Output Impedance\nInputs:\n>= 100kOhm Input impedance\nAudio Input: AC Coupled\nGate Input: 0V = Off, >1.5V = On\nPower input:\n+12V & -12V via standard 10 pin Eurorack\nconnector. Internally rectified so either polarity\nfor cable installation is OK.\nPower consumption:\n+12V: 60mA\n-12V: 60mA\nEnvelope Times (via Pots):\n(Even faster or slower adding CVs)\nADSR:\n-Attack: 1ms - 7s\n-Release: 2ms - 7s\nAD/AR:\n-Attack: 1ms - 7s\n-Decay/Release: 2ms - 7s\nEnvelope Level (Both): 8 Volts\nMAXIMUM LIMITS\nSupply Voltage: +13.5V / -13.5V\nAll inputs: Up to power supply levels.\n© 2023 Weston Precision Audio \t5\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/weston-trivium/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "USING TRIVIUM:\nGETTING STARTED\nAfter installing and powering up Trivium\nin your rack, using the module is as easy\nas patching an audio signal into the “In”\ninputs on the lower left corner of the\nmodule. You may also want to apply a\ngate signal to the “Gate” input, which\ncontrols the triggering of the 2\nenvelopes.\nROUTING: PRE/POST\nLooking at the routing switches going\nfrom left to right, the first one controls\nhow the signal moves through the VCA\nand VCF. The following image shows this\narrangement visually:\n“PRE” allows overdriven signals to be\nput into the filter, which will naturally\nsaturate them due to it’s discrete\ntransistor topology, reducing resonant\npeaks in an interesting way. “POST”\nallows the output of the filter to be\nattenuated or boosted up to +17.2dB\nbefore leaving the module.\nROUTING: VCA/VCF CV\nThe second switch selects which control\nvoltage will be routed to control the\nVCA. This can be either the ADSR\nenvelope, the AD/AR envelope, or\n“HOLD” which will hold the VCA open.\nNote that the selected CV goes through\na VCA which is modulated by the “VCA\nEnv” input, as shown by the block\ndiagram on page 4.\nThe third switch selects which control\nvoltage will be routed to the filter (VCF).\nThis can be either the ADSR envelope or\nthe AD/AR envelope. This CV passes\nthrough an “Attenuverter” before going\nto the VCF. This attenuverter is the\nbottom right potentiometer labeled\n“Filter Env”. Center (high noon) of this\npot means 0 CV. Full CW means +100%\nof the selected CV, and full CCW means\n-100% (in other words, inverted copy) of\nthe selected CV.\nROUTING: FILTER RESPONSE TYPE\nThe fourth and final switch controls\nwhich output is taken from the filter. The\nfilter, being of “State Variable” type,\nproduces 3 responses: Low Pass, Band\nPass, and High Pass. The filter will self\noscillate at high resonance settings, but\nthe amplitude and shape will vary some\ndepending on the response type. LP\n(Low Pass) will produce the nicest sine\nwaves in oscillation, around 5 Volts\npeak-to-peak.\n© 2023 Weston Precision Audio \t6\nFIG 1: PRE/POST ROUTING\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/weston-trivium/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "THE ENVELOPES\nTrivium has 2 envelopes: an ADSR\n(Attack/Decay/Sustain/Release), and\nan AD/AR (Attack-Decay OR Attack\nRelease). In addition to being routable\nto the VCA and VCF as described on the\nprevious page, both the envelopes are\navailable as front panel outputs. In this\nway, the envelopes can be patched to\nother modules or even patched back\ninto Trivium’s inputs for other patching\noptions. The following 2 oscilloscope\nimage shows the 2 envelopes along with\na gate signal:\nIn the above 2 figures, the blue trace is\nthe GATE signal inputted to Trivium. The\ngreen trace is the ADSR output (with\nsustain at roughly 50%), and the red\ntrace is the AD/AR output. As can be\nseen by comparing the 2 red traces, the\nwhite front panel button changes the\nbehavior of the AD/AR envelope.\nAnother thing that may be observed is\nthat while the ADSR envelope has a\ntraditional logarithmic shape to the\ntransitions, the AD/AR envelope has an\nattack section which is slightly convex\n(pseudo-exponential). The reason for\nthis is that this shape mimics the attack\nshape of impact-type sounds, giving\nflexibility in sound-shaping. This AD/AR\nenvelope, for example, is excellent for\n“pinging” the internal filter or other filter\nto create kick drum sounds when used\nwith short attack times.\nTHE ENVELOPES: CV\nEach envelope’s parameters (A/D/S/R\nand A/D(R) can be directly controlled\nfrom the front panel potentiometers.\nAdditionally, there are CV controls for\nthe following:\nADSR DECAY TIME\nADSR RELEASE TIME\nAD/AR ATTACK TIME\nAD/AR DECAY(OR RELEASE) TIME\nThese CVs are simply summed with their\nrespective potentiometer voltages. More\n+ voltage means longer times, and more\n- voltage means shorter times.\n© 2023 Weston Precision Audio \t7\nFIGURE 2: ENVELOPES WITH “RELEASE” SELECTED FOR THE\nAD/AR ENVELOPE.\nFIGURE 3: ENVELOPES WITH “DECAY” SELECTED FOR THE\nAD/AR ENVELOPE.\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/weston-trivium/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "ADDITIONAL CV INPUTS\nThere are 3 other CV inputs on the front\npanel of Trivium, which will be discussed\nin this section.\nCUTOFF\nThis input is simply a CV which controls\nthe cutoff frequency of the filter. It is\nsummed with the corresponding\npotentiometer CV before going to the\nfilter.\nRES\nThis input is simply a CV which controls\nthe resonance (Q) of the filter. It is\nsummed with the corresponding\npotentiometer CV before going to the\nfilter.\nVCA ENV\nThe VCA ENV allows modulation of the\nlevel of the CV which is sent to the VCA.\nThis CV, as discussed in the previous\nsection, can be either of the 2\nenvelopes, or a solid 8V (“HOLD”). The\nfollowing diagram shows how this input\nis connected:\n© 2023 Weston Precision Audio \t8\nFIGURE 4: “VCA ENV” INPUT DIAGRAM\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/weston-trivium/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "APPENDIX: TRIMMERS (SERVICE\nONLY)\nTrivium has 2 trimmers, which have been\nadjusted at the factory. Normally these\nwill not ever need to be adjusted, but\nthis section explains their purpose in\ncase of adjustment:\nVolts/Octave (Located on top of the\nmodule as shown in the pic below):\nThis trimmer adjusts the volts/octave\nscale of the filter in Trivium. The filter,\nbeing a discrete transistor type, is really\nonly good for 4-5 octaves of tracking,\nbut it can be adjusted here. To adjust,\nset the resonance to 100%, the Pre/Post\nswitch to “PRE”, and filter type switch to\n“LP”. Plug your pitch CV source into the\n“CUTOFF” input and tune the response\nlike you would an oscillator, using your\nfavorite method.\nVCA Null Trim (Located on the bottom\nof the module as shown in the pic\nbelow):\nThis trimmer normally won’t need to be\nadjusted ever. However, to adjust, do\nthe following: Switch the Pre/Post switch\nto “POST”, and the filter type to “LP”.\nSet resonance to 0% and cutoff to\n100%. Remove any patch cables from\nTrivium and input an audible oscillator\ninto the audio input. Select AD/AR\nenvelope to route to both the VCA and\nFilter. Set VCA gain to center (high\nnoon). Monitor the audio output on\nspeakers turned up loud and turn the\nVCA null trimmer clockwise until you\nhear the oscillator you inputted leaking\nthrough. Then turn back counter-\nclockwise 1/2 turn and the sound should\ndisappear.\n© 2023 Weston Precision Audio \t9\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/weston-trivium/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "REVISION HISTORY\n01: Initial release.\n© 2023 Weston Precision Audio \t10\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
