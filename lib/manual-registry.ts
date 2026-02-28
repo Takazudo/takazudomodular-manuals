@@ -167,6 +167,10 @@ import shikN32bSlimPages from '@/public/shik-n32b-slim/data/pages-ja.json';
 import westonTriviumManifest from '@/public/weston-trivium/data/manifest.json';
 import westonTriviumPages from '@/public/weston-trivium/data/pages-ja.json';
 
+// Import weston-m3s
+import westonM3sManifest from '@/public/weston-m3s/data/manifest.json';
+import westonM3sPages from '@/public/weston-m3s/data/pages-ja.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -338,6 +342,10 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'weston-trivium': {
     manifest: westonTriviumManifest as unknown as ManualManifest,
     pages: westonTriviumPages as unknown as ManualPagesData,
+  },
+  'weston-m3s': {
+    manifest: westonM3sManifest as unknown as ManualManifest,
+    pages: westonM3sPages as unknown as ManualPagesData,
   },
 };
 
