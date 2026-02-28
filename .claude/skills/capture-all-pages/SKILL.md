@@ -1,5 +1,5 @@
 ---
-name: capture-all-pages
+name: l-capture-all-pages
 description: >-
    Capture screenshots of all manual pages at high resolution for translation verification. Use when
    verifying that translations match page images, checking layout correctness, or inspecting for

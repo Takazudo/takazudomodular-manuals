@@ -469,7 +469,7 @@ pnpm clean
 
 ## PDF Processing Automation
 
-**Claude Code Skill:** `/pdf-process`
+**Claude Code Skill:** `/l-pdf-process`
 
 Automated workflow for converting the OXI ONE MKII PDF manual into Next.js application data using Claude Code Task subagents.
 
@@ -481,7 +481,7 @@ Automated workflow for converting the OXI ONE MKII PDF manual into Next.js appli
 
 - Translator prompt (`.claude/agents/manual-translator.md`)
 - Processing scripts (`scripts/pdf-*.js`)
-- Command documentation (`.claude/commands/pdf-process.md`)
+- Command documentation (`.claude/skills/pdf-process/SKILL.md`)
 - Pipeline configuration (`pdf-config.json`)
 
 ❌ **Don't maintain (regenerate as needed):**
@@ -502,7 +502,7 @@ Automated workflow for converting the OXI ONE MKII PDF manual into Next.js appli
 cp /path/to/OXI-ONE-MKII-Manual.pdf manual-pdf/
 
 # 2. Run full pipeline via Claude Code
-# Type: /pdf-process
+# Type: /l-pdf-process
 ```
 
 **Claude Code will execute the pipeline without asking questions during translation.**
@@ -561,7 +561,7 @@ Translation using Claude Sonnet 4.5:
 
 ### Translation Verification
 
-**Claude Code Command:** `/verify-translation`
+**Claude Code Command:** `/l-verify-translation`
 
 After running the PDF processing pipeline, use this command to verify that translations match the page images.
 
@@ -585,7 +585,7 @@ After running the PDF processing pipeline, use this command to verify that trans
 pnpm dev
 
 # Run verification command
-/verify-translation
+/l-verify-translation
 ```
 
 **Output location:** `__inbox/captures-{date}-{session}/`
@@ -651,7 +651,7 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
 
 3. **Process the PDF:**
    ```bash
-   /pdf-process {slug}
+   /l-pdf-process {slug}
    ```
    This runs all 6 pipeline steps: split, render, extract, translate, build, manifest.
 
