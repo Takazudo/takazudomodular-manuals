@@ -171,6 +171,14 @@ import westonTriviumPages from '@/public/weston-trivium/data/pages-ja.json';
 import westonM3sManifest from '@/public/weston-m3s/data/manifest.json';
 import westonM3sPages from '@/public/weston-m3s/data/pages-ja.json';
 
+// Import ryk-vector-wave
+import rykVectorWaveManifest from '@/public/ryk-vector-wave/data/manifest.json';
+import rykVectorWavePages from '@/public/ryk-vector-wave/data/pages-ja.json';
+
+// Import ryk-night-rider
+import rykNightRiderManifest from '@/public/ryk-night-rider/data/manifest.json';
+import rykNightRiderPages from '@/public/ryk-night-rider/data/pages-ja.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -346,6 +354,14 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'weston-m3s': {
     manifest: westonM3sManifest as unknown as ManualManifest,
     pages: westonM3sPages as unknown as ManualPagesData,
+  },
+  'ryk-vector-wave': {
+    manifest: rykVectorWaveManifest as unknown as ManualManifest,
+    pages: rykVectorWavePages as unknown as ManualPagesData,
+  },
+  'ryk-night-rider': {
+    manifest: rykNightRiderManifest as unknown as ManualManifest,
+    pages: rykNightRiderPages as unknown as ManualPagesData,
   },
 };
 

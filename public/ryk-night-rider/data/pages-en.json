@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "processedAt": "2026-03-22T15:08:38.519Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ryk-night-rider/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "RYK NIGHT RIDER\nUSER MANUAL\nVXXX FIRMWARE\nNIGHT RIDER\nQUAD SEQUENTIAL RESONATOR\nUSER MANUAL\nV1 FIRMWARE\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ryk-night-rider/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ENV/LFO\tVECTOR\n/Q/MENU\nV/OCT \tOUT L \tOUT R\nCLK/MIDI \tPOS\tRES \tF\nIN1/2\nSLEW\nOUT2 +\t- \t+\t-\nOUT1\nSLEW\n \nPOS\n \nRES\nKNOB 1 \tKNOB 2 \tKNOB 3 \tKNOB 4\nPREV\nFILTER 1\n2\n3\n4\nMEMORY\nNEXT\nSTAGE\nUTILITY MENU\nLorem ipsum\nSave Patch Memory #1-9\tLoad Fiilter Presets #1-9\nTurn the knob to select the preset number, push the knob to Load the filter preset settings into the current stage.\n1 - Formant\n2 - Formant\n3 - Formant\n4 - Formant\n5 - Formant\n6 - Formant\n7 - Chord\n8 - Chord\n9 - Chord\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/ryk-night-rider/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "RYK MODULAR\nNIGHT RIDER\nUSER MANUAL V1\nNIGHT RIDER is a Quad Sequential Filter Bank, containing Four multi-\nmodel filters with stereo capability, combined with a six-stage\nfour-channel modulation sequencer.\nOVERVIEW\nThere are four Filters in NIGHT RIDER, whose mode can be selected\nfrom several types:\n6db Band Pass, 12db Band Pass, Variable-width Band Pass [ VBPF ], All\nPass [AP2 ] and two types of feedback delay filters [ KP and AP1].\nThe Filters are arranged in parallel, except in the case of the All Pass\nmodes which are arranged in series.\nThe unique modulation sequencer unifies the control of the Filter\nparameters, enabling a spaghetti-free approach to formant animation\nfun.\nThe modulation sequencer is capable of being clocked, scanned, and\ninterpolated between each stage.\nSequencer advance is triggered by a clock input or MIDI clock input.\nBy animating the filter frequencies and levels you can create some\namazing 70's phaser sweeps, Daft-funk style formant vocal rasps, and\nfar out flanging !\nWhen adjusting the control knobs, Frequency and Level for each Filter\nare automatically stored into the current sequencer Stage.\nControls for Resonance/Feedback/Bandwidth, Slew, and Sequence\ninterpolated Position are continuously adjustable by their dedicated\nknobs.\nBi-polar Modulation inputs, and MIDI CC input also allow for modulation\nof these parameters.\nThe master Frequency input CVis 1V/Oct and can be used for melodic\nfiltering, or tuned Pinging and KP Strumming,.\nMaster Frequency can also be modulated by MIDI Note On messages\nusing the MIDI input.\nUser Voice Memory slots are available for storing and retrieving Filter\nand animation setups, and retrieving preset Formant, and Chord based\nFilter setups.\nAn auto-save option is available to keep the current settings after\npower-off.\nDIMENTIONS\n16 HP\n25 mm deep\nPOWER CONSUMPTION\n60 mA +12V\n5 mA -12V\n0 mA 5V\n1\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/ryk-night-rider/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "OSCILLATOR BANKS\nPushing the Red button accesses the Oscillator\nBank mode. Repeated pushes cycle between\neach bank, A,B,C,D.\nEach bank has 4 oscillators. Each oscillator has a\ncolumn of top and bottom knobs, to control the parameters.\nThe Oscillator Display has four pages, depending on which controls are\nbeing used:\nThe top row knobs control the harmonic frequency of each oscillator\nIN1\nIN\nOUT1\nOUT2\nOUT1\nOUT2\nFILTER1\nFILTER2\nFILTER3\nFILTER4\nPAN\nIN2\nNIGHT RIDER - STRUCTURE OVERVIEW\nNIGHT RIDER - STRUCTURE OVERVIEW (ALL PASS FILTERS)\nFILTER1 \tFILTER2 \tFILTER3 \tFILTER4\n2\nMODULATION SEQUENCER\nMODULATION SEQUENCER\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/ryk-night-rider/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "MODULATION SEQUENCER\nThe Modulation Sequencer section of Night Rider consists of four\nchannels, one for each filter, and six stages of animation.\nEach stage contains the settings for the Filter Frequencies and Filter\nLevels.\nBy animating the sequencer from one stage to another the Filter\nFrequencies and Levels are morphed from one value to another.\nUsing larger values of SLEW creates a glide of the Frequency change\n[ similar to an LFO modulation of a Filter ], using lower values of SLEW\nwill create more abrupt stepping changes of the Filter frequencies and\nLevels.\nThe bottom row of six Green LEDs indicate the current STAGE\nPOSITION of the Modulation Sequencer.\nThe horizontal lines of Red LEDs illustrate either the Filter Frequency or\nFilter Level, depending on which is selected [ See FILTER BANKS ].\nThe sequencer Stage position can be moved by using the Next\nand Prev \tbuttons, or by clocking the sequencer with an external\nclock or MIDI clock via the CLK/MIDI Input.\nThe Stage position can also be moved and interpolated by the POS\nKNOB, or external CV via the POS INPUT.\nSee below for the sequencer settings available in the SETTINGS\nMODE. [ see Page5/6] :\nThe maximum and minimum position of the sequencer Stage can be\nset with the SEQUENCE RANGE option.\nWhen using an external clock [ MIDI or analogue ] to trigger the\nSequencer, it’s timing can be subdivided using the SEQUENCE CLOCK\nDIVISION settings.\nThe direction of the Sequencer advance can be adjusted using the\nSEQUENCE MODE option.\nFILTER BANKS\nThe four filter outputs are combined in parallel for all modes, except\nALL PASS [APF] where they are combined in series.\nThe filter inputs are all fed from IN1, if using a Mono jack for the IN1/2\nINPUT. Otherwise using a Stereo jack; IN1 feeds filters 1&2, IN2 feeds\nfilters 3&4.\nThe Filter parameters are indicated by the horizontal lines of Red LEDs\nacross the display, the top line indicates Filter1, the next line indicates\nFilter2 and so on.\nDepending on which parameter you are editing ther Red LEDs will\nappear differently.\nFREQUENCY is indicated by single dots or groups of 3-4 dots [\nVariable Band Pass VBPF ].\nLEVEL is indicated by horizontal VU style Bars.\n3\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/ryk-night-rider/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "[PAN is indicated by groups of two dots, and a central point indicator.\nUse the top row of knobs to adjust the Frequency or Level of each of\nthe four Filters.\nPushing any of the knobs once will toggle between Frequency and\nLevel.\nA triple click on any of the knobs will allow you to adjust the Pan\nposition of each Filter in the stereo field, push once again to return to\nFrequency/Level adjustment. [ If you are using just one Mono output,\nthen please select “1” in the OUT option of the UTILITY SETTINGS\nMENU [See Page 10]\nThe Frequency ranges from rumble [ far left ] to wispy [ far right ].\nThe Level ranges from silent [ far left ] to very-full-on [ far right ].\nThe last 5 brighter LEDs of the Level Bar indicate that the filter will likely\nenter a zone of saturation clipping. [ nice distortion ]\nFor clean distortion free sound, we recommended setting the Levels\nlower than the 5 clipping LEDs indication.\nPlease note, the nature of Band Pass Filters [ BPF ] is to allow a limited\nrange of harmonics through. This naturally results in a loss of signal\nlevel compared to the un-filtered signal.\nPlease adjust the Level controls to compensate for this.\nWhen higher values of Resonance or Feedback are set with the RES\nCONTROL or RES CV INPUT, the signal may suddenly become much\nlouder when the filter aligns with a strong harmonic in the original\nsignal. If this leads to unwanted saturation distortion, please lower the\nLevel of the filter.\nWhen the Modulation Sequencer is at rest [ not animating ], or you are\nin STAGE EDIT MODE, or the current stage is indicated by a bright\nSolid Green LED, then the adjustments of the knobs will update the\ncurrently audible Filter bank..\nIf the Stage position is at an interpolated position between two stages\n[ indicated by two dimmed Green LEDs ] the filter adjustments will\naffect the dominant stage [ Brighter of the two Green LEDs ].\nPlease note, in this case, the audible output and frequency display will\nbe the interpolated value between the stages.\nTo edit and hear a particular stage, simply use the NEXT or PREV\nbuttons to select the desired stage. [ see below ].\nCONTROLS\nNEXT\nUsed normally the Grey button steps forwards through the Modulation\nSequence.\nBy pushing and holding the Grey button whilst turning one of the top\nrow knobs, adjustment of all the Filter Frequencies or Levels as one\ngroup is possible.\nPREV\nUsed normally the black button steps backwards through the Modula-\ntion Sequence.\nPush and hold for a second, and it will enable the STAGE EDIT MODE\n[ see below ] Push and hold the button whilst turning any of the top row\nknobs to enable the SETTINGS MODE. [ see below ]\nOSC1\nFREQ/FINE OSC2\nFREQ/FINE\nPUSH TO TOGGLE BETWEEN FREQUENCY & FINE TUNE\nPUSH TO TOGGLE ALGORITHM MODES\nOSC3\nFREQ/FINE OSC4\nFREQ/FINE\nOSC2 LEVEL\tOSC1 LEVEL \tOSC3 LEVEL \tOSC4 LEVEL\nFINE TUNE MODE \tLEVELS MODE\n4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/ryk-night-rider/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "STAGE EDIT MODE\nThis mode [ indicated by a lone Flashing Green\nLED ] allows for editing of an individual\nSequence Stage, even when the Modulation\nSequencer is in action.\nThe Stage indicated in this mode will not\nnecessarily be audible, depending on where\nthe current sequencer play position is.\nUse the NEXT or PREV button to move\nforward or backward through the Stages, the\nmode will exit if there is no activity with the\nFilter knobs after a few seconds, or can be\ncancelled by pushing the Red button.\nSETTINGS MODE\nPushing and holding the Black button whilst\nturning one of the top row knobs, enables the\nSettings Mode, where adjustments of the\nFILTER TYPE and SEQUENCER SETTINGS\nare possible.\nWhilst turning one of the knobs, the Red LED\ndisplay will change to indicate one of the four\nSettings Mode functions.\nKNOB 1\nFILTER TYPE - Select which filter model is\nused\n6db BPF\nA Band Pass filter with variable resonance.\nHigher resonance settings can be used to\nPing the filter. Try this with a pulse or click\napplied to the audio input for creating bongo\nor wooden xylophone type sounds.\nAll of the Band Pass filters are great for\ncreating vocal formant types sounds [ see tips\nand tricks at the end of the manual ]\n12dB BPF\nA steeper slope Band Pass filter with variable\nresonance, that sounds much narrower.\nHigher resonance settings can be used to Ping\nthe filter.\nVariable Width BPF\nA Band Pass filter with variable band width\n[ using the RES CONTROL].\nDepending on the width setting, this filter can\nhave a more subtle, less extreme band pass\neffect.\nKarplus-Strong style Comb Filter\nA delay-line based filter with variable feedback\n[ using the RES CONTROL] suitable for flanging\nstyle filter effects.\nWith high settings of feedback it is great to use\nA B C D\nHOLD\nMENU FUNCTION \t[ CHORD # ]\nCHORD MODE ONLU\nDESTINATION\nBANK[S]\tY\nHOLD +\n5\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/ryk-night-rider/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "for physical modelled string sounds, by\nexciting the filter with short blips of noise or\nharmonically strong pulses.\nBeware of sharp changes in frequency, which\ncan cause [un]desired artefacts !\nAll Pass Filter 1 [ delay-line based ]\nA delay-line based comb filter with variable\nmix of the dry signal [ using the RES\nCONTROL]\nIncreasing the mix of the dry signal creates\nstronger notches, which with swept filter\nfrequencies creates phase shifting effects.\nGenerally best used when the filter frequen-\ncies are closely spaced in the higher\nfrequencies, and applied to an input signal\nstrong in complex harmonics.\nBeware of sharp changes in frequency, which\ncan cause [un]desired artefacts !\nAll Pass Filter 2 [ IIR based ]\nAn IIR based filter with variable mix of the dry\nsignal [ using the RES CONTROL]\nIncreasing the mix of the dry signal creates\nstronger notches, which with swept filter\nfrequencies creates phase shifting effects.\nGenerally best used when the filter frequencies\nare closely spaced in the higher frequencies,\nand applied to an input signal strong in\ncomplex harmonics.\nThis filter is more subtle than the delay-line\nversion, and does not suffer from pitch shift\nwhen modulated.\nNB:\nWith both All Pass Filter modes the filters are\ncascaded in series, and setting the Level\ncontrol adjust the overall level rather than\nindividual filters.\nThe Pan control is unavailable, as Out1 and\nOut2 deliver subtracted dry and additive dry\nmixes with the filtered signal respectively.\nENV/LFO\n6\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/ryk-night-rider/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "KNOB 2\nSEQUENCE CLOCK DIVISION\nThis setting allows for the subdivision of the\nCLOCK INPUT that triggers the stage\nadvance of the Modulation sequencer.\nFor example a setting of 4 would trigger the\nsequencer advance once every four clock\npulses.\nThis setting is applied to the MIDI and\nanalogue clock inputs.\nNB The MIDI CLOCK INPUT is pre-divided by\na factor of 6 before the clock division is\napplied. [ MIDI clock is 24ppqn ]\nKNOB 3\nSEQUENCE RANGE\nThe maximum and minimum range of the\nsequencer stages can be set here. Push the\nknob to toggle between min and max settings.\nMinimum is indicated by a left pointing arrow,\nmaximum is indicated by a right pointing arrow.\nThe active range is indicated by the lit Green\nLEDs.\nKNOB 4\nSEQUENCE MODE\nForwards\nOn an active clock pulse, the sequencer will\nadvance to the right.\nAfter the maximum stage the sequence will\nreset to the minimum stage.\nBackwards\nRES\tRES\nATTACK\n[ PUSH TO SELECT TRIG SOURCE FOR ENV2 ]\nDECAY \tSUSTAIN \tRELEASE\nRESET TRIG\nOPTION WAVEFORM \tFREQUENCY\nHOLD + \tHOLD + \tHOLD +\n7\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/ryk-night-rider/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "On an active clock pulse, the sequencer will\nadvance to the left.\nAfter the minimum stage the sequence will\nreset to the maximum stage.reset to the\nmaximum stage.\nPing-Pong\nOn an active clock pulse, the sequencer will\nadvance to the right.\nAfter the maximum stage the sequence will\nreverse and move towards the left.\nThe sequence direction will continue to flip\nback and forth when it reaches the maximum\nor minimum stage.\nRandom\nOn an active clock pulse, the sequencer will\nadvance to a randomly chosen stage within\nthe maximum or minimum stage range.\nMEMORY\nPushing this button whilst rotating Knob1 or\nKnob 2 activates the PATCH STORAGE\nMODE, where Filter banks and Modulation\nSequence parameters can be Saved and\nLoaded.\nKNOB 1\nLOAD PATCH MEMORY #1-19\nLoad previously stored Filter Bank, and\nSequencer settings.\nTurn the knob to select the Patch Memory\nnumber, push the knob to Load.\nKNOB 2\nSAVE PATCH MEMORY #1-19\nSave the current Filter Bank, and Sequencer\nsettings.\nTurn the knob to select the Patch Memory\nnumber, push the knob to Save.\nKNOB 4\nLOAD FILTER PRESETS\nPredefined single stage filter setups can be\nLoaded into the current stage.\nThere are 13 Vocal Formants, and 13 Chords.\nTurn the knob to select the preset number,\npush the knob to Load the filter preset settings\ninto the current stage.\nVocal Formants [ Denoted by a P prefix]\n1 -ee\n2 - i\n3 - ay\n4 - e\n5 - au\n6 - u\n7 - a\n8 - aw\n9 - oo\n10 -ar\n11 - er\n12 - ir\n13 - iir\nMOD\nMOD\nANTENUVERTER\nMOD SOURCE \tDESTINATION \tDEST.\nATTRIBUTE\nMOD\nOFFSET\nHOLD +\nHOLD +\nHOLD +\n8\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/ryk-night-rider/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "Chords [ Denoted by a C prefix ]\n1 - Major\n2 - Minor\n3 - Diminished\n4 - Augmented\n5 - Major 7th\n6 - Minor 7th\n7- Dominant 7th\n8 - Diminished 7th\n9 - Augmented 7th\n10 - Suspended 2nd\n11- Suspended 4th\n12 - Suspended 2nd\n13 - Suspended 4th\nRES KNOB\nUse this knob to adjust the Resonance, Band Width, or Feedback of the\nFilters. [ the function depends on the FILTER TYPE used, see Page 5/6]\nWith the 6dB or12dB BAND PASS FILTERS, the RES control adjusts\nthe resonance of the filters, high settings will ring and oscillate allowing\nthe filters to be Ping-able !\nUse high resonance carefully, as this can create unexpectedly loud\nresonance peaks, which can distort, Adjust the Level control to reduce\nthe distortion if necessary.\nWith the VARIABLE-WIDTH BAND PASS FILTER the control adjusts\nthe width of the filter.\nWhen using the KP COMB FILTER the control adjusts the Feedback\namount. Higher settings will ring, enabling the filter to be used as a\nKarplus-Strong physical modelled string sound when excited by a\npulse of noise or sound energy.\nWhen using either ALL PASS FILTER the control increases the mix of\nthe dry signal, increasing the depth of the filter notches for more\nextreme phase cancellation jetting type sounds.\nSLEW KNOB\nThis control adjusts the amount of slew [ glide ] between the modula-\ntion stages when there is a transition from one to another, either from\nsequencer animation or using the PREV, and NEXT buttons.\nHigher settings of slew will create a smooth slow change from one\nStage to another, useful when combined with a slow Clock source to\ncreate dramatic phaser type movements to a sound.\nLower settings will create more sudden transitions between sequence\nStages, useful for quicker wah-wah-eeh-ahh vocal sounds or resonant\nacid bassline chirps.\nAt the minimum setting, there will be no glide between sequence\nStages, creating abrupt and percussive transitions between sequence\nStages, useful when sequencing frequency changes for a ping-able\nFilter set\nPUSH TO REC \tVECTOR SPEED\nCELL 1-2\nTIME CELL 2-3\nTIME CELL 3-4\nTIME\nPUSH TO SET CELL VECTOR POSITION\nRES\nSREW\n9\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/ryk-night-rider/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "POS KNOB\nThis control moves the current position of the sequence, indicated by\nthe Green LED.\nIf there is some Slew applied, then the Position control will interpolate\nbetween the stages as it changes.\nWith minium Slew applied, there will be an abrupt jump from one stage\nto the next as the knob is turned.\nIf adjusting the Frequency or Level of a Stage, when the sequence is\nnot animating, it is a good idea to first select the Stage using the PREV\nor NEXT buttons, otherwise if the sequence is halfway between stages\nin an interpolated position, the adjustments will be hard to identify\nclearly.\nUTILITY BUTTON\nThis button activates the UTILITY SETTINGS MENU of the Night Rider\nmodule.\nPush once to enter the menu, use top row Knob 1 to select a parame-\nter, use Knob 4 to adjust the value of the parameter.\nThe parameter and its value will flash alternately.\nOUT – Audio Output setting.\n1 [ CH1 - MONO], 1.2 [ CH1 & CH2 - stereo]\nNB if you are not using both outputs, please select “1” in this\nmenu.\nCH – MIDI Channel for MIDI data.\n0 = OFF, 1-16\nNB This does not affect the MIDI Clock.\nNT – MIDI Note messages\nON, OF[F]\nSelects if MIDI Note messages will be received as Global\nFrequency offset values.\nSUN – Brightness level of display to compensate for sunny days !\nRange 1-9\nCONNECTION JACKS\nIN1/2\nThis is the audio input for the Filter banks.\nInserting a Mono jack will send the audio to all four Filters.\nInserting a Stereo jack or the included Y-split cable, will send Input 1\n[left] to filters 1&2, and Input 2 [right] to filters 3&4.\nOUT1 / OUT 2\nThese are the audio outputs of the Filter banks.\nUse the Pan settings to control the mix of which Filter is sent to which\noutput.\nIf you are using just one Mono output, the please select “1” in the OUT\noption of the UTILITY SETTINGS MENU.\nCROSS MOD \tWAVE WARP \tWAVE FOLD \tDETUNE SPREAD\nPOS\n10\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/ryk-night-rider/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "CLK/MIDI\nThis input allows a clock signal to control the Modulation Sequencer.\nFor slower rates the clock input can be subdivided using the\nSEQUENCE CLOCK DIVISION parameter in the SETTINGS MODE. [\nsee Page 7 ]\nThe input also accepts a MIDI CLOCK source and MIDI MESSAGES.\nIt is a TRS MIDI input, and the polarity can be set to Type A/B on the\nback of the module, using the micro slide switch labelled MIDI.\nMIDI CC MESSAGES are mapped to the following parameters, allowing\nexternal adjustments from a MIDI controller.\nCC 34 - Global frequency offset\nCC 35 – Current Position of the sequence / with interpolation\nCC 36 – Slew amount\nCC 37 – Resonance / Bandwidth / Feedback / amount\nMIDI NOTE ON MESSAGES can also be received and are interpreted\nas semitone pitch offsets to the Global frequency offset.\nRES\nThis input accepts a bi-polar CV for modulation of the Resonance/Band\nWidth/Feedback of the Filters.\n[ See RES KNOB for more details ]\nSLEW\nThis input accepts a bi-polar CV for modulation of the amount of slew [\nglide ] between the modulation stages when there is a transition from\none to another.\n[ See SLEW KNOB for more details ]\nF\nThis input accepts a bi-polar CV for modulation of the GLOBAL\nFREQUENCY OFFSET.\nIt is pared with an anttenuverter, allowing for +/- adjustments of the\nmodulation amount.\nWith the anttenuverter set to the +/- maximum position, the frequency\nis scaled to 1V/OCT, useful for playing pitched melodies from a\nkeyboard or sequencer.\nIf there is no jack inserted, the anttenuverter acts as a Global frequency\noffset control.\nPOS\nThis input accepts a bi-polar CV for modulation of the current position\nof the sequence, indicated by the Green LED.\nIt is pared with an anttenuverter, allowing for +/- adjustments of the\nmodulation amount.\n[ See POS KNOB for more details ]\nFIRMWARE UPDATES\nThe firmware for Night Rider can be updated, please check our website\nfor any new releases:\nrykmodular.bigcartel.com/firmware-updates\nHere's how to install the firmware:\nPower up the module first.\nOn the back of the module are two micro switches, labelled “FIRM-\nMENU ITEM \tVALUE/OPTION\n11\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/ryk-night-rider/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "WARE” and “RESET”.\nPush and hold the Firmware button, then press the Reset button\nmomentarily whilst still holding the Firmware button.\nRelease the Firmware button.\nPlug a USB B micro cable from the module to a computer. Make sure it\nis a high quality cable that supplies data, some micro USB cables only\nsupply power.\nConnect the cable directly to your computer, not via a USB hub.\nYou should see a USB Disc show up on your computer named\n\"RPI-RP2\".\nCopy or drag the UF2 firmware file into the \"RPI-RP2\" disk.\nIf successful, the disk will ‘eject’ automatically, and the module will\nrestart with the new firmware.\nHave fun !\nHINTS AND TIPS\nVERY SIMPLE PHASER SETUP\nPhasers work really well with audio sources that are rich in harmonics,\nsuch as chords, or sawtooth/square wave oscillators.\nFor a simple phaser, select one of the Band Pass Filter modes, and set\nthe RES control to a middle setting.\nDial the frequencies of the filters to a group where they are spaced\nabout one dot apart.\nMake sure the levels are all set to the same, just below the 5 LED\nsaturation limit.\nApply a slow SIN or TRI LFO to the F INPUT, and adjust the attenuvert-\ner for the modulation depth.\nTIP: Select Frequency mode. Hold the NEXT button, whilst turning one\nof the top row knobs to to move all the frequency bands higher or lower\nfor a preferred position.\nAlso try separating out the distance between the frequency bands to\nhear the difference in sound.\nTry the same setup with one of the All Pass filters such as AP1, using a\nvery slow modulation source, and the filters set to quite high frequen-\ncies.\nVOCAL FORMANT SETUP\nFormant vocal sounds need an audio source that is rich in harmonics,\nsuch as sawtooth or pulse wave.\nSelect the first stage, using the PREV button.\nHold the MEMORY [ Red ] button, and turn the 4th top row knob to\npreview some of the Formant Presets [ P prefix ], when you find one you\nlike, push the knob to load it.\nSelect the second stage, using the NEXT button, and repeat the above\nprocess, choosing a different sounding formant.\nWhen you have loaded a few formants into different sequencer stages,\nselect the SEQUENCER RANGE holding the PREV button and using\nKnob 3.\nApply a clock source to the CLK/MIDI INPUT to animate the\ntransitions between the formant sounds.\nAdjust the SLEW control to a low setting for more vocal type sounds,\nlonger settings will create more 'waahh' type sounds.\n12\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/ryk-night-rider/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "13\nMARIMBA MADNESS\nSet the filter mode to the 6db or 12db Band Pass filter.\nAdjust the RES CONTROL to near maximum, but not quite.\nApply a rhythmic or medium speed very short pulses of white noise, or\nenvelope pulse to IN1/2.\nAdjust the levels of the filters, and you should begin to hear the filters\n'excite' by the pulses, creating a resonant drum sound a bit like a\nwoodblock or marimba.\nHigher levels of RES will make the decay of the sound longer, lower\nlevels will make the decay much shorter.\nTry adjusting the the frequencies of the filters to hear how the\ngroupings of the pitched resonances sound together.\nYou can also try loading one of the Chord Presets from the MEMORY\n[ see page 8/9 ]\nTIP: It can be interesting to supply different pulses of different timings\nto the IN1 and IN2 inputs, to create more complex rhythms of different\npitches.\nAlso you can connect a CV source to the F INPUT to modulate the\nglobal frequency of the sounds, such as a keyboard or sequencer.\nKARPLUS-STRONG STRINGS\nThe Karplus Strong delay filter [ KP ] can be used to create synthesised\nplucked or bowed string sounds.\nSelect the KP filter mode, and adjust the RES CONTROL to near\nmaximum, but not quite.\nAs in the Marimba example above, apply very short pulses of white\nnoise or harmonically rich sound to the IN1/2.\nThe RES CONTROL sets how much feedback is applied to the delay\nline, effectively setting the decay time of the string sound. Lower\nfrequencies will ring longer than higher frequencies.\nTIP: Try changing the envelope of the noise pulse source, a softer\nattack will make the string sound more \"bowed\" sounding.\nAlso try applying a constant source of noise or harmonically rich sound\nto IN1/2, and adjusting the filter frequency bands to create a chord. You\ncan also try loading one of the Chord Presets from the MEMORY [ see\npage 8/9 ]\nThis technique can create almost orchestral string sounding chords.\nNAME YOUR PATCH MEMORIES\n1............................................. \t2 .............................................\n3............................................. \t4 .............................................\n5............................................. \t6 .............................................\n7............................................. \t8 .............................................\n9............................................. \t10 ..........................................\n11.......................................... \t12 ..........................................\n13.......................................... \t14 ..........................................\n15.......................................... \t16 ..........................................\n17.......................................... \t18 ..........................................\n19..........................................\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/ryk-night-rider/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
