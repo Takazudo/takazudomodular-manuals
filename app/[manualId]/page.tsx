@@ -36,6 +36,7 @@ const pageStyles = ctl(`
   min-h-screen pt-[60px]
   bg-zd-gray1
   flex items-center justify-center
+  overflow-x-hidden
 `);
 
 const headingStyles = ctl(`
@@ -44,15 +45,15 @@ const headingStyles = ctl(`
 `);
 
 const brandStyles = ctl(`
-  block text-4xl pb-vgap-sm
+  block text-xl sm:text-2xl md:text-3xl lg:text-4xl pb-vgap-sm
 `);
 
 const titleStyles = ctl(`
-  block text-5xl
+  block text-2xl sm:text-3xl md:text-4xl lg:text-5xl
 `);
 
 const subtitleStyles = ctl(`
-  block text-3xl pt-vgap-sm
+  block text-lg sm:text-xl md:text-2xl lg:text-3xl pt-vgap-sm
 `);
 
 const navStyles = ctl(`
@@ -99,7 +100,7 @@ export default async function ManualLandingPage({ params }: ManualLandingPagePro
     <>
       <TopPageKeyboardNavigation manualId={manualId} />
       <main className={pageStyles}>
-        <div className="lg:-mx-hgap-2xl">
+        <div className="max-w-[80%] mx-auto lg:-mx-hgap-2xl">
           <h1 className={headingStyles}>
             <span className={brandStyles}>{manifest.brand}:</span>
             <span className={titleStyles}>{manifest.title}</span>
