@@ -35,7 +35,6 @@ jobs:
         uses: ./.github/actions/build-nextjs
         with:
           node-version: '20'
-          pnpm-version: '10'
 
       - name: Monitor Build Performance
         run: |
