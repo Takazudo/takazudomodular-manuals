@@ -9,7 +9,7 @@ on:
 
 # Prevent concurrent checks per PR
 concurrency:
-  group: pr-quality-${{ github.event.pull_request.number }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 # Grant necessary permissions
@@ -23,22 +23,21 @@ jobs:
   quality-checks:
     name: Code Quality Checks
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           lfs: false
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@02f6c237bd2518259fed6c71566509edfb3f2b74 # v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: '20'
-          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -63,7 +62,7 @@ jobs:
 
       - name: Comment quality check status
         if: always()
-        uses: actions/github-script@v8
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         with:
           script: |
             const success = '${{ job.status }}' === 'success';
@@ -117,24 +116,23 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           lfs: false
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@02f6c237bd2518259fed6c71566509edfb3f2b74 # v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: '20'
-          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Cache Next.js build
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .next/cache
           key: nextjs-cache-v1-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml', 'next.config.js', 'tsconfig.json') }}
@@ -173,7 +171,7 @@ jobs:
 
       - name: Upload build artifacts (for e2e tests)
         if: startsWith(github.head_ref, 'preview/')
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
           name: nextjs-build-pr-${{ github.event.pull_request.number }}
           path: out/
@@ -190,24 +188,23 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           lfs: false
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@02f6c237bd2518259fed6c71566509edfb3f2b74 # v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: '20'
-          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
         with:
           name: nextjs-build-pr-${{ github.event.pull_request.number }}
           path: out
@@ -217,15 +214,15 @@ jobs:
 
       - name: Start production server
         run: |
-          echo "🚀 Starting production server on port 3100..."
-          serve out -l 3100 &
+          echo "🚀 Starting production server on port 8030..."
+          serve out -l 8030 &
           SERVER_PID=$!
           echo "SERVER_PID=$SERVER_PID" >> $GITHUB_ENV
 
           # Wait for server to be ready
           echo "⏳ Waiting for server to be ready..."
           for i in {1..30}; do
-            if curl -s http://zmanuals.localhost:3100/ > /dev/null; then
+            if curl -s http://localhost:8030/manuals/ > /dev/null; then
               echo "✅ Server is ready!"
               break
             fi
@@ -238,8 +235,8 @@ jobs:
 
       - name: Run smoke tests
         run: |
-          echo "🧪 Running smoke tests on all 272 pages..."
-          node scripts/test-all-pages-fast.js
+          echo "🧪 Running smoke tests..."
+          BASE_URL="http://localhost:8030" node scripts/test-all-pages-fast.js
           echo "✅ Smoke tests passed!"
 
       - name: Stop server
@@ -251,7 +248,7 @@ jobs:
 
       - name: Comment e2e test status
         if: always()
-        uses: actions/github-script@v8
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         with:
           script: |
             const success = '${{ job.status }}' === 'success';
@@ -260,7 +257,7 @@ jobs:
 
             const body = `${emoji} **E2E Smoke Tests ${status}**
 
-            Tested all 272 manual pages against production build.
+            Tested all manual pages against production build.
 
             ${success ? '✅ All pages loaded successfully with HTTP 200.' : '❌ Some pages failed to load. Check the logs for details.'}`;
 
