@@ -179,6 +179,18 @@ import mordaxDataPages from '@/public/mordax-data/data/pages-ja.json';
 import oxiMetaManifest from '@/public/oxi-meta/data/manifest.json';
 import oxiMetaPages from '@/public/oxi-meta/data/pages-ja.json';
 
+// Import ryk-envy
+import rykEnvyManifest from '@/public/ryk-envy/data/manifest.json';
+import rykEnvyPages from '@/public/ryk-envy/data/pages-ja.json';
+
+// Import ryk-algo
+import rykAlgoManifest from '@/public/ryk-algo/data/manifest.json';
+import rykAlgoPages from '@/public/ryk-algo/data/pages-ja.json';
+
+// Import ryk-m185
+import rykM185Manifest from '@/public/ryk-m185/data/manifest.json';
+import rykM185Pages from '@/public/ryk-m185/data/pages-ja.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -362,6 +374,18 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'oxi-meta': {
     manifest: oxiMetaManifest as unknown as ManualManifest,
     pages: oxiMetaPages as unknown as ManualPagesData,
+  },
+  'ryk-envy': {
+    manifest: rykEnvyManifest as unknown as ManualManifest,
+    pages: rykEnvyPages as unknown as ManualPagesData,
+  },
+  'ryk-algo': {
+    manifest: rykAlgoManifest as unknown as ManualManifest,
+    pages: rykAlgoPages as unknown as ManualPagesData,
+  },
+  'ryk-m185': {
+    manifest: rykM185Manifest as unknown as ManualManifest,
+    pages: rykM185Pages as unknown as ManualPagesData,
   },
 };
 
