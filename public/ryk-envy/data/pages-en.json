@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "processedAt": "2026-03-22T15:08:10.877Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ryk-envy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "ENVY MACHINE\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ryk-envy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "GATE1\nM1\n2\n2\n3\n3\n4\n4\nTIME\nLEVEL\nA\nD\nR\nDR\nSHP\nAUX\nMOD\nMOD LEVEL\nSHAPE\n0\n+ \t+\n-\t-\nOPT\nOUT LEVEL\nCH\nA\nD\nS\nR\n0\nENVY MACHINE\nOUT1 \t2 \t3 \t4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/ryk-envy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "Welcome to the Envy Machine!\nA compact quad-channel modulation machine, with an envious array of\nEnvelopes, LFOs, random voltages and Knob Recording.\nOVERVIEW\nEach of the four channels on the ENVY MACHINE can be set to one of\nfive super-flexible modulation modes:\n- ADSR Envelope\n- AD Envelope\n- AD LFO\n- Random Voltage\n- Recordable Knob Voltage Control\nGhost hand - Parameters can be animated using KNOB RECORDING\nto create timed variations in your patch.\nAnd . . . with a dedicated MOD input per channel, you can use an\nexternal CV to control anything - TIME, LEVEL, WAVESHAPE, colour of\nyour hair etc . . .\nPolarity paradox - Modulation inputs AND channel Outputs come with\nbipolar attenuverters, you can choose BIPOLAR or UNIPOLAR, with\ncontinuously variable level control.\nSlippery slopes - WAVESHAPES are fully variable between LOG, EXPO,\nSIN, TRAPEZOID, and SQUARE !\nRYK MODULAR\nENVY MACHINE\nUSER MANUAL\n1\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/ryk-envy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "TECHNICAL SPECIFICATIONS\nTIME\nEnvelopes: 1.5ms – 4min\nLFO: 88hz – 7min\nRandom: 2khz - 2min\nOutput Voltage Ranges\nEnvelopes: 0–8V (inverted: 8V–0V)\nLFO/Random: 0–8V (Unipolar) or -5V–+5V (Bipolar)\nInput Voltage Range\n-5V - +5V\nDimensions\n12 HP wide\n25 mm deep\nPower Consumption\n-12V 5mA\n+12 70mA\n2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/ryk-envy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "CONCEPT OF USE\nThe ENVY MACHINE has four channels. Use the \tCHANNEL BUTTON\nto cycle through them. The four LEDs above the jack sockets indicate\nwhich channel is active for editing when lit RED/ORANGE/YELLOW.\nThe vertical LED BARS below each knob show the current knob\nvalue.\nAs you press the \tCHANNEL BUTTON the LED BARS will change\nto indicate the values for the newly active channel.\nThe LED BARS can be one of four colours depending on the current\nmode of the active channel.\nChannel Parameter Modes:\n- RED: Envelope Mode-\n- ORANGE: LFO or Random Mode\n- YELLOW: Knob Control Voltage\nChannel Option Mode:\n- GREEN\n3\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/ryk-envy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "There are 5 different Parameter modes you can choose.\nTo cycle through these five modes, press and hold the \tCHANNEL\nBUTTON, whilst a short press of the \tOPTION BUTTON.\n1.ADSR ENV MODE\n3.LFO MODE \t4.RANDOM MODE\n2.AD ENV MODE\nDECAY \tRELEASE\nATTACK \tSUSTAIN\nDECAY\nATTACK\nDECAY\nATTACK \tOFFSET \tFREQUENCY \tOFFSET\n4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/ryk-envy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "You will notice how the colour and amount of LED BARS changes\ndepending on which mode is selected for the current Channel.\nIf ALL Channels are set to KNOB CONTROL VOLTAGE MODE, then\nthe display will change to show all four LED BARS in Yellow, and each\nknob will be associated with the Channel number below. Allowing all\nChannels to be adjusted at the same time.\n5.KNOB CONTROL\nVOLTAGE MODE\nVOLTAGE LEVEL\n5\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/ryk-envy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "OPTION MODE\nTo toggle between PARAMETER MODE and OPTION MODE, press the\n- \tOPTION BUTTON.\nWhen the LED BARS are green you are in OPTION MODE, the settings\nfor this mode can be seen written vertically alongside the LED BARS.\nBAR1 – MOD CV Destination.\nThe CV from the MOD INPUT can be routed to one of\nthe following parameters:\nTIME \t– Modulate all time based controls of the channel\nA,D,R etc\nLEVEL \t– Modulate the output level of the channel\nA \t– Modulate the Attack time of the channel\nD \t– Modulate the Decay time of the channel\nDR \t– Modulate the Decay & Release time of the channel\nSHAPE – Modulate the WAVESHAPE of the channel\nAUX \t– TBC\nBAR2 – MOD CV attenuverter.\nCentre is zero, above centre for positive scaled\nvalues, below centre for negative scaled values.\n6\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/ryk-envy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "BAR3 – WAVESHAPE control.\nSQUARE – This clips the signal to a SQUARE WAVE,\nvalues between this and SINE will create a\nTRAPEZOIDE waveform.\nSINE – This maps the signal to a SINEWAVE function,\nvalues between this and EXPO will create an\napproximate LINEAR waveform\nEXPO – This maps the signal to an EXPONENTIAL\nfunction, with accelerating rise and fall times, creating\nswoopy accelerating movement. Use this shape for\nexpressive slower attack slopes such as flute sounds etc.\nLOG/EXPO – This maps the signal to a classic\nENVELOPE CURVE, with fast LOG rise\ntimes and sharp EXPONENTIAL decay times. Use\nthis shape for traditional percussive snappy envelopes.\nBAR4 – Output LEVEL attenuverter.\nCentre is zero, above centre for unipolar scaled\nvalues, below centre for bipolar scaled values. If using\nENVELOPE MODE, the bipolar option inverts the\nenvelope output value.\n7\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/ryk-envy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "KNOB RECORDING\nAdjustments to the RED/ORANGE/YELLOW Parameter Modes, can be\nrecorded and played back in a cyclic manner for variations within the\nparameter range.\nHold the \tCHANNEL BUTTON while turning a knob.\nRelease when done, and the animation will start to playback.\nAn actively playing knob recording is indicated by a flashing LED BAR.\nTo STOP or START playback of the knob recording simply push the\nknob once.\nKnob recordings are retained on power off, and can be used again at\na later date.\nIf ALL Channels are set to KNOB CONTROL VOLTAGE MODE, then\nthe display will change to show all four LED BARS in Yellow, and each\nknob will be associated with the Channel number below. Allowing all\nChannels to be adjusted at the same time.\n8\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/ryk-envy/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "TIPS AND TRICKS\nLFO MODE\nThe LFO MODE uses the A and D controls for the slope ratio of the\nwaveform. The sum of the A and D times defines the frequency of the\nLFO.\nTo create a Ramp Wave, adjust the A control to zero, and the adjust the\nD control to the desired frequency. To make this a LINEAR ramp, adjust\nthe SHAPE in the OPTION MODE to between EXPO and SINE.\nAn easy way to adjust the A and D times simultaneously is using the\nDUAL ADJUSTMENT option.\nPress and hold the OPTION BUTTON whilst adjusting either the A or D\nparameter to adjust simultaneously.\nFor a symmetrical wave, set both values to zero first, then use the\nDUAL ADJUSTMENT option to adjust both values simultaneously\nOFFSET LEVEL\nThe S Control in LFO or RANDOM MODE acts as a positive offset\nvalue to the ouput. It can be used to set a base level voltage with added\nmodulation. This is useful for modulation inputs on modules which do\nnot have an additional master contol for the same input.\nTo use the OFFSET, make sure the OUTPUT LEVEL in the OPTION\nMODE is not set to maximum, otherwise the OFFSET control will have\nlittle effect.\n9\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/ryk-envy/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "RANDOM STEPPED VOLTAGES\nIn RANDOM MODE, set the WAVE SHAPE parameter in the OPTION\nMENU to SQUARE to create Sample and Hold style stepped voltages.\nSmooth things out by blending toward SINE for slewed transitions,\ncreating a TRAPEZOIDE waveform. Adjust the A parameter for desired\nFREQUENCY.\nGATE DELAY\nIn AD ENVELOPE MODE set the WAVE SHAPE parameter to\nSQUARE. Adjust ATTACK for delay time, use the output as a gate\ndelay to creatively patch other Envelope channels or modules.\nPINK NOISE\nIn RANDOM MODE, adjust the FREQUENCY \tparameter A to\nminimum, connect the output as a source for PINK NOISE. Try\nadjusting the WAVESHAPE or FEQUENCY and listen to the changes of\nnoise colour from the output.\nDELAYED VIBRATO\nSet up a channel to LFO MODE, and adjust the WAVESHAPE to SINE,\nadjust the A and D to similar values at a fast setting. Connect this to\nyour Oscillator to modulate the pitch.\nIn the OPTION MENU, adjust the MOD Destination to LEVEL, adjust\nthe MOD Attenuverter to a positive value, and adjust the OUTPUT\nLEVEL to near zero.\nSet up another channel to AD ENVELOPE MODE, set the WAVE\nSHAPE to between SINE and EXPO. Connect a Gate signal to the\n10\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/ryk-envy/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "GATE INPUT, and set the ATTACK parameter for delay time, and\nDECAY paramter to a longer settinng.\nConnect the output of the AD ENVELOPE channel to the MOD INPUT\nof the LFO channel. When the AD ENVELOPE channel is triggered, it's\nenvelope output will control the level and amount of vibrato from the\nLFO channel.\nPlay with the AD ENVELOPE parameters for delay time.\n11\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/ryk-envy/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "INPUTS AND OUTPUTS\nMOD1-4 These are the MODULATION CV inputs for each channel,\nsee OPTION MODE for how to assign these to a parameter.\nGATE1-4 These are the GATE INPUTS for each channel.\nGATE INPUTS are normalised to the Right of a connected GATE\nINPUT, only for ENVELOPE MODE channels.\nIf a channel is set to LFO MODE a connected GATE INPUT acts as a\nRESET SYNC for the LFO cycle.\nIf a channel is set to KNOB CONTROL VOLTAGE, and the channel is\nactively playing a KNOB RECORDING, a connected GATE INPUT acts\nas a RESET SYNC for the animation playback of the knob recording.\nOUTPUT 1-4 This is the CV output for each channel.Please note it's\nlevel is controlled by the LEVEL control in the OPTION MODE\n12\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/ryk-envy/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/ryk-envy/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

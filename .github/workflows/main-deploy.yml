@@ -27,7 +27,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           lfs: false
 
@@ -35,7 +35,6 @@ jobs:
         uses: ./.github/actions/build-nextjs
         with:
           node-version: '20'
-          pnpm-version: '10'
 
       - name: Monitor Build Performance
         run: |
@@ -59,7 +58,7 @@ jobs:
           echo "================================"
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
           name: nextjs-build-production
           path: out/
@@ -75,12 +74,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           lfs: false
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
         with:
           name: nextjs-build-production
           path: out
@@ -96,7 +95,7 @@ jobs:
           build-dir: 'out'
 
       - name: Create deployment record
-        uses: actions/github-script@v8
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         with:
           script: |
             // Create a deployment record
@@ -123,7 +122,7 @@ jobs:
 
       - name: Notify deployment status
         if: always()
-        uses: actions/github-script@v8
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         with:
           script: |
             const success = '${{ job.status }}' === 'success';

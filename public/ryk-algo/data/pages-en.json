@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "processedAt": "2026-03-22T15:08:11.740Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ryk-algo/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "ALGO\nXM\t\nATTACK\n[ PUSH TO SELECT TRIG SOURCE FOR ENV2 ]\nDECAY \tSUSTAIN \tRELEASE\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/ryk-algo/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "FREQUENCY\nLEVEL\nTUNE\nSTEREO OUTPUT\nWAVE FOLD\nWAVE WARP\nALGORITHM\nRANGE\nCROSS\nMODULATION\nDETUNE\n/CHORUS\nCROSS MODULATION CV\nFM / DT / MOD\nor SYNC INPUT\nOSCILLATOR\nMOD INPUTS\nM2\tM1 \tM3 \tM4\nDT\nTUNE\nALGO\nV/OCT\nWARP\nXM\tOUT\nXM\nMOD\nCAR\nALL\n1\n2\n3\nFOLD\nFM\nDT\nSYNC\nV/OCT INPUT\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/ryk-algo/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "RYK MODULAR\nALGO\nUSER MANUAL V1\nALGO is a QUAD COMPLEX OSCILLATOR BANK,\ncapable of deep algorithmic FM sound generation.\nOVERVIEW\nALGO'S FOUR OSCILLATORS can be configured in\nseries or parallel combinations, to create COMPLEX FM\nor additive sound textures.\nA unique algorithm display indicates the signal flow from\none oscillator to another.\nEach oscillator has controls for Level and Frequency,\nallowing easy adjustment of FM timbres, no menu diving\nneeded.\nIndivdual Modulation inputs for Frequency OR Level of\neach oscillator - patch in a couple of Envelopes, and you\nhave an instant FM synth voice.\nBored of Sine waves ? A WAVE WARP control bends\nthings through Triangle to Pulse wave and back again.\nThis can be applied to Carrier, Modulator or both types of\noscillator.\nFor the more discerning mangler, WAVE FOLDING is also\navailable in three delicious flavours; Symmetric, Asym-\nPUSH TO TOGGLE ALGORITHM MODES\nOSC2 LEVEL\tOSC1 LEVEL \tOSC3 LEVEL \tOSC4 LEVEL\nMOD\n1\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/ryk-algo/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "metric and Soft Clip !\nA Global Detune control with CV input is great for\nspeading out the oscillators to create Netflix apocalypse\nstyle drones that descend into the abyss.\nLastly an onboard Stereo Chorus can add a vivacious\n1980's shimmer to all your FM creations.\nOh, and It's stereo !\nTECHNICAL SPECIFICATIONS\nFrequency range\n8hz - 35khz\nSampling frequency\n85khz @ 2 x oversampled [ 170khz ]\nDimensions\n18 HP wide\n25 mm deep\nPower Consumption\n+12v 70mA\n-12 6mA\n2\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/ryk-algo/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "FM SYNTHESIS\nSubtractive synthesis takes an oscillator source with rich\nharmonics [ saw / square wave ] and using a filter [ VCF ]\nthe harmonics are selectivity removed to change the\ntimbre of the sound.\nFM SYNTHESIS is quite the opposite, it uses frequency\nmodulation to create richer harmonics from an oscillator\nwith very few harmonics [ sine wave ].\nA modulation oscillator modulates the frequency of a\ncarrier oscillator, which produces new harmonics, called\nsidebands.\nAs the Level of the modulation oscillator increases, more\nand more of these sideband harmonics are created,\nmaking an increasingly rich harmonic sound.\nOnly the carrier oscillators are sent to the main output,\nmodulation oscillators are not audible.\nThe oscillators in ALGO are configured to act as\nmodulation oscillators or carrier oscillators, depending\non the chosen ALGORITHM.\nThe ALGORITHM , indicated by the Red LEDs, shows\nthe signal flow from one oscillator to the next, from top\nleft down to bottom right.\n3\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/ryk-algo/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "OSCILLATORS AND ALGORITHMS\nEach oscillator has a control for it's FREQUENCY [ larger\nknob ], and a control for it's output LEVEL [ trimmer knob ].\nWhen a BLANK ALGORITHM [ no RED LEDs lit ] is\nselected, we can hear all of the oscillators. [All oscillators\nare carriers ]\nAdjusting the LEVEL knob increases or decrease the\noutput level of each individual oscillator.\nAdjusting the FREQUENCY knob will scan though all 18\nharmonics available [ 0.5, 1, 2, 3, 4, 5 . . . 18 ] [see EXPERT\nFEATURES P.9 for other frequency modes ]\nHarmonics are multiples of the base\nharmonic “1”. Frequency doubles\nfor each musical octave, so\nharmonics 1,2,4,8,16 are octave\nintervals, these are indicated\nby a lit Green LED next to the\noscillator FREQUENCY knob.\nHarmonic “1” is indicated by a\nlit Yellow LED next to the oscillator\nfrequency knob.\nWhen an oscillator is a modulator\nit's output does not directly sound,\nas it is routed to modulate another\noscillator. This is called\nCROSS MODULATION. [ XM }\nThe amount of CROSS\nMODULATION is set globally by\nthe XM knob and XM CV input.\nSelect ALGORITHM 2, and play\nwith the level controls to see how\nthe modulation oscillators 1&3 affect\nthe timbre of the adjacent carrier\nU FUNCTION \t[ CHORD # ]\nCHORD MODE ONLU\nDESTINATION\nBANK[S]\tY\nALGORITHM 0\nOctave Indicator LED\n1 \n2 \n3 \n4\n1 \n2 \n3 \n4\nALGORITHM 2\n4\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/ryk-algo/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "oscillators 2&4 they are connected to. Make sure that the\nXM knob is turned up a little to hear the affect for the\nmodulation.\nIncreasing the LEVEL of a modulation oscillator\nincreases the richness of the sound, think of it a bit like\nincreasing the cutoff frequency of a low pass filter [ LP\nVCF ].\nWhen the harmonics of modulator and carrier are\nnumerically related multiples [2 & 4, or 3 & 1 etc ] the\nresultant sounds is more harmonious, other multiples\ncan create more unusual and in harmonic sounds.\nGenerally it is best to use lower settings of the XM knob\nor modulation oscillator Level control, in order to create\nmore subtle and interesting sounds.\nToo high levels of modulation can result in strong metallic\nsounds that start to all sound similar irrespective of\nwhich oscillator harmonics are used.\nHere are some examples of the available algorithms:\nAlgorithm 3\nOscillator 1 is modulating\nOscillator 2 Oscillator 3\nand Oscillator 4\nAlgorithm 5\nOscillator 1&2 are combined in\nparallel to modulate Oscillator 3\nand Oscillator 4\n1 \n2 \n3 \n4\n1 \n2 \n3 \n4\nALGORITHM 3\n\tALGORITHM 5\n5\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/ryk-algo/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "Algorithm 4\nOscillator 1 is modulating Oscillator 2, which is modulat-\ning Oscillator 3 and Oscillator 4\nCONTROLS\nPushing the RANGE button cycles\nthrough the five octave ranges of\nthe Algo module. [ see also Expert\nFeatures ]\nPushing the ALGO button cycles\nthrough the nine FM algorithms that\nindicate how the oscillators are\nconnected. A longer push will take\nyou backwards through the cycle.\n[ see also Expert Features ]\nTUNE knob – This is the global\nfine tune frequency control of the\nAlgo module, a small dot indicates\nthe centre tune position.\nNV/LFO\n1 \n2 \n3 \n4\nALGORITHM 4\nTUNE\n6\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/ryk-algo/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "DT knob– This is the global\ndetune control for the Algo module.\nIncreasing the control will start to\nspread out the frequencies of the\noscillators, creating a discordant\nsound at extreme settings.\nCHORUS EFFECT– Push and hold the \tbutton whilst\nturning the DT knob clockwise to enable and adjust the\nspeed of the Chorus Effect. Whilst holding the\nbutton, turning the DT knob fully counter-clockwise\nwill turn off the Chorus Effect.\nAfter adjusting the Chorus, be sure to turn the DT knob\nto your desired DETUNE setting, AFTER releasing the\nbutton.\nWhen the Chorus Effect is active a Green LED is lit next\nto the DT knob\n.\nXM knob- This controls the global\ncross modulation amount from\nmodulator to carrier oscillators, it is\nused in addition to the XM CV input.\nWAVE WARP - The oscillators in Algo are Sine wave\nbased, by utilising the Wave Warp control or Warp CV\nthese can be warped towards Triangle, Sawtooth and\nPulse.\nIf no jack is inserted into the Warp CV input, this control\nsets the global amount of Wave Warp applied to the\nselected oscillator types.\nIf there is a jack inserted into the Warp CV input, the\ncontrol acts as an attenuator, scaling the CV input.\nWave Warp can be applied to Modulator, Carrier or\nBoth [ALL] types of oscillators, this is indicated by the\nGreen LEDs above the control.\nTo select from these three options, push and hold the\nbutton whilst turning the control.\nDT\nXM\nChorus\nLED\n7\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/ryk-algo/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "WAVE FOLD - Wave folding creates multiple harmonics\nfrom the base sine wave by folding the peaks of the wave\nback inwards. Increasing the Fold control or Fold CV\nincreases the amount of harmonic overtones.\nIf no jack is inserted into the Fold CV input, this control\nsets the global amount of Wave Fold applied to the\noscillator.\nIf there is a jack inserted into the Fold CV input, the\ncontrol acts as an attenuator, scaling the CV input.\nThere are three types of Wave Fold indicated by the\nGreen LEDs above the control:\n1 ] Symmetric\n2 ] Asymmetric\n3 ] Soft Clip\nTo select which, push and hold the \tbutton whilst\nturning the control.\nWave Fold is only applied to Carrier oscillators.\nCONNECTION JACKS\nV/OCT – This is the pitch CV input [ 0V-6V ] that all\noscillator frequencies are multiples of [ unless an\noscillator is set to FIXED mode ]\nOUT - This is the audio output of the module. It can be\nused with a Stereo [ TRS ] or Mono [ TS ] jack, which is\nautomatically detected.\nXM – This is the Cross Modulation [ XM ] amount CV\ninput [ -5V to +8V ], which controls the global XM amount\nin addition to the XM control.\nThis can be connected to an Envelope for example to\ndynamically alter the timbre of a note when triggered.\nFM/DT/SYNC – This is a CV input [ -5V to 5V ] that can be\nused to modulate the Frequency of all the oscillators [ FM ]\nto creat vibrato style effects. Or it can be used to\nRESET TRIG\nOPTION WAVEFORM \tFREQUENCY\nCROSS MOD \tWAVE WARP \tWAVE FOLD \tDETUNE SPREAD\n8\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/ryk-algo/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "modulate the Detune amount [ DT ]. Also can be used as\na SYNC input to reset the phase of all the oscillators. This\ncan be useful for reducing clicks when playing low\nfrequency basslines etc.\nTo toggle between these modes, , push and hold the\nbutton whilst inserting a jack into the socket. The mode is\nindicated by the two Green LEDs above the socket,\nSYNC is indicated by no LEDs lit.\nM1-M4 – These are CV modulation inputs [ 0V to 8V ]\nwhich can be used to modulate the Level of the individual\noscillators , or can be used as individual FM or V/OCT\ninputs for each oscillator. [ see Expert Features ]\nWARP – This is the CV input [ 0V to 5V ] that controls the\namount of Wave Warp applied to the oscillators, the\nattenuator above scales the signal from the CV. If no jack\nis inserted the attenuator control sets the amount of\nWave Warp.\nFOLD – This is the CV input [ 0V to 5V ] that controls the\namount of Wave Fold applied to the oscillators, the\nattenuator above scales the signal from the CV. If no jack\nis inserted the attenuator control sets the amount of\nWave Fold.\nEXPERT FEATURES\nPressing and holding the \tor \tbuttons whilst using\nsome controls enables extended features for the module.\n-Oscillator Frequency Modes\nPush and hold the \tbutton whilst turning an oscillator\nFREQUENCY knob enables FINE control over the\noscillator frequency without locking it's frequency to\nMOD SOURCE \tDESTINATION \tDEST.\nATTRIBUTE\n9\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/ryk-algo/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "harmonic intervals. When used with a modulator carrier\noscillator combination these non integer harmonics are\ngreat for creating in-harmonic, clangorous bell like tones.\nWhen used with all four carrier oscillators the fine tuning\nis great for creating chords etc.\nPush and hold the \tbutton whilst turning an oscillator\nFREQUENCY knob enables FIXED control over the\noscillator frequency without locking it's frequency to\nharmonic intervals.\nIn FIXED mode, the oscillator frequency is not affected\nby the main V/OCT input, enabling an oscillator to have a\nfixed frequency.\nTurning a FREQUENCY knob without holding the\nbuttons will reset the mode of the oscillator to normal\nHarmonic mode.\n-Pan Controls\nIf using a stereo jack connected to the Output, the\noscillators can be Panned between the two outputs,\nenabling them to be positioned in Stereo Space, or used\nas two separate output channels.\nPush and hold the \tbutton whilst turning an oscillator\nLEVEL knob to set the Pan position.\nFull anticlockwise is [ Left ], full clockwise is [ Right ]\nAfter setting the PAN, remember to return the LEVEL\nknob to your desired position for Level AFTER you have\nreleased the \tbutton.\n- M1-M4 Optional Function\nNormally the Algo M1-M4 inputs default to Amplitude \t10\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/ryk-algo/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "Modulation [ AM ] of each oscillator.\nAlternatively they can be individually toggled to function\nas [ FM ] Frequency modulation inputs.\nPush and hold the \tbutton whilst inserting a jack into\none of the M1-M4 inputs to toggle from AM to FM input.\nAn oscillator whose M1-M4 input had been set to FM\ninput will have a flashing Red LED next to it's Level\ncontrol.\nNB: If using an M1-M4 CV as a FM input the following\nresults can be expected:\nWhen an oscillator is used normally in HARMONIC mode,\nthe CV modulates the harmonic intervals.\nWhen an oscillator is used in FINE mode, the CV\nmodulation input acts as a V/OCT input in addition to the\nmain V/OCT input.\nWhen an oscillator is used in FIXED mode, the frequency\nmodulation input acts as a V/OCT input, but the oscillator\nis not affected by the main V/OCT input.\n- Global VCA\nPush and hold the \tbutton whilst inserting a jack into\nM4 to toggle this input to a global VCA CV input. This is\nindicated by a Green LED next to the Oscillator 4 Level\nControl.\nThis allows CV level control of the main output of Algo,\nfor use with an envelope etc.\nFIRMWARE UPDATES\nThe firmware for ALGO from time to time may be\nupdated, please check our website [ryk-modular.com] for\nany new releases. Here's how to install the firmware:\n11\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/ryk-algo/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "Power up the module first.\nPush and hold the 'firmware' button on the back, then\npress the 'reset' button once, whilst still holding the\n'firmware' button.\nRelease the 'firmware' button.\nPlug a USB B cable from the module to a computer,\nwithout using a USB hub.\nYou should see a USB Disc show up on your computer\nnamed \"RPI-RP2\", please drag the firmware UF2 file into\nthe disk. If successful, the module will restart with the\nnew firmware.\nALGORITHM 0\nALGORITHM 1\n\tALGORITHM 2\n12\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/ryk-algo/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "PUSH TO REC \tVECTOR SPEED\nALGORITHM 3\nALGORITHM 5\nALGORITHM 7\nALGORITHM 4\nALGORITHM 6\nALGORITHM 8\n13\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/ryk-algo/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "ELL 1-2\nTIME CELL 2-3\nTIME CELL 3-4\nTIME\nPUSH TO SET CELL VECTOR POSITION\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

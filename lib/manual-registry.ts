@@ -171,6 +171,38 @@ import westonTriviumPages from '@/public/weston-trivium/data/pages-ja.json';
 import westonM3sManifest from '@/public/weston-m3s/data/manifest.json';
 import westonM3sPages from '@/public/weston-m3s/data/pages-ja.json';
 
+// Import mordax-data
+import mordaxDataManifest from '@/public/mordax-data/data/manifest.json';
+import mordaxDataPages from '@/public/mordax-data/data/pages-ja.json';
+
+// Import oxi-meta
+import oxiMetaManifest from '@/public/oxi-meta/data/manifest.json';
+import oxiMetaPages from '@/public/oxi-meta/data/pages-ja.json';
+
+// Import ryk-envy
+import rykEnvyManifest from '@/public/ryk-envy/data/manifest.json';
+import rykEnvyPages from '@/public/ryk-envy/data/pages-ja.json';
+
+// Import ryk-algo
+import rykAlgoManifest from '@/public/ryk-algo/data/manifest.json';
+import rykAlgoPages from '@/public/ryk-algo/data/pages-ja.json';
+
+// Import ryk-m185
+import rykM185Manifest from '@/public/ryk-m185/data/manifest.json';
+import rykM185Pages from '@/public/ryk-m185/data/pages-ja.json';
+
+// Import ryk-vector-wave
+import rykVectorWaveManifest from '@/public/ryk-vector-wave/data/manifest.json';
+import rykVectorWavePages from '@/public/ryk-vector-wave/data/pages-ja.json';
+
+// Import ryk-night-rider
+import rykNightRiderManifest from '@/public/ryk-night-rider/data/manifest.json';
+import rykNightRiderPages from '@/public/ryk-night-rider/data/pages-ja.json';
+
+// Import ryk-time-slice
+import rykTimeSliceManifest from '@/public/ryk-time-slice/data/manifest.json';
+import rykTimeSlicePages from '@/public/ryk-time-slice/data/pages-ja.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -346,6 +378,38 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'weston-m3s': {
     manifest: westonM3sManifest as unknown as ManualManifest,
     pages: westonM3sPages as unknown as ManualPagesData,
+  },
+  'mordax-data': {
+    manifest: mordaxDataManifest as unknown as ManualManifest,
+    pages: mordaxDataPages as unknown as ManualPagesData,
+  },
+  'oxi-meta': {
+    manifest: oxiMetaManifest as unknown as ManualManifest,
+    pages: oxiMetaPages as unknown as ManualPagesData,
+  },
+  'ryk-envy': {
+    manifest: rykEnvyManifest as unknown as ManualManifest,
+    pages: rykEnvyPages as unknown as ManualPagesData,
+  },
+  'ryk-algo': {
+    manifest: rykAlgoManifest as unknown as ManualManifest,
+    pages: rykAlgoPages as unknown as ManualPagesData,
+  },
+  'ryk-m185': {
+    manifest: rykM185Manifest as unknown as ManualManifest,
+    pages: rykM185Pages as unknown as ManualPagesData,
+  },
+  'ryk-vector-wave': {
+    manifest: rykVectorWaveManifest as unknown as ManualManifest,
+    pages: rykVectorWavePages as unknown as ManualPagesData,
+  },
+  'ryk-night-rider': {
+    manifest: rykNightRiderManifest as unknown as ManualManifest,
+    pages: rykNightRiderPages as unknown as ManualPagesData,
+  },
+  'ryk-time-slice': {
+    manifest: rykTimeSliceManifest as unknown as ManualManifest,
+    pages: rykTimeSlicePages as unknown as ManualPagesData,
   },
 };
 

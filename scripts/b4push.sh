@@ -1,80 +1,102 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -euo pipefail
 
-echo "======================================"
-echo "🔧 Running pre-push checks"
-echo "======================================"
-echo
+START_TIME=$(date +%s)
+FAILURES=()
+SERVE_PORT=8030
 
-# Step 1: Kill any existing servers
-echo "🔪 Killing process on port 3100..."
-lsof -ti:3100 | xargs kill -9 2>/dev/null || true
-echo "✅ Port cleared"
-echo
+step() {
+  echo ""
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo "▶ $1"
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+}
 
-# Step 2: Run code quality checks
-echo "✨ Running code quality checks..."
-pnpm run check
-echo "✅ Code quality checks passed"
-echo
+pass() { echo "  ✓ $1"; }
+fail() { echo "  ✗ $1"; FAILURES+=("$1"); }
 
-# Step 3: Clean build directories
-echo "🧹 Cleaning build directories..."
-pnpm run clean
-echo "✅ Build directories cleaned"
-echo
+cleanup() {
+  lsof -ti:$SERVE_PORT | xargs kill 2>/dev/null || true
+}
+trap cleanup EXIT
 
-# Step 4: Build the project
-echo "🔨 Building project..."
-pnpm run build
-echo "✅ Project built successfully"
-echo
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
-# Step 5: Run smoke tests with production build
-echo "🎭 Running smoke tests with production build..."
-echo
+wait_for_server() {
+  local url="$1"
+  local max_attempts=30
+  local attempt=0
+  while [ $attempt -lt $max_attempts ]; do
+    if curl -sf "$url" > /dev/null 2>&1; then
+      return 0
+    fi
+    attempt=$((attempt + 1))
+    sleep 1
+  done
+  return 1
+}
 
-# Start production server with serve
-pnpm dlx serve out -l 3100 --no-clipboard &
-SERVER_PID=$!
+# ── Step 1: Code quality checks ──
 
-# Wait for server
-echo "⏳ Waiting for production server..."
-sleep 5
-
-# Check if server is running
-if ! curl -s http://zmanuals.localhost:3100 > /dev/null; then
-  echo "❌ Production server failed to start"
-  kill $SERVER_PID 2>/dev/null || true
-  exit 1
+step "Step 1/5: Code quality checks"
+if (cd "$ROOT_DIR" && pnpm run check); then
+  pass "Code quality checks passed"
+else
+  fail "Code quality checks"
 fi
 
-echo "✅ Production server ready"
-echo
+# ── Step 2: Clean and build ──
 
-# Run smoke tests
-echo "🧪 Running smoke tests..."
-node scripts/test-all-pages-fast.js
+step "Step 2/5: Clean build"
+if (cd "$ROOT_DIR" && pnpm run clean && pnpm run build); then
+  pass "Clean build passed"
+else
+  fail "Clean build"
+fi
 
-TEST_EXIT=$?
+# ── Step 3: Start production server ──
 
-# Kill server
-echo "🛑 Stopping server..."
-kill $SERVER_PID 2>/dev/null || true
-lsof -ti:3100 | xargs kill -9 2>/dev/null || true
+step "Step 3/5: Start production server"
+cleanup
+(cd "$ROOT_DIR" && pnpm dlx serve out -l $SERVE_PORT --no-clipboard) &
 
-if [ $TEST_EXIT -eq 0 ]; then
-  echo
-  echo "======================================"
-  echo "✅ All pre-push checks passed!"
-  echo "======================================"
-  echo
-  echo "Ready to push!"
+# ── Step 4: Wait for server ──
+
+step "Step 4/5: Wait for server"
+if wait_for_server "http://localhost:$SERVE_PORT/manuals/"; then
+  pass "Production server ready on port $SERVE_PORT"
+else
+  fail "Production server failed to start within 30s"
+fi
+
+# ── Step 5: Smoke tests ──
+
+step "Step 5/5: Smoke tests"
+if [[ " ${FAILURES[*]} " == *"Production server"* ]]; then
+  fail "Smoke tests (skipped — server not running)"
+elif (cd "$ROOT_DIR" && BASE_URL="http://localhost:$SERVE_PORT" node scripts/test-all-pages-fast.js); then
+  pass "Smoke tests passed"
+else
+  fail "Smoke tests"
+fi
+
+# ── Summary ──
+
+END_TIME=$(date +%s)
+DURATION=$((END_TIME - START_TIME))
+
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "  SUMMARY (${DURATION}s)"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+if [ ${#FAILURES[@]} -eq 0 ]; then
+  echo "✅ All checks passed! Safe to push."
   exit 0
 else
-  echo
-  echo "======================================"
-  echo "❌ Tests failed"
-  echo "======================================"
+  echo "❌ ${#FAILURES[@]} check(s) failed:"
+  for f in "${FAILURES[@]}"; do
+    echo "   - $f"
+  done
   exit 1
 fi

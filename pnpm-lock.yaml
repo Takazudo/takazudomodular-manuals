@@ -84,9 +84,6 @@ importers:
       glob:
         specifier: ^10.5.0
         version: 10.5.0
-      husky:
-        specifier: ^9.1.7
-        version: 9.1.7
       image-size:
         specifier: ^2.0.2
         version: 2.0.2
@@ -99,6 +96,9 @@ importers:
       pdf-parse:
         specifier: ^2.4.5
         version: 2.4.5
+      pdf-poppler:
+        specifier: ^0.2.3
+        version: 0.2.3
       pdf-to-png-converter:
         specifier: ^3.14.0
         version: 3.14.0
@@ -5115,11 +5115,6 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
-  husky@9.1.7:
-    resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
-    engines: {node: '>=18'}
-    hasBin: true
-
   hyperdyperid@1.2.0:
     resolution: {integrity: sha512-Y93lCzHYgGWdrJ66yIktxiaGULYc6oGiABxhcO5AufBeOyoIdZF7bIfLaOrbM0iGIOXQQgxxRrFEnb+Y6w1n4A==}
     engines: {node: '>=10.18'}
@@ -6445,6 +6440,9 @@ packages:
     resolution: {integrity: sha512-mHU89HGh7v+4u2ubfnevJ03lmPgQ5WU4CxAVmTSh/sxVTEDYd1er/dKS/A6vg77NX47KTEoihq8jZBLr8Cxuwg==}
     engines: {node: '>=20.16.0 <21 || >=22.3.0'}
     hasBin: true
+
+  pdf-poppler@0.2.3:
+    resolution: {integrity: sha512-nUczP3M/W4c8/3F6il0LmkxkF33qTKQyxeBmUnPbQLxxhtBX42zfpZqnLysomvMdb756qVR7n5kvNr+LzisXQw==}
 
   pdf-to-png-converter@3.14.0:
     resolution: {integrity: sha512-WvCrXZrZBK/z9j+iLLA40e8kCrT2qme84WXUSmlfbiKZs5d4iZ8AVZF34LpMGvvPHN3oyv0hRcEIr6C9tiTQXA==}
@@ -14431,8 +14429,6 @@ snapshots:
 
   human-signals@5.0.0: {}
 
-  husky@9.1.7: {}
-
   hyperdyperid@1.2.0: {}
 
   iconv-lite@0.4.24:
@@ -16017,6 +16013,8 @@ snapshots:
     dependencies:
       '@napi-rs/canvas': 0.1.80
       pdfjs-dist: 5.4.296
+
+  pdf-poppler@0.2.3: {}
 
   pdf-to-png-converter@3.14.0:
     dependencies:

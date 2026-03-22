@@ -9,13 +9,12 @@ Run comprehensive pre-push checks to ensure code quality and functionality befor
 
 ## What This Command Does
 
-1. **Kill existing servers** on port 3100
-2. **Code quality checks** (typecheck, lint, format)
-3. **Clean build directories**
-4. **Build production bundle**
-5. **Serve production build** on port 3100 (using `serve`)
-6. **Run smoke e2e tests** against production build
-7. **Clean up** (stop server)
+1. **Code quality checks** (typecheck, lint, format)
+2. **Clean build** (clean + production build)
+3. **Start production server** on port 8030
+4. **Wait for server** (retry with 30s timeout)
+5. **Run smoke e2e tests** against production build
+6. **Cleanup** (server killed via trap on exit)
 
 ## Usage
 
@@ -25,31 +24,37 @@ pnpm run b4push
 
 ## What Gets Tested
 
-- ✅ TypeScript compilation
-- ✅ ESLint rules
-- ✅ Prettier formatting
-- ✅ Production build succeeds
-- ✅ All manual pages load successfully (dynamically detects all manuals from registry)
-  - OXI ONE MK2 (272 pages)
-  - OXI Coral (46 pages)
-  - OXI E16 Quick Start (4 pages)
-- ✅ No HTTP errors
+- TypeScript compilation
+- ESLint rules
+- Prettier formatting
+- Production build succeeds
+- All manual pages load successfully (dynamically detects all manuals from registry)
+- No HTTP errors
 
 ## Time Estimate
 
 - **Total:** ~5-10 minutes
   - Code checks: ~30 seconds
   - Build: ~1-2 minutes
-  - Smoke tests: ~3-7 minutes (322 pages across all manuals)
+  - Smoke tests: ~3-7 minutes (all manuals)
 
 ## Notes
 
-- Tests run against **production build** (much faster than dev server)
-- Server runs on port 3100 (same as dev server)
-- Uses `serve` package (Next.js recommended)
-- Automatically cleans up after completion
-- Exits with error code if any check fails
-- **Dynamic manual detection**: Automatically tests all manuals from registry - adding new manuals requires no test updates
+- Tests run against **production build** served on port 8030
+- Uses `serve` package via `pnpm dlx`
+- Server health checked with retry (up to 30 attempts)
+- Cleanup trap ensures server is killed on exit (even on failure)
+- Collects all failures and reports summary at the end
+- **Dynamic manual detection**: Automatically tests all manuals from registry
+
+## On Failure
+
+1. Read the failure output to identify which step failed
+2. Auto-fix what you can:
+   - Formatting: `pnpm check:fix`
+   - Lint: `pnpm lint:fix`
+3. Re-run `pnpm b4push` to confirm all checks pass
+4. Report the final status
 
 ## See Also
 
