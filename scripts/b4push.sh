@@ -72,7 +72,9 @@ fi
 # ── Step 5: Smoke tests ──
 
 step "Step 5/5: Smoke tests"
-if (cd "$ROOT_DIR" && BASE_URL="http://localhost:$SERVE_PORT" node scripts/test-all-pages-fast.js); then
+if [[ " ${FAILURES[*]} " == *"Production server"* ]]; then
+  fail "Smoke tests (skipped — server not running)"
+elif (cd "$ROOT_DIR" && BASE_URL="http://localhost:$SERVE_PORT" node scripts/test-all-pages-fast.js); then
   pass "Smoke tests passed"
 else
   fail "Smoke tests"

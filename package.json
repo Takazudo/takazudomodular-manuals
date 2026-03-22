@@ -23,7 +23,7 @@
     "dev": "next dev -p 3100 --hostname zmanuals.localhost",
     "build": "next build && node scripts/copy-original-pdfs.js && node scripts/restructure-build.js && pnpm run doc:build && mkdir -p out/manuals/doc && cp -r doc/build/* out/manuals/doc/",
     "start": "next start",
-    "serve": "pnpm dlx serve out -l 3100",
+    "serve": "pnpm dlx serve out -l 8030",
     "// ── Documentation ────────────────────────────": "",
     "doc:dev": "cd doc && pnpm run start",
     "doc:build": "cd doc && pnpm run build",
