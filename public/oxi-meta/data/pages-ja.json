@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "processedAt": "2026-03-22T15:08:49.860Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/oxi-meta/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "ユーザーガイド\n\nV 1.0",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/oxi-meta/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "© OXI ELECTRONIC INSTRUMENTS SLU – 2023 – All rights reserved.\n\nwww.oxiinstruments.com\n\n本マニュアルに記載されている情報は予告なく変更されることがあり、OXI ELECTRONIC INSTRUMENTS SLU（以下、OXI Instruments）による拘束力のある確約を示すものではありません。本マニュアルに記載されているソフトウェアは、ライセンス契約または秘密保持契約の条件に基づいて提供されます。ソフトウェアライセンス契約は、その合法的な使用に関する条件を規定しています。本マニュアルのいかなる部分も、OXI INSTRUMENTSの書面による明示的な許可なしに、購入者の個人的使用以外の目的で、いかなる形式または手段によっても複製・転載することはできません。\n\n本マニュアルに記載されているその他のすべての製品名、ロゴ、または会社名は、それぞれの所有者の商標または登録商標です。\n\nManual version: 1.0\nRevision date: 10 July 2024\n\nHardware version: OXI META v1.0\nManufacturer: OXI Instruments\n\n**仕様変更について:**\n本マニュアルに記載されている情報は、印刷時点で正確であると考えられています。ただし、OXI Instrumentsは、購入済みのハードウェアを更新する通知または義務なしに、仕様の一部を変更または修正する権利を留保します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/oxi-meta/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "WELCOME\n\nOXI Metaをお買い上げいただき、誠にありがとうございます。\n\nこのマニュアルでは、モジュールの細かな詳細について説明します。それ以外のことについては、これまでで最も使いやすいモジュールですから！\n\n— **OXI team**",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/oxi-meta/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "INDEX\n\nWELCOME　3\n\nINDEX　4\n\nINTRODUCTION　6\n\nSPECIFICATIONS　7\n\nINTERFACE　8\n\nEFFECT SCENES　9\n SPACE　9\n RISER　9\n DJ FILTER　9\n LOOP / BEAT-REPEAT　10\n DELAY　10\n GATER　10\n\nDECLARATION OF CONFORMITY　11\n\nTERMS OF WARRANTY　12",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/oxi-meta/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "このページは意図的に空白のままにしています。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/oxi-meta/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "INTRODUCTION\n\nMETAは、ライブパフォーマーとスタジオユーザーのために設計されたトランジションFX scenesモジュールです。\n\n高品質なステレオエフェクトモジュールで、コンパクトなパッケージに6種類の強力なデュアルエフェクトsceneを搭載しています。\n\nトランジションに最適な理由は、各エフェクトがシンプルな直感的操作でありながら、ドロップや曲から曲へのミックス、そしてもちろん単純なエフェクトユニットとしてサウンドに彩りを加えるための、**強力な**scenic effectsを提供するように設計されているからです。\n\n操作はとても簡単です。6つのsceneから1つを選択し、大きなknobでお好みのFX量と方向を調整し、準備ができたらOffを押してそのテンションを解放するだけです。\n\nFX量のモジュレーションとFXのコントロールのためのCVも搭載しています。\n\n驚くほど簡単に素晴らしいトランジションを実現でき、パフォーマンスのコントロールを保ちながら、さらに楽しめるようになります。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/oxi-meta/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "SPECIFICATIONS\n\n**Dimensions**\n6 Hp\n22 mm deep\n\n**Panel**\nカラーシルクプリント付きブラックアノダイズドアルミニウム。\n\n**Consumption**\n+12V - 110 mA\n-12V - 20 mA\n+5V - 0 mA\n\n**Outputs**\n2x モノラルDCカップリング出力（±5 V）\n2x モノラルACカップリング入力（±5 V）\n\n**Inputs**\n2x CV入力 ±5 V（±10V最大）。\n1x Clock入力",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/oxi-meta/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "INTERFACE\n\n**Big Knob（パフォーマンス用）:**\n- Wet Amountとマクロコントロール。Knobの位置に応じてFX Selectionが切り替わります。\n\n**FX Control Knob:**\n- エフェクトパラメーターのコントロール。\n\n**Scene Buttons:**\n- FX Sceneの独立したボタンセレクター。\n- OFF Buttonで任意のタイミングにFX Sceneを無効化できます。\n\n**Stereo Audio:**\n- Stereoインプット/アウトプット。\n\n**CV Inputs:**\n- CV InputsはFX AmountとControlに影響します。\n- Delay、Looper、GaterエフェクトをsyncするにはClock Inputが必要です。\n1拍あたり1パルスのclock解像度を受け付けます（TAP tempoボタンがそれに応じて点滅します）。\n\n**Tap tempo Button**\n- 内部または外部のtempoに応じて点滅します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/oxi-meta/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "EFFECT SCENES\n\nSPACE\n\nFX knobの位置に応じて2種類のReverbが使用できます。\n\nFX knob 時計回り: トーンとフィルターコントロールを備えたクラシックなロングテールリバーブ。\n- **FX**: Reverbのかかり量とHigh-Passフィルターの量を設定します。\n- **CTRL**: リバーブのトーンを設定します。\n- SPACEボタンを速く点滅するまで長押しし、CTRL knobを回してHigh-Passフィルターの量を調整します。\n\nFX knob 反時計回り: シマリーなテクスチャーからディープ/ブラックホールテクスチャーまでの実験的なリバーブ。\n- **FX**: リバーブのかかり量を設定します。\n- **CTRL**: リバーブのトーンを設定します。\n\nRISER\n\nFX knobの位置に応じて2種類のRiserが使用できます。\n\nFX knob 時計回り: ハイパスフィルターにリバーブとノイズのビルドアップを加えたもの。\n- **FX**: Riserの強度を設定します。\n- **CTRL**: フィルターのレゾナンスとノイズの量に影響します。\n\nFX knob 反時計回り: ハイパスフィルターにリバーブとShepard Toneスタイルのビルドアップを加えたもの。\n- **FX**: Riserの強度を設定します。\n- **CTRL**: フィルターのレゾナンス、ピッチライザーの量、ノイズの量に影響します。\n\nDJ FILTER\n\nレゾナンスコントロールを備えたDJスタイルのFilterです。\n\nFX knob 時計回り: ハイパスフィルター。\n\nFX knob 反時計回り: ローパスフィルター。\n- **FX**: フィルターの周波数を設定します。\n- **CTRL**: フィルターのレゾナンスを設定します。High Passモードでは、低域のレゾナンスを下げてベースの混濁を防ぎます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/oxi-meta/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "LOOP / BEAT-REPEAT\n\nLooperとReverse Looper / beat-repeatです。High-Pass filterを加えながらテンポにシンクします。\n\nFX knobを時計回り: forward looper。\n\nFX knobを反時計回り: reverse looper。\n\n- **FX** はLooperを起動し、ドライ信号とlooper bufferをクロスフェードします。このコントロールは同時にhigh-pass filterを段階的に起動します。\n- **CTRL** は内部または外部BPMに対するlooperのdivisionを設定します。\n- LOOPボタンを速く点滅するまで長押しし、CTRL knobを回してfilterの量を調整します。\n\nTime Divisionは反時計回りから時計回りの順で以下の通りです。\n\n1/32、1/16、1/8、1/4、1/2、1/1\n\nDELAY\n\nリバーブウォッシュとHP/LP Filterを備えたClocked Delayです。\n\nFX knobを時計回り: high pass filter付きdelay。\n\nFX knobを反時計回り: low-pass filter付きdelay。\n\n- **FX** はエフェクト量とfilter cutoffを設定します。\n- **CTRL** は内部または外部BPMに対するdelayのdivisionを設定します。\n- DELAYボタンを速く点滅するまで長押しし、CTRL knobを回してfilterの量を調整します。\n\nTime Divisionは反時計回りから時計回りの順で以下の通りです。\n\n1/32、1/24、1/16、1/12、1/8、1/6、1/4、1/3、1/2、2/3、3/4、1/1、4/3、3/2、2/1\n\n完全に反時計回り、1/32未満はミリ秒単位での1/32の分数になります。\n\nGATER\n\n1つのknobに2つのエフェクトが含まれます。\n\nFX knobを時計回り: time division controlとbuit-in High-Pass filterを備えたGATER。\n\n- **FX** はエフェクト量とfilter cutoffを設定します。\n- **CTRL** は内部または外部BPMに対するGaterのdivisionを設定します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/oxi-meta/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "- GATERボタンを速い点滅になるまで長押しし、CTRLノブを回してフィルターの量を調整します。\n\nFX knob反時計回り: リバーブおよびビルトインHigh Passフィルター付きのSnare-Rollビルドアップ\n- **FX**はSnare-Rollとリバーブの量、およびフィルターカットオフを設定します。\n- **CTRL**は内部または外部BPMに対するSnare-Rollのレートを設定します。\n- GATERボタンを速い点滅になるまで長押しし、CTRLノブを回してフィルターの量を調整します。\n\nTime Divisionは、反時計回りから時計回りの順に以下の通りです。\n\n1/32, 1/16, 1/8, 1/4, 1/2, 1/1",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/oxi-meta/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/oxi-meta/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "INPUT GAIN\n\nOFF ボタンを点滅するまで長押しし、CTRL ノブを回して入力ゲインを調整します。\nこれにより、FX 全体のレベルと入力信号の間でバランスを取ることができます。\n\nCLOCK INPUT\n\nClock Input は、Delay、Looper、Gater エフェクトを同期するために必要です。\n**1 pulse per beat clock resolution**（TAP テンポボタンがそれに合わせて点滅します）を想定しています。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/oxi-meta/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "適合宣言\n\n本製品は、欧州指令2014/53/EU および指令2011/65/EUの要件に適合しています。\n\nEU適合宣言の全文は、以下のインターネットアドレスでご覧いただけます。\nwww.oxiinstruments.com/\n\n**環境に関する注意:**\n\nこのシンボルは、本製品を家庭ごみとして処分してはならないことを示しています。製品の使用期間が終了した場合は、電気機器のリサイクルのために、適切な回収拠点に持ち込んでください。電池および電気機器を正しくリサイクルすることにより、環境への健康リスクや安全上のリスクを回避することに貢献できます。\n\n製品廃棄に関する注意事項: 本製品が修理不可能なほど破損した場合、またはいかなる理由によっても使用期間が終了したと判断された場合は、鉛、電池、プラスチックなどの材料を含む製品の適切な廃棄およびリサイクルに関する地域・州・欧州の規制、ならびにこれらの種類の製品の回収拠点についてご確認ください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/oxi-meta/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "保証規定\n\n返金ポリシー（欧州連合のみ）\n\n消費者は、製品を購入してから14日以内であれば、製品を返品し、購入代金の全額返金を受けることができます。全額返金を受けるためには、製品が購入時と同じ状態であり、すべての付属品が揃っている必要があります。\n\n送料はお客様のご負担となります。\n\n保証\n\nOXI Instrumentsは、同梱のハードウェア製品および付属品について、購入日から2年間、材料および製造上の欠陥に対して保証します。特段の証明がない限り、製品の引渡しから6ヶ月以内に生じた不適合は、引渡し時点で既に存在していたものと推定されます。\n\n以下の場合の修理費用は保証の対象外となります。\n\n● OXI Coralの誤使用（極端な環境下での使用、または誤った方法での使用を含む）。\n● 製品の不適切な取り扱い。\n● 通常の消耗、または事故や乱用による損傷。\n● OXI Instrumentsが認定していない付属品の使用による不具合。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/oxi-meta/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "© 2023 OXI ELECTRONIC INSTRUMENTS SLU. All rights reserved. OXI INSTRUMENTS および OXI ロゴは、OXI INSTRUMENTS の EU における登録商標であり、その他多くの国でも登録されています。OXI CORAL は OXI INSTRUMENTS の商標です。デザインおよび仕様は予告なく変更される場合があります。",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

@@ -171,6 +171,14 @@ import westonTriviumPages from '@/public/weston-trivium/data/pages-ja.json';
 import westonM3sManifest from '@/public/weston-m3s/data/manifest.json';
 import westonM3sPages from '@/public/weston-m3s/data/pages-ja.json';
 
+// Import mordax-data
+import mordaxDataManifest from '@/public/mordax-data/data/manifest.json';
+import mordaxDataPages from '@/public/mordax-data/data/pages-ja.json';
+
+// Import oxi-meta
+import oxiMetaManifest from '@/public/oxi-meta/data/manifest.json';
+import oxiMetaPages from '@/public/oxi-meta/data/pages-ja.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -346,6 +354,14 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'weston-m3s': {
     manifest: westonM3sManifest as unknown as ManualManifest,
     pages: westonM3sPages as unknown as ManualPagesData,
+  },
+  'mordax-data': {
+    manifest: mordaxDataManifest as unknown as ManualManifest,
+    pages: mordaxDataPages as unknown as ManualPagesData,
+  },
+  'oxi-meta': {
+    manifest: oxiMetaManifest as unknown as ManualManifest,
+    pages: oxiMetaPages as unknown as ManualPagesData,
   },
 };
 
