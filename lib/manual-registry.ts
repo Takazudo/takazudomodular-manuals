@@ -199,6 +199,10 @@ import rykVectorWavePages from '@/public/ryk-vector-wave/data/pages-ja.json';
 import rykNightRiderManifest from '@/public/ryk-night-rider/data/manifest.json';
 import rykNightRiderPages from '@/public/ryk-night-rider/data/pages-ja.json';
 
+// Import ryk-time-slice
+import rykTimeSliceManifest from '@/public/ryk-time-slice/data/manifest.json';
+import rykTimeSlicePages from '@/public/ryk-time-slice/data/pages-ja.json';
+
 export interface ManualRegistryEntry {
   manifest: ManualManifest;
   pages: ManualPagesData;
@@ -402,6 +406,10 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'ryk-night-rider': {
     manifest: rykNightRiderManifest as unknown as ManualManifest,
     pages: rykNightRiderPages as unknown as ManualPagesData,
+  },
+  'ryk-time-slice': {
+    manifest: rykTimeSliceManifest as unknown as ManualManifest,
+    pages: rykTimeSlicePages as unknown as ManualPagesData,
   },
 };
 
