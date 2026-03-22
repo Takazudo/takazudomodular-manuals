@@ -7,41 +7,24 @@
  * Usage: node scripts/pdf-render-browser.js --slug ryk-algo
  */
 
-import { existsSync, readdirSync, mkdirSync, readFileSync } from 'fs';
-import { join, dirname, resolve } from 'path';
+import { mkdirSync, readFileSync } from 'fs';
+import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { chromium } from 'playwright';
 import http from 'http';
+import { resolveManualConfig } from './lib/pdf-config-resolver.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = join(__dirname, '..');
 
-const slugIdx = process.argv.indexOf('--slug');
-const slug = slugIdx !== -1 ? process.argv[slugIdx + 1] : null;
-if (!slug) {
-  console.error('Usage: node scripts/pdf-render-browser.js --slug <slug>');
-  process.exit(1);
-}
-
-const DPI = 300;
+const config = resolveManualConfig(ROOT_DIR);
+const DPI = config.settings.imageDPI;
 const SCALE = DPI / 96;
 
 async function renderPages() {
-  const pdfDir = join(ROOT_DIR, 'manual-pdf', slug);
-  if (!existsSync(pdfDir)) {
-    console.error(`PDF dir not found: ${pdfDir}`);
-    process.exit(1);
-  }
-
-  const pdfFile = readdirSync(pdfDir).find((f) => f.endsWith('.pdf'));
-  if (!pdfFile) {
-    console.error(`No PDF found in ${pdfDir}`);
-    process.exit(1);
-  }
-
-  const pdfPath = resolve(pdfDir, pdfFile);
-  const outputDir = join(ROOT_DIR, 'public', slug, 'pages');
+  const pdfPath = config.sourcePdf;
+  const outputDir = join(ROOT_DIR, config.output.images);
   mkdirSync(outputDir, { recursive: true });
 
   console.log(`Rendering: ${pdfPath}`);

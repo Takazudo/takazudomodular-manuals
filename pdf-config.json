@@ -5,5 +5,10 @@
     "translationModel": "claude-sonnet-4-5-20250929",
     "maxRetries": 3,
     "parallelProcessing": false
+  },
+  "manualOverrides": {
+    "ryk-algo": {
+      "renderStrategy": "browser"
+    }
   }
 }

@@ -9,6 +9,7 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs';
+import { execFileSync } from 'child_process';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { pdfToPng } from 'pdf-to-png-converter';
@@ -25,6 +26,21 @@ async function renderPdfPages() {
   console.log('🖼️  PDF Page Rendering Script (Page by Page)');
   console.log('='.repeat(50));
   console.log(`📦 Manual: ${config.slug}`);
+
+  // Check render strategy — delegate to browser renderer if needed
+  if (config.settings.renderStrategy === 'browser') {
+    console.log('🌐 Render strategy: browser (Playwright)');
+    console.log('   Delegating to pdf-render-browser.js...');
+    console.log('');
+    const browserScript = join(__dirname, 'pdf-render-browser.js');
+    execFileSync('node', [browserScript, '--slug', config.slug], {
+      stdio: 'inherit',
+      cwd: ROOT_DIR,
+    });
+    return;
+  }
+
+  console.log('📄 Render strategy: default (pdf-to-png-converter)');
 
   const pagesDir = join(ROOT_DIR, config.output.splitPdf);
   const outputDir = join(ROOT_DIR, config.output.images);
