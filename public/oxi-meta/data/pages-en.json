@@ -111,8 +111,8 @@
       "image": "/oxi-meta/pages/page-012.png",
       "title": "Page 12",
       "sectionName": null,
-      "content": "12\n\n-- 1 of 1 --",
-      "hasContent": true,
+      "content": "",
+      "hasContent": false,
       "tags": []
     },
     {
