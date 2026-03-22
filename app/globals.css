@@ -1,29 +1,41 @@
 @import 'tailwindcss';
 
+/* ══════════════════════════════════════════════════════════════════════
+   Tier 1 — Palette (raw values)
+   Design system source-of-truth. Components never reference these
+   directly; they flow through @theme tokens (Tier 2) instead.
+   ══════════════════════════════════════════════════════════════════════ */
+
 @layer base {
   :root {
-    /* colors */
+    /* ── Colors: surface & text ── */
     --zd-color-black: rgb(28, 25, 23);
     --zd-color-white: rgb(214, 211, 209);
-    --zd-color-link: #fff; /* Link color is now white, with text-shadow for visibility */
-    --zd-color-active: #713f12;
     --zd-color-gray: rgb(120, 113, 108);
     --zd-color-gray2: #201f1f;
-    --zd-color-strong: #d97706; /* Orange/amber for strong text emphasis (was previously link color) */
-    --zd-color-sold: oklch(
-      50.5% 0.213 27.518
-    ); /* Orange/amber for strong text emphasis (was previously link color) */
+
+    /* ── Colors: interactive ── */
+    --zd-color-link: #fff;
+    --zd-color-active: #713f12;
+    --zd-color-outline: #ea580c; /* orange-600 — focus/active outlines */
+
+    /* ── Colors: emphasis ── */
+    --zd-color-strong: #d97706; /* orange/amber — strong text emphasis */
+    --zd-color-sold: oklch(50.5% 0.213 27.518); /* orange/amber — sold state */
+
+    /* ── Colors: status & feedback ── */
     --zd-color-notify: #22c55e;
     --zd-color-error: #f43f5e;
     --zd-color-debug: #ff0000;
-    --zd-color-price: #fbbf24; /* yellow-400 */
-    --zd-color-outline: #ea580c; /* orange-600 for focus/active outlines */
-    --zd-color-mercari-corporate: #b91c1c; /* red-700 for Mercari brand */
 
-    /* shadows */
+    /* ── Colors: brand & commerce ── */
+    --zd-color-price: #fbbf24; /* yellow-400 */
+    --zd-color-mercari-corporate: #b91c1c; /* red-700 — Mercari brand */
+
+    /* ── Shadows ── */
     --zd-text-shadow-md: 0.05em 0.05em 0 #000;
 
-    /* line-height */
+    /* ── Line heights ── */
     --zd-lineHeight-none: 1;
     --zd-lineHeight-tight: 1.4;
     --zd-lineHeight-snug: 1.6;
@@ -31,7 +43,7 @@
     --zd-lineHeight-relaxed: 1;
     --zd-lineHeight-loose: 2.3;
 
-    /* font-size / line-height combinations */
+    /* ── Font sizes (with paired line-heights) ── */
     --zd-font-xs-size: 1rem;
     --zd-font-xs-lineHeight: 1.4;
     --zd-font-sm-size: 1.1rem;
@@ -51,9 +63,8 @@
     --zd-font-5xl-size: 4.8rem;
     --zd-font-5xl-lineHeight: 1.3;
 
-    /* spacing */
+    /* ── Spacing: horizontal (hgap) ── */
     --zd-spacing-1px: 1px;
-
     --zd-spacing-hgap-2xs: 5px;
     --zd-spacing-hgap-xs: 12px;
     --zd-spacing-hgap-sm: 20px;
@@ -64,6 +75,7 @@
     --zd-spacing-hgap-xl: 100px;
     --zd-spacing-hgap-2xl: 250px;
 
+    /* ── Spacing: vertical (vgap) ── */
     --zd-spacing-vgap-2xs: 4px;
     --zd-spacing-vgap-xs: 8px;
     --zd-spacing-vgap-sm: 20px;
@@ -74,10 +86,17 @@
   }
 }
 
-/* Zudo Design System - Theme Configuration */
+/* ══════════════════════════════════════════════════════════════════════
+   Tier 2 — Theme Tokens (semantic purpose, exposed to Tailwind)
+   Maps palette values (Tier 1) to semantic roles. Components use
+   these via Tailwind utilities (e.g. bg-zd-black, text-zd-white).
+   All Tailwind defaults are reset; only these tokens are available.
+   ══════════════════════════════════════════════════════════════════════ */
+
 @theme {
-  /* STEP 1: Reset all Tailwind defaults using wildcard patterns
-     This removes ALL default Tailwind utilities (p-4, bg-blue-500, etc.) */
+  /* ── Reset: remove ALL Tailwind defaults ──
+     After this, utilities like p-4 or bg-blue-500 no longer exist.
+     Only the tokens defined below will generate valid utilities. */
   --spacing-*: initial;
   --color-*: initial;
   --font-size-*: initial;
@@ -97,12 +116,47 @@
   --min-width-*: initial;
   --min-height-*: initial;
 
-  /* STEP 2: Define ONLY Zudo Design System tokens
-     Only these custom tokens will be available as Tailwind utilities */
+  /* ══════════════════════════════════════════════
+     Colors — semantic theme tokens
+     ══════════════════════════════════════════════ */
 
-  /* Spacing - replaces all Tailwind default spacing */
+  /* Surface & text */
+  --color-zd-black: var(--zd-color-black);
+  --color-zd-white: var(--zd-color-white);
+  --color-zd-gray: var(--zd-color-gray);
+  --color-zd-gray2: var(--zd-color-gray2);
+
+  /* Interactive */
+  --color-zd-link: var(--zd-color-link);
+  --color-zd-active: var(--zd-color-active);
+  --color-zd-outline: var(--zd-color-outline);
+
+  /* Emphasis */
+  --color-zd-strong: var(--zd-color-strong);
+  --color-zd-sold: var(--zd-color-sold);
+
+  /* Status & feedback */
+  --color-zd-notify: var(--zd-color-notify);
+  --color-zd-error: var(--zd-color-error);
+  --color-debug: var(--zd-color-debug);
+
+  /* Brand & commerce */
+  --color-zd-price: var(--zd-color-price);
+  --color-zd-mercari-corporate: var(--zd-color-mercari-corporate);
+
+  /* Pure utility colors */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-transparent: transparent;
+
+  /* ══════════════════════════════════════════════
+     Spacing
+     ══════════════════════════════════════════════ */
+
   --spacing-0: 0;
   --spacing-1px: var(--zd-spacing-1px);
+
+  /* Horizontal (hgap) */
   --spacing-hgap-2xs: var(--zd-spacing-hgap-2xs);
   --spacing-hgap-xs: var(--zd-spacing-hgap-xs);
   --spacing-hgap-sm: var(--zd-spacing-hgap-sm);
@@ -112,6 +166,8 @@
   --spacing-hgap-lg-x2: var(--zd-spacing-hgap-lg-x2);
   --spacing-hgap-xl: var(--zd-spacing-hgap-xl);
   --spacing-hgap-2xl: var(--zd-spacing-hgap-2xl);
+
+  /* Vertical (vgap) */
   --spacing-vgap-2xs: var(--zd-spacing-vgap-2xs);
   --spacing-vgap-xs: var(--zd-spacing-vgap-xs);
   --spacing-vgap-sm: var(--zd-spacing-vgap-sm);
@@ -120,26 +176,11 @@
   --spacing-vgap-xl: var(--zd-spacing-vgap-xl);
   --spacing-vgap-2xl: var(--zd-spacing-vgap-2xl);
 
-  /* Colors - replaces all Tailwind default colors */
-  --color-debug: var(--zd-color-debug);
-  --color-zd-black: var(--zd-color-black);
-  --color-zd-white: var(--zd-color-white);
-  --color-zd-link: var(--zd-color-link);
-  --color-zd-active: var(--zd-color-active);
-  --color-zd-gray: var(--zd-color-gray);
-  --color-zd-gray2: var(--zd-color-gray2);
-  --color-zd-notify: var(--zd-color-notify);
-  --color-zd-error: var(--zd-color-error);
-  --color-zd-price: var(--zd-color-price);
-  --color-zd-outline: var(--zd-color-outline);
-  --color-zd-mercari-corporate: var(--zd-color-mercari-corporate);
-  --color-zd-strong: var(--zd-color-strong);
-  --color-zd-sold: var(--zd-color-sold);
-  --color-black: #000; /* Pure black for utilities */
-  --color-white: #fff; /* Pure white for utilities */
-  --color-transparent: transparent; /* Transparent for utilities */
+  /* ══════════════════════════════════════════════
+     Typography — font sizes & line heights
+     ══════════════════════════════════════════════ */
 
-  /* Typography - Font sizes with line heights (Tailwind v4 format) */
+  /* Font sizes with paired line-heights (Tailwind v4 format) */
   --text-xs: var(--zd-font-xs-size);
   --text-xs--line-height: var(--zd-font-xs-lineHeight);
   --text-sm: var(--zd-font-sm-size);
@@ -159,7 +200,7 @@
   --text-5xl: var(--zd-font-5xl-size);
   --text-5xl--line-height: var(--zd-font-5xl-lineHeight);
 
-  /* Line heights - standalone */
+  /* Standalone line heights */
   --line-height-none: var(--zd-lineHeight-none);
   --line-height-tight: var(--zd-lineHeight-tight);
   --line-height-snug: var(--zd-lineHeight-snug);
@@ -167,7 +208,10 @@
   --line-height-relaxed: var(--zd-lineHeight-relaxed);
   --line-height-loose: var(--zd-lineHeight-loose);
 
-  /* Font families with Japanese fallbacks */
+  /* ══════════════════════════════════════════════
+     Font families
+     ══════════════════════════════════════════════ */
+
   --font-noto:
     'Noto Sans', 'Noto Sans JP', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     'Hiragino Sans', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', Meiryo, sans-serif;
@@ -179,7 +223,10 @@
     'Hiragino Sans', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', Meiryo, sans-serif;
   --font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
-  /* Font weights (Tailwind defaults) */
+  /* ══════════════════════════════════════════════
+     Font weights
+     ══════════════════════════════════════════════ */
+
   --font-weight-thin: 100;
   --font-weight-extralight: 200;
   --font-weight-light: 300;
@@ -190,13 +237,20 @@
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
 
-  /* Breakpoints */
+  /* ══════════════════════════════════════════════
+     Breakpoints
+     ══════════════════════════════════════════════ */
+
   --breakpoint-sm: 580px;
   --breakpoint-md: 740px;
   --breakpoint-lg: 980px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1630px;
   --breakpoint-3xl: 1800px;
+
+  /* ══════════════════════════════════════════════
+     Borders
+     ══════════════════════════════════════════════ */
 
   /* Border widths */
   --border-width-default: 1px;
@@ -214,7 +268,10 @@
   --radius-md: 0.375rem; /* 6px */
   --radius-lg: 0.5rem; /* 8px */
 
-  /* Box shadows (Tailwind defaults) */
+  /* ══════════════════════════════════════════════
+     Shadows
+     ══════════════════════════════════════════════ */
+
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -223,6 +280,10 @@
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   --shadow-none: 0 0 #0000;
+
+  /* ══════════════════════════════════════════════
+     Sizing — widths, heights, max/min
+     ══════════════════════════════════════════════ */
 
   /* Common width/height utilities */
   --width-full: 100%;
@@ -233,7 +294,7 @@
   --max-width-full: 100%;
   --max-height-full: 100%;
 
-  /* Max-width size scale (xl through 7xl) */
+  /* Max-width size scale */
   --max-width-xs: 20rem; /* 320px */
   --max-width-sm: 24rem; /* 384px */
   --max-width-md: 28rem; /* 448px */
@@ -281,6 +342,10 @@
   --width-5\/6: 83.333333%;
 }
 
+/* ══════════════════════════════════════════════════════════════════════
+   Custom Utilities
+   ══════════════════════════════════════════════════════════════════════ */
+
 @utility zd-gradient-black-to-transparent {
   background: linear-gradient(to bottom, var(--zd-color-black) 30%, transparent);
   background-repeat: repeat-x;
@@ -322,8 +387,7 @@
   }
 }
 
-/* shadows */
-
+/* Text shadows */
 @utility text-shadow-md {
   text-shadow: var(--zd-text-shadow-md);
 }
@@ -340,10 +404,11 @@
   }
 }
 
-/*
-  Base styles for HTML elements.
-  The default border color has changed to `currentcolor` in Tailwind CSS v4.
-*/
+/* ══════════════════════════════════════════════════════════════════════
+   Base Styles
+   Default border color changed to `currentcolor` in Tailwind CSS v4.
+   ══════════════════════════════════════════════════════════════════════ */
+
 @layer base {
   *,
   ::after,
@@ -400,7 +465,10 @@
   }
 }
 
-/* Page transition animations */
+/* ══════════════════════════════════════════════════════════════════════
+   Animations & Transitions
+   ══════════════════════════════════════════════════════════════════════ */
+
 @keyframes pageSlideIn {
   from {
     opacity: 0;
@@ -441,7 +509,7 @@
   }
 }
 
-/* Animation utility classes */
+/* Page transition classes */
 .page-fade-in {
   animation: pageSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
@@ -474,7 +542,11 @@
   transition: none; /* Instant return to full opacity */
 }
 
-/* Hide scrollbar for carousel but keep scroll functionality */
+/* ══════════════════════════════════════════════════════════════════════
+   Component Styles
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* Scrollbar: hide for carousel but keep scroll functionality */
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
