@@ -66,7 +66,7 @@ async function renderPages() {
 
   const browser = await chromium.launch();
   const context = await browser.newContext({
-    deviceScaleFactor: SCALE,
+    deviceScaleFactor: 1,
   });
   const page = await context.newPage();
 
@@ -99,17 +99,22 @@ async function renderPages() {
   console.log(`Pages: ${totalPages}`);
 
   for (let i = 1; i <= totalPages; i++) {
-    await page.evaluate(async (pageNum) => {
-      const pg = await window._doc.getPage(pageNum);
-      const viewport = pg.getViewport({ scale: 1 });
-      const canvas = document.getElementById('canvas');
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
-      const ctx = canvas.getContext('2d');
-      ctx.fillStyle = 'white';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      await pg.render({ canvasContext: ctx, viewport }).promise;
-    }, i);
+    await page.evaluate(
+      async ({ pageNum, scale }) => {
+        const pg = await window._doc.getPage(pageNum);
+        const viewport = pg.getViewport({ scale });
+        const canvas = document.getElementById('canvas');
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        canvas.style.width = viewport.width + 'px';
+        canvas.style.height = viewport.height + 'px';
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        await pg.render({ canvasContext: ctx, viewport }).promise;
+      },
+      { pageNum: i, scale: SCALE },
+    );
 
     const canvas = page.locator('#canvas');
     const pageNum = String(i).padStart(3, '0');
