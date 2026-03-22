@@ -142,10 +142,17 @@ export function resolveManualConfig(rootDir) {
     },
   };
 
+  // Merge per-manual overrides into settings
+  const manualOverrides = config.manualOverrides?.[slug] || {};
+  const mergedSettings = { ...config.settings, ...manualOverrides };
+  if (!mergedSettings.renderStrategy) {
+    mergedSettings.renderStrategy = 'default';
+  }
+
   // Return merged configuration
   return {
     ...paths,
-    settings: config.settings,
+    settings: mergedSettings,
     partConfig: config.partConfig,
   };
 }
