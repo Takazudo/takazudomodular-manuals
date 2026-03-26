@@ -109,9 +109,15 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
   // Lazy loading observer (separate from page detection)
   const lazyObserverRef = useRef<IntersectionObserver | null>(null);
 
+  // Suppress lazy loading during programmatic scroll jumps (e.g., thumbs dialog)
+  const isJumpingRef = useRef(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
+        // Skip loading intermediate pages during a programmatic scroll jump
+        if (isJumpingRef.current) return;
+
         const toLoad: number[] = [];
         for (const entry of entries) {
           if (entry.isIntersecting) {
@@ -195,6 +201,30 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
     }
   }, [initialPage]);
 
+  // Re-enable lazy loading after a programmatic scroll jump settles
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleScrollEnd = () => {
+      if (!isJumpingRef.current) return;
+      isJumpingRef.current = false;
+
+      // Trigger observer re-evaluation for currently visible pages
+      // by disconnecting and re-observing all elements
+      const observer = lazyObserverRef.current;
+      if (observer) {
+        for (const el of pageElementsRef.current.values()) {
+          observer.unobserve(el);
+          observer.observe(el);
+        }
+      }
+    };
+
+    container.addEventListener('scrollend', handleScrollEnd);
+    return () => container.removeEventListener('scrollend', handleScrollEnd);
+  }, []);
+
   // Expose scrollToPage for parent/sibling components (sidebar, modal)
   useImperativeHandle(
     ref,
@@ -203,11 +233,23 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
         const container = scrollContainerRef.current;
         const el = pageElementsRef.current.get(pageNum);
         if (container && el) {
+          // Suppress lazy loading during the scroll animation
+          isJumpingRef.current = true;
+
+          // Pre-load pages near the target so they're ready on arrival
+          setLoadedImages((prev) => {
+            const next = new Set(prev);
+            for (let i = Math.max(1, pageNum - 2); i <= Math.min(totalPages, pageNum + 2); i++) {
+              next.add(i);
+            }
+            return next;
+          });
+
           container.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
         }
       },
     }),
-    [],
+    [totalPages],
   );
 
   // Notify parent when current page changes
