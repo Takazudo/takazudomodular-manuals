@@ -1,6 +1,15 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useState, useCallback, useMemo } from 'react';
+import {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useLayoutEffect,
+  useRef,
+  useState,
+  useCallback,
+  useMemo,
+} from 'react';
 import ctl from '@netlify/classnames-template-literals';
 import type { ManualPage } from '@/lib/types/manual';
 import { MarkdownRenderer } from '@/components/markdown-renderer';
@@ -71,12 +80,14 @@ interface ScrollViewerProps {
   onCurrentPageChange?: (pageNum: number) => void;
 }
 
-export function ScrollViewer({
-  pages,
-  initialPage,
-  totalPages,
-  onCurrentPageChange,
-}: ScrollViewerProps) {
+export interface ScrollViewerHandle {
+  scrollToPage: (pageNum: number) => void;
+}
+
+export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(function ScrollViewer(
+  { pages, initialPage, totalPages, onCurrentPageChange },
+  ref,
+) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const translationColumnRef = useRef<HTMLDivElement>(null);
   const pageElementsRef = useRef<Map<number, HTMLDivElement>>(new Map());
@@ -185,6 +196,21 @@ export function ScrollViewer({
     }
   }, [initialPage]);
 
+  // Expose scrollToPage for parent/sibling components (sidebar, modal)
+  useImperativeHandle(
+    ref,
+    () => ({
+      scrollToPage: (pageNum: number) => {
+        const container = scrollContainerRef.current;
+        const el = pageElementsRef.current.get(pageNum);
+        if (container && el) {
+          container.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
+        }
+      },
+    }),
+    [],
+  );
+
   // Notify parent when current page changes
   useEffect(() => {
     onCurrentPageChange?.(currentPage);
@@ -260,4 +286,4 @@ export function ScrollViewer({
       </div>
     </div>
   );
-}
+});

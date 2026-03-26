@@ -1,13 +1,14 @@
 import { notFound } from 'next/navigation';
 import {
   getManualPage,
+  getAllPages,
   getTotalPages,
   pageExists,
   getAllPageNumbers,
   getManifest,
 } from '@/lib/manual-data';
 import { isValidManual, getAvailableManuals } from '@/lib/manual-registry';
-import { PageViewer } from '@/components/page-viewer';
+import { ManualViewer } from '@/components/viewer/manual-viewer';
 
 interface PageParams {
   manualId: string;
@@ -84,6 +85,7 @@ export default async function Page({ params }: PageProps) {
   }
 
   const page = getManualPage(manualId, pageNum);
+  const allPages = getAllPages(manualId);
   const totalPages = getTotalPages(manualId);
 
   if (!page) {
@@ -91,6 +93,12 @@ export default async function Page({ params }: PageProps) {
   }
 
   return (
-    <PageViewer page={page} currentPage={pageNum} totalPages={totalPages} manualId={manualId} />
+    <ManualViewer
+      page={page}
+      allPages={allPages}
+      currentPage={pageNum}
+      totalPages={totalPages}
+      manualId={manualId}
+    />
   );
 }
