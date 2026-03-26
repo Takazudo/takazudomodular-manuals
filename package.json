@@ -61,6 +61,8 @@
     "check": "pnpm run typecheck && pnpm run lint && pnpm run format",
     "check:fix": "pnpm run lint:fix && pnpm run format:fix",
     "// ── Testing ──────────────────────────────────": "",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:smoke": "node scripts/test-all-pages-fast.js",
@@ -96,6 +98,7 @@
     "@types/react-dom": "^19.2.3",
     "@typescript-eslint/eslint-plugin": "^8.57.2",
     "@typescript-eslint/parser": "^8.57.2",
+    "@vitejs/plugin-react": "^4.7.0",
     "canvas": "^3.2.2",
     "eslint": "^10.1.0",
     "eslint-config-next": "^15.5.14",
@@ -103,6 +106,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "glob": "^13.0.6",
     "image-size": "^2.0.2",
+    "jsdom": "^29.0.1",
     "lint-staged": "^16.4.0",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^2.4.5",
@@ -113,6 +117,7 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3",
+    "vitest": "^1.6.1",
     "wrangler": "^4.77.0"
   },
   "lint-staged": {

@@ -60,6 +60,12 @@ jobs:
           pnpm run format
           echo "✅ Format check passed"
 
+      - name: Run unit tests
+        run: |
+          echo "Running unit tests..."
+          pnpm run test:unit
+          echo "Unit tests passed"
+
       - name: Comment quality check status
         if: always()
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
@@ -74,6 +80,7 @@ jobs:
             - TypeScript: ${success ? '✅' : '❌'}
             - ESLint: ${success ? '✅' : '❌'}
             - Prettier: ${success ? '✅' : '❌'}
+            - Unit Tests: ${success ? '✅' : '❌'}
 
             ${success ? '' : '⚠️ Please fix the issues above before merging.'}`;
 

@@ -38,40 +38,49 @@ wait_for_server() {
 
 # ── Step 1: Code quality checks ──
 
-step "Step 1/5: Code quality checks"
+step "Step 1/6: Code quality checks"
 if (cd "$ROOT_DIR" && pnpm run check); then
   pass "Code quality checks passed"
 else
   fail "Code quality checks"
 fi
 
-# ── Step 2: Clean and build ──
+# ── Step 2: Unit tests ──
 
-step "Step 2/5: Clean build"
+step "Step 2/6: Unit tests"
+if (cd "$ROOT_DIR" && pnpm run test:unit); then
+  pass "Unit tests passed"
+else
+  fail "Unit tests"
+fi
+
+# ── Step 3: Clean and build ──
+
+step "Step 3/6: Clean build"
 if (cd "$ROOT_DIR" && pnpm run clean && pnpm run build); then
   pass "Clean build passed"
 else
   fail "Clean build"
 fi
 
-# ── Step 3: Start production server ──
+# ── Step 4: Start production server ──
 
-step "Step 3/5: Start production server"
+step "Step 4/6: Start production server"
 cleanup
 (cd "$ROOT_DIR" && pnpm dlx serve out -l $SERVE_PORT --no-clipboard) &
 
-# ── Step 4: Wait for server ──
+# ── Step 5: Wait for server ──
 
-step "Step 4/5: Wait for server"
+step "Step 5/6: Wait for server"
 if wait_for_server "http://localhost:$SERVE_PORT/manuals/"; then
   pass "Production server ready on port $SERVE_PORT"
 else
   fail "Production server failed to start within 30s"
 fi
 
-# ── Step 5: Smoke tests ──
+# ── Step 6: Smoke tests ──
 
-step "Step 5/5: Smoke tests"
+step "Step 6/6: Smoke tests"
 if [[ " ${FAILURES[*]} " == *"Production server"* ]]; then
   fail "Smoke tests (skipped — server not running)"
 elif (cd "$ROOT_DIR" && BASE_URL="http://localhost:$SERVE_PORT" node scripts/test-all-pages-fast.js); then

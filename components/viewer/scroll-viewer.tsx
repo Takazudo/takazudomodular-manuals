@@ -304,7 +304,9 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
             className={pageItemStyles}
           >
             <div className={pageImageWrapperStyles}>
-              <div className={pageLabelStyles}>P.{page.pageNum}</div>
+              <div className={pageLabelStyles} data-testid={`scroll-page-label-${page.pageNum}`}>
+                P.{page.pageNum}
+              </div>
               {loadedImages.has(page.pageNum) && page.image ? (
                 <img
                   src={withBasePath(page.image)}
@@ -314,7 +316,10 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
                 />
               ) : (
                 <div className={placeholderInnerStyles}>
-                  <div className="page-image-loader" />
+                  <div
+                    className="page-image-loader"
+                    data-testid={`scroll-page-placeholder-${page.pageNum}`}
+                  />
                 </div>
               )}
             </div>
@@ -328,7 +333,7 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
         className={contentColumnStyles}
         data-testid="scroll-translation-column"
       >
-        <div className={translationHeaderStyles}>
+        <div className={translationHeaderStyles} data-testid="scroll-translation-header">
           <span className="text-sm text-zd-gray font-futura">
             P.{currentPage} / {totalPages}
           </span>
