@@ -17,6 +17,8 @@ import { withBasePath } from '@/lib/asset-url';
 import { useIntersectionPages } from './use-intersection-pages';
 
 const DETECTION_THRESHOLDS = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
+const PRELOAD_RADIUS = 2;
+const SCROLL_JUMP_TIMEOUT_MS = 1500;
 
 const containerStyles = ctl(`
   flex flex-col lg:flex-row
@@ -100,7 +102,11 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
   // Lazy loading: pre-load images near initialPage
   const [loadedImages, setLoadedImages] = useState<Set<number>>(() => {
     const set = new Set<number>();
-    for (let i = Math.max(1, initialPage - 2); i <= Math.min(totalPages, initialPage + 2); i++) {
+    for (
+      let i = Math.max(1, initialPage - PRELOAD_RADIUS);
+      i <= Math.min(totalPages, initialPage + PRELOAD_RADIUS);
+      i++
+    ) {
       set.add(i);
     }
     return set;
@@ -111,6 +117,24 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
 
   // Suppress lazy loading during programmatic scroll jumps (e.g., thumbs dialog)
   const isJumpingRef = useRef(false);
+  const jumpTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Re-enable lazy loading and trigger observer re-evaluation
+  const finishJump = useCallback(() => {
+    if (!isJumpingRef.current) return;
+    isJumpingRef.current = false;
+    if (jumpTimeoutRef.current) {
+      clearTimeout(jumpTimeoutRef.current);
+      jumpTimeoutRef.current = null;
+    }
+    const observer = lazyObserverRef.current;
+    if (observer) {
+      for (const el of pageElementsRef.current.values()) {
+        observer.unobserve(el);
+        observer.observe(el);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -206,24 +230,9 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    const handleScrollEnd = () => {
-      if (!isJumpingRef.current) return;
-      isJumpingRef.current = false;
-
-      // Trigger observer re-evaluation for currently visible pages
-      // by disconnecting and re-observing all elements
-      const observer = lazyObserverRef.current;
-      if (observer) {
-        for (const el of pageElementsRef.current.values()) {
-          observer.unobserve(el);
-          observer.observe(el);
-        }
-      }
-    };
-
-    container.addEventListener('scrollend', handleScrollEnd);
-    return () => container.removeEventListener('scrollend', handleScrollEnd);
-  }, []);
+    container.addEventListener('scrollend', finishJump);
+    return () => container.removeEventListener('scrollend', finishJump);
+  }, [finishJump]);
 
   // Expose scrollToPage for parent/sibling components (sidebar, modal)
   useImperativeHandle(
@@ -236,12 +245,25 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
           // Suppress lazy loading during the scroll animation
           isJumpingRef.current = true;
 
+          // Clear any previous fallback timeout
+          if (jumpTimeoutRef.current) clearTimeout(jumpTimeoutRef.current);
+          // Fallback: reset flag if scrollend never fires (e.g., Safari < 18.4, zero-distance scroll)
+          jumpTimeoutRef.current = setTimeout(finishJump, SCROLL_JUMP_TIMEOUT_MS);
+
           // Pre-load pages near the target so they're ready on arrival
           setLoadedImages((prev) => {
-            const next = new Set(prev);
-            for (let i = Math.max(1, pageNum - 2); i <= Math.min(totalPages, pageNum + 2); i++) {
-              next.add(i);
+            const lo = Math.max(1, pageNum - PRELOAD_RADIUS);
+            const hi = Math.min(totalPages, pageNum + PRELOAD_RADIUS);
+            let changed = false;
+            for (let i = lo; i <= hi; i++) {
+              if (!prev.has(i)) {
+                changed = true;
+                break;
+              }
             }
+            if (!changed) return prev;
+            const next = new Set(prev);
+            for (let i = lo; i <= hi; i++) next.add(i);
             return next;
           });
 
@@ -249,7 +271,7 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
         }
       },
     }),
-    [totalPages],
+    [totalPages, finishJump],
   );
 
   // Notify parent when current page changes
