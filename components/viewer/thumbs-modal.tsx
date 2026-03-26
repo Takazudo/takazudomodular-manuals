@@ -25,8 +25,8 @@ const contentStyles = ctl(`
   w-[95vw] max-h-[90vh]
   overflow-y-auto
   bg-black
-  rounded-lg
   p-hgap-sm
+  border border-zd-white
 `);
 
 const gridStyles = ctl(`

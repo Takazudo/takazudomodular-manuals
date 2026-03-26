@@ -17,7 +17,7 @@ const headerStyles = ctl(`
 `);
 
 const titleStyles = ctl(`
-  text-lg font-bold
+  text-lg font-normal
   text-zd-white
   zd-invert-color-link
   no-underline
@@ -34,6 +34,10 @@ const utilityBarStyles = ctl(`
   flex items-center gap-[6px]
 `);
 
+const utilityButtonWrapperStyles = ctl(`
+  relative group
+`);
+
 const utilityButtonStyles = ctl(`
   w-[32px] h-[32px]
   flex items-center justify-center
@@ -45,6 +49,48 @@ const utilityButtonStyles = ctl(`
   cursor-pointer
   active:bg-zd-gray5
 `);
+
+const tooltipStyles = ctl(`
+  absolute top-full left-1/2 -translate-x-1/2
+  mt-[6px]
+  px-hgap-xs py-vgap-2xs
+  bg-zd-gray3 border border-zd-gray4
+  text-zd-white text-xs
+  whitespace-nowrap
+  rounded-sm
+  opacity-0 pointer-events-none
+  group-hover:opacity-100
+  transition-opacity duration-200
+  z-50
+`);
+
+function TooltipButton({
+  onClick,
+  ariaLabel,
+  tooltip,
+  children,
+}: {
+  onClick: () => void;
+  ariaLabel: string;
+  tooltip: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={utilityButtonWrapperStyles}>
+      <button
+        type="button"
+        className={utilityButtonStyles}
+        onClick={onClick}
+        aria-label={ariaLabel}
+      >
+        {children}
+      </button>
+      <span className={tooltipStyles} role="tooltip">
+        {tooltip}
+      </span>
+    </div>
+  );
+}
 
 const navLinkStyles = ctl(`
   text-sm font-normal
@@ -95,33 +141,23 @@ export function Header() {
       <div className={navRightStyles}>
         {isDetailPage && (
           <div className={utilityBarStyles}>
-            <button
-              type="button"
-              className={utilityButtonStyles}
+            <TooltipButton
               onClick={() => setViewMode(viewMode === 'page' ? 'scroll' : 'page')}
-              aria-label={viewMode === 'page' ? 'Switch to scroll mode' : 'Switch to page mode'}
-              title={viewMode === 'page' ? 'Switch to scroll mode' : 'Switch to page mode'}
+              ariaLabel={viewMode === 'page' ? 'Switch to scroll mode' : 'Switch to page mode'}
+              tooltip={viewMode === 'page' ? 'スクロール表示' : 'ページ表示'}
             >
               {viewMode === 'page' ? '\u{1F4C4}' : '\u{1F4DC}'}
-            </button>
-            <button
-              type="button"
-              className={utilityButtonStyles}
-              onClick={toggleSidebar}
-              aria-label="Toggle sidebar"
-              title="Toggle sidebar"
-            >
+            </TooltipButton>
+            <TooltipButton onClick={toggleSidebar} ariaLabel="Toggle sidebar" tooltip="サムネイル">
               {'\u2630'}
-            </button>
-            <button
-              type="button"
-              className={utilityButtonStyles}
+            </TooltipButton>
+            <TooltipButton
               onClick={openThumbsModal}
-              aria-label="Open thumbnail grid"
-              title="Open thumbnail grid"
+              ariaLabel="Open thumbnail grid"
+              tooltip="ページ一覧"
             >
               {'\u229E'}
-            </button>
+            </TooltipButton>
           </div>
         )}
         <a href="https://takazudomodular.com" className={navLinkStyles}>
