@@ -8,8 +8,10 @@ import { withBasePath } from '@/lib/asset-url';
 export interface SidebarThumbsProps {
   pages: ManualPage[];
   currentPage: number;
-  totalPages: number;
-  manualId: string;
+  /** Reserved for future use (e.g. progress display) */
+  totalPages?: number;
+  /** Reserved for future use (e.g. deep-link generation) */
+  manualId?: string;
   isOpen: boolean;
   onPageSelect: (pageNum: number) => void;
 }
@@ -57,12 +59,27 @@ export function SidebarThumbs({
   onPageSelect,
 }: SidebarThumbsProps) {
   const activeRef = useRef<HTMLButtonElement>(null);
+  const prevIsOpenRef = useRef(false);
 
-  // Auto-scroll to keep the current page thumbnail visible
+  // Auto-scroll to keep the current page thumbnail visible.
+  // Delays scroll when sidebar just opened to avoid conflicting with the
+  // 300ms slide-in CSS transition.
   useEffect(() => {
-    if (isOpen && activeRef.current) {
-      activeRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (!isOpen) {
+      prevIsOpenRef.current = false;
+      return;
     }
+
+    const justOpened = !prevIsOpenRef.current;
+    prevIsOpenRef.current = true;
+
+    const timer = setTimeout(
+      () => {
+        activeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      },
+      justOpened ? 320 : 0,
+    );
+    return () => clearTimeout(timer);
   }, [currentPage, isOpen]);
 
   return (
@@ -84,12 +101,16 @@ export function SidebarThumbs({
               <div
                 className={`${thumbImageWrapperStyles} border-2 ${isCurrent ? 'border-zd-outline' : 'border-transparent'}`}
               >
-                <img
-                  src={withBasePath(page.image)}
-                  alt={`Page ${page.pageNum}`}
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
+                {page.image ? (
+                  <img
+                    src={withBasePath(page.image)}
+                    alt={`Page ${page.pageNum}`}
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-[120px] h-[160px] bg-zd-black" aria-hidden="true" />
+                )}
               </div>
               <span
                 className={`${pageNumStyles} ${isCurrent ? 'text-zd-white font-medium' : 'text-zd-gray'}`}
