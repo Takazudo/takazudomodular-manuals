@@ -1,0 +1,173 @@
+'use client';
+
+import { useEffect, useRef, useCallback } from 'react';
+import ctl from '@netlify/classnames-template-literals';
+import type { ManualPage } from '@/lib/types/manual';
+import { withBasePath } from '@/lib/asset-url';
+
+interface ThumbsModalProps {
+  pages: ManualPage[];
+  currentPage: number;
+  totalPages: number;
+  manualId: string;
+  isOpen: boolean;
+  onClose: () => void;
+  onPageSelect: (pageNum: number) => void;
+}
+
+const overlayStyles = ctl(`
+  fixed inset-0
+  z-[100]
+  flex items-center justify-center
+  bg-[rgba(0,0,0,0.85)]
+`);
+
+const contentStyles = ctl(`
+  relative
+  w-[95vw] max-h-[90vh]
+  overflow-y-auto
+  bg-black
+  rounded-lg
+  p-hgap-sm
+`);
+
+const gridStyles = ctl(`
+  grid
+  grid-cols-[repeat(auto-fill,minmax(160px,1fr))]
+  gap-[10px]
+`);
+
+const closeButtonStyles = ctl(`
+  absolute top-[8px] right-[8px]
+  z-[101]
+  flex items-center justify-center
+  w-[40px] h-[40px]
+  bg-[rgba(0,0,0,0.6)]
+  text-white text-xl
+  rounded-lg
+  cursor-pointer
+  hover:bg-[rgba(255,255,255,0.2)]
+  transition-colors
+`);
+
+const thumbItemStyles = ctl(`
+  relative
+  aspect-[1/1.414]
+  cursor-pointer
+  overflow-hidden
+  rounded-sm
+  transition-transform
+  hover:scale-[1.03]
+  hover:brightness-110
+`);
+
+const thumbItemActiveStyles = ctl(`
+  ${thumbItemStyles}
+  border-2 border-zd-outline
+`);
+
+const pageNumOverlayStyles = ctl(`
+  absolute bottom-0 left-0 right-0
+  bg-[rgba(0,0,0,0.7)]
+  text-white text-xs text-center
+  py-[2px]
+`);
+
+export function ThumbsModal({
+  pages,
+  currentPage,
+  totalPages,
+  manualId,
+  isOpen,
+  onClose,
+  onPageSelect,
+}: ThumbsModalProps) {
+  const gridRef = useRef<HTMLDivElement>(null);
+  const currentThumbRef = useRef<HTMLButtonElement>(null);
+
+  // Escape key handler
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
+  // Auto-scroll to current page on open
+  useEffect(() => {
+    if (isOpen && currentThumbRef.current) {
+      // Use requestAnimationFrame to ensure the DOM has rendered
+      requestAnimationFrame(() => {
+        currentThumbRef.current?.scrollIntoView({
+          block: 'center',
+          behavior: 'instant',
+        });
+      });
+    }
+  }, [isOpen]);
+
+  // Handle overlay click (close only when clicking the overlay itself)
+  const handleOverlayClick = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (e.target === e.currentTarget) {
+        onClose();
+      }
+    },
+    [onClose],
+  );
+
+  // Handle thumbnail click
+  const handleThumbClick = useCallback(
+    (pageNum: number) => {
+      onPageSelect(pageNum);
+      onClose();
+    },
+    [onPageSelect, onClose],
+  );
+
+  if (!isOpen) return null;
+
+  return (
+    <div className={overlayStyles} onClick={handleOverlayClick} role="dialog" aria-modal="true">
+      <div className={contentStyles}>
+        <button
+          className={closeButtonStyles}
+          onClick={onClose}
+          aria-label="閉じる"
+          type="button"
+        >
+          ✕
+        </button>
+        <div className={gridStyles} ref={gridRef}>
+          {pages.map((page) => {
+            const isActive = page.pageNum === currentPage;
+            return (
+              <button
+                key={page.pageNum}
+                ref={isActive ? currentThumbRef : undefined}
+                className={isActive ? thumbItemActiveStyles : thumbItemStyles}
+                onClick={() => handleThumbClick(page.pageNum)}
+                type="button"
+                aria-label={`ページ ${page.pageNum}`}
+              >
+                <img
+                  src={withBasePath(page.image)}
+                  alt={`Page ${page.pageNum}`}
+                  className="w-full h-full object-contain bg-white"
+                  loading="lazy"
+                />
+                <span className={pageNumOverlayStyles}>{page.pageNum}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
