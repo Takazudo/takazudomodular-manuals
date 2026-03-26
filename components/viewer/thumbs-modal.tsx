@@ -8,8 +8,6 @@ import { withBasePath } from '@/lib/asset-url';
 interface ThumbsModalProps {
   pages: ManualPage[];
   currentPage: number;
-  totalPages: number;
-  manualId: string;
   isOpen: boolean;
   onClose: () => void;
   onPageSelect: (pageNum: number) => void;
@@ -61,11 +59,6 @@ const thumbItemStyles = ctl(`
   hover:brightness-110
 `);
 
-const thumbItemActiveStyles = ctl(`
-  ${thumbItemStyles}
-  border-2 border-zd-outline
-`);
-
 const pageNumOverlayStyles = ctl(`
   absolute bottom-0 left-0 right-0
   bg-[rgba(0,0,0,0.7)]
@@ -76,8 +69,6 @@ const pageNumOverlayStyles = ctl(`
 export function ThumbsModal({
   pages,
   currentPage,
-  totalPages,
-  manualId,
   isOpen,
   onClose,
   onPageSelect,
@@ -151,7 +142,7 @@ export function ThumbsModal({
               <button
                 key={page.pageNum}
                 ref={isActive ? currentThumbRef : undefined}
-                className={isActive ? thumbItemActiveStyles : thumbItemStyles}
+                className={`${thumbItemStyles}${isActive ? ' border-2 border-zd-outline' : ''}`}
                 onClick={() => handleThumbClick(page.pageNum)}
                 type="button"
                 aria-label={`ページ ${page.pageNum}`}
@@ -160,7 +151,7 @@ export function ThumbsModal({
                   src={withBasePath(page.image)}
                   alt={`Page ${page.pageNum}`}
                   className="w-full h-full object-contain bg-white"
-                  loading="lazy"
+                  loading={isActive ? 'eager' : 'lazy'}
                 />
                 <span className={pageNumOverlayStyles}>{page.pageNum}</span>
               </button>
