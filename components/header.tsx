@@ -47,7 +47,7 @@ const utilityButtonStyles = ctl(`
 `);
 
 const navLinkStyles = ctl(`
-  text-sm
+  text-sm font-normal
   text-zd-white
   zd-invert-color-link
   no-underline
@@ -85,6 +85,7 @@ export function Header() {
   const titleHref = manualId ? `/${manualId}` : '/';
 
   const { viewMode, setViewMode, toggleSidebar, openThumbsModal } = useViewMode();
+  const isDetailPage = pathname.includes('/page/');
 
   return (
     <header className={headerStyles}>
@@ -92,35 +93,37 @@ export function Header() {
         {title || 'Manual Index'}
       </Link>
       <div className={navRightStyles}>
-        <div className={utilityBarStyles}>
-          <button
-            type="button"
-            className={utilityButtonStyles}
-            onClick={() => setViewMode(viewMode === 'page' ? 'scroll' : 'page')}
-            aria-label={viewMode === 'page' ? 'Switch to scroll mode' : 'Switch to page mode'}
-            title={viewMode === 'page' ? 'Switch to scroll mode' : 'Switch to page mode'}
-          >
-            {viewMode === 'page' ? '\u{1F4C4}' : '\u{1F4DC}'}
-          </button>
-          <button
-            type="button"
-            className={utilityButtonStyles}
-            onClick={toggleSidebar}
-            aria-label="Toggle sidebar"
-            title="Toggle sidebar"
-          >
-            {'\u2630'}
-          </button>
-          <button
-            type="button"
-            className={utilityButtonStyles}
-            onClick={openThumbsModal}
-            aria-label="Open thumbnail grid"
-            title="Open thumbnail grid"
-          >
-            {'\u229E'}
-          </button>
-        </div>
+        {isDetailPage && (
+          <div className={utilityBarStyles}>
+            <button
+              type="button"
+              className={utilityButtonStyles}
+              onClick={() => setViewMode(viewMode === 'page' ? 'scroll' : 'page')}
+              aria-label={viewMode === 'page' ? 'Switch to scroll mode' : 'Switch to page mode'}
+              title={viewMode === 'page' ? 'Switch to scroll mode' : 'Switch to page mode'}
+            >
+              {viewMode === 'page' ? '\u{1F4C4}' : '\u{1F4DC}'}
+            </button>
+            <button
+              type="button"
+              className={utilityButtonStyles}
+              onClick={toggleSidebar}
+              aria-label="Toggle sidebar"
+              title="Toggle sidebar"
+            >
+              {'\u2630'}
+            </button>
+            <button
+              type="button"
+              className={utilityButtonStyles}
+              onClick={openThumbsModal}
+              aria-label="Open thumbnail grid"
+              title="Open thumbnail grid"
+            >
+              {'\u229E'}
+            </button>
+          </div>
+        )}
         <a href="https://takazudomodular.com" className={navLinkStyles}>
           <span className={logoStyles} aria-hidden="true" />
           Takazudo Modular

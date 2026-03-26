@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useCallback } from 'react';
 import ctl from '@netlify/classnames-template-literals';
-import type { ManualPage } from '@/lib/types/manual';
+import { type ManualPage, getThumbImage } from '@/lib/types/manual';
 import { withBasePath } from '@/lib/asset-url';
 
 interface ThumbsModalProps {
@@ -144,7 +144,7 @@ export function ThumbsModal({
               >
                 {page.image ? (
                   <img
-                    src={withBasePath(page.image)}
+                    src={withBasePath(getThumbImage(page))}
                     alt={`Page ${page.pageNum}`}
                     className="w-full h-full object-contain bg-white"
                     loading={isActive ? 'eager' : 'lazy'}

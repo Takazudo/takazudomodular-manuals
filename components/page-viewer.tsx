@@ -10,8 +10,7 @@ import { withBasePath } from '@/lib/asset-url';
 
 const containerStyles = ctl(`
   flex flex-col lg:flex-row
-  h-screen
-  pt-[60px]
+  h-full
 `);
 
 const columnStyles = ctl(`

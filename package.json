@@ -38,6 +38,7 @@
     "doc:serve": "cd doc && pnpm run serve",
     "doc:serve:net": "cd doc && docusaurus serve --host 0.0.0.0",
     "// ── PDF Processing ───────────────────────────": "",
+    "thumbs:generate": "node scripts/generate-thumbs.js --all",
     "pdf:split": "node scripts/pdf-split.js",
     "pdf:render": "node scripts/pdf-render-pages.js",
     "pdf:extract": "node scripts/pdf-extract-text.js",

@@ -2,28 +2,20 @@
 
 import { useEffect, useRef } from 'react';
 import ctl from '@netlify/classnames-template-literals';
-import type { ManualPage } from '@/lib/types/manual';
+import { type ManualPage, getThumbImage } from '@/lib/types/manual';
 import { withBasePath } from '@/lib/asset-url';
 
 export interface SidebarThumbsProps {
   pages: ManualPage[];
   currentPage: number;
-  /** Reserved for future use (e.g. progress display) */
-  totalPages?: number;
-  /** Reserved for future use (e.g. deep-link generation) */
-  manualId?: string;
-  isOpen: boolean;
   onPageSelect: (pageNum: number) => void;
 }
 
 const sidebarStyles = ctl(`
-  fixed left-0 top-[60px]
-  w-[160px]
+  w-[160px] shrink-0
   h-[calc(100vh-60px)]
   bg-zd-gray2
   overflow-y-auto
-  z-40
-  transition-transform duration-300 ease-in-out
   scrollbar-hide
 `);
 
@@ -52,37 +44,15 @@ const pageNumStyles = ctl(`
   text-center
 `);
 
-export function SidebarThumbs({ pages, currentPage, isOpen, onPageSelect }: SidebarThumbsProps) {
+export function SidebarThumbs({ pages, currentPage, onPageSelect }: SidebarThumbsProps) {
   const activeRef = useRef<HTMLButtonElement>(null);
-  const prevIsOpenRef = useRef(false);
 
-  // Auto-scroll to keep the current page thumbnail visible.
-  // Delays scroll when sidebar just opened to avoid conflicting with the
-  // 300ms slide-in CSS transition.
   useEffect(() => {
-    if (!isOpen) {
-      prevIsOpenRef.current = false;
-      return;
-    }
-
-    const justOpened = !prevIsOpenRef.current;
-    prevIsOpenRef.current = true;
-
-    const timer = setTimeout(
-      () => {
-        activeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      },
-      justOpened ? 320 : 0,
-    );
-    return () => clearTimeout(timer);
-  }, [currentPage, isOpen]);
+    activeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, [currentPage]);
 
   return (
-    <aside
-      className={`${sidebarStyles} ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
-      aria-label="Page thumbnails"
-      aria-hidden={!isOpen}
-    >
+    <aside className={sidebarStyles} aria-label="Page thumbnails">
       <div className={thumbListStyles}>
         {pages.map((page) => {
           const isCurrent = page.pageNum === currentPage;
@@ -99,7 +69,7 @@ export function SidebarThumbs({ pages, currentPage, isOpen, onPageSelect }: Side
               >
                 {page.image ? (
                   <img
-                    src={withBasePath(page.image)}
+                    src={withBasePath(getThumbImage(page))}
                     alt={`Page ${page.pageNum}`}
                     className="w-full h-auto"
                     loading="lazy"

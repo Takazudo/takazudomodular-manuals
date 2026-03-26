@@ -2,6 +2,7 @@
 
 import { useCallback, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import ctl from '@netlify/classnames-template-literals';
 import type { ManualPage } from '@/lib/types/manual';
 import { getPagePath } from '@/lib/manual-config';
 import { useViewMode } from './view-mode-context';
@@ -9,6 +10,12 @@ import { PageViewer } from '@/components/page-viewer';
 import { ScrollViewer, type ScrollViewerHandle } from './scroll-viewer';
 import { SidebarThumbs } from './sidebar-thumbs';
 import { ThumbsModal } from './thumbs-modal';
+
+const outerStyles = ctl(`
+  flex
+  h-screen
+  pt-[60px]
+`);
 
 interface ManualViewerProps {
   page: ManualPage;
@@ -51,7 +58,6 @@ export function ManualViewer({
   const handleScrollPageChange = useCallback(
     (pageNum: number) => {
       setScrollCurrentPage(pageNum);
-      // Update URL without navigation so bookmarks/refresh land on the right page
       const newPath = `/manuals${getPagePath(manualId, pageNum)}`;
       window.history.replaceState(null, '', newPath);
     },
@@ -60,15 +66,6 @@ export function ManualViewer({
 
   return (
     <>
-      <SidebarThumbs
-        pages={allPages}
-        currentPage={effectiveCurrentPage}
-        totalPages={totalPages}
-        manualId={manualId}
-        isOpen={sidebarOpen}
-        onPageSelect={handlePageSelect}
-      />
-
       <ThumbsModal
         pages={allPages}
         currentPage={effectiveCurrentPage}
@@ -77,23 +74,35 @@ export function ManualViewer({
         onPageSelect={handlePageSelect}
       />
 
-      {viewMode === 'scroll' ? (
-        <ScrollViewer
-          ref={scrollViewerRef}
-          pages={allPages}
-          initialPage={currentPage}
-          totalPages={totalPages}
-          manualId={manualId}
-          onCurrentPageChange={handleScrollPageChange}
-        />
-      ) : (
-        <PageViewer
-          page={page}
-          currentPage={currentPage}
-          totalPages={totalPages}
-          manualId={manualId}
-        />
-      )}
+      <div className={outerStyles}>
+        {sidebarOpen && (
+          <SidebarThumbs
+            pages={allPages}
+            currentPage={effectiveCurrentPage}
+            onPageSelect={handlePageSelect}
+          />
+        )}
+
+        <div className="flex-1 min-w-0">
+          {viewMode === 'scroll' ? (
+            <ScrollViewer
+              ref={scrollViewerRef}
+              pages={allPages}
+              initialPage={currentPage}
+              totalPages={totalPages}
+              manualId={manualId}
+              onCurrentPageChange={handleScrollPageChange}
+            />
+          ) : (
+            <PageViewer
+              page={page}
+              currentPage={currentPage}
+              totalPages={totalPages}
+              manualId={manualId}
+            />
+          )}
+        </div>
+      </div>
     </>
   );
 }
