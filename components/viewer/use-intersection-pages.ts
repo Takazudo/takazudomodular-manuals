@@ -7,6 +7,7 @@ const DEFAULT_THRESHOLDS = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
 interface UseIntersectionPagesOptions {
   rootMargin?: string;
   threshold?: number | number[];
+  initialPage?: number;
 }
 
 interface UseIntersectionPagesReturn {
@@ -23,10 +24,11 @@ interface UseIntersectionPagesReturn {
 export function useIntersectionPages(
   options: UseIntersectionPagesOptions = {},
 ): UseIntersectionPagesReturn {
-  const { rootMargin = '0px', threshold = DEFAULT_THRESHOLDS } = options;
+  const { rootMargin = '0px', threshold = DEFAULT_THRESHOLDS, initialPage = 1 } = options;
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const [visiblePages, setVisiblePages] = useState<Set<number>>(new Set());
+  const [currentPage, setCurrentPage] = useState(initialPage);
+  // visiblePages tracked as ref to avoid unnecessary re-renders on every scroll
+  const visiblePagesRef = useRef<Set<number>>(new Set());
 
   // element -> pageNum mapping for observer callback lookups
   const nodeMapRef = useRef<Map<HTMLElement, number>>(new Map());
@@ -38,6 +40,8 @@ export function useIntersectionPages(
   const thresholdRef = useRef(threshold);
 
   useEffect(() => {
+    let mounted = true;
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -51,11 +55,13 @@ export function useIntersectionPages(
           }
         }
 
-        setVisiblePages(new Set(ratiosRef.current.keys()));
+        visiblePagesRef.current = new Set(ratiosRef.current.keys());
 
         // Debounce current page detection via requestAnimationFrame
         cancelAnimationFrame(rafRef.current);
         rafRef.current = requestAnimationFrame(() => {
+          if (!mounted) return;
+
           let maxRatio = 0;
           let maxPage = -1;
           for (const [pageNum, ratio] of ratiosRef.current) {
@@ -80,6 +86,7 @@ export function useIntersectionPages(
     }
 
     return () => {
+      mounted = false;
       observer.disconnect();
       cancelAnimationFrame(rafRef.current);
       observerInstanceRef.current = null;
@@ -89,7 +96,8 @@ export function useIntersectionPages(
   // Callback to register/unregister page elements with the observer
   const observerRef = useCallback((node: HTMLElement | null, pageNum: number) => {
     // Remove any previous element mapped to this pageNum
-    for (const [el, num] of nodeMapRef.current) {
+    // Use Array.from to avoid mutating Map during iteration
+    for (const [el, num] of Array.from(nodeMapRef.current)) {
       if (num === pageNum && el !== node) {
         nodeMapRef.current.delete(el);
         observerInstanceRef.current?.unobserve(el);
@@ -104,5 +112,5 @@ export function useIntersectionPages(
     }
   }, []);
 
-  return { observerRef, currentPage, visiblePages };
+  return { observerRef, currentPage, visiblePages: visiblePagesRef.current };
 }

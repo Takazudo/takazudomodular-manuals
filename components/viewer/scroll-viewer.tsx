@@ -85,6 +85,7 @@ export function ScrollViewer({
   // Current page detection via IntersectionObserver
   const { observerRef: pageObserverRef, currentPage } = useIntersectionPages({
     threshold: DETECTION_THRESHOLDS,
+    initialPage,
   });
 
   // Lazy loading: pre-load images near initialPage
@@ -156,16 +157,18 @@ export function ScrollViewer({
     [pageObserverRef],
   );
 
-  // Create stable ref callbacks per page to avoid re-render churn
-  const refCallbacks = useMemo(
-    () =>
-      new Map(
-        pages.map((page) => [
-          page.pageNum,
-          (node: HTMLDivElement | null) => registerPageElement(node, page.pageNum),
-        ]),
-      ),
-    [pages, registerPageElement],
+  // Lazily create stable ref callbacks per page (cached in ref to avoid re-render churn)
+  const refCallbackCacheRef = useRef(new Map<number, (node: HTMLDivElement | null) => void>());
+  const getRefCallback = useCallback(
+    (pageNum: number) => {
+      let cb = refCallbackCacheRef.current.get(pageNum);
+      if (!cb) {
+        cb = (node: HTMLDivElement | null) => registerPageElement(node, pageNum);
+        refCallbackCacheRef.current.set(pageNum, cb);
+      }
+      return cb;
+    },
+    [registerPageElement],
   );
 
   // Scroll to initial page on mount (direct scrollTop bypasses smooth scroll-behavior)
@@ -207,7 +210,7 @@ export function ScrollViewer({
           <div
             key={page.pageNum}
             data-page={page.pageNum}
-            ref={refCallbacks.get(page.pageNum)}
+            ref={getRefCallback(page.pageNum)}
             className={pageItemStyles}
           >
             <div className={pageImageWrapperStyles}>
