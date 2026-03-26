@@ -41,6 +41,17 @@ runs:
       run: npm install -g wrangler@4
       shell: bash
 
+    - name: Ensure Pages project exists
+      run: |
+        wrangler pages project list --json 2>/dev/null | grep -q '"${{ inputs.project-name }}"' || {
+          echo "Creating Cloudflare Pages project: ${{ inputs.project-name }}"
+          wrangler pages project create "${{ inputs.project-name }}" --production-branch=main
+        }
+      shell: bash
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ inputs.cloudflare-api-token }}
+        CLOUDFLARE_ACCOUNT_ID: ${{ inputs.cloudflare-account-id }}
+
     - name: Deploy to Cloudflare Pages
       id: deploy
       run: |
@@ -50,7 +61,8 @@ runs:
           --project-name="${{ inputs.project-name }}" \
           --branch="${{ inputs.branch }}" \
           --commit-hash="${{ inputs.commit-hash }}" \
-          --commit-message="${{ inputs.commit-message }}" 2>&1) || {
+          --commit-message="${{ inputs.commit-message }}" \
+          --commit-dirty=true 2>&1) || {
           echo "Deployment failed"
           echo "$DEPLOY_OUTPUT"
           exit 1
