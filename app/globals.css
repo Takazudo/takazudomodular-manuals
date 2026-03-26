@@ -13,6 +13,14 @@
     --zd-color-white: rgb(214, 211, 209);
     --zd-color-gray: rgb(120, 113, 108);
     --zd-color-gray2: #201f1f;
+    --zd-color-gray3: #2a2928;
+    --zd-color-gray4: #3a3837;
+    --zd-color-gray5: #4a4847;
+    --zd-color-gray6: #8a8584;
+    --zd-color-gray7: #a8a3a0;
+
+    /* ── Colors: overlay ── */
+    --zd-color-overlay: rgba(0, 0, 0, 0.85);
 
     /* ── Colors: interactive ── */
     --zd-color-link: #fff;
@@ -125,6 +133,12 @@
   --color-zd-white: var(--zd-color-white);
   --color-zd-gray: var(--zd-color-gray);
   --color-zd-gray2: var(--zd-color-gray2);
+  --color-zd-gray3: var(--zd-color-gray3);
+  --color-zd-gray4: var(--zd-color-gray4);
+  --color-zd-gray5: var(--zd-color-gray5);
+  --color-zd-gray6: var(--zd-color-gray6);
+  --color-zd-gray7: var(--zd-color-gray7);
+  --color-zd-overlay: var(--zd-color-overlay);
 
   /* Interactive */
   --color-zd-link: var(--zd-color-link);

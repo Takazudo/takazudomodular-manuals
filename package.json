@@ -25,13 +25,20 @@
     "dev:net": "next dev -p 3100 -H 0.0.0.0",
     "build": "next build && node scripts/copy-original-pdfs.js && node scripts/restructure-build.js && pnpm run doc:build && mkdir -p out/manuals/doc && cp -r doc/build/* out/manuals/doc/",
     "start": "next start",
+    "preserve": "lsof -ti :8030 | xargs kill 2>/dev/null; true",
     "serve": "pnpm dlx serve out -l 8030",
+    "preserve:net": "lsof -ti :8030 | xargs kill 2>/dev/null; true",
     "serve:net": "pnpm dlx serve out --listen tcp://0.0.0.0:8030",
     "// ── Documentation ────────────────────────────": "",
+    "predoc:dev": "lsof -ti :3100 | xargs kill 2>/dev/null; true",
     "doc:dev": "cd doc && pnpm run start",
+    "predoc:dev:net": "lsof -ti :3100 | xargs kill 2>/dev/null; true",
+    "doc:dev:net": "cd doc && docusaurus start --port 3100 --host 0.0.0.0",
     "doc:build": "cd doc && pnpm run build",
     "doc:serve": "cd doc && pnpm run serve",
+    "doc:serve:net": "cd doc && docusaurus serve --host 0.0.0.0",
     "// ── PDF Processing ───────────────────────────": "",
+    "thumbs:generate": "node scripts/generate-thumbs.js --all",
     "pdf:split": "node scripts/pdf-split.js",
     "pdf:render": "node scripts/pdf-render-pages.js",
     "pdf:extract": "node scripts/pdf-extract-text.js",
@@ -59,8 +66,8 @@
     "test:smoke": "node scripts/test-all-pages-fast.js",
     "test:e2e": "playwright test e2e/all-pages.spec.ts",
     "// ── Deploy ───────────────────────────────────": "",
-    "deploy:preview": "netlify deploy --dir=out --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --alias=preview",
-    "deploy:prod": "netlify deploy --dir=out --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --prod",
+    "deploy:preview": "wrangler pages deploy out --project-name=zmanuals --branch=preview",
+    "deploy:prod": "wrangler pages deploy out --project-name=zmanuals --branch=main",
     "// ── Utilities ────────────────────────────────": "",
     "clean": "rm -rf .next out doc/build doc/.docusaurus",
     "init-worktree": "./scripts/setup-worktree-env.sh",
@@ -105,7 +112,8 @@
     "prettier": "^3.8.1",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.77.0"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,mjs}": [
@@ -123,6 +131,12 @@
     ],
     "!(worktrees|__inbox|node_modules)/**/*.{json,css,yml,yaml}": [
       "prettier --write"
+    ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd"
     ]
   }
 }

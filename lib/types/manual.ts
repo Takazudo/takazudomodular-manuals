@@ -9,6 +9,14 @@ export interface ManualPage {
   tags?: string[];
 }
 
+/**
+ * Derive thumbnail image path from full image path.
+ * /oxi-one-mk2/pages/page-001.png → /oxi-one-mk2/thumbs/thumb-001.png
+ */
+export function getThumbImage(page: ManualPage): string {
+  return page.image.replace('/pages/page-', '/thumbs/thumb-');
+}
+
 export interface ManualPagesData {
   metadata: {
     processedAt: string;

@@ -14,11 +14,11 @@ This is a Next.js-based manual viewer for the OXI ONE MKII hardware synthesizer 
 - Pages: `/manuals/oxi-one-mk2/page/[1-280]`
 - Example: `/manuals/oxi-one-mk2/page/1` (page 1)
 
-**Deployed Website**: https://manual-oxi-one-mk2.netlify.app/
+**Deployed Website**: https://zmanuals.pages.dev/
 
-- Full URL: `https://manual-oxi-one-mk2.netlify.app/manuals/oxi-one-mk2/`
+- Full URL: `https://zmanuals.pages.dev/manuals/oxi-one-mk2/`
 - The deployed site reflects the current state of the main branch
-- Preview URLs: `https://*--manual-oxi-one-mk2.netlify.app/manuals/oxi-one-mk2/`
+- Preview URLs: `https://<branch>.zmanuals.pages.dev/manuals/oxi-one-mk2/`
 
 ## basePath Configuration (Critical Architecture Decision)
 
