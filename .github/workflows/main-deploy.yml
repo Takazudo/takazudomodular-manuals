@@ -1,7 +1,7 @@
 name: Production Deploy
 
 # Runs on pushes to main branch
-# Includes quality checks, build, and production deployment
+# Includes quality checks, build, and production deployment to Cloudflare Pages
 on:
   push:
     branches:
@@ -36,27 +36,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Monitor Build Performance
-        run: |
-          echo "📊 Build Performance Metrics"
-          echo "================================"
-
-          # Calculate sizes (using portable commands)
-          OUT_SIZE=$(du -sh out 2>/dev/null | cut -f1 || echo "Unknown")
-          MANUAL_SIZE=$(du -sh public/manual 2>/dev/null | cut -f1 || echo "Unknown")
-
-          echo "📁 Output directory: $OUT_SIZE"
-          echo "📚 Manual images: $MANUAL_SIZE"
-          echo "================================"
-
-          # Count files for metrics
-          if [ -d "out" ]; then
-            PAGE_COUNT=$(find out -name "*.html" | wc -l)
-            echo "📄 HTML pages: $PAGE_COUNT"
-          fi
-
-          echo "================================"
-
       - name: Upload build artifacts
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
@@ -70,7 +49,7 @@ jobs:
     name: Deploy to Production
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 10
 
     steps:
       - name: Checkout code
@@ -84,49 +63,51 @@ jobs:
           name: nextjs-build-production
           path: out
 
-      - name: Deploy to Netlify Production
+      - name: Deploy to Cloudflare Pages
         id: deploy
-        uses: ./.github/actions/deploy-netlify
+        uses: ./.github/actions/deploy-cloudflare
         with:
-          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
-          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          deploy-production: 'true'
-          deploy-message: 'Production deploy: ${{ github.sha }}'
-          build-dir: 'out'
+          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          branch: main
+          commit-hash: ${{ github.sha }}
+          commit-message: 'Production deploy: ${{ github.sha }}'
 
       - name: Create deployment record
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          DEPLOY_URL: ${{ steps.deploy.outputs.deploy-url }}
         with:
           script: |
-            // Create a deployment record
             const deployment = await github.rest.repos.createDeployment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               ref: context.sha,
               environment: 'production',
-              description: 'Production deployment to Netlify',
+              description: 'Production deployment to Cloudflare Pages',
               production_environment: true,
               auto_merge: false,
               required_contexts: []
             });
 
-            // Update deployment status
             await github.rest.repos.createDeploymentStatus({
               owner: context.repo.owner,
               repo: context.repo.repo,
               deployment_id: deployment.data.id,
               state: 'success',
-              environment_url: '${{ steps.deploy.outputs.deploy-url }}',
+              environment_url: process.env.DEPLOY_URL,
               description: 'Deployment successful'
             });
 
       - name: Notify deployment status
         if: always()
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          DEPLOY_URL: ${{ steps.deploy.outputs.deploy-url }}
+          JOB_STATUS: ${{ job.status }}
         with:
           script: |
-            const success = '${{ job.status }}' === 'success';
-            const emoji = success ? '✅' : '❌';
+            const success = process.env.JOB_STATUS === 'success';
             const status = success ? 'success' : 'failure';
 
             await github.rest.repos.createCommitStatus({
@@ -134,7 +115,7 @@ jobs:
               repo: context.repo.repo,
               sha: context.sha,
               state: status,
-              target_url: '${{ steps.deploy.outputs.deploy-url }}',
+              target_url: process.env.DEPLOY_URL,
               description: success ? 'Production deployment successful' : 'Production deployment failed',
-              context: 'netlify/production'
+              context: 'cloudflare/production'
             });

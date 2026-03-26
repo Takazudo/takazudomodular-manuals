@@ -26,7 +26,7 @@
  *       └── ...
  */
 
-import { readdirSync, mkdirSync, renameSync, existsSync, rmSync } from 'fs';
+import { readdirSync, mkdirSync, renameSync, existsSync, rmSync, copyFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -67,6 +67,16 @@ for (const item of tempContents) {
 console.log('4. Cleaning up temporary directories...');
 if (existsSync(tempDir)) {
   rmSync(tempDir, { recursive: true });
+}
+
+// Step 6: Copy _headers and _redirects to out/ root (Cloudflare Pages requires them at root)
+const cfFiles = ['_headers', '_redirects'];
+for (const file of cfFiles) {
+  const srcPath = join(targetDir, file);
+  if (existsSync(srcPath)) {
+    copyFileSync(srcPath, join(outDir, file));
+    console.log(`5. Copied ${file} to out/ root (for Cloudflare Pages)`);
+  }
 }
 
 console.log('\nBuild restructured successfully!');

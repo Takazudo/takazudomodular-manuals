@@ -65,8 +65,8 @@
     "test:smoke": "node scripts/test-all-pages-fast.js",
     "test:e2e": "playwright test e2e/all-pages.spec.ts",
     "// ── Deploy ───────────────────────────────────": "",
-    "deploy:preview": "netlify deploy --dir=out --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --alias=preview",
-    "deploy:prod": "netlify deploy --dir=out --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --prod",
+    "deploy:preview": "wrangler pages deploy out --project-name=zmanuals --branch=preview",
+    "deploy:prod": "wrangler pages deploy out --project-name=zmanuals --branch=main",
     "// ── Utilities ────────────────────────────────": "",
     "clean": "rm -rf .next out doc/build doc/.docusaurus",
     "init-worktree": "./scripts/setup-worktree-env.sh",
@@ -111,7 +111,8 @@
     "prettier": "^3.8.1",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.77.0"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,mjs}": [
@@ -129,6 +130,12 @@
     ],
     "!(worktrees|__inbox|node_modules)/**/*.{json,css,yml,yaml}": [
       "prettier --write"
+    ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd"
     ]
   }
 }
