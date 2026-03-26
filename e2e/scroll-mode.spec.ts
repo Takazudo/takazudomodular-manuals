@@ -41,15 +41,16 @@ test.describe('Scroll Mode: Page Detection', () => {
     });
 
     // Wait for IntersectionObserver to detect new page (condition-based, not fixed delay)
-    await expect(translationColumn.locator('.sticky').first()).not.toContainText('P.1', {
+    await expect(page.getByTestId('scroll-translation-header')).not.toContainText('P.1', {
       timeout: 3000,
     });
 
     // Extract detected page number and verify it advanced
-    const headerText = await translationColumn.locator('.sticky').first().textContent();
-    const match = headerText!.match(/P\.(\d+)/);
+    const headerText = await page.getByTestId('scroll-translation-header').textContent();
+    expect(headerText).toBeTruthy();
+    const match = headerText?.match(/P\.(\d+)/);
     expect(match).toBeTruthy();
-    const detectedPage = parseInt(match![1], 10);
+    const detectedPage = parseInt(match?.[1] ?? '0', 10);
     expect(detectedPage).toBeGreaterThan(1);
   });
 });
@@ -64,7 +65,7 @@ test.describe('Scroll Mode: Translation Panel', () => {
     await expect(translationColumn).toBeVisible();
 
     // Header should show P.5 (since we started on page 5)
-    await expect(translationColumn.locator('.sticky').first()).toContainText('P.5');
+    await expect(page.getByTestId('scroll-translation-header')).toContainText('P.5');
 
     // Translation panel or no-translation message should be present
     const hasTranslation = page.getByTestId('scroll-translation-panel');
@@ -95,8 +96,7 @@ test.describe('Scroll Mode: Thumbs Dialog Navigation', () => {
     await expect(modal).not.toBeVisible();
 
     // Wait for scroll to reach page 20 (IntersectionObserver fires when page is in viewport)
-    const translationColumn = page.getByTestId('scroll-translation-column');
-    await expect(translationColumn.locator('.sticky').first()).toContainText('P.20', {
+    await expect(page.getByTestId('scroll-translation-header')).toContainText('P.20', {
       timeout: 8000,
     });
 
@@ -125,8 +125,7 @@ test.describe('Scroll Mode: Sidebar Navigation', () => {
     await thumb10.click();
 
     // Wait for scroll to reach page 10 (condition-based via page indicator)
-    const translationColumn = page.getByTestId('scroll-translation-column');
-    await expect(translationColumn.locator('.sticky').first()).toContainText('P.10', {
+    await expect(page.getByTestId('scroll-translation-header')).toContainText('P.10', {
       timeout: 8000,
     });
 
@@ -149,8 +148,7 @@ test.describe('Scroll Mode: View Mode Switch Preserves Page', () => {
     await switchToScrollMode(page);
 
     // The translation column header should show P.15
-    const translationColumn = page.getByTestId('scroll-translation-column');
-    await expect(translationColumn.locator('.sticky').first()).toContainText('P.15');
+    await expect(page.getByTestId('scroll-translation-header')).toContainText('P.15');
 
     // Page 15's image should be visible (scroll viewer starts at page 15)
     const page15Image = page.getByTestId('scroll-page-image-15');
@@ -173,8 +171,7 @@ test.describe('Scroll Mode: Lazy Loading', () => {
     await expect(page100Image).not.toBeAttached();
 
     // Verify the placeholder is present for page 100 instead
-    const page100Container = page.locator('[data-page="100"]');
-    const placeholder = page100Container.locator('.page-image-loader');
+    const placeholder = page.getByTestId('scroll-page-placeholder-100');
     await expect(placeholder).toBeAttached();
   });
 });
@@ -185,17 +182,13 @@ test.describe('Scroll Mode: Page Labels', () => {
     await switchToScrollMode(page);
 
     // Check that page labels are visible for nearby pages
-    const imageColumn = page.getByTestId('scroll-image-column');
-
-    // Page 1 label should be visible (label element has font-futura font-bold classes)
-    const page1Container = imageColumn.locator('[data-page="1"]');
-    const page1Label = page1Container.locator('.font-futura.font-bold');
+    // Page 1 label should be visible
+    const page1Label = page.getByTestId('scroll-page-label-1');
     await expect(page1Label).toBeVisible();
     await expect(page1Label).toContainText('P.1');
 
     // Page 2 label should also be present in the DOM
-    const page2Container = imageColumn.locator('[data-page="2"]');
-    const page2Label = page2Container.locator('.font-futura.font-bold');
+    const page2Label = page.getByTestId('scroll-page-label-2');
     await expect(page2Label).toBeAttached();
     await expect(page2Label).toContainText('P.2');
   });
