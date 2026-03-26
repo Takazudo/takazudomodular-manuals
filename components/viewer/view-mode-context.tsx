@@ -34,7 +34,15 @@ export function ViewModeProvider({ children }: { children: React.ReactNode }) {
       openThumbsModal,
       closeThumbsModal,
     }),
-    [viewMode, sidebarOpen, thumbsModalOpen, setViewMode, toggleSidebar, openThumbsModal, closeThumbsModal],
+    [
+      viewMode,
+      sidebarOpen,
+      thumbsModalOpen,
+      setViewMode,
+      toggleSidebar,
+      openThumbsModal,
+      closeThumbsModal,
+    ],
   );
 
   return <ViewModeContext.Provider value={value}>{children}</ViewModeContext.Provider>;
