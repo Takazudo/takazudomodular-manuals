@@ -52,12 +52,7 @@ const pageNumStyles = ctl(`
   text-center
 `);
 
-export function SidebarThumbs({
-  pages,
-  currentPage,
-  isOpen,
-  onPageSelect,
-}: SidebarThumbsProps) {
+export function SidebarThumbs({ pages, currentPage, isOpen, onPageSelect }: SidebarThumbsProps) {
   const activeRef = useRef<HTMLButtonElement>(null);
   const prevIsOpenRef = useRef(false);
 
@@ -86,6 +81,7 @@ export function SidebarThumbs({
     <aside
       className={`${sidebarStyles} ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       aria-label="Page thumbnails"
+      aria-hidden={!isOpen}
     >
       <div className={thumbListStyles}>
         {pages.map((page) => {

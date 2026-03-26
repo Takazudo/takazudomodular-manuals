@@ -17,7 +17,7 @@ const overlayStyles = ctl(`
   fixed inset-0
   z-[100]
   flex items-center justify-center
-  bg-[rgba(0,0,0,0.85)]
+  bg-zd-overlay
 `);
 
 const contentStyles = ctl(`
@@ -56,7 +56,7 @@ const thumbItemStyles = ctl(`
   rounded-sm
   transition-transform
   hover:scale-[1.03]
-  hover:brightness-110
+  hover:brightness-125
 `);
 
 const pageNumOverlayStyles = ctl(`
@@ -127,12 +127,7 @@ export function ThumbsModal({
   return (
     <div className={overlayStyles} onClick={handleOverlayClick} role="dialog" aria-modal="true">
       <div className={contentStyles}>
-        <button
-          className={closeButtonStyles}
-          onClick={onClose}
-          aria-label="閉じる"
-          type="button"
-        >
+        <button className={closeButtonStyles} onClick={onClose} aria-label="閉じる" type="button">
           ✕
         </button>
         <div className={gridStyles} ref={gridRef}>
@@ -147,12 +142,16 @@ export function ThumbsModal({
                 type="button"
                 aria-label={`ページ ${page.pageNum}`}
               >
-                <img
-                  src={withBasePath(page.image)}
-                  alt={`Page ${page.pageNum}`}
-                  className="w-full h-full object-contain bg-white"
-                  loading={isActive ? 'eager' : 'lazy'}
-                />
+                {page.image ? (
+                  <img
+                    src={withBasePath(page.image)}
+                    alt={`Page ${page.pageNum}`}
+                    className="w-full h-full object-contain bg-white"
+                    loading={isActive ? 'eager' : 'lazy'}
+                  />
+                ) : (
+                  <div className="w-full h-full bg-zd-gray2" aria-hidden="true" />
+                )}
                 <span className={pageNumOverlayStyles}>{page.pageNum}</span>
               </button>
             );

@@ -75,7 +75,6 @@ export function ScrollViewer({
   pages,
   initialPage,
   totalPages,
-  manualId,
   onCurrentPageChange,
 }: ScrollViewerProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -158,7 +157,13 @@ export function ScrollViewer({
   );
 
   // Lazily create stable ref callbacks per page (cached in ref to avoid re-render churn)
-  const refCallbackCacheRef = useRef(new Map<number, (node: HTMLDivElement | null) => void>());
+  type RefCallback = (node: HTMLDivElement | null) => void;
+  const refCallbackCacheRef = useRef<Map<number, RefCallback>>(new Map());
+  const prevRegisterRef = useRef(registerPageElement);
+  if (prevRegisterRef.current !== registerPageElement) {
+    refCallbackCacheRef.current.clear();
+    prevRegisterRef.current = registerPageElement;
+  }
   const getRefCallback = useCallback(
     (pageNum: number) => {
       let cb = refCallbackCacheRef.current.get(pageNum);
@@ -201,11 +206,7 @@ export function ScrollViewer({
   return (
     <div className={containerStyles} data-testid="scroll-viewer">
       {/* Left Column: Scrollable Page Images */}
-      <div
-        ref={scrollContainerRef}
-        className={imageColumnStyles}
-        data-testid="scroll-image-column"
-      >
+      <div ref={scrollContainerRef} className={imageColumnStyles} data-testid="scroll-image-column">
         {pages.map((page) => (
           <div
             key={page.pageNum}
@@ -243,9 +244,7 @@ export function ScrollViewer({
             P.{currentPage} / {totalPages}
           </span>
           {currentPageData?.sectionName && (
-            <span className="text-sm text-zd-gray ml-hgap-sm">
-              — {currentPageData.sectionName}
-            </span>
+            <span className="text-sm text-zd-gray ml-hgap-sm">— {currentPageData.sectionName}</span>
           )}
         </div>
 
