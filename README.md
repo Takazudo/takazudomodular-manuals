@@ -1,30 +1,35 @@
-# Manual OXI ONE MK2
+# zmanuals
 
-A Next.js-based manual viewer for hardware synthesizer manuals, starting with the OXI ONE MKII. This site provides a bilingual viewing experience with original PDF page images alongside Japanese translations.
+A Next.js-based manual viewer for hardware synthesizer manuals. Provides a bilingual viewing experience with original PDF page images alongside Japanese translations, supporting 40+ manuals.
 
 ## Features
 
-- **Multi-Manual Support**: Host multiple PDF manuals with unique slugs
-- **Bilingual Display**: Original PDF images + Japanese translations
-- **Continuous Page Navigation**: Browse all pages sequentially
+- **Multi-Manual Support**: 40+ PDF manuals with unique slugs and automatic registry
+- **Bilingual Display**: Original PDF images + Japanese translations side by side
+- **Dual View Modes**: Page mode (single page) and scroll mode (continuous scrolling)
+- **Scroll Mode**: Lazy image loading, IntersectionObserver-based page detection, debounced jump navigation
+- **Thumbnail Navigation**: Sidebar thumbnails and full-page thumbnail grid modal
+- **Keyboard Navigation**: Arrow keys for page-by-page browsing
 - **Static Export**: Pre-rendered pages for fast loading
 - **Responsive Design**: Optimized for all screen sizes
-- **Dark Theme**: Custom Zudo Design System with dark mode
+- **Dark Theme**: Custom Zudo Design System
 
 ## Live Site
 
-- **Production**: [https://manual-oxi-one-mk2.netlify.app/](https://manual-oxi-one-mk2.netlify.app/)
-- **OXI ONE MK2 Manual**: [/manuals/oxi-one-mk2/](https://manual-oxi-one-mk2.netlify.app/manuals/oxi-one-mk2/)
+- **Production**: [https://zmanuals.pages.dev/](https://zmanuals.pages.dev/)
+- **OXI ONE MK2 Manual**: [https://zmanuals.pages.dev/manuals/oxi-one-mk2/](https://zmanuals.pages.dev/manuals/oxi-one-mk2/)
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 with App Router
+- **Framework**: Next.js 14+ with App Router
 - **UI**: React 19
 - **Styling**: Tailwind CSS v4 (Zudo Design System)
 - **Language**: TypeScript
 - **Package Manager**: pnpm
-- **Deployment**: Netlify
+- **Deployment**: Cloudflare Pages
 - **Documentation**: Docusaurus 3
+- **Unit Tests**: Vitest
+- **E2E Tests**: Playwright
 
 ## Quick Start
 
@@ -91,9 +96,7 @@ Edit `lib/manual-registry.ts` to import the new manual's data:
 ```typescript
 // Add imports for new manual
 import newManualManifest from '@/public/new-manual-slug/data/manifest.json';
-import newManualPart01 from '@/public/new-manual-slug/data/part-01.json';
-import newManualPart02 from '@/public/new-manual-slug/data/part-02.json';
-// ... import all parts (check how many parts were created)
+import newManualPages from '@/public/new-manual-slug/data/pages-ja.json';
 
 // Add to registry
 const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
@@ -102,11 +105,7 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   },
   'new-manual-slug': {
     manifest: newManualManifest as unknown as ManualManifest,
-    parts: {
-      '01': newManualPart01 as unknown as ManualPartData,
-      '02': newManualPart02 as unknown as ManualPartData,
-      // ... all parts
-    },
+    pages: newManualPages as unknown as ManualPagesData,
   },
 };
 ```
@@ -157,11 +156,10 @@ manual-pdf/new-manual-slug/     # Source (gitignored after processing)
   ├── pages/                    # Split page PDFs
   └── parts/                    # Split part PDFs
 
-public/new-manual-slug/ # Output (committed to git)
+public/new-manual-slug/         # Output (committed to git)
   ├── data/                     # Final JSON files
   │   ├── manifest.json
-  │   ├── part-01.json
-  │   └── ... (part-XX.json)
+  │   └── pages-ja.json
   ├── pages/                    # Rendered images
   │   ├── page-001.png
   │   └── ... (page-XXX.png)
@@ -197,6 +195,11 @@ pnpm lint                 # ESLint
 pnpm format               # Prettier formatting
 pnpm check                # Run all checks
 pnpm check:fix            # Fix all auto-fixable issues
+
+# Testing
+pnpm test:unit            # Run Vitest unit tests
+pnpm test:unit:watch      # Run unit tests in watch mode
+pnpm test                 # Run Playwright e2e tests (requires dev server)
 
 # PDF Processing
 pnpm run pdf:all --slug {slug}        # Full pipeline
@@ -234,11 +237,14 @@ cd worktrees/issue-X-feature-name
 │   └── manuals/[manualId]/     # Dynamic manual routes
 │       └── page/[pageNum]/     # Page viewer
 ├── components/                 # React components
+│   └── viewer/                 # Viewer components (scroll mode, sidebar, modal)
 ├── lib/                        # Utilities and data loading
 │   ├── manual-data.ts          # Data loading logic
 │   ├── manual-registry.ts      # Manual registry (update for new manuals)
+│   ├── asset-url.ts            # Base path utilities
 │   └── types/                  # TypeScript types
-├── public/             # Static manual assets
+├── e2e/                        # Playwright e2e tests
+├── public/                     # Static manual assets
 │   └── {slug}/                 # Per-manual directories
 │       ├── data/               # JSON files (committed)
 │       ├── pages/              # Images (committed)

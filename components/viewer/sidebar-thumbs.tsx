@@ -65,7 +65,7 @@ export function SidebarThumbs({ pages, currentPage, onPageSelect }: SidebarThumb
               className={`${thumbButtonStyles} hover:bg-white/10`}
             >
               <div
-                className={`${thumbImageWrapperStyles} border-2 ${isCurrent ? 'border-zd-outline' : 'border-transparent'}`}
+                className={`${thumbImageWrapperStyles} border-3 ${isCurrent ? 'border-zd-outline' : 'border-transparent'}`}
               >
                 {page.image ? (
                   <img

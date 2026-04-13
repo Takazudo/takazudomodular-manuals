@@ -137,7 +137,7 @@ export function ThumbsModal({
               <button
                 key={page.pageNum}
                 ref={isActive ? currentThumbRef : undefined}
-                className={`${thumbItemStyles}${isActive ? ' border-2 border-zd-outline' : ''}`}
+                className={`${thumbItemStyles}${isActive ? ' border-3 border-zd-outline' : ''}`}
                 onClick={() => handleThumbClick(page.pageNum)}
                 type="button"
                 aria-label={`ページ ${page.pageNum}`}
