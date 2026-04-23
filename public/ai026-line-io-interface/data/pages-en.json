@@ -4,7 +4,10 @@
     "language": "en",
     "extractionMethod": "pdf-parse",
     "imageFormat": "png",
-    "imageDPI": 300
+    "imageDPI": 300,
+    "cleanupMethod": "claude-code-subagent",
+    "cleanupModel": "haiku",
+    "cleanedAt": "2026-04-23T17:54:04.387Z"
   },
   "pages": [
     {
@@ -12,7 +15,7 @@
       "image": "/ai026-line-io-interface/pages/page-001.png",
       "title": "Page 1",
       "sectionName": null,
-      "content": "AI Synthesis AI026 Euroack Line\nInterface User’s Manual\nThis is the Manual for the AI026 Eurorack Line Interface you can purchase it by going to:\nhttps://aisynthesis.com/product/ai026-eurorack-line-interface/.\n1. About the AI026 Eurorack Line Interface\nThe AI026 Eurorack Line Interface converts between +/- 2V Line Signals and +/- 5V Eurorack\nsignals. This allows for the best headroom and highest quality when processing Line signals with\nEurorack modules, and vice versa.\n2. AI026 Controls\n1. Line Level. This knob controls the\nvolume of Line Level Inputs. This\nsignal is at “unity” at approximately\n3 o clock. Turning past 3 o'clock\nwill provide more gain for\nnon-normalized signals or for\nsaturation.\n2. Euro Level. This knob controls the\nvolume of the Euro Level Inputs. It\nis unity at fully CW.\n3. Line Level In. These are stereo\ninputs for Line Level Signals. The\nLeft is normalled to the Right, so\nthat when no cable is in the Right\nInput, the left signal will be passed\nto that input.\n4. Euro Level In. These are stereo\ninputs for EuroLevel Signals. The\nLeft is normalled to the Right, so\n\n-- 1 of 1 --",
+      "content": "AI Synthesis AI026 Euroack Line Interface User's Manual\n\nThis is the Manual for the AI026 Eurorack Line Interface you can purchase it by going to: https://aisynthesis.com/product/ai026-eurorack-line-interface/.\n\n1. About the AI026 Eurorack Line Interface\n\nThe AI026 Eurorack Line Interface converts between +/- 2V Line Signals and +/- 5V Eurorack signals. This allows for the best headroom and highest quality when processing Line signals with Eurorack modules, and vice versa.\n\n2. AI026 Controls\n\n1. Line Level. This knob controls the volume of Line Level Inputs. This signal is at \"unity\" at approximately 3 o clock. Turning past 3 o'clock will provide more gain for non-normalized signals or for saturation.\n\n2. Euro Level. This knob controls the volume of the Euro Level Inputs. It is unity at fully CW.\n\n3. Line Level In. These are stereo inputs for Line Level Signals. The Left is normalled to the Right, so that when no cable is in the Right Input, the left signal will be passed to that input.\n\n4. Euro Level In. These are stereo inputs for EuroLevel Signals. The Left is normalled to the Right, so",
       "hasContent": true,
       "tags": []
     },
@@ -21,7 +24,7 @@
       "image": "/ai026-line-io-interface/pages/page-002.png",
       "title": "Page 2",
       "sectionName": null,
-      "content": "that when no cable is in the Right Input, the left signal will be passed to that input.\n5. Line Level Out. These are Line Level Outputs of the Euro Level in signals.\n5. EuroLevel Out. These are Euro Level Outputs of the Line In signals.\n4. Power\nThe AI026 uses a shrouded header and reverse power protection to prevent the cable being plugged\nin the wrong way. The unit draws 11 mA on the positive rail, and 11 mA on the negative side.\n\n-- 1 of 1 --",
+      "content": "that when no cable is in the Right Input, the left signal will be passed to that input.\n\n5. Line Level Out. These are Line Level Outputs of the Euro Level in signals.\n\n5. EuroLevel Out. These are Euro Level Outputs of the Line In signals.\n\n4. Power\n\nThe AI026 uses a shrouded header and reverse power protection to prevent the cable being plugged in the wrong way. The unit draws 11 mA on the positive rail, and 11 mA on the negative side.",
       "hasContent": true,
       "tags": []
     }
