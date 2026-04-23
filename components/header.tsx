@@ -6,6 +6,7 @@ import ctl from '@netlify/classnames-template-literals';
 import { getManualTitle } from '@/lib/manual-registry';
 import { useViewMode } from '@/components/viewer/view-mode-context';
 import { SearchTrigger } from '@/components/search/search-trigger';
+import { LanguageToggle } from '@/components/language/language-toggle';
 
 const headerStyles = ctl(`
   fixed top-0 left-0 right-0 z-50
@@ -167,6 +168,7 @@ export function Header() {
                 </TooltipButton>
               </>
             )}
+            <LanguageToggle manualId={manualId} />
             <SearchTrigger manualId={manualId} />
           </div>
         )}
