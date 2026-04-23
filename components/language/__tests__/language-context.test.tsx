@@ -113,6 +113,19 @@ describe('LanguageProvider — post-mount resolution', () => {
 
     expect(screen.getByTestId('lang').textContent).toBe('ja');
   });
+
+  it('ignores invalid lang values from URL and localStorage and falls back to "ja"', () => {
+    setUrl('?lang=fr');
+    window.localStorage.setItem(LANG_STORAGE_KEY, 'de');
+
+    render(
+      <LanguageProvider>
+        <LangConsumer />
+      </LanguageProvider>,
+    );
+
+    expect(screen.getByTestId('lang').textContent).toBe('ja');
+  });
 });
 
 describe('LanguageProvider — setLang', () => {
