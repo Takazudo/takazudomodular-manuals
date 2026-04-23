@@ -45,25 +45,27 @@ Claude Code will execute the pipeline without asking questions during translatio
 ### PDF Processing Commands
 
 ```bash
-pnpm run pdf:split       # Split PDF into parts
-pnpm run pdf:render      # Render pages to PNG images
-pnpm run pdf:extract     # Extract text from PDFs
-pnpm run pdf:translate   # Translate to Japanese (requires ANTHROPIC_API_KEY)
-pnpm run pdf:build       # Build final JSON files
-pnpm run pdf:manifest    # Create manifest.json
-pnpm run pdf:all         # Run all PDF processing steps
+pnpm run pdf:split         # Split PDF into parts
+pnpm run pdf:render        # Render pages to PNG images
+pnpm run pdf:extract       # Extract text from PDFs
+pnpm run pdf:translate     # Translate to Japanese (requires ANTHROPIC_API_KEY)
+pnpm run pdf:build         # Build final JSON files
+pnpm run pdf:search-index  # Generate search-index.json for keyword search
+pnpm run pdf:manifest      # Create manifest.json
+pnpm run pdf:all           # Run all PDF processing steps
 ```
 
 ### Pipeline Overview
 
-The PDF processing pipeline consists of 6 fully automated steps:
+The PDF processing pipeline consists of 7 fully automated steps:
 
 1. **Split** - Divides the PDF into parts (30 pages each)
 2. **Render** - Converts pages to PNG images at 150 DPI
 3. **Extract** - Extracts text from each PDF part
 4. **Translate** - Translates to Japanese using Claude Code Task subagents (5 concurrent workers)
 5. **Build** - Combines data into JSON files for Next.js
-6. **Manifest** - Creates manifest.json with metadata
+6. **Search Index** - Reads `pages-ja.json` and emits `search-index.json` (MiniSearch-ready, markdown stripped, body truncated to ~500 chars per page). Invoke with `--slug <manual-slug>`.
+7. **Manifest** - Creates manifest.json with metadata
 
 **Total time:** ~15-30 minutes for a 280-page manual
 
@@ -76,7 +78,8 @@ manual-pdf/
 public/oxi-one-mk2/
   ├── data/                                     # Final JSON files (for Next.js)
   │   ├── manifest.json
-  │   └── pages.json
+  │   ├── pages.json
+  │   └── search-index.json                     # MiniSearch-ready keyword index
   ├── pages/                                    # Rendered PNG images (150 DPI)
   │   ├── page-001.png
   │   └── ... (page-272.png)
