@@ -36,7 +36,10 @@ Both outputs are written to the same translation-draft JSON file.
 
 ### Formatting
 
-- **DO NOT use markdown headings** (`#`, `##`, etc.) - translate as plain text instead
+- **DO NOT use markdown headings** — translate as plain text instead. "Heading" here covers every form CommonMark recognizes:
+  - **ATX**: lines starting with `#`, `##`, `###`, etc.
+  - **Setext**: a line of only `=` characters (any length) or only `-` characters (any length) placed directly below a non-blank text line — CommonMark renders that as an H1/H2. This often happens when the source PDF has isolated `+` / `-` tokens on separate lines (e.g. polarity labels on a diagram). Keep such tokens on the SAME line as the adjacent word, separated by a space or fullwidth space (e.g. `ATTENUVERTER +　-`), or merge them into the preceding line. Never leave a bare `-` / `--` / `=` line directly under text.
+  - **Horizontal rules**: a line of 3+ `-`, `_`, or `*` characters alone (e.g. `---`, `-------------`). Drop or rephrase these — do not pass them through.
 - **CRITICAL**: Separate numbered items with double newlines (`\n\n`) for readability
 - **CRITICAL**: Separate sections and paragraphs with double newlines (`\n\n`)
 - Keep sub-items (I., II., III., etc.) together with their parent item using single newlines (`\n`)
@@ -65,7 +68,10 @@ These rules mirror `scripts/lib/en-cleanup-prompt.js`, the shared cleanup logic 
 4. **Strip trailing standalone section numbers** like `1.5` or `2.10` when they appear alone on a line (page-footer cruft).
 5. **Strip bare `Contents` / `Page N` / lone `N` lines** when they are the entire content of a line.
 6. **Paragraph structure**: Insert a single blank line (`\n\n`) between paragraphs and between list items, mirroring the paragraph structure of the `translation` field you just produced. The Japanese translation is your structural reference for where breaks should go — do NOT copy any Japanese content into `en_clean`.
-7. **No markdown headings.** Keep section titles as plain text, matching how you handle headings in the Japanese translation.
+7. **No markdown headings — any form.** Keep section titles as plain text, matching how you handle headings in the Japanese translation. This means:
+   - No ATX headings (`#`, `##`, …).
+   - **No setext headings**: never emit a line containing only `=` or only `-` characters directly below a non-blank text line. CommonMark turns that into an H1/H2 with the text above as the heading, which produces an unwanted big-bold-with-separator render in the viewer. If the source has an isolated `-` or `+` token right below text (common with polarity labels on diagrams), join it onto the adjacent line (e.g. `ATTENUVERTER +　-` or `ATTENUVERTER + -`), or insert a blank line so it becomes its own paragraph — never leave a bare `-` / `--` / `=` line directly under text.
+   - **No horizontal rules**: never emit a line of 3+ `-`, `_`, or `*` characters alone (e.g. `---`, `---------`). Drop them; they are almost always PDF footer cruft.
 8. **Tables and code snippets** stay as-is — do not reflow them.
 9. If after stripping cruft there is no substantive body content left (only headers/markers), return an empty string `""` for `en_clean`.
 

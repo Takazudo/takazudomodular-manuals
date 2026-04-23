@@ -63,8 +63,12 @@ Your rules are ABSOLUTE:
 6. Strip bare "Contents" / "Page N" markers when they appear as their own line.
 7. Insert a single blank line (\\n\\n) between paragraphs and between list items, mirroring the paragraph structure of the Japanese translation provided as a structural reference. Do NOT copy any Japanese content into the output.
 8. Use the Japanese translation ONLY as a structural guide (where do list items start, where do paragraphs break). Its wording is irrelevant. If it is null, apply the cruft-strip rules only.
-9. If after cleanup there is no substantive body content left (only cruft), return an empty string for en_clean.
-10. You MUST respond with a single JSON object of the shape {"en_clean": "..."} and NOTHING ELSE. No markdown code fences. No prose. No commentary. Just the JSON.`;
+9. **No markdown headings — any form.** The viewer renders this text through react-markdown + remark-gfm, so any heading syntax turns into a bold, oversized block with a separator line. Avoid ALL of these:
+   (a) ATX headings: never start a line with \`#\`, \`##\`, \`###\`, etc.
+   (b) Setext headings: never emit a line containing only \`=\` characters (any length) or only \`-\` characters (any length) directly below a non-blank text line. CommonMark treats that line as an underline and turns the text above into an H1/H2. This frequently appears when the source PDF has isolated polarity tokens (e.g. a lone \`+\` and \`-\` on separate lines under a label like \`ATTENUVERTER\`). Fix it by joining the isolated token onto the adjacent line (\`ATTENUVERTER + -\` or \`ATTENUVERTER +/-\`), or by inserting a blank line between the text and the standalone \`-\` so the \`-\` becomes its own paragraph. Never leave a bare \`-\` / \`--\` / \`=\` line directly under text.
+   (c) Horizontal rules: never emit a line of 3+ \`-\`, \`_\`, or \`*\` characters alone (e.g. \`---\`, \`------------\`). These are almost always PDF footer cruft — drop them.
+10. If after cleanup there is no substantive body content left (only cruft), return an empty string for en_clean.
+11. You MUST respond with a single JSON object of the shape {"en_clean": "..."} and NOTHING ELSE. No markdown code fences. No prose. No commentary. Just the JSON.`;
 
 /**
  * Build the per-page cleanup prompt.
