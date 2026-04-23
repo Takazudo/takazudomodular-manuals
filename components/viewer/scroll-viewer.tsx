@@ -12,6 +12,7 @@ import {
 } from 'react';
 import ctl from '@netlify/classnames-template-literals';
 import type { ManualPage } from '@/lib/types/manual';
+import type { Lang } from '@/components/language/language-context';
 import { MarkdownRenderer } from '@/components/markdown-renderer';
 import { withBasePath } from '@/lib/asset-url';
 import { useIntersectionPages } from './use-intersection-pages';
@@ -75,6 +76,8 @@ const translationHeaderStyles = ctl(`
 
 interface ScrollViewerProps {
   pages: ManualPage[];
+  /** Language of the text content in `pages` — drives the `lang` attribute and empty-state copy. */
+  lang: Lang;
   initialPage: number;
   totalPages: number;
   manualId: string;
@@ -85,8 +88,13 @@ export interface ScrollViewerHandle {
   scrollToPage: (pageNum: number) => void;
 }
 
+const EMPTY_CONTENT_MESSAGE: Record<Lang, string> = {
+  ja: 'このページには翻訳がありません',
+  en: 'No text extracted for this page.',
+};
+
 export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(function ScrollViewer(
-  { pages, initialPage, totalPages, onCurrentPageChange },
+  { pages, lang, initialPage, totalPages, onCurrentPageChange },
   ref,
 ) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -343,12 +351,12 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
         </div>
 
         {currentPageData?.hasContent ? (
-          <div data-testid="scroll-translation-panel">
+          <div lang={lang} data-testid="scroll-translation-panel">
             <MarkdownRenderer content={currentPageData.content} />
           </div>
         ) : (
-          <p className="text-zd-gray italic" data-testid="scroll-no-translation">
-            このページには翻訳がありません
+          <p lang={lang} className="text-zd-gray italic" data-testid="scroll-no-translation">
+            {EMPTY_CONTENT_MESSAGE[lang]}
           </p>
         )}
       </div>

@@ -3,6 +3,7 @@
 import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 import ctl from '@netlify/classnames-template-literals';
 import type { ManualPage } from '@/lib/types/manual';
+import type { Lang } from './language/language-context';
 import { MarkdownRenderer } from './markdown-renderer';
 import { PageNavigation } from './page-navigation';
 import { KeyboardNavigation } from './keyboard-navigation';
@@ -55,12 +56,19 @@ const navigationWrapperStyles = ctl(`
 
 interface PageViewerProps {
   page: ManualPage;
+  /** Language of the text content in `page` — drives the `lang` attribute and empty-state copy. */
+  lang: Lang;
   currentPage: number;
   totalPages: number;
   manualId: string;
 }
 
-export function PageViewer({ page, currentPage, totalPages, manualId }: PageViewerProps) {
+const EMPTY_CONTENT_MESSAGE: Record<Lang, string> = {
+  ja: 'このページには翻訳がありません',
+  en: 'No text extracted for this page.',
+};
+
+export function PageViewer({ page, lang, currentPage, totalPages, manualId }: PageViewerProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const prevPageRef = useRef({ currentPage, manualId });
@@ -144,12 +152,12 @@ export function PageViewer({ page, currentPage, totalPages, manualId }: PageView
           </div>
 
           {page.hasContent ? (
-            <div data-testid="translation-panel">
+            <div lang={lang} data-testid="translation-panel">
               <MarkdownRenderer content={page.content} />
             </div>
           ) : (
-            <p className="text-zd-gray6 italic" data-testid="no-translation-message">
-              このページには翻訳がありません
+            <p lang={lang} className="text-zd-gray6 italic" data-testid="no-translation-message">
+              {EMPTY_CONTENT_MESSAGE[lang]}
             </p>
           )}
         </div>
