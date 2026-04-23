@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-04-23T12:44:46.520Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac104-tnetw/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac104-tnetw/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC104 VC T-NETWORKS \tUSER’S GUIDE\nOctober.2019\tRevision.01\nWelcome to:\npage 2\tADDAC SYSTEM\nOVERALL FEATURES\nFollowing our ADDAC103 T-Networks this new module is also inspired by Twin T-Networks circuits used in\nmany lengendary drum machines. A simple 4 voice module with frequency controls for each of the\nvoices. This new module also features CV inputs with attenuverters for each voice Frequency. Due to the\nspecificities of the circuit and to keep the module at a low price these inputs are not callibrated to\n1v/octave.\nAt each voice input there’s a gate to trigger converter so any input source is possible.\nAudio inputs can also be used as an input, in this case and due to the nature of the gate to trigger\nconverter, each voice can be used as very destructive filters.\nThis module will also be available as a full DIY kit.\nFeatures;\n4 Voices each with:\nFrequency control with CV input and attenuverter\nFrequency Range Switch, Low/Mod/High\nTrigger Input\nAudio Output\nSumming Mix output with Volume control",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac104-tnetw/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "CONTROLS DESCRIPTION\nADDAC104 User’s Guide\npage 3\tADDAC SYSTEM\nFrequency\nTune the Pitch for each voice\nSumming Mix Gain\nSets the output gain for the overall\nsumming mix\nIndependent trigger inputs\nFrequency CV Attenuverter\nSets polarity and gain of incoming\nCV input\nLow/Mod/High range switches\nSets the Frequency Range\nSumming Mix Output\nIndependent voices outputs\nIndependent frequency CV inputs",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac104-tnetw/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "page 4\tADDAC SYSTEM\nADDAC104 User’s Guide\nADDAC104\nVC T-NETWORKS SIGNAL FLOW DIAGRAM\nVOICE 4\nVOICE 3\nVOICE 2\nGENERATOR\n\tFREQUENCY RANGE\nLOW/MOD/HIGH\nVOICE 1\nTRIGGER 1\nFREQUENCY\nOUTPUT 1\nAUDIO SUM \tMIX OUTPUT\nMIX VOLUME\nCV INPUT \tFREQUENCY\nATTENUVERTER",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac104-tnetw/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC104 \tUSER’S GUIDE\nOctober.2019\tRevision.01",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
