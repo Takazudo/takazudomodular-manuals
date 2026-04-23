@@ -1,0 +1,34 @@
+[
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "Welcome to: 全体的な説明 T-Networksシリーズを開発する中で、ドラムモジュールやエンベロープをトリガーする際に、適切な入力信号を持つことがいかに重要であるかを認識しました。GateとTriggerは似た信号として扱われることが多いですが、時にはそれが大きな違いを生み、そのようなモジュールの入力にGateまたはTriggerのどちらを送るかによって結果は劇的に変化します。 このことから、私たちはこのシンプルながら効果的なGate to Triggerを開発しました。各チャンネルにバイパススイッチを備えた4チャンネルのコンバーターです。 すべての入力Gateは1msのTriggerに制限されます。 このモジュールは、フルDIYキットとしても入手可能です。 技術仕様: 6HP 4cm深さ 70mA +12V 70mA -12V",
+    "url": "/addac217-gate2trig/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "コントロール説明 Gate Input 1 Bypass Switch Output 1 Gate Input 2 Bypass Switch Output 2 Gate Input 3 Bypass Switch Output 3 Gate Input 4 Bypass Switch Output 4 CHANNEL 1 CHANNEL 2 CHANNEL 3 CHANNEL 4",
+    "url": "/addac217-gate2trig/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "ADDAC217 QUAD GATE TO TRIGGER 信号フロー図 CHANNEL 4 CHANNEL 3 CHANNEL 2 CONVERTER CHANNEL 1 BYPASS OUTPUT 1 GATE INPUT",
+    "url": "/addac217-gate2trig/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "フィードバック、コメント、または問題がある場合は、以下までご連絡ください: addac@addacsystem.com ADDAC217 ユーザーガイド 2020年1月 リビジョン.01",
+    "url": "/addac217-gate2trig/page/5"
+  }
+]

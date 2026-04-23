@@ -51,6 +51,7 @@ pnpm run pdf:extract       # Extract text from PDFs
 pnpm run pdf:translate     # Translate to Japanese (requires ANTHROPIC_API_KEY)
 pnpm run pdf:build         # Build final JSON files
 pnpm run pdf:search-index  # Generate search-index.json for keyword search
+pnpm run pdf:search-index:all   # Regenerate search-index.json for all manuals at once
 pnpm run pdf:manifest      # Create manifest.json
 pnpm run pdf:all           # Run all PDF processing steps
 ```
@@ -64,8 +65,17 @@ The PDF processing pipeline consists of 7 fully automated steps:
 3. **Extract** - Extracts text from each PDF part
 4. **Translate** - Translates to Japanese using Claude Code Task subagents (5 concurrent workers)
 5. **Build** - Combines data into JSON files for Next.js
-6. **Search Index** - Reads `pages-ja.json` and emits `search-index.json` (MiniSearch-ready, markdown stripped, body truncated to ~500 chars per page). Invoke with `--slug <manual-slug>`.
+6. **Search Index** - Reads `pages-ja.json` and emits `search-index.json` (MiniSearch-ready, markdown stripped, body truncated to ~500 chars per page). Invoke with `--slug <manual-slug>`. Also writes a SHA-1 content hash to the sibling `manifest.json` as `searchIndexVersion` for cache busting. The `pdf:search-index:all` variant does the same for every manual at once and is auto-run by `pnpm build`.
 7. **Manifest** - Creates manifest.json with metadata
+
+#### Cache busting
+
+`search-index.json` is a static asset that long-lived HTTP caches can happily keep serving after a content change, so we fingerprint it:
+
+- The index generator writes the SHA-1 of the serialized `search-index.json` into the sibling `manifest.json` under `searchIndexVersion`.
+- `manifest.json` is imported synchronously at build time via `lib/manual-registry.ts`, so the hash is bundled into the client JS with no extra fetch.
+- `SearchDialog` reads `searchIndexVersion` from the registry and appends `?v=<hash>` to the `search-index.json` fetch URL. When the index changes, the query string changes, and the CDN treats it as a new resource.
+- Cloudflare Pages includes the query string in its cache key by default, so this works with no `_headers` change on our side.
 
 **Total time:** ~15-30 minutes for a 280-page manual
 

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "INDEX 免責事項と安全に関する注意事項 概要 電源ダイアグラム 電源スイッチとモニターLED Potentiometer スイッチとPhotocell Jack LED ハードウェア設定 Arduino互換性 フロントパネル",
+    "url": "/addac210-open-heart/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "免責事項 このモジュールの使用中に生じたいかなる損害についても、間接的、特殊、偶発的、または結果的な損害（電源、他のモジュール、パーソナルコンピューター、またはモジュール自体への損害を含むがこれらに限定されない）について、当社は一切の責任を負わず、賠償責任も負いません。 自己責任でご使用ください！ 安全に関する注意事項 （エレクトロニクス愛好家の方へ） このモジュールを使用する際に注意すべき点がいくつかあります。ここではシンプルに説明しますが、要点は、何をしているか分からない場合はトラブルが起こります。しかし、落胆しないでください。何をしているか分かっていると思っていてもトラブルは起こります！ しかし、これは何かが正しくない場合、ベストケースシナリオでは回路に何らかの不具合があり単に動作しないか、ワーストケースシナリオでは回路に不具合があり、動作しないだけでなく、モジュールを通じて高負荷を流す「ショート回路」の一種を作り出し、接続先のPSUからより高い電流を要求します。これはすべてのミスがショート回路になるという意味ではありませんが、これがワーストケースシナリオの説明です。",
+    "url": "/addac210-open-heart/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "概要 これはEurorack電子機器愛好家のために最適化された開発プラットフォームです。 フロントパネル部品: On/Off 電源スイッチ 1x ブレッドボード 1x 1K Pot 2x 10k Pot 1x 100k Log Pot 1x 100k Pot 1x 1M Pot 4x LED 1x フォトセル 2x SPST (ノーマリーオープン) プッシュスイッチ 1x DPDT (on/on) トグルスイッチ 1x SPDT (on/on) トグルスイッチ 2x SPDT (on/off/on) トグルスイッチ 1x 3.5mmステレオジャック 5x 3.5mmモノジャック 1x 1/4'' モノジャック 電源: -12V, +12V -3/10V, +3/10V 付属品: 1M リボンケーブルと55cmスタンドオフスペーサー(デスクトップ操作用) 1 追加ブレッドボード ネジとナイロンワッシャー 機械的仕様: 幅: 36 HP 奥行き: 3.5cm (±1.375インチ) Arduinoの有無にかかわらず、Arduinoシールド使用時は奥行きが増加します。",
+    "url": "/addac210-open-heart/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "POWER DIAGRAM パワーダイアグラムの仕組みを理解するために、4つの異なる電源について考えます。 MAIN POWER Main powerは、Bus Boardから供給される電源です。 FRONTPANEL POWER これはモジュール全体で使用される電源です。この電圧はOn/Offスイッチおよび保護リレーの後段にあります。電流保護回路により、Main Powerからわずかな電圧降下が発生します。 SECONDARY POWER これらは2つの追加電源で、ポジティブとネガティブの電源です。隣接するトリマーによって、+3Vから+10V、および-3Vから-10Vの任意の電圧に調整できます。 ARDUINO POWER Arduino Power Pinsは、他のすべての電源から完全に独立しています。これらのピンは、ArduinoがUSBケーブルまたは外部電源アダプターによって電源供給され、接続されている場合にのみアクティブになります。 PATH DESCRIPTION Bus",
+    "url": "/addac210-open-heart/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "電源スイッチ & モニターLED フロントパネルには7つのLEDと1つのスイッチがあります。 電源On/Offスイッチは説明不要で、電源をオンまたはオフにします。このスイッチは、保護リレーが作動した後、過電流保護スイッチをリセットする際にも使用されます。 LEDは3つのグループに分かれています: SECOND* これらのLEDは、セカンダリー電源の状態を表示します。 MAIN* これらのLEDは、メイン電源の状態を表示します。 警告: これらのLEDのいずれかが消灯している場合は、直ちに電源スイッチをオフにしてください! CURRENT これらのLEDは、電流検出回路の状態を表示します。上部のLEDが点灯(OFF)している場合は、メイン電源がシャットダウンされており、電源On/Offスイッチでリセットする必要があることを意味します。 フロントパネルのラベルは相対的なものです。右側にトリマーがあり、シャットダウン前の最大消費電流を調整できます。",
+    "url": "/addac210-open-heart/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "POTENTIOMETERS フロントパネルには6つのPotentiometerがあり、抵抗値は以下の通りです： 1: B1K 2: B10K 3: B10K 4: A100K 5: B100K 6: 1M (Aは対数ポット、Bは線形ポットを示します) すべてのポットの接続は、上部のメスピンヘッダーにあります。 水平方向には、すべてのポット1から6にアクセスできます。 垂直方向には、各ポットの特定のピンにアクセスできます：Left / Center / Right。 LEFT CENTER RIGHT LEFT CENTER RIGHT LEFT CENTER RIGHT",
+    "url": "/addac210-open-heart/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "SWITCHES & PHOTOCELL フロントパネルには6つのSwitchと1つのPhotocellがあります。 3種類の異なるスイッチタイプがあります: 1 & 2: SPST、Off - On 3: DPDT、On - On 4 to 6: SPDT、On - Off - On すべてのスイッチの接続は、上部のメスピンヘッダーにあります。 ラベルはスイッチの位置を示しています: Up / Center / Down。 これは標準的なスイッチ接続とは異なることに注意してください。スイッチのメカニズムの都合上、通常は逆向きに接続されます。 PHOTOCELL LEFT PIN SWITCH 1 SWITCH 2 RIGHT PIN UP POSITION ON SWITCH LEFT SIDE CENTER PIN DOWN POSITION ON SWITCH RIGHT SIDE UP POSITION ON SWITCH 4 CENTER PIN DOWN POSITION ON SWITCH 5 SWITCH 6",
+    "url": "/addac210-open-heart/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "JACKS フロントパネルには7つのJackがあります。 3種類のJackがあります: 1: Stereo Jack 2 to 6: Mono Jack 7: 1/4'' Mono Jack すべてのJackの接続は、上部のメスピンヘッダーにあります。 ラベルはスイッチの位置を示します: Up / Center / Down。 Jack 1以外のすべてのJackには、TipとTip Switchがあります。Groundはデフォルトで接続されています。 JACK 1 JACK 2 JACK 3 JACK 4 JACK 5 JACK 6 JACK 7 LEFT STEREO JACK 1 MONO JACKS 2 to 7 RIGHT TIP TIP SWITCH",
+    "url": "/addac210-open-heart/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "LEDs フロントパネルには4つのLEDがあります。 すべてのLEDの接続は、それらの横にあるメスピンヘッダーにあります。 ラベルはLEDの脚を示します: (-) マイナスまたはカソード (+) プラスまたはアノード 便利なように、メスヘッダーの底部には4つのGround点もあります。 CATHODE GROUND PINS LEDS ANODE",
+    "url": "/addac210-open-heart/page/10"
+  },
+  {
+    "id": "11",
+    "pageNum": 11,
+    "title": "Page 11",
+    "sectionName": null,
+    "body": "HARDWARE SETTINGS CURRENT TRIMMER モジュール右側に、シャットダウン閾値を調整するためのトリマーが1つあります。これは0.2Aから0.8Aの間で設定できます。 安全のため、デフォルトの最大電流は0.3Aに設定されています。 ARDUINO POWER JUMPERS モジュールは、これらのピンがすべて未接続の状態で出荷されます。 5Vおよび3V3ジャンパーは、ArduinoのI. 5V/3V3をフロントパネルのメスヘッダーに供給するかどうかを決定します。ジャンパーが接続されていない場合、5V/3V3はフロントパネルに供給されません。 GNDジャンパーは、シンセサイザー電源とArduino間でグラウンドを共有します。",
+    "url": "/addac210-open-heart/page/11"
+  },
+  {
+    "id": "12",
+    "pageNum": 12,
+    "title": "Page 12",
+    "sectionName": null,
+    "body": "ARDUINO互換性 このモジュールは、標準的なArduino Shieldと同様にArduinoの上に積み重ねて使用します。 Arduino Diecimila、Duemilanove、Unoタイプのボードと互換性があります。 Arduinoとモジュールの間に特定のArduino Shieldを積み重ねて使用することも可能です。 究極の安全性を確保するため、RUGGEDUINOの使用を強くお勧めします。これはサードパーティ製のボードで、実質的に破壊不可能な設計となっています。過電圧保護および過電流保護機能を備えており、ボードと最終的にはコンピューターを「常に」安全に保ちます。 http://www.ruggedcircuits.com/microcontroller-boards/ruggeduino",
+    "url": "/addac210-open-heart/page/12"
+  },
+  {
+    "id": "14",
+    "pageNum": 14,
+    "title": "Page 14",
+    "sectionName": null,
+    "body": "ADDAC210 OPEN HEART SURGERY ユーザーズガイド 2014年8月 リビジョン.01",
+    "url": "/addac210-open-heart/page/14"
+  }
+]

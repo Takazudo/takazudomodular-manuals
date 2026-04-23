@@ -1,5 +1,21 @@
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'fs';
+import { tmpdir } from 'os';
+import { join } from 'path';
 import { describe, it, expect } from 'vitest';
 import * as SearchIndex from './pdf-search-index.js';
+import {
+  serializeSearchIndex,
+  sha1,
+  updateManifestSearchIndexVersion as updateManifestSearchIndexVersionImpl,
+} from './lib/search-index.js';
+import { discoverManualSlugs as discoverManualSlugsImpl } from './pdf-search-index-all.js';
+
+type ManifestLike = Record<string, unknown>;
+const updateManifestSearchIndexVersion = updateManifestSearchIndexVersionImpl as (
+  manifest: ManifestLike,
+  hash: string,
+) => ManifestLike;
+const discoverManualSlugs = discoverManualSlugsImpl as (dir: string) => string[];
 
 interface SearchEntry {
   id: string;
@@ -222,6 +238,131 @@ describe('pdf-search-index', () => {
         ],
       };
       expect(buildIndex(doc, slug).map((e) => e.pageNum)).toEqual([10, 3]);
+    });
+  });
+
+  describe('serialize determinism and hash stability', () => {
+    const slug = 'oxi-one-mk2';
+    const doc = {
+      pages: [
+        {
+          pageNum: 1,
+          title: 'Page 1',
+          sectionName: 'Intro',
+          content: '# Welcome\n\nHello world',
+          hasContent: true,
+        },
+        {
+          pageNum: 2,
+          title: 'Page 2',
+          sectionName: null,
+          content: 'Plain body **text**.',
+          hasContent: true,
+        },
+        { pageNum: 3, title: 'Page 3', sectionName: null, content: '', hasContent: false },
+      ],
+    };
+
+    it('buildIndex + serializeSearchIndex produce byte-identical output across runs', () => {
+      const a = serializeSearchIndex(buildIndex(doc, slug));
+      const b = serializeSearchIndex(buildIndex(doc, slug));
+      expect(a).toBe(b);
+      // Pretty-formatted output: 2-space indent, trailing newline.
+      expect(a.endsWith('\n')).toBe(true);
+      expect(a).toContain('  "pageNum": 1');
+    });
+
+    it('sha1 of the serialized index is stable across runs for identical input', () => {
+      const a = sha1(serializeSearchIndex(buildIndex(doc, slug)));
+      const b = sha1(serializeSearchIndex(buildIndex(doc, slug)));
+      expect(a).toBe(b);
+      expect(a).toMatch(/^[0-9a-f]{40}$/);
+    });
+  });
+
+  describe('updateManifestSearchIndexVersion', () => {
+    const hash = 'a'.repeat(40);
+
+    it('preserves every existing field, including arbitrary extras', () => {
+      const manifest = {
+        title: 'OXI',
+        brand: 'OXI Instruments',
+        version: '1.0.0',
+        totalPages: 272,
+        lastUpdated: '2026-01-03T16:35:35.555Z',
+        updatedAt: '20260112',
+        source: {
+          filename: 'OXI.pdf',
+          processedAt: '2026-01-03T16:35:30.894Z',
+          imageDPI: 300,
+          imageFormat: 'png',
+        },
+        extra: { nested: true, arr: [1, 2] },
+      };
+      const updated = updateManifestSearchIndexVersion(manifest, hash);
+      expect(updated).toEqual({ ...manifest, searchIndexVersion: hash });
+      // Source and extra are preserved by reference identity (shallow copy).
+      expect(updated.source).toBe(manifest.source);
+      expect(updated.extra).toBe(manifest.extra);
+      // Timestamps are unchanged.
+      expect(updated.lastUpdated).toBe('2026-01-03T16:35:35.555Z');
+      expect(updated.updatedAt).toBe('20260112');
+    });
+
+    it('adds searchIndexVersion when the manifest lacks the field yet', () => {
+      const manifest = { title: 'X', version: '1.0.0' };
+      const updated = updateManifestSearchIndexVersion(manifest, hash);
+      expect(updated.searchIndexVersion).toBe(hash);
+      expect(updated.title).toBe('X');
+      expect(updated.version).toBe('1.0.0');
+      // Input is not mutated.
+      expect('searchIndexVersion' in manifest).toBe(false);
+    });
+
+    it('overwrites an existing searchIndexVersion', () => {
+      const manifest = { title: 'X', searchIndexVersion: 'old' };
+      const updated = updateManifestSearchIndexVersion(manifest, hash);
+      expect(updated.searchIndexVersion).toBe(hash);
+    });
+  });
+
+  describe('discoverManualSlugs', () => {
+    it('does not throw on an empty public/ fixture and returns []', () => {
+      const dir = mkdtempSync(join(tmpdir(), 'search-index-empty-'));
+      try {
+        expect(() => discoverManualSlugs(dir)).not.toThrow();
+        expect(discoverManualSlugs(dir)).toEqual([]);
+      } finally {
+        rmSync(dir, { recursive: true, force: true });
+      }
+    });
+
+    it('skips non-directory entries and directories without data/pages-ja.json', () => {
+      const dir = mkdtempSync(join(tmpdir(), 'search-index-mixed-'));
+      try {
+        // Non-directory file (like _headers, _redirects).
+        writeFileSync(join(dir, '_headers'), 'header content');
+        // Directory without a pages-ja.json (like img/).
+        mkdirSync(join(dir, 'img'));
+        // Directory with only an unrelated file in data/.
+        mkdirSync(join(dir, 'no-pages', 'data'), { recursive: true });
+        writeFileSync(join(dir, 'no-pages', 'data', 'manifest.json'), '{}');
+        // A valid manual dir.
+        mkdirSync(join(dir, 'valid-manual', 'data'), { recursive: true });
+        writeFileSync(
+          join(dir, 'valid-manual', 'data', 'pages-ja.json'),
+          JSON.stringify({ pages: [] }),
+        );
+
+        expect(discoverManualSlugs(dir)).toEqual(['valid-manual']);
+      } finally {
+        rmSync(dir, { recursive: true, force: true });
+      }
+    });
+
+    it('returns [] when publicDir does not exist', () => {
+      const dir = join(tmpdir(), 'search-index-nonexistent-' + Date.now());
+      expect(discoverManualSlugs(dir)).toEqual([]);
     });
   });
 });

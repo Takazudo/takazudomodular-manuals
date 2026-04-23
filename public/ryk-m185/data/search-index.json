@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "RYK M185 SEQUENCER STAGE CV STAGE INDICATORS STAGE COUNT STAGE GATE MODE TEMPO PORTAMENTO GATE TIME / CH2 CV SET STAGES RUN / STOP RESET / MENU PREV NEXT SPLIT MODE MODE VOLTAGE MODE / GLIDE PROG CH1 CV OUT CH1 GATE OUT CH2 CV/GATE OUT / SYNC OUT MIDI OUT MIDI IN / RESET IN CLOCK IN/OUT RYK M185 SEQUENCER ユーザーマニュアル V4 FIRMWARE",
+    "url": "/ryk-m185/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "M185は、ステージ選択可能なGateモードを備えたマルチステージ・デュアルチャンネルMIDI & CV Sequencerです。 M185は+/-12V電源が必要です。付属の標準2x5ピンソケットリボンケーブルで接続してください。 リボンケーブルの赤いストライプ（-12V側）は、PCB上の「Red stripe」という文字に向けて接続してください。 1.1 機能 STAGE CV Knobを回してそのステージのCVを設定します。 STAGE INDICATORS Red = 現在のステージ Orange = Gate Highのステージ Green = Glideがオン STAGE COUNT スライドしてそのステージのパルス数を選択します。 STAGE GATE MODE スライドしてそのステージのGate Out動作を選択します： Off: Gate low Single gate: ステージの最初のクロックパルスでGate highになり、残りのクロックパルスではlowになります。 Multiple gate: ステージのすべてのクロックパルスでGate highになります。",
+    "url": "/ryk-m185/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "RUN / STOP このボタンを押すと、内部シーケンスクロックを開始または停止します。 [注意: 外部クロックを使用する場合は、先に内部クロックを停止することをお勧めします。] SETTINGS MENUでは、R/Sボタンで現在のメニュー階層から抜け出すことができます。 RESET このボタンを押すと、シーケンスを最初のステージにリセットします。 約3秒間押し続けると、SETTINGS MENUが起動します。 Settingsメニュー内では、このボタンを押して機能を切り替えるか、サブメニューに入ります。 GLIDE PROGモードでは、このボタンを押すと、点滅している緑色LEDで示されるステージのGlide設定をOn/Offで切り替えます。Glideがオンに設定されたステージは、点灯した緑色LEDインジケーターで表示されます。 PREV / NEXT このボタンを押すと、シーケンスまたはメニューを前後にステップします。 MODE このスイッチをスライドして、シーケンスの再生モードを設定します。 Forward:",
+    "url": "/ryk-m185/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "SERIAL SPLIT MODE ヒント: AAAB型の構成を設定するには、Sequence AがSTAGES 1〜4を3回演奏し、Sequence BがSTAGES 5〜8を1回演奏するようにします。 以下の値をそれぞれ5、3、1に設定します。 5 = 分割ポイント、3 = Aの繰り返し回数、1 = Bの繰り返し回数。 Split Modeでは、SequencerはAとBの両方のSequenceを同時に演奏しますが、Bの繰り返し回数はクロック数の乗数として使用されます。 例：BのリピートGATE数が3に設定されており、Sequence BのStage Countが4に設定されている場合、そのStageは12クロックパルス再生されます。[ 3 x 4 = 12 ] VOLTAGE MODE このスイッチをスライドさせてCVの電圧レンジを設定します。 CH1については、2V Quantised、5V Quantised、または5V Non-Quantisedに設定できます。 CH2は2VまたはQuantised 5Vのみです。 GLIDE",
+    "url": "/ryk-m185/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "2.1 設定メニュー 設定メニューにアクセスするには、赤いLEDのアニメーションが表示されるまで、約1秒間RESETを押し続けます。 2.2 レベル1 トップメニュー トップレベルの設定メニューは、緑のトグルON/OFF LEDと赤いカーソルLEDで示されます。 PREV/NEXTコントロールを使用して赤いカーソルLEDを目的の項目に移動し、RESETを押してその項目をONまたはOFFに切り替えるか、利用可能であればそのサブメニューに入ります。 設定メニュー内では、RUN/STOPを押すと現在のメニューレベルを抜け出せます。 1 - Scale Quantise サブメニュー [サブメニューについては5ページを参照] 2 - プログラマブル Gate パターン サブメニュー [サブメニューについては5ページを参照] 3 - Long Gate Slur ON/OFF ONに設定すると、Long Gateモードの終了時にGateがクリアされず、次のステージへの連続したgateが可能になります。 TIP: Slur付きLong",
+    "url": "/ryk-m185/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "2.3 レベル2 サブメニュー レベル2のサブメニューは、赤いトグルON/OFF LEDと緑のカーソルLEDで示されます。 RUN/STOPを使用してサブメニューを抜け、トップメニューに戻ります。 Scale Quantise サブメニュー PREV/NEXTを使用して緑のLEDを目的のステージに移動させ、RESETを押してスケールを選択します。1回押すとスケール1〜8（赤LED）、2回押すとスケール9〜16（オレンジLED）になります（以下参照）。 ルートノート設定 GATE TIMEノブを回してスケールのルートノートをCからBまで半音単位で調整します。 プログラマブルGateパターン サブメニュー GATE MODE「?????」のカスタムGateパターンを設定できます。 PREV / NEXTを押して緑のカーソルLEDを目的の位置に移動させ、RESETを押して各位置をON/OFFに切り替えます。ON状態は赤LEDの点灯で示されます。 確率的ランダムGateは、すべての位置をオフにすることで設定されます。 TIP:",
+    "url": "/ryk-m185/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "3.1 Sequencerユーティリティモード M185の電源を入れる際に特定のボタンを押し続けることで、いくつかのユーティリティモードにアクセスできます。 3.2 MIDI to CVモード このモードでは、M185をMIDI to CVコンバーターとして使用できます。 電源を入れる際にPREV（左の青いボタン）を押し、LEDが動きを止めるまで押し続けてからボタンを離してください。 付属のMIDI/TRSケーブルを使って、キーボードなどのMIDIソースをMIDI INソケットに接続します。 MIDIノートの入力はCH1からCV出力およびGATE出力に変換されます。 VelocityまたはモジュレーションのCVはCH2から出力されます。 MODEスイッチをスライドさせて、CH2のCV出力について以下のいずれかのオプションを選択します。 CV2はMIDIノートのVelocityを出力します。 CV2はBender Wheelのデータを出力します。 CV2はModulation Wheelのデータを出力します。 Stagesノブを回してMIDI Channelを選択します。 3.3",
+    "url": "/ryk-m185/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "www.rykmodular.bigcartel.com instagram @ryk_modular",
+    "url": "/ryk-m185/page/8"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "Instruments for Sonic Expression Est.2009 December.2022 USER'S GUIDE . REV01 ADDAC712 VINTAGE PREAMP INTRODUCING From Portugal with Love!",
+    "url": "/addac712-vintpre/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "説明 ADDAC712は、70年代の伝説的な機器で使用された有名なディスクリートプリアンプボードをベースにした、デュアルチャンネルのディスクリートゲインステージアンプです。 私たちの注目を集めたのは、そのクリッピングと結果として生じるサチュレーション/ディストーションの特性でした。 このモジュールは、モジュラーシグナルにディストーション/ファズキャラクターを追加するために使用できます。また、ラインソース、キーボード、ギターなどの外部ソースのプリアンプとしても使用できます。 ADDAC711 Balanced Inputsの優れたサイドコンパニオンでもあります。 上部にあるOn/Off [BYPASS]スイッチは、シグナルをエフェクト(上:アクティブ)または下部の出力ゲインステージ(下:バイパス)にルーティングします。 増幅量は[GAIN]コントロールで設定し、最大増幅量はユーザーが[MAX GAIN]トリマーで設定できます。 ±5.5vまでは、入力シグナルはその完全性を保ちます。この値を超えると、サチュレーションが増加し始めます。",
+    "url": "/addac712-vintpre/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "ADDAC712 VINTAGE PREAMP 信号フロー図 INPUT 1 OUTPUT GAIN CONTROL PREAMP GAIN CONTROL MAXIMUM GAIN CONTROL OUTPUT 1 OUTPUT GAIN CONTROL CLIPPING LED MONITOR BYPASS ON OFF INPUT 2 OUTPUT GAIN CONTROL PREAMP GAIN CONTROL MAXIMUM GAIN CONTROL OUTPUT 2 OUTPUT GAIN CONTROL CLIPPING LED MONITOR BYPASS ON OFF",
+    "url": "/addac712-vintpre/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "フィードバック、コメント、問題等は下記までご連絡ください： addac@addacsystem.com ADDAC712 ユーザーガイド December.2022 Revision.01",
+    "url": "/addac712-vintpre/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "コントロールの説明 Channel 1 BYPASS 上: アクティブ 下: バイパス Channel 1 Gain Channel 2 Maximum Gain Channel 2 Output Gain Channel 1 Output Gain Channel 2 Clipping Led Channel 1 Clipping Led Channel 1 Maximum Gain Channel 2 BYPASS 上: アクティブ 下: バイパス Channel 1 Input / Channel 2 Input Channel 1 Output / Channel 2 Output Channel 2 Gain",
+    "url": "/addac712-vintpre/page/5"
+  }
+]

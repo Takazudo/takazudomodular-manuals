@@ -1,0 +1,154 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "RYK VECTOR WAVE SYNTH VOICE ユーザーマニュアル V1.24 FIRMWARE",
+    "url": "/ryk-vector-wave/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "1→ENV/LFO VECTOR 2→/Q/MENU 3→V/OCT OUT L OUT R 4→TOP ROW KNOBS 5→BOTTOM ROW KNOBS 6→VECTOR MODE / 7→QUICK CONTROLS / 8→SETTING MENUS 9→OSCILLATOR BANKS / 10→OSCILLATOR MENUS 11→CV MODULATION 12→INPUTS 13→VECTOR JOYSTICK 14→ENVELOPES / 15→LFOS 16→MODULATION SLOTS 17→MIDI IN",
+    "url": "/ryk-vector-wave/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "RYK VECTOR WAVE - USER MANUAL V1.24 FIRMWARE Vector Waveは、FM＆ハーモニックシンセサイザーボイスです。4バンクのベクターシンセシス、または内蔵Envelope・LFOモジュレーションソースを備えた真の4ボイスポリフォニーを実現します。 OVERVIEW Vector Waveは、16基のサイン波オシレーターを備えており、4つのバンクA、B、C、Dに分割されています。 これらのオシレーターは、直列または並列の組み合わせで設定でき、複雑なFMまたはアディティブ波形やテクスチャーを作成できます。 FMシンセシスについて詳しくない方は、Wikipediaの以下の概要をご参照ください。 https://en.wikipedia.org/wiki/Frequencymodulationsynthesis オシレーターバンクの割り当て方が異なる4つのModeがあります：VECTor、POLYphonic、MULTi-timbralです。 ModeはSettings Menu（PAGE 12参照）から設定します。 VECT1/2",
+    "url": "/ryk-vector-wave/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "VECTOR WAVE - 構造概要 OSCILATOR BANKS（オシレーターバンク）A、B、C、D → MODULATION SLOTS（モジュレーションスロット）→ VECTOR MIX → OUT M1 M2 / M3 M4 ENV LFO MIDI JOYSTICK VECTOR ANIMATION",
+    "url": "/ryk-vector-wave/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "急いでいる方のためのQUICK START GUIDE Grey Menu Buttonを1〜2回押して、Settings Menu [ LOAD、SAVE、MODE、OUTPUT、MIDI、TUNE など ] を表示させます。 左下のKnobを回して「LOAD」を選択します。 このメニューでは、DEFault（デフォルト）設定のVoice、または1〜30の番号から以前に保存したVoiceを読み込むことができます。[ Vector Waveにはあらかじめ保存されたVoiceのセレクションが収録されています ] 右下のKnobを回してVoice Presetを選択してプレビューし、Knobを押してVoiceを読み込みます。 すばやく理解するために、すべての設定が基本オプションにリセットされるDefault Voiceを読み込むことをお勧めします。 Red Oscillator Buttonを押してOscillator Bankを選択します。 上段のKnobを使って、Bank内の各OscillatorのHarmonic",
+    "url": "/ryk-vector-wave/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "OSCILLATOR BANKS Redボタンを押すとOscillator Bankモードにアクセスできます。繰り返し押すと、各バンクA、B、C、Dを順番に切り替えます。 各バンクには4つのオシレーターがあります。各オシレーターには、パラメーターを制御するための上下のノブが1列ずつあります。 Oscillator Displayには、使用中のコントロールに応じて4つのページがあります。 上段のノブは各オシレーターの倍音周波数[1-32]を制御します。押すと、オシレーターの倍音とファインチューン[+/- 0-99]を切り替えます。 下段のノブは各オシレーターのアンプリチュードレベルを制御します。下段のいずれかのノブを押すと、FMアルゴリズムモードが有効になります。 FMアルゴリズムモードでは、ノブを押すと対象のオシレーターがキャリア、シリーズモジュレーター、またはパラレルモジュレーターに切り替わります。モジュレーションオシレーターからキャリアオシレーターへの信号の流れは、左から右へと向かいます。",
+    "url": "/ryk-vector-wave/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "Example1 Oscillator 1と2がパラレルで組み合わさり、Oscillator 3をモジュレートします。 Oscillator 4はモジュレートされません。 Example 2 Oscillator 1がOscillator 2、3、4をモジュレートしています。 Example 3 Oscillator 1がOscillator 2をモジュレートし、Oscillator 3がOscillator 4をモジュレートしています。 OSCILLATOR MENU RedのOscillatorボタンを数秒間押し続けるとOscillator Menuが起動し、再度数秒間押すとOscillator Menuを終了します。 Oscillator MenuではOscillator Bankの周波数、コード、ランダムクラスターのクイック設定、およびバンクのロードとセーブが行えます。 左下のknobで機能を選択し、右下のknobで影響を与えるDestination Bank[s]を選択します。 CHRDモードでは、3番目の下段knobでコードを選択します。",
+    "url": "/ryk-vector-wave/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "INIT – 全バンクをリセットします。 CPY TO – ABCDバンクLEDで示された、現在選択中のバンクをコピー先のバンクへコピーします。 ALL – コピー先のバンクへ昇順のハーモニクスを自動割り当てします。 ODD – コピー先のバンクへ昇順の奇数ハーモニクスを自動割り当てします。 RND – コピー先のバンクへランダムなハーモニクスを自動割り当てします。 CLUST – コピー先のバンクへランダムなフォルマントクラスターのハーモニクスを自動割り当てします。 CHRD – 14種類のコードのうち1つをコピー先のバンクへ割り当てます。 LOADB – ストア番号からオシレーターバンクを、ABCDバンクLEDで示されたバンクへロードします。 SAVEB – ABCDバンクLEDで示されたバンクをストア番号へ保存します。 CHRDモードのルート周波数は、コピー先バンクの最初のオシレーターによって定義されます。 HARMONIC VIEW 上段ノブのいずれかを数秒間押し続けるとHarmonic Viewが有効になり、再度数秒間押すとビューを終了します。",
+    "url": "/ryk-vector-wave/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "ENVELOPE PAGE 2種類のADSRタイプのEnvelopeがあります。ENV1はVector Waveボイス出力のアンプリチュードを制御し、ENV2は各Oscillator BankのXM（クロスモジュレーションFM）の量を制御します。 上段のノブは、現在のEnvelopeのAttack、Decay、Sustain、Releaseの設定を制御します。 Envelopeの設定はグローバル（GLB）またはBank単位（BNK）で使用できます。 [12ページのSettings Menu - ENVを参照して選択してください] Bank（BNK）Envelopeを使用している場合は、青いENVボタンを押しながら赤いBankボタンを押すことで、異なるBank Envelopeを選択できます。 ENV2のデフォルトのトリガーソースはGate入力ですが、シングル（GLB）Envelopeを使用する場合は別の入力に変更できます。これを行うには、上段のいずれかのノブを押してトリガーソースのオプションを切り替えます: Gate、M1、M2、M3、M4、またはOFF。 [ PUSH TO",
+    "url": "/ryk-vector-wave/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "MODULATION SLOTS Modボタンを押すとModulation Slotsにアクセスできます。繰り返し押すことで、すべてのSlot間を順番に切り替えられます。 各Slotでは、モジュレーションソースが特定の destination属性をモジュレートできます。例えば、LFOがWave Fold [FD]をモジュレートするといった使い方が可能です。 モジュレーションソースには、M1〜M4いずれかの入力からのControl Voltage、またはLFO、Joystick、EnvelopeといったInternalソースが含まれます。 各destination（例：Oscillator Bank A）には、サブオプション [ suffix ] があります。例えば WP [ Wave Warp ] は、モジュレートされるdestination属性です。 下段のKnobを使って、モジュレーションソース、destination、およびdestination suffixを選択します。 上段のKnobを使って、モジュレーションアマウント [ Attenuverter ]",
+    "url": "/ryk-vector-wave/page/10"
+  },
+  {
+    "id": "11",
+    "pageNum": 11,
+    "title": "Page 11",
+    "sectionName": null,
+    "body": "Modulation Sources（モジュレーションソース）: M1, M2, M3, M4 – M1、M2、M3、M4からの外部CVソース JYX, JYY – ジョイスティックXまたはYのポジション EV1/EV2 – Envelope1またはEnvelope2 LF1, LF2 – LFO1またはLFO2 CV – V/OCTピッチ入力 MVL – MIDI Velocity MAT – MIDI Aftertouch MMD – MIDI Modulation Wheel MBD – MIDI Pitch Bend CC2-CC49 – MIDI CC Gate – GATEトリガー M1[T] – M1トリガー入力 ** これらはVECがデスティネーションとして選択されている場合のみ、トリガーソースとして使用できます。 Modulation Destinations（モジュレーションデスティネーション）: A-D、またはA, B, C, D – オシレーターバンク AM – 振幅変調 FM – 周波数変調 XM –",
+    "url": "/ryk-vector-wave/page/11"
+  },
+  {
+    "id": "12",
+    "pageNum": 12,
+    "title": "Page 12",
+    "sectionName": null,
+    "body": "VECTOR animationには2種類あります。VEC1はJoystickの動きを時間軸で録音することができます。VEC2は4つのJoystickベクターポジションを保存し、それを使ってベクターの動きを再現します。 VEC1 録音済みおよびトリガー再生時のベクター速度は、右下のknob [ 3-99 ] で設定できます。 Joystickの録音済みポジションはセンターボックスに表示されます。左側に反転した「R」が表示されている場合は録音モードを示します。 Joystickのベクター動作を録音するには、希望するベクター速度を選択し [ 20が開始速度として適切です ]、左下のknobを押しながらJoystickを動かして録音を開始します。 トリガーソースからベクター動作を再生するには、modulationスロットのdestinationに「VEC」を設定し、GATEまたはM1Tをトリガーソースとして選択します。 速度はVector pageの右下のknobで設定されます。",
+    "url": "/ryk-vector-wave/page/12"
+  },
+  {
+    "id": "13",
+    "pageNum": 13,
+    "title": "Page 13",
+    "sectionName": null,
+    "body": "Joystickを目的のミックスポジションに動かし、下段のknobのいずれかを押してVector positionを保存します。4つのCellボックスすべてに対して繰り返してください。 下段の最初の3つのknobを使って、各Cell間の時間・スピードを調整します。 EG: knob 1はCell1とCell2の間の時間を調整し、knob 2はCell2とCell3の間の時間を調整します。 Vectorアニメーションの再生は、ディスプレイを横にスクロールする縦棒で表示されます。 トリガーソースからVectorの動きを再生するには、モジュレーションスロットのdestinationに'VEC'を設定し、GATEまたはM1Tをトリガーソースとして選択します。 各Cell間のスピードは、VectorページAの下段3つのknobで設定します。 再生をトリガーする代わりに、LFOや外部CVなどのモジュレーションソースによって時間とともにVectorの動きを連続的にアニメーションさせることもできます。",
+    "url": "/ryk-vector-wave/page/13"
+  },
+  {
+    "id": "14",
+    "pageNum": 14,
+    "title": "Page 14",
+    "sectionName": null,
+    "body": "注意：Q Performance ControlsはすべてのOscillator Bankに影響します。 単一のBankに影響を与えるには、Modulation SlotでそのBankを送り先として選択し、FDなどの送り先属性を選択して、offsetコントロールで量を調整してください。 SETTINGS MENU このメニューでは、Voiceのロードおよびセーブ、Oscillator Bankのモード選択、チューニングやMIDIなどの各種設定が行えます。 左下のknobを回して以下のメニュー項目を選択してください。 LOAD – メモリからVoiceをロードします。右下のknobを回してVoice番号を選択すると、そのVoiceのプレビューが再生されます。Voiceをロードするには、knobを押してください。 SAVE – メモリにVoiceをセーブします。右下のknobを回してVoice番号を選択し、knobを押してセーブしてください。 MODE – Oscillator Bankのアロケーションモードです。 VEC1 = JoystickまたはVector Animation",
+    "url": "/ryk-vector-wave/page/14"
+  },
+  {
+    "id": "15",
+    "pageNum": 15,
+    "title": "Page 15",
+    "sectionName": null,
+    "body": "CONNECTION JACKS V/OCT – ピッチCV入力 [ 0v-6v ] です。すべてのオシレーターハーモニクスはこの値の倍数になります。 GATE – ENV1およびENV2をトリガーするGate入力です。Vector Animationのトリガーにも使用できます。 OUT L - OUT R – モジュールのオーディオ出力です。Settings MenuのOutputを使用して、各BankをどちらかまたはL/R間の任意の位置にパンできます。 M1-M4 – CV変調入力 [ +/-5v、新しいモジュールでは+8v ] です。Modulation Slotsを通じて、Cross Modulation量 [ XM ] やWave Warp [ WP ] など、サウンドのあらゆる側面の変調ソースとして使用できます。 M1[T] – Vector Animationの再生トリガーソースとしても使用できます。 M1-M4 – ENV2またはLFO1/LFO2リセットのトリガーソースとしても使用できます。 MIDI IN – TRS MIDI入力です。V/OCT &",
+    "url": "/ryk-vector-wave/page/15"
+  },
+  {
+    "id": "16",
+    "pageNum": 16,
+    "title": "Page 16",
+    "sectionName": null,
+    "body": "VECTOR WAVE EXPANDER説明書 Expanderモジュールをお持ちの方、ラッキーです！ Vector WaveでExpanderをセットアップして使用するには、以下の手順に従ってください。 13ページの手順に従い、ExpanderをVector Waveに慎重に接続してください。 Expanderモジュールをまだラックにねじ止めしないでください。背面にアクセスする必要があります。回路基板の金属ピンがラックの金属部分に触れないよう注意してください。必要であれば、モジュールを紙やプラスチックの上に置いてください。 Expanderの背面を見ると、モジュールの上端にマイクロスイッチがあります。一方の側には「0V」、もう一方の側には「5V」とラベルが付いています。スイッチを0Vに設定してください。 まず、Vector WaveをExpanderモジュールに合わせてキャリブレーションする必要があります。 Grey buttonとENV/LFO Blue buttonを押し続けながら、Vector Waveのラック電源を入れてください。",
+    "url": "/ryk-vector-wave/page/16"
+  },
+  {
+    "id": "17",
+    "pageNum": 17,
+    "title": "Page 17",
+    "sectionName": null,
+    "body": "Voiceに名前をつけましょう！ 1................................................................................ 2................................................................................ 3................................................................................ 4................................................................................ 5................................................................................",
+    "url": "/ryk-vector-wave/page/17"
+  },
+  {
+    "id": "18",
+    "pageNum": 18,
+    "title": "Page 18",
+    "sectionName": null,
+    "body": "Oscillator Bankに名前をつけましょう！ 1................................................................................ 2................................................................................ 3................................................................................ 4................................................................................ 5................................................................................",
+    "url": "/ryk-vector-wave/page/18"
+  },
+  {
+    "id": "19",
+    "pageNum": 19,
+    "title": "Page 19",
+    "sectionName": null,
+    "body": "ここに自由に描いてみてください！",
+    "url": "/ryk-vector-wave/page/19"
+  }
+]
