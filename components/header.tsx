@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import ctl from '@netlify/classnames-template-literals';
 import { getManualTitle } from '@/lib/manual-registry';
 import { useViewMode } from '@/components/viewer/view-mode-context';
+import { SearchTrigger } from '@/components/search/search-trigger';
 
 const headerStyles = ctl(`
   fixed top-0 left-0 right-0 z-50
@@ -139,25 +140,34 @@ export function Header() {
         {title || 'Manual Index'}
       </Link>
       <div className={navRightStyles}>
-        {isDetailPage && (
+        {(isDetailPage || manualId) && (
           <div className={utilityBarStyles}>
-            <TooltipButton
-              onClick={() => setViewMode(viewMode === 'page' ? 'scroll' : 'page')}
-              ariaLabel={viewMode === 'page' ? 'Switch to scroll mode' : 'Switch to page mode'}
-              tooltip={viewMode === 'page' ? 'スクロール表示' : 'ページ表示'}
-            >
-              {viewMode === 'page' ? '\u{1F4C4}' : '\u{1F4DC}'}
-            </TooltipButton>
-            <TooltipButton onClick={toggleSidebar} ariaLabel="Toggle sidebar" tooltip="サムネイル">
-              {'\u2630'}
-            </TooltipButton>
-            <TooltipButton
-              onClick={openThumbsModal}
-              ariaLabel="Open thumbnail grid"
-              tooltip="ページ一覧"
-            >
-              {'\u229E'}
-            </TooltipButton>
+            {isDetailPage && (
+              <>
+                <TooltipButton
+                  onClick={() => setViewMode(viewMode === 'page' ? 'scroll' : 'page')}
+                  ariaLabel={viewMode === 'page' ? 'Switch to scroll mode' : 'Switch to page mode'}
+                  tooltip={viewMode === 'page' ? 'スクロール表示' : 'ページ表示'}
+                >
+                  {viewMode === 'page' ? '\u{1F4C4}' : '\u{1F4DC}'}
+                </TooltipButton>
+                <TooltipButton
+                  onClick={toggleSidebar}
+                  ariaLabel="Toggle sidebar"
+                  tooltip="サムネイル"
+                >
+                  {'☰'}
+                </TooltipButton>
+                <TooltipButton
+                  onClick={openThumbsModal}
+                  ariaLabel="Open thumbnail grid"
+                  tooltip="ページ一覧"
+                >
+                  {'⊞'}
+                </TooltipButton>
+              </>
+            )}
+            <SearchTrigger manualId={manualId} />
           </div>
         )}
         <a href="https://takazudomodular.com" className={navLinkStyles}>

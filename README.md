@@ -10,6 +10,7 @@ A Next.js-based manual viewer for hardware synthesizer manuals. Provides a bilin
 - **Scroll Mode**: Lazy image loading, IntersectionObserver-based page detection, debounced jump navigation
 - **Thumbnail Navigation**: Sidebar thumbnails and full-page thumbnail grid modal
 - **Keyboard Navigation**: Arrow keys for page-by-page browsing
+- **Keyword Search**: Full-text search across manual pages (header icon / Cmd+K / Ctrl+K)
 - **Static Export**: Pre-rendered pages for fast loading
 - **Responsive Design**: Optimized for all screen sizes
 - **Dark Theme**: Custom Zudo Design System
@@ -46,6 +47,26 @@ pnpm build
 # Serve production build locally
 pnpm serve
 ```
+
+## Search
+
+Each manual has a full-text keyword search across its pages.
+
+### Using the search dialog
+
+- Click the search icon in the header, or press **Cmd+K** (macOS) / **Ctrl+K** (Windows/Linux).
+- Type a term (e.g. _tempo_, _sequencer_). Results update as you type.
+- Click a result (or press Enter on the selected row) to jump to that page.
+
+### Regenerating the search index
+
+Each manual ships with a committed `public/{slug}/data/search-index.json` — a compact, MiniSearch-ready index generated from `pages-ja.json`. To regenerate it after translations change:
+
+```bash
+pnpm run pdf:search-index --slug {slug}
+```
+
+This is also wired into `pnpm run pdf:all` as the 6th pipeline step, so a full run regenerates the index automatically. See `scripts/CLAUDE.md` for the full pipeline.
 
 ## Adding a New Manual
 
@@ -208,6 +229,7 @@ pnpm run pdf:render --slug {slug}     # Render images
 pnpm run pdf:extract --slug {slug}    # Extract text
 pnpm run pdf:translate --slug {slug}  # Translate to Japanese
 pnpm run pdf:build --slug {slug}      # Build JSON files
+pnpm run pdf:search-index --slug {slug}  # Generate search-index.json
 pnpm run pdf:manifest --slug {slug}   # Create manifest
 
 # Utilities
