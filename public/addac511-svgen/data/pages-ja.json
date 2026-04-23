@@ -543,7 +543,7 @@
       "image": "/addac511-svgen/pages/page-060.png",
       "title": "Page 60",
       "sectionName": null,
-      "content": "パッチ例\n\nPATCH 1\n\n最もシンプルな1/4ビートでのフルレンジランダム電圧\n\nVOLTAGE SETTINGS | TIME SETTINGS\n\n+5v\n\n-5v\n\n0v\n\n1/4 | 1/4 | 1/4 | 1/4 | 1/4 | 1/8 | 1/8\n\nGATE OUTPUT: SYNC 50%\n\nVOLTAGE\n\nGATE\n\n---\n\nPATCH 2\n\nランダムビートでのポジティブなランダム電圧\n\nVOLTAGE SETTINGS | TIME SETTINGS\n\nNO GATE\n\nNO GATES: GATE確率により「ミュート」\n\nNO CHANGE: VOLTAGE確率により「ミュート」\n\nNO GATE | NO GATE | NO GATE | NO GATE | NO GATE | NO GATE\n\n1/4 | 1/4 | 1/16 1/16 | 1/8 | 1/16 | 1/16 1/16 1/16\n\nNO CHANGE | 確率「ミュート」 | 確率「ミュート」 | 確率「ミュート」 | NO CHANGE | NO CHANGE\n\n1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16\n\nGATE OUTPUT: SYNC 25%\n\n+5v\n\n0v\n\n---\n\nPATCH 3\n\n1/16ビートで確率を使ったランダム電圧\n\nVOLTAGE SETTINGS | TIME SETTINGS\n\nGATE OUTPUT: SYNC 10ms",
+      "content": "パッチ例\n\nPATCH 1\n\n最もシンプルな1/4ビートでのフルレンジランダム電圧\n\nVOLTAGE SETTINGS | TIME SETTINGS\n\n+5v\n\n-5v\n\n0v\n\n1/4 | 1/4 | 1/4 | 1/4 | 1/4 | 1/8 | 1/8\n\nGATE OUTPUT: SYNC 50%\n\nVOLTAGE\n\nGATE\n\n\\---\n\nPATCH 2\n\nランダムビートでのポジティブなランダム電圧\n\nVOLTAGE SETTINGS | TIME SETTINGS\n\nNO GATE\n\nNO GATES: GATE確率により「ミュート」\n\nNO CHANGE: VOLTAGE確率により「ミュート」\n\nNO GATE | NO GATE | NO GATE | NO GATE | NO GATE | NO GATE\n\n1/4 | 1/4 | 1/16 1/16 | 1/8 | 1/16 | 1/16 1/16 1/16\n\nNO CHANGE | 確率「ミュート」 | 確率「ミュート」 | 確率「ミュート」 | NO CHANGE | NO CHANGE\n\n1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16\n\nGATE OUTPUT: SYNC 25%\n\n+5v\n\n0v\n\n\\---\n\nPATCH 3\n\n1/16ビートで確率を使ったランダム電圧\n\nVOLTAGE SETTINGS | TIME SETTINGS\n\nGATE OUTPUT: SYNC 10ms",
       "hasContent": true,
       "tags": []
     },

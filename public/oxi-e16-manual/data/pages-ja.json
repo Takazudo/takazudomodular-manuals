@@ -129,7 +129,7 @@
       "image": "/oxi-e16-manual/pages/page-014.png",
       "title": "Page 14",
       "sectionName": null,
-      "content": "Overview\n\n1.7 Naming Editor\n\nワークフロー中の様々な場面で、名前を付けて保存、または名前を変更するオプションが表示されます。これにはSceneやPresetが含まれます。テキスト編集インターフェースはすべての命名オプションで共通で、Knobを回したりタップしたりしてテキスト文字列を編集およびナビゲートします。\n\n上部の4つのエンコーダーKnobがテキストエディターでの変更に使用されます。\n\n• Knob 1 - 回すと英数字オプションの選択をスクロールします。\nタップすると文字を変更します。\n\n• Knob 2 - 回すと編集中のテキスト本文内で編集カーソルを移動します。\nタップするとバックスペースして前の文字をクリアします。\n\n• Knob 3 - 押すとキャンセルしてサブメニューに戻ります。\n\n• Knob 4 - 押すと編集を確定して変更を完了します。\n\n• いつでも[Shift]を押すとバックアップ、キャンセル、または終了します。\n\n1 2 3 4\n\nPreset 2\n\n7    8    9    A    B    C    D    E    F\n\nCANCEL\n\nSelect a\ncharacter\n-\nTurn\nTap\n\n複数のメニューに表示されるName editorオプション\n\nMove the\nedit cursor\n-\nTurn\nTap\n\nCancel &\nbackup\n\nChange &\nconfirm\n\nTurn\nTap\n\nConfirm    Backspace\nand clear\n\nTurn\nTap\n\nNOTES",
+      "content": "Overview\n\n1.7 Naming Editor\n\nワークフロー中の様々な場面で、名前を付けて保存、または名前を変更するオプションが表示されます。これにはSceneやPresetが含まれます。テキスト編集インターフェースはすべての命名オプションで共通で、Knobを回したりタップしたりしてテキスト文字列を編集およびナビゲートします。\n\n上部の4つのエンコーダーKnobがテキストエディターでの変更に使用されます。\n\n• Knob 1 - 回すと英数字オプションの選択をスクロールします。\nタップすると文字を変更します。\n\n• Knob 2 - 回すと編集中のテキスト本文内で編集カーソルを移動します。\nタップするとバックスペースして前の文字をクリアします。\n\n• Knob 3 - 押すとキャンセルしてサブメニューに戻ります。\n\n• Knob 4 - 押すと編集を確定して変更を完了します。\n\n• いつでも[Shift]を押すとバックアップ、キャンセル、または終了します。\n\n1 2 3 4\n\nPreset 2\n\n7    8    9    A    B    C    D    E    F\n\nCANCEL\n\nSelect a\ncharacter\n\\-\nTurn\nTap\n\n複数のメニューに表示されるName editorオプション\n\nMove the\nedit cursor\n\\-\nTurn\nTap\n\nCancel &\nbackup\n\nChange &\nconfirm\n\nTurn\nTap\n\nConfirm    Backspace\nand clear\n\nTurn\nTap\n\nNOTES",
       "hasContent": true,
       "tags": []
     },
