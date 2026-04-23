@@ -332,8 +332,32 @@ export async function processPage(enPage, jaPage, opts) {
     clean_ja: kase === CASE_EN_ONLY ? null : (jaPage.content ?? null),
   });
 
-  const text = await callModel(prompt, model);
-  const parsed = parseEnCleanResponse(text);
+  // Retry on transient model-response issues (invalid JSON, missing field,
+  // unescaped control chars, etc). Each attempt is a fresh subprocess call,
+  // so Haiku gets another chance to emit valid JSON. We surface the final
+  // error only if all attempts fail.
+  const MAX_ATTEMPTS = 3;
+  let parsed = null;
+  let lastErr = null;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      const text = await callModel(prompt, model);
+      parsed = parseEnCleanResponse(text);
+      break;
+    } catch (err) {
+      lastErr = err;
+      if (attempt < MAX_ATTEMPTS) {
+        console.warn(
+          `[${slug}] page ${enPage.pageNum}: model response parse failed (attempt ${attempt}/${MAX_ATTEMPTS}): ${err.message}. Retrying...`,
+        );
+      }
+    }
+  }
+  if (!parsed) {
+    throw new Error(
+      `[${slug}] page ${enPage.pageNum}: model response parse failed after ${MAX_ATTEMPTS} attempts: ${lastErr?.message || 'unknown error'}`,
+    );
+  }
   const cleaned = parsed.en_clean;
 
   nextPage.content = cleaned;

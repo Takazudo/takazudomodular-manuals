@@ -129,17 +129,24 @@ export function parseEnCleanResponse(text) {
 
   // Some models still leak a leading note before the JSON object. Find the
   // first `{` and the matching last `}` and try that substring if the direct
-  // parse fails.
+  // parse fails. On JSON-parse failures, apply control-char escaping as a
+  // second-chance parse: Haiku occasionally emits literal \n / \r / \t inside
+  // string values, which is invalid JSON but recoverable.
   try {
     return parseAndValidate(body);
   } catch (firstErr) {
     const first = body.indexOf('{');
     const last = body.lastIndexOf('}');
-    if (first >= 0 && last > first) {
-      const candidate = body.slice(first, last + 1);
+    const candidate = first >= 0 && last > first ? body.slice(first, last + 1) : body;
+    try {
       return parseAndValidate(candidate);
+    } catch (secondErr) {
+      try {
+        return parseAndValidate(escapeControlCharsInStrings(candidate));
+      } catch {
+        throw secondErr;
+      }
     }
-    throw firstErr;
   }
 }
 
@@ -152,4 +159,51 @@ function parseAndValidate(jsonStr) {
     throw new Error('response JSON missing "en_clean" string field');
   }
   return obj;
+}
+
+/**
+ * Escape unescaped control characters inside JSON string values.
+ *
+ * Walks the text character-by-character, tracking whether we are inside a
+ * string literal. When a literal control character (0x00–0x1F) appears
+ * inside a string, rewrite it as a valid JSON escape sequence so JSON.parse
+ * can handle it. This is a defensive fallback for models that emit literal
+ * newlines inside string values.
+ *
+ * @param {string} text
+ * @returns {string}
+ */
+export function escapeControlCharsInStrings(text) {
+  let out = '';
+  let inString = false;
+  let escaped = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (escaped) {
+      out += ch;
+      escaped = false;
+      continue;
+    }
+    if (ch === '\\') {
+      out += ch;
+      escaped = true;
+      continue;
+    }
+    if (ch === '"') {
+      out += ch;
+      inString = !inString;
+      continue;
+    }
+    if (inString && ch.charCodeAt(0) < 0x20) {
+      if (ch === '\n') out += '\\n';
+      else if (ch === '\r') out += '\\r';
+      else if (ch === '\t') out += '\\t';
+      else if (ch === '\b') out += '\\b';
+      else if (ch === '\f') out += '\\f';
+      else out += '\\u' + ch.charCodeAt(0).toString(16).padStart(4, '0');
+      continue;
+    }
+    out += ch;
+  }
+  return out;
 }
