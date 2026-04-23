@@ -50,6 +50,8 @@ pnpm run pdf:render        # Render pages to PNG images
 pnpm run pdf:extract       # Extract text from PDFs
 pnpm run pdf:translate     # Translate to Japanese (requires ANTHROPIC_API_KEY)
 pnpm run pdf:build         # Build final JSON files
+pnpm run pdf:clean-en      # Reformat pages-en.json via the EN cleaner (uses Claude Code CLI, no API key)
+pnpm run pdf:clean-en:all  # Clean every manual under public/ at once
 pnpm run pdf:search-index  # Generate search-index.json for keyword search
 pnpm run pdf:search-index:all   # Regenerate search-index.json for all manuals at once
 pnpm run pdf:manifest      # Create manifest.json
@@ -58,15 +60,16 @@ pnpm run pdf:all           # Run all PDF processing steps
 
 ### Pipeline Overview
 
-The PDF processing pipeline consists of 7 fully automated steps:
+The PDF processing pipeline consists of 8 fully automated steps:
 
 1. **Split** - Divides the PDF into parts (30 pages each)
 2. **Render** - Converts pages to PNG images at 150 DPI
 3. **Extract** - Extracts text from each PDF part
-4. **Translate** - Translates to Japanese using Claude Code Task subagents (5 concurrent workers)
-5. **Build** - Combines data into JSON files for Next.js
-6. **Search Index** - Reads `pages-ja.json` and emits `search-index.json` (MiniSearch-ready, markdown stripped, body truncated to ~500 chars per page). Invoke with `--slug <manual-slug>`. Also writes a SHA-1 content hash to the sibling `manifest.json` as `searchIndexVersion` for cache busting. The `pdf:search-index:all` variant does the same for every manual at once and is auto-run by `pnpm build`.
-7. **Manifest** - Creates manifest.json with metadata
+4. **Translate** - Translates to Japanese using Claude Code Task subagents (5 concurrent workers). The translator agent now emits `en_clean` (formatted original English) alongside the Japanese `translation`, so `pages-en.json` is already clean after this step.
+5. **Build** - Combines data into JSON files for Next.js. Prefers `translationData.en_clean` over raw extracted text when populating `pages-en.json`.
+6. **Clean EN** - Runs `pdf:clean-en` as a belt-and-suspenders pass to guarantee consistent cleanup metadata (`cleanupMethod`, `cleanupModel`, `cleanedAt`) on every page. Because the translator already emits `en_clean` natively, this separate run is typically only needed for retrofits on older manuals or after tweaks to the cleanup prompt (`scripts/lib/en-cleanup-prompt.js`); on a fresh pipeline run it's essentially a no-op over already-clean content.
+7. **Search Index** - Reads `pages-ja.json` and emits `search-index.json` (MiniSearch-ready, markdown stripped, body truncated to ~500 chars per page). Invoke with `--slug <manual-slug>`. Also writes a SHA-1 content hash to the sibling `manifest.json` as `searchIndexVersion` for cache busting. The `pdf:search-index:all` variant does the same for every manual at once and is auto-run by `pnpm build`.
+8. **Manifest** - Creates manifest.json with metadata
 
 #### Cache busting
 

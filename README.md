@@ -69,7 +69,7 @@ pnpm run pdf:search-index --slug {slug}    # single manual
 pnpm run pdf:search-index:all              # every manual at once (runs automatically on pnpm build)
 ```
 
-This is also wired into `pnpm run pdf:all` as the 6th pipeline step, so a full run regenerates the index automatically. See `scripts/CLAUDE.md` for the full pipeline.
+This is also wired into `pnpm run pdf:all` as the 7th pipeline step (after `pdf:clean-en`), so a full run regenerates the index automatically. See `scripts/CLAUDE.md` for the full pipeline.
 
 ### Cache busting
 
@@ -110,9 +110,11 @@ This runs the full pipeline:
 1. **Split**: Divides PDF into parts (30 pages each)
 2. **Render**: Converts pages to PNG images at 150 DPI
 3. **Extract**: Extracts text from each part
-4. **Translate**: Translates to Japanese using Claude AI (requires `ANTHROPIC_API_KEY`)
-5. **Build**: Combines data into JSON files
-6. **Manifest**: Creates manifest.json with metadata
+4. **Translate**: Translates to Japanese using Claude AI (requires `ANTHROPIC_API_KEY`). Also emits clean English (`en_clean`) alongside the Japanese translation.
+5. **Build**: Combines data into JSON files (uses `en_clean` when available)
+6. **Clean EN**: Belt-and-suspenders pass over `pages-en.json` via Claude Code CLI (no API key). Usually a near no-op since the translator already emits clean EN.
+7. **Search Index**: Generates `search-index.json` for keyword search
+8. **Manifest**: Creates manifest.json with metadata
 
 **Time estimate**: 15-30 minutes (depending on manual size)
 **Cost estimate**: $5-10 per 280-page manual (Claude Sonnet 4.5)
@@ -236,6 +238,8 @@ pnpm run pdf:render --slug {slug}     # Render images
 pnpm run pdf:extract --slug {slug}    # Extract text
 pnpm run pdf:translate --slug {slug}  # Translate to Japanese
 pnpm run pdf:build --slug {slug}      # Build JSON files
+pnpm run pdf:clean-en --slug {slug}   # Reformat pages-en.json (Claude Code CLI, no API key)
+pnpm run pdf:clean-en:all             # Clean every manual at once
 pnpm run pdf:search-index --slug {slug}  # Generate search-index.json
 pnpm run pdf:manifest --slug {slug}   # Create manifest
 

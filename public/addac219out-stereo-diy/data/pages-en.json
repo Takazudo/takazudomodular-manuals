@@ -4,7 +4,10 @@
     "language": "en",
     "extractionMethod": "pdf-parse",
     "imageFormat": "png",
-    "imageDPI": 300
+    "imageDPI": 300,
+    "cleanupMethod": "claude-code-subagent",
+    "cleanupModel": "haiku",
+    "cleanedAt": "2026-04-23T17:29:29.937Z"
   },
   "pages": [
     {
@@ -12,8 +15,8 @@
       "image": "/addac219out-stereo-diy/pages/page-001.png",
       "title": "Page 1",
       "sectionName": null,
-      "content": "-- 1 of 1 --",
-      "hasContent": true,
+      "content": "",
+      "hasContent": false,
       "tags": []
     },
     {
@@ -21,7 +24,7 @@
       "image": "/addac219out-stereo-diy/pages/page-002.png",
       "title": "Page 2",
       "sectionName": null,
-      "content": "March.2025\nADDAC219OUT Assembly Guide\nADDAC SYSTEM \tpage 2\n\n-- 1 of 1 --",
+      "content": "ADDAC219OUT Assembly Guide\n\nADDAC SYSTEM",
       "hasContent": true,
       "tags": []
     },
@@ -30,7 +33,7 @@
       "image": "/addac219out-stereo-diy/pages/page-003.png",
       "title": "Page 3",
       "sectionName": null,
-      "content": "ADDAC SYSTEM \tpage 3\nADDAC219OUT Assembly Guide\nSTEP 1:\nThis is our simplest DIY kit, simply place the jacks on the pcb in the color order indicated below, place the front-\npanel and tighten the jack nuts. Then solder all jack legs.\n\n-- 1 of 1 --",
+      "content": "ADDAC219OUT Assembly Guide\n\nSTEP 1:\n\nThis is our simplest DIY kit, simply place the jacks on the pcb in the color order indicated below, place the front-panel and tighten the jack nuts. Then solder all jack legs.",
       "hasContent": true,
       "tags": []
     },
@@ -39,7 +42,7 @@
       "image": "/addac219out-stereo-diy/pages/page-004.png",
       "title": "Page 4",
       "sectionName": null,
-      "content": "ADDAC SYSTEM \tpage 5\nYou’re all done!\nHappy Patching!\nADDAC219OUT Assembly Guide\n\n-- 1 of 1 --",
+      "content": "You're all done!\n\nHappy Patching!",
       "hasContent": true,
       "tags": []
     },
@@ -48,7 +51,7 @@
       "image": "/addac219out-stereo-diy/pages/page-005.png",
       "title": "Page 5",
       "sectionName": null,
-      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC219OUT \tASSEMBLY GUIDE\nMarch.2025\tRevision.01\n\n-- 1 of 1 --",
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nADDAC219OUT ASSEMBLY GUIDE\nMarch.2025 Revision.01",
       "hasContent": true,
       "tags": []
     }

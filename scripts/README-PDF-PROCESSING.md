@@ -203,9 +203,21 @@ pnpm run pdf:build
 
 **Output:** `public/oxi-one-mk2/data/part-01.json` through `part-10.json`
 
-Combines page translations into part JSON files (28 pages per part) for Next.js.
+Combines page translations into part JSON files (28 pages per part) for Next.js. Prefers `translationData.en_clean` when populating `pages-en.json`.
 
-### 6. Create Manifest
+### 6. Clean English Pages
+
+```bash
+pnpm run pdf:clean-en         # Single manual (uses current slug)
+pnpm run pdf:clean-en:all     # Every manual under public/ at once
+```
+
+**Input:** `public/{slug}/data/pages-en.json`
+**Output:** Same file, rewritten in place with normalized markdown and cleanup metadata (`cleanupMethod`, `cleanupModel`, `cleanedAt`).
+
+Dispatches per-page Claude Code CLI subprocesses — no API key required. Since the translator agent now emits `en_clean` natively during step 4, this step is usually a near no-op and serves as a belt-and-suspenders guarantee for consistent metadata across manuals. Most useful for retrofits on older manuals or after tweaks to the cleanup prompt (`scripts/lib/en-cleanup-prompt.js`).
+
+### 7. Create Manifest
 
 ```bash
 pnpm run pdf:manifest
