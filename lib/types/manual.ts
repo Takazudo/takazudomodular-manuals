@@ -40,6 +40,13 @@ export interface ManualManifest {
   lastUpdated?: string;
   /** Date when this translation was last updated (YYYYMMDD format) */
   updatedAt?: string;
+  /**
+   * Content hash of the search index JSON (e.g., SHA-1 hex digest).
+   * Appended to the fetch URL as a ?v= query string so a deploy that changes
+   * the index evicts cached copies held by long-lived tabs and CDNs.
+   * Written at build time by the search-index script.
+   */
+  searchIndexVersion?: string;
   source?: {
     filename: string;
     processedAt: string;

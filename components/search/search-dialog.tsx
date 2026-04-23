@@ -14,6 +14,7 @@ import ctl from '@netlify/classnames-template-literals';
 import { useRouter } from 'next/navigation';
 import { withBasePath } from '@/lib/asset-url';
 import { getPagePath } from '@/lib/manual-config';
+import { getManifest } from '@/lib/manual-registry';
 import { highlightTerms, makeExcerpt } from './highlight';
 
 export interface SearchDialogProps {
@@ -40,9 +41,30 @@ type LoadState = 'idle' | 'loading' | 'ready' | 'error';
 const BATCH_SIZE = 10;
 const DEBOUNCE_MS = 150;
 
-// Module-level cache: one MiniSearch instance per manualId, shared across
-// mount/unmount cycles and across sibling dialogs.
+// Module-level cache: one MiniSearch instance per `${manualId}::${version ?? ''}`,
+// shared across mount/unmount cycles and across sibling dialogs. Keying by
+// version (the `searchIndexVersion` hash from the manifest) ensures a new
+// deploy bypasses a stale cache entry on long-lived tabs.
 const indexCache = new Map<string, MiniSearch<SearchDoc>>();
+
+function getIndexCacheKey(manualId: string, version: string | undefined): string {
+  return `${manualId}::${version ?? ''}`;
+}
+
+/**
+ * Resolve the search-index version for a manual from the manifest registry.
+ * Returns `undefined` when the manifest has no `searchIndexVersion` (e.g. it
+ * was built before the cache-busting feature landed) or when the manualId is
+ * not in the registry.
+ */
+function resolveSearchIndexVersion(manualId: string): string | undefined {
+  try {
+    return getManifest(manualId).searchIndexVersion;
+  } catch {
+    // invalid manualId — fall through to unversioned fetch
+    return undefined;
+  }
+}
 
 /**
  * Test-only hook: drop the cached MiniSearch instance(s). Real application
@@ -199,9 +221,10 @@ export function SearchDialog({ manualId, open, onClose }: SearchDialogProps) {
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
-  const [indexInstance, setIndexInstance] = useState<MiniSearch<SearchDoc> | null>(
-    () => indexCache.get(manualId) ?? null,
-  );
+  const [indexInstance, setIndexInstance] = useState<MiniSearch<SearchDoc> | null>(() => {
+    const version = resolveSearchIndexVersion(manualId);
+    return indexCache.get(getIndexCacheKey(manualId, version)) ?? null;
+  });
 
   // ── Dialog open/close (imperative) ───────────────────────────────────────
   useEffect(() => {
@@ -235,7 +258,9 @@ export function SearchDialog({ manualId, open, onClose }: SearchDialogProps) {
 
   // ── Lazy-load the search index on first open ─────────────────────────────
   const loadIndex = useCallback(async () => {
-    const cached = indexCache.get(manualId);
+    const version = resolveSearchIndexVersion(manualId);
+    const cacheKey = getIndexCacheKey(manualId, version);
+    const cached = indexCache.get(cacheKey);
     if (cached) {
       setIndexInstance(cached);
       setLoadState('ready');
@@ -244,7 +269,10 @@ export function SearchDialog({ manualId, open, onClose }: SearchDialogProps) {
 
     setLoadState('loading');
     try {
-      const url = withBasePath(`/${manualId}/data/search-index.json`);
+      const path = version
+        ? `/${manualId}/data/search-index.json?v=${version}`
+        : `/${manualId}/data/search-index.json`;
+      const url = withBasePath(path);
       const res = await fetch(url);
       if (!res.ok) {
         throw new Error(`Failed to fetch search index: ${res.status}`);
@@ -252,7 +280,7 @@ export function SearchDialog({ manualId, open, onClose }: SearchDialogProps) {
       const docs = (await res.json()) as SearchDoc[];
       const instance = createMiniSearch();
       instance.addAll(docs);
-      indexCache.set(manualId, instance);
+      indexCache.set(cacheKey, instance);
       setIndexInstance(instance);
       setLoadState('ready');
     } catch (err) {
