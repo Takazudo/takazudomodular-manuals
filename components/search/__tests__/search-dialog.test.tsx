@@ -87,6 +87,25 @@ vi.mock('next/navigation', () => ({
   }),
 }));
 
+// Mock the manual registry so tests can control the searchIndexVersion
+// returned from getManifest without depending on the committed manifests
+// (Sub-task D may not have landed yet in the base branch).
+const mockGetManifest = vi.fn();
+vi.mock('@/lib/manual-registry', () => ({
+  getManifest: (manualId: string) => mockGetManifest(manualId),
+}));
+
+beforeEach(() => {
+  // Default: return a manifest with a 40-hex-char hash so versioned URLs work.
+  mockGetManifest.mockReset();
+  mockGetManifest.mockReturnValue({
+    title: 'Test Manual',
+    brand: 'Test',
+    totalPages: 1,
+    searchIndexVersion: '0123456789abcdef0123456789abcdef01234567',
+  });
+});
+
 describe('SearchDialog', () => {
   it('renders a native <dialog> element with the expected aria-label', () => {
     render(<SearchDialog manualId="oxi-one-mk2" open={false} onClose={() => {}} />);
@@ -94,7 +113,7 @@ describe('SearchDialog', () => {
     expect(dialog.tagName).toBe('DIALOG');
   });
 
-  it('fetches the index from withBasePath-prefixed URL when opened', async () => {
+  it('fetches the index from a withBasePath-prefixed, version-busted URL when opened', async () => {
     const fetchSpy = globalThis.fetch as unknown as ReturnType<typeof vi.fn>;
     const { rerender } = render(
       <SearchDialog manualId="oxi-one-mk2" open={false} onClose={() => {}} />,
@@ -106,7 +125,41 @@ describe('SearchDialog', () => {
       expect(fetchSpy).toHaveBeenCalled();
     });
     const call = fetchSpy.mock.calls[0];
+    // Robust against future hash rotations: anchor on the shape, not the exact
+    // digest. 40-hex char suffix matches a SHA-1 hex digest.
+    expect(call[0]).toMatch(/^\/manuals\/oxi-one-mk2\/data\/search-index\.json\?v=[0-9a-f]{40}$/);
+  });
+
+  it('fetches the index without a ?v= query string when the manifest has no searchIndexVersion', async () => {
+    // Manifest without searchIndexVersion → unversioned fallback URL.
+    mockGetManifest.mockReturnValue({
+      title: 'Test Manual',
+      brand: 'Test',
+      totalPages: 1,
+    });
+    const fetchSpy = globalThis.fetch as unknown as ReturnType<typeof vi.fn>;
+    render(<SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} />);
+
+    await waitFor(() => {
+      expect(fetchSpy).toHaveBeenCalled();
+    });
+    const call = fetchSpy.mock.calls[0];
     expect(call[0]).toBe('/manuals/oxi-one-mk2/data/search-index.json');
+    expect(String(call[0])).not.toContain('?');
+  });
+
+  it('falls back to an unversioned URL when getManifest throws (unknown manualId)', async () => {
+    mockGetManifest.mockImplementation(() => {
+      throw new Error('Manual not found: bogus');
+    });
+    const fetchSpy = globalThis.fetch as unknown as ReturnType<typeof vi.fn>;
+    render(<SearchDialog manualId="bogus" open={true} onClose={() => {}} />);
+
+    await waitFor(() => {
+      expect(fetchSpy).toHaveBeenCalled();
+    });
+    const call = fetchSpy.mock.calls[0];
+    expect(call[0]).toBe('/manuals/bogus/data/search-index.json');
   });
 
   it('filters results based on the typed query and highlights the match', async () => {
