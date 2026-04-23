@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/header';
+import { LanguageProvider } from '@/components/language/language-context';
 import { ViewModeProvider } from '@/components/viewer/view-mode-context';
 
 const notoSans = Noto_Sans_JP({
@@ -21,10 +22,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" data-scroll-behavior="smooth">
       <body className={notoSans.variable}>
-        <ViewModeProvider>
-          <Header />
-          {children}
-        </ViewModeProvider>
+        <LanguageProvider>
+          <ViewModeProvider>
+            <Header />
+            {children}
+          </ViewModeProvider>
+        </LanguageProvider>
       </body>
     </html>
   );
