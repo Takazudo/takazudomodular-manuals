@@ -20,6 +20,7 @@ This is a Next.js-based manual viewer for the OXI ONE MKII hardware synthesizer 
 - Full URL: `https://zmanuals.pages.dev/manuals/oxi-one-mk2/`
 - The deployed site reflects the current state of the main branch
 - Preview URLs: `https://<branch>.zmanuals.pages.dev/manuals/oxi-one-mk2/`
+- PR preview URLs: `https://pr-<N>.zmanuals.pages.dev/manuals/oxi-one-mk2/` (auto-deployed on every same-repo PR; URL posted as PR comment)
 
 ## basePath Configuration (Critical Architecture Decision)
 
