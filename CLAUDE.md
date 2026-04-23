@@ -13,6 +13,7 @@ This is a Next.js-based manual viewer for the OXI ONE MKII hardware synthesizer 
 - Base path: `/manuals/oxi-one-mk2/`
 - Pages: `/manuals/oxi-one-mk2/page/[1-280]`
 - Example: `/manuals/oxi-one-mk2/page/1` (page 1)
+- Bilingual toggle: header segmented `JA | EN` control switches the translation column language; EN adds `?lang=en` to the URL, localStorage key `zmanuals:lang`. See `doc/docs/inbox/bilingual-support.md`.
 
 **Deployed Website**: https://zmanuals.pages.dev/
 
