@@ -6,6 +6,7 @@ A Next.js-based manual viewer for hardware synthesizer manuals. Provides a bilin
 
 - **Multi-Manual Support**: 40+ PDF manuals with unique slugs and automatic registry
 - **Bilingual Display**: Original PDF images + Japanese translations side by side
+- **Language Toggle**: Header `JA | EN` segmented control switches the translation column between Japanese (default) and English; selection persists via URL (`?lang=en`) and `localStorage` (`zmanuals:lang`)
 - **Dual View Modes**: Page mode (single page) and scroll mode (continuous scrolling)
 - **Scroll Mode**: Lazy image loading, IntersectionObserver-based page detection, debounced jump navigation
 - **Thumbnail Navigation**: Sidebar thumbnails and full-page thumbnail grid modal

@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "processedAt": "2026-04-23T12:44:46.805Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac210-open-heart/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac210-open-heart/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01\nWelcome to:\n3. \tDICLAIMER & REMARKS ON SAFETY\n4. \tOVERVIEW\n5. \tPOWER DIAGRAM\n6. \tPOWER SWITCH AND MONITOR LEDS\n7. \tPOTENTIOMETERS\n8. \tSWITCHES & PHOTOCELL\n9. \tJACKS\n10. \tLEDS\n11. \tHARDWARE SETTINGS\n12. \tARDUINO COMPATIBILLITY\n13. \tFRONTPANEL\nINDEX",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac210-open-heart/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "page 3\tADDAC SYSTEM\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nDISCLAIMER\nWe do not take any responsibility and we are not liable for any damage caused while using this module, be\nit indirect, special, incidental or consequential damages (including but not limited to damages to power\nsupplies, other modules, personal computers or to the module itself).\nUse it at your own responsability!\nREMARKS ON SAFETY\n(For the electronic enthusiast)\nThere are a few things to be very aware while using this module, will try to put it simple here, bottom line is\nif you’re not sure of what you’re doing s#!t will happen, but don’t despair s#it will also happen when you\nthink you know what you’re doing!\nHowever, this means that when something is not right, best case scenario, your circuit is somehow faulty and\nit simply doens’t work or, worst case scenario, your circuit is faulty, it won’t work but it will also create some\nsort of “short circuit” that will carry a high load through the module and demand a higher current from the\nPSU to where it’s connected. This doesn’t mean that all mistakes will be short circuits, but this is the worst\ncase scenario walkthrough.\nWhen a short circuit happens, all the load goes through the components in the circuit and ultimately will\ndrain the PSU to it’s limits. Depending on the PSU you may have diferent things will happen.\nOur PSUs, being good quality switching PSUs, offer short circuit and over-current protection and they will\nsimply shutdown until the short circuit is removed. On the other hand, if working with Toroidal PSUs they will\ndrop they’re operating voltage and provide as much current as they physically can, this can be harmfull for\nother modules connected in the same PSU as well as to the PSU itself.\nSo, how can we be safe at all times?\nSimple, make \"no\" mistakes! Easy right? From experience most times i learned \"The\" lesson was when i\nburnt/busted/broke/smoked something. Most of those times i wasn’t too focused either, so never be careless,\nalways try to be thinking ahead preventing \"catastrophes\" from happening.\nSo if you're stepping into electronics for the first times, be very aware at all times, keep one hand close to\nthe off switch! And keep an eye on the status leds, specially when making new circuit connections and at\npower ups!\nBe aware of board and components temperature, first sign of bad circuit design is heat, if something is\nheating up than most probably it will burn out soon, raise your nose awareness up, although things normally\nstart to smell funny a bit too late, and if you see smoke than that part is already gone for good.\nIf you're learning the arduino platform by it’s own or working solely on the arduino side, keep the open heart\ndisconnected from the modular, you can safely work with the usb power and avoid other mistakes.\nAugust.2014\tRevision.01",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac210-open-heart/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "page 4\tADDAC SYSTEM\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01\nOVERVIEW\nThis is a development platform optimized for the Eurorack electronic enthusiast.\n.Frontpanel parts:\nOn/Off Power switch\n1x breadboard\n1x 1K Pots\n2x 10k Pot\n1x 100k Log Pot\n1x 100k Pot\n1x 1M Pot\n4x Leds\n1x Photocell\n2x SPST (normally open) push switches\n1x DPDT (on/on) toggle switch\n1x SPDT (on/on) toggle switch\n2x SPDT (on/off/on) toggle switches\n1x 3.5mm stereo jack\n5x 3.5mm mono jack\n1x 1/4'' mono jack\nPower sources:\n-12V, +12V\n-3/10V, +3/10V\nShips with:\n1M Ribbon Cable and 55cm standoff Spacers for desktop operation.\n1 Extra breadboard\nScrews and nylon washers\nMechanical Specs:\nWidth: 36 HP\nDepth: 3.5cm (±1.375 inches) with or without Arduino installed, Depth increases if using arduino shields.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac210-open-heart/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "page 5\tADDAC SYSTEM\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01\nPOWER DIAGRAM\nIn order to understand how the power diagram works, consider\n4 different power sources:\nMAIN POWER\nMain power is the power coming from your Bus Board\nFRONTPANEL POWER\nThis is the power source that will be used throghout the\nmodule. This voltage is Post the On/Off Switch and Post\nprotection relays. Due to the current protection circuit there’s a\nsmall voltage drop from the Main Power\nSECONDARY POWER\nThese are 2 extra power sources, a\npositive and a negative one, they\ncan be adjusted by the adjacent\ntrimmers to any voltage between\n+3V to +10V and -3V to -10V.\nARDUINO POWER\nThe Arduino Power Pins are com-\npletely independent from all other\nsources. These pins are active only\nif an arduino is plugged in and\npowered by an USB cable or an\nexternal power adapter.\nPATH DESCRIPTION\nThe Main voltage coming from your\nBus Board goes through the On /\nOff Switch to the current detection\ncircuit and then through the Solid\nState Relays into the Front panel\npower.\nThe secondary voltage is taken\nfrom the Front panel power and\ngoes through 2 voltage regulators\n(317 & 337) and into the Frontpanel\nSecondary Power Pins.\nIf the current detection circuit\nreaches it’s threshold it will activate\nthe Solid State Relays and turn off\nall Frontpanel power sources\nexcluding the Arduino Power Pins.\nMAIN\nPOWER\nON / OFF\nSWITCH\nSOLID STATE\nRELAYS\nFRONTPANEL\nPOWER PINS\n±11.8V\nADJUSTABLE\nSECONDARY\nPOWER PINS\n( default: ±5V )\nARDUINO\nPOWER PINS\nSECONDARY\nPOWER\nADJUST\nTRIMMERS\n±3V to ±10V\nCURRENT\nDETECTION",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac210-open-heart/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "page 6\tADDAC SYSTEM\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01\nPOWER SWITH\n& MONITOR LEDS\nThere are 7 Leds and 1 Switch on the\nfront panel.\nThe Power On/Off Switch is self-\nexplanatory, it turns the power On or Off.\nThis switch is also used to reset the\ncurrent protection switch once the\nProtection Relays have been activated.\nThe Leds are separated into 3 groups:\nSECOND*\nThese Leds shows the status of the\nSecondary power sources.\nMAIN*\nThese Leds shows the status of the\nMain power sources.\n* WARNING: If any of these Leds are off\nyou should immediatelly turn the Power\nSwitch to Off!\nCURRENT\nThese Leds shows the status of the\nCurrent detection circuit.\nWhen top led is on (OFF) means that\nthe main power has been shutdown and\nneeds to be Reset with the Power On/Off\nswitch.\nThe labels on the Front panel are\nrelative, there’s a trimmer on the right\nside to adjust the max current consump-\ntion before shutdown.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac210-open-heart/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "page 7\tADDAC SYSTEM\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01\nPOTENTIOMETERS\nThere are 6 Potentiometers on the front\npanel, the resistance values of the pots\nare:\n1: B1K\n2: B10K\n3: B10K\n4: A100K\n5: B100K\n6: 1M\n(A is for logarithmic pots, B for linear\nones)\nThe connections for all pots are in the\nfemale pinheaders at the top.\nHorizontally you can access all pots 1 to\n6.\nVertically you access each specific pot\npins: Left / Center / Right.\nLEFT\nCENTER\nRIGTH\nLEFT\nCENTER\nRIGTH \tLEFT\nCENTER\nRIGTH",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac210-open-heart/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "page 8\tADDAC SYSTEM\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01\nSWITCHES\n& PHOTOCELL\nThere are 6 Switches and 1 Photocell on\nthe front panel.\nThere are 3 diferent switch types:\n1 & 2: SPST, Off - On\n3: DPDT, On - On\n4 to 6: SPDT, On - Off - On\nThe connections for all switches are in\nthe female pinheaders at the top.\nlabel indicate switch position: Up /\nCenter / Down.\nNote that this is diferent from standard\nswitches connections as due to the\nswitch mechanics normally this would\nbe connected the other way around.\nPHOTOCELL\nLEFT PIN\nSWITCH 1\nSWITCH 2\nRIGTH PIN\nUP POSITION ON\nSWITCH LEFT SIDE\nCENTER PIN\nDOWN POSITION ON\nSWITCH RIGTH SIDE\nUP POSITION ON\nSWITCH 4\nCENTER PIN\nDOWN POSITION ON\nSWITCH 5\n\tSWITCH 6",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac210-open-heart/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "page 9\tADDAC SYSTEM\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01\nJACKS\nThere are 7 Jacks on the front panel.\nThere are 3 diferent jacktypes:\n1: Stereo Jack\n2 to 6: Mono Jack\n7: 1/4’’ Mono Jack\nThe connections for all Jacks are in the\nfemale pinheaders at the top.\nlabel indicate switch position: Up /\nCenter / Down.\nBesides Jack 1, all jacks have Tip and\nTip Switch. Ground is connected by\ndefault.\nJACK 1\nJACK 2\n\tJACK 3\nJACK 4\n\tJACK 5\n\tJACK 6\n\tJACK 7\nLEFT\nSTEREO JACK 1 \tMONO JACKS 2 to 7\nRIGHT\nTIP\nTIP SWITCH",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac210-open-heart/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "page 10\tADDAC SYSTEM\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nLEDS\nThere are 4 Leds on the front panel.\nThe connections for all Leds are in the\nfemale pinheaders besides them.\nlabel indicate led leg:\n(-) Minus or cathode\n(+) Positive or anode\nFor convenience there are also 4 Ground\npoints at the bottom of the female\nheader.\nCATHODE\nGROUND PINS\nLEDS\nANODE\nAugust.2014\tRevision.01",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/addac210-open-heart/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "page 11\tADDAC SYSTEM\nCURRENT TRIMMER\nThere’s one trimmer on the right side of the module to adjust\nthe shutdown threshold. This can be set from 0.2A to 0.8A.\nFor safety default maximum current is 0.3A\nARDUINO POWER JUMPERS\nThe module ships with all these pins disconnected.\nThe 5V and 3V3 jumper, determines if the Arduino 5V/3V3\nwill go to the frontpanel female header, if not present\n5V/3V3 will not be present in the frontpanel.\nGND jumper shares the Ground between the synth power\nsupply and the Arduino.\nHARDWARE SETTINGS\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/addac210-open-heart/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "page 12\tADDAC SYSTEM\nARDUINO COMPATIBILITY\nThis module stacks on top of an Arduino just like any standard Arduino shield.\nIt is compatible with Arduino Diecimila, Duemilanove and Uno type of boards.\nIt’s also possible to use certain Arduino shields stacked between the Arduino and the module.\nFor an ultimate safe use, we deeply recommend the RUGGEDUINO, this is a 3rd party board developed to be\npractically indestructible, it features over voltage and over current protection which will keep your board and\nultimately your computer safe at \"all\" times!\nhttp://www.ruggedcircuits.com/microcontroller-boards/ruggeduino\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/addac210-open-heart/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "page 13\tADDAC SYSTEM\nADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/addac210-open-heart/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "ADDAC210 OPEN HEART SURGERY \tUSER’S GUIDE\nAugust.2014\tRevision.01",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

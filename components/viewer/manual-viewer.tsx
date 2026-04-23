@@ -1,10 +1,11 @@
 'use client';
 
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import ctl from '@netlify/classnames-template-literals';
 import type { ManualPage } from '@/lib/types/manual';
 import { getPagePath } from '@/lib/manual-config';
+import { useLanguage, type Lang } from '@/components/language/language-context';
 import { useViewMode } from './view-mode-context';
 import { PageViewer } from '@/components/page-viewer';
 import { ScrollViewer, type ScrollViewerHandle } from './scroll-viewer';
@@ -18,22 +19,38 @@ const outerStyles = ctl(`
 `);
 
 interface ManualViewerProps {
-  page: ManualPage;
-  allPages: ManualPage[];
+  allPagesJa: ManualPage[];
+  allPagesEn?: ManualPage[];
   currentPage: number;
   totalPages: number;
   manualId: string;
 }
 
 export function ManualViewer({
-  page,
-  allPages,
+  allPagesJa,
+  allPagesEn,
   currentPage,
   totalPages,
   manualId,
 }: ManualViewerProps) {
   const router = useRouter();
   const { viewMode, sidebarOpen, thumbsModalOpen, closeThumbsModal } = useViewMode();
+  const { lang } = useLanguage();
+
+  // Resolve effective language and page list. Falls back to JA silently when
+  // EN was requested but not available for this manual (the toggle UI already
+  // prevents this path — this is a defensive guard).
+  const effectiveLang: Lang = lang === 'en' && allPagesEn ? 'en' : 'ja';
+  const effectivePages = useMemo(
+    () => (effectiveLang === 'en' && allPagesEn ? allPagesEn : allPagesJa),
+    [effectiveLang, allPagesJa, allPagesEn],
+  );
+
+  // Current page object in the active language (for page mode).
+  const currentPageObject = useMemo(
+    () => effectivePages.find((p) => p.pageNum === currentPage) ?? effectivePages[0],
+    [effectivePages, currentPage],
+  );
 
   // Track current page in scroll mode (local state, updated by ScrollViewer)
   const [scrollCurrentPage, setScrollCurrentPage] = useState(currentPage);
@@ -67,7 +84,7 @@ export function ManualViewer({
   return (
     <>
       <ThumbsModal
-        pages={allPages}
+        pages={allPagesJa}
         currentPage={effectiveCurrentPage}
         isOpen={thumbsModalOpen}
         onClose={closeThumbsModal}
@@ -77,7 +94,7 @@ export function ManualViewer({
       <div className={outerStyles}>
         {sidebarOpen && (
           <SidebarThumbs
-            pages={allPages}
+            pages={allPagesJa}
             currentPage={effectiveCurrentPage}
             onPageSelect={handlePageSelect}
           />
@@ -87,20 +104,22 @@ export function ManualViewer({
           {viewMode === 'scroll' ? (
             <ScrollViewer
               ref={scrollViewerRef}
-              pages={allPages}
+              pages={effectivePages}
+              lang={effectiveLang}
               initialPage={currentPage}
               totalPages={totalPages}
               manualId={manualId}
               onCurrentPageChange={handleScrollPageChange}
             />
-          ) : (
+          ) : currentPageObject ? (
             <PageViewer
-              page={page}
+              page={currentPageObject}
+              lang={effectiveLang}
               currentPage={currentPage}
               totalPages={totalPages}
               manualId={manualId}
             />
-          )}
+          ) : null}
         </div>
       </div>
     </>
