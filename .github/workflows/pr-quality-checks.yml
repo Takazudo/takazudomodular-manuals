@@ -177,7 +177,6 @@ jobs:
           echo "✅ Build output verified"
 
       - name: Upload build artifacts (for e2e tests)
-        if: startsWith(github.head_ref, 'preview/')
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
           name: nextjs-build-pr-${{ github.event.pull_request.number }}
@@ -297,3 +296,72 @@ jobs:
                 body
               });
             }
+
+  # Job 4: Preview Deploy (Cloudflare Pages) for same-repo PRs
+  preview-deploy:
+    name: Preview Deploy (Cloudflare Pages)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: build-check
+    if: github.event.pull_request.head.repo.full_name == github.repository
+
+    permissions:
+      contents: read
+      pull-requests: write
+      deployments: write
+      statuses: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          lfs: false
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
+        with:
+          name: nextjs-build-pr-${{ github.event.pull_request.number }}
+          path: out
+
+      - name: Deploy to Cloudflare Pages Preview
+        id: deploy
+        uses: ./.github/actions/deploy-cloudflare
+        with:
+          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          branch: pr-${{ github.event.pull_request.number }}
+          commit-hash: ${{ github.event.pull_request.head.sha }}
+          commit-message: 'PR #${{ github.event.pull_request.number }} preview: ${{ github.event.pull_request.head.sha }}'
+
+      - name: Create deployment record
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          DEPLOY_URL: ${{ steps.deploy.outputs.deploy-url }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        with:
+          script: |
+            const deployment = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: process.env.HEAD_SHA,
+              environment: 'preview',
+              description: 'PR preview deployment to Cloudflare Pages',
+              production_environment: false,
+              auto_merge: false,
+              required_contexts: []
+            });
+
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deployment.data.id,
+              state: 'success',
+              environment_url: process.env.DEPLOY_URL,
+              description: 'PR preview deployment successful'
+            });
+
+      - name: Log deploy URL
+        env:
+          DEPLOY_URL: ${{ steps.deploy.outputs.deploy-url }}
+        run: |
+          echo "Deployed preview URL: $DEPLOY_URL"
