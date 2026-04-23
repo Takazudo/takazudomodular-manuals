@@ -1,0 +1,114 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "ENVY MACHINE",
+    "url": "/ryk-envy/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "1→GATE1 2→M1 3→2 4→2 5→3 6→3 7→4 8→4 9→TIME 10→LEVEL 11→A 12→D 13→R 14→DR 15→SHP 16→AUX 17→MOD 18→MOD LEVEL 19→SHAPE 20→0 21→+ + 22→- - 23→OPT 24→OUT LEVEL 25→CH 26→A 27→D 28→S 29→R 30→0 31→ENVY MACHINE 32→OUT1 2 3 4",
+    "url": "/ryk-envy/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "Envy Machineへようこそ！ コンパクトな4チャンネル変調マシンで、Envelope、LFO、ランダムボルテージ、Knob Recordingという充実したラインナップを備えています。 OVERVIEW ENVY MACHINEの4つのチャンネルはそれぞれ、以下の5つの高い柔軟性を持つ変調モードのいずれかに設定できます： ADSR Envelope AD Envelope AD LFO Random Voltage Recordable Knob Voltage Control ゴーストハンド - KNOB RECORDINGを使ってパラメーターをアニメーション化し、パッチに時限的なバリエーションを作り出すことができます。 そして・・・チャンネルごとに専用のMOD inputを備えており、外部CVを使ってTIME、LEVEL、WAVESHAPE、髪の色など、あらゆるものをコントロールできます・・・ Polarity paradox -",
+    "url": "/ryk-envy/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "技術仕様 TIME Envelopes: 1.5ms – 4min LFO: 88hz – 7min Random: 2khz - 2min 出力電圧範囲 Envelopes: 0–8V（反転時: 8V–0V） LFO/Random: 0–8V（Unipolar）または -5V–+5V（Bipolar） 入力電圧範囲 -5V - +5V 寸法 12 HP幅 25 mm深さ 消費電力 -12V 5mA +12V 70mA",
+    "url": "/ryk-envy/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "使用コンセプト ENVY MACHINEには4つのチャンネルがあります。CHANNEL BUTTONを押してチャンネルを切り替えてください。ジャックソケット上部にある4つのLEDが赤/オレンジ/黄色に点灯しているとき、そのチャンネルが編集対象として選択されていることを示します。 各ノブ下部の縦型LED BARSは、現在のノブの値を表示します。 CHANNEL BUTTONを押すと、新たに選択されたチャンネルの値を示すようにLED BARSが変化します。 LED BARSは、アクティブなチャンネルの現在のモードに応じて4色のうちいずれかの色で表示されます。 チャンネルパラメーターモード: 赤: Envelope Mode オレンジ: LFO またはランダムモード 黄色: Knob Control Voltage チャンネルオプションモード: 緑",
+    "url": "/ryk-envy/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "5種類のParameterモードを選択できます。 これら5つのモードを切り替えるには、CHANNELボタンを押しながら、OPTIONボタンを短く押してください。 ADSR ENV MODE ATTACK SUSTAIN DECAY RELEASE AD ENV MODE ATTACK DECAY LFO MODE FREQUENCY OFFSET RANDOM MODE ATTACK OFFSET",
+    "url": "/ryk-envy/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "現在のChannelに選択されているモードによって、LED BARSの色と数がどのように変化するかに注目してください。 すべてのChannelがKNOB CONTROL VOLTAGE MODEに設定されている場合、ディスプレイはすべての4つのLED BARSを黄色で表示するように切り替わり、各KnobはChannel番号と紐づけられます。これにより、すべてのChannelを同時に調整することができます。 KNOB CONTROL VOLTAGE MODE VOLTAGE LEVEL",
+    "url": "/ryk-envy/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "OPTION MODE PARAMETER MODEとOPTION MODEを切り替えるには、OPTION BOTTONを押してください。 LED BARSが緑色のときはOPTION MODEです。このモードの設定はLED BARSの横に縦書きで表示されています。 BAR1 – MOD CV Destination MOD INPUTからのCVは、以下のパラメーターのいずれかにルーティングできます: TIME – チャンネルのすべての時間ベースのコントロール（A、D、Rなど）をモジュレートします LEVEL – チャンネルの出力レベルをモジュレートします A – チャンネルのAttack timeをモジュレートします D – チャンネルのDecay timeをモジュレートします DR – チャンネルのDecay & Release timeをモジュレートします SHAPE – チャンネルのWAVESHAPEをモジュレートします AUX – 未定 BAR2 – MOD CV attenuverter 中央がゼロ、中央より上が正のスケール値、中央より下が負のスケール値です。",
+    "url": "/ryk-envy/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "BAR3 – WAVESHAPEコントロール。 SQUARE – 信号をSQUARE WAVEにクリップします。この値とSINEの間の値はTRAPEZOIDE波形を生成します。 SINE – 信号をSINEWAVE関数にマッピングします。この値とEXPOの間の値は近似LINEAR波形を生成します。 EXPO – 信号をEXPONENTIAL関数にマッピングします。立ち上がりと立ち下がり時間が加速し、スムーズな加速運動を作り出します。フルートなどの表情豊かなスローアタックスロープにこの波形を使用してください。 LOG/EXPO – 信号をクラシックなENVELOPE CURVEにマッピングします。高速なLOG立ち上がり時間とシャープなEXPONENTIAL減衰時間を持ちます。従来のパーカッシブでスナッピーなエンベロープにこの波形を使用してください。 BAR4 – 出力LEVELアッテニュバーター。 中央がゼロ、中央より上はユニポーラスケール値、中央より下はバイポーラスケール値となります。ENVELOPE MODEを使用している場合、バイポーラオプションはエンベロープ出力値を反転します。",
+    "url": "/ryk-envy/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "KNOB RECORDING RED/ORANGE/YELLOWパラメーターモードへの調整を、パラメーター範囲内のバリエーションとして、サイクル状に録音・再生することができます。 CHANNEL BUTTONを押しながらknobを回してください。 録音が終わったら離すと、アニメーションが再生を開始します。 録音中のknobがアクティブに再生されているときは、LED BARが点滅して表示されます。 knob録音の再生を停止または開始するには、knobを一度押すだけです。 Knob録音は電源オフ後も保持され、後日再び使用することができます。 すべてのChannelがKNOB CONTROL VOLTAGE MODEに設定されている場合、ディスプレイは4つのLED BARすべてをYellowで表示するように切り替わり、各knobは下のChannel番号に対応します。これにより、すべてのChannelを同時に調整することができます。",
+    "url": "/ryk-envy/page/10"
+  },
+  {
+    "id": "11",
+    "pageNum": 11,
+    "title": "Page 11",
+    "sectionName": null,
+    "body": "ヒントとコツ LFO MODE LFO MODEでは、AとDのコントロールを使用して波形のスロープ比率を設定します。AとDの時間の合計がLFOの周波数を決定します。 ランプ波を作成するには、Aコントロールをゼロに設定し、Dコントロールを希望の周波数に調整します。これをLINEARランプにするには、OPTION MODEのSHAPEをEXPOとSINEの中間に調整します。 AとDの時間を同時に調整する簡単な方法として、DUAL ADJUSTMENTオプションを使用します。 OPTION BOTTONを押しながらAまたはDのパラメーターを調整することで、同時に調整できます。 対称的な波形を作るには、まず両方の値をゼロに設定してから、DUAL ADJUSTMENTオプションを使用して両方の値を同時に調整します。 OFFSET LEVEL LFO MODEまたはRANDOM MODEのSコントロールは、出力に対してポジティブなオフセット値として機能します。これを使用して、モジュレーションを加えたベースレベルの電圧を設定することができます。これは、同じ入力に対して追加のマスターコントロールを持た",
+    "url": "/ryk-envy/page/11"
+  },
+  {
+    "id": "12",
+    "pageNum": 12,
+    "title": "Page 12",
+    "sectionName": null,
+    "body": "ランダムステップ電圧 RANDOM MODEでは、OPTION MENUのWAVE SHAPEパラメーターをSQUAREに設定することで、サンプル＆ホールドスタイルのステップ電圧を生成できます。SINEにブレンドすることでスルーのある滑らかなトランジションが得られ、TRAPEZOIDEウェーブフォームが作成されます。Aパラメーターで任意のFREQUENCYに調整してください。 GATE DELAY AD ENVELOPE MODEでは、WAVE SHAPEパラメーターをSQUAREに設定します。ATTACKでディレイタイムを調整し、その出力をゲートディレイとして使用することで、他のEnvelopeチャンネルやモジュールをクリエイティブにパッチできます。 PINK NOISE RANDOM MODEでは、FREQUENCYパラメーターAを最小値に調整し、出力をPINK NOISEのソースとして接続します。WAVESHAPEやFREQUENCYを調整して、出力のノイズカラーの変化を聴き比べてみてください。 DELAYED VIBRATO チャンネルをLFO",
+    "url": "/ryk-envy/page/12"
+  },
+  {
+    "id": "13",
+    "pageNum": 13,
+    "title": "Page 13",
+    "sectionName": null,
+    "body": "GATE INPUTに接続し、ATTACKパラメーターをディレイタイムとして設定し、DECAYパラメーターを長めの値に設定します。 AD ENVELOPEチャンネルの出力をLFOチャンネルのMOD INPUTに接続します。AD ENVELOPEチャンネルがトリガーされると、そのエンベロープ出力がLFOチャンネルからのビブラートのレベルと量をコントロールします。 AD ENVELOPEパラメーターでディレイタイムを調整してみてください。",
+    "url": "/ryk-envy/page/13"
+  },
+  {
+    "id": "14",
+    "pageNum": 14,
+    "title": "Page 14",
+    "sectionName": null,
+    "body": "入力と出力 MOD1-4 各チャンネルのMODULATION CV入力です。 これらをパラメーターに割り当てる方法については、OPTION MODEを参照してください。 GATE1-4 各チャンネルのGATE INPUTです。 GATE INPUTは、ENVELOPE MODEチャンネルのみ、接続されたGATE INPUTの右側に正規化されています。 チャンネルがLFO MODEに設定されている場合、接続されたGATE INPUTはLFOサイクルのRESET SYNCとして機能します。 チャンネルがKNOB CONTROL VOLTAGEに設定されており、チャンネルがKNOB RECORDINGをアクティブに再生している場合、接続されたGATE INPUTはKnobレコーディングのアニメーション再生のRESET SYNCとして機能します。 OUTPUT 1-4 各チャンネルのCV出力です。そのレベルはOPTION MODEのLEVELコントロールによって制御されることに注意してください。",
+    "url": "/ryk-envy/page/14"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "HV1 Hybrid Oscillator Eurorackモジュール ユーザーマニュアル Weston Precision Audio Designed In Portland, Oregon Revision 03 - July 18, 2025",
+    "url": "/weston-hv1/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "目次 パネル概要……………………….. 3 説明と仕様………………….. 4 ブロック図………………………… 5 HV1の使用方法 ホーム画面とMenu/Tune 6 チューニング画面……………….. 6 HV1メニュー Wavetableビュー................. 7 Optionsビュー………………… 8 Tunerビュー……………………. 8 HV1サウンド Modulation........................ 9 FoldとBitcrush................... 10 WT ChordとCluster……… 11 Wavetable Morph………….. 12 Digital Detune……………….. 13 Sync.................................. 13 Pulse Width Modulation…… 13 付録 SDカードの取り外し/取り付け.................................. 14 ファームウェアのアップデート............. 16",
+    "url": "/weston-hv1/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "HV1 概要 Encoder 滑らかに回転する360度アナログEncoderで、様々な調整や選択に使用します。 Tune/Menu Button チューニング画面とメニュー表示モードを常に切り替えます。 +/- / Up/Down Buttons チューニング表示モード時はオクターブを調整し、メニュー画面では他の機能を調整します。 Left/Right Buttons チューニング表示モード時、Left ButtonでVCOとLFOレンジを切り替えます。LFOレンジの場合、Right ButtonでLFO波形ビューを切り替えます。 メニュー表示時は、メニュー画面間をページ送りします。 FM Input and Attenuator オシレーターコアのFM入力。スルーゼロリニアまたはエクスポネンシャル方式。 Sync Input 外部信号でオシレーターコアをSyncします。リバーシングまたはリセッティングタイプのいずれか。 PWM Input/PW Knob PWM(Pulse Width Modulator)と、両方のパルス出力の基本PW(パルス幅)コントロール。 Phase",
+    "url": "/weston-hv1/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "概要 HV1は、アナログとデジタルの両方の長所を併せ持つVCO（Voltage Controlled Oscillator）Eurorackモジュールです。オシレーターコアは、非常に安定した追従性に優れたトライアングルコアのアナログVCOで、トライアングル、サイン、ノコギリ波、パルスの各波形を出力します。コアのトライアングル波は「デジタルフェーズシフター」に送られ、位相シフトされたウェーブテーブルベースのトライアングル波を出力します。これは従来のアナログ回路を通じてノコギリ波、サイン波、パルス波形に変換されます。デジタル位相情報は「WT」（ウェーブテーブル）出力にもマッピングされ、モジュール前面のSDカードから読み込んだユーザーウェーブテーブルを出力できます。 すべての波形は、リニアスルーゼロFMとエクスポネンシャルFMで変調可能です。また、右側のすべての出力は、純粋なリニアフェーズモジュレーション（PM）でも変調できます。このリニアPMはPA0と同様に動作しますが、より広い範囲を持ち、+/- 720度にわたります。",
+    "url": "/weston-hv1/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "HV1 Hybrid Oscillator: ブロックダイアグラム Triangle Core Analog VCO Linear FM Input V/Oct CV Input Sync Input Triangle to saw converter Pulse Sine Triangle Sawtooth 左側 (Core) アウトプット Processor Tuning Pot CV Triangle to saw converter PWM Comparator Triangle to sine converter Digital to analog converter (DAC) Wavetable Wavetable 右側 (Hybrid) アウトプット Sawtooth Pulse Sine Analog stuff Digital stuff Output Input Triangle Phase Modulation Input Octave volts generator Key: 0-7VDC",
+    "url": "/weston-hv1/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "HV1の使い方：はじめに ラックにSE1を設置して電源を入れた後、HV1の使用は他のオシレーターと同じくらい簡単です。出力を1つまたは2つ選び、V/oct入力にピッチCVをパッチするだけです。 HV1にはWT（Wavetable）出力用のウェーブテーブルがプリロードされていますが、空のSDカードを挿入した状態、またはSDカードなしでモジュールの電源を入れた場合、WT出力にはサイン波/ノコギリ波/矩形波/三角波を交互に変化させるモーフィングウェーブフォームがロードされます。 HV1の使い方：ホーム画面とMENU/TUNE HV1は常にチューニング画面で起動します。画面は次のようになります： 図1：チューニングロックがONのチューニング画面 MENU/TUNEボタンを押すと、常にこの画面とメニュー画面を切り替えます。 SV1の使い方：TUNE画面 チューニング画面（上記図1に示す）では、全体的なオシレーターのチューニング、オクターブ、および左右出力間の位相角度が表示されます。この画面でできることは次のとおりです： エンコーダーを押してチューニングをロック/アンロック",
+    "url": "/weston-hv1/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "RANGEがLFOに設定されている場合、RIGHTボタンを押すとLFO波形の表示が切り替わります。このビューでは2つの波形が表示されます: コアのサイン波の出力が、現在の電圧を示す小さな四角形と共に表示されます。 WT（wavetable）の出力が表示されます。 図4: LFO波形表示画面 メニュー画面: Wavetableビュー MENU/TUNEボタンを押してメニュー表示に切り替えると、最初に表示される画面はwavetableビューです: 図5: Wavetableビュー HV1にいくつかの有効なwavetableファイルが入ったSDカードが挿入されていると仮定すると、この画面では以下の操作が可能です: エンコーダーを回してwavetable bankを増減させます。 UPまたはDOWNキーを押して、wavetable bankを含む次のWAVファイルにジャンプします。 Wavetable bankは、HV1では以下のように構成されています:",
+    "url": "/weston-hv1/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "メニュー画面: OPTIONSビュー WavetableビューでRIGHTキーを押すと、次のメニューページであるOptionsが表示されます。 FIG 6: OPTIONSビュー この画面では、UPとDOWNキーを押してアクティブなオプションまでスクロールし、エンコーダーを回して設定を変更します。 ここには8つのオプションがあります: オシレーターコアのFMタイプ: LINEAR TZまたはEXPONENTIAL FM入力カップリング: ACまたはDC オシレーターコアのSyncタイプ: RESETまたはREVERSE デジタル出力用のWave-foldingアルゴリズム I. #1はサイン波 II. #2はフェーズの直接乗算 III. #3は三角波 IV. #4はフェーズにノイズを乗算 V. #5はローファイなビットクラッシュによる位相加算 \"Aux CV\"入力のルーティング I. Aux CVをWave foldingにルーティング II. Aux CVをBit-crushingにルーティング III. Aux CVをWavetable chordにルーティング IV. Aux",
+    "url": "/weston-hv1/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "HV1サウンド: Modulation HV1には2種類のModulationがあり、サウンドの音色を大きく変化させることができます。 まず、メインのVCOコアはFM(Frequency Modulation)で変調できます。FMには2つのタイプがあります。Linear Through-ZeroとExponentialです(選択方法は8ページの「OPTIONS VIEW」セクションを参照)。 下のグラフは三角波によるModulationを示しています。黄色の波形はコア(左)からの三角波で、マゼンタはハイブリッド(右)三角波出力です。 FIG 8: THROUGH ZERO LINEAR FM VIA TRIANGLE FIG 9: EXPONENTIAL FM VIA TRIANGLE これら2つのModulationタイプは非常に異なるサウンドになりますが、FM信号はすべての波形に影響を与えることに注目してください。これは、オシレーターコアがデジタルPhase Shifterに送られるためです(5ページのブロックダイアグラムを参照)。",
+    "url": "/weston-hv1/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "HV1サウンド: AUX CVルーティング (FOLD & BITCRUSH) HV1の「Aux CV」入力は複数の機能にルーティングできます。Aux CV入力が「Fold」にルーティングされている場合、この入力に加えられたCVは右側の波形の位相を、CVに比例した量だけフォールドします。5つのアルゴリズムが利用可能で、そのうち3つを以下に示します: 図10/11/12: FOLDアルゴリズム1、2、3。 1はサイン波、2は線形乗算、3は三角波です。 Aux CVが「Bitcrush」にルーティングされるように設定されている場合、右側のすべての波形がCVに比例した量でビットクラッシュ(ビット削減)されます。Aux CVはユニポーラで、0〜5Vの範囲のCVに反応することに注意してください。 図13/14/15: AUX CVをBITCRUSHにルーティング; CV = 約1.5V CV = 約2.5V CV = 三角波",
+    "url": "/weston-hv1/page/10"
+  },
+  {
+    "id": "11",
+    "pageNum": 11,
+    "title": "Page 11",
+    "sectionName": null,
+    "body": "HV1 SOUNDS: AUX CVルーティング (WT CHORD & WT CLUSTER) Aux CV入力が「WT Chord」にルーティングされている場合、AUX CVは従来の1V/オクターブ(0.083V)ステップにクオンタイズされ、キーボード上の5オクターブを表します。 Wavetable出力(WTアウトのみ、位相シフトされたトライアングルは含まれません)は1から5個のオシレーターに拡張され、クオンタイズされたCVによって選択されたコードを演奏します。すべてのコードが5つのオシレーターすべてを使用するわけではありません。右のチャートは使用可能なコードを示しています。興味深いインスピレーションを得るために、同じピッチCVをコードモードのAux CV入力にパッチしてみてください。 (WT CHORD & WT CLUSTER) Aux CVが「WT Cluster」にルーティングされている場合、HV1はWT出力を再び5個のオシレーターに拡張しますが、追加の4つのオシレーターのオリジナルに対する相対的なデチューン量(「スプレッド」)は、Aux",
+    "url": "/weston-hv1/page/11"
+  },
+  {
+    "id": "12",
+    "pageNum": 12,
+    "title": "Page 12",
+    "sectionName": null,
+    "body": "HV1サウンド: WAVETABLE MORPH HV1の「WT」(wavetable) 出力は、常に16個のwavetableの配列をメモリにロードします。これら16個のwavetableは、印加されるCVに比例した量で連続的にモーフします。つまり、CVが0%の場合は1番目のテーブルが100%ロードされ、CVが100%の場合は16番目のテーブルが100%ロードされます。「Morph」入力からのCVは、「Morph」potentiometerからのCVに加算されます。 LFOやエンベロープでmorph CVをゆっくりと変調することで、非常に興味深い結果が得られます。しかし、morphは最大20kHzまでのオーディオレート信号でも変調することができます！ 以下は、三角波LFO(黄色の信号)がWT出力(マゼンタの信号)をモーフィングしている様子をキャプチャしたものです。Morph potentiometerは50%に設定されており、CVが入力されるバイポーラ信号の負と正の両方の振幅でモーフするようになっています。 FIG 16: WT MORPH VIA LFO CV",
+    "url": "/weston-hv1/page/12"
+  },
+  {
+    "id": "13",
+    "pageNum": 13,
+    "title": "Page 13",
+    "sectionName": null,
+    "body": "HV1サウンド: DETUNE 6ページで説明したチューニングノブとオクターブ/位相角度/レンジ表示のホーム画面に戻ると、エンコーダーボタンを1秒間長押しすることで、「knob」の表示とコントロールがオシレーターチューニングからデジタルデチューンに切り替わります。 FIG 17A: DETUNE表示 (DETUNE OFF) デジタルデチューンがOFFの場合、右側(ハイブリッド)出力はアナログVCOと位相ロックされたままとなり、したがって同じ周波数になります。デジタルデチューンがONの場合、ハイブリッド出力の位相はアナログVCOからアンロックされ、アナログVCOに対して約+/- 1オクターブの範囲でデチューンできます。 デチューンのオン/オフを切り替えるには、上図のようなデチューン表示の状態でエンコーダーボタンを1回押すだけです。 デチューンを使用すると、HV1を5度や7度のような平行インターバルにチューニングされた2つのオシレーターのように使用したり、わずかにデチューンして追加のフェージング効果を得ることができます。 FIG 17B: DETUNE表示 (DETUNE ON)",
+    "url": "/weston-hv1/page/13"
+  },
+  {
+    "id": "14",
+    "pageNum": 14,
+    "title": "Page 14",
+    "sectionName": null,
+    "body": "付録: SDカードの取り付け/取り外し ファームウェアをアップデートする場合は、まずモジュールの電源を切ってください。単に異なるウェーブテーブルを読み込む場合は、以下の手順で「ホットスワップ」できます。 HV1の電源を入れたままSDカードをアンマウントする: ウェーブテーブルモーフ画面で、エンコーダーを2秒間押し続けると、HV1はSDカードのアンマウントを試みます。次のテキストが表示されます (SD CARD NOT MOUNTED)。これでカードを安全に取り外せます。 FIG 18: SD CARD DISMOUNTED SDカードの取り外し: 上記のようにカードが安全にアンマウントされているか、HV1の電源が切れていることを確認したら、SDカードの端を押して軽いクリック音が聞こえ、固定が解除されるまで押します。その後手を離すと、カードが数ミリメートル押し出されて簡単に引き抜けるようになります。 FIG 19: REMOVING THE CARD SDカードの取り付け:",
+    "url": "/weston-hv1/page/14"
+  },
+  {
+    "id": "15",
+    "pageNum": 15,
+    "title": "Page 15",
+    "sectionName": null,
+    "body": "付録: SDカードの取り付け/取り外し （続き） FIG 21: SDカード取り付け済み HV1の電源が入っている状態でSDカードをマウントする: HV1の電源が入っている状態でカードをアンマウントした場合、同じ方法で取り付けられたカードをマウントすることができます。エンコーダーを2秒間長押しするだけで、HV1はカードのマウントを試み、カード内のファイルを解析します。すべてが正常に完了すると、次のようにカード内の最初のファイルが読み込まれた状態が表示されます: FIG 21: SDカードが正常にマウントされました",
+    "url": "/weston-hv1/page/15"
+  },
+  {
+    "id": "16",
+    "pageNum": 16,
+    "title": "Page 16",
+    "sectionName": null,
+    "body": "付録: ファームウェアのアップデート HV1の内部ファームウェアはSDカード経由でアップデートできます。アップデートする前に、最新のファームウェアが既にインストールされているか確認してください。情報画面はTUNER画面に移動し、RIGHTボタンを3秒間長押しすることでアクセスできます: FIG 22: INFO SCREEN 新しいアップデートが利用可能な場合は、以下の手順に従ってください: HV1の電源を切り、SDカードを取り外します。ファームウェアアップデートをダウンロードし、.BINファイルをSDカードのルート(フォルダ内ではなく)にコピーします。SDカードには1つの.BINファームウェアファイルのみが保存されていることを確認してください。アップデーターはファイルを解析できず、最初に見つけたファイルをアップデートに使用します。 SDカードを再挿入し、RIGHTボタンとDOWNボタンを同時に押しながらHV1の電源を入れます。 HV1は以下の画面で起動します: FIG 23: FIRMWARE UPDATE SCREEN FIRST SCREEN",
+    "url": "/weston-hv1/page/16"
+  },
+  {
+    "id": "17",
+    "pageNum": 17,
+    "title": "Page 17",
+    "sectionName": null,
+    "body": "アップデートが正常に完了すると、「FW Update Complete」と「Copy Errors: 0」が表示されます。 モジュールの電源を切り、キーを押さずに通常通り再起動すると、HV1は新しく更新されたファームウェアで起動します。最初に行ったのと同じ方法で、Tunerに移動してRIGHTキーを3秒間押し続けることでバージョンを確認できます。",
+    "url": "/weston-hv1/page/17"
+  },
+  {
+    "id": "18",
+    "pageNum": 18,
+    "title": "Page 18",
+    "sectionName": null,
+    "body": "付録: キャリブレーション 通常の使用では、HV1をキャリブレーションする必要はありませんが、何らかの理由で調整が必要な場合、このセクションでは利用可能なオプションについて説明します。調整には物理的/機械的なものと、ソフトウェアで行うものがあります。 まず物理的なトリマーポットから始めます: VCO Volts/OctaveとHF Trim: モジュール背面の右上隅には、V/octとHF trimが配置されています。これらはアナログVCOのスケールと高周波応答を調整します。 HF trimの調整には1.5mmマイナスドライバーが、V/octaveには2.0mmが必要です。 Octave Voltage Trim: このトリマーはモジュール背面の右側に配置されており、オクターブ電圧のスケールを調整するためのものです。VCO V/octスケールが完全に調整されていることを確認した後にのみ、これを調整してください。 Right Sine Trim:",
+    "url": "/weston-hv1/page/18"
+  },
+  {
+    "id": "19",
+    "pageNum": 19,
+    "title": "Page 19",
+    "sectionName": null,
+    "body": "付録: キャリブレーション (デジタル) チューニングオフセットとフェーズオフセットのトリム: メインのチューニング画面で+/UPボタンを3秒間長押しすると、キャリブレーションモードに入り、図のように左上に「C」が表示されます: 左下の数値は、それぞれチューニングオフセットとフェーズオフセットの値です(ここでは267と2000と表示されています)。 +または-を押すとチューニングオフセットを調整できます。例えばチューニングを0に設定していて「C」が5セントずれている場合、この調整を使用して完璧に設定できます。 LEFTまたはRIGHTを押すとフェーズ0オフセットを調整できます。オシロスコープで左右の三角波をモニタリングしながら、フェーズポテンショメーターを完全に反時計回りに回します。2つの三角波が一致する(重なる)はずです。一致しない場合は、一致するまでLEFTとRIGHTを押してください。 完了したら、「C」が消えるまで+/UPを3秒間長押しするだけです。チューニングオフセットとフェーズオフセットは内部の不揮発性メモリに保存されます。",
+    "url": "/weston-hv1/page/19"
+  },
+  {
+    "id": "20",
+    "pageNum": 20,
+    "title": "Page 20",
+    "sectionName": null,
+    "body": "リビジョン履歴 03: FW 0.2.0の新しいAux CVルーティングオプションの説明を追加しました。 02: FWアップデート手順で誤って図19を参照していましたが、正しくは図23です。 01: 初版リリース。",
+    "url": "/weston-hv1/page/20"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "Welcome to: 全体的な特徴 これはT-Networksシリーズの最後のモジュールで、各ボイスにFrequencyとDecayコントロールを備えた4ボイス構成のストレートフォワードなモジュールです。名前が示すように、ノイズソースを追加し、ノイズをフィルタリングする際のT-networkのティンバーを探求する2つの異なる回路を作成しました。 このモジュールには2つの異なる回路があります。ボイス1から3はVCA前のT-networkフィルターを持ち、ボイス4ではVCA後にT-networkフィルターが適用されます。 各ボイスの入力には、使用する入力タイプを設定するスイッチがあります。この信号は内部VCAをコントロールするために使用されるため、ここで定義される設定のタイプが重要です: Trigger - 入力されるCVは、固定されたスレッショルドを超えるとすぐに1msのトリガーに変換されます。 Mute - 入力信号を切断し、ボイスを効果的にミュートします。 Envelopes - CVソースやGateソースと共に使用でき、単純に入力信号に追従します。",
+    "url": "/addac106-tnoise/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "コントロールの説明 T-Networks Frequency 各ボイスのレゾナントピッチを調整します Summing Mix Gain 全体のサミングミックスの出力ゲインを設定します 独立したボイス入力設定 Decay ディケイの量を設定します Hat/Snare スイッチ HPフィルターのオン/オフ Summing Mix Output 独立したボイス出力 独立したボイス入力 Low/Mod/High レンジスイッチ 周波数レンジを設定します",
+    "url": "/addac106-tnoise/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "ADDAC106 T-NOISEWORKS 信号フロー図 VOICE 3 VOICE 2 VCA HAT / SNARE (HP FILTER) NOISE SOURCE T-NETWORK ENVELOPE MUTE TRIGGER SLEW VOICE 1 INPUT 1 FREQUENCY OUTPUT 1 AUDIO SUM MIX OUTPUT MIX VOLUME VOICE 4 DECAY VCA T-NETWORK ENVELOPE MUTE TRIGGER SLEW INPUT 4 FREQUENCY OUTPUT 4 DECAY RANGE H / M / L",
+    "url": "/addac106-tnoise/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "フィードバック、コメント、または問題については、以下までご連絡ください: addac@addacsystem.com",
+    "url": "/addac106-tnoise/page/5"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "Trivium Analog Multifunction Eurorack Module ユーザーマニュアル Weston Precision Audio Designed In Portland, Oregon Revision 01 - February 5, 2026",
+    "url": "/weston-trivium/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "目次 パネル概要……………………….. 3 Basic Block Diagram…………………. 4 説明 & 仕様………………….. 5 Triviumの使い方 使い始める……………… 6 ルーティング: Pre/Post……………. 6 ルーティング: VCA/VCF CV……. 6 ルーティング: フィルタータイプ………… 6 エンベロープ……………….. 7 追加のCV入力……….. 8 付録 トリマー調整 (サービス専用).................... 9",
+    "url": "/weston-trivium/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "Trivium 概要 ADSRエンベロープのエンベロープタイム及びSustainレベルコントロール AD/ARエンベロープのエンベロープタイム AD/ARエンベロープの動作をDecayとReleaseの間で切り替えるトグル Filter コントロール: Cutoff、Resonance、エンベロープアッテニュバーター ルーティング選択スイッチ アウトプット: エンベロープ & オーディオアウト CV インプット: ADSR Decay、ADSR Release、AD/AR Attack、AD/AR Dec/Rel、Filter Cutoff、Filter Resonance、VCA Envelope オーディオインプット & Gate インプット",
+    "url": "/weston-trivium/page/3"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "概要 Triviumは、Weston Precision Audioとモジュラーおよびハイブリッド音楽のパフォーマー・プロデューサーであるTrovarsiによるコラボレーション製品です。最も基本的なレベルでは、TriviumはVCOなどの任意の信号源を追加するだけで、コンパクトな12HPパッケージの中に、モジュラーシンセサイザーで多目的なボイスを構築するために必要なすべてを提供します。さらに、Triviumはドラムやパーカッシブなサウンド、モジュレーションソースなど、様々な用途にも活用できます。 コンパクトなパフォーマンスケースでの使用を当初から想定して設計されたTriviumは、かなりタイトでコンパクトなレイアウトを採用しており、電源コネクターが突出しない構造となっています。これにより、利用可能な最も薄いEurorackケースにも収納することができます。 Triviumの中核となる機能は以下の通りです。ディスクリートOTAステートバリアブル電圧制御フィルター、VCA、ADSRタイプエンベロープ、AD/ARエンベロープ、そしてエンベロープの割り当てとフィルターおよびVCAのプリ/ポスト",
+    "url": "/weston-trivium/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "Triviumの使い方: はじめに Triviumをラックに取り付けて電源を入れたら、モジュール左下の「In」入力にオーディオ信号をパッチするだけで使用できます。また、「Gate」入力にGate信号を接続することもできます。これにより、2つのエンベロープのトリガーをコントロールします。 ルーティング: PRE/POST ルーティングスイッチを左から右に見ていくと、最初のスイッチは信号がVCAとVCFをどのように通過するかをコントロールします。以下の図にこの配置を視覚的に示しています。 「PRE」では、オーバードライブした信号をフィルターに入力することができます。フィルターのディスクリートトランジスタートポロジーにより信号は自然にサチュレートされ、レゾナンスのピークが独特な方法で抑制されます。「POST」では、フィルターの出力をモジュールから出力される前に最大+17.2dBまで減衰またはブーストすることができます。 ルーティング: VCA/VCF CV",
+    "url": "/weston-trivium/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "エンベロープ Triviumには2つのエンベロープが搭載されています。ADSR（Attack/Decay/Sustain/Release）と、AD/AR（Attack-DecayまたはAttack Release）です。前のページで説明したVCAおよびVCFへのルーティングに加え、両エンベロープはフロントパネルの出力端子としても利用できます。これにより、エンベロープを他のモジュールにパッチしたり、Triviumの入力端子にパッチバックして追加のパッチングオプションとして活用することができます。以下の2つのオシロスコープ画像は、Gate信号とともに2つのエンベロープの波形を示しています。 上の2つの図において、青のトレースはTriviumに入力されたGate信号です。緑のトレースはADSRの出力（サスティンはおよそ50%）、赤のトレースはAD/ARの出力です。2つの赤のトレースを比較するとわかるように、フロントパネルの白いボタンがAD/ARエンベロープの動作を切り替えます。",
+    "url": "/weston-trivium/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "追加のCV入力 Triviumのフロントパネルには、他に3つのCV入力があります。このセクションではそれらについて説明します。 CUTOFF この入力は、フィルターのカットオフ周波数をコントロールするCVです。フィルターに送られる前に、対応するポテンショメーターのCVと加算されます。 RES この入力は、フィルターのレゾナンス（Q）をコントロールするCVです。フィルターに送られる前に、対応するポテンショメーターのCVと加算されます。 VCA ENV VCA ENVは、VCAに送られるCVのレベルを変調します。このCVは、前のセクションで説明したように、2つのエンベロープのどちらか、または固定の8V（「HOLD」）のいずれかになります。以下の図はこの入力の接続方法を示しています。 FIGURE 4: 「VCA ENV」入力ダイアグラム",
+    "url": "/weston-trivium/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "付録：トリマー（サービス専用） Triviumには2つのトリマーが搭載されており、工場出荷時に調整済みです。通常、これらを調整する必要は一切ありませんが、調整が必要な場合に備えて、それぞれの目的を説明します。 Volts/Octave（以下の写真に示すモジュール上部に位置）： このトリマーは、Triviumのフィルターのボルト/オクターブスケールを調整します。このフィルターはディスクリートトランジスタ方式であるため、実際には4〜5オクターブのトラッキングにしか対応していませんが、ここで調整することができます。調整する場合は、レゾナンスを100%に設定し、Pre/Postスイッチを「PRE」に、フィルタータイプスイッチを「LP」に設定してください。ピッチCV入力を「CUTOFF」インプットに接続し、好みの方法でオシレーターと同様にレスポンスをチューニングしてください。 VCA Null Trim（以下の写真に示すモジュール底部に位置）：",
+    "url": "/weston-trivium/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "改訂履歴 01: 初版リリース。 © 2023 Weston Precision Audio",
+    "url": "/weston-trivium/page/10"
+  }
+]

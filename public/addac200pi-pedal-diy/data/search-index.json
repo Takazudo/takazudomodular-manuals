@@ -1,0 +1,74 @@
+[
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "October.2023 ADDAC200PI 組み立てガイド ADDAC SYSTEM",
+    "url": "/addac200pi-pedal-diy/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "ステップ1: 以下のように4つのコンデンサの位置を確認し、はんだ付けします。 ADDAC200PI 組み立てガイド",
+    "url": "/addac200pi-pedal-diy/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "ステップ 3: 下図のように2x5ボックス型ピンヘッダーを配置してハンダ付けします。",
+    "url": "/addac200pi-pedal-diy/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "STEP 6: 残りのピンヘッダーを配置し、下図のようにはんだ付けします。",
+    "url": "/addac200pi-pedal-diy/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "STEP 12: 3.5mmジャックを見つけ、以下の図のように最も細い脚をカットします。 STEP 13: 以下の図のようにすべてのジャックを配置します。",
+    "url": "/addac200pi-pedal-diy/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "STEP 14: 小さい方のPCBをパネルに配置し、ナットを締めてパッドをハンダ付けします。",
+    "url": "/addac200pi-pedal-diy/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "STEP 15: 大きい方のPCBを取り付け、ナットを締めて、最後のパッドをはんだ付けします。",
+    "url": "/addac200pi-pedal-diy/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "おめでとうございます、完成です！ Happy Patching!!",
+    "url": "/addac200pi-pedal-diy/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "フィードバック、コメント、または問題については、下記までご連絡ください: addac@addacsystem.com ADDAC200PI 組み立てガイド 2023年10月 リビジョン02",
+    "url": "/addac200pi-pedal-diy/page/10"
+  }
+]

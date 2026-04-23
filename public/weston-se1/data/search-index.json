@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "SE1 Shaped VC Envelope Eurorackモジュール ユーザーマニュアル Weston Precision Audio Designed In Portland, Oregon Revision 01 - December 5, 2023",
+    "url": "/weston-se1/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "目次 パネル概要…….…………………..…3 説明と仕様………………………4 SE1の使用方法 はじめに……………………5 Shape Controls……………..…….5 Gate Vs. Trigger………………….6 Loop…………………………..….…6 Sustain CVs……..…………………7 その他の機能 State Gates / EOC………………7 Level CV Input…….………………8 付録 Output Level Jumper…………….9 Trimmer Adjustments…………….9",
+    "url": "/weston-se1/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "SE1概要 A、D、S、およびR CV コントロール エンベロープコントロール用のCV入力 Shape Control Switch Attack、Decay、Releaseを Exponential、Linear、 またはLogarithmicに設定 Sustain Env In 「S」CV入力を シェイプするVCA。 詳細はページ7を ご覧ください。 Gate / Trig Input エンベロープの 開始/持続のための メインコントロール Gate / Trig Select Switch 詳細はページ6を ご覧ください。 Manual Trigger Button 「Gate/Trig」入力が 行うことを、 指で行います！ A、D、S、およびR Control Sliders エンベロープの パラメーターを調整します。 スライダー内のLEDが エンベロープの 現在の状態で点灯します。 State Gate Outs エンベロープの その状態にある時に HIGHになります （つまり、そのスライダーの LEDが点灯している時）。 Loop On/Off Switch",
+    "url": "/weston-se1/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "概要 SE1はEurorack形式のアナログADSRエンベロープジェネレーターモジュールです。シンプルなGate信号により、標準的なAttack/Decay/Sustain/Release型のエンベロープを生成します。多くのADSRモジュールとは異なり、SE1では各ステージA/D/Rの時間/電圧関数を、対数、線形、指数の中から独立して選択できるため、ユニークなエンベロープシェイプを作成できます。 ADSRエンベロープの各パラメーターはCVでコントロール可能です。さらに、「S」SustainのCV信号の前段にVCAがあり、「Sustain Env In」入力でコントロールできます。これにより、例えば他のモジュールから2つ目のエンベロープをトリガーし、Sustainトレモロスウェルのアタックとディケイを形成することが可能です。 エンベロープの各ステートA/D/S/Rには、そのステートの持続時間中Highになるゲート出力があります。さらに、現在のエンベロープが完了すると約1msのパルスを出力する「EOC」(End Of Cycle)出力があります。",
+    "url": "/weston-se1/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "SE1の使用方法: はじめに SE1をラックに設置して電源を入れた後、エンベロープを出力するには、モジュール右上のGate/Trigger入力に信号を送るだけです。Gate/Triggerスイッチを「Gate」に設定すると、以下のような典型的な出力が得られます。 赤いトレースはGate/Trigger入力に送られた信号を示し、青はSE1のメイン出力です。すべてのShapeコントロールはLinear(中央位置)に設定されています。また、Gate/Trigger入力の真下にあるボタンを押すことで、信号なしで手動でSE1をトリガーできます。 SE1の使用方法: Shapeコントロール エンベロープのAttack、Decay、Releaseセクションは、3ページのパネル概要で「Shape Control Switches」とラベル付けされたスイッチを使って個別に選択できます。以下の画像はいくつかの例を示しています。 Exponential Attack: Logarithmic Attack: Log Decay & Exponential Release:",
+    "url": "/weston-se1/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "Exponential DecayとLog Release: SE1の使用方法: GATEとTRIGGER Gate/Trigger選択スイッチは以下のように動作します: • GATEが選択されている場合、SE1は入力信号をゲートとして扱い、ADSR タイプのエンベロープが生成されます。これにより、エンベロープのRelease部分はゲート信号がローになった時に開始されます。 • TRIGGERが選択されている場合、SE1はSEに入力されたゲート信号やトリガー信号からトリガーパルスを生成し、ADタイプのエンベロープがトリガーされます。これにより、エンベロープはピーク電圧に達するまでアタックし、その後自動的にディケイします。したがって、TRIGGERモードではエンベロープのSとRの部分には決して入りません。 以下の画像は、Gate/TriggerスイッチがTRIGGERに設定されている場合のゲート信号(青)とエンベロープ出力(赤)を示しています: 上記のエンベロープは、ゲートの長さが表示されているものと異なっていても、全く同じように見えることに注意してください。 SE1の使用方法:",
+    "url": "/weston-se1/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "SE1の使用方法: SUSTAIN CV SE1は多くのADSRモジュールとは異なり、サステイン状態の間、サステイン電圧にサーボをかけます。ほとんどのADSRモジュールは、現在のサステイン電圧でディケイを停止し、エンベロープが再度トリガーされるまでそこに留まります。SE1は現在のサステイン電圧でディケイを停止し、その後、積分コンデンサを新しいサステイン電圧にサーボし続けます。これは、SUSTAIN CV入力にAC信号を入力して、次のようなものを作成できることを意味します: SUSTAIN CVに入力される信号は、SUSTAINポテンショメーターからの電圧に加算(追加)されることに注意してください。 さらに、SUSTAIN CVに入る信号は、最初にVCAを通過します。このVCAのコントロール電圧はSUSTAIN ENV INとラベル付けされています。次の画像は、SUSTAIN ENV INにパッチされた正弦波LFOと、SUSTAIN CVにパッチされた高周波正弦波を示しています: その他の機能: STATE GATES / EOC PULSE",
+    "url": "/weston-se1/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "\"D\" State Gate: \"S\" State Gate: \"R\" State Gate: EOC Pulse: その他の機能: LEVEL CV IN SE1のメインエンベロープ出力（反転出力と通常出力の両方）はVCAを通過します。このVCAのコントロール電圧はLEVEL入力からアクセスできます。この入力に5Vを入力するとエンベロープ振幅の100%に相当し、0Vは振幅の0%に相当します。",
+    "url": "/weston-se1/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "付録: OUT LEVELジャンパー SE1は柔軟性を持たせるため、メインエンベロープ出力のピーク電圧を5Vまたは8Vのいずれかに設定できるよう構成されています。設定を変更するには、モジュールの背面から3本のネジを外し、慎重に背面PCBを取り外します。このPCBの右下隅に5Vと8Vとラベル付けされたジャンパーがあります。このジャンパーは、2つの可能な向きのいずれかに取り付けられている必要があることに注意してください。ジャンパーが欠落している場合、SE1はメイン出力から何も出力しません。 付録: トリマー調整 通常、SE1は調整を必要とせず、初期構築時にのみ校正されます。ただし、利用可能な調整については以下に説明します: ゼロボルト調整(モジュールの左側からアクセス): 0Vトリマーを調整するには、SE1からすべての入出力を取り外し、電源が入っていることを確認します。電圧計またはオシロスコープでメイン出力をモニターし、0Vが得られるまで「0V」とラベル付けされたトリマーを調整するだけです。 Level CV Null調整(モジュールの下側からアクセス):",
+    "url": "/weston-se1/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "改訂履歴 01: 初回リリース。",
+    "url": "/weston-se1/page/10"
+  }
+]

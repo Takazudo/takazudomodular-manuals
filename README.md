@@ -63,10 +63,15 @@ Each manual has a full-text keyword search across its pages.
 Each manual ships with a committed `public/{slug}/data/search-index.json` — a compact, MiniSearch-ready index generated from `pages-ja.json`. To regenerate it after translations change:
 
 ```bash
-pnpm run pdf:search-index --slug {slug}
+pnpm run pdf:search-index --slug {slug}    # single manual
+pnpm run pdf:search-index:all              # every manual at once (runs automatically on pnpm build)
 ```
 
 This is also wired into `pnpm run pdf:all` as the 6th pipeline step, so a full run regenerates the index automatically. See `scripts/CLAUDE.md` for the full pipeline.
+
+### Cache busting
+
+The index generator writes a SHA-1 content hash of `search-index.json` into the sibling `manifest.json` as `searchIndexVersion`. The search dialog reads it via the build-time registry import and appends `?v=<hash>` to the fetch URL, so CDNs (Cloudflare Pages includes the query string in its cache key by default) serve the fresh index as soon as a deploy changes the content.
 
 ## Adding a New Manual
 

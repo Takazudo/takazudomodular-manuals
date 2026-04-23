@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "AI Synthesis AI026 Eurorack Line Interface ユーザーマニュアル これはAI026 Eurorack Line Interfaceのマニュアルです。製品は以下のサイトから購入できます: https://aisynthesis.com/product/ai026-eurorack-line-interface/ AI026 Eurorack Line Interfaceについて AI026 Eurorack Line Interfaceは、+/- 2VのLineシグナルと+/- 5VのEurorackシグナルを相互変換します。これにより、Eurorackモジュールでラインシグナルを処理する際に、最高のヘッドルームと最高品質を実現し、その逆も可能にします。 AI026のコントロール Line Level このKnobはLine Level入力の音量をコントロールします。このシグナルは約3時の位置で「unity」となります。3時を超えて回すと、正規化されていないシグナルや飽和のためにより多くのゲインを提供します。 Euro Level",
+    "url": "/ai026-line-io-interface/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "Rightインプットにケーブルが接続されていない場合、左側の信号がそのインプットに送られます。 Line Level Out. これらはEuro Levelインプット信号のLine Levelアウトプットです。 EuroLevel Out. これらはLine Inシグナルのユーロレベルアウトプットです。 Power AI026はシュラウド付きヘッダーとリバース電源保護を採用しており、ケーブルが誤った向きに差し込まれるのを防ぎます。本機はプラス側で11 mA、マイナス側で11 mAを消費します。",
+    "url": "/ai026-line-io-interface/page/2"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "Instruments for Sonic Expression Est.2009 June.2023 USER'S GUIDE . REV02 ADDAC107 ACID SOURCE INTRODUCING From Portugal with Love!",
+    "url": "/addac107-acids/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "Welcome to: DESCRIPTION 私たちは複雑なドラムソースの開発を目指してこのモジュールの開発を開始しましたが、開発の過程で、シンセボイスとしての性能がはるかに優れていることに気づき、この幸運な偶然を受け入れました。 本機は、[FREQUENCY]と[FINE TUNE]ノブに加えて、専用のCV InputとAttenuatorノブ（4オクターブの範囲で調整可能）を備えたVCOを特徴としています。 VCO波形出力は、スイッチでTriangleまたはSawのいずれかを選択することで実現されます。 選択された波形は、Square波とミックス/バランス調整できます。 結果として得られるミックスは、取り外し可能なジャンパーを介してFilterに送られます。ジャンパーを取り外すとVCOが無効になります。 Filterは、[CUTOFF]と[RESO]レゾナンスノブに加えて、Cutoff CV InputとAttenuverterノブを備えています。 3ポジションスイッチを使用してフィルタータイプを選択します：Highpass、Bandpass、またはLowpass。",
+    "url": "/addac107-acids/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "INPUT GAIN 通常、Attack/DecayエンベロープはInputのGateが+5vあるいはそれ以上であっても、最大電圧は+5vであり、ADは+5vでクリップします。本モジュールではこのクリッピング方式を採用せず、代わりに入力電圧がADの最大電圧を決定するようにしています。つまり、+5vのGateが入力された場合はADの最大電圧は+5vになりますが、+10vのGateが送られた場合はADの最大電圧は+10vになります。 これはまた、入力電圧が高い場合、Decayは同じ速度で減衰しますが、0vに戻るまでの範囲が長くなるため、低い電圧の場合よりも減衰時間が長くなることを意味します。 前述のように、[INPUT GAIN] KnobはInputを2倍に増幅することができ、標準的な+5vのGateまたはエンベロープを使用しながら、結果として得られるADを+10vまで上昇させることができます。 AD信号はVCAを開く役割を担っています。 +5vまではVCAはユニティゲインまで開き、この値を超えるとVCAは増幅を開始し、最終的には飽和して歪みます。",
+    "url": "/addac107-acids/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "ACCENT / INPUT Accent入力は2つの方法で使用できます: 1つ目はデフォルトで、前のページで説明したAccentです。2つ目のモードは、フィルターに直接入力として使用し、外部VCOや他のサウンドソースでフィルターVCAコンボを使用できるようにします。 パネル上のジャンパーを使用すると、内部VCOを無効にして外部オーディオのみを使用したり、外部入力と内部VCOの両方をミックスしたりできます。 JUMPERS LOCATIONS モジュールの側面に3つのジャンパーがあります。 CV OUT > FREQ. CV CV OUT > CUTOFF. CV ACCENT / INPUT",
+    "url": "/addac107-acids/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "SIGNAL FLOW DIAGRAM OUTPUT FREQUENCY CV IN FREQUENCY ATTENUVERTER - FREQUENCY FINE TUNE TRIANGLE OR SAW FREQUENCY INITIAL VCO CUTTOFF CV IN ON/OFF JUMPER ON/OFF JUMPER ACCENT / INPUT JUMPER CUTOFF ATTENUVERTER - INPUT TRIG/GATE/CV IN INPUT GAIN (MAX = *2) HP / BP / LP SELECTOR RESONANCE FILTER CV OUTPUT LED MONITOR VCA DECAY CV IN DECAY ATTENUVERTER - ACCENT/INPUT DECAY INITIAL VCA DECAY SLEW RECTANGLE / TRI/SAW MIX CUTOFF INITIAL NORMALLING (SELF-PATCHED)",
+    "url": "/addac107-acids/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "コントロールの説明 VCO周波数コントロール VCO微調整コントロール Filterレゾナンスコントロール VCAディケイコントロール VCAディケイレンジ: Short/Off/Long ディケイアッテヌバーター ディケイCV入力 オーディオ出力 CV出力 エクサイテーション入力 (Trigger、Gate、またはCV) アクセント入力 VCO周波数アッテニュエーター Filterカットオフアッテヌバーター VCO周波数CV入力 FilterカットオフCV入力 入力ゲインアンプ (*2) Filterカットオフコントロール VCO無効化ジャンパー 三角波または鋸歯状波セレクター 矩形波 <> 三角波/鋸歯状波バランス HP、BP、LPセレクター エンベロープモニター",
+    "url": "/addac107-acids/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "フィードバック、コメント、問題については下記までご連絡ください: addac@addacsystem.com ADDAC107 ユーザーズガイド June.2023 Revision.02",
+    "url": "/addac107-acids/page/7"
+  }
+]
