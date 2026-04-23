@@ -1,0 +1,34 @@
+[
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "ADDAC218 ATTENUVERTERS ユーザーガイド December.2020 Revision.01 ようこそ: 説明 ADDAC200シリーズのCV Utilitiesに新たに追加されたモジュールです。 このモジュールは3つの独立したAttenuverterを搭載しており、それぞれに入力、出力、13mmのKnobが備わっています。 白い領域により、ユーザーは各チャンネルに何が接続されているかを書き込むことができます。 Channel 1はChannel 2とChannel 3にノーマル接続されています。 仕様: 4hp ±40mA 2.5cm深さ",
+    "url": "/addac218-atten/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "コントロールの説明 Channel 3 ATTENUVERTER Channel 1 Input Channel 2 Input Channel 3 Input Channel 1 Output Channel 2 Output Channel 3 Output Channel 1 ATTENUVERTER Channel 2 ATTENUVERTER 機能の注釈を記入できる エリア（消えないマーカー で記入してください）",
+    "url": "/addac218-atten/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "ADDAC218 ATTENUVERTERの信号フロー図 CHANNEL 1 OUTPUT ATTENUVERTER 1 CHANNEL 1 INPUT ATTENUVERTER CHANNEL 2 OUTPUT ATTENUVERTER 2 CHANNEL 2 INPUT ATTENUVERTER CHANNEL 3 OUTPUT ATTENUVERTER 3 CHANNEL 3 INPUT ATTENUVERTER",
+    "url": "/addac218-atten/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "フィードバック、コメント、または問題がございましたら、以下までご連絡ください: addac@addacsystem.com ADDAC218 ユーザーガイド December.2020 Revision.01",
+    "url": "/addac218-atten/page/5"
+  }
+]

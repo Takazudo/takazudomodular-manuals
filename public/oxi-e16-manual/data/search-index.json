@@ -1,0 +1,546 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "OXI E16 Manual OP-XY Notebook : Reference & Guide Official User Manual v 0.5.0a",
+    "url": "/oxi-e16-manual/page/1"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "目次 概要 ................................................................................. 1 1.1 はじめに ........................................................................ 2 1.2 本マニュアルの使い方 ................................................... 3 1.3 ハードウェア概要 ........................................................... 4 1.4 電源を入れる ...................................................................... 5 1.5 E16の操作方法 ............................................................ 6 1.6 アーキテクチャ",
+    "url": "/oxi-e16-manual/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "目次 Scenes .................................................................................. 41 3.1 Scene Navigation ............................................................ 42 3.2 Scene Pages ................................................................... 43 3.3 Accessing All Scenes ...................................................... 45 3.4 Scene Settings ................................................................ 46 3.5 Presets",
+    "url": "/oxi-e16-manual/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "VI The OXI E16 Manual",
+    "url": "/oxi-e16-manual/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "概要 E16は、コンパクトでありながら高度なMIDIパラメーターコントローラーです。TRS、USB、またはBluetooth接続を介してMIDI通信を行うことができます。MIDI入力は外部デバイスからのメッセージングも受け付けます。パネル上には16個のプッシュ/ターン式エンドレスエンコーダーが配置されており、接続先デバイスのMIDI機能、例えばCC（コントロールチェンジ）、PC（プログラムチェンジ）、ノートデータ、その他多くのMIDIパラメーターのコントロールに対応するよう設定できます。E16はパラメーターオートメーションの記録と再生、パラメーターグループでの操作、そして精密な個別パラメーターコントロールと機能選択を提供します。 コントロールはSceneで整理されています。E16には最大16のSceneが搭載可能で、そのうち7つが電源投入時のホーム画面ですぐにアクセスできるよう表示されます。Sceneには",
+    "url": "/oxi-e16-manual/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "概要 1.1 はじめに E16はOXIファミリーの最新製品で、OXI ONEの完璧なコンパニオンです。E16は16個の設定可能なプッシュ/ターン式ロータリーエンコーダーで構成された、高度なMIDIパフォーマンスコントローラーです。MIDI USB、TRS、Bluetoothでのコントロールが可能です。 E16はMIDIコントローラーであり、それ自体はオーディオ出力を生成しません。オーディオは接続されたデバイスから生成され、E16はシンセ、エフェクト、またはシーケンサーのパラメーターやパターン値をコントロールします。 仕様 電気仕様: • 5V DC 1.7A (USB Type C電源) 無線機器: • Bluetooth 5.0、2.4GHz、Tx最大: 4 dBm 機械仕様: • アルミニウムシャーシ • 寸法: 143 x 114 x 19mm / Knob含む場合30mm • 重量: 950 gr. 動作温度: • 10 ºC から 36 ºC ユーザーインターフェース • LED表示付き16個のプッシュ/ロータリーエンコーダー。Detented または",
+    "url": "/oxi-e16-manual/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "Overview 1 1.2 このマニュアルの使い方 このマニュアルは、正式なリファレンスと詳細な説明、図解、ガイド、ワークフロー、およびデバイスのヒントを組み合わせたものです。独自のメモを追加することで、包括的でユニークなガイドブックとしてパーソナライズできます。明確にするため、このマニュアルではOXI E16デバイスを単にE16と呼びます。 アイコンとグラフィックは、デバイスのフェイスプレートとディスプレイを反映した図解で使用されます。E16のコントロールは多機能で、デバイス操作、ナビゲーション、セットアップに使用されます。そのため、用語において明確な規則に従うことが重要です。すべてのウォークスルーと説明では、これらの機能をテキスト形式で参照します。 [Shift] OXIの「O」の中にある多機能ボタンを[Shift]と呼びます。これは電源のオン・オフボタンでもあり、メニューでバックアップを実行したり、その他のナビゲーションコマンドに使用されます。角括弧で記述されます。 (Knob X)",
+    "url": "/oxi-e16-manual/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "1.3 ハードウェア概要 重要：Encoderタイプ Knobの動作は、お使いのハードウェアバージョンに合わせて設定で構成する必要があります。 設定で、デフォルトの通常設定、スムーズな非デテント制御、またはデテント付きencoderタイプから選択してください。 MIDI 1x In、2x Out 背面/エッジ 左/サイド 右/サイド USB-C Shift Button Controls 114 mm 143 mm 19 mm 30 mm TRS Type 'A' Power & MIDI 多機能ボタン 操作内容： 電源オン/オフ Shiftボタン ナビゲーションバックアップ 操作内容： ダイレクトコントロール ナビゲート & 選択 16個のPush / Turn エンドレスencoders out 1 out 2 in 前面/エッジ Front Panel OLED Display 概要 1",
+    "url": "/oxi-e16-manual/page/10"
+  },
+  {
+    "id": "11",
+    "pageNum": 11,
+    "title": "Page 11",
+    "sectionName": null,
+    "body": "概要 1 NOTES 1.4 電源の投入 E16はUSB-C接続を使用して電源を供給します。標準的なUSB電源アダプター、PC/Macbookへの接続、またはモバイルバッテリーを使用できます。E16は低消費電力で、最低200mAの電源を使用することを推奨します。 コンセントからUSBアダプター デバイスをコンセントに接続されたUSB電源アダプターに接続します。 USB出力を持つモバイルバッテリーを使用することも可能です。また、USB-Cから様々なUSBケーブルタイプへの変換ケーブルも使用できます。 USB電源接続 USB-Cケーブルのもう一方の端をE16のUSBソケットに接続します。 電源のオン/オフ E16はUSB電源から直接電力を供給します。充電式バッテリーや充電オプションはありません。デバイスの電源を入れるには、OXIの「O」の中にあるshiftボタンをタップします。 電源オン 多機能な[Shift]ボタンを長押しします。 電源オフ [Shift]ボタンを長押し + (Knob 16)を長押しします。赤く点灯したエンコーダーです。",
+    "url": "/oxi-e16-manual/page/11"
+  },
+  {
+    "id": "12",
+    "pageNum": 12,
+    "title": "Page 12",
+    "sectionName": null,
+    "body": "1.5 E16のナビゲーション OXI E16の構造におけるメインの「ホーム」画面の位置は、電源投入時に最初に表示されます。このディスプレイには、S.1からS.7とラベル付けされた7つの利用可能なシーンが表示されます。Encoderノブで各シーンを選択します。メニューコマンドをコントロールしているノブは点灯します。ノブをタップしてオプションを選択し、Shiftをタップしてメニュー構造内で戻ります。ホーム画面では、ノブ8がシステムオプションを選択します。ノブをタップしてオプションを選択し、Shiftをタップしてメニュー構造内で戻ります。ノブを回すと値やオプションが選択されます。 保存するかしないかのオプションは、例えばシーン編集を終了する際などに表示されます。ノブを押してYesを選択して保存するか、Noを選択して保存せずに戻ります。 概要 システム設定メニューとグローバル設定。 シーン1-7 16個のタップ/ターンEncoder いくつかの画面では、ノブの位置は表示される要素の位置と一致します。例えば、ホームページから表示されるシーンは1-7のノブ位置と設定アクセスに一致します。",
+    "url": "/oxi-e16-manual/page/12"
+  },
+  {
+    "id": "13",
+    "pageNum": 13,
+    "title": "Page 13",
+    "sectionName": null,
+    "body": "概要 1 1.6 アーキテクチャ E16の組織構造における最上位の要素はシーンです。合計16個のシーンが搭載されており、ホーム画面とインターフェイスのノブから7個に直接アクセスできます。シーンには12個のページがあり、各ページには16個のコントロールパラメーターがあります。シーンはOXI Appを使用してPC/Macで管理およびセットアップすることもできます。 Scene 2 Scene 1 Scene 3 Scene 4 Scene 5 Scene 6 Scene 7 Scene 8 Scene 9 Scene 10 Scene 11 Scene 12 Scene 13 Scene 14 Scene 15 Scene 16 Control 5 Control 7 Control 1 個別コントロール 設定 Page 1 Control 3 Control 3 Control 3 ページ設定 MIDI出力ポート & チャンネル Control 6 Control 8 Control 2 Control 4 Control 9 Control 11 Control 10 Control",
+    "url": "/oxi-e16-manual/page/13"
+  },
+  {
+    "id": "14",
+    "pageNum": 14,
+    "title": "Page 14",
+    "sectionName": null,
+    "body": "Overview 1.7 Naming Editor ワークフロー中の様々な場面で、名前を付けて保存、または名前を変更するオプションが表示されます。これにはSceneやPresetが含まれます。テキスト編集インターフェースはすべての命名オプションで共通で、Knobを回したりタップしたりしてテキスト文字列を編集およびナビゲートします。 上部の4つのエンコーダーKnobがテキストエディターでの変更に使用されます。 • Knob 1 - 回すと英数字オプションの選択をスクロールします。 タップすると文字を変更します。 • Knob 2 - 回すと編集中のテキスト本文内で編集カーソルを移動します。 タップするとバックスペースして前の文字をクリアします。 • Knob 3 - 押すとキャンセルしてサブメニューに戻ります。 • Knob 4 - 押すと編集を確定して変更を完了します。 • いつでも[Shift]を押すとバックアップ、キャンセル、または終了します。 1 2 3 4 Preset 2 7 8 9 A B C D E F CANCEL Select a character Turn",
+    "url": "/oxi-e16-manual/page/14"
+  },
+  {
+    "id": "15",
+    "pageNum": 15,
+    "title": "Page 15",
+    "sectionName": null,
+    "body": "Overview 1 NOTES",
+    "url": "/oxi-e16-manual/page/15"
+  },
+  {
+    "id": "17",
+    "pageNum": 17,
+    "title": "Page 17",
+    "sectionName": null,
+    "body": "接続とコントロール 2 OXI E16は、PC/MacのDigital Audio Workstation、シンセサイザー、オーディオエフェクトなど、1つ以上の外部デバイスのMIDIパラメーターコントロールに焦点を当てています。デバイス間で高い柔軟性を実現するため、複数の接続オプションが用意されています。これらには、USB-C、Bluetooth Low Energy、MIDI TRS InおよびOutが含まれます。 CC（Control Change）、PC（Program Change）、Pitch Bend、Noteなど、対象デバイスのMIDIアクセス可能なパラメーターをE16でコントロールできます。接続方法の選択は、アプリケーションと接続するデバイスによって異なります。E16のコントロールを適切に設定するには、接続先デバイスのMIDIパラメーターマッピングに関する知識が重要です。また、E16でインストゥルメント定義を使用して、事前定義されたパラメーターマッピングをすばやく設定することも可能です。機器メーカーのMIDI設定ドキュメントには、MIDIマッピング、特に各デバイスで使用",
+    "url": "/oxi-e16-manual/page/17"
+  },
+  {
+    "id": "18",
+    "pageNum": 18,
+    "title": "Page 18",
+    "sectionName": null,
+    "body": "接続とコントロール 2.1 接続の概要 OXI E16は、Bluetooth Light Energy、TRS MIDI、USB MIDIなど、様々な接続オプションを備えています。これにより、複数のデバイスを接続でき、必要なアプリケーションに応じて接続方法を柔軟に選択できます。イラストには一般的なセットアップが示されていますが、他にも多くのオプションが可能です。 out 1 out 2 in リアビュー Bluetooth LEは短距離で動作し、モバイルデバイスやタブレットへの接続に便利です。 E16はTRS Type A MIDI I/O接続を使用します。MIDI 5ピン接続には、MIDIコンバーターまたはTRSドングルが必要です。 TRS Type Aはステレオケーブルを使用してMIDIに対応します。ミニジャック3.5mm/1/8インチが、TRS MIDIで一般的に使用されるサイズです。 E16には2つのTRS MIDI Outputがあります。それぞれを'thru'として設定できます。これにより、受信したMIDIデータを指定された出力に直接パススルーできます。",
+    "url": "/oxi-e16-manual/page/18"
+  },
+  {
+    "id": "19",
+    "pageNum": 19,
+    "title": "Page 19",
+    "sectionName": null,
+    "body": "Connect & Control 2 2.2 MIDI USB接続 E16をUSB-C接続で他のデバイスに直接接続することが可能です。これは電源供給の入力でもあるため、接続するデバイス（例：PCやMac）は5V、200mAの電源を供給できる必要があることにご注意ください。 out 1 out 2 in USB Type Cはデバイス間で接続でき、PC/MacでホストされるDAWやアプリケーションに最適です。configオプションでUSBの動作を設定できます。USBはデバイスの充電供給としても使用されます。 MIDI USB Rear Edge NOTES 例：MIDI USB OXI E16からMac / PC Ableton Live DAWへ 1 Lead MIDI From OXI E16 (Port 1) Master All Channels In 1 s 60 48 36 24 12 -inf 0 Auto Monitor Audio To MIDIはOXI E16のUSB-C接続とターゲットとなるPC/MacのUSBを使用して直接接続できます。これによりMIDI",
+    "url": "/oxi-e16-manual/page/19"
+  },
+  {
+    "id": "20",
+    "pageNum": 20,
+    "title": "Page 20",
+    "sectionName": null,
+    "body": "Connect & Control 2.3 MIDI TRS接続 OXI E16は、TRS MIDI接続のインとアウトを使用してMIDIデバイスをコントロールできます。これは、タイプ'A'のアダプター/インターフェイスを使用することで、クラシックなMIDI 5ピンDinスタイルの接続にも対応できます。または、両方のデバイスがタイプA互換の場合は、TRSステレオケーブルを使用して接続できます。 TRSは、互換性のあるデバイス間でTRS to TRSで接続するか、5ピンDinスタイルのアダプターを使用して接続できます。MIDI TRSタイプ'A'がOXIの採用標準です。 MIDI In / Out / Thru MIDI Thruは、Conf > MIDI設定でTRS、USB、またはBLEに設定できます。Onに設定すると、この入力からのMIDIメッセージが他のMIDI出力にエコーされます。Offに設定すると、MIDI入力はデバイスを通じて出力に自動的にパススルーされず、E16が生成したメッセージのみが出力されます。 In Out MIDI TRS out 1 out 2 in Rear",
+    "url": "/oxi-e16-manual/page/20"
+  },
+  {
+    "id": "21",
+    "pageNum": 21,
+    "title": "Page 21",
+    "sectionName": null,
+    "body": "Connect & Control 2 2.4 MIDI Bluetooth接続 OXI ONEはBLE MIDIまたはBluetooth Low Energyを使用してワイヤレス通信を行います。BLEは一部のデバイスでセットアップが技術的に困難な場合があるため、iPadなどのデバイスを使用する際は、WIDI Master、WIDI Jack、またはWIDI uHostなどのMIDIドングルの使用を推奨します。AndroidはMIDI BLEに対してより堅牢な場合があります。 ペアリングするには、外部デバイスのBluetoothがオンになっていることを確認してください。ペアリングプロセスはデバイス自体によって決定され、デバイス間で異なる場合があります。E16はBluetoothセントラルMIDIデバイスとして表示され、ペリフェラルではありません。 OXI E16では、以下の手順でBluetoothをオンにします: Conf > Bluetooth > On/Off 注意",
+    "url": "/oxi-e16-manual/page/21"
+  },
+  {
+    "id": "22",
+    "pageNum": 22,
+    "title": "Page 22",
+    "sectionName": null,
+    "body": "2.5 MIDIポートとチャンネル OXI E16は、それぞれ16のMIDIチャンネルを持つ複数のMIDIポートとのインターフェースが可能です。 ポートAとBは、E16デバイスに内蔵された利用可能なポートですが、同じ物理出力を使用します。これらは一部の外部DAWやデバイスでは1および2として識別される場合があります。ポートはOXI Splitアクセサリーで拡張できます。E16の出力ポートと16チャンネルは、そのページ内のすべてのコントロールに対してページレベルで割り当てることも、送信先ごとに個別のコントロールレベルで割り当てることもできます。 Connect & Control 2 NOTES Output Channel Page Settings ~ ~ Individual Controls Destination 1 TRS 8 TRS 10 Destination 1 TRS 11 Destination 2 TRS 1 Page",
+    "url": "/oxi-e16-manual/page/22"
+  },
+  {
+    "id": "23",
+    "pageNum": 23,
+    "title": "Page 23",
+    "sectionName": null,
+    "body": "Connect & Control 2 2.6 Control Settings概要 E16は様々なMIDIメッセージフォーマットをコントロールできます。デフォルトのパラメーター設定はControl Changeで、個別に設定できます。設定とセットアップのオプションはパラメータータイプによって異なります。Controlsはcontrol settingsで設定され、control viewからアクセスします。 各パラメーターは以下をコントロールできます: • 2 x Control Destinations - ロータリーknobを回すことで送信される可変MIDIメッセージ。 • 1 x Push Control - ロータリーknobを押すことで送信される離散的なMIDIメッセージ。 Destination 1 Push Hi Lo Destination 2 Page Scene Abbr. Ctrl 3 CC3 Special Off Color 12 Page Scene Abbr. Ctrl 3 CC3 Special Off Color 12 Hold (Knob) to",
+    "url": "/oxi-e16-manual/page/23"
+  },
+  {
+    "id": "24",
+    "pageNum": 24,
+    "title": "Page 24",
+    "sectionName": null,
+    "body": "Connect & Control 2.7 Controlの設定 E16は様々なコントロールタイプを制御できます。設定メニューがデバイス上で設定を行うための出発点となります。また、より迅速な解決策として、ページやコントロールの設定に使用される専用のシーンエディターを含むOXI Appを使用することもできます。 コントロール設定は、コントロールビューからアクセスします。(Knob)を長押し + [Shift]をタップして、選択したコントロールを編集します。これにより、現在のシーンとパラメーターのページでコントロールが設定されます。点灯しているKnobを回してスクロールし、タップして編集するオプションを選択します。 Controlの編集 設定編集メニューは、コントロールビューからアクセスできます。必要に応じて[Shift]をタップして、メインホーム画面にメニューをバックアップします。関連するKnobをタップしてシーンを選択し、そのコントロールビューを表示します。 コントロールを直接編集するには、(Knob)を長押し +",
+    "url": "/oxi-e16-manual/page/24"
+  },
+  {
+    "id": "25",
+    "pageNum": 25,
+    "title": "Page 25",
+    "sectionName": null,
+    "body": "Connect & Control 2 NOTES 2.8 Control Colors 各Controlには、Control機能用に独自のカラースキームを設定できます。これにより、各ControlノブのロータリーLEDリングの色が設定され、視覚的な参照として役立ちます。色の設定はControlレベルで各Controlノブごとに定義され、Controlエディターで設定します。カラースペクトラムは0から100のパラメーター範囲内で選択されます。 編集メニューで色の値を設定する際、編集中にノブのLED色が変化するため、数値ではなく視覚的に選択することが容易になります。 0 10 20 30 40 50 60 70 80 90 100",
+    "url": "/oxi-e16-manual/page/25"
+  },
+  {
+    "id": "26",
+    "pageNum": 26,
+    "title": "Page 26",
+    "sectionName": null,
+    "body": "Connect & Control NOTES 2.9 Controller Destination Options E16では様々なパラメータータイプをコントロールできます。これらはターゲットデバイスとモジュレートするパラメーターに基づいて設定されます。コントロールのタイプはデスティネーションごとに設定されます。 3つのオプションがあり、2つのロータリーコントロールと1つのプッシュコントロールがあります。選択したKnobに対して各デスティネーションを設定するには、「Dest 1」、「Dest 2」、または「Push」を選択します。デスティネーション1がOffに設定されている場合、デスティネーション2は使用できません。 デスティネーションメニューのオプションは、デスティネーションによって変わります。 CC Abs 機能 説明 Instr. Instrument Def 選択したデスティネーション機器のプリセット設定を含むインストゥルメント定義を選択します。これらはOXI Appで管理できます。デフォルトの「Off」に設定することもできます。 Param. Parameter",
+    "url": "/oxi-e16-manual/page/26"
+  },
+  {
+    "id": "27",
+    "pageNum": 27,
+    "title": "Page 27",
+    "sectionName": null,
+    "body": "Connect & Control 2 NOTES CC Rel 機能の説明 Instr. Instrument Def 選択した送信先の楽器用のプリセット設定が含まれるインストゥルメント定義を選択します。これらはOXI Appで管理できます。デフォルトの'Off'に設定することもできます。 Param. Parameter インストゥルメント定義を選択すると、パラメーターオプションにアクセスできるようになります。インストゥルメント定義がロードされると、マッピングされたパラメーターがこの設定で利用可能になります。 Type Parameter Type Off、CC Rel1、CC Rel2、CC Abs、CC14 (High Resolution)、PC、PB、AT、Note、NRPN、Snapshot Output Output & Port MIDI物理出力とポート。設定可能な値：Same as Page、TRS1、TRS2、USB1、USB2、USB3、BLE、ALL-BLE（Bluetooth以外すべて）、ALL-USB（USB以外すべて）、またはOff。 Channel",
+    "url": "/oxi-e16-manual/page/27"
+  },
+  {
+    "id": "28",
+    "pageNum": 28,
+    "title": "Page 28",
+    "sectionName": null,
+    "body": "Connect & Control NOTES CC14 High Resolution Function Description Instr. Instrument Def Instrument定義を選択します。これには選択された対象機器のプリセット設定が含まれています。これらはOXI Appで管理できます。デフォルトの「Off」に設定するオプションもあります。 Param. Parameter Instrument定義を選択すると、Parameterオプションにアクセスできるようになります。Instrument定義がロードされると、マッピングされたParameterがこの設定で利用可能になります。 Type Parameter Type Off、CC Rel1、CC Rel2、CC Abs、CC14（High Resolution）、PC、PB、AT、Note、NRPN、Snapshot Output Output & Port MIDI物理出力とポート。以下に設定: Same as",
+    "url": "/oxi-e16-manual/page/28"
+  },
+  {
+    "id": "29",
+    "pageNum": 29,
+    "title": "Page 29",
+    "sectionName": null,
+    "body": "Connect & Control 2 NOTES PC - Program Change Program changeメッセージ（PCとも呼ばれます）は、1-128の値を使用して、接続先デバイスのプリセット、バンク、パッチ、またはプログラムを変更するために使用されます。E16からのPCメッセージの実際の影響と数値の整合性は、接続先デバイスの設計に依存します。製造元のMIDI実装ガイドを参照してください。 PC 機能 説明 Instr. Instrument Def 選択した接続先楽器のプリセット設定を含む楽器定義を選択します。これらはOXI Appで管理できます。デフォルトの「Off」に設定するオプションもあります。 Param. Parameter パラメーターオプションにアクセスするには、楽器定義を選択します。楽器定義がロードされると、マッピングされたパラメーターがこの設定で利用可能になります。 Type Parameter Type Off、CC Rel1、CC Rel2、CC Abs、CC14（High",
+    "url": "/oxi-e16-manual/page/29"
+  },
+  {
+    "id": "30",
+    "pageNum": 30,
+    "title": "Page 30",
+    "sectionName": null,
+    "body": "Connect & Control NOTES PB - Pitch Bend Pitch bendは、演奏中にモジュレーションコントロールを使用して音程を上下に調整することを指します。多くのシンセサイザーでは、これはピッチベンドホイールで表現されます。E16では、Knobを設定してMIDI出力用のpitch bendコマンドを操作でき、C-2からG8までの音域で設定できます。 PB Function 説明 Type パラメータータイプ Off、CC Rel1、CC Rel2、CC Abs、CC14（High Resolution）、PC、PB、AT、Note、NRPN、Snapshot Output Output & Port MIDI物理出力とポート。次のように設定します：Same as Page、TRS1、TRS2、USB1、USB2、USB3、BLE、ALL-BLE（Bluetooth以外すべて）、ALL-USB（USB以外すべて）、またはOff。 Channel MIDI Channel このチャンネルでMIDIメッセージを通信します。 設定：Same as",
+    "url": "/oxi-e16-manual/page/30"
+  },
+  {
+    "id": "31",
+    "pageNum": 31,
+    "title": "Page 31",
+    "sectionName": null,
+    "body": "Connect & Control 2 NOTES AT Function Description Type Parameter Type Off、CC Rel1、CC Rel2、CC Abs、CC14（High Resolution）、PC、PB、AT、Note、NRPN、Snapshot Output Output & Port MIDI物理出力とポート。以下に設定します：Same as page、TRS1、TRS2、USB1、USB2、USB3、BLE、ALL-BLE（Bluetooth以外のすべて）、ALL-USB（USB以外のすべて）、またはOff。 Channel MIDI Channel このチャンネルでMIDIメッセージを通信します。 設定：Same as page、1-16 Minimum Min value CCノブが送信する下限最小値。標準の0-127の範囲内の値です。 Maximum Max value CCノブが送信する上限最大値。標準の0-127の範囲内の値です。 Default Default value",
+    "url": "/oxi-e16-manual/page/31"
+  },
+  {
+    "id": "32",
+    "pageNum": 32,
+    "title": "Page 32",
+    "sectionName": null,
+    "body": "Connect & Control NOTES Note - 音楽的なノート値 Noteメッセージは、キーボードのキーを押したり、シーケンサーのノートをトリガーするのと同様に、音楽的なノート値を表します。コントロールノブを回すと、C-2からG8の範囲で固定ベロシティ100のNote Onメッセージが送信され、その後Note Offメッセージが送信されます。 Note Function - 機能 Description - 説明 Instr. Instrument Def 選択された目的地の楽器に対してプリセット設定を含む、楽器定義を選択します。これらはOXI Appで管理できます。デフォルトの「Off」に設定するオプションもあります。 Param. Parameter パラメーターオプションへのアクセスを有効にするために、楽器定義を選択します。楽器定義が読み込まれると、マッピングされたパラメーターがこの設定で利用可能になります。 Type Parameter Type Off、CC Rel1、CC Rel2、CC Abs、CC14（High",
+    "url": "/oxi-e16-manual/page/32"
+  },
+  {
+    "id": "33",
+    "pageNum": 33,
+    "title": "Page 33",
+    "sectionName": null,
+    "body": "Connect & Control 2 NOTES Snapshot コントローラーをsnapshotとして設定するオプションは、デスティネーションオプションにも存在します。この機能の詳細については、特別なパラメーター設定オプションで説明されています。 NRPN 機能説明 Instr. Instrument Def 選択したデスティネーション機器のプリセット設定を含む、インストゥルメントデフィニションを選択します。これらはOXI Appで管理できます。デフォルトの「Off」に設定するオプションもあります。 Param. Parameter パラメーターオプションにアクセスするためのインストゥルメントデフィニションを選択します。インストゥルメントデフィニションがロードされると、マッピングされたパラメーターがこの設定で利用可能になります。 Type Parameter Type Off、CC Rel1、CC Rel2、CC Abs、CC14（高解像度）、PC、PB、AT、Note、NRPN、Snapshot Output Output & Port MIDI物理出力とポート。設定可能:",
+    "url": "/oxi-e16-manual/page/33"
+  },
+  {
+    "id": "34",
+    "pageNum": 34,
+    "title": "Page 34",
+    "sectionName": null,
+    "body": "Connect & Control NOTES Pushコントロールオプション それぞれのコントロールは、ロータリーノブを使用して2つの送信先と、ノブからのpushコマンドのための1つの送信先を設定できます。pushコントロールは、ノブが素早く押されたときにMIDIメッセージを送信します。ゆっくり/長押しすると、pushオプションをトリガーするのではなく、セカンダリ機能が選択される場合があります。タイプが選択されると、利用可能な設定に、ノブ押下の動作モードを含む構成オプションが表示されます。 CC 機能 説明 Instr. Instrument Def 選択された送信先インストゥルメントのプリセット設定を含むインストゥルメント定義を選択します。これらはOXI Appで管理できます。デフォルトの'Off'に設定するオプションもあります。 Param. Parameter インストゥルメント定義を選択して、パラメーターオプションへのアクセスを有効にします。インストゥルメント定義がロードされると、マッピングされたパラメーターがこの設定で利用可能になります。 Type Parameter",
+    "url": "/oxi-e16-manual/page/34"
+  },
+  {
+    "id": "35",
+    "pageNum": 35,
+    "title": "Page 35",
+    "sectionName": null,
+    "body": "Connect & Control 2 NOTES PC 機能 説明 Type Parameter Type Off、Note、CC、PC、Set to Default、AT、Page、Record、PlayPause Rec. Output Output & Port MIDIの物理出力とポート。以下に設定: Same as Page、TRS1、TRS2、USB1、USB2、USB3、BLE、ALL-BLE（Bluetooth以外すべて）、ALL-USB（USB以外すべて）、またはOff。 Channel MIDI Channel このチャンネルでMIDIメッセージを送信します。以下に設定: Same as Page、1-16 PC nr. PC Number Knobが押されるたびに送信されるProgram Change番号。 AT 機能 説明 Type Parameter Type Off、Note、CC、PC、Set to Default、AT、Page、Record、PlayPause Rec. Output Output & Port",
+    "url": "/oxi-e16-manual/page/35"
+  },
+  {
+    "id": "36",
+    "pageNum": 36,
+    "title": "Page 36",
+    "sectionName": null,
+    "body": "Connect & Control 2.10 Special Functions E16のスペシャル機能は、コントロール設定からアクセスでき、Knobとそのコントロール操作の動作に影響を与えます。各コントロールに対して4つのスペシャル機能を選択できます。標準的なリニアまたはバイポーラ範囲、スナップショットで選択されたA-B範囲、またはパラメーターオートメーション記録の有効化とコントロールが含まれます。「Special」メニューのオプションは以下の通りです。 Control Range Knobの動作は、通常の0から127の範囲、またはバイポーラの-63から64の範囲を表示するように設定できます。LEDリングは、ディスプレイ画面と同様に値を表示します。この設定は、ディスプレイとコントロールの動作のみに影響します。どちらの場合でも、物理的な出力は同じです。例えば、CCの場合、両方とも0-127の範囲で出力されます。 スナップショットと記録機能については、次のセクションで詳しく説明します。 Special Options Knobを回してナビゲート、Knobをタップして変更。 Off",
+    "url": "/oxi-e16-manual/page/36"
+  },
+  {
+    "id": "37",
+    "pageNum": 37,
+    "title": "Page 37",
+    "sectionName": null,
+    "body": "Connect & Control 2 NOTES 2.11 Snapshot - 特殊機能 あらゆるコントロールノブをスナップショットモードに設定し、1つまたは複数の他の選択されたセカンダリコントロールに対するプライマリコントロールとして機能させることができます。プライマリスナップショットは接続されたセカンダリコントロールにのみ影響し、それ自体は出力を送信しません。セカンダリコントロールは、各コントロールまたはプライマリスナップショットコントローラーによって生成された独自の出力を送信します。各セカンダリコントローラーのレンジの下限値と上限値は、プライマリスナップショットのA値とB値に割り当てることができます。これにより、プライマリスナップショットのフルレンジが、定義されたレンジ内でセカンダリコントロールに影響を与えることができます。 Snapshotの例 Primary Control Secondary Controls プライマリスナップショットコントロールはそのフルレンジで動作し、割り当てられた各セカンダリパラメーターを定義されたスナップショットレンジで制御します。",
+    "url": "/oxi-e16-manual/page/37"
+  },
+  {
+    "id": "38",
+    "pageNum": 38,
+    "title": "Page 38",
+    "sectionName": null,
+    "body": "Connect & Control ► Snapshotの設定 Snapshotの設定はSettings Editorの特殊セクションにあり、Control Viewからアクセスします。必要に応じて[Shift]をタップしてメニューをメインホーム画面に戻します。関連するKnobをタップしてSceneを選択し、そのControl Viewを選択します。 Settings Menuを開くには、Control Viewから[Shift] + Tap (Knob 15)を押します。Editorは以前に選択したControlに対して開くため、Editorを開く前にKnobを回すと、この選択したKnobの設定が選択されます。 Editorタブは「Ctrl」が開いている必要があります。開いていない場合は、[Shift]を押しながら(Knob 1)をタップしてController Settingsを選択します。PageとSceneのSettingsタブも利用できます。 Primary Snapshot Controlとして割り当てるKnobを最初に設定する必要があります。 •",
+    "url": "/oxi-e16-manual/page/38"
+  },
+  {
+    "id": "39",
+    "pageNum": 39,
+    "title": "Page 39",
+    "sectionName": null,
+    "body": "Connect & Control 2 NOTES 2.12 Automationの記録 Control automationとは、パラメーターの変化を記録し、それを再生してコントロールの動作を再現することを指します。E16では、各Knobの操作をフリースタイルで記録し、ループで再生することができます。これにより、自動化されたコントロールパターンが対象のパラメーターに適用されます。考慮すべき2つのワークフローオプションがあります: クイック記録。Controlスクリーンで設定メニューを使用した直接的かつ汎用的な記録。Controlビューからエディターにアクセスするには、[Shift]を押しながら(Knob 13)をタップして記録を開始および停止します。 Transport knobコントロール。記録用のトランスポートコントロールを1つ以上のKnobに割り当てることで記録を行います。これはControlビューからアクセスするエディターで実行されます。「Rec」または「Play/Pause rec」の割り当ては、「special」設定で設定できます。",
+    "url": "/oxi-e16-manual/page/39"
+  },
+  {
+    "id": "40",
+    "pageNum": 40,
+    "title": "Page 40",
+    "sectionName": null,
+    "body": "Quick Recording レコーディングモードを素早く有効化して、Knobの調整をレコーディングバッファにキャプチャします。その後、プレイバックモードに切り替えるだけで、Knobのオートメーションを再生できます。Control Viewでオートメーションを記録します。 ▶ Quick Recording Quick RecordingはShiftメニューにあります。Control Viewから[Shift]を押したままアクセスします。 レコーディングを開始するには、[Shift] + Tap (Knob 13)、'REC'を押します。Knob 13とその回転する赤色LEDで示されるように、レコーディングが開始されます。 レコーディングが開始されたら、ボタンを離してメニューを終了します。レコーディングは継続されます。左上にレコードシンボルが表示されます。 レコーディングはフリースタイルで行われるため、レコーディング中に任意のコントロール用Knobを調整すると、値の変化サイクルがレコーディングバッファにキャプチャされます。レコーディングを停止して個別のKnobのプレイバックを継続する",
+    "url": "/oxi-e16-manual/page/40"
+  },
+  {
+    "id": "41",
+    "pageNum": 41,
+    "title": "Page 41",
+    "sectionName": null,
+    "body": "Connect & Control 2 Transport Knobコントロール録音 録音プロセスをより細かくコントロールするために、1つ以上のKnobを割り当てて、録音/停止/再生のTransportプロセスをコントロールできます。これはControl EditorでセットアップされKnobの「Special」設定にあります。 Transport Control Recording 録音用のTransportはControl View から [Shift]長押しでアクセスできるControl Editorオプションにあります。Sceneが選択されており、そのControl Viewが表示されていることを確認してください。 KnobのTransport設定を編集するには、Knob + [Shift]タップで選択したControlを編集します。または、[Shift]長押し + (Knob 13)の「Edit」をタップします。 「Ctrl」タブが選択されていることを確認してください。選択されていない場合は、[Shift]長押し + (Knob 1)をタップします。",
+    "url": "/oxi-e16-manual/page/41"
+  },
+  {
+    "id": "42",
+    "pageNum": 42,
+    "title": "Page 42",
+    "sectionName": null,
+    "body": "Connect & Control NOTES 2.13 Groups 各パラメーターは「グループ」に追加することもできます。グループとは、2つ以上のパラメーターをまとめて、集合的なセットとして一緒にコントロールできるものです。エンコーダーノブを押し続けると、グループステータスを表示できます。最大4つのグループが利用可能です。 グループに割り当てられたコントロールノブは、2つの役割のいずれかを担うことができます。 • Primary lead（プライマリリード）。調整すると、同じグループ内の他のすべてのノブの値も同時に変更されるコントロールです。Primary leadノブは、自身の値と、そのグループ内の他のノブの相対値を変更します。 • Secondary follower（セカンダリフォロワー）。leadノブによって値を変更できるコントロールノブです。同じグループ内のleadノブを回すと、このノブの値が変更されます。Secondary followerノブは、単独で手動調整することもできます。 グループの作成",
+    "url": "/oxi-e16-manual/page/42"
+  },
+  {
+    "id": "43",
+    "pageNum": 43,
+    "title": "Page 43",
+    "sectionName": null,
+    "body": "Connect & Control 2 注意 「点線」の境界ボックスで表示されたパラメーターは、プライマリーリードコントロールとして機能します。これらのいずれかを調整すると、同じグループ内の他のパラメーターの値も調和して調整されます。値の変化は、各パラメーターの元の値に対して相対的です。以下の例では、3つすべてのKnobが自身の値と他の2つのパラメーターの値に影響を与えます。 「実線」の境界ボックスで表示されたパラメーターは、プライマリーリードコントロールによる変更に追従しますが、独立して調整することもできます。プライマリーリードコントロールは「点線」の境界ボックスで表示されます。以下の例では、CC1のみが調整された場合、自身の値と他の2つのパラメーターの値に影響を与えます。CC2またはCC3のKnobを変更した場合、その個別の値のみが変更されます。グループ内の他のパラメーターは影響を受けません。 プライマリーリードがフォロワーに適用するコントロールの量は、各フォロワーパラメーターに対して設定できます。量は、各フォロワーのKnobを長押しして回すことで設定します。この例では、Knob",
+    "url": "/oxi-e16-manual/page/43"
+  },
+  {
+    "id": "44",
+    "pageNum": 44,
+    "title": "Page 44",
+    "sectionName": null,
+    "body": "Connect & Control NOTES 2.14 MIDI In E16は、受信したMIDIを選択された出力にスルーすることができます。これはSettings > MIDIセクションで設定します。さらに、外部MIDIのPC（Program Change）メッセージを使用してデバイスのSceneを変更することができます。この目的のために専用のMIDIチャンネルが利用可能で、こちらもMIDI設定で設定します。 ► PCによるScene変更 外部のコントロールデバイスをE16のMIDI入力に接続します。例えば、PC/MacからE16に接続します。PCメッセージを送信できるように、外部デバイスの一般的なMIDI設定が正しいことを確認してください。 E16でシステム設定を開きます。ホーム画面で(Knob 8)を押します。 MIDI設定に移動し、タップして開きます。「PC Receive Channel」に移動し、外部デバイスがPCメッセージを送信する専用のMIDIチャンネルに設定します。例：チャンネル8に設定。",
+    "url": "/oxi-e16-manual/page/44"
+  },
+  {
+    "id": "45",
+    "pageNum": 45,
+    "title": "Page 45",
+    "sectionName": null,
+    "body": "Connect & Control 2 NOTES",
+    "url": "/oxi-e16-manual/page/45"
+  },
+  {
+    "id": "47",
+    "pageNum": 47,
+    "title": "Page 47",
+    "sectionName": null,
+    "body": "Scenes 3 SceneはE16における最上位の組織単位であり、各Sceneは16ページ分のパラメーターを保持できます。メインのホームページからは7つのSceneにアクセスできますが、E16はデバイス上に合計16個のSceneを保持できます。これらのSceneにアクセスするには、ホームページから[Shift] + (Knob)を使用してSceneを再割り当てします。Sceneはすべての設定を保存し、コントロールの整理に役立ちます。 Sceneの選択は、E16の電源投入時に表示される最初のページから、システム設定メニューと共に利用できます。まず、作業またはセットアップするSceneを選択してください。Sceneの切り替えは、外部デバイスからPC - Program Changeメッセージを使用して行うこともできます。E16は受信するPCチェンジメッセージをリスンするための専用のMIDIチャンネルを使用します。各Sceneには16個のPresetも含まれています。Presetは全てのKnobの現在の値を保存し、後で呼び出すことができます。これにより、様々なハードウェアセットアップに合わ",
+    "url": "/oxi-e16-manual/page/47"
+  },
+  {
+    "id": "48",
+    "pageNum": 48,
+    "title": "Page 48",
+    "sectionName": null,
+    "body": "Main Home View - Scenes / System Save Yes Save No Save on Exit シーンを編集してホーム画面に戻ると、シーンを保存するかどうかのオプションが表示されます。Knobをタップして保存オプションを選択します。 Scene Select Scene / Page / Controller Settings Control Page 設定されたコントロールが表示されます。Knobは定義された送信先にMIDI Controlメッセージを送信します。 Change Page [Shift]を長押しすると、シーン設定と共にページ選択画面にアクセスできます。[Shift] + Tap (Knob X) 1-12でページを変更します。 [Shift]をタップすると、メニュー/ページ構造で一つ前に戻ります。 S. 1 S. 5 S. 3 S. 7 S. 2 S. 6 S. 4 CONF S. 1-P. 1 CC1 CC2 CC3 CC4 CC9 CC10 CC11 CC12 CC5 CC6 CC7 CC8 CC13 CC14 CC15 CC16",
+    "url": "/oxi-e16-manual/page/48"
+  },
+  {
+    "id": "49",
+    "pageNum": 49,
+    "title": "Page 49",
+    "sectionName": null,
+    "body": "Scenes 3 3.2 Scene Pages 各Sceneには12個のPageがあり、それぞれのPageには16個のパラメーターが含まれています。したがって、各Sceneでは合計192個のパラメーターが利用可能です。パラメーターをPageで整理することで、簡単かつ構造的な方法で管理できます。 S. 1-P. 1 CC1 CC6 CC3 CC4 CC9 CC10 CC11 CC12 CC5 CC6 CC7 CC8 CC13 CC14 CC15 CC16 S. 1 P.1 P.2 P.3 P.4 P.9 P.10 P.11 P.12 P.5 P.6 P.7 P.8 REC Lock Edit Prst S.1 Note 'Push'コントロールオプションを使用して、Pageを割り当てることができます。これはコントロール設定で設定され、Pushオプションをタイプ'page'に設定することで行います。Page番号を割り当てることができ、Knobのプッシュで現在のPageから切り替えて、割り当てられたコントロールビューに直接ジャンプすることができます。",
+    "url": "/oxi-e16-manual/page/49"
+  },
+  {
+    "id": "50",
+    "pageNum": 50,
+    "title": "Page 50",
+    "sectionName": null,
+    "body": "Scenes 3 ページオプションを編集できます。これにより、ページの名前変更、MIDIチャンネルとポートの設定が可能になります。エディター内からページのコピーも可能です。エディターにはコントロールビューからアクセスできます。まず編集するページを選択してください。 ► Page Settingsを編集する ページにはコントロールビューからアクセスできます。必要に応じて[Shift]をタップしてメニューをメインホーム画面に戻します。関連するKnobをタップしてシーンを選択し、そのコントロールビューを表示します。 編集するページを選択するには、[Shift]を押しながら(Knob 1) - (Knob 12)をタップします。 エディターを開くには、[Shift]を押しながら(Knob 15)の'Edit'をタップします。 ページタブを選択します。[Shift]を押しながら(Knob 2)の'Page'をタップします。編集オプションには、Knob 1でコントロール、Knob 3でシーンも含まれます。 オプションをナビゲートおよびスクロールするには、(Knob",
+    "url": "/oxi-e16-manual/page/50"
+  },
+  {
+    "id": "51",
+    "pageNum": 51,
+    "title": "Page 51",
+    "sectionName": null,
+    "body": "Scenes 3 3.3 全てのSceneへのアクセス E16には16個のSceneスロットが保存されており、そのうち7個はホーム画面から直接アクセスできます。Sceneは、OXI Appで管理できますが、E16デバイス上でも設定できます。16個の中からSceneを割り当てる操作は、shiftを使用してホーム画面で行います。 ► Sceneを直接アクセスとして割り当てる ホーム画面のSceneページでは、Knob 1-7に割り当てられた7つのSceneがあります。これらはデフォルトで設定されていますが、16個のオンボードSceneから別のものに変更できます。開始するにはホーム画面に移動します。必要に応じて[Shift]をタップしてメニューと画面構造をバックアップします。 [Shift]を押しながら(Knob 1)から(Knob 7)をタップします。これらには割り当てられたSceneが含まれています。 'Select Scene'画面が表示されます。",
+    "url": "/oxi-e16-manual/page/51"
+  },
+  {
+    "id": "52",
+    "pageNum": 52,
+    "title": "Page 52",
+    "sectionName": null,
+    "body": "Scenes 3 3.4 Scene設定 Scene設定を編集できます。これによりSceneの名前の略称を変更できます。また、このメニューからSceneのリロードやリセットのオプションも利用可能です。 Scene設定を編集する Scene設定へのアクセスはControl Viewから管理されます。必要に応じて[Shift]をタップして、メニューをメインホーム画面に戻します。関連するKnobをタップしてSceneを選択し、そのControl Viewを表示します。 エディターを開きます。[Shift]を押しながら(Knob 15)「Edit」をタップします。 SceneタブをタップでSceneタブを選択します。[Shift]を押しながら(Knob 3)「Scene」をタップします。編集オプションにはKnob 1でのコントロールとKnob 2でのページも含まれます。 オプションをナビゲートおよびスクロールするには、(Knob 3)を回します。編集するオプションを選択、またはメニューコマンドを選択するには、(Knob",
+    "url": "/oxi-e16-manual/page/52"
+  },
+  {
+    "id": "53",
+    "pageNum": 53,
+    "title": "Page 53",
+    "sectionName": null,
+    "body": "Scenes 3 3.5 Presets 各Sceneには16個のPresetスロットがあります。各Presetは、Sceneのすべてのコントロールknobの値の現在の状態を保存できます。Presetは後で呼び出すことができます。PresetメニューはControl Viewからアクセスでき、[Shift]を押しながら(Knob 16)「Prst」を押します。Presetの管理メニューは、点灯表示されるKnob 1を使用してナビゲートします。 ► Presetの保存 Knobの値が設定されているか、Snapshotとして構成されているか、Automationで設定されていることを確認します。これが保存される状態になります。 Preset Managerを開きます。Control Viewで、[Shift]を押しながら(Knob 16)「Prst」をタップします。 保存するには： I. 現在のスロットに保存する場合。メニュー内で(Knob 16)を回してナビゲートします。「►」タグで「Save」オプションをハイライトします。(Knob 16)をタップして保存を選択します。 II.",
+    "url": "/oxi-e16-manual/page/53"
+  },
+  {
+    "id": "55",
+    "pageNum": 55,
+    "title": "Page 55",
+    "sectionName": null,
+    "body": "この最後のセクションは、OXI E16の設定とセットアップに関するものです。 しかし、これらのトピックを見過ごさないでください。ワークフローに役立つ有益なトピックがたくさん含まれています。ここでは、ファームウェアのアップデート、OXI App、そして設定オプションの完全な概要について説明します。今すぐには必要ないかもしれませんが、将来的には確実に重要となる有益な要素がいくつかあります。少なくとも、ここで説明されている内容と機能について理解を深めておくことをお勧めします。将来の参考と認識のためです。最後に、OXI Instrumentsは、OXI E16をご購入いただき、新しいデバイスがOXIファミリーとその関連エコシステムに加わる私たちの旅にお付き合いいただいたことに、心から大きな感謝の意を表したいと思います。あなたの音楽的冒険の幸運を祈ります。願わくば、OXI E16がOXI ONE、Coral、Meta、そして他のすべての機材とともに、あなたの音楽の旅の助けとなりますように。覚えておいてください、物事はここで終わりではありません。終わるのはマニュアルだけです。本当の旅は始まったばか",
+    "url": "/oxi-e16-manual/page/55"
+  },
+  {
+    "id": "56",
+    "pageNum": 56,
+    "title": "Page 56",
+    "sectionName": null,
+    "body": "NOTES System 4 4.1 OXI App OXI機器を使用する際のほとんどのデバイス管理作業は、OXI Appを使用して処理されます。これはスタンドアロンのユーティリティで、OXIデバイスに接続すると、デバイスとPCまたはMac間でのアップデート、バックアップ、データ転送をサポートします。このAppには、Appから直接E16を設定したり、Instrument定義を作成およびロードしたりする機能など、便利なツールも含まれています。AppはOXIサイトからダウンロードできます。 OXI Appは、PCまたはMacとE16間で以下の操作を管理できます: • Sceneの管理とバックアップ。 • オンボードのScene editorでSceneを編集および作成。 • デバイス間でInstrument CC定義ファイルを管理。 • 接続されたE16にインストールされているOSと利用可能なファームウェアを比較し、デバイスのファームウェアをアップデート。 Click Here to Download the App Select a storage directory Drag and",
+    "url": "/oxi-e16-manual/page/56"
+  },
+  {
+    "id": "57",
+    "pageNum": 57,
+    "title": "Page 57",
+    "sectionName": null,
+    "body": "System 4 Sceneをアップロードまたはダウンロードするにはドラッグ&ドロップします S. 1 デバイス上 コンピューター上 S. 2 S. 1 Scene2 S. 3 S. 4 S. 5 S. 6 S. 7 S. 8 S. 9 S. 10 1 2 3 4 5 6 7 8 9 10 Instruments Scenes Firmware OXI E16 Scene Pages Scene Editor Page Control Cancel P.1 P.2 P.3 P.4 P.5 P.6 P.7 P.8 P.9 P.10 P.11 P.12 Set Set as Next Save Instruments GB Glide Volume OSC Trns DLY Time Name Name Abbr Name Channel CC Output Type Color Scene P.1 CC1 CC1 CCAb Destination Turn Push ~Same ~Same 0 ALL 1 + Micromonsta Bank SEL MOD WHL GB EQ OF",
+    "url": "/oxi-e16-manual/page/57"
+  },
+  {
+    "id": "58",
+    "pageNum": 58,
+    "title": "Page 58",
+    "sectionName": null,
+    "body": "System 4 NOTES 4.2 Instrument Definitions Instrument definitionは、外部デバイスへのMIDI CCマッピングのための事前定義された設定です。外部デバイスのパラメーターをコントロールするために各CCを手動で設定する代わりに、選択した機器のinstrument definitionがパラメーターを自動的にマッピングし、その名前を適用します。これにより時間を節約でき、外部機器のMIDI continuous controlメッセージを効率的に扱うことができます。 OXI E16のInstrument definitionは、任意のコントロールのdestination 1、2、またはpush destination設定で選択されます。この例では、Audiothingies MicroMonsta2がMIDIで接続されており、手動設定なしにE16からCCコントロールを実行できます。Instrument definitionを転送した後は、E16を再起動することで、それらがE16で表示されアクセス可能になります。 OXI",
+    "url": "/oxi-e16-manual/page/58"
+  },
+  {
+    "id": "59",
+    "pageNum": 59,
+    "title": "Page 59",
+    "sectionName": null,
+    "body": "System 4 Instrument Definitions Appを通してダウンロード可能な現在利用可能なinstrument definitionsが以下にリストアップされています。このリストは利用可能なdefinitionsのほとんどをカバーしていますが、さらに追加される可能性があるため、いつでも変更される可能性があります。 Manufacturer Device Hologram Microcosm IK Multimedia Uno Synth Pro X IK Multimedia Uno Drum IK Multimedia Uno Synth Intellĳel uMidi Jomox Airbase 99 Korg Arp 2600 M Korg Electribe ER-1 Korg MS2000 Korg NTS-1 Korg Opsix Korg Wavestate Korg Minilogue Korg Minilogue XD Korg Monologue Korg Volca Bass Korg Volca Beats Korg Volca Drum",
+    "url": "/oxi-e16-manual/page/59"
+  },
+  {
+    "id": "60",
+    "pageNum": 60,
+    "title": "Page 60",
+    "sectionName": null,
+    "body": "System 4 メーカー デバイス Moog Sirin Moog Sub-Phatty Moog Subsequent 25 Moog Subsequent 37 Moog Voyager Mutable Instruments Shruthi Norand Mono Nord Drum 2 Nord Drum 3P Nord Lead (Rack) Nord Lead (Rack) 2x Nord Wave 2 Novation Bass Station II Novation Bass Station Rack Novation Circuit Novation Nova Novation Summit Novation Peak OTO Machines FX BAM OTO Machines FX BIM OTO Machines FX BOUM OXI Instruments Coral Oberheim OB-6 Oberheim OB-X8 Pioneer Toraiz AS-1 Polyend Tracker Red Panda Particle Red",
+    "url": "/oxi-e16-manual/page/60"
+  },
+  {
+    "id": "61",
+    "pageNum": 61,
+    "title": "Page 61",
+    "sectionName": null,
+    "body": "System 4 4.3 System Settings デバイスのグローバル設定は、メインホームページから(Knob 8)を使用してアクセスできます。ユーザーインターフェース設定には、インターフェースの明るさ、オートセーブオプション、スクリーンセーバー、自動電源オフタイマーが含まれます。また、ファームウェアオプションとMIDI Monitorも利用できます。その他のメニューには、MIDIとBluetooth設定が含まれます。これらはSystemサブメニューにあります。 S. 1 S. 5 S. 3 S. 7 S. 2 S. 6 S. 4 CONF NOTES (Knob 8)をタップしてシステム設定を開きます。 回転してナビゲートし、タップしてサブメニューにアクセスします。 MIDI 設定 オプション 説明 BLE Thru On/Off Bluetoothインターフェースから入力されるMIDIをMIDI出力にスルーするか、オフ（スルーなし）にするかを設定します。 TRS Thru On/Off",
+    "url": "/oxi-e16-manual/page/61"
+  },
+  {
+    "id": "62",
+    "pageNum": 62,
+    "title": "Page 62",
+    "sectionName": null,
+    "body": "NOTES System 4 4.4 Firmwareアップデート OXI E16のfirmwareアップデートは、新機能の追加、パフォーマンスの向上、バグ修正のため定期的にリリースされます。アップデートプロセスはOXI App内で自動化されています。PC/MacをOXI E16に接続し、「Firmware」ページを開くだけです。デバイスの現在のステータスと利用可能なfirmwareバージョンが表示されます。 Firmwareアップデート OXI E16をOXI Appがインストールされている PC または Mac に USB 接続で接続します。 OXI App を開きます。 「Firmware」ページに現在インストールされているfirmwareと、利用可能な最新のfirmwareが表示されます。このページからアップデートが可能です。 新しく利用可能なアップデートがある場合、ポップアップメッセージに表示されます。「View」をクリックして詳細情報を確認し、アップデートを実行します。",
+    "url": "/oxi-e16-manual/page/62"
+  },
+  {
+    "id": "63",
+    "pageNum": 63,
+    "title": "Page 63",
+    "sectionName": null,
+    "body": "System 4 NOTES 4.5 Troubleshooting Updates OXI E16のアップデート中にフリーズしたり、'bricked'状態でロックされることは稀ですが、もしこのような状況が発生した場合は、以下の手順に従ってください。 Update Mode Recovery OXI E16をOXI AppをホストしているパソコンまたはMacにUSB接続します。また、パソコン/Macがインターネットに接続されていることを確認してください。 OXI E16の電源ボタンを長押しして、強制的にオフにします。 アップデートモードで起動します。電源ボタンを押しながら{Knob 15}と{Knob 16}を長押しします。E16はアップデートモードで起動するはずです。 ダウンロードしたOSバージョンを使用して、Appから再度アップデートを試みます。これは古いリビジョンまたは最新バージョンである可能性があります。 電源をオフ/オンしてみてください。手順を繰り返します。 Factory",
+    "url": "/oxi-e16-manual/page/63"
+  },
+  {
+    "id": "64",
+    "pageNum": 64,
+    "title": "Page 64",
+    "sectionName": null,
+    "body": "System 4 4.6 MIDI Input Monitor MIDI MonitorはOXI E16内のすべてのルートとチャンネルから受信するMIDIアクティビティをチェックするためのユーティリティです。必要に応じてconfigメニューまたはユーザーパネルから直接利用できる、シンプルでありながら非常に便利なツールです。 MIDI Monitorをオンにする：Conf Settings > System > MIDI Monitor NOTES Shift Hold Oct - Oct + MINILAB 3 ARTURIA MIDI IN Monitor USB Ch 1: N.Off 64 USB Ch 1: N.On 65 110 USB Ch 1: N.Off 65 最新の3つのメッセージが表示されます。 クロックがモニターされている場合、ノートやCC情報が上書きされることがあります。 接続、チャンネル、メッセージが表示されます。例はノート番号 + ベロシティとノート'on'メッセージです。",
+    "url": "/oxi-e16-manual/page/64"
+  },
+  {
+    "id": "65",
+    "pageNum": 65,
+    "title": "Page 65",
+    "sectionName": null,
+    "body": "System 4 NOTES",
+    "url": "/oxi-e16-manual/page/65"
+  },
+  {
+    "id": "66",
+    "pageNum": 66,
+    "title": "Page 66",
+    "sectionName": null,
+    "body": "Index A Aftertouch 25 App 50 Architecture 7 B Bipolar 30 Bluetooth 2, 12, 15 Brightness 55 C CC 21 Colors 19 CV Gate 12 D Destinations 17, 20 F Firmware Update 56 G Groups 36 H Hardware 4 Home 5 I Instrument Definitions 52 L Load 18 M MIDI 13, 38 MIDI Input monitor 58 MIDI Monitor 55 N Name 8 Note 26 NRPN 27 O OXI App 50, 52, 56 P Page 7, 43 PC 23, 38, 55 Ports 16 Power 4–5 Preset 7, 47 Push 28 R Record 30, 33 Reset 55, 57 S Save 18 Scene 7, 41–42, 51 Scenes Editor 51 Shift 3–4, 6",
+    "url": "/oxi-e16-manual/page/66"
+  },
+  {
+    "id": "67",
+    "pageNum": 67,
+    "title": "Page 67",
+    "sectionName": null,
+    "body": "Index Snapshot 30–31 Special Functions 30 Specifications 2 System 55 T Thru 55 Troubleshooting 57 TRS 12 TRS Adapter 4, 12, 14 U USB 5, 12–13",
+    "url": "/oxi-e16-manual/page/67"
+  },
+  {
+    "id": "68",
+    "pageNum": 68,
+    "title": "Page 68",
+    "sectionName": null,
+    "body": "保証と適合性 適合宣言 特記事項 本製品は充電式バッテリーを使用しています。マニュアルに記載されているもの、またはOXI Instrumentsが特に推奨するもの以外の電源やアダプターには絶対に接続しないでください。 本製品は、付属のコンポーネントのみで使用してください。非公式のアクセサリーを使用する場合は、仕様が公式のものと同じであることを確認してください。 重要: OXI Oneを開けたり分解したりしないでください。技術的な問題が発生した場合は、OXI Instrumentsまでお問い合わせください。OXI Oneを開けたり分解したりすると、保証が無効になります。 FCC情報（米国） 重要なお知らせ: 本製品を改造しないでください! 本製品は、製造および組み立て時にFCC要件を満たしています。OXI Instrumentsが明示的に承認していない改造を行うと、FCCによって付与された本製品の使用権限が無効になる場合があります。 本機器はFCC規則のパート15に準拠しています。動作は次の2つの条件に従います: (1) 本機器は有害な干渉を引き起こさないこと、(2)",
+    "url": "/oxi-e16-manual/page/68"
+  },
+  {
+    "id": "69",
+    "pageNum": 69,
+    "title": "Page 69",
+    "sectionName": null,
+    "body": "Warranty & Conformance NOTE この機器はテストされ、FCCルールのパート15に基づくクラスBデジタル機器の制限に適合していることが確認されています。 これらの制限は、住宅設置における有害な干渉に対する合理的な保護を提供するように設計されています。 この機器は無線周波数エネルギーを生成、使用、放射する可能性があり、指示に従って設置および使用されない場合、無線通信に有害な干渉を引き起こす可能性があります。 ただし、特定の設置環境において干渉が発生しないという保証はありません。この機器がラジオやテレビの受信に有害な干渉を引き起こす場合（機器の電源をオフにしたりオンにしたりすることで判断できます）、ユーザーは次のいずれかの対策によって干渉を修正することをお勧めします： • 受信アンテナの向きを変えるか、位置を変更する。 • 機器と受信機の間隔を広げる。 • 受信機が接続されている回路とは異なる回路のコンセントに機器を接続する。 • 販売店または経験豊富なラジオ/TVの技術者に相談する。 DECLARATION OF CONFORMITY",
+    "url": "/oxi-e16-manual/page/69"
+  },
+  {
+    "id": "70",
+    "pageNum": 70,
+    "title": "Page 70",
+    "sectionName": null,
+    "body": "保証と適合性 環境問題: このシンボルは、本製品を家庭ゴミとして処理してはならないことを示しています。製品の耐用年数が終了した際には、電気機器のリサイクルに関する適切な回収ポイントに持ち込む必要があります。バッテリーと電気機器の適切なリサイクルを通じて、環境の健康と安全に対するリスクの回避に貢献できます。 製品廃棄に関する注意: 本製品が修理不可能なほど損傷した場合、または何らかの理由で耐用年数が終了したと判断される場合は、鉛、バッテリー、プラスチックなどの材料を含む製品の適切な廃棄とリサイクル、およびこれらの種類の製品の回収ポイントに関する地域、州、および欧州の規制について確認してください。 これらのシンボルは、本製品にバッテリーが含まれており、家庭ゴミとして廃棄できないことを示しています。製品の耐用年数が終了した際には、バッテリーの適切なリサイクルのために関連する回収ポイントに持ち込む必要があります。 本製品は無線機器として分類されます。 シリアル番号の位置: シリアル番号は、機器本体の底面に貼られたラベルに記載されています。",
+    "url": "/oxi-e16-manual/page/70"
+  },
+  {
+    "id": "71",
+    "pageNum": 71,
+    "title": "Page 71",
+    "sectionName": null,
+    "body": "保証と適合性 保証条件 返金ポリシー（欧州連合内のみ） 消費者はOXI Oneの購入から合計14日間、製品を返品し、全額返金を受けることができます。全額返金を受けるには、製品が同じ状態であり、すべてのオリジナルの内容物が揃っている必要があります。 送料はお客様のご負担となります。 保証 OXI Instrumentsは、同梱のハードウェア製品およびアクセサリーについて、元の購入日から2年間、材料および製造上の欠陥に対して保証します。特に証明されない限り、製品の引き渡しから6ヶ月以内に明らかになった適合性の違反は、その日付にすでに存在していたものと推定されます。 保証は以下の場合の修理費用をカバーしません： OXI Oneの誤用、極端な条件下での使用、または不適切な使用。 製品の不適切な取り扱い。 通常の摩耗や損傷、事故または乱用による損傷。 OXI Instrumentsによって承認されていないアクセサリーの使用による故障。",
+    "url": "/oxi-e16-manual/page/71"
+  },
+  {
+    "id": "73",
+    "pageNum": 73,
+    "title": "Page 73",
+    "sectionName": null,
+    "body": "Copyright © 2025 by OXI Electronic Instruments SLU © 2023 OXI ELECTRONIC INSTRUMENTS SLU. All rights reserved. OXI INSTRUMENTSおよびOXIロゴは、EUにおけるOXI INSTRUMENTSの登録商標であり、その他多くの国でも登録されています。OXI ONEはOXI INSTRUMENTSの商標です。デザインおよび仕様は予告なく変更される場合があります。OXI ONEは一部の国では使用が認められていない場合があります。 December 2025 - OXI ONE MKII OS 0.5.0 a www.OXIinstruments.com",
+    "url": "/oxi-e16-manual/page/73"
+  },
+  {
+    "id": "74",
+    "pageNum": 74,
+    "title": "Page 74",
+    "sectionName": null,
+    "body": "www.oxiinstruments.com",
+    "url": "/oxi-e16-manual/page/74"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "NIGHT RIDER QUAD SEQUENTIAL RESONATOR ユーザーマニュアル V1 ファームウェア",
+    "url": "/ryk-night-rider/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "1→ENV/LFO VECTOR 2→/Q/MENU 3→V/OCT OUT L OUT R 4→CLK/MIDI POS RES F 5→IN1/2 6→SLEW 7→OUT2 + - + - 8→OUT1 9→SLEW 10→ 11→POS 12→ 13→RES 14→KNOB 1 KNOB 2 KNOB 3 KNOB 4 15→PREV 16→FILTER 1 17→2 18→3 19→4 20→MEMORY 21→NEXT 22→STAGE UTILITY MENU パッチメモリー #1-9 の保存 フィルタープリセット #1-9 の読み込み Knobを回してプリセット番号を選択し、Knobを押すと、フィルタープリセットの設定が現在のStageに読み込まれます。 1 - Formant 2 - Formant 3 - Formant 4 - Formant 5 - Formant 6 - Formant 7 - Chord 8 - Chord 9 - Chord",
+    "url": "/ryk-night-rider/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "RYK MODULAR NIGHT RIDER USER MANUAL V1 NIGHT RIDERは、ステレオ対応の4つのマルチモードフィルターと、6ステージ4チャンネルモジュレーションSequencerを組み合わせたQuad Sequential Filter Bankです。 概要 NIGHT RIDERには4つのFilterが搭載されており、以下のいくつかのタイプからモードを選択できます： 6db Band Pass、12db Band Pass、可変幅Band Pass [VBPF]、All Pass [AP2]、および2種類のフィードバックディレイFilter [KP および AP1]。 FilterはAll Passモードの場合を除き並列に配置されており、All Passモードでは直列に配置されます。 独自のモジュレーションSequencerがFilterパラメーターのコントロールを統合し、フォルマントアニメーションを配線の煩わしさなく楽しめるアプローチを実現します。 モジュレーションSequencerは、各ステージ間でクロッキング、スキャン、および補間が可能です。",
+    "url": "/ryk-night-rider/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "NIGHT RIDER - 構造概要 IN1とIN2の入力信号は、FILTER1、FILTER2、FILTER3、FILTER4の4つのフィルターを経由し、PANコントロールを通ってOUT1とOUT2へ出力されます。MODULATION SEQUENCERが各フィルターのパラメーターをモジュレートします。 NIGHT RIDER - 構造概要（ALL PASSフィルター） IN入力信号は、FILTER1、FILTER2、FILTER3、FILTER4を直列に通過し、その後OUT1とOUT2へ出力されます。MODULATION SEQUENCERが各フィルターのパラメーターをモジュレートします。",
+    "url": "/ryk-night-rider/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "MODULATION SEQUENCER Night RiderのModulation Sequencerセクションは、各フィルター用の4チャンネルと、6ステージのアニメーションで構成されています。 各ステージには、Filter FrequenciesとFilter Levelsの設定が含まれています。 Sequencerをあるステージから別のステージへアニメートすることで、Filter FrequenciesとLevelsが一方の値からもう一方の値へモーフィングされます。 SLEWの値を大きくすると、周波数変化のグライドが生まれます（フィルターへのLFOモジュレーションに似た効果）。SLEWの値を小さくすると、Filter FrequenciesとLevelsがより急激なステッピング変化を起こします。 下段の6つのGreen LEDは、Modulation SequencerのSTAGE POSITIONを示しています。 Red LEDの横ラインは、選択されている内容に応じて、Filter FrequencyまたはFilter Levelのいずれかを表示します（FILTER",
+    "url": "/ryk-night-rider/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "PANは2つのドットのグループと中央ポイントインジケーターで表示されます。 上段のノブを使用して、4つのFilterそれぞれのFrequencyまたはLevelを調整します。 いずれかのノブを1回押すと、FrequencyとLevelの切り替えができます。 いずれかのノブをトリプルクリックすると、ステレオフィールドにおける各FilterのPan位置を調整できます。もう一度押すとFrequency/Level調整に戻ります。Monoアウトプットを1つだけ使用している場合は、UTILITY SETTINGS MENUのOUTオプションで「1」を選択してください [10ページ参照]。 Frequencyの範囲は、ランブル [左端] からウィスパリング [右端] までです。 Levelの範囲は、サイレント [左端] から非常にフルオン [右端] までです。 Level Barの最後の5つの明るいLEDは、Filterがサチュレーションクリッピングのゾーンに入る可能性があることを示します。[心地よいディストーション]",
+    "url": "/ryk-night-rider/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "STAGE EDIT MODE このモード（単独で点滅するGreen LEDで表示）では、Modulation Sequencerが動作中であっても、個々のSequence Stageを編集することができます。 このモードで表示されているStageは、現在のSequencerの再生位置によっては、必ずしも音として聴こえるわけではありません。 NEXTまたはPREVボタンを使ってStageを前後に移動できます。Filter knobを数秒間操作しないとモードは自動的に終了します。またRedボタンを押すことでキャンセルすることもできます。 SETTINGS MODE Blackボタンを押したまま上段のいずれかのknobを回すと、Settings Modeが有効になります。このモードではFILTER TYPEおよびSEQUENCER SETTINGSの調整が可能です。 いずれかのknobを回している間、Red LED displayが変化し、4つのSettings Mode機能のいずれかが表示されます。 KNOB 1 FILTER TYPE - 使用するfilter",
+    "url": "/ryk-night-rider/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "物理モデリングによる弦の音を生成する際は、短いノイズのブリップや倍音の強いパルスでフィルターを励起することで効果を得られます。 周波数の急激な変化には注意してください。[意図しない/意図した]アーティファクトが発生する場合があります。 All Pass Filter 1 [delay-lineベース] ドライ信号のmixを可変できるdelay-lineベースのコムフィルターです [RES CONTROLを使用]。 ドライ信号のmixを増やすと、ノッチが強くなります。フィルター周波数をスイープすると、フェイズシフト効果が生まれます。一般的には、フィルター周波数が高域で密接に並んでいる場合に最も効果的で、複雑な倍音が豊富な入力信号に適用すると良い結果が得られます。 周波数の急激な変化には注意してください。[意図しない/意図した]アーティファクトが発生する場合があります。 All Pass Filter 2 [IIRベース] ドライ信号のmixを可変できるIIRベースのフィルターです [RES CONTROLを使用]。",
+    "url": "/ryk-night-rider/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "KNOB 2 SEQUENCE CLOCK DIVISION この設定は、Modulation sequencerのステージ送りをトリガーするCLOCK INPUTの分割を行います。 例えば、4に設定すると、4クロックパルスごとに1回sequencerが送られます。 この設定はMIDIおよびアナログのclock inputに適用されます。 注意: MIDI CLOCK INPUTは、clock divisionが適用される前に6分の1に分周されます。[MIDIクロックは24ppqn] KNOB 3 SEQUENCE RANGE sequencerステージの最大値と最小値の範囲をここで設定できます。Knobをプッシュして最小値と最大値の設定を切り替えます。 最小値は左向き矢印で示され、最大値は右向き矢印で示されます。 有効な範囲は点灯した緑色のLEDで示されます。 KNOB 4 SEQUENCE MODE Forwards アクティブなクロックパルスが入力されると、sequencerは右方向に送られます。 最大ステージの後、sequenceは最小ステージにリセットされます。",
+    "url": "/ryk-night-rider/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "アクティブなクロックパルスが入力されると、Sequencerは左方向に進みます。 最小ステージに達すると、最大ステージにリセットされます。 Ping-Pong アクティブなクロックパルスが入力されると、Sequencerは右方向に進みます。 最大ステージに達すると、方向が反転し左方向へ進みます。 最大または最小ステージに達するたびに、進行方向が交互に切り替わり続けます。 Random アクティブなクロックパルスが入力されると、Sequencerは最大・最小ステージの範囲内でランダムに選ばれたステージへ進みます。 MEMORY このボタンを押しながらKnob 1またはKnob 2を回すと、PATCH STORAGE MODEが有効になります。このモードでは、Filter BankおよびModulation Sequenceのパラメーターを保存・読み込みすることができます。 KNOB 1 LOAD PATCH MEMORY #1-19 保存済みのFilter BankおよびSequencer設定を読み込みます。 Knobを回してPatch",
+    "url": "/ryk-night-rider/page/10"
+  },
+  {
+    "id": "11",
+    "pageNum": 11,
+    "title": "Page 11",
+    "sectionName": null,
+    "body": "Chords（Cプレフィックスで表示） 1 - Major 2 - Minor 3 - Diminished 4 - Augmented 5 - Major 7th 6 - Minor 7th 7 - Dominant 7th 8 - Diminished 7th 9 - Augmented 7th 10 - Suspended 2nd 11 - Suspended 4th 12 - Suspended 2nd 13 - Suspended 4th RES KNOB このKnobでFilterのResonance、Band Width、またはFeedbackを調整します。（機能はFILTER TYPEによって異なります。5/6ページを参照してください。） 6dBまたは12dB BAND PASS FILTERを使用する場合、RESコントロールはFilterのResonanceを調整します。高い設定にすると鳴動や発振が起こり、FilterをPingで叩ける状態にできます。",
+    "url": "/ryk-night-rider/page/11"
+  },
+  {
+    "id": "12",
+    "pageNum": 12,
+    "title": "Page 12",
+    "sectionName": null,
+    "body": "POS KNOB このコントロールは、Green LEDで示されるシーケンスの現在位置を移動します。 Slewが適用されている場合、Positionコントロールは変化に応じてステージ間を補間します。 Slewが最小の場合、ノブを回すとステージからステージへと突然ジャンプします。 シーケンスがアニメーションしていない状態でステージのFrequencyまたはLevelを調整する場合は、まずPREVまたはNEXTボタンでステージを選択することをお勧めします。そうしないと、シーケンスが補間された位置でステージの間にある場合、調整が明確に識別しにくくなります。 UTILITY BUTTON このボタンは、Night RiderモジュールのUTILITY SETTINGS MENUを起動します。 1回押してメニューに入り、上段のKnob 1でパラメーターを選択し、Knob 4でパラメーターの値を調整します。 パラメーターとその値が交互に点滅します。 OUT – Audio Output設定。 1 [CH1 - MONO]、1.2 [CH1 & CH2 - ステレオ] NB:",
+    "url": "/ryk-night-rider/page/12"
+  },
+  {
+    "id": "13",
+    "pageNum": 13,
+    "title": "Page 13",
+    "sectionName": null,
+    "body": "CLK/MIDI この入力は、Modulation SequencerをClockシグナルでコントロールするためのものです。 より低いレートでは、SETTINGS MODEのSEQUENCE CLOCK DIVISIONパラメーターを使用して、Clock入力を分周できます。[Page 7参照] この入力はMIDI CLOCKソースおよびMIDI MESSAGESも受け付けます。 TRS MIDI入力であり、モジュール背面のMIDIと刻印されたマイクロスライドスイッチを使用して、極性をType A/Bに設定できます。 MIDI CC MESSAGESは以下のパラメーターにマッピングされており、MIDIコントローラーから外部調整が可能です。 CC 34 - グローバル周波数オフセット CC 35 - シーケンスの現在位置（補間付き） CC 36 - Slew量 CC 37 - Resonance / Bandwidth / Feedback量 MIDI NOTE ON MESSAGESも受信可能で、グローバル周波数オフセットへの半音ピッチオフセットとして解釈されます。 RES",
+    "url": "/ryk-night-rider/page/13"
+  },
+  {
+    "id": "14",
+    "pageNum": 14,
+    "title": "Page 14",
+    "sectionName": null,
+    "body": "WARE」と「RESET」。 Firmwareボタンを押し続けながら、Resetボタンを一瞬押します。その後、Firmwareボタンを放します。 USB Bマイクロケーブルでモジュールとコンピューターを接続します。データ転送に対応した高品質なケーブルを使用してください。マイクロUSBケーブルの中には電源供給のみのものがあります。 USBハブを経由せず、コンピューターに直接接続してください。 コンピューターに「RPI-RP2」という名前のUSBディスクが表示されます。 UF2ファームウェアファイルを「RPI-RP2」ディスクにコピーまたはドラッグします。 成功すると、ディスクが自動的に「取り出し」され、モジュールは新しいファームウェアで再起動します。 お楽しみください！ HINTS AND TIPS VERY SIMPLE PHASER SETUP Phaserは、コード、またはノコギリ波・矩形波オシレーターなど、倍音豊かなオーディオソースと非常に相性が良いです。 シンプルなPhaserには、Band Pass",
+    "url": "/ryk-night-rider/page/14"
+  },
+  {
+    "id": "15",
+    "pageNum": 15,
+    "title": "Page 15",
+    "sectionName": null,
+    "body": "MARIMBA MADNESS フィルターモードを6dBまたは12dB Band Passフィルターに設定します。 RES CONTROLをほぼ最大まで調整しますが、最大にはしないでください。 IN1/2にリズミカルまたは中程度のスピードの非常に短いホワイトノイズのパルス、またはエンベロープパルスを入力します。 フィルターのレベルを調整すると、パルスによってフィルターが「励起」され、木琴やマリンバに似た共鳴ドラムサウンドが聞こえてくるはずです。 RESのレベルが高いと音のディケイが長くなり、低いとディケイが非常に短くなります。 フィルターの周波数を調整して、ピッチを持った共鳴のグループがどのように組み合わさって聞こえるか試してみてください。 MEMORYからコードプリセットをロードすることもできます。[ 8/9ページ参照 ] TIP: IN1とIN2の入力に異なるタイミングの異なるパルスを入力して、異なるピッチの複雑なリズムを作成するのも面白いです。 また、F INPUTにCV信号を接続して、キーボードやSequencerなどで音のグローバル周波数をモジュレートすることもできます。",
+    "url": "/ryk-night-rider/page/15"
+  }
+]

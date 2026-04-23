@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "(このページは空白です)",
+    "url": "/addac219in-stereo-diy/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "March.2025 ADDAC219IN Assembly Guide ADDAC SYSTEM",
+    "url": "/addac219in-stereo-diy/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "ADDAC219IN アセンブリガイド ステップ1: PCBを手に取り、オスとメスのピンヘッダーを見つけます。 ステップ2: 対応するメスピンヘッダーにオスピンヘッダーを挿入し、両方のPCBの間に配置してハンダ付けします。",
+    "url": "/addac219in-stereo-diy/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "STEP 4: Power IDCコネクタを配置し、ハンダ付けします。 IDCコネクタの向きに注意してください。 STEP 6: 下図に示されているカラー配置に従って、フロントPCBにジャックを配置します。 フロントパネルを配置し、すべてのジャックナットを締めてから、脚をハンダ付けします。",
+    "url": "/addac219in-stereo-diy/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "完成です！ Happy Patching! ADDAC219IN 組み立てガイド",
+    "url": "/addac219in-stereo-diy/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "フィードバック、コメント、または問題については以下までご連絡ください: addac@addacsystem.com ADDAC219IN ASSEMBLY GUIDE March.2025 Revision.01",
+    "url": "/addac219in-stereo-diy/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "STEP 4: 前面と背面のPCBを両方取り付けて完成させます。",
+    "url": "/addac219in-stereo-diy/page/7"
+  }
+]

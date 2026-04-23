@@ -1,0 +1,34 @@
+[
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "Welcome to: 全体的な特徴 ADDAC103 T-Networksに続くこの新しいモジュールは、多くの伝説的なドラムマシンで使用されているTwin T-Networks回路にインスパイアされています。各ボイスに周波数コントロールを備えたシンプルな4ボイスモジュールです。この新しいモジュールは、各ボイスの周波数用のCV入力とアッテニュバーターも搭載しています。回路の特性上、およびモジュールを低価格に保つため、これらの入力は1v/octaveにキャリブレートされていません。 各ボイス入力には、Gate to Triggerコンバーターがあるため、どのような入力ソースも使用可能です。 オーディオ入力も入力として使用できます。この場合、Gate to Triggerコンバーターの性質上、各ボイスは非常に破壊的なフィルターとして使用できます。 このモジュールは、完全なDIYキットとしても入手可能です。 機能: 4ボイス、それぞれに以下を搭載: CV入力とアッテニュバーター付き周波数コントロール 周波数レンジスイッチ、Low/Mod/High Trigger入力 Audio出力",
+    "url": "/addac104-tnetw/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "コントロールの説明 Frequency 各ボイスのピッチを調整します Summing Mix Gain 全体のサミングミックスの出力ゲインを設定します Independent trigger inputs 各ボイス独立したトリガー入力 Frequency CV Attenuverter 入力されるCV信号の極性とゲインを設定します Low/Mod/High range switches 周波数レンジを設定します Summing Mix Output サミングミックス出力 Independent voices outputs 各ボイス独立した出力 Independent frequency CV inputs 各ボイス独立した周波数CV入力",
+    "url": "/addac104-tnetw/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "ADDAC104 VC T-NETWORKS 信号フロー図 VOICE 4 VOICE 3 VOICE 2 GENERATOR FREQUENCY RANGE LOW/MOD/HIGH VOICE 1 TRIGGER 1 FREQUENCY OUTPUT 1 AUDIO SUM MIX OUTPUT MIX VOLUME CV INPUT FREQUENCY ATTENUVERTER",
+    "url": "/addac104-tnetw/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "フィードバック、コメント、問題については下記までご連絡ください: addac@addacsystem.com ADDAC104 ユーザーガイド October.2019 Revision.01",
+    "url": "/addac104-tnetw/page/5"
+  }
+]

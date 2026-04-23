@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "SF1 Stereo / Dual Filter Eurorackモジュール ユーザーマニュアル Weston Precision Audio Designed In Portland, Oregon Revision 01 - September 16, 2022",
+    "url": "/weston-sf1/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "概要 SF1はデュアル電圧制御フィルター(VCF)モジュールで、同一でありながら独立した2つのVCFとして使用することも、ステレオフィルターとして使用することもできるよう設計されています。ステレオフィルターとして使用する場合は、標準3.5mm TS接続を通じて2つのモノラル(L/R)入力として受け取ります。 SF1の中核は4ポール電圧制御ローパスフィルターで、精密な「ポールミキシング」を使用して各フィルターから多数の出力を提供します。各フィルターには同時に使用可能な2つの出力があります。1つ目の出力セット(L1/R1)は、Low Pass、High Pass、またはBand Passレスポンスを選択して出力できます。これらの選択のそれぞれで、カットオフカーブを「2 pole」(12 db/octave)または「4 pole」(24 db/octave)から選択できます。 2つ目の出力セット(L2/R2)は、シングルポールNotch、2ポールAll-pass、または4段Phaserレスポンスを選択して出力できます。",
+    "url": "/weston-sf1/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "メインコントロール Cutoff: これらのポットは左右のフィルターコアの「カットオフ周波数」をコントロールします。 Resonance: これらのポットは左右のフィルターコアのレゾナンスまたはQ値の量をコントロールします。L1またはR1出力でローパスモードのいずれかを使用し、対応するレゾナンスポットを完全に時計回りにすると、自己発振が発生し、フィルターはサイン波オシレーターとして機能します。 Audio In Level: 各フィルターのオーディオ入力の量はこれらのポットでコントロールされます。各ポットの中央（「正午」の位置）にはデテントがあり、これはオーディオ入力信号のちょうどユニティ（ゲイン1）に対応します。ポットを中央より先に回すと、徐々にオーバードライブが増加します。 Cutoff CV Input: これらのジャックに入力された信号は、各フィルターのカットオフ周波数をコントロールします。コントロールポットは「アッテニュバーター」であり、中央（デテント付き）が0です。ポットを時計回りに回すと、正の電圧がカットオフ周波数に加算され、負の電圧がカットオフ周波数から減算されます。ポ",
+    "url": "/weston-sf1/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "OUTPUT 各フィルターには2つの出力があり、同時に使用できます。「1」出力(L1 & R1)には、出力タイプをコントロールする2つのスイッチがあります。「2」出力(L2 & R2)には、出力タイプをコントロールする1つのスイッチがあります。選択可能な設定は下記の表にまとめられています: 最後に、各出力ペアは電圧制御パンナー/クロスフェーダーを通過します: 「Pan」potを完全に反時計回りにすると、「L/m」オーディオ入力がL1とL2出力にルーティングされ、「R」がR1/R2にルーティングされます。「Pan」potを完全に時計回りにすると、「L/m」オーディオ入力がR1とR2出力にルーティングされ、「R」がL1/L2にルーティングされます。「Pan」potが中央にあると、各出力は「L/m」入力信号の50%と「R」入力信号の50%を受信します。 「Pan CV」ジャックに信号を入力すると、「Pan」potと同じ方法でパンニングをコントロールでき、「Pan CV」potによってアッテネートされます。 そのため、「Pan」potが中央にある場合、「Pan",
+    "url": "/weston-sf1/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "SF1の全9設定における公称出力応答のボード線図は、本書末尾の付録に掲載されています。 LINK BUTTON 「Link」ボタンは、LおよびR入力にデュアルモノペアとしてステレオオーディオ信号が入力されている場合に、SF1を便利に使用する方法を提供します。 「Link」ボタンが押され、その上のオレンジ色のLEDが点灯している場合、LEFT側の以下の項目が両方のフィルターをコントロールします： Frequency pot Resonance pot Frequency CV input / attenuverter Resonance CV このページの図は、Link機能をよりグラフィカルに示しています。",
+    "url": "/weston-sf1/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "メンテナンス SF1は特別なメンテナンスを必要としませんが、サービス時に調整可能な2組のトリマーがあります。 ユニット上部のエッジには各フィルターのVolts per octaveトリマーがあり、これらは通常のオシレーターのV/octトリマーと同様に機能します。 ユニット下部のエッジには2つのトリマーがあり、これらはオーディオインプットポットが中央の位置にある時に正確にユニティとなるようにオーディオ入力段を校正するために使用されます。これらは組み立て時に調整されるため、通常は再調整の必要はありません。 結論 モジュラーシンセ機器と同様に、単独で、または他のモジュールと一緒に実際に演奏してみるのが最良の方法です。自分の好みを見つけ、そして最も重要なことは、音楽を作って楽しむことです!!間違った答えなどありません! ...アイディア?!... 2つの異なるオシレーター波形をオーディオ入力に送り、panポットを中央に設定し、オーディオレート信号をpan CVに送ることで、クールなAM(振幅変調)エフェクトを得られます。高速なレートでは楽しいトレモロエフェクトが得られます。",
+    "url": "/weston-sf1/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "付録：ブロックダイアグラム SF1 Dual/Stereo VCF： ブロックダイアグラム Left Audio In Input Stage w/ Overdrive 4 Pole Voltage Controlled Lowpass Filter L1 Outs Pole Mixer L2 Outs Pole Mixer 4P or 2P Lowpass 4P or 2P Highpass 4P or 2P Bandpass 1P Notch 2P All Pass 4P Phaser L1 Select Switches R1 Select Switch Voltage Controlled Panner/Crossfader Voltage Controlled Panner/Crossfader L1 Output L2 Output R1 Output R2 Output Right Audio In Input Stage w/ Overdrive 4 Pole Voltage Controlled Lowpass Filter R1 Outs Pole Mixer",
+    "url": "/weston-sf1/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "付録: L1/R1 OUTPUT 公称周波数特性 Low pass（2 poleおよび4 pole）: High pass（2 poleおよび4 pole）:",
+    "url": "/weston-sf1/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "APPENDIX: L1/R1 OUTPUT NOMINAL RESPONSES Band pass (2 pole and 4 pole):",
+    "url": "/weston-sf1/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "付録: L2/R2出力 標準周波数特性 1 Pole Notch: 2 Pole All-Pass:",
+    "url": "/weston-sf1/page/10"
+  },
+  {
+    "id": "11",
+    "pageNum": 11,
+    "title": "Page 11",
+    "sectionName": null,
+    "body": "付録: L2/R2 OUTPUT 公称周波数特性 4 Pole Phaser:",
+    "url": "/weston-sf1/page/11"
+  },
+  {
+    "id": "12",
+    "pageNum": 12,
+    "title": "Page 12",
+    "sectionName": null,
+    "body": "改訂履歴 01: 初回リリース。 © 2022 Weston Precision Audio",
+    "url": "/weston-sf1/page/12"
+  }
+]

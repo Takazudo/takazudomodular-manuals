@@ -1,0 +1,34 @@
+[
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "ADDAC604 DUAL FILTER ユーザーガイド January.2020 Revision.01 Welcome to: 全体の説明 ADDAC105 4 Voice Clusterモジュールの開発中に、サミングミックスステージの後段に配置する新しいマルチモードフィルターを製作しました。そのサウンドに大変満足したため、専用フィルターとしてリリースすることを決定しました。より興味深いものにするため、ステレオ信号パスで使用できるように回路を複製しました。より汎用性を高めるため、動作モードをStereoからDual Monoに切り替えるスイッチを追加しました。Dual Monoでは両方のフィルターを独立して使用できます。 Stereo ModeではLeft CutoffがRight Cutoffのコントロールに使用されます。この場合、Right Cutoff KnobとCV Inputは単純にバイパスされ、Right",
+    "url": "/addac604-filter/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "コントロールの説明 Operation Mode DUAL MONO / STEREO LEFT CONTROLS Cutoff Initial Control Resonance Control Cutoff CV Attenuverter Cutoff CV Input Audio Input HighPass Output BandPass Output LowPass Output RIGHT CONTROLS Cutoff Initial Control Resonance Control Cutoff CV Attenuverter Cutoff CV Input Audio Input HighPass Output BandPass Output LowPass Output",
+    "url": "/addac604-filter/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "ADDAC604 DUAL FILTER 信号フロー図 LEFT FILTER HIGHPASS BANDPASS LOWPASS AUDIO INPUT CUTOFF CV INPUT CUTOFF ATTENUVERTER RESONANCE RIGHT FILTER HIGHPASS BANDPASS LOWPASS AUDIO INPUT CUTOFF CV INPUT CUTOFF ATTENUVERTER RESONANCE STEREO DUAL MONO BACK JUMPER",
+    "url": "/addac604-filter/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "フィードバック、コメント、問題等については下記までご連絡ください: addac@addacsystem.com ADDAC604 ユーザーガイド 2020年1月 リビジョン.01",
+    "url": "/addac604-filter/page/5"
+  }
+]

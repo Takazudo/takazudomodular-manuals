@@ -1,0 +1,50 @@
+[
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "ADDAC215 DUAL S&H+ ユーザーズガイド October.2019 Revision.02 Welcome to: 全体的な機能 このモジュールは、そのサイズで判断されるべきではありません。6hpという小型サイズながら、多くの機能が詰め込まれています。 その中核には、ノイズソースと2つの精密Sample & Holdが搭載されており、入力からの最大偏差は0.01%です。これにより、量子化された信号を送っても、目立った音程のずれや、時間経過による典型的な電圧降下が発生することはありません。 Sample & Holdセクションは、Track & Holdとしても使用できます。これは、Trigger入力がONの間は入力信号をホールドし、Trigger入力がOFFの時は入力が出力にそのまま流れることを意味します。 各セクションには独自のSlewプロセッサーが搭載されており、attack/decayを1つのコントロールで調整でき、ON/OFFスイッチも備えています。",
+    "url": "/addac215-sh/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "コントロール説明 セクションA SLEW S&H A信号に適用するSlew Decayの量を設定します。 ALTERNATE/SEPARATE 全体の動作モードを設定します。 セクションA Trigger入力: あらゆるCVタイプを受け付けます（Trigger/Gate/CV） （Trigger Bにノーマル接続） セクションA Output セクションA Input （Input Bにノーマル接続） セクション(A-B) Diference Output セクションA SLEWスイッチ DECAY SlewのOn/Offを設定します。 セクションB SLEWスイッチ DECAY SlewのOn/Offを設定します。 SAMPLE/TRACK & HOLD 各セクションの動作モードを設定します。 セクション(A+B)/2 Average Output セクションB Trigger入力: あらゆるCVタイプを受け付けます（Trigger/Gate/CV） セクションB Output Noise Output セクションB SLEW S&H B信号に適用するSlew",
+    "url": "/addac215-sh/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "コントロールの詳細説明 入力のノーマリング このモジュールには3つのノーマル接続された入力があり、ジャックが挿入されて物理的な接続が切断されるまで、一部の入力が物理的に別の入力に接続されていることを意味します。 NoiseはINPUT Aにノーマル接続されています INPUT AはINPUT Bにノーマル接続されています TRIGGER AはTRIGGER Bにノーマル接続されています Slew Slewは各S&Hセクションの出力に適用され、すべての出力に影響を与えます。ON/OFFスイッチでSlew回路を有効化または無効化します。コントロールノブでSlewのAttackとDecayの両方を設定します。 Trigger A Alternate 1>2 vs. Individual Channels このスイッチはモジュールの全体的な動作モードを設定します。 Individual Channelsの位置では、モジュールはトリガーと信号の入力がノーマル接続されたデュアルS&Hとして動作します。 Trigger A Alternate 1>2の位置で、Trigger",
+    "url": "/addac215-sh/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "SAMPLE & HOLDを超えて Dual Analog Random: このモジュールにはノイズジェネレーターが搭載されており、デュアルS&Hランダムとして動作することができます。ノイズソースは[INPUT A]にノーマル接続されており、[INPUT A]は[INPUT B]にノーマル接続されています。これにより、信号入力にパッチケーブルを接続しない状態でも、任意のTrigger入力がその瞬間のノイズ値を出力でホールドします。 Sample Rate Reducer: もう一つの興味深い機能は、オーディオレートでSample Rate Reducerとして使用することです。Trigger入力にOscillatorを使用すると、入力信号のSample Rateをコントロールできます。20kHzでは、入力されるオーディオ信号は目立ったアーティファクトなしに通過します。Oscillatorの周波数を下げると、S&Hが信号を「ホールド」するサンプルレートが低下し、よりステップ状の信号を生成し、典型的なBit Crusherアーティファクトが導入されます。 Rate of Change",
+    "url": "/addac215-sh/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "ADDAC215 DUAL S&H+ SIGNAL FLOW DIAGRAM CONTROLS PATH SIGNAL PATH INPUT 1 SAMPLE/ TRACK & HOLD 1 1 - 2 LATCH TRIGGER IN 1 INPUT 2 SAMPLE/ TRACK & HOLD 2 TRIGGER IN 2 OUTPUT 1 NOISE OUTPUT WHITE NOISE GENERATOR AVERAGE OUTPUT OUTPUT 2 SLEW SLEW MIX SUM OUTPUT DIFFERENCE OUTPUT ALTERNATE / SEPARATE SAMPLE / TRACK & HOLD ON / OFF ON / OFF SAMPLE / TRACK & HOLD (Normalled) (Normalled) (Normalled) POSSIBILITIES: Dual Sample / Track & Hold Dual Sample and Hold Analog Random Dual Slew Processor Stereo",
+    "url": "/addac215-sh/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "フィードバック、コメント、問題については以下までご連絡ください： addac@addacsystem.com ADDAC215 ユーザーズガイド October.2019 Revision.02",
+    "url": "/addac215-sh/page/7"
+  }
+]

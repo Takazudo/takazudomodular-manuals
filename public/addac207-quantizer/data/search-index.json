@@ -1,0 +1,282 @@
+[
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "ADDAC207 INTUITIVE QUANTIZER ユーザーズガイド 2021年4月 リビジョン.05 ファームウェアバージョンの確認方法: M1ファームウェア以降、起動時にファームウェアバージョンが表示されます。 電源が供給されると、207は上から下へ全てのLEDを点滅させます。 その後、2つの単独のLEDが短時間2回点滅します。M1の場合、最初に点滅するLEDはButton 5(横にM文字があります)で、次にButton 1が点滅します。 Button 5-3の場合、ファームウェアM3と解釈できます。 2つの単独LEDの点滅後、モジュールは下から上へ全てのボタンを点滅させ、使用可能な状態になります。",
+    "url": "/addac207-quantizer/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "ページ索引 ADDAC207 INTUITIVE QUANTIZER ユーザーガイド April.2021 Revision.05 Welcome to: 概要 はじめに VCOのシンプルなセットアップ Quantizerの基本ステップ Quantizer / Keyboardモード Key / Scaleの設定 Quantizer Voices インテュイティブメニュー 10-13. 概要 14-24. 例 NOTES 2-3-4 QUANTIZATION TYPE GATE LENGTH TRIGGER REPEAT REACTION TIME OCTAVE OFFSET 20-23. TUNING PRESETS 25-28. ASSIGN & TRANSPOSE TUNING RESET 音律に関する備考 メモリと技術仕様 参考表 33-34. Scalesテーブル EX.I EX.II EX.III EX.IV EX.V EX.VI EX.VII EX.VIII",
+    "url": "/addac207-quantizer/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "概要 フロントパネル: 7ポジション・ロータリースイッチボタン × 1 3ポジション・トグルスイッチボタン × 1 2ポジション・トグルスイッチボタン × 1 照光式ボタン × 12 I/Oジャック × 17 機能: 10オクターブの範囲で4ボイスのQuantization キーボードモード、ボタンをトリガーとして使用 ユーザー定義可能なスケール: あらゆるスケールが可能 シンプルで直感的なメニューと設定: コード生成のためのユーザー定義可能なNOTES Intervals Quantizationタイプ: Above、Below、Ignore 定義可能なGate Out Length オクターブオフセット Menu Reaction Timeの調整と保存が可能 メニュー機能のためのアサイン可能なCV Input Bohlen-Pierceを含む5種類のスケールTemperaments 1オクターブあたり48音を超えるMicrotonalオプション CV入力によるTranspose MoogとBuchla両方のスタンダードに対応 独立したボイスのFine Tuning",
+    "url": "/addac207-quantizer/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "はじめに このガイドは最高の読み物ではないかもしれませんが、すべての基本的な操作手順を全体的に理解し、本機のフルポテンシャルを引き出すためには非常に重要です。 そのため、いつかこのドキュメント全体を読むことを強くお勧めします。ほとんどのことは一度読むだけで十分です。操作手順を理解すれば、すべての機能が指先で簡単に使えるようになります。 とはいえ、まずは最初の数ページを読むだけでも、すぐにQuantizeを始めることができます。 ADDAC207 INTUITIVE QUANTIZER ユーザーズガイド April.2021 Revision.05",
+    "url": "/addac207-quantizer/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "シンプルなVCOのセットアップ システムにIntuitive Quantizerをインストールして、初めて電源を入れました！ ライトが点滅して工場出荷時のデフォルトプリセットが表示された後、キーボードエリアにデフォルトのCメジャースケールが点灯するのを確認したことでしょう。 すぐにVCOに接続したい場合は、OUT 1から4のケーブルをVCOに接続してください（左の画像では赤で表示）。4台未満のVCOをお持ちの場合は、その時点で使用可能なVCOの数に応じて1からXまで接続してください。 この後、すべてのVCOを可能な限り最低のオクターブ、および/または希望するオクターブに設定します。 次のステップは、すべてのVCOを互いにチューニングすることです。これを行うには、Button 1を数秒間押してKeyboard Modeに入る必要があります。演奏されているアクティブな音符以外のすべてのライトが点灯します。（Read この時点で、KEY/OCTAVE KnobをF5ラベルまで回転させ、キーボードのCノート（Button 1）を押します。これにより、すべてのOUT",
+    "url": "/addac207-quantizer/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "QUANTIZERの基本ステップ VCOのチューニングが完了したので、信号のQuantize（音階への量子化）を始めましょう。 まず、Keyboard ModeからQuantizer Modeに戻る必要があります。そのためにはButton 1を数秒間長押しします。ライトが変化し、選択されているActive Notesが表示されます。まだC Majorキーが表示されているはずです。 この時点で、任意のCV信号をNOTE 1（左上のジャック）のINジャックに接続してください。 即座にすべての出力が同じ電圧をすべてのVCOに送信し、それらすべてがチューニングされた状態で演奏されるはずです。 これで、対応するキーボードボタンを押すことで、音符のOn/Offを切り替えることができます。 この後、NOTE 2-3-4の入力にさらにCV信号を接続し、それらすべてが異なるCVソースを同じスケールにQuantizeすることもできます。",
+    "url": "/addac207-quantizer/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "QUANTIZER / KEYBOARD Intuitive Quantizerは2つのメインオペレーションモードQUANTIZERとKEYBOARDで使用できます。モードはメニューから選択可能で、このドキュメントの後半で詳しく説明します。まず、この2つのメインモードについて説明します： QUANTIZER MODE： Quantizer Modeでは、入力電圧を使用してQuantizationプロセスをトリガーし、入力電圧をアクティブに選択されている最も近い音程に比較・調整します。 これらのアクティブな音程のセットをActive Scaleと呼びます。 Active Scaleは、メニューボタンで表され、選択された音程に応じて点灯します（左の画像では赤で描かれています）。 Voice 1で新しい音程がquantizeされるたびに、対応するボタンが一瞬点滅します。 視覚的な混乱を避けるため、他のVoiceでは点滅しません。 KEYBOARD MODE： Keyboard Modeでは、ユーザーが手動でどの音程を演奏するかを制御します。",
+    "url": "/addac207-quantizer/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "SCALE SETTINGS Scale Settingsでは、使用するスケールを設定できます。 MINOR/MAJORトグルスイッチは、2つの主要な音階タイプを切り替えます。 MINORは常にナチュラルマイナースケールを指します。 b/N/#トグルスイッチでは、フラット(b)、ナチュラル(N)、シャープ(#)のルート音を選択できます。 Scale Settingsの変更はリアルタイムでは反映されません。希望するスケールを選択した後、ユーザーは[SET KEY]ボタンを押して変更を有効にする必要があります。 KEY/OCTAVE KEY/OCTAVEスイッチは、選択したMAIN MODEに関連します。 QUANTIZER MODEでは、KeyまたはRoot Noteを選択するために使用します。 KEYBOARD MODEでは、KeyboardのOctaveを選択するために使用します。 SET KEY Set Key Buttonは、上記の全ての設定で選択したスケールをActive Scaleに変更します。 例えば、画像の赤いボタンは以下の設定で定義されたスケールを示しています：",
+    "url": "/addac207-quantizer/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "QUANTIZER VOICES 1-4 4つのQuantization Voiceがあり、これらは独立して使用することも、Voice 1に関連付けて使用することもできます。独立して使用する場合はIN Jackに入力をプラグインし、Voice 1に関連付ける場合はVoice 2、3、4のいずれにも入力を接続しません。 電圧入力を使用しない場合、Voice 2、3、4は自動的にVoice 1に関連付けられます。 その場合、これらのVoiceはVoice 1の入力をミラーするか、Intuitive Menuの章のNOTE 2/3/4セクションで説明されているChord生成に使用されます。 このVoice 1のMaster機能は、TRIG.R.メニューで説明されているようにON/OFFを切り替えることができます。 各Voiceには4つのI/O Jackがあります: IN (-5v +5v): Quantization用の電圧入力 OUT (0v +10v): Quantize済み電圧出力 GATE IN (0 +5v):",
+    "url": "/addac207-quantizer/page/10"
+  },
+  {
+    "id": "11",
+    "pageNum": 11,
+    "title": "Page 11",
+    "sectionName": null,
+    "body": "直感的なメニュー 全体的な操作手順 Quantizerの全ての操作設定は、スケール選択やKeyboardと同じPush-Buttonで定義されます。 メニュー関連のアクセスには、Push-Buttonを約1秒間押し続ける必要があります。その後、LEDが変化してユーザーに入力を認識するための必要なフィードバックを与えます。 これが起きると、モジュールは既にユーザーが呼び出したMenuウィンドウに入っています。 これらのウィンドウでは、点灯している唯一のボタンによってアクティブな設定が識別されます。 点灯していないボタンを押すと、設定がその選択に変更され、同時に視覚的フィードバックのために点灯ボタンが変更されます。 点灯しているボタンを押すことは、常に希望する設定の確認となり、Menuウィンドウから自動的に以前のMain Mode（QUANTIZER / KEYBOARD）ウィンドウに戻り、LEDも変更されます。 任意のMenuウィンドウで、Menuボタンで5秒間操作がない場合、モジュールは自動的にMenuウィンドウから以前のMain Mode（QUANTIZER /",
+    "url": "/addac207-quantizer/page/11"
+  },
+  {
+    "id": "12",
+    "pageNum": 12,
+    "title": "Page 12",
+    "sectionName": null,
+    "body": "Menu機能の完全な説明は以下の通りです: BUTTON 1 (QUANTIZER / KEYBOARD) このボタンを約1秒間押すと、QUANTIZERモードとKEYBOARDモードが切り替わります。 BUTTON 2 = NOTE 2 (BUTTONS 1 to 12) このボタンを約1秒間押すと、NOTE 2またはQuantizer出力2の音程を定義します。 音程はボタン1から12で選択でき、0から+12の音程に対応しています。長3度/短3度は、定義されたスケールに応じて自動的に選択されます（7音のスケールを選択した場合）。 このウィンドウでは、選択されている音程を示す1つのボタンのみが点灯します。 点灯していないボタンを押すと、設定がその選択に変更され、視覚的なフィードバックとして点灯するキーが変更されます。 点灯しているキーを押すと、希望する設定が確定され、自動的に前のメインモード（QUANTIZER / KEYBOARD）ウィンドウに戻り、LEDも変更されます。 BUTTON 3 = NOTE 3 (BUTTONS 1 to 12)",
+    "url": "/addac207-quantizer/page/12"
+  },
+  {
+    "id": "13",
+    "pageNum": 13,
+    "title": "Page 13",
+    "sectionName": null,
+    "body": "INTUITIVE MENU(続き) BUTTON 7 = TRIG.R. = TRIGGER REPEAT (BUTTON 7) VOICE 1 MASTER (BUTTON 2) アナログキーボードでC4を何度も押すことを想像してください。この電圧をQuantizerの電圧入力に送り、出力がC4にクォンタイズされてGate Onが出力される場合、2回目にC4キーを押したとき、Trigger Repeat設定がオンになっていれば、全く同じことが起こります。出力は既にC4になっているので変化はありませんが、新しいGate Onが出力され、外部ADSRを再トリガーします。 Trigger Repeatがオフの場合、既にクォンタイズされているのと同じ音程にクォンタイズする際にはGateを出力しません。 このウィンドウではButton 7に関してのみ、Lit設定がONの場合に有効です。 Button 2はVoice 1をマスターとして、残りのVoiceに対してアクティブ化(LEDオン)および非アクティブ化(LEDオフ)します。",
+    "url": "/addac207-quantizer/page/13"
+  },
+  {
+    "id": "14",
+    "pageNum": 14,
+    "title": "Page 14",
+    "sectionName": null,
+    "body": "INTUITIVE MENU（続き） MOOG / BUCHLA Standard（BUTTON 10） EurorackではMoog 1v/octave standardを使用していますが、Buchlaでは1.2v/octave standardを使用しています。 Button 10はquantizerがどちらのstandardで動作するかを示すインジケーターです。 Button 11と12を同時に押すとButton 10の状態が変わります。Offの場合はMoog Standard、OnはBuchlaです。 FINE TUNING（BUTTONS 1～4、11、12） これは、ユーザーが特定のVCOの反応に合わせて1v/octave比を調整するためのFine Tuning機能です。 Fine Tuningは各voiceごとに独立しています。 Buttons 1～4はどのvoiceがアクティブかを示し、これらのButtonを押すとFine Tuning用の新しいvoiceを選択します。 Voiceを選択後、button",
+    "url": "/addac207-quantizer/page/14"
+  },
+  {
+    "id": "15",
+    "pageNum": 15,
+    "title": "Page 15",
+    "sectionName": null,
+    "body": "この設定により、7音階のスケールを選択した場合、簡単にコード生成が可能になります。 QUANTIZER MODEでC Majスケールがアクティブであると仮定します。 このメニュー機能は、NOTE 2、NOTE 3、NOTE 4のウィンドウでも同様に動作します。 デフォルト値はRoot Note（Button 1）です。 ユーザーがNOTE 2 Buttonを約1秒間ホールドすると、メニューボタンが図2に示す設定に変わります。これは、NOTE 2のインターバルが現在デフォルト値の1または0半音に設定されていることを示しています。 覚え方として、このメニューウィンドウではボタン番号がRoot Note（Voice 1）からの希望するインターバルに関連しています。したがって、Button 5は5度（Fifth）に関連し、Button 11はRoot Noteから11番目の音を表します。 ユーザーが2番目のVoice出力を5度（Fifth）に変更したい場合（Voice 1で定義されたRoot Noteに関連）、Button",
+    "url": "/addac207-quantizer/page/15"
+  },
+  {
+    "id": "16",
+    "pageNum": 16,
+    "title": "Page 16",
+    "sectionName": null,
+    "body": "Image 2 Image 1 INTUITIVE MENU Q.TYPE - Quantization Typeオペレーション - Button 3、5、6 この設定は全4つのVoiceで共有されます。 デフォルト値はAbove Method（Button 3）です。 Ex. II BUTTON 3 ABOVE Q.Type BUTTON 5 IGNORE BUTTON 6 BELOW QUANTIZER MODEで、C Maj Scaleがアクティブな状態（image 1）を想定しましょう。Quantization Typeを変更するのはユーザーの判断ですが、入力電圧を最も近い音程にQuantizeする方法には3つあることを覚えておいてください：Above（BUTTON 3）、Below（BUTTON 6）、またはスケール範囲内にない電圧を無視する（BUTTON 5）です。 覚えやすくするために、Button 3-AboveはQ.TYPE Buttonの上にあり、Button 6 - BelowはQ.TYPE Buttonの下にあることを常に覚えておいてください。",
+    "url": "/addac207-quantizer/page/16"
+  },
+  {
+    "id": "17",
+    "pageNum": 17,
+    "title": "Page 17",
+    "sectionName": null,
+    "body": "この設定は4つのVoice全てで共有されます。 デフォルト値は40ミリ秒（Button 3）です。 Image 2 Image 1 INTUITIVE MENU GATE L. - Gate Length操作 - Button 1〜11および12 Ex. III BUTTON 1 10 ms GATE LENGTH BUTTON 2 20 ms BUTTON 3 40 ms BUTTON 4 80 ms BUTTON 5 160 ms BUTTON 6 320 ms BUTTON 7 640 ms BUTTON 8 1280 ms BUTTON 9 2560 ms BUTTON 10 5120 ms BUTTON 11 10240 ms この設定の最小値は10ミリ秒（Button 1）、最大値は10240ミリ秒（Button 11）です。 時間間隔は2倍ずつ増加します。つまり、次のボタンは前のボタンの2倍のサイズになります：Button 1=10ミリ秒; 2=20; 3=40; 4=80... といった具合です。 次の式で計算することもできます： ミリ秒 =",
+    "url": "/addac207-quantizer/page/17"
+  },
+  {
+    "id": "18",
+    "pageNum": 18,
+    "title": "Page 18",
+    "sectionName": null,
+    "body": "それでは、既にTRIG.R.ボタンを約1秒間押してそのMenu Windowに入った状態を想定してみましょう。ボタンのLEDは変化しますが、どのLEDも点灯していません（画像1）。 このMenu Windowでは、ボタン2と7のみが点灯可能で、セレクターとして機能します：消灯 = オフ、点灯 = オン。 ボタン7を一度押すと、Trigger Repeatオプションが有効化され、対応するLEDが点灯します（画像2）。 この設定を保存する手順は次の通りです。保存したい状態を選択し、ボタン7を押して点灯（オン）または消灯（オフ）にした後、ボタン7以外の任意のキーを押します（画像2の黒いキー）。 これが実行されると、ユーザーはキー7の状態を新しい設定として確認し、Main Windowに戻ります。 画像2 画像1 INTUITIVE MENU TRIG.R. - Trigger Repeat操作 - ボタン7 この設定は全4つのVoiceで共有されます。 デフォルト値はオフです。 Voice 1をMasterに設定 ボタン2 このメニューの追加機能： この設定は、Voice",
+    "url": "/addac207-quantizer/page/18"
+  },
+  {
+    "id": "19",
+    "pageNum": 19,
+    "title": "Page 19",
+    "sectionName": null,
+    "body": "この設定は、Menuがユーザー入力に応答する方法、Menu Windowに入るためにユーザーがボタンを押し続ける必要がある時間、およびモジュールが自動的にMain Windowに戻るまでのMenuボタンのアイドル時間を調整するために使用されます。 REACT.T. Buttonを約1秒間押してMenu Windowに入ったと想像してみましょう。Menu Buttonsは既に画像1に示す構成に変更され、Menu Reaction TimeまたはButton 2のデフォルト設定が表示されています。 以前のMenu Windowsと同様に、別のButtonを押すと選択され、2回目に押すと設定が不揮発性メモリに保存され、Main Windowに戻ります。 以下はMenu Buttonsで定義された時間の表です： 上記の表に示されているHold Time値は、KEYBOARD Modeでは3倍になります（Hold Time × 3）。ユーザーがキーボードを演奏している可能性が高い場合にこの反応時間を遅くすることで、意図しないMenu",
+    "url": "/addac207-quantizer/page/19"
+  },
+  {
+    "id": "20",
+    "pageNum": 20,
+    "title": "Page 20",
+    "sectionName": null,
+    "body": "この設定の最小値は0オクターブ(Button 1)で、最大値は+9オクターブ(Button 10)です。 これにより、-5vまでの負の電圧も量子化できます。この場合、Oct.Ofs設定が5オクターブに設定されていると、-5vは0vに量子化され、-4vは1vに量子化される、といった具合になります。 量子化されたノートがモジュールの電圧範囲から外れた場合、可能な限り最低または最高のノートに量子化されます。 それでは、既にOCT.OFS.ボタンを約1秒間押して、そのMenuウィンドウに入ったと仮定しましょう。Menuボタンは既に画像1に示されている構成に変更され、Octave Offsetのデフォルト設定、つまりButton 1(0 Octaves Offset)が表示されています。 この設定は4つのVoiceすべてで共有されます。 デフォルト値は0 Octaves Offset(Button 1)です。 Octave Offsetを他の値に変更したい場合は、希望するボタンを2回押す必要があります。 Button 2(1 octaves Offset)を選択すると仮定しましょう。",
+    "url": "/addac207-quantizer/page/20"
+  },
+  {
+    "id": "21",
+    "pageNum": 21,
+    "title": "Page 21",
+    "sectionName": null,
+    "body": "このMenu Windowには4つの異なる機能があります： Scale Temperament（ボタン5〜9） Independent Voice Fine Tuning（ボタン1〜4、11、12） Moog/Buchla標準定義（ボタン11、12） Fine Tuning設定の保存（ボタン10） では、すでにTUNINGボタンを約1秒間押してMenu Windowに入り、Menuボタンが画像1に示す設定に変更され、Active Voice Tuning（ボタン1）とScale Temperament（ボタン6）の両方のデフォルト設定が表示されている状況を想像してみましょう。 Active Voice Tuningは、現在チューニングが設定されているQuantizer Voiceです。 画像1 INTUITIVE MENU TUNING操作 - ボタン1〜4、6〜12 Ex. VII - part A BUTTON 1 Voice 1をチューニング 機能 BUTTON 2 Voice 2をチューニング BUTTON 3 Voice 3をチューニング BUTTON 4 Voice",
+    "url": "/addac207-quantizer/page/21"
+  },
+  {
+    "id": "22",
+    "pageNum": 22,
+    "title": "Page 22",
+    "sectionName": null,
+    "body": "Image 2 Image 1 パートAで既にTUNINGボタンを約1秒間押してMenu Windowに入っているため、Menu ButtonsはImage 1に示す設定に変更されており、Active Voice Tuning（Button 1）とScale Temperament（Button 6）のデフォルト設定の両方が表示されています。 この設定は4つのVoiceすべてで共有されます。 デフォルト値はEQUAL Temperament（Button 6）です。 ユーザーは5つの異なるtemperamentから選択できます： PURE: La Monte YoungのWell Tunned Piano temperament EQUAL: Standard Equal Temperament B-P: Dr. Boulanger 12 Note Bohlen-Pierce Temperament JUST: Just Temperament AFR: African Temperament ユーザーがScale",
+    "url": "/addac207-quantizer/page/22"
+  },
+  {
+    "id": "23",
+    "pageNum": 23,
+    "title": "Page 23",
+    "sectionName": null,
+    "body": "Image 2 Image 1 この設定は1v/octaveの比率を調整するために使用できます。 ここで、すでにTUNINGボタンを約1秒間押して、そのメニューウィンドウに入ったと仮定しましょう。メニューボタンは既に画像1に示される構成に変更されており、Active Voice Tuning（ボタン1）とScale Temperament（ボタン6）の両方のデフォルト設定が表示されています。 Active Voice Fine Tuningのデフォルト値はVoice 1（ボタン1）です。 これは、ユーザーが特定のVCOの反応に合わせて1v/octave比率を調整するためのファインチューニング機能です。 Fine Tuningは各ボイスごとに独立しています。 ボタン1から4は、Fine Tuningでアクティブなボイスを示します。これらのボタンのいずれかを押すと、新しいボイスが選択されます。ここではVoice 2を仮定します（画像2）。",
+    "url": "/addac207-quantizer/page/23"
+  },
+  {
+    "id": "24",
+    "pageNum": 24,
+    "title": "Page 24",
+    "sectionName": null,
+    "body": "画像1 TUNINGボタンを約1秒間押してMenu Windowに入り、Menu Buttonsが画像1に示す設定に変更され、Active Voice Tuning（Button 1）とScale Temperament（Button 6）のデフォルト設定が表示されている状態を想像してください。 保存するには、TUNINGボタン（10）を押すだけです。 保存後、MenuはMain Windowに戻ります。 この設定により、ユーザーの現在のFine-Tuning設定が不揮発性メモリに書き込まれます。 これはシステムの電源を入れるたびに自動的に読み込まれます。 Fine Tuning設定はユーザーのPresetsには保存されません。 SAVE TUNING SETTINGS手順 - Buttons 1～4、11、12 TUNINGボタン（10）がこの設定のモニターです： Button 10のLEDがOffの場合、1v/octave Moog Standardが選択されています。 Button 10のLEDがOnの場合、1.2v/octave Buchla",
+    "url": "/addac207-quantizer/page/24"
+  },
+  {
+    "id": "25",
+    "pageNum": 25,
+    "title": "Page 25",
+    "sectionName": null,
+    "body": "ユーザーがすでにPRESETSボタンを約1秒間押してMenu Windowに入り、Menu Buttonsが画像1に示されている設定に変わり、デフォルトのActive Preset（Button 1）が表示されていると仮定します。 画像2 画像1 デフォルト値はPRESET 1（Button 1）です。 INTUITIVE MENU PRESETS操作 - Buttons 1〜11 例 IX A. LOADING ユーザーが例えばPreset 4をロードしたい場合、Button 4を2回押すだけです。 最初に押すと下のLEDが点灯します。2回目に押すとPreset 4がロードされ、Main Mode Windowに戻ります。 Preset 4がすでに選択されている場合、2回目に押してもPreset 4は再度ロードされず、Main Windowに戻り揮発性メモリはそのまま保持されます。つまり、その間に変更された設定はすべて変更されたままで、Preset 4の保存データから新たにロードされることはありません。 ユーザーがすべての変更をクリアしてPreset",
+    "url": "/addac207-quantizer/page/25"
+  },
+  {
+    "id": "26",
+    "pageNum": 26,
+    "title": "Page 26",
+    "sectionName": null,
+    "body": "ASSIGN INPUT をメニュー機能にアサインする ASSIGN 1V/Octave CV Input このCV入力は、8つのメニュー機能をコントロールするためにアサイン可能です。 これを行うには、Button 4とButton 7を同時に瞬間的に押してAssign Windowにアクセスする必要があります。 以下は、Buttonアサインメントのテーブルです。 対応するButtonのいずれかをオンにすると、入力されるCVがその特定の機能をコントロールするようにルーティングされます。 複数のLEDを同時に選択することができます。 Assign Windowを終了するには、未使用のボタン（Button 8またはButton 10）のいずれかを押してください。 この入力では、負の電圧は完全に整流され、正の電圧として解釈されます。 BUTTON 1 INPUT TRANSPOSE BUTTON 2 NOTE 2 OFFSET BUTTON 3 NOTE 3 OFFSET BUTTON 4 NOTE 4 OFFSET BUTTON 5 QUANTIZATION TYPE BUTTON 6",
+    "url": "/addac207-quantizer/page/26"
+  },
+  {
+    "id": "27",
+    "pageNum": 27,
+    "title": "Page 27",
+    "sectionName": null,
+    "body": "TRANSPOSE OPERATIONS ADDAC207には2つのトランスポーズ方法があります： INPUT TRANSPOSE（Button 1 = C） 1v/Octave CV Input（0～+5v範囲） アサインされている場合、このCV入力により正の1v/octave信号でチャンネルの入力CVをトランスポーズできます。 チャンネルの入力CVは選択されたスケール内に保ちながら即座にトランスポーズされます。 出力は入力CV + アサインCVと等しくなります。 SCALE TRANSPOSE（Button 11 = A#） 1v/Octave CV Input（0～+5v範囲） アサインされている場合、このCV入力により正の1v/octave CVを外部スケールトランスポーズのために接続できます。 入力CVは1vあたり12半音に分割され、X半音とします。スケールは即座にルート音を同じX半音分オフセットしてトランスポーズされます。 Scale",
+    "url": "/addac207-quantizer/page/27"
+  },
+  {
+    "id": "28",
+    "pageNum": 28,
+    "title": "Page 28",
+    "sectionName": null,
+    "body": "CHANNEL INPUT (Quantizing Mode = UP) Quantized Note OUT ASSIGN CV INPUT (ASSIGNED TO CV INPUT TRANSPOSITION) CV INPUT TRANSPOSE METHOD 以下の表には12の例が記載されています。各列が1つの例を示しており、上部にはチャンネルのCV入力、下部にはAssign入力に挿入されたCV入力が示されています。 赤い円は、チャンネル出力に現れる音符を示しています。 Assign入力がチャンネル入力とどのように関連するかを示すため、CV入力は同じ値（CまたはゼロV）に固定しています。 すべての例はQuantizing ModeがUPに設定されていることを前提としています。 例 - Channel input = C および Transpose Input = D# この例では、チャンネルのCV入力がAssign CVによってトランスポーズされます。 この場合、チャンネルCV入力はCで、トランスポーズ入力はD#、つまり3半音上です。 C + 3半音 = D#",
+    "url": "/addac207-quantizer/page/28"
+  },
+  {
+    "id": "29",
+    "pageNum": 29,
+    "title": "Page 29",
+    "sectionName": null,
+    "body": "CHANNEL INPUT (Quantizing Mode = UP) Quantized Note OUT ASSIGN CV INPUT (ASSIGNED TO SCALE TRANSPOSITION) SCALE TRANSPOSE METHOD 以下の表には12の例が記載されており、各列が1つの例を示しています。 上部にはChannel CV入力があり、下部にはAssign入力に挿入されたCV入力があります。 赤い円はChannel出力に現れる音を示しています。 Assign入力がChannel入力とどのように関連しているかを示すため、CV Inputを同じ値(Cまたは0ボルト)に保っています。 すべての例はQuantizing ModeがUPに設定されていることを前提としています。 例 - Channel input = C and Transpose Input = E この例では、選択されたスケールがAssign CVによってトランスポーズされます。この場合、Channel CV入力はCで、スケールトランスポーズ入力はE(4半音上)です。 C Majorスケール +",
+    "url": "/addac207-quantizer/page/29"
+  },
+  {
+    "id": "30",
+    "pageNum": 30,
+    "title": "Page 30",
+    "sectionName": null,
+    "body": "TUNING RESET Tuning Resetは、モジュールの4つのVoiceを1V/オクターブ標準にキャリブレーションする手順です。 この手順はユーザーのFine-Tuning設定を上書きしますが、不揮発性メモリには保存されないため、システムを再起動した場合、以前に保存されたユーザー設定には影響しません。 キャリブレーション結果を保存したい場合は、EX.VII - part Dに記載されている方法で保存できます。 この手順を実行するには、SET KEYボタンを5秒間押し続けてください。",
+    "url": "/addac207-quantizer/page/30"
+  },
+  {
+    "id": "31",
+    "pageNum": 31,
+    "title": "Page 31",
+    "sectionName": null,
+    "body": "音律についての補足 音律とは、音符間の音程を調律する異なる方法のことです。 一般的な平均律スケールでは、すべての音程が等しいと定義されています。これは1v/octaveが(1v/12notes) 0.08333333vの各音符間に相当することを意味します。これは音程比と呼ばれます。 私たちが慣れ親しんでいる平均律は、1630年頃のJohann Faulhaberに起因し、スケールのルートを変更するたびに計算して再調律する必要なく、どのスケールでも演奏できるように楽器を調律する最も簡単な方法であるため、長年にわたって存続してきました。 これは厳密に機能的な決定であり、音楽の本質と数学には反するものでした。 すべては比率に帰結します。 A4マイナースケールで、ルートから3度の音、つまりC5の周波数を計算したいとします。 例I - 平均律 平均律では、任意の望む音符の周波数を計算するために、ルート周波数に2の(半音/12)乗を掛けるだけです: Root * 2^(3/12) A4が440Hzの場合、Cは: 440* (2^(3/12)) 440*1.1892 = 523.25Hz",
+    "url": "/addac207-quantizer/page/31"
+  },
+  {
+    "id": "32",
+    "pageNum": 32,
+    "title": "Page 32",
+    "sectionName": null,
+    "body": "技術仕様 機械的仕様: フォーマット: Eurorack 幅: 10 HP 奥行き: 6 cm コントロール電圧 I/O: CV入力: ± 5v Assign入力: + 5v CV出力: 0 +10v 電気的仕様: 最大電流: 150mA Bus Board Cable: 8 × 2 IDC (Doepferスタイル) コネクター 不揮発性メモリー メモリーには2つの異なる保存場所があります: メインメモリー、全体的な設定を保存します プリセットメモリー、11個のユーザープリセットを保存します プリセットメモリーに保存される内容 NOTE 2 NOTE 3 NOTE 4 スケールノート ファインチューニング メインメモリーに保存される内容 QUANTIZING TYPE GATE LENGTH TRIGGER RESET OCTAVE OFFSET スケールテンペラメント ゲートオフ条件 CV Assigns Moog/Buchla リアクションタイム",
+    "url": "/addac207-quantizer/page/32"
+  },
+  {
+    "id": "33",
+    "pageNum": 33,
+    "title": "Page 33",
+    "sectionName": null,
+    "body": "便利な表 ADDACシステム BUTTON 1 500 ms BUTTON 2 700 ms BUTTON 3 900 ms BUTTON 4 1100 ms BUTTON 5 1300 ms BUTTON 6 1500 ms BUTTON 7 1700 ms BUTTON 8 1900 ms BUTTON 9 2100 ms BUTTON 10 2300 ms BUTTON 11 2500 ms BUTTON 12 2700 ms 5000 ms 6000 ms 7000 ms 8000 ms 9000 ms 10000 ms 11000 ms 12000 ms 13000 ms 14000 ms 15000 ms 16000 ms BUTTON 2 VOICE 1 MASTER ON/OFF BUTTON 7 Trigger Repeat ON/OFF F# = TRIG.R. : Trigger Repeat NOTE 3 NOTE 4 QUANTIZING TYPE GATE LENGTH TRIGGER REPEAT OCTAVE OFFSET Scale",
+    "url": "/addac207-quantizer/page/33"
+  },
+  {
+    "id": "34",
+    "pageNum": 34,
+    "title": "Page 34",
+    "sectionName": null,
+    "body": "MAJOR SCALES ADDAC207 INTUITIVE QUANTIZER ユーザーズガイド April.2021 Revision.05",
+    "url": "/addac207-quantizer/page/34"
+  },
+  {
+    "id": "35",
+    "pageNum": 35,
+    "title": "Page 35",
+    "sectionName": null,
+    "body": "NATURAL MINORスケール",
+    "url": "/addac207-quantizer/page/35"
+  },
+  {
+    "id": "36",
+    "pageNum": 36,
+    "title": "Page 36",
+    "sectionName": null,
+    "body": "ADDAC207 INTUITIVE QUANTIZER ユーザーガイド April.2021 Revision.05 フィードバック、コメント、または問題につきましては、以下までご連絡ください： addac@addacsystem.com",
+    "url": "/addac207-quantizer/page/36"
+  }
+]

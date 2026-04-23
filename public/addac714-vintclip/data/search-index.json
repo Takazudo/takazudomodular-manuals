@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "Instruments for Sonic Expression Est.2009 December.2022 USER'S GUIDE . REV01 ADDAC714 VINTAGE CLIPPER 紹介 From Portugal with Love!",
+    "url": "/addac714-vintclip/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "Welcome to: ADDAC714 VINTAGE CLIPPER ユーザーズガイド December.2022 Revision.01 説明 ADDAC714は、デュアルチャンネルのソフトクリッピングモジュールです。 ダイオードベースのパッシブクリッピングは、「ブリックウォール」リミッターとして機能し、ダイオード固有の物理特性により決定された固定ニーポイントを持ちます。パッシブRCローパス回路は、3.3KHzの-3dbローパスフィルターを追加し、全体的なトーンを形成すると同時に、エフェクトにさらなるキャラクターを加えます。 上部のOn/Off [BYPASS]スイッチは、信号をエフェクト（上：アクティブ）または下部の出力ゲインステージ（下：バイパス）にルーティングします。 クリッピングの量は[GAIN]コントロールで設定され、主にどの程度のクリッピングを適用するかのスレッショルドコントロールとして機能します。",
+    "url": "/addac714-vintclip/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "ADDAC714 VINTAGE CLIPPER 信号フロー図 INPUT 1 CLIPPER GAIN CONTROL SYMMETRY OUTPUT 1 OUTPUT GAIN CONTROL CLIPPING LED MONITOR BYPASS ON OFF INPUT 2 CLIPPER GAIN CONTROL SYMMETRY OUTPUT 2 OUTPUT GAIN CONTROL CLIPPING LED MONITOR BYPASS ON OFF",
+    "url": "/addac714-vintclip/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "フィードバック、コメント、問題については下記までご連絡ください: addac@addacsystem.com ADDAC714 ユーザーズガイド December.2022 Revision.01",
+    "url": "/addac714-vintclip/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "コントロール説明 Channel 1 BYPASS 上：アクティブ 下：バイパス Channel 1 Gain Channel 2 Clipping Symmetry 上：対称クリッピング 下：非対称クリッピング Channel 2 Output Gain Channel 1 Output Gain Channel 2 Clipping LED Channel 1 Clipping LED Channel 1 Clipping Symmetry 上：対称クリッピング 下：非対称クリッピング Channel 2 BYPASS 上：アクティブ 下：バイパス Channel 1 Input / Channel 2 Input Channel 1 Output / Channel 2 Output Channel 2 Gain",
+    "url": "/addac714-vintclip/page/5"
+  }
+]

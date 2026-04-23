@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "Instruments for Sonic Expression Est.2009 August.2022 USER'S GUIDE . REV01 ADDAC713 STEREO DISCRETE MIXER INTRODUCING From Portugal with Love!",
+    "url": "/addac713-stereomix/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "ADDAC713 STEREO DISCRETE MIXER ユーザーガイド August.2022 Revision.01 Welcome to: 製品説明 ADDAC713は、当社の703 Discrete Mixerのステレオバージョンです。 MoogのCP3ミキサーにインスパイアされたこのモジュールは、完全にディスクリート回路で構成されたアナログミキサーであり、決して一般的な標準的なミキサーではありません。しかし、そのように動作させることもできます。 これは羊の皮を被った狼です。その無害な外観にもかかわらず、パネルの裏側には、あなたのサウンドをグリッティでザラついたグロウルの領域へと連れて行きたいと願う、暗くうなり声を上げる魂が潜んでいます。 この新バージョンは当初、パーカッションミキサーとして構想されました。モノ入力とパンニングを備え、パーカッシブな音声をステレオフィールドに配置できるようにしながら、チャンネル4はキックドラムやベースなどの低域ソースのためにモノのままにしておくというものでした。開発過程で、この初期のアイデアをわずかに変更し、最初の3つのチャンネルにステレオ入",
+    "url": "/addac713-stereomix/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "ADDAC713 ステレオディスクリートミキサー 信号フロー図 LEFT OUTPUT RIGHT OUTPUT CH1 LEFT INPUT CH1 RIGHT INPUT MASTER MIX PANNING CONTROL CH2 LEFT INPUT CH2 RIGHT INPUT PANNING CONTROL CH3 LEFT INPUT CH3 RIGHT INPUT PANNING CONTROL GAIN CONTROL GAIN CONTROL GAIN CONTROL FEEDBACK GAIN CONTROL CH4 LEFT INPUT GAIN CONTROL LOW PASS SOFT/OFF/HARD SOFT CLIP &",
+    "url": "/addac713-stereomix/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "コントロール説明 Channel 1 Gainコントロール Channel 1 Panコントロール Soft Clipping + Low Pass Channel 4 Input Left Output Right Output Channel 3 Inputs (LeftはRightにノーマル接続) Channel 2 Inputs (LeftはRightにノーマル接続) Channel 1 Inputs (LeftはRightにノーマル接続) Feedback Gainコントロール Channel 3 Panコントロール Channel 3 Gainコントロール Channel 2 Gainコントロール Channel 2 Panコントロール Channel 4 Gainコントロール Master Gainコントロール",
+    "url": "/addac713-stereomix/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "フィードバック、コメント、または問題については、以下までご連絡ください: addac@addacsystem.com ADDAC713 ユーザーガイド August.2022 Revision.01",
+    "url": "/addac713-stereomix/page/5"
+  }
+]

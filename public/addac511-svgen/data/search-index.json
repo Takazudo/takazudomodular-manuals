@@ -1,0 +1,522 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "December.2024 ユーザーガイド . REV01 ファームウェア 1.0 ADDAC511 VC STOCHASTIC VOLTAGE GENERATOR INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009 15周年記念 12.2009-12.2024",
+    "url": "/addac511-svgen/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "ページインデックス イントロと特徴 信号フローダイアグラム フロントパネルレイアウト OLEDスクリーン ボタン長押し ステート モード Voltageセッティング 概要 Voltageセッティング Voltage & Gate Out Voltage Probability Voltage & Time Distribution Smooth Interpolation Stepped Interpolation Timeセッティング 概要 Timeセッティング Clock Clock Master/Slave Clock Follow Clock Delay Clock使用例 Lock Envelopeセッティング 概要 Envelopeセッティング Envelope Quantizer Timeセッティング 概要 Timeセッティング Clock Quantizer Quantizer概要 Internal/External Quantization Quantizer Sources Rounding & Note Probability Quantizer & Smooth",
+    "url": "/addac511-svgen/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "ADDAC511 VC STOCHASTIC VOLTAGE GENERATOR ユーザーズガイド Revision.01 Welcome to: WELCOME 20HP 技術仕様: 20HP 4.5cm 奥行き 200mA +12V 100mA -12V 特徴 4つの独立したチャンネルにバイポーラCV / Gate出力とClock入力を備え、あらゆるランダム処理に対応します。 各チャンネルは、連続電圧、エンベロープ、またはQuantizerのいずれかを生成するように設定できます。 チャンネルごとのMuteとHold機能 各チャンネルに3つのStatesを搭載し、非常に高速な設定変更が可能で、スムーズから劇的な変化まで対応します。 電圧レンジ、カスタムスケールを使ったQuantization、Probability、Distribution curves、Smoothingに加えて、タイムとbpmレンジ、タイムDistribution curves、複数のクロックソースをコントロールできます。",
+    "url": "/addac511-svgen/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "シグナルフローダイアグラム 入力 CV INPUT 1 CV INPUT 2 CV INPUT 3 CV INPUT 4 CV INPUT 5 CV INPUT 6 CV INPUT 7 CV INPUT 8 CLOCK INPUT 1 CLOCK INPUT 2 CLOCK INPUT 3 CLOCK INPUT 4 CONTROL ENCODER 1 CONTROL ENCODER 2 コントロールユニット CV & LOGIC CLOCK DISTRIBUTION TIME PROBABILITY DISTRIBUTION SMOOTH プリセット STATE A STATE B STATE C ユーザーインターフェースマネージャー MENU INSPECTOR LOCK 出力マネージャー CV OUT 1 CV OUT 2 CV OUT 3 CV OUT 4 GATE OUT 1 GATE OUT 2 GATE OUT 3 GATE OUT 4 LOGIC OUT 1 LOGIC OUT 2 LOGIC OUT 3 AVERAGE MIX OUT QUANTIZATION",
+    "url": "/addac511-svgen/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "フロントパネルレイアウト このモジュールにはいくつかの明確なセクションがあります: AVERAGE MIX: CV出力 CV INPUTS: 8つのCV入力 CONTROLS: EncoderとMenu STATES PRESETS & ASSIGNS LOCK / SEQUENCER LOGIC OUTPUTS: 3つの設定可能なLogic出力 CV OUTPUTS: 4つのCV出力 GATE OUTPUTS: 4つのGate出力 CLOCK / GATE INPUTS: 4つのGate入力 VOLTAGE SETTINGS TIME SETTINGS",
+    "url": "/addac511-svgen/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "OLED MONITOR MAIN SCREEN: Main Screenは全体的な操作のための最も重要な情報を表示します。 CHANNELS GATES & SPECIAL STATES 4つの上部の正方形は、4チャンネルのGate出力状態と特殊状態を表示します: 0 = Mute (0v)、H = Hold ACTIVE CHANNEL & STATE アクティブなチャンネルと状態を表示します SELECTED QUANTIZATION 選択されたスケール SCREEN TITLE Screen名を表示します VOLTAGE SETTINGS 最小および最大電圧範囲 TIME SETTINGS 最小および最大時間範囲 PROBABILITY & SMOOTH DURATION SETTINGS Probabilityを表示します、そして DISTRIBUTION CURVE 波形の低解像度表示 WEIGHT CURVE Grainsエンベロープ表示 SELECTED CHANNEL OSCILLOSCOPE 選択されたチャンネルの履歴と極性を表示します。 Rotating",
+    "url": "/addac511-svgen/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "LONG PRESSES CHANNEL SELECTION, HOLDS & MUTES メインインターフェースの各列は、1秒以上押し続けることで2次機能にアクセスできます。 CHANNEL SELECTION 最初の列は編集するチャンネルを選択します。 変更は右上隅に表示されます。 HOLD FUNCTION 2列目はHold機能を有効にします。この機能は、ボタンが再度押されるまでCV出力の現在の値を保持します。 有効化されると、該当するチャンネルは右上隅に文字「H」でその状態を表示します。 MUTE FUNCTION 3列目はMute機能を有効にします。この機能は、ボタンが再度押されるまでCV出力を0vに設定します。 有効化されると、該当するチャンネルは右上隅に数字「0」でその状態を表示します。 各行は1つのチャンネルに対応しています。",
+    "url": "/addac511-svgen/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "LONG PRESSES PASTE、RANDOM & RESET 3つのStateボタンは、1秒以上長押しすると第2の機能を持ちます。 STATE A - PASTE このボタンを長押しするとCopy画面に入ります。 Copy機能は画面に依存しており、画面の状態に応じて異なる設定をコピーします。 また、ChannelとStateにも依存しており、すべてのChannelのすべてのStateにコピー元のブロックとしてアクセスできます。 画面がMainの場合、Copyは現在のChannelとStateのすべての設定を、Copy画面で選択した内容から変更します。 画面が他のページの場合、copy機能はその特定のページの設定のみをコピーします。 Copy画面には以下が表示されます: 現在のChannelとState 現在のScreenページ コピー元のChannel 上で選択したChannelに関連するコピー元のState 2つのEncoderボタンで、変更を行わずにcopy画面を終了するCancelと、copyプロセスを実行するEnterを選択できます。 STATE B - RANDOM",
+    "url": "/addac511-svgen/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "STATES 各チャンネルには3つのStateがあり、それぞれのStateは独立しており、まったく異なる設定を持つことができます。 これらは即座にアクセス可能なチャンネルプリセットと考えてください。 CV出力に対して劇的な変化や微妙な変化を作り出すために使用できます。 Stateの変更は即座に行われ、有効化されると新しい設定が制御を引き継ぎます。 CV入力に割り当てることができ、入力される電圧レベルが対応するStateをトリガーします: STATE A < 1.6v STATE B > 1.6v & < 3.3v STATE C > 3.3v STATES PROBABILITY Stateは、確率設定に従って、各クロックサイクルごとに自動的に変更されるように設定することもできます。 この画面に入るには、任意のStateボタンをダブルクリックします。 各Stateの確率量を設定することで、各チャンネルの優勢度を微調整できます。 Encoder 1はState AとState Bの間のしきい値を設定し、Encoder 2はState BとState Cの間のポイントを設定します。",
+    "url": "/addac511-svgen/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "OPERATION MODES 各チャンネルには独立して選択できる2つの主要な動作モードがあります。 モードの選択は[VOLTAGE]画面で行うことができます。 RANDOM VOLTAGE GENERATION 時間とボルテージのドメインで完全にフィーチャーされたランダムボルテージ生成機能を備え、レンジ、確率、ランダム分布、スムーズ、量子化、および32ステップSequencerを完全にコントロールできます。 +5v -5v 0v +5v -5v 0v RANDOM ENVELOPE GENERATION 時間とボルテージのドメインで完全にフィーチャーされたランダムエンベロープ生成機能を備え、レンジ、確率、ランダム分布、カーブコントロールを完全にコントロールできます。 +5v -5v 0v MAIN SECTIONS どのモードを選択しても、各チャンネルの動作を定義する2つの主要なセクションがあります: Voltage & Time",
+    "url": "/addac511-svgen/page/10"
+  },
+  {
+    "id": "11",
+    "pageNum": 11,
+    "title": "Page 11",
+    "sectionName": null,
+    "body": "ランダム電圧生成 +5v -5v 0v こちらは生成された電圧出力のプロット例です VOLTAGE設定：シグナルフロー VOLTAGE GENERATION 電圧生成プロセスは、連鎖する複数の機能で構成されています。 各機能には、専用のファストリコールプッシュボタンと設定画面があります。 クロックが刻まれるたびに、この連鎖によって新しい電圧が生成されます。 [SMOOTH]と[QUANTIZE]の順序（AからB、BからA）は、[SMOOTH]ウィンドウで変更できます。 シグナルフロー図: VOLTAGE MIN / MAX POLARITY RESOLUTION PROBABILITY CHANCE LINEARITY DISTRIBUTION MODE LINEARITY SMOOTH QUANTIZER POST SMOOTH QUANTIZER PRE SMOOTH CURVE TYPE PRE QUANTIZE SMOOTH CURVE TYPE POST QUANTIZE QUANTIZE SCALE SOURCE ROOT TRANSPOSE QUANTIZE SCALE",
+    "url": "/addac511-svgen/page/11"
+  },
+  {
+    "id": "12",
+    "pageNum": 12,
+    "title": "Page 12",
+    "sectionName": null,
+    "body": "QUANTIZATION画面: 2つのQuantization画面があり、[QUANTIZATION]ボタンを押すことで2つの画面を切り替えることができます。 SCALE いくつかの標準的なスケールに加え、ユーザーが自由にスケールノートを選択できるカスタム設定から選択します。 SOURCE クオンタイズされるソース。デフォルトでは現在のチャンネルに設定されていますが、他のチャンネルやCV入力のいずれかに設定することができ、クオンタイザーとして機能します。 ROOT NOTE スケールのルートノート TRANSPOSE MODE SEMITONES: 半音間隔でのトランスポーズ SCALE DEGREE: スケールディグリーによるトランスポーズ。スケールノート内でトランスポーズします。標準的な7音階の場合、モードとして使用できます:1=Ionian、2=Dorianなど。 OCTAVES: オクターブ間隔でのトランスポーズ CENTS: セント間隔でのトランスポーズ TRANSPOSE トランスポーズ値 クオンタイザー動作の詳細については39ページを参照してください。 STEPS",
+    "url": "/addac511-svgen/page/12"
+  },
+  {
+    "id": "13",
+    "pageNum": 13,
+    "title": "Page 13",
+    "sectionName": null,
+    "body": "GATE OUT画面: Gate Outの動作を制御する設定 SIZE ステップサイズに対するゲートON時間の割合 PROBABILITY 出力確率を0%(出力なし)から100%(常に出力)の範囲で設定します。1msと10msのトリガー設定も利用可能です。 SKIP STEPS この機能はGate Outの動作に変化を導入し、X ステップごとに出力をローに保ちます。 OUTPUT ORDER CVとGateを物理出力に送信する順序。2つの出力間の時間差は依然としてマイクロ秒単位ですが、パッチ先によってはこの順序が重要になる場合があります。 CV/GATE: Gate出力の前にCV GATE/CV: CV出力の前にGate RANDOM VOLTAGE SETTINGS PROBABILITY画面 出力確率設定は、現在のステップで新しいCVを生成するか、それをスキップして次のステップまで現在の値を保持するかを決定します。 PROBABILITY 新しく生成されるボルテージが中断されて出力に送信されない確率を設定します 0% = すべての新しいボルテージがキャンセルされます 100% =",
+    "url": "/addac511-svgen/page/13"
+  },
+  {
+    "id": "14",
+    "pageNum": 14,
+    "title": "Page 14",
+    "sectionName": null,
+    "body": "SMOOTH画面 設定により、各2つのランダムポイント間の補間をコントロールします。 CURVE TYPE 補間に使用されるカーブのタイプ LIN: リニア補間 LOG: 対数補間 EXP: 指数補間 BEZIER: ベジェ曲線補間 DURATION ステップサイズのパーセンテージとしての補間の長さ QUANTIZE Quantizer Pre/Post設定: Pre: Quantizerを通してからSmoothへ、グリッサンド効果 Post: SmoothからQuantizerへ、アルペジオ効果 TRIGGER GATE YES / NO: Yesが選択されている場合、この機能は補間ステップが変わるたびにGate出力をトリガーします。 RESOLUTION 入力値に適用されるビットクラッシャーで、DACの解像度を16ビットから2ビットに制限します。2ビットではDAC範囲は4つの値に制限され、3ビットで8、4ビットで16、5ビットで32となり、16ビットでは解像度が65536になります。 STEP MODE この機能は、リニア補間をユーザー定義の間隔ステップに変換します: OFF:",
+    "url": "/addac511-svgen/page/14"
+  },
+  {
+    "id": "15",
+    "pageNum": 15,
+    "title": "Page 15",
+    "sectionName": null,
+    "body": "VOLTAGE & GATE OUTの例 VoltageとGate Out設定のグラフィカルな例をいくつかご紹介します。 ランダム電圧生成 VOLTAGE RANGE: BIPOLAR -2v to +5v VOLTAGE RANGE: POSITIVE +1v to +3v VOLTAGE RANGE: POSITIVE +1v to +3v VOLTAGE RANGE: BIPOLAR -2v to +5v GATE OUTPUT設定の例 SKIP STEP = 1 SKIP STEP = 2 SKIP STEP = 3 PROBABILITY = 50% PROBABILITY = 80% SIZE = 50% SIZE = 25% SIZE = 10 milliseconds",
+    "url": "/addac511-svgen/page/15"
+  },
+  {
+    "id": "16",
+    "pageNum": 16,
+    "title": "Page 16",
+    "sectionName": null,
+    "body": "VOLTAGE PROBABILITY APPLY TO 以下は、VoltageとGate Out [PROBABILITY]設定のいくつかのグラフィカルな例です。 これらが依存的または独立的に機能することに注目してください。 [APPLY TO]がCV+GATEに設定されている場合、Gateはprobabilityが真の場合にのみ出力されます。 probabilityをCVのみに適用すると、Gateはそのまま維持され、すべてのクロックティックで出力されます。これにより、Voltage ProbabilityはGate Probabilityから独立します。 GATE PROBABILITY Probability ScreenのProbability機能はマスターprobabilityです。Gate Out Screen内のものは RANDOM VOLTAGE GENERATION +5v -5v 0v VOLTAGE PROBABILITY 100% +5v -5v 0v VOLTAGE PROBABILITY 50% GATE +5v 0v APPLY TO = CV+GATE",
+    "url": "/addac511-svgen/page/16"
+  },
+  {
+    "id": "17",
+    "pageNum": 17,
+    "title": "Page 17",
+    "sectionName": null,
+    "body": "VOLTAGE AND TIME DISTRIBUTION これらの画面では、時間領域および電圧領域における各ランダム生成の確率分布を設定します。 デフォルトでは、新しいランダム値は一様分布の原理（すべての可能性に対して等しい確率）を使用して生成されますが、これらは重み付けすることができます。つまり、[VOLTAGE]画面で定義された電圧範囲内に結果を常に保ちながら、特定の範囲をより優位にするように定義できます。 重み付けされた生成は、3つのタイプの確率分布に従います：一様分布、わずかに修正された正規分布、およびwalk/drunk分布（walkモード）です。 一様分布（OFF）は、前述のように重みがなく、定義された範囲内のどの値も等しい確率で選択されます。 正規分布（FREE）はベル型で、その平均値と、[POSITION]によって定義されるその値の周りの偏差によって記述できます。ほとんどのランダム値は、[SPREAD]値に応じて多かれ少なかれ偏差を持って、このposition付近になります。正規分布の修正版では、計算された値が選択された電圧範囲外にある場合、範囲内に戻されます。",
+    "url": "/addac511-svgen/page/17"
+  },
+  {
+    "id": "18",
+    "pageNum": 18,
+    "title": "Page 18",
+    "sectionName": null,
+    "body": "GATE +5v 0v GATE OUTPUT: 10ミリ秒 GATE +5v 0v SMOOTH INTERPOLATION Smoothは、各クロックティック毎に生成される値の間を補間することができます。ユーザーは補間の持続時間を0から100%の間で設定でき、この持続時間はクロックと同期しているため、ランダムなクロックであっても正確なタイミングを保ちます。 RANDOM VOLTAGE GENERATION +5v -5v 0v VOLTAGE CHANNEL'S RANDOM VOLTAGE +5v -5v 0v SMOOTH SMOOTHED VOLTAGE : Linear - Durationで補間/スルーのサイズを変更します 50% 25% 100% GATE +5v 0v +5v -5v 0v SMOOTH SMOOTHED VOLTAGE : Exponential 50% 25% 100% +5v -5v 0v SMOOTH SMOOTHED VOLTAGE : Bezier 50% 25% 100% GATE +5v 0v GATE +5v 0v TRIGGER",
+    "url": "/addac511-svgen/page/18"
+  },
+  {
+    "id": "19",
+    "pageNum": 19,
+    "title": "Page 19",
+    "sectionName": null,
+    "body": "STEPPED INTERPOLATION 各電圧ステップ間のスムージングに加えて、Smoothは[RESOLUTION]と[STEP MODE]を使用してステップ補間を作成するために使用できます。[TRIGGER GATE]は、各補間ステップでトリガーするために使用されます。 ここでは、これらの動作をグラフィカルな例で示しています。 QuantizationがPREに設定されている場合、POSTに設定するとこれらの例はすべてQuantization画面で定義されたスケールに量子化されます。 RANDOM VOLTAGE GENERATION SMOOTHED & RESOLUTION = VOLTAGE OUTPUT RESOLUTION SMOOTHED & STEP MODE: VOLTAGE SMOOTHED & STEP MODE: TIME TRIGGER GATE動作",
+    "url": "/addac511-svgen/page/19"
+  },
+  {
+    "id": "20",
+    "pageNum": 20,
+    "title": "Page 20",
+    "sectionName": null,
+    "body": "RANDOM VOLTAGE GENERATION TIME SETTINGS : SIGNAL FLOW TIMING GENERATION Time設定は、電圧とGateが生成される速度を決定します。各生成ステップ間の間隔は[TIME]画面の設定で定義されます。その値は[DISTRIBUTION]画面の設定によって「バランス」が調整され、仮想クロックティックが生成されます。 CLOCK SOURCES 各チャンネルのタイミングをトリガーする主要なソースは3つあります。 チャンネルごとに1つずつ、合計4つの仮想クロック。各チャンネルは自身(INTERNAL)または他のチャンネルを選択できます。 3つのLogic出力。Logic出力がHighになると、チャンネルのクロックがトリガーされます。 4つのClock入力。任意の入力を任意のチャンネルにルーティングできます。 AVAILABLE CLOCK SOURCES VIRTUAL SOURCES: CHANNEL 1 CLOCK (INTERNAL) CHANNEL 2 CLOCK CHANNEL 3 CLOCK CHANNEL 4",
+    "url": "/addac511-svgen/page/20"
+  },
+  {
+    "id": "21",
+    "pageNum": 21,
+    "title": "Page 21",
+    "sectionName": null,
+    "body": "TIME SETTINGS : TIME MODE (ミリ秒) TIME DISTRIBUTION SCREEN ランダム化された時間の非線形分布を設定できます MODE FREE WALK POSITION 分布のピーク位置を設定します。 Q FACTOR 分布カーブのQファクターを設定します。 LINEARITY 全体的な分布カーブを設定します。 TIME MODE Time modeは秒を基準として使用し、各サイクルごとにTime Min / Max設定で定義された範囲内で新しい値をランダム化します。 TIME MAXIMUM 最大ステップ時間をミリ秒単位で設定します。 TIME MINIMUM 最小ステップ時間をミリ秒単位で設定します。 RANGE MODE Relative: MaxとMinの値を独立して変更できます Absolute: 定義された範囲を維持します。MaxまたはMinを変更すると、同じ範囲を維持するために他のパラメーターも影響を受けます。一方がもう一方を押す形になります。 Time Modeでは、clockはミリ秒単位で定義され、ステップの長さはTime",
+    "url": "/addac511-svgen/page/21"
+  },
+  {
+    "id": "22",
+    "pageNum": 22,
+    "title": "Page 22",
+    "sectionName": null,
+    "body": "TIME SETTINGS : BPM MODE BPM Modeでは、clockは標準的なBPM clockとして動作し、step長はDistribution画面で定義された間隔からランダム化されます。 SYNCスロット出力のdivisionは可変で、次のbeatまでに必要な時間を出力します。これにより、次のstepが確実にbeat上に戻ります。これは奇数のtime divisionを使用する場合に特に便利で、オフセットをリセットします。以下にグラフィカルな例を示します。 BPM DISTRIBUTION SCREEN BPM Modeでは、ユーザーは最大11個のdivisionを設定できます。32/1から1/32までの任意のdivisionが可能で、すべての奇数の組み合わせも含まれます。 白いバーとして視覚化された2番目のパラメーターは、各アクティブなdivisionの確率/優位性を設定します。 確率がゼロより大きいratioのみがアクティブになります。 ratioは繰り返し使用できます。",
+    "url": "/addac511-svgen/page/22"
+  },
+  {
+    "id": "23",
+    "pageNum": 23,
+    "title": "Page 23",
+    "sectionName": null,
+    "body": "CLOCK CLOCK SCREEN: 選択したチャンネルのClock入力元を設定します。 CLOCK SOURCE Clockの入力元を設定します。オプション: INTERNAL (デフォルト): チャンネル独自のClockを使用します。 CHANNEL X: 他のチャンネルのいずれかのClockを選択します。 CLOCK IN X: 4つの物理的なClockジャック入力のいずれかを選択します。 LOGIC X: 3つのLogic出力のいずれかを選択します。 INTERNAL チャンネルを他のチャンネルから独立させます。 他のすべてのオプションでは、チャンネルが選択したソースに依存するようになります。これらの場合、使用可能なClockパラメーターは選択したClockソースに応じて変わります。 CHANNEL 1 to 4 他のチャンネルに同期します: スレーブモード。 CLOCK IN 1 to 4 フロントパネルのClock入力を使用して外部ソースに同期します。 LOGIC 1 to 3 内部のLogic出力をClockとして使用します。",
+    "url": "/addac511-svgen/page/23"
+  },
+  {
+    "id": "24",
+    "pageNum": 24,
+    "title": "Page 24",
+    "sectionName": null,
+    "body": "CLOCK MASTER/SLAVE Sync Channels チャンネルは、[CLOCK]画面の[CLOCK SOURCE]設定を使用して、他のチャンネルに同期させることができます。 デフォルトでは、すべてのチャンネルはMasterチャンネルとして設定されており、他のチャンネルから独立しています。 チャンネルをSlaveに変更するには、[CLOCK SOURCE]パラメーターで他のチャンネルを選択するだけで、そのチャンネルは選択されたクロックに従うようになります。 Slaveに設定すると、[TIME]と[DISTRIBUTION]画面は新しい機能であるClock Delaysのパラメーター設定に使用されます。[CLOCK DELAY]がアクティブになると、Slaveチャンネルの[TIME]と[DISTRIBUTION]パラメーターを使用して遅延値を生成し、クロックティックに加算されることで、受信クロックを効果的に遅延させます。 この遅延は、選択された[TIME]と[DISTRIBUTION]の設定に応じて、一定またはランダムにすることができます。 RANDOM VOLTAGE",
+    "url": "/addac511-svgen/page/24"
+  },
+  {
+    "id": "25",
+    "pageNum": 25,
+    "title": "Page 25",
+    "sectionName": null,
+    "body": "CLOCK FOLLOW ADDAC511 User's Guide 同期チャンネル: BPMモード チャンネルを同期させる最良の方法は、1つをマスターチャンネルとして選択し、その[CLK SOURCE]を[INTERNAL]に設定することです。残りのチャンネルは、このマスターチャンネルを参照することができます。 この例では、Channel 1が[INTERNAL]に設定されています。 Channel 1の[TIME MODE]はBPMに設定されています。 [TIME MODE]の設定は非常に重要です。[BPM]または[TIME]に設定されているかによって、異なるオプションが表示されます。 Channel 2の[CLK SOURCE]はChannel 1に同期するように設定されています。 FOLLOW Followは同期モードを決定します。 スレーブチャンネルは以下に同期できます: [CH BPM] マスターチャンネルBPMの仮想グリッド [CH OUT] リアルタイムGate出力 これはChannel 1のリアルタイムGate出力になります。 この出力は、Channel",
+    "url": "/addac511-svgen/page/25"
+  },
+  {
+    "id": "26",
+    "pageNum": 26,
+    "title": "Page 26",
+    "sectionName": null,
+    "body": "CLOCK DELAY: BPM Sync Channels: Slave TIME MODE = BPM [CLOCK DELAY] [CLOCK DELAY]パラメーターは、入力されるクロックタイミングにずれ/ディレイを発生させるために使用します。 この場合、Channel 2の[TIME MODE]設定が非常に重要です。[BPM]または[TIME]のどちらに設定されているかによって、動作が異なります。 BPMを使用する場合、エンジンは[TIME DISTRIBUTION]画面で設定された時間分割を使用し、常にChannel 1のBPMを基準として分割プールから新しい間隔を生成します。チャンネル自身のBPM設定は無視されます。 [CLOCK DELAY] = ON & CHANNEL TIME MODE = BPM この例では、Channel 2の[TIME MODE]は[BPM]に設定されています。 FOLLOW Followは同期モードを決定します。 スレーブチャンネルは以下に同期できます: [CH BPM] マスターチャンネルBPMの仮想グリッド [CH OUT]",
+    "url": "/addac511-svgen/page/26"
+  },
+  {
+    "id": "27",
+    "pageNum": 27,
+    "title": "Page 27",
+    "sectionName": null,
+    "body": "CLOCK DELAY: TIME Sync Channels: Slave TIME MODE = TIME TIME MODEをTIMEに設定すると、エンジンは受信したクロックソースに単純にディレイを追加します。 この設定は、時間ベースのディレイ（固定またはランダム）を生成するのに便利です。この場合、マスターチャンネルのBPMグリッドによってトリガーされますが、ディレイは秒単位で設定されるため、ほとんどの場合グリッドから外れ、奇妙なディレイが生成されます。 ディレイ時間は、TIMEスクリーンのTIME MINとTIME MAXの設定で定義された範囲からランダム化されます。 受信クロックより長いディレイ時間は、次の受信クロックによってキャンセルされ、出力されません。 この例では、チャンネル2のTIME MODEがTIMEに設定されています。 チャンネル1のTIME MODEは依然としてBPMに設定されていることに注意してください。 FOLLOW FOLLOWは同期モードを決定します。 スレーブチャンネルは以下に同期できます： CH BPM - マスターチャンネルBPMの仮想グリッド",
+    "url": "/addac511-svgen/page/27"
+  },
+  {
+    "id": "28",
+    "pageNum": 28,
+    "title": "Page 28",
+    "sectionName": null,
+    "body": "CLOCK FOLLOW: より多くの例 ADDAC511 ユーザーズガイド Sync Channels > Follow: CH BPM vs CH OUT 外部クロックを設定する際、ユーザーはMaster ChannelのBPMまたはGate Outputをフォローするかを選択できます。 Master BPMをフォローすると、Slaveチャンネルに安定したBPMが設定されます。 Master ChannelのGate Outputをフォローすると、Slaveチャンネルの周期に複雑な変化が生じます。 以下に、すべての異なる設定での図解例を示します。 視認性を高めるため、すべてのゲート表示はGate On時間を示しており、Gate Lengthは常に50%です。 Masterチャンネルは赤色：Slaveチャンネルは緑色。 CHANNEL 1 MASTER: BPM CLOCK DELAY = OFF & MULT/DIV MULT/DIV = *1 MULT/DIV = *3 MULT/DIV = *2 MULT/DIV = /3 MULT/DIV = /2 CHANNEL 1",
+    "url": "/addac511-svgen/page/28"
+  },
+  {
+    "id": "29",
+    "pageNum": 29,
+    "title": "Page 29",
+    "sectionName": null,
+    "body": "RANDOM VOLTAGE GENERATION LOCK : SEQUENCER Lock機能には2つの画面があり、[LOCK]ボタンを押すことでこれらの画面を切り替えることができます。 Lock機能は本質的にはシフトレジスタで、Turing Machineに似ています。一度有効にすると、新しいランダムなステップを生成する代わりに、最大32ステップのシーケンスにロックします。 ユーザーはVoltageとTimeの値を正確に編集することもでき、完全な32ステップシーケンサーとして機能させることができます。 Sequence Lock [ACTIVE]がONに設定されている場合、Voltage ModeがENVELOPEに設定されていても強制的にNORMALになります。 ENCODERS BEHAVIOUR これらの画面では、[ENCODER A]を回すとパラメーターをスクロールし、[ENCODER B]で値を編集します。 SCREEN 1 ACTIVE Lock機能の状態: TRACK/HOLD/ON STEPS シーケンスのステップ数 SEQUENCER MODE",
+    "url": "/addac511-svgen/page/29"
+  },
+  {
+    "id": "30",
+    "pageNum": 30,
+    "title": "Page 30",
+    "sectionName": null,
+    "body": "LOCK : ステップ設定 LOCK : STATE チャンネルの内部生成とロック機能は同時にアクティブにはなりませんが、内部生成はロックシーケンスに値を影響させたり書き込んだりすることができます。これには3つのLock Stateがあります: TRACK Trackモードでは、ロックシーケンスは無効化され編集できません。内部生成がアクティブで、その出力をループでロックシーケンスのアクティブステップに継続的に保存します。 例えば、Stepsが8に設定されている場合、これら8つのステップを繰り返し、最も古いステップに新しい値を上書きして保存します。 HOLD Holdモードでは、シーケンスはロックされており再生されませんが、編集は可能です。 チャンネルの内部生成はアクティブです。 例えば、消去したくないシーケンスがあり、トランジションのために内部生成を使用したい場合、Holdモードはシーケンスを安全に保ちます。 ON ONモードでは、シーケンサーが引き継ぎ、特別な変更(Change Once / Change",
+    "url": "/addac511-svgen/page/30"
+  },
+  {
+    "id": "31",
+    "pageNum": 31,
+    "title": "Page 31",
+    "sectionName": null,
+    "body": "LOCK : Transport Controls STEPS GRAPHICS ここでは使用される様々なグラフィック表示とその機能について説明します。 LOCK : TRANSPOSITION ユーザーは[QUANTIZER]画面のトランスポーズ機能を使用するだけで、プログラムされたシーケンスを簡単にトランスポーズできます。 STEP SELECTION [ENCODER A]でグリッド上にカーソルを設定し、[ENCODER B]を使用して目的のステップを選択します。 SPECIAL CHANGES カーソルがグリッド上にある時に[ENCODER B]を押すと、選択したステップにSpecial Changesが作成されます。押すたびに、通常ステップ、1回変更、常に変更の間で切り替わります。 EDITING STEPS 編集するステップを選択した後、[ENCODER A]で編集するパラメーターまでスクロールし、[ENCODER B]を使用してGATE、STEP V、STEP T、STEP Pの値を編集します。 CURSOR POSITION AND SHOWN VALUES",
+    "url": "/addac511-svgen/page/31"
+  },
+  {
+    "id": "32",
+    "pageNum": 32,
+    "title": "Page 32",
+    "sectionName": null,
+    "body": "RANDOM ENVELOPE GENERATION VOLTAGE SETTINGS : SIGNAL FLOW VOLTAGE MIN / MAX POLARITY RESOLUTION PROBABILITY CHANCE LINEARITY DISTRIBUTION MODE LINEARITY SMOOTH CURVE TYPE POST QUANTIZE QUANTIZE SCALE SOURCE ROOT TRANSPOSE CV OUTPUT SMOOTH ENVELOPE CURVES QUANTIZE SCALE SOURCE ROOT TRANSPOSE GATE OUT MODE SIZE PROBABILITY ENVELOPE GENERATION Envelopeジェネレーション・プロセスは、チェーン内の複数の機能で構成されています。 各機能には、専用のファスト・リコール・プッシュボタンと設定画面があります。 サイクル毎に、このチェーンによって新しいEnvelopeが生成されます。 出力例 CV OUTPUT | GATE OUTPUT +5v 0v",
+    "url": "/addac511-svgen/page/32"
+  },
+  {
+    "id": "33",
+    "pageNum": 33,
+    "title": "Page 33",
+    "sectionName": null,
+    "body": "QUANTIZATION SCREEN Voltageのクォンタイゼーション設定はランダムモードと同じです。 SCALE いくつかの標準的なスケールに加え、カスタム設定を選択できます。カスタム設定では、ユーザーが自由にスケールノートを選択できます。 SOURCE クォンタイズされるソース。デフォルトでは現在のチャンネルに設定されていますが、他のチャンネルやCV入力のいずれかに設定することもでき、クォンタイザーとして機能します。 ROOT NOTE スケールのルートノート TRANSPOSE MODE SEMITONES：半音単位でのトランスポーズ SCALE DEGREE：スケールディグリーによるトランスポーズ。スケールノート内でトランスポーズします。標準的な7音スケールの場合、モードとして使用できます：1=Ionian、2=Dorianなど。 OCTAVES：オクターブ単位でのトランスポーズ CENTS：セント単位でのトランスポーズ TRANSPOSE トランスポーズの値 STEPS",
+    "url": "/addac511-svgen/page/33"
+  },
+  {
+    "id": "34",
+    "pageNum": 34,
+    "title": "Page 34",
+    "sectionName": null,
+    "body": "GATE OUT画面 Gate Outの動作を制御する設定です。 SIZE Gate出力の長さを設定します。エンベロープのAttack (A)の長さ、AttackとSustain (AS)の長さ、Attack、SustainおよびRelease (ASR)の長さに合わせることができます。また、1msまたは10msの固定出力、またはエンベロープ全体の長さに対するパーセンテージとして設定することも可能です。 PROBABILITY 出力確率を0%（出力なし）から100%（常に出力）の間で設定します。Triggerとして1msおよび10msも使用可能です。 SKIP STEPS この機能はGate Outの動作に変化を加え、X ステップごとに出力をキャンセルします。 OUTPUT ORDER CVとGateが物理出力に送信される順序を設定します。2つの出力間の時間差は依然としてマイクロ秒単位ですが、パッチ接続先によってはこの順序が重要になる場合があります。 CV/GATE: CV出力の後にGate出力 GATE/CV: Gate出力の後にCV出力 TRIGGER ON",
+    "url": "/addac511-svgen/page/34"
+  },
+  {
+    "id": "35",
+    "pageNum": 35,
+    "title": "Page 35",
+    "sectionName": null,
+    "body": "SMOOTH SCREEN Settings control the Envelope shape ATTACK CURVE Log (1.00) から Exp (-1.00) までのAttackカーブを設定します。 0.00でLinearになります。 RELEASE CURVE Log (1.00) から Exp (-1.00) までのReleaseカーブを設定します。 0.00でLinearになります。 ENVELOPE SHAPE VISUALIZATION ここでEnvelopeの形状を確認できます。 ENVELOPE VOLTAGE SETTINGS VOLTAGE DISTRIBUTION SCREEN ランダマイズされるvoltageの非線形分布を設定できます。 MODE FREE WALK POSITION 分布のピーク位置を設定します。 Q FACTOR 分布カーブのQファクターを設定します。 LINEARITY 全体的な分布カーブを設定します。 RANDOM ENVELOPE GENERATION (voltage modeと同じです)",
+    "url": "/addac511-svgen/page/35"
+  },
+  {
+    "id": "36",
+    "pageNum": 36,
+    "title": "Page 36",
+    "sectionName": null,
+    "body": "QUANTIZING ENVELOPES 生成されるエンベロープをクオンタイズすることで、アルペジオのようなエフェクトが得られます。 以下のグラフィカルな例では、クオンタイザーを読みやすくするためにオクターブに設定しています。 Quantized to: nearest note above（最も近い上の音にクオンタイズ） TRIGGER ON QUANTIZATION [SIZE]設定を無視し、クオンタイズされた新しい音ごとに1msのTriggerを出力します。 GATE SIZE 3つのオプション: Sync to Envelope: A, AS, ASR Fixed size: 1msまたは10ms As a percentage: 0%から90% GATE OUTPUT: 25% GATE OUTPUT: ATTACK + SUSTAIN GATE OUTPUT: 1ms RANDOM ENVELOPE GENERATION",
+    "url": "/addac511-svgen/page/36"
+  },
+  {
+    "id": "37",
+    "pageNum": 37,
+    "title": "Page 37",
+    "sectionName": null,
+    "body": "RANDOM ENVELOPE GENERATION TIME SETTINGS : SIGNAL FLOW TIMING GENERATION Time設定は、電圧とGateが生成される速度を決定します。各生成ステップ間の間隔は[TIME]画面の設定で定義されます。その値は[DISTRIBUTION]画面の設定によって「バランス」が取られ、仮想クロックティックが生成されます。 信号フローチャート: TIME → MIN / MAX → POLARITY → RESOLUTION → CLOCK SOURCE → DISTRIBUTION → MODE → LINEARITY → VIRTUAL CLOCK TICK GATE出力: サステインサイズ Gate出力は以下のフェーズで構成されます: ATTACK → SUSTAIN → RELEASE → REST Gate信号: 最大値: +5v 最小値: 0v Rest: 0v 出力電圧例: 電圧最小値 = 2v 電圧最大値 = 4v Rest = 0v 出力電圧範囲: -5v ~ +5v",
+    "url": "/addac511-svgen/page/37"
+  },
+  {
+    "id": "38",
+    "pageNum": 38,
+    "title": "Page 38",
+    "sectionName": null,
+    "body": "TIME SETTINGS : TIME MODE (ミリ秒) TIME MODE Time ModeをTimeまたはBPMに設定します。 ATTACK MINIMUM & MAXIMUM Attackの最小値と最大値をミリ秒単位で設定します。 SUSTAIN MINIMUM & MAXIMUM Sustainの最小値と最大値をミリ秒単位で設定します。 RELEASE MINIMUM & MAXIMUM Releaseの最小値と最大値をミリ秒単位で設定します。 REST MINIMUM & MAXIMUM Restの最小値と最大値をミリ秒単位で設定します。 SCALE MINIMUM & MAXIMUM Scaleの最小値と最大値の乗算係数を設定します。 この設定により、すべてのタイム設定の比率を保ったままエンベロープの長さを伸縮させることができます。 以下は、異なるスケール設定での同じエンベロープ形状の例です。 TIME SCREEN: Time Modeでは、クロックはミリ秒単位で定義され、ステップの長さは最小値と最大値のパラメーターで定義された範囲内でランダム化されます。",
+    "url": "/addac511-svgen/page/38"
+  },
+  {
+    "id": "39",
+    "pageNum": 39,
+    "title": "Page 39",
+    "sectionName": null,
+    "body": "CLOCK CLOCK SCREEN 選択したチャンネルのクロックソースを設定します。 CLOCK SOURCE クロックのソースを設定します。オプションは以下の通りです: INTERNAL (デフォルト): 自身のチャンネルクロックを使用します。 CHANNEL X: 他のチャンネルのクロックを選択します。 CLOCK IN X: 4つのクロック物理ジャック入力のいずれかを選択します。 LOGIC X: 3つのLogic出力のいずれかを選択します。 INTERNAL チャンネルを他のチャンネルから独立させます。 他のすべてのオプションは、チャンネルを選択したソースに依存させます。これらの場合、利用可能なクロックパラメーターは選択したクロックソースに応じて変わります。 CHANNEL 1 to 4 他のチャンネルに同期します: スレーブモード。 CLOCK IN 1 to 4 フロントパネルのクロック入力を使用して外部ソースに同期します。 CLOCK IN MODES: GATE: Gateモードでは、Gateがオフになるまでエンベロープを維持します。 TRIGGER:",
+    "url": "/addac511-svgen/page/39"
+  },
+  {
+    "id": "40",
+    "pageNum": 40,
+    "title": "Page 40",
+    "sectionName": null,
+    "body": "QUANTIZERの可能性 Quantizingエンジンは非常にパワフルで、多くのクリエイティブな方法で使用できます。16bit DACを搭載しており、非常に高精度です。 全チャンネルをリンクしてコード生成を行ったり、4つのCV入力と4つのclock入力を使用することで、完全に独立した4チャンネルのquantizerとして機能します。それぞれが独自のスケールを持ち、4つのCVと4つのgate信号を出力する、フル機能の4チャンネルquantizerとして動作します。 次のページでは、その全ての可能性を詳しく説明します。 QUANTIZER ROUNDING [MENU]では、入力電圧のquantize方法を決定するquantization rounding設定があります： NEAREST NOTE: 上下に関係なく、最も近い音にquantizeします。 NOTE ABOVE: 上の最も近い音にquantizeします。 NOTE BELLOW: 下の最も近い音にquantizeします。 NOTE PROBABILITY: 事前定義された確率のセットにquantizeします。",
+    "url": "/addac511-svgen/page/40"
+  },
+  {
+    "id": "41",
+    "pageNum": 41,
+    "title": "Page 41",
+    "sectionName": null,
+    "body": "OTHER CHANNELS QUANT. 他チャンネルの電圧をQuantize SELF QUANTIZATION チャンネルの電圧生成をQuantize CHANNEL 1 QUANTIZING CHANNEL 1 VOLTAGE CHANNEL 1 QUANTIZING CHANNEL 2 VOLTAGE CHANNEL 1 VOLTAGE GENERATION IS BYPASSED EXTERNAL QUANTIZATION CV INPUTSをQuantize CHANNEL 1 QUANTIZING CV INPUT 1 VOLTAGE CHANNEL 1 VOLTAGE GENERATION IS BYPASSED QUANTIZER VOLTAGE MIN / MAX POLARITY RESOLUTION PROBABILITY CHANCE LINEARITY DISTRIBUTION MODE LINEARITY VOLTAGE MIN / MAX POLARITY RESOLUTION PROBABILITY CHANCE LINEARITY",
+    "url": "/addac511-svgen/page/41"
+  },
+  {
+    "id": "42",
+    "pageNum": 42,
+    "title": "Page 42",
+    "sectionName": null,
+    "body": "QUANTIZER SOURCES グラフィカル例 以下は、内部および外部quantizationの両方のグラフィカル例です。 読みやすさのため、Quantizerはオクターブに設定されています。最も近い上の音にquantizeされます。 SELF QUANTIZATION CH1 VOLTAGE生成をQuantize CHANNEL 1 RANDOMIZED VOLTAGE: ランダム化された電圧入力 QUANTIZED VOLTAGE GOING OUT ON CHANNEL 1: Channel 1から出力されるquantize済み電圧 GATE OUTPUT: 25% OTHER CHANNELS QUANTIZATION 他のChannelsの電圧をQuantize CHANNEL 2 INCOMING VOLTAGE: Channel 2からの入力電圧 QUANTIZED VOLTAGE GOING OUT ON CHANNEL 1: Channel 1から出力されるquantize済み電圧 GATE OUTPUT: 10ms",
+    "url": "/addac511-svgen/page/42"
+  },
+  {
+    "id": "43",
+    "pageNum": 43,
+    "title": "Page 43",
+    "sectionName": null,
+    "body": "QUANTIZER ROUNDING & NOTE PROBABILITY 以下に、3つのquantizerの丸め方式とnote probabilityメソッドのグラフィカルな例を示します。 QUANTIZER STANDARD QUANTIZER ROUNDING QuantizerをCのオクターブに設定し、電圧範囲を2Vに制限 この場合、入力される電圧はCのオクターブにquantizeされます。つまり、出力は1vの倍数(0v、1v、2v、3v、4v)になります。 1.2vの電圧が検出された場合: ABOVE 上の最も近い音: 2v NEAREST NOTE 最も近い音: 1v BELOW 下の最も近い音: 1v 1.7vの電圧が検出された場合: 上の最も近い音: 2v 最も近い音: 2v 下の最も近い音: 1v ROUNDING TO NOTE PROBABILITY QuantizerをMajor Cに設定し、電圧範囲を2Vに制限 Note",
+    "url": "/addac511-svgen/page/43"
+  },
+  {
+    "id": "44",
+    "pageNum": 44,
+    "title": "Page 44",
+    "sectionName": null,
+    "body": "QUANTIZER PRE / POST SMOOTH [SMOOTH]と[QUANTIZE]の順序（AからB、BからA）は、[SMOOTH]ウィンドウで変更できます。 QUANTIZER PRE SMOOTHはグライド効果を生み出します。 QUANTIZER POST SMOOTHはアルペジオ効果を生み出します。 以下は両方のオプションのグラフィカルな例です。 Quantizerはオクターブに設定されています（見やすくするため）。 右下には[TRIGGER GATE]機能の例があります。 QUANTIZER PRE SMOOTH SMOOTH → QUANTIZE → CV OUTPUT 設定: SMOOTH SECTION: LIN 50% QUANTIZE SOURCE Quantizerはオクターブに設定（グラフィカルな見やすさのため） Quantized to: nearest note Smooth durationは50%に設定 Gate sizeは25%に設定 信号の流れ: CHANNEL 1 RANDOMIZED VOLTAGE ↓ SMOOTHED VOLTAGE",
+    "url": "/addac511-svgen/page/44"
+  },
+  {
+    "id": "45",
+    "pageNum": 45,
+    "title": "Page 45",
+    "sectionName": null,
+    "body": "EXTERNAL QUANTIZER 外部CV入力をクォンタイズする際、スムース効果はバイパスされます。 以下はグラフィカルな例です。 QUANTIZING WITH INTERNAL CLOCK 内部Clockを使用して、定義されたレートでCV入力をクォンタイズします。 CV INPUT INCOMING VOLTAGE QUANTIZED VOLTAGE INT. CLOCK GATE OUTPUT: 25% QUANTIZING WITH EXTERNAL CLOCK EXT. CLOCK Clock Inに設定すると、2つのクォンタイゼーションモードがあります：リアルタイムとクロック同期です。 REAL-TIME ユーザーがクロック入力を選択すると、クォンタイゼーションはリアルタイムで動作を開始します。クロックは使用されず、新しい値が検出されるとクォンタイゼーションが実行されます。 EXTERNAL CLOCK クロック入力がGate入力を受信すると、クォンタイゼーションは同期し、Gate入力によってクロックされます。",
+    "url": "/addac511-svgen/page/45"
+  },
+  {
+    "id": "46",
+    "pageNum": 46,
+    "title": "Page 46",
+    "sectionName": null,
+    "body": "QUANTIZER TRANSPOSE C MAJOR PENTATONIC - E NOTEの例 E Note トランスポーズなし E Note +50 Cents = F = G E Note +1 Semi E Note 2nd Degree E Note +1 Octave E G A C MAJOR PENTATONIC - 小パターンの例 トランスポーズなし +50 Cents +1 Semi 2nd Degree +1 Octave C D E G A | C D E +50 G +50 A +50 | C +50 D +50 F G# A# | C# D# F A C | D E E G A | C D C# D# F F# G# A# B C# D# F F# G# A# B C | C D E G A D E G A C 4つのトランスポーズモードがあります: CENTS 微分音デチューン、-50から+50セントまで。 Centsモードは次の3つのモードのいずれかと累積されます SEMITONES 半音トランスポーズ SCALE DEGREES",
+    "url": "/addac511-svgen/page/46"
+  },
+  {
+    "id": "47",
+    "pageNum": 47,
+    "title": "Page 47",
+    "sectionName": null,
+    "body": "QUANTIZER : コード生成の例 MAIN SCREEN CHANNEL 2 3rd SCALE DEGREE SMOOTH SECTION: LOG 100% MAIN SCREEN CHANNEL 3 5th SCALE DEGREE MAIN SCREEN CHANNEL 1 GENERATING CHORD ROOT NOTE VOLTAGE SETTINGS TIME SETTINGS MAIN SCREEN CHANNEL 4 7th SCALE DEGREE +2v 0v +1v VOLTAGE +2v 0v +1v QUANTIZATION CHANNEL 1 RANDOMIZED VOLTAGE E : CHANNEL 1 Em7 Dm7 Cmaj7 Gmaj7 Bm7b5 Fmaj7 Am7 Em7 G : CHANNEL 2 B : CHANNEL 3 D : CHANNEL 4 D : CHANNEL 1 F : CHANNEL 2 A : CHANNEL 3 C : CHANNEL 4 C : CHANNEL 1 E : CHANNEL 2 G :",
+    "url": "/addac511-svgen/page/47"
+  },
+  {
+    "id": "48",
+    "pageNum": 48,
+    "title": "Page 48",
+    "sectionName": null,
+    "body": "PRESETS Presetsの画面では、いずれかのEncoderを使用してリストをスクロールし、左右のEncoderを押すことでLoadまたはSaveを実行できます。 Presetsを保存するための75個のスロットが利用可能です。 保存 Presetsを保存する際、Encodersを使用してプリセット名を選択できます。左Encoderで編集する文字を選択し、右Encoderで文字を選択します。 CHANNEL 4 STATE C STATE B STATE A CHANNEL 3 STATE C STATE B STATE A CHANNEL 2 STATE C STATE B STATE A PRESET X CHANNEL 1 STATE C STATE B STATE A すべてのPresetは、全チャンネルのすべての情報を保存します。 16個のスロットが利用可能であり、これらは単一のBankファイルとしてコンピューターにダウンロードでき、ユーザーはコンピューター上でBankを管理することができます。",
+    "url": "/addac511-svgen/page/48"
+  },
+  {
+    "id": "49",
+    "pageNum": 49,
+    "title": "Page 49",
+    "sectionName": null,
+    "body": "CV ASSIGNMENTS モジュール右上には8つのCV Inputがあり、任意の出力チャンネルの任意のパラメーターにアサインすることができます。 アサインするには、Assign Screenに入り、Right Encoderを押して新しいアサインをADDします。 以下、すべての設定項目の説明です： INPUT CHANNEL 使用するCV Inputチャンネル CHANNEL TO ASSIGN CV Inputによって影響を受けるチャンネル FUNCTION CV Inputによって影響を受けるファンクション INPUT GAIN CV InputのGainで、0から10倍まで OFFSET CV Inputに適用されるOffsetで、-1.0から1.0まで PHASE INVERSION 入力信号のPhaseを反転します この画面では、Left Encoderを回すと編集するパラメーターを選択し、Right Encoderを回すとパラメーター値を編集します。 設定が完了したら、Enterボタン(Right",
+    "url": "/addac511-svgen/page/49"
+  },
+  {
+    "id": "50",
+    "pageNum": 50,
+    "title": "Page 50",
+    "sectionName": null,
+    "body": "CV ASSIGNMENTS ENCODERS INTERACTION スクリーン上のバーチャルボタンは、Encoderを押した時に実行される現在の機能を表示します。 いずれかのEncoderを回転させると、既に割り当てられているラインを選択してスクロールします。 選択されたラインは白い背景で表示されます。",
+    "url": "/addac511-svgen/page/50"
+  },
+  {
+    "id": "51",
+    "pageNum": 51,
+    "title": "Page 51",
+    "sectionName": null,
+    "body": "CV ASSIGNMENTS - FUNCTIONS CV割り当てを使用すると、511のほとんどの機能にアクセスできます。利用可能なスペースの都合上、これらの名前は短縮されています。以下は機能とディスプレイ上での表示のリストです： VMIN VMAX VSTEPS QSCALE QSRC QROOT QMODE QSTEPS GATE SIZE GATE PROB TRG QUANT PROB PROBSTPS PROBAP PROBLIN DISTMODE DISTPOS DISTSPREAD DISTLIN SMCURVE SMDUR SMQUAPP SMRES SMSTMOD SMSTEPS TMODE TMIN TMAX TBPM TDMODE TDPOS TDSPREAD TDLIN \"CLKSRC\" CLKMULTDIV CLKFOLL CLKUSET SYNCBPM VOLTAGE MINIMUM (NORMAL & ENVELOPE) VOLTAGE MAXIMUM (NORMAL & ENVELOPE) VOLTAGE STEPS QUANTIZER SCALE",
+    "url": "/addac511-svgen/page/51"
+  },
+  {
+    "id": "52",
+    "pageNum": 52,
+    "title": "Page 52",
+    "sectionName": null,
+    "body": "LOGIC ASSIGNMENTS 3つのLogic Outputがあります。[CV & LOGIC]ボタンを押すと各Logic画面が順に表示されます。選択されているLogicは画面左上で確認できます。 Logic演算は2つの変数を比較し、真または偽の結果を出力します。真の場合は+5Vを出力し、偽の場合は0Vを出力するゲート出力として考えてください。 ユーザーはこれらの演算を、CV入力、Clock入力、CV出力、またはLogic出力の任意の組み合わせで設定できます。つまり、外部ソースと内部ソースの両方を処理することができます。 CVソースを使用する場合、logicのしきい値は2.5vです。上昇時または下降時にしきい値を超えるとlogic比較がトリガーされます。 Logic演算に加えて、これらの出力はカウンターやclock出力としても設定できます。 アサインするには、Logic Assignment画面に入り、チャンネルページを選択して、右エンコーダーを押して新しいアサインをADDします: OPERATION 実行する演算: NOT, AND, NAND, OR, NOR, XOR,",
+    "url": "/addac511-svgen/page/52"
+  },
+  {
+    "id": "53",
+    "pageNum": 53,
+    "title": "Page 53",
+    "sectionName": null,
+    "body": "LOGIC ASSIGNMENTS LOGIC演算の例 NOT演算は入力変数Xのみを使用し、単純に入力信号を反転させることに注意してください。 ここでは、1つのLogic出力をGate出力1とGate出力2を比較するように設定しました。 以下に、すべての可能な演算のグラフィカルな例を示します。 CHANNEL 1 GATE OUTPUT と CHANNEL 2 GATE OUTPUT の比較 OR NOR XOR XNOR AND NAND CHANGE: ON X & Y CHANNEL 1 GATE OUTPUT と CHANNEL 2 GATE OUTPUT の比較 OR NOR XOR XNOR AND NAND CHANGE: ON X ONLY CHANNEL 1 GATE OUTPUT NOT (INVERTER) LOGIC NOT",
+    "url": "/addac511-svgen/page/53"
+  },
+  {
+    "id": "54",
+    "pageNum": 54,
+    "title": "Page 54",
+    "sectionName": null,
+    "body": "LOGIC ASSIGNMENTS ADDAC511ユーザーズガイド 設定例: X = CHANNEL 1 GATE OUTPUT Y = CHANNEL 3 GATE OUTPUT Y = CHANNEL 4 GATE OUTPUT AND RESULT XOR RESULT X = OP2 (OPERATION 2 RESULT) Y = CHANNEL 2 GATE OUTPUT NAND RESULT X = OP1 (OPERATION 1 RESULT) ALL OPERATIONS SET TO CHANGE ON X & Y カスケード接続オペレーション 複数のラインを追加することで、より複雑なLogicオペレーションが可能になります。2行目を設定する際にOP1（Operation 1）を選択すると、1つ目のオペレーションの結果が2つ目のオペレーションの入力として使用されます。また、他のLogicチャンネルを選択してチャンネル間でカスケード接続することも可能です。 以下は、左側に示された設定を使用したこのプロセスのグラフィカルな例です。 INPUTS →",
+    "url": "/addac511-svgen/page/54"
+  },
+  {
+    "id": "55",
+    "pageNum": 55,
+    "title": "Page 55",
+    "sectionName": null,
+    "body": "ADDAC SYSTEM 特殊な非論理アサインメント COUNTER Counterファンクションは、X個のパルスごとにGateまたはTriggerを出力することができます。CV入力、Clock入力、CV出力、またはLogic出力のいずれかを入力として使用できます。 BPM - CLOCK OUTPUT BPMファンクションは、選択したチャンネルのBPMの倍数（最大x32）または分数（最大/32）でClock信号を出力することができます。 この機能は、他のモジュールをADDAC511に同期させるために使用できます。 MIDI CLOCK OUTPUT BPMファンクションをx24に設定すると、標準のMIDI Clock信号を出力することができます。これは1/4音符あたり24パルスの標準的なMIDI Clockを出力します。 ADDAC511 User's Guide COUNTER: 5 CHANNEL 1 GATE OUTPUT COUNTER USING GATE OUTPUT COUNTER USING TRIGGER OUTPUT COUNTER: 3 COUNTER",
+    "url": "/addac511-svgen/page/55"
+  },
+  {
+    "id": "56",
+    "pageNum": 56,
+    "title": "Page 56",
+    "sectionName": null,
+    "body": "MENU Menuには4つの機能があります: VCO Tuning - VCOのキャリブレーションを補助するユーティリティプログラム Calibrate CV Outputs - CV出力のキャリブレーション/マッピング Screensaver - スクリーンの寿命を延ばします Auto Return to Main - 自動的にメイン画面に戻ります Quantizer Rounding - 最も近い音符に、上または下にQuantizeします Update Firmware - ファームウェアアップデートプロセスに入ります VCO TUNING 511を1v/octジェネレーターとして使用する際に、VCOを簡単にチューニングできるユーティリティ機能です。 メインプログラムをオーバーライドし、全ての出力を音符として定義された同じ電圧に強制します。 Octave (0から4): 1v間隔で電圧を上げます Note (CからB): 半音階で電圧を上げます 電圧出力モニターとキーボードが選択されたパラメーターをモニターします。 CALIBRATE CV OUTS",
+    "url": "/addac511-svgen/page/56"
+  },
+  {
+    "id": "57",
+    "pageNum": 57,
+    "title": "Page 57",
+    "sectionName": null,
+    "body": "MENU AUTO RETURN TO MAIN デフォルトでは、30秒間物理的な操作が行われないと、画面は自動的にメイン画面に戻ります。この機能はON/OFFの切り替えが可能です。 また、自動復帰時間をユーザーが設定することもできます: 10秒、30秒、1分。",
+    "url": "/addac511-svgen/page/57"
+  },
+  {
+    "id": "58",
+    "pageNum": 58,
+    "title": "Page 58",
+    "sectionName": null,
+    "body": "MENU : FIRMWARE UPDATES FIRMWARE UPDATE INSTRUCTIONS リボン電源ケーブルを接続したまま、フレームの電源を入れた状態で、511をラックから取り外します。 モジュール背面のUSBコネクターを使用して、モジュールをコンピューターに接続します。 最新のGoogle Chromeブラウザー（バージョン61以降が必要です）を使用して、以下のアドレスにアクセスします： https://media.addacsystem.com/ADDAC511 ウェブページ上のConnectボタンを押し、デバイスリストを確認します。デバイスリストの中に以下が表示されるはずです： \"ADDAC511 STOCHASTIC VOLTAGE GENERATOR\" この時点ではデバイスを選択しないでください。 モジュール上で[MENU]ボタンをクリックし、[UPDATE FIRMWARE]を選択します。[ENCODER B]をクリックしてfirmware updateモードに入り、その後[ENCODER A]を押し続けます。",
+    "url": "/addac511-svgen/page/58"
+  },
+  {
+    "id": "59",
+    "pageNum": 59,
+    "title": "Page 59",
+    "sectionName": null,
+    "body": "SPECIAL STARTUPS 電源投入時には2つの特別な起動方法があります。電源投入中に以下のようにハイライトされたボタンを押し続けることでアクセスできます。 MENU: デフォルトプリセットで起動します（以前に選択したプリセットをバイパスします） MENU + STATE C: 保存されているすべてのプリセットを削除します",
+    "url": "/addac511-svgen/page/59"
+  },
+  {
+    "id": "60",
+    "pageNum": 60,
+    "title": "Page 60",
+    "sectionName": null,
+    "body": "パッチ例 PATCH 1 最もシンプルな1/4ビートでのフルレンジランダム電圧 VOLTAGE SETTINGS | TIME SETTINGS +5v -5v 0v 1/4 | 1/4 | 1/4 | 1/4 | 1/4 | 1/8 | 1/8 GATE OUTPUT: SYNC 50% VOLTAGE GATE --- PATCH 2 ランダムビートでのポジティブなランダム電圧 VOLTAGE SETTINGS | TIME SETTINGS NO GATE NO GATES: GATE確率により「ミュート」 NO CHANGE: VOLTAGE確率により「ミュート」 NO GATE | NO GATE | NO GATE | NO GATE | NO GATE | NO GATE 1/4 | 1/4 | 1/16 1/16 | 1/8 | 1/16 | 1/16 1/16 1/16 NO CHANGE | 確率「ミュート」 | 確率「ミュート」 | 確率「ミュート」 | NO CHANGE | NO CHANGE 1/16 1/16 1/16 1/16 1/16 1/16",
+    "url": "/addac511-svgen/page/60"
+  },
+  {
+    "id": "61",
+    "pageNum": 61,
+    "title": "Page 61",
+    "sectionName": null,
+    "body": "PATCH EXAMPLES +5v -5v 0v VOLTAGE GATE +5v 0v 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/16 1/32 GATE OUTPUT: SYNC 75% MAIN SCREEN PATCH 4 RANDOM VOLTAGE WITH EXPONENTIAL DISTRIBUTION VOLTAGE SETTINGS | TIME SETTINGS MAIN SCREEN PATCH 5 RANDOM VOLTAGE WITH LOGARITHMIC DISTRIBUTION VOLTAGE SETTINGS | TIME SETTINGS MAIN SCREEN PATCH 6 RANDOM VOLTAGE WITH WALK",
+    "url": "/addac511-svgen/page/61"
+  },
+  {
+    "id": "62",
+    "pageNum": 62,
+    "title": "Page 62",
+    "sectionName": null,
+    "body": "PATCH EXAMPLES +5v -5v 0v VOLTAGE GATE +5v 0v 1/32 GATE OUTPUT: SYNC 75% MAIN SCREEN PATCH 7A RANDOM VOLTAGE WITH WEIGHTED DISTRIBUTION VOLTAGE SETTINGS TIME SETTINGS MAIN SCREEN PATCH 7B RANDOM VOLTAGE WITH WEIGHTED DISTRIBUTION VOLTAGE SETTINGS TIME SETTINGS MAIN SCREEN PATCH 7C RANDOM VOLTAGE WITH WEIGHTED DISTRIBUTION VOLTAGE SETTINGS TIME SETTINGS",
+    "url": "/addac511-svgen/page/62"
+  },
+  {
+    "id": "63",
+    "pageNum": 63,
+    "title": "Page 63",
+    "sectionName": null,
+    "body": "PATCH EXAMPLES パッチ8: ランダム電圧とリニアスムース +5v -5v 0v VOLTAGE GATE +5v 0v 1/4 1/8 GATE OUTPUT: 50% PATCH 8A: RANDOM VOLTAGE WITH LINEAR SMOOTH MAIN SCREEN VOLTAGE SETTINGS TIME SETTINGS SMOOTH SECTION: LINEAR 50% PATCH 8B: RANDOM VOLTAGE WITH LINEAR SMOOTH MAIN SCREEN VOLTAGE SETTINGS TIME SETTINGS SMOOTH SECTION: LINEAR 25% PATCH 8C: RANDOM VOLTAGE WITH LINEAR SMOOTH MAIN SCREEN VOLTAGE SETTINGS TIME SETTINGS SMOOTH SECTION: LINEAR 100%",
+    "url": "/addac511-svgen/page/63"
+  },
+  {
+    "id": "64",
+    "pageNum": 64,
+    "title": "Page 64",
+    "sectionName": null,
+    "body": "PATCH EXAMPLES +5v -5v 0v VOLTAGE GATE +5v 0v 1/8 GATE OUTPUT: 50% MAIN SCREEN PATCH 10 RANDOM VOLTAGE WITH EXPONENTIAL SMOOTH VOLTAGE SETTINGS TIME SETTINGS SMOOTH SECTION: LOG 100% SMOOTH SECTION: EXP 100% SMOOTH SECTION: BEZIER 100% MAIN SCREEN PATCH 11 RANDOM VOLTAGE WITH BEZIER SMOOTH VOLTAGE SETTINGS TIME SETTINGS MAIN SCREEN PATCH 9 RANDOM VOLTAGE WITH LOGARITHMIC SMOOTH VOLTAGE SETTINGS TIME SETTINGS",
+    "url": "/addac511-svgen/page/64"
+  },
+  {
+    "id": "65",
+    "pageNum": 65,
+    "title": "Page 65",
+    "sectionName": null,
+    "body": "フィードバック、コメント、または問題については、以下までご連絡ください: addac@addacsystem.com ADDAC511 ユーザーガイド December.2024 Revision.01",
+    "url": "/addac511-svgen/page/65"
+  }
+]
