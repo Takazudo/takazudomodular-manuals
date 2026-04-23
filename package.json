@@ -50,6 +50,8 @@
     "pdf:search-index:all": "node scripts/pdf-search-index-all.js",
     "pdf:manifest": "node scripts/pdf-manifest.js",
     "pdf:clean": "node scripts/pdf-clean.js",
+    "pdf:clean-en": "node scripts/pdf-clean-en.js",
+    "pdf:clean-en:all": "node scripts/pdf-clean-en.js --all",
     "pdf:verify": "node scripts/pdf-verify.js",
     "pdf:all": "pnpm run pdf:split && pnpm run pdf:render && pnpm run pdf:extract && pnpm run pdf:translate && pnpm run pdf:validate && pnpm run pdf:build && pnpm run pdf:search-index && pnpm run pdf:manifest",
     "// ── Quality ──────────────────────────────────": "",
