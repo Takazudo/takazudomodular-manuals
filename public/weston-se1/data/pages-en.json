@@ -4,7 +4,10 @@
     "language": "en",
     "extractionMethod": "pdf-parse",
     "imageFormat": "png",
-    "imageDPI": 300
+    "imageDPI": 300,
+    "cleanupMethod": "claude-code-subagent",
+    "cleanupModel": "haiku",
+    "cleanedAt": "2026-04-23T19:58:58.226Z"
   },
   "pages": [
     {
@@ -12,7 +15,7 @@
       "image": "/weston-se1/pages/page-001.png",
       "title": "Page 1",
       "sectionName": null,
-      "content": "© 2023 Weston Precision Audio \t1\nSE1\nShaped VC Envelope\nEurorack Module\nUser Manual\nWeston Precision Audio\nDesigned In Portland, Oregon\nRevision 01 - December 5, 2023\n\n-- 1 of 1 --",
+      "content": "© 2023 Weston Precision Audio\n\nSE1\n\nShaped VC Envelope\n\nEurorack Module\n\nUser Manual\n\nWeston Precision Audio\n\nDesigned In Portland, Oregon\n\nRevision 01 - December 5, 2023",
       "hasContent": true,
       "tags": []
     },
@@ -21,7 +24,7 @@
       "image": "/weston-se1/pages/page-002.png",
       "title": "Page 2",
       "sectionName": null,
-      "content": "TABLE OF CONTENTS\nPanel Overview…….…………………..…3\nDescription & Specs………………………4\nUsing SE1\nGetting Started……………………5\nShape Controls……………..…….5\nGate Vs. Trigger………………….6\nLoop…………………………..….…6\nSustain CVs……..…………………7\nOther Features\nState Gates / EOC………………7\nLevel CV Input…….………………8\nAppendix\nOutput Level Jumper…………….9\nTrimmer Adjustments…………….9\n© 2023 Weston Precision Audio \t2\n\n-- 1 of 1 --",
+      "content": "Panel Overview…….…………………..…3\n\nDescription & Specs………………………4\n\nUsing SE1\n\nGetting Started……………………5\n\nShape Controls……………..…….5\n\nGate Vs. Trigger………………….6\n\nLoop…………………………..….…6\n\nSustain CVs……..…………………7\n\nOther Features\n\nState Gates / EOC………………7\n\nLevel CV Input…….………………8\n\nAppendix\n\nOutput Level Jumper…………….9\n\nTrimmer Adjustments…………….9",
       "hasContent": true,
       "tags": []
     },
@@ -30,7 +33,7 @@
       "image": "/weston-se1/pages/page-003.png",
       "title": "Page 3",
       "sectionName": null,
-      "content": "© 2023 Weston Precision Audio \t3\nSE1 Overview\nA, D, S, & R CV\nControl\nCV inputs for\nenvelope control\nShape Control\nSwitch\nExponential, Linear,\nOr Logarithmic, for\nAttack, Decay, and\nRelease\nSustain Env In\nA VCA which\nshapes the “S” CV\nInput. See page 7\nfor details.\nGate / Trig Input\nMain control for\nstarting/sustaining envelope\nGate / Trig\nSelect Switch\nSee page 6 for\ndetails.\nManual Trigger\nButton\nDoes what\n“Gate/Trig” input\ndoes, but with your\nfinger!\nA, D, S, & R\nControl Sliders\nAdjusts the\nparameters of the\nenvelope. LEDs in\nslider light up in\ncurrent state of\nenvelope.\nState Gate Outs\nThese go high when\nin that state of the\nenvelope (i.e. when\nthat slider’s LED is\nlit.)\nLoop On/Off\nSwitch\nSee page 6 for\ndetails.\nEnd Of Cycle\nOutput\nGoes high for a\n~1ms pulse when\nan envelope has\ncompleted and\nreturned to zero.\nMain Output\nInverted and regular\noutput of envelope.\nSelectable 5V or 8V\n(see Page X)\nLevel CV Input\nControls a VCA on the Main Output. 0V = 0%\nof envelope, 5V = 100%.\n\n-- 1 of 1 --",
+      "content": "SE1 Overview\n\nA, D, S, & R CV Control\nCV inputs for envelope control\n\nShape Control Switch\nExponential, Linear, Or Logarithmic, for Attack, Decay, and Release\n\nSustain Env In\nA VCA which shapes the \"S\" CV Input. See page 7 for details.\n\nGate / Trig Input\nMain control for starting/sustaining envelope\n\nGate / Trig Select Switch\nSee page 6 for details.\n\nManual Trigger Button\nDoes what \"Gate/Trig\" input does, but with your finger!\n\nA, D, S, & R Control Sliders\nAdjusts the parameters of the envelope. LEDs in slider light up in current state of envelope.\n\nState Gate Outs\nThese go high when in that state of the envelope (i.e. when that slider's LED is lit.)\n\nLoop On/Off Switch\nSee page 6 for details.\n\nEnd Of Cycle Output\nGoes high for a ~1ms pulse when an envelope has completed and returned to zero.\n\nMain Output\nInverted and regular output of envelope. Selectable 5V or 8V (see Page X)\n\nLevel CV Input\nControls a VCA on the Main Output. 0V = 0% of envelope, 5V = 100%.",
       "hasContent": true,
       "tags": []
     },
@@ -39,7 +42,7 @@
       "image": "/weston-se1/pages/page-004.png",
       "title": "Page 4",
       "sectionName": null,
-      "content": "DESCRIPTION\nSE1 is an analog ADSR envelope-\ngenerating module in Eurorack format. It\ngenerates a standard Attack/Decay/\nSustain/Release type envelope with a\nsimple gate signal. Unlike many ADSR\nmodules, SE1 allows the time/voltage\nfunction of each stage A/D/R to be\nselected independently between\nLogarithmic, Linear, or Exponential,\nallowing unique envelope shapes.\nEach parameter of the ADSR envelope is\nCV-controllable. Additionally, there is a\nVCA in front of the “S” sustain CV signal\nwhich can be controlled with the\n“Sustain Env In” input. This allows, for\nexample, a second envelope to be\ntriggered from another module which\ncould shape an attack and decay of a\nsustain tremolo swell.\nEach state of the envelope A/D/S/R has\na gate output which goes high for the\nduration of that state. Additionally, there\nis an “EOC” (End Of Cycle) output\nwhich emits a ~1ms pulse when the\ncurrent envelope has completed.\nFinally, there is another VCA on the\noutputs (inverted and regular) of the\nenvelope generator, allowing for CV\ncontrol of the amplitude of the envelope\nsignal.\nImportant or helpful bits will be in red.\nSPECS\nModule Size: 12HP\nDepth: 25mm (To back PCB), 33mm (To\nend of power connector)\nEnvelope Attack/Release Times:\n1ms - 15s (faster possible with negative CVs)\nAudio Outputs:\n<=1kOhm Output Impedance\nInputs:\n>= 100kOhm Input impedance\nGate Input High:\n>2V\nPower input:\n+12V & -12V via standard 10 pin Eurorack\nconnector. Protected against reverse polarity\ninternally and with shrouded connector.\nPower consumption (+12V / -12V):\nTyp: 60mA / 20mA\nMax: 70mA / 35mA\nEnvelope Output Voltage:\nSelectable to 5V or 8V peak\nLevel & Sustain Env CV Inputs:\n0V = 0% Amplitude, 5V = 100%\nMAXIMUM LIMITS\nSupply Voltage: +13.5V / -13.5V\nAll inputs: Up to power supply levels.\n© 2023 Weston Precision Audio \t4\n\n-- 1 of 1 --",
+      "content": "DESCRIPTION\n\nSE1 is an analog ADSR envelope-generating module in Eurorack format. It generates a standard Attack/Decay/Sustain/Release type envelope with a simple gate signal. Unlike many ADSR modules, SE1 allows the time/voltage function of each stage A/D/R to be selected independently between Logarithmic, Linear, or Exponential, allowing unique envelope shapes.\n\nEach parameter of the ADSR envelope is CV-controllable. Additionally, there is a VCA in front of the \"S\" sustain CV signal which can be controlled with the \"Sustain Env In\" input. This allows, for example, a second envelope to be triggered from another module which could shape an attack and decay of a sustain tremolo swell.\n\nEach state of the envelope A/D/S/R has a gate output which goes high for the duration of that state. Additionally, there is an \"EOC\" (End Of Cycle) output which emits a ~1ms pulse when the current envelope has completed.\n\nFinally, there is another VCA on the outputs (inverted and regular) of the envelope generator, allowing for CV control of the amplitude of the envelope signal.\n\nImportant or helpful bits will be in red.\n\nSPECS\n\nModule Size: 12HP\n\nDepth: 25mm (To back PCB), 33mm (To end of power connector)\n\nEnvelope Attack/Release Times:\n1ms - 15s (faster possible with negative CVs)\n\nAudio Outputs:\n<=1kOhm Output Impedance\n\nInputs:\n>= 100kOhm Input impedance\n\nGate Input High:\n>2V\n\nPower input:\n+12V & -12V via standard 10 pin Eurorack connector. Protected against reverse polarity internally and with shrouded connector.\n\nPower consumption (+12V / -12V):\nTyp: 60mA / 20mA\nMax: 70mA / 35mA\n\nEnvelope Output Voltage:\nSelectable to 5V or 8V peak\n\nLevel & Sustain Env CV Inputs:\n0V = 0% Amplitude, 5V = 100%\n\nMAXIMUM LIMITS\n\nSupply Voltage: +13.5V / -13.5V\n\nAll inputs: Up to power supply levels.",
       "hasContent": true,
       "tags": []
     },
@@ -48,7 +51,7 @@
       "image": "/weston-se1/pages/page-005.png",
       "title": "Page 5",
       "sectionName": null,
-      "content": "USING SE1: GETTING STARTED\nAfter installing and powering up SE1 in\nyour rack, getting an envelope out is as\neasy as applying a signal to the Gate/\nTrigger input in the upper right corner of\nthe module. With the Gate/Trigger\nswitch set to “Gate”, the following is a\ntypical output:\nThe red trace shows the signal sent to\nGate/Trigger input, and the blue is the\nmain output of SE1. Note that all shape\ncontrols are set to linear (center\nposition). Also note, the button\npositioned directly below the Gate/\nTrigger input can be pressed to\nmanually trigger SE1 without any signal.\nUSING SE1: SHAPE CONTROLS\nThe Attack, Decay, and Release sections\nof the envelope can be independently\nselected via the switches labeled “Shape\nControl Switches” in the panel overview\non page 3. The images below show\nsome examples.\nExponential Attack:\nLogarithmic Attack:\nLog Decay & Exponential Release:\n© 2023 Weston Precision Audio \t5\n\n-- 1 of 1 --",
+      "content": "USING SE1: GETTING STARTED\n\nAfter installing and powering up SE1 in your rack, getting an envelope out is as easy as applying a signal to the Gate/Trigger input in the upper right corner of the module. With the Gate/Trigger switch set to \"Gate\", the following is a typical output:\n\nThe red trace shows the signal sent to Gate/Trigger input, and the blue is the main output of SE1. Note that all shape controls are set to linear (center position). Also note, the button positioned directly below the Gate/Trigger input can be pressed to manually trigger SE1 without any signal.\n\nUSING SE1: SHAPE CONTROLS\n\nThe Attack, Decay, and Release sections of the envelope can be independently selected via the switches labeled \"Shape Control Switches\" in the panel overview on page 3. The images below show some examples.\n\nExponential Attack:\n\nLogarithmic Attack:\n\nLog Decay & Exponential Release:",
       "hasContent": true,
       "tags": []
     },
@@ -57,7 +60,7 @@
       "image": "/weston-se1/pages/page-006.png",
       "title": "Page 6",
       "sectionName": null,
-      "content": "Exponential Decay & Log Release:\nUSING SE1: GATE VS. TRIGGER\nThe Gate/Trigger select switch works as\nfollows:\n• When GATE is selected, SE1 treats the\nincoming signal as a gate, and an\nADSR type envelope is produced,\nwhereby the Release part of the\nenvelope starts when the gate signal\ngoes low.\n• When TRIGGER is selected, SE1\ngenerates a trigger pulse from\nwhatever gate or trigger signal is\ninput to SE and thus a AD type\nenvelope is triggered, whereby the\nenvelope attacks until it hits peak\nvoltage, and then decays on its own.\nThe S and R portions of the envelope\nare thus never entered when in\nTRIGGER mode.\nThe following image shows the gate\nsignal (blue) and the envelope output\n(red) when the Gate/Trigger switch is\nset to TRIGGER:\nNote the above envelope would look\nexactly the same if the length of the gate\nwas different than that shown.\nUSING SE1: LOOP\nSE1 allows the ADSR-type envelope to\nbe “looped”. When the Loop switch is\nturned ON, SE1 will simply bounce\nbetween the ATTACK and DECAY states,\nwith the limits being the peak envelope\nvoltage and the SUSTAIN voltage level\nfor as long as the gate signal is held\nhigh. Once the gate is released, SE1 will\nRELEASE as normal. Below is an\nexample of SE1 looping with all shape\ncontrols set to linear:\n© 2023 Weston Precision Audio \t6\n\n-- 1 of 1 --",
+      "content": "Exponential Decay & Log Release:\n\nUSING SE1: GATE VS. TRIGGER\n\nThe Gate/Trigger select switch works as follows:\n\n• When GATE is selected, SE1 treats the incoming signal as a gate, and an ADSR type envelope is produced, whereby the Release part of the envelope starts when the gate signal goes low.\n\n• When TRIGGER is selected, SE1 generates a trigger pulse from whatever gate or trigger signal is input to SE and thus a AD type envelope is triggered, whereby the envelope attacks until it hits peak voltage, and then decays on its own.\n\nThe S and R portions of the envelope are thus never entered when in TRIGGER mode.\n\nThe following image shows the gate signal (blue) and the envelope output (red) when the Gate/Trigger switch is set to TRIGGER:\n\nNote the above envelope would look exactly the same if the length of the gate was different than that shown.\n\nUSING SE1: LOOP\n\nSE1 allows the ADSR-type envelope to be \"looped\". When the Loop switch is turned ON, SE1 will simply bounce between the ATTACK and DECAY states, with the limits being the peak envelope voltage and the SUSTAIN voltage level for as long as the gate signal is held high. Once the gate is released, SE1 will RELEASE as normal. Below is an example of SE1 looping with all shape controls set to linear:",
       "hasContent": true,
       "tags": []
     },
@@ -66,7 +69,7 @@
       "image": "/weston-se1/pages/page-007.png",
       "title": "Page 7",
       "sectionName": null,
-      "content": "USING SE1: SUSTAIN CVs\nSE1 is unlike many ADSR modules in\nthat it servos to the sustain voltage while\nin the sustain state. Most ADSR modules\nstop decaying at whatever the current\nsustain voltage is, and sit there until\nanother re-firing of the envelope. SE1\nwill stop decaying at the current sustain\nvoltage, and then continue to servo the\nintegrating capacitor to any new sustain\nvoltage. This means any AC signal can\nbe input to the SUSTAIN CV input to\ncreate something like this:\nNote the signal input to SUSTAIN CV is\nsummed (added) to the voltage from the\nSUSTAIN potentiometer.\nAdditionally, the signal which goes into\nSUSTAIN CV passes first through a\nVCA. The control voltage of this VCA is\nlabelled SUSTAIN ENV IN. The\nfollowing image shows a sinusoidal LFO\npatched to SUSTAIN ENV IN, and a\nhigher frequency sine wave patched to\nSUSTAIN CV:\nOTHER FEATURES: STATE GATES /\nEOC PULSE\nDuring any part of an actively occurring\nenvelope, the corresponding State Gate\nfor that section of the envelope will go\nhigh.\nWhen an active envelope (ADSR or AD)\nfinish and return to zero volts, SE1 will\noutput a pulse to the EOC output. The\nfollowing images show each signal\nduring an envelope\n“A” State Gate:\n© 2023 Weston Precision Audio \t7\n\n-- 1 of 1 --",
+      "content": "USING SE1: SUSTAIN CVs\n\nSE1 is unlike many ADSR modules in that it servos to the sustain voltage while in the sustain state. Most ADSR modules stop decaying at whatever the current sustain voltage is, and sit there until another re-firing of the envelope. SE1 will stop decaying at the current sustain voltage, and then continue to servo the integrating capacitor to any new sustain voltage. This means any AC signal can be input to the SUSTAIN CV input to create something like this:\n\nNote the signal input to SUSTAIN CV is summed (added) to the voltage from the SUSTAIN potentiometer.\n\nAdditionally, the signal which goes into SUSTAIN CV passes first through a VCA. The control voltage of this VCA is labelled SUSTAIN ENV IN. The following image shows a sinusoidal LFO patched to SUSTAIN ENV IN, and a higher frequency sine wave patched to SUSTAIN CV:\n\nOTHER FEATURES: STATE GATES / EOC PULSE\n\nDuring any part of an actively occurring envelope, the corresponding State Gate for that section of the envelope will go high.\n\nWhen an active envelope (ADSR or AD) finish and return to zero volts, SE1 will output a pulse to the EOC output. The following images show each signal during an envelope\n\n\"A\" State Gate:",
       "hasContent": true,
       "tags": []
     },
@@ -75,7 +78,7 @@
       "image": "/weston-se1/pages/page-008.png",
       "title": "Page 8",
       "sectionName": null,
-      "content": "“D” State Gate:\n“S” State Gate:\n“R” State Gate:\nEOC Pulse:\nOTHER FEATURES: LEVEL CV IN\nThe main envelope outputs of SE1\n(inverted and regular) both pass\nthrough a VCA. The control voltage of\nthis VCA is accessed through the LEVEL\ninput. 5V at this input corresponds to\n100% of the envelope amplitude, and\n0V corresponds to 0% amplitude.\n© 2023 Weston Precision Audio \t8\n\n-- 1 of 1 --",
+      "content": "\"D\" State Gate:\n\n\"S\" State Gate:\n\n\"R\" State Gate:\n\nEOC Pulse:\n\nOTHER FEATURES: LEVEL CV IN\n\nThe main envelope outputs of SE1 (inverted and regular) both pass through a VCA. The control voltage of this VCA is accessed through the LEVEL input. 5V at this input corresponds to 100% of the envelope amplitude, and 0V corresponds to 0% amplitude.",
       "hasContent": true,
       "tags": []
     },
@@ -84,7 +87,7 @@
       "image": "/weston-se1/pages/page-009.png",
       "title": "Page 9",
       "sectionName": null,
-      "content": "APPENDIX: OUT LEVEL JUMPER\nFor flexibility, SE1 can be configured so\nthat the main envelope output peak\nvoltage is either 5V or 8V. To change\nthe setting, remove the 3 screws from\nthe back of the module and carefully\npull off the rear PCB. There is a jumper\non the lower right corner of this PCB\nlabeled 5V and 8V. Note that, you must\nhave this jumper installed in one of the 2\npossible orientations. If the jumper is\nmissing, SE1 will output nothing from the\nmain outputs.\nAPPENDIX: TRIMMER\nADJUSTMENTS\nNormally, SE1 will require no\nadjustments and will be calibrated only\nupon initial construction. However, if the\nadjustments available will be described\nhere:\nZero Volts Adjustment (Accessed from\nLEFT side of module):\nTo adjust the 0V trimmer, remove all\ninputs and outputs from SE1 and make\nsure it its powered up. Monitor the main\noutput with a voltmeter or oscilloscope\nand simply adjust the “0V” labeled\ntrimmer until 0V is obtained.\nLevel CV Null Adjustment (Accessed\nfrom BOTTOM side of module):\nTo adjust the LEV trimmer, install an\nunconnected patch cord into the “Level”\ninput and then continuously trigger an\nenvelope with an LFO or other source.\nMonitor the main output with an\noscilloscope and adjust the LEV trimmer\nclockwise until you see a signal on the\noscilloscope. Then , turn the LEV trimmer\nback counter-clockwise until the signal\n*just* disappears.\n© 2023 Weston Precision Audio \t9\n\n-- 1 of 1 --",
+      "content": "APPENDIX: OUT LEVEL JUMPER\nFor flexibility, SE1 can be configured so that the main envelope output peak voltage is either 5V or 8V. To change the setting, remove the 3 screws from the back of the module and carefully pull off the rear PCB. There is a jumper on the lower right corner of this PCB labeled 5V and 8V. Note that, you must have this jumper installed in one of the 2 possible orientations. If the jumper is missing, SE1 will output nothing from the main outputs.\n\nAPPENDIX: TRIMMER ADJUSTMENTS\nNormally, SE1 will require no adjustments and will be calibrated only upon initial construction. However, if the adjustments available will be described here:\n\nZero Volts Adjustment (Accessed from LEFT side of module):\nTo adjust the 0V trimmer, remove all inputs and outputs from SE1 and make sure it its powered up. Monitor the main output with a voltmeter or oscilloscope and simply adjust the \"0V\" labeled trimmer until 0V is obtained.\n\nLevel CV Null Adjustment (Accessed from BOTTOM side of module):\nTo adjust the LEV trimmer, install an unconnected patch cord into the \"Level\" input and then continuously trigger an envelope with an LFO or other source. Monitor the main output with an oscilloscope and adjust the LEV trimmer clockwise until you see a signal on the oscilloscope. Then , turn the LEV trimmer back counter-clockwise until the signal *just* disappears.",
       "hasContent": true,
       "tags": []
     },
@@ -93,7 +96,7 @@
       "image": "/weston-se1/pages/page-010.png",
       "title": "Page 10",
       "sectionName": null,
-      "content": "REVISION HISTORY\n01: Initial release.\n© 2023 Weston Precision Audio \t10\n\n-- 1 of 1 --",
+      "content": "REVISION HISTORY\n\n01: Initial release.",
       "hasContent": true,
       "tags": []
     }
