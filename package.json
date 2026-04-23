@@ -47,6 +47,7 @@
     "pdf:fix": "node scripts/fix-page-numbers.js",
     "pdf:build": "node scripts/check-page-numbers.js && node scripts/pdf-build.js",
     "pdf:search-index": "node scripts/pdf-search-index.js",
+    "pdf:search-index:all": "node scripts/pdf-search-index-all.js",
     "pdf:manifest": "node scripts/pdf-manifest.js",
     "pdf:clean": "node scripts/pdf-clean.js",
     "pdf:verify": "node scripts/pdf-verify.js",
