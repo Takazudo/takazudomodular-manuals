@@ -7,7 +7,7 @@ import {
   getAllPageNumbers,
   getManifest,
 } from '@/lib/manual-data';
-import { isValidManual, getAvailableManuals } from '@/lib/manual-registry';
+import { isValidManual, getAvailableManuals, hasLanguage } from '@/lib/manual-registry';
 import { ManualViewer } from '@/components/viewer/manual-viewer';
 
 interface PageParams {
@@ -55,6 +55,8 @@ export async function generateMetadata({ params }: PageProps) {
     };
   }
 
+  // Metadata is JA-only — matches first SSR paint and avoids needing to
+  // resolve the active UI language on the server for a static export.
   const page = getManualPage(manualId, pageNum);
 
   if (!page) {
@@ -79,23 +81,26 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
-  // Validate page number is a positive integer
+  // Page-count / page-existence validation stays JA-driven. EN pages mirror
+  // the same PDF layout so page numbers align.
   if (!Number.isInteger(pageNum) || pageNum < 1 || !pageExists(manualId, pageNum)) {
     notFound();
   }
 
-  const page = getManualPage(manualId, pageNum);
-  const allPages = getAllPages(manualId);
+  const allPagesJa = getAllPages(manualId, 'ja');
+  const allPagesEn = hasLanguage(manualId, 'en') ? getAllPages(manualId, 'en') : undefined;
   const totalPages = getTotalPages(manualId);
 
-  if (!page) {
+  // Defensive check: JA must contain the requested page (already verified by
+  // pageExists, but guard against data/manifest drift).
+  if (!allPagesJa.some((p) => p.pageNum === pageNum)) {
     notFound();
   }
 
   return (
     <ManualViewer
-      page={page}
-      allPages={allPages}
+      allPagesJa={allPagesJa}
+      allPagesEn={allPagesEn}
       currentPage={pageNum}
       totalPages={totalPages}
       manualId={manualId}
