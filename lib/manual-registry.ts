@@ -10,9 +10,10 @@
 
 import type { ManualManifest, ManualPagesData } from './types/manual';
 
-// Import oxi-one-mk2 (no EN yet)
+// Import oxi-one-mk2
 import oxiOneMk2Manifest from '@/public/oxi-one-mk2/data/manifest.json';
 import oxiOneMk2PagesJa from '@/public/oxi-one-mk2/data/pages-ja.json';
+import oxiOneMk2PagesEn from '@/public/oxi-one-mk2/data/pages-en.json';
 
 // Import oxi-coral
 import oxiCoralManifest from '@/public/oxi-coral/data/manifest.json';
@@ -34,17 +35,20 @@ import addac112LooperManifest from '@/public/addac112-looper/data/manifest.json'
 import addac112LooperPagesJa from '@/public/addac112-looper/data/pages-ja.json';
 import addac112LooperPagesEn from '@/public/addac112-looper/data/pages-en.json';
 
-// Import addac107-acids (no EN yet)
+// Import addac107-acids
 import addac107AcidsManifest from '@/public/addac107-acids/data/manifest.json';
 import addac107AcidsPagesJa from '@/public/addac107-acids/data/pages-ja.json';
+import addac107AcidsPagesEn from '@/public/addac107-acids/data/pages-en.json';
 
-// Import addac106-tnoise (no EN yet)
+// Import addac106-tnoise
 import addac106TnoiseManifest from '@/public/addac106-tnoise/data/manifest.json';
 import addac106TnoisePagesJa from '@/public/addac106-tnoise/data/pages-ja.json';
+import addac106TnoisePagesEn from '@/public/addac106-tnoise/data/pages-en.json';
 
-// Import addac104-tnetw (no EN yet)
+// Import addac104-tnetw
 import addac104TnetwManifest from '@/public/addac104-tnetw/data/manifest.json';
 import addac104TnetwPagesJa from '@/public/addac104-tnetw/data/pages-ja.json';
+import addac104TnetwPagesEn from '@/public/addac104-tnetw/data/pages-en.json';
 
 // Import addac207-quantizer
 import addac207QuantizerManifest from '@/public/addac207-quantizer/data/manifest.json';
@@ -91,9 +95,10 @@ import addac219inStereoDiyManifest from '@/public/addac219in-stereo-diy/data/man
 import addac219inStereoDiyPagesJa from '@/public/addac219in-stereo-diy/data/pages-ja.json';
 import addac219inStereoDiyPagesEn from '@/public/addac219in-stereo-diy/data/pages-en.json';
 
-// Import addac218-atten (no EN yet)
+// Import addac218-atten
 import addac218AttenManifest from '@/public/addac218-atten/data/manifest.json';
 import addac218AttenPagesJa from '@/public/addac218-atten/data/pages-ja.json';
+import addac218AttenPagesEn from '@/public/addac218-atten/data/pages-en.json';
 
 // Import addac217-gate2trig
 import addac217Gate2trigManifest from '@/public/addac217-gate2trig/data/manifest.json';
@@ -110,13 +115,15 @@ import addac215ShManifest from '@/public/addac215-sh/data/manifest.json';
 import addac215ShPagesJa from '@/public/addac215-sh/data/pages-ja.json';
 import addac215ShPagesEn from '@/public/addac215-sh/data/pages-en.json';
 
-// Import addac210-open-heart (no EN yet)
+// Import addac210-open-heart
 import addac210OpenHeartManifest from '@/public/addac210-open-heart/data/manifest.json';
 import addac210OpenHeartPagesJa from '@/public/addac210-open-heart/data/pages-ja.json';
+import addac210OpenHeartPagesEn from '@/public/addac210-open-heart/data/pages-en.json';
 
-// Import addac200pi-pedal-diy (no EN yet)
+// Import addac200pi-pedal-diy
 import addac200piPedalDiyManifest from '@/public/addac200pi-pedal-diy/data/manifest.json';
 import addac200piPedalDiyPagesJa from '@/public/addac200pi-pedal-diy/data/pages-ja.json';
+import addac200piPedalDiyPagesEn from '@/public/addac200pi-pedal-diy/data/pages-en.json';
 
 // Import addac511-svgen
 import addac511SvgenManifest from '@/public/addac511-svgen/data/manifest.json';
@@ -267,6 +274,7 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'oxi-one-mk2': {
     manifest: oxiOneMk2Manifest as unknown as ManualManifest,
     pagesJa: oxiOneMk2PagesJa as unknown as ManualPagesData,
+    pagesEn: oxiOneMk2PagesEn as unknown as ManualPagesData,
   },
   'oxi-coral': {
     manifest: oxiCoralManifest as unknown as ManualManifest,
@@ -291,14 +299,17 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'addac107-acids': {
     manifest: addac107AcidsManifest as unknown as ManualManifest,
     pagesJa: addac107AcidsPagesJa as unknown as ManualPagesData,
+    pagesEn: addac107AcidsPagesEn as unknown as ManualPagesData,
   },
   'addac106-tnoise': {
     manifest: addac106TnoiseManifest as unknown as ManualManifest,
     pagesJa: addac106TnoisePagesJa as unknown as ManualPagesData,
+    pagesEn: addac106TnoisePagesEn as unknown as ManualPagesData,
   },
   'addac104-tnetw': {
     manifest: addac104TnetwManifest as unknown as ManualManifest,
     pagesJa: addac104TnetwPagesJa as unknown as ManualPagesData,
+    pagesEn: addac104TnetwPagesEn as unknown as ManualPagesData,
   },
   'addac207-quantizer': {
     manifest: addac207QuantizerManifest as unknown as ManualManifest,
@@ -348,6 +359,7 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'addac218-atten': {
     manifest: addac218AttenManifest as unknown as ManualManifest,
     pagesJa: addac218AttenPagesJa as unknown as ManualPagesData,
+    pagesEn: addac218AttenPagesEn as unknown as ManualPagesData,
   },
   'addac217-gate2trig': {
     manifest: addac217Gate2trigManifest as unknown as ManualManifest,
@@ -367,10 +379,12 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
   'addac210-open-heart': {
     manifest: addac210OpenHeartManifest as unknown as ManualManifest,
     pagesJa: addac210OpenHeartPagesJa as unknown as ManualPagesData,
+    pagesEn: addac210OpenHeartPagesEn as unknown as ManualPagesData,
   },
   'addac200pi-pedal-diy': {
     manifest: addac200piPedalDiyManifest as unknown as ManualManifest,
     pagesJa: addac200piPedalDiyPagesJa as unknown as ManualPagesData,
+    pagesEn: addac200piPedalDiyPagesEn as unknown as ManualPagesData,
   },
   'addac511-svgen': {
     manifest: addac511SvgenManifest as unknown as ManualManifest,
