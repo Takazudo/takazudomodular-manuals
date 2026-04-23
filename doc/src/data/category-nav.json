@@ -2,6 +2,11 @@
   "inbox": {
     "pages": [
       {
+        "docId": "inbox/bilingual-support",
+        "title": "Bilingual Support (JA / EN)",
+        "position": 50
+      },
+      {
         "docId": "inbox/design-system",
         "title": "Design System",
         "position": 100
