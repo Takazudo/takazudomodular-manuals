@@ -199,7 +199,7 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
    ```bash
    /l-pdf-process {slug}
    ```
-   This runs all 6 pipeline steps: split, render, extract, translate, build, manifest.
+   This runs all 7 pipeline steps: split, render, extract, translate, build, search-index, manifest.
 
 4. **Update manual registry** (`lib/manual-registry.ts`):
 
@@ -238,6 +238,7 @@ pnpm run pdf:render --slug oxi-coral
 pnpm run pdf:extract --slug oxi-coral
 pnpm run pdf:translate --slug oxi-coral
 pnpm run pdf:build --slug oxi-coral
+pnpm run pdf:search-index --slug oxi-coral
 pnpm run pdf:manifest --slug oxi-coral
 ```
 
