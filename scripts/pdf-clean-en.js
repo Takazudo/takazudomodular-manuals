@@ -356,19 +356,31 @@ export async function processPage(enPage, jaPage, opts) {
 // --------------------------------------------------------------------------
 
 /**
+ * Default per-call subprocess timeout in ms (3 minutes). A hung `claude`
+ * subprocess would otherwise stall the Promise pool indefinitely. Can be
+ * overridden via CLAUDE_CLI_TIMEOUT_MS env var or the `timeoutMs` option.
+ */
+export const DEFAULT_SUBPROCESS_TIMEOUT_MS = 3 * 60 * 1000;
+
+/**
  * Call the local `claude` CLI with a prompt and return the assistant text.
  *
  * Writes the prompt to stdin to avoid shell-quoting pitfalls. Parses the
- * --output-format=json envelope and returns the `.result` field.
+ * --output-format=json envelope and returns the `.result` field. Kills the
+ * subprocess with SIGKILL if it does not exit within `timeoutMs`.
  *
  * @param {string} prompt
  * @param {string} model
- * @param {{ claudeBin?: string, spawn?: typeof spawn }} [deps]
+ * @param {{ claudeBin?: string, spawn?: typeof spawn, timeoutMs?: number }} [deps]
  * @returns {Promise<string>} assistant response text
  */
 export function callClaudeCli(prompt, model, deps = {}) {
   const bin = deps.claudeBin || process.env.CLAUDE_CLI_BIN || 'claude';
   const spawnFn = deps.spawn || spawn;
+  const envTimeout = Number(process.env.CLAUDE_CLI_TIMEOUT_MS);
+  const timeoutMs =
+    deps.timeoutMs ??
+    (Number.isFinite(envTimeout) && envTimeout > 0 ? envTimeout : DEFAULT_SUBPROCESS_TIMEOUT_MS);
   const args = [
     '-p',
     '--model',
@@ -394,23 +406,42 @@ export function callClaudeCli(prompt, model, deps = {}) {
 
     let stdout = '';
     let stderr = '';
+    let settled = false;
+    const finish = (fn, value) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      fn(value);
+    };
+
+    const timer = setTimeout(() => {
+      try {
+        child.kill('SIGKILL');
+      } catch {
+        /* ignore */
+      }
+      finish(reject, new Error(`claude CLI timed out after ${timeoutMs}ms (killed with SIGKILL)`));
+    }, timeoutMs);
+
     child.stdout.on('data', (chunk) => {
       stdout += chunk.toString('utf-8');
     });
     child.stderr.on('data', (chunk) => {
       stderr += chunk.toString('utf-8');
     });
-    child.on('error', (err) => reject(err));
+    child.on('error', (err) => finish(reject, err));
     child.on('close', (code) => {
+      if (settled) return;
       if (code !== 0) {
-        reject(new Error(`claude CLI exited with code ${code}\n${stderr}`));
+        finish(reject, new Error(`claude CLI exited with code ${code}\n${stderr}`));
         return;
       }
       let envelope;
       try {
         envelope = JSON.parse(stdout);
       } catch (err) {
-        reject(
+        finish(
+          reject,
           new Error(
             `claude CLI stdout was not JSON: ${err.message}\n---stdout---\n${stdout.slice(0, 2000)}`,
           ),
@@ -418,7 +449,8 @@ export function callClaudeCli(prompt, model, deps = {}) {
         return;
       }
       if (envelope.is_error) {
-        reject(
+        finish(
+          reject,
           new Error(
             `claude CLI returned is_error=true: ${envelope.result || JSON.stringify(envelope)}`,
           ),
@@ -426,14 +458,15 @@ export function callClaudeCli(prompt, model, deps = {}) {
         return;
       }
       if (typeof envelope.result !== 'string') {
-        reject(
+        finish(
+          reject,
           new Error(
             `claude CLI envelope missing .result: ${JSON.stringify(envelope).slice(0, 500)}`,
           ),
         );
         return;
       }
-      resolve(envelope.result);
+      finish(resolve, envelope.result);
     });
 
     child.stdin.end(prompt, 'utf-8');

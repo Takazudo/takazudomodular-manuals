@@ -53,6 +53,15 @@ const runPool = PdfCleanEn.runPool as <T>(
 ) => Promise<T[]>;
 const atomicWriteFile = PdfCleanEn.atomicWriteFile as (p: string, c: string) => void;
 const discoverEnSlugs = PdfCleanEn.discoverEnSlugs as (dir: string) => string[];
+const callClaudeCli = PdfCleanEn.callClaudeCli as (
+  prompt: string,
+  model: string,
+  deps?: {
+    claudeBin?: string;
+    spawn?: (cmd: string, args: string[], opts: unknown) => FakeChild;
+    timeoutMs?: number;
+  },
+) => Promise<string>;
 const CASE_BOTH = PdfCleanEn.CASE_BOTH as string;
 const CASE_JA_ONLY = PdfCleanEn.CASE_JA_ONLY as string;
 const CASE_EN_ONLY = PdfCleanEn.CASE_EN_ONLY as string;
@@ -596,5 +605,98 @@ describe('cleanSlug integration', () => {
     } finally {
       cleanup();
     }
+  });
+});
+
+// --------------------------------------------------------------------------
+// callClaudeCli: timeout + JSON-envelope handling
+// --------------------------------------------------------------------------
+
+type FakeChild = {
+  stdout: { on: (evt: string, cb: (chunk: Buffer) => void) => void };
+  stderr: { on: (evt: string, cb: (chunk: Buffer) => void) => void };
+  stdin: { end: (content: string, enc: string) => void };
+  on: (evt: string, cb: (arg?: unknown) => void) => void;
+  kill: (sig: string) => void;
+};
+
+function makeFakeChild(opts: {
+  exitCode?: number;
+  stdout?: string;
+  stderr?: string;
+  delayMs?: number;
+  neverExit?: boolean;
+}): {
+  spawn: (cmd: string, args: string[], spawnOpts: unknown) => FakeChild;
+  killed: { value: boolean };
+} {
+  const killed = { value: false };
+  const spawn = () => {
+    const handlers: Record<string, Array<(arg?: unknown) => void>> = {};
+    const stdoutHandlers: Array<(chunk: Buffer) => void> = [];
+    const stderrHandlers: Array<(chunk: Buffer) => void> = [];
+    let closed = false;
+    const doClose = () => {
+      if (closed) return;
+      closed = true;
+      if (opts.stdout) stdoutHandlers.forEach((h) => h(Buffer.from(opts.stdout!, 'utf-8')));
+      if (opts.stderr) stderrHandlers.forEach((h) => h(Buffer.from(opts.stderr!, 'utf-8')));
+      (handlers['close'] || []).forEach((h) => h(opts.exitCode ?? 0));
+    };
+    if (!opts.neverExit) setTimeout(doClose, opts.delayMs ?? 1);
+    return {
+      stdout: { on: (_e: string, cb: (c: Buffer) => void) => stdoutHandlers.push(cb) },
+      stderr: { on: (_e: string, cb: (c: Buffer) => void) => stderrHandlers.push(cb) },
+      stdin: { end: () => {} },
+      on: (evt: string, cb: (arg?: unknown) => void) => {
+        (handlers[evt] = handlers[evt] || []).push(cb);
+      },
+      kill: (_sig: string) => {
+        killed.value = true;
+      },
+    };
+  };
+  return { spawn, killed };
+}
+
+describe('callClaudeCli', () => {
+  it('parses the envelope .result on success', async () => {
+    const envelope = JSON.stringify({
+      is_error: false,
+      result: JSON.stringify({ en_clean: 'hello' }),
+    });
+    const { spawn } = makeFakeChild({ exitCode: 0, stdout: envelope });
+    const out = await callClaudeCli('prompt', 'haiku', { spawn, timeoutMs: 1000 });
+    expect(out).toBe(JSON.stringify({ en_clean: 'hello' }));
+  });
+
+  it('rejects on non-zero exit code', async () => {
+    const { spawn } = makeFakeChild({ exitCode: 1, stderr: 'boom' });
+    await expect(callClaudeCli('p', 'haiku', { spawn, timeoutMs: 1000 })).rejects.toThrow(
+      /exited with code 1/,
+    );
+  });
+
+  it('rejects on is_error=true envelope', async () => {
+    const envelope = JSON.stringify({ is_error: true, result: 'Not logged in' });
+    const { spawn } = makeFakeChild({ exitCode: 0, stdout: envelope });
+    await expect(callClaudeCli('p', 'haiku', { spawn, timeoutMs: 1000 })).rejects.toThrow(
+      /is_error=true/,
+    );
+  });
+
+  it('rejects on non-JSON stdout', async () => {
+    const { spawn } = makeFakeChild({ exitCode: 0, stdout: 'not-json' });
+    await expect(callClaudeCli('p', 'haiku', { spawn, timeoutMs: 1000 })).rejects.toThrow(
+      /not JSON/,
+    );
+  });
+
+  it('times out and SIGKILLs a hung subprocess', async () => {
+    const { spawn, killed } = makeFakeChild({ neverExit: true });
+    await expect(callClaudeCli('p', 'haiku', { spawn, timeoutMs: 30 })).rejects.toThrow(
+      /timed out after 30ms/,
+    );
+    expect(killed.value).toBe(true);
   });
 });
