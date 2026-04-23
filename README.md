@@ -20,6 +20,7 @@ A Next.js-based manual viewer for hardware synthesizer manuals. Provides a bilin
 
 - **Production**: [https://zmanuals.pages.dev/](https://zmanuals.pages.dev/)
 - **OXI ONE MK2 Manual**: [https://zmanuals.pages.dev/manuals/oxi-one-mk2/](https://zmanuals.pages.dev/manuals/oxi-one-mk2/)
+- **PR Previews**: `https://pr-<N>.zmanuals.pages.dev/manuals/oxi-one-mk2/` (auto-deployed per PR)
 
 ## Tech Stack
 
