@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-04-23T12:44:39.578Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac106-tnoise/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac106-tnoise/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC106 T-NOISEWORKS \tUSER’S GUIDE\nMarch.2020\tRevision.01\nWelcome to:\npage 2\tADDAC SYSTEM\nOVERALL FEATURES\nThis is the last module in our T-Networks series, a straight forward 4 voice module with frequency and decay\ncontrols for each of the voices. As the name already unveils we added a noise source and created 2 different\ncircuits that explores the timbre of a t-network when used to filter noise.\nThere are 2 different circuits in this module, voices 1 to 3 have a pre-vca t-network filter while in voice 4 the\nt-networks filter applied post-vca.\nAt each voice input there’s a switch which sets which type of input to use, this signal will be used to control an\ninternal VCA hence why the type of setting defined here is important:\n1. Trigger - Any incoming CV will be converted into a 1ms trigger as soon as it crosses it’s fixed threshold.\n2. Mute - This disconnects then incoming signal effectivelly muting the voice.\n3. Envelopes - This can be used with CV sources as well as Gate sources and simply follows the input signal.\nThis incoming signal will then be processed by a slew circuit which adds a decay factor allowing the user to set\nthe “Tail” of each voice.\nTrigger mode is mostly dedicated for percussive sounds while the Envelope mode is open to any external enve-\nlope control and able to control noise swooshes, swirls, crackles and pops simply out of t-networks filtered noise.\nAudio inputs are also welcomed to be used as a Trigger/Envelope input, in fact the results of using this method\nhad us all extremelly surprised, so please do try it out!\nDiferences between voices:\nThe first 3 voices also feature a Timbre selector switch: Hat/Snare\nIn Snare mode all frequencies coming from the t-networks filter pass thru to the output .\nIn Hat mode it adds a High Pass circuit which removes the mid/bottom frequencies (characteristic of the snare\nstrike) creating a higher spectrum output which is closer to a Hat timbre.\nAll of these 3 voices are also differently tuned from each other to offer more timbrical options.\nVoice 4 is closer to a typical t-networks circuit but this time peculiar one where the noise is gated by the vca and\nthen sent through the t-networks filter.\nHat and Snare are terms used very looselly here, they are timbrical references and do not in any shape or form try\nto effectivelly replicate the complex timbres of a real world Hat or Snare.\nThis module will also be available as a full DIY kit.\nFeatures;\n4 Voices each with:\nFrequency control\nDecay control\nTimbre type, Hat/Snare (Voice 1 to 3)\nFrequency Range Switch, Low/Mod/High (Voice 4)\nInput\nAudio Output\nAlso and overall Summing Mix output with Volume control and 2 diferent output types (Normal/Dirt)\nTech Specs:\n4HP\n4cm deep\n40mA +12V\n40mA -12V",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac106-tnoise/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "CONTROLS DESCRIPTION\nADDAC106 User’s Guide\npage 3\tADDAC SYSTEM\nT-Networks Frequency\nTune the Resonant Pitch for each\nvoice\nSumming Mix Gain\nSets the output gain for the overall\nsumming mix\nIndependent voice input settings\nDecay\nSets amount of decay\nHat/Snare switches\nOn/Off HP Filter\nSumming Mix Output\nIndependent voices outputs\nIndependent voices inputs\nLow/Mod/High range switches\nSets the Frequency Range",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac106-tnoise/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "page 4\tADDAC SYSTEM\nADDAC106 User’s Guide\nADDAC106\nT-NOISEWORKS SIGNAL FLOW DIAGRAM\nVOICE 3\nVOICE 2\nVCA \tHAT / SNARE\n(HP FILTER)\nNOISE SOURCE\nT-NETWORK\nENVELOPE\nMUTE\nTRIGGER\nSLEW\nVOICE 1\nINPUT 1\nFREQUENCY\nOUTPUT 1\nAUDIO SUM\nMIX OUTPUT\nMIX VOLUME\nVOICE 4\nDECAY\nVCA \tT-NETWORK\nENVELOPE\nMUTE\nTRIGGER\nSLEW\tINPUT 4\nFREQUENCY\nOUTPUT 4\tDECAY\nRANGE\nH / M / L",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac106-tnoise/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC106 \tUSER’S GUIDE\nMarch.2020\tRevision.01",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}

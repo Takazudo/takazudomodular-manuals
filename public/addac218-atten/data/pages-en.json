@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "processedAt": "2026-04-23T12:44:46.824Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac218-atten/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac218-atten/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC218 ATTENUVERTERS \tUSER’S GUIDE\nDecember.2020\tRevision.01\nWelcome to:\npage 2\tADDAC SYSTEM\nDESCRIPTION\nAnother addition to our ADDAC200’s CV Utilities\nThis module features 3 independent Attenuverters each with it’s input,\noutput and 13mm knob\nWhite areas allow the user to write down what is connected to each\nchannel.\nChannel 1 is normalled to Channels 2 and 3.\nSpecs:\n4hp\n±40mA\n2.5cm deep",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac218-atten/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "CONTROLS DESCRIPTION\nADDAC218 User’s Guide\npage 3\tADDAC SYSTEM\nChannel 3\nATTENUVERTER\nChannel 1 Input\nChannel 2 Input\nChannel 3 Input\nChannel 1 Output\nChannel 2 Output\nChannel 3 Output\nChannel 1\nATTENUVERTER\nChannel 2\nATTENUVERTER\nWritable areas for function\nannotation with permanent\nmarkers",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac218-atten/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "page 4\tADDAC SYSTEM\nADDAC218 User’s Guide\nADDAC218\nATTENUVERTERS SIGNAL FLOW DIAGRAM\nCHANNEL 1 OUTPUT\nATTENUVERTER 1\nCHANNEL 1 INPUT \tATENUVERTER\nCHANNEL 2 OUTPUT\nATTENUVERTER 2\nCHANNEL 2 INPUT \tATENUVERTER\nCHANNEL 3 OUTPUT\nATTENUVERTER 3\nCHANNEL 3 INPUT \tATENUVERTER",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac218-atten/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\nADDAC218 \tUSER’S GUIDE\nDecember.2020\tRevision.01",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
