@@ -58,7 +58,7 @@ const tooltipStyles = ctl(`
   whitespace-nowrap
   rounded-sm
   opacity-0 pointer-events-none
-  group-hover:opacity-100
+  group-hover:opacity-100 group-focus-within:opacity-100
   transition-opacity duration-200
   z-50
 `);
