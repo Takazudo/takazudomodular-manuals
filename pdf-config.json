@@ -9,6 +9,9 @@
   "manualOverrides": {
     "ryk-algo": {
       "renderStrategy": "browser"
+    },
+    "ryk-night-rider": {
+      "renderStrategy": "browser"
     }
   }
 }
