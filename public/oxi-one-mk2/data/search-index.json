@@ -428,7 +428,7 @@
     "pageNum": 58,
     "title": "Page 58",
     "sectionName": null,
-    "body": "NOTES Sequencer Basics 3 Repeats. 開始点は設定されたリピート数で、例えば4回でx1ステップdurationをカバーします。 Ramp. 開始点は設定されたリピート数で、例えば4回でx8ステップdurationをカバーします。この例のY軸はvelocityレベルを指し、ramp量を設定します。 Probability % & Logic Conditions. トリガー条件パラメーターも設定でき、これによりリピートアクションがステップトリガーと共にアクティブになるか否かが決定されます。 Duration. 同じretrigger回数を、より長いステップ長をカバーするdurationを使用して調整できます。 例は4回のretriggersとx8 durationを示しています。 Acceleration. 同じrepeat回数を、より長いステップ長をカバーするdurationを使用して調整できます。例は6回のrepeatsとx8 durationを示しています。 'Rept'パラメーターは、ステップ期間中に適用されるリピート数を設定します。これはx1",
+    "body": "NOTES Sequencer Basics 3 Repeats. 開始点は設定されたリピート数で、例えば4回でx1ステップdurationをカバーします。 Ramp. 開始点は設定されたリピート数で、例えば4回でx8ステップdurationをカバーします。この例のY軸はvelocityレベルを指し、ramp量を設定します。 Probability % & Logic Conditions. トリガー条件パラメーターも設定でき、これによりリピートアクションがステップトリガーと共にアクティブになるか否かが決定されます。 \\- \\- Duration. 同じretrigger回数を、より長いステップ長をカバーするdurationを使用して調整できます。 例は4回のretriggersとx8 durationを示しています。 Acceleration. 同じrepeat回数を、より長いステップ長をカバーするdurationを使用して調整できます。例は6回のrepeatsとx8 durationを示しています。",
     "url": "/oxi-one-mk2/page/58"
   },
   {
