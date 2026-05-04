@@ -106,7 +106,29 @@ pnpm test               # Run tests
 pnpm clean              # Clean build outputs
 ```
 
-For PDF processing commands (`pdf:split`, `pdf:render`, etc.), see `scripts/CLAUDE.md`.
+## Adding New Manuals
+
+**Use the `/l-pdf-process` skill to add new manuals.** This is the recommended workflow that handles the complete pipeline automatically:
+
+```bash
+# 1. Place source PDF in manual-pdf/{slug}/ directory
+cp /path/to/Manual.pdf manual-pdf/my-manual/
+
+# 2. Run the PDF processing skill
+/l-pdf-process my-manual
+```
+
+The skill will:
+
+- Process the PDF (split, render pages, extract text)
+- Translate to Japanese using Claude Code subagents
+- Build JSON data files
+- Update the manual registry (lib/manual-registry.ts)
+- Handle all metadata and configuration
+
+**Do NOT run individual PDF commands manually** (`pnpm run pdf:split`, etc.). The `/l-pdf-process` skill manages the entire workflow with proper integration and metadata collection.
+
+For details on PDF processing steps and configuration, see `scripts/CLAUDE.md`.
 
 ## Design System (Zudo Design System)
 
