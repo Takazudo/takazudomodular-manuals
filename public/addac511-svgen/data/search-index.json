@@ -476,7 +476,7 @@
     "pageNum": 60,
     "title": "Page 60",
     "sectionName": null,
-    "body": "パッチ例 PATCH 1 最もシンプルな1/4ビートでのフルレンジランダム電圧 VOLTAGE SETTINGS | TIME SETTINGS +5v -5v 0v 1/4 | 1/4 | 1/4 | 1/4 | 1/4 | 1/8 | 1/8 GATE OUTPUT: SYNC 50% VOLTAGE GATE --- PATCH 2 ランダムビートでのポジティブなランダム電圧 VOLTAGE SETTINGS | TIME SETTINGS NO GATE NO GATES: GATE確率により「ミュート」 NO CHANGE: VOLTAGE確率により「ミュート」 NO GATE | NO GATE | NO GATE | NO GATE | NO GATE | NO GATE 1/4 | 1/4 | 1/16 1/16 | 1/8 | 1/16 | 1/16 1/16 1/16 NO CHANGE | 確率「ミュート」 | 確率「ミュート」 | 確率「ミュート」 | NO CHANGE | NO CHANGE 1/16 1/16 1/16 1/16 1/16 1/16",
+    "body": "パッチ例 PATCH 1 最もシンプルな1/4ビートでのフルレンジランダム電圧 VOLTAGE SETTINGS | TIME SETTINGS +5v -5v 0v 1/4 | 1/4 | 1/4 | 1/4 | 1/4 | 1/8 | 1/8 GATE OUTPUT: SYNC 50% VOLTAGE GATE \\--- PATCH 2 ランダムビートでのポジティブなランダム電圧 VOLTAGE SETTINGS | TIME SETTINGS NO GATE NO GATES: GATE確率により「ミュート」 NO CHANGE: VOLTAGE確率により「ミュート」 NO GATE | NO GATE | NO GATE | NO GATE | NO GATE | NO GATE 1/4 | 1/4 | 1/16 1/16 | 1/8 | 1/16 | 1/16 1/16 1/16 NO CHANGE | 確率「ミュート」 | 確率「ミュート」 | 確率「ミュート」 | NO CHANGE | NO CHANGE 1/16 1/16 1/16 1/16 1/16 1/16",
     "url": "/addac511-svgen/page/60"
   },
   {

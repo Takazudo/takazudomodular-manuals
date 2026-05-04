@@ -348,7 +348,7 @@
     "pageNum": 44,
     "title": "Page 44",
     "sectionName": null,
-    "body": "BOOTLOADER & FIRMWARE: 変更履歴 BOOTLOADER 1.9 一部のユニットで起動時に「Starting」メッセージが表示されたままフリーズするバグを修正 Bootloaderバージョンが起動時に表示されるようになりました -------------------------------------------------------------------------------------------------- FIRMWARE 1.9 新機能: GRAIN POSITION FOLLOWS LOOP (34ページ) Grains PositionをLooperのPlay Headに同期させることができます。 Grain Position knobがオフセットとなり(12時の位置でオフセットなし)、deviationが全体的な位置にランダム性を追加します。 SWITCHES CALIBRATION スイッチが正しく反応しない場合のキャリブレーション画面(30ページ) その他の軽微なバグも修正されました。",
+    "body": "BOOTLOADER & FIRMWARE: 変更履歴 BOOTLOADER 1.9 一部のユニットで起動時に「Starting」メッセージが表示されたままフリーズするバグを修正 Bootloaderバージョンが起動時に表示されるようになりました \\-------------------------------------------------------------------------------------------------- FIRMWARE 1.9 新機能: GRAIN POSITION FOLLOWS LOOP (34ページ) Grains PositionをLooperのPlay Headに同期させることができます。 Grain Position knobがオフセットとなり(12時の位置でオフセットなし)、deviationが全体的な位置にランダム性を追加します。 SWITCHES CALIBRATION スイッチが正しく反応しない場合のキャリブレーション画面(30ページ) その他の軽微なバグも修正されました。",
     "url": "/addac112-looper/page/44"
   },
   {

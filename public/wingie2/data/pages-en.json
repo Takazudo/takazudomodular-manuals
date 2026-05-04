@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "processedAt": "2026-05-04T16:36:45.120Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/wingie2/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/wingie2/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "Notice:\n- Start from low volume;\n- Beware of feedback with speakers and headphones;\n- Keep away from moisture;\n- DO NOT connect modular synth level signals directly to Wingie.\n\nThank you for purchasing Wingie2!\n\nWingie2 is a handheld stereo resonator with on-board microphones that also doubles as a development platform. It allows you to interact with and enrich sounds from instruments and vocals as well as the sonic environment around you.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/wingie2/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "Power\n\nWingie2 is powered by a USB Type-C cable. You can use a phone charger or a power bank. The first batch of Wingie2 (produced before May, 2022 without screws on the back) doesn't accept USB C-C cable. Please use a USB A-C cable.\n\nIf digital noise appears, try a different power source or a ground loop isolator. After powering up, there is about a 3-second fade-in from silence to full volume.\n\nAudio Inputs\n\nThe mics pick up sounds from the air. It's very easy to get feedback with speakers. You can play with it or use headphones to avoid the feedback (be careful of too much volume). You may listen to the environment around you through Wingie2, play Wingie2 as a percussion instrument, or turn anything into one. Feel free to experiment.\n\nWingie2 line input is 3.5mm Stereo TRS. Avoid very hot input signals. Lower your input signal level (not the volume slider on Wingie2) when the distorted dry line-in signal leaks into output when the sound source is Mic, or when the Mix is 100% wet.\n\nAudio Output\n\nWingie2 audio output is 3.5mm Stereo TRS. It is capable of directly driving headphones.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/wingie2/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "All controls are marked on the Wingie2.\n\nBoth MIX and VOLUME faders control pre-resonator signal levels, which allows the decay portion of the resonator to complete.\n\nThe right channel is an octave higher than the left channel in identical octave switch position.\n\nSlider Functions:\n- Mix: Ratio of dry / wet signals\n- Decay: Decay of resonators, from 0.15s to around 10s.\n- Volume: Input volume control",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/wingie2/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "Modes\n\nWingie2 has 4 modes. Cycle through them with the mode buttons. The current mode is indicated by the LED color.\n\nMode | Polyphony | Note Keyboard | Octave Switch Behavior\nPoly (White) | Polyphonic (up to 3 notes) | Cycle through 3 voices. | Affects next played note. Use octave switches to mix notes from different octaves.\nString (Yellow) | Monophonic | Press multiple notes together to set a sequence. Step advances when input level passes the threshold. | Instant\nBar (Red) | | |\nCave (Purple) | | (See next page) | Change caves (3 in total)\n\nGlobal Tuning affects Poly, String and Bar modes. (factory setting A3 (69) = 440Hz)\n\nTo adjust Global Tuning, see page 10.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/wingie2/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "Customizable Caves\n\nOperations:\n- Single tap: Toggle Mute / Unmute\n- Plus button + tap: Tune up corresponding resonators\n- Minus button + tap: Tune down corresponding resonators\n- Plus button + checkmark: Unmute all resonators\n- Minus button + checkmark: Mute all resonators\n- Same color taps: Same operation for both channels\n\nCustomize Your Caves",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/wingie2/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "Tap Sequencer Threshold\n\nOperations:\n\n- Mode button + tap: Right Channel Threshold\n\n- Mode button + tap: Left Channel Threshold\n\n- C, C#, D ... → B = low → high",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/wingie2/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "Setting Pre / Post Clipper Gain\n\nOperations:\n\n- Mode button + tap: Post : Resonator Volume\n\n- Mode button + tap: Pre : Amount of SATURATION\n\n- C, C#, D ... → B = low → high\n\nAdjust Pre for a satisfying tone, and adjust Post to obtain a comfortable behavior on the Dry / Wet fader.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/wingie2/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "MIDI Channel:\n\nMIDI Channel | Note | CC\nUser Adjustable (Factory Setting 1, 2, 3) | Left channel | Left channel\n| Right channel | Right channel\n| Alternate between L/R channels | Left & Right channels\n\nMIDI Note:\n\n- Wingie2 accepts Note On data (Note Off is ignored);\n\n- Internal tap sequencer works only with the on-board keyboard;\n\n- Fast change of notes with large intervals may result in loud output.\n\nMIDI CC (Control Change):\n\n- The incoming MIDI CC overwrites the corresponding fader setting. By moving the fader, the fader setting becomes valid again.\n\n- Wingie2 accepts 14-bit MIDI.\n\nCC | 0-30 Polyphony | 31-63 String | 64-95 Bar | 96-127 Cave\nCC 11 (MSB), CC 43 (LSB) | Mix (Dry / Wet) | | |\nCC 1 (MSB), CC 33 (LSB) | Decay Time | | |\nCC 7 (MSB), CC 39 (LSB) | Volume | | |",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/wingie2/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "The MIDI port is designed to the TRS standard by MMA Specification. Please use a MIDI cable of the following type:\n\nTRS Connector (Male) — Pin Out — 5-Pin DIN Connector (Female)\n- Tip → Pin 5\n- Ring → Pin 4\n- Sleeve → Pin 2\n\nDevelopment with Wingie2\n\nWingie2 can be used as a development platform. The firmware is open source.\n\nFor instructions on how to build the compiling environment & firmware download, use the link below:\n\nhttps://github.com/mengqimusic/Wingie2\n\nThe firmware is built in 2 steps:\n- DSP section written and compiled in Faust\n- Arduino sketch that connects and defines interface functions\n\nYou can modify the scale, customize your control interface or redefine the whole unit.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/wingie2/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "Global Settings\n\nMIDI Channels, Global Tuning, Alternative Tuning & Cave Mode Frequencies can be set via the Wingie Tools. You can download Wingie Tools from Meng Qi's Github. Use pd to open the file.\n\nIn the \"Media / MIDI Settings\" menu, select the MIDI port connected to Wingie under \"Output Devices\". A large frequency jump will result in loud output. Make sure to turn down Volume & Decay before adjustment.\n\nMIDI Data for Global Settings:\n\nMIDI Ch | MIDI CC | Function | Factory Setting\n16 | 20 | MIDI Channel for Left | 1\n16 | 21 | MIDI Channel for Right | 2\n16 | 22 | MIDI Channel for Both | 3\n16 | 23 (MSB), 55 (LSB) | Global Tuning Offset (from 440Hz) Range is ± 81.92Hz Resolution is 0.01Hz | 0.00\n15 | 23-31 (MSB), 55-63 (LSB) | Right Channel Tuning Selected Cave |\n14 | 23-31 (MSB), 55-63 (LSB) | Left Channel Tuning Selected Cave |",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/wingie2/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "Save Settings\n\nHold both MODE buttons for 3 seconds to save. LEDs change colors when holding, and flash quickly to indicate success.\n\nThis operation may occasionally introduce a short glitch to the sound. It's not recommended to save settings during recording or live performance.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/wingie2/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "Alternate Tunings\n\nBy default, Wingie2 uses standard Western tuning (12 Equal Temperament).\n\nAs of version 3.1, eight additional tunings are available. These are the currently available tunings (other tunings are possible via a source code change and a new firmware build):\n\n- Centaur (Kraig Grady)\n- Harp of New Albion (Terry Riley)\n- Carlos Harmonic (Wendy Carlos)\n- Well-Tuned Piano (La Monte Young)\n- Meta Slendro (Grady/Wilson)\n- Bihexany (Gene Ward Smith)\n- Hexachordal Dodecaphonic (Paul Erlich)\n- Augmented[12] (Mike Smith, Paul Erlich)\n\nAlternate tuning is enabled in two ways:\n- By holding down the left Mode button when starting the device;\n- By using MIDI. The advantage of using MIDI is that it is unnecessary to restart the device, allowing the tuning to be changed on the fly.\n\nAlternate tuning also affects Caves mode. See below for details.\n\nAlternate tuning honors the Global Tuning (A3) setting.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/wingie2/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "Switch Tunings at Startup\n\nHold down the left Mode button and plug in the USB cable. The positions of the sliders will determine the tuning:\n\nLeft Mode | Right Mode | Left Slider | Middle Slider | Right Slider | Tuning\nRelease | Hold | | | | 12 Equal Temperament\nHold | Release | Down | Down | Down | Centaur\nHold | Release | Down | Down | Up | Harp of New Albion\nHold | Release | Down | Up | Down | Carlos Harmonic\nHold | Release | Down | Up | Up | Well Tuned Piano\nHold | Release | Up | Down | Down | Meta Slendro\nHold | Release | Up | Down | Up | Bihexany\nHold | Release | Up | Up | Down | Hexachordal Dodecaphonic\nHold | Release | Up | Up | Up | Augmented[12]\n\nFor more information regarding tunings, see wingie_tuning_notes.pdf\n\nSwitch Tunings via MIDI\n\nChannel | CC | Value | Tuning\n13 | 23 | 0 | 12 Equal Temperament\n13 | 23 | 1 | Centaur\n13 | 23 | 2 | Harp of New Albion\n13 | 23 | 3 | Carlos Harmonic\n13 | 23 | 4 | Well Tuned Piano\n13 | 23 | 5 | Meta Slendro\n13 | 23 | 6 | Bihexany\n13 | 23 | 7 | Hexachordal Dodecaphonic\n13 | 23 | 8 | Augmented[12]\n\nA TouchOSC template by Dave Seidel: wingie_tuning.tosc",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/wingie2/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "Caves in Alternate Tuning\n\nWhen you enable alternate tuning, the caves are also tuned to match your selected tuning.\n\nTo accommodate all 12 pitches, the caves are arranged so that the left channel uses the even-numbered scale tones, covering one and one-third octaves:\n\nC, D, E, F#, G#, A#, C', D', E'\n\nThe right channel uses the odd-numbered scale tones, also covering one and one-third octaves:\n\nC#, D#, F, G, A, B, A#, C#', D#', F'\n\nThe three-position toggles switch between three octaves, similar to Poly, String, and Bar modes. However, the left and right caves are always in the same octave, so all scale pitches are covered across the two sides.\n\nSaving the tuning setting\n\nThe current tuning configuration is saved along with other settings when you simultaneously hold down both Mode buttons, as described in the manual. On the restart, your tuning configuration will be restored.\n\nDave Seidel contributes to the Alternative Tuning feature.",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/wingie2/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "Playing Tips:\n\n1. Play Wingie2 as a percussion instrument;\n\n2. Take Wingie2 out to play with ambient sounds;\n\n3. Use with all sorts of acoustic instruments;\n\n4. Play with feedback with speakers;\n\n5. Create feedback with effectors;\n\n6. Use with a drum machine to trigger the tap sequencer for note sequences;\n\n7. Use an external cardioid mic and line-in to avoid feedback in a live performance.\n\n...... (for you to explore)\n\nThanks to:\nRoy & Janet for the Wingie description and manual proofreading;\nAnnqi for the saying on the back of Wingie2;\nDave Seidel for the Alternative Tuning function.\n\n...and there is much on the Horizon.\n\nFind Me:\n\nWebsite: mengqimusic.com\nBandcamp : mengqi.bandcamp.com\nYouTube : youtube.com/c/MengQiMusic\nInstagram : instagram.com/mengqimusic\nSynthesis Minority: space.bilibili.com/4485929",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/wingie2/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
