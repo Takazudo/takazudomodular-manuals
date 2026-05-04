@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "processedAt": "2026-05-04T16:20:11.972Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/wingie2/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/wingie2/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/wingie2/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/wingie2/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/wingie2/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/wingie2/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/wingie2/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/wingie2/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/wingie2/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/wingie2/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/wingie2/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/wingie2/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/wingie2/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/wingie2/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/wingie2/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/wingie2/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/wingie2/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": []
+    }
+  ]
+}
