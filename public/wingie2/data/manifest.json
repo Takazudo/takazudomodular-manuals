@@ -4,12 +4,12 @@
   "productSlug": "wingie2",
   "version": "1.0.0",
   "totalPages": 17,
-  "contentPages": 0,
-  "lastUpdated": "2026-05-04T16:20:44.081Z",
+  "contentPages": 15,
+  "lastUpdated": "2026-05-04T16:36:54.898Z",
   "updatedAt": "20260505",
   "source": {
     "filename": "Wingie2.Manual.v3.1.-.EN.pdf",
-    "processedAt": "2026-05-04T16:20:11.972Z",
+    "processedAt": "2026-05-04T16:36:45.117Z",
     "imageDPI": 300,
     "imageFormat": "png"
   }

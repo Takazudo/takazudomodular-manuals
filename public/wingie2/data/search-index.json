@@ -1,1 +1,122 @@
-[]
+[
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "注意事項： 音量は低い状態からスタートしてください スピーカーやヘッドフォンでのフィードバックにご注意ください 水分を避けてください モジュラーシンセのレベルの信号をWingieに直接接続しないでください Wingie2をお買い上げいただきありがとうございます！ Wingie2は、オンボードマイクロフォンを搭載したハンドヘルド型のステレオ・レゾネーターであり、開発プラットフォームとしても活用できます。楽器やボーカルの音、そして周囲の音響環境とインタラクションし、豊かな音を生み出すことができます。",
+    "url": "/wingie2/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "電源 Wingie2はUSB Type-Cケーブルで電源を供給します。スマートフォン用の充電器やモバイルバッテリーを使用できます。なお、Wingie2の初回ロット（2022年5月以前に製造された、背面にネジのないもの）はUSB C-Cケーブルには対応していません。USB A-Cケーブルをご使用ください。 デジタルノイズが発生した場合は、別の電源を試すか、グランドループアイソレーターをお使いください。電源投入後、約3秒間かけて無音状態から最大音量まで徐々にフェードインします。 オーディオ入力 マイクロフォンは空気中の音を拾います。スピーカーを使用するとフィードバックが非常に発生しやすい状態です。フィードバックを避けるためにヘッドフォンを使用するか、あえてフィードバックと音で遊ぶこともできます（音量には十分ご注意ください）。Wingie2を通じて周囲の環境音をモニタリングしたり、Wingie2をパーカッションのように演奏したり、あらゆるものを楽器に変えたりすることができます。自由に実験してみてください。 Wingie2のライン入力は3.5mm",
+    "url": "/wingie2/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "すべてのコントロールはWingie2本体に表示されています。 MIXとVOLUMEの両フェーダーは、レゾネーター前の信号レベルをコントロールします。これにより、レゾネーターのディケイ部分が完了するまで音を鳴らし続けることができます。 右チャンネルは、オクターブスイッチが同じポジションの場合、左チャンネルより1オクターブ高くなります。 スライダーの機能： Mix：ドライ/ウェット信号の比率 Decay：レゾネーターのディケイ（0.15秒〜約10秒） Volume：入力音量コントロール",
+    "url": "/wingie2/page/4"
+  },
+  {
+    "id": "5",
+    "pageNum": 5,
+    "title": "Page 5",
+    "sectionName": null,
+    "body": "モード Wingie2には4つのモードがあります。モードボタンを押してモードを順番に切り替えます。現在のモードはLEDの色で示されます。 モード | ポリフォニー | ノートキーボード | オクターブスイッチの動作 Poly（ホワイト） | ポリフォニック（最大3音） | 3つのボイスを順番に切り替えます。 | 次に演奏するノートに影響します。オクターブスイッチを使って、異なるオクターブのノートをミックスできます。 String（イエロー） | モノフォニック | 複数のノートを同時に押してシーケンスを設定します。入力レベルが閾値を超えるとステップが進みます。 | 即時 Bar（レッド） | | | Cave（パープル） | | （次のページ参照） | Cave（全3種類）を切り替えます。 グローバルチューニングはPoly、String、Barモードに影響します。（工場設定：A3（69）= 440Hz） グローバルチューニングの調整方法については、10ページをご参照ください。",
+    "url": "/wingie2/page/5"
+  },
+  {
+    "id": "6",
+    "pageNum": 6,
+    "title": "Page 6",
+    "sectionName": null,
+    "body": "カスタマイズ可能なCave 操作方法： シングルタップ：ミュート / ミュート解除の切り替え Plusボタン + タップ：対応するレゾネーターのピッチを上げる Minusボタン + タップ：対応するレゾネーターのピッチを下げる Plusボタン + チェックマーク：すべてのレゾネーターのミュートを解除 Minusボタン + チェックマーク：すべてのレゾネーターをミュート 同じ色のタップ：両チャンネルに同じ操作を適用 Caveをカスタマイズする",
+    "url": "/wingie2/page/6"
+  },
+  {
+    "id": "7",
+    "pageNum": 7,
+    "title": "Page 7",
+    "sectionName": null,
+    "body": "Tap Sequencer Threshold Operations: Mode button + tap: 右チャンネルのThreshold Mode button + tap: 左チャンネルのThreshold C, C#, D ... → B = 低 → 高",
+    "url": "/wingie2/page/7"
+  },
+  {
+    "id": "8",
+    "pageNum": 8,
+    "title": "Page 8",
+    "sectionName": null,
+    "body": "Pre / Post Clipper Gainの設定 Operations: Mode button + tap: Post：Resonator Volume Mode button + tap: Pre：SATURATIONの量 C, C#, D ... → B = 低 → 高 Preを調整して好みのトーンを得た後、PostをDry / Wetフェーダーが快適に動作するよう調整してください。",
+    "url": "/wingie2/page/8"
+  },
+  {
+    "id": "9",
+    "pageNum": 9,
+    "title": "Page 9",
+    "sectionName": null,
+    "body": "MIDI Channel: MIDI Channel | Note | CC ユーザー調整可能（工場出荷時設定 1, 2, 3） | 左チャンネル | 左チャンネル | 右チャンネル | 右チャンネル | L/Rチャンネルを交互に切替 | 左右両チャンネル MIDI Note: Wingie2はNote Onデータを受け付けます（Note Offは無視されます）。 内蔵Tap Sequencerは本体のキーボードでのみ動作します。 大きな音程差で素早くノートを変更すると、大きな音量の出力が生じる場合があります。 MIDI CC (Control Change): 受信したMIDI CCは対応するフェーダーの設定を上書きします。フェーダーを動かすと、フェーダーの設定が再び有効になります。 Wingie2は14-bit MIDIを受け付けます。 CC | 0-30 Polyphony | 31-63 String | 64-95 Bar | 96-127 Cave CC 11（MSB）, CC 43（LSB） | Mix（Dry / Wet） | | | CC 1（MSB）, CC",
+    "url": "/wingie2/page/9"
+  },
+  {
+    "id": "10",
+    "pageNum": 10,
+    "title": "Page 10",
+    "sectionName": null,
+    "body": "MIDIポートはMMA仕様のTRS標準規格に準拠して設計されています。以下のタイプのMIDIケーブルをご使用ください。 TRS Connector（Male） — ピン配列 — 5-Pin DIN Connector（Female） Tip → Pin 5 Ring → Pin 4 Sleeve → Pin 2 Wingie2を使った開発 Wingie2は開発プラットフォームとして使用できます。ファームウェアはオープンソースです。 コンパイル環境の構築方法およびファームウェアのダウンロードについては、以下のリンクをご参照ください。 https://github.com/mengqimusic/Wingie2 ファームウェアは2つのステップで構成されています。 DSPセクションはFaustで記述・コンパイルされています。 インターフェース機能を接続・定義するArduinoスケッチ スケールを変更したり、コントロールインターフェースをカスタマイズしたり、ユニット全体を再定義することができます。",
+    "url": "/wingie2/page/10"
+  },
+  {
+    "id": "11",
+    "pageNum": 11,
+    "title": "Page 11",
+    "sectionName": null,
+    "body": "Global Settings MIDI Channel、Global Tuning、Alternative TuningおよびCave Modeの周波数はWingie Toolsを通じて設定できます。Wingie ToolsはMeng QiのGithubからダウンロードできます。ファイルを開くにはpdを使用してください。 「Media / MIDI Settings」メニューの「Output Devices」から、Wingieに接続されたMIDIポートを選択してください。大きな周波数の変化は大きな音量の出力につながります。調整前にVolumeとDecayを下げておいてください。 Global SettingsのためのMIDIデータ: MIDI Ch | MIDI CC | 機能 | 工場出荷時設定 16 | 20 | 左チャンネルのMIDI Channel | 1 16 | 21 | 右チャンネルのMIDI Channel | 2 16 | 22 | 両チャンネルのMIDI Channel | 3 16 | 23（MSB）, 55（LSB） | Global Tuning",
+    "url": "/wingie2/page/11"
+  },
+  {
+    "id": "12",
+    "pageNum": 12,
+    "title": "Page 12",
+    "sectionName": null,
+    "body": "設定の保存 両方のMODEボタンを3秒間押し続けると保存されます。押し続けている間はLEDの色が変化し、保存が完了すると素早く点滅して完了を知らせます。 この操作により、音にわずかなグリッチが生じる場合があります。録音中やライブパフォーマンス中の設定保存はお勧めしません。",
+    "url": "/wingie2/page/12"
+  },
+  {
+    "id": "13",
+    "pageNum": 13,
+    "title": "Page 13",
+    "sectionName": null,
+    "body": "代替チューニング デフォルトでは、Wingie2は標準的な西洋音楽のチューニング（12平均律）を使用しています。 バージョン3.1以降、8種類の追加チューニングが利用可能です。現在利用できるチューニングは以下の通りです（ソースコードを変更して新しいファームウェアをビルドすることで、他のチューニングも使用可能です）： Centaur（Kraig Grady） Harp of New Albion（Terry Riley） Carlos Harmonic（Wendy Carlos） Well-Tuned Piano（La Monte Young） Meta Slendro（Grady/Wilson） Bihexany（Gene Ward Smith） Hexachordal Dodecaphonic（Paul Erlich） Augmented[12]（Mike Smith, Paul Erlich） 代替チューニングは2つの方法で有効にできます： デバイス起動時に左のModeボタンを押し続ける",
+    "url": "/wingie2/page/13"
+  },
+  {
+    "id": "14",
+    "pageNum": 14,
+    "title": "Page 14",
+    "sectionName": null,
+    "body": "起動時のチューニング切り替え 左のModeボタンを押し続けながらUSBケーブルを接続します。スライダーの位置によってチューニングが決まります： Left Mode | Right Mode | Left Slider | Middle Slider | Right Slider | チューニング Release | Hold | | | | 12 Equal Temperament Hold | Release | Down | Down | Down | Centaur Hold | Release | Down | Down | Up | Harp of New Albion Hold | Release | Down | Up | Down | Carlos Harmonic Hold | Release | Down | Up | Up | Well Tuned Piano Hold | Release | Up | Down | Down | Meta Slendro Hold | Release | Up | Down | Up | Bihexany Hold |",
+    "url": "/wingie2/page/14"
+  },
+  {
+    "id": "15",
+    "pageNum": 15,
+    "title": "Page 15",
+    "sectionName": null,
+    "body": "代替チューニングのCaves 代替チューニングを有効にすると、Cavesも選択したチューニングに合わせて調律されます。 12音すべてに対応するため、Cavesは以下のように配置されています。左チャンネルは偶数番号の音階音を使用し、1オクターブと3分の1をカバーします： C, D, E, F#, G#, A#, C', D', E' 右チャンネルは奇数番号の音階音を使用し、同様に1オクターブと3分の1をカバーします： C#, D#, F, G, A, B, A#, C#', D#', F' 3ポジションのトグルスイッチは、Poly、String、Barモードと同様に3つのオクターブを切り替えます。ただし、左右のCavesは常に同じオクターブにあるため、すべての音階音が両サイドにわたってカバーされます。 チューニング設定の保存 現在のチューニング設定は、マニュアルに記載されている通り、両方のModeボタンを同時に押し続けることで、他の設定とともに保存されます。再起動時に、チューニング設定が復元されます。 Dave SeidelはAlternative Tuning機能に貢献しています。",
+    "url": "/wingie2/page/15"
+  },
+  {
+    "id": "16",
+    "pageNum": 16,
+    "title": "Page 16",
+    "sectionName": null,
+    "body": "演奏のヒント： Wingie2を打楽器として演奏する Wingie2を屋外に持ち出してアンビエントサウンドと一緒に演奏する あらゆる種類のアコースティック楽器と組み合わせて使用する スピーカーとのフィードバックで演奏する エフェクターを使ってフィードバックを作る ドラムマシンと組み合わせてタップシーケンサーをトリガーし、音符のシーケンスを作る ライブパフォーマンスでのフィードバックを避けるため、外付けカーディオイドマイクとライン入力を使用する ……（あなたが探求するために） 謝辞： Roy & Janetへ、Wingieの説明とマニュアルの校正に感謝します。 Annqiへ、Wingie2の背面に書かれた言葉に感謝します。 Dave Seidelへ、Alternative Tuning機能に感謝します。 ……そして、地平線の彼方にはまだ多くのものがあります。 お問い合わせ先： Website: mengqimusic.com Bandcamp: mengqi.bandcamp.com YouTube: youtube.com/c/MengQiMusic Instagram:",
+    "url": "/wingie2/page/16"
+  }
+]
