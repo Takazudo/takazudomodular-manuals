@@ -260,6 +260,11 @@ import wingie2Manifest from '@/public/wingie2/data/manifest.json';
 import wingie2PagesJa from '@/public/wingie2/data/pages-ja.json';
 import wingie2PagesEn from '@/public/wingie2/data/pages-en.json';
 
+// Import oxi-one-mk1
+import oxiOneMk1Manifest from '@/public/oxi-one-mk1/data/manifest.json';
+import oxiOneMk1PagesJa from '@/public/oxi-one-mk1/data/pages-ja.json';
+import oxiOneMk1PagesEn from '@/public/oxi-one-mk1/data/pages-en.json';
+
 export type ManualLanguage = 'ja' | 'en';
 
 export interface ManualRegistryEntry {
@@ -525,6 +530,11 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
     manifest: wingie2Manifest as unknown as ManualManifest,
     pagesJa: wingie2PagesJa as unknown as ManualPagesData,
     pagesEn: wingie2PagesEn as unknown as ManualPagesData,
+  },
+  'oxi-one-mk1': {
+    manifest: oxiOneMk1Manifest as unknown as ManualManifest,
+    pagesJa: oxiOneMk1PagesJa as unknown as ManualPagesData,
+    pagesEn: oxiOneMk1PagesEn as unknown as ManualPagesData,
   },
 };
 

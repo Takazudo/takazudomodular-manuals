@@ -1,0 +1,1460 @@
+{
+  "metadata": {
+    "processedAt": "2026-05-20T11:33:43.845Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/oxi-one-mk1/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "ユーザーガイド\n\n© OXI ELECTRONIC INSTRUMENTS SLU – 2024 – All rights reserved.\n\nV 5.6",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 2,
+      "image": "/oxi-one-mk1/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "www.oxiinstruments.com\n\nこのマニュアルに記載されている情報は予告なく変更される場合があり、OXI ELECTRONIC INSTRUMENTS SLU（以下「OXI Instruments」）による確約を意味するものではありません。このマニュアルに記載されているソフトウェアは、ライセンス契約または秘密保持契約の条件に基づいて提供されています。ソフトウェアライセンス契約は、合法的な使用に関する条件を規定しています。このマニュアルのいかなる部分も、OXI INSTRUMENTSの書面による明示的な許可なく、購入者の個人使用以外の目的で、いかなる形式または手段によっても複製または転載することはできません。\n\nこのマニュアルに記載されているその他すべての製品、ロゴ、または会社名は、それぞれの所有者の商標または登録商標です。\n\nマニュアル & SW バージョン: 5.6\n改訂日: 2025年7月\nハードウェアバージョン: OXI ONE v1.0\n製造元: OXI Instruments\n\nこのマニュアルの作成にご協力いただいたすべての方に感謝いたします。\nEkkomouse、A Thousand Details、AGL に特別な感謝を申し上げます。\n\n仕様変更について:\n\nこのマニュアルに記載されている情報は、印刷時点において正確であると考えられています。ただし、OXI Instruments は、購入済みのハードウェアを更新する通知または義務なしに、仕様の一部または全部を変更する権利を留保します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 3,
+      "image": "/oxi-one-mk1/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "WELCOME\n\nOXI Oneをご購入いただき、ありがとうございます。\n\nOXI Oneは、より刺激的なSequencerを必要とする数人のミュージシャンが生み出した成果です。\n\nご支援いただくことで、この楽器を継続的にアップデートし、長期にわたって新機能を提供し、近い将来に他の楽器やツールを開発するための助けとなります。\n\nこれは私たちの処女作（Opera Prima）であり、私たちが開発・宣伝・製造・出荷する過程で感じた喜びと同じくらい、お楽しみいただければ幸いです。\n\n–– OXI team",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 4,
+      "image": "/oxi-one-mk1/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "注意事項\nご使用前に必ずお読みください\n\n* 将来の参照のために、これらの注意事項を安全な場所に保管してください。\n\n初めてご使用になる前に、本機をUSB電源に接続してバッテリーを完全に充電してください。バッテリーが満充電になると、アイコンの点滅が止まります。OXI Oneの電源がオフの間は、バッテリー充電インジケーターは表示されません。\n\n**警告：**\n\n感電、ショート、破損、火災、またはその他の危険による重傷または死亡の可能性を避けるため、以下の基本的な注意事項を必ず守ってください。これらの注意事項には以下のものが含まれますが、これに限定されるものではありません：\n\n● 本機を開けたり、内部部品を分解または改造しようとしないでください。本機にはユーザーが修理できる部品はありません。誤動作していると思われる場合は、直ちに使用を中止し、OXI Instrumentsの有資格サービス担当者に点検を依頼してください。\n\n● 本機を雨にさらしたり、水の近くや湿った環境、または濡れた環境で使用したりしないでください。また、開口部に液体がこぼれる可能性のある容器を本機の上に置かないでください。\n\n● OXI Oneをコンピューターに接続したり、OXI Oneのバッテリーを充電したりする際は、OXI Instrumentsが提供する指定ケーブル（または同じ仕様の別のケーブル）のみを使用してください。\n\n● OXI Oneの電源供給または充電には5V電源のみを使用してください。誤った電源を使用するとOXI Oneが破損し、製品保証の対象外となります。\n\n● Pipe interface（HDMI Microコネクター）にテレビやモニターを接続しないでください。両方の機器が破損する可能性があります。OXI Pipeなどの対応アクセサリーのみと使用してください。誤操作による損傷は製品保証の対象外となります。\n\n● TRSジャックプラグにヘッドフォンや増幅ラインを直接接続しないでください。両方の機器が破損する可能性があります。誤操作による損傷は製品保証の対象外となります。\n\n● 本機を清掃する前に、必ず電源プラグをコンセントから抜いてください。濡れた手で電源プラグを差し込んだり抜いたりしないでください。\n\n● この製品は常に子供の手の届かない場所に保管してください。これはおもちゃではありません。\n\n● 本機をアンプ、ヘッドフォン、またはスピーカーと組み合わせて使用すると、永久的な聴力低下を引き起こす可能性のある音量を生成することがあります。高い音量、不快に感じる音量、または聴力保護に関する現行の安全基準を超える音量で長時間操作しないでください。感電、破損、火災、またはその他のリスクによる重傷または死亡の可能性を避けるため、以下の基本的な注意事項を必ず守ってください。聴力の低下や耳鳴りを感じた場合は、すぐに聴覚専門医に相談してください。毎年、耳と聴力の検査を受けることもお勧めします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 5,
+      "image": "/oxi-one-mk1/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "● 製品とケーブルチャージャーをヒーターやラジエーターなどの熱源の近くに置かないでください。コードを過度に曲げたり損傷を与えたりしないでください。重い物を乗せたり、誰かが踏んだり、つまずいたり、何かを転がす可能性のある場所に置かないでください。\n\n● ケーブルチャージャーを楽器やコンセントから取り外す際は、コードではなく必ずプラグ自体を持ってください。\n\n● 内部コンポーネントへの損傷を防ぐため、直射日光の当たる場所、ヒーターの近く、日中の車内など、過度の埃や振動、または極端な寒さや熱にさらされないようにしてください。\n\n● 誤って転倒する可能性のある不安定な場所に楽器を置かないでください。\n\n● 楽器を移動する前に、接続されているすべてのケーブルを取り外してください。\n\n● 楽器を清掃する際は、柔らかいブラシまたは柔らかい乾いた布を使用してください。ペイントシンナー、溶剤、洗浄液、または化学薬品を含んだ拭き取りクロスは使用しないでください。また、変色の原因となる可能性があるため、ビニールやプラスチック製品を楽器の上に置かないでください。\n\n● 楽器に体重をかけたり、重い物を置いたりしないでください。また、ボタン、スイッチ、コネクターに過度の力を加えないでください。\n\n● 永続的な聴力低下を引き起こす可能性があるため、高い音量や不快な音量で長時間楽器を使用しないでください。聴力の低下や耳鳴りがある場合は、医師に相談してください。\n\n● 楽器を使用しないときは、必ず電源を切ってください。\n\n● OXI Oneを水（滴下または飛散）にさらさないでください。また、花瓶などの液体が入った容器を機器の上に置かないでください。\n\n● 極端に低い気圧の状況下ではOXI Oneを使用しないでください。\n\nOXI Instrumentsは、楽器の不適切な使用や改造、または失われたり破壊されたデータによって引き起こされた損害に対して責任を負いません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 6,
+      "image": "/oxi-one-mk1/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "はじめに\n\n新しい楽器を学ぶ旅において、完全なガイドを手元に置くことは非常に有用なツールとなります。OXI One sequencerを最大限に活用するために必要なすべての情報がここに集められていますので、いつでも便利に参照できます。\n\n新しい楽器とマニュアルを初めて探索することはとても楽しく有益ですが、焦らずゆっくりと進めてください！OXI Oneには多くの機能があり、最初からすべての側面をマスターしようとすることは目標にすべきではありません。このマニュアルを最初から最後まで読み通しても構いませんし、最も興味を引く章に直接ジャンプしても構いません。自分で物事を解明したい場合も、もちろん問題ありません！OXI Oneでは、探索が奨励されています。大切なのは楽しんでいただくことです！マニュアルを最初に一読することで、今後に役立つ強固な情報の基盤を構築できます。これが、新しい楽器のパラメーター、つまり利用できるツールとそれらが互いにどのように作用するかを初めて理解する機会となります。\n\nOXI One sequencerをマスターする旅のどの段階にいても、このマニュアルは1日目であれ1,000日目であれ、あらゆるユーザーレベルに何かを提供します。その後の読み返しのたびに、これまでに得た知識を積み重ね、さらに深く踏み込む機会が生まれます。\n\nアップデートによって探索・調査すべき新機能が追加されましたか？あまり使っていない機能について記憶を新たにしたいですか？基本的な内容をよく理解した上でマニュアルを読み返すと、ページ内のアイデアや情報を異なる視点から、より深い理解を持って解釈できるようになります。これが新しい扉が開き始める瞬間です。私たちはガイドを情報源としてではなく、インスピレーションの源として活用するようになります。\n\nお楽しみください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 7,
+      "image": "/oxi-one-mk1/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "仕様\n\n電気仕様：\n5V DC 1.7A（USB Type C電源）\nLi-Poバッテリー 2200mAh\n\n無線機器：\nBluetooth 5.0、2.4GHz、最大送信出力：4 dBm\n\n機械仕様：\nアルミシャーシ＆シリコンボタン\n寸法：36 x 13 x 3 cm\n重量：890g\n\n動作温度：\n10°Cから36°C\n\n入力/出力\n\n・5V電源供給およびMIDI USB用のUSB C。内部Liバッテリーの充電も行います。\n\n・MIDI TRS入力/出力（Dinアダプター付属）。MIDI Outは5V、MIDI INは5Vおよび3.3Vの両方に対応。\n\n・MIDI Bluetooth BLE 5.0双方向通信、ペリフェラルおよびセントラルロール対応。\n\n・CVS（1〜8）出力：-3Vから5V\n\n・GATE（1〜8）出力：5Vまたは10V（設定可能）\n\n・Clock OutおよびClock/CV In（スプリッターを使用して独立させることも可能）",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 8,
+      "image": "/oxi-one-mk1/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "アクセサリー\n\n同梱品\n・USB C-A ケーブル\n・MIDI DIN to TRS アダプター（ブラック）Type A\n\n別売品\n・TRS to DIN5 Clock アダプター（グレー）- こちらから購入可能：\n　- OXI OneのClock、Start-Stop IN/OUTを他機器のDIN SYNCポートに接続できます\n・TRS to Dual TSステレオスプリッター（ピンクまたはブラック＆レッド）- こちらから購入可能：\n　- OXI OneのClockおよびResetアウトプットを2つのモノラル出力に分割します。\n　- Clock/Gate INおよびReset/CV INインプットを2つのモノラル入力に分割します。\n・OXI Split：利用可能なMIDI出力数を3に増設します。- こちらから購入可能。\n・OXI Split V2：利用可能なMIDI出力数を6に増設します。- こちらから購入可能。\n・OXI Pipe：CV/Gate出力を拡張するEurorackモジュール。- こちらから購入可能。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 9,
+      "image": "/oxi-one-mk1/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "目次\n\nようこそ .... 3\n\n注意事項 .... 4\n\nはじめに .... 6\n\n仕様 .... 7\n\n目次 .... 9\n\n新機能 .... 10\n\nクイックスタート .... 12\n\nバッテリー .... 13\n\nインターフェース概要 .... 14\n  グリッド .... 14\n  スクリーン .... 14\n  SHIFTボタン .... 15\n  Sequencer .... 15\n  Encoder .... 19\n\nファンクションボタン .... 25\n  Transport .... 25\n  NUDGE .... 27\n  キーボード - プレビュー .... 28\n  ページ .... 28\n  コピーとペースト .... 29\n  クリア .... 31\n  UNDO AND REDO .... 31\n  INIT、END、LOOP .... 31\n  Y DIV - EXPAND .... 33\n  ランダマイザー & ジェネレーター .... 34\n  LFO - CV GATE .... 37\n  STEP-CHORD - CONDENSE .... 37\n  MOD - FOLLOW .... 37\n  BACK - CONFIG .... 38\n\nロードとセーブ .... 39\n\nキーボード .... 45\n  ピックアンドプレイス .... 47\n  ARP .... 48\n  ROLLER .... 49\n\nSequencerモード .... 51\n  MONO .... 51\n  CHORD .... 54\n  MULTITRACK .... 60",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 10,
+      "image": "/oxi-one-mk1/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "POLYPHONIC 68\n\nSTOCHASTIC 70\n\nMATRICEAL 72\n\nHARMONIZER 80\n\nMOD LANES 82\n\nCV INPUT 87\n\nMIDI MAPPINGS new 88\n\nLFOs 91\n\nRECORDING 94\n\nCV GATE Configuration 98\n\nCV ROUTING 99\n\nGATE ROUTING 103\n\nCV GATE STATUS 103\n\nMIDI to CV conversion 104\n\nCV INPUT 105\n\nANALOG CLOCK 105\n\nSNAPSHOTS 106\n\nARRANGER 107\n\nSHORTCUTS 113\n\nCLOCK SYNCHRONIZATION 118\n\nAUTO SYNC 118\n\nANALOG CLOCK 119\n\nCONFIGURATION 120\n\nMIDI ROUTING 124\n\nOXI SPLIT 125\n\nOXI PIPE 126\n\nMIDI BLUETOOTH 128\n\nUSB MIDI 131\n\nDESIGN NOTES 134\n\nMONOME GRID 136\n\nMIDI REMOTE CONTROL 137\n\nMIDI MAPPINGS 138\n\nINTERNAL DESTINATIONS 140\n\nOXI ONE SEQUENCER COLORS 146\n\nCALIBRATION 147\n\nDRUM PATTERNS 149\n\nDECLARATION OF CONFORMITY 157\n\nTERMS OF WARRANTY 160",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 11,
+      "image": "/oxi-one-mk1/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "WHAT'S NEW\n\n5.6 | 2026-02-07\n\n- 新機能: MIDI CAPTURE。録音が有効になっていなくても、演奏されたノートのセットをキャプチャできます。RECをダブルタップしてパフォーマンスをキャプチャします。RECを長押しするとキャプチャされたイベントをリセットします。\n\n- 新機能: コード認識。キーボード画面で、ホールドしているノート（または外部キーボードからの入力）の検出されたコードを表示します。\n\n- 新機能: BPM Nudge。MUTEを押しながらRECを押すとBPMが徐々に下がり、PLAYを押すと上がります。正確なビートマッチングに便利です。\n\n- POLY modeにSTEP Recordingを実装\n\n- タップテンポの改善\n\n- CV gate retriggerの設定を追加。別のノートが押されたときにgateをリトリガーします。\n\n5.4.1 | 2026-01-16\n\n- 新機能: USB MIDI仮想ポートを3つ追加\n\n- 再生状態に関わらずMODレーンのCVを送信\n\n- コードベースのMIDIポート数を増加\n\n- モード変更時にCVsとGatesをクリアするのではなく再割り当て\n\n5.0 | 2025-11-16\n\n- 新しいAPPと統合したカスタム楽器定義\n\n- 新しいパラメーターカラムビューとHarmonizerサポートを追加したMatricealモードの改善\n\n- POLY modeでカスタムコード\n\n- 専用のコードセットを備えたChord ModeでのChromaticスケールを実装\n\n- キーボードARPとRollerへのスウィングを実装\n\n- バッテリーメーターの改善\n\n- Split V2サポートを追加",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 12,
+      "image": "/oxi-one-mk1/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "VERY QUICK START\n\nOXI Oneは、バッテリー駆動のパフォーマティブSequencer、コントローラー、そしてコンポジションインストゥルメントです。4つの完全に独立したSequencerを備えており、各Sequencerは同時に再生でき、利用可能な6つのモードのいずれかに設定できます。OXI Oneはあなたのワークフローに合わせて設定できます（逆ではありません）。このSequencerのほとんどの設定は柔軟で、さまざまなメニューの下で自分の好みに合わせて自由にカスタマイズできます。\n\nOXI Oneのインターフェースはレイアウト間の線形的な関係に基づいており、ネストされたメニューを避けることで非常に直感的に使用できます。機能性を犠牲にすることなく、パフォーマンスのための革新的なレイヤーを追加しています。\n\n左側の電源ボタンを押してOXI Oneの電源をオンにしてください。OXI Oneはメインビュー（Sequencer Layout）を表示します。再生を開始するには、Playボタンを押してください。トランスポートバーがグリッド上で動き、ループし始めます。\n\nTIP: Sequencer Buttonを押すと、ビューが切り替わります。\n\n選択したSequencer（ボタン）がアクティブになっていることを確認してください。Sequencerをアクティブまたは非アクティブにするには、MUTE + ボタンを押してください。数字ボタンが白と青で点滅し、Sequencerが選択されて再生中であることを示します。これは残りのSequencerを停止せずに各Sequencerの再生を開始または停止するための便利な方法です。\n\nSequencerビューでは、グリッドパッドは2種類の操作を認識します：\n\n· 素早いタップでステップをアクティブまたは非アクティブにします。\n\n· 長押し（ホールド）でステップパラメーターにアクセスします。\n\n· SHIFT + 押し（ホールド）でステップの追加パラメーターを一時的に表示します。\n\n· 長い（タイ）ノートは同じ行の2つのパッドを押すことで入力できます。逆のジェスチャー（右から左）でストレートトリガーを追加します。\n\n下から上に向かって低音から高音、左から右へと時系列順になっています。表示される8行以外の高音や低音にアクセスするには、Div（Division）ボタンを押して一番左のエンコーダーを回すか、オクターブエンコーダーを押してスクロールを有効にしてください。\n\nSequencerを選択するには、対応するボタン番号を押してください。Functionボタン、スクリーン、グリッドが選択したSequencerのパラメーターを表示します。\n\nSHIFT + Sequencer buttonでSequencer設定に入ることができます。Sequencerモードを変更できます：Mono、Chord、Polyphonic、Multitrack、StochasticまたはMatriceal、また、Sequencer MIDI Channel、出力Port、その他の設定も変更できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 13,
+      "image": "/oxi-one-mk1/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "各Sequencerモードは、それぞれが最も得意とするいくつかのタスクに特化しています。例えば、Mono Sequencerはメロディの即座な視覚的フィードバックを提供し、より作曲志向のツールを備えています。一方、Multitrackモードでは、トラックごとに即座にミュート・ソロボタンを操作できる8つのMonoトラックが使用できます。Chordモードは楽曲の基本となるコード進行を書くのに最適なツールであり、Polyphonicモードはステップあたり最大7音という完全な自由度を提供します。StochasticとMatricealは2種類のジェネレーティブモードです。\n\n各モードの詳細な動作については、Sequencerモードのセクションで説明します。\n\nTIP: 4つの使用可能なSequencerスロットに、既存のSequencerモードの任意の組み合わせを設定することが可能です。\n\n電源ボタンを少なくとも2秒間押し続けることで、OXI Oneの電源をOFFにできます。次回起動時には、最後の状態（読み込まれていたプロジェクトと設定）が復元されます。\n\nBATTERY\n\nバッテリーアイコンはバッテリー残量の大まかな目安を表示します。\n\nバッテリー充電中はアイコンが点滅し、充電が完了すると点滅が止まり点灯したままになります。OXI Oneのバッテリーは、使用状況やLEDの消費電力によって4〜8時間持続します。\n\nステータスアイコンが特定の表示になっている場合、バッテリー電圧がバッテリーの公称電圧である約3.7Vまで低下していることを意味します。OXI Oneはまだ十分な使用時間が残っています。\n\nBATTERY CHARGE\n\n壁のUSB電源アダプターであれば何でもバッテリーの充電に使用できます。電源アダプターの出力が大きいほど、充電が速くなります。OXI Oneはインテリジェントバッテリー管理ICを搭載しています。\n\nUSB A to CケーブルもUSB C to Cケーブルも有効です。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 14,
+      "image": "/oxi-one-mk1/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "インターフェース概要\n\nGRID\n\nGRIDには128個のRGB LED点灯パッドがあります。電源投入時には、Sequencer Viewが表示されます。\n\n選択されたSequencer Modeに応じて、パッドの各列がシーケンスのステップを表し、各行がノート（Mono、PolyおよびChordモードの場合）またはトラック（Multitrackモードの場合）を表します。\n\nStochasticやMatricealのような他のSequencerモードには、独自のグリッド表示があります。\n\nGRIDはKeyboard、Arranger、CV Gate Viewも表示し、これらについては後ほど説明します。グリッドのレイアウトやスクリーンメニューに関わらず、BACKボタンを押すことでメインのSequencer Viewに戻ることができます。\n\nKeyboardやArrangerなどの他のファンクションボタンは、それぞれのViewとSequencer Viewを切り替えます。\n\nTIP: ステップを押したまま、別のページボタンを押し、終了させたいステップをタップすることで、ページをまたいでステップをタイ（Tie）することができます。\n\nSCREEN\n\nスクリーンは、選択されたファンクションボタンやモードに応じて情報やパラメーター値を表示します。デフォルトまたはメインのスクリーンは、電源投入時に表示されるSequencerスクリーンです。\n\n左から右へ、上段の行は次の情報を示します：\n- 選択されたSequencerのMode\n- 選択されたSequencerのSwing\n- Snapshotが撮影されたか否か\n- Followが有効かどうか\n- Clock Source\n- Bluetooth接続\n- バッテリー状態\n\n2段目：\n- グローバルBPM\n- 選択されたSequencerのTime Division、またはMultitrackモードで最後に選択したトラックのTime Division\n\n3段目：\n- Scale\n- Root note\n- グローバルオクターブ",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 15,
+      "image": "/oxi-one-mk1/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "4行目：この最終行には、他のメニューが開かれていない場合にエンコーダーが変更するパラメーターが表示されます。\n\nSHIFTボタンを押し続けると、エンコーダーのセカンダリー機能がメイン画面に次のように表示されます：\n\nSHIFT BUTTON\n\nSHIFTを他のファンクションボタンと組み合わせて押すと、そのセカンダリー機能が有効になります。例えば、undoのセカンダリー機能はredoです。\n\nTIP: SHIFTを押し続けながらボタンを押すと、ターコイズ色で印刷されたセカンダリー機能にアクセスできます。\n\nSHIFTボタンをダブルタップすることでラッチできます。この機能を使用するには、「Latch SHIFT」設定を有効にする必要があります。\n\nSEQUENCERS\n\nSequencerの番号ボタンを押すと、インターフェースに表示するSequencerが選択されます。\n\n- MUTEを押し続けながらSequencerボタンをタップすると、そのSequencerの状態を切り替えられます。この機能は、「Mute Options」で説明されているMuteの動作に応じて、有効化/無効化またはミュート/ミュート解除に使用できます。\n\n複数のSequencerを一度に有効化/無効化することも可能です。\n\n- SHIFTを押し続けながらSequencerボタンをタップすると、Sequencer Setupメニューの3ページのうち最初のページにアクセスできます。\n\nSEQUENCER SETTINGS PAGE 1\n\nGLOBAL MIDI CHANNEL\n\n選択したSequencer用のGlobal MIDI Channelです。新しいMIDI Channelを確定するにはエンコーダーを押す必要があります。\n\nMultitrack Sequencerの場合、8つのトラックそれぞれに個別のMIDI Channelと出力を割り当てることができます。詳細はMultitrack Modeのセクションを参照してください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 16,
+      "image": "/oxi-one-mk1/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "NOTE: MIDI In Channel Filtering設定は、OXI OneがMIDI入力データを各シーケンサーにどのようにルーティングするかを定義します。\n\nMIDI OUTPUT\n\nシーケンサーのMIDIデータの送信先を定義します：ALL、TRS、USB、またはBLEの送信先。この設定はCV-Gate出力には影響しません。\n\nNote: このパラメーターは、Multitrack Modeではトラックごとに設定されます。\n\nPROGRAM CHANGE\n\nパターンのロード時、またはArranger内で設定されている場合に、選択したMIDIチャンネルおよび出力先へMIDI Program Changeメッセージを送信します。Bank SelectはPCメッセージと一緒に送信されます。Bank Message TypeはConfig設定でcc 0またはcc 32に設定できます。\n\nNote: このパラメーターは、Multitrack Modeではトラックごとに設定されます。\n\nSEQUENCER MODE\n\nMono、Poly、Chord、Multitrack、Stochastic、Matricealモードの選択。\n\nSEQUENCER SETTINGS PAGE 2\n\nSHIFTを押しながらSequencerボタンをもう一度タップすると、2番目のSequencer Setupメニューにアクセスできます。このページでは、左から右に向かって以下を変更できます：\n\nPUNCH-IN QUANTIZATION\n\n再生が停止中にシーケンサーが起動（アクティブ化）されるときのカウントダウンを設定し、他のシーケンサーと同期して開始できるようにします。このパラメーターは、再生をResetする際にも考慮されます。\n\n再生リセットとは、Punch In quantizationが発生した後に、トランスポートバーが開始ステップに戻ることを意味します。\n\nこのパラメーターはプロジェクト内に保存されるため、新しいプロジェクトではここにデフォルト値が設定されます。デフォルト値は「Global」で、Launch設定メニューでプロジェクトに設定されたグローバルなQuantization設定が考慮されます。\n\nRESET\n\n選択したバー数（1〜64）後にシーケンスをリセットします。Multitrackでトラックを再揃えしたり、タイムや分割モジュレーションが適用された際にシーケンサーをシンクに戻したりするのに便利です。\n\nBANK\n\nパターンのロード時、またはArranger内で、選択したMIDIチャンネルおよび出力先へMIDI Bank Selectメッセージを送信します。Bank Message TypeはConfig設定でcc 0またはcc 32に設定できます。\n\nNote: このパラメーターは、Multitrack Modeではトラックごとに設定されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 17,
+      "image": "/oxi-one-mk1/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "TRANSPOSE（新機能）\n\n選択したSequencerのノートトランスポーズを有効にします。トランスポーズ量は、Sequencer（またはMultitrackモードでのトラック）のルート/ベースノートを基準とします。\n\n以下のいずれかに設定できます：\n- OFF：無効。\n- Same：受信ノートのMIDIチャンネルがSequencerのグローバルMIDIチャンネルと一致するかどうかを確認します。\n- Ch1〜Ch16：このチャンネルで受信したすべてのノートがパターンのトランスポーズに使用されます。複数のSequencerに同じMIDIチャンネルをトランスポーズ用に割り当てることができます。その場合、そのチャンネルでNote Onを受信すると、すべてのSequencerが同時にトランスポーズされます。\n\nこの設定を有効にすると、受信したMIDIノートは他の用途（録音、Arpeggiatorなど）には使用されません。Note Offは無視されます。\n\nTransposeは、MIDI Channel FilteringがOffの場合でも機能します。\n\nSEQUENCER SETTINGS PAGE 3\n\nSHIFT + Sequencerボタンを再度押すと、3ページ目のSequencer Setupメニューにアクセスできます。現在、このページは以下の設定のために予約されています：\n\nINSTRUMENT DEFINITIONS（新機能）\n\nSequencerにInstrument CC定義を選択できます。これにより、MIDI CC番号がお使いのシンセのパラメーターに合わせてあらかじめ設定され、そのパラメーター名が直接表示されます。\n\nInstrument定義は、新しいOXI Appを使ってデバイスにアップロードできます。アプリ内では、データベースからInstrumentをダウンロードしたり、独自のカスタム定義を作成したりすることができます。現在、OXI OneはMIDI CC定義のみをサポートしています。\n\n注記：以前のファームウェアリリースでプリロードされていたInstrument定義は削除されています。アプリを使って再取得する必要があります。\n\nCOLOR\n\nグリッド、Piano Roll、Keyboard、PatternsおよびArranger LaneにおけるSequencerノートの色です。\n\n注記：利用可能な色の中には、他よりも視覚的なフィードバックが優れているものがあります。\n\nPOLY SEQUENCER ADDITIONAL SETTINGS（*Poly Sequencer Settingsでのみ利用可能）\n\nボイス数はSettings 3ページ目のEncoder 1で設定できます。ステップあたり最大7ノートまで許可するか、7未満に制限することができます。\n\nSTEP PARAMETERS\n\n利用可能なすべてのSequencer Modeで、以下のステップパラメーターを確認できます：Velocity、Octave、GateおよびMod。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 18,
+      "image": "/oxi-one-mk1/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "これらのパラメーターは、グローバルにまたはステップごとに変更できます。グローバルパラメーターを変更するには、メインシーケンサー画面でエンコーダーを回します。グリッドは、Velocity とGate の最終値（最後に配置されたステップまたはOXI Oneキーボードからの値）を新しいステップのデフォルト値として使用します。\n\nGate 値において、最大値100を超えるとTIEがあり、2つのステップをタイノートとして設定できます。TIEの次にLEGato があり、これはレガート動作（例えばグライドなど）をシンセで有効にするために、次のノートのNote ONメッセージが前のノートのNote OFFの前に送信されます。\n\nTIP: ノートをすばやくタイにするには、グリッド上の1つのパッドを押し続けながら、同じ行の別のパッドをタップします。これにより、タップした両方のパッドの間のステップがタイになります。\n\nページをまたいでタイにするには、選択したページの1つのパッドを押し続け、ページボタンを使って別のページへ移動し、同じノートの行で別のパッドをタップしてノートの終わりを続けます。\n\nMODULATION PARAMETER\n\n各Sequencerには4つのModulation Laneがあります（Multitrackは8つ — 4つずつ2バンク、トラックごとに1つ）。アクセスするにはMODボタンを押します。これらの4つのモディファイアーはCC Configurationスクリーンで設定できます。各Laneはステップごとの値を持ち、各Patternとともに保存されます。\n\nこのビューでは、各エンコーダーが各Modulation Laneのグローバルコントロールとして機能します。\n\nMODスクリーンを終了する前に最後に使用されたModulation Laneが、4番目のエンコーダーのグローバルModコントロールとして設定されます。\n\nADDITIONAL STEP PARAMETERS\n\nSHIFTを押し続けながらグリッドパッドを押すか、Step-Chordボタンを押すことで（すばやくタップするとこのボタンがラッチされます）、追加のステップパラメーターにアクセスできます。以下はこれらのパラメーターの概要です。詳細はSequencer Modesセクションをご参照ください。\n\n- Glide: 連続する2つのノート間でピッチが継続的に変化する時間を設定します。現時点ではCVのピッチ出力にのみ影響します。\n\n- Prob、およびLogic conditions。2番目のエンコーダーをCW方向に回すと、確率100%を超えたところにLogic conditionsが表示されます。\n\n- Retrigger（ラチェット）: ステップ持続時間中にノートがトリガーされる回数を設定します（最大5回）。解像度を上げるには、SequencerまたはTrackのTime Divisionを変更してください。\n\n- Timing Offset: 現在のTime Divisionの-45%から45%の範囲でノートの時間的ズレを設定します。±25%はステップ持続時間の4分の1のズレです。\n\nSTEP MUTE（新機能）\n\nMono、Poly、Chord、およびMultitrackモードでは、MUTEボタンを押し続けてから任意のステップをタップすることでステップをミュートできます。ミュートされたステップは再生されません。ミュートを解除するには、MUTEを押し続けてもう一度ステップをタップします。\n\nステップパラメーターページでもステップをミュートできます。Velocity エンコーダーを一回タップするとノートがミュート/ミュート解除されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 19,
+      "image": "/oxi-one-mk1/pages/page-019.png",
+      "title": "Page 19",
+      "sectionName": null,
+      "content": "ミュートされたステップはグリッド上で紫色で表示され、ステップパラメータメニューの特定のアイコンで示されます：\n\nMUTE + 最初の列はシーケンサー全体をミュートするために予約されていることに注意してください。\n\nSEQUENCER DATA\n\n各Sequencer（1〜4）には、Sequencerごとに独立して設定可能で、パターンごとに保存されるグローバルパラメータがあります：\n\n· Sequencerビューとステップページ\n· MIDIチャンネル設定（異なるチャンネルで最大32トラック、2つの独立した仮想ポートでUSB出力に32チャンネル使用可能、OXI Splitを使用して最大48 MIDIチャンネル、OXI Split V2を使用して96 MIDIチャンネル）\n· 各モード用に設計されたキーボードレイアウト\n· モードに応じたトラック\n· Sequencerごとに16パターンスロットメモリ（プロジェクトごとに64スロット）\n· スケールとルートノート\n· Arpeggiator（トラックごと）\n· Looper（トラックごと）\n· Swing\n· Randomizerエンジン\n· Random Generatorエンジン\n· 初期ステップと終了ステップ（トラックごと）\n· タイム・ディビジョン・シグネチャー（トラックごと）\n· 再生方向（トラックごと）\n· MOD設定（4、またはMultitrackで最大8）\n· LFOs\n· Instrument CC定義\n· トランスポーズ（ピッチ）MIDIチャンネル\n· カラー\n· 外部MIDIおよびCVマッピング\n· Euclidean Generator（Multitrackのみ）\n· Grids Drum Pattern Generator（Multitrackのみ）\n\nENCODERS\n\nエンコーダーはすべてのパラメータ変更のインターフェースとして機能します。\n\n以降、エンコーダーの時計回りの回転を「CW」、反時計回りの回転を「CCW」と呼びます。\n\nSequencerビューでは、各エンコーダーが変更するパラメータは選択されたSequencer（1〜4）に適用されます：\n\n· VELocity（副機能：Tempo）\n· OCTave（副機能：Swing）\n· GATE（副機能：Scale）",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 20,
+      "image": "/oxi-one-mk1/pages/page-020.png",
+      "title": "Page 20",
+      "sectionName": null,
+      "content": "· MODulation（secondary function: Root）\n\nエンコーダーの値は画面にポップアップ表示されます。\nほとんどのファンクションボタンとセカンダリ機能について、画面には右図のように4つのパラメーターが表示されます。エンコーダーは画面上の対応するパラメーター位置を変更します。そのためには、ファンクションボタンを押しながら（またはタップして）エンコーダーを回してください。\n\n· ほとんどのパラメーターはエンコーダーボタンを押して確認する必要はありません。一部のパラメーターは確認が必要です。\n\n· 一般的に、エンコーダーボタンを押すと、ほとんどのメニューで対応するパラメーターがデフォルト値にリセットされます。一部の機能では shift + 押しでデフォルト値にリセットされます。\n\nPRIMARY FUNCTIONS\n\nVELOCITY\n\nVEL エンコーダーを回すと、選択した Sequencer（またはMultitrackで現在選択中のトラック）の全ステップのベロシティ値が変更されます。ステップ間でベロシティ値が異なる場合、画面には最小値と最大値が表示されます。エンコーダーを回すと各ステップの値がオフセットされます。\n\nグリッドボタンを押し続けるとStep menuが表示され、そのステップのVelocityを変更できます。複数のグリッドボタンを押しながらこのノブを回すことで、複数のステップのベロシティを同時に変更できます。Velocity エンコーダーをシングルタップするとノートがミュート/ミュート解除されます。Velocity エンコーダーをダブルタップするとステップのベロシティ値がリセットされます。\n\nVEL エンコーダーを押すと、グリッドにアクティブなステップのベロシティ値が縦棒グラフ形式で表示されます。ここからステップごとのベロシティ値を編集したり、ステップのオン/オフを切り替えたりすることもできます。\n\nVelocity column view\n\nVEL エンコーダーをタップすると、各ACTIVEステップのベロシティ値が縦棒として視覚的に表示されるStep Velocity Viewに切り替わります。VEL エンコーダーを押し続けると、Step Velocity Viewが一時的に表示されます。ステップごとのベロシティ値を即座にビジュアルフィードバックを確認しながら変更できます。すべてのACTIVEステップを一度に調整するには、VEL エンコーダーを回すだけです。エンコーダーを回すと、ディスプレイに最小・最大ベロシティ値が表示されます。これにより、各ステップのベロシティ値が、そのステップに割り当てられたベロシティ値に対して相対的に増減します。ノートデータのないINACTIVEステップは、VEL エンコーダーを回しても影響を受けません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 21,
+      "image": "/oxi-one-mk1/pages/page-021.png",
+      "title": "Page 21",
+      "sectionName": null,
+      "content": "ステップボタンを押しながらVEL エンコーダーを素早くダブルプレスすると、選択したステップのベロシティがデフォルト値にリセットされます。デフォルトのベロシティ値は75に固定されており、Configurationで変更できます。\n\nベロシティは、デフォルトでCV OutのADトリガーエンベロープの振幅に影響します。\n\nOCTAVE\n\nデフォルトのオクターブはC2です。2番目のエンコーダーを回して、選択したSequencerのベースオクターブを変更します。このベースオクターブはグリッド内のノートの基準点となります。各ステップのオクターブ値はこのベースノートからのオフセットとして機能します。\n\nSequencerビューでは、OCT エンコーダーを一度プレスして回すと、グリッドを上下にスクロールできます。白い行がルートノートを視覚的に表します（MONO、POLY、CHORDモードに適用）。もう一度プレスすると、グリッドビューがベースオクターブに戻ります。3回目のプレスでオクターブコントロールに戻ります。\n\nMULTITRACKモードの場合（new）：\n- エンコーダーをタップすると、選択したトラックのPiano Rollビューにアクセスできます。\n- Piano Roll内では、OCT エンコーダーを回すと、選択したトラックのPiano Rollビューを垂直スクロールできます。\n- または、OCT エンコーダーを押し続けることで、離すまでの間、Piano Rollビューに一時的に入ることもできます。\n\nGATE\n\nこのパラメーターは、選択したディビジョンに依存する各ステップの全長に対する%としてノートの長さを設定します。例えば、シーケンスが1/16thに設定されていてGATEが50の場合、ノートは1/16thノートの半分の長さになります。\n\nベロシティと同様に、ステップに異なるGATE値がある場合、画面には最大値と最小値が表示されます。グローバルコントロールとして機能します。GATE = 99の後はTIEになります。このパラメーターはステップごとに変更することもでき、TIEに加えてステップごとのLEGATOにもアクセスできます。\n\n- TIEは、現在のノートを複数のステップにわたって保持します。グリッド上のステップを押しながら、同じ行の右側にある別のステップを押すことでも設定できます（タイしたノートの終端を定義）。逆の操作（右から左）を行うと、タイされたノートではなく通常のトリガーが追加されます。\n\nタイされたステップは淡い白いライトで表示されます。タイするためにはステップが同じ行とオクターブに存在する必要があります。そうでない場合、別のノートとして扱われます。\n\nTIED steps representation\n\nTIP: ページをまたいでステップをタイするには、選択したページのパッドを1つ押し続け、ページボタンを使って別のページに移動し、同じノートの行で別のパッドをタップしてノートの終端を続けます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 22,
+      "image": "/oxi-one-mk1/pages/page-022.png",
+      "title": "Page 22",
+      "sectionName": null,
+      "content": "LEGatoは、連続する音符（異なるピッチ）の間でトランジションを生成し、それらの間に時間的なギャップを設けません。\n\nGATE encoderをいずれかの方向にゆっくりまたは一定の速度で回すと、TIED（またはLEGato）ステップを除くすべてのステップに効果が適用されます。TIEDまたはLEGatoのステップはTIEDまたはLEGatoのまま維持されます。これらのステップのTIESまたはLEGatoを解除するには、ノブをCCW（反時計回り）方向に素早く追加で回してTIEdノートを解除する必要があります。\n\nencoder をCW（時計回り）に回してGATE値を上げる際、素早く追加で回すことでステップをTIEできます。これにより、隣接するステップがTIEされます。\n\nencoderをゆっくり99に向けて回すと、TIEをアクティブにするための追加の素早い回転を完了するまでGATE値が99で変化しなくなります。逆方向も同様です。\n\nTIP: GateはCV OutのAD Trigエンベロープのdecay timeに直接影響します。\n\nGATE encoderを押すとGate列編集に入ります。ここでは、列グラフ形式でGate値を調整したり、ステップのオン/オフを切り替えたりすることができます。最上位の値はノートをTIEとして設定し、TIEされたノートは白い淡い色で表示されます。\n\nGate column view\n\nMOD\n\nMOD encoderを1回押すと、アクティブなレーンのモジュレーション値が列グラフ形式で表示されます。画面にはMIDIパラメーターのデスティネーションが表示されます。encoderを回して選択するモジュレーションレーンを変更します。グリッドにモジュレーションカーブを描いたり、開始点と終了点の変更（Init-Endボタンを使用）、速度の変更（x2および/2ボタン）、複製またはクリアなどのクイックアクションを実行できます。MODビュー中、これらのアクションはフォーカスされたMODレーンにのみ影響します。\n\nMIDIパラメーターまたは内部デスティネーション、その他のモジュレーションレーン設定は、後述のMOD設定で変更できます。\n\nGLOBAL CONTROL\n\nVelocity、Gate、ModのステップパラメーターをグローバルにSetするとき、それらが異なる設定を持つ場合はオフセットとして機能し、代わりにステップの最小値と最大値が表示されます。例えば、",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 23,
+      "image": "/oxi-one-mk1/pages/page-023.png",
+      "title": "Page 23",
+      "sectionName": null,
+      "content": "シーケンスのvelocityが50〜110の範囲であれば、グローバルvelocityをCW（時計回り）に回すと、全ステップに+1のインクリメントが加わります（51〜111、52〜112 …）。\n\n最大値または最小値に達して超過した場合、極端な値は制限/クリップされ、この範囲は縮小されます。この実装により、グローバルパラメーターに対してパフォーマンスを行うことができます。極端な値に達することで、そのパラメーターのばらつきを「フラット化」し、全ステップに同じ値を素早く再設定することができます。\n\nSECONDARY FUNCTIONS\n\nTEMPO\n\nTempoは全てのSequencerに影響します。変更するには、SHIFT + 1番目のエンコーダーを回します。\n\nこれはOXI OneがINT（内部）同期モードの場合にのみ機能します（Synchronizationセクションを参照）。\n\nプロジェクトのTempoはプロジェクトごとに保存され、「Load Project BPM update during playback」設定に応じてプロジェクトデータと共に読み込まれます。再生が有効な状態で新しいプロジェクトを読み込む際にTempoを自動更新するか否かをConfigメニューで選択できます。\n\nまた、トランスポートが動作中に新しいプロジェクトを読み込む場合、Global Launch Quantizationにより新しいプロジェクトがいつ読み込まれるかが決まります。New 4.5.2\n\nTIP: SHIFT + Playを繰り返し押してtempoをTAPで目的のビートに合わせることができます。\n\nSWING\n\nSHIFT + 2番目のエンコーダーを回してSwingを変更します。各Sequencerは独自のSwing値を持ちます。各Sequencerはそれぞれ異なるタイムシグネチャまたはタイムディビジョンを持つ場合があるため、音楽的な結果を得るにはSwing値を慎重に設定する必要があります。SHIFT + エンコーダー2ボタンを押すと、Swingはデフォルト値の50（スウィングなし）にリセットされます。\n\nSCALE\n\nSHIFT + 3番目のエンコーダーを回して、異なるScaleの中から選択します。\n\nScaleの操作には、Scale quantization設定に依存する2つの方法があります。\n\n- Scale quantizationが無効の場合、エンコーダーを回すと新しいScaleが自動的に適用されます。パターンに存在するステップはその位置を保持しますが、Scaleによって結果の音符が全く異なる場合があります。例えば、C Chromatic（12音）からC Majorスケール（7音）に切り替えると、EノートはGノートに変換されます。インターバルは変わりませんが、結果の音符は異なる場合があります。この場合、SHIFT + エンコーダー3を押すと、Scaleはデフォルト値のChromaticに設定されます。\n\n- Scale quantizationが有効の場合、新しいScaleは自動的に設定されず、SHIFT + 3番目のエンコーダーを長押しして確認する必要があります。新しいScaleが適用されると、既存のステップはScale変更前の音符にできるだけ近くなるよう調整されます。これがScale quantizationです。例えば、C Majorの5番目のインターバル・5番目のグリッド行にあるGノートは、C Chromaticでは実際に8番目のインターバル・8番目のグリッド行のGノートにquantizeされます。\n\nScale quantizationは、Scale間でメロディーをできるだけ近い状態に保つ必要がある場合や、特定のScaleを探しているが全てのScaleを",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 24,
+      "image": "/oxi-one-mk1/pages/page-024.png",
+      "title": "Page 24",
+      "sectionName": null,
+      "content": "スケール量子化をOFFにすることで、様々なスケールへの直接アクセスが可能になり、スケールエンコーダーを回すたびにノートが更新されるため、同じステップセットを異なるスケールで聴くときに興味深い結果が得られます。\n\nHARMONIZERモードのセクションで説明する非常に優れた機能があります。これは、あるSequencerのノートが、別のSequencerで演奏されているコードのノートにハーモニー的に従う機能です。これにより、すべての楽器がキーに合わせてコード進行に沿い続けることができます。HARMOスケール設定は、ChromaticスケールからCCW方向に1つエンコーダーを回した位置にあります。Mono、Poly、Multitrack、Stochasticモードでのみサポートされています。\n\nOXI Oneキーボードや外部MIDIソースからの入力ノートは、Scale note quantizing設定に応じてスケールに量子化することができます。\n\nSCALES LIST\n\n1) Chromatic\n2) Major\n3) Minor\n4) Dorian\n5) Frigyan\n6) Lydian\n7) Mixolydian\n8) Locrian\n9) PentatonicMajor\n10) PentatonicMinor\n11) Harmonic Minor\n12) Melodic Minor\n13) Blues\n14) Arabian\n15) Romanian\n16) Balinese\n17) Hungarian 1\n18) Hungarian 2\n19) Oriental\n20) Raga Todi\n21) Chinese\n22) Japanese 1\n23) Japanese 2\n24) Persian\n25) Diminished\n26) Phrygian Dominant\n27) Byzantine\n28) Spanish Phrygian\n29) Neapolitan Minor\n30) Neapolitan Major\n31) Ukrainian Dorian\n\nTIP: Sequencerモードを変更してもScaleはリセットされません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 25,
+      "image": "/oxi-one-mk1/pages/page-025.png",
+      "title": "Page 25",
+      "sectionName": null,
+      "content": "ROOT NOTE\n\nデフォルトのルートノートはC2ですが、SHIFTを押しながらエンコーダー4を回すことで簡単に変更できます。\n前のパラメーターと同様に、SHIFTを押しながらエンコーダーボタンを押すと、ルートノートがデフォルト値のC2にリセットされます。\n\nScaleとRootはどちらも、パフォーマンス中に意図しない変更を防ぐためにConfigurationメニューでロックできます。\n\nFUNCTION BUTTONS\n\nTIP: Mono、Chord、Multitrack、またはPolyphonicシーケンスをすぐに使い始めたい場合は、Sequencer Modeのセクションにジャンプして、Function Buttonsのセクションをスキップしてください。Function Buttonが言及されている際のナビゲーションを助けるためのブックマークへのリンクがあります。\n\nただし、Function Buttonsのセクションを最初に読むことで、すべてのシーケンサーを通じた一般的なワークフローに慣れることができます。\n\nTRANSPORT\n\n以下の動作はInternal Synchronizationに適用されます。\n\nRecはKeyboard viewまたはMIDI入力からの録音を有効にします。\n\nStopはすべてのSequencerをステップ1に停止・リセットします。\n\nPlay/Pause/FILLはデフォルトでは期待通りに動作しますが、Configメニューで以下に変更できます：\n- すべてのシーケンサーのプレイヘッドをスタートポイントにリセット\n- Pause\n- FILLモディファイアー\n- 何もしない\n\nRecording: シーケンサーはMIDI Inチャンネルフィルタリングの設定オプションに応じて、受信したMIDI情報を受け取ります。MIDI Inチャンネルフィルタリングがオンの場合、各シーケンサーは自分自身のMIDIチャンネルを聴きます。オフの場合、選択されたシーケンサーが任意のチャンネルを聴きます。Recordingについての詳細は専用のセクションをご覧ください。\n\nStep Recording: Rec + PlayでStep Recordモードに入ります。\n\nTIP: Shift + Stopでシーケンサーをリセットします。\n\nMUTE OPTIONS new\n\nMuteボタンとシーケンサーボタン、Step、マルチトラックのファーストカラムパッドなどを組み合わせて押すことで、さまざまなミュートアクションを実行できます。ミュートをラッチするには、Muteボタンをダブルタップすると状態が維持され、片手でミュート操作が可能になります。Configメニューでは、ワークフローに最適なMute動作を選択できます。この設定に応じて、Muteは以下のように機能します：\n\nToggle Instant\n\nMute + シーケンサー押下：シーケンサーの再生を有効または無効にします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 26,
+      "image": "/oxi-one-mk1/pages/page-026.png",
+      "title": "Page 26",
+      "sectionName": null,
+      "content": "Sequencerが非アクティブの場合、そのSequencerのトランスポートは停止しています。Sequencerをアクティブにすると、Punch-Inのクオンタイズ設定に従ってトランスポートが開始されます。\n\nToggle On Release\n\nMuteを長押しして、好きなだけSequencerボタンを押します。SequencerはMuteボタンを即座に押した時ではなく、Muteボタンを離した時に有効/無効が切り替わります。これにより、Muteを押さえている間に複数のトラック/Sequencerをまとめてアクティブ/非アクティブにでき、Muteボタンを離した時に有効になります。\n\nSequencerが無効になると、トランスポートバーが停止します。\n\nSequencerをミュートしながらプレイヘッドを動かし続けるには、MUTE + Sequencerの最初のパッドを押します。\n\nMute Instant\n\nMute + Sequencerボタン押下：Sequencerのトランスポートが停止してSequencerが非アクティブになる代わりに、再生をミュート/アンミュートします。\n\nこの設定では、ミュートされたSequencerでもトランスポートバーは動き続けますが、ノートやCV-Gate情報は出力されません。この設定では、Muteボタンを押した瞬間にミュートが有効になります。\n\nMute On Release\n\nMute/アンミュートはMute Instantと同じように動作しますが、この設定ではMuteボタンを離すまでミュートが適用されません。これにより、Muteボタンを離す前に複数のSequencerやトラックのミュート/アンミュートを準備することができます。\n\nTIP: Mute Latchを有効にしてToggle on ReleaseまたはMute on Release設定を使用すると、Sequencer間や異なるMultitrack Mode Sequencer内にまたがってミュートを準備できます。ラッチされたMute中は、Shift+Sequencer Buttonを使用して別のMultitrack Modeにフォーカスを切り替えてください。\n\nRECORDING\n\nレコーディングに関するすべての情報は、専用のセクションに記載されています。\n\nOTHER TRANSPORT COMMANDS\n\nPlay/PauseボタンのビヘイビアはConfigで以下のように設定できます。\n\n- \"OFF\"：一時停止無効\n\n- \"ON\"：一時停止有効。OXI Oneが再生中にPlayをタップすると、すべてのSequencerが一時停止します。\n\n- \"RESET\"：一時停止の代わりに、OXI Oneの再生中にPlayボタンをタップすると、すべてのSequencerのプレイヘッドがPunch In設定に従ってリセットされます。\n\nSHIFT + STOP（再生中）：すべてのSequencerの再生をPunch In設定に従ってリセットします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 27,
+      "image": "/oxi-one-mk1/pages/page-027.png",
+      "title": "Page 27",
+      "sectionName": null,
+      "content": "SHIFT + MUTE + Sequencerボタン　選択したSequencerの再生を、そのPunch In設定に従ってリセットします。\n\nSHIFT + MUTE　Nudgeメニューを開きます。\n\nMUTE + 1列目の任意のパッド　選択したSequencerをミュートします。再生ヘッドは動き続けますが、SequencerはMIDIやCVイベントを出力しません。\n\nSHIFT + Playを3秒以上長押しすると、Sequencingから一時休憩できます ;)\n\nTRANSPORT CC COMMANDS\n\nOXI OneがMasterでない場合（リアルタイムメッセージがMasterによって無視される場合）に、DAWや他のデバイスのTransportを制御するため、Stop、Play、RecにMIDI CCメッセージを割り当てることができます。\n\nこれらのMIDI CCメッセージは、選択したMIDIチャンネルのPort AからOXI Oneを通じて送信されます。\n\n- Stop: CC 105\n- Play: CC 106\n- Rec: CC 107\n\nこの機能はConfig、MIDIセクションで有効にできます: CC Transport Msgs Channel\n\n\"Off\"、またはPort AのChannel 1〜16のいずれかに設定できます。\n\nこの設定が\"Off\"でない場合、いずれかのボタンをタップするとOXI Oneが対応するCCメッセージを送信するため、DAWのMIDI learnを使ってこの3つのコマンドを素早く割り当てることができます。\n\nNUDGE\n\nNudgeを使用すると、4つのSequencerそれぞれのタイミングを個別に微調整できます。\n\nSHIFT + Mute　Time Offsetスクリーンを開き、4つのSequencerそれぞれのタイミングを+/- 100ミリ秒の範囲で変更できます。対応するSequencerのEncoderをタップすると、Time Offsetの値がゼロにリセットされます。4つのOffset値を同時に調整するには、任意のEncoderを回しながらShiftを押し続けます。\n\nSHIFT + Muteをダブルタップ　Time Bendスクリーンを開き、各SequencerのグローバルTempoに対する相対的な割合で再生速度を増減できます。対応するSequencerのEncoderをタップすると、Time bendが",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 28,
+      "image": "/oxi-one-mk1/pages/page-028.png",
+      "title": "Page 28",
+      "sectionName": null,
+      "content": "の値をゼロにします。4つのTime Bend値をすべて同時に調整するには、任意のEncoderを回しながらShiftを押し続けます。\n\nSHIFT + 任意のEncoderを押すと、Time OffsetとTime Bendメニューが切り替わります。\n\nKEYBOARD - プレビュー\n\nOXI One Keyboardのレイアウトに関するすべての情報は、Keyboardセクションに記載されています。\n\nSHIFT + Previewは、ステップを押した際（またはエンコーダーでコードタイプやステップのノートを変更した際）に、グリッドのPiano RollビューでPlaybackを有効/無効にします。これにより、シーケンスに追加したノートやコードについて、設定済みのMIDIおよびCVを通じて即座にフィードバックが得られます。\n\nPAGES\n\n16、32、48、または64を押して、グリッドに表示するステップページを選択します。80、96、114、128ページにアクセスするには、対応するSequencerボタン（1〜4）を押しながら目的のページ番号を押すか、ページ番号をダブルタップします：16は80を表示し、32は96を表示するといった具合です。この場合、ページボタンは青く点灯します。\n\nOXI Oneは、最初の4ページまたは最後の4ページ間のナビゲーションをよりスムーズにします。別のブロックに切り替える前に、現在どのページにいるかを考慮するためです。\n\nSequencerが動作中、グリッドは通常現在のページを表示するため、16、32、48、または64ボタンはSequencerがそのページを離れるまでの間のみ表示に影響します。特定のページにディスプレイをロックするには、Follow機能をオフにしてください。\n\nSequencerビュー以外の画面でいずれかのページボタンを押すと、このビューに移動します。\n\nARROW MOVEMENTS\n\nSHIFT + Pageは、表示された矢印に従って、グリッド上のシーケンスを移動させます。シーケンスを左、上、下、右に1ステップずつ移動させ、水平方向に回転させるか垂直方向にトランスポーズします。アクティブなステップ範囲にのみ適用されます。\n\nまた、グリッドの異なる列の2つのパッドを押しながらSHIFT + Pageボタンを押すことで、ステップの範囲をシフトすることもできます。\n\nWORKING WITH PAGES\n\n異なるページでのステップ編集に関する注意事項：\n\n- Followをオフにすることができます（SHIFT + MODボタンでFollowのオン/オフを切り替え）。これにより、OXI Oneが別のページに切り替えることがなくなります。\n\n- INIT + END + Pageボタンを押し続けることで、ページを素早くループできます（ファームウェア4.2以降で使用可能なループモードに入ります）。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 29,
+      "image": "/oxi-one-mk1/pages/page-029.png",
+      "title": "Page 29",
+      "sectionName": null,
+      "content": "・ ページボタンを使用してINITとENDポイントを設定できます。例えば、Initを押しながらページ32ボタンを押します。これにより、初期のステップ範囲を保ちながら、initとendの両方のポイントが同時にスマートに移動します。\n\nCOPY AND PASTE\n\nOXI Oneには、いくつかのコピー/ペースト操作が用意されています。コピーする場合は、COPYボタンを押しながらコピーしたいアイテムを選択します。または、先にアイテムを選択してからCOPYを押します。ペーストも同様の手順です: PASTEを押しながらターゲット位置を選択するか、ターゲット位置を押しながらPASTEを押します。\n\n利用可能な操作:\n\nパターン\n\n・ Load、Save、またはArrangerビューでパターンをコピー/ペーストできます。また、Sequencer間でパターンを転送し、任意の位置に1つずつ配置することも可能です。\n\nSequencerのコピー/ペースト\n\nSequencerをコピーするには、COPYボタンを押しながら、ソースSequencerのSequencerボタン（1〜4）を押します。ペーストするには、PASTEボタンを押しながら、ターゲットSequencerに対応するSequencerボタンを押します。この操作により、あるSequencerのコンテンツが別のSequencerに複製されます。先にSequencerボタンを押してからCOPYを押すこともできます。\n\n・ Mono SequencerをMultitrackトラックにコピー/ペーストする: まずMono Sequencerをコピーし、次にPasteを押して、コピー先トラック（1〜8）の最初のパッドをタップします。これは、Mono modeのパワーを活用して作曲し、MultitrackをSequencerスロットを空けるためのストレージとして使用する際に非常に便利です。\n\n・ あるMultitrackトラックを別のMultitrackトラックにコピー/ペーストする: Copyを押してソーストラックの最初のパッドをタップし、次にPasteを押して宛先トラックの最初のパッドをタップします。\n\n・ Poly SequencerからペーストするとSequencerモードが上書きされます。\n\n・ Chord Sequencerからペーストするとsequencerモードが上書きされます。ただし、Polyにペーストする場合を除きます。Polyにペーストすることで、コードシーケンスをノートごとに細かく調整できます。\n\n・ Stochastic Sequencerからペーストするとsequencerモードが上書きされます。ただし、Monoにペーストする場合を除きます。Monoにペーストすると、stochasticバッファのノートがモノフォニックシーケンスに変換されます。\n\nSTEPS",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 30,
+      "image": "/oxi-one-mk1/pages/page-030.png",
+      "title": "Page 30",
+      "sectionName": null,
+      "content": "・ 新機能 単一または複数のステップをすべてのパラメーターごとコピー/ペーストできます。これらのステップは、異なる位置、さらに異なるピッチに相対的にペーストできます。コピーできるステップの最大数は、ステップクリップボードバッファのサイズによって制限されます。\n\n・ ページ単位のステップ（16、32、48など）を別のページにコピー/ペーストできます。Copy/Pasteを長押ししながらページボタンを押します。\n\n・ 単一または複数のTIEDノートをコピー/ペーストできます。新機能\n\n・ Polyシーケンサーで、Copyを押しながらそのカラムの空のステップを押すことで、単一または複数のステップのカラムをコピー/ペーストできます。選択したステップのすべてのノートがコピーされます。\n\n・ MatricealのCopy/Pasteで、パラメーターレーン、トラック、ステップ値をコピー/ペーストできます。\n\nSCALE AND ROOT 新機能\n\n・ シーケンサー間でScaleとRootの情報をコピー/ペーストできます。Copyボタンを長押ししながら3番目または4番目のエンコーダーをタップして、ScaleとRootをコピーします。\n\nMOD LANES および MOD MATRIX\n\n・ Mod LaneおよびMOD Matrixの設定内でCopy/Pasteが使用可能です。あるMod Laneから別のMod Laneへすべてのパラメーターと値をコピーしたり、あるMOD Matrix MappingからMOD Matrixの別のMappingへコピーしたりできます。\n\n・ クイックCopy/Paste: Copyを押しながらエンコーダーをクリックし、次にPasteを押しながら別のエンコーダーをクリックすることで、あるMOD LaneからMOD値を別のMOD Laneにコピーできます。\n\nOTHERS\n\n・ アレンジャービューでアレンジャースロットをコピー/ペーストできます。\n\nDUPLICATE\n\nSHIFT + Copyは現在のシーケンスのステップを後続のステップに複製し、シーケンスの長さを2倍にします。このアクションはまた、新しい長さに合わせてシーケンスのEndポイントを自動的に調整します。\n\n例えばシーケンスが80ステップの長さの場合、最大128ステップの上限に達するまで、残りの48ステップのみがコピーされます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 31,
+      "image": "/oxi-one-mk1/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "content": "CLEAR\n\nSHIFT + PasteはClearを起動します。\n\nSequencerビューで、SHIFT + Clearを押すと、Sequencerの全ノートイベント、またはMultitrackモードで選択したトラックのノートイベントを消去できます。\n\nSHIFTを押しながらClearを長押しすると、Sequencerのフルクリアが実行されます。ステップ情報、タイムディビジョン、パターン長、ノートオフセット、ランダマイズ設定などがデフォルト値にリセットされますが、MIDIチャンネルやMODデスティネーションなどのセットアップ設定は、利便性のためほとんどの場合影響を受けません。ただし、Saveレイアウトを使用してこれらの残りの設定を完全に消去することもできます。\n\nArrangerレイアウトでロードされたソング／アレンジメントをクリアする際や、MODスクリーンが開いているときにMODレーンの値をクリアする際にもこの機能を使用できます。\n\nUNDO AND REDO\n\nUndoには最後の10ステートが保存されており、繰り返し押すことで不要なテイクを取り消せます。SHIFT + Redoを繰り返し押すと、やり直しができます。\n\n- ステップのトグルで新しいUndoステップが作成されます。（新機能）\n\n- TIEDノートの入力と削除で新しいUndoステップが追加されます。（新機能）\n\n- ランダムジェネレーター、Expand、Condense、Clear、Duplicate、Copy、Paste、Recordingの開始と終了、異なるパターンのロード時に、データ損失を防ぐため新しいUndoステートが作成されます。新しいUndoステップはボタンLEDの素早い点滅で示されます。\n\nINIT, END and LOOP\n\nアクティブなSequencerの開始・終了ステップを変更するか、Multitrackでトラックごとに変更します。\n\nInitまたはEndを保持して：\n- グリッド上の任意のステップを押す\n- エンコーダー2と3を回す\n- またはページボタンを押す\n\nページボタンをダブルプレスすると、ページ80、96、114、128が選択できます。\n\nいずれかのボタンを保持すると、グリッドLEDがパターンの開始点と終了点を紫色で表示します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 32,
+      "image": "/oxi-one-mk1/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "content": "SHIFT + [ボタン]または[ボタン]で、選択中のSequencerのタイムディビジョンをそれぞれ2倍または半分にします。\n\nMultitrackモードでは、SequencerのナンバーボタンとInitまたはEndボタンを押しながら目的のステップを押すことで、全トラックのInitとEndのステップを一度に変更できます。\n\nワークフローを改善するために、パターンの開始ステップを現在の最終ステップより後に設定すると、パターンの長さ分だけ両方の位置がオフセットされます。\n\n例：開始ステップが1、終了ステップが16の状態でInit + ステップ32を押すと、新しい開始点と終了点はそれぞれ17〜32になります。\n\nMatricealモードでInitまたはEndボタンと任意のトラックステップを組み合わせることで、パラメータートラックの開始点と終了点を設定することもできます。\n\nLOOP MENU（新機能）\n\nLooperのチュートリアル動画はこちら。\n\nLOOPスクリーンに入るには、InitボタンとEndボタンを同時に押します。\n\nLoopは、Mono、Poly、Chord、Stochastic、Multitrackモードで動作します。\n\nLOOPメニューに入ったら、グリッド上の異なる2列のステップを2つ押すだけでループをアクティブにできます。押したステップがループのポイントになります（同じ列の異なる2行を押すと1ステップのみをループできます）。Multitrackモードでも同様に動作します。トラックエンコーダーでAllを選択すれば全トラック同時にループを設定でき、トラックエンコーダーで任意のトラックを選択して各トラックの行の2つのステップを押せば、個別のトラックループを設定できます。\n\nループは手動でInitまたはEndボタンを押して無効にするまで、そのSequencerでアクティブになります。無効にすると、ループはLoop release sync設定に従ってシンクに合わせて解除されます。各Sequencerで個別にループを有効・無効にできます。\n\nループメニューにあるオプションは以下のとおりです。\n\n● Len：ループの長さを2倍または半分にして調整し、初期位置を固定したままループを素早く拡張または短縮できます。このオプションをアクティブにすると、まだアクティブでない場合はループが有効になります。\n\n● Pos：ループの長さを変えずにループの位置を1ステップずつ移動させ、シーケンスの開始点と終了点を同時にシフトします。ループがアクティブかどうかに関わらず使用できます。SHIFTを押しながらPositionを変更すると、ループは実際のループ長と同じ数のステップ分移動します。\n\n● Rate：ループ内のプレイバックヘッドのRate（レート）またはディビジョン。\n\n● Track：Multitrack SequencerでLooperが影響するトラック（またはトラック群）。\n\nTIP：LOOPがアクティブな状態でも、シーケンスをトランスポーズしたり、グリッドのステップをオン/オフに切り替えることができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 33,
+      "image": "/oxi-one-mk1/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "content": "LOOPが特定のシーケンサーでアクティブになっている場合、InitとEnd pointのマーカーは常に表示されますが、これらのポイントでのアクティブなノートの視認性を確保するために若干暗く表示されます。グリッド上のパッドを選択し、initボタンとendボタンを押しながら操作することで、LOOPのINIT/ENDを設定することができます。\n\nTIP: SnapshotのなかでLOOPすることも、LOOPのなかでSnapshotすることも可能です。どちらのシナリオでもSnapshotを終了すると、パターンに戻りLOOPも終了します。LOOPを終了してもSnapshotは終了しませんが、Snapshotを終了するとLOOPも終了し、Init/EndはLOOPポイントの直前に戻ります。\n\nY DIV - EXPAND\n\nDivision menuをアクティブにします。左から右へ:\n\n・グリッドの垂直スクロール / トラック選択（Multitrack）\n・再生方向\n・ランダム タイム ディビジョン\n・タイム ディビジョン\n\n素早くタップするとメニューが開き、長押しするとボタンを離すまで一時的に開きます。\n\nグリッドのPiano Roll viewはOCTで選択したオクターブに設定され、ルートノートが最下行になります。より高いまたは低いオクターブに到達してステップをさらに編集するには、垂直スクロール（1番目のエンコーダー）を使用してビューを上下に移動します。グリッドを垂直方向に移動すると、ハイライトされた行が表示され、それらはルートノートの位置を示しています。\n\nSHIFTを押しながら操作すると、スケールインターバルではなくオクターブ単位でジャンプします。\n\nTIP: 2番目のエンコーダー（Oct）を長押しして回すことで、垂直スクロールをすばやく実行することもできます。\n\nMultitrackでは、1番目のエンコーダーで選択トラックを変更します。\n\n再生方向は、前進、後退、ペンデュラム、ランダム、ピンポン、ドランクから選択できます。Multitrackモードでは、このパラメーターは各トラックで独立しています。\n\nドランク方向: 各ステップで、次のステップに進む確率が50%、同じステップを繰り返す確率が25%、1ステップ戻る確率が25%です。\n\nTIP: Ping PongとPendulumは似ていますが、Pendulumはパターンが最初のステップに戻った後に1から始められるよう、パターンの最終ステップを2回再生します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 34,
+      "image": "/oxi-one-mk1/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "content": "Random Time Divisionは、シーケンスにより予測しにくいリズムをもたらすために、分割の変更を導入します。アクティブになると、Sequencerは同期が外れますが、クロックのテンポには従います。Multitrackモードでは、このパラメーターはすべてのトラックに影響します。\n\nTime Division。Multitrackモードでは、このパラメーターは選択されたトラックのみに影響します。\n\nSHIFT + DivisionでExpandが有効になります。シーケンスのズームインとして機能します: 長さが2倍になり、タイムディビジョンが半分になります。アクティブなノートは、その長さを維持するために次のステップにTIEされます。Expandは最大ステップ数（128）によってのみ制限されます。\n\nTIP: Expandを使うと解像度を素早く上げることができます。\n\nExpandの反対はCondense機能です。元に戻せないズームアウト機能であり、使用するとノートが消えることがあります。\n\nExpandとCondenseは両方とも新しいUndoステップを生成します。\n\nRANDOMIZER & GENERATORS\n\nRANDOM PERFORM（非破壊的）\n\nシーケンスに非破壊的なバリエーションを作成するための簡単で音楽的な方法は、Random Performを使用することです。\n\n素早くタップするとメニューが開き、長押しするとボタンを離すまで一時的にメニューが開きます。\n\nパラメーターはトラックごとのすべてのステップに影響します。\n\n左から右へ:\n\n● Rand Velocityは単極または双極にできます。+ の値は正のランダム変動のみを加えます。+/- の値は正と負の両方の変動を加えます。\n\n● Rand Octaveは単極または双極にできます。+ の値はランダムに高いオクターブのみを加えます。+/- の値はランダムに高いまたは低いオクターブを加えます。ランダム値が大きいほど、異なるオクターブでノートが再生される確率が高くなるだけでなく、ランダム化のオクターブ範囲も広がります。\n\n● Rand Triggerは、ノートが再生される確率です。100% は無作為化なしを意味します。\n\n● Rand Retriggerは、ステップにラチェットエフェクトを導入する確率です。\n\nMonoモードとMultitrackモードでは、RetriggerはSkip（ステップパラメーター）にも以下のように影響します:\n○ 負の値では、ステップにスキップを追加します。\n○ 0% から 32% の正の値では、Skipに設定されたステップがトリガーされ始め、Retriggerも一部表示されることがあります。\n○ 33% から 100% では、Retriggerが表示される確率が高くなります。Skipに設定されたステップはトリガーされる可能性がさらに高くなります。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 35,
+      "image": "/oxi-one-mk1/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "content": "Multitrackモードでは、Random OctaveではなくRandom Gateがあり、TIEには影響しません。\nMatricealモードおよびMultitrackモードでは、Random PerformパラメーターはトラックごとにIndependentです。\nRandom PerformはMultitrackモードで個別のトラックに対して有効/無効にできます。Random Buttonを押すと、最初の列がオレンジ色に点灯します。ボタンを押したまま、対応するトラックのパッドを押すと、そのトラックへのRandom Performの影響を止められます。\n\nRANDOM GENERATOR（破壊的）\n\nRandom をダブルタップするか、SHIFT + Random を押すとRandom Generatorメニューがアクティブになります。これにより、様々なパラメーターに基づいてシーケンスを生成でき、どのSequencerモードでも、メロディックやリズミックなアイデアを生み出すためにパラメーターを細かく調整できます。\n\nRandomボタンを押しながら、グリッドの最初の3トラックにある3つの青いパッドのいずれかを押すと、Multitrack ModeのそれらのトラックのDrum Pattern Generatorを有効/無効にできます。詳細についてはMultitrack Modeを参照してください。\n\nさらに、MultitrackモードではSHIFT + RandomはEuclidean GeneratorとRandom Generatorを全8トラック間でトグルします。ただし、最初の3トラックでDrum Generatorが有効になっており、そのいずれかがフォーカスされている場合は除きます。同じショートカットで、Drum GeneratorとRandom Generatorのトグルも可能です（Euclidean Generatorについては後述します）。\n\n4番目のエンコーダーを押すと新しいパターンが生成されます。アイコンはエンコーダーの押し操作が確認のために必要であることを意味します。\n\n最初のパラメーターセット：\n\n● Bias：（スケールインターバルの）ルートノートオフセットを設定します。新しいノートの生成のための中心点となります。\n\n● Rang：新しいノートが生成されるステップインターバルの範囲を定義します。バイポーラまたはユニポーラモードに設定できます。\n○ バイポーラモード（±）では、新しいノートはBias値にRangeの値を加算または減算した範囲内で生成されます。Biasが0でRangeが0より大きい場合、ルートノートより上下の両方でノートが生成されます。\n○ ユニポーラモードでは、新しいノートはBiasポイントより上にのみ生成されます。\n\n● Rand：生成されるノートのバリエーションの程度を制御します。値が小さいとパターンが一定になり、アルペジオに適しています。値が大きいと、より変化に富んで繰り返しの少ないシーケンスになります。\n\n● Dens：生成されるノートの量（密度）を変更します。最小量は1%です。1%を超えると、次の機能が利用可能になります：\n○ Huma：既存のシーケンスにHumanization（ベロシティ、Gate、マイクロタイミングオフセットのランダム化）を適用します。Humanization量については次のオプションを参照してください。\n○ Order：最初からシーケンスを新しく生成するのではなく、Randomizerが実際のシーケンスのノートの順序をシャッフルし、そのバリエーションを作成します。ノートのTiesは保持されません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 36,
+      "image": "/oxi-one-mk1/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "content": "○ Pitch：新しいシーケンスをゼロから生成する代わりに、Randomizerは現在のシーケンスのアクティブなステップのピッチをシャッフルします。ノートのタイは保持されません。\n\n○ Invrt：パターンの順序をスタートポイントからエンドポイントへと逆順にします。（New）\n\nパラメーターの第2セット（Encoderを押してトグル切り替え）：\n\n- Random scale：「Yes」にすると、シーケンサーのスケールとルートノートをランダム化します。\n\n- Humanize：生成されたパターンにタイムオフセット、Gate、ベロシティのバリエーションを加えます。\n\n- Ties：TIEDノートが出現する確率量を設定します。\n\nRandom Generatorはデストラクティブ（破壊的）な操作で、パターンのスタートポイントからエンドポイントまでの内容を上書きします。前のシーケンスに戻すにはUndoを押してください。\n\nNew Random GeneratorはFIXEDまたはLOCKEDのロジック条件が設定されているステップを変更しません。この機能により、特定のステップを変更せずに保ちながら、Random Generatorを使ってバリエーションを加えたり、ダイナミックなパターンを生成したりすることができます。\n\nTIP：SHIFT + ENCODERを押すと、選択したRandom GeneratorパラメーターをデフォルトValeに戻すことができます。\n\nEUCLIDEAN GENERATOR（デストラクティブ）\n\nEuclidean GeneratorメニューはMultitrackモードのみで利用できます。SHIFT + Randomを押してメニューに入ります。\n\nDRUM PATTERN GENERATOR（ノンデストラクティブ）\n\nPattern GeneratorはMultitrackモードで利用できる新しいツールで、MI Gridsモジュールをベースにしています。Kick/Bassdrum、Snare、HiHatのドラムパターンを生成するために使用できますが、もちろん他のサウンドをトリガーすることも可能です。生成されたパターンは、トラディショナルなものからよりエクスペリメンタルなものまで、多様なリズムをミックスしたもので、組み合わせることで興味深い結果をもたらします。このミックスはXとYの2つのコントロールで調整します。\n\nこの機能の詳細については、Multitrackモードのセクションを参照してください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 37,
+      "image": "/oxi-one-mk1/pages/page-037.png",
+      "title": "Page 37",
+      "sectionName": null,
+      "content": "LFO - CV GATE\n\nSequencer 1つにつき2つのLFOがあり、どちらも1つの内部パラメーターと1つのMIDIパラメーターをモジュレートできます。素早くタップするとメニューが開き、長押しするとボタンを離すまでの間だけメニューが一時的に表示されます。再度タップすると2番目のLFOメニューに入ります。LFOの詳細はLFOsセクションで確認できます。\n\nSHIFT + LFOボタンを押すことで、CV GATEルーティングレイアウトにアクセスします。このレイアウトはCV Gateセクションで説明されています。\n\nSTEP-CHORD - CONDENSE\n\nStep-Chordボタンを使用すると、シーケンスステップの追加パラメーター（Step Submenu）を入力できます。\n\n利用可能なオプションはSequencer Modeによって異なるため、それぞれのMODsセクションで説明されています。\n\n一般的に、短押しでこのボタンのラッチをオン／オフします。ラッチがオンの状態でいずれかのステップを押すと、画面にこれらの追加パラメーターが表示されます。ほとんどのSequencerモードでは、SHIFT + パッドを押しても同じStep Submuにアクセスできます。これらのモードでは、SHIFT Latchを使用することで、両手を使わずにStep Submuにアクセスできます。\n\nコードモードでは、最初のタップでStep Chordメニューが有効になります。有効な状態でステップを押すと、そのステップのコード設定（コードタイプ、ボイシング、スプレッド）が表示されます。もう一度タップするとStep Submuがラッチされます。\n\nSHIFT + Step-Chord: CONDENSE機能により、現在のシーケンスを低い解像度に圧縮します。1/4ノートが1/2ノートになります。元に戻せる破壊的な操作です。\n\nMOD - FOLLOW\n\nMOD（モジュレーション）はMODレイアウトをトグルします。この機能は独立したセクション「MOD LANES」で詳しく説明されています。素早くタップするとレイアウトが開き、長押しするとボタンを離すまでの間だけ一時的に開きます。\n\nSHIFT + MODでFollow機能をトグルします。これを押すと、グリッドの表示ページが自動的に変わり、再生ヘッドとともにステップページを追跡します。オフにすると、Sequencerが動いている場合でも特定のページを編集できるように、選択したページを静止した状態に保ちます。\n\n**TIP**: Followがアクティブで少なくとも1つのステップが押されている場合、ページは静止したままになります。\nFollow設定は電源を切っても記憶されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 38,
+      "image": "/oxi-one-mk1/pages/page-038.png",
+      "title": "Page 38",
+      "sectionName": null,
+      "content": "BACK - CONFIG\n\nBackボタンは、前の画面に戻ります。押し続けると、メインSequencerビューに移動します。\n\nSHIFT + BackでConfigurationメニューが開きます。詳細はConfigurationセクションを参照してください。\n\nSHIFTを押してからBackを数秒間押し続けると、MIDI（入力）モニターに直接移動します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 39,
+      "image": "/oxi-one-mk1/pages/page-039.png",
+      "title": "Page 39",
+      "sectionName": null,
+      "content": "LOAD AND SAVE\n\nMEMORY ACCESS\n\nOXI Oneは15個のProjectを保存できます。各ProjectにはSequencerごとに最大16個のPatternが保存でき、1プロジェクトあたり合計64個のPatternになります。各PatternはモードやSequencerのすべてのデータ（Mono、Chordなど）を保存しており、同じSequencerでも異なるPatternが異なるモードに設定されていても構いません。また、32個のPatternテンプレートが収録されたTemplatesフォルダーも用意されています。\n\nOXI Oneは最後に加えた変更をTEMP MEMORYに保存するため、再起動後も利用できます。変更を破棄したい場合は、Projectを再読み込みするだけです。\n\nTIP: Projectをクイックリロードするには、shift + Load Buttonを押してください。\n\nシーケンスを保存するには、Save Buttonを押し続けます。現在のProjectのMemory Accessビューがグリッドに表示されます。このレイアウトは、選択しているSequencerとは無関係に表示されます。\n\nグリッドの上部4行のパッドにPatternが表示され、1行がSequencer 1つに対応しています。各スロットには1つのSequencerの1つのPatternが格納されます。\n\n各Sequencerは、他のSequencerが再生しているPatternとは無関係に、16個のPatternのうちいずれかを独立して読み込んで再生できます。そのため、Memory Accessの構造を整理するためマトリクス形式で配置しています。\n\n他のProjectからPatternを読み込むこともできます。他のProjectから読み込むには、Load Menuに入り、encoder 1を回してProjectを選択しますが、encoderは押しません。次にencoder 2を回してPatternを選択し、pushして読み込みを確定するか、グリッドのPatternボタンを押します（現在アクティブなLoad Menu ProjectのPatternがグリッドに表示されます）。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 40,
+      "image": "/oxi-one-mk1/pages/page-040.png",
+      "title": "Page 40",
+      "sectionName": null,
+      "content": "選択されたシーケンスのパターン行は、淡い紫色でハイライト表示されます。\nこれにより、正しいパターンの読み込み/保存が容易になります。\n\nTIP: OXI Oneでは、PatternまたはProjectの読み込みイベントは、すべて再生を中断することなく実行されます。\nこの動作により、ソング、パターン、ステップ数の制限が事実上なくなります。\n\nLoad viewまたはSave viewのどちらにいるかに応じて、対応するSequencerの行にある任意のパッドを押すことで、任意のスロットからパターンを読み込んだり、保存したりすることができます。\n\nQUICK LOAD\n\nグリッドからPatternを素早く読み込むには、2つの異なる方法があります。\n\nLoadボタンを素早くタップすると、グリッドにMemoryレイアウトが常時表示されます。\n開いたら、グリッドの任意のパターンスロットをタップすると、Load量子化設定に従って即座に読み込まれます（アレンジャーがOFFの場合）。OXI Oneが停止している場合は即座に読み込まれます。\nLoad量子化がOFFの場合、新しいパターンは前のパターンと同期して即座に読み込まれ、再生ヘッドは前の位置を保持します。それ以外の場合、パターンは量子化が発生したときに読み込まれ、再生ヘッドは最初からリセットされます。\n\nLoadボタンを長押しすると、ボタンを離すまで一時的にLOAD viewが開きます。グリッドの任意のパターンをタップして読み込みます（前と同様）。ボタンを離すと、前の画面に戻ります。\n\nTIP: 新しいPatternが読み込まれると、以前のパターンに加えた変更は、手動で保存しておかない限り失われます。\n\nアレンジャー内のLaunch Settingsメニューで、パターンのLoad Quantization設定を変更できます。\nアレンジャーの16列目の下部4パッドのいずれかを押し、「Global」設定を必要に応じて選択します。これにより、押したときにパターンが読み込まれる速さが、即座から8小節まで定義されます。Off（Instant）に設定すると、トランスポートの再生ヘッドはパターンの先頭にリセットされないため、クリエイティブな使い方が可能です。インスタントパターン切り替えとトランスポート継続を示すビデオもあります。\n\nLOADING PATTERNS FROM OTHER PROJECTS new\n\n最初のエンコーダーを回して他のプロジェクトを選択することで、グリッドから直接、異なるプロジェクトのパターンを読み込むことができます。グリッドには、選択したプロジェクトの利用可能なパターンが表示されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 41,
+      "image": "/oxi-one-mk1/pages/page-041.png",
+      "title": "Page 41",
+      "sectionName": null,
+      "content": "新しくロードしたパターンは、アクティブなプロジェクトの任意のスロットに保存できます。\n\nQUICK SAVE\n\nグリッドを使って現在ロードしているパターンをQuick Saveするには、2つの方法があります。\n\nSaveボタンを素早くタップすると、グリッドにMemoryレイアウトが保存モードで常時表示されます。\n\nこの保存ビューでは、グリッドの任意のパターンをダブルタップして、現在ロードしているパターンをそのスロットに保存します。これにより、誤って他のパターンを上書きしてしまうことを防げます。\n\nSaveボタンを長押しすると、ボタンを離すまでの間、保存ビューが一時的に開きます。このSAVEビューでは、グリッドの任意のパターンスロットをタップすると即座に保存されます。\n\nグリッドには4つのパターン（Sequencerごとに1つ）を、選択しているSequencer（1〜4）に関係なく独立して保存できます。\n\nQUICK ERASE\n\n1つまたは複数のパターンをまとめてQuick Eraseするには、SaveボタンをタップしてグリッドにMemoryレイアウトを保存モードで常時表示させ、消去したいパターンを長押ししながらSHIFT + Clearを押します。\n\n完全にクリアされたパターンは、ストレージビューで非点灯のままになります。\n\nパターンストレージに関する注意事項\n\n・各行は各Sequencerのパターンを保存します。最上行（1行目）= Sequencer 1、2行目 = Seq 2、以下同様。\n\n・Sequencer 1のパターンは1行目のスロットにのみ保存・ロードができます（以下同様）。これによりパターンの整理がしやすくなります。\n\n・各スロットには1つのパターンを保存できます。SequencerのMODE（Mono、Chordなど）も保存データに含まれるため、同じSequencerの異なるパターンがそれぞれ異なるモードを持つことができます。パターンがロードされると、Sequencerは自動的にそのモードに切り替わります。\n\n・MIDIチャンネル、Arpの設定、CCアサイン付きのMOD Lanes、Ext Mappingsなど、その他の情報もパターンごとに保存されます。\n\n・パターンを保存すると、BPM、アクティブなSequencer、ロードされているパターン、CVアサインなど、プロジェクトの現在の情報もメモリに更新されます。\n\nTIP：パターン間の一貫性を保つために、最初のパターンでMODE、MIDIチャンネル、CCアサインなど必要な設定をすべて行うことをお勧めします。\n\nその後、このパターンを連続するメモリスロットに保存してください。\n\nパターンはテンプレートとして保存し、必要な設定をすべて格納することもできます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 42,
+      "image": "/oxi-one-mk1/pages/page-042.png",
+      "title": "Page 42",
+      "sectionName": null,
+      "content": "LOAD SAVE メニュー\n\nLoad および Save 画面メニューには、グリッドを使用するための追加オプションがあります。また、プロジェクトをロード・セーブする唯一の方法でもあります。\n\nこれらのメニューでは、encoder 1 でプロジェクトリストとプロジェクトサブメニューを操作し、encoder 2 でパターンリストとパターンサブメニューを操作します。最初は直感的でないように感じるかもしれませんが、メニューの階層を浅くし、プロジェクトからパターン、またはその逆への移動をしやすくするためです。\n\nこれらのメニューからのみ実行できる操作：\n\n- 他のプロジェクトからパターンをロードする\n- パターンを別のプロジェクトにセーブする\n- テンプレートからパターンをロードする\n- パターンをテンプレートとしてセーブする\n- プロジェクトおよびパターンの名前を変更する\n- プロジェクトおよびパターンをクリアする\n\n⏱ シンボルは、操作の完了までに時間がかかることを示します。「Clear project」のような数ミリ秒から、「Duplic proj here」のような数百ミリ秒まで様々です。OXI One が演奏中にこの操作を行うと、パフォーマンスに悪影響を与える可能性があります。\n\nPATTERN メニュー\n\n選択したスロットが現在ロードされているものかどうかによって、一部のメニューの内容が異なります。\n\nPattern Load メニュー：\n- Reload（不揮発性メモリからの再ロード）\n- Load from template\n- Clear pattern\n\nPattern Save メニュー：\n- Save pattern（不揮発性メモリへのセーブ）\n- Rename：Rename 画面へのアクセスで、パターンやプロジェクトの名前を変更できます。\n- Save as template\n- Clear pattern\n\nPROJECT メニュー\n\nProject Load メニュー：\n- Load project（プロジェクト情報と4つのアクティブパターンを不揮発性メモリからロードします）\n- ロードは LOAD Quantization 設定に従ってクオンタイズされます。new\n\nProject Save メニュー（ロードされているプロジェクト用）：\n- Save project（プロジェクト情報と現在ロードされている4つのパターンを不揮発性メモリに保存します）\n- Rename\n- Clear project ⏱（プロジェクトデータとそのすべてのパターンを不揮発性メモリから完全に削除します）",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 43,
+      "image": "/oxi-one-mk1/pages/page-043.png",
+      "title": "Page 43",
+      "sectionName": null,
+      "content": "プロジェクト保存メニュー（読み込まれているものと異なる場合）:\n- Duplic proj here（現在読み込まれているプロジェクトとそのパターンを選択したスロットにコピーします）\n- Clear project\n\nRENAME MENU（リネームメニュー）\n\nこの画面では、プロジェクトやパターンの名前を変更できます。同じ画面は他のメニューでの名前変更にも使用されます。\n\n左から順に、最初のエンコーダーで文字や記号をスクロールできます。押すと、カーソルの直後に選択した文字が挿入されます。\n\n2番目のエンコーダーはカーソルの位置を移動させます。このエンコーダーを押すと、現在カーソルの下にある文字が削除されます。\n\n3番目のエンコーダーを押すと、処理をキャンセルして前の画面に戻ります。\n\n最後に、4番目のエンコーダーを押すと新しい名前を確定し、プロジェクトまたはパターンが保存されます。\n\nPATTERN TEMPLATES（パターンテンプレート）\n\nテンプレートフォルダーは、プロジェクトフォルダー内の15番目のプロジェクトの直後にあります。\n\n読み込まれている4つのパターンのいずれかをテンプレートとして保存できます。また、いつでもテンプレートを呼び出すことができ、選択したシーケンサーにテンプレートが読み込まれます。\n\nパターンテンプレートは保存されたパターンのコピーです。特定のセットアップや楽器（MIDI Channel、MIDI CCs、Scaleなど）に合わせてパターンを設定し、後から何度でも使用することができます。\n\nパターンテンプレートは名前を変更できます。そのためには、Saveをタップし、最初のエンコーダーでTemplatesフォルダーに移動し、2番目のエンコーダーでテンプレートを選択して「Rename template」を押します。\n\nQUICK PROJECT SAVE（クイックプロジェクト保存）\n\nすべてをクイック保存するには、SHIFTとSaveを同時に押します。これにより、プロジェクト設定と現在読み込まれているパターンが保存されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 44,
+      "image": "/oxi-one-mk1/pages/page-044.png",
+      "title": "Page 44",
+      "sectionName": null,
+      "content": "CHANGE PATTERN WITH PROGRAM CHANGE new 4.0\n\nグローバルMIDIチャンネルを割り当てて、1〜16の範囲の値を持つProgram Change（PC）メッセージを受信することができます。これは、コンフィギュレーションメニューのMIDI設定内にある「PC（Program Change）受信グローバルChannel」オプションで設定できます。\n\n特定の値を持つProgram Changeメッセージを受信すると、その番号に対応するパターンが読み込まれます。例えば、値が2のPCメッセージを受信した場合、4つのSequencer全てにパターン番号2が読み込まれます。\n\nこれは、Load量子化設定に従って行われます。Arrangerが有効な場合はLaunch量子化設定に従います。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 45,
+      "image": "/oxi-one-mk1/pages/page-045.png",
+      "title": "Page 45",
+      "sectionName": null,
+      "content": "KEYBOARD\n\nグリッド上のキーボードレイアウトを表示します。各Sequencerモードには、それぞれ専用のKeyboardレイアウトがあります。\n\nキーボードレイアウトには2種類あります。OXI One専用に設計されたクラシックレイアウトと、Isomorphicレイアウトです。どちらを表示するかはConfigurationメニューで選択できます。\n\nCLASSIC LAYOUT\n\nクラシックレイアウトでは、選択したスケールに応じて、グリッド上の異なる列のパッドがハイライトされ、スケールに属する音符の視覚的なガイドとして機能します。各列は半音を表し、垂直方向に移動すると各行で1オクターブ上下に移動します。\n\nChromaticスケール以外のスケールが選択された場合、スケールに属さない音符は薄い赤色で点灯します。\n\nChromatic Scaleにおけるクラシックレイアウト。\n\nクラシックレイアウトでは、ベースオクターブの音符がハイライトされます（Chromaticスケールを除く）。\n\nISOMORPHIC LAYOUT\n\nIsomorphicレイアウトは3.0アップデートで追加されました。クラシックレイアウトとの主な違いは、あるパッドとその真上のパッドの間に固定のインターバルがあることです。このインターバルは完全4度または完全5度になります。このルールにより、音符が全く異なる方法で配置されます。\n\nIsomorphicレイアウトの主な利点の1つは、2つのパッド間のインターバル関係が常に同じであるため、キーボード上で特定のコードを演奏しやすくなることです。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 46,
+      "image": "/oxi-one-mk1/pages/page-046.png",
+      "title": "Page 46",
+      "sectionName": null,
+      "content": "4度のIsomorphicレイアウト、C クロマティックスケール。\n\n5度のIsomorphicレイアウト、メジャースケール。\n\nIsomorphicレイアウトでは、ベースノートがハイライト表示されます（クロマティックスケールを除く）。 new\n\nこのモードのエンコーダーは以下を変更します：\nキーボードからトリガーされるノートのVelocity。\nPitch Bend。キーボードのPitch Bendとして機能します。エンコーダーを押すと0にリセットされます。各シーケンサーは最後に設定したPitch Bend値を記憶します。\n設定されたCV出力のPressure/Aftertouch。PressureノブはCV経由のモジュラーギアとのパフォーマビリティ向上のためのGLIDEコントロールとしても機能します。\nシーケンサーから独立したキーボードのベースオクターブノート。\n\nヒント：最後に演奏したノート（またはChordモードではコード）がメニュータイトルに表示されます。\n\nPlayがアクティブな状態でRecを押してノートを録音します。SHIFT + Recを押すことでクオンタイズやその他のパラメーターを調整できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 47,
+      "image": "/oxi-one-mk1/pages/page-047.png",
+      "title": "Page 47",
+      "sectionName": null,
+      "content": "Keyboard（アルペジオを含む）は、押された任意の数のノートを送信します。これにより、Mono KeyboardはポリフォニックSynthを問題なく演奏するために使用でき、制限はコントロールされているSynthまたはサウンドエンジンによって設定されます。\n\nChordおよびMultitrackモード向けの特定のKeyboardレイアウトについては、それぞれのセクションで説明します。\n\n以下では、ArpeggiatorとRollerの両方について説明します。\n\nSCALE QUANTIZATION\n\nScale quantizationはConfigメニューでオン/オフを切り替えられます。ONの場合、スケール外のノートは最も近い上のスケールノートにQuantizeされます。\n\nPICK AND PLACE\n\nPick and Place機能を使用すると、Oxi KeyboardまたはExternal Keyboardでノートまたはコードを演奏でき、Oxiはそのノートを一時的に保存してKeyboardを終了してグリッドにノートを配置できるようにします。この機能はMONO、POLY、およびCHORDタイプのSequencerでのみ動作します。\n\nPick and Placeを完了するには、まずKeyboardに移動するか、外部コントローラーからコードを演奏し、次にKeyboardボタンを押してKeyboardを閉じてグリッドに戻ります。または、すでにグリッド上にいる場合は、配置したい列を押すことでノートを配置します。OXI Oneは、その行が現在グリッドに表示されていなくても、正しい行にノートを配置します。\n\n一時バッファをクリアしてPick and Placeを使用しない場合は、グリッドをタップする前にSequencerボタンを押してください。ページボタンを押してもPick and Placeの一時メモリはクリアされません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 48,
+      "image": "/oxi-one-mk1/pages/page-048.png",
+      "title": "Page 48",
+      "sectionName": null,
+      "content": "ARP\n\nArp を押すとアルペジオメニューに入ります。Keyboard ビューでない場合は、Keyboard も表示されます。ただし、独自のアルペジエーターが内蔵されている Chord モードおよびポリフォニックモードは除きます。 new\n\n各 Sequencer には、Sequencer で再生中の内容とは独立して動作するアルペジオが1つあります。\n\n- Encoder 1 を回して ON にし、そのまま時計回りに回してアルペジオモードまたはアルゴリズムを選択します。Arp モードの名前は画面上部に表示されます。SHIFT を押しながら最初の Encoder ボタンを押すと、Arp のオン/オフを切り替えられます。オン/オフの切り替え中も、最後に選択したモードが維持されます。\n\n- Encoder 2 はオクターブのボイシングレンジを変更します。繰り返しのリズムパターンで、アルペジオに上下のオクターブのノートを追加します。Arp 8 Patt Reset はパターンの LEN と Pulse に影響します。\n\n- Encoder 3 はアルペジオの Gate またはノートの長さを変更します。\n\n- Encoder 4 はタイムディビジョン（時間分割）を設定します。\n\n新しく改良された ARP エンジンには、リズム生成（ユークリッドパターンに基づく）とグルーブエンジンが組み込まれています。 new\n\nこの目的のために、4つのパラメーターのうちの2番目があります。切り替えるには、対応する Encoder ボタンを押す必要があります。SHIFT を押しながら Encoder を押し続けると、対応するパラメーターがリセットされます。このワークフローは、インターフェースの他の部分とは異なりますが、Arpeggiator を使ったパフォーマンス中のクイック調整に向けた、より効率的なワークフローを実現します。\n\n- Accent またはグルーブ量。あらかじめ定義されたグルーブに従って、生成されたノートにベロシティモジュレーションを追加します。正または負の値を取ることができます。\n\n- ユークリッドパターンの長さ（Length）。\n\n- Pulse。ユークリッドパターンによって生成されるパルスの数。\n\n- Repeat count。ユークリッドパルスの後に生成されるノートの数。\n\nLen と Puls を同じ値に設定すると、クラシックなアルペジエーターのような連続したノートのストリームが生成されます。\n\n幅広いアルペジエーターモードから選択でき、すべて試してみることをおすすめします！\n\nアルペジオは、Sequencer がアクティブかどうかに関わらず、Play がオンの時のみ機能します。\n\nモード、オクターブレンジ、レートなどの Arpeggiator のパラメーターは、内部 LFO、内部 MOD Lanes、または MOD Matrix でモジュレーションできます。\n\nRec を押してアルペジオを Sequencer に録音します。Keyboard ARP は録音時にベロシティ/グルーブを考慮します（Chord モードでアルペジオ化されたコードには対応していません）。\n\nTIP：Polyphonic Sequencer でオーバーダブをオンにした状態で、演奏したアルペジオの複数のレイヤーを録音することができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 49,
+      "image": "/oxi-one-mk1/pages/page-049.png",
+      "title": "Page 49",
+      "sectionName": null,
+      "content": "利用可能なArpモード: Up、Down、Up Down、2Up 2Down、Altern In、Altern Out、Altern InOut、Pinky、Thumb、Random、Random Once、Order。\n\nSHIFT + ArpでHoldが有効になります。これにより、音符を手で押さえ続けることなく、アルペジオの音符を追加・削除できます。アルペジオがHoldされている場合、Keyboard viewを終了したりSequencerを変更しても、アルペジオはオフになりません。このため、最大4つのアルペジオを同時にHoldすることができます。これは、すべてのシーケンサータイプのキーボードに対する受信MIDIにも対応しています。\n\n- Arpを無効にした状態でHoldを使用すると、ドローン音を作成できます。\n\n- Holdが有効な状態で、各シーケンサーから独立して同時に音符をアルペジオ化できます。\n\n- HoldはRollerと一緒にも使用できます。\n\nROLLER\n\nRollerは、Mono、Poly、Multitrack、Stochasticモードで利用できる機能です。キーボードで押さえた音符を使ってリズムパターンを作成します。\n\nこれらのモードのいずれかで、キーボードボタンを押してKeyboard viewに移動します。\n\nグリッドの左から13列目がRollレートの選択です。下から上に向かってロールのレートが上がります。レートは絶対値であり、シーケンサーの設定には依存しません。\n\n- 1/4、1/4T、1/8、1/8T、1/16、1/16T、1/32、1/32T\n\nRollerは、1音（モノ）または複数音（ポリフォニック）で同時に動作します。\n\nSHIFT + Holdを押してキーボードの音符をホールドすると、その音符の上でRollerが動作し、別の種類のリズムパターンを作成できます。\n\nMIDI CAPTURE\n\nMIDI CAPTUREを使用すると、キーボードで演奏して録音しなかった内容を「回収」できます。最もわかりやすい説明は「キーボードで演奏した内容は、最大128ステップに分散できる256音までのバッファに保存される」ということです。「あの演奏を保存しておけばよかった」と思うようなアイデアを取り戻すのに最適です。\n\nアイコンが画面に表示された場合、演奏から回収できるMIDI/Note情報があることを意味します。回収するには、Recordボタンを2回押すだけで、演奏した音符がSequencer Viewに配置され、編集できるようになります。\n\n音符を回収すると、バッファはクリアされ、MIDI CAPTUREアイコンは画面から消えます。クリアするには、RECを長押しして録音済みイベントをリセットします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 50,
+      "image": "/oxi-one-mk1/pages/page-050.png",
+      "title": "Page 50",
+      "sectionName": null,
+      "content": "コード認識\n\nOXI Oneは、Keyboardスクリーン上で、押さえているノート（または外部キーボードからの入力）に対して検出されたコードを表示します。これは、特定のモードを除き、現在のSequencerモードに関係なく機能します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 51,
+      "image": "/oxi-one-mk1/pages/page-051.png",
+      "title": "Page 51",
+      "sectionName": null,
+      "content": "SEQUENCER MODES\n\n利用可能なModeは6種類あります：Mono、Polyphonic、Chords、Multitrack、StochasticおよびMatricealです。各Sequencer Modeは特定の目的を達成するよう設計されています。StochasticとMatricealは2種類のジェネラティブエンジンです。\n\n選択されたSequencerのModeを変更するには、SHIFTを押したままSequencerボタンをタップして、Sequencer設定メニューに入ります。次に、最も右のencoderを使用してリストから目的のModeを選択します。\n\nMONO\n\nMono modeは、曲のリードやメインメロディーを作成したり、演奏したり、オートメーションするのに最適なModeです。\n\nMono modeでは、選択されたルートノートを起点として、各行が選択されたスケールに従ったノートポジションを表します。例えば、Cメジャースケールでは、stepはC、D、E、F、G、A、B、そして1オクターブ上のCになります。\n\n最大128 stepまで設定できます。長さを変更する方法については、InitおよびEndファンクションボタンをご参照ください。\n\nノートを入力するには、設定したいpadを短く押します。削除するには、アクティブなpadを短く押します。この操作で複数のノートを一度に入力または削除することができます。\n\n- Y DIVと最初のencoderを使用して上下にスクロールし、高い/低いノートにアクセスすることを覚えておいてください。2番目のencoderを押しながら回すこともできます。ハイライトされている行がルートノートです。\n\nあるノートが高いオクターブまたは低いオクターブにある場合、上または下の行のLEDが点灯し、より高い音または低い音を示します。そのノートはそれぞれの行にも表示されるため、すべてのノートを一目で確認しながらコントロールするのに役立ちます。\n\n1つのstepよりも長いノートを作成するには、TIEを追加します。TIED noteを入力するには、アクティベートしたい最初のstepを押さえたまま、同じ行でTIEを有効にしたい最後のstepを押します（この操作は、2番目のノートを押す前に最初のノートを押さえ続ける必要があります）。同じ操作でTIED noteを削除することもできます。最初のstepをタップすることでもTIED noteを削除できます。逆の操作（右から左への方向）はストレートトリガーを追加します。\n\nそれぞれのSequencerボタンを押さえたまま、アクティブなノートより高いまたは低い空のノートを押すと、シーケンス全体をすばやくトランスポーズできます。アクティブなノートから押したpadまでの列方向の距離がトランスポーズの方向と距離を決定します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 52,
+      "image": "/oxi-one-mk1/pages/page-052.png",
+      "title": "Page 52",
+      "sectionName": null,
+      "content": "STEP PARAMETERS\n\n1つ以上のノート（アクティブかどうかにかかわらず）を同時に押し続けると、そのステップパラメーターとノート情報が表示されます。各エンコーダーで、Velocity、Octave（列の端のパッドがオクターブの正または負のオフセットの目安として点灯します）、Gate、およびMODセクションで設定されたMod（デフォルトではModWheelを送信）を変更できます。\n\nADDITIONAL STEP PARAMETERS\n\nStep-Chordが有効な状態でステップを押し続けると、Step Subメニューが表示されます。また、SHIFT + ステップを押し続けることで、この2番目のステップパラメーターレイヤーにアクセスすることもできます。\n\nこの画面では、以下のパラメーターを変更できます：\n\nGlide: 2つの連続したノート間でピッチが連続的に変化するまでの時間を設定します。現時点では、CVのピッチ出力にのみ影響します。\n\nProb（確率）とLogic条件。2つの動作があります：\n\nSTEP PROBABILITY\n\n- デフォルトでは100%に設定されており、ステップがノートをトリガーする確率が100%であることを意味します。2番目のエンコーダーをCCW（反時計回り）に回すと、ステップがトリガーするノートの確率が下がります。Stepメニューで100%確率とFixed Logicを切り替えることができます。\n\nLOGIC CONDITIONS\n\n- エンコーダーをCW（時計回り）に回すと、A | Bのロジックトリガーに移ります。AとBは数値で、Bはバー数を設定し、Aはそのバーのうちどのバーでノートがトリガーされるかを設定します。\n例えば、3 | 4は、4バーごとの3番目のバーでノートがトリガーされることを意味します。\nこのツールは、より長いパターンを作成したり、毎ループではなく時折サンプルを起動したりするのに便利です。\n\n- A | Bの後に、NOT A | Bのロジック条件があります。Aはノートがトリガーされないバーの番号を設定し、Bは条件が再び評価されるまでのバー数を設定します。\n\n- 次にPREとNOT PREが来ます。PREは前のステップもノートをトリガーした場合にノートをトリガーします。NOT PREは前のステップがノートをトリガーしなかった場合にノートをトリガーします。\n\n- FIRSTとNOT FIRST。FIRSTは再生開始後初回のみノートをトリガーします。NOT FIRSTは再生開始後初回を除いて常にノートをトリガーします。\n\n- FIXEDはステップトリガーがモジュレーションやランダム化ソースの影響を受けず、常にトリガーされることを意味します。エンコーダーを押すと100%確率とFixedが切り替わります。\n\n- FILLとNOT FILL。PlayボタンはFILLモディファイアーとして機能します。押し続けると、FILLに設定されたステップが再生され、NOT FILLに設定されたステップは再生されません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 53,
+      "image": "/oxi-one-mk1/pages/page-053.png",
+      "title": "Page 53",
+      "sectionName": null,
+      "content": "- LOCKED new: このステップはモジュレーションやランダマイズのソースによる影響を一切受けません。例えば、velocity・gate・ピッチのランダマイズやモジュレーションはこのステップには作用しません。Random generatorおよびEuclidean generatorは、FIXEDまたはLOCKEDのロジック条件を持つステップには影響しません。FIXEDまたはLOCKEDのステップは、ステップパラメーターメニュー内の鍵アイコンで識別できます。\n\nTIP: Secondボタンを押すと、100%とFIXEDのロジック条件をすばやく切り替えることができます。\n\nRetrig: ステップデュレーション中にノートがトリガーされる回数を設定します（最大5回）。より高い解像度を得るには、SequencerまたはTrackのTime Divisionを変更してください。\n\n完全に反時計回りにするとSKIPになります。SKIPを選択すると、ステップのタイミングがトランスポートバーで無視され、シーケンスの長さが短くなります。SkipはMono・Multi・Matricealモードでのみサポートされています。\n\nTIP: Skipを使用すると、パターンのタイミングとフィールを急激に変更できます。Retrigのランダム化を使用することで、Perform画面のRetrig on Randomにてノートの追加・削除によりバーごとに異なるシーケンス長を取得できます。\n\nOffset: ノートの時間的なずれを現在のタイム・ディビジョンの-40%〜40%の範囲で設定します。±25%はステップのデュレーションの4分の1のずれです。\n\nキーボードからのライブ録音または外部MIDIを使用する場合、Recordingメニューの量子化パーセンテージがノートの時間オフセットを設定します。量子化が100%に設定されている場合、オフセットは0%になります。それ以外の場合は、グリッドに対してほぼ正確な値になります。\n\nSTEP MUTE new\n\nMUTEを押しながら任意のステップをタップするとステップをミュートできます。ミュートされたステップは紫色で表示され、再生が無効になります。MUTEを押しながら再度そのステップをタップするとミュートを解除できます。\n\nMUTE + 最初の列はシーケンサー全体をミュートするために予約されているためご注意ください。\n\nKEYBOARD\n\n詳細については、keyboardおよびARPセクションをご確認ください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 54,
+      "image": "/oxi-one-mk1/pages/page-054.png",
+      "title": "Page 54",
+      "sectionName": null,
+      "content": "CHORD\n\nCHORDモードのビデオチュートリアルはこちらからご覧いただけます。\n\nChord modeでは、各ステップが最大8音のコードを演奏できます。\n\nPiano RollまたはSequencerビューでは、グリッドの各行が選択したスケールの各音度を表します。例えば、Cメジャースケールでは、Piano Rollビューでグリッドは下から上に向かって、Cmaj、Dmin、Emin、Fmajなどを表します。\n\nCHORD EDITING\n\nChord modeは、インスピレーションを与え、学びの場となることを前提に構築されています。シンプルなトライアドの進行から、あらゆる種類のテンション、転回形、スケール音度に関連した複雑なコード進行まで、非常に直感的な方法で作成できます。\n\n利用可能なコードのバンクはAとBの2つです。\n\nバンクAは、オーグメント、ディミニッシュ、ドミナントコードなど、音楽的なトレーニングを受けていないユーザーにとって一般的に使いにくい不協和音を避けています。それらのコードはすべてバンクBにあります。\n\n自動ボイシングエンジンは、ボイスの動きを最小限に抑えるために、すべてのコードに最適なボイシングを割り当てる機能で、デフォルトで有効になっています。\n\n対応するSequencerボタンを押しながら、アクティブなパッドより上または下の空のパッドを押すことで、コード進行全体をすばやくトランスポーズできます。列内のアクティブなノートと押したパッドの距離が、トランスポーズの方向と距離を決定します。\n\nSTEP PARAMETERS\n\n1つまたは複数のパッドを同時に押し続けると（アクティブかどうかに関わらず）、主要なステップパラメーターとコード情報を確認できます。各エンコーダーでVelocity、Octave（分散オクターブの表示として列の端のパッドが点灯します）、Gate、Modを変更できます。Modはデフォルトでモジュレーションホイールを送信し、CC Configurationで変更可能です。\n\nSTEP CHORD MENU\n\nコードメニューで各ステップのコードを変更できます。これを行うには、Step-Chordボタンを押してコードメニューを有効にします（ボタンが点滅し始めます）。次に目的のステップを押すとコードメニューが表示されます。連続するステップがタイされている場合（同じルートノート、コードタイプ、ボイシング、スプレッド）、選択したステップへの変更はタイされたステップにも適用されます。\n\n最初のエンコーダーはステップごとのSpread値を設定します（右の例ではS:1）。各音度の高オクターブのノートを昇順で追加することで、すべてのコードのボイス数を増やします（最大8音）。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 55,
+      "image": "/oxi-one-mk1/pages/page-055.png",
+      "title": "Page 55",
+      "sectionName": null,
+      "content": "2つ目のエンコーダーは、コードのTypeを設定します。デフォルトでは、対応するディグリーのトライアドが設定されています。Auto voicingがONの場合、コードのボイスが音楽的にバランスよくなるよう、すべてのディグリーに対してインバージョン（ボイシング）が設定されます。コードはシンプルなものから複雑なものの順に並んでいます（ここでの複雑さとは、ボイスとテンションの数を意味します）。Suspended 2、Suspended 4コード、5度および8度のインターバルは後半に表示されます。\n\n3つ目のエンコーダーは、インバージョンまたはVoicingを設定します。オプションはno inversion、Open、Open 1st、2nd、Inversion 1st、2ndです。\n\nADDITIONAL STEP PARAMETERS\n\nStep-Chordボタンをダブルタップ（白い定常ライト）すると、ステップサブメニューが有効になります。このサブメニューは、1つまたは複数のステップを同時に長押しすることで確認できます。SHIFT + ステップを長押しすることでも、このステップパラメーターの第2レイヤーにアクセスできます。\n\nこの画面で編集できるパラメーターは以下のとおりです：\n\nStrum：-100から100の範囲で設定します。正の値は低音から高音へのノート間の時間間隔を生じさせ、負の値では高音から低音へと進みます。このエフェクトはギターのストリングをストラムするような音になります。\n\nProb、またはLogic Conditionsについては「Trigger Conditions」セクションで説明しています。\n\nRetrig：ステップの長さ中にノートがトリガーされる回数を設定します（最大5回）。より高い解像度を得るには、SequencerまたはTrackのTime Divisionを変更してください。SkipはChord Modeではサポートされていません。\n\nOffset：現在のTime Divisionの-45%から45%の範囲でノートの時間的なずれを設定します。25%のオフセットはステップの長さの4分の1のずれを意味し、50%はステップの半分になります。 ±\n\nSHIFT + Step-ChordでメインのステップスクリーンのEditingに戻ります。\n\nSTEP MUTE（新機能）\n\nMUTEを押しながら任意のステップをタップすることでステップをミュートできます。ミュートされたステップは紫色で表示され、再生が無効になります。MUTEを押しながら再度ステップをタップするとミュートが解除されます。\n\n注意：MUTE + 最初の列はシーケンサー全体をミュートするために予約されています。\n\nSTEP CHORD BUTTON BEHAVIOR\n\n- Step-Chordボタンを押し続ける → Chord Globalメニューが開く\n\n- 1回押す → Chord Stepメニューをラッチ\n\n- コードの変更がない状態で2回目を押す → Substepメニューをラッチ\n\n- コードの変更があった状態で2回目を押す → メインのステップパラメーターに戻る",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 56,
+      "image": "/oxi-one-mk1/pages/page-056.png",
+      "title": "Page 56",
+      "sectionName": null,
+      "content": "CHORD BUILT-IN ARPEGGIATOR（更新済み）\n\nChord モードには内蔵 Arpeggiator が搭載されており、コードノートを入力として使用することで、ユニークな方法でミュージカルフレーズを生成することができます。リズムジェネレーターやグルーブエンジンと組み合わせることで、魅力的な音楽的テクスチャーを作成することが可能です。Arp パラメーターはパターンデータ内に保存され、パターンごとに呼び出すことができます。\n\nARPEGGIATOR PARAMETERS:\n\nArpeggiator パラメーターは ARP に表示されているものと同等です。パラメーターには、グリッドノートビュー上で ARP ボタンを押すことでアクセスできます。これらのシーケンサー ARP パラメーターは、キーボードビューから ARP ボタンを押すことでアクセスする Keyboard ARP とは異なります。\n\nAccent は最初の4つのパラメーターセットの3番目の位置に表示され、Gate を置き換えます。アープノートのゲート長は、ノートグリッドビュー内で3番目のエンコーダーを使ってグローバルにコントロールできます。\n\nRot、Len、Puls 設定を使用して、ARP にユークリッドパターンを適用することができます。ユークリッドパターンの Rotation は、パルスが右にシフトされる（正の値）または左にシフトされる（負の値）ローテーション数またはステップ数を設定します。\n\nARPEGGIATOR SPEED VARIATION:\n\nArpeggiator は、シーケンスとは異なる速度で動作することができます。\n\nCHORD KEYBOARD\n\nキーボードレイアウトには、経験豊富な音楽理論家から初心者まで、コードの演奏を同様に充実したものにするための直感的なショートカットとツールが多数含まれており、障壁なく学習と探求を可能にします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 57,
+      "image": "/oxi-one-mk1/pages/page-057.png",
+      "title": "Page 57",
+      "sectionName": null,
+      "content": "キーボードは2つのセクションに分かれています。Gridの最初の12列がパフォーマンスエリアで、コードをトリガーします。各パッドは、それがトリガーするコードのルートノートで定義されます。各列はスケールでフィルタリングされた半音で構成されており、垂直方向に移動するとオクターブ上下に変化します。\n\n2つ目のセクションは13列目から最後の列までです。\n\n13列目と14列目は、スケールと演奏されたルートノートに基づいてコードタイプを選択します。\n\n15列目は演奏されたコードのボイシングを選択します。\n\n16列目はコード内のノートのスプレッドを選択します。コードは最大8ノートまで設定できます。\n\n右上のパッドは、このセクションのコードモディファイアーを切り替え、押されたときまたはそうでないときにコードをトリガーします。\n\nChord Bankは、コードBank AとBank Bを切り替えます。\n\nAuto Voicingは、インテリジェントなボイス・スタック（コードボイスの最小移動）を有効または無効にします。\n\nTIP: ARPスクリーンからキーボードArpeggiatorをオンにすることで、演奏されたコードをアルペジオにすることができます。\n\nUSER CHORD SLOTS (new)\n\n気に入ったコードが見つかったら、トップ行に保存できます。ルートノート、タイプ、インバージョン、スプレッドの値が、12個の利用可能なスロットのいずれかに保存されます。\n\n1つのコードをスロットに保存するには、コードパッド（モディファイアーではなく）を押さえたまま、コードスロットを2秒間押さえます。スロットをクリアするには、同じ操作を行い、4秒間長押しします。\n\nUser Chord Slotsは他のコードと同様に機能し、アルペジオにしたり録音したりすることができます。\n\nPICK AND PLACE CHORDS\n\nキーボードでコードを演奏した後、Sequencerビューに戻ると、Gridに入力する次のコードは最後に演奏したコードと全く同じになります。この機能をPick and Placeと呼びます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 58,
+      "image": "/oxi-one-mk1/pages/page-058.png",
+      "title": "Page 58",
+      "sectionName": null,
+      "content": "GLOBAL CHORD MENU\n\nKeyboardモードでStep-Chordボタンを押し続けることで、Global Chord menuにアクセスできます。パラメーターは以下の通りです。\n\nSpread はシーケンス全体に影響し、ステップごとのポジションに応じて全てのコードのボイス数を増加させます（最大8音）。\n\nType はシーケンス全体に影響し、ステップごとのポジションに応じてオフセットしながら全てのコードのタイプを変更します。\n\nVoicing はシーケンス全体に影響し、ステップごとのポジションに応じてオフセットしながら全てのコードのボイシングを変更します。\n\nBass はシーケンスとキーボード全体に影響し、全てのコードのルート音の1オクターブ下の音を追加します。Bass音は8音制限においてSpreadよりも優先されます。\n\nCHORD BANKS\n\n説明した通り、利用可能なコードバンクはBank AとBの2つです。\n\nBank Aは、音楽理論の知識なしにはコンポジションに組み込むのが難しいオーグメント、ディミニッシュ、ドミナントコードなど、不協和音になりやすいコードを避けます。それらのコードはいずれも、別の転回形のマイナーやマイナーバリアント、または6thコードなどの他のオプションに置き換えられており、モジュレーション（スケール外の音を持つスケール外のコード）を導入するものもあります。これにより、増3度や減5度のインターバルを避けています。\n\nオーグメント、ディミニッシュ、ドミナントコードなどは、選択されたスケールに応じてBank Bで見つけることができます。Bank Bはファームウェア3.0で追加されました。\n\nChordモードで現在サポートされているスケールは以下の通りです。\n\n7つのダイアトニックスケール：Major、Minor、Dorian、Phrygian、Lydian、Mixolydian、Locrian、Pentatonic MajorとMinor、Harmonic Minor、Melodic Minor（昇順）。\n\n新しいChromaticスケールもChord Modeでサポートされています。このスケールでは、コードのセットが若干異なります。それらの間にトーナルな関係がないため、主にMajorコードとMinorコードの2つのグループに分けて提示されます。\n\nRECORDING CHORDS\n\nコードはステップごとに録音でき、コード情報を含む1ステップにつき1コードを記録できます。コードはまた、Chord内蔵キーボードのChordモディファイアー（Chord Type、Voicing、Spread）を使用して録音することもできます。\n\nただし、コードアルペジエーターによって生成されたアルペジオ音の録音はサポートされていません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 59,
+      "image": "/oxi-one-mk1/pages/page-059.png",
+      "title": "Page 59",
+      "sectionName": null,
+      "content": "CHORDS INTERNAL MODULATION\n\nコードのパラメーター（chord BankおよびAuto Voicingを除く）はすべて、利用可能なモジュレーションソース（LFO、MOD Lane、MOD CV IN）でモジュレーションできます。詳細はInternal destinationテーブルで確認できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 60,
+      "image": "/oxi-one-mk1/pages/page-060.png",
+      "title": "Page 60",
+      "sectionName": null,
+      "content": "MULTITRACK\n\nMultitrackのチュートリアルはこちらからご覧ください。\n\nMultitrack SequencerはOXI ONEの最大の魅力のひとつです。8つの独立したトラックを備えており、ドラムパターンやモノフォニックなメロディの作成に最適で、1つのレイアウトでそれらを直接コントロールできます。\n\n各行は独立したトラックを表しており、それぞれ独立したInit/Endステップ、タイムディビジョン、長さを持つモノフォニックシーケンスです。最大128ステップまで設定できます。\n\n各トラックにはMIDIチャンネルとアウトプットを割り当てることができ、複数のトラックが同じMIDIチャンネルを共有することも可能です。すべてのトラックのMIDIチャンネルは、デフォルトでシーケンサーのMIDIチャンネルに設定されています（シーケンサー設定を参照）。パッドはDrum Kitやサンプルのトリガーとしてはもちろんのこと、追加のメロディラインにも使用できます。これにより、1カラムにつき最大8ステップを有効化することができます。\n\nMuteおよびSoloトラックのショートカットがあり、ランダムおよびLFOモジュレーションの影響を受けるトラックの有効化・無効化も行えます：\n\n- MUTE + 1st column: 各トラックのMute/Unmute\n- MUTE + 16th column: 各トラックのSolo/グループSolo/Solo解除\n- MUTE + Any other column: 再生用に選択したステップのMute/Unmute\n\nMUTEボタンを押し続けると、グリッドにMute/Soloの状態がそれぞれ青と黄色で表示されます。\n\n異なるMultitrackパターンでパフォーマンスする際は、パターン読み込み時のKeep Mutes in Multi modeをニーズに合わせて調整することを検討してください。\n\nRANDOMまたはLFOボタンを押し続けると、グリッドの各トラックの1ステップ目がそれぞれ黄色とオレンジで表示されます。これは、RandomizationおよびLFOパラメーター変更の影響を受けているトラックを示しています。デフォルトではすべてのトラックが有効になっています。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 61,
+      "image": "/oxi-one-mk1/pages/page-061.png",
+      "title": "Page 61",
+      "sectionName": null,
+      "content": "Multitrackモードでは、Random OctaveではなくRandom Gateが使用され、TIEには影響しません。例えば、LFOを使ってhi-hatトラックにvelocityモジュレーションを送りながら、他のトラックには影響を与えないといった使い方に便利です。\n\nSELECTED TRACK & MULTITRACK EDITING\n\nMultitrackモードでは、ファンクションボタンはデフォルトで選択中のトラックに作用します。これにより、シーケンス内の全トラックに影響を与えることなく、個別のトラックのコピー、ペースト、複製、拡張、クリア、タイムディビジョンのx2/÷2、ランダマイザーの有効化、ローテーション、トランスポーズが行えます。Global Velocity、Gate、Modulationエンコーダーも選択中のトラックのみに作用します。\n\n選択中のトラックは異なる色でハイライト表示されます（カラー設定によっては、このモードでより視認しやすくなる場合があります）。また、トラック行の第1列と第16列のパッドが黄色で表示されます（ステップが有効でない場合）。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 62,
+      "image": "/oxi-one-mk1/pages/page-062.png",
+      "title": "Page 62",
+      "sectionName": null,
+      "content": "CLEAR SINGLE OR ALL TRACKS\n\nSHIFT + Clear を押すと、選択したトラックのすべてのノートイベントを消去できます。または、SHIFT を押しながら Clear を長押しすると、すべてのトラックを完全にリセットできます。ステップ情報、タイムディビジョン、レングス、ノートオフセットはデフォルト値に戻りますが、各トラックのMIDIチャンネルとMODデスティネーションには影響しません。\n\nTRACK SELECTION\n\n選択したトラックを変更するには、以下のいずれかの方法を使用します：\n- Sequencer ボタンを押しながら任意のパッドを押す\n- ステップをトグルしない程度に任意のパッドを長押しすると、そのパッドの行のトラックが選択されます\n- Track Selection Priority 設定が有効な場合、別のトラックのパッドをタップしてもステップはトグルされず、そのトラックが選択されます\n\nすべてのトラックに対してこれらの機能を同時に適用したい場合（すべてのトラックをクリア、延長、ランダム化、ローテートなど）は、まず対応する Sequencer ボタンを押してから通常のボタン操作を行ってください。これはGlobal Velocity、Gate、Modulationにも対応しており、すべてのトラックに同時に影響します。\n\n例えば、1つのトラックへのRandomizer（ランダムジェネレーター）（SHIFT + Random）は、ピッチ、gate、velocity、タイムオフセットをランダム化して選択したトラックにMonoシーケンスを作成します。\n\n一方、すべてのトラックへのRandomizer（Seq ボタン + SHIFT + Random）は、各トラックのノートを維持したまますべてのトラックにリズムパターンを作成します。ドラムキットの使用に最適で、すべてのトラックのトリガー、velocity、gate、オフセットをランダム化します。\n\nA row pad + SHIFT + Random：選択したトラックのステップのvelocityをランダム化します。\n\nTRACK PARAMETERS\n\n説明したように、各TrackにはそれぞれのInitポイントとEndポイント、個別のレングスとタイムディビジョンがあります。Init と End を参照してください。\n\nTrackパラメーターにアクセスするには、目的のトラックの最初のパッドを押しながら、Multitrackがアクティブな Sequencer ボタンを押すか、Sequencer ボタンを押しながら任意のトラック行の最初のパッドを押します。\n\nこの画面で以下を変更できます：\n● Track MIDI Channel：デフォルトでは、すべてのトラックチャンネルはSequencerのMIDIチャンネルと同じです。このパラメーターを変更して、各トラックを個別またはグループ化されたMIDIチャンネルで送信することで、より柔軟な設定が可能です。新しいMIDIチャンネルを確定するにはエンコーダーを押す必要があります。\n● MIDI Output：デフォルトでは、MIDI出力ポートはSequencerと同じです。ただし、この設定はトラックごとに調整できます。\n● Note Offset：トラックのすべてのステップのベースノートを、クロマチックの場合は半音単位で、それ以外のスケールの場合はディグリー単位で変更します。ドラムラックやサンプラーの設定に便利です。\n● Time Division per track：これについては後で詳しく説明します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 63,
+      "image": "/oxi-one-mk1/pages/page-063.png",
+      "title": "Page 63",
+      "sectionName": null,
+      "content": "DIVISION (Y Div)\n\nMultitrackでは、DivisionメニューのパラメーターはトラックごとにDivisionします。以下を選択できます。\n\nTrack Selection: 同じ画面でどのトラックを編集するかを選択します。\n\nPlayback Direction: トラックの再生方向を設定します。Forward、Backward、Pendulum、Random、Drunkから選択できます。\n\nDivision Randomization: 0〜100%の確率で、各ステップにおいてトラックのTime Divisionが変化する確率を設定します。\n\nTime Division: トラックのTime Divisionを設定します。これは上述のTrack Menuスクリーンと同じ値です。\n\nSequencerボタンを押しながらSHIFT + または を押すと、すべてのトラックのTime Divisionを一度に変更できます。押すたびにすべてのTime Divisionが2倍または半分になります。\n\nInitとEndを押しながら任意の2つのステップを押すと、それらのステップ間ですべてのトラックのLOOPを作成できます。異なるTime Divisionはリズムやメロディのバリエーションを生み出します。\n\nSequencer再生をリセットする方法の一つは、SHIFT + MUTE + Sequencerボタンを押すことです。同時にすべてのSequencerをリセットするには、このオプションが利用可能なことを覚えておいてください。詳細はtransportセクションをご確認ください。\n\nSequencer Resetパラメーターが有効になっている場合、X bars後にトラックもリセット/再整列されます。\n\nSTEP PARAMETERS\n\n任意のトラックの任意のステップを押し続けると、そのパラメーターにアクセスできます。ここでステップごとに以下を変更できます。\n\nVelocity と Gate は他のモードと同様です。\n\nNote: エンコーダーを使用して1つまたは複数のステップのノートを編集できます。値はアクティブなスケールによって異なります。エンコーダーを押すと、選択したトラックのベースノートにリセットされます。\n\nあるいはPiano Roll ビューを開いてモノフォニックSequencerのようにノートを描くこともできます。\n\nModulation: ここでは選択したMOD Laneの値をステップごとに変更できます。\n\nStep-Chordボタンがアクティブな状態でステップを押し続けると、Step Submenuに移動します。ここでは以下を編集できます。\n\nTglid またはTrack Glide: 名前が示すとおり、これはトラックパラメーターです。連続的なピッチが次のノートに到達するまでの時間を変更します。\n\nサウンドエンジンがこれを機能させるためにピッチベンドをサポートしている必要があることに注意してください。\n\nProb、またはTrigger ConditionsセクションのLogic Conditionsです。\n\nRetrig: ステップの持続時間中にノートがトリガーされる回数を設定します（最大5回）。解像度を上げるには、SequencerまたはトラックのTime Divisionを変更してください。\n\n完全にCCWにするとSKIPになります。選択すると、ステップのタイミングはトランスポートバーによって無視され、シーケンスの長さが短くなります。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 64,
+      "image": "/oxi-one-mk1/pages/page-064.png",
+      "title": "Page 64",
+      "sectionName": null,
+      "content": "TIPを活用しましょう: Skip機能を使うとパターンのタイミングやフィールを急激に変えることができます。Retrig on Random PerformスクリーンでSkipステップをランダム化すると、バーごとに異なるシーケンス長が得られ、ノートの追加と削除を行うことができます。\n\nOffsetは、現在のタイム・ディビジョンの-40%から40%の範囲でノートの時間的なずれを設定します。25%は各ステップの長さの±1/4の偏差になります。\n\nPIANO ROLL new\n\nOCTエンコーダーを押すかホールドすると、選択されたトラックのPiano Rollビューに入ることができます。ここでは他のモードと同様にグリッドの縦スクロールが可能で、グリッドに入力したノートをプレビューするNote Preview機能も使用できます。\n\nCOLUMN VIEWS new\n\n1番目、3番目、4番目のエンコーダーを押すと、それぞれVelocity、Gate、Modのカラムビューが表示されます。\n\nMULTITRACK KEYBOARD\n\nMultitrack Keyboardでは、ドラムキットとしてすべてのトラックを一度に演奏したり、ボタンを押すだけで各トラックを個別にフルキーボードで演奏したりすることができます。また、個々のトラックのソロとミュートのための便利なショートカットもあります。\n\n1列目から12列目はパフォーマンスエリアです。\n\n各トラックに異なるベロシティレベルを持つドラムビュー（例：ドラムキットの演奏）から、1つのトラックが選択／アーム状態（14列目）のときに単一トラック用の通常のキーボードに切り替わります。\n\n● 13列目はRoller機能で、ノートリピートのレートをコントロールします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 65,
+      "image": "/oxi-one-mk1/pages/page-065.png",
+      "title": "Page 65",
+      "sectionName": null,
+      "content": "14列目はArm（アーム済み）Trackを選択します。\n\n- 何も選択されていない状態（デフォルト）では、8トラックのドラムビューが表示されます。14列目で1つのトラックを選択/Armすると、そのトラックに対して通常のフルキーボードが表示されます。\n- トラックごとに設定された異なるMIDI channelが反映されます。\n- Armされたトラックなしでレコーディングを有効にすると、トラックトリガーをドラムパッドとして異なるベロシティレベルでプレイできます。1つのトラックをArmすると、フルキーボードで特定のシンセをプレイ・レコードできます。機能を最大限活用するにはRec menuをご確認ください。\n\n15列目はトラックごとのMuteです。\n\n16列目はトラックごとのSoloです。列の複数のパッドを押すとSoloグループになります。\n\nEUCLIDEAN GENERATOR（デストラクティブ）\n\nEuclidean GeneratorメニューはMultitrackモードでのみ使用できます。SHIFT + Randomを押してメニューに入ります。\n\nオプションは以下の通りです：\n\nLen: フレーズの全体的なLength（長さ）を設定します。このメニュー外でトラック長を調整すると、このパラメーターは自動的に合わせて更新されます。\n\nPuls: 定義されたフレーズ長に対して等間隔に配置されたPulse（パルス）の数です。\n\nRot: パルスが右（正の値）または左（負の値）にシフトされるRotation（回転）数またはステップ数です。\n\nInv: アルゴリズムの結果を反転させ、アクティブステップを非アクティブステップに、またはその逆に切り替えます。\n\nこれらのパラメーターを変更すると、すぐに新しいパターンが作成されます。\n\nEuclidean Generatorはデストラクティブです。つまり、トラックのステップが上書きされます。ただし、Euclidean GeneratorはFIXEDまたはLOCKEDのロジック条件を持つステップには影響しません。\n\nEUCLIDEAN MODULATION\n\nEuclidean GeneratorのPulsesとRotationパラメーターは、現在のモジュレーションソース（LFO、MOD Lanes、MOD CV IN）のいずれかを使用して、トラックごとにモジュレートできます。\n\nPulsesにモジュレーションが適用されると、影響を受けるトラックのEuclidean GeneratorのLengthパラメーターで定義された範囲内に新しいトリガーが表示されます。\n\nさらにバリエーションを増やすために、Rotationパラメーターをモジュレートすることも可能です。これにより、Lengthによって決定されるステップの範囲内でパルスが回転します。Rotationのモジュレーションを有効にするには、Pulsesに対してモジュレーションが適用されている必要があります。手動で入力されたノート/トリガーには影響しません。\n\nモジュレーションを追加することで生成された新しいトリガーは、シーケンサーが動作中にグリッド上でオレンジ色で表示されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 66,
+      "image": "/oxi-one-mk1/pages/page-066.png",
+      "title": "Page 66",
+      "sectionName": null,
+      "content": "DRUM PATTERN GENERATOR（非破壊）\n\nパターンジェネレーターは、MI GridsモジュールをベースにしたMultitrackモードで使用できる新しいツールです。Kick/Bassdrum、Snare、HiHatのドラムパターンを生成するために使用できますが、もちろん他のサウンドをトリガーすることもできます。生成されるパターンは、トラディショナルなものからよりエクスペリメンタルなものまで、多くの異なるリズムを組み合わせた結果であり、興味深い結果をもたらします。このミックスは2つのコントロール X と Y で調整します。\n\nバージョン4.4.6以降、Drum Pattern Generatorは内部的に初期開始ディビジョンを改善し、より広い範囲の使用可能なパターンを実現しています。これは、以前の古いバージョンでDrum Pattern Generatorを使用して保存されたパターンとプロジェクトに影響します。\n\n3つのエンジンが使用可能で、最初の3つのトラックで有効にできます。\n\n最初（一番下）のトラックはKickまたはBassdrum、2番目はSnare、3番目はHiHatに対応するトリガーを生成します。\n\n3つのレーンのいずれかを有効にするには、ボタンを押しながら、薄い青色の3つのパッド（2列目）のいずれかをタップします（各レーンに1つずつ）。画面にツールチップが表示され、対応するトラックのエンジンの状態が示されます。\n\nパターンジェネレーターが有効な場合、対応するパッドは明るい青色に点灯します。\n\nパターンジェネレーターはトラック1と2では無効、トラック3では有効になっています。\n\nこのエンジンが生成するトリガーは、Sequencerの動作中にグリッド上でオレンジ色で表示されます。\n\nジェネレーターの設定に入るには、Sequencerボタンと2列目の3つの青いパッドのいずれかを押してください。SHIFT + Randomを押してこのメニューに入ることもできます。Pattern Generatorメニューは、このエンジンがアクティブなトラックに対して表示されます。\n\n- Dens: 選択したレーンで新しいイベントが発生する確率。\n\n- X: ドラムパターンマップ内のX位置（現在のバージョンでは全レーン共通）。\n\n- Y: ドラムパターンマップ内のY位置（現在のバージョンでは全レーン共通）。\n\n- Chaos: パターンエンジンに導入されるランダム化の量。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 67,
+      "image": "/oxi-one-mk1/pages/page-067.png",
+      "title": "Page 67",
+      "sectionName": null,
+      "content": "Densityコントロールはトラックごとに独立していますが、X、Y、Chaosはすべてのトラックに共通です。\n\nパターンジェネレーターの優れている点は、グリッドに入力したノートの上で機能することです。これにより、プログラムしたパターンに対して非破壊的な方法でスパイスとバリエーションを簡単に追加できます。オフにすれば、グリッドに表示されている元の状態にいつでも戻せます。\n\nジェネレーター実行中でも、既存のすべてのオプションを使用できます。\n\n生成されるパターンの長さは最大32ステップです。パターンの全フレーバーとバリエーションを活かすために、トラック長を少なくとも32に設定してください。\n\n4.0では、Xパラメーターの末尾の値に新しいリズムバンクが追加されました。\n\n使用可能なパターンの一覧は「Drum Patterns」セクションで確認できます。パターンはXおよびYコントロールに応じてミックスされることを覚えておいてください。\n\n受信ノートフィルタリング\n\n● MIDI Inチャンネルフィルタリング。以下の3つのオプションがあります。\n○ OFF\n○ MIDI Channel\n○ Ch & Note (MULTI)\n\nOFF アームされたトラックなし\n\nMIDIチャンネルを無視してノートごとにイベントをフィルタリングします。ベースノートが2つ以上のトラックに一致する場合、最初のトラックにのみ送信します。\n\nOFF 1トラックアーム済み\n\n入力MIDIチャンネルに関係なく、このトラックにすべてのイベントを送信します。\n\nMIDI Channel アームされたトラックなし\n\nトラックのMIDIチャンネルごとにイベントをフィルタリングします。MIDIチャンネルが2つ以上のトラックに一致する場合、最初に一致したトラックに送信します。\n\nMIDI Channel 1トラックアーム済み\n\nトラックのMIDIチャンネルが一致する場合、このトラックにイベントを送信します。トラックのベースノートは関係ありません。\n\nCh & Note アームされたトラックなし\n\nMIDIチャンネルとベースノートごとにイベントをフィルタリングします。MIDIチャンネルとベースノートが2つ以上のトラックに一致する場合、最初に一致したトラックにのみ送信します。\n\nCh & Note 1トラックアーム済み\n\nトラックのMIDIチャンネルが一致する場合、このトラックにイベントを送信します。トラックのベースノートは関係ありません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 68,
+      "image": "/oxi-one-mk1/pages/page-068.png",
+      "title": "Page 68",
+      "sectionName": null,
+      "content": "POLYPHONIC\n\nPolyphonicモードでは、1ステップあたり最大7音、最大128ステップで完全な自由度を持つことができます。\n\nSTEP PARAMETERS\n\n● グライド（ピッチに設定されたCV出力にのみ影響）\n\n● ノートごとのProbabilityとlogic conditions\n\n● ノートごとのRetrigger\n\n● ノートごとのMicro offset\n\n● ノートごとのVelocity\n\n● ノートごとのOctave offset\n\n● ノートごとのGate\n\n● ステップごとの4つのmodulation lanes\n\nノートは異なるステップにわたってTIEDにすることができます。\n\nMUTEを押しながら任意のステップをタップすることで、ステップをMuteすることができます。\n\n異なるオクターブオフセットで同じノートを入力するには、グリッドを縦方向に移動する必要があります。\nその方法は2つあります：\n\n- Y Divメニューに入り、最初のエンコーダーを使用する。\n- メインシーケンサー画面で2番目のエンコーダーを押しながら回す。\n\n1ステップあたり最大7音がアクティブになれるため、8音目を追加すると、最初に入力したノートが削除され、以降も同様となります。\n\n該当するSequencerボタンを押しながら任意のパッドを押すことで、シーケンス全体をすばやくトランスポーズすることができます。列の最低音から押したパッドまでの距離によって、トランスポーズの方向と距離が決まります。\n\nChordシーケンサーをコピーしてPolyphonicにペーストし、コード進行を細かく調整することができます。\n\nPOLYモードのCopy and Paste操作は非常に強力です。以下のことができます：\n\n· New Copy/pasteによる単一または複数のステップとその全パラメーターのコピー。これらのステップは異なる位置や異なるピッチに相対的にペーストすることができます。コピーできるステップの最大数は、ステップクリップボードバッファのサイズによって制限されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 69,
+      "image": "/oxi-one-mk1/pages/page-069.png",
+      "title": "Page 69",
+      "sectionName": null,
+      "content": "・ 単一または複数のTIEDノートをコピー/ペーストできます（新機能）\n\n・ コピーを押してその列の空のステップを押すことで、1列または複数列のステップをコピー/ペーストできます。選択したステップの全ノートがコピーされます。これはコードをコピーする素早い方法です。\n\nPOLY BUILT-IN ARPEGGIATOR（新機能）4.3.6\n\nPoly modeには組み込みのArpeggiatorが搭載されており、グリッドのノートを入力として使用し、音楽フレーズを生成するユニークな方法を提供します。ARPパラメーターはパターン内に保存され、パターンごとに呼び出すことができます。\n\nARPEGGIATOR PARAMETERS:\n\nArpeggiatorのパラメーターは、ARPに表示されているものと同等です。パラメーターはグリッドノートビューの状態でARPボタンを押すことでアクセスできます。これらのARPパラメーターは、キーボードビューからARPボタンを押してアクセスするPOLY Keyboard ARPとは異なります。\n\nAccentはGateに代わり、最初の4パラメーターセットの3番目の位置に表示されます。ARPノートのゲート長は、3番目のエンコーダーでグローバルにコントロールできます。\n\nRot、Len、Pulsの設定を使用することで、ARPにユークリッドパターンを適用できます。ユークリッドパターンのRotationは、パルスを右にシフトする（正の値の場合）または左にシフトする（負の値の場合）RotationsまたはステップNの数を設定します。\n\nARPEGGIATOR SPEED VARIATION:\n\nArpeggiatorはシーケンスとは異なる速度で実行できます。\n\nUSER CHORD SLOTS（新機能）\n\n12個の利用可能なコードスロットのいずれかにカスタムコード（基本的には任意のノートのグループ）を保存できます。\n\nコードを1つのスロットに保存するには、必要な数だけノートを押し続けてから、コードスロットを2秒間長押しします。スロットをクリアするには同じ操作を行い、4秒間長押しします。\n\nUser Chord Slotsは、ピックアンドプレースでシーケンスに配置することや、Keyboard ARPを使用してアルペジオ演奏することができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 70,
+      "image": "/oxi-one-mk1/pages/page-070.png",
+      "title": "Page 70",
+      "sectionName": null,
+      "content": "STOCHASTIC\n\nStochasticモードは、コントロールされたランダムな方法でリズムやメロディのアイデアを生成するジェネラティブモードです。\n\nこのモードでは、グリッドがStochasticパターンジェネレーターをパラメーター設定するためのインターフェースとして機能します。グリッド上にプレイヘッドの動きが表示されますが、ジェネレーターのコントロールとは位置的な関係はありません。実際には、非表示の変化するパターンを再生しており、必要に応じてロックすることができます。Stochasticは最大128ステップまで対応しており、Gate ViewまたはVelocity Viewに入ることで全ステップのゲートやベロシティを確認できます。Velocity EncoderをプレスするとVelocity Viewが表示されます。Gate EncoderをプレスするとGate Viewが表示されます。これらのビューでは、Shift + Arrow Left/Rightを押すことでシーケンスをシフト/ローテーションさせることができます。Loop ModeはこのモードでもSnapshot Modeと同様に機能します。\n\nGENERAL CONTROLS\n\n● 最初の12列は、各ノートが再生される確率を設定します。\n\n● 右から4列目と3列目は、中央行を起点として、Long（長）とShort（短）という名前のオクターブの上下レンジとタイムディビジョンのランダム化を設定します。\n\n● 最後の2列は、ピッチとリズムがランダム化されるステップの割合（%）を設定します：100%ではマトリックス設定に従ってすべてのピッチまたはリズムがランダム化され、0%ではピッチやリズムはランダム化されず、同じピッチやリズム（または両方）がループします。\n\n右から1列目の設定は、次のステップがトリガーされる確率を定義します。リズミックな味わいは、右から3列目の設定によるディビジョンランダマイザーによって加えられます。\n\nリズムエンジンによって決定された各トリガーに対して、2段階のピッチランダム化が適用されます：\n\n1. 右から2列目（ピッチランダム化）で定義される一定の確率に基づいて、ノートの確率に応じて新しいノートが生成されます。\n\n2. 前の結果ノートにオクターブシフトが適用されます。オクターブシフトの量は、右から4列目の設定からランダムに選択されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 71,
+      "image": "/oxi-one-mk1/pages/page-071.png",
+      "title": "Page 71",
+      "sectionName": null,
+      "content": "結果として得られたノートは、内部の「バッファー」に保存されます。ピッチの確率が0%に設定されている場合、新しいノートは生成されず、代わりに内部バッファーから取り出されます。ピッチの確率が高いほど、新しいノートが生成される確率も高くなります！\n\nOXI Oneの既存の多くの機能も、Random Perform、Time division設定、CV-Gateレイアウト、MOD lanesなど、このモードで動作します。\n\nTIPS\n\n● 最後の2列を0%に設定すると現在のシーケンスを即座にキャプチャでき、その後低い%に設定することでリズムを少しずつ時間をかけて変化させることができます\n\n● LFOをピッチに設定すると、設定したノート以外の音へ美しく連れて行ってくれます（より良い結果を得るには低いアマウントに設定してください）\n\n● Rand Perform Trig %は、すべてのノート（列）に設定された確率のオフセットとして機能し、実質的にPOSTノート密度コントロールとして働きます\n\n● Random Perform -> Retrigで遊んでみてください\n\n● Encoder 2はシーケンス全体のオクターブオフセットを変更します。ドラムマシンの調整に便利です\n\n● Loopが使用可能です。ぜひ活用してください（StartポイントとEndポイントも同様です）\n\n● CCsとCVs（およびCC to CV）が使用可能で、さらにStochasticはCV Glideを生成します。グライドの量は、生成されるGate長とdivisionのランダム化によって決まります\n\n● CV pitchはラックで使用するランダムCVの優れたソースであり、リアルタイムでの制御性も非常に高いです（上記で説明したようにシーケンスをロックすることで、シーケンスの長さに合わせてランダムCVを繰り返したり、手動でループしたり、オクターブ設定でランダムの範囲を変更したりすることができます）。短いGate長はステップ状のランダムを生成し、長いGate/レガートはスムーズなランダムを生成します\n\n● 矢印ボタンを使用してシーケンサーを左右にシフトします。\n\n● Init/Endを使用してStochastic Modeでシーケンスを長くまたは短くします。長いシーケンスを表示するには、Followを有効にしてGateまたはVelocityビューに移動します。\n\n● GateはCV Glideをコントロールします。Gate 50以上でCVシグナルにグライドがかかり始め、Gate長を長くするほどグライドが増加します。\n\n● Shift + Preview：シーケンサーグリッドビューでノートを演奏できます。グリッドを押すとノートが聞こえます。\n\n任意のモジュレーションソース（MOD lanes、LFOsおよびCV In）を使用してStochasticエンジンのパラメーターの一部をモジュレートすることで、ストキャスティックレシピをさらに発展させることができます。内部デスティネーションテーブルをご参照ください。\n\nSTOCHASTIC & HARMONIZER\n\nスケール設定がHARMOに設定されている場合、Stochasticシーケンサーは任意のChordシーケンサーに従うことができます。この場合、列はスケールノートの確率ではなく、現在アクティブなコードの音度の確率を表します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 72,
+      "image": "/oxi-one-mk1/pages/page-072.png",
+      "title": "Page 72",
+      "sectionName": null,
+      "content": "MATRICEAL\n\nMatricealは新しく革新的なジェネレーティブモードです。4つの独立したトラックで構成され、それぞれに10個の独立したパラメーターマトリクス（レーンとも呼ばれます）があります。各パラメーターレーンには16ステップがあります。\n\n各パラメーターレーンには独自の設定があり、異なるInitポイントとEndポイント、スピード（またはタイムディビジョン）、方向を持ちます。これらの設定は、パラメーターページボタンを長押しすることでアクセスできます。\n\n利用可能なパラメーター：Trigger、note、interval、pulses、velocity、octave、gate、trigger probability、retrigおよびglide。\n\ntriggerトランスポートが新しいアクティブなtriggerに到達すると、パラメーター値が評価され、それぞれのトランスポートポジション（triggersレーンのトランスポートポジションとは異なる場合があります！）から取得されます。このようにして、異なるパラメーターを互いに切り離すことができます。\n\nTIP\n\n異なるパラメーターレーンに異なる長さとスピードを割り当てることで、非常に少ないステップ数で変化に富んだ複雑なパターンを作成できます。これがMatricealモードの魅力です。そして、1つのシングルSequencerで4つのトラックを使って実験できます！\n\nLAYOUT\n\nGLOBAL TRACK SETTINGS\n\n選択したトラックは、4つの白く点灯した下部パッドで示されます。いずれかを長押しすると、Global Track settingsスクリーンが表示されます。また、選択するトラックも変更されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 73,
+      "image": "/oxi-one-mk1/pages/page-073.png",
+      "title": "Page 73",
+      "sectionName": null,
+      "content": "グローバルトラック設定\n\n左から右へ：\n\n- Track MIDI Channel：デフォルトではSequencerチャンネルと同じです。\n- Track Note offset：デフォルトではSequencerのルートノートと同じです。ベースノートです。\n- Track RLength：このトラック上のすべてのパラメーターPlayheadをリセットすることにより、Sequence（トリガーステップとパルスの合計）のリセット長さを定義します。\n- Track clear：名前のとおり、トラック上のすべてのパラメーターページをクリアします。\n\nNOTE: トラックエリアのいずれかのパッドをタップすると、そのトラックが選択されたトラックとして設定されます。\n\nPARAMETERS PAGES\n\nトラックごとに10個のパラメーターページがあります。グリッド上での値の表示方法は、選択されたパラメーターによって異なります。\n\n表示は以下のとおりです：\n\n各色が表す内容：\n\nパラメータートラックボタンを長押しすると、その設定画面にアクセスできます。\n\nNote lane設定\n\n各パラメーターレーンは異なる設定を持つことができます：",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 74,
+      "image": "/oxi-one-mk1/pages/page-074.png",
+      "title": "Page 74",
+      "sectionName": null,
+      "content": "- スタートとエンドポイント: Init ボタンと End ボタンを押しながら、マトリックス上の任意のステップをタップして設定します。\n\n- タイム・ディビジョン: この設定は各パラメーター画面で利用できます。\n\n- 再生方向: この設定も各パラメーター画面で利用できます。\n\nRandomize（ランダマイズ）は、個々のステップを押しながら Rnd（一番左のエンコーダー）を押すことで実行できます。このとき、そのレーンの Init/End の長さが維持されます。\n\nまた、任意のパラメーターページボタンを押しながら Rnd ボタンを押すことでもランダマイズを実行できます。この方法では、そのパラメーターレーンの現在の Init/End 設定もランダマイズされます。\n\n各パラメーターレーンは、それぞれのパラメーターのランダマイズ値によって設定された独自のランダマイズ量を持つことができます。\n\n再生方向\n\nPendulum と Drunk の方向は表示されていません。スタート・エンドポイントは紫色で表示されます。\n\nCOLUMNS VIEW（新機能）\n\n任意のパラメーターページボタン（トリガーページを除く）をダブルタップすると、そのパラメーターのカラムビューに入ります。\n\nカラムビューでは、グリッドを使用してパラメーター値を直接入力できるため、ステップを押しながらエンコーダーを回す操作が不要になります（片手操作）。\n\nTRIGGERS（白色）\n\nMatriceal モードの最初のパラメーターはトリガーページです。トランスポートバーがアクティブなトリガーに達すると、ノートが送信されます。\n\nトリガーは、Matriceal トラックすべての基盤です。他のパラメーターはすべて、新しいトリガーが発生するたびに評価され、新しいノートの値が決定されます。\n\nトリガーのトランスポート設定は、トリガートラックの設定で定義されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 75,
+      "image": "/oxi-one-mk1/pages/page-075.png",
+      "title": "Page 75",
+      "sectionName": null,
+      "content": "マトリクスでのトリガー表示\n\nTriggers lane settings\n\nトリガーを追加するのに役立つ、EuclideanジェネレーターとRandomジェネレーターがあります。\n\nマトリクスの16ステップのいずれかを長押しして、トリガーステップ画面を開きます。\n\n左から右へ:\n- トリガーのEuclideanエンジンの長さを設定します（またトリガーレーンの長さを設定します）\n- Euclideanエンジンのパルス数を設定します\n- クリア。押すとすべてのステップを削除します\n- ランダムトリガー配置。押すとトリガーをランダムに追加します。値が高いほどトリガーが増えます。100%にすると16個のトリガーがすべて有効になります。パラメーターステップ設定ボタンを押しながらランダムボタンを押すことでもランダム化できます。\n\nLengthまたはPulsesエンコーダーを回すと、すぐにEuclideanパターンが作成されます。ただし、クリアまたはランダム化を行うには、それぞれのエンコーダーボタンを押す必要があります。トリガーステップを長押しすると、その長押ししたステップからEuclideanパターンを開始できます。\n\nトリガーを手動で入力することもできます。素早くタップしてトリガーのオン/オフを切り替えます。\n\nいくつかトリガーを設定したら、次のパラメーターに進みます。追加レーンは、配置したトリガーがパラメーター値と交わる場合にノートの出力に影響します。\n\nNOTE（黄色）\n\nNoteレーンはノートのピッチを決定します。Noteパラメーターページが選択されている状態で、任意のステップを長押しするとNoteステップ画面が表示されます。このメニューには左から右へ以下が表示されます：\n- ステップのノート値。これはトラック設定（行1の4つの白いパッドを長押し）にあるトラックのNoteオフセット（トラックベースノート）を基準とした相対値です。エンコーダーを回して変更し、押してリセットします。\n- ステップのノート値が適用される確率。0%の場合、デフォルトのベースノート（グローバルトラック設定で定義）が常に適用され、ノートオフセットは発生しません。\n- 3番目のエンコーダーを押すと、トラックのすべてのノート値をクリアしてリセットします。\n- 4番目のエンコーダーを回してランダム化の量を調整し、押してノート値をランダム化します。パラメーターステップ設定ボタンを押しながらランダムボタンを押すことでもランダム化できることを覚えておいてください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 76,
+      "image": "/oxi-one-mk1/pages/page-076.png",
+      "title": "Page 76",
+      "sectionName": null,
+      "content": "グリッドはトラックのNote offsetに対するステップ値を表します。高いピッチ値は黄色で表示されます。ピッチが高いほど、LEDの輝度が高くなります。低いピッチ値は赤で表示されます。\n\nトリガーされたノートの最終ピッチは、シーケンサーのオクターブ、ルート、トラックのNote offset、ステップのノート値、ステップのオクターブ、および累積インターバルを考慮して計算されます。\n\nINTERVAL（サーモンピンク）\n\nIntervalレーンは、このモードで最も興味深い機能のひとつです。静的なピッチ値を定義する代わりに、選択したスケールの次のインターバルまたはポジションを定義する累積値です。\n\nIntervalレーンのトランスポートが動くたびに、ステップのインターバル値がすべてのノートオフセットの影響を受けたノート値に加算されます。累積値がIntervalレーンの設定で定義されたMinimum値（Min）またはMaximum値（Max）に達すると、パラメーターレーンの設定で設定された反対のMinimum（Min）またはMaximum（Max）値に戻ります（またはその逆）。\n\nインターバルはratchets/ステップリピートの間でも評価されます。\n\nIntervalレーンの設定\n\nIntervalステップ画面はノートステップ画面と同等です。\n\nIntervalステップオプション\n\nTIP: 異なる速度と長さで、シンプルなピッチシーケンスにわずかなインターバルのバリエーションを混ぜて再生すると、シンプルながらも発展するメロディーのアイデアが得られます。\n\nPULSES（オレンジ）\n\nこのパラメーターはM185のようなクラシックなシーケンサーからインスピレーションを得ています。ステップを繰り返す（パルス）ことができ、特定のステップ内の全パラメーターの再生ヘッドを定義された数のパルスの間、そのステップに留めることができます。異なるパルスタイプを選択することで、そのステップ中のトリガー動作を細かく調整することができます。\n\n● すべてのパルス/リピートでトリガー（デフォルト）",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 77,
+      "image": "/oxi-one-mk1/pages/page-077.png",
+      "title": "Page 77",
+      "sectionName": null,
+      "content": "All pulses\n\n● 最初のパルス/リピートの間だけトリガーします。\n\nFirst pulse\n\n● トリガーはパルスの全体の持続時間にわたって広がります。この設定では、トリガーが「TIED」になります。\n\nTIED pulse\n\n注：ステップのパルス値が1以外の場合、それらの追加パルスはRLengthの計算に反映されます。\n\nVELOCITY（ターコイズ）\n\nVelocityはトリガーされたノートのMIDI velocityを定義します。\n\nVelocity値は、グリッド上の比例した明るさのレベルで表示されます。\n\nOCTAVE（青）\n\nピッチに正または負のオクターブオフセットを追加します。このオフセットが発生する確率をステップ単位で設定できます。\n\nOctave step\n\nGATE（紫）\n\n他のSequencerモードと同様に、Gateはノートの長さを定義します。\n\nGate値は、グリッド上の比例した明るさのレベルで表示されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 78,
+      "image": "/oxi-one-mk1/pages/page-078.png",
+      "title": "Page 78",
+      "sectionName": null,
+      "content": "GateはステップLength（長さ）の5%から100%の範囲で設定できます。その後にTIEとLEGATOがあります。TIEは連続する2つのトリガーを1つのノートに結合し、LEGATOは前のノートのNote Offが送信される前に次のノートのNote Onが送信されるLegatoエフェクトを追加します。\n\nヒント：いくつかのステップをTIEに設定し、異なるタイムディビジョンとレーン長と組み合わせることで、面白い結果が得られます。\n\nGate step\n\nGate パラメーターページが選択されている状態で、任意のステップを長押しするとGate stepの画面が表示されます。\n\n- 1つ目のエンコーダーでステップのGate値を設定します。\n\n- 3つ目のエンコーダーを押すと、全ステップをデフォルトのGate値にリセットします。\n\n- 4つ目のエンコーダーを回して押すと、ランダマイズ量の調整とGate値のランダマイズができます。\n\nGate値は異なる輝度レベルで表示されます。\n\nTRIGGER PROBABILITY（バイオレット）\n\nステップが演奏/トリガーされる確率です。\n\nRETRIGGER（グリーン/シアン）\n\n新しいトリガーがある場合のステップ長内でのノートの繰り返し回数と、その発生確率を設定します。\n\n反時計回りに回すとステップをSKIPに設定することもでき、これにより1つのトリガーパルスがスキップされます。これにより、よりリズミカルなバリエーションが生まれ、トリガーを他のパラメーターからデカップリングする別の方法となります。\n\nRetrigger step\n\nGLIDE（ライトブルー）\n\nGlideはCV出力にのみ影響します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 79,
+      "image": "/oxi-one-mk1/pages/page-079.png",
+      "title": "Page 79",
+      "sectionName": null,
+      "content": "EXTERNAL NOTE INPUT\n\nMatriceal Mode では、外部キーボードを使ってピッチ情報を入力することができます。REC を有効にし、Note パラメーターページ内のステップを長押しして、外部キーボードの任意のキーを押すとピッチ情報が登録されます。入力されたノートは、選択されたスケールにクォンタイズされる点にご注意ください。\n\nMATRICEAL KEYBOARD\n\nキーボードは、最初のトラックに割り当てられた MIDI チャンネルでのみノートをトリガーするために使用できます。キーボードは Matriceal レーンへの録音には使用できません。Matriceal の出力に合わせて演奏するために使用できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 80,
+      "image": "/oxi-one-mk1/pages/page-080.png",
+      "title": "Page 80",
+      "sectionName": null,
+      "content": "HARMONIZER\n\nHarmonizer は、Mono、Polyphonic、Multitrack、Stochastic Sequencer モード（Follower）のスケール設定です。\n\n音符のピッチは、Chord Sequencer のアクティブなコード、または Poly Sequencer のアクティブな音符セット（\"Leader\"）から取得されます。\n\n動作の仕組み：リズムとピッチのトレンドは Follower の Sequencer によって設定されますが、最終的なピッチは \"Leader\" のアクティブなコード進行に基づきます。\n\nHARMO SETUP\n\n少なくとも1つの Sequencer を Chord または Poly モードに設定してください。Chord または Poly モードの Sequencer が1つある場合、他の Sequencer（Mono、Poly、Multitrack、Stochastic モード）では新しいスケールオプション「HARMON」が使用可能になります。\n\nSequencer ビューで、画面に HARMON が表示されるまでスケールを変更します：SHIFT を押しながら3番目の Encoder を反時計回り（CCW）に回します。HARMON スケールの後には「Sq #」が続きます。# は \"Leader\" として機能する Chord Sequencer の番号です。\n\nFollower Sequencer のオクターブパラメーターは、画面の右下隅に引き続き表示されます。\n\nスケールを HARMO に設定すると、対応する Sequencer はアクティブなコード進行の音符に従います。\"Leader\" Sequencer を変更するには、SHIFT を押しながら4番目のノブを回します（ルートノートと同様）。\n\nPERFORM WITH HARMONIZER\n\nこのモードでは、キーに合わせるだけでなく、Leader Sequencer に加えた変更が Harmonizer がオンの他のすべての Sequencer に影響します。例えば、Leader Sequence のスケールを変更したり、トランスポーズやモジュレーションを行ったり、強力な Chord Keyboard、Poly Keyboard、または外部 MIDI キーボードやコントローラーで直接演奏すると、Follower Sequencer に音楽的な方法で影響を与えます。\n\nHARMONIZER は \"Leader\" Sequencer のキーボードを使用する場合にも機能します。\n\nChord Keyboard から演奏した最後のコード、または Poly Keyboard の最後の音符セットを維持するには、\"Leader\" Sequencer を無効化/オフにする必要があります。Keyboard HOLD は期待通りに動作します。\n\n\"Leader\" Sequencer が実行中でコードや音符を演奏しており、ユーザーがキーボードモード（または外部 MIDI キーボード）でコードや音符セットをトリガーした場合、後者がシーケンスより優先されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 81,
+      "image": "/oxi-one-mk1/pages/page-081.png",
+      "title": "Page 81",
+      "sectionName": null,
+      "content": "「Leader」sequencer がミュートされており、Mute Behavior が「Leader」sequencer を無効化する設定（トグル）になっている場合、follower sequencer のハーモナイズは停止し、leader に従う sequencer は現在のノートを出力します。Harmonizer が後続の sequencer に影響を与えるには、トランスポートが動作中である必要があります。\n\nFOLLOWER KEYBOARD\n\nFollower sequencer のキーボードには、Harmonizer エンジンが使用するノートのセットがリアルタイムで表示されます。そのノートセット上で演奏することで、音楽的に優れた結果を簡単に得ることができます。\n\nハーモナイザーが使用するノートは緑色で表示されます\n\nNOTES ABOUT THE HARMONIZER\n\nステップを低いオクターブに配置した場合、ハーモナイザーのオクターブ化効果により、ハーモナイズされた結果のノートが必ずしも低いピッチになるとは限りません。\n\nFolower sequencer に C3 のステップと C2 のステップがある場合、ハーモナイザーエンジン処理後のノートは互いに1オクターブ離れています（必ずしも C ではなく、コードによって異なります）。\n\nしかし、C2 や D2 の代わりに B2（C2 よりも低い値）が設定されている場合、結果のノートはその時点でマスターが演奏しているコードに依存し、より高いピッチのノートになることがあります。ハーモナイザーはルートノート C2 からコードの度数を取ります。\n\nまた、マスターに適用されたモジュレーションやランダマイゼーションは、ハーモナイザーによって考慮され、follower sequencer に適用されることにも注意してください。\n\nHarmonizer Octave (Jump) の最大設定は、follower sequencer が行うことのできる最大オクターブのジャンプを決定します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 82,
+      "image": "/oxi-one-mk1/pages/page-082.png",
+      "title": "Page 82",
+      "sectionName": null,
+      "content": "MOD LANES\n\nMOD ボタンを押してモジュレーションレイアウトに入ります。Sequencer ごとに独立した 4 つのモジュレーションレーンがあります（Multitrack Mode では 8 つ）。\n\nモジュレーションレーンは以下のさまざまな用途に使用できます：\n- MIDI パラメーターの自動化または手動コントロール：CC、Aftertouch、Pitch Bend、Program Changes\n- Internal destinations テーブルに記載された内部パラメーターの自動化または手動モジュレーション\n- CV 出力へのルーティングも可能（CV Gate 設定を参照）\n\nMOD レーンに MIDI パラメーターが割り当てられている場合、対応するエンコーダーは MIDI 経由で値を送信するため、4 つのエンコーダーを使用して、任意の DAW、ハードウェアシンセサイザー、サンプラー、モジュラーシンセ、またはモバイルアプリの外部パラメーターを同時にコントロールできます。\n\n自動化カーブが存在する場合、つまりモジュレーションレーンのステップごとに異なる値がある場合、エンコーダーはステップ値のオフセットとして機能します。エンコーダーを回すと、選択したモジュレーションレーンのすべてのモジュレーション値が増減し、カーブの形状が維持されます。エンコーダーをポジティブまたはネガティブの範囲まで全部回すとカーブがフラットになります。ディスプレイにはエンコーダーを回す際に最小値と最大値が表示されます。\n\nTIP：Mod Lane の形状を維持したい場合、ノブを回しながら上下の値がクリップされないようにするには、MOD レーンのオフセット機能を使用できます。Shift を押しながらエンコーダーを回してオフセットを適用します。\n\n各エンコーダーはそれぞれ MOD 1 から 4 を変更します。\n\nTIP：モジュレーションの値をファインチューニングするには、変更したいステップを押したままエンコーダーを使用して、4 つのモジュレーション値をそれぞれ調整します。\n\nMOD レーンのメイン画面ラベルには、アクティブなモジュレーション先が表示されます。有効な先を次の優先順位で表示します：MIDI/CC、Internal destination 1、Internal destination 2、またはすべて OFF。\n\nMOD Lane の名前は手動で編集でき、最大 4 文字です。あるいは、Instrument CC 定義を割り当てると、パラメーターが割り当てられている CC 値には省略ラベルが表示されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 83,
+      "image": "/oxi-one-mk1/pages/page-083.png",
+      "title": "Page 83",
+      "sectionName": null,
+      "content": "LANE SELECTION\n\n選択されたMOD laneは画面に表示されます。エンコーダーを回すか押すと、対応するMOD laneが選択されます。グリッドはその値を表示します。\n\nTIP: Multitrack Sequencerで5〜8にアクセスするには、MODボタンを押しながら5〜8の行を選択してください。\n\n最後に選択/タッチしたモジュレーションが、メインのSequencer viewとKeyboard layoutのMod control（encoder 4）に割り当てられます。Multitrackモードでは最後に選択したトラックが優先され、そのモジュレーションlaneがこの4番目のノブに割り当てられます。\n\nステップメニューでは、velocity、octave、gateと同様に、この選択されたモジュレーションlaneの値を編集できます。\n\nMULTITRACK LANE SELECTION\n\nMultitrackモードでは、トラックごとに1つ、計8つのモジュレーションlaneがあります。エンコーダーですべてのlaneを選択するにはどうすればよいですか？\n\n選択されたトラックが最初の4つ（1〜4）のうちの1つであれば、MODメニューはトラック1〜4のモジュレーションlaneを表示します。選択されたトラックが後半の4つ（5〜8）のうちの1つであれば、後半4つの情報を表示します。MODボタンと任意のグリッド行を押すと、選択されたlaneをすばやく変更できます。\n\n8つのモジュレーションlaneが使用可能なため、最初の4つのlaneと後半の4つのlaneを切り替える2つの方法が実装されています。\n\n1- MODボタンを押しながら、グリッドの任意の行をタップします。これにより、新しく選択されたトラックのモジュレーションlaneが自動的に表示されます。\n\n2- 任意のステップを押したままにすると、そのステップと選択されたトラックのモジュレーション値が画面に表示されます。\n最初のエンコーダーを回してトラックを変更します。\n4番目のエンコーダーを使用して、そのステップのモジュレーション値を調整します。\n\nMOD LANE ON - OFF\n\nエンコーダーボタンを押すと、各laneのオン/オフを切り替え、MIDIメッセージや内部モジュレーションの送信を防止できます。MOD laneがOFFのとき：\n- 選択されたMIDIパラメーターは現在の値を保持します。\n- 内部モジュレーションは無効になり、デスティネーションはそのまま保たれます。\n\nエンコーダーを少し回すと、再びONになり次の値にジャンプします。\n\nSHIFT + エンコーダーボタンを押すと、MOD laneの設定に入ります。\n\nMOD LANE OFFSET\n\nSHIFTを押しながらエンコーダーを回すと、-127〜+127の範囲でMOD Lane offsetを調整できます。このoffset調整は、MOD Lane設定で指定されたMaximumおよびMinimum値の範囲内に制限され、出力値がこれらの設定された制限を超えないようにします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 84,
+      "image": "/oxi-one-mk1/pages/page-084.png",
+      "title": "Page 84",
+      "sectionName": null,
+      "content": "LANE SETTINGS\n\nSHIFT + encoderを押してMOD lane設定に入ります。各laneのencoderを回してlane設定メニューをナビゲートし、encoderを押して設定に入り、backを使ってサブメニューから戻ります。\n\n- CC DEST: モジュレーションlaneが送るMIDIパラメーター（Channel Pressure、Program Change、Aftertouch、Pitch BendまたはCC）を選択します。\n\n- MOD MAX: このlaneで各ステップに設定できる最大MOD値。7から127まで。内部デスティネーションまたはCCパラメーターの最大モジュレーション値を素早く選択できます。\n\n- MOD MIN: このlaneで各ステップに設定できる最小MOD値。0から120まで。\n\n- INT DEST 1: このlaneの内部パラメーターデスティネーション。すべてのルーティングオプションについては、デスティネーションテーブルセクションを参照してください。\n\n- INT AMT 1: MOD値の後に適用される%アマウント。内部モジュレーションの範囲をファインチューニングするための追加コントロールです。\n\nNOTE: このファームウェアバージョンでは、AmountはAbsolute値です。デスティネーションパラメーターによって、必要なMOD Amountは1〜2ユニット（Octave、Arp Divisionなど）と少ない場合もあれば、Velocity、Gate、Trigger probabilityなどのパラメーターでは最大100になる場合もあります。\n\nTIP: MOD laneの範囲は0〜127です。\n\n- INT OFF 1: 内部モジュレーションを適用する前のMOD lane値へのオフセット。ネガティブまたはバイポーラなモジュレーション値を得るために使用します。\n\n- INT DEST 2: 2番目の内部デスティネーションを定義します。\n\n- INT AMT 2: 2番目の内部デスティネーションのアマウント。\n\n- INT OFF 2: 2番目の内部デスティネーションのオフセット。\n\n- DIVISION: MOD laneのタイム・ディビジョン。MOD Lane viewのquick actionsを使用することもできます。\n\n- SMOOTH: あるモジュレーションステップ値から次の値へ移行する時間（スルー）を制御するファクター。0はsmooth factorが'Off'であることを意味し、モジュレーションは即座に1つのステップ値から次のステップ値にジャンプします。このパラメーターは、MOD LaneがCV Gate viewのCVに割り当てられている場合、CVアウトプットにも影響します。\n\n- LINKED: MOD Laneはデフォルトでノートシーケンスにリンクされています。これは、MOD view外で行われた変更（スタート/エンドポイント、ディビジョン、クリア、エクスパンド、コンデンスなど）もMOD Laneに影響することを意味します。Linkedを'No'に設定することで、この動作を手動で無効にできます。また、MOD view内でMOD laneのパラメーターを変更した場合、現在のlaneは利便性のために自動的にunlinkedになります。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 85,
+      "image": "/oxi-one-mk1/pages/page-085.png",
+      "title": "Page 85",
+      "sectionName": null,
+      "content": "- INIT: MOD laneの開始ステップです。Init ボタンを使用して設定することもできます。\n\n- END: MOD laneの終了ステップです。End ボタンを使用して設定することもできます。\n\n- RENAME: 特定のCC MOD laneの名前を書き換えることで、デフォルトのCCまたはDestinationの値の代わりに表示されます。名前変更画面についてはこちらで説明しています。\n\n- COPY: 設定と値をコピーして、他のMOD laneにペーストできます。\n\n- PASTE: 別のMOD laneから以前コピーした設定と値をペーストします。\n\n- CLEAR: 値と設定をクリアします。\n\nMOD EDITING\n\nモジュレーションのステップ値は、Motion Recordingまたはグリッドへの直接描画によってパフォーマティブな方法で編集できます。また、SHIFT + コマンドを使用してモジュレーションlane全体をランダム化することも可能です。\n\nMOTION RECORDING\n\nMOD laneメニューにいる状態でRecボタンを押し、エンコーダーを操作することで、MOD laneの値変化をリアルタイムで録音できます。シーケンスに合わせてエンコーダーの動きを録音することで、シーケンスの長さで繰り返すオートメーションエンベロープが生成されます。モジュレーションの録音はシーケンサーのRecord設定に従わず、以前のモジュレーションが上書きされる場合があることに注意してください。また、Pitch bendなど外部デバイスからのMIDIメッセージも録音できます。ただし、外部デバイスのメッセージの種類と値が、MOD laneに設定されているものと一致している必要があります（設定でMIDIチャンネルによるフィルタリングを行っている場合は、シーケンサーのMIDIチャンネルと一致させてください）。\n\nエンコーダーボタンのいずれかを押すと、そのモーションをOFFにします。エンコーダーを回すか押すと、モーションをONにして継続します。\n\nDRAWING MODULATIONS\n\n各モジュレーションlaneは、シーケンサービューのグリッドから直接編集（描画）することもできます（以下のセクションを参照）。ただし、キーボードビューでは、モジュレーション値を調整しながら同時にノートを演奏できるよう、MOD画面のみを表示したキーボードレイアウトを維持しています。\n\nグリッドは下から上へ、表示中のモジュレーションの各ステップの低い値から高い値を示します。最小値は0、最大値は127です。最小値と最大値はMOD laneの設定メニューで調整できます。\n\nグリッドに表示されたModulation lane",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 86,
+      "image": "/oxi-one-mk1/pages/page-086.png",
+      "title": "Page 86",
+      "sectionName": null,
+      "content": "PER STEP MODULATION\n\nいずれかのステップを押すと、Modulation値が自動的に設定されます。より細かい調整を行うには、グリッドの任意のパッドを押し続けながらエンコーダーを操作します。この際、画面にはそのステップの4つのModulation値が表示され、各エンコーダーで任意の値を変更できます。エンコーダーボタンを押すと、Modulation値が0にリセットされます。\n\nStep 6 modulation values\n\nTIP: 以前の値からModulationを調整するには、まずShiftを押し、次に調整したいパッドの列を選択し、Shiftを放してエンコーダーを回します。古い値は保持され、その初期値を起点としてステップ値を調整できます。\n\nいずれかのステップのModulation値をゼロにリセットするには、下のパッドを2回タップすることもできます。最初のタップで最低値が設定され、2回目のタップでゼロに設定されます。\n\nTIP: 表示されているModulationレーンを変更するには、別のエンコーダーを回すか押すか、MODを押しながらグリッドの任意のパッドを押します。下から上に向かって、各行がModulationレーンを表しています。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 87,
+      "image": "/oxi-one-mk1/pages/page-087.png",
+      "title": "Page 87",
+      "sectionName": null,
+      "content": "EXTERNAL MOD MATRIX new\n\nOXI Oneは、MIDIポート（USB、TRS、BLE）およびCV入力を通じてデータの受信・送信の両方が可能な多機能マトリクスを搭載しました。これにより、内部パラメーターのモジュレーションや、外部MIDIデバイスへの再ルーティングが可能になります。\n\nTIP: モジュレーションソースをCV入力に接続するか、有線またはBLEワイヤレスで外部MIDIコントローラーを接続することで、OXI Oneによるコントロールの可能性が新たな次元へと広がります。\n\nExternal Mod Matrixメニューにアクセスするには、MODボタンをダブルタップするだけです。\n\nこのメニューでは、モジュレーション用にCV入力を割り当てたり、最大16のMIDIマッピングを設定したりすることができます。各マッピングは、様々な内部の送信先に向けたり、外部MIDIデバイスに中継したりすることができます。\n\nこれらの設定オプションについて詳しく見ていきましょう。\n\nCV INPUT\n\nCV TO MIDI\n\nOXI OneのCV入力は、Start-Stop/Reset InとしてもCVモジュレーション入力としても機能する二重の役割を担っています。内部パラメーターに影響を与えたり、外部MIDIデバイスにControl Change（CC）やその他のMIDIコマンドを送信するようにリダイレクトしたりと、柔軟なルーティングが可能です。\n\n以下のグラフでは、アナログADエンベロープがCC（この場合はMod Wheel）パラメーターに滑らかに変換される例を確認できます。モジュラーシステムで生成された複雑なモジュレーションをMIDIに変換することで、モジュラーとMIDIのタイトな連携が実現できます。\n\n正の電圧のみが変換され、負の値はゼロにクリップされます（Pitch Bendの送信に使用する場合を除く）。\n\nAnalog envelope to MIDI CC",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 88,
+      "image": "/oxi-one-mk1/pages/page-088.png",
+      "title": "Page 88",
+      "sectionName": null,
+      "content": "CV AS INTERNAL MODULATION\n\nCV inputのもう一つの興味深い用途は、内部パラメーターのモジュレーションです。Internal destinationのテーブルはLFOやMOD laneと同じです。\n\nInternal destinationは2つあり、モジュレーション量はdestinationごとに個別に設定できます。バイポーラモジュレーション用に正および負の電圧の両方を受け入れます。\n\nMIDI MAPPINGS new\n\nMODボタンを2回タップして新しいMIDI matrix/mappingツールにアクセスすると、CV inputのルーティングに加えて、sequencerごとに最大16の受信MIDI信号をinternal destination、sequencerパラメーター、MIDI output、またはそれらすべてに同時にルーティングできます。MIDI Port Mergeにより、受信MIDIをマージしてMIDI Port A、B、CへmappingをSendすることができます。\n\n新しく導入されたMOD matrixツールでは、CV inputの設定だけでなく、sequencerごとに最大16の受信MIDI信号を以下にルーティングできます：\n\n- velocity、gate、pitchなどのInternal sequencer destination\n\n- Scale、Root、randomizerの設定などの特定のsequencerパラメーター\n\n- tempoやFILL activationなどのGlobal parameters\n\n- 外部MIDIデバイスのさまざまなパラメーターを同時にコントロールするために、受信データをシングルまたはマルチメッセージとして転送\n\n- そして上記の組み合わせ！\n\nMIDI MAPPINGS SETTINGS\n\nリスト上のすべてのMappingで、以下のパラメーターを設定できます：\n\n● TYPE: 認識・処理されるMIDIメッセージ\n\n● MIDI Inチャンネル。いくつかのオプションがあります：\n○ Same: sequencerの（一般的な）MIDIチャンネルをリッスンします（MultitrakまたはMatricealモードではトラックチャンネルではありません）\n○ ALL: CCまたはNote valueが一致する場合、いずれかのMIDIチャンネルをリッスンします\n○ 1-16: 特定のMIDIチャンネルを指定してリッスンします\n\n● LEARN: 受信信号を特定のmappingにマップすることができます\n\n● TRACK: MultitrakおよびMatricealシーケンサーでのみ機能し、受信信号の影響を受けるトラック（またはMultitrackモードでは複数のトラック）を選択できます（例：複数のトラックをmute、fillを作成するために1つ以上のトラックのrandom amountをコントロールなど）\n\n● CC FWRD Out: CC Forwarded message to the MIDI Outputsの略です。sequencerに割り当てられた同じMIDIチャンネルに外部転送されるCC numberまたはMIDIメッセージを設定します（MultitrakおよびMatricealモードではトラックのチャンネル）。Multitrackモードでは、メッセージはすべてではなく、最初に割り当てられたトラックのみに転送されます。\n\n● CC-INT AMT 1: CC and Internal Destination Amount 1",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 89,
+      "image": "/oxi-one-mk1/pages/page-089.png",
+      "title": "Page 89",
+      "sectionName": null,
+      "content": "CCフォワードメッセージとInternal Destination 1の両方に適用されるモジュレーション量を設定します（どちらがアクティブかによって異なります）。\n\n● CC-INT OFS 1. CC and Internal Destination Offset 1\nCCフォワードメッセージとInternal Destination 1の両方にオフセットを適用します（どちらがアクティブかによって異なります）。ユニポーラとバイポーラの異なるデスティネーションで作業する際に便利です。\n\n● INT DEST 1 and 2. Internal Destination 1 and 2.\nモジュレーションに利用可能なパラメーターを表示します。詳細はInternal Destinationsセクションを参照してください。適用されるモジュレーションは非破壊的で、オフセットとして実装されており、デスティネーションパラメーターの初期値を増加または減少させることができます。各Mappingにつき2つのInternal Destinationがあります。\n\n● INT AMT 2. Internal Amount 1.\nInternal Destination 2に適用されるモジュレーションの振幅を設定します。\n\n● INT OFS 2. Internal Offset 2.\nInternal Destination 2にオフセットを適用します。ユニポーラとバイポーラの異なるデスティネーションで作業する際に便利です。\n\n● PARA 1 and 2. Parameter 1 and 2.\nモジュレート可能なパラメーターの2番目のリストには、Mute、Scale、Randomizeのオプション、Start/Endポイントなどのシーケンサー設定や、TempoやFILL有効化などのグローバル設定が含まれます。これらは「破壊的」なアサインメントであることに注意してください。選択したパラメーターの値を永続的に変更し、モジュレーション前の元の値に戻ることはありません（Internal Destinationsを介した非破壊モジュレーションとは異なります）。各Mappingにつき2つのパラメーターモジュレーションがあります。\n\n● PARA AMT 1 and 2. Parameter Amount 1 and 2.\n各パラメーターに適用されるモジュレーションの振幅をそれぞれ設定します。\n\n● PARA OFS 1 and 2. Parameter Offset 1 and 2.\nこれらのパラメーターモジュレーションの中心点を定義します。\n\n● CONSUME. 受信信号を後続のMIDI MappingやMIDI出力に渡すか（Consume No）、まったく転送しないか（Consume Yes）を決定するオプションです。\n\n● COPY MAP. 現在選択されているMappingまたはシーケンサーのすべてのMappingの設定を複製できます。コピーした値はメモリに保存され、現在のプロジェクトや別のプロジェクト内の任意のシーケンサーやパターンにMappingを転送・ペーストできます。\n\n● PASTE MAP. 最後のコピー操作に従って機能します。単一のMappingをコピーした場合は、そのMappingをペーストできます（Paste Current）。シーケンサーやパターンのすべてのMappingをコピーした場合は、Mapping一式を別のシーケンサーやパターンにペーストできます（Paste All）。\n\n● CLEAR MAP. 現在選択されているMappingのすべての設定をデフォルト値にリセットします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 90,
+      "image": "/oxi-one-mk1/pages/page-090.png",
+      "title": "Page 90",
+      "sectionName": null,
+      "content": "● LAST VALUE は、選択したMappingで最後に受信した値を表示します。\n\n認識・処理されるために対応する必要があるMIDIメッセージのタイプを指定します。CC、Note On、Note Offメッセージの中から選択できます。\n\n○ Note Onメッセージは値127として解釈されます。\n○ Note Offメッセージは値0として解釈されます。\n○ CCメッセージの場合、実際に受信した値が使用されます。\n\n● NUMBER\n\nControl Change（CC）または受信するNote番号を指定します。\n\nTIP: MIDI Mappingsのリストはこちらで確認できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 91,
+      "image": "/oxi-one-mk1/pages/page-091.png",
+      "title": "Page 91",
+      "sectionName": null,
+      "content": "LFOs\n\nシーケンスにバリエーションを加えるもう一つの優れた方法は、LFOでパラメーターを自動化することです。\nSequencerごとに2つのLFOがあり、どちらも1つの内部パラメーターと1つのMIDIパラメーターをモジュレートできます。\n\nLFO RANGE\n\nLFOの出力レンジは選択した送り先によって異なります。各用途において最適なコントロールが得られるよう調整されています。LFOが内部パラメーターに適用される場合、値はバイポーラ（-128〜127）となります。LFOがMIDI CCに送られる場合、値は最適なMIDIレンジ（0〜127）に調整されます。\n\nCC Destinations\n\nLFOがCCパラメーターに送られ、アマウントが100%の場合、CCレンジは0〜127となります。アマウントを例えば50%に減らすと、レンジは0〜63に設定されます。オフセットを適用することでCCパラメーターの最小値をシフトさせることも可能です。オフセットが+64でアマウントが50%の場合、CCは正確に64〜127の範囲になります。\n\nPITCH BEND\n\nこの場合、最大レンジは-8192〜8191に調整されます。\n\nINTERNAL Destinations\n\nLFOが内部の送り先に適用されると、正と負の変化をもたらします。これはLFOのAmountとOffsetの設定によって制御されるバイポーラ値です。\n\nLFOの結果値は送り先間で正規化されていないことに注意してください。これはパラメーターが持つ値の数によって異なります。詳細はInternal Destinationsセクションをご確認ください。\n\nLFO SCREEN\n\nLFO screenは2ページ（1/2に注目）で構成されており、それぞれのページにそのSequencerで使用可能な各LFOの情報とパラメーターが含まれています。\n\nWaveform（波形）：次に示すような独特な形状を含む、多くの種類から選択できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 92,
+      "image": "/oxi-one-mk1/pages/page-092.png",
+      "title": "Page 92",
+      "sectionName": null,
+      "content": "1st encoderを押すと、Retrigger設定にアクセスできます。シーケンスのノートでLFOをリトリガーするかどうかを選択できます。\n\nRateはencoderを左に回すことで最大16 barsまでクロック同期させることができます。右に回すとFree running LFOになります。LFOはOXI Oneが動作している時のみ機能します。Free runningモードでは最大約200Hzに達します。2nd encoderを押すと、LFOのPhaseを調整できます。\n\nAmountは、内部および外部モジュレーションの両方の変更範囲を設定します。\n\nTIP: SHIFT + encoderを回すことで、外部/MIDI Amountを個別に調整できます。\n\nOffsetは、LFO値にオフセットを加えます。CCやATメッセージのようなユニポーラーの送信先や、特定の内部送信先に便利です。3rd encoderを押すと、3番目のパラメーターをAmountとOffsetの間で切り替えることができます。なお、このオフセットはCV出力には適用されません。CV出力にはCV / Gate Modeに独自のオフセット設定があります。\n\nInternal Destination（内部送信先）は、シーケンサーモードによって数が異なります。例としては、Velocity、Note（スケールに量子化）、Octave、Gate、CV Pitch Bend、Time Divisionなどがあります。各モードで利用可能なパラメーターの完全なリストは、Internal Destinations Tableを参照してください。\n\nNOTE: このバージョンのファームウェアでは、AmountはAbsolute valueです。送信先パラメーターによって、必要なLFO Amountは、Octave、Arp Divisionなどでは最小1〜2単位と少ない場合もあれば、Velocity、Gate、Trigger probabilityなどの他のパラメーターでは最大100まで必要な場合もあります。\n\nExternal/MIDI Destinationとして、CCメッセージ、Program Change、AftertouchおよびPitch Bendなどがあり、DAW、ハードウェアシンセ、またはモバイルアプリのパラメーターを自動化することができます。\n\n内部送信先と外部送信先を切り替えるには、4th encoderを押してください。\n\nCV LFOs\n\nLFOはCV出力にもルーティングできます。このルーティングは上記のDestinationパラメーターとは独立しているため、LFOを内部および/または外部MIDI変調とCV出力変調として同時に使用することができます。CV出力にはCV GATE layoutから調整できる独自のオフセット値があります。\n\nCV LFO Output Range\n\nCV LFO出力の最大範囲は、割り当て時の初期状態では0〜+5Vです。LFOメニューからオフセットを調整しても、値は0〜+5Vの範囲にクリップされるため、負のLFO電圧は得られません。ハードウェアの限界である-3Vまで電圧を下げるには、",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 93,
+      "image": "/oxi-one-mk1/pages/page-093.png",
+      "title": "Page 93",
+      "sectionName": null,
+      "content": "CV / Gate ModeのCV出力のオフセットです。CV Outputsは8Vのレンジ（-3Vから+5V）を持つため、LFOのオフセットを最大にすると、中心電圧が1Vとなり、ピーク時は-3Vと+5Vになります。\n\nMULTITRACKモードのLFO\n\nMULTITRACKモードでは、個々のトラックごとにLFOを有効/無効にすることができます。LFOボタンを押すと最初の列がオレンジ色に点灯します。各トラックのパッドを押すと、そのトラックへのLFOの影響を停止できます。この設定はLFO 1（オレンジ色）とLFO 2（ピンク色）でそれぞれ独立しています。\n\nTIP: SHIFT + ENCODERを押すと、選択したLFO Parameterのデフォルト値に戻すことができます。\n\nTIP: LFOをPitchに適用すると、選択したスケールに従いながらシーケンサーをモジュレートする楽しい方法です。1音のArp Style Modulationを作成して、実際の動作を確認してみてください。\n\nHOW MODULATIONS ARE APPLIED\n\nAmountはデスティネーション間で正規化されていません。パラメーターが持つ値の数によって異なります。例えば、Amount 1は1セミトーンまたは1オクターブに相当します。LFOウェーブはおよそ23の値を持つため、Amountを増やしてその値に達するとモジュレーションは最大値に達し、波形がそれを超える部分はパラメーターの最大値を維持します。これによりモジュレーションが「クリップ」し、変化のないプラトーが生じます。\n\nLFOとExt CV Inputはバイポーラで、正と負の両方の変化をもたらします。\n\nMOD Laneはユニポーラのため、値は常にパラメーターデスティネーションに対して「増加/加算」されます。\n\nLFOとMOD Laneにはオフセットコントロールがあります。これを使用してLFOの負の成分を除去したり、MOD Laneに負のオフセットを加えたりすることができます。\n\nTIP: すべてのInternal Destinationsのリストはこちらで確認できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 94,
+      "image": "/oxi-one-mk1/pages/page-094.png",
+      "title": "Page 94",
+      "sectionName": null,
+      "content": "RECORDING\n\nMIDI INPUT CHANNEL FILTERING\n\nRecordingがアクティブなとき、SequencerはMIDI Inチャンネルフィルタリングの設定オプションに応じて、受信したMIDI情報を受け取ります。\n\n- OFF: 選択されたSequencerは、どのチャンネルからの受信MIDIノートも受け付けます。\n\n- MIDI Channel: 各Sequencerは自身のMIDIチャンネルのノートのみを受け付けます。マルチトラックではノートはトラックのチャンネルでフィルタリングされ、すべてのトラックが同じMIDIチャンネルを共有している場合、すべてのメッセージはトラック1のみに送られます。\n\n- Ch & Note (MULTI): 各Sequencerは自身のMIDIチャンネルのノートのみを受け付け、Multitrackモードでは、トラックのチャンネルフィルタリングに加えて、いずれかのトラックのルートノートと一致するノートを持つMIDIメッセージのみが考慮されます（ドラムモード）。\n\nMultitrack Modeセクションに詳細があります。\n\nもう一つ考慮すべき設定は、MIDI In Port (A-F) Mergeです。有効にすると、受信MIDIデータはMIDI PortがAのSequencerだけでなく、MIDIチャンネルが一致する限りPortのBおよびCにも転送されます。この設定は、OXI SplitおよびOXI Split V2のPortのBからFを使用する際に便利です。このMergeはUSBおよびTRSからの受信ノートで発生します。CC、Pitch Bend、Aftertouch、PolyPressureのMIDI Mergeも実装されています。\n\nMulti SequencerモードでMIDIチャンネルフィルタリングがONの場合、各トラックに異なるチャンネルを割り当てることができ、そのトラックにRecordingするためには外部キーボードのチャンネルが一致している必要があります。同じMIDIチャンネルを持つ複数のトラックがある場合、そのチャンネルを持つ最も低いトラック（トラック1が下、トラック8が上）のみが録音中に外部MIDIを受け取ります。\n\nRECORDING MENU\n\nSHIFT + Recを押してRecording Menuのページ1にアクセスします。パラメーターは左から右の順です。終了するには、BackボタンまたはShift + Recを押してページを切り替えて終了します。\n\nQuantization (Qnt): 録音のQuantizationをON/OFFで切り替えます。QuantizationがONのとき、録音されたノートは自動的にグリッドディビジョンに量子化されます。この設定は実際の録音中に有効/無効にすることができます。\n\nTime Quantization % (Qnt%): 選択されたSequencerのディビジョンに対するQuantizationのパーセンテージです。Quantizationを適用するには、同じエンコーダーを押して確認が必要です。これはUndoで元に戻せる破壊的なプロセスです。パーセンテージは(Qnt)が有効なときに録音されたステップに影響を与えるか、(Qnt)がOFFのときの録音後に適用できます。Quantizationはトランスポートが動いている間、実際の録音中または録音終了後に適用できます。\n\nOverdub: 録音の動作設定です。ONの場合、Sequencerは既存のノートを保持しながら演奏した新しいノートを追加します。OFFの場合、トランスポートバーはその経路にあるSequencerのイベントを削除します。この設定は実際の録音中に有効/無効にすることができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 95,
+      "image": "/oxi-one-mk1/pages/page-095.png",
+      "title": "Page 95",
+      "sectionName": null,
+      "content": "Looping、1-Shot、Extend\n\n以下のように動作する3つの異なる挙動があります。\n\n- Loopingは、実際のトラック長さの中でイベントの録音を継続します。最初と最後のステップは変更されません。\n\n- 1-Shotは、トランスポートバーがトラックの最終ステップに達すると、録音を停止します。\n\n- Extendは、録音を停止するか、トランスポートバーがトラックの最大サイズに達するまで、トラックの長さが増加します。この挙動により、外部MIDI入力またはOXI One Keyboardレイアウトを使用したMIDI Live Loopingが可能になります。\n\nCOUNTDOWN（新機能）\n\n録音メニューでSHIFT + Recを押すと、録音メニューの2ページ目が表示され、カウントダウンとメトロノームの設定を確認できます。\n\n左から、最初のエンコーダーはカウントダウンを有効にし、その長さを設定します。有効にすると、Recボタンを押してプレイバックがアクティブな場合に、カウントダウンが画面に表示されます。カウントダウンは選択した設定（2 Bar、1 Bar、1/2 Bar、Beat、Off）に従って表示されます。\n\nOXI Oneが停止している場合、Playを押した後、カウントダウンの終了後に再生が開始されます。選択したシーケンサーが非アクティブな場合、カウントダウン後に再生が開始されます。それ以外の場合、すぐに録音が開始され、カウントダウンは時間の参照としてのみ機能しますが、録音イベントの開始を妨げません。\n\nMETRONOME（新機能）\n\nメトロノームのチュートリアルはこちらでご覧いただけます。\n\nこの画面でメトロノームの設定を選択できます。左から、2番目のエンコーダーはメトロノームのCV出力またはGate出力を選択します。CV/Gateメトロノームは、ミキサーやヘッドフォンに接続できる5Vpp可聴信号です。Gate出力を使用する場合は、ヘッドフォン、ミキサー、スピーカーを破損しないように、Gate電圧を確認してください。\n\n3番目のエンコーダーは、MIDIメトロノーム信号を出力するMIDIチャンネルを選択します。\n\n4番目のエンコーダーは、メトロノームモードを「always」または「only during count in」として選択します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 96,
+      "image": "/oxi-one-mk1/pages/page-096.png",
+      "title": "Page 96",
+      "sectionName": null,
+      "content": "EXTERNAL NOTE INPUT\n\nOXI Oneが停止している状態でRecボタンを押すと、ステップ録音が有効になります。その後、シーケンサービューで任意のステップを長押しすると、外部ソース（MIDIキーボードやコントローラー）からの任意のMIDIノート入力がパターンに録音されます。\n\nSTEP RECORDING\n\nノートをプログラムするもう一つの方法は、ステップ録音です。RECボタンを押し続けながらPlayを押すと、このモードに入ります。\n\nこのモードでは、内部・外部キーボードの両方からノートを個別または同時に入力でき、再生中またはシーケンサーが一時停止している間も操作可能です。外部MIDIを使用する場合は、RestとTieを挿入するためにエンコーダーが引き続き必要になります。\n\nSCREEN CONTROLS:\n\n- Reset: 一番左のエンコーダーを押してRESETすると、書き込みポインターがシーケンスの先頭にリセットされ、最初の位置から新たに入力できるようになります。これにより、パターン長が1ステップにリセットされます。\n\n- Pos: 2番目のエンコーダーを回すと、シーケンス内の書き込みポインターを操作し、新しいステップの位置を選択できます。これにより、パターン長も変更されます。\n\n- Rest: 3番目のエンコーダーを押すと、シーケンスにRestが挿入され、ノート間にポーズが追加されてシーケンスの長さが実質的に増加します。\n\n- Tie: 4番目のエンコーダーを押すと、ノート間にTieが挿入され、レガート接続が生成されてシーケンスの長さも延長されます。\n\nディスプレイは、内部または外部キーボードからステップが追加されるたびに動的に更新され、シーケンスの長さに関するリアルタイムのフィードバックを提供します。\n\nステップ録音モードを終了するには、Record + Playボタンのコンボを再度押してください。\n\nMultitrackでは、まずトラックを選択し、OXIキーボードまたは外部キーボードからノートを入力することで、8つのトラックのいずれかに録音できます。この場合、外部キーボードはシーケンサーまたはトラックと一致するMIDIチャンネルを持っている必要があります。MIDIフィルタリングが有効な場合、外部キーボードから一致するMIDIチャンネルはトラックMIDIを送信でき、トラックを選択する必要があります。各トラックは個別にリセットして最初のステップから開始できます。\n\nRECORDING QUANTIZATION\n\nOXI Oneは、クオンタイズまたはアンクオンタイズの方法で録音できます。録音は、内蔵キーボード、外部コントローラー、またはMIDIハードウェアから行うことができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 97,
+      "image": "/oxi-one-mk1/pages/page-097.png",
+      "title": "Page 97",
+      "sectionName": null,
+      "content": "SHIFT + REC を押してRec Settings Menuにアクセスすることで、QuantizationをON/OFFに切り替えることができます。\nQuantizationがオフの場合、録音のオリジナルタイミングが保持されます。\n\n2番目のエンコーダーを押すことで、録音済みのシーケンスにQuantizationを適用することもできます。Quantizationの量は(Qnt%)パラメーターで設定され、各ステップのタイミングオフセットが0（完全にQuantized）になるまで削減されます。\n\nこれは非可逆的な処理ですが、undoを押すことで元に戻すことができます。また、手動で設定したタイミングオフセットも削除されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 98,
+      "image": "/oxi-one-mk1/pages/page-098.png",
+      "title": "Page 98",
+      "sectionName": null,
+      "content": "CV GATE Configuration\n\nSHIFT + LFO を押すとCV Gate のグリッドレイアウトが開きます。\n\nこのモードはルーティングが重複しないようにすべてのSequencerで共有されるため、この設定はプロジェクト固有のものであり、パターンごとには保存されません。\n\n8つのCV と8つのGate があり、再生中にリアルタイムで完全に設定可能です。つまり、このレイアウトをパフォーマンスのための革新的なツールとして使用できます。出力のON/OFFの切り替え、VoiceまたはSequencerの変更、モジュレーションソースまたはクロック分周の変更をボタン一つで行うことができます。\n\nCV GATE の設定は、すべてのSequencerに影響するため、パターンごとではなくプロジェクトデータに保存されます。\n\n下の図はレイアウトの分布を説明しています。\n\nWORKFLOW\n\n1- Sequencerの選択:\n上部4行でソースとなるSequencerを1〜4の中から選択します。アクティブなパッドをもう一度押すと、対応する出力がオフになります。\n\nヒント: このレイアウトを使ってパフォーマンス中にVoiceやリズムを追加・削除してトランジションを作ることができます。ハイライトされたSequencerを押すとOFFになります。\n\n2- コントロールシグナルの選択:\nこのCV またはGate を通じて情報を送信するSequencerを選択したら、このCV またはGate が出力するコントロールシグナルの種類を選択する必要があります。\n\n以下の選択肢があります:",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 99,
+      "image": "/oxi-one-mk1/pages/page-099.png",
+      "title": "Page 99",
+      "sectionName": null,
+      "content": "上からの行番号　CVs　GATEs\n5　Pitch　Gate\n6　Velocity　Clock\n7　Trig Envelope　Accent\n8　Modulation\n-　Sequencer LFO\n-　Sequencer Modulation lanes\n　Modulation Threshold\n\nデフォルトでは、1つのCVを有効にすると最初のボイス（またはMultitrackモードのSequencerの場合はトラック）のPitchが選択され、1つのGateを有効にすると最初のボイス/トラックのGateが選択されます。OXI Oneは、そのSequencerに追加のCV/Gate Outputを割り当てる際、ボイス/トラック番号を自動的に増やします。\n\nSequencerソースを変更しても選択内容は記憶されますが、Sequencerを削除すると消去されます。\n\nCV ROUTING\n\n注意：CVの範囲はハードウェアにより -3 +5 V に制限されています。CVは正確なPitchトラッキングのためにキャリブレーションされていますが、再キャリブレーションが必要な場合は、Calibrationの手順に従ってください。\n\n各SequencerモードにはCV/Gateにルーティングできるボイス数が異なります：\n\n· Mono：1ボイス\n· Chord：最大8ボイス\n· Polyphonic：最大7ボイス\n· Multitrack：最大8ボイス（1トラックにつき1ボイス）\n· Stochastic：1ボイス\n· Matriceal：最大4ボイス（1トラックにつき1ボイス）\n\nPitch、Gate、Velocity、Trig EnvelopesのModulationソースはボイス番号で関連付けられています。これらのソースのいずれかを選択した後、最初のエンコーダーで読み取るボイスを選択できます。例えば：\n\nPITCH\n\nCVがPitchに設定されている場合、最初のパラメーターはボイスインデックスです。\n\nボイスインデックス：MonoおよびStochasticのSequencerでは常に1、PolyおよびChordモードでは1〜7/8、MultirackおよびMatricealではそれぞれトラック1〜8/4です。\n\n2番目のパラメーターは半音単位のノートオフセットです。\n\n4番目のパラメーターはCV電圧フォーマットを指定します。次のいずれかになります：",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 100,
+      "image": "/oxi-one-mk1/pages/page-100.png",
+      "title": "Page 100",
+      "sectionName": null,
+      "content": "- V/Oct（ほとんどのモジュラーおよびセミモジュラーシステム）。-3 V から +5 V。\n\n- Hz/V（Korg標準ピッチトラッキング）。0 から +5 V。\n\n- 1.2V（Buchla標準ピッチトラッキング）。0 から +5 V。\n\n一般的なモジュラーボイスを駆動するには、Pitch、Gate または Trig Envelope、VelocityにおいてSequencerとボイス番号を同じに設定する必要があります。\n\n設定例\n\nCV設定\n- CV 1をPitchに設定し、SEQ 1に割り当て\n- CV 2をPitchに設定し、SEQ 2に割り当て\n- CV 3をVelに設定し、SEQ 2に割り当て\n- CV 4とCV 5をpitch Voice 1とVoice 2に設定し、SEQ 3に割り当て\n- CV 6をPitchに設定し、SEQ 4に割り当て\n- CV 7とCV 8をTrigEnvに設定し、SEQ 4のTrack 1とTrack 2にそれぞれ割り当て\n\nGATE設定\n- Gate 1をSEQ 1に割り当て\n- Gate 2をSEQ 2に割り当て\n- Gate 3をSEQ 3に割り当て\n- Gate 4から6をSEQ 4のTrack 1からTrack 3に割り当て\n\nVOICE PITCH ALLOCATION\n\n使用するボイス数と、それをルーティングするCVを選択します。モジュラーシンスでコードやポリフォニックなメロディーをSequencingすることは非常に簡単で、出力するボイス数を選択できるため、柔軟性を最大限に発揮できます。PolyphonicモードおよびChordモードの利用可能なボイスの総数よりもCVが少ない場合、ボイスは最後に演奏されたものから順に割り当てられます。\n\nポリフォニックで動作する場合（PolyおよびChordモード）、利用可能なCVとGate（ボイス）が演奏されたノートにどのように割り当てられるかは、CV & Gateボイスアロケーション設定とGate ALL Retriggerオプションによって異なります。\n\n- LRU: 最近使用されていないCVまたはGateが新しいノートイベントに割り当てられます。各CVまたはGateに異なるノートが割り当てられるため、ボイスはユニゾンでは演奏されません。\n\n- UNISON: SequencerのためにConfigureされたすべての利用可能なCVとGATESボイスが、単音に対してユニゾンで演奏されます。さらなるノートはボイスに分配され、割り当てられた（続く）",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 101,
+      "image": "/oxi-one-mk1/pages/page-101.png",
+      "title": "Page 101",
+      "sectionName": null,
+      "content": "- CVsとGates。利用可能なCVまたはGateよりも多くのノートがある場合、ボイスは最後に演奏された順にソートされます。\n\n- Gate ALL Retriggerは、別のノートが押されたときにGateをリトリガーすることを可能にします。\n\nTIP: 現在のボイスアロケーション設定では、同じノートが常に同じ出力に送られるわけではありません。マトリクスで2つ以上のボイスが割り当てられている場合、ソートによって出力がローテーションされます。\n\nTIP: UNISON設定を、パラフォニックモジュラー構成やシンセサイザーと組み合わせて使用すると、異なるオシレーターのピッチを独立してコントロールし、ユニゾンやグライドエフェクトを作り出すことができます。\n\nまた、同じシグナルを異なるCVに出力することもできます。例えば、同じボイスのTrig EnvelopeをそれぞれのAttackが異なる2つのCVに通したり、オフセット設定が異なる同じLFOを複数のCVに出力したりすることができます。\n\nNOTE VELOCITY\n\nノートのピッチと同様ですが、ボイスのベロシティ情報を対象とします。Note velocityは、ノートピッチと同じ方法でCVに割り当てられます。\n\nCVがVelに設定されている場合、2番目のパラメーターでゲート動作の有無を選択します：\n\n- Gated: 電圧はノートの長さの間、ノートベロシティに比例します。ノートが終了すると0Vに戻ります。\n\n- Not Gated: この出力の電圧は、最後のノートのベロシティに常に比例します。\n\nTRIG ENVELOPE\n\nOXI Oneでは、Triggered Envelopesを導入しました。これは、シーケンスのステップ設定に応じて動的に変化するADSRエンベロープの一種です。\n\nデフォルトでは、エンベロープの最大アンプリチュードは、エンベロープをトリガーするステップのベロシティに比例します。ベロシティが127のとき、電圧は+5Vに達します。ベロシティはグリッド上のベロシティエンコーダーや、一部のSequencerモードのvelocity viewから調整できます。\n\nDecay/Releaseの長さはステップのゲートの長さに比例します。これらは独立して設定することはできません。ゲートの長さは、グリッド上のゲートエンコーダーや、一部のSequencerモードのgate viewから調整できます。\n\nAttackは、CV設定で手動で調整するか、以下のソースのいずれかによってモジュレートすることができます：",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 102,
+      "image": "/oxi-one-mk1/pages/page-102.png",
+      "title": "Page 102",
+      "sectionName": null,
+      "content": "- SequencerのLFO（LFO Buttonからアクセス）\n- SequencerのMOD lane（MOD Buttonからアクセス）\n\nタイされたノートの場合、リリースは最後にタイされたノートのGate長によって定義されます。タイはGrid viewまたはグリッド上のグローバルGate encoderから調整できます。\n\nSustainはmax amplitude levelのパーセンテージで定義され、100%はvelocityで設定された値になります。つまり、amplitudeはデフォルトのVelocity値、入力後に変更した値、またはvelocityにかけているモジュレーションによって設定されます。エンベロープのピークからsustainレベルへの移行（decayステージ）はゆるやかなカーブです。このdecay timeは独立して設定することができません。\n\nこの実装はMIDIとCVメッセージの橋渡しをするもので、VCA、LPG、LPFやラック上のその他のモジュールのパラメーターをモジュレートするダイナミックなエンベロープを提供します。\n\nTIP: GateとVelocityにモジュレーションやランダマイゼーションを適用することで、Trig EnvelopeのAmplitudeとDecayもモジュレートすることができます。\n\nLFO - MOD\n\nモジュレーションの最後のソースは、下段のLFOとModulation Laneです。選択すると、1番目のencoderでLFO 1またはLFO 2、あるいはMod Lane 1〜4（Multitrackシーケンサーでは1〜8）をソースとして選択できます。これらはそれぞれLFOとMOD画面で設定します。詳細は各セクションを参照してください。\n\nLFOはその設定画面で設定されたパラメーターのdestinationに関わらず独立して動作しますが、LFOのAmountとOffsetコントロールの影響を受けます。\n\nModはアサインされたMOD Laneが生成する瞬間値とOn/Offの動作に応答します。\n\nTIP: MIDI（USB、TRS、BLE）にルーティングされたLFOやCC、およびCVを同時に操作できます。つまり、オートメーションの作成、エンベロープの手動録音、オフセット調整、On/Offの切り替えを、必要なすべてのMIDIパラメーターとCV出力に対して行うことができます。\n\nLFOまたはMOD laneにアサインされた場合のCV出力のレンジは0〜+5Vです。\n\nハードウェアの限界である-3Vまで電圧を下げるには、CV MatrixメニューでCV出力のOffset（2番目のencoder）を調整する必要があります。CV Outputは-3V〜+5Vの8Vレンジを持ち、LFOのオフセットを-100にするとセンター電圧が1Vになり、ピーク時に-3Vと+5Vになります。\n\nデフォルトでは、LFOとModの出力はユニポーラで、0〜+5Vです。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 103,
+      "image": "/oxi-one-mk1/pages/page-103.png",
+      "title": "Page 103",
+      "sectionName": null,
+      "content": "GATE ROUTING\n\nGATE\n\nノートが押さえられている間アクティブなままのトリガーを出力します。ピッチと同様に、適切なイベントを出力するためには、GateのVoice/Track設定を適切に設定する必要があります。\n\n各GateはV-TrigまたはS-Trigとして設定できます。\n\n- V-Trig：トリガーがアクティブな時、出力電圧はHIGHになります。それ以外はLowです。\n- S-Trig：トリガーがアクティブな時、出力電圧はLOWになります。それ以外はHighです。\n\n出力電圧は、Config、Analogセクションで全てのGateに対して5Vまたは10Vに設定できます。\n\nS-Trigはパッチング目的で、反転Gateとしても使用できます。\n\nCLOCK new 4.0.6\n\n選択したClock分割で50%パルスClockシグナルを出力します。これはシーケンスの分割とは独立しています。\n\nClock分割はデフォルトで1/16です。Clockトリガー幅は、選択したClock値の半分です。\n\nACCENT new 4.0.6\n\nパターン内のノートのベロシティがThreshold値に達すると、Gateレベルがhighになります。この値に割り当てるトラック番号またはVoiceを選択できます。このトリガー出力を使用して、パッチにアクセントを追加できます。このアクセントGateは、グリッド上の次のステップが設定したThreshold値を下回るまでhighのままになります。\n\nTIP:\n\nTHRESHOLD new 4.0.6\n\nモジュレーションの値がThreshold値に達すると、トリガーレベルが上がります。\n\nLFOまたはMOD Laneのいずれかのモジュレーションソースを選択できます。GateはLFOまたはMOD LaneがThresholdを満たした時に出力し、LFOまたはMOD LaneがThresholdを下回るまでhighのままになります。\n\nCV GATE STATUS\n\nCVとGateのステータスはリアルタイムでグリッドに表示されます。\n\nいずれかのCV出力が正または負の電圧（0以外）を持つ場合、対応する列はそれぞれ青または赤色で光ります。\n\nいずれかのGateがアクティブな場合、その列は青色で光ります。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 104,
+      "image": "/oxi-one-mk1/pages/page-104.png",
+      "title": "Page 104",
+      "sectionName": null,
+      "content": "MIDI to CV変換\n\nOXI Oneは、TRS、USB、Bluetoothなどのさまざまな外部ソースからのMIDIデータ（ノートやCCなど）をCV信号に変換するための多彩なオプションを提供しています。MIDI Port Mergeにより、受信したMIDIをマージしてMIDI Port A、B、Cへ送信することができます。\n\n外部MIDI NOTEのCV変換\n\nMIDIノートおよびPitch BendメッセージをCVピッチに簡単に変換することができます。この機能は、外部キーボードを使用する場合に特に便利です。\n\nこの機能を有効にするには、以下の手順に従ってください：\n\n1. Sequencerの設定：使用するCV出力とGate出力にルーティングされたSequencerが、正しいMIDIチャンネルを受信するように設定されていることを確認します。\n\n2. MIDIチャンネルのグローバル設定：適切な通信を確保するために、SequencerのMIDIチャンネルとMIDIチャンネルフィルタリング設定を調整します。\n\n3. モノフォニックおよびポリフォニック演奏：モノフォニック演奏の場合、1つのCV出力をピッチに、1つのGate（またはトリガーエンベロープ）を割り当てます。ポリフォニック機能のためには、複数のCVとGate出力を割り当てます。演奏したいボイス数と同じ数だけ割り当てます。\n\nMODULATION用MIDI CC to CV（新機能）\n\nOXI Oneでは、外部ソースからのCCおよびAftertouch MIDIメッセージを任意のCV出力にマッピングすることもできます。この機能により、MIDIコントローラーやDAW（Digital Audio Workstation）からのデジタル信号を、モジュラーシンセサイザーに適したアナログ信号に変換することができます。\n\n使用例：\n\n実際の応用として、以下のシナリオを検討してください：\n\n1. CV出力の設定：CV1をSequencer 1のMOD 1に設定します。\n\n2. CCの割り当て：Sequencer 1のMOD 1にCC 1（モジュレーションホイール）を割り当てます。\n\n3. MIDIメッセージの受信：CC 1メッセージがOXI Oneに送信されると、CC値に比例した対応する電圧をCV1から変換して出力します。\n\n重要な注意事項：MOD Lane 1がOFFになっていることを確認してください。ONのままにすると、MOD Laneの設定が外部CC値をオーバーライドします。\n\n録音機能：これらの条件下でREC機能が有効な場合、外部CC値がMOD Lane 1に録音され、ダイナミックなモジュレーション録音が可能になります。その場合、CV出力への変換は行われません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 105,
+      "image": "/oxi-one-mk1/pages/page-105.png",
+      "title": "Page 105",
+      "sectionName": null,
+      "content": "CV INPUT\n\nOXI Oneには1つのCV inputがあり、Start-Stop / Reset Inとしても機能します。このinputを使用するには、TRSからTR-TRへのスプリッターが必要です。\n\nMODボタンをダブルタップしてEXT MOD MATRIXメニューに入ると、CV inputのルーティングオプションを選択できます。詳細は対応するセクションで説明されています。\n\n注意：このinputを同期に使用する場合は、CV（コントロール電圧）をモジュレーションに使用しないようにしてください。\n\nANALOG CLOCK\n\nOXI Oneは24 ppqのタイミングに従ってMIDI clockを読み取り、出力します。アナログclock inputおよびoutputの解像度、ならびにStart-Stop/Resetの動作はConfigurationで変更できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 106,
+      "image": "/oxi-one-mk1/pages/page-106.png",
+      "title": "Page 106",
+      "sectionName": null,
+      "content": "SNAPSHOTS\n\nSnapshotsは、4つのSequencer全ての状態を一時的に保存し、ノート、モジュレーション、ミュート状態などのSequencer設定といったパターン内の調整を加えた後に、その状態に戻すことができる機能です。パターン内で保存可能なほとんどのパラメーターがSnapshotに対応しており、Snapshot中に変更を加えてから、Snapshotモードに入る前の元の状態に戻すことができます。パフォーマンス中のトランジションやブレイクダウンを作成するのに非常に便利なツールです。\n\nLoad と Save を同時に押して、全Sequencerのスナップショットを作成します。Load と Undo ボタンが点滅を開始します。\n\nスナップショットが取られたら、Load または Undo を押してスナップショットを解除します。\n\nスナップショットは常に1 Bar Syncで解除されます。\n\nスナップショットをキャンセルするには、SHIFTを長押ししながら、Load または Undo ボタンを押します。\n\nSNAPSHOT中に、スナップショット解除後に個々のSequencerおよびMultitrackのトラックが持つMute状態を事前に設定できるようになりました。これを行うには、MUTEを押したままの状態またはラッチした状態で、SequencerボタンまたはMultitrackトラックの最初のパッドをダブルタップします。(新機能)\n\nスナップショットから前の状態に戻る前に、変更内容をSequencerに保存しておくことができます。注意：スナップショットが有効な場合、保存されたパターンは読み込まれたものとして設定されません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 107,
+      "image": "/oxi-one-mk1/pages/page-107.png",
+      "title": "Page 107",
+      "sectionName": null,
+      "content": "ARRANGER\n\nここはSongを作成し、複数のパターンをリンクしたり、手動で起動するための場所です。\n\nすべての細部をコントロールしたいときも、パフォーマンス中にもう少し流れに任せたいときも、Arrangerがサポートします。OXI Oneがバックグラウンドでトランジションを担ってくれるので、音楽に集中できるツールです。\n\nArrangerには主に2つの使い方があります。1つ目は、プログラムしたパターンを自動再生する完全なSongシーケンスを最初から最後まで作成することです。もう1つは、手動でプログレッションをコントロールしながら無限にループするパターンアレンジを設定することで、完全なマニュアルコントロールとフルSongモードの中間を提供します。どちらのアプローチがワークフローに最も合うかを確認するために、両方を試してみることをお勧めします。\n\nArrangerモードを使用するには、まずいくつかのパターンを保存しておく必要があります。下部の4行は青色で表示されており、これらがArranger行です。パターンpadを押してから空のArrangerスロットを押すことでパターンを読み込みます。各行はOXI Oneの4つのSequencerのうちの1つにリンクしており、各行に15のスロット（パターン用）があります。さらに、マスタートラックの割り当てなどの起動設定をコントロールできるマスターレーンも備えています。\n\nArrangerにパターンを追加するには、Pattern padを長押ししながら青いpadのいずれかを押して、選択したSequencerレーンに配置します。埋まっているスロット間のギャップは自動的に空白で埋められるため、ミュート状態を作成するのに便利です。Arrangerビューでスロットpadを長押しすると、割り当てられたパターンが赤で表示され、Arrangerスロット設定が呼び出されます。\n\n基本的なレイアウトは次のとおりです。非アクティブなスロットは青、空または空白のスロットはグレー、アクティブなスロットはそれぞれのパターンカラーで表示されます。画面には、4つのトラックすべてのプログレッションバー、どのトラックがマスターであるか、Songとも呼ばれるアレンジメントの保存と読み込みオプションが表示されます。SongはSaveしたプロジェクトパターンのアレンジメントです。1プロジェクトにつき最大10個のSongを保存できます！\n\nパターンを配置する際、スロットpadを長押しすると2つの重要な設定が表示されます：Program/Bank ChangesとRepetitionsです。Program/Bank Changesについては、オフにする、特定のメッセージ番号を割り当てる、またはパターン設定に保存されているパターンが送信するメッセージと一致させるかを選択できます。\n\nRepetitionsはシンプルですが非常に強力な機能です。1〜19の範囲で設定するか、infiniteに設定できます。パターンを4回繰り返してから次に進みたい場合は、repetitionsを4に設定するだけです。Infiniteモードは、ループバックさせずに次のパターンを手動でトリガーするための時間をより多く確保したい場合に最適です。別のパターンを選択するかMasterを移動するまで繰り返しが続きます。\n\nアレンジメントを設定する際、スロットのコピー＆ペースト、SHIFT + Xによるクリア、パターンのカラー変更、矢印キーによるパターンスロットの移動が可能です。アレンジメントを保存するには、メニューからプロジェクトを保存するか、SHIFT + Save（すべてを保存）を実行します。\n\n再生中にパターンに加えた変更は、保存していない限り新しいスロットが読み込まれると失われることを覚えておいてください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 108,
+      "image": "/oxi-one-mk1/pages/page-108.png",
+      "title": "Page 108",
+      "sectionName": null,
+      "content": "最後に、列16のLaunch clipを長押しすることで、Master Laneの設定にアクセスできます。Master Laneでは、MasterトラックとLaunch Quantizationを設定できます。Launch QuantizationがOFFの場合、Master Laneは他のSequencerが次のスロットへ進むタイミングを定義します。クォンタイゼーションは、1つのパターン繰り返しサイクルを完了するための内部クロックバー数を設定し、Master Laneで設定された繰り返し回数に従って、Sequencer Laneが次のスロットへ進むタイミングを決定します。「Off」に設定した場合、パターンはパターンの最後のステップに到達する必要があります。この設定を有効にするには、ArrangerがONである必要があります。\n\nまた、いつでもLoad pageから他のArranger clipやパターンを直接トリガーできることを忘れないでください。\n\nArrangerの再生を有効にするには、SHIFT + Arrangerを長押しします。画面に「Arranger ON」と表示されます。Arrangerは再生の準備ができた状態になります。同じコマンドでArrangerの再生をOFFにします。Arrangerは停止（Stop）を押すと無効化されます。Arrangerを再度有効にすると、現在のSongの最初のスロットのパターンが読み込まれます。\n\nARRANGER SCREEN\n\nArrangerスクリーンには、読み込まれたSongが表示されます。Songはアレンジメント、つまりパターンがタイムライン上にどのように配置されているかを表しています。各プロジェクトには10個のSongが含まれています。\n\nArrangerのステータス、グローバルクォンタイゼーションバー、各Sequencerのプログレスバーも表示されます。\n\n最後に、2つのLoad（フォルダー）とSave（ディスク）のアイコンは、1番目と2番目のエンコーダーをそれぞれ使用してSongを読み込んだり保存したりしながらナビゲートできることを示しています。\n\nGRID LAYOUT\n\nグリッドの下4行は、各Sequencerの15ポジションシーケンスをそれぞれ表しており、4レーンのパターン再生が可能です。上4行はMemory Accessで、4つのSequencerの保存されたパターンを確認できます。\n\n最後の列の下4パッドがMaster Laneを設定します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 109,
+      "image": "/oxi-one-mk1/pages/page-109.png",
+      "title": "Page 109",
+      "sectionName": null,
+      "content": "アレンジャーにパターンを追加するには、スロットパッドを押し続けたまま、アレンジャーの対応するSequencerレーンの目的の位置のパッドを押してください。新しいパターンを追加する際に最後のアレンジャースロットとの間にギャップがある場合、中間のスロットは空白のパターンで埋められます。\n\nTIP: アレンジャービューでスロットパッドを押し続けると、そのスロットに割り当てられたパターンが赤色で表示されます。\n\nLAUNCH-LOAD QUANTIZATION SETTINGS\n\nアレンジャーレイアウトで、ランチ設定領域の4つのパッドのいずれかを押し続けると、Launchクオンタイゼーション設定メニューが表示されます。\n\n左から右へ：\n\n- Master lane: 'Off'、または4つのSequencerのいずれかに設定できます。\n\n- Launch quantization: 1つのパターン繰り返しサイクルを完了するための内部クロックのbar数を設定します。'Off'に設定すると、パターンは最後のステップに到達する必要があります。この設定を有効にするには、ArrangerがONになっている必要があります。\n\n- Glob(al) またはLoad quantization: Launch quantizationと同じですが、この場合はArrangerがOFFでパターンが手動でロードされる場合に適用されます。\nGlobalという用語は、この値がPunch-In Sequencerの「Global」設定のデフォルト値としても使用されるためです。\n\nNew 4.5 TIP: プロジェクトのロードは、LOAD Quantization Settingに従ってクオンタイズされます。\n\nARRANGER'S LOGIC\n\nパターンのプレイヘッドがLaunch quantization設定に到達すると、再生カウントが1つ減ります。繰り返しカウントが0になると、次のパターンがロードされます。Multitrackモードの場合、トラック番号1が参照トラックとして使用されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 110,
+      "image": "/oxi-one-mk1/pages/page-110.png",
+      "title": "Page 110",
+      "sectionName": null,
+      "content": "繰り返しパラメーターが無限に設定されている場合、再生カウントは減少しないため、パターンはArrangerでループされます。Arrangerは、スロットを追加したりパターンを配置したりする際に、最後に設定した繰り返しオプションを記憶します。\n\nArrangerはStopを押すと無効になります。Arrangerを再度有効にすると、現在のソングの最初のスロットのパターンが読み込まれます。\n\nArrangerは、次のパターンを起動する直前（2クロックティック前）にProgram ChangeおよびBank Select MIDIメッセージを送信できます。Bank Message TypeはConfig設定でcc 0またはcc 32に設定できます。\n\nブランクスロットはノートやモジュレーションを再生せず、パターン間の無音または区切りとして機能します。デュレーションは1小節（1/16th で16ステップ）で、繰り返し回数を変更できます。1つのブランクパターンを指定した繰り返し回数に設定したり、無限にループしたりすることができます。ブランクパターンは白色で表示されます。\n\nTIP: 無限繰り返しを持つレーンにブランクパターンを設定することで、手動で次のパターンを起動するまでSequencerがノートの送信を停止するパートを作ることができます。\n\n空のスロット（パターンが割り当てられていないスロット）は単純にスキップされます。\n\nArrangerレーンのいずれかのパッドを長押しすると、スロットのパラメーターが表示されます：\n\n- Program Change：異なる設定が可能です。\n- = は選択したスロットが、パターンに保存されているものと同じProgram Changeを送信することを意味します。\n- Offはすべての Program Change メッセージの送信を回避します。\n- 1〜16で選択したスロットへProgram Changeメッセージを強制送信します。\n\n- Bank Select：Program Changeと同様ですが、Bank Select CCメッセージ用です。Bank Message TypeはConfig設定でcc 0またはcc 32に設定できます。\n\n- Pattern：選択したスロットが起動するパターン。\n\n- Repeats：選択したスロット内のパターンの繰り返し回数。1回から無限まで設定可能（19を超えると無限アイコンが表示されます）。\n\nCopyおよびPasteボタンを使用してArrangerスロットをコピー/ペーストできます。SHIFT + X（クリア）でArrangerスロットをクリアできます。\n\nパターンレーンのパッドを長押しすると、各Sequencerのパターンカラーを変更する別の方法が表示されます。アレンジメント内のパターンを識別するのに便利です。\n\nスロットを長押しして左右の矢印ボタン（16および64ステップページボタン）を押すことで、Arrangerスロットをシフトできます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 111,
+      "image": "/oxi-one-mk1/pages/page-111.png",
+      "title": "Page 111",
+      "sectionName": null,
+      "content": "TIP: Arrangerを再生の準備状態にするには、SHIFT + Arrangerを押してください。画面に「Arranger ON」と表示されます。これでArrangerは再生の準備が整います。同じボタンの組み合わせでArrangerの再生をOFFにすることができます。\n\nメイン画面の右側には、各アレンジメントトラックパターンが次のパターンに切り替わるまでのカウントダウンとその進行状況バーが表示されます。現在のパターンがループしている場合は、丸い矢印でその旨が表示されます。\n\n重要なお知らせ\n\nパターンへのすべての変更を保存してください。Arrangerによって新しいパターンが自動的に読み込まれるたびに、変更内容は失われます。\n\nSONGS\n\nSongsとは、Arrangerの状態です。つまり、Projectごとにシーケンスされたパターンの構成を保存し、呼び出すことができます。再生中のパターンへの未保存の変更は、Songsには保存されません。\n\nPatternまたはProjectを保存するたびに、現在のSongも保存されます。\n\nSHIFT + Clearを押してSongをクリアします。Undoを押すことで元に戻せます。\n\nCLIP LAUNCH\n\nアレンジメントの任意のスロットをクイックタップすると、Launch Quantizationの設定に従ってそのスロットに割り当てられたパターンが起動します。これは、パターンがループしているときに曲の異なるセクションに移動する場合に便利です。一度に複数のパターンを起動できます（Sequencerごとに1つ）。\n\n起動を待っているスロットは、起動されるまで点滅します。\n\n最初のエンコーダーを回して別のProjectを選択することで、グリッド上から別のProjectのパターンを直接起動できることに注意してください。\n\nPATTERN OVERRIDE\n\nArrangerがオンのとき、Arrangerが再生中のスロットに別のパターンを読み込むことができます。新しいパターンは同期して読み込まれます:\n\n- LOAD + 任意のArrangerスロットを押してください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 112,
+      "image": "/oxi-one-mk1/pages/page-112.png",
+      "title": "Page 112",
+      "sectionName": null,
+      "content": "MASTER LANE\n\nMaster Laneは、アレンジメントの進行をコントロールするLaneです。4つのSequencerのうち、どれでもMasterとして機能させることができます。\n\nMasterに設定されたSequencerがアレンジメントの進行を担うため、他のSequencerはパターンの長さやスロットのリピート回数に関係なく、Masterと同じスロットに移動します。\n\nこの機能は、Clip Launch機能と組み合わせて使用し、関連するパターンの長さやタイム・ディビジョンが異なる場合にアレンジメントの進行をコントロールするために設計されています。\n\n特に便利な使い方は？\n\n- アレンジャーにいくつかのパターンを、異なるリピート回数でループなし（インフィニット未満）で入力します。\n\n- アレンジャーの特定の位置（例えばスロット番号5）で、パターンのリピートをインフィニットに設定します。\n\n- これにより、ある時点で全てのSequencerがループし、アレンジメントのスロット5に固定されるようになります。\n\nMaster LaneでClip Launchを使って別のパターンを起動すると、MasterのSequencerが次のスロットに切り替わると同時に、他のSequencerも追従するのを確認できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 113,
+      "image": "/oxi-one-mk1/pages/page-113.png",
+      "title": "Page 113",
+      "sectionName": null,
+      "content": "SHORTCUTS\n\nTurquoise（ターコイズ）はセカンダリカラーを表しており、すべてのセカンダリ機能はSHIFTボタンで起動/アクセスします。\n\nGENERAL\n\n- MUTE + Sequencer 1-4: シーケンサーの再生をオン/オフにします\n- MUTE + 1列目のパッド: マルチトラックでシーケンサーまたはトラックをミュート/ミュート解除します\n- SHIFT + Load: プロジェクトのクイックリロード\n- SHIFT + Save: プロジェクトのクイックセーブ\n- SHIFT + Play: テンポをタップして希望のビートに合わせるため、繰り返し押します\n- Double Tap Mute: ミュートのロックオンで複数のミュートを選択\n- Double Tap Mute to Latch（ラッチ）\n- Muteがラッチされている間、SHIFT + 別のSequencerを押すと、ミュート状態を変更せずにフォーカスを移動できるため、ミュートの準備ができます（Toggle on Release または Mute on Release Configを使用する必要があります）\n- Double Tap Shift: Shiftをロックオン（設定で有効化が必要）\n- SHIFT + Keys（Preview）: シーケンサービューで押したノートを事前に試聴するプレビューをオン/オフにします\n- SHIFT + Stop: グローバルローンチ設定に従ってシーケンサーをリセットします（Arranger Column 16 Setting）\n- SHIFT + MUTE + Sequencer 1-4: パンチイン設定に従ってシーケンサーのプレイヘッドを再スタートします\n- SHIFT + MOD: Followのオン/オフを切り替えます\n- SHIFT + Paste: クリアをアクティブにします。3秒間ホールドするとフルクリアになります\n- Long press + : シーケンサーのフルクリア：パターンと設定\n- Sequencer 1-4 + \tCopy: 選択したSequencerをコピーします\n- Sequencer 1-4 + Paste: 選択したSequencerをペーストします（コピー元とペースト先のSequencerのモードによって動作が異なります。すべてのモードが他のモードへペーストできるわけではありません）\n- SHIFT + Sequencerボタンを3回: シーケンサーカラーのシーケンサー設定にアクセスします\n- Hold Power Button: Oxiを強制終了します\n- Mute + Power Onボタン: アプリが動作しない場合、ファームウェアアップデートモードでOxiを起動します\n\nGRID AND STEP EDITING\n\n- SHIFT + \tCopy: 現在のシーケンスのステップを後続のステップに複製し、シーケンスを2倍にします\n- SHIFT + Page（矢印）: 表示された矢印の方向にグリッド上のシーケンスを移動します\n- Step + Copy / Copy + Step: 選択したステップのパラメーターをコピーします\n- Step + Paste / Paste + Step: 選択したステップのパラメーターをペーストします\n- Page button（16, 32…）+ Copy: ページ（16ステップ）をコピーします\n- Page button（16, 32…）+ Paste: 以前にコピーしたページをペーストします\n- Mute + Active Steps: 単一ステップをミュートします\n- First Pad + Single Velocity Encoder Press: ステップをミュートします\n- First Pad + Quick Double Press Velocity Encoder: ステップのベロシティをデフォルトにリセットします\n- Sequencer + empty note on grid: シーケンス全体をトランスポーズします（ほとんどのSEQUENCER MODES）\n- Init + Page: InitとEnd Pointsの両方を同時に移動し、ステップ範囲を維持します。ページビューの前進に使用します\n- End + Page: InitとEnd Pointsの両方を同時に移動し、ステップ範囲を維持します。ページビューの後退に使用します\n- SHIFT + \tor \t: 押すたびに現在のシーケンサーTime Divisionを2倍または1/2にします\n- SHIFT + \tYDiv（Expand）: Expandをアクティブにし、シーケンスをズームインしてTime Divisionを半分にします",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 114,
+      "image": "/oxi-one-mk1/pages/page-114.png",
+      "title": "Page 114",
+      "sectionName": null,
+      "content": "- SHIFT + Step-Chord（Condense）: Condenseを有効にし、シーケンスとタイム・ディビジョンを折りたたみます。縮小するほど非可逆的な操作になります。\n\n- SHIFT + Play: 3秒以上長押しでシーケンシングを一時停止します。\n\nGENERAL FUNCTIONALITY AND PAGE ACCESS（一般機能とページアクセス）\n\n- SHIFT + Sequencer 1-4: Sequencer設定画面を表示します。\n\n- SHIFT + Step: 追加のStepパラメーター（Step Submenu）を表示します。\n\n- Hold Active Step: 追加のStep Parametersにアクセスします。\n\n- SHIFT + LFO: CV Gate Matrixにアクセスします。\n\n- SHIFT + RANDOM（ほとんどのSEQUENCERモード）: Random Generator Menuを開きます。\n\n- Double Tap Random: Random Generatorも開きます（ショートカットを再度使用してモードを切り替え）。\n\n- Save + Load: Snapshot Modeを開きます。SaveまたはUndoを押してモードを終了します。\n\n- Snapshot Mode限定 Double Tap Sequencer または Multitrack track First Pad: 個別のSequencerおよびMultitrackの個別トラックのミュート状態を準備します。\n\n- MULTITRACK ONLY: Hold Random + First Three Tracks Blue Pad: Drum Generatorを有効にします。\n\n- Init + End: Loop Modeを開きます。InitまたはEndを押してモードを終了します。\n\n- Init + End + Page: Loop Modeを開き、ページをすばやくループします。\n\n- YDiv（Expand）: Division Pageを表示します。\n\n- SHIFT + MUTE: Time Offset MenuとTime Bend Menuを開きます。それぞれ1回または2回押します。\n\n- SHIFT + Rec: Recordingの設定を行い、録音クォンタイゼーションのOn/Off切り替え、メトロノーム、カウントインなどを設定します。追加のRecording Settingsページを表示するには繰り返し押します。\n\n- Double Tap Mod: MOD Matrixにアクセスします。\n\n- SHIFT + CONFIG: System Settingsにアクセスします。\n\n- SHIFT + Multitrack Sequencer: Multitrack Sequencer Settingsにアクセスします。\n\n- Multitrack Sequencer + Track first Pad（各行）: 個別のTrack Settingsにアクセスします。\n\n- SHIFT + ← または →: 押すたびに現在のTrack Time Divisionを2倍または1/2に変更します。\n\n- SHIFT + Sequencer + ← または →: 押すたびにAll TracksのTime Divisionを2倍または1/2に変更します。\n\nSAVE AND LOAD VIEWS（保存とロードのビュー）\n\n- Copy + Pattern: Patternスロットをコピーします。\n\n- Paste + Pattern: Patternスロットをペーストします。\n\n- SHIFT + Clear + Pattern: Patternスロットをクリアします。\n\n- SHIFT + Save: プロジェクトをクイックセーブします。\n\n- SHIFT + Load: PatternをクイックLoadします。\n\n- Hold Load Button: Pattern LoadのMomentaryビューを表示します。\n\n- Hold Save Button: Pattern SaveのMomentaryビューを表示します。\n\n- Hold Load Button: Arrange画面のMomentaryビューを表示します。Launch Setting列は編集可能ですが、アレンジは編集できません。アレンジを編集するにはArrange Buttonを使用してArrangerにアクセスしてください。\n\nRECORDING（レコーディング）\n\n- SHIFT + Rec: Recordingの設定を行い、録音クォンタイゼーションのOn/Off切り替え、メトロノーム、カウントインなどを設定します。追加のRecording Settingsページを表示するには繰り返し押します。\n\n- Rec + Play: Step Record Modeを開きます。同じコンボを繰り返して終了し、もう一度押してStep Record Modeを終了します。\n\nENCODERS\n\n- 1st encoder turn: Global Velocityを設定します。\n\n- 2nd encoder turn: Global Octave Offsetを設定します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 115,
+      "image": "/oxi-one-mk1/pages/page-115.png",
+      "title": "Page 115",
+      "sectionName": null,
+      "content": "- 第2エンコーダーを押す：MONO、POLY、CHORDではGrid Note Viewをコントロールするようにエンコーダーをセットする。MULTIでは選択したトラックごとにピアノロールビューをセットする。\n\n- 第3エンコーダーを回す：Global Gateをセット\n\n- 第4エンコーダーを回す：Global CC Modulationをセット\n\n- 第1エンコーダーを押す：Velocityカラム編集ビュー\n\n- 第2エンコーダーを押す：マルチトラックSequencerでのピアノロールビュー\n\n- 第2エンコーダーをホールドしながら回す：グリッドを上下にスクロール\n\n- 第3エンコーダーを押す：Gateカラム編集ビュー\n\n- 第4エンコーダーを押す：Mod Lanes編集ビュー\n\n- SHIFT + 第1エンコーダーを回す：テンポを変更\n\n- SHIFT + 第2エンコーダーを回す：Sequencerのスウィングを変更\n\n- SHIFT + 第3エンコーダーを回す：Sequencerのスケールを変更\n\n- SHIFT + 第4エンコーダーを回す：Sequencerのスケールのルートノートを変更\n\n- SHIFT + 第1エンコーダーを押す：保存されたプロジェクトのテンポに戻す\n\n- SHIFT + 第2エンコーダーを押す：スウィングをリセット（スウィングなし）\n\n- SHIFT + 第3エンコーダーを押す：スケールをデフォルトにリセット（またはスケール変更を確定）：クロマチック\n\n- SHIFT + 第4エンコーダーを押す：ルートノートをデフォルトにリセット：C\n\n- ステップをホールドしながらVelocityエンコーダーを押す：Mute Note On/Offを切り替え。ノートは削除されない。\n\n- SHIFT + Grid ViewでEncoderを回す：現在アクティブなMod LaneにOffsetを適用\n\n- SHIFT + エンコーダーを押す：一部の機能でデフォルト値にリセット。例：LFO、Random Generatorパラメーター\n\nMOD LANES\n\n- SHIFT + MOD ENCODER：MOD Lane設定にアクセス\n\n- SHIFT + ：モジュレーションレーン全体をランダム化\n\n- エンコーダーを押す：Mod Laneのオン/オフ\n\nLFO's\n\n- エンコーダー3を回す：内部アマウントを個別に調整する\n\n- SHIFT + エンコーダー3を回す：外部/MIDIアマウントを個別に調整する\n\n- SHIFT + ENCODER：選択したLFOパラメーターのデフォルト値に戻す\n\nMONOPHONIC、CHORD AND POLYPHONIC MODE\n\n- MUTE + 第1カラム：Sequencerをミュート/ミュート解除。プレイヘッドは動き続ける。\n\n- Sequencer 1-4 + アクティブでないパッド：シーケンスをトランスポーズ（MONO & CHORDS）。押したパッドで距離と方向を設定。\n\n- Page番号をダブルプレス：80、96、112、128の各ページにそれぞれアクセス\n\n- Init + Pageボタン（16、32...、長いページにアクセスするには2回押す；80、96...）：選択したページの最初のステップをSequencerの開始ステップとして選択する。\n\n- End + Pageボタン（16、32...、長いページにアクセスするには2回押す；80、96...）：選択したページの最後のステップをSequencerの終了ステップとして選択する。\n\n- Push + 第2エンコーダーを回す：グリッドビューを上下にスクロールして高い/低いノートに移動\n\n- SHIFT + MUTE + Sequencer：個別のSequencerを先頭にリセット\n\n- SHIFT + 第4ノブを回す：（PolyまたはChord Sequencerのみ）スケールがHarmonizerに設定されているときにLeader Sequencerを変更",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 116,
+      "image": "/oxi-one-mk1/pages/page-116.png",
+      "title": "Page 116",
+      "sectionName": null,
+      "content": "CHORD KEYBOARD\n\n- 13列目・14列目: コードインバージョン\n\n- 15列目: コードボイシング\n\n- 右上のパッド: モディファイアートリガーのOn/Off\n\n- 16列目: コードスプレッド\n\n- SHIFT + Step: 追加のChordパラメーターを表示\n\n- SHIFT + Arp: Arpを有効化\n\n- SHIFT + Hold: キーボード上のホールドノートを有効化\n\n- SHIFT + 4番目のノブを回す: スケールがHarmonizerに設定されている場合にリーダーSequencerを変更\n\nMULTITRACK SEQUENCER\n\n- Sequencer 1-4 + : 全トラックをクリア\n\n- Sequencer 1-4 + 1列目のパッド: トラック設定\n\n- MUTE + 1列目: 各トラックのMute/Unmute\n\n- MUTE + 16列目: 各トラックのSolo/グループSolo/Soloなし\n\n- MUTE + その他の列: 個別のStepのMute/Unmute\n\n- Random、LFO、またはMOD（外部Modメニュー内）を長押し: 1列目でRandom、LFO、または外部Modulationによって影響を受けるトラックを切り替え\n\n- Paste + Step: コピーしたMonoシーケンスをその行の各トラックにペースト\n\n- SHIFT + Sequencer + ← または →: 各プレスで全トラックのTime Divisionを2倍に複製またはスプリット\n\n- Shift + Expand/Condense: 現在選択されているトラックを拡張または縮小（現在のトラック設定をオフセット）\n\n- Sequencer + Shift + Expand/Condense: 全トラックを拡張または縮小（現在のトラック設定をオフセット）\n\n- Init + Page: 現在選択されているトラックのInitを設定\n\n- End + Page: 現在選択されているトラックのEndを設定\n\n- Sequencer 1-4 + Init + Page: 全トラックのInitを同時に設定。個別のトラックに設定する場合はSequencerボタンを押さない\n\n- Sequencer 1-4 + End + Page: 全トラックのEndを同時に設定。個別のトラックに設定する場合はSequencerボタンを押さない\n\n- SHIFT + Random: EuclideanジェネレーターとRandomジェネレーターを切り替え\n\n- 行パッド + SHIFT + Random: 選択トラックのStepのベロシティをランダム化\n\n- Multitrackのボタンコンボの実践例を参照: [Ekkomouse Tutorial]\n\nSTOCHASTIC SEQUENCER\n\n- Gate エンコーダーを押す: 生成されたノートのGateビューに入る\n\n- SHIFT + Arrow Left/Right: Gate View内でノートをRotate\n\n- SHIFT + Preview: Sequencerグリッドビューでノートを演奏可能。グリッドを押すとノートが聞こえる\n\nKEYBOARD\n\n- 14列目: そのトラックをアームして当該トラックのフルキーボードを使用\n\n- 15列目: 各トラックのMute/Unmute\n\n- SHIFT + Random: 最後に選択したトラックのピッチ、Gate、ベロシティ、タイムオフセットをランダム化\n\n- Sequencer 1-4 + SHIFT + Random: 全トラックのトリガー、Gate、オフセットをランダム化\n\n- 行パッド + SHIFT + Random: 選択トラックのベロシティをランダム化\n\n- Sequencer 1-4 + Init / End + Step: 全トラックの開始・終了Stepを選択\n\n- Init + Page ボタン（16、32…、長いPageにアクセスするには2回押し: 80、96...）: 押したPageの最初のStepを、選択・ハイライトされたトラックの開始Stepとして選択",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 117,
+      "image": "/oxi-one-mk1/pages/page-117.png",
+      "title": "Page 117",
+      "sectionName": null,
+      "content": "- End + Page ボタン（16、32…、2回押すとより長い Page にアクセス；80、96...）：押した Page の最後のステップを、選択/ハイライトされたトラックの終了ステップとして設定します。\n\n- SHIFT + Preview：グリッド Piano Roll ビューでの再生を有効/無効にします。\n\nARRANGER\n\n- SHIFT + Arrange ボタン：Arrangement の有効化は、再生前または再生中に行えます。再度押すと無効になります。\n\n- 上4列のPadを長押し + 下4列のArranger Slot をタップ：Pattern をArrangement に配置します（1列&5列、2列&6列、3列&7列、4列&8列が配置のためにペアになっています。異なるシーケンサーのArrangement 行に配置するには、まず別の上列にPattern をコピーしてください）。\n\n- Copy + Lower Slot：Arrangement Slot をコピーします。\n\n- Paste + Lower Slot：Arrangement Slot をペーストします。\n\n- SHIFT + Clear + Lower Slot：Arrangement Slot をクリアします。\n\n- Arrow Left/Right + Lower Slot：Slot を左または右に移動します。プレースホルダースロットではなく、空のスロットの隣でなければなりません。\n\n- Encoder 1 回転：新しいSong Arrangement をロードまたは選択します。\n\n- Encoder 2 回転：現在のSong Arrangement を保存するSong Slot を選択します。\n\n- SHIFT + Clear：Song Arrangement をクリアします。Undo でSong Clear を元に戻せます。\n\n- Arrangement View の16列目を長押し：Launch Settings にアクセスします。\n\n- Arrangement Lower Slot を長押し：追加のSlot 設定にアクセスします。\n\n- Upper Pattern を長押し：Pattern Color にアクセスします。\n\n- SHIFT + Save：プロジェクトをクイックセーブします。\n\n- SHIFT + Load：Pattern をクイックロードします。\n\n- Arrangement が有効な状態でUpper Pattern を押す：Pattern がArrangement Slot を上書きします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 118,
+      "image": "/oxi-one-mk1/pages/page-118.png",
+      "title": "Page 118",
+      "sectionName": null,
+      "content": "クロック同期\n\nOXI Oneが起動すると、デフォルトでSequencer 1が選択され、内部同期モードが設定されます。\n\nSequencerが停止している状態でSHIFT + STOP（sync）ボタンをタップすることで、以下の同期オプションを変更できます：\n\n- INT：OXI Oneは選択されたテンポに従って内部タイミングに同期します。\n\n- USB：OXI OneはMIDI USBポートからのみ受信したクロックタイミングに同期します。\n\n- MIDI：OXI OneはMIDI TRS jackまたはMIDI Bluetoothを通じて受信したクロックタイミングに同期します。\n\n- CLK：OXI Oneはクロック入力から受信したクロックタイミングに同期します。\n\nOXI Oneは24 ppqタイミングに従ってMIDI clockを読み取り、出力します。アナログクロック入力および出力の分解能はConfigメニューで変更できます。\n\nOXI OneとDAWが同期しており、どちらかがマスタークロックとして動作している場合、DAWの設定でMIDI clock sync delayを調整して、DAWが生成するレイテンシーを補正することを忘れないでください。オーディオバッファが大きいほどレイテンシーも大きくなり、プロジェクトのCPU負荷によってもさらに増加します。\n\nAUTO SYNC\n\nAutoclockはConfigメニューで有効/無効を切り替えられます。\n\nAutoclockがオンでOXI Oneが停止している場合、外部ソース（MIDI TRS、MIDI BLEまたはMIDI USB）からMIDI Startメッセージを受信すると、自動的に再生を開始します。OXI Oneは外部ソースのテンポに自動的に同期します。\n\nアナログクロック用のAutoclockもファームウェアバージョン3.8から実装されています。\n\nINTERNAL CLOCK FALLBACK\n\nOXI OneがMIDI Stopメッセージを受信した場合、またはMIDI外部同期ソースが失われた場合、自動的に内部同期に戻ります。\n\nこの動作は、同期ソースがアナログクロックの場合には適用されません。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 119,
+      "image": "/oxi-one-mk1/pages/page-119.png",
+      "title": "Page 119",
+      "sectionName": null,
+      "content": "ANALOG CLOCK\n\nOXI Oneには、入力と出力のクロックポートがそれぞれ1つあります。これにより、モジュラーシンセサイザーや、クロック同期が可能なMIDI以前の機器（KorgやRolandが製造した初期のドラムマシンなど）と接続することができます。OXI Oneはシンクロナイゼーション信号の送受信の両方に対応しています。\n\n入力・出力のクロックポートはいずれもTRSジャックです。クロック信号はTip（先端）に、Start-Stop/Reset信号はジャックコネクターのRing（リング）に配線されています。\n\nStart-Stop/Reset信号の入力・出力は、Configの「Reset/Start-Stop IN/OUT」設定に応じて2通りの動作が可能です：\n\n- OFF：リセット入力を無視し、リセット出力信号を無効にします。OXI OneのsyncをClkに設定している場合、クロックパルスを受信するとすぐに動作を開始します。Start-Stop/Reset信号を使用しない場合（モノラルTRケーブルを接続する場合など）は、このオプションを設定してください。\n\n- PULSE RESET：入力・出力ともにRESET信号として動作します。\n- Output：OXI Oneが再生または再開するとき、最初のクロック出力パルスの前にReset outから4msの短いパルスが送出されます。\n- Input：OXI OneのシンクがClkに設定されている状態でReset Inputにリセットパルスが入力されると、OXI Oneはリセットされます。これはシーケンサーのプレイヘッドをリセットすることを意味します。\n\n- RUN-STOP：他のシンセやドラムマシンは異なる種類のリセット信号を必要とします。run-stop（またはstart-stop）出力は、OXI Oneが再生中は高（High）、停止中は低（Low）になります。一方、SyncがClkに設定されている場合、OXI Oneはrun-stop/start-stop入力信号が高（High）のときのみ再生し、それ以外は停止します。\n\nReset/Start-Stop InputはアナログのCV In信号です。アナログ入力としての使用方法については「MOD CV IN」セクションをご参照ください。Clock InputとCV Inputは同時に使用できますが、意図しない効果を避けるため、Reset/Start-Stop IN/OUT設定をOFFにしてください。\n\nBPM NUDGE\n\nOXI Oneはテンポのnudge（微調整）が可能です。DJや他のプレイヤーとシーケンサーを同期するときに、DJミックスで2つのトラックを合わせるような感覚でご使用いただけます。\n\nBPM Nudgeを使用するには、MUTEを押し続けながら、RECボタンでテンポを遅くし、PLAYボタンでテンポをなめらかに速くします。MIDIで接続できない場合に他のソースと同期したいときに特に便利です。\n\nMuteを離すと、シーケンサーは元のテンポに戻ります。必要に応じてTap Tempoと組み合わせてご使用ください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 120,
+      "image": "/oxi-one-mk1/pages/page-120.png",
+      "title": "Page 120",
+      "sectionName": null,
+      "content": "CONFIGURATION\n\nこのメニューは、OXI One全体に影響するグローバルパラメーターを表示します。その一部はカスタマイズオプションとして提供されており、ユーザーが楽器を最高の状態で使用できるようになっています。自分に最も合ったオプションを選択できます。\n\nリストをナビゲートするには、最初のエンコーダーを使用します。メニューの次のレベルに進むには、エンコーダーボタンを押します。Configurationメニューは以下のセクションに分かれています。\n\nMIDI\n\n● OXI Split selection\n○ OFF: OXI OneのMIDI出力は標準のMIDI TRS出力（Type A）として機能します。\n○ Split V1: Split（v1）をOXI Oneに接続する際に必要です。\n○ Split V2: Split V2を接続する際に必要です。\n注意：Split V1またはSplit V2を選択した場合、標準MIDIは機能しません。\n\n● MIDI Transport Msgs Send：有効にすると、Clock、Start、Stop、Continue MIDIメッセージがTRS、USB、Bluetooth経由で送信されます。\n\n● Start Stop Msgs Ignore：有効にすると、OXI Oneのトランスポートが外部からコントロールされなくなります。\n\n● MIDI TRS Thru：有効にすると、OXI OneはTRS経由で受信したMIDIメッセージをエコーします。\n\n● MIDI USB Thru：有効にすると、OXI OneはUSB経由で受信したMIDIメッセージをエコーします。\n\n● MIDI BLE Thru：有効にすると、OXI OneはBluetooth経由で受信したMIDIメッセージをエコーします。\n\n● MIDI In channel filtering\n○ OFF：選択されたSequencerは、あらゆるチャンネルからの受信MIDIノートをリッスンします。\n○ MIDI Channel：各SequencerはそれぞれのMIDIチャンネルからのノートのみをリッスンします。マルチトラックでは、ノートはトラックのチャンネルでフィルタリングされ、すべてのトラックが同じMIDIチャンネルを共有している場合、すべてのメッセージはトラック1にのみ送られます。\n○ Ch & Note (MULTI)：各SequencerはそれぞれのMIDIチャンネルからのノートのみをリッスンし、Multitrackモードでは、トラックのチャンネルフィルタリングに加えて、いずれかのトラックのルートノートと一致するノートのMIDIメッセージのみが考慮されます（ドラムモード）。\n詳細はMultitrack Modeセクションを参照してください。\n\n● MIDI In Port (A-F) Merge：有効にすると、受信MIDIデータはMIDI PortがAのSequencerだけでなく、MIDIチャンネルが一致する限り、ポートBとCにも転送されます。この設定は、OXI SplitまたはSplit V2のBからFのポートを使用する際に便利です。\n\n● Keyb Scale note quantizing：入力ノートは、イベントを受け取るSequencerのスケールに量子化されます。\n\n● Send CC of MULTI muted tracks：有効にすると、ミュートされたトラックも引き続きモジュレーション情報を送信します。\n\n● MOD-CC Smooth Factor：MOD Lanesのスムーズファクターのデフォルト値です。\n\n● CC Transport Msgs transmit Channel：トランスポートCCメッセージ（start、stop、continue、rec）が送信されるMIDIチャンネルを選択します。\n\n● PC (Program Change) receive global Channel：有効にすると、外部ソースからのPCメッセージで異なるSequencerのロードされたパターンを変更できます。詳細はChange pattern with PCセクションを参照してください。\n\n● Bank Select LSB or MSB：Bank SelectをLSBにするかMSBにするかを選択します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 121,
+      "image": "/oxi-one-mk1/pages/page-121.png",
+      "title": "Page 121",
+      "sectionName": null,
+      "content": "ANALOG\n\n● PPQ Out: OXI Oneがアナログ Clock Outを通じて送信するPPQ（クォーターノートあたりのパルス数）を変更します。（24PPQ、1PP16、2PPQ、1PPQ）\n\n● PPQ In: OXI Oneがアナログ Clock Inで受信するPPQ（クォーターノートあたりのパルス数）を変更します。（24PPQ、1PP16、2PPQ、1PPQ）\n\n● Reset/Start-Stop IN/OUT: アナログのReset/Start-Stop INおよびOUTシグナルの動作を設定します。\n○ OFF: 入力リセットを無視し、出力リセットシグナルを無効にします。OXI OneのSyncがClkに設定されている場合、クロックパルスを受信した時点で動作を開始します。\n○ PULSE RESET: 入力・出力ともにRESETシグナルとして動作します。\n■ Output: OXI Oneが再生を開始または再開する際、最初のクロック出力パルスの前にReset outを通じて短い4msパルスが送信されます。\n■ Input: OXI OneのSyncがClkに設定されている場合、Reset InputでリセットパルスをReset Inputで受信すると、OXI Oneはリセットされます。つまり、Sequencerの再生ヘッドがリセットされます。\n○ RUN-STOP: 他のシンセサイザーやドラムマシンは、異なる種類のリセットシグナルを必要とする場合があります。run-stop（またはstart-stop）出力は、OXI Oneが再生中はHigh、停止中はLowになります。一方、SyncがClkに設定されている場合、OXI OneはReset入力シグナルがHighの時のみ再生し、そうでない場合は停止します。\n\n● Gate V Out: すべてのGateの出力電圧を5Vまたは10Vに設定します。\n\n● Remember params when On/Off individual outs: Offにすると、CV/Gate出力のすべての設定がリセットされます。Onにすると、出力を再度オンにした際に設定が保持されます。\n\n● CV & Gate voice allocation: 両方のオプションについては、CV GATEセクションをご参照ください。\n\n● Pitch bend range: CV Pitch bendのセミトーン数を設定します。\n\n● Gate ALL Retrigger: 別のノートが押された際にGateをリトリガーします。\n\nPERFORMANCE\n\n● Play/Pause behavior: OXI Oneが再生中にPlayボタンがどのように動作するかを決定します。\n○ OFF: ポーズは無効です。Playボタンは、OXI Oneが停止している場合にのみ効果があります。\n○ ON: ポーズが有効です。OXI Oneの再生中にPlayボタンをタップすると一時停止します。\n○ RESET: 再生を一時停止する代わりに、各Sequencerのパンチイン設定に従って再生ヘッドをリセットします。\n○ FILL: Playボタンがフィルモディファイアーボタンとして機能します。押し続けると、FILLに設定されたステップが再生され、NOT FILLに設定されたステップは再生されません。\n\n● Mute behavior: ミュートセクションで説明しています。\n○ Toggle Instant\n○ Toggle On Release\n○ Mute Instant\n○ Mute On Release\n\n● Keep Mutes in Multi mode when loading patterns: このオプションが「Yes」に設定されている場合、新しいパターンがロードされても、トラックのミュート状態が保持されます。この継続性は、ロードされる新しいパターンが空でない場合にのみ適用されます。空の場合、ミュート状態はリセットされます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 122,
+      "image": "/oxi-one-mk1/pages/page-122.png",
+      "title": "Page 122",
+      "sectionName": null,
+      "content": "● Keyboard Layout。KeyboardセクションのClassicまたはIsomorphicレイアウトについて説明します。\n\n● Auto Sync。Autosyncを有効または無効にします。\n\n● Taps count for tempo。新しいBPM値を計算する際に考慮されるタップ数を設定します。Infiniteは、計算された平均テンポがリセットされないため、よりスムーズなトランジションが可能です。逆に、小さい値を設定するとより即座のテンポ調整が可能になります。\n\n● Keyb Arp Velocity。PER NOTE PLAYEDの場合、キーボードアルペジエーターはノートが演奏された時のベロシティを適用します。GLOBALの場合、キーボードアルペジエーターはノート演奏時に現在のキーボードベロシティを適用します。\n\n● Keyb latch when hold is active。内部または外部キーボードから新しいノートが入力され、HOLDがアクティブなときのアルペジエーターの動作を選択します。\n○ Latched（またはシーケンサーモード）は、ノートバッファーがいっぱいになるまで、新しいノートをパターンに追加し続けます。\n○ Normal（Non Latched）は、新しいセットのノートが入力されたときに演奏されたパターンをリセットします。\n\n● Arp Patt Reset on Note Change。「Yes」に設定すると、アルペジオされたノートのセットに変化があるたびに、アープパターンを最初にリセットします。\n\n● Loop Sync release。LOOPファンクションが解除されたときの動作を変更します。SYNC BAR：シーケンスは次のバーで続行します。SYNC BEAT：シーケンスは次のビートまたはステップで続行します。NO SYNC：シーケンスは解除された正確な時点で続行します。\n\n● Harmonizer seq Octave (Jump) max。このパフォーマンス設定は、フォロワーシーケンサーが行うことができる最大オクターブの跳躍を決定します。\n\n● Harmonized seq stays in base octave。「Yes」に設定すると、フォロワーシーケンサーはマスターシーケンスのノートからのオクターブピッチオフセットを無視し、すべてのノートがベースオクターブ内で演奏されるようにします。これにより、マスターシーケンスのオクターブの変化に関わらず、ルートノートを中心にハーモニーが維持されます。\n\n● Load Project BPM update during playback。再生中に次に新しくロードされたプロジェクトの保存されたBPMでBPMが更新されるかどうかを選択します。\n\nWORKFLOW\n\n● Lock root and scale during playback。アクティブにすると、意図しない変更を避けるため、再生中にスケールとルートが変更できなくなります。\n\n● Confirm scale change and quantize。この設定はScaleセクションで詳しく説明されています。\n\n● Lock sequence steps with preview ON。アクティブにすると、Previewが有効な場合にシーケンスのステップの追加または削除が無効になります。例えばマルチトラックモードで、異なるノートとベロシティを持つカスタマイズされたステップレイアウトを作成した場合、ステップを無効化することなくドラムマシン上でサンプルをトリガーすることができます。\n\n● Latch SHIFT with double tap。ダブルタップでSHIFTのラッチを有効にします。\n\n● Track select priority in multitrack。Track Selectionセクションで説明されています。\n\n● Reset step parameters when clearing。新しく入力されたノートまたはコードは以前の値の代わりにデフォルト値を持ちます。これはMono、Chords、Multitrackモードにのみ影響します。Polyモードでは新しいステップは常にリセットされます。\n\n● Default Velocity value。新しいノートとキーボードのデフォルトベロシティ値。\n\n● Default Gate value。新しいノートとキーボードアルペジエーターのデフォルトGate値。\n\n● Selected track indicator。マルチトラックシーケンサーでは、この設定で選択されたトラックを示す黄色のグリッドパッドのオン/オフを切り替えることができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 123,
+      "image": "/oxi-one-mk1/pages/page-123.png",
+      "title": "Page 123",
+      "sectionName": null,
+      "content": "SYSTEM\n\n● MIDI IN Monitor：受信したMIDIデータのモニターです。\n\n● LEDs Animations：フェードやその他のLEDエフェクトの量を設定します。\n\n● LEDs Brightness：2段階の輝度設定です。\n\n● LEDs Transport bar keyboard：キーボードビューでトランスポートバーを表示します。録音が有効になっている場合は常に表示されます。\n\n● Screensaver animation：スクリーンセーバーを有効または無効にします。\n\n● Inactivity Power-Off Time：OXI Oneが未使用時に電源が切れるまでの時間を設定します。\n\n● Bluetooth ON/OFF。\n\n● USB Mode\n○ Device：OXI OneがUSB MIDI DeviceとしてUSBから電源を受け取ります。\n○ Host+Power：OXI OneがUSB MIDI Hostとして動作し、他のUSBデバイスに電源を供給します。\n○ Host No Power：OXI OneがUSB MIDI Hostとして動作しますが、電源の供給は行いません。一部のUSBアダプターに必要です。\n○ Device Self Powered：OXI OneがUSBコンセントから電源を受け取らずにUSB MIDI Deviceとして動作します。これによりUSB電源によるグランドループの発生を回避できます。有効にするにはUSBケーブルを再接続してください。\n\n● FW & HW Version：ファームウェア、ハードウェア、BLEのバージョンを表示します。\n\n● RESET：キャリブレーション設定を維持しながらOXI Oneをファクトリー設定にリセットします。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 124,
+      "image": "/oxi-one-mk1/pages/page-124.png",
+      "title": "Page 124",
+      "sectionName": null,
+      "content": "MIDI ROUTING\n\nOXI Oneはデフォルトで、あるソースから別のソースへMIDI Thruメッセージを送信します。例えば、Bluetooth MIDI（BLE MIDI）経由で受信したMIDIデータは、USB MIDI、TRS MIDI出力から出力され、さらにCV/GateがSequencerに割り当てられている場合は、対応するCV/Gateにもルーティングされます。\n\nTIP: これにより、OXI Oneはあらゆる種類のセットアップや状況において、MIDIハブおよび/またはMIDI to CVコンバーターとして機能することができます。\n\nあるソースから別のソースへのThruメッセージは、Configurationメニューから無効にすることができます。\n\nOXI Oneによって生成されたMIDIデータは、選択したすべての通信経路（MIDI USB、MIDI TRS、MIDI BLEなど）を通じて、対応するMIDIチャンネルに送信されます。これについては、Sequencer設定で詳しく確認できます。\n\n各Sequencerは、ConfigurationのMIDI Inチャンネルフィルタリングで設定されたグローバル設定に応じて、入力MIDIデータを受信します。\n\nMIDI MONITOR 新機能\n\nMIDI IN Monitorを使用して、受信したMIDIデータを確認することができます。ConfigメニューのSystemセクションからアクセスするか、SHIFTキーを押しながらBackキーを数秒間押すことで、どこからでもアクセスできます。\n\n受信した最後の3つのメッセージと、そのメッセージのソースが表示されます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 125,
+      "image": "/oxi-one-mk1/pages/page-125.png",
+      "title": "Page 125",
+      "sectionName": null,
+      "content": "OXI SPLIT\n\nOXI Splitは、OXI Oneを3つの独立したMIDI ポートで拡張し、48の設定可能なチャンネル（レーンごとに16）を提供します。これにより、より多くの楽器を接続し、スムーズに切り替えることができます。\n\nまた、3つのバッファードレーンを提供することで、MIDI帯域幅の制限の問題を解決し、すべてのデバイスへの高速で信頼性の高いデータ転送を実現します。\n\nOXI Splitを使用するには、まず有効化する必要があります。Configuration MenuのMIDI Settingsに移動し、「OXI Split selection」を有効にしてください。INジャックの下の青いLEDが点灯し、SplitがOXI Oneによって給電されていることを示します。\n\nTIP: Splitデバイスを取り外し、Config OptionのOXI Split SelectionをOnのままにすると、標準MIDIが機能しなくなります。単一のMIDIケーブルを使用する前にオフにしてください。\n\nOXI Splitが有効で接続された状態で、OXI OneのポートBとCを活用できます。青いLEDは、Splitがデータを受信中であることを示すために点滅します。\n\n1Aから16AのMIDIチャンネルは、OXI SplitのPORT 1/Aから出力されます。\n\n1Bから16BのMIDIチャンネルは、OXI SplitのPORT 2/Bから出力されます。\n\n1Cから16CのMIDIチャンネルは、OXI SplitのPORT 3/Cから出力されます。\n\nこれにより、合計48のMIDIチャンネルを使用できます。\n\nOXI Oneが受信したすべてのMIDI情報（USB In、TRS In、またはBLE Inのいずれかのソースから）は、そのMIDIソース（USB、TRS、またはBLE）のThru設定が有効な場合、OXI SplitのTHRUポートを通じて送信されます。\n\nSplit MIDIの出力は3.3V（OXI Oneポートの5Vとは異なります）です。TRSのものは、メインのOXI OneのMIDI出力ポートと同様にType Aです。こちらのリンクで購入できます。\n\nSPLIT V2\n\n同じコンセプトですが、6つのPORTと96のMIDIチャンネルを備えています。\n\nポートC、D、E、FはTRSポートで、TRSタイプAとBの切り替えスイッチが付いています。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 126,
+      "image": "/oxi-one-mk1/pages/page-126.png",
+      "title": "Page 126",
+      "sectionName": null,
+      "content": "Split の MIDI 出力は 3.3V です（5V の OXI One ポートとは異なります）。TRS タイプのものは、メイン OXI One の MIDI 出力ポートと同様に Type A です。こちらのリンクからご購入いただけます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 127,
+      "image": "/oxi-one-mk1/pages/page-127.png",
+      "title": "Page 127",
+      "sectionName": null,
+      "content": "OXI PIPE\n\nOXI Pipeは、OXI Oneの8つのCV出力、8つのGate出力、ClockとCV/Resetの入力を複製するブレイクアウトモジュールです。OXI Oneに追加の信号は一切加えません。\n\nPipeとOneの出力は同時に使用できます（パッシブMultのように）。ただし、One本体とPipeの入力を同時に使用することはできません。\n\n各Pipeには、HDMIケーブルが無料で付属しています。異なる仕様のケーブル（長さ、コネクターの角度など）が必要な場合は、2.0以上の仕様のHDMIケーブルを別途ご購入ください。\n\n注意: 一般的なHDMI 2.0ケーブルの中には、2.0の仕様を謳っていても、正しく配線されていないものがあります。\n\n以下の2本のケーブルは、OXI Pipeで問題なく動作することが確認されています：\nUGreen HDMI 2.0 ケーブル リンク\nDeleyCon HDMI 2.0 ケーブル リンク\n\nこちらのリンクからご購入いただけます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 128,
+      "image": "/oxi-one-mk1/pages/page-128.png",
+      "title": "Page 128",
+      "sectionName": null,
+      "content": "MIDI BLUETOOTH\n\nOXI OneはBluetooth（BLE）経由のMIDIに対応しており、デュアルロールデバイスです。使用方法は2つあります。\n\nNote: iOS、Mac、またはWindowsデバイスとの最適なパフォーマンスのために、WIDI Master、WIDI Jack、またはWIDI UHost（iPadなどのUSB MIDIデバイス向け）のようなドングルの使用を強くお勧めします。AndroidでのBLE MIDIのパフォーマンスはわずかに優れています。\n\nWIDI UHOSTを使用すると、Bluetoothのパフォーマンスが大幅に向上します。意外なことに、iOSのBLEパフォーマンスはタイトなタイミングのシーケンシングには十分ではありません。\n\nCENTRAL ROLE\n\nOXI Oneは、以下のような他のMIDI Bluetoothペリフェラルのハブとして機能できます：\n- ピアノキーボード（ROLI Seaboard、CME Xkey Air など）\n- BLEドングル（CME WIDI BUD、DORE MIDIケーブルなど）\n- BLE MIDIアダプター（WIDI Jack、WIDI Master など）\n- コントローラー（AKAI LPD8、Korg nanoKEY など）\n- OP-Z などのその他のデバイス\n\nOXI Oneは、ペリフェラルデバイスがオンになってアドバタイズ（ペアリングするためのセントラルデバイスを探している状態）している場合、そのデバイスに自動的に接続（「ペアリング」）します。\n\n現在、同時に接続できるのは1つのデバイスのみです。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 129,
+      "image": "/oxi-one-mk1/pages/page-129.png",
+      "title": "Page 129",
+      "sectionName": null,
+      "content": "PERIPHERAL ROLE\n\n一方、OXI OneはiOSやAndroidデバイス、コンピューター（MacとWindowsは最近のバージョンでBluetooth MIDIをネイティブサポートしています）、CME WIDI MasterなどのCentralデバイスに接続することができます。\n\nOXI Oneのペアリングプロセスは、接続する相手のデバイスによって異なります。\n\nMAC OS X\n\nネイティブアプリケーション「Audio MIDI Setup」を開き、MIDI Studioウィンドウ上のBluetooth設定を開いてください。\n\nBluetoothアイコンを押し、Bluetooth設定ウィンドウで「connect」を押すだけです。\nOXI OneはオーディオMIDIアプリに「OXI ONE BLE」というMIDIデバイスとして表示されます。\n\nWINDOWS（Windows 8.1以降）\n\nまず、WindowsとBluetooth MIDIデバイスを接続する必要があります。\n\nタスクトレイのBluetoothアイコンを押し、「Bluetoothデバイスの表示」を選択します。\n\nBluetoothデバイス管理画面で「ペアリングの準備完了」と表示されているデバイスを選択し、「ペアリング」を押します。\n\n「接続済み」と表示されたら、ペアリングは完了です。\n\n最後のステップは、MIDIberryアプリをダウンロードすることです。このアプリにより、Bluetooth MIDIポートが他のアプリで使用できるようになります。\n\nMIDIアプリケーションを起動し、必要に応じてMIDI INポートとMIDI OUTポートを選択します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 130,
+      "image": "/oxi-one-mk1/pages/page-130.png",
+      "title": "Page 130",
+      "sectionName": null,
+      "content": "iOS\n\n接続は、アプリ自体のMIDIおよびBluetoothの設定から確立する必要があります。\n\nここでは例として、無料のiOSアプリ「Synth One」を使用します。\n\nBluetoothアイコンをタップしてBluetooth設定を開きます（このメニューは、MIDI設定メニューなど他のメニュー内にある場合があります）。\n\n「OXI ONE BLE」を選択し、接続が確立されるまで数秒待ちます。これで使用可能になります！\n\nANDROID\n\niOSで説明した手順と同じです。\n\n「FluidSynth MIDI for Android」のような無料アプリで試すことができます。アプリを開いたら、メニュー（ドットアイコン）をタップし、「MIDI Bluetooth」を開いて「OXI ONE BLE」を選択します。\n\nOXI ONE BLEは、アプリのMIDI設定にMIDIデバイスとして表示されます（FluidSynth内のMIDIをタップしてこのメニューを開きます）。\n\nNotes:\n\nグローバル設定のConf: \"Bluetooth ON/OFF\" からBluetoothのON/OFFを切り替えることができます。\n\n設定はリブート後も保持されますので、BLE MIDIで演奏したい場合はONになっていることを確認してください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 131,
+      "image": "/oxi-one-mk1/pages/page-131.png",
+      "title": "Page 131",
+      "sectionName": null,
+      "content": "USB MIDI\n\nUSB MODES\n\nOXI OneのUSBは、システム設定のUSB Modeで以下のモードに設定できます。\n\n● Device: OXI OneはUSBから電力を供給されながら、USB MIDI Deviceとして動作します。\n\n● Host+Power: OXI OneはUSB MIDI Hostとして動作し、他のUSBデバイスに電力を供給します。\n\n● Host No Power: OXI OneはUSB MIDI Hostとして動作しますが、電力は供給しません。一部のUSBアダプターで必要となります。\n\n● Device Self Powered: OXI OneはUSBアウトレットから電力を供給されずにUSB MIDI Deviceとして動作します。これにより、USB電源が引き起こす可能性のあるグランドループを回避できます。有効にするにはUSBケーブルを再接続してください。\n\nUSB MIDI HOST\n\nOXI OneがHost+Power Modeで動作して外部デバイスに電力を供給している場合、バッテリーレベルインジケーターが低下することがあります。この低下は、接続されたデバイスをサポートするために必要な追加の消費電力を反映しています。\n\n動作確認済みデバイス:\n\n- Roli Seaboard\n- Arturia Keystep\n- Arturia Keystep 37\n- Arturia Keystep Pro\n- AKAI LPK25\n- Korg nanoKONTROL2\n- ASM Hydrasynth\n- OXI One\n- Miditech Minicontrol-32\n- Teenage engineering TX-6\n- Teenage engineering OP-1 Field\n- Roland MC101\n- Akai MPD218\n- Moog One 16 and 5\n- Novation Launch Control XL\n- Waldorf Streichfett\n- Waldorf Blofeld\n- Novation 25 SL Mk2\n- Novation Launchpad Pro Mk3\n- Novation Launchpad S\n- QuNexus\n- Conductive Labs NDLR\n- Roland MC707\n- Elektron Syntakt",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 132,
+      "image": "/oxi-one-mk1/pages/page-132.png",
+      "title": "Page 132",
+      "sectionName": null,
+      "content": "USB SOLUTIONS\n\nOXI OneのDeviceモード\n\n- USB Isolatorを外部電源入力付きで使用すると、電源/グランドループノイズを避けることができます。Isolatorには外部電源（壁のコンセントからのACアダプターなど）が必要です。外部電源がない場合、OXI Oneへの電力供給が不十分となり、バッテリーが徐々に消耗します。\n\nLINK\n\nグランドノイズを避けるもう一つの方法として、OXI OneをDevice Self Poweredモードに設定することができます。ただし、一部のホストでは動作しない場合があります。\n\nOXI ONEのHostモード\n\nテスト済みのセットアップ:\n\n- Roli SeaboardなどのデバイスはUSB C to Cケーブルで動作します。アダプターは不要です。\n\n- シンプルなUSB C to AアダプターはOXI OneをUSB Hostおよび電源として使用する際の優れたソリューションです。この場合、OXI Oneを\"Host + Power\"に設定する必要があります。「電力を多く消費する」デバイスを接続する際の電源とバッテリーの制限にご注意ください。\n\nAmazonで入手可能\n\n- USB C電源スプリッターは、OXI Oneへの電源供給とUSB MIDIデバイスへの接続を同時に行いたい場合に使用します。OXI Oneは\"Host No Power\"に設定する必要があります。\n\nUSB C オス端子はHostであるOXI Oneに接続し、MIDIデバイスはUSB A メス端子（一部のスプリッターではUSB Cの場合もあり、電源シンボルではなく\"data\"シンボルで識別されます）に接続し、USB C メス端子が電源入力となります。\n\nこのタイプのアダプターに関する推奨事項を以下に示します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 133,
+      "image": "/oxi-one-mk1/pages/page-133.png",
+      "title": "Page 133",
+      "sectionName": null,
+      "content": "LINK1　LINK2　LINK3　LINK4　LINK5",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 134,
+      "image": "/oxi-one-mk1/pages/page-134.png",
+      "title": "Page 134",
+      "sectionName": null,
+      "content": "DESIGN NOTES\n\nMODES DIFFERENCES\n\nMONO vs POLY?\n\n両者ともに128ステップの長さです。\n\n両者ともに4つのモジュレーションレーンがあります。\n\nMonoは1ステップにつき1つのアクティブノートしか持てませんが、Polyは1ステップにつき最大7つのアクティブノートを持つことができます。\n\nそれでは、なぜMonoトラックを使うのでしょうか？Monoトラックは1ステップにつき同時に1つのアクティブノートしか持てないため、例えば単音のリードがある場合やモノシンセをシーケンスする場合など、メロディを素早く変更するのに便利です。\n\nそれ以外の状況では、Polyトラックの方がより自由度が高く、またMonoモードでは利用できないGridからArpを使用することができます。\n\nどちらのモードでも、シーケンサーボタンとグリッドのいずれかのパッドを押すことでトランスポーズが可能です。Polyシーケンスは最低音に基づいてトランスポーズされます。\n\nCHORD vs POLY?\n\n両者ともに128ステップの長さです。\n\n両者ともに4つのモジュレーションレーンがあります。\n\nこれら2つのモードは全く異なる動作をします。Chordモードは、異なるタイプとボイシングを持つ定義済みのパレットからコードを入力できます。グリッドビューでは個別のステップが配置されているように見えますが、OXI Oneから実際に送信されるノートは複数のノートで構成されたコードです。\n\n一方、Polyはより自由に好きなようにノートを入力できますが、Chordモードでは異なるスケールの整理されたコードセットによる即座のインスピレーションを提供します（現在はダイアトニックスケールのみサポート）。PolyはChordキーボードにアクセスできません。\n\nChordモードでコード進行を書き始めて、さらなる調整、ブリッジノート、またはChordが提供しないその他の装飾が必要だと感じた場合、モードをPolyモードに変換することができます。方法は2つあります。コードシーケンスをPolyシーケンサーにコピーするか、シーケンサーのモードをChordからPolyに変更する方法です。Polyモードシーケンサーを現在のノートグリッドを保持したままChordシーケンサーに変換することはできません。\n\nMULTITRACK?\n\n128ステップ。\n\n8トラック\n\n1トラックにつき1つのモジュレーションレーン\n\nMultitrackモードは8つのメロディックまたはドラム/サンプルトラックを扱うことができます。\n\nMonoシーケンサーで作成した1つのトラックをMultitrackシーケンサーのトラックの1つにコピーすることができます。MultitrackからMonoシーケンサーへのコピーは行えません。MultitrackはMonoシーケンスの保存場所です。\n\nOCTエンコーダーを押すことで、選択したトラックのPiano rollビューにアクセスすることもできます。\n\nMultitrackはドラムだけのためではありません！Monoモードと同様に、ステップごとのノートやその他のパラメーターを設定できます。さらに、各トラックにトランスポーズ設定があり、独立した長さ、タイムディビジョン、MIDIチャンネルもあります。ただし、1トラックにつきモジュレーションレーンは1つのみ（合計8つ）であり、",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 135,
+      "image": "/oxi-one-mk1/pages/page-135.png",
+      "title": "Page 135",
+      "sectionName": null,
+      "content": "glideコントロールはすべてのステップまたはトラック全体に影響します。すべてのトラックを同じ MIDIチャンネルに設定してMultitrackを使用する場合、8音のポリフォニーとともに送信できる8つのModulationレーンが利用可能になります。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 136,
+      "image": "/oxi-one-mk1/pages/page-136.png",
+      "title": "Page 136",
+      "sectionName": null,
+      "content": "MONOME GRID\n\nOXI Oneの電源を入れる際にSHIFTボタンを押し続けると、128 GRIDデバイスとして動作するモードが有効になります。通常の動作に戻るには、電源ボタンを押してOXI Oneを再起動してください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 137,
+      "image": "/oxi-one-mk1/pages/page-137.png",
+      "title": "Page 137",
+      "sectionName": null,
+      "content": "MIDI REMOTE CONTROL\n\nDAWや他のMIDIデバイスからOXI Oneをリモートコントロールしたい場合は、その機能を使用できます。MIDI Remote Control Documentationはこちらで確認できます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 138,
+      "image": "/oxi-one-mk1/pages/page-138.png",
+      "title": "Page 138",
+      "sectionName": null,
+      "content": "MIDI マッピング\n\nMIDI マッピング パラメーター\n\n内部パラメーター\t最適範囲\n\nSeq Enable（オン/オフ）\t0 - 127\n[ オフセット値以上は無効、それ以外は有効 ]\n\nSeq Mute\t0 - 127\n[ オフセット値以上はミュート、それ以外はミュート解除 ]\n\nSeq Division\t0 - 8\n[ 1 Bar, 1/2, 1/4, 1/8, 1/12, 1/16, 1/24, 1/32, 1/48 ]\n\nSeq Direction\t0 - 3\n[ 順方向、逆方向、交互、ランダム ]\n\nSeq Scale\t1 - 31\n[ スケールリストに従う ]\n\nSeq Root\t0 - 11\n[ C, C#, D, D#, など ]\n\nSeq Swing\t-40 - 40\n\nSeq Roll\t0 - 8\n[ OFF, 1/4, 1/6, 1/8, 1/12, 1/16, 1/24, 1/32, 1/48 ]\n\nSeq Loop\t0 - 127\n[ スタートポイントからのループ長を設定 ]\n\nSeq Loop Release\t-\n[ ループは値に関係なく解放される ]\n\nSeq Time Stretch\t-120 - 120\n\nSeq Time Offset\t-100 - 100\n\nTrack Init*\t0 - 127\n\nTrack End*\t0 - 127\n\nMod Lane Enable\t0 - 1\n\nMod Lane Offset\t-100 - 100\n\nMod Lane Division\t0 - 8\n[ 1 Bar, 1/2, 1/4, 1/8, 1/12, 1/16, 1/24, 1/32, 1/48 ]\n\nMod Lane Init\t0 - 127\n\nMod Lane End\t0 - 127\n\nRandom Velocity\t-100 - 100\n\nRandom Oct/Gate\t-100 - 100",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 139,
+      "image": "/oxi-one-mk1/pages/page-139.png",
+      "title": "Page 139",
+      "sectionName": null,
+      "content": "内部パラメーター 　最適レンジ\n\nRandom Trig Probability 　0 - 100\n\nRandom Retrigger 　-100 - 100\n\nGlobal Tempo 　入力値は10倍されます。\n\nGlobal Fill 　0 - 1\n\nGlobal Reset 　0 - 1\n\nRandom Generator 　0 - 1\n\nPattern Reload 　0 - 1\n\nTap Tempo 　0 - 1\n\nRecord Toggle 　0 - 1\n\n* Euclidean Lengthにも影響します",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 140,
+      "image": "/oxi-one-mk1/pages/page-140.png",
+      "title": "Page 140",
+      "sectionName": null,
+      "content": "内部デスティネーション\n\nシーケンサーモードによって、利用可能な内部デスティネーションが異なります。\n\n注意：LFOとExt CVはバイポーラですが、MODレーンはユニポーラです（オフセットが適用されない限り）。\n\n| 全モード共通 | 最適レンジ | LFOで利用可能 | Mod Laneで利用可能 | Mod Matrix MIDI Assignmentで利用可能 | Mod Matrix CV Assignmentで利用可能 |\n| --- | --- | --- | --- | --- | --- |\n| Velocity | 0 - 100 | Yes | Yes | Yes | Yes |\n| Pitch（スケール量子化） | 0 - 36 | Yes | Yes | Yes | Yes |\n| Octave | 0 - 4 | Yes | Yes | Yes | Yes |\n| Gate | 0 - 100 | Yes | Yes | Yes | Yes |\n| CV Pitch Bend | 0 - 100 | Yes | Yes | Yes | Yes |\n| Division Mod | 0 - 100 | Yes | Yes | Yes | Yes |\n| Retrigger | 0 - 8 | Yes | Yes | Yes | Yes |\n| Trigger Probability | 0 - 100 | Yes | Yes | Yes | Yes |\n| CV Glide | 0 - 100 | Yes | Yes | Yes | Yes |\n| Keyboard Arp Division | 0 - 3 | Yes | Yes | Yes | Yes |\n| Keyboard Arp Oct | 0 - 3 | Yes | Yes | Yes | Yes |\n| Keyboard Arp Type | 0 - 10 | Yes | Yes | Yes | Yes |\n| LFO 1 Wave | 0 - 10 | Yes | Yes | Yes | Yes |\n| LFO 1 Rate | 0 - 10（同期時）または 0-100（フリーラン） | Yes | Yes | Yes | Yes |\n| LFO 1 Amount | 0 - 100 | Yes | Yes | Yes | Yes |\n| LFO 2 Wave | 0 - 10 | Yes | Yes | Yes | Yes |\n| LFO 2 Rate | 0 - 10（同期時）0-100（フリーラン） | Yes | Yes | Yes | Yes |\n| LFO 2 Amount | 0 - 100 | Yes | Yes | Yes | Yes |",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 141,
+      "image": "/oxi-one-mk1/pages/page-141.png",
+      "title": "Page 141",
+      "sectionName": null,
+      "content": "POLY\n\n| パラメーター | 適正範囲 | LFOで利用可能 | Mod Laneで利用可能 | Mod Matrix MIDI Assignmentで利用可能 | Mod Matrix CV Assignmentで利用可能 |\n|---|---|---|---|---|---|\n| Poly Arp Div | 0 - 3 | Yes | Yes | Yes | Yes |\n| Poly Arp Oct | 0 - 7 | Yes | Yes | Yes | Yes |\n| Poly Arp Type | 0 - 10 | Yes | Yes | Yes | Yes |\n\nCHORD\n\n| パラメーター | 適正範囲 | LFOで利用可能 | Mod Laneで利用可能 | Mod Matrix MIDI Assignmentで利用可能 | Mod Matrix CV Assignmentで利用可能 |\n|---|---|---|---|---|---|\n| Chord Root | 0 - 7 | Yes | Yes | Yes | Yes |\n| Chord Type | 0 - 10 | Yes | Yes | Yes | Yes |\n| Chord Voicing | 0 - 7 | Yes | Yes | Yes | Yes |\n| Strum | 0 - 100 | Yes | Yes | Yes | Yes |\n| Spread | 0 - 7 | Yes | Yes | Yes | Yes |\n| Chord Arp Division | 0 - 3 | Yes | Yes | Yes | Yes |\n| Chord Arp Octave | 0 - 7 | Yes | Yes | Yes | Yes |\n| Chord Arp Type | 0 - 10 | Yes | Yes | Yes | Yes |",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 142,
+      "image": "/oxi-one-mk1/pages/page-142.png",
+      "title": "Page 142",
+      "sectionName": null,
+      "content": "MULTITRACK\n\n| パラメーター | 最適範囲 | LFOで使用可能 | Mod Laneで使用可能 | Mod Matrix MIDI Assignmentで使用可能 | Mod Matrix CV Assignmentで使用可能 |\n|---|---|---|---|---|---|\n| Euclidean pulse | 0 - 16 | Yes | Yes | Yes | Yes |\n| Euclidean rotation | 0 - 16 | Yes | Yes | Yes | Yes |\n| Pattern generator: Kick density | 0 - 100 | Yes | Yes | Yes | Yes |\n| Pattern generator: Snare density | 0 - 100 | Yes | Yes | Yes | Yes |\n| Pattern generator: Hihat density | 0 - 100 | Yes | Yes | Yes | Yes |\n| Pattern generator X | 0 - 100 | Yes | Yes | Yes | Yes |\n| Pattern generator Y | 0 - 100 | Yes | Yes | Yes | Yes |\n| Patt generator Chaos | 0 - 100 | Yes | Yes | Yes | Yes |\n\nSTOCHASTIC\n\n| パラメーター | 最適範囲 | LFOで使用可能 | Mod Laneで使用可能 | Mod Matrix MIDI Assignmentで使用可能 | Mod Matrix CV Assignmentで使用可能 |\n|---|---|---|---|---|---|\n| Note probability | 0 - 7 | Yes | Yes | Yes | Yes |\n| Pitch Lock % | 0 - 7 | Yes | Yes | Yes | Yes |\n| Rhythm Lock % | 0 - 7 | Yes | Yes | Yes | Yes |\n| Positive division % | 0 - 3 | Yes | Yes | Yes | Yes |\n| Negative division % | 0 - 3 | Yes | Yes | Yes | Yes |\n| Higher Octave | 0 - 3 | Yes | Yes | Yes | Yes |\n| Lower Octave | 0 - 3 | Yes | Yes | Yes | Yes |",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 143,
+      "image": "/oxi-one-mk1/pages/page-143.png",
+      "title": "Page 143",
+      "sectionName": null,
+      "content": "MATRICEAL\n\n| パラメーター / デスティネーション | 最適範囲 | LFOで使用可能 | Mod Laneで使用可能 | Mod Matrix MIDI Assignmentで使用可能 | Mod Matrix CV Assignmentで使用可能 |\n|---|---|---|---|---|---|\n| Note interval | 0 - 5 | はい | はい | はい | はい |\n\nMOD MATRIX パラメーター デスティネーション（全モード共通）\n\n| パラメーター / デスティネーション | 最適範囲 | LFOで使用可能 | Mod Laneで使用可能 | Mod Matrix MIDI Assignmentで使用可能 | Mod Matrix CV Assignmentで使用可能 |\n|---|---|---|---|---|---|\n| Seq Enable (On/Off) | 0 - 127 [オフセット以上は無効、それ以外は有効] | いいえ | いいえ | はい | いいえ |\n| Seq Mute | 0 - 127 [オフセット以上はミュート、それ以外はミュート解除] | いいえ | いいえ | はい | いいえ |\n| Seq Division | 0 - 8 [1 Bar, 1/2, 1/4, 1/8, 1/12, 1/16, 1/24, 1/32, 1/48] | いいえ | いいえ | はい | いいえ |\n| Seq Direction | 0 - 3 [Forward, Backward, Alternate, Random] | いいえ | いいえ | はい | いいえ |\n| Seq Scale | 1 - 31 [スケールリストに従う] | いいえ | いいえ | はい | いいえ |\n| Seq Root | 0 - 11 [C, C#, D, D#など] | いいえ | いいえ | はい | いいえ |\n| Seq Swing | -40 - 40 | いいえ | いいえ | はい | いいえ |\n| Seq Roll | 0 - 8 [OFF, 1/4, 1/6, 1/8, 1/12, 1/16, 1/24, 1/32, 1/48] | いいえ | いいえ | はい | いいえ |",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 144,
+      "image": "/oxi-one-mk1/pages/page-144.png",
+      "title": "Page 144",
+      "sectionName": null,
+      "content": "MOD MATRIX\n\n| パラメーター デスティネーション | 全モード共通 適切な範囲 | LFOで使用可能 | Mod Laneで使用可能 | Mod Matrix MIDI アサインで使用可能 | Mod Matrix CV アサインで使用可能 |\n|---|---|---|---|---|---|\n| Seq Loop | 0 - 127 [スタートポイントからのループ長を設定します] | No | No | Yes | No |\n| Seq Loop Release | - [ループは値とは独立して解放されます] | No | No | Yes | No |\n| Seq Time Stretch | -120 - 120 | No | No | Yes | No |\n| Seq Time Offset | -100 - 100 | No | No | Yes | No |\n| Track Init* | 0 - 127 | No | No | Yes | No |\n| Track End* | 0 - 127 | No | No | Yes | No |\n| Mod Lane Enable | 0 - 1 | No | No | Yes | No |\n| Mod Lane Offset | -100 - 100 | No | No | Yes | No |\n| Mod Lane Division | 0 - 8 [1 Bar, 1/2, 1/4, 1/8, 1/12, 1/16, 1/24, 1/32, 1/48] | No | No | Yes | No |\n| Mod Lane Init | 0 - 127 | No | No | Yes | No |\n| Mod Lane End | 0 - 127 | No | No | Yes | No |\n| Random Velocity | -100 - 100 | No | No | Yes | No |\n| Random Oct/Gate | -100 - 100 | No | No | Yes | No |\n| Random Trig Probability | 0 - 100 | No | No | Yes | No |\n| Random Retrigger | -100 - 100 | No | No | Yes | No |",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 145,
+      "image": "/oxi-one-mk1/pages/page-145.png",
+      "title": "Page 145",
+      "sectionName": null,
+      "content": "MOD MATRIX\n\n| パラメーター・デスティネーション | 全モード共通（最適レンジ） | LFOで利用可能 | Mod Laneで利用可能 | Mod Matrix MIDIアサインで利用可能 | Mod Matrix CVアサインで利用可能 |\n|---|---|---|---|---|---|\n| Global Tempo | 入力値は10倍されます。 | No | No | Yes | No |\n| Global Fill | 0 - 1 | No | No | Yes | No |\n| Global Reset | 0 - 1 | No | No | Yes | No |\n| Random Generator | 0 - 1 | No | No | Yes | No |\n| Pattern Reload | 0 - 1 | No | No | Yes | No |\n| Tap Tempo | 0 - 1 | No | No | Yes | No |\n| Record Toggle | 0 - 1 | No | No | Yes | No |\n\n* Euclidean Lengthにも影響します\n\nOXI ONE SEQUENCER COLORS\n\n任意のSequencerのグリッドパッドのカラーをカスタマイズできます。希望のカラーを設定するには、Sequencer Setupの3ページ目（SHIFT + Sequencerナンバーを3回押す）に進み、希望のカラーを選択してください。\n\nおおよそのカラー一覧を以下に示します：",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 146,
+      "image": "/oxi-one-mk1/pages/page-146.png",
+      "title": "Page 146",
+      "sectionName": null,
+      "content": "値　　　カラー\n0　　　Purple\n10　　　Blue\n23　　　Lilac\n30　　　Violet\n34　　　Baby Pink\n39　　　Yellow\n49　　　Magenta\n61　　　Pink\n69　　　Orange\n77　　　White\n79　　　Turquoise\n90　　　Aquamarine\n100　　　Light Blue",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 147,
+      "image": "/oxi-one-mk1/pages/page-147.png",
+      "title": "Page 147",
+      "sectionName": null,
+      "content": "CALIBRATION\n\nすべてのOXI Oneは工場出荷時にキャリブレーションされています。キャリブレーションは高精度な機器を使用して行われています。何らかの理由でキャリブレーション手順を繰り返す必要がある場合は、以下の手順に従ってください。5桁のマルチメーターや、チューナーと組み合わせた精度の高いVCO（V/Oct CV入力搭載）などの基準機器を使用してください。\n\nキャリブレーションモードに入るには、SHIFT + cv gateを2秒以上押し続けてください。OXI Oneがキャリブレーションモードに切り替わると、画面に表示されます。\n\nTIP: OXI OneのCVは-3Vから+5Vの範囲を持ち、V/Oct形式でC-1からC7のオクターブを表します。ONEはMIDIノート12をC-1として扱います。\n\nCALIBRATION TABLE:\n\n各オクターブについて、以下の表はONEが出力すべき値を示しています。これは8つのCV出力それぞれに適用されます。\n\nNOTE \tEXPECTED VOLTAGE\nC-1 [12] \t-3V\nC0 [24] \t-2V\nC1 [36] \t-1V\nC2 [48] \t0V\nC3 [60] \t1V\nC4 [72] \t2V\nC5 [84] \t3V\nC6 [96] \t4V\nC7 [108] \t5V\n\n表の各ポイントは、それぞれのCVに対してキャリブレーションする必要があります。\n\n例えば、C2を押したときにOXIが0.123Vを表示する場合、そのCVはC2ポイントで+0.123Vのオフセットによりキャリブレーションが外れています。\n\n- 下に調整するには、C2の直下のキーであるB1を押します。出力電圧は約-0.002V（+2mV）低下します。\n\n- 上に調整するには、C2の直上のキーであるC#2を押します。出力電圧は約+0.002V（-2mV）上昇します。\n\nメーターの小数点以下の桁数が少ない場合は、電圧の変化が見え始めるまで何度か押す必要があります。\n\nB1の代わりにA#1を、C#2の代わりにD2を押すと、ジャンプ幅が大きくなり（2mVではなく20mV）、プロセスを速めることができます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 148,
+      "image": "/oxi-one-mk1/pages/page-148.png",
+      "title": "Page 148",
+      "sectionName": null,
+      "content": "電圧オフセットが期待値の±0.003V（±3mV）以内に収まるまで繰り返し押してください。\n\nキャリブレーションカーブのすべてのポイントが完了したら、C8を押して保存します。\n\nすべてのCV出力に対してこのプロセスを繰り返す必要があります。\n\n各CVは異なるMIDIチャンネルを受信します。CV1はMIDIチャンネル1を、CV2はMIDIチャンネル2を受信し、以降同様にCV8はチャンネル8を受信します。\n\nMIDI INポートに接続された任意のキーボードで行えますが、オクターブレンジをより確認しやすいため、DAWでの実施を推奨します。\n\nAbletonユーザーの方は、このプロセスをサポートするプロジェクトをダウンロードできます。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 149,
+      "image": "/oxi-one-mk1/pages/page-149.png",
+      "title": "Page 149",
+      "sectionName": null,
+      "content": "DRUM PATTERNS\n\nこれは、異なるDensity値を使用したときにDrum Patternsがどのように変化するかを示しています。以下にそれらのパターンのリストを示します。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 150,
+      "image": "/oxi-one-mk1/pages/page-150.png",
+      "title": "Page 150",
+      "sectionName": null,
+      "content": "X：0〜17",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 151,
+      "image": "/oxi-one-mk1/pages/page-151.png",
+      "title": "Page 151",
+      "sectionName": null,
+      "content": "X: 18〜35",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 152,
+      "image": "/oxi-one-mk1/pages/page-152.png",
+      "title": "Page 152",
+      "sectionName": null,
+      "content": "X: 36〜53",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 153,
+      "image": "/oxi-one-mk1/pages/page-153.png",
+      "title": "Page 153",
+      "sectionName": null,
+      "content": "X：54〜71",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 154,
+      "image": "/oxi-one-mk1/pages/page-154.png",
+      "title": "Page 154",
+      "sectionName": null,
+      "content": "X: 72〜89",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 155,
+      "image": "/oxi-one-mk1/pages/page-155.png",
+      "title": "Page 155",
+      "sectionName": null,
+      "content": "X from 90 to 97\n\n4 to the floor\n\njungle\n\ndrum and bass\n\nhip hop 1\n\ntrap 1",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 156,
+      "image": "/oxi-one-mk1/pages/page-156.png",
+      "title": "Page 156",
+      "sectionName": null,
+      "content": "X from 98 to 127\n\nFunky drummer @Capsella\n\nWhen the levee breaks @Capsella\n\nAmen brother @Capsella\n\nBreakbeat @Wabbit\n\nDub @Wabbit",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 157,
+      "image": "/oxi-one-mk1/pages/page-157.png",
+      "title": "Page 157",
+      "sectionName": null,
+      "content": "適合宣言\n\n特別メッセージ\n\n本製品は充電式バッテリーを使用しています。本製品は、マニュアルに記載されているか、またはOXI Instrumentsが特別に推奨する電源アダプター以外には接続しないでください。\n\n本製品は、同梱のコンポーネントのみとともに使用してください。非公式のアクセサリーを使用する場合は、仕様が公式のものと同一であることを確認してください。\n\n重要：OXI Oneを開けたり分解したりしないでください。技術的な問題が発生した場合は、OXI Instrumentsにお問い合わせください。OXI Oneを開けたり分解したりすると、保証が無効になります。\n\nFCC情報（U.S.A）\n\n1. 重要なお知らせ：本機を改造しないでください！\n\n本製品は、製造・組み立て時にFCCの要件を満たしています。OXI Instrumentsが明示的に承認していない改造を行うと、FCCから付与された本製品の使用権限が失われる可能性があります。\n\n本機はFCC規則のパート15に準拠しています。使用は以下の2つの条件に従います：（1）本機は有害な干渉を引き起こさないこと、および（2）本機は望ましくない動作を引き起こす可能性のある干渉を含む、受信したあらゆる干渉を受け入れなければならないこと。\n\nFCC ID: 2A094-MK02を含む\n\n2. 重要\n\n本製品をアクセサリーや他の製品に接続する場合は、高品質のシールドケーブルのみを使用してください。本製品に付属のケーブルを必ず使用してください。すべての取り付け手順に従ってください。手順に従わない場合、米国での本製品の使用に関するFCC認可が無効になる可能性があります。\n\n3. 注意\n\n本機器はテストされ、FCC規則のパート15に従い、クラスBデジタル機器の制限に準拠していることが確認されています。\n\nこれらの制限は、住宅環境での有害な干渉に対して適切な保護を提供するために設計されています。\n\n本機器は無線周波数エネルギーを生成・使用・放射することがあり、指示に従って取り付け・使用しない場合、無線通信に有害な干渉を引き起こす可能性があります。\n\nただし、特定の取り付け状況で干渉が発生しないことを保証するものではありません。本機器がラジオやテレビの受信に有害な干渉を引き起こす場合（機器のオン・オフを切り替えることで確認できます）、ユーザーは以下の方法の1つまたは複数を試みて干渉を解消することを推奨します：",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 158,
+      "image": "/oxi-one-mk1/pages/page-158.png",
+      "title": "Page 158",
+      "sectionName": null,
+      "content": "• 受信アンテナの向きや設置場所を変えてください。\n\n• 機器と受信機の間の距離を広げてください。\n\n• 受信機が接続されている回路とは異なる回路のコンセントに機器を接続してください。\n\n• 販売店または経験豊富なラジオ/TVの技術者にご相談ください。\n\n適合宣言\n\n米国の適合宣言の全文は、以下のインターネットアドレスでご確認いただけます：\nwww.oxiinstruments.com/\n\nヨーロッパ\n\n本製品は、欧州指令2014/53/EUおよび指令2011/65/EUの要件に準拠しています。\n\nEUの適合宣言の全文は、以下のインターネットアドレスでご確認いただけます：\nwww.oxiinstruments.com/\n\n環境に関する注意事項：\n\nこのシンボルは、本製品を一般家庭ごみとして処理してはならないことを示しています。使用期間が終了した際には、電気機器のリサイクルのための適切な収集場所に持ち込む必要があります。電池および電気機器を適切にリサイクルすることで、環境と健康・安全に対するリスクを回避することに貢献できます。\n\n製品廃棄に関するご注意：本製品が修理不能なほど損傷した場合、またはいかなる理由においても使用期間が終了したとみなされる場合は、鉛、電池、プラスチックなどの材料を含む製品の適切な廃棄およびリサイクルに関する地域・州・欧州の規制、ならびにこれらの製品の収集場所についてご確認ください。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 159,
+      "image": "/oxi-one-mk1/pages/page-159.png",
+      "title": "Page 159",
+      "sectionName": null,
+      "content": "これらのシンボルは、本製品にバッテリーが含まれており、家庭ごみとして廃棄できないことを示しています。使用期限が終了したら、バッテリーの適切なリサイクルのために、関連する収集ポイントに持ち込む必要があります。\n\n本製品は無線機器として分類されています。\n\nシリアルナンバーの位置：\n\nシリアルナンバーは、本体底面に貼付されたラベルに記載されています。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 160,
+      "image": "/oxi-one-mk1/pages/page-160.png",
+      "title": "Page 160",
+      "sectionName": null,
+      "content": "保証条件\n\n返金ポリシー（欧州連合内のみ）\n\n消費者は、OXI Oneの購入から14日以内に製品を返品し、全額返金を受ける権利があります。全額返金を受けるためには、製品が同一の状態であり、すべての元のコンテンツが揃っていることが必要です。\n\n送料はお客様のご負担となります。\n\n保証\n\nOXI Instrumentsは、付属のハードウェア製品およびアクセサリーについて、当初の購入日から2年間、材料および製造上の欠陥に対して保証します。別途証明されない限り、製品の引渡しから6ヶ月以内に明らかになった適合性の違反は、引渡し時点ですでに存在していたものと推定されます。\n\n以下の場合の修理費用は保証対象外となります：\n\n● 極端な条件下での使用や誤った使用方法によるOXI Oneの誤用。\n\n● 製品の不適切な取り扱い。\n\n● 通常の摩耗・損耗、または事故や乱用による損傷。\n\n● OXI Instrumentsが認定していないアクセサリーの使用による誤作動。",
+      "hasContent": true,
+      "tags": []
+    },
+    {
+      "pageNum": 161,
+      "image": "/oxi-one-mk1/pages/page-161.png",
+      "title": "Page 161",
+      "sectionName": null,
+      "content": "© 2024 OXI ELECTRONIC INSTRUMENTS SLU. All rights reserved. OXI INSTRUMENTSおよびOXIロゴは、EU内においてOXI INSTRUMENTSの登録商標であり、その他多くの国々でも登録されています。OXI ONEはOXI INSTRUMENTSの商標です。デザインおよび仕様は予告なく変更されることがあります。OXI ONEは一部の国では使用が認可されていない場合があります。",
+      "hasContent": true,
+      "tags": []
+    }
+  ]
+}
