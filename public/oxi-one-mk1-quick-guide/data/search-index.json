@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "QUICK GUIDE 4.2 バッテリー駆動のパフォーマティブ Sequencer、Controller、および Composition ツール（4つの完全独立した Sequencer を搭載） Encoder 機能 プライマリーパラメーター（グローバル Vel、Oct など）を変更するには、Encoder を回します。 Sequencer モードに応じて Vel、Gate などのビューに入るには、Encoder を回します。 セカンダリーパラメーター（Tempo、Swing など）を変更するには、SHIFT を押しながら回します。 セカンダリーパラメーターをリセットするには、SHIFT + Encoder ボタンを押します。 Scale Root Note | Octave Sequencer Division Battery State Clock Source Swing Track 番号 Playback Direction Sequencer Type Tempo Bluetooth Connection Display & Encoders (1) Grid (2)",
+    "url": "/oxi-one-mk1-quick-guide/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "MOD PERFORM Encoderを使用するか、グリッドに描画することで、利用可能なモジュレーションレーンのグローバル値を変更します。 モジュレーションをアクティブ/非アクティブにします。 SHIFT + MOD PERFORM / MOD PERFORM: MOD 設定。 ダブルタップで EXTERNAL MOD に入ります：CV Input・MIDI Mappings。 FOLLOW ON にすると、グリッドは常に Transport Bar の位置を表示します（MULTITRACK Mode では選択中のトラックについて）。ページ間を自動的に切り替えます。 Y DIVISION MENU グリッドの垂直スクロール Playback direction Grid Division/Resolution SHIFT + Y DIVISION: 垂直スクロール。 EXPAND：現在のシーケンスをより高い解像度にズームインします。1/16 ノートが 1/32 ノートになります（非可逆操作）。 PAGES グリッドが表示する Step Page を選択します。ダブルタップで",
+    "url": "/oxi-one-mk1-quick-guide/page/2"
+  },
+  {
+    "id": "3",
+    "pageNum": 3,
+    "title": "Page 3",
+    "sectionName": null,
+    "body": "SEQUENCER MODES MONOPHONIC / POLYPHONIC / CHORD GENERATIVE MODES MONO MODE はステップごとに 1つのアクティブノートしか持てません。メロディラインをすばやく変更するのに適しています。 POLY MODE はステップごとに最大 7つのアクティブノートを持てます。ポリフォニックパターンに対してより自由度があります。 CHORD MODE では、さまざまなコードタイプとボイシングを含む定義済みのパレットからコードプログレッションを書くことができます。 コードサブメニュー（Step Chord）から、コードタイプとボイシングをグローバルまたはステップごとに編集できます。 MONO シーケンスは、Sequencer 設定メニューから、または単純に MONO Seq を POLY Seq にコピーすることで POLY シーケンスに変換できます。 CHORD シーケンスも POLY シーケンスに変換できます。MONO の場合と同じ手順を繰り返します。コードは POLY Seq",
+    "url": "/oxi-one-mk1-quick-guide/page/3"
+  },
+  {
+    "id": "4",
+    "pageNum": 4,
+    "title": "Page 4",
+    "sectionName": null,
+    "body": "CONNECTIONS OXI One をコンピューターまたは USB 電源に付属のケーブルで接続して、バッテリーを完全に充電します。 モバイルまたはデスクトップ用の任意のオーディオアプリや、お気に入りの DAW と一緒に OXI ONE を使い始めることができます。 また、付属の DIN to TRS アダプターを使用して、MIDI シンセサイザーに直接接続することもできます。 ARRANGEMENT VIEW Arranger ビューでは、パターンをすばやく効果的にアレンジまたはチェーンできます。 このビューはパターンをクイックロードまたはセーブする別の方法でもあります。 Arranger を最大限に活用するには、マニュアルをご確認ください。 MULTITRACK SHORTCUTS MUTE + 1列目：該当するトラックをミュート/ミュート解除します。 MUTE + 16列目：該当するトラックをソロ/ソロ解除します。 RANDOM、LFO または Ext MOD を押し続ける：1列目（マスク）で、それぞれ Random、LFO または Ext",
+    "url": "/oxi-one-mk1-quick-guide/page/4"
+  }
+]
