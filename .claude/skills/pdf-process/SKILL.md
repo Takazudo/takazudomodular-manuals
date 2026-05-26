@@ -84,12 +84,13 @@ This will execute all pipeline steps in order:
 2. **Clean** - Remove all existing generated files (images, data, split PDFs)
 3. **Split** - Split PDF into parts (30 pages each)
 4. **Render** - Render pages to PNG images (150 DPI)
-5. **Extract** - Extract text from PDFs
-6. **Translate** - Translate to Japanese using manual-translator subagents (Task tool)
-7. **Build** - Build final JSON files
-8. **Manifest** - Create manifest.json
-9. **Update Manifest** - Add brand name and title to manifest (from Step 0)
-10. **Update Registry** - Add manual to `lib/manual-registry.ts` for Next.js build
+5. **Thumbnails** - Generate 150px-wide thumbnail images from rendered pages (`pnpm run thumbs:generate:slug --slug <slug>`)
+6. **Extract** - Extract text from PDFs
+7. **Translate** - Translate to Japanese using manual-translator subagents (Task tool)
+8. **Build** - Build final JSON files
+9. **Manifest** - Create manifest.json
+10. **Update Manifest** - Add brand name and title to manifest (from Step 0)
+11. **Update Registry** - Add manual to `lib/manual-registry.ts` for Next.js build
 
 **Phase 2: Verification (AI-Powered)**
 
@@ -285,9 +286,12 @@ These steps can be run directly using pnpm with the --slug parameter:
 
 - `pnpm run pdf:split --slug <slug>` - Split PDF into parts (30 pages each)
 - `pnpm run pdf:render --slug <slug>` - Render pages to PNG images (150 DPI)
+- `pnpm run thumbs:generate:slug --slug <slug>` - Generate thumbnails from rendered pages (outputs to `public/<slug>/thumbs/`)
 - `pnpm run pdf:extract --slug <slug>` - Extract text from PDFs
 
 **Note:** All commands now require the --slug parameter to specify which manual to process.
+
+**Thumbnail generation** must run after `pdf:render` because it reads from `public/<slug>/pages/`. It is included in `pdf:all` automatically.
 
 ### Step 4: Translation (Optimized Worker Pool with Direct File Writing)
 
@@ -566,11 +570,11 @@ const registryEntry = `  '${slug}': {
 - Build will succeed but the manual pages won't be generated
 - Users will see 404 when accessing the manual URL
 
-### Steps 9-16: Verification Phase (MANDATORY)
+### Steps 12-19: Verification Phase (MANDATORY)
 
 **After all translation and build steps are complete, execute the verification phase directly (do NOT call /l-verify-translation as a separate skill).**
 
-#### Step 9: Build Production
+#### Step 12: Build Production
 
 ```bash
 pnpm build
@@ -578,7 +582,7 @@ pnpm build
 
 This creates an optimized production build in `/out/` directory.
 
-#### Step 10: Start Production Server
+#### Step 13: Start Production Server
 
 ```bash
 # Start serve in background
@@ -591,7 +595,7 @@ sleep 3
 curl -s -o /dev/null -w "%{http_code}" http://localhost:8030/manuals/$SLUG/page/1
 ```
 
-#### Step 11: Capture All Pages
+#### Step 14: Capture All Pages
 
 **Use the lightweight capture script (NOT MCP Playwright):**
 
@@ -609,7 +613,7 @@ This script:
 - Saves to `__inbox/verify-{slug}-{date}-{session}/`
 - Outputs summary.json with results
 
-#### Step 12: AI-Powered Verification
+#### Step 15: AI-Powered Verification
 
 **For EACH captured page, perform visual verification:**
 
@@ -636,21 +640,21 @@ This script:
 }
 ```
 
-#### Step 13: Fix Extraction Failures
+#### Step 16: Fix Extraction Failures
 
 For each page flagged as needing fix:
 
-**13.1 Regenerate extracted text from PDF image:**
+**16.1 Regenerate extracted text from PDF image:**
 
 Look at the PDF image (left side of screenshot) and extract ALL visible English text in correct reading order.
 
-**13.2 Update the extracted text file:**
+**16.2 Update the extracted text file:**
 
 ```bash
 Write to: public/$SLUG/processing/extracted/page-XXX.txt
 ```
 
-**13.3 Re-translate the page:**
+**16.3 Re-translate the page:**
 
 ```xml
 <invoke name="Task">
@@ -663,7 +667,7 @@ Page: XXX, Total: YYY</parameter>
 </invoke>
 ```
 
-#### Step 14: Rebuild After Fixes
+#### Step 17: Rebuild After Fixes
 
 If any pages were fixed:
 
@@ -683,13 +687,13 @@ rm -rf public/manuals/
 pnpm format:fix
 ```
 
-#### Step 15: Stop Serve Process
+#### Step 18: Stop Serve Process
 
 ```bash
 lsof -ti:8030 | xargs kill -9 2>/dev/null || true
 ```
 
-#### Step 16: Generate Report
+#### Step 19: Generate Report
 
 Output a verification report:
 
@@ -739,13 +743,14 @@ This runs everything automatically including verification.
 ### Individual Steps (for debugging)
 
 ```bash
-pnpm run pdf:clean --slug <slug>     # Clean existing files
-pnpm run pdf:split --slug <slug>     # Split PDF
-pnpm run pdf:render --slug <slug>    # Render pages
-pnpm run pdf:extract --slug <slug>   # Extract text
+pnpm run pdf:clean --slug <slug>              # Clean existing files
+pnpm run pdf:split --slug <slug>              # Split PDF
+pnpm run pdf:render --slug <slug>             # Render pages
+pnpm run thumbs:generate:slug --slug <slug>   # Generate thumbnails (after render)
+pnpm run pdf:extract --slug <slug>            # Extract text
 # Translation via Task tool (manual-translator subagents)
-pnpm run pdf:build --slug <slug>     # Build JSON
-pnpm run pdf:manifest --slug <slug>  # Create manifest
+pnpm run pdf:build --slug <slug>              # Build JSON
+pnpm run pdf:manifest --slug <slug>           # Create manifest
 ```
 
 ### Manual Verification (if needed separately)
