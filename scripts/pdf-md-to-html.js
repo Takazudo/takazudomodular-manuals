@@ -9,18 +9,28 @@
  * `contentHtml` field deterministically — re-running is idempotent.
  *
  * Pipeline: unified + remark-parse + remark-gfm + remark-rehype + rehype-slug
- *           + rehype-highlight + rehype-stringify
+ *           + rehype-highlight + rehypeWrapTables + rehype-stringify
  *
  * This mirrors `components/markdown-renderer.tsx` which uses:
  *   - remark-gfm (GFM tables, strikethrough, task lists)
  *   - rehype-slug (heading anchor IDs via `id` attributes)
  *   - rehype-highlight (code syntax highlighting via `hljs` classes)
  *
+ * Element-tree / CSS contract (for #128 prose CSS + Sub 4 island):
+ *   - Code highlighting uses the `hljs` class namespace (rehype-highlight),
+ *     NOT syntect. #128's highlight.js theme CSS targets `.hljs` / `.hljs-*`.
+ *   - Each <table> is wrapped in <div class="table-wrapper"> (mirrors the
+ *     React `Table` component's scroll wrapper) so wide tables can scroll.
+ *     This must happen at HTML-gen time because a page can contain multiple
+ *     tables and the island can only wrap the whole blob, not each table.
+ *   - The OUTER `.zd-prose` wrapper is NOT baked into contentHtml — Sub 4's
+ *     island adds `className="zd-prose"` to its container once. #128's prose
+ *     CSS should scope under `.zd-prose` and `.zd-prose .table-wrapper`.
+ *
  * Structural deviations from react-markdown custom components (intentional):
- *   - <table> is NOT wrapped in <div role="region"> (Table component adds this)
  *   - <h2>/<h3> have no extra <span> or anchor-link children (H2/H3 add decorative spans)
  *   - <a> does NOT get target="_blank" on external links (A component adds this)
- *   - No Tailwind CSS classNames on any element (Sub 2's prose CSS targets elements)
+ *   - No Tailwind CSS classNames on elements (replaced by #128's prose CSS)
  * Sub 4's island relies on prose CSS, not custom React components, so raw HTML is correct.
  *
  * Usage:
@@ -42,11 +52,39 @@ import remarkRehype from 'remark-rehype';
 import rehypeSlug from 'rehype-slug';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeStringify from 'rehype-stringify';
+import { visit, SKIP } from 'unist-util-visit';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 export const ROOT_DIR = join(__dirname, '..');
 const PUBLIC_DIR = join(ROOT_DIR, 'public');
+
+/**
+ * Rehype plugin: wrap every <table> in a <div class="table-wrapper">.
+ *
+ * Mirrors the React `Table` component (`components/markdown/table.tsx`) which
+ * renders `<div class="overflow-x-auto"><table>…</table></div>` so wide GFM
+ * tables can scroll horizontally. #128's prose CSS styles `.table-wrapper`.
+ *
+ * Returning [SKIP, index + 1] after replacing the node prevents the visitor
+ * from descending into the freshly inserted wrapper (which would re-match the
+ * same <table> and recurse infinitely).
+ */
+function rehypeWrapTables() {
+  return (tree) => {
+    visit(tree, 'element', (node, index, parent) => {
+      if (node.tagName !== 'table' || !parent || typeof index !== 'number') return;
+      const wrapper = {
+        type: 'element',
+        tagName: 'div',
+        properties: { className: ['table-wrapper'] },
+        children: [node],
+      };
+      parent.children[index] = wrapper;
+      return [SKIP, index + 1];
+    });
+  };
+}
 
 // --------------------------------------------------------------------------
 // Build the unified processor ONCE and reuse — process() calls are stateless
@@ -58,6 +96,7 @@ const processor = unified()
   .use(remarkRehype)
   .use(rehypeSlug)
   .use(rehypeHighlight)
+  .use(rehypeWrapTables)
   .use(rehypeStringify);
 
 /**
