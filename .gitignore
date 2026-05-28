@@ -97,3 +97,6 @@ temp-processing/
 
 # Accidental paths
 Users/
+
+# zfb build artifact written to repo root
+zfb-tailwind-entry-*.css
