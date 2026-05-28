@@ -10,7 +10,7 @@
 // (LandingLangIsland + LandingSearchIsland) since the mega-island
 // only mounts on detail pages.
 
-import { getAvailableManuals, getManifest } from '@/lib/zfb-registry';
+import { getAvailableManuals, getManifest, hasEnglish } from '@/lib/zfb-registry';
 import { Island } from '@takazudo/zfb';
 import DefaultLayout from '../../layouts/default';
 import { ArrowLink } from '../../components/zfb/arrow-link';
@@ -23,10 +23,9 @@ export function paths() {
   const manualIds = getAvailableManuals();
   return manualIds.map((manualId) => {
     const manifest = getManifest(manualId);
-    // availableLangs: zfb-registry doesn't bundle pages EN JSON so we
-    // default to ['ja', 'en'] (the island fetches at runtime and falls
-    // back gracefully). TODO #133: expose hasEnglish in manifest.json.
-    const availableLangs: Lang[] = ['ja', 'en'];
+    // All current manuals have EN; hasEnglish() returns false for unknown IDs.
+    // See zfb-registry.ts for the hasEnglish follow-up note.
+    const availableLangs: Lang[] = ['ja', ...(hasEnglish(manualId) ? ['en' as Lang] : [])];
     return {
       params: { manualId },
       props: {
