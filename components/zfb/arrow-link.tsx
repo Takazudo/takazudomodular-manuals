@@ -1,3 +1,4 @@
+import type { ComponentChildren } from 'preact';
 import ctl from './ctl';
 
 const linkStyles = ctl(`
@@ -15,7 +16,7 @@ const arrowStyles = ctl(`
 
 interface ArrowLinkProps {
   href: string;
-  children: unknown;
+  children: ComponentChildren;
   external?: boolean;
 }
 
@@ -47,7 +48,7 @@ export function ArrowLink({ href, children, external }: ArrowLinkProps) {
       <span className="pr-[12px]">
         <ArrowRightSvg className={arrowStyles} />
       </span>
-      <span>{children as never}</span>
+      <span>{children}</span>
     </>
   );
 

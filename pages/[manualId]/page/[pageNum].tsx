@@ -85,9 +85,8 @@ export default function ViewerPage({
   appManifest,
 }: ViewerPageInput) {
   const { manualId } = params;
-  const pageNumInt = currentPageNum;
 
-  const pageTitle = `${currentPageTitle} (Page ${pageNumInt}) - ${appManifest.title}`;
+  const pageTitle = `${currentPageTitle} (Page ${currentPageNum}) - ${appManifest.title}`;
   const manualHref = `/manuals/${manualId}`;
 
   // Reconstruct the ManualPage object for ViewerShell (server-render only).
@@ -109,7 +108,7 @@ export default function ViewerPage({
       <Island when="load">
         <ManualApp
           manualId={manualId}
-          initialPageNum={pageNumInt}
+          initialPageNum={currentPageNum}
           totalPages={totalPages}
           availableLangs={availableLangs}
           initialLang="ja"
@@ -118,7 +117,7 @@ export default function ViewerPage({
           {/* SSR'd current page body — image column + translation column.
               Visible immediately in HTML before JS hydrates. The ManualApp
               island captures this via BODY_MARKER_ATTR and reinjects it. */}
-          <ViewerShell page={currentPage} pageNum={pageNumInt} totalPages={totalPages} />
+          <ViewerShell page={currentPage} pageNum={currentPageNum} totalPages={totalPages} />
         </ManualApp>
       </Island>
     </DefaultLayout>
