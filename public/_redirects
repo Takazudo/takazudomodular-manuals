@@ -1,1 +1,6 @@
 / /manuals/ 302
+
+# Legacy single-manual deep links: /manuals/page/N → oxi-one-mk2 viewer.
+# Replaces the per-page Next.js redirect() in app/page/[pageNum]/page.tsx
+# (one glob line covers every N). :n is a named placeholder echoed in the target.
+/manuals/page/:n /manuals/oxi-one-mk2/page/:n 301
