@@ -13,6 +13,8 @@ export default [
     ignores: [
       'node_modules/**',
       '.next/**',
+      '.zfb-build/**',
+      'dist/**',
       'out/**',
       'public/**',
       '*.min.js',

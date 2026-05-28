@@ -1,0 +1,458 @@
+/* ══════════════════════════════════════════════════════════════════════
+   styles/prose.css — CSS-only equivalent of components/markdown/*
+   Used by the zfb build when Sub 3 (#129) emits pre-rendered HTML
+   (`contentHtml`). The HTML must be wrapped in `.zd-prose` by Sub 3.
+
+   Each rule below corresponds to a React component in components/markdown/
+   and mirrors its Tailwind classes using the same Zudo CSS variables so
+   visual output is identical.
+
+   IMPORTANT — Syntax highlighting class namespace:
+   The current Next.js build uses rehype-highlight → highlight.js (hljs).
+   The zfb build uses syntect which emits `<pre class="syntect-…"><code>`.
+   Rules below cover both namespaces:
+     .zd-prose pre code.hljs          → rehype-highlight path (Next.js)
+     .zd-prose pre[class*="syntect-"] → syntect path (zfb)
+   Sub 3 / #129 should confirm which namespace the contentHtml uses and
+   remove the unused ruleset. This delta is documented in issue #128.
+
+   zd-primary NOTE:
+   The React components reference `text-zd-primary` / `border-zd-primary`
+   but --color-zd-primary is NOT defined in the design system. These are
+   dead tokens that render as inherited/transparent in the current site.
+   In prose.css we replace them with var(--zd-color-strong) (#d97706,
+   orange-amber) as the nearest intentional emphasis color. Sub 9 / the
+   cutover can align this with whatever color the design system assigns.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ── Responsive typography helpers (mirrors md:/lg: breakpoints) ──── */
+/* Base sizes are mobile-first; overrides at md (740px) and lg (980px). */
+
+/* ── H1 — mirrors h1.tsx ──────────────────────────────────────────── */
+/* text-2xl md:text-3xl lg:text-4xl font-bold text-zd-white mb-vgap-md pb-vgap-sm border-b-4 border-zd-white */
+.zd-prose h1 {
+  font-size: var(--zd-font-2xl-size);
+  line-height: var(--zd-font-2xl-lineHeight);
+  font-weight: 700;
+  color: var(--zd-color-white);
+  margin-bottom: var(--zd-spacing-vgap-md);
+  padding-bottom: var(--zd-spacing-vgap-sm);
+  border-bottom: 4px solid var(--zd-color-white);
+  text-wrap: balance;
+}
+
+@media (min-width: 740px) {
+  .zd-prose h1 {
+    font-size: var(--zd-font-3xl-size);
+    line-height: var(--zd-font-3xl-lineHeight);
+  }
+}
+
+@media (min-width: 980px) {
+  .zd-prose h1 {
+    font-size: var(--zd-font-4xl-size);
+    line-height: var(--zd-font-4xl-lineHeight);
+  }
+}
+
+/* ── H2 — mirrors h2.tsx ──────────────────────────────────────────── */
+/* pt-vgap-sm md:pt-vgap-md text-base md:text-lg lg:text-xl pb-vgap-sm lg:pb-vgap-md font-bold text-zd-white clear-both */
+/* The React component renders elaborate nested spans with a gradient border effect. */
+/* CSS-only equivalent: top/bottom padding, bold white text, border-top. */
+.zd-prose h2 {
+  padding-top: var(--zd-spacing-vgap-sm);
+  padding-bottom: var(--zd-spacing-vgap-sm);
+  font-size: var(--zd-font-base-size);
+  line-height: var(--zd-font-base-lineHeight);
+  font-weight: 700;
+  color: var(--zd-color-white);
+  clear: both;
+  border-top: 1px solid var(--zd-color-white);
+  text-wrap: balance;
+}
+
+@media (min-width: 740px) {
+  .zd-prose h2 {
+    padding-top: var(--zd-spacing-vgap-md);
+    font-size: var(--zd-font-lg-size);
+    line-height: var(--zd-font-lg-lineHeight);
+  }
+}
+
+@media (min-width: 980px) {
+  .zd-prose h2 {
+    padding-bottom: var(--zd-spacing-vgap-md);
+    font-size: var(--zd-font-xl-size);
+    line-height: var(--zd-font-xl-lineHeight);
+  }
+}
+
+/* ── H3 — mirrors h3.tsx ──────────────────────────────────────────── */
+/* text-sm sm:text-lg pt-vgap-md pb-vgap-md font-bold text-zd-white */
+/* React component also renders a gradient-to-black rule above the heading. */
+.zd-prose h3 {
+  font-size: var(--zd-font-sm-size);
+  line-height: var(--zd-font-sm-lineHeight);
+  padding-top: var(--zd-spacing-vgap-md);
+  padding-bottom: var(--zd-spacing-vgap-md);
+  font-weight: 700;
+  color: var(--zd-color-white);
+  text-wrap: balance;
+}
+
+/* Gradient rule above h3 — mirrors the span.bg-linear-to-r in h3.tsx */
+.zd-prose h3::before {
+  content: '';
+  display: block;
+  height: 1px;
+  margin-bottom: var(--zd-spacing-vgap-sm);
+  background: linear-gradient(to right, var(--zd-color-white), var(--zd-color-black));
+}
+
+@media (min-width: 580px) {
+  .zd-prose h3 {
+    font-size: var(--zd-font-lg-size);
+    line-height: var(--zd-font-lg-lineHeight);
+  }
+}
+
+/* ── H4 — mirrors h4.tsx ──────────────────────────────────────────── */
+/* font-bold pb-vgap-sm text-sm md:text-lg text-zd-gray7 */
+.zd-prose h4 {
+  font-weight: 700;
+  padding-bottom: var(--zd-spacing-vgap-sm);
+  font-size: var(--zd-font-sm-size);
+  line-height: var(--zd-font-sm-lineHeight);
+  color: var(--zd-color-gray7);
+  text-wrap: balance;
+}
+
+@media (min-width: 740px) {
+  .zd-prose h4 {
+    font-size: var(--zd-font-lg-size);
+    line-height: var(--zd-font-lg-lineHeight);
+  }
+}
+
+/* ── H5 — mirrors h5.tsx ──────────────────────────────────────────── */
+/* font-bold pb-vgap-sm text-sm md:text-base text-zd-gray7 */
+.zd-prose h5 {
+  font-weight: 700;
+  padding-bottom: var(--zd-spacing-vgap-sm);
+  font-size: var(--zd-font-sm-size);
+  line-height: var(--zd-font-sm-lineHeight);
+  color: var(--zd-color-gray7);
+  text-wrap: balance;
+}
+
+@media (min-width: 740px) {
+  .zd-prose h5 {
+    font-size: var(--zd-font-base-size);
+    line-height: var(--zd-font-base-lineHeight);
+  }
+}
+
+/* ── H6 — mirrors h6.tsx ──────────────────────────────────────────── */
+/* font-bold pb-vgap-sm text-sm text-zd-gray7 */
+.zd-prose h6 {
+  font-weight: 700;
+  padding-bottom: var(--zd-spacing-vgap-sm);
+  font-size: var(--zd-font-sm-size);
+  line-height: var(--zd-font-sm-lineHeight);
+  color: var(--zd-color-gray7);
+  text-wrap: balance;
+}
+
+/* ── P — mirrors p.tsx ────────────────────────────────────────────── */
+/* text-sm md:text-base pb-vgap-md mt-[-0.3em] text-zd-gray7 */
+.zd-prose p {
+  font-size: var(--zd-font-sm-size);
+  line-height: var(--zd-font-sm-lineHeight);
+  padding-bottom: var(--zd-spacing-vgap-md);
+  margin-top: -0.3em;
+  color: var(--zd-color-gray7);
+}
+
+@media (min-width: 740px) {
+  .zd-prose p {
+    font-size: var(--zd-font-base-size);
+    line-height: var(--zd-font-base-lineHeight);
+  }
+}
+
+/* ── A — mirrors a.tsx ────────────────────────────────────────────── */
+/* text-zd-primary underline hover:text-zd-white transition-colors
+   NOTE: zd-primary is undefined in the design system. Using zd-strong
+   (#d97706) as nearest intentional emphasis color. Sub 9 can revise. */
+.zd-prose a {
+  color: var(--zd-color-strong);
+  text-decoration: underline;
+  transition-property: color;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.zd-prose a:hover {
+  color: var(--zd-color-white);
+}
+
+/* ── STRONG — mirrors strong.tsx ──────────────────────────────────── */
+/* text-zd-white font-bold */
+.zd-prose strong {
+  color: var(--zd-color-white);
+  font-weight: 700;
+}
+
+/* ── EM — mirrors em.tsx ──────────────────────────────────────────── */
+/* italic */
+.zd-prose em {
+  font-style: italic;
+}
+
+/* ── HR — mirrors hr.tsx ──────────────────────────────────────────── */
+/* border-0 h-[4px] bg-zd-white my-vgap-md lg:my-vgap-lg */
+.zd-prose hr {
+  border: 0;
+  height: 4px;
+  background-color: var(--zd-color-white);
+  margin-top: var(--zd-spacing-vgap-md);
+  margin-bottom: var(--zd-spacing-vgap-md);
+}
+
+@media (min-width: 980px) {
+  .zd-prose hr {
+    margin-top: var(--zd-spacing-vgap-lg);
+    margin-bottom: var(--zd-spacing-vgap-lg);
+  }
+}
+
+/* ── INLINE CODE — mirrors code.tsx (inline branch) ──────────────── */
+/* bg-zd-gray3 text-zd-primary font-mono px-[5px] py-[3px] mx-[3px] rounded
+   NOTE: zd-primary → using zd-strong as fallback. See note at top. */
+.zd-prose :not(pre) > code {
+  background-color: var(--zd-color-gray3);
+  color: var(--zd-color-strong);
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  padding: 3px 5px;
+  margin: 0 3px;
+  border-radius: 0.25rem;
+}
+
+/* ── PRE — mirrors pre.tsx ────────────────────────────────────────── */
+/* bg-zd-gray3 p-hgap-sm rounded-md overflow-x-auto mb-vgap-md */
+.zd-prose pre {
+  background-color: var(--zd-color-gray3);
+  padding: var(--zd-spacing-hgap-sm);
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  margin-bottom: var(--zd-spacing-vgap-md);
+}
+
+/* ── BLOCK CODE — mirrors code.tsx (block branch inside <pre>) ────── */
+/* font-mono text-zd-gray7 */
+/* Both hljs and syntect paths receive the same base treatment. */
+.zd-prose pre code,
+.zd-prose pre code.hljs,
+.zd-prose pre[class*='syntect-'] code {
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  color: var(--zd-color-gray7);
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* ── BLOCKQUOTE — mirrors blockquote.tsx ─────────────────────────── */
+/* border-l-4 border-zd-primary pl-hgap-sm italic text-zd-gray6 mb-vgap-sm
+   NOTE: zd-primary → using zd-strong as fallback. */
+.zd-prose blockquote {
+  border-left: 4px solid var(--zd-color-strong);
+  padding-left: var(--zd-spacing-hgap-sm);
+  font-style: italic;
+  color: var(--zd-color-gray6);
+  margin-bottom: var(--zd-spacing-vgap-sm);
+}
+
+/* ── UL — mirrors ul.tsx ──────────────────────────────────────────── */
+/* text-sm md:text-base text-zd-gray7 list-disc flow-root pl-hgap-md pb-vgap-md mt-[-0.3em]
+   [&>*+*]:mt-vgap-xs [&_ul]:ml-0 [&_ul]:mt-vgap-sm [&_ul]:pb-vgap-xs */
+.zd-prose ul {
+  font-size: var(--zd-font-sm-size);
+  line-height: var(--zd-font-sm-lineHeight);
+  color: var(--zd-color-gray7);
+  list-style-type: disc;
+  display: flow-root;
+  padding-left: var(--zd-spacing-hgap-md);
+  padding-bottom: var(--zd-spacing-vgap-md);
+  margin-top: -0.3em;
+}
+
+.zd-prose ul > * + * {
+  margin-top: var(--zd-spacing-vgap-xs);
+}
+
+.zd-prose ul ul {
+  margin-left: 0;
+  margin-top: var(--zd-spacing-vgap-sm);
+  padding-bottom: var(--zd-spacing-vgap-xs);
+}
+
+@media (min-width: 740px) {
+  .zd-prose ul {
+    font-size: var(--zd-font-base-size);
+    line-height: var(--zd-font-base-lineHeight);
+  }
+}
+
+/* ── OL — mirrors ol.tsx ──────────────────────────────────────────── */
+/* text-sm md:text-base text-zd-gray7 list-decimal flow-root ml-hgap-md pb-vgap-md
+   [&>*+*]:mt-vgap-xs [&_ol]:ml-hgap-sm [&_ol]:mt-vgap-sm [&_ol]:pb-vgap-xs */
+.zd-prose ol {
+  font-size: var(--zd-font-sm-size);
+  line-height: var(--zd-font-sm-lineHeight);
+  color: var(--zd-color-gray7);
+  list-style-type: decimal;
+  display: flow-root;
+  margin-left: var(--zd-spacing-hgap-md);
+  padding-bottom: var(--zd-spacing-vgap-md);
+}
+
+.zd-prose ol > * + * {
+  margin-top: var(--zd-spacing-vgap-xs);
+}
+
+.zd-prose ol ol {
+  margin-left: var(--zd-spacing-hgap-sm);
+  margin-top: var(--zd-spacing-vgap-sm);
+  padding-bottom: var(--zd-spacing-vgap-xs);
+}
+
+@media (min-width: 740px) {
+  .zd-prose ol {
+    font-size: var(--zd-font-base-size);
+    line-height: var(--zd-font-base-lineHeight);
+  }
+}
+
+/* ── TABLE wrapper — mirrors table.tsx outer div ──────────────────── */
+/* overflow-x-auto mb-vgap-md */
+.zd-prose .table-wrapper {
+  overflow-x: auto;
+  margin-bottom: var(--zd-spacing-vgap-md);
+}
+
+/* Fallback: if Sub 3 emits <table> without .table-wrapper */
+.zd-prose table {
+  overflow-x: auto;
+  margin-bottom: var(--zd-spacing-vgap-md);
+}
+
+/* ── TABLE — mirrors table.tsx inner table ────────────────────────── */
+/* border-collapse text-xs md:text-sm lg:text-base leading-snug
+   [&_th]:border [&_th]:border-zd-white [&_th]:px-hgap-xs [&_th]:py-vgap-xs [&_th]:text-zd-white [&_th]:font-bold
+   [&_td]:border [&_td]:border-zd-gray6 [&_td]:px-hgap-xs [&_td]:py-vgap-xs [&_td]:text-zd-gray7
+   md:[&_th]:px-hgap-sm md:[&_th]:py-vgap-sm md:[&_td]:px-hgap-sm md:[&_td]:py-vgap-sm */
+.zd-prose table {
+  border-collapse: collapse;
+  font-size: var(--zd-font-xs-size);
+  line-height: var(--zd-lineHeight-snug);
+  display: table;
+}
+
+.zd-prose table th {
+  border: 1px solid var(--zd-color-white);
+  padding: var(--zd-spacing-vgap-xs) var(--zd-spacing-hgap-xs);
+  color: var(--zd-color-white);
+  font-weight: 700;
+}
+
+.zd-prose table td {
+  border: 1px solid var(--zd-color-gray6);
+  padding: var(--zd-spacing-vgap-xs) var(--zd-spacing-hgap-xs);
+  color: var(--zd-color-gray7);
+}
+
+@media (min-width: 740px) {
+  .zd-prose table {
+    font-size: var(--zd-font-sm-size);
+  }
+
+  .zd-prose table th {
+    padding: var(--zd-spacing-vgap-sm) var(--zd-spacing-hgap-sm);
+  }
+
+  .zd-prose table td {
+    padding: var(--zd-spacing-vgap-sm) var(--zd-spacing-hgap-sm);
+  }
+}
+
+@media (min-width: 980px) {
+  .zd-prose table {
+    font-size: var(--zd-font-base-size);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Syntax Highlighting — syntect theme (zfb native)
+   syntect emits inline span styles for each token; the pre element gets
+   a class like "syntect-base16-ocean-dark". We provide a base container
+   style; individual token colors come from syntect's inline style attrs.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* syntect-rendered pre blocks: reset so inline styles take over */
+.zd-prose pre[class*='syntect-'] {
+  background-color: var(--zd-color-gray3);
+  color: var(--zd-color-gray7);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Syntax Highlighting — hljs theme fallback (Next.js / rehype-highlight)
+   The current Next.js site does NOT import any hljs theme CSS — code
+   blocks are styled purely by code.tsx (monochrome text-zd-gray7).
+   This section provides minimal hljs styling aligned with that look so
+   if hljs classes appear (e.g. after Sub 3 emits contentHtml from
+   rehype-highlight), they render acceptably without a colored theme.
+   ══════════════════════════════════════════════════════════════════════ */
+
+.zd-prose .hljs {
+  background: var(--zd-color-gray3);
+  color: var(--zd-color-gray7);
+  padding: var(--zd-spacing-hgap-sm);
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Minimal token coloring aligned with Zudo dark palette */
+.zd-prose .hljs-keyword,
+.zd-prose .hljs-selector-tag,
+.zd-prose .hljs-built_in,
+.zd-prose .hljs-name,
+.zd-prose .hljs-tag {
+  color: var(--zd-color-white);
+}
+
+.zd-prose .hljs-string,
+.zd-prose .hljs-title,
+.zd-prose .hljs-section,
+.zd-prose .hljs-attr,
+.zd-prose .hljs-literal,
+.zd-prose .hljs-template-tag,
+.zd-prose .hljs-template-variable,
+.zd-prose .hljs-addition {
+  color: var(--zd-color-strong);
+}
+
+.zd-prose .hljs-comment,
+.zd-prose .hljs-quote,
+.zd-prose .hljs-deletion,
+.zd-prose .hljs-meta {
+  color: var(--zd-color-gray6);
+  font-style: italic;
+}
+
+.zd-prose .hljs-number,
+.zd-prose .hljs-regexp,
+.zd-prose .hljs-variable,
+.zd-prose .hljs-params {
+  color: var(--zd-color-gray7);
+}
