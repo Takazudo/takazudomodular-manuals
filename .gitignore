@@ -83,6 +83,10 @@ storybook-static/
 dist/
 *.log
 
+# zfb build cache and intermediate artifacts
+.zfb/
+.zfb-build/
+
 # Lock files (pnpm only)
 package-lock.json
 yarn.lock
