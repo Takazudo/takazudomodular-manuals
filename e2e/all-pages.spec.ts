@@ -19,19 +19,37 @@
  * only apply on CF Pages')`.
  */
 import { test, expect } from '@playwright/test';
-import { getAvailableManuals, getManifest } from '../lib/manual-registry';
+import { createRequire } from 'module';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+import { readdirSync, existsSync } from 'fs';
 
 // Uses playwright.config.ts baseURL (http://localhost:8030 for zfb serve).
 // Hard-coding the URL here is intentional so it is visible next to the
 // assertions and so the tests work even if baseURL changes later.
 const BASE_URL = 'http://localhost:8030';
 
-// Discover all manuals from registry
-const manualIds = getAvailableManuals();
+// Discover manuals from the filesystem (public/<id>/data/manifest.json) rather
+// than importing lib/manual-registry. The registry statically imports 158 JSON
+// files, which Playwright's Node ESM loader rejects without an `with { type:
+// "json" }` attribute. Reading the manifests directly via createRequire (CJS)
+// sidesteps the loader limitation and keeps the e2e harness decoupled from the
+// app's bundling concerns. Mirrors scripts/test-all-pages-fast.js.
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const require = createRequire(import.meta.url);
+const PUBLIC_DIR = join(__dirname, '..', 'public');
+
+const manualIds = readdirSync(PUBLIC_DIR, { withFileTypes: true })
+  .filter((d) => d.isDirectory() && existsSync(join(PUBLIC_DIR, d.name, 'data', 'manifest.json')))
+  .map((d) => d.name)
+  .sort();
 
 // Create test suite for each manual
 for (const manualId of manualIds) {
-  const manifest = getManifest(manualId);
+  const manifest = require(join(PUBLIC_DIR, manualId, 'data', 'manifest.json')) as {
+    title: string;
+    totalPages: number;
+  };
   const totalPages = manifest.totalPages;
 
   test.describe(`${manifest.title} - Smoke Test (${totalPages} pages)`, () => {
