@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "October.2023\nADDAC200PI Assembly Guide\nADDAC SYSTEM",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>October.2023\nADDAC200PI Assembly Guide\nADDAC SYSTEM</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "STEP 1:\n\nLocate and solder the 4 capacitors like shown below..",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 1:</p>\n<p>Locate and solder the 4 capacitors like shown below..</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "STEP 3:\n\nLocate and solder the 2x5 boxed pinheader like shown below.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 3:</p>\n<p>Locate and solder the 2x5 boxed pinheader like shown below.</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "STEP 6:\n\nLocate the remaining pinheaders, place and solder them like shown below.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 6:</p>\n<p>Locate the remaining pinheaders, place and solder them like shown below.</p>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "STEP 13:\nPlace all jacks like shown below.\n\nSTEP 12:\nLocate the 3.5mm jacks and cut the thinest leg like shown below.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 13:\nPlace all jacks like shown below.</p>\n<p>STEP 12:\nLocate the 3.5mm jacks and cut the thinest leg like shown below.</p>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "STEP 14:\n\nPlace the smaller pcb on the panel, tighten the nuts and solder their pads.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 14:</p>\n<p>Place the smaller pcb on the panel, tighten the nuts and solder their pads.</p>"
     },
     {
       "pageNum": 8,
@@ -80,7 +87,8 @@
       "sectionName": null,
       "content": "STEP 15:\n\nAttach the bigger pcb tighten the nuts and solder the last pads.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 15:</p>\n<p>Attach the bigger pcb tighten the nuts and solder the last pads.</p>"
     },
     {
       "pageNum": 9,
@@ -89,7 +97,8 @@
       "sectionName": null,
       "content": "Congratulations you're done!\n\nHappy Patching!!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Congratulations you're done!</p>\n<p>Happy Patching!!</p>"
     },
     {
       "pageNum": 10,
@@ -98,7 +107,8 @@
       "sectionName": null,
       "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nADDAC200PI ASSEMBLY GUIDE\nOctober.2023 Revision.02",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC200PI ASSEMBLY GUIDE\nOctober.2023 Revision.02</p>"
     }
   ]
 }

@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "ADDAC305 Assembly Guide\n\nParts included in the kit:\n\n1x Front Panel\n\n1x Pcb\n\n3x 10uF SMD Capacitors\n\n4x 100nF SMD Capacitors\n\n8x 1k SMD Resistors\n\n8x 470R SMD Resistors\n\n1x 78M05 IC\n\n2x 10mm female/female spacer\n\n4x M3 fiber washer\n\n6x M3 screws\n\n3x Nutted Jacks\n\n9x No-nut Jacks\n\n3x Jack nuts\n\n8x Push Buttons\n\n1x 2x5 IDC Connector\n\n1x Ribbon cable",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC305 Assembly Guide</p>\n<p>Parts included in the kit:</p>\n<p>1x Front Panel</p>\n<p>1x Pcb</p>\n<p>3x 10uF SMD Capacitors</p>\n<p>4x 100nF SMD Capacitors</p>\n<p>8x 1k SMD Resistors</p>\n<p>8x 470R SMD Resistors</p>\n<p>1x 78M05 IC</p>\n<p>2x 10mm female/female spacer</p>\n<p>4x M3 fiber washer</p>\n<p>6x M3 screws</p>\n<p>3x Nutted Jacks</p>\n<p>9x No-nut Jacks</p>\n<p>3x Jack nuts</p>\n<p>8x Push Buttons</p>\n<p>1x 2x5 IDC Connector</p>\n<p>1x Ribbon cable</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "ADDAC305 Assembly Guide\n\nSTEP 1:\n\nLocate Pcb and surface mount parts.\n\nSTEP 2:\n\nStart by adding a bit of solder to every smd part right pads, this will make it easier to solder the surface mount parts. If you're left handed then add solder to the left pads.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC305 Assembly Guide</p>\n<p>STEP 1:</p>\n<p>Locate Pcb and surface mount parts.</p>\n<p>STEP 2:</p>\n<p>Start by adding a bit of solder to every smd part right pads, this will make it easier to solder the surface mount parts. If you're left handed then add solder to the left pads.</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "STEP 3:\n\nNow let's place all 8 of the 1k resistors, use a tweezer and solder the right pad of each by heating the already added solder and place the part in place.\n\nSTEP 4:\n\nNext solder the right pad for all four 100nF capacitors.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 3:</p>\n<p>Now let's place all 8 of the 1k resistors, use a tweezer and solder the right pad of each by heating the already added solder and place the part in place.</p>\n<p>STEP 4:</p>\n<p>Next solder the right pad for all four 100nF capacitors.</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "STEP 5:\nRepeat the process for the eight 470R resistors.\n\nSTEP 6:\nFinally rotate the pcb 180 degrees and solder all left pads of all smd parts.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 5:\nRepeat the process for the eight 470R resistors.</p>\n<p>STEP 6:\nFinally rotate the pcb 180 degrees and solder all left pads of all smd parts.</p>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "STEP 7:\nPlace and solder the 78M05 IC.\n\nSTEP 8:\nNext place and solder the three 10uF capacitors.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 7:\nPlace and solder the 78M05 IC.</p>\n<p>STEP 8:\nNext place and solder the three 10uF capacitors.</p>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "STEP 9:\n\nPlace and solder the IDC power connnector, note that the indent faces down.\n\nSTEP 10:\n\nNext place the spacers adding a fiber washer between the pcb and the spacer.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 9:</p>\n<p>Place and solder the IDC power connnector, note that the indent faces down.</p>\n<p>STEP 10:</p>\n<p>Next place the spacers adding a fiber washer between the pcb and the spacer.</p>"
     },
     {
       "pageNum": 8,
@@ -80,7 +87,8 @@
       "sectionName": null,
       "content": "STEP 12:\nLocate and place, do not solder, the 3 jacks with threaded shaft at the bottom.\n\nWe'll now populate all front panel parts:\n\nDO NOT SOLDER ANY PART UNTIL ALL PARTS ARE PLACED!\n\nSTEP 13:\nPlace the remaining jacks.\n\nSTEP 11:\nLocate the jacks and cut the smallest legs like shown below.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 12:\nLocate and place, do not solder, the 3 jacks with threaded shaft at the bottom.</p>\n<p>We'll now populate all front panel parts:</p>\n<p>DO NOT SOLDER ANY PART UNTIL ALL PARTS ARE PLACED!</p>\n<p>STEP 13:\nPlace the remaining jacks.</p>\n<p>STEP 11:\nLocate the jacks and cut the smallest legs like shown below.</p>"
     },
     {
       "pageNum": 9,
@@ -89,7 +97,8 @@
       "sectionName": null,
       "content": "STEP 14:\n\nNext let's place latch buttons, note that the buttons have polarity because of the leds inside, longer leg is the positive (+) side. The bottom of the button also shows + & - markings to show the polarity.\n\nPlace these matching the button's polarity to the markings printed on the pcb.\n\nSTEP 15:\n\nNext let's place the front panel, use a tweezer to help getting all the jacks in their holes.\n\nSTEP 16:\n\nTighten the 3 jack nuts and the 2 screws.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 14:</p>\n<p>Next let's place latch buttons, note that the buttons have polarity because of the leds inside, longer leg is the positive (+) side. The bottom of the button also shows + &#x26; - markings to show the polarity.</p>\n<p>Place these matching the button's polarity to the markings printed on the pcb.</p>\n<p>STEP 15:</p>\n<p>Next let's place the front panel, use a tweezer to help getting all the jacks in their holes.</p>\n<p>STEP 16:</p>\n<p>Tighten the 3 jack nuts and the 2 screws.</p>"
     },
     {
       "pageNum": 10,
@@ -98,7 +107,8 @@
       "sectionName": null,
       "content": "We'll now describe s a good practice that minimizes any damage that may occur to all front panel parts for continued exposure to the soldering iron heat.\n\nIt happens often that users not very used to soldering spend too much time on each pad.\n\nAn experienced solderer will take 1-2 seconds for each pad, this minimizes the heat the part is exposed to.\n\nIf the solderer takes too much time on each pad the part may heat to a point where the plastic will start melting/deforming and may render the part useless.\n\nWe'll exemplify the process with jacks.\n\nStep 1 : Start by soldering only one pad of each jack first.\n\nStep 2 : Then solder a second pad of each jack.\n\nStep 3 : Finally solder the remaining pads of all jacks.\n\nRespecting this very simple process for all parts will guarantee no part will be damaged as they'll have time to cool down between every soldered pad.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>We'll now describe s a good practice that minimizes any damage that may occur to all front panel parts for continued exposure to the soldering iron heat.</p>\n<p>It happens often that users not very used to soldering spend too much time on each pad.</p>\n<p>An experienced solderer will take 1-2 seconds for each pad, this minimizes the heat the part is exposed to.</p>\n<p>If the solderer takes too much time on each pad the part may heat to a point where the plastic will start melting/deforming and may render the part useless.</p>\n<p>We'll exemplify the process with jacks.</p>\n<p>Step 1 : Start by soldering only one pad of each jack first.</p>\n<p>Step 2 : Then solder a second pad of each jack.</p>\n<p>Step 3 : Finally solder the remaining pads of all jacks.</p>\n<p>Respecting this very simple process for all parts will guarantee no part will be damaged as they'll have time to cool down between every soldered pad.</p>"
     },
     {
       "pageNum": 11,
@@ -107,7 +117,8 @@
       "sectionName": null,
       "content": "STEP 17:\n\nAfter all parts are placed we'll now solder all pads.\n\nFollow the process described in the previous page.\n\nSTEP 18:\n\nOnce finished it will look like this.\n\nCongratulations, you're done!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 17:</p>\n<p>After all parts are placed we'll now solder all pads.</p>\n<p>Follow the process described in the previous page.</p>\n<p>STEP 18:</p>\n<p>Once finished it will look like this.</p>\n<p>Congratulations, you're done!</p>"
     },
     {
       "pageNum": 12,
@@ -116,7 +127,8 @@
       "sectionName": null,
       "content": "ADDAC305 ASSEMBLY GUIDE\n\nFor feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nNovember.2017 Revision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC305 ASSEMBLY GUIDE</p>\n<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>November.2017 Revision.01</p>"
     }
   ]
 }

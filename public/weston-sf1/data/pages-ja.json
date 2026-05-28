@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "SF1\n\nStereo / Dual Filter\n\nEurorackモジュール\n\nユーザーマニュアル\n\nWeston Precision Audio\n\nDesigned In Portland, Oregon\n\nRevision 01 - September 16, 2022",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>SF1</p>\n<p>Stereo / Dual Filter</p>\n<p>Eurorackモジュール</p>\n<p>ユーザーマニュアル</p>\n<p>Weston Precision Audio</p>\n<p>Designed In Portland, Oregon</p>\n<p>Revision 01 - September 16, 2022</p>"
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "概要\n\nSF1はデュアル電圧制御フィルター(VCF)モジュールで、同一でありながら独立した2つのVCFとして使用することも、ステレオフィルターとして使用することもできるよう設計されています。ステレオフィルターとして使用する場合は、標準3.5mm TS接続を通じて2つのモノラル(L/R)入力として受け取ります。\n\nSF1の中核は4ポール電圧制御ローパスフィルターで、精密な「ポールミキシング」を使用して各フィルターから多数の出力を提供します。各フィルターには同時に使用可能な2つの出力があります。1つ目の出力セット(L1/R1)は、Low Pass、High Pass、またはBand Passレスポンスを選択して出力できます。これらの選択のそれぞれで、カットオフカーブを「2 pole」(12 db/octave)または「4 pole」(24 db/octave)から選択できます。\n\n2つ目の出力セット(L2/R2)は、シングルポールNotch、2ポールAll-pass、または4段Phaserレスポンスを選択して出力できます。\n\n最後に、各出力ペア(L1/R1とL2/R2)は2つの電圧制御クロスフェーダーに接続されており、SF1の2つの側面間のパンニング量を変調するために使用できます。\n\nSF1の出力とリンクオプションにより、SF1は非常に汎用性の高いモジュールとなっています。ステレオVCFから、デュアルサイン波V/octaveシンセボイス、さらにはフェーズモジュレーターまで、SF1はあらゆることができます!\n\n仕様\n\nモジュールサイズ: 18HP\n\n奥行き: 25mm(基板背面まで)、33mm(電源コネクタ端まで)\n\nAudio出力:\n~1kOhm出力インピーダンス\n\n入力(すべての入力>=100kOhmインピーダンス): Volts/octave 1&2、Resonance 1&2、Frequency cutoff 1&2、Panning CV\n\n電源入力:\n+12V & -12V、標準10ピンEurorackコネクタ経由。内部および保護付きコネクタにより逆極性保護。\n\n消費電力(+12V / -12V):\n標準: 120mA / 120mA\n最大: 135mA / 135mA\n\n最大定格\n\n電源電圧: +13.5V / -13.5V\n\nすべての入力: 電源電圧レベルまで\n\n© 2022 Weston Precision Audio",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>概要</p>\n<p>SF1はデュアル電圧制御フィルター(VCF)モジュールで、同一でありながら独立した2つのVCFとして使用することも、ステレオフィルターとして使用することもできるよう設計されています。ステレオフィルターとして使用する場合は、標準3.5mm TS接続を通じて2つのモノラル(L/R)入力として受け取ります。</p>\n<p>SF1の中核は4ポール電圧制御ローパスフィルターで、精密な「ポールミキシング」を使用して各フィルターから多数の出力を提供します。各フィルターには同時に使用可能な2つの出力があります。1つ目の出力セット(L1/R1)は、Low Pass、High Pass、またはBand Passレスポンスを選択して出力できます。これらの選択のそれぞれで、カットオフカーブを「2 pole」(12 db/octave)または「4 pole」(24 db/octave)から選択できます。</p>\n<p>2つ目の出力セット(L2/R2)は、シングルポールNotch、2ポールAll-pass、または4段Phaserレスポンスを選択して出力できます。</p>\n<p>最後に、各出力ペア(L1/R1とL2/R2)は2つの電圧制御クロスフェーダーに接続されており、SF1の2つの側面間のパンニング量を変調するために使用できます。</p>\n<p>SF1の出力とリンクオプションにより、SF1は非常に汎用性の高いモジュールとなっています。ステレオVCFから、デュアルサイン波V/octaveシンセボイス、さらにはフェーズモジュレーターまで、SF1はあらゆることができます!</p>\n<p>仕様</p>\n<p>モジュールサイズ: 18HP</p>\n<p>奥行き: 25mm(基板背面まで)、33mm(電源コネクタ端まで)</p>\n<p>Audio出力:\n~1kOhm出力インピーダンス</p>\n<p>入力(すべての入力>=100kOhmインピーダンス): Volts/octave 1&#x26;2、Resonance 1&#x26;2、Frequency cutoff 1&#x26;2、Panning CV</p>\n<p>電源入力:\n+12V &#x26; -12V、標準10ピンEurorackコネクタ経由。内部および保護付きコネクタにより逆極性保護。</p>\n<p>消費電力(+12V / -12V):\n標準: 120mA / 120mA\n最大: 135mA / 135mA</p>\n<p>最大定格</p>\n<p>電源電圧: +13.5V / -13.5V</p>\n<p>すべての入力: 電源電圧レベルまで</p>\n<p>© 2022 Weston Precision Audio</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "メインコントロール\n\nCutoff:\n\nこれらのポットは左右のフィルターコアの「カットオフ周波数」をコントロールします。\n\nResonance:\n\nこれらのポットは左右のフィルターコアのレゾナンスまたはQ値の量をコントロールします。L1またはR1出力でローパスモードのいずれかを使用し、対応するレゾナンスポットを完全に時計回りにすると、自己発振が発生し、フィルターはサイン波オシレーターとして機能します。\n\nAudio In Level:\n\n各フィルターのオーディオ入力の量はこれらのポットでコントロールされます。各ポットの中央（「正午」の位置）にはデテントがあり、これはオーディオ入力信号のちょうどユニティ（ゲイン1）に対応します。ポットを中央より先に回すと、徐々にオーバードライブが増加します。\n\nCutoff CV Input:\n\nこれらのジャックに入力された信号は、各フィルターのカットオフ周波数をコントロールします。コントロールポットは「アッテニュバーター」であり、中央（デテント付き）が0です。ポットを時計回りに回すと、正の電圧がカットオフ周波数に加算され、負の電圧がカットオフ周波数から減算されます。ポットを反時計回りに回すとこれが逆転します。例えば、正方向のエンベロープは反時計回りに回したときにローパスフィルターを「閉じる」傾向があります。\n\nResonance CV:\n\nこれらのジャックに入力された信号は、各フィルターのレゾナンス量をコントロールします。これらの入力にはアッテネーターがないため、「フルストレングス」で動作します。\n\nV/Oct:\n\nこれらの入力は、1 Volt/octaveに較正された単なる別の周波数CVです。自己発振時にピッチをコントロールするためにこれらを使用してください。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>メインコントロール</p>\n<p>Cutoff:</p>\n<p>これらのポットは左右のフィルターコアの「カットオフ周波数」をコントロールします。</p>\n<p>Resonance:</p>\n<p>これらのポットは左右のフィルターコアのレゾナンスまたはQ値の量をコントロールします。L1またはR1出力でローパスモードのいずれかを使用し、対応するレゾナンスポットを完全に時計回りにすると、自己発振が発生し、フィルターはサイン波オシレーターとして機能します。</p>\n<p>Audio In Level:</p>\n<p>各フィルターのオーディオ入力の量はこれらのポットでコントロールされます。各ポットの中央（「正午」の位置）にはデテントがあり、これはオーディオ入力信号のちょうどユニティ（ゲイン1）に対応します。ポットを中央より先に回すと、徐々にオーバードライブが増加します。</p>\n<p>Cutoff CV Input:</p>\n<p>これらのジャックに入力された信号は、各フィルターのカットオフ周波数をコントロールします。コントロールポットは「アッテニュバーター」であり、中央（デテント付き）が0です。ポットを時計回りに回すと、正の電圧がカットオフ周波数に加算され、負の電圧がカットオフ周波数から減算されます。ポットを反時計回りに回すとこれが逆転します。例えば、正方向のエンベロープは反時計回りに回したときにローパスフィルターを「閉じる」傾向があります。</p>\n<p>Resonance CV:</p>\n<p>これらのジャックに入力された信号は、各フィルターのレゾナンス量をコントロールします。これらの入力にはアッテネーターがないため、「フルストレングス」で動作します。</p>\n<p>V/Oct:</p>\n<p>これらの入力は、1 Volt/octaveに較正された単なる別の周波数CVです。自己発振時にピッチをコントロールするためにこれらを使用してください。</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "OUTPUT\n\n各フィルターには2つの出力があり、同時に使用できます。「1」出力(L1 & R1)には、出力タイプをコントロールする2つのスイッチがあります。「2」出力(L2 & R2)には、出力タイプをコントロールする1つのスイッチがあります。選択可能な設定は下記の表にまとめられています:\n\n最後に、各出力ペアは電圧制御パンナー/クロスフェーダーを通過します:\n\n「Pan」potを完全に反時計回りにすると、「L/m」オーディオ入力がL1とL2出力にルーティングされ、「R」がR1/R2にルーティングされます。「Pan」potを完全に時計回りにすると、「L/m」オーディオ入力がR1とR2出力にルーティングされ、「R」がL1/L2にルーティングされます。「Pan」potが中央にあると、各出力は「L/m」入力信号の50%と「R」入力信号の50%を受信します。\n\n「Pan CV」ジャックに信号を入力すると、「Pan」potと同じ方法でパンニングをコントロールでき、「Pan CV」potによってアッテネートされます。\n\nそのため、「Pan」potが中央にある場合、「Pan CV」に正の電圧を入力すると「Pan」potを時計回りに回すのと同等の効果があり、負の電圧を入力すると「pan」potを反時計回りに回すのと同等の効果があります。これにより、L/Rオーディオ空間内のサウンドの位置をコントロール信号で簡単にモジュレートできます。\n\nSF1 Output Modes\n\nL1またはR1\nSlope | L1またはR1\nType | L1またはR1 Output\nResult\n\nUp | Up | 12 dB/oct. Low Pass\n\nUp | Middle | 12 dB/oct. High Pass\n\nUp | Down | 12 dB/oct. Bandpass\n\nDown | Up | 24 dB/oct. Low Pass\n\nDown | Middle | 24 dB/oct. High Pass\n\nDown | Down | 24 dB/oct. Bandpass\n\nL2またはR2\nType | L2またはR2 Output\nResult\n\nUp | 6 dB/oct. Notch\n\nMiddle | 12 dB/oct. All-Pass\n\nDown | 24 dB/oct. Phaser (2「combs」)",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>OUTPUT</p>\n<p>各フィルターには2つの出力があり、同時に使用できます。「1」出力(L1 &#x26; R1)には、出力タイプをコントロールする2つのスイッチがあります。「2」出力(L2 &#x26; R2)には、出力タイプをコントロールする1つのスイッチがあります。選択可能な設定は下記の表にまとめられています:</p>\n<p>最後に、各出力ペアは電圧制御パンナー/クロスフェーダーを通過します:</p>\n<p>「Pan」potを完全に反時計回りにすると、「L/m」オーディオ入力がL1とL2出力にルーティングされ、「R」がR1/R2にルーティングされます。「Pan」potを完全に時計回りにすると、「L/m」オーディオ入力がR1とR2出力にルーティングされ、「R」がL1/L2にルーティングされます。「Pan」potが中央にあると、各出力は「L/m」入力信号の50%と「R」入力信号の50%を受信します。</p>\n<p>「Pan CV」ジャックに信号を入力すると、「Pan」potと同じ方法でパンニングをコントロールでき、「Pan CV」potによってアッテネートされます。</p>\n<p>そのため、「Pan」potが中央にある場合、「Pan CV」に正の電圧を入力すると「Pan」potを時計回りに回すのと同等の効果があり、負の電圧を入力すると「pan」potを反時計回りに回すのと同等の効果があります。これにより、L/Rオーディオ空間内のサウンドの位置をコントロール信号で簡単にモジュレートできます。</p>\n<p>SF1 Output Modes</p>\n<p>L1またはR1\nSlope | L1またはR1\nType | L1またはR1 Output\nResult</p>\n<p>Up | Up | 12 dB/oct. Low Pass</p>\n<p>Up | Middle | 12 dB/oct. High Pass</p>\n<p>Up | Down | 12 dB/oct. Bandpass</p>\n<p>Down | Up | 24 dB/oct. Low Pass</p>\n<p>Down | Middle | 24 dB/oct. High Pass</p>\n<p>Down | Down | 24 dB/oct. Bandpass</p>\n<p>L2またはR2\nType | L2またはR2 Output\nResult</p>\n<p>Up | 6 dB/oct. Notch</p>\n<p>Middle | 12 dB/oct. All-Pass</p>\n<p>Down | 24 dB/oct. Phaser (2「combs」)</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "SF1の全9設定における公称出力応答のボード線図は、本書末尾の付録に掲載されています。\n\nLINK BUTTON\n\n「Link」ボタンは、LおよびR入力にデュアルモノペアとしてステレオオーディオ信号が入力されている場合に、SF1を便利に使用する方法を提供します。\n\n「Link」ボタンが押され、その上のオレンジ色のLEDが点灯している場合、LEFT側の以下の項目が両方のフィルターをコントロールします：\n\n- Frequency pot\n- Resonance pot\n- Frequency CV input / attenuverter\n- Resonance CV\n\nこのページの図は、Link機能をよりグラフィカルに示しています。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>SF1の全9設定における公称出力応答のボード線図は、本書末尾の付録に掲載されています。</p>\n<p>LINK BUTTON</p>\n<p>「Link」ボタンは、LおよびR入力にデュアルモノペアとしてステレオオーディオ信号が入力されている場合に、SF1を便利に使用する方法を提供します。</p>\n<p>「Link」ボタンが押され、その上のオレンジ色のLEDが点灯している場合、LEFT側の以下の項目が両方のフィルターをコントロールします：</p>\n<ul>\n<li>Frequency pot</li>\n<li>Resonance pot</li>\n<li>Frequency CV input / attenuverter</li>\n<li>Resonance CV</li>\n</ul>\n<p>このページの図は、Link機能をよりグラフィカルに示しています。</p>"
     },
     {
       "pageNum": 6,
@@ -59,7 +64,8 @@
       "sectionName": null,
       "content": "メンテナンス\n\nSF1は特別なメンテナンスを必要としませんが、サービス時に調整可能な2組のトリマーがあります。\n\nユニット上部のエッジには各フィルターのVolts per octaveトリマーがあり、これらは通常のオシレーターのV/octトリマーと同様に機能します。\n\nユニット下部のエッジには2つのトリマーがあり、これらはオーディオインプットポットが中央の位置にある時に正確にユニティとなるようにオーディオ入力段を校正するために使用されます。これらは組み立て時に調整されるため、通常は再調整の必要はありません。\n\n結論\n\nモジュラーシンセ機器と同様に、単独で、または他のモジュールと一緒に実際に演奏してみるのが最良の方法です。自分の好みを見つけ、そして最も重要なことは、音楽を作って楽しむことです!!間違った答えなどありません!\n\n...アイディア?!...\n\n1. 2つの異なるオシレーター波形をオーディオ入力に送り、panポットを中央に設定し、オーディオレート信号をpan CVに送ることで、クールなAM(振幅変調)エフェクトを得られます。高速なレートでは楽しいトレモロエフェクトが得られます。\n\n2. 両方のフィルターをオシレーターとして使用し(セルフオシレーション)、音楽的なインターバル(三度、五度、オクターブなど)にチューニングし、1 V/oct入力で両方をコントロールすることで、サイン波シンセボイスを作成できます。\n\n3. L1 outをR audioにパッチすることで、両方のVCFを直列にルーティングし、L2 outを使用して8ポールのLP、HP、またはBPフィルターを得られます。またはL2 outをR audio inにパッチし、R2 outを使用することで、2ポールのノッチ、720度の位相変位を持つオールパスフィルター、または4つの「櫛」を持つフェイザーを得られます!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>メンテナンス</p>\n<p>SF1は特別なメンテナンスを必要としませんが、サービス時に調整可能な2組のトリマーがあります。</p>\n<p>ユニット上部のエッジには各フィルターのVolts per octaveトリマーがあり、これらは通常のオシレーターのV/octトリマーと同様に機能します。</p>\n<p>ユニット下部のエッジには2つのトリマーがあり、これらはオーディオインプットポットが中央の位置にある時に正確にユニティとなるようにオーディオ入力段を校正するために使用されます。これらは組み立て時に調整されるため、通常は再調整の必要はありません。</p>\n<p>結論</p>\n<p>モジュラーシンセ機器と同様に、単独で、または他のモジュールと一緒に実際に演奏してみるのが最良の方法です。自分の好みを見つけ、そして最も重要なことは、音楽を作って楽しむことです!!間違った答えなどありません!</p>\n<p>...アイディア?!...</p>\n<ol>\n<li>\n<p>2つの異なるオシレーター波形をオーディオ入力に送り、panポットを中央に設定し、オーディオレート信号をpan CVに送ることで、クールなAM(振幅変調)エフェクトを得られます。高速なレートでは楽しいトレモロエフェクトが得られます。</p>\n</li>\n<li>\n<p>両方のフィルターをオシレーターとして使用し(セルフオシレーション)、音楽的なインターバル(三度、五度、オクターブなど)にチューニングし、1 V/oct入力で両方をコントロールすることで、サイン波シンセボイスを作成できます。</p>\n</li>\n<li>\n<p>L1 outをR audioにパッチすることで、両方のVCFを直列にルーティングし、L2 outを使用して8ポールのLP、HP、またはBPフィルターを得られます。またはL2 outをR audio inにパッチし、R2 outを使用することで、2ポールのノッチ、720度の位相変位を持つオールパスフィルター、または4つの「櫛」を持つフェイザーを得られます!</p>\n</li>\n</ol>"
     },
     {
       "pageNum": 7,
@@ -68,7 +74,8 @@
       "sectionName": null,
       "content": "付録：ブロックダイアグラム\n\nSF1 Dual/Stereo VCF：\nブロックダイアグラム\n\nLeft Audio In\n\nInput Stage\nw/ Overdrive\n\n4 Pole Voltage\nControlled\nLowpass Filter\n\nL1 Outs Pole\nMixer\n\nL2 Outs Pole\nMixer\n\n4P or 2P Lowpass\n4P or 2P Highpass\n4P or 2P Bandpass\n1P Notch\n2P All Pass\n4P Phaser\n\nL1 Select Switches\n\nR1 Select Switch\n\nVoltage Controlled\nPanner/Crossfader\n\nVoltage Controlled\nPanner/Crossfader\n\nL1 Output\n\nL2 Output\n\nR1 Output\n\nR2 Output\n\nRight Audio In\n\nInput Stage\nw/ Overdrive\n\n4 Pole Voltage\nControlled\nLowpass Filter\n\nR1 Outs Pole\nMixer\n\nR2 Outs Pole\nMixer\n\n4P or 2P Lowpass\n4P or 2P Highpass\n4P or 2P Bandpass\n1P Notch\n2P All Pass\n4P Phaser\n\nR1 Select Switches\n\nR2 Select Switch\n\n(Right audio in jack normalling)\n\nLeft Freq CV In\nAttenuverter\n\nLeft Res CV In\n\nLeft Freq Pot\n\nLeft Res Pot\n\nLeft 1 V/Oct In\n\nRight Freq CV In\nAttenuverter\n\nRight Res CV In\n\nRight Freq Pot\n\nRight Res Pot\n\nRight1 V/Oct In\n\nLINK Button\n\nPan Pot\n\nPan CV",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>付録：ブロックダイアグラム</p>\n<p>SF1 Dual/Stereo VCF：\nブロックダイアグラム</p>\n<p>Left Audio In</p>\n<p>Input Stage\nw/ Overdrive</p>\n<p>4 Pole Voltage\nControlled\nLowpass Filter</p>\n<p>L1 Outs Pole\nMixer</p>\n<p>L2 Outs Pole\nMixer</p>\n<p>4P or 2P Lowpass\n4P or 2P Highpass\n4P or 2P Bandpass\n1P Notch\n2P All Pass\n4P Phaser</p>\n<p>L1 Select Switches</p>\n<p>R1 Select Switch</p>\n<p>Voltage Controlled\nPanner/Crossfader</p>\n<p>Voltage Controlled\nPanner/Crossfader</p>\n<p>L1 Output</p>\n<p>L2 Output</p>\n<p>R1 Output</p>\n<p>R2 Output</p>\n<p>Right Audio In</p>\n<p>Input Stage\nw/ Overdrive</p>\n<p>4 Pole Voltage\nControlled\nLowpass Filter</p>\n<p>R1 Outs Pole\nMixer</p>\n<p>R2 Outs Pole\nMixer</p>\n<p>4P or 2P Lowpass\n4P or 2P Highpass\n4P or 2P Bandpass\n1P Notch\n2P All Pass\n4P Phaser</p>\n<p>R1 Select Switches</p>\n<p>R2 Select Switch</p>\n<p>(Right audio in jack normalling)</p>\n<p>Left Freq CV In\nAttenuverter</p>\n<p>Left Res CV In</p>\n<p>Left Freq Pot</p>\n<p>Left Res Pot</p>\n<p>Left 1 V/Oct In</p>\n<p>Right Freq CV In\nAttenuverter</p>\n<p>Right Res CV In</p>\n<p>Right Freq Pot</p>\n<p>Right Res Pot</p>\n<p>Right1 V/Oct In</p>\n<p>LINK Button</p>\n<p>Pan Pot</p>\n<p>Pan CV</p>"
     },
     {
       "pageNum": 8,
@@ -77,7 +84,8 @@
       "sectionName": null,
       "content": "付録: L1/R1 OUTPUT\n\n公称周波数特性\n\nLow pass（2 poleおよび4 pole）:\n\nHigh pass（2 poleおよび4 pole）:",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>付録: L1/R1 OUTPUT</p>\n<p>公称周波数特性</p>\n<p>Low pass（2 poleおよび4 pole）:</p>\n<p>High pass（2 poleおよび4 pole）:</p>"
     },
     {
       "pageNum": 9,
@@ -86,7 +94,8 @@
       "sectionName": null,
       "content": "APPENDIX: L1/R1 OUTPUT\n\nNOMINAL RESPONSES\n\nBand pass (2 pole and 4 pole):",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>APPENDIX: L1/R1 OUTPUT</p>\n<p>NOMINAL RESPONSES</p>\n<p>Band pass (2 pole and 4 pole):</p>"
     },
     {
       "pageNum": 10,
@@ -95,7 +104,8 @@
       "sectionName": null,
       "content": "付録: L2/R2出力\n\n標準周波数特性\n\n1 Pole Notch:\n\n2 Pole All-Pass:",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>付録: L2/R2出力</p>\n<p>標準周波数特性</p>\n<p>1 Pole Notch:</p>\n<p>2 Pole All-Pass:</p>"
     },
     {
       "pageNum": 11,
@@ -104,7 +114,8 @@
       "sectionName": null,
       "content": "付録: L2/R2 OUTPUT\n\n公称周波数特性\n\n4 Pole Phaser:",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>付録: L2/R2 OUTPUT</p>\n<p>公称周波数特性</p>\n<p>4 Pole Phaser:</p>"
     },
     {
       "pageNum": 12,
@@ -113,7 +124,8 @@
       "sectionName": null,
       "content": "改訂履歴\n\n01: 初回リリース。\n\n© 2022 Weston Precision Audio",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>改訂履歴</p>\n<p>01: 初回リリース。</p>\n<p>© 2022 Weston Precision Audio</p>"
     }
   ]
 }

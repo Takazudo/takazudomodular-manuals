@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "March.2025\n\nADDAC219IN Assembly Guide\n\nADDAC SYSTEM",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>March.2025</p>\n<p>ADDAC219IN Assembly Guide</p>\n<p>ADDAC SYSTEM</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "ADDAC219IN Assembly Guide\n\nSTEP 1:\n\nGrab the pcb, and locate the male and female pinheaders.\n\nSTEP 2:\n\nInsert the male pinheaders on corresponding female pinheaders, place them between both pcbs and solder them.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC219IN Assembly Guide</p>\n<p>STEP 1:</p>\n<p>Grab the pcb, and locate the male and female pinheaders.</p>\n<p>STEP 2:</p>\n<p>Insert the male pinheaders on corresponding female pinheaders, place them between both pcbs and solder them.</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "STEP 4:\n\nPlace the Power IDC connector and solder it.\n\nNotice the orientation of the IDC connector\n\nSTEP 6:\n\nPlace the jacks on the front pcb following the color placement shown below.\n\nPlace the front panel and tighten all the jack nuts, then proceed by soldering their legs.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 4:</p>\n<p>Place the Power IDC connector and solder it.</p>\n<p>Notice the orientation of the IDC connector</p>\n<p>STEP 6:</p>\n<p>Place the jacks on the front pcb following the color placement shown below.</p>\n<p>Place the front panel and tighten all the jack nuts, then proceed by soldering their legs.</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "You're all done!\n\nHappy Patching!\n\nADDAC219IN Assembly Guide",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>You're all done!</p>\n<p>Happy Patching!</p>\n<p>ADDAC219IN Assembly Guide</p>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nADDAC219IN \tASSEMBLY GUIDE\nMarch.2025\tRevision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC219IN \tASSEMBLY GUIDE\nMarch.2025\tRevision.01</p>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "STEP 4:\n\nFinish it by attaching both front and back pcbs.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 4:</p>\n<p>Finish it by attaching both front and back pcbs.</p>"
     }
   ]
 }

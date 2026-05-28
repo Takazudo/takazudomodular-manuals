@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "Parts included in the kit:\n\n1x Front Panel\n\n1x Pcb\n\n3x 10uF SMD Capacitors\n\n4x 100nF SMD Capacitors\n\n8x 1k SMD Resistors\n\n1x 78M05 IC\n\n2x 10mm female/female spacer\n\n4x M3 fiber washer\n\n4x M3 screws\n\n3x Nutted Jacks\n\n9x No-nut Jacks\n\n3x Jack nuts\n\n8x Push Buttons\n\n1x 2x5 IDC Connector\n\n1x Ribbon cable",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Parts included in the kit:</p>\n<p>1x Front Panel</p>\n<p>1x Pcb</p>\n<p>3x 10uF SMD Capacitors</p>\n<p>4x 100nF SMD Capacitors</p>\n<p>8x 1k SMD Resistors</p>\n<p>1x 78M05 IC</p>\n<p>2x 10mm female/female spacer</p>\n<p>4x M3 fiber washer</p>\n<p>4x M3 screws</p>\n<p>3x Nutted Jacks</p>\n<p>9x No-nut Jacks</p>\n<p>3x Jack nuts</p>\n<p>8x Push Buttons</p>\n<p>1x 2x5 IDC Connector</p>\n<p>1x Ribbon cable</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "ADDAC304 Assembly Guide\n\nSTEP 1:\nLocate Pcb and surface mount parts.\n\nSTEP 2:\nStart by adding a bit of solder to every smd part right pads, this will make it easier to solder the surface mount parts. If you're left handed then add solder to the left pads.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC304 Assembly Guide</p>\n<p>STEP 1:\nLocate Pcb and surface mount parts.</p>\n<p>STEP 2:\nStart by adding a bit of solder to every smd part right pads, this will make it easier to solder the surface mount parts. If you're left handed then add solder to the left pads.</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "STEP 3:\n\nNow let's place all 4 of the 100nF capacitors, use a tweezer and solder the right pad of each by heating the already added solder and place the part in place.\n\nSTEP 4:\n\nNext solder all 4 left pads.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 3:</p>\n<p>Now let's place all 4 of the 100nF capacitors, use a tweezer and solder the right pad of each by heating the already added solder and place the part in place.</p>\n<p>STEP 4:</p>\n<p>Next solder all 4 left pads.</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "STEP 5:\n\nRepeat the process for all the 1k resistors.\n\nSTEP 6:\n\nFinally solder the 78M05 and the 3 10uF capacitors.\n\nADDAC304 Assembly Guide",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 5:</p>\n<p>Repeat the process for all the 1k resistors.</p>\n<p>STEP 6:</p>\n<p>Finally solder the 78M05 and the 3 10uF capacitors.</p>\n<p>ADDAC304 Assembly Guide</p>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "STEP 7:\nPlace and solder the IDC power connnector, note that the indent faces down.\n\nSTEP 8:\nNext place the spacers adding a washer between the pcb and the spacer.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 7:\nPlace and solder the IDC power connnector, note that the indent faces down.</p>\n<p>STEP 8:\nNext place the spacers adding a washer between the pcb and the spacer.</p>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "STEP 9:\nLocate the jacks and cut the smallest legs like shown below.\n\nSTEP 10:\nLocate and place the 3 jacks with threaded shaft.\n\nSTEP 11:\nPlace the remaining jacks.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 9:\nLocate the jacks and cut the smallest legs like shown below.</p>\n<p>STEP 10:\nLocate and place the 3 jacks with threaded shaft.</p>\n<p>STEP 11:\nPlace the remaining jacks.</p>"
     },
     {
       "pageNum": 8,
@@ -80,7 +87,8 @@
       "sectionName": null,
       "content": "STEP 12:\nNow let's place the push buttons, note that there's a specific orientation look for the button's flat face and match it with the pcb print.\n\nSTEP 13:\nWe'll have to trim 2 legs of only one of the push buttons, cut 2mm of each of the legs further away from the button's flat face. Note that you only need to do this to 1 button.\n\nSTEP 14:\nPlace the button with the trimmed legs in the position shown below.\n\nSTEP 15:\nNext place all the remaining push buttons, keep paying attention to the button's orientation.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 12:\nNow let's place the push buttons, note that there's a specific orientation look for the button's flat face and match it with the pcb print.</p>\n<p>STEP 13:\nWe'll have to trim 2 legs of only one of the push buttons, cut 2mm of each of the legs further away from the button's flat face. Note that you only need to do this to 1 button.</p>\n<p>STEP 14:\nPlace the button with the trimmed legs in the position shown below.</p>\n<p>STEP 15:\nNext place all the remaining push buttons, keep paying attention to the button's orientation.</p>"
     },
     {
       "pageNum": 9,
@@ -89,7 +97,8 @@
       "sectionName": null,
       "content": "STEP 16:\nNext let's place the front panel, use a tweezer to help getting all the jacks in their holes.\n\nSTEP 17:\nTighten the jack nuts and the 2 screws.\n\nSTEP 18:\nNext we'll solder the jacks.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 16:\nNext let's place the front panel, use a tweezer to help getting all the jacks in their holes.</p>\n<p>STEP 17:\nTighten the jack nuts and the 2 screws.</p>\n<p>STEP 18:\nNext we'll solder the jacks.</p>"
     },
     {
       "pageNum": 10,
@@ -98,7 +107,8 @@
       "sectionName": null,
       "content": "We'll now describe s a good practice that minimizes any damage that may occur to all front panel parts for continued exposure to the soldering iron heat.\n\nIt happens often that users not very used to soldering spend too much time on each pad.\n\nAn experienced solderer will take 1-2 seconds for each pad, this minimizes the heat the part is exposed to.\n\nIf the solderer takes too much time on each pad the part may heat to a point where the plastic will start melting/deforming and may render the part useless.\n\nRespecting this very simple process for all parts will guarantee no part will be damaged as they'll have time to cool down between every soldered pad.\n\nSTEP 19:\n\nStart by soldering only one pad of each jack first.\n\nSTEP 20:\n\nThen solder a second pad of each jack.\n\nSTEP 21:\n\nFinally solder the remaining pads of all jacks.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>We'll now describe s a good practice that minimizes any damage that may occur to all front panel parts for continued exposure to the soldering iron heat.</p>\n<p>It happens often that users not very used to soldering spend too much time on each pad.</p>\n<p>An experienced solderer will take 1-2 seconds for each pad, this minimizes the heat the part is exposed to.</p>\n<p>If the solderer takes too much time on each pad the part may heat to a point where the plastic will start melting/deforming and may render the part useless.</p>\n<p>Respecting this very simple process for all parts will guarantee no part will be damaged as they'll have time to cool down between every soldered pad.</p>\n<p>STEP 19:</p>\n<p>Start by soldering only one pad of each jack first.</p>\n<p>STEP 20:</p>\n<p>Then solder a second pad of each jack.</p>\n<p>STEP 21:</p>\n<p>Finally solder the remaining pads of all jacks.</p>"
     },
     {
       "pageNum": 11,
@@ -107,7 +117,8 @@
       "sectionName": null,
       "content": "STEP 22:\n\nNext lay the module facing down on a flat surface (this will allow the push buttons to be alligned) and solder their pads.\n\nSTEP 23:\n\nFinally solder a small wire between the 2 jack pads like shown below.\n\nCongratulations, you're done!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 22:</p>\n<p>Next lay the module facing down on a flat surface (this will allow the push buttons to be alligned) and solder their pads.</p>\n<p>STEP 23:</p>\n<p>Finally solder a small wire between the 2 jack pads like shown below.</p>\n<p>Congratulations, you're done!</p>"
     },
     {
       "pageNum": 12,
@@ -116,7 +127,8 @@
       "sectionName": null,
       "content": "ADDAC304 ASSEMBLY GUIDE\n\nFor feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nNovember.2017 Revision.02",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC304 ASSEMBLY GUIDE</p>\n<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>November.2017 Revision.02</p>"
     }
   ]
 }

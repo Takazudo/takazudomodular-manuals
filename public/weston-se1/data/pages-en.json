@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "© 2023 Weston Precision Audio\n\nSE1\n\nShaped VC Envelope\n\nEurorack Module\n\nUser Manual\n\nWeston Precision Audio\n\nDesigned In Portland, Oregon\n\nRevision 01 - December 5, 2023",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>© 2023 Weston Precision Audio</p>\n<p>SE1</p>\n<p>Shaped VC Envelope</p>\n<p>Eurorack Module</p>\n<p>User Manual</p>\n<p>Weston Precision Audio</p>\n<p>Designed In Portland, Oregon</p>\n<p>Revision 01 - December 5, 2023</p>"
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "Panel Overview…….…………………..…3\n\nDescription & Specs………………………4\n\nUsing SE1\n\nGetting Started……………………5\n\nShape Controls……………..…….5\n\nGate Vs. Trigger………………….6\n\nLoop…………………………..….…6\n\nSustain CVs……..…………………7\n\nOther Features\n\nState Gates / EOC………………7\n\nLevel CV Input…….………………8\n\nAppendix\n\nOutput Level Jumper…………….9\n\nTrimmer Adjustments…………….9",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Panel Overview…….…………………..…3</p>\n<p>Description &#x26; Specs………………………4</p>\n<p>Using SE1</p>\n<p>Getting Started……………………5</p>\n<p>Shape Controls……………..…….5</p>\n<p>Gate Vs. Trigger………………….6</p>\n<p>Loop…………………………..….…6</p>\n<p>Sustain CVs……..…………………7</p>\n<p>Other Features</p>\n<p>State Gates / EOC………………7</p>\n<p>Level CV Input…….………………8</p>\n<p>Appendix</p>\n<p>Output Level Jumper…………….9</p>\n<p>Trimmer Adjustments…………….9</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "SE1 Overview\n\nA, D, S, & R CV Control\nCV inputs for envelope control\n\nShape Control Switch\nExponential, Linear, Or Logarithmic, for Attack, Decay, and Release\n\nSustain Env In\nA VCA which shapes the \"S\" CV Input. See page 7 for details.\n\nGate / Trig Input\nMain control for starting/sustaining envelope\n\nGate / Trig Select Switch\nSee page 6 for details.\n\nManual Trigger Button\nDoes what \"Gate/Trig\" input does, but with your finger!\n\nA, D, S, & R Control Sliders\nAdjusts the parameters of the envelope. LEDs in slider light up in current state of envelope.\n\nState Gate Outs\nThese go high when in that state of the envelope (i.e. when that slider's LED is lit.)\n\nLoop On/Off Switch\nSee page 6 for details.\n\nEnd Of Cycle Output\nGoes high for a ~1ms pulse when an envelope has completed and returned to zero.\n\nMain Output\nInverted and regular output of envelope. Selectable 5V or 8V (see Page X)\n\nLevel CV Input\nControls a VCA on the Main Output. 0V = 0% of envelope, 5V = 100%.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>SE1 Overview</p>\n<p>A, D, S, &#x26; R CV Control\nCV inputs for envelope control</p>\n<p>Shape Control Switch\nExponential, Linear, Or Logarithmic, for Attack, Decay, and Release</p>\n<p>Sustain Env In\nA VCA which shapes the \"S\" CV Input. See page 7 for details.</p>\n<p>Gate / Trig Input\nMain control for starting/sustaining envelope</p>\n<p>Gate / Trig Select Switch\nSee page 6 for details.</p>\n<p>Manual Trigger Button\nDoes what \"Gate/Trig\" input does, but with your finger!</p>\n<p>A, D, S, &#x26; R Control Sliders\nAdjusts the parameters of the envelope. LEDs in slider light up in current state of envelope.</p>\n<p>State Gate Outs\nThese go high when in that state of the envelope (i.e. when that slider's LED is lit.)</p>\n<p>Loop On/Off Switch\nSee page 6 for details.</p>\n<p>End Of Cycle Output\nGoes high for a ~1ms pulse when an envelope has completed and returned to zero.</p>\n<p>Main Output\nInverted and regular output of envelope. Selectable 5V or 8V (see Page X)</p>\n<p>Level CV Input\nControls a VCA on the Main Output. 0V = 0% of envelope, 5V = 100%.</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "DESCRIPTION\n\nSE1 is an analog ADSR envelope-generating module in Eurorack format. It generates a standard Attack/Decay/Sustain/Release type envelope with a simple gate signal. Unlike many ADSR modules, SE1 allows the time/voltage function of each stage A/D/R to be selected independently between Logarithmic, Linear, or Exponential, allowing unique envelope shapes.\n\nEach parameter of the ADSR envelope is CV-controllable. Additionally, there is a VCA in front of the \"S\" sustain CV signal which can be controlled with the \"Sustain Env In\" input. This allows, for example, a second envelope to be triggered from another module which could shape an attack and decay of a sustain tremolo swell.\n\nEach state of the envelope A/D/S/R has a gate output which goes high for the duration of that state. Additionally, there is an \"EOC\" (End Of Cycle) output which emits a ~1ms pulse when the current envelope has completed.\n\nFinally, there is another VCA on the outputs (inverted and regular) of the envelope generator, allowing for CV control of the amplitude of the envelope signal.\n\nImportant or helpful bits will be in red.\n\nSPECS\n\nModule Size: 12HP\n\nDepth: 25mm (To back PCB), 33mm (To end of power connector)\n\nEnvelope Attack/Release Times:\n1ms - 15s (faster possible with negative CVs)\n\nAudio Outputs:\n<=1kOhm Output Impedance\n\nInputs:\n>= 100kOhm Input impedance\n\nGate Input High:\n>2V\n\nPower input:\n+12V & -12V via standard 10 pin Eurorack connector. Protected against reverse polarity internally and with shrouded connector.\n\nPower consumption (+12V / -12V):\nTyp: 60mA / 20mA\nMax: 70mA / 35mA\n\nEnvelope Output Voltage:\nSelectable to 5V or 8V peak\n\nLevel & Sustain Env CV Inputs:\n0V = 0% Amplitude, 5V = 100%\n\nMAXIMUM LIMITS\n\nSupply Voltage: +13.5V / -13.5V\n\nAll inputs: Up to power supply levels.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>DESCRIPTION</p>\n<p>SE1 is an analog ADSR envelope-generating module in Eurorack format. It generates a standard Attack/Decay/Sustain/Release type envelope with a simple gate signal. Unlike many ADSR modules, SE1 allows the time/voltage function of each stage A/D/R to be selected independently between Logarithmic, Linear, or Exponential, allowing unique envelope shapes.</p>\n<p>Each parameter of the ADSR envelope is CV-controllable. Additionally, there is a VCA in front of the \"S\" sustain CV signal which can be controlled with the \"Sustain Env In\" input. This allows, for example, a second envelope to be triggered from another module which could shape an attack and decay of a sustain tremolo swell.</p>\n<p>Each state of the envelope A/D/S/R has a gate output which goes high for the duration of that state. Additionally, there is an \"EOC\" (End Of Cycle) output which emits a ~1ms pulse when the current envelope has completed.</p>\n<p>Finally, there is another VCA on the outputs (inverted and regular) of the envelope generator, allowing for CV control of the amplitude of the envelope signal.</p>\n<p>Important or helpful bits will be in red.</p>\n<p>SPECS</p>\n<p>Module Size: 12HP</p>\n<p>Depth: 25mm (To back PCB), 33mm (To end of power connector)</p>\n<p>Envelope Attack/Release Times:\n1ms - 15s (faster possible with negative CVs)</p>\n<p>Audio Outputs:\n&#x3C;=1kOhm Output Impedance</p>\n<p>Inputs:</p>\n<blockquote>\n<p>= 100kOhm Input impedance</p>\n</blockquote>\n<p>Gate Input High:</p>\n<blockquote>\n<p>2V</p>\n</blockquote>\n<p>Power input:\n+12V &#x26; -12V via standard 10 pin Eurorack connector. Protected against reverse polarity internally and with shrouded connector.</p>\n<p>Power consumption (+12V / -12V):\nTyp: 60mA / 20mA\nMax: 70mA / 35mA</p>\n<p>Envelope Output Voltage:\nSelectable to 5V or 8V peak</p>\n<p>Level &#x26; Sustain Env CV Inputs:\n0V = 0% Amplitude, 5V = 100%</p>\n<p>MAXIMUM LIMITS</p>\n<p>Supply Voltage: +13.5V / -13.5V</p>\n<p>All inputs: Up to power supply levels.</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "USING SE1: GETTING STARTED\n\nAfter installing and powering up SE1 in your rack, getting an envelope out is as easy as applying a signal to the Gate/Trigger input in the upper right corner of the module. With the Gate/Trigger switch set to \"Gate\", the following is a typical output:\n\nThe red trace shows the signal sent to Gate/Trigger input, and the blue is the main output of SE1. Note that all shape controls are set to linear (center position). Also note, the button positioned directly below the Gate/Trigger input can be pressed to manually trigger SE1 without any signal.\n\nUSING SE1: SHAPE CONTROLS\n\nThe Attack, Decay, and Release sections of the envelope can be independently selected via the switches labeled \"Shape Control Switches\" in the panel overview on page 3. The images below show some examples.\n\nExponential Attack:\n\nLogarithmic Attack:\n\nLog Decay & Exponential Release:",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>USING SE1: GETTING STARTED</p>\n<p>After installing and powering up SE1 in your rack, getting an envelope out is as easy as applying a signal to the Gate/Trigger input in the upper right corner of the module. With the Gate/Trigger switch set to \"Gate\", the following is a typical output:</p>\n<p>The red trace shows the signal sent to Gate/Trigger input, and the blue is the main output of SE1. Note that all shape controls are set to linear (center position). Also note, the button positioned directly below the Gate/Trigger input can be pressed to manually trigger SE1 without any signal.</p>\n<p>USING SE1: SHAPE CONTROLS</p>\n<p>The Attack, Decay, and Release sections of the envelope can be independently selected via the switches labeled \"Shape Control Switches\" in the panel overview on page 3. The images below show some examples.</p>\n<p>Exponential Attack:</p>\n<p>Logarithmic Attack:</p>\n<p>Log Decay &#x26; Exponential Release:</p>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "Exponential Decay & Log Release:\n\nUSING SE1: GATE VS. TRIGGER\n\nThe Gate/Trigger select switch works as follows:\n\n• When GATE is selected, SE1 treats the incoming signal as a gate, and an ADSR type envelope is produced, whereby the Release part of the envelope starts when the gate signal goes low.\n\n• When TRIGGER is selected, SE1 generates a trigger pulse from whatever gate or trigger signal is input to SE and thus a AD type envelope is triggered, whereby the envelope attacks until it hits peak voltage, and then decays on its own.\n\nThe S and R portions of the envelope are thus never entered when in TRIGGER mode.\n\nThe following image shows the gate signal (blue) and the envelope output (red) when the Gate/Trigger switch is set to TRIGGER:\n\nNote the above envelope would look exactly the same if the length of the gate was different than that shown.\n\nUSING SE1: LOOP\n\nSE1 allows the ADSR-type envelope to be \"looped\". When the Loop switch is turned ON, SE1 will simply bounce between the ATTACK and DECAY states, with the limits being the peak envelope voltage and the SUSTAIN voltage level for as long as the gate signal is held high. Once the gate is released, SE1 will RELEASE as normal. Below is an example of SE1 looping with all shape controls set to linear:",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Exponential Decay &#x26; Log Release:</p>\n<p>USING SE1: GATE VS. TRIGGER</p>\n<p>The Gate/Trigger select switch works as follows:</p>\n<p>• When GATE is selected, SE1 treats the incoming signal as a gate, and an ADSR type envelope is produced, whereby the Release part of the envelope starts when the gate signal goes low.</p>\n<p>• When TRIGGER is selected, SE1 generates a trigger pulse from whatever gate or trigger signal is input to SE and thus a AD type envelope is triggered, whereby the envelope attacks until it hits peak voltage, and then decays on its own.</p>\n<p>The S and R portions of the envelope are thus never entered when in TRIGGER mode.</p>\n<p>The following image shows the gate signal (blue) and the envelope output (red) when the Gate/Trigger switch is set to TRIGGER:</p>\n<p>Note the above envelope would look exactly the same if the length of the gate was different than that shown.</p>\n<p>USING SE1: LOOP</p>\n<p>SE1 allows the ADSR-type envelope to be \"looped\". When the Loop switch is turned ON, SE1 will simply bounce between the ATTACK and DECAY states, with the limits being the peak envelope voltage and the SUSTAIN voltage level for as long as the gate signal is held high. Once the gate is released, SE1 will RELEASE as normal. Below is an example of SE1 looping with all shape controls set to linear:</p>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "USING SE1: SUSTAIN CVs\n\nSE1 is unlike many ADSR modules in that it servos to the sustain voltage while in the sustain state. Most ADSR modules stop decaying at whatever the current sustain voltage is, and sit there until another re-firing of the envelope. SE1 will stop decaying at the current sustain voltage, and then continue to servo the integrating capacitor to any new sustain voltage. This means any AC signal can be input to the SUSTAIN CV input to create something like this:\n\nNote the signal input to SUSTAIN CV is summed (added) to the voltage from the SUSTAIN potentiometer.\n\nAdditionally, the signal which goes into SUSTAIN CV passes first through a VCA. The control voltage of this VCA is labelled SUSTAIN ENV IN. The following image shows a sinusoidal LFO patched to SUSTAIN ENV IN, and a higher frequency sine wave patched to SUSTAIN CV:\n\nOTHER FEATURES: STATE GATES / EOC PULSE\n\nDuring any part of an actively occurring envelope, the corresponding State Gate for that section of the envelope will go high.\n\nWhen an active envelope (ADSR or AD) finish and return to zero volts, SE1 will output a pulse to the EOC output. The following images show each signal during an envelope\n\n\"A\" State Gate:",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>USING SE1: SUSTAIN CVs</p>\n<p>SE1 is unlike many ADSR modules in that it servos to the sustain voltage while in the sustain state. Most ADSR modules stop decaying at whatever the current sustain voltage is, and sit there until another re-firing of the envelope. SE1 will stop decaying at the current sustain voltage, and then continue to servo the integrating capacitor to any new sustain voltage. This means any AC signal can be input to the SUSTAIN CV input to create something like this:</p>\n<p>Note the signal input to SUSTAIN CV is summed (added) to the voltage from the SUSTAIN potentiometer.</p>\n<p>Additionally, the signal which goes into SUSTAIN CV passes first through a VCA. The control voltage of this VCA is labelled SUSTAIN ENV IN. The following image shows a sinusoidal LFO patched to SUSTAIN ENV IN, and a higher frequency sine wave patched to SUSTAIN CV:</p>\n<p>OTHER FEATURES: STATE GATES / EOC PULSE</p>\n<p>During any part of an actively occurring envelope, the corresponding State Gate for that section of the envelope will go high.</p>\n<p>When an active envelope (ADSR or AD) finish and return to zero volts, SE1 will output a pulse to the EOC output. The following images show each signal during an envelope</p>\n<p>\"A\" State Gate:</p>"
     },
     {
       "pageNum": 8,
@@ -80,7 +87,8 @@
       "sectionName": null,
       "content": "\"D\" State Gate:\n\n\"S\" State Gate:\n\n\"R\" State Gate:\n\nEOC Pulse:\n\nOTHER FEATURES: LEVEL CV IN\n\nThe main envelope outputs of SE1 (inverted and regular) both pass through a VCA. The control voltage of this VCA is accessed through the LEVEL input. 5V at this input corresponds to 100% of the envelope amplitude, and 0V corresponds to 0% amplitude.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>\"D\" State Gate:</p>\n<p>\"S\" State Gate:</p>\n<p>\"R\" State Gate:</p>\n<p>EOC Pulse:</p>\n<p>OTHER FEATURES: LEVEL CV IN</p>\n<p>The main envelope outputs of SE1 (inverted and regular) both pass through a VCA. The control voltage of this VCA is accessed through the LEVEL input. 5V at this input corresponds to 100% of the envelope amplitude, and 0V corresponds to 0% amplitude.</p>"
     },
     {
       "pageNum": 9,
@@ -89,7 +97,8 @@
       "sectionName": null,
       "content": "APPENDIX: OUT LEVEL JUMPER\nFor flexibility, SE1 can be configured so that the main envelope output peak voltage is either 5V or 8V. To change the setting, remove the 3 screws from the back of the module and carefully pull off the rear PCB. There is a jumper on the lower right corner of this PCB labeled 5V and 8V. Note that, you must have this jumper installed in one of the 2 possible orientations. If the jumper is missing, SE1 will output nothing from the main outputs.\n\nAPPENDIX: TRIMMER ADJUSTMENTS\nNormally, SE1 will require no adjustments and will be calibrated only upon initial construction. However, if the adjustments available will be described here:\n\nZero Volts Adjustment (Accessed from LEFT side of module):\nTo adjust the 0V trimmer, remove all inputs and outputs from SE1 and make sure it its powered up. Monitor the main output with a voltmeter or oscilloscope and simply adjust the \"0V\" labeled trimmer until 0V is obtained.\n\nLevel CV Null Adjustment (Accessed from BOTTOM side of module):\nTo adjust the LEV trimmer, install an unconnected patch cord into the \"Level\" input and then continuously trigger an envelope with an LFO or other source. Monitor the main output with an oscilloscope and adjust the LEV trimmer clockwise until you see a signal on the oscilloscope. Then , turn the LEV trimmer back counter-clockwise until the signal *just* disappears.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>APPENDIX: OUT LEVEL JUMPER\nFor flexibility, SE1 can be configured so that the main envelope output peak voltage is either 5V or 8V. To change the setting, remove the 3 screws from the back of the module and carefully pull off the rear PCB. There is a jumper on the lower right corner of this PCB labeled 5V and 8V. Note that, you must have this jumper installed in one of the 2 possible orientations. If the jumper is missing, SE1 will output nothing from the main outputs.</p>\n<p>APPENDIX: TRIMMER ADJUSTMENTS\nNormally, SE1 will require no adjustments and will be calibrated only upon initial construction. However, if the adjustments available will be described here:</p>\n<p>Zero Volts Adjustment (Accessed from LEFT side of module):\nTo adjust the 0V trimmer, remove all inputs and outputs from SE1 and make sure it its powered up. Monitor the main output with a voltmeter or oscilloscope and simply adjust the \"0V\" labeled trimmer until 0V is obtained.</p>\n<p>Level CV Null Adjustment (Accessed from BOTTOM side of module):\nTo adjust the LEV trimmer, install an unconnected patch cord into the \"Level\" input and then continuously trigger an envelope with an LFO or other source. Monitor the main output with an oscilloscope and adjust the LEV trimmer clockwise until you see a signal on the oscilloscope. Then , turn the LEV trimmer back counter-clockwise until the signal <em>just</em> disappears.</p>"
     },
     {
       "pageNum": 10,
@@ -98,7 +107,8 @@
       "sectionName": null,
       "content": "REVISION HISTORY\n\n01: Initial release.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>REVISION HISTORY</p>\n<p>01: Initial release.</p>"
     }
   ]
 }

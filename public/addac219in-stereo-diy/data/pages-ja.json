@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "(このページは空白です)",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>(このページは空白です)</p>"
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "March.2025\n\nADDAC219IN Assembly Guide\n\nADDAC SYSTEM",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>March.2025</p>\n<p>ADDAC219IN Assembly Guide</p>\n<p>ADDAC SYSTEM</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "ADDAC219IN アセンブリガイド\n\nステップ1:\n\nPCBを手に取り、オスとメスのピンヘッダーを見つけます。\n\nステップ2:\n\n対応するメスピンヘッダーにオスピンヘッダーを挿入し、両方のPCBの間に配置してハンダ付けします。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC219IN アセンブリガイド</p>\n<p>ステップ1:</p>\n<p>PCBを手に取り、オスとメスのピンヘッダーを見つけます。</p>\n<p>ステップ2:</p>\n<p>対応するメスピンヘッダーにオスピンヘッダーを挿入し、両方のPCBの間に配置してハンダ付けします。</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "STEP 4:\n\nPower IDCコネクタを配置し、ハンダ付けします。\n\nIDCコネクタの向きに注意してください。\n\nSTEP 6:\n\n下図に示されているカラー配置に従って、フロントPCBにジャックを配置します。\n\nフロントパネルを配置し、すべてのジャックナットを締めてから、脚をハンダ付けします。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 4:</p>\n<p>Power IDCコネクタを配置し、ハンダ付けします。</p>\n<p>IDCコネクタの向きに注意してください。</p>\n<p>STEP 6:</p>\n<p>下図に示されているカラー配置に従って、フロントPCBにジャックを配置します。</p>\n<p>フロントパネルを配置し、すべてのジャックナットを締めてから、脚をハンダ付けします。</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "完成です！\n\nHappy Patching!\n\nADDAC219IN 組み立てガイド",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>完成です！</p>\n<p>Happy Patching!</p>\n<p>ADDAC219IN 組み立てガイド</p>"
     },
     {
       "pageNum": 6,
@@ -59,7 +64,8 @@
       "sectionName": null,
       "content": "フィードバック、コメント、または問題については以下までご連絡ください:\naddac@addacsystem.com\n\nADDAC219IN ASSEMBLY GUIDE\nMarch.2025 Revision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>フィードバック、コメント、または問題については以下までご連絡ください:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC219IN ASSEMBLY GUIDE\nMarch.2025 Revision.01</p>"
     },
     {
       "pageNum": 7,
@@ -68,7 +74,8 @@
       "sectionName": null,
       "content": "STEP 4:\n\n前面と背面のPCBを両方取り付けて完成させます。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 4:</p>\n<p>前面と背面のPCBを両方取り付けて完成させます。</p>"
     }
   ]
 }

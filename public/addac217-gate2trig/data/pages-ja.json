@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "Welcome to:\n\n全体的な説明\n\nT-Networksシリーズを開発する中で、ドラムモジュールやエンベロープをトリガーする際に、適切な入力信号を持つことがいかに重要であるかを認識しました。GateとTriggerは似た信号として扱われることが多いですが、時にはそれが大きな違いを生み、そのようなモジュールの入力にGateまたはTriggerのどちらを送るかによって結果は劇的に変化します。\n\nこのことから、私たちはこのシンプルながら効果的なGate to Triggerを開発しました。各チャンネルにバイパススイッチを備えた4チャンネルのコンバーターです。\n\nすべての入力Gateは1msのTriggerに制限されます。\n\nこのモジュールは、フルDIYキットとしても入手可能です。\n\n技術仕様:\n6HP\n4cm深さ\n70mA +12V\n70mA -12V",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Welcome to:</p>\n<p>全体的な説明</p>\n<p>T-Networksシリーズを開発する中で、ドラムモジュールやエンベロープをトリガーする際に、適切な入力信号を持つことがいかに重要であるかを認識しました。GateとTriggerは似た信号として扱われることが多いですが、時にはそれが大きな違いを生み、そのようなモジュールの入力にGateまたはTriggerのどちらを送るかによって結果は劇的に変化します。</p>\n<p>このことから、私たちはこのシンプルながら効果的なGate to Triggerを開発しました。各チャンネルにバイパススイッチを備えた4チャンネルのコンバーターです。</p>\n<p>すべての入力Gateは1msのTriggerに制限されます。</p>\n<p>このモジュールは、フルDIYキットとしても入手可能です。</p>\n<p>技術仕様:\n6HP\n4cm深さ\n70mA +12V\n70mA -12V</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "コントロール説明\n\nGate Input 1\n\nBypass Switch\n\nOutput 1\n\nGate Input 2\n\nBypass Switch\n\nOutput 2\n\nGate Input 3\n\nBypass Switch\n\nOutput 3\n\nGate Input 4\n\nBypass Switch\n\nOutput 4\n\nCHANNEL 1\n\nCHANNEL 2\n\nCHANNEL 3\n\nCHANNEL 4",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>コントロール説明</p>\n<p>Gate Input 1</p>\n<p>Bypass Switch</p>\n<p>Output 1</p>\n<p>Gate Input 2</p>\n<p>Bypass Switch</p>\n<p>Output 2</p>\n<p>Gate Input 3</p>\n<p>Bypass Switch</p>\n<p>Output 3</p>\n<p>Gate Input 4</p>\n<p>Bypass Switch</p>\n<p>Output 4</p>\n<p>CHANNEL 1</p>\n<p>CHANNEL 2</p>\n<p>CHANNEL 3</p>\n<p>CHANNEL 4</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "ADDAC217\nQUAD GATE TO TRIGGER 信号フロー図\n\nCHANNEL 4\n\nCHANNEL 3\n\nCHANNEL 2\n\nCONVERTER\n\nCHANNEL 1\n\nBYPASS\n\nOUTPUT 1\tGATE INPUT",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC217\nQUAD GATE TO TRIGGER 信号フロー図</p>\n<p>CHANNEL 4</p>\n<p>CHANNEL 3</p>\n<p>CHANNEL 2</p>\n<p>CONVERTER</p>\n<p>CHANNEL 1</p>\n<p>BYPASS</p>\n<p>OUTPUT 1\tGATE INPUT</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "フィードバック、コメント、または問題がある場合は、以下までご連絡ください:\naddac@addacsystem.com\n\nADDAC217 ユーザーガイド\n2020年1月 リビジョン.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>フィードバック、コメント、または問題がある場合は、以下までご連絡ください:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC217 ユーザーガイド\n2020年1月 リビジョン.01</p>"
     }
   ]
 }

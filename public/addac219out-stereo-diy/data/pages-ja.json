@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "ADDAC219OUT 組み立てガイド\n\nADDAC SYSTEM",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC219OUT 組み立てガイド</p>\n<p>ADDAC SYSTEM</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "ADDAC219OUT 組み立てガイド\n\nSTEP 1:\n\nこれは最もシンプルなDIYキットです。下記の色順序に従ってジャックをPCBに配置し、フロントパネルを取り付けてジャックナットを締めます。その後、すべてのジャックの脚をはんだ付けします。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC219OUT 組み立てガイド</p>\n<p>STEP 1:</p>\n<p>これは最もシンプルなDIYキットです。下記の色順序に従ってジャックをPCBに配置し、フロントパネルを取り付けてジャックナットを締めます。その後、すべてのジャックの脚をはんだ付けします。</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "完成です！\n\nHappy Patching!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>完成です！</p>\n<p>Happy Patching!</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "フィードバック、コメント、問題についてはこちらまでお問い合わせください：\naddac@addacsystem.com\n\nADDAC219OUT アセンブリガイド\n2025年3月 リビジョン.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>フィードバック、コメント、問題についてはこちらまでお問い合わせください：\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC219OUT アセンブリガイド\n2025年3月 リビジョン.01</p>"
     }
   ]
 }

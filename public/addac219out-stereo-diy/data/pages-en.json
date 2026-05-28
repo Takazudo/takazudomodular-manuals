@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "ADDAC219OUT Assembly Guide\n\nADDAC SYSTEM",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC219OUT Assembly Guide</p>\n<p>ADDAC SYSTEM</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "ADDAC219OUT Assembly Guide\n\nSTEP 1:\n\nThis is our simplest DIY kit, simply place the jacks on the pcb in the color order indicated below, place the front-panel and tighten the jack nuts. Then solder all jack legs.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC219OUT Assembly Guide</p>\n<p>STEP 1:</p>\n<p>This is our simplest DIY kit, simply place the jacks on the pcb in the color order indicated below, place the front-panel and tighten the jack nuts. Then solder all jack legs.</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "You're all done!\n\nHappy Patching!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>You're all done!</p>\n<p>Happy Patching!</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nADDAC219OUT ASSEMBLY GUIDE\nMarch.2025 Revision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC219OUT ASSEMBLY GUIDE\nMarch.2025 Revision.01</p>"
     }
   ]
 }

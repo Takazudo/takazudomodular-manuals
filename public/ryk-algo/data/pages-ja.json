@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "ALGO\n\nXM\n\nATTACK\n\n[ ENV2のトリガーソースを選択するにはプッシュしてください ]\n\nDECAY　　SUSTAIN　　RELEASE",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ALGO</p>\n<p>XM</p>\n<p>ATTACK</p>\n<p>[ ENV2のトリガーソースを選択するにはプッシュしてください ]</p>\n<p>DECAY　　SUSTAIN　　RELEASE</p>"
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "1→FREQUENCY\n\n2→LEVEL\n\n3→TUNE\n\n4→STEREO OUTPUT\n\n5→WAVE FOLD\n\n6→WAVE WARP\n\n7→ALGORITHM\n\n8→RANGE\n\n9→CROSS\n\n10→MODULATION\n\n11→DETUNE\n\n12→/CHORUS\n\n13→CROSS MODULATION CV\n\n14→FM / DT / MOD\n\n15→or SYNC INPUT\n\n16→OSCILLATOR\n\n17→MOD INPUTS\n\n18→M2　M1　M3　M4\n\n19→DT\n\n20→TUNE\n\n21→ALGO\n\n22→V/OCT\n\n23→WARP\n\n24→XM　OUT\n\n25→XM\n\n26→MOD\n\n27→CAR\n\n28→ALL\n\n29→1\n\n30→2\n\n31→3\n\n32→FOLD\n\n33→FM\n\n34→DT\n\n35→SYNC\n\n36→V/OCT INPUT",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>1→FREQUENCY</p>\n<p>2→LEVEL</p>\n<p>3→TUNE</p>\n<p>4→STEREO OUTPUT</p>\n<p>5→WAVE FOLD</p>\n<p>6→WAVE WARP</p>\n<p>7→ALGORITHM</p>\n<p>8→RANGE</p>\n<p>9→CROSS</p>\n<p>10→MODULATION</p>\n<p>11→DETUNE</p>\n<p>12→/CHORUS</p>\n<p>13→CROSS MODULATION CV</p>\n<p>14→FM / DT / MOD</p>\n<p>15→or SYNC INPUT</p>\n<p>16→OSCILLATOR</p>\n<p>17→MOD INPUTS</p>\n<p>18→M2　M1　M3　M4</p>\n<p>19→DT</p>\n<p>20→TUNE</p>\n<p>21→ALGO</p>\n<p>22→V/OCT</p>\n<p>23→WARP</p>\n<p>24→XM　OUT</p>\n<p>25→XM</p>\n<p>26→MOD</p>\n<p>27→CAR</p>\n<p>28→ALL</p>\n<p>29→1</p>\n<p>30→2</p>\n<p>31→3</p>\n<p>32→FOLD</p>\n<p>33→FM</p>\n<p>34→DT</p>\n<p>35→SYNC</p>\n<p>36→V/OCT INPUT</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "ALGOは、深いアルゴリズムFMサウンド生成が可能なQUAD COMPLEX OSCILLATOR BANKです。\n\n概要\n\nALGOの4つのオシレーターは、直列または並列の組み合わせで設定でき、複雑なFMまたは加算合成のサウンドテクスチャを作成できます。\n\nユニークなアルゴリズムディスプレイが、あるオシレーターから別のオシレーターへのシグナルフローを表示します。\n\n各オシレーターにはLevelとFrequencyのコントロールがあり、メニューを掘り下げることなくFMティンバーを簡単に調整できます。\n\n各オシレーターのFrequencyまたはLevelに対する個別のModulationインプット - エンベロープをいくつかパッチして、即座にFMシンセボイスを構築できます。\n\nサイン波に飽きましたか？WAVE WARPコントロールで、トライアングル波からパルス波へ、そして元に戻るように波形を変形させます。これはキャリア、モジュレーター、またはその両方のタイプのオシレーターに適用できます。\n\nさらなる加工を求める方には、WAVE FOLDINGも3つの美味しいフレーバーで利用可能です。Symmetric（対称）、Asym-（非対称）など。\n\nPUSH TO TOGGLE ALGORITHM MODES\n\nOSC2 LEVEL　OSC1 LEVEL　OSC3 LEVEL　OSC4 LEVEL",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ALGOは、深いアルゴリズムFMサウンド生成が可能なQUAD COMPLEX OSCILLATOR BANKです。</p>\n<p>概要</p>\n<p>ALGOの4つのオシレーターは、直列または並列の組み合わせで設定でき、複雑なFMまたは加算合成のサウンドテクスチャを作成できます。</p>\n<p>ユニークなアルゴリズムディスプレイが、あるオシレーターから別のオシレーターへのシグナルフローを表示します。</p>\n<p>各オシレーターにはLevelとFrequencyのコントロールがあり、メニューを掘り下げることなくFMティンバーを簡単に調整できます。</p>\n<p>各オシレーターのFrequencyまたはLevelに対する個別のModulationインプット - エンベロープをいくつかパッチして、即座にFMシンセボイスを構築できます。</p>\n<p>サイン波に飽きましたか？WAVE WARPコントロールで、トライアングル波からパルス波へ、そして元に戻るように波形を変形させます。これはキャリア、モジュレーター、またはその両方のタイプのオシレーターに適用できます。</p>\n<p>さらなる加工を求める方には、WAVE FOLDINGも3つの美味しいフレーバーで利用可能です。Symmetric（対称）、Asym-（非対称）など。</p>\n<p>PUSH TO TOGGLE ALGORITHM MODES</p>\n<p>OSC2 LEVEL　OSC1 LEVEL　OSC3 LEVEL　OSC4 LEVEL</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "metric および Soft Clip！\n\nCV入力付きのGlobal Detuneコントロールは、オシレーターを広げて、深淵へと沈み込むNetflixの終末ドローン風サウンドを作成するのに最適です。\n\n最後に、オンボードのStereo Chorusにより、すべてのFMサウンドに活気あふれる1980年代風のシマーを加えることができます。\n\nそして、ステレオ対応です！\n\nTECHNICAL SPECIFICATIONS\n\n周波数範囲\n8hz - 35khz\n\nサンプリング周波数\n85khz @ 2倍オーバーサンプリング [ 170khz ]\n\n寸法\n18 HP幅\n25 mm 奥行き\n\n消費電力\n+12v 70mA\n-12v 6mA",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>metric および Soft Clip！</p>\n<p>CV入力付きのGlobal Detuneコントロールは、オシレーターを広げて、深淵へと沈み込むNetflixの終末ドローン風サウンドを作成するのに最適です。</p>\n<p>最後に、オンボードのStereo Chorusにより、すべてのFMサウンドに活気あふれる1980年代風のシマーを加えることができます。</p>\n<p>そして、ステレオ対応です！</p>\n<p>TECHNICAL SPECIFICATIONS</p>\n<p>周波数範囲\n8hz - 35khz</p>\n<p>サンプリング周波数\n85khz @ 2倍オーバーサンプリング [ 170khz ]</p>\n<p>寸法\n18 HP幅\n25 mm 奥行き</p>\n<p>消費電力\n+12v 70mA\n-12v 6mA</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "FM SYNTHESIS\n\nSubtractive synthesisは、豊富な倍音を持つオシレーターソース（のこぎり波・矩形波）を使用し、フィルター（VCF）によって倍音を選択的に除去することで、音のtimbreを変化させます。\n\nFM SYNTHESISはその対極にあります。非常に少ない倍音しか持たないオシレーター（サイン波）から、周波数変調を使って豊かな倍音を生み出します。\n\nモジュレーションオシレーターがキャリアオシレーターの周波数を変調し、「サイドバンド」と呼ばれる新たな倍音を生み出します。\n\nモジュレーションオシレーターのLevelが上がるにつれて、これらのサイドバンドの倍音がより多く生成され、音はより豊かで複雑になっていきます。\n\nキャリアオシレーターのみがメイン出力に送られ、モジュレーションオシレーターは音として聞こえません。\n\nALGO内のオシレーターは、選択されたALGORITHMに応じて、モジュレーションオシレーターまたはキャリアオシレーターとして機能するよう設定されています。\n\n赤いLEDで示されるALGORITHMは、オシレーター間の信号の流れを、左上から右下に向かって表示します。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>FM SYNTHESIS</p>\n<p>Subtractive synthesisは、豊富な倍音を持つオシレーターソース（のこぎり波・矩形波）を使用し、フィルター（VCF）によって倍音を選択的に除去することで、音のtimbreを変化させます。</p>\n<p>FM SYNTHESISはその対極にあります。非常に少ない倍音しか持たないオシレーター（サイン波）から、周波数変調を使って豊かな倍音を生み出します。</p>\n<p>モジュレーションオシレーターがキャリアオシレーターの周波数を変調し、「サイドバンド」と呼ばれる新たな倍音を生み出します。</p>\n<p>モジュレーションオシレーターのLevelが上がるにつれて、これらのサイドバンドの倍音がより多く生成され、音はより豊かで複雑になっていきます。</p>\n<p>キャリアオシレーターのみがメイン出力に送られ、モジュレーションオシレーターは音として聞こえません。</p>\n<p>ALGO内のオシレーターは、選択されたALGORITHMに応じて、モジュレーションオシレーターまたはキャリアオシレーターとして機能するよう設定されています。</p>\n<p>赤いLEDで示されるALGORITHMは、オシレーター間の信号の流れを、左上から右下に向かって表示します。</p>"
     },
     {
       "pageNum": 6,
@@ -59,7 +64,8 @@
       "sectionName": null,
       "content": "オシレーターとAlgorithm\n\n各オシレーターには、FREQUENCY（周波数）を調整するコントロール［大きいKnob］と、出力LEVELを調整するコントロール［トリマーKnob］があります。\n\nBLANK ALGORITHM［赤いLEDが点灯していない状態］を選択すると、すべてのオシレーターの音を聴くことができます。［すべてのオシレーターがキャリアになります］\n\nLEVEL Knobを調整すると、各オシレーターの出力レベルを上げ下げできます。\n\nFREQUENCY Knobを調整すると、利用可能な18種類のハーモニクス［0.5、1、2、3、4、5 … 18］を順に切り替えることができます。［その他の周波数モードについてはEXPERT FEATURES P.9を参照してください］\n\nハーモニクスは、基本ハーモニクス「1」の倍数です。音楽的なオクターブごとに周波数は2倍になるため、ハーモニクス1、2、4、8、16はオクターブ間隔になります。これらはオシレーターのFREQUENCY Knobの横の緑色のLEDが点灯することで示されます。\n\nハーモニクス「1」は、オシレーターのFREQUENCY Knobの横の黄色のLEDが点灯することで示されます。\n\nオシレーターがモジュレーターとして機能している場合、その出力は直接音として出力されず、別のオシレーターを変調するようにルーティングされます。これをCROSS MODULATION（クロスモジュレーション）と呼びます。［XM］\n\nCROSS MODULATIONの量は、XM KnobとXM CV入力によってグローバルに設定されます。\n\nALGORITHM 2を選択し、LEVELコントロールを操作して、モジュレーションオシレーター1と3が隣接するキャリアの音色にどのような影響を与えるかを確認してください。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>オシレーターとAlgorithm</p>\n<p>各オシレーターには、FREQUENCY（周波数）を調整するコントロール［大きいKnob］と、出力LEVELを調整するコントロール［トリマーKnob］があります。</p>\n<p>BLANK ALGORITHM［赤いLEDが点灯していない状態］を選択すると、すべてのオシレーターの音を聴くことができます。［すべてのオシレーターがキャリアになります］</p>\n<p>LEVEL Knobを調整すると、各オシレーターの出力レベルを上げ下げできます。</p>\n<p>FREQUENCY Knobを調整すると、利用可能な18種類のハーモニクス［0.5、1、2、3、4、5 … 18］を順に切り替えることができます。［その他の周波数モードについてはEXPERT FEATURES P.9を参照してください］</p>\n<p>ハーモニクスは、基本ハーモニクス「1」の倍数です。音楽的なオクターブごとに周波数は2倍になるため、ハーモニクス1、2、4、8、16はオクターブ間隔になります。これらはオシレーターのFREQUENCY Knobの横の緑色のLEDが点灯することで示されます。</p>\n<p>ハーモニクス「1」は、オシレーターのFREQUENCY Knobの横の黄色のLEDが点灯することで示されます。</p>\n<p>オシレーターがモジュレーターとして機能している場合、その出力は直接音として出力されず、別のオシレーターを変調するようにルーティングされます。これをCROSS MODULATION（クロスモジュレーション）と呼びます。［XM］</p>\n<p>CROSS MODULATIONの量は、XM KnobとXM CV入力によってグローバルに設定されます。</p>\n<p>ALGORITHM 2を選択し、LEVELコントロールを操作して、モジュレーションオシレーター1と3が隣接するキャリアの音色にどのような影響を与えるかを確認してください。</p>"
     },
     {
       "pageNum": 7,
@@ -68,7 +74,8 @@
       "sectionName": null,
       "content": "これらが接続されているオシレーター2と4に影響を与えます。モジュレーションの効果を聴くには、XMノブを少し上げてください。\n\nモジュレーション・オシレーターのLEVELを上げると、サウンドの豊かさが増します。これはローパスフィルター（LP VCF）のカットオフ周波数を上げることに似たイメージです。\n\nモジュレーターとキャリアのハーモニクスが数値的に関連した倍数（2と4、または3と1など）の場合、生成されるサウンドはより調和的になります。それ以外の倍数では、より個性的なインハーモニックなサウンドが生まれます。\n\n一般的に、より繊細で興味深いサウンドを作るためには、XMノブやモジュレーション・オシレーターのLevel コントロールを低めの設定にすることが最適です。\n\nモジュレーションのレベルが高すぎると、使用するオシレーターのハーモニクスに関わらず、互いに似通った強いメタリックなサウンドになってしまいます。\n\n以下に使用可能なアルゴリズムの例をいくつか示します：\n\nAlgorithm 3\nOscillator 1がOscillator 2、Oscillator 3、およびOscillator 4をモジュレートします。\n\nAlgorithm 5\nOscillator 1と2が並列で組み合わさり、Oscillator 3とOscillator 4をモジュレートします。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>これらが接続されているオシレーター2と4に影響を与えます。モジュレーションの効果を聴くには、XMノブを少し上げてください。</p>\n<p>モジュレーション・オシレーターのLEVELを上げると、サウンドの豊かさが増します。これはローパスフィルター（LP VCF）のカットオフ周波数を上げることに似たイメージです。</p>\n<p>モジュレーターとキャリアのハーモニクスが数値的に関連した倍数（2と4、または3と1など）の場合、生成されるサウンドはより調和的になります。それ以外の倍数では、より個性的なインハーモニックなサウンドが生まれます。</p>\n<p>一般的に、より繊細で興味深いサウンドを作るためには、XMノブやモジュレーション・オシレーターのLevel コントロールを低めの設定にすることが最適です。</p>\n<p>モジュレーションのレベルが高すぎると、使用するオシレーターのハーモニクスに関わらず、互いに似通った強いメタリックなサウンドになってしまいます。</p>\n<p>以下に使用可能なアルゴリズムの例をいくつか示します：</p>\n<p>Algorithm 3\nOscillator 1がOscillator 2、Oscillator 3、およびOscillator 4をモジュレートします。</p>\n<p>Algorithm 5\nOscillator 1と2が並列で組み合わさり、Oscillator 3とOscillator 4をモジュレートします。</p>"
     },
     {
       "pageNum": 8,
@@ -77,7 +84,8 @@
       "sectionName": null,
       "content": "Algorithm 4\n\nOscillator 1がOscillator 2をモジュレートし、Oscillator 2がOscillator 3とOscillator 4をモジュレートします。\n\nCONTROLS\n\nRANGEボタンを押すと、Algoモジュールの5つのオクターブレンジを順番に切り替えます。[Expert Featuresも参照してください]\n\nALGOボタンを押すと、オシレーターの接続方法を示す9つのFM algorithmを順番に切り替えます。長押しすると逆方向に切り替わります。[Expert Featuresも参照してください]\n\nTUNE knob – Algoモジュールのグローバルなファインチューン周波数コントロールです。小さなドットがセンターチューン位置を示します。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Algorithm 4</p>\n<p>Oscillator 1がOscillator 2をモジュレートし、Oscillator 2がOscillator 3とOscillator 4をモジュレートします。</p>\n<p>CONTROLS</p>\n<p>RANGEボタンを押すと、Algoモジュールの5つのオクターブレンジを順番に切り替えます。[Expert Featuresも参照してください]</p>\n<p>ALGOボタンを押すと、オシレーターの接続方法を示す9つのFM algorithmを順番に切り替えます。長押しすると逆方向に切り替わります。[Expert Featuresも参照してください]</p>\n<p>TUNE knob – Algoモジュールのグローバルなファインチューン周波数コントロールです。小さなドットがセンターチューン位置を示します。</p>"
     },
     {
       "pageNum": 9,
@@ -86,7 +94,8 @@
       "sectionName": null,
       "content": "DTノブ – Algoモジュールのグローバルなデチューンコントロールです。ノブを上げるとオシレーターの周波数が広がり始め、極端な設定では不協和音のようなサウンドが生まれます。\n\nCHORUS EFFECT – ボタンを押し続けながらDTノブを時計回りに回すと、Chorus Effectを有効にしてスピードを調整できます。ボタンを押し続けながらDTノブを完全に反時計回りに回すと、Chorus Effectがオフになります。\n\nChorusを調整した後は、ボタンを離してから、DTノブを希望のDETUNE設定に合わせてください。\n\nChorus Effectがアクティブなとき、DTノブの隣に緑色のLEDが点灯します。\n\nXMノブ – モジュレーターからキャリアオシレーターへのグローバルなクロスモジュレーション量を制御します。XM CV入力と組み合わせて使用します。\n\nWAVE WARP – Algoのオシレーターはサイン波ベースですが、Wave WarpコントロールまたはWarp CVを使用することで、トライアングル波、ノコギリ波、パルス波へと変形させることができます。\n\nWarp CV入力にジャックが挿入されていない場合、このコントロールは選択したオシレータータイプに適用されるWave Warpのグローバル量を設定します。\n\nWarp CV入力にジャックが挿入されている場合、コントロールはアッテネーターとして機能し、CV入力をスケーリングします。\n\nWave WarpはModulator、Carrier、またはBoth [ALL]のオシレータータイプに適用でき、コントロール上部の緑色のLEDで示されます。\n\nこれら3つのオプションから選択するには、ボタンを押し続けながらコントロールを回してください。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>DTノブ – Algoモジュールのグローバルなデチューンコントロールです。ノブを上げるとオシレーターの周波数が広がり始め、極端な設定では不協和音のようなサウンドが生まれます。</p>\n<p>CHORUS EFFECT – ボタンを押し続けながらDTノブを時計回りに回すと、Chorus Effectを有効にしてスピードを調整できます。ボタンを押し続けながらDTノブを完全に反時計回りに回すと、Chorus Effectがオフになります。</p>\n<p>Chorusを調整した後は、ボタンを離してから、DTノブを希望のDETUNE設定に合わせてください。</p>\n<p>Chorus Effectがアクティブなとき、DTノブの隣に緑色のLEDが点灯します。</p>\n<p>XMノブ – モジュレーターからキャリアオシレーターへのグローバルなクロスモジュレーション量を制御します。XM CV入力と組み合わせて使用します。</p>\n<p>WAVE WARP – Algoのオシレーターはサイン波ベースですが、Wave WarpコントロールまたはWarp CVを使用することで、トライアングル波、ノコギリ波、パルス波へと変形させることができます。</p>\n<p>Warp CV入力にジャックが挿入されていない場合、このコントロールは選択したオシレータータイプに適用されるWave Warpのグローバル量を設定します。</p>\n<p>Warp CV入力にジャックが挿入されている場合、コントロールはアッテネーターとして機能し、CV入力をスケーリングします。</p>\n<p>Wave WarpはModulator、Carrier、またはBoth [ALL]のオシレータータイプに適用でき、コントロール上部の緑色のLEDで示されます。</p>\n<p>これら3つのオプションから選択するには、ボタンを押し続けながらコントロールを回してください。</p>"
     },
     {
       "pageNum": 10,
@@ -95,7 +104,8 @@
       "sectionName": null,
       "content": "WAVE FOLD - Wave Foldingは、波のピークを内側に折り返すことで、基本サイン波から複数のハーモニクスを生成します。Foldコントロールまたは Fold CVを増加させると、ハーモニックオーバートーンの量が増加します。\n\nFold CV入力にジャックが挿入されていない場合、このコントロールはオシレーターに適用されるWave Foldのグローバルな量を設定します。\n\nFold CV入力にジャックが挿入されている場合、コントロールはアッテネーターとして機能し、CV入力をスケーリングします。\n\nWave Foldには3種類あり、コントロール上部のGreen LEDで示されます：\n1 ] Symmetric\n2 ] Asymmetric\n3 ] Soft Clip\n\n選択するには、コントロールを回しながらボタンを押し続けてください。\n\nWave FoldはCarrierオシレーターにのみ適用されます。\n\nCONNECTION JACKS\n\nV/OCT - これはピッチCV入力 [ 0V-6V ] で、すべてのオシレーター周波数の基準となります [ オシレーターがFIXEDモードに設定されている場合を除く ]。\n\nOUT - これはモジュールのオーディオ出力です。Stereo [ TRS ] またはMono [ TS ] ジャックで使用でき、自動的に検出されます。\n\nXM - これはCross Modulation [ XM ] 量のCV入力 [ -5V to +8V ] で、XMコントロールに加えてグローバルなXM量をコントロールします。\n\n例えばEnvelopeに接続することで、ノートがトリガーされたときに音色を動的に変化させることができます。\n\nFM/DT/SYNC - これはCV入力 [ -5V to 5V ] で、すべてのオシレーターの周波数をモジュレートしてビブラートスタイルのエフェクトを作成したり [ FM ]、その他の用途にも使用できます。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>WAVE FOLD - Wave Foldingは、波のピークを内側に折り返すことで、基本サイン波から複数のハーモニクスを生成します。Foldコントロールまたは Fold CVを増加させると、ハーモニックオーバートーンの量が増加します。</p>\n<p>Fold CV入力にジャックが挿入されていない場合、このコントロールはオシレーターに適用されるWave Foldのグローバルな量を設定します。</p>\n<p>Fold CV入力にジャックが挿入されている場合、コントロールはアッテネーターとして機能し、CV入力をスケーリングします。</p>\n<p>Wave Foldには3種類あり、コントロール上部のGreen LEDで示されます：\n1 ] Symmetric\n2 ] Asymmetric\n3 ] Soft Clip</p>\n<p>選択するには、コントロールを回しながらボタンを押し続けてください。</p>\n<p>Wave FoldはCarrierオシレーターにのみ適用されます。</p>\n<p>CONNECTION JACKS</p>\n<p>V/OCT - これはピッチCV入力 [ 0V-6V ] で、すべてのオシレーター周波数の基準となります [ オシレーターがFIXEDモードに設定されている場合を除く ]。</p>\n<p>OUT - これはモジュールのオーディオ出力です。Stereo [ TRS ] またはMono [ TS ] ジャックで使用でき、自動的に検出されます。</p>\n<p>XM - これはCross Modulation [ XM ] 量のCV入力 [ -5V to +8V ] で、XMコントロールに加えてグローバルなXM量をコントロールします。</p>\n<p>例えばEnvelopeに接続することで、ノートがトリガーされたときに音色を動的に変化させることができます。</p>\n<p>FM/DT/SYNC - これはCV入力 [ -5V to 5V ] で、すべてのオシレーターの周波数をモジュレートしてビブラートスタイルのエフェクトを作成したり [ FM ]、その他の用途にも使用できます。</p>"
     },
     {
       "pageNum": 11,
@@ -104,7 +114,8 @@
       "sectionName": null,
       "content": "Detune量 [ DT ] をモジュレートします。また、全オシレーターのフェーズをリセットするSYNC入力としても使用できます。これは低周波ベースラインなどを演奏する際のクリックノイズを軽減するのに役立ちます。\n\nこれらのモードを切り替えるには、ジャックをソケットに挿入しながらボタンを押し続けてください。モードはソケット上部の2つの緑色LEDで示され、SYNCはLEDが点灯していない状態で示されます。\n\nM1-M4 – これらは個々のオシレーターのレベルをモジュレートするために使用できるCV モジュレーション入力 [ 0V～8V ] です。また、各オシレーターの個別のFMまたはV/OCT入力としても使用できます。[ Expert Featuresを参照 ]\n\nWARP – これはオシレーターに適用されるWave Warpの量をコントロールするCV入力 [ 0V～5V ] です。上部のアッテネーターがCVからの信号をスケールします。ジャックが挿入されていない場合は、アッテネーターコントロールがWave Warpの量を設定します。\n\nFOLD – これはオシレーターに適用されるWave Foldの量をコントロールするCV入力 [ 0V～5V ] です。上部のアッテネーターがCVからの信号をスケールします。ジャックが挿入されていない場合は、アッテネーターコントロールがWave Foldの量を設定します。\n\nEXPERT FEATURES\n\n一部のコントロールを使用しながら上矢印または下矢印ボタンを押し続けると、モジュールの拡張機能が有効になります。\n\nオシレーター周波数モード\n\nオシレーターのFREQUENCYノブを回しながら上矢印ボタンを押し続けると、周波数をMOD SOURCEにロックせずにオシレーター周波数のFINEコントロールが有効になります。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Detune量 [ DT ] をモジュレートします。また、全オシレーターのフェーズをリセットするSYNC入力としても使用できます。これは低周波ベースラインなどを演奏する際のクリックノイズを軽減するのに役立ちます。</p>\n<p>これらのモードを切り替えるには、ジャックをソケットに挿入しながらボタンを押し続けてください。モードはソケット上部の2つの緑色LEDで示され、SYNCはLEDが点灯していない状態で示されます。</p>\n<p>M1-M4 – これらは個々のオシレーターのレベルをモジュレートするために使用できるCV モジュレーション入力 [ 0V～8V ] です。また、各オシレーターの個別のFMまたはV/OCT入力としても使用できます。[ Expert Featuresを参照 ]</p>\n<p>WARP – これはオシレーターに適用されるWave Warpの量をコントロールするCV入力 [ 0V～5V ] です。上部のアッテネーターがCVからの信号をスケールします。ジャックが挿入されていない場合は、アッテネーターコントロールがWave Warpの量を設定します。</p>\n<p>FOLD – これはオシレーターに適用されるWave Foldの量をコントロールするCV入力 [ 0V～5V ] です。上部のアッテネーターがCVからの信号をスケールします。ジャックが挿入されていない場合は、アッテネーターコントロールがWave Foldの量を設定します。</p>\n<p>EXPERT FEATURES</p>\n<p>一部のコントロールを使用しながら上矢印または下矢印ボタンを押し続けると、モジュールの拡張機能が有効になります。</p>\n<p>オシレーター周波数モード</p>\n<p>オシレーターのFREQUENCYノブを回しながら上矢印ボタンを押し続けると、周波数をMOD SOURCEにロックせずにオシレーター周波数のFINEコントロールが有効になります。</p>"
     },
     {
       "pageNum": 12,
@@ -113,7 +124,8 @@
       "sectionName": null,
       "content": "倍音の音程間隔となります。変調器とキャリアオシレーターの組み合わせで使用する場合、これらの非整数倍音はインハーモニックで金属的なベルのような音色を作るのに適しています。4つのキャリアオシレーター全てで使用する場合、ファインチューニングはコードなどを作るのに適しています。\n\nボタンを押し続けながらオシレーターのFREQUENCYノブを回すと、オシレーターの周波数を倍音の音程間隔に縛らずにFIXED（固定）でコントロールできるようになります。\n\nFIXEDモードでは、オシレーターの周波数はメインのV/OCT入力の影響を受けないため、オシレーターを固定周波数で動作させることができます。\n\nボタンを押さずにFREQUENCYノブを回すと、オシレーターのモードが通常のHarmonicモードにリセットされます。\n\nPanコントロール\n\nOutputにステレオジャックを接続している場合、オシレーターを2つの出力間でPanすることができます。これにより、Stereo Spaceでの定位を設定したり、2つの独立した出力チャンネルとして使用したりすることができます。\n\nボタンを押し続けながらオシレーターのLEVELノブを回すと、Pan位置を設定できます。\n\n完全に反時計回りが［左］、完全に時計回りが［右］です。\n\nPANを設定した後は、ボタンを離してからLEVELノブをお好みのLevel位置に戻すことを忘れないでください。\n\nM1-M4 オプション機能\n\n通常、Algo M1-M4入力はAmplitude（振幅）がデフォルトになっています。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>倍音の音程間隔となります。変調器とキャリアオシレーターの組み合わせで使用する場合、これらの非整数倍音はインハーモニックで金属的なベルのような音色を作るのに適しています。4つのキャリアオシレーター全てで使用する場合、ファインチューニングはコードなどを作るのに適しています。</p>\n<p>ボタンを押し続けながらオシレーターのFREQUENCYノブを回すと、オシレーターの周波数を倍音の音程間隔に縛らずにFIXED（固定）でコントロールできるようになります。</p>\n<p>FIXEDモードでは、オシレーターの周波数はメインのV/OCT入力の影響を受けないため、オシレーターを固定周波数で動作させることができます。</p>\n<p>ボタンを押さずにFREQUENCYノブを回すと、オシレーターのモードが通常のHarmonicモードにリセットされます。</p>\n<p>Panコントロール</p>\n<p>Outputにステレオジャックを接続している場合、オシレーターを2つの出力間でPanすることができます。これにより、Stereo Spaceでの定位を設定したり、2つの独立した出力チャンネルとして使用したりすることができます。</p>\n<p>ボタンを押し続けながらオシレーターのLEVELノブを回すと、Pan位置を設定できます。</p>\n<p>完全に反時計回りが［左］、完全に時計回りが［右］です。</p>\n<p>PANを設定した後は、ボタンを離してからLEVELノブをお好みのLevel位置に戻すことを忘れないでください。</p>\n<p>M1-M4 オプション機能</p>\n<p>通常、Algo M1-M4入力はAmplitude（振幅）がデフォルトになっています。</p>"
     },
     {
       "pageNum": 13,
@@ -122,7 +134,8 @@
       "sectionName": null,
       "content": "各オシレーターの振幅変調 [ AM ] を行います。\n\nまたは、個別に切り替えて [ FM ] 周波数変調入力として機能させることもできます。\n\nM1-M4入力のいずれかにジャックを挿し込む際に、ボタンを押し続けると、AM入力からFM入力へ切り替えられます。\n\nM1-M4入力がFM入力に設定されたオシレーターは、Levelコントロールの隣に赤色のLEDが点滅します。\n\n注意: M1-M4 CVをFM入力として使用した場合、以下の結果が予想されます：\n\nオシレーターをHARMONICモードで通常使用している場合、CVは倍音間隔を変調します。\n\nオシレーターをFINEモードで使用している場合、CV変調入力はメインV/OCT入力に加えてV/OCT入力として機能します。\n\nオシレーターをFIXEDモードで使用している場合、周波数変調入力はV/OCT入力として機能しますが、オシレーターはメインV/OCT入力の影響を受けません。\n\n- グローバルVCA\n\nM4にジャックを挿し込む際にボタンを押し続けると、この入力をグローバルVCA CV入力に切り替えられます。これはオシレーター4のLevelコントロール隣の緑色のLEDで示されます。\n\nこれにより、AlgoのメイN出力のCVレベルコントロールが可能となり、エンベロープなどと組み合わせて使用できます。\n\nFIRMWARE UPDATES\n\nALGOのファームウェアは随時更新される場合があります。新しいリリースについては、ウェブサイト [ryk-modular.com] をご確認ください。ファームウェアのインストール方法は以下の通りです：",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>各オシレーターの振幅変調 [ AM ] を行います。</p>\n<p>または、個別に切り替えて [ FM ] 周波数変調入力として機能させることもできます。</p>\n<p>M1-M4入力のいずれかにジャックを挿し込む際に、ボタンを押し続けると、AM入力からFM入力へ切り替えられます。</p>\n<p>M1-M4入力がFM入力に設定されたオシレーターは、Levelコントロールの隣に赤色のLEDが点滅します。</p>\n<p>注意: M1-M4 CVをFM入力として使用した場合、以下の結果が予想されます：</p>\n<p>オシレーターをHARMONICモードで通常使用している場合、CVは倍音間隔を変調します。</p>\n<p>オシレーターをFINEモードで使用している場合、CV変調入力はメインV/OCT入力に加えてV/OCT入力として機能します。</p>\n<p>オシレーターをFIXEDモードで使用している場合、周波数変調入力はV/OCT入力として機能しますが、オシレーターはメインV/OCT入力の影響を受けません。</p>\n<ul>\n<li>グローバルVCA</li>\n</ul>\n<p>M4にジャックを挿し込む際にボタンを押し続けると、この入力をグローバルVCA CV入力に切り替えられます。これはオシレーター4のLevelコントロール隣の緑色のLEDで示されます。</p>\n<p>これにより、AlgoのメイN出力のCVレベルコントロールが可能となり、エンベロープなどと組み合わせて使用できます。</p>\n<p>FIRMWARE UPDATES</p>\n<p>ALGOのファームウェアは随時更新される場合があります。新しいリリースについては、ウェブサイト [ryk-modular.com] をご確認ください。ファームウェアのインストール方法は以下の通りです：</p>"
     },
     {
       "pageNum": 14,
@@ -131,7 +144,8 @@
       "sectionName": null,
       "content": "1. 最初にモジュールの電源を入れます。\n\n2. 背面の「firmware」ボタンを押したまま保持します。\n\n3. 「firmware」ボタンを押し続けたまま、「reset」ボタンを一度押します。\n\n4. 「firmware」ボタンを離します。\n\n5. USBハブを使用せずに、USB Bケーブルでモジュールとコンピューターを接続します。\n\n6. コンピューターに「RPI-RP2」という名前のUSBディスクが表示されるはずです。ファームウェアのUF2ファイルをそのディスクにドラッグしてください。成功すると、モジュールは新しいファームウェアで再起動します。\n\nALGORITHM 0\n\nALGORITHM 1\n\nALGORITHM 2",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<ol>\n<li>\n<p>最初にモジュールの電源を入れます。</p>\n</li>\n<li>\n<p>背面の「firmware」ボタンを押したまま保持します。</p>\n</li>\n<li>\n<p>「firmware」ボタンを押し続けたまま、「reset」ボタンを一度押します。</p>\n</li>\n<li>\n<p>「firmware」ボタンを離します。</p>\n</li>\n<li>\n<p>USBハブを使用せずに、USB Bケーブルでモジュールとコンピューターを接続します。</p>\n</li>\n<li>\n<p>コンピューターに「RPI-RP2」という名前のUSBディスクが表示されるはずです。ファームウェアのUF2ファイルをそのディスクにドラッグしてください。成功すると、モジュールは新しいファームウェアで再起動します。</p>\n</li>\n</ol>\n<p>ALGORITHM 0</p>\n<p>ALGORITHM 1</p>\n<p>ALGORITHM 2</p>"
     },
     {
       "pageNum": 15,
@@ -140,7 +154,8 @@
       "sectionName": null,
       "content": "PUSH TO REC: VECTOR SPEED\n\nALGORITHM 3\n\nALGORITHM 5\n\nALGORITHM 7\n\nALGORITHM 4\n\nALGORITHM 6\n\nALGORITHM 8",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>PUSH TO REC: VECTOR SPEED</p>\n<p>ALGORITHM 3</p>\n<p>ALGORITHM 5</p>\n<p>ALGORITHM 7</p>\n<p>ALGORITHM 4</p>\n<p>ALGORITHM 6</p>\n<p>ALGORITHM 8</p>"
     },
     {
       "pageNum": 16,
@@ -149,7 +164,8 @@
       "sectionName": null,
       "content": "1→ELL 1-2\n\n2→TIME CELL 2-3\n\n3→TIME CELL 3-4\n\n4→TIME\n\n5→PUSH TO SET CELL VECTOR POSITION",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>1→ELL 1-2</p>\n<p>2→TIME CELL 2-3</p>\n<p>3→TIME CELL 3-4</p>\n<p>4→TIME</p>\n<p>5→PUSH TO SET CELL VECTOR POSITION</p>"
     }
   ]
 }

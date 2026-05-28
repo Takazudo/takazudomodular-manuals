@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "AI Synthesis AI018 Stereo Matrix Mixer User's Manual\n\nThis is the Manual for the AI018 Eurorack Stereo Matrix Mixer you can purchase by going to:\nhttps://aisynthesis.com/product/ai018-eurorack-stereo-matrix-mixer/.\n\n1. About the AI018 Eurorack Stereo Matrix Mixer\n\nThe AI018 Eurorack Stereo Matrix Mixer is a compact 8-in, 8-out matrix mixer. A matrix mixer is used to route audio or cv signals from multiple sources to different destinations. There are sixteen potentiometers, with each potentiometer controlling the amount a given stereo input pair (1-4) will be sent to a given stereo output (A-D).\n\nA common usage for the AI018 would be as an effects send, with one or more inputs, and one or more effect inputs and outputs. Using the AI018 Stereo Matrix Mixer in this way, inputs can be sent to multiple effects, and the effects can be sent to each other, and even back into themselves, expanding the depth of the effects.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>AI Synthesis AI018 Stereo Matrix Mixer User's Manual</p>\n<p>This is the Manual for the AI018 Eurorack Stereo Matrix Mixer you can purchase by going to:\n<a href=\"https://aisynthesis.com/product/ai018-eurorack-stereo-matrix-mixer/\">https://aisynthesis.com/product/ai018-eurorack-stereo-matrix-mixer/</a>.</p>\n<ol>\n<li>About the AI018 Eurorack Stereo Matrix Mixer</li>\n</ol>\n<p>The AI018 Eurorack Stereo Matrix Mixer is a compact 8-in, 8-out matrix mixer. A matrix mixer is used to route audio or cv signals from multiple sources to different destinations. There are sixteen potentiometers, with each potentiometer controlling the amount a given stereo input pair (1-4) will be sent to a given stereo output (A-D).</p>\n<p>A common usage for the AI018 would be as an effects send, with one or more inputs, and one or more effect inputs and outputs. Using the AI018 Stereo Matrix Mixer in this way, inputs can be sent to multiple effects, and the effects can be sent to each other, and even back into themselves, expanding the depth of the effects.</p>"
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "2. AI018 Controls\n\n1. Inputs\n\nThere are four stereo inputs numbered 1-4. The (L) Right input is normalled to the Left (R) so that if no plug is inserted into the R Input, the Input from the L jack will duplicate itself on the R Channel.\n\n2. Input 1 Mixing Row.\n\nThis row of knobs controls the amount of signal from the Input 1 jacks will be mixed to outputs A-D.\n\n3. Input 2 Mixing Row.\n\nThis row of knobs controls the amount of signal from the Input 2 jacks will be mixed to outputs A-D.\n\n4. Input 3 Mixing Row.\n\nThis row of knobs controls the amount of signal from the Input 3 jacks will be mixed to outputs A-D.\n\n5. Input 4 Mixing Row.\n\nThis row of knobs controls the amount of signal from the Input 4 jacks will be mixed to outputs A-D.\n\n6. Outputs.\n\nThese are the separate mix outputs. Each output is a stereo mix of Inputs 1-4 as defined by the mixing rows.\n\n3. Power",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<ol start=\"2\">\n<li>\n<p>AI018 Controls</p>\n</li>\n<li>\n<p>Inputs</p>\n</li>\n</ol>\n<p>There are four stereo inputs numbered 1-4. The (L) Right input is normalled to the Left (R) so that if no plug is inserted into the R Input, the Input from the L jack will duplicate itself on the R Channel.</p>\n<ol start=\"2\">\n<li>Input 1 Mixing Row.</li>\n</ol>\n<p>This row of knobs controls the amount of signal from the Input 1 jacks will be mixed to outputs A-D.</p>\n<ol start=\"3\">\n<li>Input 2 Mixing Row.</li>\n</ol>\n<p>This row of knobs controls the amount of signal from the Input 2 jacks will be mixed to outputs A-D.</p>\n<ol start=\"4\">\n<li>Input 3 Mixing Row.</li>\n</ol>\n<p>This row of knobs controls the amount of signal from the Input 3 jacks will be mixed to outputs A-D.</p>\n<ol start=\"5\">\n<li>Input 4 Mixing Row.</li>\n</ol>\n<p>This row of knobs controls the amount of signal from the Input 4 jacks will be mixed to outputs A-D.</p>\n<ol start=\"6\">\n<li>Outputs.</li>\n</ol>\n<p>These are the separate mix outputs. Each output is a stereo mix of Inputs 1-4 as defined by the mixing rows.</p>\n<ol start=\"3\">\n<li>Power</li>\n</ol>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "The AI008 uses a shrouded header to prevent the cable being plugged in the wrong way.\n\nThe unit draws 20mA on the positive rail and 15mA on the negative side.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>The AI008 uses a shrouded header to prevent the cable being plugged in the wrong way.</p>\n<p>The unit draws 20mA on the positive rail and 15mA on the negative side.</p>"
     }
   ]
 }

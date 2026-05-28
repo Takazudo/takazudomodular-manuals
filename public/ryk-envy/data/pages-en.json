@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "ENVY MACHINE",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ENVY MACHINE</p>"
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "GATE1\nM1\n2\n2\n3\n3\n4\n4\nTIME\nLEVEL\nA\nD\nR\nDR\nSHP\nAUX\nMOD\nMOD LEVEL\nSHAPE\n0\n+ +\n- -\nOPT\nOUT LEVEL\nCH\nA\nD\nS\nR\n0\nENVY MACHINE\nOUT1 2 3 4",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>GATE1\nM1\n2\n2\n3\n3\n4\n4\nTIME\nLEVEL\nA\nD\nR\nDR\nSHP\nAUX\nMOD\nMOD LEVEL\nSHAPE\n0</p>\n<ul>\n<li>+</li>\n</ul>\n<ul>\n<li>\n<ul>\n<li></li>\n</ul>\n</li>\n</ul>\n<p>OPT\nOUT LEVEL\nCH\nA\nD\nS\nR\n0\nENVY MACHINE\nOUT1 2 3 4</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "Welcome to the Envy Machine!\n\nA compact quad-channel modulation machine, with an envious array of Envelopes, LFOs, random voltages and Knob Recording.\n\nOVERVIEW\n\nEach of the four channels on the ENVY MACHINE can be set to one of five super-flexible modulation modes:\n\n- ADSR Envelope\n- AD Envelope\n- AD LFO\n- Random Voltage\n- Recordable Knob Voltage Control\n\nGhost hand - Parameters can be animated using KNOB RECORDING to create timed variations in your patch.\n\nAnd . . . with a dedicated MOD input per channel, you can use an external CV to control anything - TIME, LEVEL, WAVESHAPE, colour of your hair etc . . .\n\nPolarity paradox - Modulation inputs AND channel Outputs come with bipolar attenuverters, you can choose BIPOLAR or UNIPOLAR, with continuously variable level control.\n\nSlippery slopes - WAVESHAPES are fully variable between LOG, EXPO, SIN, TRAPEZOID, and SQUARE !",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Welcome to the Envy Machine!</p>\n<p>A compact quad-channel modulation machine, with an envious array of Envelopes, LFOs, random voltages and Knob Recording.</p>\n<p>OVERVIEW</p>\n<p>Each of the four channels on the ENVY MACHINE can be set to one of five super-flexible modulation modes:</p>\n<ul>\n<li>ADSR Envelope</li>\n<li>AD Envelope</li>\n<li>AD LFO</li>\n<li>Random Voltage</li>\n<li>Recordable Knob Voltage Control</li>\n</ul>\n<p>Ghost hand - Parameters can be animated using KNOB RECORDING to create timed variations in your patch.</p>\n<p>And . . . with a dedicated MOD input per channel, you can use an external CV to control anything - TIME, LEVEL, WAVESHAPE, colour of your hair etc . . .</p>\n<p>Polarity paradox - Modulation inputs AND channel Outputs come with bipolar attenuverters, you can choose BIPOLAR or UNIPOLAR, with continuously variable level control.</p>\n<p>Slippery slopes - WAVESHAPES are fully variable between LOG, EXPO, SIN, TRAPEZOID, and SQUARE !</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "TECHNICAL SPECIFICATIONS\n\nTIME\nEnvelopes: 1.5ms – 4min\nLFO: 88hz – 7min\nRandom: 2khz - 2min\n\nOutput Voltage Ranges\nEnvelopes: 0–8V (inverted: 8V–0V)\nLFO/Random: 0–8V (Unipolar) or -5V–+5V (Bipolar)\n\nInput Voltage Range\n-5V - +5V\n\nDimensions\n12 HP wide\n25 mm deep\n\nPower Consumption\n-12V 5mA\n+12 70mA",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>TECHNICAL SPECIFICATIONS</p>\n<p>TIME\nEnvelopes: 1.5ms – 4min\nLFO: 88hz – 7min\nRandom: 2khz - 2min</p>\n<p>Output Voltage Ranges\nEnvelopes: 0–8V (inverted: 8V–0V)\nLFO/Random: 0–8V (Unipolar) or -5V–+5V (Bipolar)</p>\n<p>Input Voltage Range\n-5V - +5V</p>\n<p>Dimensions\n12 HP wide\n25 mm deep</p>\n<p>Power Consumption\n-12V 5mA\n+12 70mA</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "CONCEPT OF USE\n\nThe ENVY MACHINE has four channels. Use the CHANNEL BUTTON to cycle through them. The four LEDs above the jack sockets indicate which channel is active for editing when lit RED/ORANGE/YELLOW. The vertical LED BARS below each knob show the current knob value.\n\nAs you press the CHANNEL BUTTON the LED BARS will change to indicate the values for the newly active channel.\n\nThe LED BARS can be one of four colours depending on the current mode of the active channel.\n\nChannel Parameter Modes:\n- RED: Envelope Mode-\n- ORANGE: LFO or Random Mode\n- YELLOW: Knob Control Voltage\n\nChannel Option Mode:\n- GREEN",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>CONCEPT OF USE</p>\n<p>The ENVY MACHINE has four channels. Use the CHANNEL BUTTON to cycle through them. The four LEDs above the jack sockets indicate which channel is active for editing when lit RED/ORANGE/YELLOW. The vertical LED BARS below each knob show the current knob value.</p>\n<p>As you press the CHANNEL BUTTON the LED BARS will change to indicate the values for the newly active channel.</p>\n<p>The LED BARS can be one of four colours depending on the current mode of the active channel.</p>\n<p>Channel Parameter Modes:</p>\n<ul>\n<li>RED: Envelope Mode-</li>\n<li>ORANGE: LFO or Random Mode</li>\n<li>YELLOW: Knob Control Voltage</li>\n</ul>\n<p>Channel Option Mode:</p>\n<ul>\n<li>GREEN</li>\n</ul>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "There are 5 different Parameter modes you can choose. To cycle through these five modes, press and hold the CHANNEL BUTTON, whilst a short press of the OPTION BUTTON.\n\n1.ADSR ENV MODE\nATTACK SUSTAIN\nDECAY RELEASE\n\n2.AD ENV MODE\nATTACK\nDECAY\n\n3.LFO MODE\nFREQUENCY OFFSET\n\n4.RANDOM MODE\nATTACK OFFSET",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>There are 5 different Parameter modes you can choose. To cycle through these five modes, press and hold the CHANNEL BUTTON, whilst a short press of the OPTION BUTTON.</p>\n<p>1.ADSR ENV MODE\nATTACK SUSTAIN\nDECAY RELEASE</p>\n<p>2.AD ENV MODE\nATTACK\nDECAY</p>\n<p>3.LFO MODE\nFREQUENCY OFFSET</p>\n<p>4.RANDOM MODE\nATTACK OFFSET</p>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "You will notice how the colour and amount of LED BARS changes depending on which mode is selected for the current Channel.\n\nIf ALL Channels are set to KNOB CONTROL VOLTAGE MODE, then the display will change to show all four LED BARS in Yellow, and each knob will be associated with the Channel number below. Allowing all Channels to be adjusted at the same time.\n\n5. KNOB CONTROL VOLTAGE MODE\n\nVOLTAGE LEVEL",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>You will notice how the colour and amount of LED BARS changes depending on which mode is selected for the current Channel.</p>\n<p>If ALL Channels are set to KNOB CONTROL VOLTAGE MODE, then the display will change to show all four LED BARS in Yellow, and each knob will be associated with the Channel number below. Allowing all Channels to be adjusted at the same time.</p>\n<ol start=\"5\">\n<li>KNOB CONTROL VOLTAGE MODE</li>\n</ol>\n<p>VOLTAGE LEVEL</p>"
     },
     {
       "pageNum": 8,
@@ -80,7 +87,8 @@
       "sectionName": null,
       "content": "OPTION MODE\n\nTo toggle between PARAMETER MODE and OPTION MODE, press the OPTION BUTTON.\n\nWhen the LED BARS are green you are in OPTION MODE, the settings for this mode can be seen written vertically alongside the LED BARS.\n\nBAR1 – MOD CV Destination.\n\nThe CV from the MOD INPUT can be routed to one of the following parameters:\n\nTIME – Modulate all time based controls of the channel A,D,R etc\n\nLEVEL – Modulate the output level of the channel\n\nA – Modulate the Attack time of the channel\n\nD – Modulate the Decay time of the channel\n\nDR – Modulate the Decay & Release time of the channel\n\nSHAPE – Modulate the WAVESHAPE of the channel\n\nAUX – TBC\n\nBAR2 – MOD CV attenuverter.\n\nCentre is zero, above centre for positive scaled values, below centre for negative scaled values.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>OPTION MODE</p>\n<p>To toggle between PARAMETER MODE and OPTION MODE, press the OPTION BUTTON.</p>\n<p>When the LED BARS are green you are in OPTION MODE, the settings for this mode can be seen written vertically alongside the LED BARS.</p>\n<p>BAR1 – MOD CV Destination.</p>\n<p>The CV from the MOD INPUT can be routed to one of the following parameters:</p>\n<p>TIME – Modulate all time based controls of the channel A,D,R etc</p>\n<p>LEVEL – Modulate the output level of the channel</p>\n<p>A – Modulate the Attack time of the channel</p>\n<p>D – Modulate the Decay time of the channel</p>\n<p>DR – Modulate the Decay &#x26; Release time of the channel</p>\n<p>SHAPE – Modulate the WAVESHAPE of the channel</p>\n<p>AUX – TBC</p>\n<p>BAR2 – MOD CV attenuverter.</p>\n<p>Centre is zero, above centre for positive scaled values, below centre for negative scaled values.</p>"
     },
     {
       "pageNum": 9,
@@ -89,7 +97,8 @@
       "sectionName": null,
       "content": "BAR3 – WAVESHAPE control.\n\nSQUARE – This clips the signal to a SQUARE WAVE, values between this and SINE will create a TRAPEZOIDE waveform.\n\nSINE – This maps the signal to a SINEWAVE function, values between this and SINE will create an approximate LINEAR waveform\n\nEXPO – This maps the signal to an EXPONENTIAL function, with accelerating rise and fall times, creating swoopy accelerating movement. Use this shape for expressive slower attack slopes such as flute sounds etc.\n\nLOG/EXPO – This maps the signal to a classic ENVELOPE CURVE, with fast LOG rise times and sharp EXPONENTIAL decay times. Use this shape for traditional percussive snappy envelopes.\n\nBAR4 – Output LEVEL attenuverter.\n\nCentre is zero, above centre for unipolar scaled values, below centre for bipolar scaled values. If using ENVELOPE MODE, the bipolar option inverts the envelope output value.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>BAR3 – WAVESHAPE control.</p>\n<p>SQUARE – This clips the signal to a SQUARE WAVE, values between this and SINE will create a TRAPEZOIDE waveform.</p>\n<p>SINE – This maps the signal to a SINEWAVE function, values between this and SINE will create an approximate LINEAR waveform</p>\n<p>EXPO – This maps the signal to an EXPONENTIAL function, with accelerating rise and fall times, creating swoopy accelerating movement. Use this shape for expressive slower attack slopes such as flute sounds etc.</p>\n<p>LOG/EXPO – This maps the signal to a classic ENVELOPE CURVE, with fast LOG rise times and sharp EXPONENTIAL decay times. Use this shape for traditional percussive snappy envelopes.</p>\n<p>BAR4 – Output LEVEL attenuverter.</p>\n<p>Centre is zero, above centre for unipolar scaled values, below centre for bipolar scaled values. If using ENVELOPE MODE, the bipolar option inverts the envelope output value.</p>"
     },
     {
       "pageNum": 10,
@@ -98,7 +107,8 @@
       "sectionName": null,
       "content": "KNOB RECORDING\n\nAdjustments to the RED/ORANGE/YELLOW Parameter Modes, can be recorded and played back in a cyclic manner for variations within the parameter range.\n\nHold the CHANNEL BUTTON while turning a knob.\nRelease when done, and the animation will start to playback.\n\nAn actively playing knob recording is indicated by a flashing LED BAR.\n\nTo STOP or START playback of the knob recording simply push the knob once.\n\nKnob recordings are retained on power off, and can be used again at a later date.\n\nIf ALL Channels are set to KNOB CONTROL VOLTAGE MODE, then the display will change to show all four LED BARS in Yellow, and each knob will be associated with the Channel number below. Allowing all Channels to be adjusted at the same time.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>KNOB RECORDING</p>\n<p>Adjustments to the RED/ORANGE/YELLOW Parameter Modes, can be recorded and played back in a cyclic manner for variations within the parameter range.</p>\n<p>Hold the CHANNEL BUTTON while turning a knob.\nRelease when done, and the animation will start to playback.</p>\n<p>An actively playing knob recording is indicated by a flashing LED BAR.</p>\n<p>To STOP or START playback of the knob recording simply push the knob once.</p>\n<p>Knob recordings are retained on power off, and can be used again at a later date.</p>\n<p>If ALL Channels are set to KNOB CONTROL VOLTAGE MODE, then the display will change to show all four LED BARS in Yellow, and each knob will be associated with the Channel number below. Allowing all Channels to be adjusted at the same time.</p>"
     },
     {
       "pageNum": 11,
@@ -107,7 +117,8 @@
       "sectionName": null,
       "content": "TIPS AND TRICKS\n\nLFO MODE\n\nThe LFO MODE uses the A and D controls for the slope ratio of the waveform. The sum of the A and D times defines the frequency of the LFO.\n\nTo create a Ramp Wave, adjust the A control to zero, and the adjust the D control to the desired frequency. To make this a LINEAR ramp, adjust the SHAPE in the OPTION MODE to between EXPO and SINE.\n\nAn easy way to adjust the A and D times simultaneously is using the DUAL ADJUSTMENT option.\n\nPress and hold the OPTION BUTTON whilst adjusting either the A or D parameter to adjust simultaneously.\n\nFor a symmetrical wave, set both values to zero first, then use the DUAL ADJUSTMENT option to adjust both values simultaneously.\n\nOFFSET LEVEL\n\nThe S Control in LFO or RANDOM MODE acts as a positive offset value to the output. It can be used to set a base level voltage with added modulation. This is useful for modulation inputs on modules which do not have an additional master control for the same input.\n\nTo use the OFFSET, make sure the OUTPUT LEVEL in the OPTION MODE is not set to maximum, otherwise the OFFSET control will have little effect.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>TIPS AND TRICKS</p>\n<p>LFO MODE</p>\n<p>The LFO MODE uses the A and D controls for the slope ratio of the waveform. The sum of the A and D times defines the frequency of the LFO.</p>\n<p>To create a Ramp Wave, adjust the A control to zero, and the adjust the D control to the desired frequency. To make this a LINEAR ramp, adjust the SHAPE in the OPTION MODE to between EXPO and SINE.</p>\n<p>An easy way to adjust the A and D times simultaneously is using the DUAL ADJUSTMENT option.</p>\n<p>Press and hold the OPTION BUTTON whilst adjusting either the A or D parameter to adjust simultaneously.</p>\n<p>For a symmetrical wave, set both values to zero first, then use the DUAL ADJUSTMENT option to adjust both values simultaneously.</p>\n<p>OFFSET LEVEL</p>\n<p>The S Control in LFO or RANDOM MODE acts as a positive offset value to the output. It can be used to set a base level voltage with added modulation. This is useful for modulation inputs on modules which do not have an additional master control for the same input.</p>\n<p>To use the OFFSET, make sure the OUTPUT LEVEL in the OPTION MODE is not set to maximum, otherwise the OFFSET control will have little effect.</p>"
     },
     {
       "pageNum": 12,
@@ -116,7 +127,8 @@
       "sectionName": null,
       "content": "RANDOM STEPPED VOLTAGES\n\nIn RANDOM MODE, set the WAVE SHAPE parameter in the OPTION MENU to SQUARE to create Sample and Hold style stepped voltages. Smooth things out by blending toward SINE for slewed transitions, creating a TRAPEZOIDE waveform. Adjust the A parameter for desired FREQUENCY.\n\nGATE DELAY\n\nIn AD ENVELOPE MODE set the WAVE SHAPE parameter to SQUARE. Adjust ATTACK for delay time, use the output as a gate delay to creatively patch other Envelope channels or modules.\n\nPINK NOISE\n\nIn RANDOM MODE, adjust the FREQUENCY parameter A to minimum, connect the output as a source for PINK NOISE. Try adjusting the WAVESHAPE or FEQUENCY and listen to the changes of noise colour from the output.\n\nDELAYED VIBRATO\n\nSet up a channel to LFO MODE, and adjust the WAVESHAPE to SINE, adjust the A and D to similar values at a fast setting. Connect this to your Oscillator to modulate the pitch.\n\nIn the OPTION MENU, adjust the MOD Destination to LEVEL, adjust the MOD Attenuverter to a positive value, and adjust the OUTPUT LEVEL to near zero.\n\nSet up another channel to AD ENVELOPE MODE, set the WAVE SHAPE to between SINE and EXPO. Connect a Gate signal to the",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>RANDOM STEPPED VOLTAGES</p>\n<p>In RANDOM MODE, set the WAVE SHAPE parameter in the OPTION MENU to SQUARE to create Sample and Hold style stepped voltages. Smooth things out by blending toward SINE for slewed transitions, creating a TRAPEZOIDE waveform. Adjust the A parameter for desired FREQUENCY.</p>\n<p>GATE DELAY</p>\n<p>In AD ENVELOPE MODE set the WAVE SHAPE parameter to SQUARE. Adjust ATTACK for delay time, use the output as a gate delay to creatively patch other Envelope channels or modules.</p>\n<p>PINK NOISE</p>\n<p>In RANDOM MODE, adjust the FREQUENCY parameter A to minimum, connect the output as a source for PINK NOISE. Try adjusting the WAVESHAPE or FEQUENCY and listen to the changes of noise colour from the output.</p>\n<p>DELAYED VIBRATO</p>\n<p>Set up a channel to LFO MODE, and adjust the WAVESHAPE to SINE, adjust the A and D to similar values at a fast setting. Connect this to your Oscillator to modulate the pitch.</p>\n<p>In the OPTION MENU, adjust the MOD Destination to LEVEL, adjust the MOD Attenuverter to a positive value, and adjust the OUTPUT LEVEL to near zero.</p>\n<p>Set up another channel to AD ENVELOPE MODE, set the WAVE SHAPE to between SINE and EXPO. Connect a Gate signal to the</p>"
     },
     {
       "pageNum": 13,
@@ -125,7 +137,8 @@
       "sectionName": null,
       "content": "GATE INPUT, and set the ATTACK parameter for delay time, and DECAY paramter to a longer settinng.\n\nConnect the output of the AD ENVELOPE channel to the MOD INPUT of the LFO channel. When the AD ENVELOPE channel is triggered, it's envelope output will control the level and amount of vibrato from the LFO channel.\n\nPlay with the AD ENVELOPE parameters for delay time.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>GATE INPUT, and set the ATTACK parameter for delay time, and DECAY paramter to a longer settinng.</p>\n<p>Connect the output of the AD ENVELOPE channel to the MOD INPUT of the LFO channel. When the AD ENVELOPE channel is triggered, it's envelope output will control the level and amount of vibrato from the LFO channel.</p>\n<p>Play with the AD ENVELOPE parameters for delay time.</p>"
     },
     {
       "pageNum": 14,
@@ -134,7 +147,8 @@
       "sectionName": null,
       "content": "INPUTS AND OUTPUTS\n\nMOD1-4 These are the MODULATION CV inputs for each channel, see OPTION MODE for how to assign these to a parameter.\n\nGATE1-4 These are the GATE INPUTS for each channel.\n\nGATE INPUTS are normalised to the Right of a connected GATE INPUT, only for ENVELOPE MODE channels.\n\nIf a channel is set to LFO MODE a connected GATE INPUT acts as a RESET SYNC for the LFO cycle.\n\nIf a channel is set to KNOB CONTROL VOLTAGE, and the channel is actively playing a KNOB RECORDING, a connected GATE INPUT acts as a RESET SYNC for the animation playback of the knob recording.\n\nOUTPUT 1-4 This is the CV output for each channel. Please note it's level is controlled by the LEVEL control in the OPTION MODE",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>INPUTS AND OUTPUTS</p>\n<p>MOD1-4 These are the MODULATION CV inputs for each channel, see OPTION MODE for how to assign these to a parameter.</p>\n<p>GATE1-4 These are the GATE INPUTS for each channel.</p>\n<p>GATE INPUTS are normalised to the Right of a connected GATE INPUT, only for ENVELOPE MODE channels.</p>\n<p>If a channel is set to LFO MODE a connected GATE INPUT acts as a RESET SYNC for the LFO cycle.</p>\n<p>If a channel is set to KNOB CONTROL VOLTAGE, and the channel is actively playing a KNOB RECORDING, a connected GATE INPUT acts as a RESET SYNC for the animation playback of the knob recording.</p>\n<p>OUTPUT 1-4 This is the CV output for each channel. Please note it's level is controlled by the LEVEL control in the OPTION MODE</p>"
     },
     {
       "pageNum": 15,
@@ -143,7 +157,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 16,
@@ -152,7 +167,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     }
   ]
 }
