@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "Instruments for Sonic Expression\nEst.2009\n\nJune.2023\n\nUSER'S GUIDE . REV02\n\nADDAC107\nACID\nSOURCE\n\nINTRODUCING\n\nFrom Portugal with Love!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Instruments for Sonic Expression\nEst.2009</p>\n<p>June.2023</p>\n<p>USER'S GUIDE . REV02</p>\n<p>ADDAC107\nACID\nSOURCE</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>"
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "Welcome to:\n\nDESCRIPTION\n\nWe started this module with the idea of developing a complex drum source however, somewhere along the process, we noticed how much better it performed as a synth voice and simply embraced this lucky accident.\n\nIt features a VCO with a [FREQUENCY] and [FINE TUNE] knob plus a dedicated CV Input and Attenuator knob (tunable over 4 octaves).\n\nThe VCO waveform output is achieved by selecting either a Triangle or Saw through a switch.\n\nthe selected waveform can then be mixed/balanced against the square wave.\n\nThe resulting mix is then sent to the Filter through a jumper that can be removed disabling the VCO.\n\nThe Filter features a [CUTOFF] and [RESO] resonance knob plus a Cutoff CV Input and Attenuverter knob.\n\nA 3 position switch is used to select the filter type: Highpass, Bandpass or Lowpass.\n\nThe resulting output is then sent to the VCA.\n\nThe VCA features an Input with [INPUT GAIN] knob which at maximum can amplify the incoming signal by a factor of 2. This is a very important control (more about it in the next page). It accepts any signal Trigger, Gate or CV.\n\nWhatever input is plugged in the signal is then fed through an AD with a very short attack and controllable decay through the [VCA DECAY] knob plus the CV Input and Attenuverter knob.\n\nA 3 position Decay Switch allows to change the decay ranges: Short / Off / Long\n\nThe resulting slewed signal is then used to control the VCA gain. This signal is also sent to the CV OUTPUT as well as the LED monitor.\n\nThe Accent input adds to the Input signal creating a different amplitude output\n\nThe CV OUTPUT is also normalled to the Frequency and Cutoff inputs.\n\nThis module will also be available as a full DIY kit.\n\nTech Specs:\n\n9HP\n\n4 cm deep\n\n80mA +12V\n\n80mA -12V",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Welcome to:</p>\n<p>DESCRIPTION</p>\n<p>We started this module with the idea of developing a complex drum source however, somewhere along the process, we noticed how much better it performed as a synth voice and simply embraced this lucky accident.</p>\n<p>It features a VCO with a [FREQUENCY] and [FINE TUNE] knob plus a dedicated CV Input and Attenuator knob (tunable over 4 octaves).</p>\n<p>The VCO waveform output is achieved by selecting either a Triangle or Saw through a switch.</p>\n<p>the selected waveform can then be mixed/balanced against the square wave.</p>\n<p>The resulting mix is then sent to the Filter through a jumper that can be removed disabling the VCO.</p>\n<p>The Filter features a [CUTOFF] and [RESO] resonance knob plus a Cutoff CV Input and Attenuverter knob.</p>\n<p>A 3 position switch is used to select the filter type: Highpass, Bandpass or Lowpass.</p>\n<p>The resulting output is then sent to the VCA.</p>\n<p>The VCA features an Input with [INPUT GAIN] knob which at maximum can amplify the incoming signal by a factor of 2. This is a very important control (more about it in the next page). It accepts any signal Trigger, Gate or CV.</p>\n<p>Whatever input is plugged in the signal is then fed through an AD with a very short attack and controllable decay through the [VCA DECAY] knob plus the CV Input and Attenuverter knob.</p>\n<p>A 3 position Decay Switch allows to change the decay ranges: Short / Off / Long</p>\n<p>The resulting slewed signal is then used to control the VCA gain. This signal is also sent to the CV OUTPUT as well as the LED monitor.</p>\n<p>The Accent input adds to the Input signal creating a different amplitude output</p>\n<p>The CV OUTPUT is also normalled to the Frequency and Cutoff inputs.</p>\n<p>This module will also be available as a full DIY kit.</p>\n<p>Tech Specs:</p>\n<p>9HP</p>\n<p>4 cm deep</p>\n<p>80mA +12V</p>\n<p>80mA -12V</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "INPUT GAIN\n\nUsually Attack/Decay envelopes have a maximum voltage of +5v, no matter if the input gate is +5v or above the AD will clip at +5v. In this case we did not use this clipping method and instead allow the incoming voltage to determine the maximum AD voltage, meaning that if a +5v gate is present then the AD maximum voltage will be +5v but if a gate of +10v is sent then the AD maximum voltage will be +10v.\n\nThis also means that with higher input voltages the decay, although falling at the same speed, will be longer than with lower voltages as it has a longer range to go back to 0v.\n\nAs we mentioned before the [INPUT GAIN] knob can amplify the incoming input by a factor of 2, allowing to use a standard +5v gate or envelope and being able to make the resultant AD go up to +10v.\n\nThe AD signal is responsible for opening the VCA.\n\nUp to +5v the VCA will open to unity gain above this value the VCA will start to amplify and eventually saturate and distort.\n\nThis saturation will add harmonics to the signal which will change it's gentle timbrical nature to a more unique and peculiar timbre that will make the module shine in Acid contexts.\n\nAdding high levels of Resonance or even filter self oscillation in combination with high VCA saturation will create even more harmonics that we highly encourage the user to explore.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>INPUT GAIN</p>\n<p>Usually Attack/Decay envelopes have a maximum voltage of +5v, no matter if the input gate is +5v or above the AD will clip at +5v. In this case we did not use this clipping method and instead allow the incoming voltage to determine the maximum AD voltage, meaning that if a +5v gate is present then the AD maximum voltage will be +5v but if a gate of +10v is sent then the AD maximum voltage will be +10v.</p>\n<p>This also means that with higher input voltages the decay, although falling at the same speed, will be longer than with lower voltages as it has a longer range to go back to 0v.</p>\n<p>As we mentioned before the [INPUT GAIN] knob can amplify the incoming input by a factor of 2, allowing to use a standard +5v gate or envelope and being able to make the resultant AD go up to +10v.</p>\n<p>The AD signal is responsible for opening the VCA.</p>\n<p>Up to +5v the VCA will open to unity gain above this value the VCA will start to amplify and eventually saturate and distort.</p>\n<p>This saturation will add harmonics to the signal which will change it's gentle timbrical nature to a more unique and peculiar timbre that will make the module shine in Acid contexts.</p>\n<p>Adding high levels of Resonance or even filter self oscillation in combination with high VCA saturation will create even more harmonics that we highly encourage the user to explore.</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "ACCENT / INPUT\n\nThe Accent input can be used in two ways: The default one is the Accent already described in previous pages. The second mode is to use it as an input straight into the filter and allow to use the filter vca combo with external vcos or other sound sources.\n\nThe jumper on the panel allows to disable the internal VCO to use the external audio alone or mix both the external input with the internal VCO.\n\nJUMPERS LOCATIONS\n\nThere are 3 jumpers on the side of the module.\n\nCV OUT >\nFREQ. CV\n\nCV OUT >\nCUTOFF. CV\n\nACCENT /\nINPUT",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ACCENT / INPUT</p>\n<p>The Accent input can be used in two ways: The default one is the Accent already described in previous pages. The second mode is to use it as an input straight into the filter and allow to use the filter vca combo with external vcos or other sound sources.</p>\n<p>The jumper on the panel allows to disable the internal VCO to use the external audio alone or mix both the external input with the internal VCO.</p>\n<p>JUMPERS LOCATIONS</p>\n<p>There are 3 jumpers on the side of the module.</p>\n<p>CV OUT >\nFREQ. CV</p>\n<p>CV OUT >\nCUTOFF. CV</p>\n<p>ACCENT /\nINPUT</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "SIGNAL FLOW DIAGRAM\n\nOUTPUT\n\nFREQUENCY CV IN\n\nFREQUENCY\nATTENUVERTER\n+\n\\-\n\nFREQUENCY\nFINE TUNE\n\nTRIANGLE\nOR\nSAW\n\nFREQUENCY\nINITIAL\n\nVCO\n\nCUTTOFF CV IN\n\nON/OFF\nJUMPER\n\nON/OFF\nJUMPER\n\nACCENT / INPUT\nJUMPER\n\nCUTOFF\nATTENUVERTER\n+\n\\-\n\nINPUT TRIG/GATE/CV IN\n\nINPUT GAIN (MAX = *2)\n\nHP / BP / LP\nSELECTOR\n\nRESONANCE\n\nFILTER\n\nCV OUTPUT\n\nLED MONITOR\n\nVCA\n\nDECAY CV IN\n\nDECAY\nATTENUVERTER\n+\n\\-\n\nACCENT/INPUT\n\nDECAY INITIAL\n\nVCA DECAY SLEW\n\nRECTANGLE\n/\nTRI/SAW\nMIX\n\nCUTOFF\nINITIAL\n\nNORMALLING (SELF-PATCHED)",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>SIGNAL FLOW DIAGRAM</p>\n<p>OUTPUT</p>\n<p>FREQUENCY CV IN</p>\n<p>FREQUENCY\nATTENUVERTER\n+\n-</p>\n<p>FREQUENCY\nFINE TUNE</p>\n<p>TRIANGLE\nOR\nSAW</p>\n<p>FREQUENCY\nINITIAL</p>\n<p>VCO</p>\n<p>CUTTOFF CV IN</p>\n<p>ON/OFF\nJUMPER</p>\n<p>ON/OFF\nJUMPER</p>\n<p>ACCENT / INPUT\nJUMPER</p>\n<p>CUTOFF\nATTENUVERTER\n+\n-</p>\n<p>INPUT TRIG/GATE/CV IN</p>\n<p>INPUT GAIN (MAX = *2)</p>\n<p>HP / BP / LP\nSELECTOR</p>\n<p>RESONANCE</p>\n<p>FILTER</p>\n<p>CV OUTPUT</p>\n<p>LED MONITOR</p>\n<p>VCA</p>\n<p>DECAY CV IN</p>\n<p>DECAY\nATTENUVERTER\n+\n-</p>\n<p>ACCENT/INPUT</p>\n<p>DECAY INITIAL</p>\n<p>VCA DECAY SLEW</p>\n<p>RECTANGLE\n/\nTRI/SAW\nMIX</p>\n<p>CUTOFF\nINITIAL</p>\n<p>NORMALLING (SELF-PATCHED)</p>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "CONTROLS DESCRIPTION\n\nVCO Frequency control\n\nVCO Fine Tune control\n\nFilter Resonance control\n\nVCA Decay control\n\nVCA Decay range: Short/Off/Long\n\nDecay Attenuverter\n\nDecay CV Input\n\nAudio Output\n\nCV Output\n\nExcitation Input\n(Trigger, Gate or CV)\n\nAccent Input\n\nVCO Frequency Attenuator\n\nFilter Cutoff Attenuverter\n\nVCO Frequency CV Input\n\nFilter Cutoff CV Input\n\nInput Gain Amplifier (*2)\n\nFilter Cutoff control\n\nVCO disabling jumper\n\nTriangle Or Saw Selector\n\nSquare <> Tri/Saw Balance\n\nHP, BP, LP Selector\n\nEnvelope Monitor",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>CONTROLS DESCRIPTION</p>\n<p>VCO Frequency control</p>\n<p>VCO Fine Tune control</p>\n<p>Filter Resonance control</p>\n<p>VCA Decay control</p>\n<p>VCA Decay range: Short/Off/Long</p>\n<p>Decay Attenuverter</p>\n<p>Decay CV Input</p>\n<p>Audio Output</p>\n<p>CV Output</p>\n<p>Excitation Input\n(Trigger, Gate or CV)</p>\n<p>Accent Input</p>\n<p>VCO Frequency Attenuator</p>\n<p>Filter Cutoff Attenuverter</p>\n<p>VCO Frequency CV Input</p>\n<p>Filter Cutoff CV Input</p>\n<p>Input Gain Amplifier (*2)</p>\n<p>Filter Cutoff control</p>\n<p>VCO disabling jumper</p>\n<p>Triangle Or Saw Selector</p>\n<p>Square &#x3C;> Tri/Saw Balance</p>\n<p>HP, BP, LP Selector</p>\n<p>Envelope Monitor</p>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nADDAC107 USER'S GUIDE\nJune.2023 Revision.02",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC107 USER'S GUIDE\nJune.2023 Revision.02</p>"
     }
   ]
 }

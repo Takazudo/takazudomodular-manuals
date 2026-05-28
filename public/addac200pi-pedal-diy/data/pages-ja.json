@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "October.2023\nADDAC200PI 組み立てガイド\nADDAC SYSTEM",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>October.2023\nADDAC200PI 組み立てガイド\nADDAC SYSTEM</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "ステップ1:\n\n以下のように4つのコンデンサの位置を確認し、はんだ付けします。\n\nADDAC200PI 組み立てガイド",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ステップ1:</p>\n<p>以下のように4つのコンデンサの位置を確認し、はんだ付けします。</p>\n<p>ADDAC200PI 組み立てガイド</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "ステップ 3:\n\n下図のように2x5ボックス型ピンヘッダーを配置してハンダ付けします。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ステップ 3:</p>\n<p>下図のように2x5ボックス型ピンヘッダーを配置してハンダ付けします。</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "STEP 6:\n\n残りのピンヘッダーを配置し、下図のようにはんだ付けします。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 6:</p>\n<p>残りのピンヘッダーを配置し、下図のようにはんだ付けします。</p>"
     },
     {
       "pageNum": 6,
@@ -59,7 +64,8 @@
       "sectionName": null,
       "content": "STEP 12:\n3.5mmジャックを見つけ、以下の図のように最も細い脚をカットします。\n\nSTEP 13:\n以下の図のようにすべてのジャックを配置します。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 12:\n3.5mmジャックを見つけ、以下の図のように最も細い脚をカットします。</p>\n<p>STEP 13:\n以下の図のようにすべてのジャックを配置します。</p>"
     },
     {
       "pageNum": 7,
@@ -68,7 +74,8 @@
       "sectionName": null,
       "content": "STEP 14:\n\n小さい方のPCBをパネルに配置し、ナットを締めてパッドをハンダ付けします。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 14:</p>\n<p>小さい方のPCBをパネルに配置し、ナットを締めてパッドをハンダ付けします。</p>"
     },
     {
       "pageNum": 8,
@@ -77,7 +84,8 @@
       "sectionName": null,
       "content": "STEP 15:\n\n大きい方のPCBを取り付け、ナットを締めて、最後のパッドをはんだ付けします。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>STEP 15:</p>\n<p>大きい方のPCBを取り付け、ナットを締めて、最後のパッドをはんだ付けします。</p>"
     },
     {
       "pageNum": 9,
@@ -86,7 +94,8 @@
       "sectionName": null,
       "content": "おめでとうございます、完成です！\n\nHappy Patching!!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>おめでとうございます、完成です！</p>\n<p>Happy Patching!!</p>"
     },
     {
       "pageNum": 10,
@@ -95,7 +104,8 @@
       "sectionName": null,
       "content": "フィードバック、コメント、または問題については、下記までご連絡ください:\naddac@addacsystem.com\n\nADDAC200PI 組み立てガイド\n2023年10月 リビジョン02",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>フィードバック、コメント、または問題については、下記までご連絡ください:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC200PI 組み立てガイド\n2023年10月 リビジョン02</p>"
     }
   ]
 }

@@ -54,6 +54,8 @@ pnpm run pdf:translate           # Translate to Japanese (requires ANTHROPIC_API
 pnpm run pdf:build               # Build final JSON files
 pnpm run pdf:clean-en            # Reformat pages-en.json via the EN cleaner (uses Claude Code CLI, no API key)
 pnpm run pdf:clean-en:all        # Clean every manual under public/ at once
+pnpm run pdf:md-to-html          # Convert content markdown → contentHtml in pages-{ja,en}.json
+pnpm run pdf:md-to-html:all      # Convert markdown for ALL manuals at once
 pnpm run pdf:search-index        # Generate search-index.json for keyword search
 pnpm run pdf:search-index:all    # Regenerate search-index.json for all manuals at once
 pnpm run pdf:manifest            # Create manifest.json
@@ -62,7 +64,7 @@ pnpm run pdf:all                 # Run all PDF processing steps (includes thumbn
 
 ### Pipeline Overview
 
-The PDF processing pipeline consists of 9 fully automated steps:
+The PDF processing pipeline consists of 10 fully automated steps:
 
 1. **Split** - Divides the PDF into parts (30 pages each)
 2. **Render** - Converts pages to PNG images at 150 DPI
@@ -71,8 +73,9 @@ The PDF processing pipeline consists of 9 fully automated steps:
 5. **Translate** - Translates to Japanese using Claude Code Task subagents (5 concurrent workers). The translator agent now emits `en_clean` (formatted original English) alongside the Japanese `translation`, so `pages-en.json` is already clean after this step.
 6. **Build** - Combines data into JSON files for Next.js. Prefers `translationData.en_clean` over raw extracted text when populating `pages-en.json`.
 7. **Clean EN** - Runs `pdf:clean-en` as a belt-and-suspenders pass to guarantee consistent cleanup metadata (`cleanupMethod`, `cleanupModel`, `cleanedAt`) on every page. Because the translator already emits `en_clean` natively, this separate run is typically only needed for retrofits on older manuals or after tweaks to the cleanup prompt (`scripts/lib/en-cleanup-prompt.js`); on a fresh pipeline run it's essentially a no-op over already-clean content.
-8. **Search Index** - Reads `pages-ja.json` and emits `search-index.json` (MiniSearch-ready, markdown stripped, body truncated to ~500 chars per page). Invoke with `--slug <manual-slug>`. Also writes a SHA-1 content hash to the sibling `manifest.json` as `searchIndexVersion` for cache busting. The `pdf:search-index:all` variant does the same for every manual at once and is auto-run by `pnpm build`.
-9. **Manifest** - Creates manifest.json with metadata
+8. **Markdown → HTML** - Runs `pdf:md-to-html` to convert each page's `content` markdown to `contentHtml` in both `pages-ja.json` and `pages-en.json`. Runs AFTER `pdf:clean-en` so EN html reflects the final cleaned content (in-build conversion would capture pre-clean EN). Mirrors `components/markdown-renderer.tsx`: `unified` + `remark-parse` + `remark-gfm` + `remark-rehype` + `rehype-slug` + `rehype-highlight` + a custom `rehypeWrapTables` (wraps each `<table>` in `<div class="table-wrapper">`) + `rehype-stringify`. Pages with `hasContent === false` get `contentHtml: ""`. See `scripts/pdf-md-to-html.js`.
+9. **Search Index** - Reads `pages-ja.json` and emits `search-index.json` (MiniSearch-ready, markdown stripped, body truncated to ~500 chars per page). Invoke with `--slug <manual-slug>`. Also writes a SHA-1 content hash to the sibling `manifest.json` as `searchIndexVersion` for cache busting. The `pdf:search-index:all` variant does the same for every manual at once and is auto-run by `pnpm build`.
+10. **Manifest** - Creates manifest.json with metadata
 
 #### Cache busting
 
@@ -221,7 +224,7 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
    ```bash
    /l-pdf-process {slug}
    ```
-   This runs all 9 pipeline steps: split, render, thumbnails, extract, translate, build, clean-en, search-index, manifest.
+   This runs all 10 pipeline steps: split, render, thumbnails, extract, translate, build, clean-en, md-to-html, search-index, manifest.
 
 4. **Update manual registry** (`lib/manual-registry.ts`):
 
@@ -261,6 +264,7 @@ pnpm run thumbs:generate:slug --slug oxi-coral   # Generate thumbnails (after re
 pnpm run pdf:extract --slug oxi-coral
 pnpm run pdf:translate --slug oxi-coral
 pnpm run pdf:build --slug oxi-coral
+pnpm run pdf:md-to-html --slug oxi-coral
 pnpm run pdf:search-index --slug oxi-coral
 pnpm run pdf:manifest --slug oxi-coral
 ```
@@ -339,7 +343,7 @@ import oxiOneMk2Pages from '@/public/oxi-one-mk2/data/pages.json';
 }
 ```
 
-### Pages Format (`pages.json`)
+### Pages Format (`pages-ja.json` / `pages-en.json`)
 
 ```json
 {
@@ -355,10 +359,23 @@ import oxiOneMk2Pages from '@/public/oxi-one-mk2/data/pages.json';
       "image": "/oxi-one-mk2/pages/page-001.png",
       "title": "Page 1",
       "sectionName": null,
-      "translation": "# Markdown content here...",
+      "content": "# Markdown content here...",
+      "contentHtml": "<h1 id=\"markdown-content-here\">Markdown content here...</h1>",
       "hasContent": true,
       "tags": []
     }
   ]
 }
 ```
+
+**`contentHtml` field** (added by `pdf:md-to-html` step):
+
+- Present on every page object in both `pages-ja.json` and `pages-en.json`.
+- Contains the `content` field converted to HTML using the unified pipeline: `unified` + `remark-parse` + `remark-gfm` + `remark-rehype` + `rehype-slug` + `rehype-highlight` + `rehype-stringify`.
+- Empty string (`""`) when `hasContent === false`.
+- Heading elements get `id` attributes from `rehype-slug` (e.g., `<h2 id="section-name">`).
+- Fenced code blocks get `hljs` CSS classes from `rehype-highlight` (e.g., `<code class="hljs language-js">`). The highlight namespace is **`hljs`** (not syntect) — the prose theme CSS targets `.hljs` / `.hljs-*`.
+- Each `<table>` is wrapped in `<div class="table-wrapper">` (custom `rehypeWrapTables` step) so wide GFM tables can scroll, mirroring the React `Table` component. Per-table wrapping happens here because a page can hold multiple tables and the island can only wrap the whole blob.
+- GFM tables, strikethrough, and task lists are supported via `remark-gfm`.
+- Sub 4's island injects this HTML via `dangerouslySetInnerHTML` — the client ships zero markdown JS. The island adds the outer `.zd-prose` wrapper on its container; `.zd-prose` is NOT baked into `contentHtml`. Prose CSS should scope under `.zd-prose` and `.zd-prose .table-wrapper`.
+- Structural deviations from react-markdown's custom `components/markdown/*`: no Tailwind classNames on elements, `<h2>`/`<h3>` lack decorative spans, `<a>` lacks `target="_blank"`. The prose CSS targets raw HTML elements.

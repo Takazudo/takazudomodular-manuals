@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "AI Synthesis AI018 Stereo Matrix Mixer ユーザーマニュアル\n\nこちらは、AI018 Eurorack Stereo Matrix Mixerのマニュアルです。製品は以下のURLから購入できます：\nhttps://aisynthesis.com/product/ai018-eurorack-stereo-matrix-mixer/\n\n1. AI018 Eurorack Stereo Matrix Mixerについて\n\nAI018 Eurorack Stereo Matrix Mixerは、コンパクトな8入力、8出力のマトリックスミキサーです。マトリックスミキサーは、複数のソースからのオーディオまたはCV信号を異なる出力先にルーティングするために使用されます。16個のポテンシオメーターを搭載しており、各ポテンシオメーターは特定のステレオ入力ペア（1-4）から特定のステレオ出力（A-D）へ送信される信号量をコントロールします。\n\nAI018の一般的な使用方法は、1つ以上の入力と1つ以上のエフェクト入出力を使用したエフェクトセンドです。AI018 Stereo Matrix Mixerをこのように使用することで、入力を複数のエフェクトに送信でき、エフェクト同士を相互に接続したり、さらには自身にフィードバックさせることも可能になり、エフェクトの深さを拡張できます。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>AI Synthesis AI018 Stereo Matrix Mixer ユーザーマニュアル</p>\n<p>こちらは、AI018 Eurorack Stereo Matrix Mixerのマニュアルです。製品は以下のURLから購入できます：\n<a href=\"https://aisynthesis.com/product/ai018-eurorack-stereo-matrix-mixer/\">https://aisynthesis.com/product/ai018-eurorack-stereo-matrix-mixer/</a></p>\n<ol>\n<li>AI018 Eurorack Stereo Matrix Mixerについて</li>\n</ol>\n<p>AI018 Eurorack Stereo Matrix Mixerは、コンパクトな8入力、8出力のマトリックスミキサーです。マトリックスミキサーは、複数のソースからのオーディオまたはCV信号を異なる出力先にルーティングするために使用されます。16個のポテンシオメーターを搭載しており、各ポテンシオメーターは特定のステレオ入力ペア（1-4）から特定のステレオ出力（A-D）へ送信される信号量をコントロールします。</p>\n<p>AI018の一般的な使用方法は、1つ以上の入力と1つ以上のエフェクト入出力を使用したエフェクトセンドです。AI018 Stereo Matrix Mixerをこのように使用することで、入力を複数のエフェクトに送信でき、エフェクト同士を相互に接続したり、さらには自身にフィードバックさせることも可能になり、エフェクトの深さを拡張できます。</p>"
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "2. AI018 コントロール\n\n1. Inputs\n\n4つのステレオ入力があり、1-4の番号が付けられています。(L) Right入力はLeft (R)にノーマル接続されているため、R Inputにプラグが挿入されていない場合、LジャックからのInputがRチャンネルに複製されます。\n\n2. Input 1 Mixing Row\n\nこのKnobの列は、Input 1ジャックからの信号が出力A-Dにミックスされる量をコントロールします。\n\n3. Input 2 Mixing Row\n\nこのKnobの列は、Input 2ジャックからの信号が出力A-Dにミックスされる量をコントロールします。\n\n4. Input 3 Mixing Row\n\nこのKnobの列は、Input 3ジャックからの信号が出力A-Dにミックスされる量をコントロールします。\n\n5. Input 4 Mixing Row\n\nこのKnobの列は、Input 4ジャックからの信号が出力A-Dにミックスされる量をコントロールします。\n\n6. Outputs\n\nこれらは個別のミックス出力です。各出力は、Mixing Rowで定義されたInputs 1-4のステレオミックスです。\n\n3. Power",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<ol start=\"2\">\n<li>\n<p>AI018 コントロール</p>\n</li>\n<li>\n<p>Inputs</p>\n</li>\n</ol>\n<p>4つのステレオ入力があり、1-4の番号が付けられています。(L) Right入力はLeft (R)にノーマル接続されているため、R Inputにプラグが挿入されていない場合、LジャックからのInputがRチャンネルに複製されます。</p>\n<ol start=\"2\">\n<li>Input 1 Mixing Row</li>\n</ol>\n<p>このKnobの列は、Input 1ジャックからの信号が出力A-Dにミックスされる量をコントロールします。</p>\n<ol start=\"3\">\n<li>Input 2 Mixing Row</li>\n</ol>\n<p>このKnobの列は、Input 2ジャックからの信号が出力A-Dにミックスされる量をコントロールします。</p>\n<ol start=\"4\">\n<li>Input 3 Mixing Row</li>\n</ol>\n<p>このKnobの列は、Input 3ジャックからの信号が出力A-Dにミックスされる量をコントロールします。</p>\n<ol start=\"5\">\n<li>Input 4 Mixing Row</li>\n</ol>\n<p>このKnobの列は、Input 4ジャックからの信号が出力A-Dにミックスされる量をコントロールします。</p>\n<ol start=\"6\">\n<li>Outputs</li>\n</ol>\n<p>これらは個別のミックス出力です。各出力は、Mixing Rowで定義されたInputs 1-4のステレオミックスです。</p>\n<ol start=\"3\">\n<li>Power</li>\n</ol>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "AI008は、ケーブルが誤った向きで接続されないように、シュラウド付きヘッダーを使用しています。本ユニットは、正極側で20mA、負極側で15mAを消費します。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>AI008は、ケーブルが誤った向きで接続されないように、シュラウド付きヘッダーを使用しています。本ユニットは、正極側で20mA、負極側で15mAを消費します。</p>"
     }
   ]
 }

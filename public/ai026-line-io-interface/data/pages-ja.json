@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "AI Synthesis AI026 Eurorack Line Interface ユーザーマニュアル\n\nこれはAI026 Eurorack Line Interfaceのマニュアルです。製品は以下のサイトから購入できます:\nhttps://aisynthesis.com/product/ai026-eurorack-line-interface/\n\n1. AI026 Eurorack Line Interfaceについて\n\nAI026 Eurorack Line Interfaceは、+/- 2VのLineシグナルと+/- 5VのEurorackシグナルを相互変換します。これにより、Eurorackモジュールでラインシグナルを処理する際に、最高のヘッドルームと最高品質を実現し、その逆も可能にします。\n\n2. AI026のコントロール\n\n1. Line Level\nこのKnobはLine Level入力の音量をコントロールします。このシグナルは約3時の位置で「unity」となります。3時を超えて回すと、正規化されていないシグナルや飽和のためにより多くのゲインを提供します。\n\n2. Euro Level\nこのKnobはEuro Level入力の音量をコントロールします。完全に時計回り(CW)でunityになります。\n\n3. Line Level In\nこれらはLine Level Signalのステレオインプットです。左は右にノーマルされており、右の入力にケーブルが接続されていない場合、左のシグナルがその入力に渡されます。\n\n4. Euro Level In\nこれらはEuroLevel Signalのステレオインプットです。左は右にノーマルされており、",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>AI Synthesis AI026 Eurorack Line Interface ユーザーマニュアル</p>\n<p>これはAI026 Eurorack Line Interfaceのマニュアルです。製品は以下のサイトから購入できます:\n<a href=\"https://aisynthesis.com/product/ai026-eurorack-line-interface/\">https://aisynthesis.com/product/ai026-eurorack-line-interface/</a></p>\n<ol>\n<li>AI026 Eurorack Line Interfaceについて</li>\n</ol>\n<p>AI026 Eurorack Line Interfaceは、+/- 2VのLineシグナルと+/- 5VのEurorackシグナルを相互変換します。これにより、Eurorackモジュールでラインシグナルを処理する際に、最高のヘッドルームと最高品質を実現し、その逆も可能にします。</p>\n<ol start=\"2\">\n<li>\n<p>AI026のコントロール</p>\n</li>\n<li>\n<p>Line Level\nこのKnobはLine Level入力の音量をコントロールします。このシグナルは約3時の位置で「unity」となります。3時を超えて回すと、正規化されていないシグナルや飽和のためにより多くのゲインを提供します。</p>\n</li>\n<li>\n<p>Euro Level\nこのKnobはEuro Level入力の音量をコントロールします。完全に時計回り(CW)でunityになります。</p>\n</li>\n<li>\n<p>Line Level In\nこれらはLine Level Signalのステレオインプットです。左は右にノーマルされており、右の入力にケーブルが接続されていない場合、左のシグナルがその入力に渡されます。</p>\n</li>\n<li>\n<p>Euro Level In\nこれらはEuroLevel Signalのステレオインプットです。左は右にノーマルされており、</p>\n</li>\n</ol>"
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "Rightインプットにケーブルが接続されていない場合、左側の信号がそのインプットに送られます。\n\n5. Line Level Out. これらはEuro Levelインプット信号のLine Levelアウトプットです。\n\n5. EuroLevel Out. これらはLine Inシグナルのユーロレベルアウトプットです。\n\n4. Power\n\nAI026はシュラウド付きヘッダーとリバース電源保護を採用しており、ケーブルが誤った向きに差し込まれるのを防ぎます。本機はプラス側で11 mA、マイナス側で11 mAを消費します。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Rightインプットにケーブルが接続されていない場合、左側の信号がそのインプットに送られます。</p>\n<ol start=\"5\">\n<li>\n<p>Line Level Out. これらはEuro Levelインプット信号のLine Levelアウトプットです。</p>\n</li>\n<li>\n<p>EuroLevel Out. これらはLine Inシグナルのユーロレベルアウトプットです。</p>\n</li>\n<li>\n<p>Power</p>\n</li>\n</ol>\n<p>AI026はシュラウド付きヘッダーとリバース電源保護を採用しており、ケーブルが誤った向きに差し込まれるのを防ぎます。本機はプラス側で11 mA、マイナス側で11 mAを消費します。</p>"
     }
   ]
 }

@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "Welcome to:\n\nOVERALL FEATURES\n\nFollowing our ADDAC103 T-Networks this new module is also inspired by Twin T-Networks circuits used in many lengendary drum machines. A simple 4 voice module with frequency controls for each of the voices. This new module also features CV inputs with attenuverters for each voice Frequency. Due to the specificities of the circuit and to keep the module at a low price these inputs are not callibrated to 1v/octave.\n\nAt each voice input there's a gate to trigger converter so any input source is possible.\n\nAudio inputs can also be used as an input, in this case and due to the nature of the gate to trigger converter, each voice can be used as very destructive filters.\n\nThis module will also be available as a full DIY kit.\n\nFeatures;\n\n4 Voices each with:\n\nFrequency control with CV input and attenuverter\n\nFrequency Range Switch, Low/Mod/High\n\nTrigger Input\n\nAudio Output\n\nSumming Mix output with Volume control",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Welcome to:</p>\n<p>OVERALL FEATURES</p>\n<p>Following our ADDAC103 T-Networks this new module is also inspired by Twin T-Networks circuits used in many lengendary drum machines. A simple 4 voice module with frequency controls for each of the voices. This new module also features CV inputs with attenuverters for each voice Frequency. Due to the specificities of the circuit and to keep the module at a low price these inputs are not callibrated to 1v/octave.</p>\n<p>At each voice input there's a gate to trigger converter so any input source is possible.</p>\n<p>Audio inputs can also be used as an input, in this case and due to the nature of the gate to trigger converter, each voice can be used as very destructive filters.</p>\n<p>This module will also be available as a full DIY kit.</p>\n<p>Features;</p>\n<p>4 Voices each with:</p>\n<p>Frequency control with CV input and attenuverter</p>\n<p>Frequency Range Switch, Low/Mod/High</p>\n<p>Trigger Input</p>\n<p>Audio Output</p>\n<p>Summing Mix output with Volume control</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "CONTROLS DESCRIPTION\n\nFrequency\nTune the Pitch for each voice\n\nSumming Mix Gain\nSets the output gain for the overall summing mix\n\nIndependent trigger inputs\n\nFrequency CV Attenuverter\nSets polarity and gain of incoming CV input\n\nLow/Mod/High range switches\nSets the Frequency Range\n\nSumming Mix Output\n\nIndependent voices outputs\n\nIndependent frequency CV inputs",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>CONTROLS DESCRIPTION</p>\n<p>Frequency\nTune the Pitch for each voice</p>\n<p>Summing Mix Gain\nSets the output gain for the overall summing mix</p>\n<p>Independent trigger inputs</p>\n<p>Frequency CV Attenuverter\nSets polarity and gain of incoming CV input</p>\n<p>Low/Mod/High range switches\nSets the Frequency Range</p>\n<p>Summing Mix Output</p>\n<p>Independent voices outputs</p>\n<p>Independent frequency CV inputs</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "ADDAC104\n\nVC T-NETWORKS SIGNAL FLOW DIAGRAM\n\nVOICE 4\n\nVOICE 3\n\nVOICE 2\n\nGENERATOR\n\nFREQUENCY RANGE\n\nLOW/MOD/HIGH\n\nVOICE 1\n\nTRIGGER 1\n\nFREQUENCY\n\nOUTPUT 1\n\nAUDIO SUM MIX OUTPUT\n\nMIX VOLUME\n\nCV INPUT FREQUENCY\n\nATTENUVERTER",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC104</p>\n<p>VC T-NETWORKS SIGNAL FLOW DIAGRAM</p>\n<p>VOICE 4</p>\n<p>VOICE 3</p>\n<p>VOICE 2</p>\n<p>GENERATOR</p>\n<p>FREQUENCY RANGE</p>\n<p>LOW/MOD/HIGH</p>\n<p>VOICE 1</p>\n<p>TRIGGER 1</p>\n<p>FREQUENCY</p>\n<p>OUTPUT 1</p>\n<p>AUDIO SUM MIX OUTPUT</p>\n<p>MIX VOLUME</p>\n<p>CV INPUT FREQUENCY</p>\n<p>ATTENUVERTER</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>"
     }
   ]
 }

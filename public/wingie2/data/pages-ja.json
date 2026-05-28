@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "注意事項：\n- 音量は低い状態からスタートしてください\n- スピーカーやヘッドフォンでのフィードバックにご注意ください\n- 水分を避けてください\n- モジュラーシンセのレベルの信号をWingieに直接接続しないでください\n\nWingie2をお買い上げいただきありがとうございます！\n\nWingie2は、オンボードマイクロフォンを搭載したハンドヘルド型のステレオ・レゾネーターであり、開発プラットフォームとしても活用できます。楽器やボーカルの音、そして周囲の音響環境とインタラクションし、豊かな音を生み出すことができます。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>注意事項：</p>\n<ul>\n<li>音量は低い状態からスタートしてください</li>\n<li>スピーカーやヘッドフォンでのフィードバックにご注意ください</li>\n<li>水分を避けてください</li>\n<li>モジュラーシンセのレベルの信号をWingieに直接接続しないでください</li>\n</ul>\n<p>Wingie2をお買い上げいただきありがとうございます！</p>\n<p>Wingie2は、オンボードマイクロフォンを搭載したハンドヘルド型のステレオ・レゾネーターであり、開発プラットフォームとしても活用できます。楽器やボーカルの音、そして周囲の音響環境とインタラクションし、豊かな音を生み出すことができます。</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "電源\n\nWingie2はUSB Type-Cケーブルで電源を供給します。スマートフォン用の充電器やモバイルバッテリーを使用できます。なお、Wingie2の初回ロット（2022年5月以前に製造された、背面にネジのないもの）はUSB C-Cケーブルには対応していません。USB A-Cケーブルをご使用ください。\n\nデジタルノイズが発生した場合は、別の電源を試すか、グランドループアイソレーターをお使いください。電源投入後、約3秒間かけて無音状態から最大音量まで徐々にフェードインします。\n\nオーディオ入力\n\nマイクロフォンは空気中の音を拾います。スピーカーを使用するとフィードバックが非常に発生しやすい状態です。フィードバックを避けるためにヘッドフォンを使用するか、あえてフィードバックと音で遊ぶこともできます（音量には十分ご注意ください）。Wingie2を通じて周囲の環境音をモニタリングしたり、Wingie2をパーカッションのように演奏したり、あらゆるものを楽器に変えたりすることができます。自由に実験してみてください。\n\nWingie2のライン入力は3.5mm ステレオTRSです。入力信号が過大にならないようにしてください。サウンドソースがMicの場合、またはMixが100%ウェットの場合に、歪んだドライのライン入力信号が出力に混入するときは、Wingie2の音量スライダーではなく入力信号レベルを下げてください。\n\nオーディオ出力\n\nWingie2のオーディオ出力は3.5mm ステレオTRSです。ヘッドフォンを直接駆動する能力を備えています。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>電源</p>\n<p>Wingie2はUSB Type-Cケーブルで電源を供給します。スマートフォン用の充電器やモバイルバッテリーを使用できます。なお、Wingie2の初回ロット（2022年5月以前に製造された、背面にネジのないもの）はUSB C-Cケーブルには対応していません。USB A-Cケーブルをご使用ください。</p>\n<p>デジタルノイズが発生した場合は、別の電源を試すか、グランドループアイソレーターをお使いください。電源投入後、約3秒間かけて無音状態から最大音量まで徐々にフェードインします。</p>\n<p>オーディオ入力</p>\n<p>マイクロフォンは空気中の音を拾います。スピーカーを使用するとフィードバックが非常に発生しやすい状態です。フィードバックを避けるためにヘッドフォンを使用するか、あえてフィードバックと音で遊ぶこともできます（音量には十分ご注意ください）。Wingie2を通じて周囲の環境音をモニタリングしたり、Wingie2をパーカッションのように演奏したり、あらゆるものを楽器に変えたりすることができます。自由に実験してみてください。</p>\n<p>Wingie2のライン入力は3.5mm ステレオTRSです。入力信号が過大にならないようにしてください。サウンドソースがMicの場合、またはMixが100%ウェットの場合に、歪んだドライのライン入力信号が出力に混入するときは、Wingie2の音量スライダーではなく入力信号レベルを下げてください。</p>\n<p>オーディオ出力</p>\n<p>Wingie2のオーディオ出力は3.5mm ステレオTRSです。ヘッドフォンを直接駆動する能力を備えています。</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "すべてのコントロールはWingie2本体に表示されています。\n\nMIXとVOLUMEの両フェーダーは、レゾネーター前の信号レベルをコントロールします。これにより、レゾネーターのディケイ部分が完了するまで音を鳴らし続けることができます。\n\n右チャンネルは、オクターブスイッチが同じポジションの場合、左チャンネルより1オクターブ高くなります。\n\nスライダーの機能：\n- Mix：ドライ/ウェット信号の比率\n- Decay：レゾネーターのディケイ（0.15秒〜約10秒）\n- Volume：入力音量コントロール",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>すべてのコントロールはWingie2本体に表示されています。</p>\n<p>MIXとVOLUMEの両フェーダーは、レゾネーター前の信号レベルをコントロールします。これにより、レゾネーターのディケイ部分が完了するまで音を鳴らし続けることができます。</p>\n<p>右チャンネルは、オクターブスイッチが同じポジションの場合、左チャンネルより1オクターブ高くなります。</p>\n<p>スライダーの機能：</p>\n<ul>\n<li>Mix：ドライ/ウェット信号の比率</li>\n<li>Decay：レゾネーターのディケイ（0.15秒〜約10秒）</li>\n<li>Volume：入力音量コントロール</li>\n</ul>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "モード\n\nWingie2には4つのモードがあります。モードボタンを押してモードを順番に切り替えます。現在のモードはLEDの色で示されます。\n\nモード | ポリフォニー | ノートキーボード | オクターブスイッチの動作\nPoly（ホワイト） | ポリフォニック（最大3音） | 3つのボイスを順番に切り替えます。 | 次に演奏するノートに影響します。オクターブスイッチを使って、異なるオクターブのノートをミックスできます。\nString（イエロー） | モノフォニック | 複数のノートを同時に押してシーケンスを設定します。入力レベルが閾値を超えるとステップが進みます。 | 即時\nBar（レッド） | | |\nCave（パープル） | | （次のページ参照） | Cave（全3種類）を切り替えます。\n\nグローバルチューニングはPoly、String、Barモードに影響します。（工場設定：A3（69）= 440Hz）\n\nグローバルチューニングの調整方法については、10ページをご参照ください。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>モード</p>\n<p>Wingie2には4つのモードがあります。モードボタンを押してモードを順番に切り替えます。現在のモードはLEDの色で示されます。</p>\n<p>モード | ポリフォニー | ノートキーボード | オクターブスイッチの動作\nPoly（ホワイト） | ポリフォニック（最大3音） | 3つのボイスを順番に切り替えます。 | 次に演奏するノートに影響します。オクターブスイッチを使って、異なるオクターブのノートをミックスできます。\nString（イエロー） | モノフォニック | 複数のノートを同時に押してシーケンスを設定します。入力レベルが閾値を超えるとステップが進みます。 | 即時\nBar（レッド） | | |\nCave（パープル） | | （次のページ参照） | Cave（全3種類）を切り替えます。</p>\n<p>グローバルチューニングはPoly、String、Barモードに影響します。（工場設定：A3（69）= 440Hz）</p>\n<p>グローバルチューニングの調整方法については、10ページをご参照ください。</p>"
     },
     {
       "pageNum": 6,
@@ -59,7 +64,8 @@
       "sectionName": null,
       "content": "カスタマイズ可能なCave\n\n操作方法：\n- シングルタップ：ミュート / ミュート解除の切り替え\n- Plusボタン + タップ：対応するレゾネーターのピッチを上げる\n- Minusボタン + タップ：対応するレゾネーターのピッチを下げる\n- Plusボタン + チェックマーク：すべてのレゾネーターのミュートを解除\n- Minusボタン + チェックマーク：すべてのレゾネーターをミュート\n- 同じ色のタップ：両チャンネルに同じ操作を適用\n\nCaveをカスタマイズする",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>カスタマイズ可能なCave</p>\n<p>操作方法：</p>\n<ul>\n<li>シングルタップ：ミュート / ミュート解除の切り替え</li>\n<li>Plusボタン + タップ：対応するレゾネーターのピッチを上げる</li>\n<li>Minusボタン + タップ：対応するレゾネーターのピッチを下げる</li>\n<li>Plusボタン + チェックマーク：すべてのレゾネーターのミュートを解除</li>\n<li>Minusボタン + チェックマーク：すべてのレゾネーターをミュート</li>\n<li>同じ色のタップ：両チャンネルに同じ操作を適用</li>\n</ul>\n<p>Caveをカスタマイズする</p>"
     },
     {
       "pageNum": 7,
@@ -68,7 +74,8 @@
       "sectionName": null,
       "content": "Tap Sequencer Threshold\n\nOperations:\n\n- Mode button + tap: 右チャンネルのThreshold\n\n- Mode button + tap: 左チャンネルのThreshold\n\n- C, C#, D ... → B = 低 → 高",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Tap Sequencer Threshold</p>\n<p>Operations:</p>\n<ul>\n<li>\n<p>Mode button + tap: 右チャンネルのThreshold</p>\n</li>\n<li>\n<p>Mode button + tap: 左チャンネルのThreshold</p>\n</li>\n<li>\n<p>C, C#, D ... → B = 低 → 高</p>\n</li>\n</ul>"
     },
     {
       "pageNum": 8,
@@ -77,7 +84,8 @@
       "sectionName": null,
       "content": "Pre / Post Clipper Gainの設定\n\nOperations:\n\n- Mode button + tap: Post：Resonator Volume\n\n- Mode button + tap: Pre：SATURATIONの量\n\n- C, C#, D ... → B = 低 → 高\n\nPreを調整して好みのトーンを得た後、PostをDry / Wetフェーダーが快適に動作するよう調整してください。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Pre / Post Clipper Gainの設定</p>\n<p>Operations:</p>\n<ul>\n<li>\n<p>Mode button + tap: Post：Resonator Volume</p>\n</li>\n<li>\n<p>Mode button + tap: Pre：SATURATIONの量</p>\n</li>\n<li>\n<p>C, C#, D ... → B = 低 → 高</p>\n</li>\n</ul>\n<p>Preを調整して好みのトーンを得た後、PostをDry / Wetフェーダーが快適に動作するよう調整してください。</p>"
     },
     {
       "pageNum": 9,
@@ -86,7 +94,8 @@
       "sectionName": null,
       "content": "MIDI Channel:\n\nMIDI Channel | Note | CC\nユーザー調整可能（工場出荷時設定 1, 2, 3） | 左チャンネル | 左チャンネル\n| 右チャンネル | 右チャンネル\n| L/Rチャンネルを交互に切替 | 左右両チャンネル\n\nMIDI Note:\n\n- Wingie2はNote Onデータを受け付けます（Note Offは無視されます）。\n\n- 内蔵Tap Sequencerは本体のキーボードでのみ動作します。\n\n- 大きな音程差で素早くノートを変更すると、大きな音量の出力が生じる場合があります。\n\nMIDI CC (Control Change):\n\n- 受信したMIDI CCは対応するフェーダーの設定を上書きします。フェーダーを動かすと、フェーダーの設定が再び有効になります。\n\n- Wingie2は14-bit MIDIを受け付けます。\n\nCC | 0-30 Polyphony | 31-63 String | 64-95 Bar | 96-127 Cave\nCC 11（MSB）, CC 43（LSB） | Mix（Dry / Wet） | | |\nCC 1（MSB）, CC 33（LSB） | Decay Time | | |\nCC 7（MSB）, CC 39（LSB） | Volume | | |",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>MIDI Channel:</p>\n<p>MIDI Channel | Note | CC\nユーザー調整可能（工場出荷時設定 1, 2, 3） | 左チャンネル | 左チャンネル\n| 右チャンネル | 右チャンネル\n| L/Rチャンネルを交互に切替 | 左右両チャンネル</p>\n<p>MIDI Note:</p>\n<ul>\n<li>\n<p>Wingie2はNote Onデータを受け付けます（Note Offは無視されます）。</p>\n</li>\n<li>\n<p>内蔵Tap Sequencerは本体のキーボードでのみ動作します。</p>\n</li>\n<li>\n<p>大きな音程差で素早くノートを変更すると、大きな音量の出力が生じる場合があります。</p>\n</li>\n</ul>\n<p>MIDI CC (Control Change):</p>\n<ul>\n<li>\n<p>受信したMIDI CCは対応するフェーダーの設定を上書きします。フェーダーを動かすと、フェーダーの設定が再び有効になります。</p>\n</li>\n<li>\n<p>Wingie2は14-bit MIDIを受け付けます。</p>\n</li>\n</ul>\n<p>CC | 0-30 Polyphony | 31-63 String | 64-95 Bar | 96-127 Cave\nCC 11（MSB）, CC 43（LSB） | Mix（Dry / Wet） | | |\nCC 1（MSB）, CC 33（LSB） | Decay Time | | |\nCC 7（MSB）, CC 39（LSB） | Volume | | |</p>"
     },
     {
       "pageNum": 10,
@@ -95,7 +104,8 @@
       "sectionName": null,
       "content": "MIDIポートはMMA仕様のTRS標準規格に準拠して設計されています。以下のタイプのMIDIケーブルをご使用ください。\n\nTRS Connector（Male） — ピン配列 — 5-Pin DIN Connector（Female）\n- Tip → Pin 5\n- Ring → Pin 4\n- Sleeve → Pin 2\n\nWingie2を使った開発\n\nWingie2は開発プラットフォームとして使用できます。ファームウェアはオープンソースです。\n\nコンパイル環境の構築方法およびファームウェアのダウンロードについては、以下のリンクをご参照ください。\n\nhttps://github.com/mengqimusic/Wingie2\n\nファームウェアは2つのステップで構成されています。\n- DSPセクションはFaustで記述・コンパイルされています。\n- インターフェース機能を接続・定義するArduinoスケッチ\n\nスケールを変更したり、コントロールインターフェースをカスタマイズしたり、ユニット全体を再定義することができます。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>MIDIポートはMMA仕様のTRS標準規格に準拠して設計されています。以下のタイプのMIDIケーブルをご使用ください。</p>\n<p>TRS Connector（Male） — ピン配列 — 5-Pin DIN Connector（Female）</p>\n<ul>\n<li>Tip → Pin 5</li>\n<li>Ring → Pin 4</li>\n<li>Sleeve → Pin 2</li>\n</ul>\n<p>Wingie2を使った開発</p>\n<p>Wingie2は開発プラットフォームとして使用できます。ファームウェアはオープンソースです。</p>\n<p>コンパイル環境の構築方法およびファームウェアのダウンロードについては、以下のリンクをご参照ください。</p>\n<p><a href=\"https://github.com/mengqimusic/Wingie2\">https://github.com/mengqimusic/Wingie2</a></p>\n<p>ファームウェアは2つのステップで構成されています。</p>\n<ul>\n<li>DSPセクションはFaustで記述・コンパイルされています。</li>\n<li>インターフェース機能を接続・定義するArduinoスケッチ</li>\n</ul>\n<p>スケールを変更したり、コントロールインターフェースをカスタマイズしたり、ユニット全体を再定義することができます。</p>"
     },
     {
       "pageNum": 11,
@@ -104,7 +114,8 @@
       "sectionName": null,
       "content": "Global Settings\n\nMIDI Channel、Global Tuning、Alternative TuningおよびCave Modeの周波数はWingie Toolsを通じて設定できます。Wingie ToolsはMeng QiのGithubからダウンロードできます。ファイルを開くにはpdを使用してください。\n\n「Media / MIDI Settings」メニューの「Output Devices」から、Wingieに接続されたMIDIポートを選択してください。大きな周波数の変化は大きな音量の出力につながります。調整前にVolumeとDecayを下げておいてください。\n\nGlobal SettingsのためのMIDIデータ:\n\nMIDI Ch | MIDI CC | 機能 | 工場出荷時設定\n16 | 20 | 左チャンネルのMIDI Channel | 1\n16 | 21 | 右チャンネルのMIDI Channel | 2\n16 | 22 | 両チャンネルのMIDI Channel | 3\n16 | 23（MSB）, 55（LSB） | Global Tuning Offset（440Hzからのオフセット）範囲：± 81.92Hz、分解能：0.01Hz | 0.00\n15 | 23-31（MSB）, 55-63（LSB） | 右チャンネルのTuning 選択済みCave |\n14 | 23-31（MSB）, 55-63（LSB） | 左チャンネルのTuning 選択済みCave |",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Global Settings</p>\n<p>MIDI Channel、Global Tuning、Alternative TuningおよびCave Modeの周波数はWingie Toolsを通じて設定できます。Wingie ToolsはMeng QiのGithubからダウンロードできます。ファイルを開くにはpdを使用してください。</p>\n<p>「Media / MIDI Settings」メニューの「Output Devices」から、Wingieに接続されたMIDIポートを選択してください。大きな周波数の変化は大きな音量の出力につながります。調整前にVolumeとDecayを下げておいてください。</p>\n<p>Global SettingsのためのMIDIデータ:</p>\n<p>MIDI Ch | MIDI CC | 機能 | 工場出荷時設定\n16 | 20 | 左チャンネルのMIDI Channel | 1\n16 | 21 | 右チャンネルのMIDI Channel | 2\n16 | 22 | 両チャンネルのMIDI Channel | 3\n16 | 23（MSB）, 55（LSB） | Global Tuning Offset（440Hzからのオフセット）範囲：± 81.92Hz、分解能：0.01Hz | 0.00\n15 | 23-31（MSB）, 55-63（LSB） | 右チャンネルのTuning 選択済みCave |\n14 | 23-31（MSB）, 55-63（LSB） | 左チャンネルのTuning 選択済みCave |</p>"
     },
     {
       "pageNum": 12,
@@ -113,7 +124,8 @@
       "sectionName": null,
       "content": "設定の保存\n\n両方のMODEボタンを3秒間押し続けると保存されます。押し続けている間はLEDの色が変化し、保存が完了すると素早く点滅して完了を知らせます。\n\nこの操作により、音にわずかなグリッチが生じる場合があります。録音中やライブパフォーマンス中の設定保存はお勧めしません。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>設定の保存</p>\n<p>両方のMODEボタンを3秒間押し続けると保存されます。押し続けている間はLEDの色が変化し、保存が完了すると素早く点滅して完了を知らせます。</p>\n<p>この操作により、音にわずかなグリッチが生じる場合があります。録音中やライブパフォーマンス中の設定保存はお勧めしません。</p>"
     },
     {
       "pageNum": 13,
@@ -122,7 +134,8 @@
       "sectionName": null,
       "content": "代替チューニング\n\nデフォルトでは、Wingie2は標準的な西洋音楽のチューニング（12平均律）を使用しています。\n\nバージョン3.1以降、8種類の追加チューニングが利用可能です。現在利用できるチューニングは以下の通りです（ソースコードを変更して新しいファームウェアをビルドすることで、他のチューニングも使用可能です）：\n\n- Centaur（Kraig Grady）\n- Harp of New Albion（Terry Riley）\n- Carlos Harmonic（Wendy Carlos）\n- Well-Tuned Piano（La Monte Young）\n- Meta Slendro（Grady/Wilson）\n- Bihexany（Gene Ward Smith）\n- Hexachordal Dodecaphonic（Paul Erlich）\n- Augmented[12]（Mike Smith, Paul Erlich）\n\n代替チューニングは2つの方法で有効にできます：\n- デバイス起動時に左のModeボタンを押し続ける\n- MIDIを使用する。MIDIを使用する利点は、デバイスを再起動する必要がなく、チューニングをその場で変更できる点です。\n\n代替チューニングはCavesモードにも影響します。詳細は下記を参照してください。\n\n代替チューニングはGlobal Tuning（A3）設定に従います。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>代替チューニング</p>\n<p>デフォルトでは、Wingie2は標準的な西洋音楽のチューニング（12平均律）を使用しています。</p>\n<p>バージョン3.1以降、8種類の追加チューニングが利用可能です。現在利用できるチューニングは以下の通りです（ソースコードを変更して新しいファームウェアをビルドすることで、他のチューニングも使用可能です）：</p>\n<ul>\n<li>Centaur（Kraig Grady）</li>\n<li>Harp of New Albion（Terry Riley）</li>\n<li>Carlos Harmonic（Wendy Carlos）</li>\n<li>Well-Tuned Piano（La Monte Young）</li>\n<li>Meta Slendro（Grady/Wilson）</li>\n<li>Bihexany（Gene Ward Smith）</li>\n<li>Hexachordal Dodecaphonic（Paul Erlich）</li>\n<li>Augmented[12]（Mike Smith, Paul Erlich）</li>\n</ul>\n<p>代替チューニングは2つの方法で有効にできます：</p>\n<ul>\n<li>デバイス起動時に左のModeボタンを押し続ける</li>\n<li>MIDIを使用する。MIDIを使用する利点は、デバイスを再起動する必要がなく、チューニングをその場で変更できる点です。</li>\n</ul>\n<p>代替チューニングはCavesモードにも影響します。詳細は下記を参照してください。</p>\n<p>代替チューニングはGlobal Tuning（A3）設定に従います。</p>"
     },
     {
       "pageNum": 14,
@@ -131,7 +144,8 @@
       "sectionName": null,
       "content": "起動時のチューニング切り替え\n\n左のModeボタンを押し続けながらUSBケーブルを接続します。スライダーの位置によってチューニングが決まります：\n\nLeft Mode | Right Mode | Left Slider | Middle Slider | Right Slider | チューニング\nRelease | Hold | | | | 12 Equal Temperament\nHold | Release | Down | Down | Down | Centaur\nHold | Release | Down | Down | Up | Harp of New Albion\nHold | Release | Down | Up | Down | Carlos Harmonic\nHold | Release | Down | Up | Up | Well Tuned Piano\nHold | Release | Up | Down | Down | Meta Slendro\nHold | Release | Up | Down | Up | Bihexany\nHold | Release | Up | Up | Down | Hexachordal Dodecaphonic\nHold | Release | Up | Up | Up | Augmented[12]\n\nチューニングの詳細については、wingie_tuning_notes.pdf を参照してください。\n\nMIDIによるチューニング切り替え\n\nChannel | CC | Value | チューニング\n13 | 23 | 0 | 12 Equal Temperament\n13 | 23 | 1 | Centaur\n13 | 23 | 2 | Harp of New Albion\n13 | 23 | 3 | Carlos Harmonic\n13 | 23 | 4 | Well Tuned Piano\n13 | 23 | 5 | Meta Slendro\n13 | 23 | 6 | Bihexany\n13 | 23 | 7 | Hexachordal Dodecaphonic\n13 | 23 | 8 | Augmented[12]\n\nDave SeidelによるTouchOSCテンプレート：wingie_tuning.tosc",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>起動時のチューニング切り替え</p>\n<p>左のModeボタンを押し続けながらUSBケーブルを接続します。スライダーの位置によってチューニングが決まります：</p>\n<p>Left Mode | Right Mode | Left Slider | Middle Slider | Right Slider | チューニング\nRelease | Hold | | | | 12 Equal Temperament\nHold | Release | Down | Down | Down | Centaur\nHold | Release | Down | Down | Up | Harp of New Albion\nHold | Release | Down | Up | Down | Carlos Harmonic\nHold | Release | Down | Up | Up | Well Tuned Piano\nHold | Release | Up | Down | Down | Meta Slendro\nHold | Release | Up | Down | Up | Bihexany\nHold | Release | Up | Up | Down | Hexachordal Dodecaphonic\nHold | Release | Up | Up | Up | Augmented[12]</p>\n<p>チューニングの詳細については、wingie_tuning_notes.pdf を参照してください。</p>\n<p>MIDIによるチューニング切り替え</p>\n<p>Channel | CC | Value | チューニング\n13 | 23 | 0 | 12 Equal Temperament\n13 | 23 | 1 | Centaur\n13 | 23 | 2 | Harp of New Albion\n13 | 23 | 3 | Carlos Harmonic\n13 | 23 | 4 | Well Tuned Piano\n13 | 23 | 5 | Meta Slendro\n13 | 23 | 6 | Bihexany\n13 | 23 | 7 | Hexachordal Dodecaphonic\n13 | 23 | 8 | Augmented[12]</p>\n<p>Dave SeidelによるTouchOSCテンプレート：wingie_tuning.tosc</p>"
     },
     {
       "pageNum": 15,
@@ -140,7 +154,8 @@
       "sectionName": null,
       "content": "代替チューニングのCaves\n\n代替チューニングを有効にすると、Cavesも選択したチューニングに合わせて調律されます。\n\n12音すべてに対応するため、Cavesは以下のように配置されています。左チャンネルは偶数番号の音階音を使用し、1オクターブと3分の1をカバーします：\n\nC, D, E, F#, G#, A#, C', D', E'\n\n右チャンネルは奇数番号の音階音を使用し、同様に1オクターブと3分の1をカバーします：\n\nC#, D#, F, G, A, B, A#, C#', D#', F'\n\n3ポジションのトグルスイッチは、Poly、String、Barモードと同様に3つのオクターブを切り替えます。ただし、左右のCavesは常に同じオクターブにあるため、すべての音階音が両サイドにわたってカバーされます。\n\nチューニング設定の保存\n\n現在のチューニング設定は、マニュアルに記載されている通り、両方のModeボタンを同時に押し続けることで、他の設定とともに保存されます。再起動時に、チューニング設定が復元されます。\n\nDave SeidelはAlternative Tuning機能に貢献しています。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>代替チューニングのCaves</p>\n<p>代替チューニングを有効にすると、Cavesも選択したチューニングに合わせて調律されます。</p>\n<p>12音すべてに対応するため、Cavesは以下のように配置されています。左チャンネルは偶数番号の音階音を使用し、1オクターブと3分の1をカバーします：</p>\n<p>C, D, E, F#, G#, A#, C', D', E'</p>\n<p>右チャンネルは奇数番号の音階音を使用し、同様に1オクターブと3分の1をカバーします：</p>\n<p>C#, D#, F, G, A, B, A#, C#', D#', F'</p>\n<p>3ポジションのトグルスイッチは、Poly、String、Barモードと同様に3つのオクターブを切り替えます。ただし、左右のCavesは常に同じオクターブにあるため、すべての音階音が両サイドにわたってカバーされます。</p>\n<p>チューニング設定の保存</p>\n<p>現在のチューニング設定は、マニュアルに記載されている通り、両方のModeボタンを同時に押し続けることで、他の設定とともに保存されます。再起動時に、チューニング設定が復元されます。</p>\n<p>Dave SeidelはAlternative Tuning機能に貢献しています。</p>"
     },
     {
       "pageNum": 16,
@@ -149,7 +164,8 @@
       "sectionName": null,
       "content": "演奏のヒント：\n\n1. Wingie2を打楽器として演奏する\n\n2. Wingie2を屋外に持ち出してアンビエントサウンドと一緒に演奏する\n\n3. あらゆる種類のアコースティック楽器と組み合わせて使用する\n\n4. スピーカーとのフィードバックで演奏する\n\n5. エフェクターを使ってフィードバックを作る\n\n6. ドラムマシンと組み合わせてタップシーケンサーをトリガーし、音符のシーケンスを作る\n\n7. ライブパフォーマンスでのフィードバックを避けるため、外付けカーディオイドマイクとライン入力を使用する\n\n……（あなたが探求するために）\n\n謝辞：\nRoy & Janetへ、Wingieの説明とマニュアルの校正に感謝します。\nAnnqiへ、Wingie2の背面に書かれた言葉に感謝します。\nDave Seidelへ、Alternative Tuning機能に感謝します。\n\n……そして、地平線の彼方にはまだ多くのものがあります。\n\nお問い合わせ先：\n\nWebsite: mengqimusic.com\nBandcamp: mengqi.bandcamp.com\nYouTube: youtube.com/c/MengQiMusic\nInstagram: instagram.com/mengqimusic\nSynthesis Minority: space.bilibili.com/4485929",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>演奏のヒント：</p>\n<ol>\n<li>\n<p>Wingie2を打楽器として演奏する</p>\n</li>\n<li>\n<p>Wingie2を屋外に持ち出してアンビエントサウンドと一緒に演奏する</p>\n</li>\n<li>\n<p>あらゆる種類のアコースティック楽器と組み合わせて使用する</p>\n</li>\n<li>\n<p>スピーカーとのフィードバックで演奏する</p>\n</li>\n<li>\n<p>エフェクターを使ってフィードバックを作る</p>\n</li>\n<li>\n<p>ドラムマシンと組み合わせてタップシーケンサーをトリガーし、音符のシーケンスを作る</p>\n</li>\n<li>\n<p>ライブパフォーマンスでのフィードバックを避けるため、外付けカーディオイドマイクとライン入力を使用する</p>\n</li>\n</ol>\n<p>……（あなたが探求するために）</p>\n<p>謝辞：\nRoy &#x26; Janetへ、Wingieの説明とマニュアルの校正に感謝します。\nAnnqiへ、Wingie2の背面に書かれた言葉に感謝します。\nDave Seidelへ、Alternative Tuning機能に感謝します。</p>\n<p>……そして、地平線の彼方にはまだ多くのものがあります。</p>\n<p>お問い合わせ先：</p>\n<p>Website: mengqimusic.com\nBandcamp: mengqi.bandcamp.com\nYouTube: youtube.com/c/MengQiMusic\nInstagram: instagram.com/mengqimusic\nSynthesis Minority: space.bilibili.com/4485929</p>"
     },
     {
       "pageNum": 17,
@@ -158,7 +174,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     }
   ]
 }

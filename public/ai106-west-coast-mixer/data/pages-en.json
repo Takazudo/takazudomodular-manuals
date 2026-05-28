@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "This is the Manual for the AI022 Harmonic Mixer you can purchase it by going to:\nhttps://aisynthesis.com/product/ai106-west-coast-eurorack-mixer/.\n\n1. About the AI106 West Coast Mixer\n\nThe AI106 West Coast Mixer is a discrete mixer using no ICs. As gain increases harmonics and analog warmth are added. As gain increases more, distortion and phasing is added, creating new waveforms from old ones.\n\nThe AI106 takes inspiration from the legendary but primitive mixers used in 1960s synthesizers built on the West Coast of the United States, but updates it for eurorack and allows for user customization of the circuit.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>This is the Manual for the AI022 Harmonic Mixer you can purchase it by going to:\n<a href=\"https://aisynthesis.com/product/ai106-west-coast-eurorack-mixer/\">https://aisynthesis.com/product/ai106-west-coast-eurorack-mixer/</a>.</p>\n<ol>\n<li>About the AI106 West Coast Mixer</li>\n</ol>\n<p>The AI106 West Coast Mixer is a discrete mixer using no ICs. As gain increases harmonics and analog warmth are added. As gain increases more, distortion and phasing is added, creating new waveforms from old ones.</p>\n<p>The AI106 takes inspiration from the legendary but primitive mixers used in 1960s synthesizers built on the West Coast of the United States, but updates it for eurorack and allows for user customization of the circuit.</p>"
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "2. AI106 Controls\n\n1. Mono Inputs. These inputs accept mono audio or voltage signals.\n\n2. Mix Out. This is the primary voltage output. Just like the vintage 1960s mixers, the output is inverted.\n\n4. Input Volume. The position of these knobs control the volume of each input. These knobs are passive attenuators. As volume increases more harmonic distortion is added.\n\n5. Master Volume. The position of this knob controls the volume of audio and or voltage of the Mix Out. As volume increases more harmonic distortion is added.\n\n3. Power\n\nThe AI106 uses a shrouded header to prevent the cable being plugged in the wrong way. The unit draws 12 mA on the positive rail, and 0 mA on the negative side.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<ol start=\"2\">\n<li>\n<p>AI106 Controls</p>\n</li>\n<li>\n<p>Mono Inputs. These inputs accept mono audio or voltage signals.</p>\n</li>\n<li>\n<p>Mix Out. This is the primary voltage output. Just like the vintage 1960s mixers, the output is inverted.</p>\n</li>\n<li>\n<p>Input Volume. The position of these knobs control the volume of each input. These knobs are passive attenuators. As volume increases more harmonic distortion is added.</p>\n</li>\n<li>\n<p>Master Volume. The position of this knob controls the volume of audio and or voltage of the Mix Out. As volume increases more harmonic distortion is added.</p>\n</li>\n<li>\n<p>Power</p>\n</li>\n</ol>\n<p>The AI106 uses a shrouded header to prevent the cable being plugged in the wrong way. The unit draws 12 mA on the positive rail, and 0 mA on the negative side.</p>"
     }
   ]
 }

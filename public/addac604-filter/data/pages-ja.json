@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "ADDAC604 DUAL FILTER ユーザーガイド\n\nJanuary.2020 Revision.01\n\nWelcome to:\n\n全体の説明\n\nADDAC105 4 Voice Clusterモジュールの開発中に、サミングミックスステージの後段に配置する新しいマルチモードフィルターを製作しました。そのサウンドに大変満足したため、専用フィルターとしてリリースすることを決定しました。より興味深いものにするため、ステレオ信号パスで使用できるように回路を複製しました。より汎用性を高めるため、動作モードをStereoからDual Monoに切り替えるスイッチを追加しました。Dual Monoでは両方のフィルターを独立して使用できます。\n\nStereo ModeではLeft CutoffがRight Cutoffのコントロールに使用されます。この場合、Right Cutoff KnobとCV Inputは単純にバイパスされ、Right Channelの動作に影響を与えません。これにより、Stereoポジションを使用したときに両方のフィルター周波数を即座に同期できます。オプションとして、背面にジャンパーがあり、装着すると Right ControlsをRight CV controlに再接続し、Right Channel Cutoffのオフセットをコントロールできるようになります。\n\nResonanceは両方のModeで独立しており、両方のチャンネルをマッチさせるには手動で設定する必要があります。\n\nAudioとCV inputsはLeftからRightチャンネルにノーマル接続されています。標準的に、Rightチャンネルの任意の入力にプラグを挿すとこの接続が解除されます。\n\nこのモジュールはフルDIYキットとしても入手可能です。\n\nTech Specs:\n\n6HP\n\n4 cm deep\n\n70mA +12V\n\n70mA -12V",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC604 DUAL FILTER ユーザーガイド</p>\n<p>January.2020 Revision.01</p>\n<p>Welcome to:</p>\n<p>全体の説明</p>\n<p>ADDAC105 4 Voice Clusterモジュールの開発中に、サミングミックスステージの後段に配置する新しいマルチモードフィルターを製作しました。そのサウンドに大変満足したため、専用フィルターとしてリリースすることを決定しました。より興味深いものにするため、ステレオ信号パスで使用できるように回路を複製しました。より汎用性を高めるため、動作モードをStereoからDual Monoに切り替えるスイッチを追加しました。Dual Monoでは両方のフィルターを独立して使用できます。</p>\n<p>Stereo ModeではLeft CutoffがRight Cutoffのコントロールに使用されます。この場合、Right Cutoff KnobとCV Inputは単純にバイパスされ、Right Channelの動作に影響を与えません。これにより、Stereoポジションを使用したときに両方のフィルター周波数を即座に同期できます。オプションとして、背面にジャンパーがあり、装着すると Right ControlsをRight CV controlに再接続し、Right Channel Cutoffのオフセットをコントロールできるようになります。</p>\n<p>Resonanceは両方のModeで独立しており、両方のチャンネルをマッチさせるには手動で設定する必要があります。</p>\n<p>AudioとCV inputsはLeftからRightチャンネルにノーマル接続されています。標準的に、Rightチャンネルの任意の入力にプラグを挿すとこの接続が解除されます。</p>\n<p>このモジュールはフルDIYキットとしても入手可能です。</p>\n<p>Tech Specs:</p>\n<p>6HP</p>\n<p>4 cm deep</p>\n<p>70mA +12V</p>\n<p>70mA -12V</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "コントロールの説明\n\nOperation Mode\nDUAL MONO / STEREO\n\nLEFT CONTROLS\n\nCutoff Initial Control\nResonance Control\nCutoff CV Attenuverter\nCutoff CV Input\nAudio Input\nHighPass Output\nBandPass Output\nLowPass Output\n\nRIGHT CONTROLS\n\nCutoff Initial Control\nResonance Control\nCutoff CV Attenuverter\nCutoff CV Input\nAudio Input\nHighPass Output\nBandPass Output\nLowPass Output",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>コントロールの説明</p>\n<p>Operation Mode\nDUAL MONO / STEREO</p>\n<p>LEFT CONTROLS</p>\n<p>Cutoff Initial Control\nResonance Control\nCutoff CV Attenuverter\nCutoff CV Input\nAudio Input\nHighPass Output\nBandPass Output\nLowPass Output</p>\n<p>RIGHT CONTROLS</p>\n<p>Cutoff Initial Control\nResonance Control\nCutoff CV Attenuverter\nCutoff CV Input\nAudio Input\nHighPass Output\nBandPass Output\nLowPass Output</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "ADDAC604\nDUAL FILTER 信号フロー図\n\nLEFT\nFILTER\n\nHIGHPASS\nBANDPASS\nLOWPASS\n\nAUDIO INPUT\n\nCUTOFF\n\nCV INPUT\n\nCUTOFF\nATTENUVERTER\n\nRESONANCE\n\nRIGHT\nFILTER\n\nHIGHPASS\nBANDPASS\nLOWPASS\n\nAUDIO INPUT\n\nCUTOFF\n\nCV INPUT\n\nCUTOFF\nATTENUVERTER\n\nRESONANCE\n\nSTEREO\nDUAL\nMONO\n\nBACK\nJUMPER",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC604\nDUAL FILTER 信号フロー図</p>\n<p>LEFT\nFILTER</p>\n<p>HIGHPASS\nBANDPASS\nLOWPASS</p>\n<p>AUDIO INPUT</p>\n<p>CUTOFF</p>\n<p>CV INPUT</p>\n<p>CUTOFF\nATTENUVERTER</p>\n<p>RESONANCE</p>\n<p>RIGHT\nFILTER</p>\n<p>HIGHPASS\nBANDPASS\nLOWPASS</p>\n<p>AUDIO INPUT</p>\n<p>CUTOFF</p>\n<p>CV INPUT</p>\n<p>CUTOFF\nATTENUVERTER</p>\n<p>RESONANCE</p>\n<p>STEREO\nDUAL\nMONO</p>\n<p>BACK\nJUMPER</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "フィードバック、コメント、問題等については下記までご連絡ください:\naddac@addacsystem.com\n\nADDAC604 ユーザーガイド\n2020年1月 リビジョン.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>フィードバック、コメント、問題等については下記までご連絡ください:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC604 ユーザーガイド\n2020年1月 リビジョン.01</p>"
     }
   ]
 }

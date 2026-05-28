@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "Welcome to:\n\n全体的な特徴\n\nこれはT-Networksシリーズの最後のモジュールで、各ボイスにFrequencyとDecayコントロールを備えた4ボイス構成のストレートフォワードなモジュールです。名前が示すように、ノイズソースを追加し、ノイズをフィルタリングする際のT-networkのティンバーを探求する2つの異なる回路を作成しました。\n\nこのモジュールには2つの異なる回路があります。ボイス1から3はVCA前のT-networkフィルターを持ち、ボイス4ではVCA後にT-networkフィルターが適用されます。\n\n各ボイスの入力には、使用する入力タイプを設定するスイッチがあります。この信号は内部VCAをコントロールするために使用されるため、ここで定義される設定のタイプが重要です:\n\n1. Trigger - 入力されるCVは、固定されたスレッショルドを超えるとすぐに1msのトリガーに変換されます。\n\n2. Mute - 入力信号を切断し、ボイスを効果的にミュートします。\n\n3. Envelopes - CVソースやGateソースと共に使用でき、単純に入力信号に追従します。\n\nこの入力信号はスルー回路によって処理され、ディケイファクターが追加されることで、ユーザーは各ボイスの「テール」を設定できます。\n\nTriggerモードは主にパーカッシブなサウンドに特化していますが、Envelopeモードは外部エンベロープコントロールに対応し、T-networkでフィルタリングされたノイズから、ノイズスウッシュ、スワール、クラックル、ポップをコントロールすることができます。\n\nオーディオ入力をTrigger/Envelope入力として使用することも可能です。実際、この方法を使用した結果には私たち全員が非常に驚かされましたので、ぜひお試しください!\n\nボイス間の違い:\n\n最初の3つのボイスには、Timbreセレクタースイッチ(Hat/Snare)も備わっています。\n\nSnareモードでは、T-networkフィルターから出力されるすべての周波数がそのまま出力に送られます。\n\nHatモードでは、ハイパスフィルター回路が追加され、中低域の周波数(スネアストライクの特徴)が除去され、Hatのティンバーに近い高域スペクトラムの出力が作成されます。\n\nこれら3つのボイスは、より多くのティンバーオプションを提供するために、それぞれ異なるチューニングが施されています。\n\nボイス4は典型的なT-networks回路に近いですが、今回はノイズがVCAによってゲートされ、その後T-networkフィルターを通過するという独特な構造になっています。\n\nHatとSnareという用語はここでは非常に緩く使用されており、ティンバーの参照として使用されているだけで、実際のHatやSnareの複雑なティンバーを効果的に再現しようとするものではありません。\n\nこのモジュールは完全なDIYキットとしても入手可能です。\n\n特徴:\n\n4ボイス、それぞれ以下を装備:\n\nFrequencyコントロール\n\nDecayコントロール\n\nTimbreタイプ、Hat/Snare (ボイス1から3)\n\nFrequency Rangeスイッチ、Low/Mod/High (ボイス4)\n\nInput\n\nAudio Output\n\n全体的なSumming Mix出力にVolumeコントロールと2つの異なる出力タイプ(Normal/Dirt)を装備\n\n技術仕様:\n\n4HP\n\n4cm深さ\n\n40mA +12V\n\n40mA -12V",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Welcome to:</p>\n<p>全体的な特徴</p>\n<p>これはT-Networksシリーズの最後のモジュールで、各ボイスにFrequencyとDecayコントロールを備えた4ボイス構成のストレートフォワードなモジュールです。名前が示すように、ノイズソースを追加し、ノイズをフィルタリングする際のT-networkのティンバーを探求する2つの異なる回路を作成しました。</p>\n<p>このモジュールには2つの異なる回路があります。ボイス1から3はVCA前のT-networkフィルターを持ち、ボイス4ではVCA後にT-networkフィルターが適用されます。</p>\n<p>各ボイスの入力には、使用する入力タイプを設定するスイッチがあります。この信号は内部VCAをコントロールするために使用されるため、ここで定義される設定のタイプが重要です:</p>\n<ol>\n<li>\n<p>Trigger - 入力されるCVは、固定されたスレッショルドを超えるとすぐに1msのトリガーに変換されます。</p>\n</li>\n<li>\n<p>Mute - 入力信号を切断し、ボイスを効果的にミュートします。</p>\n</li>\n<li>\n<p>Envelopes - CVソースやGateソースと共に使用でき、単純に入力信号に追従します。</p>\n</li>\n</ol>\n<p>この入力信号はスルー回路によって処理され、ディケイファクターが追加されることで、ユーザーは各ボイスの「テール」を設定できます。</p>\n<p>Triggerモードは主にパーカッシブなサウンドに特化していますが、Envelopeモードは外部エンベロープコントロールに対応し、T-networkでフィルタリングされたノイズから、ノイズスウッシュ、スワール、クラックル、ポップをコントロールすることができます。</p>\n<p>オーディオ入力をTrigger/Envelope入力として使用することも可能です。実際、この方法を使用した結果には私たち全員が非常に驚かされましたので、ぜひお試しください!</p>\n<p>ボイス間の違い:</p>\n<p>最初の3つのボイスには、Timbreセレクタースイッチ(Hat/Snare)も備わっています。</p>\n<p>Snareモードでは、T-networkフィルターから出力されるすべての周波数がそのまま出力に送られます。</p>\n<p>Hatモードでは、ハイパスフィルター回路が追加され、中低域の周波数(スネアストライクの特徴)が除去され、Hatのティンバーに近い高域スペクトラムの出力が作成されます。</p>\n<p>これら3つのボイスは、より多くのティンバーオプションを提供するために、それぞれ異なるチューニングが施されています。</p>\n<p>ボイス4は典型的なT-networks回路に近いですが、今回はノイズがVCAによってゲートされ、その後T-networkフィルターを通過するという独特な構造になっています。</p>\n<p>HatとSnareという用語はここでは非常に緩く使用されており、ティンバーの参照として使用されているだけで、実際のHatやSnareの複雑なティンバーを効果的に再現しようとするものではありません。</p>\n<p>このモジュールは完全なDIYキットとしても入手可能です。</p>\n<p>特徴:</p>\n<p>4ボイス、それぞれ以下を装備:</p>\n<p>Frequencyコントロール</p>\n<p>Decayコントロール</p>\n<p>Timbreタイプ、Hat/Snare (ボイス1から3)</p>\n<p>Frequency Rangeスイッチ、Low/Mod/High (ボイス4)</p>\n<p>Input</p>\n<p>Audio Output</p>\n<p>全体的なSumming Mix出力にVolumeコントロールと2つの異なる出力タイプ(Normal/Dirt)を装備</p>\n<p>技術仕様:</p>\n<p>4HP</p>\n<p>4cm深さ</p>\n<p>40mA +12V</p>\n<p>40mA -12V</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "コントロールの説明\n\nT-Networks Frequency\n\n各ボイスのレゾナントピッチを調整します\n\nSumming Mix Gain\n\n全体のサミングミックスの出力ゲインを設定します\n\n独立したボイス入力設定\n\nDecay\n\nディケイの量を設定します\n\nHat/Snare スイッチ\n\nHPフィルターのオン/オフ\n\nSumming Mix Output\n\n独立したボイス出力\n\n独立したボイス入力\n\nLow/Mod/High レンジスイッチ\n\n周波数レンジを設定します",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>コントロールの説明</p>\n<p>T-Networks Frequency</p>\n<p>各ボイスのレゾナントピッチを調整します</p>\n<p>Summing Mix Gain</p>\n<p>全体のサミングミックスの出力ゲインを設定します</p>\n<p>独立したボイス入力設定</p>\n<p>Decay</p>\n<p>ディケイの量を設定します</p>\n<p>Hat/Snare スイッチ</p>\n<p>HPフィルターのオン/オフ</p>\n<p>Summing Mix Output</p>\n<p>独立したボイス出力</p>\n<p>独立したボイス入力</p>\n<p>Low/Mod/High レンジスイッチ</p>\n<p>周波数レンジを設定します</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "ADDAC106\nT-NOISEWORKS 信号フロー図\n\nVOICE 3\n\nVOICE 2\n\nVCA HAT / SNARE\n(HP FILTER)\n\nNOISE SOURCE\n\nT-NETWORK\n\nENVELOPE\n\nMUTE\n\nTRIGGER\n\nSLEW\n\nVOICE 1\n\nINPUT 1\n\nFREQUENCY\n\nOUTPUT 1\n\nAUDIO SUM\n\nMIX OUTPUT\n\nMIX VOLUME\n\nVOICE 4\n\nDECAY\n\nVCA T-NETWORK\n\nENVELOPE\n\nMUTE\n\nTRIGGER\n\nSLEW INPUT 4\n\nFREQUENCY\n\nOUTPUT 4 DECAY\n\nRANGE\n\nH / M / L",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC106\nT-NOISEWORKS 信号フロー図</p>\n<p>VOICE 3</p>\n<p>VOICE 2</p>\n<p>VCA HAT / SNARE\n(HP FILTER)</p>\n<p>NOISE SOURCE</p>\n<p>T-NETWORK</p>\n<p>ENVELOPE</p>\n<p>MUTE</p>\n<p>TRIGGER</p>\n<p>SLEW</p>\n<p>VOICE 1</p>\n<p>INPUT 1</p>\n<p>FREQUENCY</p>\n<p>OUTPUT 1</p>\n<p>AUDIO SUM</p>\n<p>MIX OUTPUT</p>\n<p>MIX VOLUME</p>\n<p>VOICE 4</p>\n<p>DECAY</p>\n<p>VCA T-NETWORK</p>\n<p>ENVELOPE</p>\n<p>MUTE</p>\n<p>TRIGGER</p>\n<p>SLEW INPUT 4</p>\n<p>FREQUENCY</p>\n<p>OUTPUT 4 DECAY</p>\n<p>RANGE</p>\n<p>H / M / L</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "フィードバック、コメント、または問題については、以下までご連絡ください:\naddac@addacsystem.com",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>フィードバック、コメント、または問題については、以下までご連絡ください:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>"
     }
   ]
 }
