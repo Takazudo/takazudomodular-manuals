@@ -31,16 +31,16 @@ jobs:
         with:
           lfs: false
 
-      - name: Build Next.js application
-        uses: ./.github/actions/build-nextjs
+      - name: Build zfb application
+        uses: ./.github/actions/build-zfb
         with:
           node-version: '20'
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
-          name: nextjs-build-production
-          path: out/
+          name: zfb-build-production
+          path: dist/
           include-hidden-files: true
           retention-days: 1
 
@@ -60,8 +60,8 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
         with:
-          name: nextjs-build-production
-          path: out
+          name: zfb-build-production
+          path: dist
 
       - name: Deploy to Cloudflare Pages
         id: deploy
@@ -72,6 +72,7 @@ jobs:
           branch: main
           commit-hash: ${{ github.sha }}
           commit-message: 'Production deploy: ${{ github.sha }}'
+          build-dir: dist
 
       - name: Create deployment record
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8

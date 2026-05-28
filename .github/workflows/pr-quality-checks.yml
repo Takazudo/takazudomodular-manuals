@@ -138,14 +138,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Cache Next.js build
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
-        with:
-          path: .next/cache
-          key: nextjs-cache-v1-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml', 'next.config.js', 'tsconfig.json') }}
-          restore-keys: nextjs-cache-v1-${{ runner.os }}-
-
-      - name: Build Next.js
+      - name: Build zfb site
         run: pnpm build
         env:
           NODE_ENV: production
@@ -153,34 +146,42 @@ jobs:
 
       - name: Verify build output
         run: |
-          echo "📦 Build Output Verification"
-          echo "============================"
+          echo "Build Output Verification"
+          echo "========================="
 
-          if [ ! -d "out" ]; then
-            echo "❌ Error: out/ directory not found"
+          if [ ! -d "dist" ]; then
+            echo "Error: dist/ directory not found"
             exit 1
           fi
 
-          # Count output files
-          HTML_COUNT=$(find out -name "*.html" | wc -l)
-          echo "📄 HTML files: $HTML_COUNT"
+          # Count HTML files emitted by zfb + finalize
+          HTML_COUNT=$(find dist -name "*.html" | wc -l)
+          echo "HTML files: $HTML_COUNT"
 
-          # Check for _next in out/manuals/ (due to basePath: '/manuals')
-          if [ -d "out/manuals/_next" ]; then
-            echo "✅ Next.js static assets found (out/manuals/_next)"
+          # zfb-finalize-build.js merges everything under dist/manuals/
+          if [ -d "dist/manuals/assets" ]; then
+            echo "zfb assets found (dist/manuals/assets/)"
           else
-            echo "❌ Error: _next/ directory not found in out/manuals/"
+            echo "Error: dist/manuals/assets/ not found"
             exit 1
           fi
 
-          echo "============================"
-          echo "✅ Build output verified"
+          # Cloudflare control files must be at dist/ root
+          if [ -f "dist/_headers" ]; then
+            echo "dist/_headers present"
+          else
+            echo "Error: dist/_headers not found at dist root"
+            exit 1
+          fi
+
+          echo "========================="
+          echo "Build output verified"
 
       - name: Upload build artifacts (for e2e tests)
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
-          name: nextjs-build-pr-${{ github.event.pull_request.number }}
-          path: out/
+          name: zfb-build-pr-${{ github.event.pull_request.number }}
+          path: dist/
           include-hidden-files: true
           retention-days: 1
 
@@ -212,16 +213,16 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
         with:
-          name: nextjs-build-pr-${{ github.event.pull_request.number }}
-          path: out
+          name: zfb-build-pr-${{ github.event.pull_request.number }}
+          path: dist
 
       - name: Install serve
         run: pnpm add -g serve
 
       - name: Start production server
         run: |
-          echo "🚀 Starting production server on port 8030..."
-          serve out -l 8030 &
+          echo "Starting production server on port 8030..."
+          serve dist -l 8030 &
           SERVER_PID=$!
           echo "SERVER_PID=$SERVER_PID" >> $GITHUB_ENV
 
@@ -320,8 +321,8 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
         with:
-          name: nextjs-build-pr-${{ github.event.pull_request.number }}
-          path: out
+          name: zfb-build-pr-${{ github.event.pull_request.number }}
+          path: dist
 
       - name: Deploy to Cloudflare Pages Preview
         id: deploy
@@ -332,6 +333,7 @@ jobs:
           branch: pr-${{ github.event.pull_request.number }}
           commit-hash: ${{ github.event.pull_request.head.sha }}
           commit-message: 'PR #${{ github.event.pull_request.number }} preview: ${{ github.event.pull_request.head.sha }}'
+          build-dir: dist
 
       - name: Create deployment record
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
