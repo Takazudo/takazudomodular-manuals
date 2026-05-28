@@ -129,9 +129,9 @@ export default [
   // TypeScript files (Next.js app — uses tsconfig.json with Next plugin)
   {
     files: ['**/*.ts', '**/*.tsx'],
-    // zfb pages/layouts use tsconfig.zfb.json (see override below);
+    // zfb pages/layouts/islands use tsconfig.zfb.json (see override below);
     // all other TS/TSX falls back to this rule using tsconfig.json.
-    ignores: ['pages/**', 'layouts/**'],
+    ignores: ['pages/**', 'layouts/**', 'components/zfb/**'],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -231,11 +231,18 @@ export default [
     },
   },
 
-  // zfb pages and layouts — preact JSX, tsconfig.zfb.json, Preact hooks.
+  // zfb pages, layouts, and islands — preact JSX, tsconfig.zfb.json, Preact hooks.
   // Coexists with the Next.js TS block above during the migration POC.
   // Remove this block when the Next.js app is fully retired (Sub 9/11).
   {
-    files: ['pages/**/*.ts', 'pages/**/*.tsx', 'layouts/**/*.ts', 'layouts/**/*.tsx'],
+    files: [
+      'pages/**/*.ts',
+      'pages/**/*.tsx',
+      'layouts/**/*.ts',
+      'layouts/**/*.tsx',
+      'components/zfb/**/*.ts',
+      'components/zfb/**/*.tsx',
+    ],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {

@@ -18,10 +18,14 @@
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/lib/*": ["./lib/*"],
-      "@/public/*": ["./public/*"]
+      "@/public/*": ["./public/*"],
+      "react": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"],
+      "react/jsx-runtime": ["./node_modules/preact/jsx-runtime/"],
+      "react/jsx-dev-runtime": ["./node_modules/preact/jsx-runtime/"]
     },
     "types": ["node"]
   },
-  "include": ["pages/**/*", "layouts/**/*", "zfb.config.ts"],
+  "include": ["pages/**/*", "layouts/**/*", "components/zfb/**/*", "zfb.config.ts"],
   "exclude": ["node_modules", "dist", "worktrees", "app", "doc"]
 }
