@@ -11,6 +11,12 @@ importers:
       '@netlify/classnames-template-literals':
         specifier: ^1.0.3
         version: 1.0.3
+      '@takazudo/zfb':
+        specifier: 0.1.0-next.13
+        version: 0.1.0-next.13
+      '@takazudo/zfb-runtime':
+        specifier: 0.1.0-next.13
+        version: 0.1.0-next.13(@takazudo/zfb@0.1.0-next.13)
       minisearch:
         specifier: ^7.2.0
         version: 7.2.0
@@ -20,6 +26,12 @@ importers:
       next-mdx-remote:
         specifier: ^6.0.0
         version: 6.0.0(@types/react@19.2.14)(react@19.2.4)
+      preact:
+        specifier: ^10.22.0
+        version: 10.29.2
+      preact-render-to-string:
+        specifier: ^6.5.0
+        version: 6.7.0(preact@10.29.2)
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -942,10 +954,6 @@ packages:
 
   '@babel/runtime-corejs3@7.29.0':
     resolution: {integrity: sha512-TgUkdp71C9pIbBcHudc+gXZnihEDOjUAmXO1VO4HHGES7QLZcShR0stfKIxLSNIYx2fqhmJChOjm/wkF8wv4gA==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/runtime@7.28.6':
-    resolution: {integrity: sha512-05WQkdpL9COIMz4LjTxGpPNCdlpyimKppYNoJ5Di5EUObifl8t4tuLuUBBZEpoLYOmfvIWrsp9fCl0HoPRVTdA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/runtime@7.29.2':
@@ -3061,6 +3069,42 @@ packages:
 
   '@tailwindcss/postcss@4.2.2':
     resolution: {integrity: sha512-n4goKQbW8RVXIbNKRB/45LzyUqN451deQK0nzIeauVEqjlI49slUlgKYJM2QyUzap/PcpnS7kzSUmPb1sCRvYQ==}
+
+  '@takazudo/zfb-darwin-arm64@0.1.0-next.13':
+    resolution: {integrity: sha512-Py5/eOjj308ug0V71FO0R0cY+PaCtJZMx0ltD+NUVnqZWkR8bOj4SXQEX5hMoOXQAjHYvDlaXOh79dWa+eRo2w==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@takazudo/zfb-darwin-x64@0.1.0-next.13':
+    resolution: {integrity: sha512-BhmU7bFy8yD9L4FLgHPst4DTicrmbntbxDKfWruA7HJU+bISBv48S0rLMMoHLmc0pQMUIs2DAdqi7wEgxStvnw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@takazudo/zfb-linux-arm64-gnu@0.1.0-next.13':
+    resolution: {integrity: sha512-yLAz7S2GdosF77GxlsrJQRDDJHX6yYo4RkBZTDs5zmXa2kfXN9aelFwM9TjdEuqCadSrLngK9sWxHBOASailaA==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@takazudo/zfb-linux-x64-gnu@0.1.0-next.13':
+    resolution: {integrity: sha512-tHxgfe1egU8TamtqqnLeBXTz98aQpMKT7WYd/LsvX8V7ddvVWK8qUvL9rRf1Tqmq2N1DJoXLeg8tEtvLJJqkTQ==}
+    cpu: [x64]
+    os: [linux]
+
+  '@takazudo/zfb-runtime@0.1.0-next.13':
+    resolution: {integrity: sha512-8my9Yb4Gjd8Am7zsm0xSRUHAATCs//mCb6nJFcdEOTBu3QcszuauuyOc/Cj0BrCBIfUIHiuKzrq73+b87zpAyA==}
+    engines: {node: '>=22.0.0', pnpm: '>=10.0.0'}
+    peerDependencies:
+      '@takazudo/zfb': 0.1.0-next.13
+
+  '@takazudo/zfb-win32-x64-msvc@0.1.0-next.13':
+    resolution: {integrity: sha512-t3bYvNOD2dvQJBUiA4IVh4CfmgFCuPP/rdZltFhEOViRL5qb0gAbwUkkiLW/vaBiGNQUn4aSzQFXk+DGZSUDKA==}
+    cpu: [x64]
+    os: [win32]
+
+  '@takazudo/zfb@0.1.0-next.13':
+    resolution: {integrity: sha512-5G3bHWkMcdWPl0IpamalmaIWV9K2sKAdzpgFVZYlybTtZVfhAz6EmSAu5eziOBpRn8030YkHq6UzO24gOfOuOQ==}
+    engines: {node: '>=22.0.0', pnpm: '>=10.0.0'}
+    hasBin: true
 
   '@testing-library/dom@10.4.1':
     resolution: {integrity: sha512-o4PXJQidqJl82ckFaXUeoAW+XysPLauYI43Abki5hABd853iMhitooc6znOnczgbTYmEP6U6/y1ZyKAIsvMKGg==}
@@ -5424,6 +5468,10 @@ packages:
   hoist-non-react-statics@3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
 
+  hono@4.12.23:
+    resolution: {integrity: sha512-eIaZ9qDgu7XV0pxOCrg7/WhnQ6Ivm22UcxhXx/A3dcbqbbYgBEkc6e/J/s7j2tS96zoB0S9VBdLwQNCWwUo4LA==}
+    engines: {node: '>=16.9.0'}
+
   hpack.js@2.1.6:
     resolution: {integrity: sha512-zJxVehUdMGIKsRaNt7apO2Gqp0BdqW5yaiGHXXmbpvxgBYVZnAql+BJb4RO5ad2MgpbZKn5G6nMnegrH1FcNYQ==}
 
@@ -7344,6 +7392,14 @@ packages:
   postcss@8.5.8:
     resolution: {integrity: sha512-OW/rX8O/jXnm82Ey1k44pObPtdblfiuWnrd8X7GJ7emImCOstunGbXUpp7HdBrFQX6rJzn3sPT397Wp5aCwCHg==}
     engines: {node: ^10 || ^12 || >=14}
+
+  preact-render-to-string@6.7.0:
+    resolution: {integrity: sha512-Z4WR8fmLMRpdYqJ9i7vrlXSsSrxVJydwrkEXHapexfARbWfGb7vGcnvNQnIzN0cXciMVOlz/XLoiMCi9gUsy9Q==}
+    peerDependencies:
+      preact: '>=10 || >= 11.0.0-0'
+
+  preact@10.29.2:
+    resolution: {integrity: sha512-7tNmwg/7mzzAoB/8kSg6Hl37JraAZw3Z3A0JSY7VXlZwo82Xn0G7wKbNNs2qoF4ZEEsQGTwDAroNdqKs1ofJxQ==}
 
   prebuild-install@7.1.3:
     resolution: {integrity: sha512-8Mf2cbV7x1cXPUILADGI3wuhfqWvtiLA1iclTDbFRZkgRQS0NqsPZphna9V+HyTEadheuPmjaJMsbzKQFOzLug==}
@@ -9763,8 +9819,6 @@ snapshots:
     dependencies:
       core-js-pure: 3.48.0
 
-  '@babel/runtime@7.28.6': {}
-
   '@babel/runtime@7.29.2': {}
 
   '@babel/template@7.27.2':
@@ -10234,7 +10288,7 @@ snapshots:
       '@babel/preset-env': 7.29.2(@babel/core@7.29.0)
       '@babel/preset-react': 7.28.5(@babel/core@7.29.0)
       '@babel/preset-typescript': 7.28.5(@babel/core@7.29.0)
-      '@babel/runtime': 7.28.6
+      '@babel/runtime': 7.29.2
       '@babel/runtime-corejs3': 7.29.0
       '@babel/traverse': 7.29.0
       '@docusaurus/logger': 3.9.2
@@ -12257,6 +12311,34 @@ snapshots:
       '@tailwindcss/oxide': 4.2.2
       postcss: 8.5.8
       tailwindcss: 4.2.2
+
+  '@takazudo/zfb-darwin-arm64@0.1.0-next.13':
+    optional: true
+
+  '@takazudo/zfb-darwin-x64@0.1.0-next.13':
+    optional: true
+
+  '@takazudo/zfb-linux-arm64-gnu@0.1.0-next.13':
+    optional: true
+
+  '@takazudo/zfb-linux-x64-gnu@0.1.0-next.13':
+    optional: true
+
+  '@takazudo/zfb-runtime@0.1.0-next.13(@takazudo/zfb@0.1.0-next.13)':
+    dependencies:
+      '@takazudo/zfb': 0.1.0-next.13
+      hono: 4.12.23
+
+  '@takazudo/zfb-win32-x64-msvc@0.1.0-next.13':
+    optional: true
+
+  '@takazudo/zfb@0.1.0-next.13':
+    optionalDependencies:
+      '@takazudo/zfb-darwin-arm64': 0.1.0-next.13
+      '@takazudo/zfb-darwin-x64': 0.1.0-next.13
+      '@takazudo/zfb-linux-arm64-gnu': 0.1.0-next.13
+      '@takazudo/zfb-linux-x64-gnu': 0.1.0-next.13
+      '@takazudo/zfb-win32-x64-msvc': 0.1.0-next.13
 
   '@testing-library/dom@10.4.1':
     dependencies:
@@ -15164,6 +15246,8 @@ snapshots:
     dependencies:
       react-is: 16.13.1
 
+  hono@4.12.23: {}
+
   hpack.js@2.1.6:
     dependencies:
       inherits: 2.0.4
@@ -17448,6 +17532,12 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  preact-render-to-string@6.7.0(preact@10.29.2):
+    dependencies:
+      preact: 10.29.2
+
+  preact@10.29.2: {}
+
   prebuild-install@7.1.3:
     dependencies:
       detect-libc: 2.1.2
@@ -17590,7 +17680,7 @@ snapshots:
 
   react-loadable-ssr-addon-v5-slorber@1.0.1(@docusaurus/react-loadable@6.0.0(react@18.3.1))(webpack@5.105.3):
     dependencies:
-      '@babel/runtime': 7.28.6
+      '@babel/runtime': 7.29.2
       react-loadable: '@docusaurus/react-loadable@6.0.0(react@18.3.1)'
       webpack: 5.105.3
 
@@ -17616,13 +17706,13 @@ snapshots:
 
   react-router-config@5.1.1(react-router@5.3.4(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@babel/runtime': 7.28.6
+      '@babel/runtime': 7.29.2
       react: 18.3.1
       react-router: 5.3.4(react@18.3.1)
 
   react-router-dom@5.3.4(react@18.3.1):
     dependencies:
-      '@babel/runtime': 7.28.6
+      '@babel/runtime': 7.29.2
       history: 4.10.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
@@ -17633,7 +17723,7 @@ snapshots:
 
   react-router@5.3.4(react@18.3.1):
     dependencies:
-      '@babel/runtime': 7.28.6
+      '@babel/runtime': 7.29.2
       history: 4.10.1
       hoist-non-react-statics: 3.3.2
       loose-envify: 1.4.0

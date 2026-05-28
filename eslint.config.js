@@ -124,9 +124,12 @@ export default [
     },
   },
 
-  // TypeScript files
+  // TypeScript files (Next.js app — uses tsconfig.json with Next plugin)
   {
     files: ['**/*.ts', '**/*.tsx'],
+    // zfb pages/layouts use tsconfig.zfb.json (see override below);
+    // all other TS/TSX falls back to this rule using tsconfig.json.
+    ignores: ['pages/**', 'layouts/**'],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -223,6 +226,54 @@ export default [
       'space-infix-ops': 'error',
       'space-unary-ops': ['error', { words: true, nonwords: false }],
       'no-multi-spaces': 'error',
+    },
+  },
+
+  // zfb pages and layouts — preact JSX, tsconfig.zfb.json, Preact hooks.
+  // Coexists with the Next.js TS block above during the migration POC.
+  // Remove this block when the Next.js app is fully retired (Sub 9/11).
+  {
+    files: ['pages/**/*.ts', 'pages/**/*.tsx', 'layouts/**/*.ts', 'layouts/**/*.tsx'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 2022,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+        project: './tsconfig.zfb.json',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+      // Disable Next.js / React-hooks rules for zfb pages (preact hooks are different)
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      'no-console': 'off',
+      'no-debugger': 'error',
+      'prefer-const': 'error',
+      'no-var': 'error',
     },
   },
 ];
