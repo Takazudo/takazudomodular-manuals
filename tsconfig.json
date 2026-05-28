@@ -27,5 +27,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "doc", "worktrees", "dist", "pages", "layouts"]
+  "exclude": ["node_modules", "doc", "worktrees", "dist", "pages", "layouts", "components/zfb"]
 }

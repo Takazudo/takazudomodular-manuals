@@ -5,6 +5,15 @@ export interface ManualPage {
   sectionName: string | null;
   /** Text content - language depends on which file was loaded (pages-ja.json or pages-en.json) */
   content: string;
+  /**
+   * Pre-rendered HTML of `content`, produced at build time by
+   * `scripts/pdf-md-to-html.js` (hljs highlight classes, tables wrapped in
+   * `<div class="table-wrapper">`). The zfb island injects this via
+   * `dangerouslySetInnerHTML` inside a `.zd-prose` container, shipping zero
+   * markdown JS to the client. Optional because data predating the
+   * md-to-html build step lacks it. The `.zd-prose` wrapper is NOT baked in.
+   */
+  contentHtml?: string;
   hasContent: boolean;
   tags?: string[];
 }
