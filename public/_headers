@@ -3,11 +3,24 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
+# Content-hashed JS/CSS bundles, safe to cache forever. Two prefixes during the
+# zfb/Next coexistence window (this file feeds BOTH builders):
+#   /manuals/_next/static/* — Next.js (legacy; #136 drops this line at cutover)
+#   /manuals/assets/*       — zfb (new)
+# The prefixes are disjoint, so each is inert for the other builder.
 /manuals/_next/static/*
   Cache-Control: public, max-age=31536000, immutable
-
-/manuals/*/pages/*
+/manuals/assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-/manuals/*.html
+# Rendered PDF page PNGs (and thumbs) under each manual — immutable.
+/manuals/*/pages/*
+  Cache-Control: public, max-age=31536000, immutable
+/manuals/*/thumbs/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# JSON data (manifest / pages-ja / pages-en / search-index) is fetched at
+# runtime by the islands; revalidate so content updates show without a hard
+# cache bust (search fetches already carry ?v=<hash>).
+/manuals/*/data/*
   Cache-Control: public, max-age=0, must-revalidate
