@@ -1,5 +1,14 @@
+/**
+ * Tests for components/language/language-context.tsx (original React/Next
+ * component). No zfb equivalent exists — the mega-island owns lang state
+ * internally. This file is kept on the original until #137 deletes both the
+ * original component and this test.
+ *
+ * The import resolves through preact/compat (alias in vitest.config.ts) so no
+ * actual React 19 runtime ships into the test environment.
+ */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen } from '@testing-library/preact';
 import { renderToString } from 'react-dom/server';
 import {
   LANG_QUERY_PARAM,

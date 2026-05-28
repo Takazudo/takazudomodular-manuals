@@ -38,6 +38,16 @@ const DEBOUNCE_MS = 150;
 // hash) ensures a new deploy bypasses a stale cache entry on long-lived tabs.
 const indexCache = new Map<string, MiniSearch<SearchDoc>>();
 
+/**
+ * Test-only hook: drop the cached MiniSearch instance(s). Real application
+ * code never calls this — the cache intentionally survives open/close cycles.
+ * Call this in `beforeEach` so search-dialog tests start with a clean slate
+ * and don't leak stale indices across test cases.
+ */
+export function __clearSearchIndexCacheForTests(): void {
+  indexCache.clear();
+}
+
 function getIndexCacheKey(manualId: string, version: string | undefined): string {
   return `${manualId}::${version ?? ''}`;
 }

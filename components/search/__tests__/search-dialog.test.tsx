@@ -1,7 +1,20 @@
+/**
+ * Tests for components/zfb/search-dialog.tsx (Preact, prop-based).
+ *
+ * Decision (#135): re-pointed at the zfb equivalent now. The original
+ * components/search/search-dialog.tsx (Next-coupled, reads getManifest
+ * internally, uses useRouter) is deleted in #137.
+ *
+ * Key API differences from the original:
+ *   - searchIndexVersion is passed as a prop (no getManifest inside)
+ *   - onNavigate prop replaces useRouter().push
+ *   - No next/navigation mock needed
+ *   - No manual-registry mock needed
+ */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { SearchDialog, __clearSearchIndexCacheForTests } from '../search-dialog';
-import { highlightTerms, makeExcerpt } from '../highlight';
+import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/preact';
+import { SearchDialog, __clearSearchIndexCacheForTests } from '@/components/zfb/search-dialog';
+import { highlightTerms, makeExcerpt } from '@/components/zfb/search-highlight';
 
 // jsdom does not implement the native <dialog> element. Polyfill just enough
 // surface (`showModal`, `close`, the `open` property, the `close` event) so
@@ -75,40 +88,17 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-// Mock next/navigation so useRouter returns a stub router.
-vi.mock('next/navigation', () => ({
-  useRouter: () => ({
-    push: vi.fn(),
-    replace: vi.fn(),
-    prefetch: vi.fn(),
-    back: vi.fn(),
-    forward: vi.fn(),
-    refresh: vi.fn(),
-  }),
-}));
+// No next/navigation mock needed — the zfb SearchDialog receives onNavigate
+// as a prop; no useRouter inside.
+// No manual-registry mock needed — searchIndexVersion is passed as a prop.
 
-// Mock the manual registry so tests can control the searchIndexVersion
-// returned from getManifest without depending on the committed manifests
-// (Sub-task D may not have landed yet in the base branch).
-const mockGetManifest = vi.fn();
-vi.mock('@/lib/manual-registry', () => ({
-  getManifest: (manualId: string) => mockGetManifest(manualId),
-}));
-
-beforeEach(() => {
-  // Default: return a manifest with a 40-hex-char hash so versioned URLs work.
-  mockGetManifest.mockReset();
-  mockGetManifest.mockReturnValue({
-    title: 'Test Manual',
-    brand: 'Test',
-    totalPages: 1,
-    searchIndexVersion: '0123456789abcdef0123456789abcdef01234567',
-  });
-});
+const TEST_VERSION = '0123456789abcdef0123456789abcdef01234567';
 
 describe('SearchDialog', () => {
   it('renders a native <dialog> element with the expected aria-label', () => {
-    render(<SearchDialog manualId="oxi-one-mk2" open={false} onClose={() => {}} />);
+    render(
+      <SearchDialog manualId="oxi-one-mk2" open={false} onClose={() => {}} onNavigate={vi.fn()} />,
+    );
     const dialog = screen.getByLabelText('検索') as HTMLDialogElement;
     expect(dialog.tagName).toBe('DIALOG');
   });
@@ -116,10 +106,24 @@ describe('SearchDialog', () => {
   it('fetches the index from a withBasePath-prefixed, version-busted URL when opened', async () => {
     const fetchSpy = globalThis.fetch as unknown as ReturnType<typeof vi.fn>;
     const { rerender } = render(
-      <SearchDialog manualId="oxi-one-mk2" open={false} onClose={() => {}} />,
+      <SearchDialog
+        manualId="oxi-one-mk2"
+        searchIndexVersion={TEST_VERSION}
+        open={false}
+        onClose={() => {}}
+        onNavigate={vi.fn()}
+      />,
     );
 
-    rerender(<SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} />);
+    rerender(
+      <SearchDialog
+        manualId="oxi-one-mk2"
+        searchIndexVersion={TEST_VERSION}
+        open={true}
+        onClose={() => {}}
+        onNavigate={vi.fn()}
+      />,
+    );
 
     await waitFor(() => {
       expect(fetchSpy).toHaveBeenCalled();
@@ -130,15 +134,12 @@ describe('SearchDialog', () => {
     expect(call[0]).toMatch(/^\/manuals\/oxi-one-mk2\/data\/search-index\.json\?v=[0-9a-f]{40}$/);
   });
 
-  it('fetches the index without a ?v= query string when the manifest has no searchIndexVersion', async () => {
-    // Manifest without searchIndexVersion → unversioned fallback URL.
-    mockGetManifest.mockReturnValue({
-      title: 'Test Manual',
-      brand: 'Test',
-      totalPages: 1,
-    });
+  it('fetches the index without a ?v= query string when no searchIndexVersion is passed', async () => {
+    // No searchIndexVersion prop → unversioned fallback URL.
     const fetchSpy = globalThis.fetch as unknown as ReturnType<typeof vi.fn>;
-    render(<SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} />);
+    render(
+      <SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} onNavigate={vi.fn()} />,
+    );
 
     await waitFor(() => {
       expect(fetchSpy).toHaveBeenCalled();
@@ -148,23 +149,11 @@ describe('SearchDialog', () => {
     expect(String(call[0])).not.toContain('?');
   });
 
-  it('falls back to an unversioned URL when getManifest throws (unknown manualId)', async () => {
-    mockGetManifest.mockImplementation(() => {
-      throw new Error('Manual not found: bogus');
-    });
-    const fetchSpy = globalThis.fetch as unknown as ReturnType<typeof vi.fn>;
-    render(<SearchDialog manualId="bogus" open={true} onClose={() => {}} />);
-
-    await waitFor(() => {
-      expect(fetchSpy).toHaveBeenCalled();
-    });
-    const call = fetchSpy.mock.calls[0];
-    expect(call[0]).toBe('/manuals/bogus/data/search-index.json');
-  });
-
   it('filters results based on the typed query and highlights the match', async () => {
     const fetchSpy = globalThis.fetch as unknown as ReturnType<typeof vi.fn>;
-    render(<SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} />);
+    render(
+      <SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} onNavigate={vi.fn()} />,
+    );
 
     // Wait for the fetch + index load to complete (idle → loading → ready).
     await waitFor(() => {
@@ -177,7 +166,9 @@ describe('SearchDialog', () => {
     const input = screen.getByPlaceholderText('検索キーワードを入力...') as HTMLInputElement;
 
     await act(async () => {
-      fireEvent.change(input, { target: { value: 'sequencer' } });
+      // The zfb SearchDialog uses `onInput` (Preact maps this to the native
+      // `input` event). Use fireEvent.input, not fireEvent.change.
+      fireEvent.input(input, { target: { value: 'sequencer' } });
     });
 
     // Wait for the debounced search + render to produce a result row for the
@@ -204,7 +195,9 @@ describe('SearchDialog', () => {
     // the test output stays clean while still asserting the UI state.
     const errSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
-    render(<SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} />);
+    render(
+      <SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} onNavigate={vi.fn()} />,
+    );
 
     await waitFor(() => {
       expect(screen.getByText('検索インデックスを読み込めませんでした')).toBeTruthy();

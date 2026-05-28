@@ -1,6 +1,18 @@
+/**
+ * Tests for components/zfb/search-trigger.tsx (Preact, prop-based).
+ *
+ * Decision (#135): re-pointed at the zfb equivalent now. The original
+ * components/search/search-trigger.tsx (Next-coupled, manualId: string|null)
+ * is deleted in #137.
+ *
+ * API differences from the original:
+ *   - manualId is required string (no null — caller conditionally renders)
+ *   - onNavigate prop added (no useRouter inside)
+ *   - No next/navigation mock needed
+ */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
-import { SearchTrigger } from '../search-trigger';
+import { cleanup, fireEvent, render, screen } from '@testing-library/preact';
+import { SearchTrigger } from '@/components/zfb/search-trigger';
 
 // Polyfill native <dialog> just enough for the underlying SearchDialog to mount
 // without throwing. The trigger tests don't assert dialog rendering details
@@ -27,16 +39,7 @@ class FakeIntersectionObserver {
   }
 }
 
-vi.mock('next/navigation', () => ({
-  useRouter: () => ({
-    push: vi.fn(),
-    replace: vi.fn(),
-    prefetch: vi.fn(),
-    back: vi.fn(),
-    forward: vi.fn(),
-    refresh: vi.fn(),
-  }),
-}));
+// No next/navigation mock needed — no useRouter in the zfb components.
 
 beforeEach(() => {
   installDialogPolyfill();
@@ -77,14 +80,9 @@ function setUserAgent(ua: string) {
 }
 
 describe('SearchTrigger', () => {
-  it('renders nothing when manualId is null', () => {
-    const { container } = render(<SearchTrigger manualId={null} />);
-    expect(container.firstChild).toBeNull();
-  });
-
   it('renders an icon button with aria-label="検索" when manualId is provided', () => {
     setUserAgent('Mozilla/5.0 (X11; Linux x86_64)');
-    render(<SearchTrigger manualId="oxi-one-mk2" />);
+    render(<SearchTrigger manualId="oxi-one-mk2" onNavigate={vi.fn()} />);
     const button = screen.getByRole('button', { name: '検索' });
     expect(button).toBeTruthy();
     expect(button.tagName).toBe('BUTTON');
@@ -92,7 +90,7 @@ describe('SearchTrigger', () => {
 
   it('shows the Ctrl+K label on non-Mac platforms', () => {
     setUserAgent('Mozilla/5.0 (X11; Linux x86_64)');
-    render(<SearchTrigger manualId="oxi-one-mk2" />);
+    render(<SearchTrigger manualId="oxi-one-mk2" onNavigate={vi.fn()} />);
     expect(screen.getByText('Ctrl+K')).toBeTruthy();
   });
 
@@ -100,13 +98,13 @@ describe('SearchTrigger', () => {
     setUserAgent(
       'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko)',
     );
-    render(<SearchTrigger manualId="oxi-one-mk2" />);
+    render(<SearchTrigger manualId="oxi-one-mk2" onNavigate={vi.fn()} />);
     expect(screen.getByText('⌘K')).toBeTruthy();
   });
 
   it('opens the dialog when the trigger button is clicked', () => {
     setUserAgent('Mozilla/5.0 (X11; Linux x86_64)');
-    render(<SearchTrigger manualId="oxi-one-mk2" />);
+    render(<SearchTrigger manualId="oxi-one-mk2" onNavigate={vi.fn()} />);
 
     const dialog = screen.getByLabelText('検索', {
       selector: 'dialog',
@@ -119,7 +117,7 @@ describe('SearchTrigger', () => {
 
   it('toggles the dialog with Ctrl+K on non-Mac platforms', () => {
     setUserAgent('Mozilla/5.0 (X11; Linux x86_64)');
-    render(<SearchTrigger manualId="oxi-one-mk2" />);
+    render(<SearchTrigger manualId="oxi-one-mk2" onNavigate={vi.fn()} />);
 
     const dialog = screen.getByLabelText('検索', {
       selector: 'dialog',
@@ -137,7 +135,7 @@ describe('SearchTrigger', () => {
     setUserAgent(
       'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko)',
     );
-    render(<SearchTrigger manualId="oxi-one-mk2" />);
+    render(<SearchTrigger manualId="oxi-one-mk2" onNavigate={vi.fn()} />);
 
     const dialog = screen.getByLabelText('検索', {
       selector: 'dialog',
@@ -150,19 +148,12 @@ describe('SearchTrigger', () => {
 
   it('does not respond to plain "k" without modifier', () => {
     setUserAgent('Mozilla/5.0 (X11; Linux x86_64)');
-    render(<SearchTrigger manualId="oxi-one-mk2" />);
+    render(<SearchTrigger manualId="oxi-one-mk2" onNavigate={vi.fn()} />);
 
     const dialog = screen.getByLabelText('検索', {
       selector: 'dialog',
     }) as HTMLDialogElement;
     fireEvent.keyDown(window, { key: 'k' });
     expect(dialog.open).toBe(false);
-  });
-
-  it('does not register a keyboard listener when manualId is null', () => {
-    const addSpy = vi.spyOn(window, 'addEventListener');
-    render(<SearchTrigger manualId={null} />);
-    const keydownAdds = addSpy.mock.calls.filter((call) => call[0] === 'keydown');
-    expect(keydownAdds.length).toBe(0);
   });
 });
