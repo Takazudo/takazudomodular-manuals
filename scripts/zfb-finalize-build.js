@@ -136,15 +136,26 @@ console.log('\nFinalize complete.');
 // Verify the resulting shape.
 // ---------------------------------------------------------------------------
 console.log('\nVerifying structure:');
-const checks = [
-  'manuals/index.html',
-  'manuals/oxi-one-mk2/index.html',
-  'manuals/oxi-one-mk2/page/1/index.html',
-  'manuals/oxi-one-mk2/pages/page-001.png',
-  'manuals/oxi-one-mk2/original.pdf',
-  '_headers',
-  '_redirects',
+
+// Sample manuals to spot-check: largest (oxi-one-mk2), smallest (ai022-harmonic-mixer),
+// bilingual (oxi-one-mk2), and a few small manuals.
+const SAMPLE_MANUALS = [
+  { slug: 'oxi-one-mk2', page: 1, hasPdf: true },
+  { slug: 'ai022-harmonic-mixer', page: 1, hasPdf: false },
+  { slug: 'addac106-tnoise', page: 1, hasPdf: false },
+  { slug: 'weston-2v2', page: 1, hasPdf: false },
 ];
+
+const checks = ['manuals/index.html', '_headers', '_redirects'];
+for (const { slug, page, hasPdf } of SAMPLE_MANUALS) {
+  checks.push(`manuals/${slug}/index.html`);
+  checks.push(`manuals/${slug}/page/${page}/index.html`);
+  checks.push(`manuals/${slug}/pages/page-001.png`);
+  if (hasPdf) {
+    checks.push(`manuals/${slug}/original.pdf`);
+  }
+}
+
 let ok = true;
 for (const rel of checks) {
   const exists = existsSync(join(distDir, rel));
@@ -155,3 +166,21 @@ if (!ok) {
   console.error('\nFinalize verification FAILED.');
   process.exit(1);
 }
+
+// Count emitted HTML files for the build report.
+let htmlCount = 0;
+function countHtml(dir) {
+  try {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (entry.isDirectory()) {
+        countHtml(join(dir, entry.name));
+      } else if (entry.name.endsWith('.html')) {
+        htmlCount++;
+      }
+    }
+  } catch {
+    // ignore unreadable dirs
+  }
+}
+countHtml(manualsDir);
+console.log(`\nEmitted HTML count: ${htmlCount} files under dist/manuals/`);
