@@ -103,6 +103,13 @@ export default function DefaultLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
+        {/* Favicon: explicit /manuals/ prefix required — the browser requests
+            /favicon.ico from the domain root by default, but this site is
+            proxied at takazudomodular.com/manuals/* so the file lives at
+            /manuals/favicon.ico. Next.js auto-emits this link from app/favicon.ico;
+            we replicate it explicitly here. The /manuals/ prefix is hard-coded
+            (not relative) to match the production proxy mount. */}
+        <link rel="icon" href="/manuals/favicon.ico" />
         {/* Google Fonts: Noto Sans JP, replaces next/font/google. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
