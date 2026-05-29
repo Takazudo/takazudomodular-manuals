@@ -59,8 +59,9 @@ pnpm run pdf:md-to-html:all      # Convert markdown for ALL manuals at once
 pnpm run pdf:search-index        # Generate search-index.json for keyword search
 pnpm run pdf:search-index:all    # Regenerate search-index.json for all manuals at once
 pnpm run pdf:manifest            # Create manifest.json
-pnpm run pdf:all                 # Run all PDF processing steps (includes thumbnail generation)
+pnpm run pdf:all                 # Run all PDF processing steps (includes thumbnail generation); halts at translate stub
                                  # All CLI args (e.g. --slug <x>) are forwarded to every step via scripts/pdf-all.js
+                                 # Translation is handled by /l-pdf-process subagents, not the aggregate chain
 ```
 
 ### Pipeline Overview
@@ -144,11 +145,13 @@ After running the PDF processing pipeline, use this command to verify that trans
 2. Captures all 30 pages at high resolution (2000x1600) using `capture-all-pages` skill
 3. Verifies sample pages (1, 10, 15, 21, 30) for translation accuracy
 4. Checks for:
-  - Translation is present
-  - Page numbers match
-  - Content corresponds to image
-  - No missing translations
-  - No page number mismatches
+
+- Translation is present
+- Page numbers match
+- Content corresponds to image
+- No missing translations
+- No page number mismatches
+
 5. Generates verification report
 
 **Usage:**
@@ -212,19 +215,23 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
 ### Adding a New Manual
 
 1. **Create source directory:**
+
    ```bash
    mkdir manual-pdf/{slug}
    ```
 
 2. **Add PDF file** (any filename works):
+
    ```bash
    cp ~/path/to/manual.pdf manual-pdf/{slug}/
    ```
 
 3. **Process the PDF:**
+
    ```bash
    /l-pdf-process {slug}
    ```
+
    This runs all 10 pipeline steps: split, render, thumbnails, extract, translate, build, clean-en, md-to-html, search-index, manifest.
 
 4. **Update BOTH manual registries** — `lib/manual-registry.ts` AND `lib/zfb-registry.ts`.
@@ -240,6 +247,7 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
    > these. Until then, add the manual to both files.
 
    Add imports for the new manual in `lib/manual-registry.ts`:
+
    ```typescript
    import newManualManifest from '@/public/new-manual/data/manifest.json';
    import newManualPagesJa from '@/public/new-manual/data/pages-ja.json';
@@ -252,6 +260,7 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
      },
    };
    ```
+
    Then mirror the manifest + `pages-ja.json` import into `lib/zfb-registry.ts`'s
    import block and its `REGISTRY` map.
 

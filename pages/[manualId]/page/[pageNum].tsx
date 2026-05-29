@@ -35,7 +35,7 @@ export function paths() {
     const pagesJa = getPagesJa(manualId);
     const manifest = getManifest(manualId);
     const totalPages = manifest.totalPages;
-    // All current manuals have EN. hasEnglish() returns false only for unknown IDs.
+    // hasEnglish() reads manifest.hasEnglish, so it correctly returns false for JA-only manuals (not just unknown IDs).
     const availableLangs: Lang[] = ['ja', ...(hasEnglish(manualId) ? ['en' as Lang] : [])];
     const appManifest: ManualAppManifest = {
       title: manifest.title,
