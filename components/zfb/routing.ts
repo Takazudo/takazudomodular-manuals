@@ -38,9 +38,9 @@ export function getPagePath(manualId: string, pageNum: number): string {
 }
 
 /**
- * Navigation capabilities for the current page. Mirrors
- * `lib/manual-data.getNavigationState` so the ported nav components keep
- * identical prev/next gating without importing the Next-app data layer.
+ * Navigation capabilities for the current page. This is the single source of
+ * the prev/next gating consumed by the nav/keyboard islands (the former
+ * `lib/manual-data.getNavigationState` copy was removed in the zfb follow-ups).
  */
 export function getNavigationState(currentPage: number, totalPages: number) {
   return {

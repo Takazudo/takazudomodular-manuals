@@ -16,6 +16,7 @@ export default defineConfig({
   site: 'https://takazudomodular.com',
   // Port 3300 avoids collision with Next.js (3100) and serve (8030).
   port: 3300,
-  // No `collections`: we keep the JSON data model + lib/manual-registry.ts
-  // throughout the POC. Content collections can be added later if needed.
+  // No `collections`: we keep the JSON data model + lib/zfb-registry.ts
+  // (code-generated from public/*/data via scripts/gen-registry.js).
+  // Content collections can be added later if needed.
 });

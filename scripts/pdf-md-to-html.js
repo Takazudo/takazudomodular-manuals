@@ -66,8 +66,9 @@ const PUBLIC_DIR = join(ROOT_DIR, 'public');
  * structural algorithm (find first colon, check if it appears before the first
  * /, ?, or # — if so it's a protocol, allow-list it, else strip to "").
  *
- * Targets: a[href], img[src], source[src].
- * Safe protocols: http, https, mailto, tel (+ no-protocol / relative / anchor).
+ * Targets: a[href], area[href], img[src], source[src].
+ * Safe protocols: http, https, mailto, tel, ircs, irc, xmpp
+ *   (+ no-protocol / relative / anchor).
  * Dangerous examples neutralized: javascript:, data:, vbscript:.
  *
  * This is defense-in-depth — rehype-raw is not used so raw HTML is escaped,
@@ -75,8 +76,9 @@ const PUBLIC_DIR = join(ROOT_DIR, 'public');
  */
 
 // Allow-list: protocols that are safe to keep.
-// Mirrors defaultUrlTransform's set (https, http, mailto) plus tel and ircs
-// which also appear in real manual content.
+// Mirrors react-markdown's defaultUrlTransform set (http, https, mailto, tel,
+// ircs, irc, xmpp) — the extras beyond http/https/mailto also appear in real
+// manual content.
 const SAFE_PROTOCOLS = new Set(['http', 'https', 'mailto', 'tel', 'ircs', 'irc', 'xmpp']);
 
 /**
@@ -112,7 +114,7 @@ export function sanitizeUrl(url) {
 
 /**
  * Rehype plugin: strip dangerous href/src protocols from element attributes.
- * Visits a[href], img[src], source[src] and runs sanitizeUrl on each value.
+ * Visits a[href], area[href], img[src], source[src] and runs sanitizeUrl on each value.
  */
 function rehypeSanitizeUrls() {
   return (tree) => {
