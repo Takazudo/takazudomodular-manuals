@@ -123,28 +123,35 @@ export default function ManualApp({
 
     const baseHref = `/manuals/${manualId}/data`;
     const wantEn = availableLangs.includes('en');
-    const fetches: Array<Promise<PagesData>> = [
-      fetch(`${baseHref}/pages-ja.json`).then((r) => {
-        if (!r.ok) throw new Error(`pages-ja.json ${r.status}`);
-        return r.json() as Promise<PagesData>;
-      }),
-    ];
-    if (wantEn) {
-      fetches.push(
-        fetch(`${baseHref}/pages-en.json`).then((r) => {
-          if (!r.ok) throw new Error(`pages-en.json ${r.status}`);
-          return r.json() as Promise<PagesData>;
-        }),
-      );
-    }
 
-    Promise.all(fetches)
+    // JA is required — its failure is fatal (error banner + disabled nav).
+    const jaFetch = fetch(`${baseHref}/pages-ja.json`).then((r) => {
+      if (!r.ok) throw new Error(`pages-ja.json ${r.status}`);
+      return r.json() as Promise<PagesData>;
+    });
+    // EN is optional — a failed/missing pages-en.json (e.g. a JA-only manual)
+    // must NOT break the JA viewer. Swallow EN errors to null; the derived
+    // effectiveLang already falls back to JA when pagesEn is absent.
+    const enFetch: Promise<PagesData | null> = wantEn
+      ? fetch(`${baseHref}/pages-en.json`)
+          .then((r) => {
+            if (!r.ok) throw new Error(`pages-en.json ${r.status}`);
+            return r.json() as Promise<PagesData>;
+          })
+          .catch((err) => {
+            console.warn('[ManualApp] EN page data unavailable; EN disabled', err);
+            return null;
+          })
+      : Promise.resolve(null);
+
+    Promise.all([jaFetch, enFetch])
       .then(([ja, en]) => {
         if (cancelled) return;
         setPagesJa(ja.pages);
         if (en) setPagesEn(en.pages);
       })
       .catch((err) => {
+        // Only a JA failure reaches here (EN errors are swallowed above).
         if (cancelled) return;
         console.error('[ManualApp] page data fetch failed', err);
         setFetchFailed(true);
@@ -193,7 +200,11 @@ export default function ManualApp({
   );
 
   const navigateHome = useCallback(() => {
-    window.history.pushState(null, '', getManualBasePath(manualId));
+    // The manual landing is a SEPARATE zfb template, not a route this island
+    // can render. Use a full navigation (not history.pushState) so the landing
+    // page actually loads — pushState alone would change the URL while leaving
+    // the viewer painted, desyncing reload/back-forward.
+    window.location.href = getManualBasePath(manualId);
   }, [manualId]);
 
   // Scroll mode updates the URL silently as the visible page changes.

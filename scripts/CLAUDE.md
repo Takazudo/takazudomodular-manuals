@@ -226,20 +226,33 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
    ```
    This runs all 10 pipeline steps: split, render, thumbnails, extract, translate, build, clean-en, md-to-html, search-index, manifest.
 
-4. **Update manual registry** (`lib/manual-registry.ts`):
+4. **Update BOTH manual registries** — `lib/manual-registry.ts` AND `lib/zfb-registry.ts`.
 
-   Add imports for the new manual:
+   > ⚠️ Two registries exist after the zfb migration. The viewer routes
+   > (`pages/[manualId]/...`) read `lib/zfb-registry.ts` (which statically
+   > imports every manual's `manifest.json` + `pages-ja.json` — `pages-en.json`
+   > is fetched at runtime to keep the V8 build bundle under the ~10MB
+   > silent-500 limit). `lib/manual-registry.ts` is the richer registry used by
+   > the index page and tests. **A new manual must be added to BOTH** or it will
+   > not appear in the viewer (the build will NOT error — it just silently omits
+   > the manual). See agent-found issue for the plan to unify/auto-generate
+   > these. Until then, add the manual to both files.
+
+   Add imports for the new manual in `lib/manual-registry.ts`:
    ```typescript
    import newManualManifest from '@/public/new-manual/data/manifest.json';
-   import newManualPages from '@/public/new-manual/data/pages.json';
+   import newManualPagesJa from '@/public/new-manual/data/pages-ja.json';
 
    const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
      'new-manual': {
        manifest: newManualManifest as unknown as ManualManifest,
-       pages: newManualPages as unknown as ManualPagesData,
+       pagesJa: newManualPagesJa as unknown as ManualPagesData,
+       // pagesEn optional — add only if the manual has an English translation
      },
    };
    ```
+   Then mirror the manifest + `pages-ja.json` import into `lib/zfb-registry.ts`'s
+   import block and its `REGISTRY` map.
 
    **Why explicit imports?** Type safety, build-time bundling, compatible with zfb static site generation.
 
