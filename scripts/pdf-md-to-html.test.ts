@@ -11,7 +11,7 @@
  */
 import { describe, it, expect } from 'vitest';
 // @ts-expect-error — plain JS module; no types file
-import { markdownToHtml } from './pdf-md-to-html.js';
+import { markdownToHtml, sanitizeUrl } from './pdf-md-to-html.js';
 
 describe('markdownToHtml — heading IDs (rehype-slug)', () => {
   it('adds an id attribute derived from the heading text', async () => {
@@ -103,5 +103,112 @@ describe('markdownToHtml — empty / whitespace input', () => {
   it('returns an empty string for null-like falsy input', async () => {
     // The real pipeline may call with undefined when a page has no content.
     expect(await markdownToHtml(undefined as unknown as string)).toBe('');
+  });
+});
+
+// ---------------------------------------------------------------------------
+// URL sanitization — defense-in-depth (#155)
+// ---------------------------------------------------------------------------
+
+describe('sanitizeUrl — dangerous protocol neutralization', () => {
+  it('neutralizes javascript: URIs (lowercase)', () => {
+    expect(sanitizeUrl('javascript:alert(1)')).toBe('');
+  });
+
+  it('neutralizes javascript: URIs (uppercase — case-insensitive)', () => {
+    expect(sanitizeUrl('JAVASCRIPT:alert(1)')).toBe('');
+  });
+
+  it('neutralizes data: URIs', () => {
+    expect(sanitizeUrl('data:text/html,<script>alert(1)</script>')).toBe('');
+    expect(sanitizeUrl('data:image/png;base64,abc123')).toBe('');
+  });
+
+  it('neutralizes vbscript: URIs', () => {
+    expect(sanitizeUrl('vbscript:msgbox(1)')).toBe('');
+  });
+});
+
+describe('sanitizeUrl — safe URL preservation', () => {
+  it('preserves https: URLs', () => {
+    const url = 'https://example.com/path?q=1#anchor';
+    expect(sanitizeUrl(url)).toBe(url);
+  });
+
+  it('preserves http: URLs', () => {
+    const url = 'http://www.oxiinstruments.com';
+    expect(sanitizeUrl(url)).toBe(url);
+  });
+
+  it('preserves mailto: URLs', () => {
+    const url = 'mailto:user@example.com';
+    expect(sanitizeUrl(url)).toBe(url);
+  });
+
+  it('preserves tel: URLs', () => {
+    const url = 'tel:+1234567890';
+    expect(sanitizeUrl(url)).toBe(url);
+  });
+
+  it('preserves relative URLs (no colon)', () => {
+    expect(sanitizeUrl('/relative/path')).toBe('/relative/path');
+    expect(sanitizeUrl('./relative')).toBe('./relative');
+    expect(sanitizeUrl('../relative')).toBe('../relative');
+  });
+
+  it('preserves anchor-only URLs', () => {
+    expect(sanitizeUrl('#section')).toBe('#section');
+  });
+
+  it('preserves empty string', () => {
+    expect(sanitizeUrl('')).toBe('');
+  });
+
+  it('treats colon-after-slash as path (not protocol)', () => {
+    // e.g. /path/to:something — colon is not a protocol separator here
+    expect(sanitizeUrl('/path/to:something')).toBe('/path/to:something');
+  });
+});
+
+describe('markdownToHtml — URL sanitization integration', () => {
+  it('neutralizes javascript: hrefs in markdown links', async () => {
+    const html = await markdownToHtml('[click me](javascript:alert(1))');
+    // href must be empty after sanitization
+    expect(html).toContain('href=""');
+    expect(html).not.toContain('javascript:');
+  });
+
+  it('neutralizes data: srcs in markdown images', async () => {
+    const html = await markdownToHtml('![alt](data:image/png;base64,abc123)');
+    expect(html).toContain('src=""');
+    expect(html).not.toContain('data:');
+  });
+
+  it('preserves https: links after sanitization', async () => {
+    const html = await markdownToHtml('[site](https://example.com)');
+    expect(html).toContain('href="https://example.com"');
+  });
+
+  it('preserves mailto: links after sanitization', async () => {
+    const html = await markdownToHtml('[email](mailto:user@example.com)');
+    expect(html).toContain('href="mailto:user@example.com"');
+  });
+
+  it('does not disturb heading ids (rehype-slug)', async () => {
+    const html = await markdownToHtml('## Getting Started\n\n[link](javascript:void(0))');
+    expect(html).toContain('id="getting-started"');
+    expect(html).not.toContain('javascript:');
+  });
+
+  it('does not disturb table-wrapper class (rehypeWrapTables)', async () => {
+    const md = '| A | B |\n|---|---|\n| 1 | 2 |';
+    const html = await markdownToHtml(md);
+    expect(html).toContain('<div class="table-wrapper">');
+  });
+
+  it('does not disturb hljs classes (rehype-highlight)', async () => {
+    const html = await markdownToHtml('```js\nconst x = 1;\n```');
+    expect(html).toContain('hljs');
+    expect(html).toContain('language-js');
   });
 });
