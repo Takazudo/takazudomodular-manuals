@@ -6,29 +6,20 @@ import type { Lang } from './lang';
 import { withBasePath } from './routing';
 import { ProseContent } from './prose-content';
 import { useIntersectionPages } from './use-intersection-pages';
+import { viewerContainerStyles, viewerContentColumnStyles } from './viewer-layout-styles';
 
 const DETECTION_THRESHOLDS = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
 const PRELOAD_RADIUS = 2;
 const SCROLL_JUMP_TIMEOUT_MS = 1500;
 
-const containerStyles = ctl(`
-  flex flex-col lg:flex-row
-  h-full
-`);
-
+// scroll-viewer's image column differs from page-viewer's: no `flex flex-col
+// items-center`, adds `relative` (needed for absolutely-positioned page labels).
 const imageColumnStyles = ctl(`
   flex-1
   overflow-y-scroll
   min-h-0
   bg-zd-white
   relative
-`);
-
-const contentColumnStyles = ctl(`
-  flex-1
-  overflow-y-scroll
-  min-h-0
-  px-hgap-sm
 `);
 
 const pageItemStyles = ctl(`
@@ -297,7 +288,7 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
   );
 
   return (
-    <div className={containerStyles} data-testid="scroll-viewer">
+    <div className={viewerContainerStyles} data-testid="scroll-viewer">
       {/* Left Column: Scrollable Page Images */}
       <div ref={scrollContainerRef} className={imageColumnStyles} data-testid="scroll-image-column">
         {pages.map((page) => (
@@ -334,7 +325,7 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
       {/* Right Column: Translation for Current Page */}
       <div
         ref={translationColumnRef}
-        className={contentColumnStyles}
+        className={viewerContentColumnStyles}
         data-testid="scroll-translation-column"
       >
         <div className={translationHeaderStyles} data-testid="scroll-translation-header">

@@ -4,6 +4,7 @@ import type { Lang } from './lang';
 import type { ViewMode } from './manual-app-types';
 import { LanguageToggle } from './language-toggle';
 import { SearchTrigger } from './search-trigger';
+import { utilityTooltipStyles } from './tooltip-styles';
 
 export interface HeaderUtilityBarProps {
   manualId: string;
@@ -54,20 +55,6 @@ const utilityButtonStyles = ctl(`
   active:bg-zd-gray5
 `);
 
-const tooltipStyles = ctl(`
-  absolute top-full left-1/2 -translate-x-1/2
-  mt-[6px]
-  px-hgap-xs py-vgap-2xs
-  bg-zd-gray3 border border-zd-gray4
-  text-zd-white text-xs
-  whitespace-nowrap
-  rounded-sm
-  opacity-0 pointer-events-none
-  group-hover:opacity-100
-  transition-opacity duration-200
-  z-50
-`);
-
 function TooltipButton({
   onClick,
   ariaLabel,
@@ -89,7 +76,7 @@ function TooltipButton({
       >
         {children}
       </button>
-      <span className={tooltipStyles} role="tooltip">
+      <span className={utilityTooltipStyles} role="tooltip">
         {tooltip}
       </span>
     </div>
