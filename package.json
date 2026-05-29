@@ -57,7 +57,7 @@
     "pdf:md-to-html": "node scripts/pdf-md-to-html.js",
     "pdf:md-to-html:all": "node scripts/pdf-md-to-html.js --all",
     "pdf:verify": "node scripts/pdf-verify.js",
-    "pdf:all": "pnpm run pdf:split && pnpm run pdf:render && pnpm run thumbs:generate:slug && pnpm run pdf:extract && pnpm run pdf:translate && pnpm run pdf:validate && pnpm run pdf:build && pnpm run pdf:clean-en && pnpm run pdf:md-to-html && pnpm run pdf:search-index && pnpm run pdf:manifest",
+    "pdf:all": "node scripts/pdf-all.js",
     "// ── Quality ──────────────────────────────────": "",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
