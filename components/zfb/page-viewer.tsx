@@ -6,50 +6,19 @@ import { withBasePath } from './routing';
 import { ProseContent } from './prose-content';
 import { PageNavigation } from './page-navigation';
 import { KeyboardNavigation } from './keyboard-navigation';
-
-const containerStyles = ctl(`
-  flex flex-col lg:flex-row
-  h-full
-`);
-
-const columnStyles = ctl(`
-  flex-1
-  overflow-y-scroll
-  min-h-0
-`);
-
-const imageColumnStyles = ctl(`
-  ${columnStyles}
-  flex flex-col items-center
-  bg-zd-white
-`);
-
-const contentColumnStyles = ctl(`
-  ${columnStyles}
-  px-hgap-sm
-`);
-
-const imageWrapperStyles = ctl(`
-  relative w-full
-  min-h-[400px]
-  h-full
-  content-center
-`);
+import {
+  viewerContainerStyles,
+  viewerImageColumnStyles,
+  viewerContentColumnStyles,
+  viewerImageWrapperStyles,
+  viewerNavigationWrapperStyles,
+} from './viewer-layout-styles';
 
 const loaderWrapperStyles = ctl(`
   absolute
   top-1/2 left-1/2
   transform -translate-x-1/2 -translate-y-1/2
   z-10
-`);
-
-const navigationWrapperStyles = ctl(`
-  sticky top-0 z-10
-  mb-vgap-md
-  pt-vgap-sm
-  px-hgap-sm
-  -mx-hgap-sm
-  bg-zd-black/90
 `);
 
 interface PageViewerProps {
@@ -113,10 +82,10 @@ export function PageViewer({
         onNavigateHome={onNavigateHome}
         navDisabled={navDisabled}
       />
-      <div className={containerStyles}>
+      <div className={viewerContainerStyles}>
         {/* Left Column: PDF Image */}
-        <div className={imageColumnStyles} data-testid="page-image-column">
-          <div className={imageWrapperStyles} data-testid="page-image-wrapper">
+        <div className={viewerImageColumnStyles} data-testid="page-image-column">
+          <div className={viewerImageWrapperStyles} data-testid="page-image-wrapper">
             {hasError ? (
               <div className={loaderWrapperStyles} data-testid="page-image-error">
                 <div className="text-zd-red text-center">
@@ -158,8 +127,8 @@ export function PageViewer({
         </div>
 
         {/* Right Column: Translation */}
-        <div className={contentColumnStyles} data-testid="translation-column">
-          <div className={navigationWrapperStyles} data-testid="page-navigation-wrapper">
+        <div className={viewerContentColumnStyles} data-testid="translation-column">
+          <div className={viewerNavigationWrapperStyles} data-testid="page-navigation-wrapper">
             <PageNavigation
               currentPage={currentPage}
               totalPages={totalPages}

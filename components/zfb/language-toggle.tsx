@@ -1,5 +1,6 @@
 import ctl from './ctl';
 import type { Lang } from './lang';
+import { langTooltipStyles } from './tooltip-styles';
 
 export interface LanguageToggleProps {
   lang: Lang;
@@ -47,20 +48,6 @@ const segmentDisabledStyles = ctl(`
 
 const tooltipWrapperStyles = ctl(`
   relative group flex
-`);
-
-const tooltipStyles = ctl(`
-  absolute top-full left-1/2 -translate-x-1/2
-  mt-[6px]
-  px-hgap-xs py-vgap-2xs
-  bg-zd-gray3 border border-zd-gray4
-  text-zd-white text-xs
-  whitespace-nowrap
-  rounded-sm
-  opacity-0 pointer-events-none
-  group-hover:opacity-100 group-focus-within:opacity-100
-  transition-opacity duration-200
-  z-50
 `);
 
 function cx(...classes: Array<string | false | undefined>) {
@@ -115,7 +102,7 @@ export function LanguageToggle({ lang, setLang, availableLangs }: LanguageToggle
           EN
         </button>
         {!enAvailable && (
-          <span className={tooltipStyles} role="tooltip">
+          <span className={langTooltipStyles} role="tooltip">
             この資料は日本語のみ対応です
           </span>
         )}
