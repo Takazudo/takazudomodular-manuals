@@ -59,8 +59,9 @@ pnpm run pdf:md-to-html:all      # Convert markdown for ALL manuals at once
 pnpm run pdf:search-index        # Generate search-index.json for keyword search
 pnpm run pdf:search-index:all    # Regenerate search-index.json for all manuals at once
 pnpm run pdf:manifest            # Create manifest.json
-pnpm run pdf:all                 # Run all PDF processing steps (includes thumbnail generation)
+pnpm run pdf:all                 # Run all PDF processing steps (includes thumbnail generation); halts at translate stub
                                  # All CLI args (e.g. --slug <x>) are forwarded to every step via scripts/pdf-all.js
+                                 # Translation is handled by /l-pdf-process subagents, not the aggregate chain
 ```
 
 ### Pipeline Overview
@@ -83,7 +84,7 @@ The PDF processing pipeline consists of 10 fully automated steps:
 `search-index.json` is a static asset that long-lived HTTP caches can happily keep serving after a content change, so we fingerprint it:
 
 - The index generator writes the SHA-1 of the serialized `search-index.json` into the sibling `manifest.json` under `searchIndexVersion`.
-- `manifest.json` is imported synchronously at build time via `lib/manual-registry.ts`, so the hash is bundled into the client JS with no extra fetch.
+- `manifest.json` is imported synchronously at build time via `lib/zfb-registry.ts` (through its generated import list), so the hash is bundled into the client JS with no extra fetch.
 - `SearchDialog` reads `searchIndexVersion` from the registry and appends `?v=<hash>` to the `search-index.json` fetch URL. When the index changes, the query string changes, and the CDN treats it as a new resource.
 - Cloudflare Pages includes the query string in its cache key by default, so this works with no `_headers` change on our side.
 
@@ -144,11 +145,13 @@ After running the PDF processing pipeline, use this command to verify that trans
 2. Captures all 30 pages at high resolution (2000x1600) using `capture-all-pages` skill
 3. Verifies sample pages (1, 10, 15, 21, 30) for translation accuracy
 4. Checks for:
-  - Translation is present
-  - Page numbers match
-  - Content corresponds to image
-  - No missing translations
-  - No page number mismatches
+
+- Translation is present
+- Page numbers match
+- Content corresponds to image
+- No missing translations
+- No page number mismatches
+
 5. Generates verification report
 
 **Usage:**
@@ -212,50 +215,44 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
 ### Adding a New Manual
 
 1. **Create source directory:**
+
    ```bash
    mkdir manual-pdf/{slug}
    ```
 
 2. **Add PDF file** (any filename works):
+
    ```bash
    cp ~/path/to/manual.pdf manual-pdf/{slug}/
    ```
 
 3. **Process the PDF:**
+
    ```bash
    /l-pdf-process {slug}
    ```
+
    This runs all 10 pipeline steps: split, render, thumbnails, extract, translate, build, clean-en, md-to-html, search-index, manifest.
 
-4. **Update BOTH manual registries** — `lib/manual-registry.ts` AND `lib/zfb-registry.ts`.
+4. **Regenerate the manual registry** (single source of truth — no hand-editing):
 
-   > ⚠️ Two registries exist after the zfb migration. The viewer routes
-   > (`pages/[manualId]/...`) read `lib/zfb-registry.ts` (which statically
-   > imports every manual's `manifest.json` + `pages-ja.json` — `pages-en.json`
-   > is fetched at runtime to keep the V8 build bundle under the ~10MB
-   > silent-500 limit). `lib/manual-registry.ts` is the richer registry used by
-   > the index page and tests. **A new manual must be added to BOTH** or it will
-   > not appear in the viewer (the build will NOT error — it just silently omits
-   > the manual). See agent-found issue for the plan to unify/auto-generate
-   > these. Until then, add the manual to both files.
-
-   Add imports for the new manual in `lib/manual-registry.ts`:
-   ```typescript
-   import newManualManifest from '@/public/new-manual/data/manifest.json';
-   import newManualPagesJa from '@/public/new-manual/data/pages-ja.json';
-
-   const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
-     'new-manual': {
-       manifest: newManualManifest as unknown as ManualManifest,
-       pagesJa: newManualPagesJa as unknown as ManualPagesData,
-       // pagesEn optional — add only if the manual has an English translation
-     },
-   };
+   ```bash
+   pnpm run gen:registry   # or: node scripts/gen-registry.js
    ```
-   Then mirror the manifest + `pages-ja.json` import into `lib/zfb-registry.ts`'s
-   import block and its `REGISTRY` map.
 
-   **Why explicit imports?** Type safety, build-time bundling, compatible with zfb static site generation.
+   > The viewer registry is code-generated. `scripts/gen-registry.js` scans
+   > `public/<slug>/data/` for every directory that has both `manifest.json` and
+   > `pages-ja.json` and regenerates `lib/zfb-registry.generated.ts` — the static
+   > import list + `REGISTRY` map that `lib/zfb-registry.ts` re-exports through
+   > its public API. Adding a manual means dropping its files under `public/` and
+   > regenerating; there is no import list to hand-edit. Regeneration is
+   > idempotent (re-running with no changes yields zero diff). `pages-en.json` is
+   > intentionally never imported (it is ~3.25MB and would push the bundle past
+   > zfb's ~10MB embedded-V8 silent-500 limit); EN pages are fetched at runtime.
+   > Never edit `lib/zfb-registry.generated.ts` by hand — commit the regenerated
+   > file alongside the new manual's data.
+
+   **Why a registry at all?** Explicit static imports give type safety and build-time bundling, compatible with zfb static site generation.
 
 5. **Build and deploy:**
    ```bash
@@ -292,12 +289,12 @@ pnpm run pdf:manifest --slug oxi-coral
 
 ### Important Notes
 
-**Manual Registry is Manual:**
+**Manual Registry is Code-Generated:**
 
-- The registry (`lib/manual-registry.ts`) requires explicit imports for each manual
-- This is NOT automatic - you must add imports for each new manual
-- The build will fail if imports are missing
-- This ensures type safety and build-time optimization
+- The registry is single-sourced: `scripts/gen-registry.js` scans `public/<slug>/data/` and writes `lib/zfb-registry.generated.ts` (the explicit static-import list + `REGISTRY` map)
+- Adding a manual = drop its files under `public/` then run `pnpm run gen:registry` — no hand-editing of an import list
+- A manual that exists on disk but was not regenerated into the registry is silently omitted from the viewer (the build does NOT error)
+- Explicit static imports still give type safety and build-time bundling
 
 **Processing Files are Temporary:**
 
@@ -327,15 +324,15 @@ Each manual has two JSON files: manifest.json (metadata) and pages.json (all pag
 
 **Build-time import (Current Approach):**
 
-- JSON files imported as ES modules in `lib/manual-registry.ts`
+- JSON files imported as ES modules via `lib/zfb-registry.ts` (through its generated import list)
 - Data bundled into HTML at build time
 - Compatible with zfb static site generation
 - Fast page loads (no runtime fetch)
 
 ```typescript
-// lib/manual-registry.ts
+// lib/zfb-registry.generated.ts (code-generated)
 import oxiOneMk2Manifest from '@/public/oxi-one-mk2/data/manifest.json';
-import oxiOneMk2Pages from '@/public/oxi-one-mk2/data/pages.json';
+import oxiOneMk2Pages from '@/public/oxi-one-mk2/data/pages-ja.json';
 ```
 
 ### Manifest Format (`manifest.json`)

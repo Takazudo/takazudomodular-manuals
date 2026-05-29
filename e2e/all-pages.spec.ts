@@ -30,11 +30,12 @@ import { readdirSync, existsSync } from 'fs';
 const BASE_URL = 'http://localhost:8030';
 
 // Discover manuals from the filesystem (public/<id>/data/manifest.json) rather
-// than importing lib/manual-registry. The registry statically imports 158 JSON
-// files, which Playwright's Node ESM loader rejects without an `with { type:
-// "json" }` attribute. Reading the manifests directly via createRequire (CJS)
-// sidesteps the loader limitation and keeps the e2e harness decoupled from the
-// app's bundling concerns. Mirrors scripts/test-all-pages-fast.js.
+// than importing the viewer registry (lib/zfb-registry.ts). The registry
+// statically imports the per-manual manifest + pages-ja JSON for every manual,
+// which Playwright's Node ESM loader rejects without an `with { type: "json" }`
+// attribute. Reading the manifests directly via createRequire (CJS) sidesteps
+// the loader limitation and keeps the e2e harness decoupled from the app's
+// bundling concerns. Mirrors scripts/test-all-pages-fast.js.
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
 const PUBLIC_DIR = join(__dirname, '..', 'public');

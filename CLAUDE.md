@@ -128,7 +128,7 @@ The skill will:
 - Process the PDF (split, render pages, extract text)
 - Translate to Japanese using Claude Code subagents
 - Build JSON data files
-- Update the manual registry (lib/manual-registry.ts)
+- Regenerate the manual registry (`pnpm run gen:registry` → `lib/zfb-registry.generated.ts`)
 - Handle all metadata and configuration
 
 **Do NOT run individual PDF commands manually** (`pnpm run pdf:split`, etc.). The `/l-pdf-process` skill manages the entire workflow with proper integration and metadata collection.

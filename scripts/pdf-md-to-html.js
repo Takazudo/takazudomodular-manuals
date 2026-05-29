@@ -60,6 +60,78 @@ export const ROOT_DIR = join(__dirname, '..');
 const PUBLIC_DIR = join(ROOT_DIR, 'public');
 
 /**
+ * Rehype plugin: neutralize dangerous URL protocols in link/image targets.
+ *
+ * Mirrors react-markdown's `defaultUrlTransform` semantics (#155): uses the
+ * structural algorithm (find first colon, check if it appears before the first
+ * /, ?, or # — if so it's a protocol, allow-list it, else strip to "").
+ *
+ * Targets: a[href], area[href], img[src], source[src].
+ * Safe protocols: http, https, mailto, tel, ircs, irc, xmpp
+ *   (+ no-protocol / relative / anchor).
+ * Dangerous examples neutralized: javascript:, data:, vbscript:.
+ *
+ * This is defense-in-depth — rehype-raw is not used so raw HTML is escaped,
+ * but markdown-sourced javascript:/data: URIs would otherwise pass through.
+ */
+
+// Allow-list: protocols that are safe to keep.
+// Mirrors react-markdown's defaultUrlTransform set (http, https, mailto, tel,
+// ircs, irc, xmpp) — the extras beyond http/https/mailto also appear in real
+// manual content.
+const SAFE_PROTOCOLS = new Set(['http', 'https', 'mailto', 'tel', 'ircs', 'irc', 'xmpp']);
+
+/**
+ * Returns the URL if safe, or "" if it contains a dangerous protocol.
+ * Implements the structural colon-before-slash algorithm from react-markdown.
+ *
+ * @param {string} url
+ * @returns {string}
+ */
+export function sanitizeUrl(url) {
+  if (!url) return url;
+  const colonPos = url.indexOf(':');
+  if (colonPos < 0) {
+    // No colon → relative URL or anchor-only — always safe.
+    return url;
+  }
+  // Find the first path/query/fragment delimiter before the colon.
+  const slashPos = url.indexOf('/');
+  const queryPos = url.indexOf('?');
+  const hashPos = url.indexOf('#');
+  // Smallest non-negative delimiter position.
+  const firstDelim = [slashPos, queryPos, hashPos]
+    .filter((p) => p >= 0)
+    .reduce((a, b) => Math.min(a, b), Infinity);
+  if (firstDelim < colonPos) {
+    // Colon appears after a path/query/fragment char → not a protocol → safe.
+    return url;
+  }
+  // Colon is the first special char — the text before it is the scheme.
+  const scheme = url.slice(0, colonPos).toLowerCase();
+  return SAFE_PROTOCOLS.has(scheme) ? url : '';
+}
+
+/**
+ * Rehype plugin: strip dangerous href/src protocols from element attributes.
+ * Visits a[href], area[href], img[src], source[src] and runs sanitizeUrl on each value.
+ */
+function rehypeSanitizeUrls() {
+  return (tree) => {
+    visit(tree, 'element', (node) => {
+      const tag = node.tagName;
+      const props = node.properties ?? {};
+      if ((tag === 'a' || tag === 'area') && typeof props.href === 'string') {
+        props.href = sanitizeUrl(props.href);
+      }
+      if ((tag === 'img' || tag === 'source') && typeof props.src === 'string') {
+        props.src = sanitizeUrl(props.src);
+      }
+    });
+  };
+}
+
+/**
  * Rehype plugin: wrap every <table> in a <div class="table-wrapper">.
  *
  * Mirrors the React `Table` component (`components/markdown/table.tsx`) which
@@ -96,6 +168,7 @@ const processor = unified()
   .use(remarkRehype)
   .use(rehypeSlug)
   .use(rehypeHighlight)
+  .use(rehypeSanitizeUrls)
   .use(rehypeWrapTables)
   .use(rehypeStringify);
 

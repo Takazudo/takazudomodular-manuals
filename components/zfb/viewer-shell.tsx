@@ -1,49 +1,19 @@
 import type { ManualPage } from '@/lib/types/manual';
 import { withBasePath } from './routing';
 import { ProseContent } from './prose-content';
-import ctl from './ctl';
+import {
+  viewerContainerStyles,
+  viewerImageColumnStyles,
+  viewerContentColumnStyles,
+  viewerImageWrapperStyles,
+  viewerNavigationWrapperStyles,
+} from './viewer-layout-styles';
 
 interface ViewerShellProps {
   page: ManualPage;
   pageNum: number;
   totalPages: number;
 }
-
-const containerStyles = ctl(`
-  flex flex-col lg:flex-row
-  h-full
-`);
-
-const imageColumnStyles = ctl(`
-  flex-1
-  overflow-y-scroll
-  min-h-0
-  flex flex-col items-center
-  bg-zd-white
-`);
-
-const contentColumnStyles = ctl(`
-  flex-1
-  overflow-y-scroll
-  min-h-0
-  px-hgap-sm
-`);
-
-const imageWrapperStyles = ctl(`
-  relative w-full
-  min-h-[400px]
-  h-full
-  content-center
-`);
-
-const navigationWrapperStyles = ctl(`
-  sticky top-0 z-10
-  mb-vgap-md
-  pt-vgap-sm
-  px-hgap-sm
-  -mx-hgap-sm
-  bg-zd-black/90
-`);
 
 /**
  * Server-render-only shell for the manual viewer page body. Renders the image
@@ -58,10 +28,10 @@ const navigationWrapperStyles = ctl(`
  */
 export function ViewerShell({ page, pageNum, totalPages }: ViewerShellProps) {
   return (
-    <div className={containerStyles} data-testid="viewer-shell-ssr">
+    <div className={viewerContainerStyles} data-testid="viewer-shell-ssr">
       {/* Left Column: PDF Image */}
-      <div className={imageColumnStyles} data-testid="page-image-column">
-        <div className={imageWrapperStyles} data-testid="page-image-wrapper">
+      <div className={viewerImageColumnStyles} data-testid="page-image-column">
+        <div className={viewerImageWrapperStyles} data-testid="page-image-wrapper">
           {page.image ? (
             <img
               src={withBasePath(page.image)}
@@ -79,8 +49,8 @@ export function ViewerShell({ page, pageNum, totalPages }: ViewerShellProps) {
       </div>
 
       {/* Right Column: Translation */}
-      <div className={contentColumnStyles} data-testid="translation-column">
-        <div className={navigationWrapperStyles} data-testid="page-navigation-wrapper">
+      <div className={viewerContentColumnStyles} data-testid="translation-column">
+        <div className={viewerNavigationWrapperStyles} data-testid="page-navigation-wrapper">
           <p className="text-zd-gray6 text-sm">
             Page {pageNum} / {totalPages}
           </p>
