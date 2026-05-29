@@ -12,13 +12,18 @@
         "position": 60
       },
       {
+        "docId": "inbox/migration-nextjs-to-zfb",
+        "title": "Migration — Next.js → zfb",
+        "position": 70
+      },
+      {
         "docId": "inbox/design-system",
         "title": "Design System",
         "position": 100
       },
       {
         "docId": "inbox/pdf-to-nextjs-architecture",
-        "title": "PDF Processing to Next.js Architecture",
+        "title": "PDF Processing Architecture",
         "position": 999
       }
     ],
