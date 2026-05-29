@@ -88,6 +88,9 @@ export function ThumbsModal({
   const gridRef = useRef<HTMLDivElement>(null);
   const currentThumbRef = useRef<HTMLButtonElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  // Element focused at open time; focus returns here on close so keyboard
+  // users are not dumped at the top of the document.
+  const previouslyFocusedRef = useRef<HTMLElement | null>(null);
 
   // Escape key + Tab focus trap
   useEffect(() => {
@@ -128,10 +131,16 @@ export function ThumbsModal({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Restore focus to the trigger element on close
+  // Capture focus on open; restore it on close. Prefer an explicit triggerRef
+  // from the caller, falling back to whatever was focused when the modal opened
+  // (so restore works even when the parent does not wire triggerRef).
   useEffect(() => {
-    if (isOpen) return;
-    triggerRef?.current?.focus();
+    if (isOpen) {
+      previouslyFocusedRef.current = document.activeElement as HTMLElement | null;
+    } else {
+      const restoreTarget = triggerRef?.current ?? previouslyFocusedRef.current;
+      restoreTarget?.focus();
+    }
   }, [isOpen, triggerRef]);
 
   // Auto-scroll to current page on open

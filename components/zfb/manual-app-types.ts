@@ -24,7 +24,5 @@ export interface ManualAppProps {
   initialPageNum: number;
   totalPages: number;
   availableLangs: readonly Lang[];
-  /** Always "ja" at SSR (deterministic first paint); resolved post-mount. */
-  initialLang: Lang;
   manifest: ManualAppManifest;
 }
