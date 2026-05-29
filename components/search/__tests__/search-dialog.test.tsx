@@ -202,7 +202,9 @@ describe('SearchDialog', () => {
     await waitFor(() => {
       // The error message appears in two places: the sr-only live region and
       // the visible status paragraph. Use getAllByText to assert both are present.
-      expect(screen.getAllByText('検索インデックスを読み込めませんでした').length).toBeGreaterThan(0);
+      expect(screen.getAllByText('検索インデックスを読み込めませんでした').length).toBeGreaterThan(
+        0,
+      );
     });
     expect(screen.getByRole('button', { name: '再試行' })).toBeTruthy();
     errSpy.mockRestore();
