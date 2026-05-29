@@ -4,12 +4,24 @@ import ctl from './ctl';
 import type { ManualPage } from '@/lib/types/manual';
 import { withBasePath, getThumbImage } from './routing';
 
+// Selector for all focusable elements — used by the focus trap
+const FOCUSABLE_SELECTOR = [
+  'a[href]',
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(', ');
+
 interface ThumbsModalProps {
   pages: ManualPage[];
   currentPage: number;
   isOpen: boolean;
   onClose: () => void;
   onPageSelect: (pageNum: number) => void;
+  /** Element to restore focus to when the modal closes. */
+  triggerRef?: { current: HTMLElement | null };
 }
 
 const overlayStyles = ctl(`
@@ -71,23 +83,56 @@ export function ThumbsModal({
   isOpen,
   onClose,
   onPageSelect,
+  triggerRef,
 }: ThumbsModalProps) {
   const gridRef = useRef<HTMLDivElement>(null);
   const currentThumbRef = useRef<HTMLButtonElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
-  // Escape key handler
+  // Escape key + Tab focus trap
   useEffect(() => {
     if (!isOpen) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         onClose();
+        return;
+      }
+
+      if (e.key === 'Tab') {
+        const container = overlayRef.current;
+        if (!container) return;
+        const focusable = Array.from(
+          container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR),
+        ).filter((el) => !el.closest('[aria-hidden="true"]'));
+        if (focusable.length === 0) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
+
+  // Restore focus to the trigger element on close
+  useEffect(() => {
+    if (isOpen) return;
+    triggerRef?.current?.focus();
+  }, [isOpen, triggerRef]);
 
   // Auto-scroll to current page on open
   useEffect(() => {
@@ -123,7 +168,14 @@ export function ThumbsModal({
   if (!isOpen) return null;
 
   return (
-    <div className={overlayStyles} onClick={handleOverlayClick} role="dialog" aria-modal="true">
+    <div
+      ref={overlayRef}
+      className={overlayStyles}
+      onClick={handleOverlayClick}
+      role="dialog"
+      aria-modal="true"
+      aria-label="ページ一覧"
+    >
       <div className={contentStyles}>
         <button className={closeButtonStyles} onClick={onClose} aria-label="閉じる" type="button">
           ✕

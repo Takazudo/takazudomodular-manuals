@@ -61,6 +61,7 @@ export function SidebarThumbs({ pages, currentPage, onPageSelect }: SidebarThumb
               type="button"
               onClick={() => onPageSelect(page.pageNum)}
               className={`${thumbButtonStyles} hover:bg-white/10`}
+              aria-current={isCurrent ? 'page' : undefined}
             >
               <div
                 className={`${thumbImageWrapperStyles} border-3 ${isCurrent ? 'border-zd-outline' : 'border-transparent'}`}
