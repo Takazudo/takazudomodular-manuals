@@ -119,7 +119,6 @@ export default function ViewerPage({
           initialPageNum={currentPageNum}
           totalPages={totalPages}
           availableLangs={availableLangs}
-          initialLang="ja"
           manifest={appManifest}
         >
           {/* SSR'd current page body — image column + translation column.

@@ -1,15 +1,14 @@
 // Runtime URL + route helpers for the zfb mega-island.
 //
-// The Next.js app relies on `basePath: '/manuals'` to prefix every route and
-// asset automatically. zfb has no equivalent runtime injection, so the island
-// builds fully-qualified paths itself. The base segment must match
-// `zfb.config.ts` `base: '/manuals/'`.
-//
-// Sub 5 (#131) does the full asset-url adaptation; this is the minimal subset
-// the island needs for client-side navigation and runtime data/asset fetches.
+// zfb has no automatic runtime base-path injection, so the island builds
+// fully-qualified paths itself. BASE_PATH is derived from the single source of
+// truth in `lib/base-path.ts` (also used by `zfb.config.ts`) with the trailing
+// slash stripped — the island contract is "no trailing slash".
+
+import { ZFB_BASE } from '@/lib/base-path';
 
 /** Leading path segment matching `base` in zfb.config.ts. No trailing slash. */
-const BASE_PATH = '/manuals';
+const BASE_PATH = ZFB_BASE.replace(/\/$/, '');
 
 /**
  * Prefix a root-relative asset/data URL with the zfb base path. External URLs

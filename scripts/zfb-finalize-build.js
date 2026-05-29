@@ -107,10 +107,19 @@ if (existsSync(manualPdfDir)) {
     const sourceDir = join(manualPdfDir, slug);
     const pdf = readdirSync(sourceDir).find((f) => f.endsWith('.pdf') && !f.startsWith('.'));
     const destDir = join(manualsDir, slug);
-    // Only copy where the manual was actually rendered (POC = oxi-one-mk2).
+    // Only copy where the manual was actually rendered.
     if (pdf && existsSync(destDir)) {
       copyFileSync(join(sourceDir, pdf), join(destDir, 'original.pdf'));
       pdfCopied++;
+    } else if (pdf && !existsSync(destDir)) {
+      // The landing page links to /manuals/<slug>/original.pdf unconditionally.
+      // A missing dest dir means the manual was not emitted by zfb, so that
+      // link will 404. This is likely a registry omission — add the manual to
+      // both lib/manual-registry.ts and lib/zfb-registry.ts.
+      console.warn(
+        `   WARNING: manual-pdf/${slug}/${pdf} found but dist/manuals/${slug}/ was not emitted — ` +
+          `skipping original.pdf copy. The landing-page link to /manuals/${slug}/original.pdf will 404.`,
+      );
     }
   }
 }

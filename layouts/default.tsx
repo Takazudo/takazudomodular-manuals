@@ -35,12 +35,16 @@ const GOOGLE_FONTS_URL =
 // self-contained — the string is embedded verbatim in the <script> tag.
 const LANG_BOOTSTRAP_SCRIPT = `(function(){try{var l=localStorage.getItem('zmanuals:lang');if(l==='en')document.documentElement.setAttribute('data-lang','en');}catch(e){}})();`;
 
+// Layout header: title (left) + Takazudo Modular link (left, adjacent).
+// On viewer pages, HeaderUtilityBar (manual-app.tsx) renders a separate
+// `fixed top-0 right-0 z-50` cluster. Removing `justify-between` keeps the
+// brand link away from the right edge so the two fixed elements do not collide.
 const headerStyles = ctl(`
   fixed top-0 left-0 right-0 z-50
   bg-zd-gray1
   px-hgap-sm
   h-[60px]
-  flex items-center justify-between
+  flex items-center gap-hgap-md
   shadow-lg shadow-zd-white/5
   font-futura
 `);

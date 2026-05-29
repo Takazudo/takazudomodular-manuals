@@ -1,7 +1,7 @@
 name: Deploy preview/* to Cloudflare Pages Preview
 
 # Triggers on pushes to any preview/* branch
-# Builds Next.js and deploys to Cloudflare Pages preview
+# Builds zfb and deploys to Cloudflare Pages preview
 on:
   push:
     branches:

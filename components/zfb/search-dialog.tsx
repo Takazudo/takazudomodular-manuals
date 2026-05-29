@@ -364,8 +364,26 @@ export function SearchDialog({
   const hasQuery = debouncedQuery.trim().length > 0;
   const hitCountLabel = `${results.length}件の結果`;
 
+  // Single persistent live-region text — covers all states so screen readers
+  // always hear exactly one announcement per settled query (no per-keystroke
+  // re-announcement of the whole list).
+  let liveStatusText = '';
+  if (loadState === 'loading') {
+    liveStatusText = '検索インデックスを読み込み中...';
+  } else if (loadState === 'error') {
+    liveStatusText = '検索インデックスを読み込めませんでした';
+  } else if (loadState === 'ready' && hasQuery) {
+    liveStatusText = results.length === 0 ? '該当なし' : hitCountLabel;
+  }
+
   return (
     <dialog ref={dialogRef} className={dialogStyles} aria-label="検索" data-search-dialog>
+      {/* Single persistent live region — announces only count/status text,
+          not the result list itself. Lives outside the scroll container so
+          it is never re-rendered by list updates. */}
+      <span className="sr-only" aria-live="polite" aria-atomic="true">
+        {liveStatusText}
+      </span>
       <div className={rootStyles}>
         {/* Header row ------------------------------------------------------ */}
         <div className={headerStyles}>
@@ -399,7 +417,7 @@ export function SearchDialog({
         </div>
 
         {/* Results region -------------------------------------------------- */}
-        <div ref={listRef} className={resultsListStyles} aria-live="polite">
+        <div ref={listRef} className={resultsListStyles}>
           {loadState === 'loading' ? (
             <div className={statusStyles}>検索インデックスを読み込み中...</div>
           ) : null}
@@ -423,7 +441,6 @@ export function SearchDialog({
 
           {loadState === 'ready' && hasQuery && results.length > 0 ? (
             <>
-              <span className="sr-only">{hitCountLabel}</span>
               {visibleResults.map((hit) => {
                 const doc = hit as unknown as SearchResult & SearchDoc;
                 const excerpt = makeExcerpt(doc.body ?? '', debouncedQuery);

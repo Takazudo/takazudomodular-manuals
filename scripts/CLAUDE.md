@@ -60,6 +60,7 @@ pnpm run pdf:search-index        # Generate search-index.json for keyword search
 pnpm run pdf:search-index:all    # Regenerate search-index.json for all manuals at once
 pnpm run pdf:manifest            # Create manifest.json
 pnpm run pdf:all                 # Run all PDF processing steps (includes thumbnail generation)
+                                 # All CLI args (e.g. --slug <x>) are forwarded to every step via scripts/pdf-all.js
 ```
 
 ### Pipeline Overview
