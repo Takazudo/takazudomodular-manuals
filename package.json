@@ -58,6 +58,7 @@
     "pdf:md-to-html:all": "node scripts/pdf-md-to-html.js --all",
     "pdf:verify": "node scripts/pdf-verify.js",
     "pdf:all": "node scripts/pdf-all.js",
+    "gen:registry": "node scripts/gen-registry.js",
     "// ── Quality ──────────────────────────────────": "",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",

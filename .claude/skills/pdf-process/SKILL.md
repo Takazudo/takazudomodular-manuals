@@ -90,7 +90,7 @@ This will execute all pipeline steps in order:
 8. **Build** - Build final JSON files
 9. **Manifest** - Create manifest.json
 10. **Update Manifest** - Add brand name and title to manifest (from Step 0)
-11. **Update Registry** - Add manual to `lib/manual-registry.ts` for Next.js build
+11. **Regenerate Registry** - Run `pnpm run gen:registry` so the viewer build includes the new manual
 
 **Phase 2: Verification (AI-Powered)**
 
@@ -474,101 +474,27 @@ Or use the Edit tool to update all fields:
 - The updatedAt date is displayed on the landing page
 - The productSlug links this manual to the product in takazudomodular (for auto-sync)
 
-### Step 8: Update Manual Registry (REQUIRED)
+### Step 8: Regenerate the Manual Registry (REQUIRED)
 
-**After manifest update, add the new manual to `lib/manual-registry.ts` so Next.js can generate pages for it.**
+**After the manifest is written, regenerate the viewer registry so the build generates pages for the new manual.**
 
-This step is CRITICAL - without it, the build will not generate HTML pages for the new manual.
+This step is CRITICAL — without it, the build will not generate HTML pages for the new manual (the build will NOT error; it just silently omits the manual).
 
-#### 8.1 Generate Variable Name from Slug
+The registry is **single-sourced via codegen** — there is no import list to hand-edit. Just run:
 
-Convert the slug to a camelCase variable name:
-```javascript
-// Example: "ai008-matrix-mixer" → "ai008MatrixMixer"
-function slugToVarName(slug) {
-  return slug.replace(/-([a-z0-9])/g, (_, char) => char.toUpperCase());
-}
+```bash
+pnpm run gen:registry   # or: node scripts/gen-registry.js
 ```
 
-#### 8.2 Check if Already Registered
+This scans `public/<slug>/data/` for every directory that has both `manifest.json` and `pages-ja.json`, and regenerates `lib/zfb-registry.generated.ts` (the static import list + `REGISTRY` map that `lib/zfb-registry.ts` re-exports through its public API). Because the new manual's `manifest.json` + `pages-ja.json` already exist by this step, regenerating picks it up automatically.
 
-Read `lib/manual-registry.ts` and check if the manual is already imported:
-```javascript
-const registryPath = 'lib/manual-registry.ts';
-const content = fs.readFileSync(registryPath, 'utf8');
-const isAlreadyRegistered = content.includes(`'${slug}':`);
-```
+**Notes:**
 
-If already registered, skip this step.
+- Idempotent — re-running with no new manuals yields zero diff.
+- `pages-en.json` is intentionally never imported (bundle-size constraint; EN is fetched at runtime). The codegen enforces this.
+- `lib/zfb-registry.generated.ts` is a generated file: never edit it by hand. Commit the regenerated file alongside the new manual's data.
 
-#### 8.3 Add Import Statements
-
-Find the last import block and add new imports after it:
-```typescript
-// Import {slug}
-import {varName}Manifest from '@/public/{slug}/data/manifest.json';
-import {varName}Pages from '@/public/{slug}/data/pages-ja.json';
-```
-
-**Example:**
-```typescript
-// Import ai008-matrix-mixer
-import ai008MatrixMixerManifest from '@/public/ai008-matrix-mixer/data/manifest.json';
-import ai008MatrixMixerPages from '@/public/ai008-matrix-mixer/data/pages-ja.json';
-```
-
-Use the Edit tool to insert after the last existing import (before `export interface ManualRegistryEntry`).
-
-#### 8.4 Add Registry Entry
-
-Find the closing `};` of the MANUAL_REGISTRY object and add new entry before it:
-```typescript
-  '{slug}': {
-    manifest: {varName}Manifest as unknown as ManualManifest,
-    pages: {varName}Pages as unknown as ManualPagesData,
-  },
-```
-
-**Example:**
-```typescript
-  'ai008-matrix-mixer': {
-    manifest: ai008MatrixMixerManifest as unknown as ManualManifest,
-    pages: ai008MatrixMixerPages as unknown as ManualPagesData,
-  },
-```
-
-Use the Edit tool to insert before the closing `};` of MANUAL_REGISTRY.
-
-#### Implementation Example:
-
-```javascript
-const slug = 'ai008-matrix-mixer';
-const varName = 'ai008MatrixMixer';  // converted from slug
-
-// 1. Add imports (find last import, add after it)
-const importBlock = `
-// Import ${slug}
-import ${varName}Manifest from '@/public/${slug}/data/manifest.json';
-import ${varName}Pages from '@/public/${slug}/data/pages-ja.json';
-`;
-
-// 2. Add registry entry
-const registryEntry = `  '${slug}': {
-    manifest: ${varName}Manifest as unknown as ManualManifest,
-    pages: ${varName}Pages as unknown as ManualPagesData,
-  },`;
-
-// Use Edit tool to:
-// - Insert importBlock before "export interface ManualRegistryEntry"
-// - Insert registryEntry before the closing "};" of MANUAL_REGISTRY
-```
-
-**Why this step is REQUIRED:**
-
-- Next.js static export requires explicit imports (no dynamic require())
-- Without registry entry, `generateStaticParams()` won't include this manual
-- Build will succeed but the manual pages won't be generated
-- Users will see 404 when accessing the manual URL
+**Why a registry at all?** Explicit static imports give type safety and build-time bundling, and are compatible with zfb static site generation (no runtime `require()` / `node:fs` in the V8 build context).
 
 ### Steps 12-19: Verification Phase (MANDATORY)
 
