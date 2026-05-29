@@ -23,8 +23,7 @@ export function paths() {
   const manualIds = getAvailableManuals();
   return manualIds.map((manualId) => {
     const manifest = getManifest(manualId);
-    // All current manuals have EN; hasEnglish() returns false for unknown IDs.
-    // See zfb-registry.ts for the hasEnglish follow-up note.
+    // hasEnglish() reads manifest.hasEnglish, so it correctly returns false for JA-only manuals (not just unknown IDs).
     const availableLangs: Lang[] = ['ja', ...(hasEnglish(manualId) ? ['en' as Lang] : [])];
     return {
       params: { manualId },
