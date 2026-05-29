@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js-based manual viewer for the OXI ONE MKII hardware synthesizer manual. The site provides a bilingual viewing experience (original English PDF pages + Japanese translations) with continuous page numbering.
+This is a zfb-based manual viewer for hardware synthesizer manuals. The site provides a bilingual viewing experience (original English PDF pages + Japanese translations) with continuous page numbering. Built with Preact islands for fast static pages with selective interactivity.
 
 **Project Goal**: Create a web-based manual viewer that displays PDF page images alongside Japanese translations in a user-friendly, searchable interface.
 
@@ -22,19 +22,18 @@ This is a Next.js-based manual viewer for the OXI ONE MKII hardware synthesizer 
 - Preview URLs: `https://<branch>.zmanuals.pages.dev/manuals/oxi-one-mk2/`
 - PR preview URLs: `https://pr-<N>.zmanuals.pages.dev/manuals/oxi-one-mk2/` (auto-deployed on every same-repo PR; URL posted as PR comment)
 
-## basePath Configuration (Critical Architecture Decision)
+## Base Path Configuration (Critical Architecture Decision)
 
-**This site uses `basePath: '/manuals'` in `next.config.js`.**
+**This site uses `base: '/manuals/'` in `zfb.config.ts`.**
 
-This site is proxied through `takazudomodular.com/manuals/*` via a Netlify redirect. Without basePath, CSS/JS assets would 404.
+This site is proxied through `takazudomodular.com/manuals/*` via a Netlify redirect. Without the base path, CSS/JS assets would 404.
 
 **Key rules:**
 
-- **Route paths** (`<Link>`, `router.push()`): Don't include `/manuals` prefix - basePath adds it automatically
-- **Static asset paths** (`<img>`, `<a href>`): Don't include `/manuals` prefix - basePath adds it automatically
-- **App directory**: Routes defined WITHOUT `/manuals` prefix (`/app/[manualId]/page/[pageNum]/page.tsx` serves at `/manuals/[manualId]/page/[pageNum]`)
-- **usePathname()**: Returns paths WITHOUT basePath
-- **Configuration**: `next.config.js` (basePath), `lib/manual-config.ts` (helper functions)
+- **Route paths** (page links, navigation): Don't include `/manuals` prefix — zfb's link rewriter handles static literal `href`/`src` values automatically at build time
+- **Runtime-built URLs** (page images from JSON, fetch calls, `history.pushState`): Must be prefixed explicitly using `withBasePath()` from `components/zfb/routing.ts`
+- **Pages directory**: Routes defined WITHOUT `/manuals` prefix (`pages/[manualId]/page/[pageNum].tsx` serves at `/manuals/[manualId]/page/[pageNum]`)
+- **Configuration**: `zfb.config.ts` (base path), `components/zfb/routing.ts` (`withBasePath` helper)
 
 ## Language Guidelines
 
@@ -60,9 +59,13 @@ All temporary files (reports, screenshots, test outputs, error reports) go to `_
 
 ```
 /
-├── app/                        # Next.js app directory
-├── components/                 # React components
+├── pages/                      # zfb page templates (static generation)
+│   └── [manualId]/             # Per-manual page templates
+├── layouts/                    # zfb layout wrappers
+├── components/                 # Preact components
+│   └── zfb/                    # zfb-specific islands and utilities
 ├── lib/                        # Utilities and libraries
+├── styles/                     # Global CSS (Tailwind / Zudo Design System)
 ├── public/                     # Static assets
 │   └── oxi-one-mk2/           # OXI ONE MKII manual
 │       ├── data/               # Final JSON files (build time import)
@@ -81,7 +84,7 @@ Each manual is self-contained under `/public/{manual-id}/` with its own data, im
 
 This project uses **pnpm** (workspace in `pnpm-workspace.yaml`).
 
-- **Next.js 14+** (App Router, static export) | **React 19** | **TypeScript**
+- **zfb** (Preact islands, static site generation) | **Preact** (via `preact/compat`) | **TypeScript**
 - **Tailwind CSS v4** with Zudo Design System | **Docusaurus 3** for docs
 - **JSON** for translation data | **PNG** for rendered PDF pages (150 DPI)
 
@@ -89,12 +92,13 @@ This project uses **pnpm** (workspace in `pnpm-workspace.yaml`).
 
 ```bash
 # App development
-pnpm dev                # Start Next.js dev server
-pnpm build              # Build for production
-pnpm serve              # Serve production build locally
+pnpm dev                # Start zfb dev server (port 3300)
+pnpm build              # Build for production (search index + zfb + doc)
+pnpm preview            # Preview the zfb build
+pnpm serve              # Serve production build locally (port 8030)
 
 # Documentation (see doc/CLAUDE.md for details)
-pnpm doc:dev            # Start Docusaurus dev server
+pnpm doc:dev            # Start Docusaurus dev server (port 3100)
 pnpm doc:build          # Build documentation
 
 # Quality
@@ -102,8 +106,9 @@ pnpm typecheck          # Type checking
 pnpm lint               # Linting (lint:fix to auto-fix)
 pnpm format             # Formatting (format:fix to auto-fix)
 pnpm check              # Run all checks (check:fix to auto-fix)
-pnpm test               # Run tests
-pnpm clean              # Clean build outputs
+pnpm test               # Run Playwright e2e tests
+pnpm test:unit          # Run Vitest unit tests
+pnpm clean              # Clean build outputs (.zfb-build, dist, doc/build)
 ```
 
 ## Adding New Manuals
@@ -140,9 +145,11 @@ Custom Tailwind CSS v4 config: all defaults disabled, only Zudo tokens. CSS vari
 
 - Strict type checking, define interfaces for all data structures, avoid `any`
 
-### React Components
+### Preact Components
 
 - Functional components with hooks, proper prop types/interfaces, single-purpose
+- JSX uses `jsxImportSource: "preact"` — imports resolve to Preact automatically
+- Interactive UI lives in `components/zfb/` as islands (`*-island.tsx` files)
 
 ### Styling
 
@@ -162,9 +169,10 @@ Custom Tailwind CSS v4 config: all defaults disabled, only Zudo tokens. CSS vari
 **ALWAYS run before pushing:**
 
 ```bash
-pnpm check          # Run all quality checks
+pnpm check          # Run all quality checks (typecheck + lint + format)
 pnpm check:fix      # Fix issues if any
-pnpm test           # Run tests (recommended)
+pnpm test:unit      # Run unit tests
+pnpm build          # Verify production build succeeds
 ```
 
 ## Git Worktree Workflow
@@ -185,7 +193,7 @@ For detailed worktree workflow, examples, and troubleshooting, see `.claude/CLAU
 
 | Port | Service          | Domain                   | Purpose                     | Start Command |
 | ---- | ---------------- | ------------------------ | --------------------------- | ------------- |
-| 3100 | Next.js App      | `zmanuals.localhost`     | Manual viewer app           | `pnpm dev`    |
+| 3300 | zfb App          | `zmanuals.localhost`     | Manual viewer app           | `pnpm dev`    |
 | 3100 | Docusaurus Docs  | `doc-zmanuals.localhost` | Technical documentation     | `pnpm doc:dev`|
 | 8030 | Production Build | `localhost`              | Production build test serve | `pnpm serve`  |
 
@@ -202,10 +210,7 @@ Port cleanup: `lsof -ti:[PORT] | xargs kill -9`
 - #1: Technical Documentation | #2: Project Setup | #3: Docusaurus Setup
 - #4: Tailwind CSS Design System | #5: Next.js App MVP | #6: Data Migration
 - #7: Convert All Parts | #8: Search | #9: Bookmarking | #10: Performance | #11: Deployment
-
-## Reference Project
-
-Based on architecture from `/Users/takazudo/repos/personal/takazudomodular`.
+- #126: zfb Migration Epic (migrated from Next.js to zfb/Preact in waves #127-#137)
 
 ## Subdirectory CLAUDE.md Files
 

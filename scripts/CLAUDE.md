@@ -6,7 +6,7 @@ PDF processing scripts and multi-manual support documentation. For project-wide 
 
 **Claude Code Skill:** `/l-pdf-process`
 
-Automated workflow for converting PDF manuals into Next.js application data using Claude Code Task subagents.
+Automated workflow for converting PDF manuals into zfb application data using Claude Code Task subagents.
 
 ### Important: Maintain the System, Not the Output
 
@@ -71,7 +71,7 @@ The PDF processing pipeline consists of 10 fully automated steps:
 3. **Thumbnails** - Generates 150px-wide thumbnail images from the rendered pages (`public/<slug>/thumbs/`)
 4. **Extract** - Extracts text from each PDF part
 5. **Translate** - Translates to Japanese using Claude Code Task subagents (5 concurrent workers). The translator agent now emits `en_clean` (formatted original English) alongside the Japanese `translation`, so `pages-en.json` is already clean after this step.
-6. **Build** - Combines data into JSON files for Next.js. Prefers `translationData.en_clean` over raw extracted text when populating `pages-en.json`.
+6. **Build** - Combines data into JSON files for the zfb app. Prefers `translationData.en_clean` over raw extracted text when populating `pages-en.json`.
 7. **Clean EN** - Runs `pdf:clean-en` as a belt-and-suspenders pass to guarantee consistent cleanup metadata (`cleanupMethod`, `cleanupModel`, `cleanedAt`) on every page. Because the translator already emits `en_clean` natively, this separate run is typically only needed for retrofits on older manuals or after tweaks to the cleanup prompt (`scripts/lib/en-cleanup-prompt.js`); on a fresh pipeline run it's essentially a no-op over already-clean content.
 8. **Markdown → HTML** - Runs `pdf:md-to-html` to convert each page's `content` markdown to `contentHtml` in both `pages-ja.json` and `pages-en.json`. Runs AFTER `pdf:clean-en` so EN html reflects the final cleaned content (in-build conversion would capture pre-clean EN). Mirrors `components/markdown-renderer.tsx`: `unified` + `remark-parse` + `remark-gfm` + `remark-rehype` + `rehype-slug` + `rehype-highlight` + a custom `rehypeWrapTables` (wraps each `<table>` in `<div class="table-wrapper">`) + `rehype-stringify`. Pages with `hasContent === false` get `contentHtml: ""`. See `scripts/pdf-md-to-html.js`.
 9. **Search Index** - Reads `pages-ja.json` and emits `search-index.json` (MiniSearch-ready, markdown stripped, body truncated to ~500 chars per page). Invoke with `--slug <manual-slug>`. Also writes a SHA-1 content hash to the sibling `manifest.json` as `searchIndexVersion` for cache busting. The `pdf:search-index:all` variant does the same for every manual at once and is auto-run by `pnpm build`.
@@ -95,7 +95,7 @@ manual-pdf/
   ├── pages/                                    # Split page PDFs (gitignored)
   └── parts/                                    # Split part PDFs (gitignored)
 public/oxi-one-mk2/
-  ├── data/                                     # Final JSON files (for Next.js)
+  ├── data/                                     # Final JSON files (for the zfb app)
   │   ├── manifest.json
   │   ├── pages.json
   │   └── search-index.json                     # MiniSearch-ready keyword index
@@ -241,7 +241,7 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
    };
    ```
 
-   **Why explicit imports?** Type safety, build-time bundling, compatible with Next.js static export (`output: 'export'`).
+   **Why explicit imports?** Type safety, build-time bundling, compatible with zfb static site generation.
 
 5. **Build and deploy:**
    ```bash
@@ -315,7 +315,7 @@ Each manual has two JSON files: manifest.json (metadata) and pages.json (all pag
 
 - JSON files imported as ES modules in `lib/manual-registry.ts`
 - Data bundled into HTML at build time
-- Compatible with Next.js static export (`output: 'export'`)
+- Compatible with zfb static site generation
 - Fast page loads (no runtime fetch)
 
 ```typescript
