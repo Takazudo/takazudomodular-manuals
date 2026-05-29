@@ -4,14 +4,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks'
 import type { ComponentChildren } from 'preact';
 import ctl from './ctl';
 import type { ManualPage } from '@/lib/types/manual';
-import {
-  DEFAULT_LANG,
-  readPersistedLang,
-  syncLangToUrl,
-  writeLangToStorage,
-  type Lang,
-} from './lang';
+import type { Lang } from './lang';
 import type { ManualAppProps, ViewMode } from './manual-app-types';
+import { useLang } from './use-lang';
 import { getManualBasePath, getPagePath } from './routing';
 import { HeaderUtilityBar } from './header-utility-bar';
 import { PageViewer } from './page-viewer';
@@ -78,21 +73,8 @@ export default function ManualApp({
 }: ManualAppProps & { children?: ComponentChildren }) {
   // ── Language (no React context; resolved post-mount) ─────────────────────
   // Deterministic SSR default = "ja". Real preference resolved in an effect to
-  // avoid a hydration mismatch on the first paint.
-  const [lang, setLangState] = useState<Lang>(DEFAULT_LANG);
-
-  useEffect(() => {
-    const persisted = readPersistedLang();
-    if (persisted !== DEFAULT_LANG) {
-      setLangState(persisted);
-    }
-  }, []);
-
-  const setLang = useCallback((next: Lang) => {
-    setLangState(next);
-    writeLangToStorage(next);
-    syncLangToUrl(next);
-  }, []);
+  // avoid a hydration mismatch on the first paint. See useLang() for details.
+  const [lang, setLang] = useLang();
 
   // ── View mode + chrome toggles ───────────────────────────────────────────
   const [viewMode, setViewMode] = useState<ViewMode>('page');
