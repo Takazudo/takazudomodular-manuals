@@ -1,15 +1,17 @@
-# PDF Processing to Next.js Architecture
+# PDF Processing Architecture
+
+> **Note**: This document was originally titled "PDF Processing to Next.js Architecture". The app was migrated from Next.js to zfb (Preact islands) in #126. The PDF processing pipeline is unchanged; the "Application" section now describes the zfb integration.
 
 ## Overview
 
-This document describes the architecture for processing PDF manuals and integrating them with the Next.js application. The system supports **multiple manuals** with independent processing pipelines, producing self-contained data for each manual.
+This document describes the architecture for processing PDF manuals and integrating them with the zfb application. The system supports **multiple manuals** with independent processing pipelines, producing self-contained data for each manual.
 
 ## Design Goals
 
 1. **Multi-Manual Support**: Process any number of PDF manuals with identical workflows
 2. **Slug-Based Architecture**: All paths computed dynamically from manual slug
-3. **Clean Separation**: Clear boundary between PDF processing and Next.js data consumption
-4. **Build-Time Bundling**: JSON data imported as ES modules (static export compatible)
+3. **Clean Separation**: Clear boundary between PDF processing and zfb app data consumption
+4. **Build-Time Bundling**: JSON data imported as ES modules (static generation compatible)
 5. **Simple Workflow**: Single command to process entire PDF (`/l-pdf-process {slug}`)
 
 ## Architecture Diagram
@@ -35,7 +37,7 @@ This document describes the architecture for processing PDF manuals and integrat
                         │
                         ▼
 ┌─────────────────────────────────────────────────────────────┐
-│ Phase 2: Build for Next.js (Final Data)                     │
+│ Phase 2: Build for zfb app (Final Data)                     │
 │                                                              │
 │  pdf:build    → public/{slug}/data/pages-ja.json            │
 │               → public/{slug}/data/pages-en.json            │
@@ -45,7 +47,7 @@ This document describes the architecture for processing PDF manuals and integrat
                         │
                         ▼
 ┌─────────────────────────────────────────────────────────────┐
-│ Next.js Application (Data Consumer)                         │
+│ zfb Application (Data Consumer)                             │
 │                                                              │
 │  • Imports JSON via manual-registry.ts (ES modules)         │
 │  • User selects language (ja/en), loads only that file      │
@@ -87,7 +89,7 @@ This document describes the architecture for processing PDF manuals and integrat
 │           ├── page-001.json               #   → pages-ja.json
 │           └── ... (page-XXX.json)
 │
-├── lib/                                    # Next.js data access layer
+├── lib/                                    # zfb app data access layer
 │   ├── manual-registry.ts                  # Central registry of all manuals
 │   ├── manual-data.ts                      # Data access functions
 │   ├── manual-config.ts                    # Route/asset path helpers
@@ -260,7 +262,7 @@ pnpm run pdf:translate --slug oxi-one-mk2
 # Time: 15-30 minutes
 ```
 
-### Phase 2: Build for Next.js (Final Data)
+### Phase 2: Build for zfb app (Final Data)
 
 ```bash
 # 5. Build pages-ja.json and pages-en.json
@@ -376,7 +378,7 @@ Dynamically computes all paths from slug:
 - Finds first PDF file in source directory
 - All paths computed from slug
 
-## Next.js Integration
+## zfb App Integration
 
 ### Manual Registry (lib/manual-registry.ts)
 
@@ -411,7 +413,7 @@ export function isValidManual(manualId: string): boolean;
 
 **Why explicit imports:**
 
-- Required for Next.js static export (`output: 'export'`)
+- Required for zfb static site generation
 - Type-safe with TypeScript
 - Data bundled into HTML at build time
 - No runtime fetch needed
@@ -480,50 +482,33 @@ export interface ManualManifest {
 }
 ```
 
-### Page Component
+### Page Template (zfb)
 
 ```typescript
-// app/[manualId]/page/[pageNum]/page.tsx
+// pages/[manualId]/page/[pageNum].tsx
 
-export async function generateStaticParams() {
+// zfb reads getStaticPaths to generate all static page routes
+export function getStaticPaths() {
   const manuals = getAvailableManuals();
-  const params = [];
+  const paths = [];
 
   for (const manualId of manuals) {
     const totalPages = getTotalPages(manualId);
     for (let i = 1; i <= totalPages; i++) {
-      params.push({ manualId, pageNum: String(i) });
+      paths.push({ params: { manualId, pageNum: String(i) } });
     }
   }
 
-  return params;
+  return { paths, fallback: false };
 }
 
-export default async function ManualPage({
-  params
-}: {
-  params: Promise<{ manualId: string; pageNum: string }>
-}) {
-  const { manualId, pageNum: pageNumStr } = await params;
+// The page passes data to the Preact island (manual-app.tsx)
+export default function ManualPageRoute({ params }) {
+  const { manualId, pageNum: pageNumStr } = params;
   const pageNum = parseInt(pageNumStr);
-
-  if (!isValidManual(manualId)) {
-    notFound();
-  }
-
   const pageData = getManualPage(manualId, pageNum);
-  if (!pageData) {
-    notFound();
-  }
 
-  return (
-    <div className="manual-page">
-      <img src={pageData.image} alt={`Page ${pageNum}`} />
-      <div className="translation">
-        <MarkdownRenderer content={pageData.translation} />
-      </div>
-    </div>
-  );
+  return <ManualAppIsland manualId={manualId} initialPage={pageData} />;
 }
 ```
 
@@ -642,7 +627,7 @@ git push origin main
 
 ## URL Structure
 
-- **Base path:** `/manuals/` (configured in `next.config.js`)
+- **Base path:** `/manuals/` (configured in `zfb.config.ts`)
 - **Manual index:** `/manuals/{slug}/`
 - **Page viewer:** `/manuals/{slug}/page/{pageNum}`
 
@@ -802,7 +787,7 @@ Language preference handling:
 - **Multi-Language**: Japanese and English available separately
 - **Optimal Payload**: Users only load their chosen language
 - **Simple Updates**: Single command rebuilds everything
-- **Static Export Compatible**: Build-time imports
+- **Static Generation Compatible**: Build-time imports via zfb
 - **Fast Performance**: No runtime fetch
 - **Scalable**: Works for any PDF size
 - **Type-Safe**: Full TypeScript support

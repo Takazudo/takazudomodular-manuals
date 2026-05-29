@@ -1,6 +1,6 @@
 # zmanuals
 
-A Next.js-based manual viewer for hardware synthesizer manuals. Provides a bilingual viewing experience with original PDF page images alongside Japanese translations, supporting 40+ manuals.
+A static manual viewer for hardware synthesizer manuals built with zfb (Preact islands). Provides a bilingual viewing experience with original PDF page images alongside Japanese translations, supporting 40+ manuals.
 
 ## Features
 
@@ -24,8 +24,8 @@ A Next.js-based manual viewer for hardware synthesizer manuals. Provides a bilin
 
 ## Tech Stack
 
-- **Framework**: Next.js 14+ with App Router
-- **UI**: React 19
+- **Framework**: zfb (Preact islands, static site generation)
+- **UI**: Preact (via preact/compat — JSX compatible with React syntax)
 - **Styling**: Tailwind CSS v4 (Zudo Design System)
 - **Language**: TypeScript
 - **Package Manager**: pnpm
@@ -40,14 +40,17 @@ A Next.js-based manual viewer for hardware synthesizer manuals. Provides a bilin
 # Install dependencies
 pnpm install
 
-# Start development server (port 3100)
+# Start development server (port 3300)
 pnpm dev
 
 # Build for production
 pnpm build
 
-# Serve production build locally
+# Serve production build locally (port 8030)
 pnpm serve
+
+# Preview the zfb build
+pnpm preview
 ```
 
 ## Search
@@ -144,7 +147,7 @@ const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
 
 - Type safety with TypeScript
 - Build-time bundling (no runtime fetch)
-- Compatible with Next.js static export
+- Compatible with zfb static site generation
 
 ### 5. Build and Deploy
 
@@ -212,8 +215,9 @@ public/new-manual-slug/         # Output (committed to git)
 
 ```bash
 # Development
-pnpm dev                  # Start Next.js dev server (port 3100)
-pnpm doc:dev              # Start Docusaurus docs (port 3110)
+pnpm dev                  # Start zfb dev server (port 3300)
+pnpm preview              # Preview the zfb build
+pnpm doc:dev              # Start Docusaurus docs (port 3100)
 
 # Building
 pnpm build                # Build for production
@@ -266,15 +270,14 @@ cd worktrees/issue-X-feature-name
 
 ```
 /
-├── app/                        # Next.js app directory
-│   └── manuals/[manualId]/     # Dynamic manual routes
-│       └── page/[pageNum]/     # Page viewer
-├── components/                 # React components
-│   └── viewer/                 # Viewer components (scroll mode, sidebar, modal)
+├── pages/                      # zfb page templates (static generation)
+│   └── [manualId]/             # Per-manual pages
+├── layouts/                    # zfb layout wrappers
+├── components/                 # Preact components
+│   └── zfb/                    # zfb-specific islands and utilities
 ├── lib/                        # Utilities and data loading
 │   ├── manual-data.ts          # Data loading logic
 │   ├── manual-registry.ts      # Manual registry (update for new manuals)
-│   ├── asset-url.ts            # Base path utilities
 │   └── types/                  # TypeScript types
 ├── e2e/                        # Playwright e2e tests
 ├── public/                     # Static manual assets

@@ -32,8 +32,8 @@ Every same-repo pull request gets an automatic Cloudflare Pages preview deployme
 
 ## Build artifact is reused (no double builds)
 
-- `build-check` uploads the built Next.js site as an artifact named `nextjs-build-pr-<N>` (where `<N>` is the PR number).
-- `preview-deploy` downloads the same `nextjs-build-pr-<N>` artifact instead of rebuilding. There is exactly one `pnpm build` per PR push.
+- `build-check` uploads the built zfb site as an artifact named `zfb-build-pr-<N>` (where `<N>` is the PR number).
+- `preview-deploy` downloads the same `zfb-build-pr-<N>` artifact instead of rebuilding. There is exactly one `pnpm build` per PR push.
 - If `build-check` fails, `preview-deploy` does not run, so there is no attempt to deploy a broken build.
 
 ## Quick reference
