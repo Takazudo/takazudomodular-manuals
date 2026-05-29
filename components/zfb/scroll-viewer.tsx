@@ -86,6 +86,14 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
   const translationColumnRef = useRef<HTMLDivElement>(null);
   const pageElementsRef = useRef<Map<number, HTMLDivElement>>(new Map());
 
+  // Capture the mount-time initial page ONCE. `initialPage` is live parent
+  // state (manual-app passes `currentPage`): in scroll mode the observer keeps
+  // updating it, so reading it live in the mount-snap effect would re-snap on
+  // every page detection and interrupt continuous scroll / smooth jumps (#154).
+  // Each page<->scroll toggle is a type-swap remount, so a fresh mount always
+  // re-captures the current page as the snap target.
+  const initialSnapPageRef = useRef(initialPage);
+
   // Current page detection via IntersectionObserver
   const { observerRef: pageObserverRef, currentPage } = useIntersectionPages({
     threshold: DETECTION_THRESHOLDS,
@@ -209,14 +217,17 @@ export const ScrollViewer = forwardRef<ScrollViewerHandle, ScrollViewerProps>(fu
     [registerPageElement],
   );
 
-  // Scroll to initial page on mount (direct scrollTop bypasses smooth scroll-behavior)
+  // Scroll to the captured initial page on mount only (direct scrollTop bypasses
+  // smooth scroll-behavior). Empty deps + the ref keep this from re-firing on
+  // observer-driven `currentPage`/`initialPage` updates; explicit jumps go
+  // through `scrollToPage` (gated by `isJumpingRef`) instead. (#154)
   useLayoutEffect(() => {
     const container = scrollContainerRef.current;
-    const el = pageElementsRef.current.get(initialPage);
+    const el = pageElementsRef.current.get(initialSnapPageRef.current);
     if (container && el) {
       container.scrollTop = el.offsetTop;
     }
-  }, [initialPage]);
+  }, []);
 
   // Re-enable lazy loading after a programmatic scroll jump settles
   useEffect(() => {
