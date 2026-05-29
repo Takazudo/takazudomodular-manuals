@@ -1,17 +1,15 @@
-// zfb project config — coexists with next.config.js during the POC migration.
-// The Next.js app (app/) and zfb app (pages/) build independently;
-// promotion to sole renderer happens in Sub 9.
-//
-// `base: "/manuals/"` matches Next.js `basePath: '/manuals'`; the site is
-// proxied through takazudomodular.com/manuals/* via a Netlify redirect.
-// `site` is set so layouts can build canonical <link> tags and OpenGraph
-// meta with correct absolute hrefs.
+// `base` matches the Netlify proxy mount: takazudomodular.com/manuals/*.
+// `site` is used by layouts for canonical <link> and OpenGraph meta.
+// The base value is shared with `components/zfb/routing.ts` via
+// `lib/base-path.ts` to keep the two in sync without importing this config
+// (which may pull build-only deps) into client islands.
 
 import { defineConfig } from '@takazudo/zfb/config';
+import { ZFB_BASE } from './lib/base-path.js';
 
 export default defineConfig({
   framework: 'preact',
-  base: '/manuals/',
+  base: ZFB_BASE,
   outDir: 'dist',
   publicDir: 'public',
   tailwind: { enabled: true },

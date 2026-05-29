@@ -7,9 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '.'),
-      // Mirror tsconfig.zfb.json: alias react/react-dom → preact/compat so
-      // any file that still imports 'react' (e.g. language-context which has
-      // no zfb equivalent yet — deleted in #137) resolves through Preact.
+      // Mirror tsconfig.json: alias react/react-dom → preact/compat so
+      // any file that imports 'react' resolves through Preact.
       // @testing-library/preact depends on this alias for its own internals.
       react: path.resolve(__dirname, 'node_modules/preact/compat'),
       'react-dom': path.resolve(__dirname, 'node_modules/preact/compat'),

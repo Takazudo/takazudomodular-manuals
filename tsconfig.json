@@ -37,8 +37,7 @@
     "e2e/**/*",
     "zfb.config.ts",
     "vitest.config.ts",
-    "playwright.config.ts",
-    "svg.d.ts"
+    "playwright.config.ts"
   ],
   "exclude": ["node_modules", "dist", "worktrees", "doc"]
 }
