@@ -13,5 +13,6 @@
     "imageDPI": 300,
     "imageFormat": "png"
   },
-  "searchIndexVersion": "43203d2ef722445d6daa566a1859605581dd4237"
+  "searchIndexVersion": "43203d2ef722445d6daa566a1859605581dd4237",
+  "hasEnglish": true
 }

@@ -20,12 +20,11 @@
  * Static imports are the only reliable way to load data in the V8 context.
  *
  * **hasEnglish**
- * All 52 current manuals have pages-en.json. The manifest JSON does not yet
- * carry a `hasEnglish` field (manifests were generated before this need).
- * hasEnglish() returns true for all manuals until a `hasEnglish` field is
- * added to manifest.json by the PDF pipeline (tracked as a follow-up).
- * The ManualApp island gracefully falls back when a fetch for pages-en.json
- * 404s, so this conservative default is safe.
+ * All 52 current manuals have pages-en.json and carry `hasEnglish: true` in
+ * their manifest (backfilled by scripts/backfill-has-english.js; new manuals
+ * get the field from the PDF pipeline at manifest generation time).
+ * hasEnglish() reads manifest.hasEnglish and falls back to false so a future
+ * JA-only manual (no pages-en.json) will not have its EN toggle enabled.
  */
 
 import type { ManualManifest, ManualPage, ManualPagesData } from './types/manual';
@@ -385,12 +384,10 @@ export function getPagesJa(manualId: string): ManualPage[] {
 /**
  * Check if a manual has English pages available.
  *
- * All 52 current manuals have pages-en.json. The manifest does not yet carry
- * a `hasEnglish` field, so this function returns true for all known manuals.
- * ManualApp falls back gracefully if pages-en.json is absent at runtime.
- * Follow-up: add `hasEnglish` to manifest.json generation in the PDF pipeline.
+ * Reads `manifest.hasEnglish` so a future JA-only manual (no pages-en.json)
+ * correctly returns false even though it is present in REGISTRY.
+ * Falls back to false for unknown manual IDs.
  */
 export function hasEnglish(manualId: string): boolean {
-  // All current manuals have EN. Return false only for unknown IDs.
-  return manualId in REGISTRY;
+  return REGISTRY[manualId]?.manifest.hasEnglish ?? false;
 }
