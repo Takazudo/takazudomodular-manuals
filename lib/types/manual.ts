@@ -56,6 +56,13 @@ export interface ManualManifest {
    * Written at build time by the search-index script.
    */
   searchIndexVersion?: string;
+  /**
+   * Whether this manual has an English translation (pages-en.json).
+   * Set by the PDF pipeline at manifest generation time. Defaults to false
+   * when absent (e.g. manifests generated before this field was added are
+   * backfilled via scripts/backfill-has-english.js).
+   */
+  hasEnglish?: boolean;
   source?: {
     filename: string;
     processedAt: string;

@@ -74,6 +74,9 @@ function buildManifest() {
     console.log('');
     console.log('='.repeat(50));
 
+    // Check whether an English translation file was also produced
+    const pagesEnPath = join(dataDir, 'pages-en.json');
+
     // Build manifest
     const manifest = {
       title: slugToTitle(config.slug),
@@ -87,6 +90,8 @@ function buildManifest() {
         imageDPI: config.settings.imageDPI,
         imageFormat: config.settings.imageFormat,
       },
+      // true when pages-en.json was produced alongside pages-ja.json
+      hasEnglish: existsSync(pagesEnPath),
     };
 
     return manifest;
