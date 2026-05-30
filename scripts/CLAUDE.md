@@ -103,10 +103,10 @@ public/oxi-one-mk2/
   │   └── search-index.json                     # MiniSearch-ready keyword index
   ├── pages/                                    # Rendered PNG images (150 DPI)
   │   ├── page-001.png
-  │   └── ... (page-272.png)
+  │   └── ... (page-302.png)
   ├── thumbs/                                   # Thumbnail images (150px wide, generated from pages/)
   │   ├── thumb-001.png
-  │   └── ... (thumb-272.png)
+  │   └── ... (thumb-302.png)
   └── processing/                               # Intermediate files (gitignored)
       ├── extracted/                            # Extracted text
       └── translations-draft/                   # Translation drafts
@@ -342,8 +342,8 @@ import oxiOneMk2Pages from '@/public/oxi-one-mk2/data/pages-ja.json';
   "title": "OXI ONE MKII: Manual",
   "brand": "OXI Instruments",
   "version": "1.0.0",
-  "totalPages": 272,
-  "contentPages": 260,
+  "totalPages": 302,
+  "contentPages": 288,
   "lastUpdated": "2026-01-12T...",
   "source": {
     "filename": "OXI-ONE-MKII-Manual.pdf",

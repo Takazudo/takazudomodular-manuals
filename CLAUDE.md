@@ -11,7 +11,7 @@ This is a zfb-based manual viewer for hardware synthesizer manuals. The site pro
 **URL Structure**:
 
 - Base path: `/manuals/oxi-one-mk2/`
-- Pages: `/manuals/oxi-one-mk2/page/[1-280]`
+- Pages: `/manuals/oxi-one-mk2/page/[1-302]`
 - Example: `/manuals/oxi-one-mk2/page/1` (page 1)
 - Bilingual toggle: header segmented `JA | EN` control switches the translation column language; EN adds `?lang=en` to the URL, localStorage key `zmanuals:lang`. See `doc/docs/inbox/bilingual-support.md`.
 
