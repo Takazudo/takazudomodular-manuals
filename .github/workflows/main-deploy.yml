@@ -34,7 +34,7 @@ jobs:
       - name: Build zfb application
         uses: ./.github/actions/build-zfb
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
