@@ -122,32 +122,17 @@ This runs the full pipeline:
 **Time estimate**: 15-30 minutes (depending on manual size)
 **Cost estimate**: $5-10 per 280-page manual (Claude Sonnet 4.5)
 
-### 4. Update Manual Registry
+### 4. Regenerate the Manual Registry
 
-Edit `lib/manual-registry.ts` to import the new manual's data:
+The viewer registry is **single-sourced via codegen** — there is no import list to hand-edit:
 
-```typescript
-// Add imports for new manual
-import newManualManifest from '@/public/new-manual-slug/data/manifest.json';
-import newManualPages from '@/public/new-manual-slug/data/pages-ja.json';
-
-// Add to registry
-const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
-  'oxi-one-mk2': {
-    // ... existing manual
-  },
-  'new-manual-slug': {
-    manifest: newManualManifest as unknown as ManualManifest,
-    pages: newManualPages as unknown as ManualPagesData,
-  },
-};
+```bash
+pnpm run gen:registry
 ```
 
-**Why explicit imports?**
+`scripts/gen-registry.js` scans `public/<slug>/data/` for every directory that has both `manifest.json` and `pages-ja.json`, and regenerates `lib/zfb-registry.generated.ts` — the static import list + `REGISTRY` map that `lib/zfb-registry.ts` re-exports through its public API. Because the new manual's files already exist under `public/` by this step, regenerating picks them up automatically.
 
-- Type safety with TypeScript
-- Build-time bundling (no runtime fetch)
-- Compatible with zfb static site generation
+**Never edit `lib/zfb-registry.generated.ts` by hand** — commit the regenerated file alongside the new manual's data. Regeneration is idempotent (re-running with no changes yields zero diff).
 
 ### 5. Build and Deploy
 
@@ -205,7 +190,7 @@ public/new-manual-slug/         # Output (committed to git)
 
 - ✅ `public/{slug}/data/` - Final JSON files
 - ✅ `public/{slug}/pages/` - Rendered images
-- ✅ `lib/manual-registry.ts` - Updated registry
+- ✅ `lib/zfb-registry.generated.ts` - Regenerated registry (via `pnpm run gen:registry`)
 - ❌ `manual-pdf/{slug}/` - Source PDFs (gitignored)
 - ❌ `public/{slug}/processing/` - Temp files (gitignored)
 
@@ -277,7 +262,8 @@ cd worktrees/issue-X-feature-name
 │   └── zfb/                    # zfb-specific islands and utilities
 ├── lib/                        # Utilities and data loading
 │   ├── manual-data.ts          # Data loading logic
-│   ├── manual-registry.ts      # Manual registry (update for new manuals)
+│   ├── zfb-registry.generated.ts  # Code-generated registry (run `pnpm run gen:registry`)
+│   ├── zfb-registry.ts         # Public API re-exporting the generated registry
 │   └── types/                  # TypeScript types
 ├── e2e/                        # Playwright e2e tests
 ├── public/                     # Static manual assets
