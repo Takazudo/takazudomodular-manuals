@@ -203,18 +203,32 @@ export default function ManualApp({
     [manualId],
   );
 
-  // Keep currentPage in sync with browser back/forward.
+  // Keep the viewer in sync with browser back/forward. The browser has already
+  // changed the URL (that's what popstate means), so we never touch history
+  // here — we mirror navigateToPage's view-mode branching to move the viewer:
+  //   - scroll mode: route through the gated smooth-jump (scrollToPage). The
+  //     observer then syncs currentPage + replaceState as the scroll settles,
+  //     same as every other scroll-mode jump. Without this the URL changes but
+  //     the viewport stays put (#165). setCurrentPage alone won't scroll because
+  //     the mount-snap is gated to mount + explicit jump only (#154).
+  //   - page mode: just update currentPage to re-render the page body.
   useEffect(() => {
     const onPopState = () => {
       const match = window.location.pathname.match(/\/page\/(\d+)/);
       if (match) {
         const n = parseInt(match[1], 10);
-        if (n >= 1 && n <= totalPages) setCurrentPage(n);
+        if (n >= 1 && n <= totalPages) {
+          if (viewMode === 'scroll') {
+            scrollViewerRef.current?.scrollToPage(n);
+          } else {
+            setCurrentPage(n);
+          }
+        }
       }
     };
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
-  }, [totalPages]);
+  }, [totalPages, viewMode]);
 
   // Thumbnails always use the JA list (language-independent page numbers).
   const thumbPages = pagesJa;
