@@ -7,6 +7,7 @@ import type { ManualPage } from '@/lib/types/manual';
 import type { Lang } from './lang';
 import type { ManualAppProps, ViewMode } from './manual-app-types';
 import { useLang } from './use-lang';
+import { useZoom } from './use-zoom';
 import { getManualBasePath, getPagePath } from './routing';
 import { HeaderUtilityBar } from './header-utility-bar';
 import { PageViewer } from './page-viewer';
@@ -80,6 +81,10 @@ export default function ManualApp({
   const [viewMode, setViewMode] = useState<ViewMode>('page');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [thumbsModalOpen, setThumbsModalOpen] = useState(false);
+
+  // Hover-zoom (Amazon-style page magnifier) — page mode only. Persisted, but
+  // SSR-safe: defaults to off until the post-mount effect reads localStorage.
+  const [zoomEnabled, toggleZoom] = useZoom();
 
   const toggleViewMode = useCallback(() => {
     setViewMode((prev) => (prev === 'page' ? 'scroll' : 'page'));
@@ -248,6 +253,7 @@ export default function ManualApp({
           onNavigate={navigateToPage}
           onNavigateHome={navigateHome}
           navDisabled={navDisabled}
+          zoomEnabled={zoomEnabled}
         />
       )
     ) : null;
@@ -275,6 +281,8 @@ export default function ManualApp({
         onToggleViewMode={toggleViewMode}
         onToggleSidebar={toggleSidebar}
         onOpenThumbsModal={openThumbsModal}
+        zoomEnabled={zoomEnabled}
+        onToggleZoom={toggleZoom}
         lang={lang}
         setLang={setLang}
         availableLangs={availableLangs}

@@ -688,3 +688,50 @@
     /* Reserved for optional future animations. v1 skips motion entirely. */
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   Manual Page Hover-Zoom (Amazon-style magnifier)
+   Geometry (position/size/background) is supplied per-frame as CSS custom
+   properties set imperatively from page-viewer.tsx; the static look lives
+   here. Both elements are `position: fixed` (placed in viewport coords from
+   getBoundingClientRect) and `pointer-events: none` (the mouse must keep
+   hitting the source image). Hidden until JS adds `.is-active` on hover.
+   ══════════════════════════════════════════════════════════════════════ */
+
+.zoom-lens,
+.zoom-panel {
+  display: none;
+  position: fixed;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.zoom-lens.is-active,
+.zoom-panel.is-active {
+  display: block;
+}
+
+/* Translucent box on the source image marking the magnified region. */
+.zoom-lens {
+  left: var(--zoom-lens-left, 0);
+  top: var(--zoom-lens-top, 0);
+  width: var(--zoom-lens-width, 0);
+  height: var(--zoom-lens-height, 0);
+  background: rgb(255 255 255 / 0.28);
+  border: 1px solid var(--zd-color-white);
+}
+
+/* Magnified view filling the translation column. */
+.zoom-panel {
+  left: var(--zoom-panel-left, 0);
+  top: var(--zoom-panel-top, 0);
+  width: var(--zoom-panel-width, 0);
+  height: var(--zoom-panel-height, 0);
+  background-color: var(--zd-color-white);
+  background-image: var(--zoom-image);
+  background-repeat: no-repeat;
+  background-size: var(--zoom-bg-size);
+  background-position: var(--zoom-bg-pos);
+  border: 1px solid var(--zd-color-gray4);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.45);
+}
