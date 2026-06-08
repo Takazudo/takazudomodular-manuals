@@ -15,3 +15,26 @@ trustPolicyExclude:
   - 'undici-types@6.21.0'
   - 'eslint-import-resolver-typescript@3.10.1'
   - 'semver@6.3.1'
+
+# pnpm settings relocated here from .npmrc: these are pnpm-only keys, and any npm/npx call
+# (e.g. the pre-commit hook's `npx lint-staged`) read them from .npmrc and warned
+# "Unknown project config ... will stop working in the next major version of npm".
+# pnpm reads them here; npm never looks at pnpm-workspace.yaml, so the warnings are gone.
+
+# Don't fail the install on missing/invalid peer dependencies
+strictPeerDependencies: false
+# Auto-install non-optional peers (compatibility)
+autoInstallPeers: true
+# Fully flat node_modules — needed for Docusaurus (and legacy Next.js) module resolution
+shamefullyHoist: true
+# Hoist these to the root node_modules so they resolve from outside their declaring package.
+# next* / @next/* are legacy from the pre-zfb Next.js setup — kept to preserve behavior;
+# safe to prune in a follow-up once confirmed nothing references them.
+publicHoistPattern:
+  - 'next*'
+  - '@next/*'
+  - '*types*'
+  - '@types/*'
+  - 'react'
+  - 'react-dom'
+  - '@docusaurus/*'
