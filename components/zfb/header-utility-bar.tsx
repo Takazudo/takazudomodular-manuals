@@ -14,6 +14,9 @@ export interface HeaderUtilityBarProps {
   onToggleViewMode: () => void;
   onToggleSidebar: () => void;
   onOpenThumbsModal: () => void;
+  /** Hover-zoom enabled flag (page mode only). */
+  zoomEnabled: boolean;
+  onToggleZoom: () => void;
   lang: Lang;
   setLang: (next: Lang) => void;
   availableLangs: readonly Lang[];
@@ -43,36 +46,57 @@ const utilityButtonWrapperStyles = ctl(`
   relative group
 `);
 
-const utilityButtonStyles = ctl(`
+const utilityButtonBaseStyles = ctl(`
   w-[32px] h-[32px]
   flex items-center justify-center
-  bg-zd-gray3 hover:bg-zd-gray4
   border border-zd-gray4
   text-zd-white text-sm
   rounded-sm
   transition-colors
   cursor-pointer
-  active:bg-zd-gray5
 `);
+
+// Resting toggle: gray3 base, lighten on hover, darken on press.
+const utilityButtonInactiveStyles = ctl(`
+  bg-zd-gray3 hover:bg-zd-gray4 active:bg-zd-gray5
+`);
+
+// Engaged toggle (aria-pressed): persistent darkened fill, matching the
+// LanguageToggle's active-segment treatment (bg-zd-gray5).
+const utilityButtonActiveStyles = ctl(`
+  bg-zd-gray5 hover:bg-zd-gray4
+`);
+
+function cx(...classes: Array<string | false | undefined>) {
+  return classes.filter(Boolean).join(' ');
+}
 
 function TooltipButton({
   onClick,
   ariaLabel,
   tooltip,
+  active,
   children,
 }: {
   onClick: () => void;
   ariaLabel: string;
   tooltip: string;
+  /** When defined, the button is a toggle: reflected via aria-pressed + fill. */
+  active?: boolean;
   children: ComponentChildren;
 }) {
+  const isToggle = active !== undefined;
   return (
     <div className={utilityButtonWrapperStyles}>
       <button
         type="button"
-        className={utilityButtonStyles}
+        className={cx(
+          utilityButtonBaseStyles,
+          active ? utilityButtonActiveStyles : utilityButtonInactiveStyles,
+        )}
         onClick={onClick}
         aria-label={ariaLabel}
+        aria-pressed={isToggle ? active : undefined}
       >
         {children}
       </button>
@@ -90,6 +114,8 @@ export function HeaderUtilityBar({
   onToggleViewMode,
   onToggleSidebar,
   onOpenThumbsModal,
+  zoomEnabled,
+  onToggleZoom,
   lang,
   setLang,
   availableLangs,
@@ -107,6 +133,18 @@ export function HeaderUtilityBar({
           >
             {viewMode === 'page' ? '\u{1F4C4}' : '\u{1F4DC}'}
           </TooltipButton>
+          {/* Hover-zoom is a page-mode-only interaction (left image / right text);
+              hide the toggle in scroll mode rather than offer a no-op button. */}
+          {viewMode === 'page' && (
+            <TooltipButton
+              onClick={onToggleZoom}
+              ariaLabel={zoomEnabled ? 'Disable hover zoom' : 'Enable hover zoom'}
+              tooltip={zoomEnabled ? '拡大表示オフ' : '拡大表示オン'}
+              active={zoomEnabled}
+            >
+              {'\u{1F50D}'}
+            </TooltipButton>
+          )}
           <TooltipButton onClick={onToggleSidebar} ariaLabel="Toggle sidebar" tooltip="サムネイル">
             {'☰'}
           </TooltipButton>
