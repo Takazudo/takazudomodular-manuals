@@ -205,23 +205,30 @@ export default function ManualApp({
 
   // Keep the viewer in sync with browser back/forward. The browser has already
   // changed the URL (that's what popstate means), so we never touch history
-  // here — we mirror navigateToPage's view-mode branching to move the viewer:
-  //   - scroll mode: route through the gated smooth-jump (scrollToPage). The
-  //     observer then syncs currentPage + replaceState as the scroll settles,
-  //     same as every other scroll-mode jump. Without this the URL changes but
-  //     the viewport stays put (#165). setCurrentPage alone won't scroll because
-  //     the mount-snap is gated to mount + explicit jump only (#154).
-  //   - page mode: just update currentPage to re-render the page body.
+  // here. We always update currentPage first, then additionally smooth-scroll
+  // in scroll mode:
+  //   - currentPage is the source of truth for the page body (page mode) and
+  //     for ScrollViewer's initialPage. Setting it unconditionally is also the
+  //     fallback that survives the data-loading window: if a scroll-mode
+  //     popstate fires before ScrollViewer has mounted (JSON still loading),
+  //     scrollViewerRef is null and the jump below no-ops, but the updated
+  //     currentPage becomes ScrollViewer's initialPage so it snaps to the right
+  //     page on mount instead of the stale one (which would otherwise let the
+  //     observer replaceState the URL back, undoing the navigation).
+  //   - scroll mode (mounted): route through the gated smooth-jump
+  //     (scrollToPage). The observer then re-syncs currentPage + replaceState
+  //     as the scroll settles. Without this the URL changes but the viewport
+  //     stays put (#165); the snap effect alone won't move it because it's
+  //     gated to mount + explicit jump only (#154).
   useEffect(() => {
     const onPopState = () => {
       const match = window.location.pathname.match(/\/page\/(\d+)/);
       if (match) {
         const n = parseInt(match[1], 10);
         if (n >= 1 && n <= totalPages) {
+          setCurrentPage(n);
           if (viewMode === 'scroll') {
             scrollViewerRef.current?.scrollToPage(n);
-          } else {
-            setCurrentPage(n);
           }
         }
       }
