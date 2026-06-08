@@ -42,6 +42,28 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Guard against stale generated registry
+        run: |
+          echo "🔍 Checking lib/zfb-registry.generated.ts is in sync with public/*/data..."
+          # Regenerate from public/*/data, then normalize with the repo's own
+          # prettier before diffing. The raw generator output is babel-ts/
+          # node-version sensitive, so a naive byte diff goes flaky-red on the
+          # runner; running prettier (same version as the format check that already
+          # passes for the committed file) cancels formatting differences, leaving
+          # only real content drift to fail the step.
+          pnpm run gen:registry
+          pnpm exec prettier --write lib/zfb-registry.generated.ts
+          if ! git diff --quiet -- lib/zfb-registry.generated.ts; then
+            echo "::error file=lib/zfb-registry.generated.ts::Generated registry is stale. Run 'pnpm run gen:registry' and commit the result."
+            echo "❌ lib/zfb-registry.generated.ts is out of sync with public/*/data."
+            echo "   A manual was likely added/removed (or scripts/gen-registry.js changed) without regenerating."
+            echo "   Fix: run 'pnpm run gen:registry' locally and commit the updated file."
+            echo "--- drift (committed vs. freshly generated) ---"
+            git --no-pager diff -- lib/zfb-registry.generated.ts
+            exit 1
+          fi
+          echo "✅ Generated registry is in sync"
+
       - name: Run TypeScript type checking
         run: |
           echo "🔍 Running TypeScript type checking..."
