@@ -127,8 +127,11 @@ pnpm run pdf:manifest --slug oxi-coral
    pnpm run pdf:all --slug new-manual-slug
    ```
 
-4. **Update registry** (`lib/manual-registry.ts`):
-   Add explicit imports for the new manual's JSON files.
+4. **Regenerate the manual registry** (single source of truth — no hand-editing):
+   ```bash
+   pnpm run gen:registry
+   ```
+   This scans `public/<slug>/data/` and regenerates `lib/zfb-registry.generated.ts` (consumed by `lib/zfb-registry.ts`). Never edit the generated file by hand.
 
 See main README.md for complete workflow.
 
