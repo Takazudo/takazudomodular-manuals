@@ -203,18 +203,39 @@ export default function ManualApp({
     [manualId],
   );
 
-  // Keep currentPage in sync with browser back/forward.
+  // Keep the viewer in sync with browser back/forward. The browser has already
+  // changed the URL (that's what popstate means), so we never touch history
+  // here. We always update currentPage first, then additionally smooth-scroll
+  // in scroll mode:
+  //   - currentPage is the source of truth for the page body (page mode) and
+  //     for ScrollViewer's initialPage. Setting it unconditionally is also the
+  //     fallback that survives the data-loading window: if a scroll-mode
+  //     popstate fires before ScrollViewer has mounted (JSON still loading),
+  //     scrollViewerRef is null and the jump below no-ops, but the updated
+  //     currentPage becomes ScrollViewer's initialPage so it snaps to the right
+  //     page on mount instead of the stale one (which would otherwise let the
+  //     observer replaceState the URL back, undoing the navigation).
+  //   - scroll mode (mounted): route through the gated smooth-jump
+  //     (scrollToPage). The observer then re-syncs currentPage + replaceState
+  //     as the scroll settles. Without this the URL changes but the viewport
+  //     stays put (#165); the snap effect alone won't move it because it's
+  //     gated to mount + explicit jump only (#154).
   useEffect(() => {
     const onPopState = () => {
       const match = window.location.pathname.match(/\/page\/(\d+)/);
       if (match) {
         const n = parseInt(match[1], 10);
-        if (n >= 1 && n <= totalPages) setCurrentPage(n);
+        if (n >= 1 && n <= totalPages) {
+          setCurrentPage(n);
+          if (viewMode === 'scroll') {
+            scrollViewerRef.current?.scrollToPage(n);
+          }
+        }
       }
     };
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
-  }, [totalPages]);
+  }, [totalPages, viewMode]);
 
   // Thumbnails always use the JA list (language-independent page numbers).
   const thumbPages = pagesJa;
