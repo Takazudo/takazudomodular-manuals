@@ -23,6 +23,7 @@ export default [
       'doc/**',
       'scripts/**',
       'worktrees/**',
+      '__inbox/**',
     ],
   },
 
