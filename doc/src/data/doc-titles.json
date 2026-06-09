@@ -2,6 +2,7 @@
   "inbox/bilingual-support": "Bilingual Support (JA / EN)",
   "inbox/design-system": "Design System",
   "inbox/index": "INBOX",
-  "inbox/pdf-to-nextjs-architecture": "PDF Processing to Next.js Architecture",
+  "inbox/migration-nextjs-to-zfb": "Migration — Next.js → zfb",
+  "inbox/pdf-to-nextjs-architecture": "PDF Processing Architecture",
   "inbox/pr-preview-url": "PR Preview URL (Cloudflare Pages)"
 }

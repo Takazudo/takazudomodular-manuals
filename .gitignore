@@ -83,6 +83,10 @@ storybook-static/
 dist/
 *.log
 
+# zfb build cache and intermediate artifacts
+.zfb/
+.zfb-build/
+
 # Lock files (pnpm only)
 package-lock.json
 yarn.lock
@@ -93,3 +97,6 @@ temp-processing/
 
 # Accidental paths
 Users/
+
+# zfb build artifact written to repo root
+zfb-tailwind-entry-*.css

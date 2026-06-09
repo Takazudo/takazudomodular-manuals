@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "Instruments for Sonic Expression\nEst.2009\n\nDecember.2022\n\nUSER'S GUIDE . REV01\n\nADDAC714\nVINTAGE\nCLIPPER\n\n紹介\n\nFrom Portugal with Love!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Instruments for Sonic Expression\nEst.2009</p>\n<p>December.2022</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC714\nVINTAGE\nCLIPPER</p>\n<p>紹介</p>\n<p>From Portugal with Love!</p>"
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "Welcome to:\n\nADDAC714 VINTAGE CLIPPER ユーザーズガイド\n\nDecember.2022 Revision.01\n\n説明\n\nADDAC714は、デュアルチャンネルのソフトクリッピングモジュールです。\n\nダイオードベースのパッシブクリッピングは、「ブリックウォール」リミッターとして機能し、ダイオード固有の物理特性により決定された固定ニーポイントを持ちます。パッシブRCローパス回路は、3.3KHzの-3dbローパスフィルターを追加し、全体的なトーンを形成すると同時に、エフェクトにさらなるキャラクターを加えます。\n\n上部のOn/Off [BYPASS]スイッチは、信号をエフェクト（上：アクティブ）または下部の出力ゲインステージ（下：バイパス）にルーティングします。\n\nクリッピングの量は[GAIN]コントロールで設定され、主にどの程度のクリッピングを適用するかのスレッショルドコントロールとして機能します。\n\nより多くのクリッピングが適用されると、信号の振幅も減少します。これを補償するために、Gainレンジ全体で出力振幅のバランスを保つためのゲイン補償ステージを設定しています。\n\nSymmetryは、バイポーラクリッピングまたはポジティブクリッピングを選択します。これは生成される高調波に関連しており、バイポーラでは奇数および偶数高調波（上位置）、ユニポーラでは奇数高調波のみ（下位置）となります。\n\n第2ステージでは、オペアンプベースのx2出力ゲインと、出力でのクリッピングをモニターするクリッピングLED、および出力ボリュームを設定する[Output]コントロールがあります。\n\n上部と中段のゲインステージを持つことで柔軟性が提供され、ユーザーは上部ステージで信号を完全に歪ませ、第2ステージでその出力レベルを調整することができます。\n\n下部には、両チャンネルの入力ジャック（Left入力はRight入力にノーマル接続されます）と出力ジャックがあります。\n\nこのモジュールは、フルDIYキットとしても入手可能です。\n\n技術仕様:\n\n6HP\n\n4 cm深さ\n\n40mA +12V\n\n40mA -12V",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Welcome to:</p>\n<p>ADDAC714 VINTAGE CLIPPER ユーザーズガイド</p>\n<p>December.2022 Revision.01</p>\n<p>説明</p>\n<p>ADDAC714は、デュアルチャンネルのソフトクリッピングモジュールです。</p>\n<p>ダイオードベースのパッシブクリッピングは、「ブリックウォール」リミッターとして機能し、ダイオード固有の物理特性により決定された固定ニーポイントを持ちます。パッシブRCローパス回路は、3.3KHzの-3dbローパスフィルターを追加し、全体的なトーンを形成すると同時に、エフェクトにさらなるキャラクターを加えます。</p>\n<p>上部のOn/Off [BYPASS]スイッチは、信号をエフェクト（上：アクティブ）または下部の出力ゲインステージ（下：バイパス）にルーティングします。</p>\n<p>クリッピングの量は[GAIN]コントロールで設定され、主にどの程度のクリッピングを適用するかのスレッショルドコントロールとして機能します。</p>\n<p>より多くのクリッピングが適用されると、信号の振幅も減少します。これを補償するために、Gainレンジ全体で出力振幅のバランスを保つためのゲイン補償ステージを設定しています。</p>\n<p>Symmetryは、バイポーラクリッピングまたはポジティブクリッピングを選択します。これは生成される高調波に関連しており、バイポーラでは奇数および偶数高調波（上位置）、ユニポーラでは奇数高調波のみ（下位置）となります。</p>\n<p>第2ステージでは、オペアンプベースのx2出力ゲインと、出力でのクリッピングをモニターするクリッピングLED、および出力ボリュームを設定する[Output]コントロールがあります。</p>\n<p>上部と中段のゲインステージを持つことで柔軟性が提供され、ユーザーは上部ステージで信号を完全に歪ませ、第2ステージでその出力レベルを調整することができます。</p>\n<p>下部には、両チャンネルの入力ジャック（Left入力はRight入力にノーマル接続されます）と出力ジャックがあります。</p>\n<p>このモジュールは、フルDIYキットとしても入手可能です。</p>\n<p>技術仕様:</p>\n<p>6HP</p>\n<p>4 cm深さ</p>\n<p>40mA +12V</p>\n<p>40mA -12V</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "ADDAC714\nVINTAGE CLIPPER 信号フロー図\n\nINPUT 1\n\nCLIPPER\nGAIN\nCONTROL\n\nSYMMETRY\n\nOUTPUT 1\n\nOUTPUT\nGAIN\nCONTROL\n\nCLIPPING\nLED\nMONITOR\n\nBYPASS\nON\nOFF\n\nINPUT 2\n\nCLIPPER\nGAIN\nCONTROL\n\nSYMMETRY\n\nOUTPUT 2\n\nOUTPUT\nGAIN\nCONTROL\n\nCLIPPING\nLED\nMONITOR\n\nBYPASS\nON\nOFF",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC714\nVINTAGE CLIPPER 信号フロー図</p>\n<p>INPUT 1</p>\n<p>CLIPPER\nGAIN\nCONTROL</p>\n<p>SYMMETRY</p>\n<p>OUTPUT 1</p>\n<p>OUTPUT\nGAIN\nCONTROL</p>\n<p>CLIPPING\nLED\nMONITOR</p>\n<p>BYPASS\nON\nOFF</p>\n<p>INPUT 2</p>\n<p>CLIPPER\nGAIN\nCONTROL</p>\n<p>SYMMETRY</p>\n<p>OUTPUT 2</p>\n<p>OUTPUT\nGAIN\nCONTROL</p>\n<p>CLIPPING\nLED\nMONITOR</p>\n<p>BYPASS\nON\nOFF</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "フィードバック、コメント、問題については下記までご連絡ください:\naddac@addacsystem.com\n\nADDAC714 ユーザーズガイド\nDecember.2022 Revision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>フィードバック、コメント、問題については下記までご連絡ください:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC714 ユーザーズガイド\nDecember.2022 Revision.01</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "コントロール説明\n\nChannel 1 BYPASS\n上：アクティブ\n下：バイパス\n\nChannel 1 Gain\n\nChannel 2 Clipping Symmetry\n上：対称クリッピング\n下：非対称クリッピング\n\nChannel 2 Output Gain\n\nChannel 1 Output Gain\n\nChannel 2 Clipping LED\n\nChannel 1 Clipping LED\n\nChannel 1 Clipping Symmetry\n上：対称クリッピング\n下：非対称クリッピング\n\nChannel 2 BYPASS\n上：アクティブ\n下：バイパス\n\nChannel 1 Input / Channel 2 Input\n\nChannel 1 Output / Channel 2 Output\n\nChannel 2 Gain",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>コントロール説明</p>\n<p>Channel 1 BYPASS\n上：アクティブ\n下：バイパス</p>\n<p>Channel 1 Gain</p>\n<p>Channel 2 Clipping Symmetry\n上：対称クリッピング\n下：非対称クリッピング</p>\n<p>Channel 2 Output Gain</p>\n<p>Channel 1 Output Gain</p>\n<p>Channel 2 Clipping LED</p>\n<p>Channel 1 Clipping LED</p>\n<p>Channel 1 Clipping Symmetry\n上：対称クリッピング\n下：非対称クリッピング</p>\n<p>Channel 2 BYPASS\n上：アクティブ\n下：バイパス</p>\n<p>Channel 1 Input / Channel 2 Input</p>\n<p>Channel 1 Output / Channel 2 Output</p>\n<p>Channel 2 Gain</p>"
     }
   ]
 }

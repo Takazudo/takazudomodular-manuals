@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "HV1\n\nHybrid Oscillator\n\nEurorackモジュール\n\nユーザーマニュアル\n\nWeston Precision Audio\n\nDesigned In Portland, Oregon\n\nRevision 03 - July 18, 2025",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>HV1</p>\n<p>Hybrid Oscillator</p>\n<p>Eurorackモジュール</p>\n<p>ユーザーマニュアル</p>\n<p>Weston Precision Audio</p>\n<p>Designed In Portland, Oregon</p>\n<p>Revision 03 - July 18, 2025</p>"
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "目次\n\nパネル概要……………………….. 3\n\n説明と仕様………………….. 4\n\nブロック図………………………… 5\n\nHV1の使用方法\n\nホーム画面とMenu/Tune 6\n\nチューニング画面……………….. 6\n\nHV1メニュー\n\nWavetableビュー................. 7\n\nOptionsビュー………………… 8\n\nTunerビュー……………………. 8\n\nHV1サウンド\n\nModulation........................ 9\n\nFoldとBitcrush................... 10\n\nWT ChordとCluster……… 11\n\nWavetable Morph………….. 12\n\nDigital Detune……………….. 13\n\nSync.................................. 13\n\nPulse Width Modulation…… 13\n\n付録\n\nSDカードの取り外し/取り付け.................................. 14\n\nファームウェアのアップデート............. 16\n\nキャリブレーション………………….. 18\n\n© 2023 Weston Precision Audio",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>目次</p>\n<p>パネル概要……………………….. 3</p>\n<p>説明と仕様………………….. 4</p>\n<p>ブロック図………………………… 5</p>\n<p>HV1の使用方法</p>\n<p>ホーム画面とMenu/Tune 6</p>\n<p>チューニング画面……………….. 6</p>\n<p>HV1メニュー</p>\n<p>Wavetableビュー................. 7</p>\n<p>Optionsビュー………………… 8</p>\n<p>Tunerビュー……………………. 8</p>\n<p>HV1サウンド</p>\n<p>Modulation........................ 9</p>\n<p>FoldとBitcrush................... 10</p>\n<p>WT ChordとCluster……… 11</p>\n<p>Wavetable Morph………….. 12</p>\n<p>Digital Detune……………….. 13</p>\n<p>Sync.................................. 13</p>\n<p>Pulse Width Modulation…… 13</p>\n<p>付録</p>\n<p>SDカードの取り外し/取り付け.................................. 14</p>\n<p>ファームウェアのアップデート............. 16</p>\n<p>キャリブレーション………………….. 18</p>\n<p>© 2023 Weston Precision Audio</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "HV1 概要\n\nEncoder\n\n滑らかに回転する360度アナログEncoderで、様々な調整や選択に使用します。\n\nTune/Menu Button\n\nチューニング画面とメニュー表示モードを常に切り替えます。\n\n+/- / Up/Down Buttons\n\nチューニング表示モード時はオクターブを調整し、メニュー画面では他の機能を調整します。\n\nLeft/Right Buttons\n\nチューニング表示モード時、Left ButtonでVCOとLFOレンジを切り替えます。LFOレンジの場合、Right ButtonでLFO波形ビューを切り替えます。\n\nメニュー表示時は、メニュー画面間をページ送りします。\n\nFM Input and Attenuator\n\nオシレーターコアのFM入力。スルーゼロリニアまたはエクスポネンシャル方式。\n\nSync Input\n\n外部信号でオシレーターコアをSyncします。リバーシングまたはリセッティングタイプのいずれか。\n\nPWM Input/PW Knob\n\nPWM(Pulse Width Modulator)と、両方のパルス出力の基本PW(パルス幅)コントロール。\n\nPhase Controls\n\n左のKnobは、右側の波形の位相オフセットを左側に対して調整します。右のKnobは「Lin PM」ジャックに入力するPM(Phase Modulation)信号のアッテネーターです。\n\nMorph Controls\n\n左のKnobはWT出力のモーフ位置を調整します。右のKnobはMorph CV信号のアッテネーターです。\n\nAux CV Input\n\n右側の出力のウェーブフォールディングまたはビットクラッシングに割り当て可能です。\n\nCore Outputs\n\nオシレーターコアからの出力。100% Analog。\n\nHybrid Outputs\n\nデジタルフェーズシフターからの出力(三角波とその派生波形、およびWT出力)。\n\nSD Card Slot\n\nウェーブテーブルのロードとファームウェアのアップデートに使用します。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>HV1 概要</p>\n<p>Encoder</p>\n<p>滑らかに回転する360度アナログEncoderで、様々な調整や選択に使用します。</p>\n<p>Tune/Menu Button</p>\n<p>チューニング画面とメニュー表示モードを常に切り替えます。</p>\n<p>+/- / Up/Down Buttons</p>\n<p>チューニング表示モード時はオクターブを調整し、メニュー画面では他の機能を調整します。</p>\n<p>Left/Right Buttons</p>\n<p>チューニング表示モード時、Left ButtonでVCOとLFOレンジを切り替えます。LFOレンジの場合、Right ButtonでLFO波形ビューを切り替えます。</p>\n<p>メニュー表示時は、メニュー画面間をページ送りします。</p>\n<p>FM Input and Attenuator</p>\n<p>オシレーターコアのFM入力。スルーゼロリニアまたはエクスポネンシャル方式。</p>\n<p>Sync Input</p>\n<p>外部信号でオシレーターコアをSyncします。リバーシングまたはリセッティングタイプのいずれか。</p>\n<p>PWM Input/PW Knob</p>\n<p>PWM(Pulse Width Modulator)と、両方のパルス出力の基本PW(パルス幅)コントロール。</p>\n<p>Phase Controls</p>\n<p>左のKnobは、右側の波形の位相オフセットを左側に対して調整します。右のKnobは「Lin PM」ジャックに入力するPM(Phase Modulation)信号のアッテネーターです。</p>\n<p>Morph Controls</p>\n<p>左のKnobはWT出力のモーフ位置を調整します。右のKnobはMorph CV信号のアッテネーターです。</p>\n<p>Aux CV Input</p>\n<p>右側の出力のウェーブフォールディングまたはビットクラッシングに割り当て可能です。</p>\n<p>Core Outputs</p>\n<p>オシレーターコアからの出力。100% Analog。</p>\n<p>Hybrid Outputs</p>\n<p>デジタルフェーズシフターからの出力(三角波とその派生波形、およびWT出力)。</p>\n<p>SD Card Slot</p>\n<p>ウェーブテーブルのロードとファームウェアのアップデートに使用します。</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "概要\n\nHV1は、アナログとデジタルの両方の長所を併せ持つVCO（Voltage Controlled Oscillator）Eurorackモジュールです。オシレーターコアは、非常に安定した追従性に優れたトライアングルコアのアナログVCOで、トライアングル、サイン、ノコギリ波、パルスの各波形を出力します。コアのトライアングル波は「デジタルフェーズシフター」に送られ、位相シフトされたウェーブテーブルベースのトライアングル波を出力します。これは従来のアナログ回路を通じてノコギリ波、サイン波、パルス波形に変換されます。デジタル位相情報は「WT」（ウェーブテーブル）出力にもマッピングされ、モジュール前面のSDカードから読み込んだユーザーウェーブテーブルを出力できます。\n\nすべての波形は、リニアスルーゼロFMとエクスポネンシャルFMで変調可能です。また、右側のすべての出力は、純粋なリニアフェーズモジュレーション（PM）でも変調できます。このリニアPMはPA0と同様に動作しますが、より広い範囲を持ち、+/- 720度にわたります。\n\nWavetable出力は16ウェイCV制御可能なモーフィングをサポートし、WaveEditまたはSerum形式でテーブルを読み込めます。HV1のデジタルセクションは16-bit、極めて高速な150kHzサンプリングレートで動作し、高い忠実度と低いエイリアシングを実現します。\n\n重要または役立つ情報は赤字で表示されています。\n\n仕様\n\nモジュールサイズ：16HP\n\n奥行き：25mm（背面PCBまで）、33mm（電源コネクタ端まで）\n\nVCOトラッキング：\n最低8オクターブ、+/- 2セント以内の誤差\n\n入力：\n>= 100kΩ入力インピーダンス\nCV入力：DCカップリング、FM入力：AC/DCカップリング\n\n電源入力：\n+12V & -12V、標準10ピンEurorackコネクタ経由。内部およびシュラウド付きコネクタにより逆接続保護。\n\n消費電力：\n+12V：125mA\n-12V：45mA\n\nDAC：\n2チャンネル 16-bit / 150kHz\n\n内部WT形式：\n1024サンプル\n\nユーザーウェーブテーブル形式：\n16-bit WaveEdit（256サンプル、64バンク）\n32-bit Serum（2048サンプル、バンクサイズはファイル長に依存）\n\nすべて読み込むには標準WAVファイルヘッダーが必要です。32-bitファイルは通常の32-bitである必要があり、32-bit float形式ではありません。\n\n最大定格\n\n電源電圧：+13.5V / -13.5V\n\nすべての入力：電源電圧レベルまで",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>概要</p>\n<p>HV1は、アナログとデジタルの両方の長所を併せ持つVCO（Voltage Controlled Oscillator）Eurorackモジュールです。オシレーターコアは、非常に安定した追従性に優れたトライアングルコアのアナログVCOで、トライアングル、サイン、ノコギリ波、パルスの各波形を出力します。コアのトライアングル波は「デジタルフェーズシフター」に送られ、位相シフトされたウェーブテーブルベースのトライアングル波を出力します。これは従来のアナログ回路を通じてノコギリ波、サイン波、パルス波形に変換されます。デジタル位相情報は「WT」（ウェーブテーブル）出力にもマッピングされ、モジュール前面のSDカードから読み込んだユーザーウェーブテーブルを出力できます。</p>\n<p>すべての波形は、リニアスルーゼロFMとエクスポネンシャルFMで変調可能です。また、右側のすべての出力は、純粋なリニアフェーズモジュレーション（PM）でも変調できます。このリニアPMはPA0と同様に動作しますが、より広い範囲を持ち、+/- 720度にわたります。</p>\n<p>Wavetable出力は16ウェイCV制御可能なモーフィングをサポートし、WaveEditまたはSerum形式でテーブルを読み込めます。HV1のデジタルセクションは16-bit、極めて高速な150kHzサンプリングレートで動作し、高い忠実度と低いエイリアシングを実現します。</p>\n<p>重要または役立つ情報は赤字で表示されています。</p>\n<p>仕様</p>\n<p>モジュールサイズ：16HP</p>\n<p>奥行き：25mm（背面PCBまで）、33mm（電源コネクタ端まで）</p>\n<p>VCOトラッキング：\n最低8オクターブ、+/- 2セント以内の誤差</p>\n<p>入力：</p>\n<blockquote>\n<p>= 100kΩ入力インピーダンス\nCV入力：DCカップリング、FM入力：AC/DCカップリング</p>\n</blockquote>\n<p>電源入力：\n+12V &#x26; -12V、標準10ピンEurorackコネクタ経由。内部およびシュラウド付きコネクタにより逆接続保護。</p>\n<p>消費電力：\n+12V：125mA\n-12V：45mA</p>\n<p>DAC：\n2チャンネル 16-bit / 150kHz</p>\n<p>内部WT形式：\n1024サンプル</p>\n<p>ユーザーウェーブテーブル形式：\n16-bit WaveEdit（256サンプル、64バンク）\n32-bit Serum（2048サンプル、バンクサイズはファイル長に依存）</p>\n<p>すべて読み込むには標準WAVファイルヘッダーが必要です。32-bitファイルは通常の32-bitである必要があり、32-bit float形式ではありません。</p>\n<p>最大定格</p>\n<p>電源電圧：+13.5V / -13.5V</p>\n<p>すべての入力：電源電圧レベルまで</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "HV1 Hybrid Oscillator:\nブロックダイアグラム\n\nTriangle Core\nAnalog VCO\n\nLinear FM Input\nV/Oct CV Input\nSync Input\n\nTriangle to saw converter\n\nPulse\nSine\nTriangle\nSawtooth\n\n左側 (Core) アウトプット\n\nProcessor\n\nTuning\nPot CV\n\nTriangle to saw converter\nPWM Comparator\nTriangle to sine converter\n\nDigital to analog converter (DAC)\n\nWavetable\nWavetable\n\n右側 (Hybrid) アウトプット\n\nSawtooth\nPulse\nSine\n\nAnalog stuff\nDigital stuff\n\nOutput\nInput\n\nTriangle\n\nPhase Modulation Input\n\nOctave volts generator\n\nKey:\n0-7VDC",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>HV1 Hybrid Oscillator:\nブロックダイアグラム</p>\n<p>Triangle Core\nAnalog VCO</p>\n<p>Linear FM Input\nV/Oct CV Input\nSync Input</p>\n<p>Triangle to saw converter</p>\n<p>Pulse\nSine\nTriangle\nSawtooth</p>\n<p>左側 (Core) アウトプット</p>\n<p>Processor</p>\n<p>Tuning\nPot CV</p>\n<p>Triangle to saw converter\nPWM Comparator\nTriangle to sine converter</p>\n<p>Digital to analog converter (DAC)</p>\n<p>Wavetable\nWavetable</p>\n<p>右側 (Hybrid) アウトプット</p>\n<p>Sawtooth\nPulse\nSine</p>\n<p>Analog stuff\nDigital stuff</p>\n<p>Output\nInput</p>\n<p>Triangle</p>\n<p>Phase Modulation Input</p>\n<p>Octave volts generator</p>\n<p>Key:\n0-7VDC</p>"
     },
     {
       "pageNum": 6,
@@ -59,7 +64,8 @@
       "sectionName": null,
       "content": "HV1の使い方：はじめに\n\nラックにSE1を設置して電源を入れた後、HV1の使用は他のオシレーターと同じくらい簡単です。出力を1つまたは2つ選び、V/oct入力にピッチCVをパッチするだけです。\n\nHV1にはWT（Wavetable）出力用のウェーブテーブルがプリロードされていますが、空のSDカードを挿入した状態、またはSDカードなしでモジュールの電源を入れた場合、WT出力にはサイン波/ノコギリ波/矩形波/三角波を交互に変化させるモーフィングウェーブフォームがロードされます。\n\nHV1の使い方：ホーム画面とMENU/TUNE\n\nHV1は常にチューニング画面で起動します。画面は次のようになります：\n\n図1：チューニングロックがONのチューニング画面\n\nMENU/TUNEボタンを押すと、常にこの画面とメニュー画面を切り替えます。\n\nSV1の使い方：TUNE画面\n\nチューニング画面（上記図1に示す）では、全体的なオシレーターのチューニング、オクターブ、および左右出力間の位相角度が表示されます。この画面でできることは次のとおりです：\n\n* エンコーダーを押してチューニングをロック/アンロック\n\n図2：チューニングが有効なチューニング画面\n\n* チューニングがアンロックされている場合、エンコーダーを回してオシレーターコアをチューニング\n\n* +/-キーを押してオクターブを増減\n\n* エンコーダーを1秒間長押しして、オシレーターコアのチューニングとアナログコアに対するデジタル出力のデチューンを切り替え（詳細はセクションXXXを参照）\n\n* デチューンが表示されている場合、エンコーダーを押してデジタルデチューンをロック/アンロック（チューニングと同じ動作）\n\n図3：デチューン表示のチューニング画面\n\n* LEFTボタンを押して、オシレーターコアのVCOとLFOレンジを切り替え",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>HV1の使い方：はじめに</p>\n<p>ラックにSE1を設置して電源を入れた後、HV1の使用は他のオシレーターと同じくらい簡単です。出力を1つまたは2つ選び、V/oct入力にピッチCVをパッチするだけです。</p>\n<p>HV1にはWT（Wavetable）出力用のウェーブテーブルがプリロードされていますが、空のSDカードを挿入した状態、またはSDカードなしでモジュールの電源を入れた場合、WT出力にはサイン波/ノコギリ波/矩形波/三角波を交互に変化させるモーフィングウェーブフォームがロードされます。</p>\n<p>HV1の使い方：ホーム画面とMENU/TUNE</p>\n<p>HV1は常にチューニング画面で起動します。画面は次のようになります：</p>\n<p>図1：チューニングロックがONのチューニング画面</p>\n<p>MENU/TUNEボタンを押すと、常にこの画面とメニュー画面を切り替えます。</p>\n<p>SV1の使い方：TUNE画面</p>\n<p>チューニング画面（上記図1に示す）では、全体的なオシレーターのチューニング、オクターブ、および左右出力間の位相角度が表示されます。この画面でできることは次のとおりです：</p>\n<ul>\n<li>エンコーダーを押してチューニングをロック/アンロック</li>\n</ul>\n<p>図2：チューニングが有効なチューニング画面</p>\n<ul>\n<li>\n<p>チューニングがアンロックされている場合、エンコーダーを回してオシレーターコアをチューニング</p>\n</li>\n<li>\n<p>+/-キーを押してオクターブを増減</p>\n</li>\n<li>\n<p>エンコーダーを1秒間長押しして、オシレーターコアのチューニングとアナログコアに対するデジタル出力のデチューンを切り替え（詳細はセクションXXXを参照）</p>\n</li>\n<li>\n<p>デチューンが表示されている場合、エンコーダーを押してデジタルデチューンをロック/アンロック（チューニングと同じ動作）</p>\n</li>\n</ul>\n<p>図3：デチューン表示のチューニング画面</p>\n<ul>\n<li>LEFTボタンを押して、オシレーターコアのVCOとLFOレンジを切り替え</li>\n</ul>"
     },
     {
       "pageNum": 7,
@@ -68,7 +74,8 @@
       "sectionName": null,
       "content": "* RANGEがLFOに設定されている場合、RIGHTボタンを押すとLFO波形の表示が切り替わります。このビューでは2つの波形が表示されます:\n\n* コアのサイン波の出力が、現在の電圧を示す小さな四角形と共に表示されます。\n\n* WT（wavetable）の出力が表示されます。\n\n図4: LFO波形表示画面\n\nメニュー画面: Wavetableビュー\n\nMENU/TUNEボタンを押してメニュー表示に切り替えると、最初に表示される画面はwavetableビューです:\n\n図5: Wavetableビュー\n\nHV1にいくつかの有効なwavetableファイルが入ったSDカードが挿入されていると仮定すると、この画面では以下の操作が可能です:\n\n* エンコーダーを回してwavetable bankを増減させます。\n\n* UPまたはDOWNキーを押して、wavetable bankを含む次のWAVファイルにジャンプします。\n\nWavetable bankは、HV1では以下のように構成されています:\n\n* WaveEdit形式のファイルの場合、HV1は各テーブルが256サンプルで、各bankが64テーブルであると仮定します。HV1は16wayのwavetable morphを持つため、各ファイルは4つのbankとして表示されます。HV1は読み込み時に各テーブルを256サンプルから1024サンプルのHV1テーブルに補間します。\n\n* Serumファイルの場合、HV1はこれらが大きく細かく補間されたbankであると仮定し、各テーブルは標準の2048サンプルを持ち、ファイルの長さに基づいてインターリーブして16テーブルのbankを構築します。例えば、テーブルが256テーブルの長さの場合、HV1は256/16 = 16番目のテーブルごとにbankを構築し、それらの2048サンプルの各テーブルを1024サンプルのHV1テーブルにダウンサンプリングします。\n\n注意: Serumのwavetableには、ファイルヘッダーに標準外のデータが書き込まれていることが非常に多く、HV1がファイルを読み込めないことがあります。この場合は、TwistedWave（Mac）などのエディターでWAVEファイルを開き、ヘッダー情報が準拠した標準的な16-bitモノラルwaveファイルとして保存し直すことをお勧めします。また、32-bitファイルは32-bit FLOATではなく、単なる32-bit（整数）であることを確認してください。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<ul>\n<li>\n<p>RANGEがLFOに設定されている場合、RIGHTボタンを押すとLFO波形の表示が切り替わります。このビューでは2つの波形が表示されます:</p>\n</li>\n<li>\n<p>コアのサイン波の出力が、現在の電圧を示す小さな四角形と共に表示されます。</p>\n</li>\n<li>\n<p>WT（wavetable）の出力が表示されます。</p>\n</li>\n</ul>\n<p>図4: LFO波形表示画面</p>\n<p>メニュー画面: Wavetableビュー</p>\n<p>MENU/TUNEボタンを押してメニュー表示に切り替えると、最初に表示される画面はwavetableビューです:</p>\n<p>図5: Wavetableビュー</p>\n<p>HV1にいくつかの有効なwavetableファイルが入ったSDカードが挿入されていると仮定すると、この画面では以下の操作が可能です:</p>\n<ul>\n<li>\n<p>エンコーダーを回してwavetable bankを増減させます。</p>\n</li>\n<li>\n<p>UPまたはDOWNキーを押して、wavetable bankを含む次のWAVファイルにジャンプします。</p>\n</li>\n</ul>\n<p>Wavetable bankは、HV1では以下のように構成されています:</p>\n<ul>\n<li>\n<p>WaveEdit形式のファイルの場合、HV1は各テーブルが256サンプルで、各bankが64テーブルであると仮定します。HV1は16wayのwavetable morphを持つため、各ファイルは4つのbankとして表示されます。HV1は読み込み時に各テーブルを256サンプルから1024サンプルのHV1テーブルに補間します。</p>\n</li>\n<li>\n<p>Serumファイルの場合、HV1はこれらが大きく細かく補間されたbankであると仮定し、各テーブルは標準の2048サンプルを持ち、ファイルの長さに基づいてインターリーブして16テーブルのbankを構築します。例えば、テーブルが256テーブルの長さの場合、HV1は256/16 = 16番目のテーブルごとにbankを構築し、それらの2048サンプルの各テーブルを1024サンプルのHV1テーブルにダウンサンプリングします。</p>\n</li>\n</ul>\n<p>注意: Serumのwavetableには、ファイルヘッダーに標準外のデータが書き込まれていることが非常に多く、HV1がファイルを読み込めないことがあります。この場合は、TwistedWave（Mac）などのエディターでWAVEファイルを開き、ヘッダー情報が準拠した標準的な16-bitモノラルwaveファイルとして保存し直すことをお勧めします。また、32-bitファイルは32-bit FLOATではなく、単なる32-bit（整数）であることを確認してください。</p>"
     },
     {
       "pageNum": 8,
@@ -77,7 +84,8 @@
       "sectionName": null,
       "content": "メニュー画面: OPTIONSビュー\n\nWavetableビューでRIGHTキーを押すと、次のメニューページであるOptionsが表示されます。\n\nFIG 6: OPTIONSビュー\n\nこの画面では、UPとDOWNキーを押してアクティブなオプションまでスクロールし、エンコーダーを回して設定を変更します。\n\nここには8つのオプションがあります:\n\n1) オシレーターコアのFMタイプ: LINEAR TZまたはEXPONENTIAL\n\n2) FM入力カップリング: ACまたはDC\n\n3) オシレーターコアのSyncタイプ: RESETまたはREVERSE\n\n4) デジタル出力用のWave-foldingアルゴリズム\nI. #1はサイン波\nII. #2はフェーズの直接乗算\nIII. #3は三角波\nIV. #4はフェーズにノイズを乗算\nV. #5はローファイなビットクラッシュによる位相加算\n\n5) \"Aux CV\"入力のルーティング\nI. Aux CVをWave foldingにルーティング\nII. Aux CVをBit-crushingにルーティング\nIII. Aux CVをWavetable chordにルーティング\nIV. Aux CVをWavetable clusterにルーティング\n\n6) 右側(デジタル)の三角波出力のオクターブを、VCOコアに対して+1シフト\n\n7) Wavetable出力のオクターブを、VCOコアに対して+1シフト\n\n8) WT出力のアンチエイリアシングのオン/オフ*\n\n* バンク/ファイルを切り替える際、WTアンチエイリアシングがオンになっている場合、HV1は高オクターブのアンチエイリアシングWavetableを構築するのに数秒かかります。\n\nメニュー画面: TUNERビュー\n\nOptionsビューでRIGHTキーを押すと、最後のメニューページであるTunerが表示されます。\n\nFIG 7: TUNERビュー\n\nこれはコアオシレーターのピッチを継続的に測定する便利なチューナーです。最も近い音名が中央に表示され、その音名からのセント単位のピッチのずれが数値とバーの両方で音名の上に表示されます。\n\n画面下部には、チューニングノブの全範囲内での現在位置が表示され、右下隅には選択されたオクターブが表示されます。\n\nこの画面でも、+/-キーはチューニング画面と同様にオクターブを上下に調整します。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>メニュー画面: OPTIONSビュー</p>\n<p>WavetableビューでRIGHTキーを押すと、次のメニューページであるOptionsが表示されます。</p>\n<p>FIG 6: OPTIONSビュー</p>\n<p>この画面では、UPとDOWNキーを押してアクティブなオプションまでスクロールし、エンコーダーを回して設定を変更します。</p>\n<p>ここには8つのオプションがあります:</p>\n<ol>\n<li>\n<p>オシレーターコアのFMタイプ: LINEAR TZまたはEXPONENTIAL</p>\n</li>\n<li>\n<p>FM入力カップリング: ACまたはDC</p>\n</li>\n<li>\n<p>オシレーターコアのSyncタイプ: RESETまたはREVERSE</p>\n</li>\n<li>\n<p>デジタル出力用のWave-foldingアルゴリズム\nI. #1はサイン波\nII. #2はフェーズの直接乗算\nIII. #3は三角波\nIV. #4はフェーズにノイズを乗算\nV. #5はローファイなビットクラッシュによる位相加算</p>\n</li>\n<li>\n<p>\"Aux CV\"入力のルーティング\nI. Aux CVをWave foldingにルーティング\nII. Aux CVをBit-crushingにルーティング\nIII. Aux CVをWavetable chordにルーティング\nIV. Aux CVをWavetable clusterにルーティング</p>\n</li>\n<li>\n<p>右側(デジタル)の三角波出力のオクターブを、VCOコアに対して+1シフト</p>\n</li>\n<li>\n<p>Wavetable出力のオクターブを、VCOコアに対して+1シフト</p>\n</li>\n<li>\n<p>WT出力のアンチエイリアシングのオン/オフ*</p>\n</li>\n</ol>\n<ul>\n<li>バンク/ファイルを切り替える際、WTアンチエイリアシングがオンになっている場合、HV1は高オクターブのアンチエイリアシングWavetableを構築するのに数秒かかります。</li>\n</ul>\n<p>メニュー画面: TUNERビュー</p>\n<p>OptionsビューでRIGHTキーを押すと、最後のメニューページであるTunerが表示されます。</p>\n<p>FIG 7: TUNERビュー</p>\n<p>これはコアオシレーターのピッチを継続的に測定する便利なチューナーです。最も近い音名が中央に表示され、その音名からのセント単位のピッチのずれが数値とバーの両方で音名の上に表示されます。</p>\n<p>画面下部には、チューニングノブの全範囲内での現在位置が表示され、右下隅には選択されたオクターブが表示されます。</p>\n<p>この画面でも、+/-キーはチューニング画面と同様にオクターブを上下に調整します。</p>"
     },
     {
       "pageNum": 9,
@@ -86,7 +94,8 @@
       "sectionName": null,
       "content": "HV1サウンド: Modulation\n\nHV1には2種類のModulationがあり、サウンドの音色を大きく変化させることができます。\n\nまず、メインのVCOコアはFM(Frequency Modulation)で変調できます。FMには2つのタイプがあります。Linear Through-ZeroとExponentialです(選択方法は8ページの「OPTIONS VIEW」セクションを参照)。\n\n下のグラフは三角波によるModulationを示しています。黄色の波形はコア(左)からの三角波で、マゼンタはハイブリッド(右)三角波出力です。\n\nFIG 8: THROUGH ZERO LINEAR FM VIA TRIANGLE\n\nFIG 9: EXPONENTIAL FM VIA TRIANGLE\n\nこれら2つのModulationタイプは非常に異なるサウンドになりますが、FM信号はすべての波形に影響を与えることに注目してください。これは、オシレーターコアがデジタルPhase Shifterに送られるためです(5ページのブロックダイアグラムを参照)。\n\n利用可能なもう1つのModulationタイプは、through-zero PM(Phase Modulation)です。「Phase Angle」PotentiometerとLin PM入力は合算(加算)され、右側の波形の位相を左側の波形に対して変調します。\n\n再度注意点として、PMは「Digital Phase Shifter」とラベル付けされた右側の波形にのみ適用されます。PMのサウンドは、変調する波形によって大きく異なります。\n\n以下は2つの例です:\n\nFIG 9: PM WITH TRIANGLE AS MODULATOR\n\nFIG 10: PM WITH SQUARE AS MODULATOR",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>HV1サウンド: Modulation</p>\n<p>HV1には2種類のModulationがあり、サウンドの音色を大きく変化させることができます。</p>\n<p>まず、メインのVCOコアはFM(Frequency Modulation)で変調できます。FMには2つのタイプがあります。Linear Through-ZeroとExponentialです(選択方法は8ページの「OPTIONS VIEW」セクションを参照)。</p>\n<p>下のグラフは三角波によるModulationを示しています。黄色の波形はコア(左)からの三角波で、マゼンタはハイブリッド(右)三角波出力です。</p>\n<p>FIG 8: THROUGH ZERO LINEAR FM VIA TRIANGLE</p>\n<p>FIG 9: EXPONENTIAL FM VIA TRIANGLE</p>\n<p>これら2つのModulationタイプは非常に異なるサウンドになりますが、FM信号はすべての波形に影響を与えることに注目してください。これは、オシレーターコアがデジタルPhase Shifterに送られるためです(5ページのブロックダイアグラムを参照)。</p>\n<p>利用可能なもう1つのModulationタイプは、through-zero PM(Phase Modulation)です。「Phase Angle」PotentiometerとLin PM入力は合算(加算)され、右側の波形の位相を左側の波形に対して変調します。</p>\n<p>再度注意点として、PMは「Digital Phase Shifter」とラベル付けされた右側の波形にのみ適用されます。PMのサウンドは、変調する波形によって大きく異なります。</p>\n<p>以下は2つの例です:</p>\n<p>FIG 9: PM WITH TRIANGLE AS MODULATOR</p>\n<p>FIG 10: PM WITH SQUARE AS MODULATOR</p>"
     },
     {
       "pageNum": 10,
@@ -95,7 +104,8 @@
       "sectionName": null,
       "content": "HV1サウンド: AUX CVルーティング\n(FOLD & BITCRUSH)\n\nHV1の「Aux CV」入力は複数の機能にルーティングできます。Aux CV入力が「Fold」にルーティングされている場合、この入力に加えられたCVは右側の波形の位相を、CVに比例した量だけフォールドします。5つのアルゴリズムが利用可能で、そのうち3つを以下に示します:\n\n図10/11/12: FOLDアルゴリズム1、2、3。\n1はサイン波、2は線形乗算、3は三角波です。\n\nAux CVが「Bitcrush」にルーティングされるように設定されている場合、右側のすべての波形がCVに比例した量でビットクラッシュ(ビット削減)されます。Aux CVはユニポーラで、0〜5Vの範囲のCVに反応することに注意してください。\n\n図13/14/15: AUX CVをBITCRUSHにルーティング;\nCV = 約1.5V\nCV = 約2.5V\nCV = 三角波",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>HV1サウンド: AUX CVルーティング\n(FOLD &#x26; BITCRUSH)</p>\n<p>HV1の「Aux CV」入力は複数の機能にルーティングできます。Aux CV入力が「Fold」にルーティングされている場合、この入力に加えられたCVは右側の波形の位相を、CVに比例した量だけフォールドします。5つのアルゴリズムが利用可能で、そのうち3つを以下に示します:</p>\n<p>図10/11/12: FOLDアルゴリズム1、2、3。\n1はサイン波、2は線形乗算、3は三角波です。</p>\n<p>Aux CVが「Bitcrush」にルーティングされるように設定されている場合、右側のすべての波形がCVに比例した量でビットクラッシュ(ビット削減)されます。Aux CVはユニポーラで、0〜5Vの範囲のCVに反応することに注意してください。</p>\n<p>図13/14/15: AUX CVをBITCRUSHにルーティング;\nCV = 約1.5V\nCV = 約2.5V\nCV = 三角波</p>"
     },
     {
       "pageNum": 11,
@@ -104,7 +114,8 @@
       "sectionName": null,
       "content": "HV1 SOUNDS: AUX CVルーティング\n\n(WT CHORD & WT CLUSTER)\n\nAux CV入力が「WT Chord」にルーティングされている場合、AUX CVは従来の1V/オクターブ(0.083V)ステップにクオンタイズされ、キーボード上の5オクターブを表します。\n\nWavetable出力(WTアウトのみ、位相シフトされたトライアングルは含まれません)は1から5個のオシレーターに拡張され、クオンタイズされたCVによって選択されたコードを演奏します。すべてのコードが5つのオシレーターすべてを使用するわけではありません。右のチャートは使用可能なコードを示しています。興味深いインスピレーションを得るために、同じピッチCVをコードモードのAux CV入力にパッチしてみてください。\n\n(WT CHORD & WT CLUSTER)\n\nAux CVが「WT Cluster」にルーティングされている場合、HV1はWT出力を再び5個のオシレーターに拡張しますが、追加の4つのオシレーターのオリジナルに対する相対的なデチューン量(「スプレッド」)は、Aux CVに比例します。0Vはすべての5つのオシレーターがチューニングされていることを意味します。5Vは最大スプレッドが1オクターブと5度(上下)であることを意味します。ドローンに対して低いスプレッド値を試して、超厚いサウンドを得てください。\n\nNote\tVolts\tChord\n\nC0\t0.000\tMajor\n\nC#0\t0.083\tAdd 4\n\nD0\t0.166\tSixth\n\nD#0\t0.249\tSix Nine\n\nE0\t0.332\tMajor 7th\n\nF0\t0.415\tMajor 9th\n\nF#0\t0.498\tMajor 7 Sharp 11\n\nG0\t0.581\tMinor\n\nG#0\t0.664\tMinor Add 4\n\nA0\t0.747\tMinor Sixth\n\nBb0\t0.830\tMinor 7th\n\nB0\t0.913\tMinor Add 9\n\nC1\t0.996\tMinor Sixth Add 9\n\nC#1\t1.079\tMinor 9th\n\nD1\t1.162\tMinor 11th\n\nD#1\t1.245\tMinor / Major 7th\n\nE1\t1.328\tMinor / Major 9th\n\nF1\t1.411\tMinor / Major 11th\n\nF#1\t1.494\tMinor 7 Flat 5 (Half Dim)\n\nG1\t1.577\tDominant 7th\n\nG#1\t1.660\tDominant 9th\n\nA1\t1.743\tDominant 11th\n\nBb1\t1.826\tSeven Sharp 5\n\nB1\t1.909\tSeven Flat 5\n\nC2\t1.992\tSeven Flat 9th\n\nC#2\t2.075\tSeven Sharp 9th\n\nD2\t2.158\tNine Sharp 5\n\nD#2\t2.241\tNine Flat 5\n\nE2\t2.324\t7 Sharp 5 Sharp 9\n\nF2\t2.407\t7 Sharp 5 Flat 9\n\nF#2\t2.490\tFlat 5 Sharp 9\n\nG2\t2.573\t7 Flat 5 Flat 9\n\nG#2\t2.656\t7 Sharp 11\n\nA2\t2.739\tDiminished 7th\n\nBb2\t2.822\tAugmented",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>HV1 SOUNDS: AUX CVルーティング</p>\n<p>(WT CHORD &#x26; WT CLUSTER)</p>\n<p>Aux CV入力が「WT Chord」にルーティングされている場合、AUX CVは従来の1V/オクターブ(0.083V)ステップにクオンタイズされ、キーボード上の5オクターブを表します。</p>\n<p>Wavetable出力(WTアウトのみ、位相シフトされたトライアングルは含まれません)は1から5個のオシレーターに拡張され、クオンタイズされたCVによって選択されたコードを演奏します。すべてのコードが5つのオシレーターすべてを使用するわけではありません。右のチャートは使用可能なコードを示しています。興味深いインスピレーションを得るために、同じピッチCVをコードモードのAux CV入力にパッチしてみてください。</p>\n<p>(WT CHORD &#x26; WT CLUSTER)</p>\n<p>Aux CVが「WT Cluster」にルーティングされている場合、HV1はWT出力を再び5個のオシレーターに拡張しますが、追加の4つのオシレーターのオリジナルに対する相対的なデチューン量(「スプレッド」)は、Aux CVに比例します。0Vはすべての5つのオシレーターがチューニングされていることを意味します。5Vは最大スプレッドが1オクターブと5度(上下)であることを意味します。ドローンに対して低いスプレッド値を試して、超厚いサウンドを得てください。</p>\n<p>Note\tVolts\tChord</p>\n<p>C0\t0.000\tMajor</p>\n<p>C#0\t0.083\tAdd 4</p>\n<p>D0\t0.166\tSixth</p>\n<p>D#0\t0.249\tSix Nine</p>\n<p>E0\t0.332\tMajor 7th</p>\n<p>F0\t0.415\tMajor 9th</p>\n<p>F#0\t0.498\tMajor 7 Sharp 11</p>\n<p>G0\t0.581\tMinor</p>\n<p>G#0\t0.664\tMinor Add 4</p>\n<p>A0\t0.747\tMinor Sixth</p>\n<p>Bb0\t0.830\tMinor 7th</p>\n<p>B0\t0.913\tMinor Add 9</p>\n<p>C1\t0.996\tMinor Sixth Add 9</p>\n<p>C#1\t1.079\tMinor 9th</p>\n<p>D1\t1.162\tMinor 11th</p>\n<p>D#1\t1.245\tMinor / Major 7th</p>\n<p>E1\t1.328\tMinor / Major 9th</p>\n<p>F1\t1.411\tMinor / Major 11th</p>\n<p>F#1\t1.494\tMinor 7 Flat 5 (Half Dim)</p>\n<p>G1\t1.577\tDominant 7th</p>\n<p>G#1\t1.660\tDominant 9th</p>\n<p>A1\t1.743\tDominant 11th</p>\n<p>Bb1\t1.826\tSeven Sharp 5</p>\n<p>B1\t1.909\tSeven Flat 5</p>\n<p>C2\t1.992\tSeven Flat 9th</p>\n<p>C#2\t2.075\tSeven Sharp 9th</p>\n<p>D2\t2.158\tNine Sharp 5</p>\n<p>D#2\t2.241\tNine Flat 5</p>\n<p>E2\t2.324\t7 Sharp 5 Sharp 9</p>\n<p>F2\t2.407\t7 Sharp 5 Flat 9</p>\n<p>F#2\t2.490\tFlat 5 Sharp 9</p>\n<p>G2\t2.573\t7 Flat 5 Flat 9</p>\n<p>G#2\t2.656\t7 Sharp 11</p>\n<p>A2\t2.739\tDiminished 7th</p>\n<p>Bb2\t2.822\tAugmented</p>"
     },
     {
       "pageNum": 12,
@@ -113,7 +124,8 @@
       "sectionName": null,
       "content": "HV1サウンド: WAVETABLE\n\nMORPH\n\nHV1の「WT」(wavetable) 出力は、常に16個のwavetableの配列をメモリにロードします。これら16個のwavetableは、印加されるCVに比例した量で連続的にモーフします。つまり、CVが0%の場合は1番目のテーブルが100%ロードされ、CVが100%の場合は16番目のテーブルが100%ロードされます。「Morph」入力からのCVは、「Morph」potentiometerからのCVに加算されます。\n\nLFOやエンベロープでmorph CVをゆっくりと変調することで、非常に興味深い結果が得られます。しかし、morphは最大20kHzまでのオーディオレート信号でも変調することができます！\n\n以下は、三角波LFO(黄色の信号)がWT出力(マゼンタの信号)をモーフィングしている様子をキャプチャしたものです。Morph potentiometerは50%に設定されており、CVが入力されるバイポーラ信号の負と正の両方の振幅でモーフするようになっています。\n\nFIG 16: WT MORPH VIA LFO CV",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>HV1サウンド: WAVETABLE</p>\n<p>MORPH</p>\n<p>HV1の「WT」(wavetable) 出力は、常に16個のwavetableの配列をメモリにロードします。これら16個のwavetableは、印加されるCVに比例した量で連続的にモーフします。つまり、CVが0%の場合は1番目のテーブルが100%ロードされ、CVが100%の場合は16番目のテーブルが100%ロードされます。「Morph」入力からのCVは、「Morph」potentiometerからのCVに加算されます。</p>\n<p>LFOやエンベロープでmorph CVをゆっくりと変調することで、非常に興味深い結果が得られます。しかし、morphは最大20kHzまでのオーディオレート信号でも変調することができます！</p>\n<p>以下は、三角波LFO(黄色の信号)がWT出力(マゼンタの信号)をモーフィングしている様子をキャプチャしたものです。Morph potentiometerは50%に設定されており、CVが入力されるバイポーラ信号の負と正の両方の振幅でモーフするようになっています。</p>\n<p>FIG 16: WT MORPH VIA LFO CV</p>"
     },
     {
       "pageNum": 13,
@@ -122,7 +134,8 @@
       "sectionName": null,
       "content": "HV1サウンド: DETUNE\n\n6ページで説明したチューニングノブとオクターブ/位相角度/レンジ表示のホーム画面に戻ると、エンコーダーボタンを1秒間長押しすることで、「knob」の表示とコントロールがオシレーターチューニングからデジタルデチューンに切り替わります。\n\nFIG 17A: DETUNE表示 (DETUNE OFF)\n\nデジタルデチューンがOFFの場合、右側(ハイブリッド)出力はアナログVCOと位相ロックされたままとなり、したがって同じ周波数になります。デジタルデチューンがONの場合、ハイブリッド出力の位相はアナログVCOからアンロックされ、アナログVCOに対して約+/- 1オクターブの範囲でデチューンできます。\n\nデチューンのオン/オフを切り替えるには、上図のようなデチューン表示の状態でエンコーダーボタンを1回押すだけです。\n\nデチューンを使用すると、HV1を5度や7度のような平行インターバルにチューニングされた2つのオシレーターのように使用したり、わずかにデチューンして追加のフェージング効果を得ることができます。\n\nFIG 17B: DETUNE表示 (DETUNE ON)\n\nHV1サウンド: SYNC\n\nHV1のアナログオシレーターは、フロントパネルの「SYNC」入力を介して別のオシレーターにsyncすることができます。オプションメニュー(8ページ参照)から2つの異なるオプションを選択できます:\n\n1) RESET: VCOの積分コンデンサは、sync入力の立ち上がりパルスごとに放電されます。\n\n2) RVERSE: VCOの積分コンデンサは、sync入力の立ち上がりパルスごとに充電方向を反転します。\n\nHV1サウンド: PWM\n\n最後に、HV1にはPWM入力があり、両方のパルス出力のパルス幅を変調します。この信号は、PW(Pulse Width)ポテンショメーターからの電圧と単純に加算されます。PWポテンショメーターの範囲は、0%デューティサイクルを少し超えた値から100%デューティサイクルを少し超えた値までです。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>HV1サウンド: DETUNE</p>\n<p>6ページで説明したチューニングノブとオクターブ/位相角度/レンジ表示のホーム画面に戻ると、エンコーダーボタンを1秒間長押しすることで、「knob」の表示とコントロールがオシレーターチューニングからデジタルデチューンに切り替わります。</p>\n<p>FIG 17A: DETUNE表示 (DETUNE OFF)</p>\n<p>デジタルデチューンがOFFの場合、右側(ハイブリッド)出力はアナログVCOと位相ロックされたままとなり、したがって同じ周波数になります。デジタルデチューンがONの場合、ハイブリッド出力の位相はアナログVCOからアンロックされ、アナログVCOに対して約+/- 1オクターブの範囲でデチューンできます。</p>\n<p>デチューンのオン/オフを切り替えるには、上図のようなデチューン表示の状態でエンコーダーボタンを1回押すだけです。</p>\n<p>デチューンを使用すると、HV1を5度や7度のような平行インターバルにチューニングされた2つのオシレーターのように使用したり、わずかにデチューンして追加のフェージング効果を得ることができます。</p>\n<p>FIG 17B: DETUNE表示 (DETUNE ON)</p>\n<p>HV1サウンド: SYNC</p>\n<p>HV1のアナログオシレーターは、フロントパネルの「SYNC」入力を介して別のオシレーターにsyncすることができます。オプションメニュー(8ページ参照)から2つの異なるオプションを選択できます:</p>\n<ol>\n<li>\n<p>RESET: VCOの積分コンデンサは、sync入力の立ち上がりパルスごとに放電されます。</p>\n</li>\n<li>\n<p>RVERSE: VCOの積分コンデンサは、sync入力の立ち上がりパルスごとに充電方向を反転します。</p>\n</li>\n</ol>\n<p>HV1サウンド: PWM</p>\n<p>最後に、HV1にはPWM入力があり、両方のパルス出力のパルス幅を変調します。この信号は、PW(Pulse Width)ポテンショメーターからの電圧と単純に加算されます。PWポテンショメーターの範囲は、0%デューティサイクルを少し超えた値から100%デューティサイクルを少し超えた値までです。</p>"
     },
     {
       "pageNum": 14,
@@ -131,7 +144,8 @@
       "sectionName": null,
       "content": "付録: SDカードの取り付け/取り外し\n\nファームウェアをアップデートする場合は、まずモジュールの電源を切ってください。単に異なるウェーブテーブルを読み込む場合は、以下の手順で「ホットスワップ」できます。\n\nHV1の電源を入れたままSDカードをアンマウントする:\n\nウェーブテーブルモーフ画面で、エンコーダーを2秒間押し続けると、HV1はSDカードのアンマウントを試みます。次のテキストが表示されます (SD CARD NOT MOUNTED)。これでカードを安全に取り外せます。\n\nFIG 18: SD CARD DISMOUNTED\n\nSDカードの取り外し:\n\n上記のようにカードが安全にアンマウントされているか、HV1の電源が切れていることを確認したら、SDカードの端を押して軽いクリック音が聞こえ、固定が解除されるまで押します。その後手を離すと、カードが数ミリメートル押し出されて簡単に引き抜けるようになります。\n\nFIG 19: REMOVING THE CARD\n\nSDカードの取り付け:\n\nカードを取り付けるには、取り外しの手順を逆に行います。カードの小さな切り欠きが上向きになっていることを確認してください。\n\nFIG 20: INSTALLING THE CARD\n\n…そしてカードをスライドして挿入します。その後、固定ラッチが作動するまで端を押し込みます。\n\nカードは取り付け時に約2mm程度飛び出している必要があります。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>付録: SDカードの取り付け/取り外し</p>\n<p>ファームウェアをアップデートする場合は、まずモジュールの電源を切ってください。単に異なるウェーブテーブルを読み込む場合は、以下の手順で「ホットスワップ」できます。</p>\n<p>HV1の電源を入れたままSDカードをアンマウントする:</p>\n<p>ウェーブテーブルモーフ画面で、エンコーダーを2秒間押し続けると、HV1はSDカードのアンマウントを試みます。次のテキストが表示されます (SD CARD NOT MOUNTED)。これでカードを安全に取り外せます。</p>\n<p>FIG 18: SD CARD DISMOUNTED</p>\n<p>SDカードの取り外し:</p>\n<p>上記のようにカードが安全にアンマウントされているか、HV1の電源が切れていることを確認したら、SDカードの端を押して軽いクリック音が聞こえ、固定が解除されるまで押します。その後手を離すと、カードが数ミリメートル押し出されて簡単に引き抜けるようになります。</p>\n<p>FIG 19: REMOVING THE CARD</p>\n<p>SDカードの取り付け:</p>\n<p>カードを取り付けるには、取り外しの手順を逆に行います。カードの小さな切り欠きが上向きになっていることを確認してください。</p>\n<p>FIG 20: INSTALLING THE CARD</p>\n<p>…そしてカードをスライドして挿入します。その後、固定ラッチが作動するまで端を押し込みます。</p>\n<p>カードは取り付け時に約2mm程度飛び出している必要があります。</p>"
     },
     {
       "pageNum": 15,
@@ -140,7 +154,8 @@
       "sectionName": null,
       "content": "付録: SDカードの取り付け/取り外し\n（続き）\n\nFIG 21: SDカード取り付け済み\n\nHV1の電源が入っている状態でSDカードをマウントする:\n\nHV1の電源が入っている状態でカードをアンマウントした場合、同じ方法で取り付けられたカードをマウントすることができます。エンコーダーを2秒間長押しするだけで、HV1はカードのマウントを試み、カード内のファイルを解析します。すべてが正常に完了すると、次のようにカード内の最初のファイルが読み込まれた状態が表示されます:\n\nFIG 21: SDカードが正常にマウントされました",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>付録: SDカードの取り付け/取り外し\n（続き）</p>\n<p>FIG 21: SDカード取り付け済み</p>\n<p>HV1の電源が入っている状態でSDカードをマウントする:</p>\n<p>HV1の電源が入っている状態でカードをアンマウントした場合、同じ方法で取り付けられたカードをマウントすることができます。エンコーダーを2秒間長押しするだけで、HV1はカードのマウントを試み、カード内のファイルを解析します。すべてが正常に完了すると、次のようにカード内の最初のファイルが読み込まれた状態が表示されます:</p>\n<p>FIG 21: SDカードが正常にマウントされました</p>"
     },
     {
       "pageNum": 16,
@@ -149,7 +164,8 @@
       "sectionName": null,
       "content": "付録: ファームウェアのアップデート\n\nHV1の内部ファームウェアはSDカード経由でアップデートできます。アップデートする前に、最新のファームウェアが既にインストールされているか確認してください。情報画面はTUNER画面に移動し、RIGHTボタンを3秒間長押しすることでアクセスできます:\n\nFIG 22: INFO SCREEN\n\n新しいアップデートが利用可能な場合は、以下の手順に従ってください:\n\n1) HV1の電源を切り、SDカードを取り外します。ファームウェアアップデートをダウンロードし、.BINファイルをSDカードのルート(フォルダ内ではなく)にコピーします。SDカードには1つの.BINファームウェアファイルのみが保存されていることを確認してください。アップデーターはファイルを解析できず、最初に見つけたファイルをアップデートに使用します。\n\n2) SDカードを再挿入し、*RIGHTボタンとDOWNボタンを同時に押しながら*HV1の電源を入れます。\n\n3) HV1は以下の画面で起動します:\n\nFIG 23: FIRMWARE UPDATE SCREEN FIRST SCREEN\n\nSDカードが挿入されており、有効な.BINファイルがカードに保存されている場合、図23に示す画面が表示されます。\n\n4) +を押してアップデートを開始します。最初にフラッシュメモリのアプリケーションブロックが短時間消去され、以下が表示されます:\n\nFIG 24: FW UPDATE, FLASH MEM SUCCESSFULLY ERASED\n\n5) もう一度+を押して、BINファイルをフラッシュメモリに書き込みます。以下が表示されます:\n\n短時間後、以下が表示されます:\n\nFIG 25/26: FW UPDATING COPYING FW\n\n6) ファームウェアアップデートが完了しました。図26に示す画面が表示されるはずです。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>付録: ファームウェアのアップデート</p>\n<p>HV1の内部ファームウェアはSDカード経由でアップデートできます。アップデートする前に、最新のファームウェアが既にインストールされているか確認してください。情報画面はTUNER画面に移動し、RIGHTボタンを3秒間長押しすることでアクセスできます:</p>\n<p>FIG 22: INFO SCREEN</p>\n<p>新しいアップデートが利用可能な場合は、以下の手順に従ってください:</p>\n<ol>\n<li>\n<p>HV1の電源を切り、SDカードを取り外します。ファームウェアアップデートをダウンロードし、.BINファイルをSDカードのルート(フォルダ内ではなく)にコピーします。SDカードには1つの.BINファームウェアファイルのみが保存されていることを確認してください。アップデーターはファイルを解析できず、最初に見つけたファイルをアップデートに使用します。</p>\n</li>\n<li>\n<p>SDカードを再挿入し、<em>RIGHTボタンとDOWNボタンを同時に押しながら</em>HV1の電源を入れます。</p>\n</li>\n<li>\n<p>HV1は以下の画面で起動します:</p>\n</li>\n</ol>\n<p>FIG 23: FIRMWARE UPDATE SCREEN FIRST SCREEN</p>\n<p>SDカードが挿入されており、有効な.BINファイルがカードに保存されている場合、図23に示す画面が表示されます。</p>\n<ol start=\"4\">\n<li>+を押してアップデートを開始します。最初にフラッシュメモリのアプリケーションブロックが短時間消去され、以下が表示されます:</li>\n</ol>\n<p>FIG 24: FW UPDATE, FLASH MEM SUCCESSFULLY ERASED</p>\n<ol start=\"5\">\n<li>もう一度+を押して、BINファイルをフラッシュメモリに書き込みます。以下が表示されます:</li>\n</ol>\n<p>短時間後、以下が表示されます:</p>\n<p>FIG 25/26: FW UPDATING COPYING FW</p>\n<ol start=\"6\">\n<li>ファームウェアアップデートが完了しました。図26に示す画面が表示されるはずです。</li>\n</ol>"
     },
     {
       "pageNum": 17,
@@ -158,7 +174,8 @@
       "sectionName": null,
       "content": "アップデートが正常に完了すると、「FW Update Complete」と「Copy Errors: 0」が表示されます。\n\n7) モジュールの電源を切り、キーを押さずに通常通り再起動すると、HV1は新しく更新されたファームウェアで起動します。最初に行ったのと同じ方法で、Tunerに移動してRIGHTキーを3秒間押し続けることでバージョンを確認できます。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>アップデートが正常に完了すると、「FW Update Complete」と「Copy Errors: 0」が表示されます。</p>\n<ol start=\"7\">\n<li>モジュールの電源を切り、キーを押さずに通常通り再起動すると、HV1は新しく更新されたファームウェアで起動します。最初に行ったのと同じ方法で、Tunerに移動してRIGHTキーを3秒間押し続けることでバージョンを確認できます。</li>\n</ol>"
     },
     {
       "pageNum": 18,
@@ -167,7 +184,8 @@
       "sectionName": null,
       "content": "付録: キャリブレーション\n\n通常の使用では、HV1をキャリブレーションする必要はありませんが、何らかの理由で調整が必要な場合、このセクションでは利用可能なオプションについて説明します。調整には物理的/機械的なものと、ソフトウェアで行うものがあります。\n\nまず物理的なトリマーポットから始めます:\n\nVCO Volts/OctaveとHF Trim:\n\nモジュール背面の右上隅には、V/octとHF trimが配置されています。これらはアナログVCOのスケールと高周波応答を調整します。\n\nHF trimの調整には1.5mmマイナスドライバーが、V/octaveには2.0mmが必要です。\n\nOctave Voltage Trim:\n\nこのトリマーはモジュール背面の右側に配置されており、オクターブ電圧のスケールを調整するためのものです。VCO V/octスケールが完全に調整されていることを確認した後にのみ、これを調整してください。\n\nRight Sine Trim:\n\nこのトリマーはモジュール背面の左側に配置されており、デジタル(右側)出力のサイン波の形状を調整します。耳で、または周波数アナライザーを使用して調整してください。通常、これを調整する必要はありません。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>付録: キャリブレーション</p>\n<p>通常の使用では、HV1をキャリブレーションする必要はありませんが、何らかの理由で調整が必要な場合、このセクションでは利用可能なオプションについて説明します。調整には物理的/機械的なものと、ソフトウェアで行うものがあります。</p>\n<p>まず物理的なトリマーポットから始めます:</p>\n<p>VCO Volts/OctaveとHF Trim:</p>\n<p>モジュール背面の右上隅には、V/octとHF trimが配置されています。これらはアナログVCOのスケールと高周波応答を調整します。</p>\n<p>HF trimの調整には1.5mmマイナスドライバーが、V/octaveには2.0mmが必要です。</p>\n<p>Octave Voltage Trim:</p>\n<p>このトリマーはモジュール背面の右側に配置されており、オクターブ電圧のスケールを調整するためのものです。VCO V/octスケールが完全に調整されていることを確認した後にのみ、これを調整してください。</p>\n<p>Right Sine Trim:</p>\n<p>このトリマーはモジュール背面の左側に配置されており、デジタル(右側)出力のサイン波の形状を調整します。耳で、または周波数アナライザーを使用して調整してください。通常、これを調整する必要はありません。</p>"
     },
     {
       "pageNum": 19,
@@ -176,7 +194,8 @@
       "sectionName": null,
       "content": "付録: キャリブレーション\n\n(デジタル)\n\nチューニングオフセットとフェーズオフセットのトリム:\n\nメインのチューニング画面で+/UPボタンを3秒間長押しすると、キャリブレーションモードに入り、図のように左上に「C」が表示されます:\n\n左下の数値は、それぞれチューニングオフセットとフェーズオフセットの値です(ここでは267と2000と表示されています)。\n\n+または-を押すとチューニングオフセットを調整できます。例えばチューニングを0に設定していて「C」が5セントずれている場合、この調整を使用して完璧に設定できます。\n\nLEFTまたはRIGHTを押すとフェーズ0オフセットを調整できます。オシロスコープで左右の三角波をモニタリングしながら、フェーズポテンショメーターを完全に反時計回りに回します。2つの三角波が一致する(重なる)はずです。一致しない場合は、一致するまでLEFTとRIGHTを押してください。\n\n完了したら、「C」が消えるまで+/UPを3秒間長押しするだけです。チューニングオフセットとフェーズオフセットは内部の不揮発性メモリに保存されます。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>付録: キャリブレーション</p>\n<p>(デジタル)</p>\n<p>チューニングオフセットとフェーズオフセットのトリム:</p>\n<p>メインのチューニング画面で+/UPボタンを3秒間長押しすると、キャリブレーションモードに入り、図のように左上に「C」が表示されます:</p>\n<p>左下の数値は、それぞれチューニングオフセットとフェーズオフセットの値です(ここでは267と2000と表示されています)。</p>\n<p>+または-を押すとチューニングオフセットを調整できます。例えばチューニングを0に設定していて「C」が5セントずれている場合、この調整を使用して完璧に設定できます。</p>\n<p>LEFTまたはRIGHTを押すとフェーズ0オフセットを調整できます。オシロスコープで左右の三角波をモニタリングしながら、フェーズポテンショメーターを完全に反時計回りに回します。2つの三角波が一致する(重なる)はずです。一致しない場合は、一致するまでLEFTとRIGHTを押してください。</p>\n<p>完了したら、「C」が消えるまで+/UPを3秒間長押しするだけです。チューニングオフセットとフェーズオフセットは内部の不揮発性メモリに保存されます。</p>"
     },
     {
       "pageNum": 20,
@@ -185,7 +204,8 @@
       "sectionName": null,
       "content": "リビジョン履歴\n\n03: FW 0.2.0の新しいAux CVルーティングオプションの説明を追加しました。\n\n02: FWアップデート手順で誤って図19を参照していましたが、正しくは図23です。\n\n01: 初版リリース。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>リビジョン履歴</p>\n<p>03: FW 0.2.0の新しいAux CVルーティングオプションの説明を追加しました。</p>\n<p>02: FWアップデート手順で誤って図19を参照していましたが、正しくは図23です。</p>\n<p>01: 初版リリース。</p>"
     }
   ]
 }

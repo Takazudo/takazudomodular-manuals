@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "Instruments for Sonic Expression\nEst.2009\n\nAugust.2022\n\nUSER'S GUIDE . REV01\n\nADDAC713\nSTEREO\nDISCRETE\nMIXER\n\nINTRODUCING\n\nFrom Portugal with Love!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Instruments for Sonic Expression\nEst.2009</p>\n<p>August.2022</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC713\nSTEREO\nDISCRETE\nMIXER</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>"
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "ADDAC713 STEREO DISCRETE MIXER ユーザーガイド\n\nAugust.2022 Revision.01\n\nWelcome to:\n\n製品説明\n\nADDAC713は、当社の703 Discrete Mixerのステレオバージョンです。\n\nMoogのCP3ミキサーにインスパイアされたこのモジュールは、完全にディスクリート回路で構成されたアナログミキサーであり、決して一般的な標準的なミキサーではありません。しかし、そのように動作させることもできます。\n\nこれは羊の皮を被った狼です。その無害な外観にもかかわらず、パネルの裏側には、あなたのサウンドをグリッティでザラついたグロウルの領域へと連れて行きたいと願う、暗くうなり声を上げる魂が潜んでいます。\n\nこの新バージョンは当初、パーカッションミキサーとして構想されました。モノ入力とパンニングを備え、パーカッシブな音声をステレオフィールドに配置できるようにしながら、チャンネル4はキックドラムやベースなどの低域ソースのためにモノのままにしておくというものでした。開発過程で、この初期のアイデアをわずかに変更し、最初の3つのチャンネルにステレオ入力を追加しましたが、4番目のチャンネルはモノのままにしました。\n\n4つの[GAIN]コントロールはすべて極端なレベルまで上げることができ、最初の3つのチャンネルには[PAN]コントロールも備えています。\n\nFeedbackは、ミックス全体をオーバードライブさせるために使用されます。コントロールを時計回りに回すと、サウンドはより強くクリップされ、最終的には完全にオフになります。これは、フィードバックが増加するにつれてオーディオバイアス基準も上昇し、極端なレベルでは信号全体を上方向にオフセットし、信号全体が上部レールを完全に超えて全信号をクリップすることで、結果としてゲート効果が生じるためです。\n\n[MASTER OUTPUT]は、ミキサーの全体的な出力ゲインを設定します。2つのLEDがオーディオ出力信号をモニターします。\n\nSoft clippingスイッチは、アンチクリック回路を有効にし、出力前にローパスフィルターを追加します。スイッチは3つの状態を切り替えることができます：Soft low pass / Off / Hard low pass\n\n機能：\n\n.ステレオ入力、GAINおよびPANノブを備えた3つのチャンネル\n.モノ入力とGAINノブを備えた1つのチャンネル\n.Feedback/GATEノブ\n.MASTER OUTPUTボリュームノブ\n.Soft clippingスイッチ\n.LeftおよびRightチャンネル用の2つのLEDモニター\n\nこのモジュールは、フルDIYキットとしても入手可能です。\n\n技術仕様：\n\n8HP\n4cm深さ\n80mA +12V\n80mA -12V",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC713 STEREO DISCRETE MIXER ユーザーガイド</p>\n<p>August.2022 Revision.01</p>\n<p>Welcome to:</p>\n<p>製品説明</p>\n<p>ADDAC713は、当社の703 Discrete Mixerのステレオバージョンです。</p>\n<p>MoogのCP3ミキサーにインスパイアされたこのモジュールは、完全にディスクリート回路で構成されたアナログミキサーであり、決して一般的な標準的なミキサーではありません。しかし、そのように動作させることもできます。</p>\n<p>これは羊の皮を被った狼です。その無害な外観にもかかわらず、パネルの裏側には、あなたのサウンドをグリッティでザラついたグロウルの領域へと連れて行きたいと願う、暗くうなり声を上げる魂が潜んでいます。</p>\n<p>この新バージョンは当初、パーカッションミキサーとして構想されました。モノ入力とパンニングを備え、パーカッシブな音声をステレオフィールドに配置できるようにしながら、チャンネル4はキックドラムやベースなどの低域ソースのためにモノのままにしておくというものでした。開発過程で、この初期のアイデアをわずかに変更し、最初の3つのチャンネルにステレオ入力を追加しましたが、4番目のチャンネルはモノのままにしました。</p>\n<p>4つの[GAIN]コントロールはすべて極端なレベルまで上げることができ、最初の3つのチャンネルには[PAN]コントロールも備えています。</p>\n<p>Feedbackは、ミックス全体をオーバードライブさせるために使用されます。コントロールを時計回りに回すと、サウンドはより強くクリップされ、最終的には完全にオフになります。これは、フィードバックが増加するにつれてオーディオバイアス基準も上昇し、極端なレベルでは信号全体を上方向にオフセットし、信号全体が上部レールを完全に超えて全信号をクリップすることで、結果としてゲート効果が生じるためです。</p>\n<p>[MASTER OUTPUT]は、ミキサーの全体的な出力ゲインを設定します。2つのLEDがオーディオ出力信号をモニターします。</p>\n<p>Soft clippingスイッチは、アンチクリック回路を有効にし、出力前にローパスフィルターを追加します。スイッチは3つの状態を切り替えることができます：Soft low pass / Off / Hard low pass</p>\n<p>機能：</p>\n<p>.ステレオ入力、GAINおよびPANノブを備えた3つのチャンネル\n.モノ入力とGAINノブを備えた1つのチャンネル\n.Feedback/GATEノブ\n.MASTER OUTPUTボリュームノブ\n.Soft clippingスイッチ\n.LeftおよびRightチャンネル用の2つのLEDモニター</p>\n<p>このモジュールは、フルDIYキットとしても入手可能です。</p>\n<p>技術仕様：</p>\n<p>8HP\n4cm深さ\n80mA +12V\n80mA -12V</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "ADDAC713\n\nステレオディスクリートミキサー 信号フロー図\n\nLEFT OUTPUT\n\nRIGHT OUTPUT\n\nCH1 LEFT INPUT\n\nCH1 RIGHT INPUT\n\nMASTER MIX\n\nPANNING\nCONTROL\n\nCH2 LEFT INPUT\n\nCH2 RIGHT INPUT\n\nPANNING\nCONTROL\n\nCH3 LEFT INPUT\n\nCH3 RIGHT INPUT\n\nPANNING\nCONTROL\n\nGAIN\nCONTROL\n\nGAIN\nCONTROL\n\nGAIN\nCONTROL\n\nFEEDBACK\n\nGAIN\nCONTROL\n\nCH4 LEFT INPUT\n\nGAIN\nCONTROL\n\nLOW PASS\n\nSOFT/OFF/HARD\n\nSOFT CLIP\n&",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC713</p>\n<p>ステレオディスクリートミキサー 信号フロー図</p>\n<p>LEFT OUTPUT</p>\n<p>RIGHT OUTPUT</p>\n<p>CH1 LEFT INPUT</p>\n<p>CH1 RIGHT INPUT</p>\n<p>MASTER MIX</p>\n<p>PANNING\nCONTROL</p>\n<p>CH2 LEFT INPUT</p>\n<p>CH2 RIGHT INPUT</p>\n<p>PANNING\nCONTROL</p>\n<p>CH3 LEFT INPUT</p>\n<p>CH3 RIGHT INPUT</p>\n<p>PANNING\nCONTROL</p>\n<p>GAIN\nCONTROL</p>\n<p>GAIN\nCONTROL</p>\n<p>GAIN\nCONTROL</p>\n<p>FEEDBACK</p>\n<p>GAIN\nCONTROL</p>\n<p>CH4 LEFT INPUT</p>\n<p>GAIN\nCONTROL</p>\n<p>LOW PASS</p>\n<p>SOFT/OFF/HARD</p>\n<p>SOFT CLIP\n&#x26;</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "コントロール説明\n\nChannel 1 Gainコントロール\n\nChannel 1 Panコントロール\n\nSoft Clipping + Low Pass\n\nChannel 4 Input\n\nLeft Output\n\nRight Output\n\nChannel 3 Inputs\n(LeftはRightにノーマル接続)\n\nChannel 2 Inputs\n(LeftはRightにノーマル接続)\n\nChannel 1 Inputs\n(LeftはRightにノーマル接続)\n\nFeedback Gainコントロール\n\nChannel 3 Panコントロール\n\nChannel 3 Gainコントロール\n\nChannel 2 Gainコントロール\n\nChannel 2 Panコントロール\n\nChannel 4 Gainコントロール\n\nMaster Gainコントロール",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>コントロール説明</p>\n<p>Channel 1 Gainコントロール</p>\n<p>Channel 1 Panコントロール</p>\n<p>Soft Clipping + Low Pass</p>\n<p>Channel 4 Input</p>\n<p>Left Output</p>\n<p>Right Output</p>\n<p>Channel 3 Inputs\n(LeftはRightにノーマル接続)</p>\n<p>Channel 2 Inputs\n(LeftはRightにノーマル接続)</p>\n<p>Channel 1 Inputs\n(LeftはRightにノーマル接続)</p>\n<p>Feedback Gainコントロール</p>\n<p>Channel 3 Panコントロール</p>\n<p>Channel 3 Gainコントロール</p>\n<p>Channel 2 Gainコントロール</p>\n<p>Channel 2 Panコントロール</p>\n<p>Channel 4 Gainコントロール</p>\n<p>Master Gainコントロール</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "フィードバック、コメント、または問題については、以下までご連絡ください:\naddac@addacsystem.com\n\nADDAC713 ユーザーガイド\nAugust.2022 Revision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>フィードバック、コメント、または問題については、以下までご連絡ください:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC713 ユーザーガイド\nAugust.2022 Revision.01</p>"
     }
   ]
 }

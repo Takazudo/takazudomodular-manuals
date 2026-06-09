@@ -1,22 +1,17 @@
+/**
+ * Tests for components/zfb/page-viewer.tsx (Preact, prop-based nav).
+ *
+ * Decision (#135): re-pointed at the zfb equivalent now because that is the
+ * code that ships in production. The original components/page-viewer.tsx
+ * (Next-coupled) is deleted in #137.
+ *
+ * No next/navigation mock needed — the zfb PageViewer receives onNavigate /
+ * onNavigateHome as callbacks; navigation is owned by the island.
+ */
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/preact';
 import type { ManualPage } from '@/lib/types/manual';
-import { PageViewer } from '../page-viewer';
-
-// The viewer uses next/navigation internally via PageNavigation / KeyboardNavigation.
-// Stub useRouter so those children render in jsdom without a Next.js runtime.
-vi.mock('next/navigation', () => ({
-  useRouter: () => ({
-    push: vi.fn(),
-    replace: vi.fn(),
-    back: vi.fn(),
-    forward: vi.fn(),
-    refresh: vi.fn(),
-    prefetch: vi.fn(),
-  }),
-  usePathname: () => '/oxi-one-mk2/page/1',
-  useSearchParams: () => new URLSearchParams(),
-}));
+import { PageViewer } from '../zfb/page-viewer';
 
 const pageWithContent = (lang: 'ja' | 'en'): ManualPage => ({
   pageNum: 1,
@@ -24,6 +19,9 @@ const pageWithContent = (lang: 'ja' | 'en'): ManualPage => ({
   title: 'Intro',
   sectionName: 'Overview',
   content: lang === 'ja' ? 'こんにちは' : 'Hello world',
+  // ProseContent uses contentHtml when present; inject pre-rendered HTML to
+  // match the zfb island's build-time rendering contract.
+  contentHtml: lang === 'ja' ? '<p>こんにちは</p>' : '<p>Hello world</p>',
   hasContent: true,
 });
 
@@ -49,11 +47,13 @@ describe('PageViewer — language wiring', () => {
         currentPage={1}
         totalPages={10}
         manualId="oxi-one-mk2"
+        onNavigate={vi.fn()}
+        onNavigateHome={vi.fn()}
       />,
     );
     const panel = screen.getByTestId('translation-panel');
     expect(panel.getAttribute('lang')).toBe('ja');
-    expect(panel.textContent).toContain('こんにちは');
+    expect(panel.innerHTML).toContain('こんにちは');
   });
 
   it('tags the translation panel with lang="en" when lang is en', () => {
@@ -64,11 +64,13 @@ describe('PageViewer — language wiring', () => {
         currentPage={1}
         totalPages={10}
         manualId="oxi-one-mk2"
+        onNavigate={vi.fn()}
+        onNavigateHome={vi.fn()}
       />,
     );
     const panel = screen.getByTestId('translation-panel');
     expect(panel.getAttribute('lang')).toBe('en');
-    expect(panel.textContent).toContain('Hello world');
+    expect(panel.innerHTML).toContain('Hello world');
   });
 
   it('renders Japanese empty-state copy when lang is ja and page has no content', () => {
@@ -79,6 +81,8 @@ describe('PageViewer — language wiring', () => {
         currentPage={2}
         totalPages={10}
         manualId="oxi-one-mk2"
+        onNavigate={vi.fn()}
+        onNavigateHome={vi.fn()}
       />,
     );
     const msg = screen.getByTestId('no-translation-message');
@@ -94,6 +98,8 @@ describe('PageViewer — language wiring', () => {
         currentPage={2}
         totalPages={10}
         manualId="oxi-one-mk2"
+        onNavigate={vi.fn()}
+        onNavigateHome={vi.fn()}
       />,
     );
     const msg = screen.getByTestId('no-translation-message');

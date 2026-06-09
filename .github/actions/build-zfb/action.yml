@@ -1,0 +1,76 @@
+name: 'Build zfb Application'
+description: 'Setup environment and build the zfb static site (dist/)'
+
+inputs:
+  node-version:
+    description: 'Node.js version to use'
+    required: false
+    default: '22'
+
+outputs:
+  build-output-path:
+    description: 'Path to the build output directory'
+    value: 'dist'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@02f6c237bd2518259fed6c71566509edfb3f2b74 # v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+      shell: bash
+
+    - name: Build zfb site
+      run: pnpm build
+      shell: bash
+      env:
+        NODE_ENV: production
+        NODE_OPTIONS: '--max-old-space-size=4096'
+
+    - name: Verify build output
+      run: |
+        echo "Build Output Verification"
+        echo "========================="
+
+        if [ ! -d "dist" ]; then
+          echo "Error: dist/ directory not found"
+          exit 1
+        fi
+
+        # Count HTML files
+        HTML_COUNT=$(find dist -name "*.html" | wc -l)
+        echo "HTML files: $HTML_COUNT"
+
+        # zfb-finalize-build.js merges everything under dist/manuals/
+        if [ -d "dist/manuals/assets" ]; then
+          echo "zfb assets found (dist/manuals/assets/)"
+        else
+          echo "Error: dist/manuals/assets/ not found"
+          exit 1
+        fi
+
+        # Cloudflare control files must be at dist/ root
+        if [ -f "dist/_headers" ]; then
+          echo "dist/_headers present"
+        else
+          echo "Error: dist/_headers not found at dist root"
+          exit 1
+        fi
+
+        if [ -f "dist/_redirects" ]; then
+          echo "dist/_redirects present"
+        else
+          echo "Error: dist/_redirects not found at dist root"
+          exit 1
+        fi
+
+        echo "========================="
+        echo "Build output verified"
+      shell: bash

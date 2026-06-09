@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "Instruments for Sonic Expression\nEst.2009\n\nAugust.2022\n\nUSER'S GUIDE . REV01\n\nADDAC713\nSTEREO\nDISCRETE\nMIXER\n\nINTRODUCING\n\nFrom Portugal with Love!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Instruments for Sonic Expression\nEst.2009</p>\n<p>August.2022</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC713\nSTEREO\nDISCRETE\nMIXER</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>"
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "August.2022 Revision.01\n\nWelcome to:\n\nDESCRIPTION\n\nADDAC713 is the stereo version of our 703 Discrete Mixer.\n\nInspired by Moog's CP3 mixer, this is a fully discrete analog mixer and it's not, by any means, your standard breakfast mixer, although it can behave like one.\n\nThis is a wolf in sheep's clothing. Despite its harmless looks there's a dark snarly soul behind that panel that wants to take your sounds into a realm of gritty gnarly growls.\n\nThis new version was initially thought of as a percussion mixer, with mono inputs and panning, to allow placing percussive voices in the stereo field, while keeping channel 4 in mono for low end sources like a kick drum or Bass. In the developement process we slightly changed this initial idea, adding stereo inputs for the first 3 channels, but still kept the 4th channel in mono.\n\nAll four [GAIN] controls go to extreme levels, the first 3 channels also feature [PAN] controls.\n\nFeedback is used to overdrive the whole mix. As the control is turned clockwise the sound will be clipped harder until it goes completely off, this happens as feedback is increased the audio bias reference also moves up, at extreme levels it offsets the whole signal upwards until it completely goes above the top rail clipping the whole signal hence the resulting gate effect.\n\nThe [MASTER OUTPUT] sets the overall output gain of the mixer, the two leds monitor the audio output signal.\n\nThe Soft clipping switch engages an anti-click circuit which adds a low pass before the output, the switch allows 3 states: Soft low pass / Off / Hard low pass\n\nFeatures:\n\n.Three channels with stereo inputs, gain and pan knob\n\n.One channel with mono input and gainknob\n\n.Feedback/gate knob\n\n.Master output volume knob\n\n.Soft clipping switch\n\n.Two Led Monitors for Left and Right channels\n\nThis module will also be available as a full DIY kit.\n\nTech Specs:\n\n8HP\n\n4 cm deep\n\n80mA +12V\n\n80mA -12V",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>August.2022 Revision.01</p>\n<p>Welcome to:</p>\n<p>DESCRIPTION</p>\n<p>ADDAC713 is the stereo version of our 703 Discrete Mixer.</p>\n<p>Inspired by Moog's CP3 mixer, this is a fully discrete analog mixer and it's not, by any means, your standard breakfast mixer, although it can behave like one.</p>\n<p>This is a wolf in sheep's clothing. Despite its harmless looks there's a dark snarly soul behind that panel that wants to take your sounds into a realm of gritty gnarly growls.</p>\n<p>This new version was initially thought of as a percussion mixer, with mono inputs and panning, to allow placing percussive voices in the stereo field, while keeping channel 4 in mono for low end sources like a kick drum or Bass. In the developement process we slightly changed this initial idea, adding stereo inputs for the first 3 channels, but still kept the 4th channel in mono.</p>\n<p>All four [GAIN] controls go to extreme levels, the first 3 channels also feature [PAN] controls.</p>\n<p>Feedback is used to overdrive the whole mix. As the control is turned clockwise the sound will be clipped harder until it goes completely off, this happens as feedback is increased the audio bias reference also moves up, at extreme levels it offsets the whole signal upwards until it completely goes above the top rail clipping the whole signal hence the resulting gate effect.</p>\n<p>The [MASTER OUTPUT] sets the overall output gain of the mixer, the two leds monitor the audio output signal.</p>\n<p>The Soft clipping switch engages an anti-click circuit which adds a low pass before the output, the switch allows 3 states: Soft low pass / Off / Hard low pass</p>\n<p>Features:</p>\n<p>.Three channels with stereo inputs, gain and pan knob</p>\n<p>.One channel with mono input and gainknob</p>\n<p>.Feedback/gate knob</p>\n<p>.Master output volume knob</p>\n<p>.Soft clipping switch</p>\n<p>.Two Led Monitors for Left and Right channels</p>\n<p>This module will also be available as a full DIY kit.</p>\n<p>Tech Specs:</p>\n<p>8HP</p>\n<p>4 cm deep</p>\n<p>80mA +12V</p>\n<p>80mA -12V</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "ADDAC713\n\nSTEREO DISCRETE MIXER SIGNAL FLOW DIAGRAM\n\nLEFT OUTPUT\n\nRIGHT OUTPUT\n\nCH1 LEFT INPUT\n\nCH1 RIGHT INPUT\n\nMASTER MIX\n\nPANNING\nCONTROL\n\nCH2 LEFT INPUT\n\nCH2 RIGHT INPUT\n\nPANNING\nCONTROL\n\nCH3 LEFT INPUT\n\nCH3 RIGHT INPUT\n\nPANNING\nCONTROL\n\nGAIN\nCONTROL\n\nGAIN\nCONTROL\n\nGAIN\nCONTROL\n\nFEEDBACK\n\nGAIN\nCONTROL\n\nCH4 LEFT INPUT\n\nGAIN\nCONTROL\n\nLOW PASS\n\nSOFT/OFF/HARD\n\nSOFT CLIP\n&",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC713</p>\n<p>STEREO DISCRETE MIXER SIGNAL FLOW DIAGRAM</p>\n<p>LEFT OUTPUT</p>\n<p>RIGHT OUTPUT</p>\n<p>CH1 LEFT INPUT</p>\n<p>CH1 RIGHT INPUT</p>\n<p>MASTER MIX</p>\n<p>PANNING\nCONTROL</p>\n<p>CH2 LEFT INPUT</p>\n<p>CH2 RIGHT INPUT</p>\n<p>PANNING\nCONTROL</p>\n<p>CH3 LEFT INPUT</p>\n<p>CH3 RIGHT INPUT</p>\n<p>PANNING\nCONTROL</p>\n<p>GAIN\nCONTROL</p>\n<p>GAIN\nCONTROL</p>\n<p>GAIN\nCONTROL</p>\n<p>FEEDBACK</p>\n<p>GAIN\nCONTROL</p>\n<p>CH4 LEFT INPUT</p>\n<p>GAIN\nCONTROL</p>\n<p>LOW PASS</p>\n<p>SOFT/OFF/HARD</p>\n<p>SOFT CLIP\n&#x26;</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "CONTROLS DESCRIPTION\n\nChannel 1 Gain control\n\nChannel 1 Pan control\n\nSoft Clipping + Low Pass\n\nChannel 4 Input\n\nLeft Output\n\nRight Output\n\nChannel 3 Inputs\n(Left normalled to Right)\n\nChannel 2 Inputs\n(Left normalled to Right)\n\nChannel 1 Inputs\n(Left normalled to Right)\n\nFeedback Gain control\n\nChannel 3 Pan control\n\nChannel 3 Gain control\n\nChannel 2 Gain control\n\nChannel 2 Pan control\n\nChannel 4 Gain control\n\nMaster Gain control",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>CONTROLS DESCRIPTION</p>\n<p>Channel 1 Gain control</p>\n<p>Channel 1 Pan control</p>\n<p>Soft Clipping + Low Pass</p>\n<p>Channel 4 Input</p>\n<p>Left Output</p>\n<p>Right Output</p>\n<p>Channel 3 Inputs\n(Left normalled to Right)</p>\n<p>Channel 2 Inputs\n(Left normalled to Right)</p>\n<p>Channel 1 Inputs\n(Left normalled to Right)</p>\n<p>Feedback Gain control</p>\n<p>Channel 3 Pan control</p>\n<p>Channel 3 Gain control</p>\n<p>Channel 2 Gain control</p>\n<p>Channel 2 Pan control</p>\n<p>Channel 4 Gain control</p>\n<p>Master Gain control</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nADDAC713 USER'S GUIDE\nAugust.2022 Revision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC713 USER'S GUIDE\nAugust.2022 Revision.01</p>"
     }
   ]
 }

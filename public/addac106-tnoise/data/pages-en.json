@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "Welcome to:\n\nOVERALL FEATURES\n\nThis is the last module in our T-Networks series, a straight forward 4 voice module with frequency and decay controls for each of the voices. As the name already unveils we added a noise source and created 2 different circuits that explores the timbre of a t-network when used to filter noise.\n\nThere are 2 different circuits in this module, voices 1 to 3 have a pre-vca t-network filter while in voice 4 the t-networks filter applied post-vca.\n\nAt each voice input there's a switch which sets which type of input to use, this signal will be used to control an internal VCA hence why the type of setting defined here is important:\n\n1. Trigger - Any incoming CV will be converted into a 1ms trigger as soon as it crosses it's fixed threshold.\n\n2. Mute - This disconnects then incoming signal effectivelly muting the voice.\n\n3. Envelopes - This can be used with CV sources as well as Gate sources and simply follows the input signal.\n\nThis incoming signal will then be processed by a slew circuit which adds a decay factor allowing the user to set the \"Tail\" of each voice.\n\nTrigger mode is mostly dedicated for percussive sounds while the Envelope mode is open to any external envelope control and able to control noise swooshes, swirls, crackles and pops simply out of t-networks filtered noise.\n\nAudio inputs are also welcomed to be used as a Trigger/Envelope input, in fact the results of using this method had us all extremelly surprised, so please do try it out!\n\nDiferences between voices:\n\nThe first 3 voices also feature a Timbre selector switch: Hat/Snare\n\nIn Snare mode all frequencies coming from the t-networks filter pass thru to the output .\n\nIn Hat mode it adds a High Pass circuit which removes the mid/bottom frequencies (characteristic of the snare strike) creating a higher spectrum output which is closer to a Hat timbre.\n\nAll of these 3 voices are also differently tuned from each other to offer more timbrical options.\n\nVoice 4 is closer to a typical t-networks circuit but this time peculiar one where the noise is gated by the vca and then sent through the t-networks filter.\n\nHat and Snare are terms used very looselly here, they are timbrical references and do not in any shape or form try to effectivelly replicate the complex timbres of a real world Hat or Snare.\n\nThis module will also be available as a full DIY kit.\n\nFeatures;\n\n4 Voices each with:\n\nFrequency control\n\nDecay control\n\nTimbre type, Hat/Snare (Voice 1 to 3)\n\nFrequency Range Switch, Low/Mod/High (Voice 4)\n\nInput\n\nAudio Output\n\nAlso and overall Summing Mix output with Volume control and 2 diferent output types (Normal/Dirt)\n\nTech Specs:\n\n4HP\n\n4cm deep\n\n40mA +12V\n\n40mA -12V",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Welcome to:</p>\n<p>OVERALL FEATURES</p>\n<p>This is the last module in our T-Networks series, a straight forward 4 voice module with frequency and decay controls for each of the voices. As the name already unveils we added a noise source and created 2 different circuits that explores the timbre of a t-network when used to filter noise.</p>\n<p>There are 2 different circuits in this module, voices 1 to 3 have a pre-vca t-network filter while in voice 4 the t-networks filter applied post-vca.</p>\n<p>At each voice input there's a switch which sets which type of input to use, this signal will be used to control an internal VCA hence why the type of setting defined here is important:</p>\n<ol>\n<li>\n<p>Trigger - Any incoming CV will be converted into a 1ms trigger as soon as it crosses it's fixed threshold.</p>\n</li>\n<li>\n<p>Mute - This disconnects then incoming signal effectivelly muting the voice.</p>\n</li>\n<li>\n<p>Envelopes - This can be used with CV sources as well as Gate sources and simply follows the input signal.</p>\n</li>\n</ol>\n<p>This incoming signal will then be processed by a slew circuit which adds a decay factor allowing the user to set the \"Tail\" of each voice.</p>\n<p>Trigger mode is mostly dedicated for percussive sounds while the Envelope mode is open to any external envelope control and able to control noise swooshes, swirls, crackles and pops simply out of t-networks filtered noise.</p>\n<p>Audio inputs are also welcomed to be used as a Trigger/Envelope input, in fact the results of using this method had us all extremelly surprised, so please do try it out!</p>\n<p>Diferences between voices:</p>\n<p>The first 3 voices also feature a Timbre selector switch: Hat/Snare</p>\n<p>In Snare mode all frequencies coming from the t-networks filter pass thru to the output .</p>\n<p>In Hat mode it adds a High Pass circuit which removes the mid/bottom frequencies (characteristic of the snare strike) creating a higher spectrum output which is closer to a Hat timbre.</p>\n<p>All of these 3 voices are also differently tuned from each other to offer more timbrical options.</p>\n<p>Voice 4 is closer to a typical t-networks circuit but this time peculiar one where the noise is gated by the vca and then sent through the t-networks filter.</p>\n<p>Hat and Snare are terms used very looselly here, they are timbrical references and do not in any shape or form try to effectivelly replicate the complex timbres of a real world Hat or Snare.</p>\n<p>This module will also be available as a full DIY kit.</p>\n<p>Features;</p>\n<p>4 Voices each with:</p>\n<p>Frequency control</p>\n<p>Decay control</p>\n<p>Timbre type, Hat/Snare (Voice 1 to 3)</p>\n<p>Frequency Range Switch, Low/Mod/High (Voice 4)</p>\n<p>Input</p>\n<p>Audio Output</p>\n<p>Also and overall Summing Mix output with Volume control and 2 diferent output types (Normal/Dirt)</p>\n<p>Tech Specs:</p>\n<p>4HP</p>\n<p>4cm deep</p>\n<p>40mA +12V</p>\n<p>40mA -12V</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "T-Networks Frequency\n\nTune the Resonant Pitch for each voice\n\nSumming Mix Gain\n\nSets the output gain for the overall summing mix\n\nIndependent voice input settings\n\nDecay\n\nSets amount of decay\n\nHat/Snare switches\n\nOn/Off HP Filter\n\nSumming Mix Output\n\nIndependent voices outputs\n\nIndependent voices inputs\n\nLow/Mod/High range switches\n\nSets the Frequency Range",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>T-Networks Frequency</p>\n<p>Tune the Resonant Pitch for each voice</p>\n<p>Summing Mix Gain</p>\n<p>Sets the output gain for the overall summing mix</p>\n<p>Independent voice input settings</p>\n<p>Decay</p>\n<p>Sets amount of decay</p>\n<p>Hat/Snare switches</p>\n<p>On/Off HP Filter</p>\n<p>Summing Mix Output</p>\n<p>Independent voices outputs</p>\n<p>Independent voices inputs</p>\n<p>Low/Mod/High range switches</p>\n<p>Sets the Frequency Range</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "ADDAC106\nT-NOISEWORKS SIGNAL FLOW DIAGRAM\n\nVOICE 3\n\nVOICE 2\n\nVCA HAT / SNARE\n(HP FILTER)\n\nNOISE SOURCE\n\nT-NETWORK\n\nENVELOPE\n\nMUTE\n\nTRIGGER\n\nSLEW\n\nVOICE 1\n\nINPUT 1\n\nFREQUENCY\n\nOUTPUT 1\n\nAUDIO SUM\n\nMIX OUTPUT\n\nMIX VOLUME\n\nVOICE 4\n\nDECAY\n\nVCA T-NETWORK\n\nENVELOPE\n\nMUTE\n\nTRIGGER\n\nSLEW INPUT 4\n\nFREQUENCY\n\nOUTPUT 4 DECAY\n\nRANGE\n\nH / M / L",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC106\nT-NOISEWORKS SIGNAL FLOW DIAGRAM</p>\n<p>VOICE 3</p>\n<p>VOICE 2</p>\n<p>VCA HAT / SNARE\n(HP FILTER)</p>\n<p>NOISE SOURCE</p>\n<p>T-NETWORK</p>\n<p>ENVELOPE</p>\n<p>MUTE</p>\n<p>TRIGGER</p>\n<p>SLEW</p>\n<p>VOICE 1</p>\n<p>INPUT 1</p>\n<p>FREQUENCY</p>\n<p>OUTPUT 1</p>\n<p>AUDIO SUM</p>\n<p>MIX OUTPUT</p>\n<p>MIX VOLUME</p>\n<p>VOICE 4</p>\n<p>DECAY</p>\n<p>VCA T-NETWORK</p>\n<p>ENVELOPE</p>\n<p>MUTE</p>\n<p>TRIGGER</p>\n<p>SLEW INPUT 4</p>\n<p>FREQUENCY</p>\n<p>OUTPUT 4 DECAY</p>\n<p>RANGE</p>\n<p>H / M / L</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "For feedback, comments or problems please contact us at:\n\naddac@addacsystem.com",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:</p>\n<p><a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>"
     }
   ]
 }

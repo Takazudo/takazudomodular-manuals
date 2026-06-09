@@ -1,7 +1,7 @@
 name: Deploy preview/* to Cloudflare Pages Preview
 
 # Triggers on pushes to any preview/* branch
-# Builds Next.js and deploys to Cloudflare Pages preview
+# Builds zfb and deploys to Cloudflare Pages preview
 on:
   push:
     branches:
@@ -32,10 +32,10 @@ jobs:
         with:
           lfs: false
 
-      - name: Build Next.js application
-        uses: ./.github/actions/build-nextjs
+      - name: Build zfb application
+        uses: ./.github/actions/build-zfb
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Sanitize branch name
         id: branch
@@ -55,6 +55,7 @@ jobs:
           branch: ${{ steps.branch.outputs.sanitized }}
           commit-hash: ${{ github.sha }}
           commit-message: 'Deploy preview branch - ${{ github.sha }}'
+          build-dir: dist
 
       - name: Create deployment record
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8

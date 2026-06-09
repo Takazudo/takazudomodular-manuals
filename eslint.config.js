@@ -13,6 +13,8 @@ export default [
     ignores: [
       'node_modules/**',
       '.next/**',
+      '.zfb-build/**',
+      'dist/**',
       'out/**',
       'public/**',
       '*.min.js',
@@ -21,6 +23,7 @@ export default [
       'doc/**',
       'scripts/**',
       'worktrees/**',
+      '__inbox/**',
     ],
   },
 
@@ -124,7 +127,7 @@ export default [
     },
   },
 
-  // TypeScript files
+  // TypeScript files — zfb app (Preact JSX, tsconfig.json with preact paths)
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
@@ -179,7 +182,7 @@ export default [
       'no-undef': 'off',
       'no-unused-vars': 'off',
 
-      // React rules (same as JS)
+      // React/Preact rules
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'react/jsx-uses-react': 'error',

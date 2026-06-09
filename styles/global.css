@@ -1,0 +1,737 @@
+/* ══════════════════════════════════════════════════════════════════════
+   styles/global.css — Zudo Design System for zfb build
+   Ported from app/globals.css (Next.js) for the zfb migration.
+   Coexists with app/globals.css until Sub 11 promotes zfb as sole renderer.
+
+   Structure mirrors app/globals.css exactly so diffs between the two are
+   minimal and Sub 11's cleanup is mechanical:
+     Tier 1 — raw palette variables on :root
+     Tier 2 — @theme tokens (Tailwind v4 CSS-first config)
+     Custom @utility blocks
+     Base layer overrides
+     Keyframes / animations
+     Component styles
+   ══════════════════════════════════════════════════════════════════════ */
+
+@import 'tailwindcss';
+
+/* ══════════════════════════════════════════════════════════════════════
+   Tier 1 — Palette (raw values)
+   Design system source-of-truth. Components never reference these
+   directly; they flow through @theme tokens (Tier 2) instead.
+   ══════════════════════════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    /* ── Colors: surface & text ── */
+    --zd-color-black: rgb(28, 25, 23);
+    --zd-color-white: rgb(214, 211, 209);
+    --zd-color-gray: rgb(120, 113, 108);
+    --zd-color-gray2: #201f1f;
+    --zd-color-gray3: #2a2928;
+    --zd-color-gray4: #3a3837;
+    --zd-color-gray5: #4a4847;
+    --zd-color-gray6: #8a8584;
+    --zd-color-gray7: #a8a3a0;
+
+    /* ── Colors: overlay ── */
+    --zd-color-overlay: rgba(0, 0, 0, 0.85);
+
+    /* ── Colors: interactive ── */
+    --zd-color-link: #fff;
+    --zd-color-active: #713f12;
+    --zd-color-outline: #ea580c; /* orange-600 — focus/active outlines */
+
+    /* ── Colors: emphasis ── */
+    --zd-color-strong: #d97706; /* orange/amber — strong text emphasis */
+    --zd-color-sold: oklch(50.5% 0.213 27.518); /* orange/amber — sold state */
+
+    /* ── Colors: status & feedback ── */
+    --zd-color-notify: #22c55e;
+    --zd-color-error: #f43f5e;
+    --zd-color-debug: #ff0000;
+
+    /* ── Colors: brand & commerce ── */
+    --zd-color-price: #fbbf24; /* yellow-400 */
+    --zd-color-mercari-corporate: #b91c1c; /* red-700 — Mercari brand */
+
+    /* ── Shadows ── */
+    --zd-text-shadow-md: 0.05em 0.05em 0 #000;
+
+    /* ── Line heights ── */
+    --zd-lineHeight-none: 1;
+    --zd-lineHeight-tight: 1.4;
+    --zd-lineHeight-snug: 1.6;
+    --zd-lineHeight-normal: 1.8;
+    --zd-lineHeight-relaxed: 1;
+    --zd-lineHeight-loose: 2.3;
+
+    /* ── Font sizes (with paired line-heights) ── */
+    --zd-font-xs-size: 1rem;
+    --zd-font-xs-lineHeight: 1.4;
+    --zd-font-sm-size: 1.1rem;
+    --zd-font-sm-lineHeight: 1.5;
+    --zd-font-base-size: 1.4rem;
+    --zd-font-base-lineHeight: 1.7;
+    --zd-font-lg-size: 1.6rem;
+    --zd-font-lg-lineHeight: 1.5;
+    --zd-font-xl-size: 1.9rem;
+    --zd-font-xl-lineHeight: 1.4;
+    --zd-font-2xl-size: 2.8rem;
+    --zd-font-2xl-lineHeight: 1.35;
+    --zd-font-3xl-size: 3.2rem;
+    --zd-font-3xl-lineHeight: 1.3;
+    --zd-font-4xl-size: 4rem;
+    --zd-font-4xl-lineHeight: 1.3;
+    --zd-font-5xl-size: 4.8rem;
+    --zd-font-5xl-lineHeight: 1.3;
+
+    /* ── Spacing: horizontal (hgap) ── */
+    --zd-spacing-1px: 1px;
+    --zd-spacing-hgap-2xs: 5px;
+    --zd-spacing-hgap-xs: 12px;
+    --zd-spacing-hgap-sm: 20px;
+    --zd-spacing-hgap-md: 40px;
+    --zd-spacing-hgap-md-x2: 80px;
+    --zd-spacing-hgap-lg: 60px;
+    --zd-spacing-hgap-lg-x2: 120px;
+    --zd-spacing-hgap-xl: 100px;
+    --zd-spacing-hgap-2xl: 250px;
+
+    /* ── Spacing: vertical (vgap) ── */
+    --zd-spacing-vgap-2xs: 4px;
+    --zd-spacing-vgap-xs: 8px;
+    --zd-spacing-vgap-sm: 20px;
+    --zd-spacing-vgap-md: 35px;
+    --zd-spacing-vgap-lg: 50px;
+    --zd-spacing-vgap-xl: 65px;
+    --zd-spacing-vgap-2xl: 80px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Tier 2 — Theme Tokens (semantic purpose, exposed to Tailwind)
+   Maps palette values (Tier 1) to semantic roles. Components use
+   these via Tailwind utilities (e.g. bg-zd-black, text-zd-white).
+   All Tailwind defaults are reset; only these tokens are available.
+   ══════════════════════════════════════════════════════════════════════ */
+
+@theme {
+  /* ── Reset: remove ALL Tailwind defaults ──
+     After this, utilities like p-4 or bg-blue-500 no longer exist.
+     Only the tokens defined below will generate valid utilities. */
+  --spacing-*: initial;
+  --color-*: initial;
+  --font-size-*: initial;
+  --font-family-*: initial;
+  --font-weight-*: initial;
+  --line-height-*: initial;
+  --letter-spacing-*: initial;
+  --text-*: initial;
+  --border-radius-*: initial;
+  --border-width-*: initial;
+  --border-color-*: initial;
+  --shadow-*: initial;
+  --width-*: initial;
+  --height-*: initial;
+  --max-width-*: initial;
+  --max-height-*: initial;
+  --min-width-*: initial;
+  --min-height-*: initial;
+
+  /* ══════════════════════════════════════════════
+     Colors — semantic theme tokens
+     ══════════════════════════════════════════════ */
+
+  /* Surface & text */
+  --color-zd-black: var(--zd-color-black);
+  --color-zd-white: var(--zd-color-white);
+  --color-zd-gray: var(--zd-color-gray);
+  --color-zd-gray2: var(--zd-color-gray2);
+  --color-zd-gray3: var(--zd-color-gray3);
+  --color-zd-gray4: var(--zd-color-gray4);
+  --color-zd-gray5: var(--zd-color-gray5);
+  --color-zd-gray6: var(--zd-color-gray6);
+  --color-zd-gray7: var(--zd-color-gray7);
+  --color-zd-overlay: var(--zd-color-overlay);
+
+  /* Interactive */
+  --color-zd-link: var(--zd-color-link);
+  --color-zd-active: var(--zd-color-active);
+  --color-zd-outline: var(--zd-color-outline);
+
+  /* Emphasis */
+  --color-zd-strong: var(--zd-color-strong);
+  --color-zd-sold: var(--zd-color-sold);
+
+  /* Status & feedback */
+  --color-zd-notify: var(--zd-color-notify);
+  --color-zd-error: var(--zd-color-error);
+  --color-debug: var(--zd-color-debug);
+
+  /* Brand & commerce */
+  --color-zd-price: var(--zd-color-price);
+  --color-zd-mercari-corporate: var(--zd-color-mercari-corporate);
+
+  /* Pure utility colors */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-transparent: transparent;
+
+  /* ══════════════════════════════════════════════
+     Spacing
+     ══════════════════════════════════════════════ */
+
+  --spacing-0: 0;
+  --spacing-1px: var(--zd-spacing-1px);
+
+  /* Horizontal (hgap) */
+  --spacing-hgap-2xs: var(--zd-spacing-hgap-2xs);
+  --spacing-hgap-xs: var(--zd-spacing-hgap-xs);
+  --spacing-hgap-sm: var(--zd-spacing-hgap-sm);
+  --spacing-hgap-md: var(--zd-spacing-hgap-md);
+  --spacing-hgap-md-x2: var(--zd-spacing-hgap-md-x2);
+  --spacing-hgap-lg: var(--zd-spacing-hgap-lg);
+  --spacing-hgap-lg-x2: var(--zd-spacing-hgap-lg-x2);
+  --spacing-hgap-xl: var(--zd-spacing-hgap-xl);
+  --spacing-hgap-2xl: var(--zd-spacing-hgap-2xl);
+
+  /* Vertical (vgap) */
+  --spacing-vgap-2xs: var(--zd-spacing-vgap-2xs);
+  --spacing-vgap-xs: var(--zd-spacing-vgap-xs);
+  --spacing-vgap-sm: var(--zd-spacing-vgap-sm);
+  --spacing-vgap-md: var(--zd-spacing-vgap-md);
+  --spacing-vgap-lg: var(--zd-spacing-vgap-lg);
+  --spacing-vgap-xl: var(--zd-spacing-vgap-xl);
+  --spacing-vgap-2xl: var(--zd-spacing-vgap-2xl);
+
+  /* ══════════════════════════════════════════════
+     Typography — font sizes & line heights
+     ══════════════════════════════════════════════ */
+
+  /* Font sizes with paired line-heights (Tailwind v4 format) */
+  --text-xs: var(--zd-font-xs-size);
+  --text-xs--line-height: var(--zd-font-xs-lineHeight);
+  --text-sm: var(--zd-font-sm-size);
+  --text-sm--line-height: var(--zd-font-sm-lineHeight);
+  --text-base: var(--zd-font-base-size);
+  --text-base--line-height: var(--zd-font-base-lineHeight);
+  --text-lg: var(--zd-font-lg-size);
+  --text-lg--line-height: var(--zd-font-lg-lineHeight);
+  --text-xl: var(--zd-font-xl-size);
+  --text-xl--line-height: var(--zd-font-xl-lineHeight);
+  --text-2xl: var(--zd-font-2xl-size);
+  --text-2xl--line-height: var(--zd-font-2xl-lineHeight);
+  --text-3xl: var(--zd-font-3xl-size);
+  --text-3xl--line-height: var(--zd-font-3xl-lineHeight);
+  --text-4xl: var(--zd-font-4xl-size);
+  --text-4xl--line-height: var(--zd-font-4xl-lineHeight);
+  --text-5xl: var(--zd-font-5xl-size);
+  --text-5xl--line-height: var(--zd-font-5xl-lineHeight);
+
+  /* Standalone line heights */
+  --line-height-none: var(--zd-lineHeight-none);
+  --line-height-tight: var(--zd-lineHeight-tight);
+  --line-height-snug: var(--zd-lineHeight-snug);
+  --line-height-normal: var(--zd-lineHeight-normal);
+  --line-height-relaxed: var(--zd-lineHeight-relaxed);
+  --line-height-loose: var(--zd-lineHeight-loose);
+
+  /* ══════════════════════════════════════════════
+     Font families
+     ══════════════════════════════════════════════ */
+
+  --font-noto:
+    'Noto Sans', 'Noto Sans JP', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Hiragino Sans', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', Meiryo, sans-serif;
+  --font-futura:
+    Futura, Jost, 'Century Gothic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Noto Sans', 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  --font-sans:
+    Helvetica, Arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP',
+    'Hiragino Sans', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', Meiryo, sans-serif;
+  --font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  /* ══════════════════════════════════════════════
+     Font weights
+     ══════════════════════════════════════════════ */
+
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* ══════════════════════════════════════════════
+     Breakpoints
+     ══════════════════════════════════════════════ */
+
+  --breakpoint-sm: 580px;
+  --breakpoint-md: 740px;
+  --breakpoint-lg: 980px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1630px;
+  --breakpoint-3xl: 1800px;
+
+  /* ══════════════════════════════════════════════
+     Borders
+     ══════════════════════════════════════════════ */
+
+  /* Border widths */
+  --border-width-default: 1px;
+  --border-width-0: 0px;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-3: 3px;
+  --border-width-4: 4px;
+  --border-width-5: 5px;
+  --border-width-10: 10px;
+
+  /* Border radius */
+  --radius-xs: 0.125rem; /* 2px */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.375rem; /* 6px */
+  --radius-lg: 0.5rem; /* 8px */
+
+  /* ══════════════════════════════════════════════
+     Shadows
+     ══════════════════════════════════════════════ */
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  --shadow-none: 0 0 #0000;
+
+  /* ══════════════════════════════════════════════
+     Sizing — widths, heights, max/min
+     ══════════════════════════════════════════════ */
+
+  /* Common width/height utilities */
+  --width-full: 100%;
+  --height-full: 100%;
+  --min-width-0: 0;
+  --min-height-0: 0;
+  --min-height-screen: 100vh;
+  --max-width-full: 100%;
+  --max-height-full: 100%;
+
+  /* Max-width size scale */
+  --max-width-xs: 20rem; /* 320px */
+  --max-width-sm: 24rem; /* 384px */
+  --max-width-md: 28rem; /* 448px */
+  --max-width-lg: 32rem; /* 512px */
+  --max-width-xl: 36rem; /* 576px */
+  --max-width-2xl: 42rem; /* 672px */
+  --max-width-3xl: 48rem; /* 768px */
+  --max-width-4xl: 56rem; /* 896px */
+  --max-width-5xl: 64rem; /* 1024px */
+  --max-width-6xl: 72rem; /* 1152px */
+  --max-width-7xl: 80rem; /* 1280px */
+
+  /* Fractional max-widths */
+  --max-width-1\/2: 50%;
+  --max-width-1\/3: 33.333333%;
+  --max-width-2\/3: 66.666667%;
+  --max-width-1\/4: 25%;
+  --max-width-2\/4: 50%;
+  --max-width-3\/4: 75%;
+  --max-width-1\/5: 20%;
+  --max-width-2\/5: 40%;
+  --max-width-3\/5: 60%;
+  --max-width-4\/5: 80%;
+  --max-width-1\/6: 16.666667%;
+  --max-width-2\/6: 33.333333%;
+  --max-width-3\/6: 50%;
+  --max-width-4\/6: 66.666667%;
+  --max-width-5\/6: 83.333333%;
+
+  /* Fractional widths */
+  --width-1\/2: 50%;
+  --width-1\/3: 33.333333%;
+  --width-2\/3: 66.666667%;
+  --width-1\/4: 25%;
+  --width-2\/4: 50%;
+  --width-3\/4: 75%;
+  --width-1\/5: 20%;
+  --width-2\/5: 40%;
+  --width-3\/5: 60%;
+  --width-4\/5: 80%;
+  --width-1\/6: 16.666667%;
+  --width-2\/6: 33.333333%;
+  --width-3\/6: 50%;
+  --width-4\/6: 66.666667%;
+  --width-5\/6: 83.333333%;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Custom Utilities
+   ══════════════════════════════════════════════════════════════════════ */
+
+@utility zd-gradient-black-to-transparent {
+  background: linear-gradient(to bottom, var(--zd-color-black) 30%, transparent);
+  background-repeat: repeat-x;
+}
+
+@utility zd-gradient-white-to-transparent {
+  background: linear-gradient(to bottom, var(--zd-color-white), transparent);
+  background-repeat: repeat-x;
+}
+
+@utility zd-hash {
+  letter-spacing: 0.15em;
+}
+
+@utility zd-invert-color-link {
+  @apply text-shadow-md outline-offset-4;
+  &:hover,
+  &:focus {
+    @apply text-zd-black bg-zd-white text-shadow-none no-underline;
+    @apply outline-2 rounded-xs outline-zd-outline;
+  }
+  &:active {
+    @apply text-zd-black;
+    @apply bg-zd-active;
+  }
+}
+
+@utility zd-invert-color-link--focus {
+  @apply text-zd-black bg-zd-white text-shadow-none no-underline;
+  @apply outline-2 rounded-xs outline-zd-outline outline-offset-4;
+}
+
+@utility zd-invert-color-link-inline {
+  @apply text-shadow-md;
+  &:hover,
+  &:active,
+  &:focus {
+    @apply text-black bg-zd-white text-shadow-none no-underline;
+  }
+}
+
+/* Text shadows */
+@utility text-shadow-md {
+  text-shadow: var(--zd-text-shadow-md);
+}
+@utility text-shadow-none {
+  text-shadow: none !important;
+}
+
+/* clearfix */
+@utility clearfix {
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Base Styles
+   Default border color changed to `currentcolor` in Tailwind CSS v4.
+   ══════════════════════════════════════════════════════════════════════ */
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: currentcolor;
+  }
+
+  html {
+    @apply underline-offset-4 bg-zd-black;
+    scroll-behavior: smooth;
+  }
+
+  /* Scroll offset for anchor navigation */
+  [id] {
+    scroll-margin-top: 100px;
+  }
+
+  body {
+    @apply text-base font-noto text-zd-white bg-zd-black font-light;
+    text-wrap: pretty;
+  }
+
+  input,
+  textarea {
+    @apply text-zd-black bg-zd-white;
+  }
+
+  input[type='search'] {
+    -webkit-appearance: none;
+  }
+
+  a {
+    @apply underline text-zd-white font-medium;
+  }
+
+  a:focus,
+  a:active {
+    @apply outline-2 outline-zd-outline rounded-xs;
+  }
+
+  a:active {
+    @apply text-zd-black bg-zd-active;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Animations & Transitions
+   ══════════════════════════════════════════════════════════════════════ */
+
+@keyframes pageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Page transition classes */
+.page-fade-in {
+  animation: pageSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.page-loading {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.drawer-enter {
+  animation: slideInFromRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.drawer-exit {
+  animation: slideOutToRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.fade-in-animation {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Body opacity transitions during page navigation */
+.body-page-loading {
+  opacity: 0.3;
+  transition: none; /* Instant darkening for immediate feedback */
+}
+
+.body-page-loaded {
+  opacity: 1;
+  transition: none; /* Instant return to full opacity */
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Component Styles
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* Scrollbar: hide for carousel but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* TOC (Table of Contents) Styles - migrated from Gatsby article-page-layout.module.css */
+.zd-toc-pointer {
+  margin-top: var(--zd-spacing-vgap-lg);
+}
+
+.zd-toc-pointer + ul {
+  padding-top: var(--zd-spacing-vgap-sm);
+  margin-bottom: var(--zd-spacing-vgap-sm);
+  padding-right: 50px;
+  border: 1px dashed var(--zd-color-white);
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (min-width: 740px) {
+  .zd-toc-pointer + ul {
+    padding-top: var(--zd-spacing-vgap-md);
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 980px) {
+  .zd-toc-pointer + ul {
+    padding-right: var(--zd-spacing-hgap-md);
+    border-width: 1px;
+    padding-left: var(--zd-spacing-hgap-md);
+  }
+}
+
+.zd-toc-pointer + ul li {
+  background: url(/svgs/arrow-down.svg) no-repeat 0 0.4em;
+  background-size: 20px 20px;
+  padding-left: 28px;
+}
+
+/* Image Loading Spinner */
+.page-image-loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.page-image-loader:before,
+.page-image-loader:after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+.page-image-loader:after {
+  box-shadow: 0 2px 0 var(--zd-color-strong) inset;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Image loading transition - uses explicit opacity values to avoid hydration flicker */
+.page-image-transition {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-image-loading {
+  opacity: 0;
+}
+
+.page-image-loaded {
+  opacity: 1;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Search Dialog
+   Native <dialog> element backdrop + scoped rules. The backdrop is
+   painted by the UA-provided ::backdrop pseudo element.
+   ══════════════════════════════════════════════════════════════════════ */
+
+[data-search-dialog]::backdrop {
+  background: rgb(0 0 0 / 0.7);
+}
+
+[data-search-dialog] mark {
+  background: var(--zd-color-strong);
+  color: var(--zd-color-black);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-search-dialog] {
+    /* Reserved for optional future animations. v1 skips motion entirely. */
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   Manual Page Hover-Zoom (Amazon-style magnifier)
+   Geometry (position/size/background) is supplied per-frame as CSS custom
+   properties set imperatively from page-viewer.tsx; the static look lives
+   here. Both elements are `position: fixed` (placed in viewport coords from
+   getBoundingClientRect) and `pointer-events: none` (the mouse must keep
+   hitting the source image). Hidden until JS adds `.is-active` on hover.
+   ══════════════════════════════════════════════════════════════════════ */
+
+.zoom-lens,
+.zoom-panel {
+  display: none;
+  position: fixed;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.zoom-lens.is-active,
+.zoom-panel.is-active {
+  display: block;
+}
+
+/* Translucent box on the source image marking the magnified region. */
+.zoom-lens {
+  left: var(--zoom-lens-left, 0);
+  top: var(--zoom-lens-top, 0);
+  width: var(--zoom-lens-width, 0);
+  height: var(--zoom-lens-height, 0);
+  background: rgb(255 255 255 / 0.28);
+  border: 1px solid var(--zd-color-white);
+}
+
+/* Magnified view filling the translation column. */
+.zoom-panel {
+  left: var(--zoom-panel-left, 0);
+  top: var(--zoom-panel-top, 0);
+  width: var(--zoom-panel-width, 0);
+  height: var(--zoom-panel-height, 0);
+  background-color: var(--zd-color-white);
+  background-image: var(--zoom-image);
+  background-repeat: no-repeat;
+  background-size: var(--zoom-bg-size);
+  background-position: var(--zoom-bg-pos);
+  border: 1px solid var(--zd-color-gray4);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.45);
+}

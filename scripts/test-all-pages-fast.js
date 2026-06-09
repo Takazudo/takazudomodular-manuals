@@ -1,11 +1,18 @@
 #!/usr/bin/env node
 
 /**
- * Fast smoke test for all manual pages
- * Dynamically tests all manuals from the registry
+ * Fast smoke test for all manual pages — zfb dist target.
+ *
+ * Migrated from Next.js dev (http://zmanuals.localhost:3100) to zfb
+ * production-serve (http://localhost:8030). Build + serve the dist first:
+ *   pnpm zfb:build && node scripts/zfb-finalize-build.js && pnpm serve
+ *
+ * Routes are identical to the Next.js app: /manuals/{id}/page/{n}.
+ * Asset paths changed from /manuals/_next/static/* to /manuals/assets/* but
+ * this script tests page HTTP status, not asset presence.
  *
  * Environment variables:
- *   BASE_URL - Server base URL (default: http://zmanuals.localhost:3100)
+ *   BASE_URL - Server base URL (default: http://localhost:8030)
  */
 
 import { createRequire } from 'module';
@@ -30,7 +37,9 @@ const MANUALS = {
   'oxi-one-mk2': oxiOneMk2Manifest,
 };
 
-const BASE_URL = process.env.BASE_URL || 'http://zmanuals.localhost:3100';
+// Default changed from zmanuals.localhost:3100 (Next.js dev) to localhost:8030
+// (zfb production-serve / pnpm serve). Override with BASE_URL env var if needed.
+const BASE_URL = process.env.BASE_URL || 'http://localhost:8030';
 const BATCH_SIZE = 10;
 
 const errors = [];

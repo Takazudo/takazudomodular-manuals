@@ -55,7 +55,7 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
       expect(response?.status()).toBe(200);
     });
 
-    test('should load page 272 (last)', async ({ page }) => {
+    test('should load last page', async ({ page }) => {
       const response = await page.goto(`${MANUAL_PATH}/${TOTAL_PAGES}`);
       expect(response?.status()).toBe(200);
     });

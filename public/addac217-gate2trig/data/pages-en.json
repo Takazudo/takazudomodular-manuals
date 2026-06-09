@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "Welcome to:\n\nOVERALL DESCRIPTION\n\nFollowing our T-Networks series we came to realize how important it is to have the right input signal for firing drum modules or envelopes, Gates and Triggers are often looked at as similar signals but at times it really makes a difference and results will change drastically depending if a Gate or a Trigger is fed to the input of such modules.\n\nThis led us to develop this simple yet effective Gate to Trigger. A four channel converter with bypass switch for each channel.\n\nAny input Gate will be limited to a 1ms Trigger.\n\nThis module will also be available as a full DIY kit.\n\nTech Specs:\n\n6HP\n\n4 cm deep 7\n\n0mA +12V\n\n70mA -12V",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Welcome to:</p>\n<p>OVERALL DESCRIPTION</p>\n<p>Following our T-Networks series we came to realize how important it is to have the right input signal for firing drum modules or envelopes, Gates and Triggers are often looked at as similar signals but at times it really makes a difference and results will change drastically depending if a Gate or a Trigger is fed to the input of such modules.</p>\n<p>This led us to develop this simple yet effective Gate to Trigger. A four channel converter with bypass switch for each channel.</p>\n<p>Any input Gate will be limited to a 1ms Trigger.</p>\n<p>This module will also be available as a full DIY kit.</p>\n<p>Tech Specs:</p>\n<p>6HP</p>\n<p>4 cm deep 7</p>\n<p>0mA +12V</p>\n<p>70mA -12V</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "CONTROLS DESCRIPTION\n\nGate Input 1\n\nBypass Switch\n\nOutput 1\n\nGate Input 2\n\nBypass Switch\n\nOutput 2\n\nGate Input 3\n\nBypass Switch\n\nOutput 3\n\nGate Input 4\n\nBypass Switch\n\nOutput 4\n\nCHANNEL 1\n\nCHANNEL 2\n\nCHANNEL 3\n\nCHANNEL 4",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>CONTROLS DESCRIPTION</p>\n<p>Gate Input 1</p>\n<p>Bypass Switch</p>\n<p>Output 1</p>\n<p>Gate Input 2</p>\n<p>Bypass Switch</p>\n<p>Output 2</p>\n<p>Gate Input 3</p>\n<p>Bypass Switch</p>\n<p>Output 3</p>\n<p>Gate Input 4</p>\n<p>Bypass Switch</p>\n<p>Output 4</p>\n<p>CHANNEL 1</p>\n<p>CHANNEL 2</p>\n<p>CHANNEL 3</p>\n<p>CHANNEL 4</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "ADDAC217\n\nQUAD GATE TO TRIGGER SIGNAL FLOW DIAGRAM\n\nCHANNEL 4\n\nCHANNEL 3\n\nCHANNEL 2\n\nCONVERTER\n\nCHANNEL 1\n\nBYPASS\n\nOUTPUT 1\tGATE INPUT",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC217</p>\n<p>QUAD GATE TO TRIGGER SIGNAL FLOW DIAGRAM</p>\n<p>CHANNEL 4</p>\n<p>CHANNEL 3</p>\n<p>CHANNEL 2</p>\n<p>CONVERTER</p>\n<p>CHANNEL 1</p>\n<p>BYPASS</p>\n<p>OUTPUT 1\tGATE INPUT</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nADDAC217 \tUSER'S GUIDE\nJanuary.2020\tRevision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC217 \tUSER'S GUIDE\nJanuary.2020\tRevision.01</p>"
     }
   ]
 }

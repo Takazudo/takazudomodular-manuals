@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "ENVY MACHINE",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ENVY MACHINE</p>"
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "1→GATE1\n\n2→M1\n\n3→2\n\n4→2\n\n5→3\n\n6→3\n\n7→4\n\n8→4\n\n9→TIME\n\n10→LEVEL\n\n11→A\n\n12→D\n\n13→R\n\n14→DR\n\n15→SHP\n\n16→AUX\n\n17→MOD\n\n18→MOD LEVEL\n\n19→SHAPE\n\n20→0\n\n21→+ 　+\n\n22→-　-\n\n23→OPT\n\n24→OUT LEVEL\n\n25→CH\n\n26→A\n\n27→D\n\n28→S\n\n29→R\n\n30→0\n\n31→ENVY MACHINE\n\n32→OUT1 　2 　3 　4",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>1→GATE1</p>\n<p>2→M1</p>\n<p>3→2</p>\n<p>4→2</p>\n<p>5→3</p>\n<p>6→3</p>\n<p>7→4</p>\n<p>8→4</p>\n<p>9→TIME</p>\n<p>10→LEVEL</p>\n<p>11→A</p>\n<p>12→D</p>\n<p>13→R</p>\n<p>14→DR</p>\n<p>15→SHP</p>\n<p>16→AUX</p>\n<p>17→MOD</p>\n<p>18→MOD LEVEL</p>\n<p>19→SHAPE</p>\n<p>20→0</p>\n<p>21→+ 　+</p>\n<p>22→-　-</p>\n<p>23→OPT</p>\n<p>24→OUT LEVEL</p>\n<p>25→CH</p>\n<p>26→A</p>\n<p>27→D</p>\n<p>28→S</p>\n<p>29→R</p>\n<p>30→0</p>\n<p>31→ENVY MACHINE</p>\n<p>32→OUT1 　2 　3 　4</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "Envy Machineへようこそ！\n\nコンパクトな4チャンネル変調マシンで、Envelope、LFO、ランダムボルテージ、Knob Recordingという充実したラインナップを備えています。\n\nOVERVIEW\n\nENVY MACHINEの4つのチャンネルはそれぞれ、以下の5つの高い柔軟性を持つ変調モードのいずれかに設定できます：\n\n- ADSR Envelope\n- AD Envelope\n- AD LFO\n- Random Voltage\n- Recordable Knob Voltage Control\n\nゴーストハンド - KNOB RECORDINGを使ってパラメーターをアニメーション化し、パッチに時限的なバリエーションを作り出すことができます。\n\nそして・・・チャンネルごとに専用のMOD inputを備えており、外部CVを使ってTIME、LEVEL、WAVESHAPE、髪の色など、あらゆるものをコントロールできます・・・\n\nPolarity paradox - 変調inputとチャンネルOutputの両方にバイポーラアッテヌバーターが付いており、BIPOLAR（双極性）またはUNIPOLAR（単極性）を選択でき、連続可変レベルコントロールが可能です。\n\nSlippery slopes - WAVESHAPEはLOG、EXPO、SIN、TRAPEZOID、SQUAREの間で完全に可変です！",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Envy Machineへようこそ！</p>\n<p>コンパクトな4チャンネル変調マシンで、Envelope、LFO、ランダムボルテージ、Knob Recordingという充実したラインナップを備えています。</p>\n<p>OVERVIEW</p>\n<p>ENVY MACHINEの4つのチャンネルはそれぞれ、以下の5つの高い柔軟性を持つ変調モードのいずれかに設定できます：</p>\n<ul>\n<li>ADSR Envelope</li>\n<li>AD Envelope</li>\n<li>AD LFO</li>\n<li>Random Voltage</li>\n<li>Recordable Knob Voltage Control</li>\n</ul>\n<p>ゴーストハンド - KNOB RECORDINGを使ってパラメーターをアニメーション化し、パッチに時限的なバリエーションを作り出すことができます。</p>\n<p>そして・・・チャンネルごとに専用のMOD inputを備えており、外部CVを使ってTIME、LEVEL、WAVESHAPE、髪の色など、あらゆるものをコントロールできます・・・</p>\n<p>Polarity paradox - 変調inputとチャンネルOutputの両方にバイポーラアッテヌバーターが付いており、BIPOLAR（双極性）またはUNIPOLAR（単極性）を選択でき、連続可変レベルコントロールが可能です。</p>\n<p>Slippery slopes - WAVESHAPEはLOG、EXPO、SIN、TRAPEZOID、SQUAREの間で完全に可変です！</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "技術仕様\n\nTIME\nEnvelopes: 1.5ms – 4min\nLFO: 88hz – 7min\nRandom: 2khz - 2min\n\n出力電圧範囲\nEnvelopes: 0–8V（反転時: 8V–0V）\nLFO/Random: 0–8V（Unipolar）または -5V–+5V（Bipolar）\n\n入力電圧範囲\n-5V - +5V\n\n寸法\n12 HP幅\n25 mm深さ\n\n消費電力\n-12V 5mA\n+12V 70mA",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>技術仕様</p>\n<p>TIME\nEnvelopes: 1.5ms – 4min\nLFO: 88hz – 7min\nRandom: 2khz - 2min</p>\n<p>出力電圧範囲\nEnvelopes: 0–8V（反転時: 8V–0V）\nLFO/Random: 0–8V（Unipolar）または -5V–+5V（Bipolar）</p>\n<p>入力電圧範囲\n-5V - +5V</p>\n<p>寸法\n12 HP幅\n25 mm深さ</p>\n<p>消費電力\n-12V 5mA\n+12V 70mA</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "使用コンセプト\n\nENVY MACHINEには4つのチャンネルがあります。CHANNEL BUTTONを押してチャンネルを切り替えてください。ジャックソケット上部にある4つのLEDが赤/オレンジ/黄色に点灯しているとき、そのチャンネルが編集対象として選択されていることを示します。\n\n各ノブ下部の縦型LED BARSは、現在のノブの値を表示します。\n\nCHANNEL BUTTONを押すと、新たに選択されたチャンネルの値を示すようにLED BARSが変化します。\n\nLED BARSは、アクティブなチャンネルの現在のモードに応じて4色のうちいずれかの色で表示されます。\n\nチャンネルパラメーターモード:\n- 赤: Envelope Mode\n- オレンジ: LFO またはランダムモード\n- 黄色: Knob Control Voltage\n\nチャンネルオプションモード:\n- 緑",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>使用コンセプト</p>\n<p>ENVY MACHINEには4つのチャンネルがあります。CHANNEL BUTTONを押してチャンネルを切り替えてください。ジャックソケット上部にある4つのLEDが赤/オレンジ/黄色に点灯しているとき、そのチャンネルが編集対象として選択されていることを示します。</p>\n<p>各ノブ下部の縦型LED BARSは、現在のノブの値を表示します。</p>\n<p>CHANNEL BUTTONを押すと、新たに選択されたチャンネルの値を示すようにLED BARSが変化します。</p>\n<p>LED BARSは、アクティブなチャンネルの現在のモードに応じて4色のうちいずれかの色で表示されます。</p>\n<p>チャンネルパラメーターモード:</p>\n<ul>\n<li>赤: Envelope Mode</li>\n<li>オレンジ: LFO またはランダムモード</li>\n<li>黄色: Knob Control Voltage</li>\n</ul>\n<p>チャンネルオプションモード:</p>\n<ul>\n<li>緑</li>\n</ul>"
     },
     {
       "pageNum": 6,
@@ -59,7 +64,8 @@
       "sectionName": null,
       "content": "5種類のParameterモードを選択できます。\nこれら5つのモードを切り替えるには、CHANNELボタンを押しながら、OPTIONボタンを短く押してください。\n\n1. ADSR ENV MODE\nATTACK　SUSTAIN\nDECAY　RELEASE\n\n2. AD ENV MODE\nATTACK\nDECAY\n\n3. LFO MODE\nFREQUENCY　OFFSET\n\n4. RANDOM MODE\nATTACK　OFFSET",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>5種類のParameterモードを選択できます。\nこれら5つのモードを切り替えるには、CHANNELボタンを押しながら、OPTIONボタンを短く押してください。</p>\n<ol>\n<li>\n<p>ADSR ENV MODE\nATTACK　SUSTAIN\nDECAY　RELEASE</p>\n</li>\n<li>\n<p>AD ENV MODE\nATTACK\nDECAY</p>\n</li>\n<li>\n<p>LFO MODE\nFREQUENCY　OFFSET</p>\n</li>\n<li>\n<p>RANDOM MODE\nATTACK　OFFSET</p>\n</li>\n</ol>"
     },
     {
       "pageNum": 7,
@@ -68,7 +74,8 @@
       "sectionName": null,
       "content": "現在のChannelに選択されているモードによって、LED BARSの色と数がどのように変化するかに注目してください。\n\nすべてのChannelがKNOB CONTROL VOLTAGE MODEに設定されている場合、ディスプレイはすべての4つのLED BARSを黄色で表示するように切り替わり、各KnobはChannel番号と紐づけられます。これにより、すべてのChannelを同時に調整することができます。\n\n5. KNOB CONTROL VOLTAGE MODE\n\nVOLTAGE LEVEL",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>現在のChannelに選択されているモードによって、LED BARSの色と数がどのように変化するかに注目してください。</p>\n<p>すべてのChannelがKNOB CONTROL VOLTAGE MODEに設定されている場合、ディスプレイはすべての4つのLED BARSを黄色で表示するように切り替わり、各KnobはChannel番号と紐づけられます。これにより、すべてのChannelを同時に調整することができます。</p>\n<ol start=\"5\">\n<li>KNOB CONTROL VOLTAGE MODE</li>\n</ol>\n<p>VOLTAGE LEVEL</p>"
     },
     {
       "pageNum": 8,
@@ -77,7 +84,8 @@
       "sectionName": null,
       "content": "OPTION MODE\n\nPARAMETER MODEとOPTION MODEを切り替えるには、OPTION BOTTONを押してください。\n\nLED BARSが緑色のときはOPTION MODEです。このモードの設定はLED BARSの横に縦書きで表示されています。\n\nBAR1 – MOD CV Destination\n\nMOD INPUTからのCVは、以下のパラメーターのいずれかにルーティングできます:\n\nTIME – チャンネルのすべての時間ベースのコントロール（A、D、Rなど）をモジュレートします\n\nLEVEL – チャンネルの出力レベルをモジュレートします\n\nA – チャンネルのAttack timeをモジュレートします\n\nD – チャンネルのDecay timeをモジュレートします\n\nDR – チャンネルのDecay & Release timeをモジュレートします\n\nSHAPE – チャンネルのWAVESHAPEをモジュレートします\n\nAUX – 未定\n\nBAR2 – MOD CV attenuverter\n\n中央がゼロ、中央より上が正のスケール値、中央より下が負のスケール値です。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>OPTION MODE</p>\n<p>PARAMETER MODEとOPTION MODEを切り替えるには、OPTION BOTTONを押してください。</p>\n<p>LED BARSが緑色のときはOPTION MODEです。このモードの設定はLED BARSの横に縦書きで表示されています。</p>\n<p>BAR1 – MOD CV Destination</p>\n<p>MOD INPUTからのCVは、以下のパラメーターのいずれかにルーティングできます:</p>\n<p>TIME – チャンネルのすべての時間ベースのコントロール（A、D、Rなど）をモジュレートします</p>\n<p>LEVEL – チャンネルの出力レベルをモジュレートします</p>\n<p>A – チャンネルのAttack timeをモジュレートします</p>\n<p>D – チャンネルのDecay timeをモジュレートします</p>\n<p>DR – チャンネルのDecay &#x26; Release timeをモジュレートします</p>\n<p>SHAPE – チャンネルのWAVESHAPEをモジュレートします</p>\n<p>AUX – 未定</p>\n<p>BAR2 – MOD CV attenuverter</p>\n<p>中央がゼロ、中央より上が正のスケール値、中央より下が負のスケール値です。</p>"
     },
     {
       "pageNum": 9,
@@ -86,7 +94,8 @@
       "sectionName": null,
       "content": "BAR3 – WAVESHAPEコントロール。\n\nSQUARE – 信号をSQUARE WAVEにクリップします。この値とSINEの間の値はTRAPEZOIDE波形を生成します。\n\nSINE – 信号をSINEWAVE関数にマッピングします。この値とEXPOの間の値は近似LINEAR波形を生成します。\n\nEXPO – 信号をEXPONENTIAL関数にマッピングします。立ち上がりと立ち下がり時間が加速し、スムーズな加速運動を作り出します。フルートなどの表情豊かなスローアタックスロープにこの波形を使用してください。\n\nLOG/EXPO – 信号をクラシックなENVELOPE CURVEにマッピングします。高速なLOG立ち上がり時間とシャープなEXPONENTIAL減衰時間を持ちます。従来のパーカッシブでスナッピーなエンベロープにこの波形を使用してください。\n\nBAR4 – 出力LEVELアッテニュバーター。\n\n中央がゼロ、中央より上はユニポーラスケール値、中央より下はバイポーラスケール値となります。ENVELOPE MODEを使用している場合、バイポーラオプションはエンベロープ出力値を反転します。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>BAR3 – WAVESHAPEコントロール。</p>\n<p>SQUARE – 信号をSQUARE WAVEにクリップします。この値とSINEの間の値はTRAPEZOIDE波形を生成します。</p>\n<p>SINE – 信号をSINEWAVE関数にマッピングします。この値とEXPOの間の値は近似LINEAR波形を生成します。</p>\n<p>EXPO – 信号をEXPONENTIAL関数にマッピングします。立ち上がりと立ち下がり時間が加速し、スムーズな加速運動を作り出します。フルートなどの表情豊かなスローアタックスロープにこの波形を使用してください。</p>\n<p>LOG/EXPO – 信号をクラシックなENVELOPE CURVEにマッピングします。高速なLOG立ち上がり時間とシャープなEXPONENTIAL減衰時間を持ちます。従来のパーカッシブでスナッピーなエンベロープにこの波形を使用してください。</p>\n<p>BAR4 – 出力LEVELアッテニュバーター。</p>\n<p>中央がゼロ、中央より上はユニポーラスケール値、中央より下はバイポーラスケール値となります。ENVELOPE MODEを使用している場合、バイポーラオプションはエンベロープ出力値を反転します。</p>"
     },
     {
       "pageNum": 10,
@@ -95,7 +104,8 @@
       "sectionName": null,
       "content": "KNOB RECORDING\n\nRED/ORANGE/YELLOWパラメーターモードへの調整を、パラメーター範囲内のバリエーションとして、サイクル状に録音・再生することができます。\n\nCHANNEL BUTTONを押しながらknobを回してください。\n録音が終わったら離すと、アニメーションが再生を開始します。\n\n録音中のknobがアクティブに再生されているときは、LED BARが点滅して表示されます。\n\nknob録音の再生を停止または開始するには、knobを一度押すだけです。\n\nKnob録音は電源オフ後も保持され、後日再び使用することができます。\n\nすべてのChannelがKNOB CONTROL VOLTAGE MODEに設定されている場合、ディスプレイは4つのLED BARすべてをYellowで表示するように切り替わり、各knobは下のChannel番号に対応します。これにより、すべてのChannelを同時に調整することができます。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>KNOB RECORDING</p>\n<p>RED/ORANGE/YELLOWパラメーターモードへの調整を、パラメーター範囲内のバリエーションとして、サイクル状に録音・再生することができます。</p>\n<p>CHANNEL BUTTONを押しながらknobを回してください。\n録音が終わったら離すと、アニメーションが再生を開始します。</p>\n<p>録音中のknobがアクティブに再生されているときは、LED BARが点滅して表示されます。</p>\n<p>knob録音の再生を停止または開始するには、knobを一度押すだけです。</p>\n<p>Knob録音は電源オフ後も保持され、後日再び使用することができます。</p>\n<p>すべてのChannelがKNOB CONTROL VOLTAGE MODEに設定されている場合、ディスプレイは4つのLED BARすべてをYellowで表示するように切り替わり、各knobは下のChannel番号に対応します。これにより、すべてのChannelを同時に調整することができます。</p>"
     },
     {
       "pageNum": 11,
@@ -104,7 +114,8 @@
       "sectionName": null,
       "content": "ヒントとコツ\n\nLFO MODE\n\nLFO MODEでは、AとDのコントロールを使用して波形のスロープ比率を設定します。AとDの時間の合計がLFOの周波数を決定します。\n\nランプ波を作成するには、Aコントロールをゼロに設定し、Dコントロールを希望の周波数に調整します。これをLINEARランプにするには、OPTION MODEのSHAPEをEXPOとSINEの中間に調整します。\n\nAとDの時間を同時に調整する簡単な方法として、DUAL ADJUSTMENTオプションを使用します。\n\nOPTION BOTTONを押しながらAまたはDのパラメーターを調整することで、同時に調整できます。\n\n対称的な波形を作るには、まず両方の値をゼロに設定してから、DUAL ADJUSTMENTオプションを使用して両方の値を同時に調整します。\n\nOFFSET LEVEL\n\nLFO MODEまたはRANDOM MODEのSコントロールは、出力に対してポジティブなオフセット値として機能します。これを使用して、モジュレーションを加えたベースレベルの電圧を設定することができます。これは、同じ入力に対して追加のマスターコントロールを持たないモジュールのモジュレーション入力に役立ちます。\n\nOFFSETを使用するには、OPTION MODEのOUTPUT LEVELが最大に設定されていないことを確認してください。最大に設定されていると、OFFSETコントロールの効果がほとんどなくなります。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ヒントとコツ</p>\n<p>LFO MODE</p>\n<p>LFO MODEでは、AとDのコントロールを使用して波形のスロープ比率を設定します。AとDの時間の合計がLFOの周波数を決定します。</p>\n<p>ランプ波を作成するには、Aコントロールをゼロに設定し、Dコントロールを希望の周波数に調整します。これをLINEARランプにするには、OPTION MODEのSHAPEをEXPOとSINEの中間に調整します。</p>\n<p>AとDの時間を同時に調整する簡単な方法として、DUAL ADJUSTMENTオプションを使用します。</p>\n<p>OPTION BOTTONを押しながらAまたはDのパラメーターを調整することで、同時に調整できます。</p>\n<p>対称的な波形を作るには、まず両方の値をゼロに設定してから、DUAL ADJUSTMENTオプションを使用して両方の値を同時に調整します。</p>\n<p>OFFSET LEVEL</p>\n<p>LFO MODEまたはRANDOM MODEのSコントロールは、出力に対してポジティブなオフセット値として機能します。これを使用して、モジュレーションを加えたベースレベルの電圧を設定することができます。これは、同じ入力に対して追加のマスターコントロールを持たないモジュールのモジュレーション入力に役立ちます。</p>\n<p>OFFSETを使用するには、OPTION MODEのOUTPUT LEVELが最大に設定されていないことを確認してください。最大に設定されていると、OFFSETコントロールの効果がほとんどなくなります。</p>"
     },
     {
       "pageNum": 12,
@@ -113,7 +124,8 @@
       "sectionName": null,
       "content": "ランダムステップ電圧\n\nRANDOM MODEでは、OPTION MENUのWAVE SHAPEパラメーターをSQUAREに設定することで、サンプル＆ホールドスタイルのステップ電圧を生成できます。SINEにブレンドすることでスルーのある滑らかなトランジションが得られ、TRAPEZOIDEウェーブフォームが作成されます。Aパラメーターで任意のFREQUENCYに調整してください。\n\nGATE DELAY\n\nAD ENVELOPE MODEでは、WAVE SHAPEパラメーターをSQUAREに設定します。ATTACKでディレイタイムを調整し、その出力をゲートディレイとして使用することで、他のEnvelopeチャンネルやモジュールをクリエイティブにパッチできます。\n\nPINK NOISE\n\nRANDOM MODEでは、FREQUENCYパラメーターAを最小値に調整し、出力をPINK NOISEのソースとして接続します。WAVESHAPEやFREQUENCYを調整して、出力のノイズカラーの変化を聴き比べてみてください。\n\nDELAYED VIBRATO\n\nチャンネルをLFO MODEに設定し、WAVESHAPEをSINEに調整します。AとDを同じような値に、速めの設定で調整してください。これをオシレーターに接続してピッチをモジュレーションします。\n\nOPTION MENUでMOD DestinationをLEVELに調整し、MOD AttenuverterをポジティブVALUEに設定し、OUTPUT LEVELをゼロに近い値に調整します。\n\n別のチャンネルをAD ENVELOPE MODEに設定し、WAVE SHAPEをSINEとEXPOの間に設定します。Gate信号を接続してください。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ランダムステップ電圧</p>\n<p>RANDOM MODEでは、OPTION MENUのWAVE SHAPEパラメーターをSQUAREに設定することで、サンプル＆ホールドスタイルのステップ電圧を生成できます。SINEにブレンドすることでスルーのある滑らかなトランジションが得られ、TRAPEZOIDEウェーブフォームが作成されます。Aパラメーターで任意のFREQUENCYに調整してください。</p>\n<p>GATE DELAY</p>\n<p>AD ENVELOPE MODEでは、WAVE SHAPEパラメーターをSQUAREに設定します。ATTACKでディレイタイムを調整し、その出力をゲートディレイとして使用することで、他のEnvelopeチャンネルやモジュールをクリエイティブにパッチできます。</p>\n<p>PINK NOISE</p>\n<p>RANDOM MODEでは、FREQUENCYパラメーターAを最小値に調整し、出力をPINK NOISEのソースとして接続します。WAVESHAPEやFREQUENCYを調整して、出力のノイズカラーの変化を聴き比べてみてください。</p>\n<p>DELAYED VIBRATO</p>\n<p>チャンネルをLFO MODEに設定し、WAVESHAPEをSINEに調整します。AとDを同じような値に、速めの設定で調整してください。これをオシレーターに接続してピッチをモジュレーションします。</p>\n<p>OPTION MENUでMOD DestinationをLEVELに調整し、MOD AttenuverterをポジティブVALUEに設定し、OUTPUT LEVELをゼロに近い値に調整します。</p>\n<p>別のチャンネルをAD ENVELOPE MODEに設定し、WAVE SHAPEをSINEとEXPOの間に設定します。Gate信号を接続してください。</p>"
     },
     {
       "pageNum": 13,
@@ -122,7 +134,8 @@
       "sectionName": null,
       "content": "GATE INPUTに接続し、ATTACKパラメーターをディレイタイムとして設定し、DECAYパラメーターを長めの値に設定します。\n\nAD ENVELOPEチャンネルの出力をLFOチャンネルのMOD INPUTに接続します。AD ENVELOPEチャンネルがトリガーされると、そのエンベロープ出力がLFOチャンネルからのビブラートのレベルと量をコントロールします。\n\nAD ENVELOPEパラメーターでディレイタイムを調整してみてください。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>GATE INPUTに接続し、ATTACKパラメーターをディレイタイムとして設定し、DECAYパラメーターを長めの値に設定します。</p>\n<p>AD ENVELOPEチャンネルの出力をLFOチャンネルのMOD INPUTに接続します。AD ENVELOPEチャンネルがトリガーされると、そのエンベロープ出力がLFOチャンネルからのビブラートのレベルと量をコントロールします。</p>\n<p>AD ENVELOPEパラメーターでディレイタイムを調整してみてください。</p>"
     },
     {
       "pageNum": 14,
@@ -131,7 +144,8 @@
       "sectionName": null,
       "content": "入力と出力\n\nMOD1-4 各チャンネルのMODULATION CV入力です。\nこれらをパラメーターに割り当てる方法については、OPTION MODEを参照してください。\n\nGATE1-4 各チャンネルのGATE INPUTです。\nGATE INPUTは、ENVELOPE MODEチャンネルのみ、接続されたGATE INPUTの右側に正規化されています。\n\nチャンネルがLFO MODEに設定されている場合、接続されたGATE INPUTはLFOサイクルのRESET SYNCとして機能します。\n\nチャンネルがKNOB CONTROL VOLTAGEに設定されており、チャンネルがKNOB RECORDINGをアクティブに再生している場合、接続されたGATE INPUTはKnobレコーディングのアニメーション再生のRESET SYNCとして機能します。\n\nOUTPUT 1-4 各チャンネルのCV出力です。そのレベルはOPTION MODEのLEVELコントロールによって制御されることに注意してください。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>入力と出力</p>\n<p>MOD1-4 各チャンネルのMODULATION CV入力です。\nこれらをパラメーターに割り当てる方法については、OPTION MODEを参照してください。</p>\n<p>GATE1-4 各チャンネルのGATE INPUTです。\nGATE INPUTは、ENVELOPE MODEチャンネルのみ、接続されたGATE INPUTの右側に正規化されています。</p>\n<p>チャンネルがLFO MODEに設定されている場合、接続されたGATE INPUTはLFOサイクルのRESET SYNCとして機能します。</p>\n<p>チャンネルがKNOB CONTROL VOLTAGEに設定されており、チャンネルがKNOB RECORDINGをアクティブに再生している場合、接続されたGATE INPUTはKnobレコーディングのアニメーション再生のRESET SYNCとして機能します。</p>\n<p>OUTPUT 1-4 各チャンネルのCV出力です。そのレベルはOPTION MODEのLEVELコントロールによって制御されることに注意してください。</p>"
     },
     {
       "pageNum": 15,
@@ -140,7 +154,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 16,
@@ -149,7 +164,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     }
   ]
 }

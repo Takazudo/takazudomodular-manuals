@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "SF1\n\nStereo / Dual Filter\n\nEurorack Module\n\nUser Manual\n\nWeston Precision Audio\n\nDesigned In Portland, Oregon\n\nRevision 01 - September 16, 2022",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>SF1</p>\n<p>Stereo / Dual Filter</p>\n<p>Eurorack Module</p>\n<p>User Manual</p>\n<p>Weston Precision Audio</p>\n<p>Designed In Portland, Oregon</p>\n<p>Revision 01 - September 16, 2022</p>"
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "DESCRIPTION\n\nSF1 is a dual voltage controlled filter (VCF) module designed to be used either as a pair of identical, but separate VCFs, or as a stereo filter, accepting its input as 2 mono (L/R) inputs through standard 3.5mm TS connections.\n\nThe core of SF1 is a 4-pole voltage-controlled lowpass filter which uses precise \"pole-mixing\" to provide a multitude of outputs from each filter. Each filter has TWO outputs which are available concurrently. The first set of outputs (L1/R1) may be selected to output Low Pass, High Pass, or Band Pass responses. At each one of these selections, the cutoff curve may be selected between \"2 pole\" (12 db/octave) or \"4 pole\" (24 db/octave).\n\nThe second set of outputs (L2/R2) may be selected to output a single pole Notch, 2 pole All-pass, or 4-stage Phaser response.\n\nFinally, each pair of outputs (L1/R1 and L2/R2) feeds into a set of 2 voltage controlled crossfaders which may be used to modulate the amount of panning between the 2 sides of SF1.\n\nSF1's output and linking options make SF1 a highly versatile module. From a stereo VCF, to a dual sine wave V/octave synth voice, all the way to a phase-modulator, the SF1 can do it!\n\nSPECS\n\nModule Size: 18HP\n\nDepth: 25mm (To back PCB), 33mm (To end of power connector)\n\nAudio Outputs:\n~1kOhm Output Impedance\n\nInputs (All inputs >=100kOhm Impedance): Volts/octave 1&2, Resonance 1&2, Frequency cutoff 1&2, Panning CV.\n\nPower input:\n+12V & -12V via standard 10 pin Eurorack connector. Protected against reverse polarity internally and with shrouded connector.\n\nPower consumption (+12V / -12V):\nTyp: 120mA / 120mA\nMax: 135mA / 135mA\n\nMAXIMUM LIMITS\n\nSupply Voltage: +13.5V / -13.5V\n\nAll inputs: Up to power supply levels.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>DESCRIPTION</p>\n<p>SF1 is a dual voltage controlled filter (VCF) module designed to be used either as a pair of identical, but separate VCFs, or as a stereo filter, accepting its input as 2 mono (L/R) inputs through standard 3.5mm TS connections.</p>\n<p>The core of SF1 is a 4-pole voltage-controlled lowpass filter which uses precise \"pole-mixing\" to provide a multitude of outputs from each filter. Each filter has TWO outputs which are available concurrently. The first set of outputs (L1/R1) may be selected to output Low Pass, High Pass, or Band Pass responses. At each one of these selections, the cutoff curve may be selected between \"2 pole\" (12 db/octave) or \"4 pole\" (24 db/octave).</p>\n<p>The second set of outputs (L2/R2) may be selected to output a single pole Notch, 2 pole All-pass, or 4-stage Phaser response.</p>\n<p>Finally, each pair of outputs (L1/R1 and L2/R2) feeds into a set of 2 voltage controlled crossfaders which may be used to modulate the amount of panning between the 2 sides of SF1.</p>\n<p>SF1's output and linking options make SF1 a highly versatile module. From a stereo VCF, to a dual sine wave V/octave synth voice, all the way to a phase-modulator, the SF1 can do it!</p>\n<p>SPECS</p>\n<p>Module Size: 18HP</p>\n<p>Depth: 25mm (To back PCB), 33mm (To end of power connector)</p>\n<p>Audio Outputs:\n~1kOhm Output Impedance</p>\n<p>Inputs (All inputs >=100kOhm Impedance): Volts/octave 1&#x26;2, Resonance 1&#x26;2, Frequency cutoff 1&#x26;2, Panning CV.</p>\n<p>Power input:\n+12V &#x26; -12V via standard 10 pin Eurorack connector. Protected against reverse polarity internally and with shrouded connector.</p>\n<p>Power consumption (+12V / -12V):\nTyp: 120mA / 120mA\nMax: 135mA / 135mA</p>\n<p>MAXIMUM LIMITS</p>\n<p>Supply Voltage: +13.5V / -13.5V</p>\n<p>All inputs: Up to power supply levels.</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "MAIN CONTROLS\n\nCutoff:\nThese pots controls the \"cutoff frequencies\" of the left and right filter cores.\n\nResonance:\nThese pots control the amount of resonance or Q-value of the left and right filter cores. Using one of the low-pass modes on L1 or R1 outputs and putting the corresponding resonance pot to full CW will result in self-oscillation and the filter will act as a sine wave oscillator.\n\nAudio In Level:\nEach filter's audio input's amount is controlled by these pots. There is a detent at the center (\"high noon\") of each pot which corresponds to exactly unity (gain of 1) of the audio input signal. Turning the pot past center results in progressively more overdrive.\n\nCutoff CV Input:\nSignals input to these jacks will control the cutoff frequency of each filter. The control pots are \"attenuverters\", meaning that the center (which also has a detent) is 0. Turning the pot CW means positive voltages add to the cutoff frequency, and negative voltages subtract to the cutoff frequency. Turning the pot CCW reverses this, e.g., a positive-going envelope would tend to \"close off\" a low pass filter when turning CCW.\n\nResonance CV:\nSignals input to these jacks will control the amount of resonance of each filter. These inputs to not have an attenuator so they work \"full strength\".\n\nV/Oct:\nThese inputs are simply another frequency CV which is calibrated to 1 Volt/octave. Use these to control pitch when self-oscillating.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>MAIN CONTROLS</p>\n<p>Cutoff:\nThese pots controls the \"cutoff frequencies\" of the left and right filter cores.</p>\n<p>Resonance:\nThese pots control the amount of resonance or Q-value of the left and right filter cores. Using one of the low-pass modes on L1 or R1 outputs and putting the corresponding resonance pot to full CW will result in self-oscillation and the filter will act as a sine wave oscillator.</p>\n<p>Audio In Level:\nEach filter's audio input's amount is controlled by these pots. There is a detent at the center (\"high noon\") of each pot which corresponds to exactly unity (gain of 1) of the audio input signal. Turning the pot past center results in progressively more overdrive.</p>\n<p>Cutoff CV Input:\nSignals input to these jacks will control the cutoff frequency of each filter. The control pots are \"attenuverters\", meaning that the center (which also has a detent) is 0. Turning the pot CW means positive voltages add to the cutoff frequency, and negative voltages subtract to the cutoff frequency. Turning the pot CCW reverses this, e.g., a positive-going envelope would tend to \"close off\" a low pass filter when turning CCW.</p>\n<p>Resonance CV:\nSignals input to these jacks will control the amount of resonance of each filter. These inputs to not have an attenuator so they work \"full strength\".</p>\n<p>V/Oct:\nThese inputs are simply another frequency CV which is calibrated to 1 Volt/octave. Use these to control pitch when self-oscillating.</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "OUTPUTS\n\nEach filter has 2 outputs that are available at the same time. The \"1\" outputs (L1 & R1) have 2 switches which control their output type. The \"2\" outputs (L2 & R2) have 1 switch which controls their output type. The selections available are summarized in the table below:\n\nFinally, each pair of outputs is routed through the voltage-controlled panner/crossfader:\n\nWhen the \"Pan\" pot is full counter-clockwise, the \"L/m\" audio input is routed to the L1 and L2 outputs, and the \"R\" to R1/R2. When the \"Pan\" pot is full clockwise, the \"L/m\" audio input is routed to the R1 and R2 outputs, and the \"R\" to L1/L2. When the \"Pan\" pot is in the center, each output will receive 50% of the \"L/m\" input signal and 50% of the \"R\" input signal.\n\nA signal applied to the \"Pan CV\" jack will serve to control the panning in the same manner as the \"Pan\" pot and is attenuated by the \"Pan CV\" pot.\n\nSo, if the \"Pan\" pot is in the dead-center, a positive-going voltage applied to \"Pan CV\" will do the equivalent of turning the \"Pan\" pot clockwise, and a negative-going voltage will do the equivalent of turning the \"pan\" pot counter-clockwise. Thus, the position of a sound within the L/R audio space can easily be modulated via a control signal.\n\nSF1 Output Modes\n\nL1 or R1 Slope\tL1 or R1 Type\tL1 or R1 Output Result\nUp\tUp\t12 dB/oct. Low Pass\nUp\tMiddle\t12 dB/oct. High Pass\nUp\tDown\t12 dB/oct. Bandpass\nDown\tUp\t24 dB/oct. Low Pass\nDown\tMiddle\t24 dB/oct. High Pass\nDown\tDown\t24 dB/oct. Bandpass\n\nL2 or R2 Type\tL2 or R2 Output Result\nUp\t6 dB/oct. Notch\nMiddle\t12 dB/oct. All-Pass\nDown\t24 dB/oct. Phaser (2 \"combs\")",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>OUTPUTS</p>\n<p>Each filter has 2 outputs that are available at the same time. The \"1\" outputs (L1 &#x26; R1) have 2 switches which control their output type. The \"2\" outputs (L2 &#x26; R2) have 1 switch which controls their output type. The selections available are summarized in the table below:</p>\n<p>Finally, each pair of outputs is routed through the voltage-controlled panner/crossfader:</p>\n<p>When the \"Pan\" pot is full counter-clockwise, the \"L/m\" audio input is routed to the L1 and L2 outputs, and the \"R\" to R1/R2. When the \"Pan\" pot is full clockwise, the \"L/m\" audio input is routed to the R1 and R2 outputs, and the \"R\" to L1/L2. When the \"Pan\" pot is in the center, each output will receive 50% of the \"L/m\" input signal and 50% of the \"R\" input signal.</p>\n<p>A signal applied to the \"Pan CV\" jack will serve to control the panning in the same manner as the \"Pan\" pot and is attenuated by the \"Pan CV\" pot.</p>\n<p>So, if the \"Pan\" pot is in the dead-center, a positive-going voltage applied to \"Pan CV\" will do the equivalent of turning the \"Pan\" pot clockwise, and a negative-going voltage will do the equivalent of turning the \"pan\" pot counter-clockwise. Thus, the position of a sound within the L/R audio space can easily be modulated via a control signal.</p>\n<p>SF1 Output Modes</p>\n<p>L1 or R1 Slope\tL1 or R1 Type\tL1 or R1 Output Result\nUp\tUp\t12 dB/oct. Low Pass\nUp\tMiddle\t12 dB/oct. High Pass\nUp\tDown\t12 dB/oct. Bandpass\nDown\tUp\t24 dB/oct. Low Pass\nDown\tMiddle\t24 dB/oct. High Pass\nDown\tDown\t24 dB/oct. Bandpass</p>\n<p>L2 or R2 Type\tL2 or R2 Output Result\nUp\t6 dB/oct. Notch\nMiddle\t12 dB/oct. All-Pass\nDown\t24 dB/oct. Phaser (2 \"combs\")</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "Bode plots of the nominal output responses from all 9 settings of SF1 are included in the appendix at the end of this document.\n\nLINK BUTTON\n\nThe \"Link\" button provides a convenient way to use the SF1 with a stereo audio signal present as a dual mono pair to the L and R inputs.\n\nWhen the \"Link\" button is engaged and the orange LED above it is lit, the LEFT side…\n- Frequency pot\n- Resonance pot\n- Frequency CV input / attenuverter\n- Resonance CV\n…will control BOTH filters.\n\nThe illustration on this page shows the link function more graphically.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Bode plots of the nominal output responses from all 9 settings of SF1 are included in the appendix at the end of this document.</p>\n<p>LINK BUTTON</p>\n<p>The \"Link\" button provides a convenient way to use the SF1 with a stereo audio signal present as a dual mono pair to the L and R inputs.</p>\n<p>When the \"Link\" button is engaged and the orange LED above it is lit, the LEFT side…</p>\n<ul>\n<li>Frequency pot</li>\n<li>Resonance pot</li>\n<li>Frequency CV input / attenuverter</li>\n<li>Resonance CV\n…will control BOTH filters.</li>\n</ul>\n<p>The illustration on this page shows the link function more graphically.</p>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "MAINTANENCE\nSF1 will not require any particular maintenance, but there are 2 sets of trimmers which are adjustable during service.\n\nAlong the top edge of the unit are the Volts per octave trimmers for each filter, which work like a V/oct trimmer on any oscillator.\n\nAlong the bottom edge of the unit are 2 trimmers which are used to calibrate the audio input stages so that they are exactly unity when the audio input pots are centered. These are adjusted upon assembly and would normally not need to be adjusted.\n\nCONCLUSIONS\nAs with any piece of modular synth equipment, it is best to just play with it by itself and with other modules. Find what you like and most importunely, have fun making music!! There is no wrong answer!\n\n...IDEAS?!…\n- Send two different oscillator waveforms to the audio inputs, center the pan pot, and send an audio rate signal to pan CV for cool AM (amplitude modulation) effects. At fast rates you will get a fun tremolo effect.\n\n- Use both filters as oscillators (self-oscillation) and tune them to a musical interval (third, fifth, octave, etc..) and control both with the 1 V/oct inputs for a sine-wave synth voice.\n\n- You can route both VCFs in series by patching L1 out to R audio and use L2 out to get 8 pole LP, HP, or BP filter. Or patch L2 out to R audio in and use R2 out to get a 2 pole notch, an all-pass filter with 720 degrees of phase displacement, or a phaser with 4 \"combs\"!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>MAINTANENCE\nSF1 will not require any particular maintenance, but there are 2 sets of trimmers which are adjustable during service.</p>\n<p>Along the top edge of the unit are the Volts per octave trimmers for each filter, which work like a V/oct trimmer on any oscillator.</p>\n<p>Along the bottom edge of the unit are 2 trimmers which are used to calibrate the audio input stages so that they are exactly unity when the audio input pots are centered. These are adjusted upon assembly and would normally not need to be adjusted.</p>\n<p>CONCLUSIONS\nAs with any piece of modular synth equipment, it is best to just play with it by itself and with other modules. Find what you like and most importunely, have fun making music!! There is no wrong answer!</p>\n<p>...IDEAS?!…</p>\n<ul>\n<li>\n<p>Send two different oscillator waveforms to the audio inputs, center the pan pot, and send an audio rate signal to pan CV for cool AM (amplitude modulation) effects. At fast rates you will get a fun tremolo effect.</p>\n</li>\n<li>\n<p>Use both filters as oscillators (self-oscillation) and tune them to a musical interval (third, fifth, octave, etc..) and control both with the 1 V/oct inputs for a sine-wave synth voice.</p>\n</li>\n<li>\n<p>You can route both VCFs in series by patching L1 out to R audio and use L2 out to get 8 pole LP, HP, or BP filter. Or patch L2 out to R audio in and use R2 out to get a 2 pole notch, an all-pass filter with 720 degrees of phase displacement, or a phaser with 4 \"combs\"!</p>\n</li>\n</ul>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "APPENDIX: BLOCK DIAGRAM\n\nSF1 Dual/Stereo VCF:\nBlock Diagram\n\nLeft Audio In\n\nInput Stage\nw/ Overdrive\n\n4 Pole Voltage\nControlled\nLowpass Filter\n\nL1 Outs Pole\nMixer\n\nL2 Outs Pole\nMixer\n\n4P or 2P Lowpass\n4P or 2P Highpass\n4P or 2P Bandpass\n1P Notch\n2P All Pass\n4P Phaser\n\nL1 Select Switches\n\nR1 Select Switch\n\nVoltage Controlled\nPanner/Crossfader\n\nVoltage Controlled\nPanner/Crossfader\n\nL1 Output\n\nL2 Output\n\nR1 Output\n\nR2 Output\n\nRight Audio In\n\nInput Stage\nw/ Overdrive\n\n4 Pole Voltage\nControlled\nLowpass Filter\n\nR1 Outs Pole\nMixer\n\nR2 Outs Pole\nMixer\n\n4P or 2P Lowpass\n4P or 2P Highpass\n4P or 2P Bandpass\n1P Notch\n2P All Pass\n4P Phaser\n\nR1 Select Switches\n\nR2 Select Switch\n\n(Right audio in jack normalling)\n\nLeft Freq CV In\nAttenuverter\n\nLeft Res CV In\n\nLeft Freq Pot\n\nLeft Res Pot\n\nLeft 1 V/Oct In\n\nRight Freq CV In\nAttenuverter\n\nRight Res CV In\n\nRight Freq Pot\n\nRight Res Pot\n\nRight1 V/Oct In\n\nLINK Button\n\nPan Pot\n\nPan CV",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>APPENDIX: BLOCK DIAGRAM</p>\n<p>SF1 Dual/Stereo VCF:\nBlock Diagram</p>\n<p>Left Audio In</p>\n<p>Input Stage\nw/ Overdrive</p>\n<p>4 Pole Voltage\nControlled\nLowpass Filter</p>\n<p>L1 Outs Pole\nMixer</p>\n<p>L2 Outs Pole\nMixer</p>\n<p>4P or 2P Lowpass\n4P or 2P Highpass\n4P or 2P Bandpass\n1P Notch\n2P All Pass\n4P Phaser</p>\n<p>L1 Select Switches</p>\n<p>R1 Select Switch</p>\n<p>Voltage Controlled\nPanner/Crossfader</p>\n<p>Voltage Controlled\nPanner/Crossfader</p>\n<p>L1 Output</p>\n<p>L2 Output</p>\n<p>R1 Output</p>\n<p>R2 Output</p>\n<p>Right Audio In</p>\n<p>Input Stage\nw/ Overdrive</p>\n<p>4 Pole Voltage\nControlled\nLowpass Filter</p>\n<p>R1 Outs Pole\nMixer</p>\n<p>R2 Outs Pole\nMixer</p>\n<p>4P or 2P Lowpass\n4P or 2P Highpass\n4P or 2P Bandpass\n1P Notch\n2P All Pass\n4P Phaser</p>\n<p>R1 Select Switches</p>\n<p>R2 Select Switch</p>\n<p>(Right audio in jack normalling)</p>\n<p>Left Freq CV In\nAttenuverter</p>\n<p>Left Res CV In</p>\n<p>Left Freq Pot</p>\n<p>Left Res Pot</p>\n<p>Left 1 V/Oct In</p>\n<p>Right Freq CV In\nAttenuverter</p>\n<p>Right Res CV In</p>\n<p>Right Freq Pot</p>\n<p>Right Res Pot</p>\n<p>Right1 V/Oct In</p>\n<p>LINK Button</p>\n<p>Pan Pot</p>\n<p>Pan CV</p>"
     },
     {
       "pageNum": 8,
@@ -80,7 +87,8 @@
       "sectionName": null,
       "content": "APPENDIX: L1/R1 OUTPUT\n\nNOMINAL RESPONSES\n\nLow pass (2 pole and 4 pole):\n\nHigh pass (2 pole and 4 pole):",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>APPENDIX: L1/R1 OUTPUT</p>\n<p>NOMINAL RESPONSES</p>\n<p>Low pass (2 pole and 4 pole):</p>\n<p>High pass (2 pole and 4 pole):</p>"
     },
     {
       "pageNum": 9,
@@ -89,7 +97,8 @@
       "sectionName": null,
       "content": "APPENDIX: L1/R1 OUTPUT\n\nNOMINAL RESPONSES\n\nBand pass (2 pole and 4 pole):",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>APPENDIX: L1/R1 OUTPUT</p>\n<p>NOMINAL RESPONSES</p>\n<p>Band pass (2 pole and 4 pole):</p>"
     },
     {
       "pageNum": 10,
@@ -98,7 +107,8 @@
       "sectionName": null,
       "content": "APPENDIX: L2/R2 OUTPUT\n\nNOMINAL RESPONSES\n\n1 Pole Notch:\n\n2 Pole All-Pass:",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>APPENDIX: L2/R2 OUTPUT</p>\n<p>NOMINAL RESPONSES</p>\n<p>1 Pole Notch:</p>\n<p>2 Pole All-Pass:</p>"
     },
     {
       "pageNum": 11,
@@ -107,7 +117,8 @@
       "sectionName": null,
       "content": "APPENDIX: L2/R2 OUTPUT\n\nNOMINAL RESPONSES\n\n4 Pole Phaser:",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>APPENDIX: L2/R2 OUTPUT</p>\n<p>NOMINAL RESPONSES</p>\n<p>4 Pole Phaser:</p>"
     },
     {
       "pageNum": 12,
@@ -116,7 +127,8 @@
       "sectionName": null,
       "content": "REVISION HISTORY\n\n01: Initial release.\n\n© 2022 Weston Precision Audio",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>REVISION HISTORY</p>\n<p>01: Initial release.</p>\n<p>© 2022 Weston Precision Audio</p>"
     }
   ]
 }

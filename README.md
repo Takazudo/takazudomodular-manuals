@@ -1,6 +1,6 @@
 # zmanuals
 
-A Next.js-based manual viewer for hardware synthesizer manuals. Provides a bilingual viewing experience with original PDF page images alongside Japanese translations, supporting 40+ manuals.
+A static manual viewer for hardware synthesizer manuals built with zfb (Preact islands). Provides a bilingual viewing experience with original PDF page images alongside Japanese translations, supporting 40+ manuals.
 
 ## Features
 
@@ -24,8 +24,8 @@ A Next.js-based manual viewer for hardware synthesizer manuals. Provides a bilin
 
 ## Tech Stack
 
-- **Framework**: Next.js 14+ with App Router
-- **UI**: React 19
+- **Framework**: zfb (Preact islands, static site generation)
+- **UI**: Preact (via preact/compat — JSX compatible with React syntax)
 - **Styling**: Tailwind CSS v4 (Zudo Design System)
 - **Language**: TypeScript
 - **Package Manager**: pnpm
@@ -40,14 +40,17 @@ A Next.js-based manual viewer for hardware synthesizer manuals. Provides a bilin
 # Install dependencies
 pnpm install
 
-# Start development server (port 3100)
+# Start development server (port 3300)
 pnpm dev
 
 # Build for production
 pnpm build
 
-# Serve production build locally
+# Serve production build locally (port 8030)
 pnpm serve
+
+# Preview the zfb build
+pnpm preview
 ```
 
 ## Search
@@ -119,32 +122,17 @@ This runs the full pipeline:
 **Time estimate**: 15-30 minutes (depending on manual size)
 **Cost estimate**: $5-10 per 280-page manual (Claude Sonnet 4.5)
 
-### 4. Update Manual Registry
+### 4. Regenerate the Manual Registry
 
-Edit `lib/manual-registry.ts` to import the new manual's data:
+The viewer registry is **single-sourced via codegen** — there is no import list to hand-edit:
 
-```typescript
-// Add imports for new manual
-import newManualManifest from '@/public/new-manual-slug/data/manifest.json';
-import newManualPages from '@/public/new-manual-slug/data/pages-ja.json';
-
-// Add to registry
-const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
-  'oxi-one-mk2': {
-    // ... existing manual
-  },
-  'new-manual-slug': {
-    manifest: newManualManifest as unknown as ManualManifest,
-    pages: newManualPages as unknown as ManualPagesData,
-  },
-};
+```bash
+pnpm run gen:registry
 ```
 
-**Why explicit imports?**
+`scripts/gen-registry.js` scans `public/<slug>/data/` for every directory that has both `manifest.json` and `pages-ja.json`, and regenerates `lib/zfb-registry.generated.ts` — the static import list + `REGISTRY` map that `lib/zfb-registry.ts` re-exports through its public API. Because the new manual's files already exist under `public/` by this step, regenerating picks them up automatically.
 
-- Type safety with TypeScript
-- Build-time bundling (no runtime fetch)
-- Compatible with Next.js static export
+**Never edit `lib/zfb-registry.generated.ts` by hand** — commit the regenerated file alongside the new manual's data. Regeneration is idempotent (re-running with no changes yields zero diff).
 
 ### 5. Build and Deploy
 
@@ -202,7 +190,7 @@ public/new-manual-slug/         # Output (committed to git)
 
 - ✅ `public/{slug}/data/` - Final JSON files
 - ✅ `public/{slug}/pages/` - Rendered images
-- ✅ `lib/manual-registry.ts` - Updated registry
+- ✅ `lib/zfb-registry.generated.ts` - Regenerated registry (via `pnpm run gen:registry`)
 - ❌ `manual-pdf/{slug}/` - Source PDFs (gitignored)
 - ❌ `public/{slug}/processing/` - Temp files (gitignored)
 
@@ -212,8 +200,9 @@ public/new-manual-slug/         # Output (committed to git)
 
 ```bash
 # Development
-pnpm dev                  # Start Next.js dev server (port 3100)
-pnpm doc:dev              # Start Docusaurus docs (port 3110)
+pnpm dev                  # Start zfb dev server (port 3300)
+pnpm preview              # Preview the zfb build
+pnpm doc:dev              # Start Docusaurus docs (port 3100)
 
 # Building
 pnpm build                # Build for production
@@ -266,15 +255,15 @@ cd worktrees/issue-X-feature-name
 
 ```
 /
-├── app/                        # Next.js app directory
-│   └── manuals/[manualId]/     # Dynamic manual routes
-│       └── page/[pageNum]/     # Page viewer
-├── components/                 # React components
-│   └── viewer/                 # Viewer components (scroll mode, sidebar, modal)
+├── pages/                      # zfb page templates (static generation)
+│   └── [manualId]/             # Per-manual pages
+├── layouts/                    # zfb layout wrappers
+├── components/                 # Preact components
+│   └── zfb/                    # zfb-specific islands and utilities
 ├── lib/                        # Utilities and data loading
 │   ├── manual-data.ts          # Data loading logic
-│   ├── manual-registry.ts      # Manual registry (update for new manuals)
-│   ├── asset-url.ts            # Base path utilities
+│   ├── zfb-registry.generated.ts  # Code-generated registry (run `pnpm run gen:registry`)
+│   ├── zfb-registry.ts         # Public API re-exporting the generated registry
 │   └── types/                  # TypeScript types
 ├── e2e/                        # Playwright e2e tests
 ├── public/                     # Static manual assets

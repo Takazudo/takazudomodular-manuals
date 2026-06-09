@@ -3,15 +3,16 @@
   "brand": "OXI Instruments",
   "productSlug": "oxi-one-mk2-black",
   "version": "1.0.0",
-  "totalPages": 272,
-  "contentPages": 260,
-  "lastUpdated": "2026-01-03T16:35:35.555Z",
-  "updatedAt": "20260112",
+  "totalPages": 302,
+  "contentPages": 288,
+  "lastUpdated": "2026-05-30T16:23:16.753Z",
+  "updatedAt": "20260531",
   "source": {
-    "filename": "OXI-ONE-MKII-Manual.pdf",
-    "processedAt": "2026-01-03T16:35:30.894Z",
+    "filename": "OXI ONE MKII Manual.pdf",
+    "processedAt": "2026-05-30T14:46:43.462Z",
     "imageDPI": 300,
     "imageFormat": "png"
   },
-  "searchIndexVersion": "558583c6f321c46fa7a57dbce77270a3554b46fc"
+  "hasEnglish": true,
+  "searchIndexVersion": "14a6e2e21e8885846a2783fa954fc0e73c531c3e"
 }

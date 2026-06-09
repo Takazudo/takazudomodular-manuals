@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "TZ0\n\nThru Zero Oscillator\n\nEurorack Module\n\nUser Manual\n\nWeston Precision Audio\n\nDesigned In Portland, Oregon\n\nRevision 01 - September 25, 2023",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>TZ0</p>\n<p>Thru Zero Oscillator</p>\n<p>Eurorack Module</p>\n<p>User Manual</p>\n<p>Weston Precision Audio</p>\n<p>Designed In Portland, Oregon</p>\n<p>Revision 01 - September 25, 2023</p>"
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "DESCRIPTION\n\nTZ0 is an analog voltage-controlled triangle-core oscillator with the ability to modulate through zero-frequency (See figure 1). This allows for deeper, cleaner, more natural sounding frequency modulation and allows for additional sonic expression not available with standard linear FM. TZ0 is a 12 HP Eurorack module which is available as a pre-built module or as a DIY project. This VCO has been engineered for extremely good 1 V/oct response over a large tuning range and great thermal stability.\n\nFigure 1: A typical triangle wave modulating through a zero-frequency crossing\n\nSPECS\n\nModule Size: 12HP\n\nVCO Output (All outputs ~1kOhm Impedance): Sine, Triangle*, Sawtooth, Square*, Pulse\n(* = Directly from VCO core)\n\nInputs (All inputs >=100kOhm Impedance): 1 Volts/Octave, Linear Frequency Modulation, FM Modulation Envelope, Sync, Pulse Width Modulation\n\nAll wave outputs: 10 Volts peak-to-peak nominal\n\nVCO range: 0Hz - 28kHz\n\nPower input: +12V & -12V via standard 10 pin Eurorack connector.\n\nPower consumption (+12V / -12V):\nTyp: 75mA / 60mA\nMax: 85mA / 70mA\n\nTuning error: < +/- 5 cents over 7 octave typical\n\nMAXIMUM LIMITS\n\nSupply Voltage: +13.5V / -13.5V\n\nFM, PWM, and Sync Inputs: 20Vpp (nominal 10Vpp)\n\nEnvelope Input: +10V (nominal 0-5V)\n\n1 Volt/Oct Input: +12V",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>DESCRIPTION</p>\n<p>TZ0 is an analog voltage-controlled triangle-core oscillator with the ability to modulate through zero-frequency (See figure 1). This allows for deeper, cleaner, more natural sounding frequency modulation and allows for additional sonic expression not available with standard linear FM. TZ0 is a 12 HP Eurorack module which is available as a pre-built module or as a DIY project. This VCO has been engineered for extremely good 1 V/oct response over a large tuning range and great thermal stability.</p>\n<p>Figure 1: A typical triangle wave modulating through a zero-frequency crossing</p>\n<p>SPECS</p>\n<p>Module Size: 12HP</p>\n<p>VCO Output (All outputs ~1kOhm Impedance): Sine, Triangle*, Sawtooth, Square*, Pulse\n(* = Directly from VCO core)</p>\n<p>Inputs (All inputs >=100kOhm Impedance): 1 Volts/Octave, Linear Frequency Modulation, FM Modulation Envelope, Sync, Pulse Width Modulation</p>\n<p>All wave outputs: 10 Volts peak-to-peak nominal</p>\n<p>VCO range: 0Hz - 28kHz</p>\n<p>Power input: +12V &#x26; -12V via standard 10 pin Eurorack connector.</p>\n<p>Power consumption (+12V / -12V):\nTyp: 75mA / 60mA\nMax: 85mA / 70mA</p>\n<p>Tuning error: &#x3C; +/- 5 cents over 7 octave typical</p>\n<p>MAXIMUM LIMITS</p>\n<p>Supply Voltage: +13.5V / -13.5V</p>\n<p>FM, PWM, and Sync Inputs: 20Vpp (nominal 10Vpp)</p>\n<p>Envelope Input: +10V (nominal 0-5V)</p>\n<p>1 Volt/Oct Input: +12V</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "TZ0\n\nOverview\n\nTuning Potentiometers\n\nLarge = coarse adjustment, small = fine adjustment\n\nLinear Frequency Modulation Section\n\nSee Page 3 for detail\n\nPWM Section\n\nSee Page 4 for detail\n\nPrimary Wave Outputs\n\nSine, Triangle, Sawtooth, Square, Pulse\n\nFrequency CV Input\n\nChanges oscillator pitch on a 1 volt per octave scale.\n\nSync Input\n\nSee Page 4 for detail",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>TZ0</p>\n<p>Overview</p>\n<p>Tuning Potentiometers</p>\n<p>Large = coarse adjustment, small = fine adjustment</p>\n<p>Linear Frequency Modulation Section</p>\n<p>See Page 3 for detail</p>\n<p>PWM Section</p>\n<p>See Page 4 for detail</p>\n<p>Primary Wave Outputs</p>\n<p>Sine, Triangle, Sawtooth, Square, Pulse</p>\n<p>Frequency CV Input</p>\n<p>Changes oscillator pitch on a 1 volt per octave scale.</p>\n<p>Sync Input</p>\n<p>See Page 4 for detail</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "MODULATION SECTION (Thru-Zero FM)\n\nOne of the features of TZ0 that many analog VCOs do not have is through-zero linear FM. A VCO with standard linear FM, when presented with a modulating signal that will take it all the way down to 0Hz frequency, will simply stop making any sound. This produces an effective DC offset of the modulating signal that increases with more modulation, thus bending the primary pitch of the oscillator upward as modulation increases. On the other hand, a TZFM oscillator core will simply modulate towards 0Hz, then \"start spinning backwards\" and continue to modulate. The result is natural sounding modulation, such as that of a bell or a pipe being struck, without the bending of the fundamental pitch like regular linear FM.\n\nThe FM section of TZ0 is shown in the above block diagram. The \"0Hz\" point discussed above is simply adjusted with the \"TZ Offset\" knob. This has the side-effect of modulating the primary pitch of the oscillator, so adjustments in \"TZ Offset\" need to be accompanied with re-tuning via the tuning pots.\n\nOne interesting usage of the \"TZ Offset\" pot, is to set it completely counter-clockwise (to zero). This means that the oscillator core itself will not make any sound on it's own, but it can be modulated with a signal from the \"Lin FM\" input. This has the effect of reversing the role of the tuning pots and the \"Lin FM\" input: The \"Lin FM\" signal effects the overall pitch heard, and the tuning knobs (and V/oct input) change the timbre of the sound.\n\nFinally, a simple VCA has been included right after the \"Lin FM\" input. This allows the amount of TZFM modulation to be shaped by an envelope or other signal.\n\nThe \"Lin FM\" input on TZ0 is AC-coupled.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>MODULATION SECTION (Thru-Zero FM)</p>\n<p>One of the features of TZ0 that many analog VCOs do not have is through-zero linear FM. A VCO with standard linear FM, when presented with a modulating signal that will take it all the way down to 0Hz frequency, will simply stop making any sound. This produces an effective DC offset of the modulating signal that increases with more modulation, thus bending the primary pitch of the oscillator upward as modulation increases. On the other hand, a TZFM oscillator core will simply modulate towards 0Hz, then \"start spinning backwards\" and continue to modulate. The result is natural sounding modulation, such as that of a bell or a pipe being struck, without the bending of the fundamental pitch like regular linear FM.</p>\n<p>The FM section of TZ0 is shown in the above block diagram. The \"0Hz\" point discussed above is simply adjusted with the \"TZ Offset\" knob. This has the side-effect of modulating the primary pitch of the oscillator, so adjustments in \"TZ Offset\" need to be accompanied with re-tuning via the tuning pots.</p>\n<p>One interesting usage of the \"TZ Offset\" pot, is to set it completely counter-clockwise (to zero). This means that the oscillator core itself will not make any sound on it's own, but it can be modulated with a signal from the \"Lin FM\" input. This has the effect of reversing the role of the tuning pots and the \"Lin FM\" input: The \"Lin FM\" signal effects the overall pitch heard, and the tuning knobs (and V/oct input) change the timbre of the sound.</p>\n<p>Finally, a simple VCA has been included right after the \"Lin FM\" input. This allows the amount of TZFM modulation to be shaped by an envelope or other signal.</p>\n<p>The \"Lin FM\" input on TZ0 is AC-coupled.</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "PWM Section\n\nThe rightmost output on TZ0 is a PWM or pulse-width-modulated output. A pulse signal with PMW is a square-shaped signal that can vary its duty-cycle (the amount of time the wave is high vs low). The PWM signal is derived by simply feeding the triangle from the VCO core to a comparator, with the other voltage of the comparator being some voltage.\n\nThe TZ0 PWM section is shown in the diagram above. The overall initial pulse-width is simply set by using the \"PW\" knob. When the knob is centered, the pulse output will be 50% duty cycle (a square). Turning the knob CCW makes for narrower pulses, and CW makes for wider ones.\n\nFinally, any signal such as a LFO or VCO or envelope can be inserted into the \"PWM\" jack and used to modulate the width of the pulse output. It is simply summed with the DC value which is adjusted by the \"PW\" knob.\n\nSync\n\nThe oscillator core of TZ0 can be sync'd from another oscillator with the \"Sync\" input. It is a \"reset\" or \"hard\" sync type which resets the triangle's integrating capacitor on the rising edge of the inputted sync signal. Try keeping the sync signal fixed and adjusting the tuning put constant for classic sync sounds.\n\nThe diagram below shows the action of the \"Sync\" input:",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>PWM Section</p>\n<p>The rightmost output on TZ0 is a PWM or pulse-width-modulated output. A pulse signal with PMW is a square-shaped signal that can vary its duty-cycle (the amount of time the wave is high vs low). The PWM signal is derived by simply feeding the triangle from the VCO core to a comparator, with the other voltage of the comparator being some voltage.</p>\n<p>The TZ0 PWM section is shown in the diagram above. The overall initial pulse-width is simply set by using the \"PW\" knob. When the knob is centered, the pulse output will be 50% duty cycle (a square). Turning the knob CCW makes for narrower pulses, and CW makes for wider ones.</p>\n<p>Finally, any signal such as a LFO or VCO or envelope can be inserted into the \"PWM\" jack and used to modulate the width of the pulse output. It is simply summed with the DC value which is adjusted by the \"PW\" knob.</p>\n<p>Sync</p>\n<p>The oscillator core of TZ0 can be sync'd from another oscillator with the \"Sync\" input. It is a \"reset\" or \"hard\" sync type which resets the triangle's integrating capacitor on the rising edge of the inputted sync signal. Try keeping the sync signal fixed and adjusting the tuning put constant for classic sync sounds.</p>\n<p>The diagram below shows the action of the \"Sync\" input:</p>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "MAINTANENCE\n\nTZ0, like most modular synth equipment will not need any particular maintenance. However, some people may want to adjust the trimmer pots on the module, such as perfecting the V/oct response for your particular case, MIDI converter, etc.. The following trimmer pots are located on the rear PCB of TZ0 and are labeled on the top side of the board with their function:\n\n- V/oct trimmer *\n- High Frequency compensation trim *\n- Sine roundness trim\n\n* If you wish to fine tune the V/oct and HF compensation trimmer, remember to set the \"TZ Offset\" pot to center (high noon) while doing so.\n\nCONCLUSIONS\n\nAs with any piece of modular synth equipment, it is best to just play with it by itself and with other modules. Find what you like and most importunely, have fun making music!!",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>MAINTANENCE</p>\n<p>TZ0, like most modular synth equipment will not need any particular maintenance. However, some people may want to adjust the trimmer pots on the module, such as perfecting the V/oct response for your particular case, MIDI converter, etc.. The following trimmer pots are located on the rear PCB of TZ0 and are labeled on the top side of the board with their function:</p>\n<ul>\n<li>V/oct trimmer *</li>\n<li>High Frequency compensation trim *</li>\n<li>Sine roundness trim</li>\n</ul>\n<ul>\n<li>If you wish to fine tune the V/oct and HF compensation trimmer, remember to set the \"TZ Offset\" pot to center (high noon) while doing so.</li>\n</ul>\n<p>CONCLUSIONS</p>\n<p>As with any piece of modular synth equipment, it is best to just play with it by itself and with other modules. Find what you like and most importunely, have fun making music!!</p>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "REVISION HISTORY\n\n01: Initial release.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>REVISION HISTORY</p>\n<p>01: Initial release.</p>"
     }
   ]
 }

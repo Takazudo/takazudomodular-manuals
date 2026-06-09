@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "全体的な説明\n\nこのモジュールには、AとBとラベル付けされた2つの同一セクションがあります。\n\nこのモジュールは、2つの入力信号(X & Y)を単に合計するだけでなく、2つの信号を減算する可能性も提供する特殊なタイプのミキサーです。オーディオ信号とCV信号の両方で動作するため、2つのCVの差分を取得したり、2つのオーディオ信号の位相をキャンセルしたりすることが可能です。\n\n合計または減算の結果信号は、その後、スイッチ可能(on/off)な全波整流回路を通過します。これはAbsoluteとラベル付けされています。この後、ミックスされた信号のゲインは、Amplitudeとラベル付けされた別のアッテニュバーターを通過し、結果信号のゲインをコントロールします。これはアッテニュバーターであるため、入力信号を反転させる可能性も提供します。Amplitudeの後には、AC/DCカップリングスイッチがあり、その後にバイポーラOffsetノブが続きます。\n\n通常の出力に加えて、A & Bセクションのそれぞれに反転出力もあります。\n\nセクションAとBの出力も合算され、Average Outputに送信されます。\n\n単一入力(XまたはY入力のいずれか)を使用すると、このモジュールは、全波整流とACカップリングオプションを備えたシンプルなデュアルアッテニュバーター & Offset CVプロセッサーとしても使用できます。\n\n機能:\n\n2つの独立したセクション、それぞれに:\nI. ゲインアッテニュバーター付き2入力\nII. AmplitudeアッテニュバーターとバイポーラOffset\nIII. Absolute/BipolarおよびAC/DCスイッチ\nIV. 出力と反転出力\nV. 出力の極性とゲインをモニターする2つのLED\n\n両セクションのAverageミックス出力",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>全体的な説明</p>\n<p>このモジュールには、AとBとラベル付けされた2つの同一セクションがあります。</p>\n<p>このモジュールは、2つの入力信号(X &#x26; Y)を単に合計するだけでなく、2つの信号を減算する可能性も提供する特殊なタイプのミキサーです。オーディオ信号とCV信号の両方で動作するため、2つのCVの差分を取得したり、2つのオーディオ信号の位相をキャンセルしたりすることが可能です。</p>\n<p>合計または減算の結果信号は、その後、スイッチ可能(on/off)な全波整流回路を通過します。これはAbsoluteとラベル付けされています。この後、ミックスされた信号のゲインは、Amplitudeとラベル付けされた別のアッテニュバーターを通過し、結果信号のゲインをコントロールします。これはアッテニュバーターであるため、入力信号を反転させる可能性も提供します。Amplitudeの後には、AC/DCカップリングスイッチがあり、その後にバイポーラOffsetノブが続きます。</p>\n<p>通常の出力に加えて、A &#x26; Bセクションのそれぞれに反転出力もあります。</p>\n<p>セクションAとBの出力も合算され、Average Outputに送信されます。</p>\n<p>単一入力(XまたはY入力のいずれか)を使用すると、このモジュールは、全波整流とACカップリングオプションを備えたシンプルなデュアルアッテニュバーター &#x26; Offset CVプロセッサーとしても使用できます。</p>\n<p>機能:</p>\n<p>2つの独立したセクション、それぞれに:\nI. ゲインアッテニュバーター付き2入力\nII. AmplitudeアッテニュバーターとバイポーラOffset\nIII. Absolute/BipolarおよびAC/DCスイッチ\nIV. 出力と反転出力\nV. 出力の極性とゲインをモニターする2つのLED</p>\n<p>両セクションのAverageミックス出力</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "コントロール説明\n\nセクションA 振幅Attenuverter\n\nセクションA 入力\n\nセクションA モニターLED\n\nセクションA Attenuverter Offset\n\nセクションA X&Y Attenuverter入力\n\n振幅Attenuverter セクションB\n\nモニターLED セクションB\n\nAttenuverter Offset セクションB\n\n入力 セクションB\n\nAC / DC Coupling セクションB\n\n平均出力 セクションA&B\n\nAbsolute / Bipolar セクションB\n\nAC / DC Coupling セクションA\n\nAbsolute / Bipolar セクションA\n\n出力 セクションB\t\tセクションA 出力\n\nセクションA 反転出力\n\n反転出力 セクションB\n\nセクションB X&Y Attenuverter入力\n\nセクションA\n\nセクションB",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>コントロール説明</p>\n<p>セクションA 振幅Attenuverter</p>\n<p>セクションA 入力</p>\n<p>セクションA モニターLED</p>\n<p>セクションA Attenuverter Offset</p>\n<p>セクションA X&#x26;Y Attenuverter入力</p>\n<p>振幅Attenuverter セクションB</p>\n<p>モニターLED セクションB</p>\n<p>Attenuverter Offset セクションB</p>\n<p>入力 セクションB</p>\n<p>AC / DC Coupling セクションB</p>\n<p>平均出力 セクションA&#x26;B</p>\n<p>Absolute / Bipolar セクションB</p>\n<p>AC / DC Coupling セクションA</p>\n<p>Absolute / Bipolar セクションA</p>\n<p>出力 セクションB\t\tセクションA 出力</p>\n<p>セクションA 反転出力</p>\n<p>反転出力 セクションB</p>\n<p>セクションB X&#x26;Y Attenuverter入力</p>\n<p>セクションA</p>\n<p>セクションB</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "ADDAC216 ユーザーガイド\n\nADDAC216\n\nSUM & DIFFERENCE\n\n信号フロー図\n\nセクションA\n\nIN Y\n\nIN X\n\nATTENU\nVERTER\nGAIN\n\nATTENU\nVERTER\nGAIN\n\nMIX\n\nABSOLUTE\n\\-\nBIPOLAR\n(FULL RECTIFICATION)\n\nINVER\nTER\n\nOUT\n\nLEDs\n\nINVER\nTED\nOUT\n\nAC / DC\nCOUPLING\n\nOFFSET\n\nATTENUVERTER\nGAIN\n\nAVERAGE OUTPUT\n\nセクションB\n\nIN Y\n\nIN X\n\nATTENU\nVERTER\nGAIN\n\nATTENU\nVERTER\nGAIN\n\nMIX\n\nABSOLUTE\n\\-\nBIPOLAR\n(FULL RECTIFICATION)\n\nAC / DC\nCOUPLING\n\nOFFSET\n\nATTENUVERTER\nGAIN\n\nOUT\n\nINVER\nTER\n\nINVER\nTED\nOUT\n\nLEDs",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC216 ユーザーガイド</p>\n<p>ADDAC216</p>\n<p>SUM &#x26; DIFFERENCE</p>\n<p>信号フロー図</p>\n<p>セクションA</p>\n<p>IN Y</p>\n<p>IN X</p>\n<p>ATTENU\nVERTER\nGAIN</p>\n<p>ATTENU\nVERTER\nGAIN</p>\n<p>MIX</p>\n<p>ABSOLUTE\n-\nBIPOLAR\n(FULL RECTIFICATION)</p>\n<p>INVER\nTER</p>\n<p>OUT</p>\n<p>LEDs</p>\n<p>INVER\nTED\nOUT</p>\n<p>AC / DC\nCOUPLING</p>\n<p>OFFSET</p>\n<p>ATTENUVERTER\nGAIN</p>\n<p>AVERAGE OUTPUT</p>\n<p>セクションB</p>\n<p>IN Y</p>\n<p>IN X</p>\n<p>ATTENU\nVERTER\nGAIN</p>\n<p>ATTENU\nVERTER\nGAIN</p>\n<p>MIX</p>\n<p>ABSOLUTE\n-\nBIPOLAR\n(FULL RECTIFICATION)</p>\n<p>AC / DC\nCOUPLING</p>\n<p>OFFSET</p>\n<p>ATTENUVERTER\nGAIN</p>\n<p>OUT</p>\n<p>INVER\nTER</p>\n<p>INVER\nTED\nOUT</p>\n<p>LEDs</p>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "フィードバック、コメント、問題については、以下までご連絡ください:\naddac@addacsystem.com\n\nADDAC216 ユーザーガイド\nOctober.2019 Revision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>フィードバック、コメント、問題については、以下までご連絡ください:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC216 ユーザーガイド\nOctober.2019 Revision.01</p>"
     }
   ]
 }

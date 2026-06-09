@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "OVERALL DESCRIPTION\n\nThere are two equal sections in this module labeled A and B.\n\nThis module is a peculiar type of mixer that instead of just summing two input signals (X & Y) it also allows the possibility to subtract the two signals. It works both for audio and CV signals and hence the possibility to get the diference of two CVs or cancel the phase of two audio signals.\n\nThe resulting signal, of sum or subtraction, is then routed through a switchable (on/off) full rectification circuit labeled: Absolute. After this the gain of the mixed signal goes through another attenuverter labeled: Amplitude to control the resulting signal gain which, being an attenuverter, also allows the possibility to invert the incoming signal. After the Amplitude comes an AC/DC coupling switch followed by an bipolar Offset knob.\n\nBesides the normal output there's also an inverted output for each of the A & B sections.\n\nThe outputs of section A & B are also summed and sent to the Average Output.\n\nUsing a single input, just the X or Y input, the module can also be used as a simple dual Attenuverter & Offset CV processor with full rectification and AC coupling options.\n\nFeatures;\n\n2 independent sections each with:\n\n2 inputs with gain attenuverters\n\nAmplitude attenuverter and bipolar Offset\n\nAbsolute/Bipolar and AC/DC switches\n\nOutput and inverted output\n\n2 leds monitor the Output polarities and gain.\n\nAverage mix output of both sections",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>OVERALL DESCRIPTION</p>\n<p>There are two equal sections in this module labeled A and B.</p>\n<p>This module is a peculiar type of mixer that instead of just summing two input signals (X &#x26; Y) it also allows the possibility to subtract the two signals. It works both for audio and CV signals and hence the possibility to get the diference of two CVs or cancel the phase of two audio signals.</p>\n<p>The resulting signal, of sum or subtraction, is then routed through a switchable (on/off) full rectification circuit labeled: Absolute. After this the gain of the mixed signal goes through another attenuverter labeled: Amplitude to control the resulting signal gain which, being an attenuverter, also allows the possibility to invert the incoming signal. After the Amplitude comes an AC/DC coupling switch followed by an bipolar Offset knob.</p>\n<p>Besides the normal output there's also an inverted output for each of the A &#x26; B sections.</p>\n<p>The outputs of section A &#x26; B are also summed and sent to the Average Output.</p>\n<p>Using a single input, just the X or Y input, the module can also be used as a simple dual Attenuverter &#x26; Offset CV processor with full rectification and AC coupling options.</p>\n<p>Features;</p>\n<p>2 independent sections each with:</p>\n<p>2 inputs with gain attenuverters</p>\n<p>Amplitude attenuverter and bipolar Offset</p>\n<p>Absolute/Bipolar and AC/DC switches</p>\n<p>Output and inverted output</p>\n<p>2 leds monitor the Output polarities and gain.</p>\n<p>Average mix output of both sections</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "CONTROLS DESCRIPTION\n\nSection A Amplitude Attenuverter\nSection A Inputs\nSection A Monitor Leds\nSection A Attenuverter Offset\nSection A X&Y Attenuverter Inputs\n\nAmplitude Attenuverter Section B\nMonitor Leds Section B\nAttenuverter Offset Section B\nInputs Section B\nAC / DC Coupling Section B\n\nAverage Output Section A&B\n\nAbsolute / Bipolar Section B\nAC / DC Coupling Section A\nAbsolute / Bipolar Section A\n\nOutput Section B\nSection A Output\nSection A Inverted Output\nInverted Output Section B\nSection B X&Y Attenuverter Inputs\n\nSECTION A\n\nSECTION B",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>CONTROLS DESCRIPTION</p>\n<p>Section A Amplitude Attenuverter\nSection A Inputs\nSection A Monitor Leds\nSection A Attenuverter Offset\nSection A X&#x26;Y Attenuverter Inputs</p>\n<p>Amplitude Attenuverter Section B\nMonitor Leds Section B\nAttenuverter Offset Section B\nInputs Section B\nAC / DC Coupling Section B</p>\n<p>Average Output Section A&#x26;B</p>\n<p>Absolute / Bipolar Section B\nAC / DC Coupling Section A\nAbsolute / Bipolar Section A</p>\n<p>Output Section B\nSection A Output\nSection A Inverted Output\nInverted Output Section B\nSection B X&#x26;Y Attenuverter Inputs</p>\n<p>SECTION A</p>\n<p>SECTION B</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "ADDAC216\n\nSUM & DIFFERENCE\n\nSIGNAL FLOW DIAGRAM\n\nSECTION A\n\nIN Y\n\nIN X\n\nATTENU\nVERTER\nGAIN\n\nATTENU\nVERTER\nGAIN\n\nMIX\n\nABSOLUTE\n\\-\nBIPOLAR\n(FULL RECTIFICATION)\n\nINVER\nTER\n\nOUT\n\nLEDs\n\nINVER\nTED\nOUT\n\nAC / DC\nCOUPLING\n\nOFFSET\n\nATTENUVERTER\nGAIN\n\nAVERAGE OUTPUT\n\nSECTION B\n\nIN Y\n\nIN X\n\nATTENU\nVERTER\nGAIN\n\nATTENU\nVERTER\nGAIN\n\nMIX\n\nABSOLUTE\n\\-\nBIPOLAR\n(FULL RECTIFICATION)\n\nAC / DC\nCOUPLING\n\nOFFSET\n\nATTENUVERTER\nGAIN\n\nOUT\n\nINVER\nTER\n\nINVER\nTED\nOUT\n\nLEDs",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC216</p>\n<p>SUM &#x26; DIFFERENCE</p>\n<p>SIGNAL FLOW DIAGRAM</p>\n<p>SECTION A</p>\n<p>IN Y</p>\n<p>IN X</p>\n<p>ATTENU\nVERTER\nGAIN</p>\n<p>ATTENU\nVERTER\nGAIN</p>\n<p>MIX</p>\n<p>ABSOLUTE\n-\nBIPOLAR\n(FULL RECTIFICATION)</p>\n<p>INVER\nTER</p>\n<p>OUT</p>\n<p>LEDs</p>\n<p>INVER\nTED\nOUT</p>\n<p>AC / DC\nCOUPLING</p>\n<p>OFFSET</p>\n<p>ATTENUVERTER\nGAIN</p>\n<p>AVERAGE OUTPUT</p>\n<p>SECTION B</p>\n<p>IN Y</p>\n<p>IN X</p>\n<p>ATTENU\nVERTER\nGAIN</p>\n<p>ATTENU\nVERTER\nGAIN</p>\n<p>MIX</p>\n<p>ABSOLUTE\n-\nBIPOLAR\n(FULL RECTIFICATION)</p>\n<p>AC / DC\nCOUPLING</p>\n<p>OFFSET</p>\n<p>ATTENUVERTER\nGAIN</p>\n<p>OUT</p>\n<p>INVER\nTER</p>\n<p>INVER\nTED\nOUT</p>\n<p>LEDs</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nADDAC216 USER'S GUIDE\nOctober.2019 Revision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC216 USER'S GUIDE\nOctober.2019 Revision.01</p>"
     }
   ]
 }

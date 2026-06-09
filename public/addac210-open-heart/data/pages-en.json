@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "Welcome to:\n\n3. DICLAIMER & REMARKS ON SAFETY\n\n4. OVERVIEW\n\n5. POWER DIAGRAM\n\n6. POWER SWITCH AND MONITOR LEDS\n\n7. POTENTIOMETERS\n\n8. SWITCHES & PHOTOCELL\n\n9. JACKS\n\n10. LEDS\n\n11. HARDWARE SETTINGS\n\n12. ARDUINO COMPATIBILLITY\n\n13. FRONTPANEL",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Welcome to:</p>\n<ol start=\"3\">\n<li>\n<p>DICLAIMER &#x26; REMARKS ON SAFETY</p>\n</li>\n<li>\n<p>OVERVIEW</p>\n</li>\n<li>\n<p>POWER DIAGRAM</p>\n</li>\n<li>\n<p>POWER SWITCH AND MONITOR LEDS</p>\n</li>\n<li>\n<p>POTENTIOMETERS</p>\n</li>\n<li>\n<p>SWITCHES &#x26; PHOTOCELL</p>\n</li>\n<li>\n<p>JACKS</p>\n</li>\n<li>\n<p>LEDS</p>\n</li>\n<li>\n<p>HARDWARE SETTINGS</p>\n</li>\n<li>\n<p>ARDUINO COMPATIBILLITY</p>\n</li>\n<li>\n<p>FRONTPANEL</p>\n</li>\n</ol>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "DISCLAIMER\n\nWe do not take any responsibility and we are not liable for any damage caused while using this module, be it indirect, special, incidental or consequential damages (including but not limited to damages to power supplies, other modules, personal computers or to the module itself).\n\nUse it at your own responsability!\n\nREMARKS ON SAFETY\n\n(For the electronic enthusiast)\n\nThere are a few things to be very aware while using this module, will try to put it simple here, bottom line is if you're not sure of what you're doing s#!t will happen, but don't despair s#it will also happen when you think you know what you're doing!\n\nHowever, this means that when something is not right, best case scenario, your circuit is somehow faulty and it simply doens't work or, worst case scenario, your circuit is faulty, it won't work but it will also create some sort of \"short circuit\" that will carry a high load through the module and demand a higher current from the PSU to where it's connected. This doesn't mean that all mistakes will be short circuits, but this is the worst case scenario walkthrough.\n\nWhen a short circuit happens, all the load goes through the components in the circuit and ultimately will drain the PSU to it's limits. Depending on the PSU you may have diferent things will happen.\n\nOur PSUs, being good quality switching PSUs, offer short circuit and over-current protection and they will simply shutdown until the short circuit is removed. On the other hand, if working with Toroidal PSUs they will drop they're operating voltage and provide as much current as they physically can, this can be harmfull for other modules connected in the same PSU as well as to the PSU itself.\n\nSo, how can we be safe at all times?\n\nSimple, make \"no\" mistakes! Easy right? From experience most times i learned \"The\" lesson was when i burnt/busted/broke/smoked something. Most of those times i wasn't too focused either, so never be careless, always try to be thinking ahead preventing \"catastrophes\" from happening.\n\nSo if you're stepping into electronics for the first times, be very aware at all times, keep one hand close to the off switch! And keep an eye on the status leds, specially when making new circuit connections and at power ups!\n\nBe aware of board and components temperature, first sign of bad circuit design is heat, if something is heating up than most probably it will burn out soon, raise your nose awareness up, although things normally start to smell funny a bit too late, and if you see smoke than that part is already gone for good.\n\nIf you're learning the arduino platform by it's own or working solely on the arduino side, keep the open heart disconnected from the modular, you can safely work with the usb power and avoid other mistakes.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>DISCLAIMER</p>\n<p>We do not take any responsibility and we are not liable for any damage caused while using this module, be it indirect, special, incidental or consequential damages (including but not limited to damages to power supplies, other modules, personal computers or to the module itself).</p>\n<p>Use it at your own responsability!</p>\n<p>REMARKS ON SAFETY</p>\n<p>(For the electronic enthusiast)</p>\n<p>There are a few things to be very aware while using this module, will try to put it simple here, bottom line is if you're not sure of what you're doing s#!t will happen, but don't despair s#it will also happen when you think you know what you're doing!</p>\n<p>However, this means that when something is not right, best case scenario, your circuit is somehow faulty and it simply doens't work or, worst case scenario, your circuit is faulty, it won't work but it will also create some sort of \"short circuit\" that will carry a high load through the module and demand a higher current from the PSU to where it's connected. This doesn't mean that all mistakes will be short circuits, but this is the worst case scenario walkthrough.</p>\n<p>When a short circuit happens, all the load goes through the components in the circuit and ultimately will drain the PSU to it's limits. Depending on the PSU you may have diferent things will happen.</p>\n<p>Our PSUs, being good quality switching PSUs, offer short circuit and over-current protection and they will simply shutdown until the short circuit is removed. On the other hand, if working with Toroidal PSUs they will drop they're operating voltage and provide as much current as they physically can, this can be harmfull for other modules connected in the same PSU as well as to the PSU itself.</p>\n<p>So, how can we be safe at all times?</p>\n<p>Simple, make \"no\" mistakes! Easy right? From experience most times i learned \"The\" lesson was when i burnt/busted/broke/smoked something. Most of those times i wasn't too focused either, so never be careless, always try to be thinking ahead preventing \"catastrophes\" from happening.</p>\n<p>So if you're stepping into electronics for the first times, be very aware at all times, keep one hand close to the off switch! And keep an eye on the status leds, specially when making new circuit connections and at power ups!</p>\n<p>Be aware of board and components temperature, first sign of bad circuit design is heat, if something is heating up than most probably it will burn out soon, raise your nose awareness up, although things normally start to smell funny a bit too late, and if you see smoke than that part is already gone for good.</p>\n<p>If you're learning the arduino platform by it's own or working solely on the arduino side, keep the open heart disconnected from the modular, you can safely work with the usb power and avoid other mistakes.</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "OVERVIEW\n\nThis is a development platform optimized for the Eurorack electronic enthusiast.\n\nFrontpanel parts:\n\nOn/Off Power switch\n\n1x breadboard\n\n1x 1K Pots\n\n2x 10k Pot\n\n1x 100k Log Pot\n\n1x 100k Pot\n\n1x 1M Pot\n\n4x Leds\n\n1x Photocell\n\n2x SPST (normally open) push switches\n\n1x DPDT (on/on) toggle switch\n\n1x SPDT (on/on) toggle switch\n\n2x SPDT (on/off/on) toggle switches\n\n1x 3.5mm stereo jack\n\n5x 3.5mm mono jack\n\n1x 1/4'' mono jack\n\nPower sources:\n\n-12V, +12V\n\n-3/10V, +3/10V\n\nShips with:\n\n1M Ribbon Cable and 55cm standoff Spacers for desktop operation.\n\n1 Extra breadboard\n\nScrews and nylon washers\n\nMechanical Specs:\n\nWidth: 36 HP\n\nDepth: 3.5cm (±1.375 inches) with or without Arduino installed, Depth increases if using arduino shields.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>OVERVIEW</p>\n<p>This is a development platform optimized for the Eurorack electronic enthusiast.</p>\n<p>Frontpanel parts:</p>\n<p>On/Off Power switch</p>\n<p>1x breadboard</p>\n<p>1x 1K Pots</p>\n<p>2x 10k Pot</p>\n<p>1x 100k Log Pot</p>\n<p>1x 100k Pot</p>\n<p>1x 1M Pot</p>\n<p>4x Leds</p>\n<p>1x Photocell</p>\n<p>2x SPST (normally open) push switches</p>\n<p>1x DPDT (on/on) toggle switch</p>\n<p>1x SPDT (on/on) toggle switch</p>\n<p>2x SPDT (on/off/on) toggle switches</p>\n<p>1x 3.5mm stereo jack</p>\n<p>5x 3.5mm mono jack</p>\n<p>1x 1/4'' mono jack</p>\n<p>Power sources:</p>\n<p>-12V, +12V</p>\n<p>-3/10V, +3/10V</p>\n<p>Ships with:</p>\n<p>1M Ribbon Cable and 55cm standoff Spacers for desktop operation.</p>\n<p>1 Extra breadboard</p>\n<p>Screws and nylon washers</p>\n<p>Mechanical Specs:</p>\n<p>Width: 36 HP</p>\n<p>Depth: 3.5cm (±1.375 inches) with or without Arduino installed, Depth increases if using arduino shields.</p>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "POWER DIAGRAM\n\nIn order to understand how the power diagram works, consider 4 different power sources:\n\nMAIN POWER\n\nMain power is the power coming from your Bus Board\n\nFRONTPANEL POWER\n\nThis is the power source that will be used throghout the module. This voltage is Post the On/Off Switch and Post protection relays. Due to the current protection circuit there's a small voltage drop from the Main Power\n\nSECONDARY POWER\n\nThese are 2 extra power sources, a positive and a negative one, they can be adjusted by the adjacent trimmers to any voltage between +3V to +10V and -3V to -10V.\n\nARDUINO POWER\n\nThe Arduino Power Pins are completely independent from all other sources. These pins are active only if an arduino is plugged in and powered by an USB cable or an external power adapter.\n\nPATH DESCRIPTION\n\nThe Main voltage coming from your Bus Board goes through the On / Off Switch to the current detection circuit and then through the Solid State Relays into the Front panel power.\n\nThe secondary voltage is taken from the Front panel power and goes through 2 voltage regulators (317 & 337) and into the Frontpanel Secondary Power Pins.\n\nIf the current detection circuit reaches it's threshold it will activate the Solid State Relays and turn off all Frontpanel power sources excluding the Arduino Power Pins.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>POWER DIAGRAM</p>\n<p>In order to understand how the power diagram works, consider 4 different power sources:</p>\n<p>MAIN POWER</p>\n<p>Main power is the power coming from your Bus Board</p>\n<p>FRONTPANEL POWER</p>\n<p>This is the power source that will be used throghout the module. This voltage is Post the On/Off Switch and Post protection relays. Due to the current protection circuit there's a small voltage drop from the Main Power</p>\n<p>SECONDARY POWER</p>\n<p>These are 2 extra power sources, a positive and a negative one, they can be adjusted by the adjacent trimmers to any voltage between +3V to +10V and -3V to -10V.</p>\n<p>ARDUINO POWER</p>\n<p>The Arduino Power Pins are completely independent from all other sources. These pins are active only if an arduino is plugged in and powered by an USB cable or an external power adapter.</p>\n<p>PATH DESCRIPTION</p>\n<p>The Main voltage coming from your Bus Board goes through the On / Off Switch to the current detection circuit and then through the Solid State Relays into the Front panel power.</p>\n<p>The secondary voltage is taken from the Front panel power and goes through 2 voltage regulators (317 &#x26; 337) and into the Frontpanel Secondary Power Pins.</p>\n<p>If the current detection circuit reaches it's threshold it will activate the Solid State Relays and turn off all Frontpanel power sources excluding the Arduino Power Pins.</p>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "POWER SWITH & MONITOR LEDS\n\nThere are 7 Leds and 1 Switch on the front panel.\n\nThe Power On/Off Switch is self-explanatory, it turns the power On or Off. This switch is also used to reset the current protection switch once the Protection Relays have been activated.\n\nThe Leds are separated into 3 groups:\n\nSECOND*\nThese Leds shows the status of the Secondary power sources.\n\nMAIN*\nThese Leds shows the status of the Main power sources.\n\n* WARNING: If any of these Leds are off you should immediatelly turn the Power Switch to Off!\n\nCURRENT\nThese Leds shows the status of the Current detection circuit.\n\nWhen top led is on (OFF) means that the main power has been shutdown and needs to be Reset with the Power On/Off switch.\n\nThe labels on the Front panel are relative, there's a trimmer on the right side to adjust the max current consumption before shutdown.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>POWER SWITH &#x26; MONITOR LEDS</p>\n<p>There are 7 Leds and 1 Switch on the front panel.</p>\n<p>The Power On/Off Switch is self-explanatory, it turns the power On or Off. This switch is also used to reset the current protection switch once the Protection Relays have been activated.</p>\n<p>The Leds are separated into 3 groups:</p>\n<p>SECOND*\nThese Leds shows the status of the Secondary power sources.</p>\n<p>MAIN*\nThese Leds shows the status of the Main power sources.</p>\n<ul>\n<li>WARNING: If any of these Leds are off you should immediatelly turn the Power Switch to Off!</li>\n</ul>\n<p>CURRENT\nThese Leds shows the status of the Current detection circuit.</p>\n<p>When top led is on (OFF) means that the main power has been shutdown and needs to be Reset with the Power On/Off switch.</p>\n<p>The labels on the Front panel are relative, there's a trimmer on the right side to adjust the max current consumption before shutdown.</p>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "POTENTIOMETERS\n\nThere are 6 Potentiometers on the front panel, the resistance values of the pots are:\n\n1: B1K\n\n2: B10K\n\n3: B10K\n\n4: A100K\n\n5: B100K\n\n6: 1M\n\n(A is for logarithmic pots, B for linear ones)\n\nThe connections for all pots are in the female pinheaders at the top.\n\nHorizontally you can access all pots 1 to 6.\n\nVertically you access each specific pot pins: Left / Center / Right.\n\nLEFT\nCENTER\nRIGTH\n\nLEFT\nCENTER\nRIGTH\n\nLEFT\nCENTER\nRIGTH",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>POTENTIOMETERS</p>\n<p>There are 6 Potentiometers on the front panel, the resistance values of the pots are:</p>\n<p>1: B1K</p>\n<p>2: B10K</p>\n<p>3: B10K</p>\n<p>4: A100K</p>\n<p>5: B100K</p>\n<p>6: 1M</p>\n<p>(A is for logarithmic pots, B for linear ones)</p>\n<p>The connections for all pots are in the female pinheaders at the top.</p>\n<p>Horizontally you can access all pots 1 to 6.</p>\n<p>Vertically you access each specific pot pins: Left / Center / Right.</p>\n<p>LEFT\nCENTER\nRIGTH</p>\n<p>LEFT\nCENTER\nRIGTH</p>\n<p>LEFT\nCENTER\nRIGTH</p>"
     },
     {
       "pageNum": 8,
@@ -80,7 +87,8 @@
       "sectionName": null,
       "content": "SWITCHES & PHOTOCELL\n\nThere are 6 Switches and 1 Photocell on the front panel.\n\nThere are 3 diferent switch types:\n\n1 & 2: SPST, Off - On\n\n3: DPDT, On - On\n\n4 to 6: SPDT, On - Off - On\n\nThe connections for all switches are in the female pinheaders at the top.\n\nlabel indicate switch position: Up / Center / Down.\n\nNote that this is diferent from standard switches connections as due to the switch mechanics normally this would be connected the other way around.\n\nPHOTOCELL\n\nLEFT PIN\n\nSWITCH 1\n\nSWITCH 2\n\nRIGTH PIN\n\nUP POSITION ON\n\nSWITCH LEFT SIDE\n\nCENTER PIN\n\nDOWN POSITION ON\n\nSWITCH RIGTH SIDE\n\nUP POSITION ON\n\nSWITCH 4\n\nCENTER PIN\n\nDOWN POSITION ON\n\nSWITCH 5\n\nSWITCH 6",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>SWITCHES &#x26; PHOTOCELL</p>\n<p>There are 6 Switches and 1 Photocell on the front panel.</p>\n<p>There are 3 diferent switch types:</p>\n<p>1 &#x26; 2: SPST, Off - On</p>\n<p>3: DPDT, On - On</p>\n<p>4 to 6: SPDT, On - Off - On</p>\n<p>The connections for all switches are in the female pinheaders at the top.</p>\n<p>label indicate switch position: Up / Center / Down.</p>\n<p>Note that this is diferent from standard switches connections as due to the switch mechanics normally this would be connected the other way around.</p>\n<p>PHOTOCELL</p>\n<p>LEFT PIN</p>\n<p>SWITCH 1</p>\n<p>SWITCH 2</p>\n<p>RIGTH PIN</p>\n<p>UP POSITION ON</p>\n<p>SWITCH LEFT SIDE</p>\n<p>CENTER PIN</p>\n<p>DOWN POSITION ON</p>\n<p>SWITCH RIGTH SIDE</p>\n<p>UP POSITION ON</p>\n<p>SWITCH 4</p>\n<p>CENTER PIN</p>\n<p>DOWN POSITION ON</p>\n<p>SWITCH 5</p>\n<p>SWITCH 6</p>"
     },
     {
       "pageNum": 9,
@@ -89,7 +97,8 @@
       "sectionName": null,
       "content": "JACKS\n\nThere are 7 Jacks on the front panel.\n\nThere are 3 diferent jacktypes:\n\n1: Stereo Jack\n2 to 6: Mono Jack\n7: 1/4'' Mono Jack\n\nThe connections for all Jacks are in the female pinheaders at the top.\n\nlabel indicate switch position: Up / Center / Down.\n\nBesides Jack 1, all jacks have Tip and Tip Switch. Ground is connected by default.\n\nJACK 1\n\nJACK 2\n\nJACK 3\n\nJACK 4\n\nJACK 5\n\nJACK 6\n\nJACK 7\n\nLEFT\n\nSTEREO JACK 1\n\nMONO JACKS 2 to 7\n\nRIGHT\n\nTIP\n\nTIP SWITCH",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>JACKS</p>\n<p>There are 7 Jacks on the front panel.</p>\n<p>There are 3 diferent jacktypes:</p>\n<p>1: Stereo Jack\n2 to 6: Mono Jack\n7: 1/4'' Mono Jack</p>\n<p>The connections for all Jacks are in the female pinheaders at the top.</p>\n<p>label indicate switch position: Up / Center / Down.</p>\n<p>Besides Jack 1, all jacks have Tip and Tip Switch. Ground is connected by default.</p>\n<p>JACK 1</p>\n<p>JACK 2</p>\n<p>JACK 3</p>\n<p>JACK 4</p>\n<p>JACK 5</p>\n<p>JACK 6</p>\n<p>JACK 7</p>\n<p>LEFT</p>\n<p>STEREO JACK 1</p>\n<p>MONO JACKS 2 to 7</p>\n<p>RIGHT</p>\n<p>TIP</p>\n<p>TIP SWITCH</p>"
     },
     {
       "pageNum": 10,
@@ -98,7 +107,8 @@
       "sectionName": null,
       "content": "LEDS\n\nThere are 4 Leds on the front panel.\n\nThe connections for all Leds are in the female pinheaders besides them.\n\nlabel indicate led leg:\n\n(-) Minus or cathode\n\n(+) Positive or anode\n\nFor convenience there are also 4 Ground points at the bottom of the female header.\n\nCATHODE\nGROUND PINS\nLEDS\nANODE",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>LEDS</p>\n<p>There are 4 Leds on the front panel.</p>\n<p>The connections for all Leds are in the female pinheaders besides them.</p>\n<p>label indicate led leg:</p>\n<p>(-) Minus or cathode</p>\n<p>(+) Positive or anode</p>\n<p>For convenience there are also 4 Ground points at the bottom of the female header.</p>\n<p>CATHODE\nGROUND PINS\nLEDS\nANODE</p>"
     },
     {
       "pageNum": 11,
@@ -107,7 +117,8 @@
       "sectionName": null,
       "content": "HARDWARE SETTINGS\n\nCURRENT TRIMMER\n\nThere's one trimmer on the right side of the module to adjust the shutdown threshold. This can be set from 0.2A to 0.8A. For safety default maximum current is 0.3A\n\nARDUINO POWER JUMPERS\n\nThe module ships with all these pins disconnected.\n\nThe 5V and 3V3 jumper, determines if the Arduino 5V/3V3 will go to the frontpanel female header, if not present 5V/3V3 will not be present in the frontpanel.\n\nGND jumper shares the Ground between the synth power supply and the Arduino.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>HARDWARE SETTINGS</p>\n<p>CURRENT TRIMMER</p>\n<p>There's one trimmer on the right side of the module to adjust the shutdown threshold. This can be set from 0.2A to 0.8A. For safety default maximum current is 0.3A</p>\n<p>ARDUINO POWER JUMPERS</p>\n<p>The module ships with all these pins disconnected.</p>\n<p>The 5V and 3V3 jumper, determines if the Arduino 5V/3V3 will go to the frontpanel female header, if not present 5V/3V3 will not be present in the frontpanel.</p>\n<p>GND jumper shares the Ground between the synth power supply and the Arduino.</p>"
     },
     {
       "pageNum": 12,
@@ -116,7 +127,8 @@
       "sectionName": null,
       "content": "ARDUINO COMPATIBILITY\n\nThis module stacks on top of an Arduino just like any standard Arduino shield.\n\nIt is compatible with Arduino Diecimila, Duemilanove and Uno type of boards.\n\nIt's also possible to use certain Arduino shields stacked between the Arduino and the module.\n\nFor an ultimate safe use, we deeply recommend the RUGGEDUINO, this is a 3rd party board developed to be practically indestructible, it features over voltage and over current protection which will keep your board and ultimately your computer safe at \"all\" times!\n\nhttp://www.ruggedcircuits.com/microcontroller-boards/ruggeduino",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ARDUINO COMPATIBILITY</p>\n<p>This module stacks on top of an Arduino just like any standard Arduino shield.</p>\n<p>It is compatible with Arduino Diecimila, Duemilanove and Uno type of boards.</p>\n<p>It's also possible to use certain Arduino shields stacked between the Arduino and the module.</p>\n<p>For an ultimate safe use, we deeply recommend the RUGGEDUINO, this is a 3rd party board developed to be practically indestructible, it features over voltage and over current protection which will keep your board and ultimately your computer safe at \"all\" times!</p>\n<p><a href=\"http://www.ruggedcircuits.com/microcontroller-boards/ruggeduino\">http://www.ruggedcircuits.com/microcontroller-boards/ruggeduino</a></p>"
     },
     {
       "pageNum": 13,
@@ -125,7 +137,8 @@
       "sectionName": null,
       "content": "",
       "hasContent": false,
-      "tags": []
+      "tags": [],
+      "contentHtml": ""
     },
     {
       "pageNum": 14,
@@ -134,7 +147,8 @@
       "sectionName": null,
       "content": "ADDAC210 OPEN HEART SURGERY USER'S GUIDE\n\nAugust.2014 Revision.01",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>ADDAC210 OPEN HEART SURGERY USER'S GUIDE</p>\n<p>August.2014 Revision.01</p>"
     }
   ]
 }

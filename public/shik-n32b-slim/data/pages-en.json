@@ -17,7 +17,8 @@
       "sectionName": null,
       "content": "N32B Slim MIDI Controller\nUser Manual",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>N32B Slim MIDI Controller\nUser Manual</p>"
     },
     {
       "pageNum": 2,
@@ -26,7 +27,8 @@
       "sectionName": null,
       "content": "Introduction \t3\n\nOverview \t3\n\nGetting Started \t3\n\nInitial Setup \t3\n\nConnecting to Your Device \t3\n\nBasic Operations \t4\n\nPowering On & Menu Navigation \t4\n\nButton Behavior \t4\n\nGlobal Channel & Preset Selection \t4\n\nSending Snapshot \t4\n\nMIDI Learn* \t4\n\nPick-Up Mode \t5\n\nAdvanced Configuration \t5\n\nUsing the Web Editor \t5\n\nManaging Presets \t5\n\nFirmware Update \t6\n\nHow to Update \t6\n\nPerforming a Hard Reset \t6\n\nTroubleshooting \t6\n\nSpecifications \t7\n\nWarranty & Product Liability \t7\n\nSafety Precautions \t7",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Introduction \t3</p>\n<p>Overview \t3</p>\n<p>Getting Started \t3</p>\n<p>Initial Setup \t3</p>\n<p>Connecting to Your Device \t3</p>\n<p>Basic Operations \t4</p>\n<p>Powering On &#x26; Menu Navigation \t4</p>\n<p>Button Behavior \t4</p>\n<p>Global Channel &#x26; Preset Selection \t4</p>\n<p>Sending Snapshot \t4</p>\n<p>MIDI Learn* \t4</p>\n<p>Pick-Up Mode \t5</p>\n<p>Advanced Configuration \t5</p>\n<p>Using the Web Editor \t5</p>\n<p>Managing Presets \t5</p>\n<p>Firmware Update \t6</p>\n<p>How to Update \t6</p>\n<p>Performing a Hard Reset \t6</p>\n<p>Troubleshooting \t6</p>\n<p>Specifications \t7</p>\n<p>Warranty &#x26; Product Liability \t7</p>\n<p>Safety Precautions \t7</p>"
     },
     {
       "pageNum": 3,
@@ -35,7 +37,8 @@
       "sectionName": null,
       "content": "Introduction\n\nThis manual is designed to guide you through the setup, operation, and troubleshooting of your N32B Slim MIDI Controller. Follow these instructions to maximize functionality and performance.\n\nOverview\n\nThe N32B Slim MIDI Controller features 32 potentiometer knobs, 2 buttons, a 3-digit 7-segment display, TRS MIDI I/O, and USB-C connectivity, offering versatile control for your music production setup.\n\nGetting Started\n\nInitial Setup\n\nThe N32B Slim MIDI Controller can be powered by connecting it to a computer, a wall outlet with a 5V USB output, or any device with a 5V USB output using the USB-C cable provided.\n\nConnecting to Your Device\n\nThe N32B Slim can be connected to any DAW or hardware device that supports MIDI. This includes utilizing MIDI over USB for direct computer connections, or traditional MIDI connections using the TRS MIDI input, output, and now including the MIDI THRU connectors for daisy-chaining devices. Use an appropriate Type A TRS to DIN5 adapter for devices requiring DIN5 connections, available in our online shop.",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Introduction</p>\n<p>This manual is designed to guide you through the setup, operation, and troubleshooting of your N32B Slim MIDI Controller. Follow these instructions to maximize functionality and performance.</p>\n<p>Overview</p>\n<p>The N32B Slim MIDI Controller features 32 potentiometer knobs, 2 buttons, a 3-digit 7-segment display, TRS MIDI I/O, and USB-C connectivity, offering versatile control for your music production setup.</p>\n<p>Getting Started</p>\n<p>Initial Setup</p>\n<p>The N32B Slim MIDI Controller can be powered by connecting it to a computer, a wall outlet with a 5V USB output, or any device with a 5V USB output using the USB-C cable provided.</p>\n<p>Connecting to Your Device</p>\n<p>The N32B Slim can be connected to any DAW or hardware device that supports MIDI. This includes utilizing MIDI over USB for direct computer connections, or traditional MIDI connections using the TRS MIDI input, output, and now including the MIDI THRU connectors for daisy-chaining devices. Use an appropriate Type A TRS to DIN5 adapter for devices requiring DIN5 connections, available in our online shop.</p>"
     },
     {
       "pageNum": 4,
@@ -44,7 +47,8 @@
       "sectionName": null,
       "content": "Basic Operations\n\nPowering On & Menu Navigation\n\nOn startup, the N32B Slim displays its current mode on the 3-character display. Use the Up/Down buttons to cycle through the following main menu items:\n● VAL – Displays the value of the moved knob\n● NAM – Displays the name of the moved knob\n● C n – Current global MIDI channel\n● P n – Current preset (0–9)\n● Syc – Send a snapshot of all current knob states\n● Lrn – Enter MIDI Learn mode\n\nButton Behavior\n\nShort press Up/Down: Navigate menu\nLong press Bottom button: Select/Enter\nLong press Top button: Cancel/Go back\n\nGlobal Channel & Preset Selection\n\n1. Navigate: Short press the buttons to reach C n (channel) or P n (preset).\n2. Enter Selection Mode: Long press Button B (bottom).\n3. Change Value: Short press Button A (up) or Button B (down).\n*Changes apply immediately (from firmware v1.0.6).\n4. Exit: Long press either button to return to the main navigation root.\n*In firmware versions earlier than v1.0.6, changes are applied only after confirming with a long press.\n\nSending Snapshot\n\nTo send the current state of all 32 knobs:\n1. Navigate to Syc\n2. Long press the bottom button\n\nThis sends the values via MIDI (useful for syncing hardware/software after preset load)\n\nMIDI Learn*\n\n1. Navigate to Lrn, then long press the bottom button to enter MIDI Learn mode\n2. Move the knob you want to assign\n3. Move the same knob to select a macro slot (1–4)\n4. Send a MIDI message from your DAW or hardware — the macro will learn it",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Basic Operations</p>\n<p>Powering On &#x26; Menu Navigation</p>\n<p>On startup, the N32B Slim displays its current mode on the 3-character display. Use the Up/Down buttons to cycle through the following main menu items:\n● VAL – Displays the value of the moved knob\n● NAM – Displays the name of the moved knob\n● C n – Current global MIDI channel\n● P n – Current preset (0–9)\n● Syc – Send a snapshot of all current knob states\n● Lrn – Enter MIDI Learn mode</p>\n<p>Button Behavior</p>\n<p>Short press Up/Down: Navigate menu\nLong press Bottom button: Select/Enter\nLong press Top button: Cancel/Go back</p>\n<p>Global Channel &#x26; Preset Selection</p>\n<ol>\n<li>Navigate: Short press the buttons to reach C n (channel) or P n (preset).</li>\n<li>Enter Selection Mode: Long press Button B (bottom).</li>\n<li>Change Value: Short press Button A (up) or Button B (down).\n*Changes apply immediately (from firmware v1.0.6).</li>\n<li>Exit: Long press either button to return to the main navigation root.\n*In firmware versions earlier than v1.0.6, changes are applied only after confirming with a long press.</li>\n</ol>\n<p>Sending Snapshot</p>\n<p>To send the current state of all 32 knobs:</p>\n<ol>\n<li>Navigate to Syc</li>\n<li>Long press the bottom button</li>\n</ol>\n<p>This sends the values via MIDI (useful for syncing hardware/software after preset load)</p>\n<p>MIDI Learn*</p>\n<ol>\n<li>Navigate to Lrn, then long press the bottom button to enter MIDI Learn mode</li>\n<li>Move the knob you want to assign</li>\n<li>Move the same knob to select a macro slot (1–4)</li>\n<li>Send a MIDI message from your DAW or hardware — the macro will learn it</li>\n</ol>"
     },
     {
       "pageNum": 5,
@@ -53,7 +57,8 @@
       "sectionName": null,
       "content": "* MIDI Learn is saved per macro, not just per knob.\n\nPick-Up Mode\n\nPick-Up mode prevents a macro from sending MIDI until the knob position matches the target value on the connected device. This avoids parameter jumps when switching presets or during live performance.\n\n● Enabled per macro via the web editor\n● Particularly useful for live hardware/DAW integration\n\nAdvanced Configuration\n\nUsing the Web Editor\n\nGo to: editor.shik.tech\n\n● Recommended browser: Chrome\n\nCustomize each macro:\n\n○ Message type (CC, 14-bit, NRPN, RPN, Aftertouch, SysEx)\n○ MIDI channel\n○ Min/Max range\n○ Inversion\n○ Output ports\n○ Enable Pick-Up Mode\n\n● Import/export presets for backup or sharing\n\nManaging Presets\n\n● Up to 10 quick presets saved on-device\n● Unlimited additional presets via web editor\n● Use the editor to back up, share, or restore presets anytime",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<ul>\n<li>MIDI Learn is saved per macro, not just per knob.</li>\n</ul>\n<p>Pick-Up Mode</p>\n<p>Pick-Up mode prevents a macro from sending MIDI until the knob position matches the target value on the connected device. This avoids parameter jumps when switching presets or during live performance.</p>\n<p>● Enabled per macro via the web editor\n● Particularly useful for live hardware/DAW integration</p>\n<p>Advanced Configuration</p>\n<p>Using the Web Editor</p>\n<p>Go to: editor.shik.tech</p>\n<p>● Recommended browser: Chrome</p>\n<p>Customize each macro:</p>\n<p>○ Message type (CC, 14-bit, NRPN, RPN, Aftertouch, SysEx)\n○ MIDI channel\n○ Min/Max range\n○ Inversion\n○ Output ports\n○ Enable Pick-Up Mode</p>\n<p>● Import/export presets for backup or sharing</p>\n<p>Managing Presets</p>\n<p>● Up to 10 quick presets saved on-device\n● Unlimited additional presets via web editor\n● Use the editor to back up, share, or restore presets anytime</p>"
     },
     {
       "pageNum": 6,
@@ -62,7 +67,8 @@
       "sectionName": null,
       "content": "Firmware Update\n\nHow to Update\n\n1. Download the latest N32B Slim firmware from shik.tech/firmware-update\n\n2. Disconnect the device\n\n3. Hold the bottom button and connect the USB cable\n\n4. Keep holding until the display shows UPd and a drive named SHIK appears on your computer\n\n5. Open the SHIK drive and drag and drop the downloaded .uf2 firmware file into it\n\n6. The device will reboot automatically with the new firmware installed\n\nPerforming a Hard Reset\n\nTo restore factory settings:\n\n1. Disconnect USB\n\n2. Hold the upper button, reconnect USB, and keep holding\n\n3. Release after 5 seconds when a reset animation appears\n\n4. All presets and settings will be erased\n\nTroubleshooting\n\nDevice Not Recognized\n\n● Use the supplied USB-C data cable\n\n● Try a different port or computer\n\n● Avoid USB hubs\n\nDevice Won't Power On\n\n● Verify USB cable and port\n\n● Test with another power source\n\nFor support, contact: info@shik.tech",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Firmware Update</p>\n<p>How to Update</p>\n<ol>\n<li>\n<p>Download the latest N32B Slim firmware from shik.tech/firmware-update</p>\n</li>\n<li>\n<p>Disconnect the device</p>\n</li>\n<li>\n<p>Hold the bottom button and connect the USB cable</p>\n</li>\n<li>\n<p>Keep holding until the display shows UPd and a drive named SHIK appears on your computer</p>\n</li>\n<li>\n<p>Open the SHIK drive and drag and drop the downloaded .uf2 firmware file into it</p>\n</li>\n<li>\n<p>The device will reboot automatically with the new firmware installed</p>\n</li>\n</ol>\n<p>Performing a Hard Reset</p>\n<p>To restore factory settings:</p>\n<ol>\n<li>\n<p>Disconnect USB</p>\n</li>\n<li>\n<p>Hold the upper button, reconnect USB, and keep holding</p>\n</li>\n<li>\n<p>Release after 5 seconds when a reset animation appears</p>\n</li>\n<li>\n<p>All presets and settings will be erased</p>\n</li>\n</ol>\n<p>Troubleshooting</p>\n<p>Device Not Recognized</p>\n<p>● Use the supplied USB-C data cable</p>\n<p>● Try a different port or computer</p>\n<p>● Avoid USB hubs</p>\n<p>Device Won't Power On</p>\n<p>● Verify USB cable and port</p>\n<p>● Test with another power source</p>\n<p>For support, contact: <a href=\"mailto:info@shik.tech\">info@shik.tech</a></p>"
     },
     {
       "pageNum": 7,
@@ -71,7 +77,8 @@
       "sectionName": null,
       "content": "Specifications\n\n● Knobs: 32 potentiometers\n\n● Buttons: 2\n\n● Display: 3-character 7-segment LED\n\n● Presets: 10 on-device, unlimited via web editor\n\n● Connectivity:\n○ USB MIDI\n○ TRS MIDI In/Out/Thru (Type A)\n\n● Power: 5V via USB-C\n\nWarranty & Product Liability\n\nThe N32B Slim comes with a 12-month warranty from purchase date for manufacturing defects.\n\nThis does not cover:\n● Normal wear components (knobs, buttons, faders)\n\n● Damage from misuse or improper connections\n\n● Modifications or self-repair\n\nOpening the unit voids warranty.\n\nSafety Precautions\n\n● Indoor use only\n\n● Avoid drops, heat, moisture, and dust\n\n● Operating temperature: 0°C to +40°C\n\n● Use only certified USB power sources\n\n● No liquids or foreign objects inside device\n\n● Cleaning: dry cloth or brush only — no liquids",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Specifications</p>\n<p>● Knobs: 32 potentiometers</p>\n<p>● Buttons: 2</p>\n<p>● Display: 3-character 7-segment LED</p>\n<p>● Presets: 10 on-device, unlimited via web editor</p>\n<p>● Connectivity:\n○ USB MIDI\n○ TRS MIDI In/Out/Thru (Type A)</p>\n<p>● Power: 5V via USB-C</p>\n<p>Warranty &#x26; Product Liability</p>\n<p>The N32B Slim comes with a 12-month warranty from purchase date for manufacturing defects.</p>\n<p>This does not cover:\n● Normal wear components (knobs, buttons, faders)</p>\n<p>● Damage from misuse or improper connections</p>\n<p>● Modifications or self-repair</p>\n<p>Opening the unit voids warranty.</p>\n<p>Safety Precautions</p>\n<p>● Indoor use only</p>\n<p>● Avoid drops, heat, moisture, and dust</p>\n<p>● Operating temperature: 0°C to +40°C</p>\n<p>● Use only certified USB power sources</p>\n<p>● No liquids or foreign objects inside device</p>\n<p>● Cleaning: dry cloth or brush only — no liquids</p>"
     }
   ]
 }

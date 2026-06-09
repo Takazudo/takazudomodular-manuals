@@ -14,7 +14,8 @@
       "sectionName": null,
       "content": "N32B Slim MIDIコントローラー\nユーザーマニュアル",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>N32B Slim MIDIコントローラー\nユーザーマニュアル</p>"
     },
     {
       "pageNum": 2,
@@ -23,7 +24,8 @@
       "sectionName": null,
       "content": "Introduction\t3\n\nOverview\t3\n\nGetting Started\t3\n\nInitial Setup\t3\n\nConnecting to Your Device\t3\n\nBasic Operations\t4\n\nPowering On & Menu Navigation\t4\n\nButton Behavior\t4\n\nGlobal Channel & Preset Selection\t4\n\nSending Snapshot\t4\n\nMIDI Learn*\t4\n\nPick-Up Mode\t5\n\nAdvanced Configuration\t5\n\nUsing the Web Editor\t5\n\nManaging Presets\t5\n\nFirmware Update\t6\n\nHow to Update\t6\n\nPerforming a Hard Reset\t6\n\nTroubleshooting\t6\n\nSpecifications\t7\n\nWarranty & Product Liability\t7\n\nSafety Precautions\t7",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Introduction\t3</p>\n<p>Overview\t3</p>\n<p>Getting Started\t3</p>\n<p>Initial Setup\t3</p>\n<p>Connecting to Your Device\t3</p>\n<p>Basic Operations\t4</p>\n<p>Powering On &#x26; Menu Navigation\t4</p>\n<p>Button Behavior\t4</p>\n<p>Global Channel &#x26; Preset Selection\t4</p>\n<p>Sending Snapshot\t4</p>\n<p>MIDI Learn*\t4</p>\n<p>Pick-Up Mode\t5</p>\n<p>Advanced Configuration\t5</p>\n<p>Using the Web Editor\t5</p>\n<p>Managing Presets\t5</p>\n<p>Firmware Update\t6</p>\n<p>How to Update\t6</p>\n<p>Performing a Hard Reset\t6</p>\n<p>Troubleshooting\t6</p>\n<p>Specifications\t7</p>\n<p>Warranty &#x26; Product Liability\t7</p>\n<p>Safety Precautions\t7</p>"
     },
     {
       "pageNum": 3,
@@ -32,7 +34,8 @@
       "sectionName": null,
       "content": "はじめに\n\nこのマニュアルは、N32B Slim MIDIコントローラーのセットアップ、操作、およびトラブルシューティングをガイドするように設計されています。これらの手順に従って、機能性とパフォーマンスを最大限に引き出してください。\n\n概要\n\nN32B Slim MIDIコントローラーは、32個のポテンショメーターKnob、2個のButton、3桁の7セグメントディスプレイ、TRS MIDI I/O、およびUSB-C接続を備えており、音楽制作セットアップのための多様なコントロールを提供します。\n\nはじめに\n\n初期セットアップ\n\nN32B Slim MIDIコントローラーは、付属のUSB-Cケーブルを使用してコンピューター、5V USB出力を備えた壁コンセント、または5V USB出力を備えた任意のデバイスに接続することで電源を供給できます。\n\nデバイスへの接続\n\nN32B Slimは、MIDIをサポートする任意のDAWまたはハードウェアデバイスに接続できます。これには、コンピューターへの直接接続のためのMIDI over USBの利用、または従来のMIDI接続としてTRS MIDI入力、出力、そしてデイジーチェーン接続のためのMIDI THRU接続が含まれます。DIN5接続が必要なデバイスには、適切なType A TRSからDIN5へのアダプターを使用してください。これは当社のオンラインショップで入手可能です。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>はじめに</p>\n<p>このマニュアルは、N32B Slim MIDIコントローラーのセットアップ、操作、およびトラブルシューティングをガイドするように設計されています。これらの手順に従って、機能性とパフォーマンスを最大限に引き出してください。</p>\n<p>概要</p>\n<p>N32B Slim MIDIコントローラーは、32個のポテンショメーターKnob、2個のButton、3桁の7セグメントディスプレイ、TRS MIDI I/O、およびUSB-C接続を備えており、音楽制作セットアップのための多様なコントロールを提供します。</p>\n<p>はじめに</p>\n<p>初期セットアップ</p>\n<p>N32B Slim MIDIコントローラーは、付属のUSB-Cケーブルを使用してコンピューター、5V USB出力を備えた壁コンセント、または5V USB出力を備えた任意のデバイスに接続することで電源を供給できます。</p>\n<p>デバイスへの接続</p>\n<p>N32B Slimは、MIDIをサポートする任意のDAWまたはハードウェアデバイスに接続できます。これには、コンピューターへの直接接続のためのMIDI over USBの利用、または従来のMIDI接続としてTRS MIDI入力、出力、そしてデイジーチェーン接続のためのMIDI THRU接続が含まれます。DIN5接続が必要なデバイスには、適切なType A TRSからDIN5へのアダプターを使用してください。これは当社のオンラインショップで入手可能です。</p>"
     },
     {
       "pageNum": 4,
@@ -41,7 +44,8 @@
       "sectionName": null,
       "content": "基本操作\n\n電源投入とメニューナビゲーション\n\n起動時、N32B Slimは現在のモードを3文字ディスプレイに表示します。Up/Downボタンを使用して、以下のメインメニュー項目を切り替えます:\n\n● VAL – 動かしたKnobの値を表示\n● NAM – 動かしたKnobの名前を表示\n● C n – 現在のグローバルMIDIチャンネル\n● P n – 現在のプリセット (0–9)\n● Syc – 全てのKnobの現在の状態のスナップショットを送信\n● Lrn – MIDI Learnモードに入る\n\nボタンの動作\n\nUp/Downボタンの短押し: メニューをナビゲート\n下側ボタンの長押し: 選択/決定\n上側ボタンの長押し: キャンセル/戻る\n\nグローバルチャンネルとプリセットの選択\n\n1. ナビゲート: ボタンを短押しして C n (チャンネル) または P n (プリセット) に移動します。\n2. 選択モードに入る: ボタンB (下側) を長押しします。\n3. 値を変更: ボタンA (上) またはボタンB (下) を短押しします。\n*変更は即座に適用されます (ファームウェア v1.0.6以降)。\n4. 終了: いずれかのボタンを長押しして、メインナビゲーションのルートに戻ります。\n*ファームウェアv1.0.6より前のバージョンでは、変更は長押しで確定した後にのみ適用されます。\n\nスナップショットの送信\n\n全32個のKnobの現在の状態を送信するには:\n\n1. Sycに移動\n2. 下側ボタンを長押し\n\nこれによりMIDI経由で値が送信されます (プリセット読み込み後のハードウェア/ソフトウェアの同期に便利です)\n\nMIDI Learn*\n\n1. Lrnに移動し、下側ボタンを長押ししてMIDI Learnモードに入ります\n2. 割り当てたいKnobを動かします\n3. 同じKnobを動かしてマクロスロット (1–4) を選択します\n4. DAWまたはハードウェアからMIDIメッセージを送信すると、マクロがそれを学習します",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>基本操作</p>\n<p>電源投入とメニューナビゲーション</p>\n<p>起動時、N32B Slimは現在のモードを3文字ディスプレイに表示します。Up/Downボタンを使用して、以下のメインメニュー項目を切り替えます:</p>\n<p>● VAL – 動かしたKnobの値を表示\n● NAM – 動かしたKnobの名前を表示\n● C n – 現在のグローバルMIDIチャンネル\n● P n – 現在のプリセット (0–9)\n● Syc – 全てのKnobの現在の状態のスナップショットを送信\n● Lrn – MIDI Learnモードに入る</p>\n<p>ボタンの動作</p>\n<p>Up/Downボタンの短押し: メニューをナビゲート\n下側ボタンの長押し: 選択/決定\n上側ボタンの長押し: キャンセル/戻る</p>\n<p>グローバルチャンネルとプリセットの選択</p>\n<ol>\n<li>ナビゲート: ボタンを短押しして C n (チャンネル) または P n (プリセット) に移動します。</li>\n<li>選択モードに入る: ボタンB (下側) を長押しします。</li>\n<li>値を変更: ボタンA (上) またはボタンB (下) を短押しします。\n*変更は即座に適用されます (ファームウェア v1.0.6以降)。</li>\n<li>終了: いずれかのボタンを長押しして、メインナビゲーションのルートに戻ります。\n*ファームウェアv1.0.6より前のバージョンでは、変更は長押しで確定した後にのみ適用されます。</li>\n</ol>\n<p>スナップショットの送信</p>\n<p>全32個のKnobの現在の状態を送信するには:</p>\n<ol>\n<li>Sycに移動</li>\n<li>下側ボタンを長押し</li>\n</ol>\n<p>これによりMIDI経由で値が送信されます (プリセット読み込み後のハードウェア/ソフトウェアの同期に便利です)</p>\n<p>MIDI Learn*</p>\n<ol>\n<li>Lrnに移動し、下側ボタンを長押ししてMIDI Learnモードに入ります</li>\n<li>割り当てたいKnobを動かします</li>\n<li>同じKnobを動かしてマクロスロット (1–4) を選択します</li>\n<li>DAWまたはハードウェアからMIDIメッセージを送信すると、マクロがそれを学習します</li>\n</ol>"
     },
     {
       "pageNum": 5,
@@ -50,7 +54,8 @@
       "sectionName": null,
       "content": "* MIDI Learnは各Knobごとではなく、各Macroごとに保存されます。\n\nPick-Up Mode\n\nPick-Up Modeは、Knobの位置が接続されたデバイスのターゲット値と一致するまで、MacroがMIDIを送信しないようにします。これにより、プリセットの切り替え時やライブパフォーマンス中のパラメータージャンプを回避できます。\n\n● Webエディタで各Macroごとに有効化\n● ライブハードウェア/DAW統合に特に便利\n\n高度な設定\n\nWebエディタの使用\n\neditor.shik.tech にアクセス\n\n● 推奨ブラウザ: Chrome\n\n各Macroをカスタマイズ:\n\n○ メッセージタイプ (CC、14-bit、NRPN、RPN、Aftertouch、SysEx)\n○ MIDIチャンネル\n○ 最小/最大範囲\n○ 反転\n○ 出力ポート\n○ Pick-Up Modeを有効化\n\n● バックアップや共有のためにプリセットをインポート/エクスポート\n\nプリセットの管理\n\n● 最大10個のクイックプリセットをデバイスに保存可能\n● Webエディタ経由で無制限の追加プリセット\n● いつでもエディタを使用してプリセットのバックアップ、共有、復元が可能",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<ul>\n<li>MIDI Learnは各Knobごとではなく、各Macroごとに保存されます。</li>\n</ul>\n<p>Pick-Up Mode</p>\n<p>Pick-Up Modeは、Knobの位置が接続されたデバイスのターゲット値と一致するまで、MacroがMIDIを送信しないようにします。これにより、プリセットの切り替え時やライブパフォーマンス中のパラメータージャンプを回避できます。</p>\n<p>● Webエディタで各Macroごとに有効化\n● ライブハードウェア/DAW統合に特に便利</p>\n<p>高度な設定</p>\n<p>Webエディタの使用</p>\n<p>editor.shik.tech にアクセス</p>\n<p>● 推奨ブラウザ: Chrome</p>\n<p>各Macroをカスタマイズ:</p>\n<p>○ メッセージタイプ (CC、14-bit、NRPN、RPN、Aftertouch、SysEx)\n○ MIDIチャンネル\n○ 最小/最大範囲\n○ 反転\n○ 出力ポート\n○ Pick-Up Modeを有効化</p>\n<p>● バックアップや共有のためにプリセットをインポート/エクスポート</p>\n<p>プリセットの管理</p>\n<p>● 最大10個のクイックプリセットをデバイスに保存可能\n● Webエディタ経由で無制限の追加プリセット\n● いつでもエディタを使用してプリセットのバックアップ、共有、復元が可能</p>"
     },
     {
       "pageNum": 6,
@@ -59,7 +64,8 @@
       "sectionName": null,
       "content": "Firmwareアップデート\n\nアップデート方法\n\n1. shik.tech/firmware-updateから最新のN32B Slim firmwareをダウンロードします\n\n2. デバイスを切断します\n\n3. 下部のボタンを押しながらUSBケーブルを接続します\n\n4. ディスプレイにUPdと表示され、コンピューター上にSHIKという名前のドライブが表示されるまで押し続けます\n\n5. SHIKドライブを開き、ダウンロードした.uf2 firmwareファイルをドラッグ&ドロップします\n\n6. デバイスは新しいfirmwareがインストールされた状態で自動的に再起動します\n\nハードリセットの実行\n\n工場出荷時の設定を復元するには：\n\n1. USBを切断します\n\n2. 上部のボタンを押しながらUSBを再接続し、押し続けます\n\n3. リセットアニメーションが表示されたら5秒後に離します\n\n4. すべてのプリセットと設定が消去されます\n\nトラブルシューティング\n\nデバイスが認識されない\n\n● 付属のUSB-Cデータケーブルを使用してください\n● 別のポートまたはコンピューターを試してください\n● USBハブは避けてください\n\nデバイスが起動しない\n\n● USBケーブルとポートを確認してください\n● 別の電源で試してください\n\nサポートについては、info@shik.techまでお問い合わせください。",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>Firmwareアップデート</p>\n<p>アップデート方法</p>\n<ol>\n<li>\n<p>shik.tech/firmware-updateから最新のN32B Slim firmwareをダウンロードします</p>\n</li>\n<li>\n<p>デバイスを切断します</p>\n</li>\n<li>\n<p>下部のボタンを押しながらUSBケーブルを接続します</p>\n</li>\n<li>\n<p>ディスプレイにUPdと表示され、コンピューター上にSHIKという名前のドライブが表示されるまで押し続けます</p>\n</li>\n<li>\n<p>SHIKドライブを開き、ダウンロードした.uf2 firmwareファイルをドラッグ&#x26;ドロップします</p>\n</li>\n<li>\n<p>デバイスは新しいfirmwareがインストールされた状態で自動的に再起動します</p>\n</li>\n</ol>\n<p>ハードリセットの実行</p>\n<p>工場出荷時の設定を復元するには：</p>\n<ol>\n<li>\n<p>USBを切断します</p>\n</li>\n<li>\n<p>上部のボタンを押しながらUSBを再接続し、押し続けます</p>\n</li>\n<li>\n<p>リセットアニメーションが表示されたら5秒後に離します</p>\n</li>\n<li>\n<p>すべてのプリセットと設定が消去されます</p>\n</li>\n</ol>\n<p>トラブルシューティング</p>\n<p>デバイスが認識されない</p>\n<p>● 付属のUSB-Cデータケーブルを使用してください\n● 別のポートまたはコンピューターを試してください\n● USBハブは避けてください</p>\n<p>デバイスが起動しない</p>\n<p>● USBケーブルとポートを確認してください\n● 別の電源で試してください</p>\n<p>サポートについては、<a href=\"mailto:info@shik.tech\">info@shik.tech</a>までお問い合わせください。</p>"
     },
     {
       "pageNum": 7,
@@ -68,7 +74,8 @@
       "sectionName": null,
       "content": "仕様\n\n● Knob: 32個のポテンシオメーター\n\n● Button: 2個\n\n● Display: 3文字7セグメントLED\n\n● プリセット: 本体に10個、Webエディターで無制限\n\n● 接続:\n○ USB MIDI\n○ TRS MIDI In/Out/Thru (Type A)\n\n● 電源: USB-C経由で5V\n\n保証と製品責任\n\nN32B Slimには、製造上の欠陥に対して購入日から12ヶ月間の保証が付いています。\n\n以下は保証対象外です:\n\n● 通常の摩耗部品（Knob、Button、Fader）\n\n● 誤使用や不適切な接続による損傷\n\n● 改造または自己修理\n\n本体を開けると保証が無効になります。\n\n安全上の注意\n\n● 屋内使用のみ\n\n● 落下、熱、湿気、埃を避けてください\n\n● 動作温度: 0°C〜+40°C\n\n● 認証済みのUSB電源のみを使用してください\n\n● 液体や異物を機器内に入れないでください\n\n● 清掃: 乾いた布またはブラシのみ使用 — 液体は使用しないでください",
       "hasContent": true,
-      "tags": []
+      "tags": [],
+      "contentHtml": "<p>仕様</p>\n<p>● Knob: 32個のポテンシオメーター</p>\n<p>● Button: 2個</p>\n<p>● Display: 3文字7セグメントLED</p>\n<p>● プリセット: 本体に10個、Webエディターで無制限</p>\n<p>● 接続:\n○ USB MIDI\n○ TRS MIDI In/Out/Thru (Type A)</p>\n<p>● 電源: USB-C経由で5V</p>\n<p>保証と製品責任</p>\n<p>N32B Slimには、製造上の欠陥に対して購入日から12ヶ月間の保証が付いています。</p>\n<p>以下は保証対象外です:</p>\n<p>● 通常の摩耗部品（Knob、Button、Fader）</p>\n<p>● 誤使用や不適切な接続による損傷</p>\n<p>● 改造または自己修理</p>\n<p>本体を開けると保証が無効になります。</p>\n<p>安全上の注意</p>\n<p>● 屋内使用のみ</p>\n<p>● 落下、熱、湿気、埃を避けてください</p>\n<p>● 動作温度: 0°C〜+40°C</p>\n<p>● 認証済みのUSB電源のみを使用してください</p>\n<p>● 液体や異物を機器内に入れないでください</p>\n<p>● 清掃: 乾いた布またはブラシのみ使用 — 液体は使用しないでください</p>"
     }
   ]
 }
