@@ -3,6 +3,7 @@ import { withBasePath } from './routing';
 import { ProseContent } from './prose-content';
 import {
   viewerContainerStyles,
+  viewerImageColumnOuterStyles,
   viewerImageColumnStyles,
   viewerContentColumnStyles,
   viewerImageWrapperStyles,
@@ -30,21 +31,23 @@ export function ViewerShell({ page, pageNum, totalPages }: ViewerShellProps) {
   return (
     <div className={viewerContainerStyles} data-testid="viewer-shell-ssr">
       {/* Left Column: PDF Image */}
-      <div className={viewerImageColumnStyles} data-testid="page-image-column">
-        <div className={viewerImageWrapperStyles} data-testid="page-image-wrapper">
-          {page.image ? (
-            <img
-              src={withBasePath(page.image)}
-              alt={`Page ${pageNum}: ${page.title}`}
-              className="w-full h-auto"
-              data-testid="page-image"
-            />
-          ) : (
-            <div className="text-zd-gray6 text-center p-hgap-md" data-testid="page-image-missing">
-              <p className="text-lg mb-vgap-xs">画像がありません</p>
-              <p className="text-sm">ページ {pageNum}</p>
-            </div>
-          )}
+      <div className={viewerImageColumnOuterStyles} data-testid="page-image-column">
+        <div className={viewerImageColumnStyles} data-testid="page-image-scroll">
+          <div className={viewerImageWrapperStyles} data-testid="page-image-wrapper">
+            {page.image ? (
+              <img
+                src={withBasePath(page.image)}
+                alt={`Page ${pageNum}: ${page.title}`}
+                className="w-full h-auto"
+                data-testid="page-image"
+              />
+            ) : (
+              <div className="text-zd-gray6 text-center p-hgap-md" data-testid="page-image-missing">
+                <p className="text-lg mb-vgap-xs">画像がありません</p>
+                <p className="text-sm">ページ {pageNum}</p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 

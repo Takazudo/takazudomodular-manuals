@@ -9,6 +9,7 @@ import { PageNavigation } from './page-navigation';
 import { KeyboardNavigation } from './keyboard-navigation';
 import {
   viewerContainerStyles,
+  viewerImageColumnOuterStyles,
   viewerImageColumnStyles,
   viewerContentColumnStyles,
   viewerImageWrapperStyles,
@@ -224,31 +225,24 @@ export function PageViewer({
       />
       <div className={viewerContainerStyles}>
         {/* Left Column: PDF Image */}
-        <div className={viewerImageColumnStyles} data-testid="page-image-column">
-          <div className={viewerImageWrapperStyles} data-testid="page-image-wrapper">
-            {hasError ? (
-              <div className={loaderWrapperStyles} data-testid="page-image-error">
-                <div className="text-zd-red text-center">
-                  <p className="text-lg font-bold mb-vgap-xs">画像の読み込みに失敗しました</p>
-                  <p className="text-sm text-zd-gray6">ページ {currentPage}</p>
+        <div className={viewerImageColumnOuterStyles} data-testid="page-image-column">
+          <div className={viewerImageColumnStyles} data-testid="page-image-scroll">
+            <div className={viewerImageWrapperStyles} data-testid="page-image-wrapper">
+              {hasError ? (
+                <div className={loaderWrapperStyles} data-testid="page-image-error">
+                  <div className="text-zd-red text-center">
+                    <p className="text-lg font-bold mb-vgap-xs">画像の読み込みに失敗しました</p>
+                    <p className="text-sm text-zd-gray6">ページ {currentPage}</p>
+                  </div>
                 </div>
-              </div>
-            ) : !page.image ? (
-              <div className={loaderWrapperStyles} data-testid="page-image-missing">
-                <div className="text-zd-gray6 text-center">
-                  <p className="text-lg mb-vgap-xs">画像がありません</p>
-                  <p className="text-sm">ページ {currentPage}</p>
+              ) : !page.image ? (
+                <div className={loaderWrapperStyles} data-testid="page-image-missing">
+                  <div className="text-zd-gray6 text-center">
+                    <p className="text-lg mb-vgap-xs">画像がありません</p>
+                    <p className="text-sm">ページ {currentPage}</p>
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <>
-                {/* Loading overlay - fades out when image loads */}
-                <div
-                  className={`absolute inset-0 bg-zd-white z-10 flex items-center justify-center transition-opacity duration-300 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-                  data-testid="page-image-overlay"
-                >
-                  <div className="page-image-loader" />
-                </div>
+              ) : (
                 <img
                   ref={imgRef}
                   src={withBasePath(page.image)}
@@ -264,9 +258,21 @@ export function PageViewer({
                   onMouseLeave={zoomEnabled ? handleZoomLeave : undefined}
                   data-testid="page-image"
                 />
-              </>
-            )}
+              )}
+            </div>
           </div>
+          {/* Loading overlay — sibling of the scroll container (not inside it) so it
+              covers the visible pane and is unaffected by scroll position (#180).
+              Fades out when the image loads. */}
+          {!hasError && page.image && (
+            <div
+              className={`absolute inset-0 bg-white z-10 flex items-center justify-center transition-opacity duration-300 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+              aria-hidden="true"
+              data-testid="page-image-overlay"
+            >
+              <div className="page-image-loader" />
+            </div>
+          )}
         </div>
 
         {/* Right Column: Translation */}
