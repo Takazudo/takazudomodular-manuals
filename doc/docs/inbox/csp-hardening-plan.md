@@ -16,7 +16,7 @@ manuals site, and now records the **executed** enforced state.
 
 The viewer surface (`/*`) was flipped from `Content-Security-Policy-Report-Only`
 to **enforced** `Content-Security-Policy` in `public/_headers`. A docs carve-out
-keeps the Docusaurus site (`/manuals/doc/*`) on Report-Only.
+keeps the Docusaurus site (`/manuals/doc` and `/manuals/doc/*`) on Report-Only.
 
 Steps 2, 3, and 4 below were executed in this change. Step 1 (zero violations on
 the PR-preview proxied origin) is verified on the PR preview before the PR is
@@ -34,26 +34,35 @@ Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-hIolMSvWh
 - `style-src`: `'unsafe-inline'` **dropped** (Google Fonts origin kept) — see the
   audit result below.
 
-### Docs carve-out (`/manuals/doc/*`)
+### Docs carve-out (`/manuals/doc` + `/manuals/doc/*`)
 
 `pnpm build` copies the Docusaurus output into `dist/manuals/doc/`
 (`baseUrl: '/manuals/doc/'`), and Docusaurus output contains inline `<script>`
 and inline `<style>` that the enforced viewer policy would block. A naive global
-flip would therefore break `/manuals/doc/*`.
+flip would therefore break the docs site.
 
-The carve-out detaches the enforced header for that path and keeps docs on the
-previous docs-tolerant Report-Only directive (with `'unsafe-inline'` in both
-`script-src` and `style-src`):
+The carve-out detaches the enforced header for the docs path and keeps docs on
+the previous docs-tolerant Report-Only directive (with `'unsafe-inline'` in both
+`script-src` and `style-src`). **Two rules are needed**, because the
+`/manuals/doc/*` glob does NOT match the exact no-trailing-slash URL form
+`/manuals/doc` — a response served at that bare URL (the Docusaurus landing page)
+would otherwise fall through to the enforced `/*` policy and break on its inline
+scripts/styles. The exact `/manuals/doc` rule must be listed first, immediately
+before the glob:
 
 ```
+/manuals/doc
+  ! Content-Security-Policy
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'
+
 /manuals/doc/*
   ! Content-Security-Policy
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'
 ```
 
 `! Content-Security-Policy` is Cloudflare Pages' detach syntax: the `/*` rule
-sets the enforced header, then this more-specific rule removes it for the docs
-path and substitutes the Report-Only directive. The other security headers
+sets the enforced header, then these more-specific rules remove it for the docs
+path and substitute the Report-Only directive. The other security headers
 (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`) are inherited
 from `/*` and still apply to docs. Hardening the docs CSP (hashing Docusaurus's
 inline scripts/styles, or enforcing a docs-specific policy) is deferred.
