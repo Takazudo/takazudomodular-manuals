@@ -19,9 +19,17 @@ permissions:
   statuses: write
 
 jobs:
-  # Step 1: Build for production
-  build:
-    name: Build Production Site
+  # Single job: build + deploy in one runner.
+  #
+  # Previously this was a build job that uploaded an ~880 MB artifact and a
+  # separate deploy job that downloaded it. That artifact counted against the
+  # 2 GB Actions storage cap on every push to main. Merging the two jobs lets
+  # the deploy reuse the build output in-place (dist/) with nothing persisted to
+  # Actions storage. The build step still runs before the deploy step, so a
+  # broken build fails the job before anything is deployed — "build gates
+  # deploy" is preserved.
+  build-and-deploy:
+    name: Build and Deploy to Production
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -35,33 +43,6 @@ jobs:
         uses: ./.github/actions/build-zfb
         with:
           node-version: '22'
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
-        with:
-          name: zfb-build-production
-          path: dist/
-          include-hidden-files: true
-          retention-days: 1
-
-  # Step 2: Deploy to production
-  deploy:
-    name: Deploy to Production
-    needs: build
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-        with:
-          lfs: false
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
-        with:
-          name: zfb-build-production
-          path: dist
 
       - name: Deploy to Cloudflare Pages
         id: deploy
