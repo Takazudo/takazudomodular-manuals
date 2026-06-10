@@ -149,57 +149,23 @@ jobs:
         with:
           lfs: false
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@02f6c237bd2518259fed6c71566509edfb3f2b74 # v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      # Build (setup pnpm/node, install, build, verify output) via the shared
+      # composite action — same action preview-deploy and main-deploy use, so
+      # all paths build identically and the verify step can't drift.
+      - name: Build zfb application
+        uses: ./.github/actions/build-zfb
         with:
           node-version: '22'
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Build zfb site
-        run: pnpm build
-        env:
-          NODE_ENV: production
-          NODE_OPTIONS: '--max-old-space-size=4096'
-
-      - name: Verify build output
-        run: |
-          echo "Build Output Verification"
-          echo "========================="
-
-          if [ ! -d "dist" ]; then
-            echo "Error: dist/ directory not found"
-            exit 1
-          fi
-
-          # Count HTML files emitted by zfb + finalize
-          HTML_COUNT=$(find dist -name "*.html" | wc -l)
-          echo "HTML files: $HTML_COUNT"
-
-          # zfb-finalize-build.js merges everything under dist/manuals/
-          if [ -d "dist/manuals/assets" ]; then
-            echo "zfb assets found (dist/manuals/assets/)"
-          else
-            echo "Error: dist/manuals/assets/ not found"
-            exit 1
-          fi
-
-          # Cloudflare control files must be at dist/ root
-          if [ -f "dist/_headers" ]; then
-            echo "dist/_headers present"
-          else
-            echo "Error: dist/_headers not found at dist root"
-            exit 1
-          fi
-
-          echo "========================="
-          echo "Build output verified"
-
+      # Only persist the ~880 MB build artifact where it is actually consumed:
+      # the e2e-smoke-tests job runs on preview/* branches ONLY. On every other
+      # PR the artifact would be uploaded, count against the 2 GB Actions storage
+      # cap, and never be downloaded. preview-deploy now builds the site itself
+      # instead of consuming this artifact, so this upload is preview/* only.
+      # This workflow only triggers on pull_request, so github.head_ref is always
+      # defined here (no push-event guard needed).
       - name: Upload build artifacts (for e2e tests)
+        if: startsWith(github.head_ref, 'preview/')
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
           name: zfb-build-pr-${{ github.event.pull_request.number }}
@@ -208,6 +174,12 @@ jobs:
           retention-days: 1
 
   # Job 3: E2E Smoke Tests (only for preview/* branches)
+  #
+  # This is the ONLY consumer of build-check's uploaded artifact. Its
+  # `if:` predicate MUST stay in sync with the upload step's `if:` in
+  # build-check — if you ever widen this trigger, widen that upload gate
+  # too, or this job will try to download an artifact that was never
+  # uploaded.
   e2e-smoke-tests:
     name: E2E Smoke Tests
     runs-on: ubuntu-latest
@@ -321,11 +293,19 @@ jobs:
             }
 
   # Job 4: Preview Deploy (Cloudflare Pages) for same-repo PRs
+  #
+  # Builds the site itself via the build-zfb composite action rather than
+  # downloading build-check's ~880 MB artifact. This removes the persisted
+  # artifact from the preview path (the biggest Actions-storage lever) at the
+  # cost of building the site twice per same-repo PR (once in build-check, once
+  # here). A red build still blocks the deploy two ways: this job needs
+  # quality-checks (typecheck/lint/format/unit), and its own build step runs
+  # before the deploy step, so a broken build fails the job before deploying.
   preview-deploy:
     name: Preview Deploy (Cloudflare Pages)
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    needs: build-check
+    timeout-minutes: 30
+    needs: quality-checks
     if: github.event.pull_request.head.repo.full_name == github.repository
 
     permissions:
@@ -340,11 +320,10 @@ jobs:
         with:
           lfs: false
 
-      - name: Download build artifacts
-        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6
+      - name: Build zfb application
+        uses: ./.github/actions/build-zfb
         with:
-          name: zfb-build-pr-${{ github.event.pull_request.number }}
-          path: dist
+          node-version: '22'
 
       - name: Deploy to Cloudflare Pages Preview
         id: deploy
