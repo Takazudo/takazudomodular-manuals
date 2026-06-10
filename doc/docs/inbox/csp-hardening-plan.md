@@ -128,5 +128,3 @@ Worker forwarding to a logging service, or a third-party service (e.g.
 decision and is **not** part of the enforced flip. The directive currently has
 no `report-to`/`report-uri`, so violations surface only in each visitor's
 console.
-</content>
-</invoke>
