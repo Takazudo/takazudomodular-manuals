@@ -27,7 +27,7 @@ inputs:
   build-dir:
     description: 'Directory containing build output'
     required: false
-    default: 'out'
+    default: 'dist'
 
 outputs:
   deploy-url:

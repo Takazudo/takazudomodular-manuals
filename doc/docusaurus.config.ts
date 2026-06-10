@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Takazudo Modular: Manuals',
   tagline: 'Development documentation for manual viewer',
-  // favicon: 'img/favicon.ico', // TODO: Add favicon later
+  favicon: 'img/logo.svg',
 
   // Set the production url of your site here
   url: 'https://manual-oxi-one-mk2.netlify.app',
