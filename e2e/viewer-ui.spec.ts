@@ -35,16 +35,19 @@ test.describe('Viewer UI: Sidebar Thumbnails', () => {
     const sidebar = page.locator('aside[aria-label="Page thumbnails"]');
     const sidebarBtn = page.locator('button[aria-label="Toggle sidebar"]');
 
-    // Initially hidden (translated off-screen)
-    await expect(sidebar).toHaveAttribute('aria-hidden', 'true');
+    // The sidebar is conditionally mounted ({sidebarOpen && thumbPages && ...}
+    // in manual-app.tsx): absent from the DOM while closed, mounted on open.
+    // Mounting also depends on the page-data fetch — the auto-waiting expect()
+    // polling below tolerates that delay.
+    await expect(sidebar).toHaveCount(0);
 
     // Open sidebar
     await sidebarBtn.click();
-    await expect(sidebar).toHaveAttribute('aria-hidden', 'false');
+    await expect(sidebar).toBeVisible();
 
     // Close sidebar
     await sidebarBtn.click();
-    await expect(sidebar).toHaveAttribute('aria-hidden', 'true');
+    await expect(sidebar).toHaveCount(0);
   });
 
   test('should highlight current page in sidebar', async ({ page }) => {
