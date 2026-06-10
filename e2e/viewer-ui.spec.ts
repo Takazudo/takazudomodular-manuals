@@ -209,6 +209,45 @@ test.describe('Viewer UI: View Mode Toggle', () => {
   });
 });
 
+test.describe('Viewer UI: Page-mode loading overlay (#180)', () => {
+  test('overlay covers the visible pane regardless of scroll and is pure white', async ({
+    page,
+  }) => {
+    await page.goto(PAGE_URL);
+
+    const column = page.getByTestId('page-image-column');
+    const overlay = page.getByTestId('page-image-overlay');
+    await expect(column).toBeVisible();
+    // The overlay only exists in the interactive viewer (not the SSR shell) —
+    // its presence means hydration + data fetch completed.
+    await expect(overlay).toBeAttached();
+
+    const scrollArea = page.getByTestId('page-image-scroll');
+    await expect(page.getByTestId('page-image')).toBeVisible();
+
+    // Scroll the left pane down (the bug: the overlay used to scroll away with it)
+    await scrollArea.evaluate((el) => {
+      el.scrollTop = 500;
+    });
+    const scrolled = await scrollArea.evaluate((el) => el.scrollTop);
+    expect(scrolled).toBeGreaterThan(0);
+
+    // Overlay must still cover exactly the visible column area
+    const columnBox = await column.boundingBox();
+    const overlayBox = await overlay.boundingBox();
+    expect(columnBox).not.toBeNull();
+    expect(overlayBox).not.toBeNull();
+    expect(overlayBox!.x).toBeCloseTo(columnBox!.x, 1);
+    expect(overlayBox!.y).toBeCloseTo(columnBox!.y, 1);
+    expect(overlayBox!.width).toBeCloseTo(columnBox!.width, 1);
+    expect(overlayBox!.height).toBeCloseTo(columnBox!.height, 1);
+
+    // Background is pure white (#fff), not the design-system off-white
+    const bg = await overlay.evaluate((el) => getComputedStyle(el).backgroundColor);
+    expect(bg).toBe('rgb(255, 255, 255)');
+  });
+});
+
 test.describe('Viewer UI: No Console Errors', () => {
   test('should not have console errors during UI interactions', async ({ page }) => {
     const consoleErrors: string[] = [];

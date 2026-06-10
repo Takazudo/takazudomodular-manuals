@@ -17,13 +17,26 @@ export const viewerContainerStyles = ctl(`
 `);
 
 /**
- * Image column for page mode (viewer-shell + page-viewer only).
+ * Outer positioning wrapper for the page-mode image column (viewer-shell +
+ * page-viewer only). Carries the flex-child role and anchors the loading
+ * overlay OUTSIDE the scroll container so the overlay covers the visible
+ * pane regardless of scroll position (#180).
+ */
+export const viewerImageColumnOuterStyles = ctl(`
+  relative
+  flex-1
+  min-h-0
+  min-w-0
+`);
+
+/**
+ * Image column for page mode (viewer-shell + page-viewer only); the scroll
+ * container nested inside viewerImageColumnOuterStyles.
  * scroll-viewer has a different imageColumn layout so it must NOT use this.
  */
 export const viewerImageColumnStyles = ctl(`
-  flex-1
+  h-full
   overflow-y-scroll
-  min-h-0
   flex flex-col items-center
   bg-zd-white
 `);
