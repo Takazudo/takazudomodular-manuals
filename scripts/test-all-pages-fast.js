@@ -11,31 +11,54 @@
  * Asset paths changed from /manuals/_next/static/* to /manuals/assets/* but
  * this script tests page HTTP status, not asset presence.
  *
+ * Manuals are discovered dynamically by scanning `public/<slug>/data/manifest.json`
+ * (the same approach as `discoverManualSlugs()` in scripts/pdf-search-index-all.js),
+ * so EVERY manual registered under public/ is smoke-tested — there is no
+ * hardcoded list to drift out of sync with lib/zfb-registry.generated.ts.
+ *
  * Environment variables:
  *   BASE_URL - Server base URL (default: http://localhost:8030)
  */
 
-import { createRequire } from 'module';
+import { readFileSync, existsSync, readdirSync, statSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const require = createRequire(import.meta.url);
+const PUBLIC_DIR = join(__dirname, '..', 'public');
 
-// Read all manifests directly from the data directories
-const oxiOneMk2Manifest = require('../public/oxi-one-mk2/data/manifest.json');
-const oxiCoralManifest = require('../public/oxi-coral/data/manifest.json');
-const oxiE16QuickStartManifest = require('../public/oxi-e16-quick-start/data/manifest.json');
-const oxiE16ManualManifest = require('../public/oxi-e16-manual/data/manifest.json');
-const addac112LooperManifest = require('../public/addac112-looper/data/manifest.json');
+/**
+ * Discover every manual under `publicDir` that has a `data/manifest.json`,
+ * returning a map of slug -> parsed manifest. Mirrors the discovery pattern in
+ * scripts/pdf-search-index-all.js but keys on manifest.json (this crawler needs
+ * `totalPages`, not the search-index's pages-ja.json). Non-directory entries
+ * (`_headers`, `_redirects`) and dirs without a manifest (`img/`) are skipped.
+ *
+ * @param {string} publicDir
+ * @returns {Record<string, { totalPages: number }>} slug -> manifest
+ */
+function discoverManuals(publicDir) {
+  const manuals = {};
+  if (!existsSync(publicDir)) return manuals;
 
-const MANUALS = {
-  'addac112-looper': addac112LooperManifest,
-  'oxi-coral': oxiCoralManifest,
-  'oxi-e16-manual': oxiE16ManualManifest,
-  'oxi-e16-quick-start': oxiE16QuickStartManifest,
-  'oxi-one-mk2': oxiOneMk2Manifest,
-};
+  for (const name of readdirSync(publicDir)) {
+    const abs = join(publicDir, name);
+    let st;
+    try {
+      st = statSync(abs);
+    } catch {
+      continue;
+    }
+    if (!st.isDirectory()) continue;
+    const manifestPath = join(abs, 'data', 'manifest.json');
+    if (!existsSync(manifestPath)) continue;
+    manuals[name] = JSON.parse(readFileSync(manifestPath, 'utf-8'));
+  }
+
+  return manuals;
+}
+
+const MANUALS = discoverManuals(PUBLIC_DIR);
 
 // Default changed from zmanuals.localhost:3100 (Next.js dev) to localhost:8030
 // (zfb production-serve / pnpm serve). Override with BASE_URL env var if needed.
@@ -91,6 +114,13 @@ async function main() {
 
   // Get all manuals
   const manualIds = Object.keys(MANUALS).sort();
+
+  // Fail loudly on an empty discovery — otherwise a misconfigured public/ dir
+  // would silently "pass" with zero pages tested.
+  if (manualIds.length === 0) {
+    console.error('❌ No manuals discovered under public/*/data/manifest.json — nothing to test.');
+    process.exit(1);
+  }
 
   // Calculate total pages
   for (const manualId of manualIds) {

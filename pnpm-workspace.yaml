@@ -4,6 +4,9 @@ packages:
   - scripts/md-formatter
 
 onlyBuiltDependencies:
+  # canvas is only jsdom's (vitest) optional rendering capability — no first-party code imports it.
+  # Kept (not dropped) because removing it forces a full lockfile regen; left in the allowlist so its
+  # native build runs. If a stale local install loses build/Release/canvas.node, run `pnpm rebuild`.
   - canvas
   - sharp
   - esbuild
@@ -25,6 +28,12 @@ trustPolicyExclude:
 strictPeerDependencies: false
 # Auto-install non-optional peers (compatibility)
 autoInstallPeers: true
+# Silence the eslint 10 unmet-peer warning for eslint-plugin-react: no released version
+# declares an eslint ^10 peer yet (latest 7.37.5 caps at ^9.7; lint passes on eslint 10 today).
+# Remove this entry once jsx-eslint/eslint-plugin-react ships eslint-10 peer support.
+peerDependencyRules:
+  allowedVersions:
+    'eslint-plugin-react>eslint': '10'
 # Fully flat node_modules — needed for Docusaurus (and legacy Next.js) module resolution
 shamefullyHoist: true
 # Hoist these to the root node_modules so they resolve from outside their declaring package.

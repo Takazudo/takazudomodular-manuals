@@ -105,18 +105,16 @@
     "@types/node": "25.5.0",
     "@typescript-eslint/eslint-plugin": "^8.57.2",
     "@typescript-eslint/parser": "^8.57.2",
-    "@vitejs/plugin-react": "^4.7.0",
     "canvas": "^3.2.2",
     "eslint": "^10.1.0",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "glob": "^13.0.6",
     "image-size": "^2.0.2",
     "jsdom": "^29.0.1",
     "lint-staged": "^16.4.0",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^2.4.5",
-    "pdf-poppler": "^0.2.3",
     "pdf-to-png-converter": "^3.14.0",
     "pdfjs-dist": "^5.5.207",
     "prettier": "^3.8.1",
@@ -150,12 +148,6 @@
     ],
     "!(worktrees|__inbox|node_modules)/**/*.{json,css,yml,yaml}": [
       "prettier --write"
-    ]
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "workerd"
     ]
   }
 }

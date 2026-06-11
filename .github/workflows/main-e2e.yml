@@ -1,0 +1,82 @@
+name: Main E2E (full Playwright suite)
+
+# Runs the FULL Playwright e2e suite on every push to main.
+#
+# This is intentionally a SEPARATE workflow from main-deploy.yml: the
+# production deploy does NOT depend on it. Failures here are visible (red check
+# on the commit) but never block a deploy — the suite is post-merge regression
+# detection, not a gate. To disable, delete this one file; nothing else
+# references it.
+on:
+  push:
+    branches:
+      - main
+
+# Independent of the production-deploy concurrency group so this never serializes
+# with or blocks deploys. Newer pushes cancel an in-flight e2e run.
+concurrency:
+  group: main-e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  e2e-full:
+    name: Full Playwright Suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          lfs: false
+
+      # Setup pnpm/node, install deps, and build dist/ via the shared composite
+      # action — same build the deploy uses, so the suite tests what ships.
+      - name: Build zfb application
+        uses: ./.github/actions/build-zfb
+        with:
+          node-version: '22'
+
+      - name: Resolve Playwright version
+        id: pw
+        run: |
+          PW_VERSION=$(node -e "console.log(require('@playwright/test/package.json').version)")
+          echo "version=$PW_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Playwright version: $PW_VERSION"
+
+      - name: Cache Playwright browsers
+        id: pw-cache
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}
+
+      - name: Install Playwright chromium (+ system deps)
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (cached browser)
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+
+      # Full suite (all specs incl. all-pages) against the already-built dist/.
+      # Playwright owns the serve via webServer + SKIP_ZFB_BUILD=1.
+      - name: Run full Playwright suite
+        env:
+          SKIP_ZFB_BUILD: '1'
+        run: |
+          echo "🎭 Running the full Playwright suite..."
+          npx playwright test
+          echo "✅ Full suite passed"
+
+      - name: Upload Playwright traces on failure
+        if: failure()
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: playwright-traces-main-${{ github.sha }}
+          path: test-results/
+          retention-days: 3
+          if-no-files-found: ignore
