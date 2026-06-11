@@ -8,6 +8,15 @@ import { defineConfig, devices } from '@playwright/test';
 // scripts/zfb-finalize-build.js && pnpm serve`.
 const ZFB_SERVE_URL = 'http://localhost:8030';
 
+// Serve the already-finalized dist/ without rebuilding. CI builds the site
+// once via the build-zfb composite action, then runs Playwright with
+// SKIP_ZFB_BUILD=1 so the test runner doesn't rebuild from scratch.
+const SERVE_DIST_CMD = 'pnpm dlx serve dist -l 8030';
+// Full build chain (zfb build + finalize) before serving — the default for
+// local runs where no dist exists yet.
+const BUILD_AND_SERVE_CMD = `pnpm zfb:build && node scripts/zfb-finalize-build.js && ${SERVE_DIST_CMD}`;
+const SKIP_ZFB_BUILD = process.env.SKIP_ZFB_BUILD === '1';
+
 export default defineConfig({
   testDir: './e2e',
   fullyParallel: false,
@@ -37,10 +46,11 @@ export default defineConfig({
   // move them to a separate spec that runs only against the deployed preview.
   webServer: {
     // Build the zfb dist + finalize + serve in sequence so the test runner
-    // starts against a fully baked production bundle. If a dist already exists
-    // and you want to skip the rebuild, set SKIP_ZFB_BUILD=1 and start the
-    // server manually before running playwright.
-    command: 'pnpm zfb:build && node scripts/zfb-finalize-build.js && pnpm dlx serve dist -l 8030',
+    // starts against a fully baked production bundle. Set SKIP_ZFB_BUILD=1 to
+    // skip the rebuild and serve an existing dist/ directly — Playwright still
+    // owns the server lifecycle (start/stop), so no manual server step is
+    // needed. CI uses this after building once via the build-zfb action.
+    command: SKIP_ZFB_BUILD ? SERVE_DIST_CMD : BUILD_AND_SERVE_CMD,
     url: ZFB_SERVE_URL,
     reuseExistingServer: !process.env.CI,
     stdout: 'ignore',

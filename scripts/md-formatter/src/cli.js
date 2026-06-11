@@ -16,7 +16,7 @@ program
   .option(
     '--ignore <patterns>',
     'Comma-separated patterns to ignore',
-    '**/node_modules/**,dist/**,dev/**,build/**,.git/**,worktrees/**,sub-packages/**,__inbox/**',
+    '**/node_modules/**,dist/**,dev/**,build/**,.git/**,worktrees/**,sub-packages/**,__inbox/**,test-results/**,playwright-report/**',
   )
   .action(async (patterns, options) => {
     try {

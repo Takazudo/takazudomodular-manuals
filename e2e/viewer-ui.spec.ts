@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { waitForViewerNavReady } from './helpers';
 
 const PAGE_URL = '/manuals/oxi-one-mk2/page/5';
 
@@ -31,6 +32,7 @@ test.describe('Viewer UI: Header Utility Bar', () => {
 test.describe('Viewer UI: Sidebar Thumbnails', () => {
   test('should open and close sidebar on toggle', async ({ page }) => {
     await page.goto(PAGE_URL);
+    await waitForViewerNavReady(page);
 
     const sidebar = page.locator('aside[aria-label="Page thumbnails"]');
     const sidebarBtn = page.locator('button[aria-label="Toggle sidebar"]');
@@ -52,6 +54,7 @@ test.describe('Viewer UI: Sidebar Thumbnails', () => {
 
   test('should highlight current page in sidebar', async ({ page }) => {
     await page.goto(PAGE_URL);
+    await waitForViewerNavReady(page);
 
     const sidebarBtn = page.locator('button[aria-label="Toggle sidebar"]');
     await sidebarBtn.click();
@@ -72,6 +75,7 @@ test.describe('Viewer UI: Sidebar Thumbnails', () => {
 
   test('should navigate when clicking a sidebar thumbnail', async ({ page }) => {
     await page.goto(PAGE_URL);
+    await waitForViewerNavReady(page);
 
     const sidebarBtn = page.locator('button[aria-label="Toggle sidebar"]');
     await sidebarBtn.click();
@@ -90,6 +94,7 @@ test.describe('Viewer UI: Sidebar Thumbnails', () => {
 test.describe('Viewer UI: Thumbnail Grid Modal', () => {
   test('should open and close modal', async ({ page }) => {
     await page.goto(PAGE_URL);
+    await waitForViewerNavReady(page);
 
     const thumbsBtn = page.locator('button[aria-label="Open thumbnail grid"]');
     await thumbsBtn.click();
@@ -108,6 +113,7 @@ test.describe('Viewer UI: Thumbnail Grid Modal', () => {
 
   test('should close modal with Escape key', async ({ page }) => {
     await page.goto(PAGE_URL);
+    await waitForViewerNavReady(page);
 
     const thumbsBtn = page.locator('button[aria-label="Open thumbnail grid"]');
     await thumbsBtn.click();
@@ -121,6 +127,7 @@ test.describe('Viewer UI: Thumbnail Grid Modal', () => {
 
   test('should close modal when clicking overlay', async ({ page }) => {
     await page.goto(PAGE_URL);
+    await waitForViewerNavReady(page);
 
     const thumbsBtn = page.locator('button[aria-label="Open thumbnail grid"]');
     await thumbsBtn.click();
@@ -135,6 +142,7 @@ test.describe('Viewer UI: Thumbnail Grid Modal', () => {
 
   test('should navigate when clicking a thumbnail in modal', async ({ page }) => {
     await page.goto(PAGE_URL);
+    await waitForViewerNavReady(page);
 
     const thumbsBtn = page.locator('button[aria-label="Open thumbnail grid"]');
     await thumbsBtn.click();
@@ -153,6 +161,7 @@ test.describe('Viewer UI: Thumbnail Grid Modal', () => {
 
   test('should show thumbnail grid with proper aspect ratio', async ({ page }) => {
     await page.goto(PAGE_URL);
+    await waitForViewerNavReady(page);
 
     const thumbsBtn = page.locator('button[aria-label="Open thumbnail grid"]');
     await thumbsBtn.click();
@@ -170,6 +179,7 @@ test.describe('Viewer UI: Thumbnail Grid Modal', () => {
 test.describe('Viewer UI: View Mode Toggle', () => {
   test('should switch to scroll mode and back', async ({ page }) => {
     await page.goto(PAGE_URL);
+    await waitForViewerNavReady(page);
 
     // Initially in page mode
     const pageViewer = page.getByTestId('page-image-column');
@@ -193,6 +203,7 @@ test.describe('Viewer UI: View Mode Toggle', () => {
 
   test('scroll mode should show page images', async ({ page }) => {
     await page.goto(PAGE_URL);
+    await waitForViewerNavReady(page);
 
     // Switch to scroll mode
     const viewModeBtn = page.locator('button[aria-label="Switch to scroll mode"]');
@@ -262,6 +273,7 @@ test.describe('Viewer UI: No Console Errors', () => {
 
     await page.goto(PAGE_URL);
     await page.waitForLoadState('networkidle');
+    await waitForViewerNavReady(page);
 
     // Toggle sidebar
     await page.locator('button[aria-label="Toggle sidebar"]').click();
