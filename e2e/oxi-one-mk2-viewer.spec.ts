@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
-import manifest from '../public/oxi-one-mk2/data/manifest.json';
+import manifest from '../public/oxi-one-mk2/data/manifest.json' with { type: 'json' };
+import { waitForViewerNavReady } from './helpers';
 
 const MANUAL_ID = 'oxi-one-mk2';
 const MANUAL_PATH = `/manuals/${MANUAL_ID}/page`;
@@ -118,6 +119,7 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
   test.describe('Keyboard Navigation', () => {
     test('should navigate to next page with ArrowRight', async ({ page }) => {
       await page.goto(`${MANUAL_PATH}/1`);
+      await waitForViewerNavReady(page);
 
       // Press ArrowRight
       await page.keyboard.press('ArrowRight');
@@ -131,6 +133,7 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
 
     test('should navigate to previous page with ArrowLeft', async ({ page }) => {
       await page.goto(`${MANUAL_PATH}/2`);
+      await waitForViewerNavReady(page);
 
       // Press ArrowLeft
       await page.keyboard.press('ArrowLeft');
@@ -142,19 +145,20 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
       await expect(page).toHaveURL(`${MANUAL_PATH}/1`);
     });
 
-    test('should not navigate before page 1 with ArrowLeft', async ({ page }) => {
+    test('should navigate to manual top with ArrowLeft on page 1', async ({ page }) => {
       await page.goto(`${MANUAL_PATH}/1`);
-      const initialUrl = page.url();
+      await waitForViewerNavReady(page);
 
-      // Press ArrowLeft (should not navigate)
+      // ArrowLeft on page 1 deliberately goes to the manual landing page
+      // (navigateHome branch in keyboard-navigation.tsx), not "nowhere".
       await page.keyboard.press('ArrowLeft');
 
-      // Verify URL hasn't changed
-      await expect(page).toHaveURL(initialUrl);
+      await expect(page).toHaveURL(`/manuals/${MANUAL_ID}`);
     });
 
     test('should not navigate beyond last page with ArrowRight', async ({ page }) => {
       await page.goto(`${MANUAL_PATH}/${TOTAL_PAGES}`);
+      await waitForViewerNavReady(page);
       const initialUrl = page.url();
 
       // Press ArrowRight (should not navigate)
@@ -311,7 +315,7 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
 
       // Wait for navigation
       await page.waitForURL(`${MANUAL_PATH}/11`);
-      expect(page.url()).toBe(`${MANUAL_PATH}/11`);
+      await expect(page).toHaveURL(`${MANUAL_PATH}/11`);
 
       // Click prev button
       const prevButton = page.getByTestId('prev-page-button');
@@ -319,7 +323,7 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
 
       // Wait for navigation
       await page.waitForURL(`${MANUAL_PATH}/10`);
-      expect(page.url()).toBe(`${MANUAL_PATH}/10`);
+      await expect(page).toHaveURL(`${MANUAL_PATH}/10`);
     });
 
     test('should navigate using page selector', async ({ page }) => {
@@ -331,7 +335,7 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
 
       // Wait for navigation
       await page.waitForURL(`${MANUAL_PATH}/50`);
-      expect(page.url()).toBe(`${MANUAL_PATH}/50`);
+      await expect(page).toHaveURL(`${MANUAL_PATH}/50`);
 
       // Verify page selector shows correct page
       await expect(pageSelector).toHaveValue('50');
