@@ -1,4 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
+import { waitForViewerNavReady } from './helpers';
 
 const MANUAL_PATH = '/manuals/oxi-one-mk2/page';
 
@@ -18,6 +19,9 @@ const MANUAL_PATH = '/manuals/oxi-one-mk2/page';
 
 /** Switch from page mode to scroll mode and wait for viewer to be ready */
 async function switchToScrollMode(page: Page) {
+  // Wait for the island to be interactive first — a click on the SSR'd button
+  // before hydration is silently lost (no listener attached yet).
+  await waitForViewerNavReady(page);
   const viewModeBtn = page.locator('button[aria-label="Switch to scroll mode"]');
   await viewModeBtn.click();
   const scrollViewer = page.getByTestId('scroll-viewer');
@@ -40,9 +44,11 @@ test.describe('Scroll Mode: Page Detection', () => {
       el.scrollTop = el.scrollHeight * 0.05;
     });
 
-    // Wait for IntersectionObserver to detect new page (condition-based, not fixed delay)
-    await expect(page.getByTestId('scroll-translation-header')).not.toContainText('P.1', {
-      timeout: 3000,
+    // Wait for IntersectionObserver to detect new page (condition-based, not
+    // fixed delay). Match "P.1 /" with the boundary — a bare "P.1" is a
+    // substring of "P.16 / 302" and would never stop matching.
+    await expect(page.getByTestId('scroll-translation-header')).not.toContainText('P.1 /', {
+      timeout: 8000,
     });
 
     // Extract detected page number and verify it advanced
