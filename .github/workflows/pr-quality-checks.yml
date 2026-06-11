@@ -158,7 +158,7 @@ jobs:
           node-version: '22'
 
       # Only persist the ~880 MB build artifact where it is actually consumed:
-      # the e2e-smoke-tests job runs on preview/* branches ONLY. On every other
+      # the page-smoke-crawler job runs on preview/* branches ONLY. On every other
       # PR the artifact would be uploaded, count against the 2 GB Actions storage
       # cap, and never be downloaded. preview-deploy now builds the site itself
       # instead of consuming this artifact, so this upload is preview/* only.
@@ -173,15 +173,20 @@ jobs:
           include-hidden-files: true
           retention-days: 1
 
-  # Job 3: E2E Smoke Tests (only for preview/* branches)
+  # Job 3: Page Smoke Crawler (only for preview/* branches)
+  #
+  # NOT Playwright — this runs scripts/test-all-pages-fast.js, a plain HTTP-status
+  # crawler that GETs every /manuals/<id>/page/<n> route of every manual and
+  # asserts HTTP 200. Browser-level interaction is covered separately by the
+  # e2e-interaction job (Playwright) and the main-e2e workflow.
   #
   # This is the ONLY consumer of build-check's uploaded artifact. Its
   # `if:` predicate MUST stay in sync with the upload step's `if:` in
   # build-check — if you ever widen this trigger, widen that upload gate
   # too, or this job will try to download an artifact that was never
   # uploaded.
-  e2e-smoke-tests:
-    name: E2E Smoke Tests
+  page-smoke-crawler:
+    name: Page Smoke Crawler
     runs-on: ubuntu-latest
     timeout-minutes: 15
     needs: build-check
@@ -247,7 +252,7 @@ jobs:
             kill $SERVER_PID || true
           fi
 
-      - name: Comment e2e test status
+      - name: Comment page smoke crawler status
         if: always()
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         with:
@@ -256,11 +261,11 @@ jobs:
             const emoji = success ? '✅' : '❌';
             const status = success ? 'passed' : 'failed';
 
-            const body = `${emoji} **E2E Smoke Tests ${status}**
+            const body = `${emoji} **Page Smoke Crawler ${status}**
 
-            Tested all manual pages against production build.
+            HTTP-status crawl of every manual's pages against the production build (not a browser test).
 
-            ${success ? '✅ All pages loaded successfully with HTTP 200.' : '❌ Some pages failed to load. Check the logs for details.'}`;
+            ${success ? '✅ Every manual page returned HTTP 200.' : '❌ Some pages failed to load. Check the logs for details.'}`;
 
             // Find existing comment
             const { data: comments } = await github.rest.issues.listComments({
@@ -271,7 +276,7 @@ jobs:
 
             const botComment = comments.find(comment =>
               comment.user.type === 'Bot' &&
-              comment.body.includes('E2E Smoke Tests')
+              comment.body.includes('Page Smoke Crawler')
             );
 
             if (botComment) {
@@ -292,7 +297,96 @@ jobs:
               });
             }
 
-  # Job 4: Preview Deploy (Cloudflare Pages) for same-repo PRs
+  # Job 4: E2E Interaction Tests (Playwright) — runs on ALL PRs
+  #
+  # Runs the browser-level Playwright interaction specs (NOT the all-pages
+  # crawler — page loads are covered by page-smoke-crawler and the main-e2e
+  # workflow). This is the only CI path that would have caught the broken
+  # navigation/scroll assertions that sat on main for ~5 months (#196).
+  #
+  # Builds the site IN-JOB via the build-zfb composite action and runs
+  # Playwright with SKIP_ZFB_BUILD=1 against that build — deliberately NOT
+  # consuming build-check's ~880 MB artifact (the workflow warns about the 2 GB
+  # Actions storage cap). Chromium is cached on ~/.cache/ms-playwright keyed on
+  # the installed Playwright version.
+  #
+  # No `branches:` filter exists on this workflow's pull_request trigger, so
+  # this job fires for PRs targeting ANY base branch (e.g. topic/* base
+  # branches), not just main. Do NOT add a branches filter without revisiting
+  # this.
+  e2e-interaction:
+    name: E2E Interaction Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    needs: quality-checks
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          lfs: false
+
+      # Setup pnpm/node, install deps, and build dist/ — same composite action
+      # the deploy paths use, so the e2e build can't drift from production.
+      - name: Build zfb application
+        uses: ./.github/actions/build-zfb
+        with:
+          node-version: '22'
+
+      - name: Resolve Playwright version
+        id: pw
+        run: |
+          PW_VERSION=$(node -e "console.log(require('@playwright/test/package.json').version)")
+          echo "version=$PW_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Playwright version: $PW_VERSION"
+
+      - name: Cache Playwright browsers
+        id: pw-cache
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}
+
+      # Cache hit: only (re)install the OS-level deps (apt packages live outside
+      # ~/.cache/ms-playwright and are never cached). Cache miss: download the
+      # chromium browser plus its system deps.
+      - name: Install Playwright chromium (+ system deps)
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (cached browser)
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+
+      # Run ONLY the interaction specs against the already-built dist/ (Playwright
+      # owns the serve via webServer + SKIP_ZFB_BUILD=1). all-pages.spec.ts is
+      # intentionally excluded — page loads are the crawler's job.
+      - name: Run Playwright interaction specs
+        env:
+          SKIP_ZFB_BUILD: '1'
+        run: |
+          echo "🎭 Running Playwright interaction specs..."
+          npx playwright test \
+            e2e/oxi-one-mk2-viewer.spec.ts \
+            e2e/scroll-mode.spec.ts \
+            e2e/language-toggle.spec.ts \
+            e2e/viewer-ui.spec.ts
+          echo "✅ Interaction specs passed"
+
+      # On failure only: persist the on-retry traces (config uses the 'list'
+      # reporter + trace:'on-first-retry', so there is no playwright-report/ dir;
+      # failing tests drop a trace under test-results/). Tiny + 3-day retention
+      # keeps this well clear of the 2 GB Actions storage cap.
+      - name: Upload Playwright traces on failure
+        if: failure()
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: playwright-traces-pr-${{ github.event.pull_request.number }}
+          path: test-results/
+          retention-days: 3
+          if-no-files-found: ignore
+
+  # Job 5: Preview Deploy (Cloudflare Pages) for same-repo PRs
   #
   # Builds the site itself via the build-zfb composite action rather than
   # downloading build-check's ~880 MB artifact. This removes the persisted
