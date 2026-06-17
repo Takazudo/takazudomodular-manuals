@@ -33,11 +33,11 @@ Every same-repo pull request gets an automatic Cloudflare Workers preview deploy
 The built zfb site is ~880 MB (the manuals carry a lot of media). To avoid churning through the 2 GB Actions storage cap (see issue #175), the preview path does not upload the built artifact:
 
 - `preview-deploy` **builds the site itself** via the `./.github/actions/build-zfb` composite action. This means the site is built twice per same-repo PR (once in `build-check`, once in `preview-deploy`) — accepted as the trade-off for not persisting the artifact. A red build still blocks the deploy: `preview-deploy` `needs: quality-checks`, and its own build step runs before the deploy step.
-- `build-check` only uploads the `zfb-build-pr-<N>` artifact when `github.head_ref` starts with `preview/` — i.e. only on the branches where the `page-smoke-crawler` job actually consumes it. On all other PRs nothing is persisted to Actions storage.
+- `build-check` only uploads the `zfb-build-pr-<N>` artifact when `github.head_ref` starts with `preview/` — i.e. only on the branches where the `page-smoke-crawler` job actually consumes it (a `preview/*` branch opts a PR into the extra full-page HTTP smoke crawl; ordinary PR branches skip it). On all other PRs nothing is persisted to Actions storage.
 
 ## Quick reference
 
-| Flow       | Trigger                       | URL                                                          | Comment marker           | Commit status           |
-| ---------- | ----------------------------- | ------------------------------------------------------------ | ------------------------ | ----------------------- |
-| PR preview | Same-repo PR opened / updated | `https://pr-<N>-zmanuals-<hash>.takazudo.workers.dev/`      | `<!-- cf-preview-pr -->` | `cloudflare/pr-preview` |
-| Forked PR  | PR from a fork                | _(no preview — secrets unavailable, by design)_              | —                        | —                       |
+| Flow       | Trigger                       | URL                                                    | Comment marker           | Commit status           |
+| ---------- | ----------------------------- | ------------------------------------------------------ | ------------------------ | ----------------------- |
+| PR preview | Same-repo PR opened / updated | `https://pr-<N>-zmanuals-<hash>.takazudo.workers.dev/` | `<!-- cf-preview-pr -->` | `cloudflare/pr-preview` |
+| Forked PR  | PR from a fork                | _(no preview — secrets unavailable, by design)_        | —                        | —                       |

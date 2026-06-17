@@ -8,7 +8,7 @@
  * Usage:
  *   node scripts/capture.js
  *   node scripts/capture.js --pages 30
- *   node scripts/capture.js --base-url http://zmanuals.localhost:3300
+ *   node scripts/capture.js --base-url http://zmanuals.localhost:3300/oxi-one-mk2/page
  */
 
 const { chromium } = require('playwright');

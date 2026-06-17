@@ -141,7 +141,7 @@ After running the PDF processing pipeline, use this command to verify that trans
 
 **What it does:**
 
-1. Starts dev server on port 3100 (if not running)
+1. Starts dev server on port 3300 (if not running)
 2. Captures all 30 pages at high resolution (2000x1600) using `capture-all-pages` skill
 3. Verifies sample pages (1, 10, 15, 21, 30) for translation accuracy
 4. Checks for:
@@ -302,9 +302,9 @@ pnpm run pdf:manifest --slug oxi-coral
 - `processing/` directory is gitignored
 - Can delete processing files after successful deploy
 
-**Backward Compatibility:**
+**Manual Isolation:**
 
-- Existing manual URLs unchanged: `/oxi-one-mk2/page/1`
+- Adding a manual never changes the URLs of existing manuals (each lives at its own `/{slug}/page/{n}` route, e.g. `/oxi-one-mk2/page/1`)
 - Each manual is independent
 - No conflicts between manuals
 
