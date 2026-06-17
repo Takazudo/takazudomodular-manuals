@@ -21,15 +21,13 @@ import { test, expect } from '@playwright/test';
  * How to run:
  *   pnpm exec playwright test e2e/language-toggle.spec.ts
  *
- * By default, Playwright's `webServer` config spins up `pnpm dev` on
- * http://zmanuals.localhost:3100 (see playwright.config.ts). To run against a
- * production build instead, start `pnpm serve` on port 8030 first and then run:
- *   PLAYWRIGHT_BASE_URL=http://localhost:8030 pnpm exec playwright test \
- *     e2e/language-toggle.spec.ts
- * (or temporarily override `use.baseURL` in the config).
+ * By default, Playwright's `webServer` config builds and serves the zfb dist on
+ * http://localhost:8030 (see playwright.config.ts). To run against an already-
+ * built dist, set SKIP_ZFB_BUILD=1 and start `pnpm serve` first:
+ *   SKIP_ZFB_BUILD=1 pnpm exec playwright test e2e/language-toggle.spec.ts
  */
 
-const PAGE_PATH = '/manuals/oxi-coral/page/5';
+const PAGE_PATH = '/oxi-coral/page/5';
 
 const TRANSLATION_PANEL = '[data-testid="translation-panel"]';
 const EN_BUTTON = 'button[aria-label="English"]';

@@ -3,24 +3,24 @@ import manifest from '../public/oxi-one-mk2/data/manifest.json' with { type: 'js
 import { waitForViewerNavReady } from './helpers';
 
 const MANUAL_ID = 'oxi-one-mk2';
-const MANUAL_PATH = `/manuals/${MANUAL_ID}/page`;
+const MANUAL_PATH = `/${MANUAL_ID}/page`;
 const TOTAL_PAGES = manifest.totalPages;
 
 /**
  * E2E tests for oxi-one-mk2 manual viewer
  *
- * Verifies backward compatibility after multi-PDF refactoring:
+ * Verifies correct behavior on the CF Workers root-scheme routes:
  * - Page loading
  * - Navigation (arrow keys)
  * - Images display
  * - Translations display
- * - URL structure unchanged
+ * - URL structure
  */
 
 test.describe('OXI ONE MKII Manual Viewer', () => {
   test.describe('Index Pages', () => {
     test('should load manuals index page', async ({ page }) => {
-      await page.goto('/manuals');
+      await page.goto('/');
       await expect(page).toHaveTitle(/Manual Index/i);
 
       // Should show link to oxi-one-mk2
@@ -29,7 +29,7 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
     });
 
     test('should load oxi-one-mk2 manual index', async ({ page }) => {
-      await page.goto(`/manuals/${MANUAL_ID}`);
+      await page.goto(`/${MANUAL_ID}`);
       await expect(page).toHaveTitle(/OXI ONE MKII.*日本語訳/i);
 
       // Should have "マニュアルを読む" link
@@ -38,10 +38,10 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
     });
 
     test('manuals index should load', async ({ page }) => {
-      // With basePath: '/manuals', the app root is at /manuals
-      await page.goto('/manuals');
+      // Root / serves the manual index directly (no /manuals prefix)
+      await page.goto('/');
 
-      await expect(page).toHaveURL('/manuals');
+      await expect(page).toHaveURL('/');
     });
   });
 
@@ -86,7 +86,7 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
 
       // Verify image src points to correct path
       const src = await pageImage.getAttribute('src');
-      expect(src).toContain('/manuals/oxi-one-mk2/pages/page-001.png');
+      expect(src).toContain('/oxi-one-mk2/pages/page-001.png');
 
       // Verify alt text
       const alt = await pageImage.getAttribute('alt');
@@ -153,7 +153,7 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
       // (navigateHome branch in keyboard-navigation.tsx), not "nowhere".
       await page.keyboard.press('ArrowLeft');
 
-      await expect(page).toHaveURL(`/manuals/${MANUAL_ID}`);
+      await expect(page).toHaveURL(`/${MANUAL_ID}`);
     });
 
     test('should not navigate beyond last page with ArrowRight', async ({ page }) => {
@@ -169,8 +169,8 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
     });
   });
 
-  test.describe('URL Structure (Backward Compatibility)', () => {
-    test('existing URLs should work unchanged', async ({ page }) => {
+  test.describe('URL Structure', () => {
+    test('root-scheme URLs should work', async ({ page }) => {
       const testPages = [1, 10, 50, 100, 150, 200, 250, TOTAL_PAGES];
 
       for (const pageNum of testPages) {
@@ -179,9 +179,32 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
       }
     });
 
-    test('URL pattern /manuals/oxi-one-mk2/page/{num} should work', async ({ page }) => {
-      await page.goto(`/manuals/oxi-one-mk2/page/1`);
-      await expect(page).toHaveURL('/manuals/oxi-one-mk2/page/1');
+    // The legacy /manuals/* → /:splat 301 lives in public/_redirects, which is
+    // applied by the CF Workers deployment but NOT by `pnpm dlx serve` (the
+    // local/CI webServer). Against `serve` the old path just 404s, so this test
+    // only runs when E2E_TARGET=deployed (i.e. pointed at a preview URL).
+    test('legacy /manuals/oxi-one-mk2/page/1 should 301 to /oxi-one-mk2/page/1', async ({
+      page,
+    }) => {
+      test.skip(
+        process.env.E2E_TARGET !== 'deployed',
+        '_redirects 301 rules only apply on the CF Workers deployment, not `serve`',
+      );
+
+      // CF Workers redirect rule: /manuals/oxi-one-mk2/page/1 → /oxi-one-mk2/page/1 (301)
+      const response = await page.goto('/manuals/oxi-one-mk2/page/1', {
+        waitUntil: 'domcontentloaded',
+      });
+
+      // The first request must have been a redirect to the root-scheme path.
+      const redirectedFrom = response?.request().redirectedFrom();
+      expect(redirectedFrom, 'expected a redirect from the /manuals path').not.toBeNull();
+      expect(redirectedFrom?.url()).toContain('/manuals/oxi-one-mk2/page/1');
+
+      // After following the redirect the URL and final response settle on the
+      // root-scheme page.
+      await expect(page).toHaveURL('/oxi-one-mk2/page/1');
+      expect(response?.status()).toBe(200);
     });
   });
 
@@ -228,11 +251,11 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
       await page.goto(`${MANUAL_PATH}/5`);
 
       // Check image paths
-      const pageImage = page.locator('img[src*="/manuals/oxi-one-mk2/pages/"]').first();
+      const pageImage = page.locator('img[src*="/oxi-one-mk2/pages/"]').first();
       await expect(pageImage).toBeVisible();
 
       const src = await pageImage.getAttribute('src');
-      expect(src).toMatch(/\/manuals\/oxi-one-mk2\/pages\/page-\d{3}\.png/);
+      expect(src).toMatch(/\/oxi-one-mk2\/pages\/page-\d{3}\.png/);
     });
   });
 
