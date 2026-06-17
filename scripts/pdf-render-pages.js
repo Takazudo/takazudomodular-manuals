@@ -88,8 +88,11 @@ async function renderPdfPages() {
       // Convert PDF to PNG
       const scale = dpi / 72;
 
+      // No outputFolder: pdf-to-png-converter only writes PNGs to disk when it is set,
+      // and it leaks stray copies under a relative ./home/<abs-path-mirror>/ tree. We
+      // already persist pngPages[0].content ourselves below, so omit it (content is
+      // still returned because returnPageContent defaults to true).
       const pngPages = await pdfToPng(pagePath, {
-        outputFolder: outputDir,
         viewportScale: scale,
         pngOptions: {
           quality: 100,
