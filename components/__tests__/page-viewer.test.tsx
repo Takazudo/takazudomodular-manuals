@@ -107,3 +107,91 @@ describe('PageViewer — language wiring', () => {
     expect(msg.textContent).toBe('No text extracted for this page.');
   });
 });
+
+describe('PageViewer — scroll reset on navigation', () => {
+  // jsdom implements no layout, so an element's scrollTop is effectively a
+  // no-op (always 0). Back it with a real settable property so a "scrolled
+  // down" precondition can be simulated and the reset asserted.
+  const makeScrollable = (el: Element) => {
+    let value = 0;
+    Object.defineProperty(el, 'scrollTop', {
+      configurable: true,
+      get: () => value,
+      set: (n: number) => {
+        value = n;
+      },
+    });
+  };
+
+  it('resets both scroll columns to the top when the page changes', () => {
+    const { rerender } = render(
+      <PageViewer
+        page={pageWithContent('ja')}
+        lang="ja"
+        currentPage={1}
+        totalPages={10}
+        manualId="oxi-one-mk2"
+        onNavigate={vi.fn()}
+        onNavigateHome={vi.fn()}
+      />,
+    );
+
+    const imageScroll = screen.getByTestId('page-image-scroll');
+    const translationCol = screen.getByTestId('translation-column');
+    makeScrollable(imageScroll);
+    makeScrollable(translationCol);
+
+    // Simulate the user scrolling down on the current page.
+    imageScroll.scrollTop = 500;
+    translationCol.scrollTop = 800;
+
+    // Navigate to a different page (every nav path flows through currentPage).
+    rerender(
+      <PageViewer
+        page={{ ...pageWithContent('ja'), pageNum: 2 }}
+        lang="ja"
+        currentPage={2}
+        totalPages={10}
+        manualId="oxi-one-mk2"
+        onNavigate={vi.fn()}
+        onNavigateHome={vi.fn()}
+      />,
+    );
+
+    expect(imageScroll.scrollTop).toBe(0);
+    expect(translationCol.scrollTop).toBe(0);
+  });
+
+  it('does not reset scroll on re-render that keeps the same page (e.g. language toggle)', () => {
+    const { rerender } = render(
+      <PageViewer
+        page={pageWithContent('ja')}
+        lang="ja"
+        currentPage={3}
+        totalPages={10}
+        manualId="oxi-one-mk2"
+        onNavigate={vi.fn()}
+        onNavigateHome={vi.fn()}
+      />,
+    );
+
+    const translationCol = screen.getByTestId('translation-column');
+    makeScrollable(translationCol);
+    translationCol.scrollTop = 600;
+
+    // Same currentPage — only the language changes. Scroll should be preserved.
+    rerender(
+      <PageViewer
+        page={pageWithContent('en')}
+        lang="en"
+        currentPage={3}
+        totalPages={10}
+        manualId="oxi-one-mk2"
+        onNavigate={vi.fn()}
+        onNavigateHome={vi.fn()}
+      />,
+    );
+
+    expect(translationCol.scrollTop).toBe(600);
+  });
+});

@@ -262,6 +262,42 @@ test.describe('Viewer UI: Page-mode loading overlay (#180)', () => {
   });
 });
 
+test.describe('Viewer UI: Page-mode scroll reset on navigation', () => {
+  test('resets both column scroll positions to the top when navigating pages', async ({ page }) => {
+    await page.goto(PAGE_URL); // /manuals/oxi-one-mk2/page/5
+    await waitForViewerNavReady(page);
+
+    const imageScroll = page.getByTestId('page-image-scroll');
+    const translationCol = page.getByTestId('translation-column');
+    await expect(imageScroll).toBeVisible();
+    await expect(translationCol).toBeVisible();
+
+    // Scroll both columns down (each is an independent overflow-y-scroll pane).
+    await imageScroll.evaluate((el) => {
+      el.scrollTop = 500;
+    });
+    await translationCol.evaluate((el) => {
+      el.scrollTop = 500;
+    });
+
+    // Precondition: at least one column actually moved off the top (values clamp
+    // to each pane's max scroll, so they may be < 500).
+    const before = await Promise.all([
+      imageScroll.evaluate((el) => el.scrollTop),
+      translationCol.evaluate((el) => el.scrollTop),
+    ]);
+    expect(Math.max(...before)).toBeGreaterThan(0);
+
+    // Navigate to the next page via the 次へ button.
+    await page.getByTestId('next-page-button').click();
+    await expect(page.getByTestId('page-selector')).toHaveValue('6');
+
+    // Both panes must be back at the top of the new page (#scroll-reset).
+    await expect.poll(() => imageScroll.evaluate((el) => el.scrollTop)).toBe(0);
+    await expect.poll(() => translationCol.evaluate((el) => el.scrollTop)).toBe(0);
+  });
+});
+
 test.describe('Viewer UI: No Console Errors', () => {
   test('should not have console errors during UI interactions', async ({ page }) => {
     const consoleErrors: string[] = [];
