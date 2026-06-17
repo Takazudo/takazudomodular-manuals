@@ -158,6 +158,67 @@ function rehypeWrapTables() {
   };
 }
 
+/**
+ * Rehype plugin: repair GFM autolink-literal anchors that swallowed trailing
+ * non-ASCII text into the URL.
+ *
+ * remark-gfm's autolink-literal extension only recognizes ASCII punctuation as
+ * a URL terminator. When a bare URL is immediately followed by CJK text or
+ * full-width punctuation with no separating space (idiomatic in Japanese prose,
+ * e.g. `（https://ebow.com/diy-mods）が施され…`), it greedily extends the URL
+ * through the rest of the run. The result is an `<a>` whose `href` is the URL
+ * plus a percent-encoded chunk of prose and whose visible text is equally
+ * polluted — a broken link.
+ *
+ * This repairs such anchors. The autolink invariant is that the anchor's single
+ * text child IS its own URL (`decodeURI(href) === text`). When that holds, the
+ * text starts with `http(s)://`, and it contains a non-ASCII character, we cut
+ * at the first non-ASCII codepoint: the ASCII prefix becomes the clean URL for
+ * both `href` and link text, and the remainder is reinserted as a plain text
+ * sibling after the anchor.
+ *
+ * Explicit `[label](url)` links have a label distinct from their href, so the
+ * `decodeURI(href) === text` guard never matches them — CJK link labels are
+ * left untouched. (A bare URL whose path legitimately contains non-ASCII is not
+ * a real case in these ASCII-only manual URLs; the cut is correct for the
+ * domain, including abbreviation ellipses like `…` that appear inside a URL.)
+ */
+function rehypeFixCjkAutolinks() {
+  return (tree) => {
+    visit(tree, 'element', (node, index, parent) => {
+      if (node.tagName !== 'a' || !parent || typeof index !== 'number') return;
+      if (node.children.length !== 1 || node.children[0].type !== 'text') return;
+
+      const text = node.children[0].value;
+      if (!/^https?:\/\//.test(text)) return;
+
+      const boundary = text.match(/[^\x00-\x7F]/);
+      if (!boundary) return; // clean ASCII autolink — nothing to repair
+
+      const href = node.properties?.href;
+      if (typeof href !== 'string') return;
+      let decoded;
+      try {
+        decoded = decodeURI(href);
+      } catch {
+        decoded = href;
+      }
+      if (decoded !== text) return; // not a bare autolink (e.g. explicit [label](url))
+
+      const cut = boundary.index;
+      const url = text.slice(0, cut);
+      const rest = text.slice(cut);
+
+      node.properties = { ...(node.properties || {}), href: url };
+      node.children = [{ type: 'text', value: url }];
+      parent.children.splice(index + 1, 0, { type: 'text', value: rest });
+
+      // Skip the (now-clean) anchor's children and the freshly inserted sibling.
+      return [SKIP, index + 1];
+    });
+  };
+}
+
 // --------------------------------------------------------------------------
 // Build the unified processor ONCE and reuse — process() calls are stateless
 // --------------------------------------------------------------------------
@@ -168,6 +229,7 @@ const processor = unified()
   .use(remarkRehype)
   .use(rehypeSlug)
   .use(rehypeHighlight)
+  .use(rehypeFixCjkAutolinks)
   .use(rehypeSanitizeUrls)
   .use(rehypeWrapTables)
   .use(rehypeStringify);
