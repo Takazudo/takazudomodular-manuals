@@ -18,9 +18,9 @@ A static manual viewer for hardware synthesizer manuals built with zfb (Preact i
 
 ## Live Site
 
-- **Production**: [https://zmanuals.pages.dev/](https://zmanuals.pages.dev/)
-- **OXI ONE MK2 Manual**: [https://zmanuals.pages.dev/manuals/oxi-one-mk2/](https://zmanuals.pages.dev/manuals/oxi-one-mk2/)
-- **PR Previews**: `https://pr-<N>.zmanuals.pages.dev/manuals/oxi-one-mk2/` (auto-deployed per PR)
+- **Production**: [https://manuals.takazudomodular.com/](https://manuals.takazudomodular.com/)
+- **OXI ONE MK2 Manual**: [https://manuals.takazudomodular.com/oxi-one-mk2/](https://manuals.takazudomodular.com/oxi-one-mk2/)
+- **PR Previews**: `https://pr-<N>-zmanuals-<hash>.takazudo.workers.dev/` (auto-deployed per PR via Cloudflare Workers preview aliases)
 
 ## Tech Stack
 
@@ -29,7 +29,7 @@ A static manual viewer for hardware synthesizer manuals built with zfb (Preact i
 - **Styling**: Tailwind CSS v4 (Zudo Design System)
 - **Language**: TypeScript
 - **Package Manager**: pnpm
-- **Deployment**: Cloudflare Pages
+- **Deployment**: Cloudflare Workers (static assets)
 - **Documentation**: Docusaurus 3
 - **Unit Tests**: Vitest
 - **E2E Tests**: Playwright
@@ -76,7 +76,7 @@ This is also wired into `pnpm run pdf:all` as the 7th pipeline step (after `pdf:
 
 ### Cache busting
 
-The index generator writes a SHA-1 content hash of `search-index.json` into the sibling `manifest.json` as `searchIndexVersion`. The search dialog reads it via the build-time registry import and appends `?v=<hash>` to the fetch URL, so CDNs (Cloudflare Pages includes the query string in its cache key by default) serve the fresh index as soon as a deploy changes the content.
+The index generator writes a SHA-1 content hash of `search-index.json` into the sibling `manifest.json` as `searchIndexVersion`. The search dialog reads it via the build-time registry import and appends `?v=<hash>` to the fetch URL, so CDNs (Cloudflare Workers includes the query string in its cache key by default) serve the fresh index as soon as a deploy changes the content.
 
 ## Adding a New Manual
 
@@ -146,16 +146,16 @@ pnpm build
 # Test locally
 pnpm serve
 
-# Visit: http://localhost:8030/manuals/new-manual-slug/page/1
+# Visit: http://localhost:8030/new-manual-slug/page/1
 ```
 
 ### 6. Verify the Manual
 
 Test key pages:
 
-- First page: `/manuals/new-manual-slug/page/1`
-- Middle page: `/manuals/new-manual-slug/page/50`
-- Last page: `/manuals/new-manual-slug/page/{lastPage}`
+- First page: `/new-manual-slug/page/1`
+- Middle page: `/new-manual-slug/page/50`
+- Last page: `/new-manual-slug/page/{lastPage}`
 
 Check:
 

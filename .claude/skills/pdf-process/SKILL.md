@@ -518,7 +518,7 @@ pnpm serve &
 sleep 3
 
 # Verify server is running (port 8030)
-curl -s -o /dev/null -w "%{http_code}" http://localhost:8030/manuals/$SLUG/page/1
+curl -s -o /dev/null -w "%{http_code}" http://localhost:8030/$SLUG/page/1
 ```
 
 #### Step 14: Capture All Pages
@@ -598,16 +598,8 @@ Page: XXX, Total: YYY</parameter>
 If any pages were fixed:
 
 ```bash
-# Copy translations to expected location
-mkdir -p public/manuals/$SLUG/processing/translations-draft
-cp public/$SLUG/processing/translations-draft/*.json public/manuals/$SLUG/processing/translations-draft/
-
 # Rebuild pages.json
 pnpm run pdf:build --slug $SLUG
-
-# Copy back to correct location
-cp public/manuals/$SLUG/data/pages.json public/$SLUG/data/pages.json
-rm -rf public/manuals/
 
 # Format
 pnpm format:fix

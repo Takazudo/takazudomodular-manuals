@@ -38,7 +38,7 @@ export default function Home(): ReactNode {
                   </li>
                   <li>
                     <a
-                      href="https://manual-oxi-one-mk2.netlify.app/manuals/oxi-one-mk2/"
+                      href="https://manuals.takazudomodular.com/oxi-one-mk2/"
                       rel="noopener noreferrer"
                     >
                       Manual Viewer (Production)

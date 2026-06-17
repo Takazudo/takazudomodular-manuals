@@ -24,7 +24,7 @@
     "dev": "zfb dev",
     "predev:net": "lsof -ti :3300 | xargs kill 2>/dev/null; true",
     "dev:net": "zfb dev --host 0.0.0.0",
-    "build": "pnpm run pdf:search-index:all && zfb build && node scripts/zfb-finalize-build.js && pnpm run doc:build && mkdir -p dist/manuals/doc && cp -r doc/build/* dist/manuals/doc/",
+    "build": "pnpm run pdf:search-index:all && zfb build && node scripts/zfb-finalize-build.js && pnpm run doc:build && mkdir -p dist/doc && cp -r doc/build/* dist/doc/",
     "zfb:build": "pnpm run pdf:search-index:all && zfb build",
     "preview": "zfb preview",
     "preserve": "lsof -ti :8030 | xargs kill 2>/dev/null; true",
@@ -78,8 +78,8 @@
     "test:smoke": "node scripts/test-all-pages-fast.js",
     "test:e2e": "playwright test e2e/all-pages.spec.ts",
     "// ── Deploy ───────────────────────────────────": "",
-    "deploy:preview": "wrangler pages deploy dist --project-name=zmanuals --branch=preview",
-    "deploy:prod": "wrangler pages deploy dist --project-name=zmanuals --branch=main",
+    "deploy:preview": "wrangler versions upload --preview-alias preview",
+    "deploy:prod": "wrangler deploy",
     "// ── Utilities ────────────────────────────────": "",
     "clean": "rm -rf .zfb-build dist doc/build doc/.docusaurus",
     "init-worktree": "./scripts/setup-worktree-env.sh",
@@ -90,6 +90,7 @@
     "@netlify/classnames-template-literals": "^1.0.3",
     "@takazudo/zfb": "0.1.0-next.52",
     "@takazudo/zfb-runtime": "0.1.0-next.52",
+    "@takazudo/zfb-adapter-cloudflare": "0.1.0-next.52",
     "minisearch": "^7.2.0",
     "preact": "^10.22.0",
     "preact-render-to-string": "^6.5.0"
@@ -130,7 +131,7 @@
     "unified": "^11.0.5",
     "unist-util-visit": "^5.1.0",
     "vitest": "^1.6.1",
-    "wrangler": "^4.77.0"
+    "wrangler": "4.85.0"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,mjs}": [

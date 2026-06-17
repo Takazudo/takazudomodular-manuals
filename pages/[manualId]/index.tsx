@@ -1,4 +1,4 @@
-// pages/[manualId]/index.tsx — /manuals/{id} manual landing page.
+// pages/[manualId]/index.tsx — /{id} manual landing page.
 // Ports app/[manualId]/page.tsx for the zfb renderer.
 //
 // paths() enumerates all manuals using the manifests-only zfb-registry
@@ -120,9 +120,9 @@ export default function ManualLandingPage({
   const { manualId } = params;
 
   const pageTitle = `${manifestTitle} 日本語訳 | Takazudo Modular`;
-  const readerHref = `/manuals/${manualId}/page/1`;
-  const pdfHref = `/manuals/${manualId}/original.pdf`;
-  const manualHref = `/manuals/${manualId}`;
+  const readerHref = `/${manualId}/page/1`;
+  const pdfHref = `/${manualId}/original.pdf`;
+  const manualHref = `/${manualId}`;
 
   return (
     <DefaultLayout title={pageTitle} manualTitle={manifestTitle} manualHref={manualHref}>

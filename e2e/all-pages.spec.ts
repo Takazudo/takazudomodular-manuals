@@ -5,18 +5,16 @@
  * production-serve (port 8030 / localhost). playwright.config.ts webServer
  * builds the zfb dist before starting this suite.
  *
- * Route structure is identical to the Next.js app:
- *   /manuals/{id}/page/{n}
+ * Route structure (CF Workers / root scheme):
+ *   /{id}/page/{n}
  *
- * Asset path change: static assets now live under /manuals/assets/* instead of
- * /manuals/_next/static/*. This is transparent to page-load assertions (we
- * check HTTP status and DOM, not asset URLs).
+ * Asset paths live under /{id}/pages/* (no /manuals prefix).
  *
- * NOTE: The /manuals/page/N redirect and root / 302 rules are Cloudflare Pages
- * redirect rules that are NOT replicated by `pnpm dlx serve`. Tests that
- * assert those redirects must be skipped locally or run against the deployed
- * preview URL. Mark such tests: `test.skip(!!process.env.CI, 'redirect rules
- * only apply on CF Pages')`.
+ * NOTE: The /{id}/page/N redirect rules are Cloudflare Workers redirect rules
+ * that are NOT replicated by `pnpm dlx serve`. Tests that assert those
+ * redirects must be skipped locally or run against the deployed preview URL.
+ * Mark such tests: `test.skip(!!process.env.CI, 'redirect rules only apply on
+ * CF Workers')`.
  */
 import { test, expect } from '@playwright/test';
 import { createRequire } from 'module';
@@ -59,7 +57,7 @@ for (const manualId of manualIds) {
       const successes: number[] = [];
 
       for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
-        const url = `${BASE_URL}/manuals/${manualId}/page/${pageNum}`;
+        const url = `${BASE_URL}/${manualId}/page/${pageNum}`;
         const response = await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         if (!response) {

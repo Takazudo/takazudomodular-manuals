@@ -48,11 +48,11 @@ runs:
         HTML_COUNT=$(find dist -name "*.html" | wc -l)
         echo "HTML files: $HTML_COUNT"
 
-        # zfb-finalize-build.js merges everything under dist/manuals/
-        if [ -d "dist/manuals/assets" ]; then
-          echo "zfb assets found (dist/manuals/assets/)"
+        # zfb assets are output directly to dist/assets/ (no /manuals/ prefix)
+        if [ -d "dist/assets" ]; then
+          echo "zfb assets found (dist/assets/)"
         else
-          echo "Error: dist/manuals/assets/ not found"
+          echo "Error: dist/assets/ not found"
           exit 1
         fi
 

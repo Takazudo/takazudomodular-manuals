@@ -8,7 +8,7 @@ import type { Lang } from './lang';
 import type { ManualAppProps, ViewMode } from './manual-app-types';
 import { useLang } from './use-lang';
 import { useZoom } from './use-zoom';
-import { getManualBasePath, getPagePath } from './routing';
+import { getManualBasePath, getPagePath, withBasePath } from './routing';
 import { HeaderUtilityBar } from './header-utility-bar';
 import { PageViewer } from './page-viewer';
 import { ScrollViewer, type ScrollViewerHandle } from './scroll-viewer';
@@ -108,7 +108,9 @@ export default function ManualApp({
     let cancelled = false;
     setFetchFailed(false);
 
-    const baseHref = `/manuals/${manualId}/data`;
+    // Route through withBasePath so the fetch URLs survive any future base-path
+    // change (consistent with search-dialog.tsx); at base `/` this is a no-op.
+    const baseHref = withBasePath(`/${manualId}/data`);
     const wantEn = availableLangs.includes('en');
 
     // JA is required — its failure is fatal (error banner + disabled nav).

@@ -12,9 +12,9 @@ const BASE_PATH = ZFB_BASE.replace(/\/$/, '');
 
 /**
  * Prefix a root-relative asset/data URL with the zfb base path. External URLs
- * (http/https) and already-prefixed URLs pass through unchanged. Mirrors the
- * Next.js `withBasePath` so page-image `src` and JSON fetch URLs resolve under
- * the proxied `/manuals/*` mount.
+ * (http/https) and already-prefixed URLs pass through unchanged.
+ *
+ * At base `/`, BASE_PATH is `''`, so root-relative paths are returned as-is.
  */
 export function withBasePath(url: string): string {
   if (url.startsWith('http')) {

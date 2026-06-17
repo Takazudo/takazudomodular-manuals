@@ -26,8 +26,8 @@ The toggle is a visual segmented control. The active segment is indicated by `ar
 
 | State   | URL shape                                  |
 | ------- | ------------------------------------------ |
-| JA (default) | `/manuals/<id>/page/<n>`                   |
-| EN      | `/manuals/<id>/page/<n>?lang=en`           |
+| JA (default) | `/<id>/page/<n>`                   |
+| EN      | `/<id>/page/<n>?lang=en`           |
 
 Rules:
 

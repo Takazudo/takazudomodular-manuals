@@ -86,7 +86,7 @@ The PDF processing pipeline consists of 10 fully automated steps:
 - The index generator writes the SHA-1 of the serialized `search-index.json` into the sibling `manifest.json` under `searchIndexVersion`.
 - `manifest.json` is imported synchronously at build time via `lib/zfb-registry.ts` (through its generated import list), so the hash is bundled into the client JS with no extra fetch.
 - `SearchDialog` reads `searchIndexVersion` from the registry and appends `?v=<hash>` to the `search-index.json` fetch URL. When the index changes, the query string changes, and the CDN treats it as a new resource.
-- Cloudflare Pages includes the query string in its cache key by default, so this works with no `_headers` change on our side.
+- Cloudflare Workers includes the query string in its cache key by default, so this works with no special headers configuration on our side.
 
 **Total time:** ~15-30 minutes for a 280-page manual
 
@@ -141,7 +141,7 @@ After running the PDF processing pipeline, use this command to verify that trans
 
 **What it does:**
 
-1. Starts dev server on port 3100 (if not running)
+1. Starts dev server on port 3300 (if not running)
 2. Captures all 30 pages at high resolution (2000x1600) using `capture-all-pages` skill
 3. Verifies sample pages (1, 10, 15, 21, 30) for translation accuracy
 4. Checks for:
@@ -206,11 +206,11 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
 
 **URL structure:**
 
-- Base: `/manuals/{slug}/`
-- Pages: `/manuals/{slug}/page/{pageNum}`
+- Base: `/{slug}/`
+- Pages: `/{slug}/page/{pageNum}`
 - Examples:
-  - `/manuals/oxi-one-mk2/page/1`
-  - `/manuals/oxi-coral/page/1`
+  - `/oxi-one-mk2/page/1`
+  - `/oxi-coral/page/1`
 
 ### Adding a New Manual
 
@@ -302,9 +302,9 @@ pnpm run pdf:manifest --slug oxi-coral
 - `processing/` directory is gitignored
 - Can delete processing files after successful deploy
 
-**Backward Compatibility:**
+**Manual Isolation:**
 
-- Existing manual URLs unchanged: `/manuals/oxi-one-mk2/page/1`
+- Adding a manual never changes the URLs of existing manuals (each lives at its own `/{slug}/page/{n}` route, e.g. `/oxi-one-mk2/page/1`)
 - Each manual is independent
 - No conflicts between manuals
 
