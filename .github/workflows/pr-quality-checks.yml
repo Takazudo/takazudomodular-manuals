@@ -531,12 +531,20 @@ jobs:
             const success = process.env.JOB_STATUS === 'success';
             const status = success ? 'success' : 'failure';
 
-            await github.rest.repos.createCommitStatus({
+            const params = {
               owner: context.repo.owner,
               repo: context.repo.repo,
               sha: process.env.HEAD_SHA,
               state: status,
-              target_url: process.env.DEPLOY_URL,
               description: success ? 'PR preview deployment successful' : 'PR preview deployment failed',
-              context: 'cloudflare/pr-preview'
-            });
+              context: 'cloudflare/pr-preview',
+            };
+            // Only set target_url when a non-empty *.workers.dev preview URL exists.
+            // GitHub rejects an empty target_url, which would turn the intended
+            // "preview pending" (no URL yet) path into a red status check.
+            const deployUrl = process.env.DEPLOY_URL;
+            if (deployUrl) {
+              params.target_url = deployUrl;
+            }
+
+            await github.rest.repos.createCommitStatus(params);
