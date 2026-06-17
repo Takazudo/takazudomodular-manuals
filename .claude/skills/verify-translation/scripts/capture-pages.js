@@ -19,7 +19,7 @@ import path from 'path';
 const DEFAULT_CONFIG = {
   port: 8030, // Production build serve port
   baseUrl: 'http://localhost',
-  basePath: '/manuals',
+  basePath: '', // Site is deployed at root — no /manuals prefix
   viewport: { width: 2000, height: 1600 }, // High resolution for verification
   timeoutMs: 30000,
   waitAfterLoad: 2000,

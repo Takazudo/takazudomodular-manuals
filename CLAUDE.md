@@ -10,30 +10,29 @@ This is a zfb-based manual viewer for hardware synthesizer manuals. The site pro
 
 **URL Structure**:
 
-- Base path: `/manuals/oxi-one-mk2/`
-- Pages: `/manuals/oxi-one-mk2/page/[1-302]`
-- Example: `/manuals/oxi-one-mk2/page/1` (page 1)
+- Base path: `/` (root — no prefix)
+- Pages: `/oxi-one-mk2/page/[1-302]`
+- Example: `/oxi-one-mk2/page/1` (page 1)
 - Bilingual toggle: header segmented `JA | EN` control switches the translation column language; EN adds `?lang=en` to the URL, localStorage key `zmanuals:lang`. See `doc/docs/inbox/bilingual-support.md`.
 
-**Deployed Website**: https://zmanuals.pages.dev/
+**Deployed Website**: https://manuals.takazudomodular.com/
 
-- Full URL: `https://zmanuals.pages.dev/manuals/oxi-one-mk2/`
+- Full URL: `https://manuals.takazudomodular.com/oxi-one-mk2/`
 - The deployed site reflects the current state of the main branch
-- Preview URLs: `https://<branch>.zmanuals.pages.dev/manuals/oxi-one-mk2/`
-- PR preview URLs: `https://pr-<N>.zmanuals.pages.dev/manuals/oxi-one-mk2/` (auto-deployed on every same-repo PR; URL posted as PR comment)
+- PR preview URLs: `https://pr-<N>-zmanuals-<hash>.takazudo.workers.dev/` (auto-deployed on every same-repo PR via `wrangler versions upload --preview-alias pr-<N>`; URL posted as PR comment)
 
 ## Base Path Configuration (Critical Architecture Decision)
 
-**This site uses `base: '/manuals/'` in `zfb.config.ts`.**
+**This site uses `base: '/'` in `zfb.config.ts` (via `lib/base-path.ts`).**
 
-This site is proxied through `takazudomodular.com/manuals/*` via a Netlify redirect. Without the base path, CSS/JS assets would 404.
+The site is deployed as a Cloudflare Workers static-asset site at its own custom domain (`manuals.takazudomodular.com`). There is no Netlify proxy and no `/manuals` prefix — the site lives at the root of its domain. The canonical base value is exported from `lib/base-path.ts` as `ZFB_BASE = '/'` and imported by both `zfb.config.ts` and `components/zfb/routing.ts`.
 
 **Key rules:**
 
-- **Route paths** (page links, navigation): Don't include `/manuals` prefix — zfb's link rewriter handles static literal `href`/`src` values automatically at build time
-- **Runtime-built URLs** (page images from JSON, fetch calls, `history.pushState`): Must be prefixed explicitly using `withBasePath()` from `components/zfb/routing.ts`
-- **Pages directory**: Routes defined WITHOUT `/manuals` prefix (`pages/[manualId]/page/[pageNum].tsx` serves at `/manuals/[manualId]/page/[pageNum]`)
-- **Configuration**: `zfb.config.ts` (base path), `components/zfb/routing.ts` (`withBasePath` helper)
+- **Route paths** (page links, navigation): No prefix needed — zfb's link rewriter handles static literal `href`/`src` values automatically at build time
+- **Runtime-built URLs** (page images from JSON, fetch calls, `history.pushState`): Use `withBasePath()` from `components/zfb/routing.ts`. At base `/`, `withBasePath('/oxi-one-mk2/pages/page-001.png')` returns the path unchanged — but always call `withBasePath()` so the code stays correct if the base ever changes.
+- **Pages directory**: Routes defined as `pages/[manualId]/page/[pageNum].tsx` serve at `/{manualId}/page/{pageNum}` (no `/manuals` prefix)
+- **Configuration**: `lib/base-path.ts` (single source of truth), `zfb.config.ts` (imports `ZFB_BASE`), `components/zfb/routing.ts` (`withBasePath` helper)
 
 ## Language Guidelines
 

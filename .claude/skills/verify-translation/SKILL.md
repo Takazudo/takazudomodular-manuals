@@ -66,7 +66,7 @@ SERVE_PID=$!
 sleep 3
 
 # Verify server is running
-curl -s -o /dev/null -w "%{http_code}" http://localhost:8030/manuals/$SLUG/page/1
+curl -s -o /dev/null -w "%{http_code}" http://localhost:8030/$SLUG/page/1
 ```
 
 **Why build+serve instead of dev?**
@@ -200,16 +200,8 @@ Page: 49, Total: 74</parameter>
 After fixing pages:
 
 ```bash
-# Copy translations to expected location for build
-mkdir -p public/manuals/$SLUG/processing/translations-draft
-cp public/$SLUG/processing/translations-draft/*.json public/manuals/$SLUG/processing/translations-draft/
-
 # Rebuild pages.json
 pnpm run pdf:build --slug $SLUG
-
-# Copy back to correct location
-cp public/manuals/$SLUG/data/pages.json public/$SLUG/data/pages.json
-rm -rf public/manuals/
 
 # Format
 pnpm format:fix

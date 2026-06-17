@@ -24,7 +24,7 @@ the Preact-based zfb framework used in the takazudomodular ecosystem.
 | React 19 + `react-dom` | Preact via `preact/compat` |
 | `app/` directory (RSC) | `pages/` + `layouts/` (zfb templates) |
 | `next.config.js` | `zfb.config.ts` |
-| `basePath: '/manuals'` in next.config | `base: '/manuals/'` in zfb.config |
+| `basePath: '/manuals'` in next.config | `base: '/manuals/'` in zfb.config (later changed to `'/'` in the CF Workers migration — see issue #211) |
 | `next build` → `out/` | `zfb build` → `dist/` |
 
 ### Routing
@@ -67,9 +67,13 @@ the Preact-based zfb framework used in the takazudomodular ecosystem.
 Before: Next.js `basePath: '/manuals'` added the prefix automatically to all routes and
 static asset references.
 
-After: zfb's link rewriter handles static literal `href`/`src` at build time. Runtime-built
+After (zfb, at migration time): zfb's link rewriter handles static literal `href`/`src` at build time. Runtime-built
 URLs (page images from JSON, fetch calls, `history.pushState`) use `withBasePath()` from
 `components/zfb/routing.ts`.
+
+After (CF Workers migration, issue #211): The site now deploys at the root of its own domain
+(`manuals.takazudomodular.com`), so the base is `'/'`. `withBasePath()` is still called for
+correctness but at base `/` it returns root-relative paths unchanged.
 
 ## Sub-issues (wave order)
 

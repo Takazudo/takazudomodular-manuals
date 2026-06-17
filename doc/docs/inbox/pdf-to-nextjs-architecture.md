@@ -1,6 +1,6 @@
 # PDF Processing Architecture
 
-> **Note**: This document was originally titled "PDF Processing to Next.js Architecture". The app was migrated from Next.js to zfb (Preact islands) in #126. The PDF processing pipeline is unchanged; the "Application" section now describes the zfb integration.
+> **Note**: This document was originally titled "PDF Processing to Next.js Architecture". The app was migrated from Next.js to zfb (Preact islands) in #126, and later to Cloudflare Workers with a root base path (`/`) in issue #211. The PDF processing pipeline is unchanged; the "Application" section reflects the historical zfb migration. URL examples below that use `/manuals/{slug}/...` reflect the former base path — the current paths are `/{slug}/...` served from `manuals.takazudomodular.com`.
 
 ## Overview
 
@@ -51,8 +51,8 @@ This document describes the architecture for processing PDF manuals and integrat
 │                                                              │
 │  • Imports JSON via manual-registry.ts (ES modules)         │
 │  • User selects language (ja/en), loads only that file      │
-│  • Serves images from /manuals/{slug}/pages/                │
-│  • Renders pages at /manuals/{slug}/page/[1-N]              │
+│  • Serves images from /{slug}/pages/                        │
+│  • Renders pages at /{slug}/page/[1-N]                      │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -575,7 +575,7 @@ pnpm run pdf:clean --slug {slug}
 
 # 4. Test locally
 pnpm dev
-# Navigate to http://zmanuals.localhost:3100/manuals/{slug}/page/1
+# Navigate to http://zmanuals.localhost:3300/{slug}/page/1
 
 # 5. Commit and deploy
 git add .
@@ -627,15 +627,18 @@ git push origin main
 
 ## URL Structure
 
-- **Base path:** `/manuals/` (configured in `zfb.config.ts`)
-- **Manual index:** `/manuals/{slug}/`
-- **Page viewer:** `/manuals/{slug}/page/{pageNum}`
+> **Updated:** The base path changed to `/` in the CF Workers migration (issue #211).
+> Current paths use `/{slug}/...` served from `manuals.takazudomodular.com`.
+
+- **Base path:** `/` (configured in `lib/base-path.ts` → `zfb.config.ts`)
+- **Manual index:** `/{slug}/`
+- **Page viewer:** `/{slug}/page/{pageNum}`
 
 **Examples:**
 
-- `/manuals/oxi-one-mk2/` - Manual index
-- `/manuals/oxi-one-mk2/page/1` - First page
-- `/manuals/oxi-one-mk2/page/272` - Last page
+- `/oxi-one-mk2/` - Manual index
+- `/oxi-one-mk2/page/1` - First page
+- `/oxi-one-mk2/page/272` - Last page
 
 ## Error Handling
 
@@ -734,14 +737,14 @@ Language preference handling:
 **Option A: Build-time (Static)**
 
 - Generate separate HTML pages per language
-- URL: `/manuals/{slug}/page/1` (ja) vs `/manuals/{slug}/en/page/1` (en)
+- URL: `/{slug}/page/1` (ja) vs `/{slug}/en/page/1` (en)
 - Pros: Fast, SEO-friendly
 - Cons: Doubles build output
 
 **Option B: Runtime (Dynamic)**
 
 - Single page structure, fetch language data on demand
-- URL: `/manuals/{slug}/page/1?lang=en`
+- URL: `/{slug}/page/1?lang=en`
 - Pros: Smaller build, flexible
 - Cons: Requires client-side data fetching
 

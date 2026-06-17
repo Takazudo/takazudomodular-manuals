@@ -16,7 +16,7 @@ manuals site, and now records the **executed** enforced state.
 
 The viewer surface (`/*`) was flipped from `Content-Security-Policy-Report-Only`
 to **enforced** `Content-Security-Policy` in `public/_headers`. A docs carve-out
-keeps the Docusaurus site (`/manuals/doc` and `/manuals/doc/*`) on Report-Only.
+keeps the Docusaurus site (`/doc` and `/doc/*`) on Report-Only.
 
 Steps 2, 3, and 4 below were executed in this change. Step 1 (zero violations on
 the PR-preview proxied origin) is verified on the PR preview before the PR is
@@ -34,38 +34,44 @@ Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-hIolMSvWh
 - `style-src`: `'unsafe-inline'` **dropped** (Google Fonts origin kept) — see the
   audit result below.
 
-### Docs carve-out (`/manuals/doc` + `/manuals/doc/*`)
+### Docs carve-out (`/doc` + `/doc/*`)
 
-`pnpm build` copies the Docusaurus output into `dist/manuals/doc/`
-(`baseUrl: '/manuals/doc/'`), and Docusaurus output contains inline `<script>`
+`pnpm build` copies the Docusaurus output into `dist/doc/`
+(`baseUrl: '/doc/'`), and Docusaurus output contains inline `<script>`
 and inline `<style>` that the enforced viewer policy would block. A naive global
 flip would therefore break the docs site.
 
 The carve-out detaches the enforced header for the docs path and keeps docs on
 the previous docs-tolerant Report-Only directive (with `'unsafe-inline'` in both
 `script-src` and `style-src`). **Two rules are needed**, because the
-`/manuals/doc/*` glob does NOT match the exact no-trailing-slash URL form
-`/manuals/doc` — a response served at that bare URL (the Docusaurus landing page)
+`/doc/*` glob does NOT match the exact no-trailing-slash URL form
+`/doc` — a response served at that bare URL (the Docusaurus landing page)
 would otherwise fall through to the enforced `/*` policy and break on its inline
-scripts/styles. The exact `/manuals/doc` rule must be listed first, immediately
+scripts/styles. The exact `/doc` rule must be listed first, immediately
 before the glob:
 
 ```
-/manuals/doc
+/doc
   ! Content-Security-Policy
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'
 
-/manuals/doc/*
+/doc/*
   ! Content-Security-Policy
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'
 ```
 
-`! Content-Security-Policy` is Cloudflare Pages' detach syntax: the `/*` rule
+`! Content-Security-Policy` is the Cloudflare `_headers` detach syntax: the `/*` rule
 sets the enforced header, then these more-specific rules remove it for the docs
 path and substitute the Report-Only directive. The other security headers
 (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`) are inherited
 from `/*` and still apply to docs. Hardening the docs CSP (hashing Docusaurus's
 inline scripts/styles, or enforcing a docs-specific policy) is deferred.
+
+> **Migration note:** When the site moved from Cloudflare Pages (proxied at
+> `takazudomodular.com/manuals/*`) to Cloudflare Workers at its own domain
+> (`manuals.takazudomodular.com`), the Docusaurus `baseUrl` changed from
+> `/manuals/doc/` to `/doc/`. The `_headers` carve-out rules and the `dist/`
+> directory layout were updated accordingly (CF Workers migration, issue #211).
 
 ## Flip-to-enforced criteria (reference)
 
@@ -73,11 +79,12 @@ The viewer flip was gated on the steps below.
 
 ### Step 1 — Confirm zero violations on the PR-preview origin
 
-The PR preview URL (`https://pr-<N>.zmanuals.pages.dev/manuals/oxi-one-mk2/`)
-goes through the real Cloudflare Pages + Netlify proxy chain. Verify **zero CSP
-violations** in the browser console on that origin for both a viewer page **and**
-a `/manuals/doc/` page before merging. This is the pre-merge gate for the topic
-branch; it cannot be exercised by `pnpm serve` on `localhost:8030`.
+The PR preview URL (deployed to `*.workers.dev` via Cloudflare Workers; previously
+`https://pr-<N>.zmanuals.pages.dev/manuals/oxi-one-mk2/` on Pages) goes through
+the real Cloudflare edge. Verify **zero CSP violations** in the browser console on
+that origin for both a viewer page **and** a `/doc/` page before merging. This is
+the pre-merge gate for the topic branch; it cannot be exercised by `pnpm serve`
+on `localhost:8030`.
 
 ### Step 2 — Replace `script-src 'unsafe-inline'` with the SHA-256 hash ✅ executed
 
