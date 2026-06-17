@@ -1,6 +1,12 @@
-/ /manuals/ 302
+# Workers static assets validates this file at deploy time — only 3xx rules, no duplicate sources.
 
-# Legacy single-manual deep links: /manuals/page/N → oxi-one-mk2 viewer.
-# Replaces the per-page Next.js redirect() in app/page/[pageNum]/page.tsx
-# (one glob line covers every N). :n is a named placeholder echoed in the target.
-/manuals/page/:n /manuals/oxi-one-mk2/page/:n 301
+# Legacy single-manual deep link: /manuals/page/N → oxi-one-mk2 viewer.
+# Must come BEFORE the splat so it takes precedence (most-specific first).
+/manuals/page/:n /oxi-one-mk2/page/:n 301
+
+# Bare /manuals (no trailing slash, not matched by the splat below) → new root index.
+/manuals / 301
+
+# Headline rule: strip /manuals prefix for the root Workers deploy.
+# e.g. manuals.takazudomodular.com/manuals/oxi-one-mk2/page/1 → /oxi-one-mk2/page/1
+/manuals/* /:splat 301
