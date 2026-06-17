@@ -1,7 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 import { waitForViewerNavReady } from './helpers';
 
-const MANUAL_PATH = '/manuals/oxi-one-mk2/page';
+const MANUAL_PATH = '/oxi-one-mk2/page';
 
 /**
  * E2E tests for scroll mode interactions

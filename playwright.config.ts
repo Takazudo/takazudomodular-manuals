@@ -26,9 +26,9 @@ export default defineConfig({
   reporter: 'list',
   use: {
     // Updated from the Next.js dev URL (zmanuals.localhost:3100) to the zfb
-    // production-serve URL (localhost:8030). Routes are identical:
-    // /manuals/{id}/page/{n}. Asset paths changed from /manuals/_next/static/*
-    // to /manuals/assets/* but that is transparent to Playwright page loads.
+    // production-serve URL (localhost:8030). CF Workers root scheme: routes are
+    // now /{id}/page/{n} (no /manuals prefix). Asset paths live under
+    // /{id}/pages/*.
     baseURL: ZFB_SERVE_URL,
     trace: 'on-first-retry',
   },
@@ -40,10 +40,12 @@ export default defineConfig({
     },
   ],
 
-  // NOTE: The /manuals/page/N redirect and / 302 are not processed by `serve`
-  // locally (they are Cloudflare Pages / Netlify redirect rules). If any e2e
-  // tests assert those redirects, mark them with test.skip in non-CI mode or
-  // move them to a separate spec that runs only against the deployed preview.
+  // NOTE: The /manuals/{id}/page/{n} → /{id}/page/{n} 301 redirect is a CF
+  // Workers redirect rule not replicated by `serve` locally. Tests that assert
+  // it run against the served dist and follow redirects via Playwright's default
+  // redirect-following behavior; no skip is needed for the 301 test because
+  // `serve` will simply 404 the old path (the redirect test will fail locally
+  // unless run against the CF Workers deployment).
   webServer: {
     // Build the zfb dist + finalize + serve in sequence so the test runner
     // starts against a fully baked production bundle. Set SKIP_ZFB_BUILD=1 to

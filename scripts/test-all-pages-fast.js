@@ -7,9 +7,8 @@
  * production-serve (http://localhost:8030). Build + serve the dist first:
  *   pnpm zfb:build && node scripts/zfb-finalize-build.js && pnpm serve
  *
- * Routes are identical to the Next.js app: /manuals/{id}/page/{n}.
- * Asset paths changed from /manuals/_next/static/* to /manuals/assets/* but
- * this script tests page HTTP status, not asset presence.
+ * CF Workers root scheme: routes are /{id}/page/{n} (no /manuals prefix).
+ * This script tests page HTTP status, not asset presence.
  *
  * Manuals are discovered dynamically by scanning `public/<slug>/data/manifest.json`
  * (the same approach as `discoverManualSlugs()` in scripts/pdf-search-index-all.js),
@@ -73,7 +72,7 @@ async function testBatch(manualId, start, end, maxPages) {
   const promises = [];
 
   for (let pageNum = start; pageNum <= end && pageNum <= maxPages; pageNum++) {
-    const url = `${BASE_URL}/manuals/${manualId}/page/${pageNum}`;
+    const url = `${BASE_URL}/${manualId}/page/${pageNum}`;
 
     promises.push(
       fetch(url)

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { waitForViewerNavReady } from './helpers';
 
-const PAGE_URL = '/manuals/oxi-one-mk2/page/5';
+const PAGE_URL = '/oxi-one-mk2/page/5';
 
 /**
  * E2E tests for viewer UI improvements (issue #78)
@@ -264,7 +264,7 @@ test.describe('Viewer UI: Page-mode loading overlay (#180)', () => {
 
 test.describe('Viewer UI: Page-mode scroll reset on navigation', () => {
   test('resets both column scroll positions to the top when navigating pages', async ({ page }) => {
-    await page.goto(PAGE_URL); // /manuals/oxi-one-mk2/page/5
+    await page.goto(PAGE_URL); // /oxi-one-mk2/page/5
     await waitForViewerNavReady(page);
 
     const imageScroll = page.getByTestId('page-image-scroll');
