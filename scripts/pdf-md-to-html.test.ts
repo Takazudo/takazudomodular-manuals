@@ -212,3 +212,36 @@ describe('markdownToHtml — URL sanitization integration', () => {
     expect(html).toContain('language-js');
   });
 });
+
+// ---------------------------------------------------------------------------
+// CJK autolink repair (rehypeFixCjkAutolinks)
+// ---------------------------------------------------------------------------
+
+describe('markdownToHtml — CJK autolink repair', () => {
+  it('trims a bare URL wrapped in full-width parens followed by CJK prose', async () => {
+    const md = '改造（https://ebow.com/diy-mods）が施されており、弦の上をスライド';
+    const html = await markdownToHtml(md);
+    // href is the clean URL, not the percent-encoded prose blob.
+    expect(html).toContain('<a href="https://ebow.com/diy-mods">https://ebow.com/diy-mods</a>');
+    expect(html).not.toContain('%E');
+    // The trailing prose is preserved as text after the anchor.
+    expect(html).toContain('）が施されており、弦の上をスライド');
+  });
+
+  it('cuts at the first CJK char when a URL is immediately followed by Japanese', async () => {
+    const html = await markdownToHtml('https://zadig.akeo.ieにアクセスして');
+    expect(html).toContain('<a href="https://zadig.akeo.ie">https://zadig.akeo.ie</a>');
+    expect(html).toContain('にアクセスして');
+    expect(html).not.toContain('%E');
+  });
+
+  it('leaves a clean ASCII autolink untouched', async () => {
+    const html = await markdownToHtml('詳細は https://example.com/path です');
+    expect(html).toContain('<a href="https://example.com/path">https://example.com/path</a>');
+  });
+
+  it('does NOT split an explicit [label](url) link with a CJK label', async () => {
+    const html = await markdownToHtml('[公式サイト](https://example.com/abc)を参照');
+    expect(html).toContain('<a href="https://example.com/abc">公式サイト</a>');
+  });
+});
