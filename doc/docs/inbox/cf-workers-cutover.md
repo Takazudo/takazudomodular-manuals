@@ -132,7 +132,7 @@ the redirect rule to `_redirects-pages`:
 /manuals/* https://manuals.takazudomodular.com/:splat 301
 ```
 
-**zzmod issue:** [Takazudo/zmodular#1831](https://github.com/Takazudo/zmodular/issues/1831)
+**zzmod issue:** [zudolab/zzmod#724](https://github.com/zudolab/zzmod/issues/724)
 
 > Apply this redirect **after** Step 3 (live site verified). Applying it before
 > the Worker is live on `manuals.takazudomodular.com` would cause errors for
