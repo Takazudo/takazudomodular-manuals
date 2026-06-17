@@ -8,10 +8,10 @@ const config: Config = {
   favicon: 'img/logo.svg',
 
   // Set the production url of your site here
-  url: 'https://manual-oxi-one-mk2.netlify.app',
+  url: 'https://manuals.takazudomodular.com',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // Must include /manuals/ prefix because the whole site is served under basePath /manuals/
-  baseUrl: '/manuals/doc/',
+  // Docs are served at /doc/ on the CF Workers deployment (dist/doc/ in the build output)
+  baseUrl: '/doc/',
 
   // Don't add trailing slash
   trailingSlash: false,
@@ -151,7 +151,7 @@ const config: Config = {
           type: 'html',
           position: 'right',
           value:
-            '<a href="https://takazudomodular.com/" class="navbar__takazudo-modular" rel="noopener noreferrer"><img src="/manuals/doc/img/logo.svg" alt="" /><span>Takazudo Modular</span></a>',
+            '<a href="https://takazudomodular.com/" class="navbar__takazudo-modular" rel="noopener noreferrer"><img src="/doc/img/logo.svg" alt="" /><span>Takazudo Modular</span></a>',
         },
       ],
     },
