@@ -1,4 +1,4 @@
-// pages/index.tsx — /manuals/ manual index page.
+// pages/index.tsx — / manual index page.
 // Ports app/page.tsx for the zfb renderer. Static route, no paths() needed.
 // No island: list of links to each manual's landing page.
 //
@@ -55,10 +55,9 @@ export default function IndexPage() {
           <ul className={listStyles}>
             {manualIds.map((manualId) => {
               const manifest = getManifest(manualId);
-              // Links use /manuals/ prefix explicitly for dynamically-built URLs.
               return (
                 <li key={manualId} className={listItemStyles}>
-                  <a href={`/manuals/${manualId}`} className={linkStyles}>
+                  <a href={`/${manualId}`} className={linkStyles}>
                     {manifest.title}
                   </a>
                 </li>

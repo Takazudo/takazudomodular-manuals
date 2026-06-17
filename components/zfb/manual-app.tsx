@@ -108,7 +108,7 @@ export default function ManualApp({
     let cancelled = false;
     setFetchFailed(false);
 
-    const baseHref = `/manuals/${manualId}/data`;
+    const baseHref = `/${manualId}/data`;
     const wantEn = availableLangs.includes('en');
 
     // JA is required — its failure is fatal (error banner + disabled nav).

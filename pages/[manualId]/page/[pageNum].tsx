@@ -1,4 +1,4 @@
-// pages/[manualId]/page/[pageNum].tsx — /manuals/{id}/page/{n} viewer route.
+// pages/[manualId]/page/[pageNum].tsx — /{id}/page/{n} viewer route.
 // Ports app/[manualId]/page/[pageNum]/page.tsx for the zfb renderer.
 //
 // paths() enumerates ALL 52 manuals × every page (1122 routes total).
@@ -95,7 +95,7 @@ export default function ViewerPage({
   const { manualId } = params;
 
   const pageTitle = `${currentPageTitle} (Page ${currentPageNum}) - ${appManifest.title}`;
-  const manualHref = `/manuals/${manualId}`;
+  const manualHref = `/${manualId}`;
 
   // Reconstruct the ManualPage object for ViewerShell (server-render only).
   const currentPage: ManualPage = {

@@ -9,10 +9,9 @@
 // Tailwind `font-noto` utility, keeping existing component class usage intact.
 //
 // The logo CSS mask references /img/takazudo-logo.svg served from public/img/.
-// zfb's link rewriter handles the /manuals/ prefix automatically for CSS
-// embedded in <style> tags. The mask-image arbitrary Tailwind class writes
-// the URL into the stylesheet, so we keep the literal without /manuals/ —
-// the static-asset prefix is applied by zfb's asset pipeline.
+// zfb's link rewriter handles the base prefix automatically for CSS embedded
+// in <style> tags. The mask-image arbitrary Tailwind class writes the URL into
+// the stylesheet. At base `/` the path is simply `/img/takazudo-logo.svg`.
 import type { ComponentChildren } from 'preact';
 import '../styles/global.css';
 import '../styles/prose.css';
@@ -70,17 +69,14 @@ const navLinkStyles = ctl(`
   rounded-xs
 `);
 
-// CSS mask logo. The URL here does NOT include /manuals/ — zfb's static-asset
-// link rewriter handles the base prefix for href/src attributes in HTML.
-// CSS mask-image inside a Tailwind arbitrary value is embedded in the
-// stylesheet string, which zfb may not rewrite. Keep the literal /img/ path:
-// at runtime the site is served under /manuals/ so /img/ would 404.
-// Use /manuals/img/ explicitly here so it works both in the zfb preview
-// (served at /manuals/) and in production (proxied at /manuals/).
+// CSS mask logo. The site is deployed at the domain root (/), so the asset
+// lives at /img/takazudo-logo.svg. zfb's link rewriter does not touch
+// arbitrary Tailwind values embedded in the stylesheet, but at base `/` there
+// is nothing to prepend — the root-relative path resolves correctly as-is.
 const logoStyles = ctl(`
   w-[1.2em] h-[1.2em]
   bg-current
-  [mask-image:url('/manuals/img/takazudo-logo.svg')]
+  [mask-image:url('/img/takazudo-logo.svg')]
   [mask-size:contain]
   [mask-repeat:no-repeat]
   [mask-position:center]
@@ -107,13 +103,9 @@ export default function DefaultLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
-        {/* Favicon: explicit /manuals/ prefix required — the browser requests
-            /favicon.ico from the domain root by default, but this site is
-            proxied at takazudomodular.com/manuals/* so the file lives at
-            /manuals/favicon.ico. Next.js auto-emits this link from app/favicon.ico;
-            we replicate it explicitly here. The /manuals/ prefix is hard-coded
-            (not relative) to match the production proxy mount. */}
-        <link rel="icon" href="/manuals/favicon.ico" />
+        {/* Favicon: the site is deployed at the domain root, so the favicon
+            lives at /favicon.ico — the browser's default location. */}
+        <link rel="icon" href="/favicon.ico" />
         {/* Google Fonts: Noto Sans JP, replaces next/font/google. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -129,7 +121,7 @@ export default function DefaultLayout({
               {manualTitle}
             </a>
           ) : (
-            <a href="/manuals/" className={titleStyles}>
+            <a href="/" className={titleStyles}>
               Manual Index
             </a>
           )}

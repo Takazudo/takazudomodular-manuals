@@ -131,7 +131,7 @@ describe('SearchDialog', () => {
     const call = fetchSpy.mock.calls[0];
     // Robust against future hash rotations: anchor on the shape, not the exact
     // digest. 40-hex char suffix matches a SHA-1 hex digest.
-    expect(call[0]).toMatch(/^\/manuals\/oxi-one-mk2\/data\/search-index\.json\?v=[0-9a-f]{40}$/);
+    expect(call[0]).toMatch(/^\/oxi-one-mk2\/data\/search-index\.json\?v=[0-9a-f]{40}$/);
   });
 
   it('fetches the index without a ?v= query string when no searchIndexVersion is passed', async () => {
@@ -145,7 +145,7 @@ describe('SearchDialog', () => {
       expect(fetchSpy).toHaveBeenCalled();
     });
     const call = fetchSpy.mock.calls[0];
-    expect(call[0]).toBe('/manuals/oxi-one-mk2/data/search-index.json');
+    expect(call[0]).toBe('/oxi-one-mk2/data/search-index.json');
     expect(String(call[0])).not.toContain('?');
   });
 
