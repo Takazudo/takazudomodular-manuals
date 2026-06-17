@@ -58,6 +58,10 @@ export function PageViewer({
   const [hasError, setHasError] = useState(false);
   const prevPageRef = useRef({ currentPage, manualId });
   const imgRef = useRef<HTMLImageElement>(null);
+  // The left image column and right translation column each scroll
+  // independently (both are overflow-y-scroll). Refs let us reset them to the
+  // top whenever the page changes — see the scroll-reset effect below.
+  const imageScrollRef = useRef<HTMLDivElement>(null);
 
   // ── Hover-zoom (Amazon-style magnifier) ──────────────────────────────────
   // Lens overlays the source image; the panel fills the translation column and
@@ -193,6 +197,18 @@ export function PageViewer({
     prevPageRef.current = { currentPage, manualId };
   }, [currentPage, manualId]);
 
+  // Reset both scroll columns to the top on every page change. All in-manual
+  // navigation (次へ/前へ, the page selector, thumbnails, keyboard, browser
+  // back/forward) flows through `currentPage`, so this one effect covers every
+  // path. Without it the columns keep the previous page's scroll offset and the
+  // new page appears mid-scrolled (#180-adjacent). useLayoutEffect runs after
+  // the DOM updates but before paint, so there is no flash of the old position.
+  // Mirrors ScrollViewer's translation-column reset; page mode only.
+  useLayoutEffect(() => {
+    if (contentColRef.current) contentColRef.current.scrollTop = 0;
+    if (imageScrollRef.current) imageScrollRef.current.scrollTop = 0;
+  }, [currentPage, manualId]);
+
   // Disabling zoom mid-hover must hide the UI immediately.
   useEffect(() => {
     if (!zoomEnabled) deactivateZoom();
@@ -226,7 +242,11 @@ export function PageViewer({
       <div className={viewerContainerStyles}>
         {/* Left Column: PDF Image */}
         <div className={viewerImageColumnOuterStyles} data-testid="page-image-column">
-          <div className={viewerImageColumnStyles} data-testid="page-image-scroll">
+          <div
+            ref={imageScrollRef}
+            className={viewerImageColumnStyles}
+            data-testid="page-image-scroll"
+          >
             <div className={viewerImageWrapperStyles} data-testid="page-image-wrapper">
               {hasError ? (
                 <div className={loaderWrapperStyles} data-testid="page-image-error">
