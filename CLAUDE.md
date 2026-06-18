@@ -72,7 +72,7 @@ All temporary files (reports, screenshots, test outputs, error reports) go to `_
 │       └── processing/         # Intermediate files (gitignored)
 ├── manual-pdf/                 # Source PDFs (pages/parts gitignored)
 ├── scripts/                    # Build and processing scripts
-├── doc/                        # Docusaurus documentation
+├── doc/                        # zudo-doc documentation (deploys independently to doc-manuals.takazudomodular.com)
 ├── worktrees/                  # Git worktrees (gitignored)
 └── __inbox/                    # Temporary files (gitignored)
 ```
@@ -84,7 +84,7 @@ Each manual is self-contained under `/public/{manual-id}/` with its own data, im
 This project uses **pnpm** (workspace in `pnpm-workspace.yaml`).
 
 - **zfb** (Preact islands, static site generation) | **Preact** (via `preact/compat`) | **TypeScript**
-- **Tailwind CSS v4** with Zudo Design System | **Docusaurus 3** for docs
+- **Tailwind CSS v4** with Zudo Design System | **zudo-doc** (zfb + MDX + Tailwind CSS v4) for docs
 - **JSON** for translation data | **PNG** for rendered PDF pages (150 DPI)
 
 ## Development Commands
@@ -92,12 +92,12 @@ This project uses **pnpm** (workspace in `pnpm-workspace.yaml`).
 ```bash
 # App development
 pnpm dev                # Start zfb dev server (port 3300)
-pnpm build              # Build for production (search index + zfb + doc)
+pnpm build              # Build for production (search index + zfb only; docs build separately)
 pnpm preview            # Preview the zfb build
 pnpm serve              # Serve production build locally (port 8030)
 
 # Documentation (see doc/CLAUDE.md for details)
-pnpm doc:dev            # Start Docusaurus dev server (port 3100)
+pnpm doc:dev            # Start zudo-doc dev server (port 4321)
 pnpm doc:build          # Build documentation
 
 # Quality
@@ -107,7 +107,7 @@ pnpm format             # Formatting (format:fix to auto-fix)
 pnpm check              # Run all checks (check:fix to auto-fix)
 pnpm test               # Run Playwright e2e tests
 pnpm test:unit          # Run Vitest unit tests
-pnpm clean              # Clean build outputs (.zfb-build, dist, doc/build)
+pnpm clean              # Clean build outputs (.zfb-build, dist, doc/dist, doc/.zfb)
 ```
 
 ## Adding New Manuals
@@ -136,7 +136,7 @@ For details on PDF processing steps and configuration, see `scripts/CLAUDE.md`.
 
 ## Design System (Zudo Design System)
 
-Custom Tailwind CSS v4 config: all defaults disabled, only Zudo tokens. CSS variables in `:root`, semantic naming (`hgap`/`vgap`), dark theme enforced. See `/doc/docs/inbox/design-system.md`.
+Custom Tailwind CSS v4 config: all defaults disabled, only Zudo tokens. CSS variables in `:root`, semantic naming (`hgap`/`vgap`), dark theme enforced. See `doc/src/content/docs/design-system/design-system.md` (served at `/docs/design-system/design-system`).
 
 ## Coding Standards
 
@@ -193,7 +193,7 @@ For detailed worktree workflow, examples, and troubleshooting, see `.claude/CLAU
 | Port | Service          | Domain                   | Purpose                     | Start Command |
 | ---- | ---------------- | ------------------------ | --------------------------- | ------------- |
 | 3300 | zfb App          | `zmanuals.localhost`     | Manual viewer app           | `pnpm dev`    |
-| 3100 | Docusaurus Docs  | `doc-zmanuals.localhost` | Technical documentation     | `pnpm doc:dev`|
+| 4321 | zudo-doc Docs    | `localhost`              | Technical documentation     | `pnpm doc:dev`|
 | 8030 | Production Build | `localhost`              | Production build test serve | `pnpm serve`  |
 
 Port cleanup: `lsof -ti:[PORT] | xargs kill -9`
@@ -216,5 +216,5 @@ Port cleanup: `lsof -ti:[PORT] | xargs kill -9`
 Detailed context-specific instructions are in subdirectory CLAUDE.md files (loaded automatically when working in those directories):
 
 - **`scripts/CLAUDE.md`** - PDF processing pipeline, multi-manual support, data structure formats
-- **`doc/CLAUDE.md`** - Docusaurus documentation setup and conventions
+- **`doc/CLAUDE.md`** - zudo-doc documentation setup and conventions
 - **`.claude/CLAUDE.md`** - Git worktree workflow details, Claude Code skills/agents overview
