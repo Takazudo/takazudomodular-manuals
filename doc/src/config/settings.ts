@@ -38,7 +38,8 @@ export const settings = {
     respectPrefersColorScheme: true,
   } satisfies ColorModeConfig as ColorModeConfig | false,
   siteName: 'zmanuals doc',
-  siteDescription: '' as string,
+  siteDescription:
+    'Architecture, design system, and infrastructure notes for the takazudomodular manual viewer' as string,
   base: '/',
   trailingSlash: false as boolean,
   noindex: true as boolean,
@@ -48,9 +49,10 @@ export const settings = {
   metaTags: {
     description: true,
     keywords: false,
-    ogImage: false,
+    ogImage: '/img/ogp.png',
     ogSiteName: true,
-    twitterCard: false,
+    twitterCard: 'summary_large_image',
+    twitterCreator: '@Takazudo',
   } satisfies MetaTagsConfig as MetaTagsConfig,
   docsDir: 'src/content/docs',
   defaultLocale: 'en' as const,
