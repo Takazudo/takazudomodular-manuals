@@ -1,0 +1,102 @@
+# Production deployment workflow for the zmanuals-doc site.
+#
+# Triggered on every push to `main` that touches files under doc/.
+# The pipeline:
+#   1. Builds the docs (zfb build inside doc/)
+#   2. Deploys to Cloudflare Workers (wrangler deploy, pinned version from root package.json)
+#
+# The docs site is a pure-static deployment — no _worker.js is emitted by the
+# doc build, so no .assetsignore preparation step is needed here.
+#
+# fetch-depth: 0 is required because the doc build uses @takazudo/zudo-doc-history-server
+# which reads the full git log to generate document history pages.
+#
+# Concurrency: only one production deploy runs at a time.
+# We do NOT cancel in-progress runs — the earlier deploy should finish.
+#
+# Secrets:
+#   CLOUDFLARE_API_TOKEN  -- Workers: Edit scope required (NOT Pages: Edit)
+#   CLOUDFLARE_ACCOUNT_ID
+
+name: Docs Production Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'doc/**'
+
+concurrency:
+  group: doc-production-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  deployments: write
+  statuses: write
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # Job 1: Build + Deploy the docs site
+  # ---------------------------------------------------------------------------
+  build-and-deploy:
+    name: Build and Deploy Docs
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          # Full git history required by the doc-history plugin
+          # (@takazudo/zudo-doc-history-server reads git log for each doc file).
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@02f6c237bd2518259fed6c71566509edfb3f2b74 # v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build docs
+        run: pnpm run doc:build
+
+      - name: Deploy to Cloudflare Workers (production)
+        # Wrangler lives in the root devDependencies. Run via npx pinned to the
+        # package.json devDependency version so production deploys use the same
+        # wrangler the check:wrangler-pin gate validates.
+        # Deploy from within doc/ so wrangler picks up doc/wrangler.toml and
+        # resolves the [assets] directory = "./dist" relative to doc/.
+        run: |
+          WRANGLER_VERSION=$(node -p "require('./package.json').devDependencies.wrangler")
+          cd doc
+          npx "wrangler@${WRANGLER_VERSION}" deploy
+        env:
+          # CLOUDFLARE_API_TOKEN requires Workers: Edit scope (NOT Pages: Edit)
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Record deployment status
+        if: always()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          JOB_STATUS: ${{ job.status }}
+        with:
+          script: |
+            const success = process.env.JOB_STATUS === 'success';
+            const status = success ? 'success' : 'failure';
+
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: status,
+              description: success ? 'Docs production deployment successful' : 'Docs production deployment failed',
+              context: 'cloudflare/doc-production'
+            });

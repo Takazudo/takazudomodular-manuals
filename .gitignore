@@ -103,3 +103,6 @@ Users/
 
 # zfb build artifact written to repo root
 zfb-tailwind-entry-*.css
+
+# Harness-internal isolated agent worktrees (runtime state)
+.claude/worktrees/

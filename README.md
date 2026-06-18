@@ -30,7 +30,7 @@ A static manual viewer for hardware synthesizer manuals built with zfb (Preact i
 - **Language**: TypeScript
 - **Package Manager**: pnpm
 - **Deployment**: Cloudflare Workers (static assets)
-- **Documentation**: Docusaurus 3
+- **Documentation**: zudo-doc (zfb + MDX + Tailwind CSS v4)
 - **Unit Tests**: Vitest
 - **E2E Tests**: Playwright
 
@@ -202,11 +202,11 @@ public/new-manual-slug/         # Output (committed to git)
 # Development
 pnpm dev                  # Start zfb dev server (port 3300)
 pnpm preview              # Preview the zfb build
-pnpm doc:dev              # Start Docusaurus docs (port 3100)
+pnpm doc:dev              # Start zudo-doc docs (port 4321)
 
 # Building
 pnpm build                # Build for production
-pnpm doc:build            # Build documentation
+pnpm doc:build            # Build documentation (deploys independently)
 
 # Quality Checks
 pnpm typecheck            # TypeScript type checking
@@ -273,28 +273,27 @@ cd worktrees/issue-X-feature-name
 │       └── processing/         # Temp files (gitignored)
 ├── manual-pdf/                 # Source PDFs (gitignored)
 ├── scripts/                    # Build and processing scripts
-├── doc/                        # Docusaurus documentation
+├── doc/                        # zudo-doc documentation (deploys to doc-manuals.takazudomodular.com)
 └── worktrees/                  # Git worktrees (gitignored)
 ```
 
 ## Documentation
 
-Comprehensive documentation is available in the `/doc/` directory:
+Comprehensive documentation is available at **https://doc-manuals.takazudomodular.com/**. To run locally:
 
 ```bash
 # Start documentation server
 pnpm doc:dev
 
-# Visit: http://doc-zmanuals.localhost:3100
+# Visit: http://localhost:4321
 ```
 
 Topics covered:
 
-- PDF Processing Pipeline
-- Multi-Manual Architecture
+- Architecture
 - Design System (Zudo)
-- Development Workflow
-- Translation Guidelines
+- Infrastructure
+- Project History
 
 ## Configuration
 
@@ -338,7 +337,7 @@ MIT License
 ## Support
 
 - **Issues**: [GitHub Issues](https://github.com/Takazudo/takazudomodular-manuals/issues)
-- **Documentation**: [http://doc-zmanuals.localhost:3100](http://doc-zmanuals.localhost:3100) (when running locally)
+- **Documentation**: [https://doc-manuals.takazudomodular.com/](https://doc-manuals.takazudomodular.com/) (or `http://localhost:4321` when running locally)
 
 ---
 

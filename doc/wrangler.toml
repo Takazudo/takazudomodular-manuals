@@ -1,0 +1,39 @@
+# Cloudflare Workers Static Assets configuration for the docs site.
+#
+# The doc build (zfb build inside doc/) produces a pure-static output under
+# doc/dist/ — no _worker.js is emitted. This config therefore has no `main`
+# entry and no nodejs_compat flag: Cloudflare's asset-serving layer handles
+# all request routing directly without a Worker script.
+
+name = "zmanuals-doc"
+
+compatibility_date = "2024-12-01"
+
+# workers_dev enables the worker's PUBLIC *.workers.dev subdomain
+# (zmanuals-doc.takazudo.workers.dev). Required for preview-alias URLs to route.
+workers_dev = true
+
+# preview_urls enables *.workers.dev version-preview URLs for staging/preview
+# deploys (consumed by doc-pr-checks.yml via
+# `wrangler versions upload --preview-alias`). Requires workers_dev = true.
+preview_urls = true
+
+# ---------------------------------------------------------------------------
+# Static asset serving
+#
+# not_found_handling = "404-page" serves dist/404.html for unmatched GETs.
+#
+# run_worker_first = false means the asset layer handles requests directly
+# (no Worker script exists — this is a pure-static deployment).
+# ---------------------------------------------------------------------------
+[assets]
+directory = "./dist"
+not_found_handling = "404-page"
+run_worker_first = false
+
+# ---------------------------------------------------------------------------
+# Custom domain routing
+# ---------------------------------------------------------------------------
+[[routes]]
+pattern = "doc-manuals.takazudomodular.com"
+custom_domain = true
