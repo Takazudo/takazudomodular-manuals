@@ -1,11 +1,10 @@
 ---
 title: PDF Processing Architecture
 sidebar_position: 1
+description: End-to-end pipeline from source PDF to JSON data consumed by the zfb application.
 ---
 
 # PDF Processing Architecture
-
-> **Note**: This document was originally titled "PDF Processing to Next.js Architecture". The app was migrated from Next.js to zfb (Preact islands) in #126, and later to Cloudflare Workers with a root base path (`/`) in issue #211. The PDF processing pipeline is unchanged; the "Application" section reflects the historical zfb migration. URL examples below that use `/manuals/{slug}/...` reflect the former base path — the current paths are `/{slug}/...` served from `manuals.takazudomodular.com`.
 
 ## Overview
 
@@ -54,7 +53,7 @@ This document describes the architecture for processing PDF manuals and integrat
 ┌─────────────────────────────────────────────────────────────┐
 │ zfb Application (Data Consumer)                             │
 │                                                              │
-│  • Imports JSON via manual-registry.ts (ES modules)         │
+│  • Imports JSON via zfb-registry.generated.ts (ES modules)  │
 │  • User selects language (ja/en), loads only that file      │
 │  • Serves images from /{slug}/pages/                        │
 │  • Renders pages at /{slug}/page/[1-N]                      │
@@ -95,8 +94,8 @@ This document describes the architecture for processing PDF manuals and integrat
 │           └── ... (page-XXX.json)
 │
 ├── lib/                                    # zfb app data access layer
-│   ├── manual-registry.ts                  # Central registry of all manuals
-│   ├── manual-data.ts                      # Data access functions
+│   ├── zfb-registry.generated.ts           # Auto-generated registry (run gen:registry)
+│   ├── zfb-registry.ts                     # Public API over the generated registry
 │   ├── manual-config.ts                    # Route/asset path helpers
 │   └── types/
 │       └── manual.ts                       # TypeScript interfaces
@@ -108,6 +107,7 @@ This document describes the architecture for processing PDF manuals and integrat
     ├── pdf-build.js                        # Build pages-ja.json & pages-en.json
     ├── pdf-manifest.js                     # Generate manifest.json
     ├── pdf-clean.js                        # Clean generated files
+    ├── gen-registry.js                     # Regenerate zfb-registry.generated.ts
     └── lib/
         └── pdf-config-resolver.js          # Slug-based path resolution
 ```
@@ -122,18 +122,7 @@ This document describes the architecture for processing PDF manuals and integrat
 
 ## Currently Supported Manuals
 
-The system currently supports **8 manuals**:
-
-| Slug | Manual | Pages |
-|------|--------|-------|
-| `oxi-one-mk2` | OXI ONE MKII Manual | 272 |
-| `oxi-coral` | OXI Coral Manual | - |
-| `oxi-e16-manual` | OXI E16 Manual | - |
-| `oxi-e16-quick-start` | OXI E16 Quick Start | - |
-| `addac104-tnetw` | ADDAC104 VC T-Networks | 5 |
-| `addac106-tnoise` | ADDAC106 T-Noise | - |
-| `addac107-acids` | ADDAC107 Acids | - |
-| `addac112-looper` | ADDAC112 Looper | - |
+The system currently supports **53 manuals** (auto-detected by `gen-registry.js` from `public/` directory).
 
 ## Data Formats
 
@@ -150,6 +139,7 @@ Metadata file describing the manual.
   "contentPages": 260,
   "lastUpdated": "2026-01-03T16:35:35.555Z",
   "updatedAt": "20260112",
+  "hasEnglish": true,
   "source": {
     "filename": "OXI-ONE-MKII-Manual.pdf",
     "processedAt": "2026-01-03T16:35:30.894Z",
@@ -328,7 +318,7 @@ pnpm run pdf:split --slug {slug}       # Step 1: Split PDF
 pnpm run pdf:render --slug {slug}      # Step 2: Render images
 pnpm run pdf:extract --slug {slug}     # Step 3: Extract text
 pnpm run pdf:translate --slug {slug}   # Step 4: Translate
-pnpm run pdf:build --slug {slug}       # Step 5: Build pages.json
+pnpm run pdf:build --slug {slug}       # Step 5: Build pages-ja/en.json
 pnpm run pdf:manifest --slug {slug}    # Step 6: Generate manifest
 ```
 
@@ -385,37 +375,28 @@ Dynamically computes all paths from slug:
 
 ## zfb App Integration
 
-### Manual Registry (lib/manual-registry.ts)
+### Manual Registry (lib/zfb-registry.generated.ts)
 
-Central hub that imports all manual data at build time:
+The registry is **auto-generated** by `node scripts/gen-registry.js` (alias: `pnpm run gen:registry`). It scans `public/<slug>/data/` for `manifest.json` and `pages-ja.json`, then emits a static import list + `REGISTRY` map. Never edit this file by hand.
 
 ```typescript
-// Explicit imports for each manual
-import oxiOneMk2Manifest from '@/public/oxi-one-mk2/data/manifest.json';
-import oxiOneMk2Pages from '@/public/oxi-one-mk2/data/pages.json';
-import addac104Manifest from '@/public/addac104-tnetw/data/manifest.json';
-import addac104Pages from '@/public/addac104-tnetw/data/pages.json';
-// ... more manuals
+// lib/zfb-registry.generated.ts (auto-generated — do not edit)
+import m0 from '@/public/addac104-tnetw/data/manifest.json';
+// ... one manifest import per manual, alphabetically
 
-const MANUAL_REGISTRY: Record<string, ManualRegistryEntry> = {
-  'oxi-one-mk2': {
-    manifest: oxiOneMk2Manifest as unknown as ManualManifest,
-    pages: oxiOneMk2Pages as unknown as ManualPagesData,
-  },
-  'addac104-tnetw': {
-    manifest: addac104Manifest as unknown as ManualManifest,
-    pages: addac104Pages as unknown as ManualPagesData,
-  },
-  // ... more manuals
+import p0 from '@/public/addac104-tnetw/data/pages-ja.json';
+// ... one pages-ja import per manual
+// NOTE: pages-en.json is intentionally NOT imported here (fetched at runtime)
+
+export const REGISTRY: Record<string, RegistryEntry> = {
+  'addac104-tnetw': { manifest: m0, pagesJa: p0 },
+  // ... one entry per manual
 };
 ```
 
-**Why explicit imports:**
+**Bundle-size constraint:** `pages-en.json` is intentionally excluded from the static bundle (fetched at runtime by `ManualApp` via `fetch()`). Only `manifest.json` (~26 KB total) and `pages-ja.json` (~4 MB total) are statically imported, keeping the bundle well under the V8 10 MB threshold.
 
-- Required for zfb static site generation
-- Type-safe with TypeScript
-- Data bundled into HTML at build time
-- No runtime fetch needed
+The public API (`getManifest`, `getPagesJa`, `hasEnglish`, `getAvailableManuals`) is exported from `lib/zfb-registry.ts`, which imports from the generated file.
 
 ### TypeScript Interfaces (lib/types/manual.ts)
 
@@ -448,6 +429,7 @@ export interface ManualManifest {
   contentPages?: number;
   lastUpdated?: string;
   updatedAt?: string;
+  hasEnglish?: boolean;
   source?: {
     filename: string;
     processedAt: string;
@@ -459,10 +441,8 @@ export interface ManualManifest {
 
 ## URL Structure
 
-> **Updated:** The base path changed to `/` in the CF Workers migration (issue #211).
-> Current paths use `/{slug}/...` served from `manuals.takazudomodular.com`.
-
 - **Base path:** `/` (configured in `lib/base-path.ts` → `zfb.config.ts`)
+- **Deployed at:** `manuals.takazudomodular.com`
 - **Manual index:** `/{slug}/`
 - **Page viewer:** `/{slug}/page/{pageNum}`
 
@@ -477,7 +457,7 @@ export interface ManualManifest {
 1. Create source directory: `mkdir manual-pdf/{new-slug}`
 2. Add PDF file (any filename)
 3. Process the PDF: `/l-pdf-process {new-slug}`
-4. Update `lib/manual-registry.ts` with the new manual's imports and registry entry
+4. Regenerate the registry: `pnpm run gen:registry`
 5. Build and deploy: `pnpm build`
 
 **Time estimate:** ~30 minutes (translation: 15-30 min, other steps: ~5 min)
@@ -485,8 +465,8 @@ export interface ManualManifest {
 ## Key Architectural Decisions
 
 1. **Slug-Based Path Resolution** — No hardcoded paths; `pdf-config-resolver.js` computes all paths from slug
-2. **Single pages.json File** — All pages in one file per manual; simpler than part-based organization
-3. **Manual Registry** — Explicit imports in `lib/manual-registry.ts`; required for static export compatibility
-4. **Page-by-Page Processing** — Extract, translate, then build combines into single pages.json
-5. **Processing Files are Temporary** — Only `data/` and `pages/` committed to Git; `temp-processing/` is gitignored
-6. **Multi-Language Support** — Separate files per language (`pages-ja.json`, `pages-en.json`); users only download what they need
+2. **Separate Language Files** — `pages-ja.json` and `pages-en.json` per manual; users only download what they need
+3. **Auto-Generated Registry** — `lib/zfb-registry.generated.ts` is produced by `gen-registry.js`; adding a manual is a one-command regeneration (`pnpm run gen:registry`), not a hand-edit
+4. **JA bundled, EN fetched** — `pages-ja.json` is statically imported at build time (default language); `pages-en.json` is fetched at runtime to stay under the V8 bundle-size limit
+5. **Page-by-Page Processing** — Extract, translate, then build combines into per-language JSON files
+6. **Processing Files are Temporary** — Only `data/` and `pages/` committed to Git; `temp-processing/` is gitignored
