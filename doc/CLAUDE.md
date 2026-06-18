@@ -1,42 +1,68 @@
-# Documentation (Docusaurus) - CLAUDE.md
+# Documentation (zudo-doc) - CLAUDE.md
 
-Docusaurus documentation system configuration. For project-wide instructions, see the root `CLAUDE.md`.
+zudo-doc documentation system configuration. For project-wide instructions, see the root `CLAUDE.md`.
 
 ## Overview
 
-Comprehensive project documentation is maintained in `/doc/` using Docusaurus 3.
+Project documentation lives in `doc/` and is built with **zudo-doc** — a documentation framework built on zfb (Preact islands), MDX, and Tailwind CSS v4.
 
-- **INBOX category**: Main development documentation (in `doc/docs/inbox/`)
-- **Japanese locale**: All documentation in Japanese (default language)
-- **Dark mode**: Forced dark theme for consistency with the main app
+- **Content location**: `doc/src/content/docs/`
+- **Categories**: `architecture/`, `design-system/`, `history/`, `infrastructure/`, plus top-level `index.mdx`
+- **Dark mode**: Default dark theme (respects system preference)
+- **Robots**: noindex/nofollow — self-managed via `doc/public/_headers`, `doc/public/robots.txt`, and `noindex: true` in `doc/src/config/settings.ts`
 
 ## Development Commands
 
+Run from the **project root** (delegated via `pnpm -C doc`):
+
 ```bash
-pnpm doc:dev            # Start Docusaurus dev server (port 3100, doc-zmanuals.localhost)
-pnpm doc:build          # Build documentation for production
+pnpm doc:dev            # Start zudo-doc dev server (port 4321)
+pnpm doc:build          # Build documentation to doc/dist
+pnpm doc:serve          # Preview the doc build locally
 ```
 
-## URL Mapping
+The docs build is **independent** of the main app build (`pnpm build` does not build docs).
 
-- `http://doc-zmanuals.localhost:3100/docs/inbox/` maps to files in `/doc/docs/inbox/`
+## Deployment
 
-## Structure
+Docs deploy independently to a dedicated Cloudflare Worker (`zmanuals-doc`) at:
+
+**https://doc-manuals.takazudomodular.com/**
+
+## Content Structure
+
+```
+doc/src/content/docs/
+├── index.mdx                   # Top-level landing page
+├── architecture/               # Architecture decisions and diagrams
+├── design-system/              # Zudo Design System reference
+│   └── design-system.md        # Tailwind v4 tokens, CSS variables, dark theme
+├── history/                    # Project history and migration notes
+└── infrastructure/             # Deployment, CI/CD, Cloudflare setup
+```
+
+### Sidebar & Navigation
+
+- Sidebar order: use `sidebar_position` in MDX frontmatter (lower number = higher)
+- Header nav categories: configured in `doc/src/config/settings.ts` (`headerNav` array)
+  - Architecture → `/docs/architecture`
+  - Design System → `/docs/design-system`
+  - Infrastructure → `/docs/infrastructure`
+  - History → `/docs/history`
+
+## Project Structure
 
 ```
 doc/
-├── docs/
-│   └── inbox/              # Main documentation category
-├── docusaurus.config.ts    # Docusaurus configuration
-├── package.json            # Doc-specific dependencies
-├── plugins/                # Custom Docusaurus plugins
-├── scripts/                # Doc build scripts
-├── sidebars.ts             # Sidebar configuration
-├── src/                    # Custom components and pages
-├── static/                 # Static assets for documentation
-└── tsconfig.json           # TypeScript config
+├── src/
+│   ├── content/docs/       # MDX documentation files
+│   └── config/
+│       └── settings.ts     # Site config (siteName, headerNav, noindex, siteUrl, etc.)
+├── public/                 # Static assets (_headers, robots.txt)
+├── zfb.config.ts           # zfb/zudo-doc build config
+└── package.json            # Doc-specific dependencies
 ```
 
 ## Design System Documentation
 
-The Zudo Design System documentation is at `/doc/docs/inbox/design-system.md`. This is the authoritative reference for the custom Tailwind CSS v4 configuration used in the main app.
+The Zudo Design System documentation is at `doc/src/content/docs/design-system/design-system.md` (served at `/docs/design-system/design-system`). This is the authoritative reference for the custom Tailwind CSS v4 configuration used in the main app.

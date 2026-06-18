@@ -15,7 +15,7 @@ allowed-tools:
 Run `pnpm b4push` from the project root. This executes `scripts/b4push.sh`:
 
 1. **Code quality checks** - typecheck, lint, format via `pnpm check`
-2. **Clean build** - `pnpm clean && pnpm build` (Next.js + Docusaurus)
+2. **Clean build** - `pnpm clean && pnpm build`
 3. **Start production server** - serve built output on port 8030
 4. **Wait for server** - retry with 30s timeout
 5. **Smoke e2e tests** - test all manual pages load successfully
