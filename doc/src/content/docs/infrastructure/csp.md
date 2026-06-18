@@ -1,7 +1,9 @@
 ---
 title: Content Security Policy (CSP)
 sidebar_position: 3
-description: Current Content Security Policy setup for the zmanuals site, including the viewer directive and docs carve-out.
+description: >-
+  Current Content Security Policy setup for the zmanuals site, including the viewer directive and
+  docs carve-out.
 ---
 
 # Content Security Policy (CSP)
