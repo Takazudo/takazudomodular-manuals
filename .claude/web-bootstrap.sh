@@ -5,17 +5,16 @@
 set -euo pipefail
 
 [ "${CLAUDE_CODE_REMOTE:-}" = "true" ] || exit 0
-# --self-only gate (uncomment to limit loading to YOUR web sessions on a shared
-# repo) WITHOUT committing any personal identifier. Opt in by setting
-# CLAUDE_WEB_PROFILE_OPT_IN=1 in your per-user web env (Claude Code on the web →
-# Environment variables — per-account, not tracked in git). Other accounts that
-# never set it no-op; it supports multiple accounts (each opts in), survives
-# account switches (set the var in the new account's env — no source change), and
-# fails loudly, not silently.
-# [ "${CLAUDE_WEB_PROFILE_OPT_IN:-}" = "1" ] || {
-#   echo "web-bootstrap: CLAUDE_WEB_PROFILE_OPT_IN not set — skipping" >&2
-#   exit 0
-# }
+# --self-only gate: limits loading to YOUR web sessions WITHOUT committing any
+# personal identifier. Opt in by setting CLAUDE_WEB_PROFILE_OPT_IN=1 in your
+# per-user web env (Claude Code on the web → Environment variables — per-account,
+# not tracked in git). Other accounts that never set it no-op; it supports
+# multiple accounts (each opts in), survives account switches (set the var in the
+# new account's env — no source change), and fails loudly, not silently.
+[ "${CLAUDE_WEB_PROFILE_OPT_IN:-}" = "1" ] || {
+  echo "web-bootstrap: CLAUDE_WEB_PROFILE_OPT_IN not set — skipping" >&2
+  exit 0
+}
 
 SRC="$HOME/.claude-src"
 URL="https://github.com/Takazudo/claude-resources"
