@@ -1,13 +1,10 @@
 ---
 title: PR Preview URL (Cloudflare Workers)
 sidebar_position: 2
+description: How automatic PR preview deployments work on Cloudflare Workers.
 ---
 
 # PR Preview URL (Cloudflare Workers)
-
-> **Migration note:** This page was updated when the site moved from Cloudflare Pages to
-> Cloudflare Workers static assets (CF Workers migration, issue #211). The old Pages preview
-> URLs (`*.zmanuals.pages.dev`) are no longer used.
 
 Every same-repo pull request gets an automatic Cloudflare Workers preview deployment. This page documents the flow, comment markers, and the forked-PR caveat so contributors know what to expect.
 
