@@ -8,7 +8,7 @@
       },
       {
         "docId": "inbox/pr-preview-url",
-        "title": "PR Preview URL (Cloudflare Pages)",
+        "title": "PR Preview URL (Cloudflare Workers)",
         "position": 60
       },
       {
@@ -20,6 +20,11 @@
         "docId": "inbox/migration-nextjs-to-zfb",
         "title": "Migration — Next.js → zfb",
         "position": 70
+      },
+      {
+        "docId": "inbox/cf-workers-cutover",
+        "title": "Cloudflare Workers Cutover Runbook",
+        "position": 80
       },
       {
         "docId": "inbox/design-system",
