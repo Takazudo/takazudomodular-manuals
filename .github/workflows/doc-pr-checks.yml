@@ -1,0 +1,214 @@
+# PR checks and preview deployment for the docs site.
+#
+# Triggered on pull requests that touch files under doc/.
+# Jobs:
+#   1. doc-build-check: Build docs to verify no build errors (all PRs).
+#   2. doc-preview-deploy: Build docs and deploy a preview to Cloudflare Workers
+#      (same-repo PRs only, mirrors preview-deploy in pr-quality-checks.yml).
+#
+# fetch-depth: 0 is required because the doc build uses @takazudo/zudo-doc-history-server
+# which reads the full git log to generate document history pages.
+#
+# Concurrency: cancel in-progress runs for the same PR so the latest commit wins.
+#
+# Secrets:
+#   CLOUDFLARE_API_TOKEN  -- Workers: Edit scope required (NOT Pages: Edit)
+#   CLOUDFLARE_ACCOUNT_ID
+
+name: Docs PR Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'doc/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+  statuses: write
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # Job 1: Build Check — verify doc build passes (all PRs)
+  # ---------------------------------------------------------------------------
+  doc-build-check:
+    name: Docs Build Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          # Full git history required by the doc-history plugin.
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@02f6c237bd2518259fed6c71566509edfb3f2b74 # v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build docs
+        run: pnpm run doc:build
+
+  # ---------------------------------------------------------------------------
+  # Job 2: Preview Deploy — build docs and deploy to Cloudflare Workers
+  #         (same-repo PRs only, mirrors preview-deploy in pr-quality-checks.yml)
+  # ---------------------------------------------------------------------------
+  doc-preview-deploy:
+    name: Docs Preview Deploy (Cloudflare Workers)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: github.event.pull_request.head.repo.full_name == github.repository
+
+    permissions:
+      contents: read
+      pull-requests: write
+      statuses: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          # Full git history required by the doc-history plugin.
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@02f6c237bd2518259fed6c71566509edfb3f2b74 # v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build docs
+        run: pnpm run doc:build
+
+      - name: Deploy docs PR preview to Cloudflare Workers
+        id: cf-deploy
+        # Wrangler lives in the root devDependencies. Pin to the package.json
+        # devDependency version. Deploy from within doc/ so wrangler picks up
+        # doc/wrangler.toml and resolves [assets] directory = "./dist" relative
+        # to doc/.
+        run: |
+          PR_NUMBER="${{ github.event.pull_request.number }}"
+          ALIAS="doc-pr-${PR_NUMBER}"
+          WRANGLER_VERSION=$(node -p "require('./package.json').devDependencies.wrangler")
+          DEPLOY_LOG=$(mktemp)
+          cd doc
+          npx "wrangler@${WRANGLER_VERSION}" versions upload \
+            --preview-alias "$ALIAS" \
+            2>&1 | tee "$DEPLOY_LOG"
+          DEPLOY_URL=$(grep -oE "https://${ALIAS}-[a-z0-9.-]+\.workers\.dev" "$DEPLOY_LOG" | head -1)
+          echo "deploy_url=$DEPLOY_URL" >> "$GITHUB_OUTPUT"
+          if [ -z "$DEPLOY_URL" ]; then
+            echo "::warning::No preview-alias URL yet -- enable the workers.dev subdomain for zmanuals-doc. Worker upload succeeded."
+            exit 0
+          fi
+          echo "Preview URL: $DEPLOY_URL"
+        env:
+          # CLOUDFLARE_API_TOKEN requires Workers: Edit scope (NOT Pages: Edit)
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Comment docs preview URL on PR
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          DEPLOY_URL: ${{ steps.cf-deploy.outputs.deploy_url }}
+        with:
+          script: |
+            const deployUrl = process.env.DEPLOY_URL;
+            const prNumber = context.issue.number;
+            const marker = '<!-- cf-doc-preview-pr -->';
+            const sha = context.sha.substring(0, 7);
+
+            const body = deployUrl
+              ? [
+                  marker,
+                  `## Cloudflare Workers Docs Preview`,
+                  '',
+                  `Docs preview deployment is ready.`,
+                  '',
+                  `| | URL |`,
+                  `|---|---|`,
+                  `| Preview | ${deployUrl} |`,
+                  `| Docs | ${deployUrl}/docs/ |`,
+                  '',
+                  `Built from commit: \`${sha}\``,
+                ].join('\n')
+              : [
+                  marker,
+                  `## Cloudflare Workers Docs Preview`,
+                  '',
+                  `⏳ **Preview pending.** The worker uploaded successfully, but no \`*.workers.dev\` preview URL is available yet -- enable the account's **workers.dev subdomain** for \`zmanuals-doc\`, then re-run this check.`,
+                  '',
+                  `Built from commit: \`${sha}\``,
+                ].join('\n');
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            });
+
+            const existing = comments.find(c => c.body.includes(marker));
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+              console.log(`Updated existing docs preview comment (id: ${existing.id})`);
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
+              console.log('Created new docs preview comment');
+            }
+
+      - name: Notify docs PR preview status
+        if: always()
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          DEPLOY_URL: ${{ steps.cf-deploy.outputs.deploy_url }}
+          JOB_STATUS: ${{ job.status }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        with:
+          script: |
+            const success = process.env.JOB_STATUS === 'success';
+            const status = success ? 'success' : 'failure';
+
+            const params = {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: process.env.HEAD_SHA,
+              state: status,
+              description: success ? 'Docs PR preview deployment successful' : 'Docs PR preview deployment failed',
+              context: 'cloudflare/doc-pr-preview',
+            };
+            const deployUrl = process.env.DEPLOY_URL;
+            if (deployUrl) {
+              params.target_url = deployUrl;
+            }
+
+            await github.rest.repos.createCommitStatus(params);
