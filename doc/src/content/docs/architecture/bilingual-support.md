@@ -1,6 +1,7 @@
 ---
 title: Bilingual Support (JA / EN)
 sidebar_position: 2
+description: Language toggle behaviour, URL conventions, and localStorage persistence for the JA/EN bilingual viewer.
 ---
 
 # Bilingual Support (JA / EN)
