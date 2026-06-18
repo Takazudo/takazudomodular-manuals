@@ -122,7 +122,7 @@ This document describes the architecture for processing PDF manuals and integrat
 
 ## Currently Supported Manuals
 
-The system currently supports **53 manuals** (auto-detected by `gen-registry.js` from `public/` directory).
+The registry supports any number of manuals. `gen-registry.js` auto-detects every manual under `public/` that has both a `data/manifest.json` and a `data/pages-ja.json`, so the supported set is whatever is committed — no fixed count to keep in sync here.
 
 ## Data Formats
 

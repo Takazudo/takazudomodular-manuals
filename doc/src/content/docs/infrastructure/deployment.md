@@ -58,4 +58,4 @@ Cache rules are set in `public/_headers` (deployed alongside the Worker):
 
 ## Docs site
 
-The documentation site (`doc-manuals.takazudomodular.com`) deploys independently via a separate Cloudflare Worker (`zmanuals-doc`) configured in `doc/wrangler.toml`. The docs build produces a pure-static output (no `_worker.js`) so the asset-serving layer handles all routing directly. The docs CI deploy runs in a separate workflow (`doc-pr-checks.yml` / `doc-main-deploy.yml`) and does not share build artifacts or secrets with the main app deploy.
+The documentation site (`doc-manuals.takazudomodular.com`) deploys independently via a separate Cloudflare Worker (`zmanuals-doc`) configured in `doc/wrangler.toml`. The docs build produces a pure-static output (no `_worker.js`) so the asset-serving layer handles all routing directly. The docs CI deploy runs in a separate workflow (`doc-pr-checks.yml` / `doc-deploy.yml`) and does not share build artifacts or secrets with the main app deploy.
