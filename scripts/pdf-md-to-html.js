@@ -182,6 +182,14 @@ function rehypeWrapTables() {
  * left untouched. (A bare URL whose path legitimately contains non-ASCII is not
  * a real case in these ASCII-only manual URLs; the cut is correct for the
  * domain, including abbreviation ellipses like `…` that appear inside a URL.)
+ *
+ * NOTE — do NOT delete this after a zfb bump. zfb ships its own equivalent fix
+ * (`CjkAutolinkBoundaryPlugin`, zfb#1105, in zfb >= 0.1.0-next.53), but that
+ * lives in zfb's Rust `zfb-content` markdown pipeline. This project does not
+ * route manual content through zfb's pipeline — manual `content` is rendered to
+ * `contentHtml` HERE, by this standalone remark-gfm pipeline. The two never
+ * overlap, so the zfb fix does not cover this path and this repair is still
+ * required.
  */
 function rehypeFixCjkAutolinks() {
   return (tree) => {
