@@ -99,7 +99,6 @@ export const settings = {
     { label: 'Architecture', path: '/docs/architecture', categoryMatch: 'architecture' },
     { label: 'Design System', path: '/docs/design-system', categoryMatch: 'design-system' },
     { label: 'Infrastructure', path: '/docs/infrastructure', categoryMatch: 'infrastructure' },
-    { label: 'History', path: '/docs/history', categoryMatch: 'history' },
   ] satisfies HeaderNavItem[] as HeaderNavItem[],
   headerRightItems: [
     { type: 'component', component: 'github-link' },
