@@ -1,9 +1,10 @@
 {
   "inbox/bilingual-support": "Bilingual Support (JA / EN)",
+  "inbox/cf-workers-cutover": "Cloudflare Workers Cutover Runbook",
   "inbox/csp-hardening-plan": "CSP Flip-to-Enforced Hardening Plan",
   "inbox/design-system": "Design System",
   "inbox/index": "INBOX",
   "inbox/migration-nextjs-to-zfb": "Migration — Next.js → zfb",
   "inbox/pdf-to-nextjs-architecture": "PDF Processing Architecture",
-  "inbox/pr-preview-url": "PR Preview URL (Cloudflare Pages)"
+  "inbox/pr-preview-url": "PR Preview URL (Cloudflare Workers)"
 }
