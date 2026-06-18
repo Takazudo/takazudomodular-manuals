@@ -1,5 +1,6 @@
 ---
 title: Zudo Design System
+description: Reference for the Zudo Design System — custom Tailwind CSS v4 tokens, semantic spacing (hgap/vgap), color palette, and typography used in this project.
 sidebar_position: 1
 ---
 
