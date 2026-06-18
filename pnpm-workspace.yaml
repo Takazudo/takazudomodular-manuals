@@ -34,8 +34,6 @@ autoInstallPeers: true
 peerDependencyRules:
   allowedVersions:
     'eslint-plugin-react>eslint': '10'
-# Fully flat node_modules — needed for Docusaurus (and legacy Next.js) module resolution
-shamefullyHoist: true
 # Hoist these to the root node_modules so they resolve from outside their declaring package.
 # next* / @next/* are legacy from the pre-zfb Next.js setup — kept to preserve behavior;
 # safe to prune in a follow-up once confirmed nothing references them.
@@ -46,4 +44,3 @@ publicHoistPattern:
   - '@types/*'
   - 'react'
   - 'react-dom'
-  - '@docusaurus/*'
