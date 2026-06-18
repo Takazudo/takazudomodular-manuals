@@ -34,6 +34,11 @@ autoInstallPeers: true
 peerDependencyRules:
   allowedVersions:
     'eslint-plugin-react>eslint': '10'
+# Fully flat node_modules — needed for zfb resolution / legacy Next.js publicHoist entries.
+# shamefullyHoist keeps the module graph flat and protects the main app from resolution
+# failures; removing it is risky until zfb + all tooling is verified in a strict-hoist
+# environment.
+shamefullyHoist: true
 # Hoist these to the root node_modules so they resolve from outside their declaring package.
 # next* / @next/* are legacy from the pre-zfb Next.js setup — kept to preserve behavior;
 # safe to prune in a follow-up once confirmed nothing references them.
