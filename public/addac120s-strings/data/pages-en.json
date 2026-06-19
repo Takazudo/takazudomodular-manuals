@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "processedAt": "2026-06-17T17:51:46.320Z",
+    "processedAt": "2026-06-19T19:11:19.432Z",
     "language": "en",
     "extractionMethod": "pdf-parse",
     "imageFormat": "png",
@@ -12,10 +12,10 @@
       "image": "/addac120s-strings/pages/page-001.png",
       "title": "Page 1",
       "sectionName": null,
-      "content": "May.2026\nUSER'S GUIDE . REV01\n\nADDAC120s\nFOUR STRINGS SERIES\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "content": "June.2026\nUSER'S GUIDE . REV01\n\nADDAC120s\nFOUR STRINGS SERIES\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>May.2026\nUSER'S GUIDE . REV01</p>\n<p>ADDAC120s\nFOUR STRINGS SERIES</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "contentHtml": "<p>June.2026\nUSER'S GUIDE . REV01</p>\n<p>ADDAC120s\nFOUR STRINGS SERIES</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 2,
@@ -52,10 +52,10 @@
       "image": "/addac120s-strings/pages/page-005.png",
       "title": "Page 5",
       "sectionName": null,
-      "content": "STRING SYSTEMS\n\nHere's 3 selected systems sold as packs.\nStandalone systems ship pre-assembled.\n\nINTRO STRING SYSTEM (without frame)\n\nSTANDALONE STRING SYSTEM #1 (with frame)\n\nSTANDALONE STRING SYSTEM #2 (with frame)",
+      "content": "STRING SYSTEMS\n\nHere's 3 selected systems sold as packs.\n\nStandalone systems ship pre-assembled.\n\nSTRINGS BASIC SYSTEM (without frame)\n\nSTRINGS HUMBUCKER SYSTEM (with either 122HP or 197HP frame)\n\nSTRINGS QUADRAPHONIC SYSTEM (with either 122HP or 197HP frame)",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>STRING SYSTEMS</p>\n<p>Here's 3 selected systems sold as packs.\nStandalone systems ship pre-assembled.</p>\n<p>INTRO STRING SYSTEM (without frame)</p>\n<p>STANDALONE STRING SYSTEM #1 (with frame)</p>\n<p>STANDALONE STRING SYSTEM #2 (with frame)</p>"
+      "contentHtml": "<p>STRING SYSTEMS</p>\n<p>Here's 3 selected systems sold as packs.</p>\n<p>Standalone systems ship pre-assembled.</p>\n<p>STRINGS BASIC SYSTEM (without frame)</p>\n<p>STRINGS HUMBUCKER SYSTEM (with either 122HP or 197HP frame)</p>\n<p>STRINGS QUADRAPHONIC SYSTEM (with either 122HP or 197HP frame)</p>"
     },
     {
       "pageNum": 6,
@@ -132,20 +132,20 @@
       "image": "/addac120s-strings/pages/page-013.png",
       "title": "Page 13",
       "sectionName": null,
-      "content": "May.2026\nUSER’S GUIDE . REV01\nADDAC122\nQUADRAPHONIC\nPICKUP\nINTRODUCING\nFrom Portugal with Love!\nInstruments for Sonic Expression\nEst.2009\n\n-- 1 of 1 --",
+      "content": "June.2026\nUSER’S GUIDE . REV01\nADDAC122\nQUADRAPHONIC\nPICKUP\nINTRODUCING\nFrom Portugal with Love!\nInstruments for Sonic Expression\nEst.2009\n\n-- 1 of 1 --",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>May.2026\nUSER’S GUIDE . REV01\nADDAC122\nQUADRAPHONIC\nPICKUP\nINTRODUCING\nFrom Portugal with Love!\nInstruments for Sonic Expression\nEst.2009</p>\n<p>-- 1 of 1 --</p>"
+      "contentHtml": "<p>June.2026\nUSER’S GUIDE . REV01\nADDAC122\nQUADRAPHONIC\nPICKUP\nINTRODUCING\nFrom Portugal with Love!\nInstruments for Sonic Expression\nEst.2009</p>\n<p>-- 1 of 1 --</p>"
     },
     {
       "pageNum": 14,
       "image": "/addac120s-strings/pages/page-014.png",
       "title": "Page 14",
       "sectionName": null,
-      "content": "ADDAC122 QUADRAPHONIC PICKUP USER'S GUIDE\n\n14HP\n80mA on +12V\n60mA on -12V\nMay.2026　Revision.01\n\nWELCOME\n\nThis is our Quadraphonic pickup which allows each string to be independently captured. While not common Hexaphonic guitar pickups were developed in the 80's to allow guitar synthesizers to pickup each string independently allowing for more precise detection instead of decoding all strings from a mono output.\n\nOne can look at it like four independent pickups each with their own pre-amplifier, independent Volume control and output jack.\n\nA Mono Mix output (post volumes) is also available.\n\nAll outputs are synth level.\n\nAll coils are hand winded by us, they're stacked humbuckers with Alnico 5 slugs, Each is winded to 20.000 turns using 44AWG polyurethane wire measuring aprox. 7.4k Ohms.\n\nThe height of the pickup can be adjusted using the mounting screws.",
+      "content": "ADDAC122 QUADRAPHONIC PICKUP USER'S GUIDE\n\n14HP\n80mA on +12V\n60mA on -12V\nJune.2026　Revision.01\n\nWELCOME\n\nThis is our Quadraphonic pickup which allows each string to be independently captured. While not common Hexaphonic guitar pickups were developed in the 80's to allow guitar synthesizers to pickup each string independently allowing for more precise detection instead of decoding all strings from a mono output.\n\nOne can look at it like four independent pickups each with their own pre-amplifier, independent Volume control and output jack.\n\nA Mono Mix output (post volumes) is also available.\n\nAll outputs are synth level.\n\nAll coils are hand winded by us, they're stacked humbuckers with Alnico 5 slugs, Each is winded to 20.000 turns using 44AWG polyurethane wire measuring aprox. 7.4k Ohms.\n\nThe height of the pickup can be adjusted using the mounting screws.",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC122 QUADRAPHONIC PICKUP USER'S GUIDE</p>\n<p>14HP\n80mA on +12V\n60mA on -12V\nMay.2026　Revision.01</p>\n<p>WELCOME</p>\n<p>This is our Quadraphonic pickup which allows each string to be independently captured. While not common Hexaphonic guitar pickups were developed in the 80's to allow guitar synthesizers to pickup each string independently allowing for more precise detection instead of decoding all strings from a mono output.</p>\n<p>One can look at it like four independent pickups each with their own pre-amplifier, independent Volume control and output jack.</p>\n<p>A Mono Mix output (post volumes) is also available.</p>\n<p>All outputs are synth level.</p>\n<p>All coils are hand winded by us, they're stacked humbuckers with Alnico 5 slugs, Each is winded to 20.000 turns using 44AWG polyurethane wire measuring aprox. 7.4k Ohms.</p>\n<p>The height of the pickup can be adjusted using the mounting screws.</p>"
+      "contentHtml": "<p>ADDAC122 QUADRAPHONIC PICKUP USER'S GUIDE</p>\n<p>14HP\n80mA on +12V\n60mA on -12V\nJune.2026　Revision.01</p>\n<p>WELCOME</p>\n<p>This is our Quadraphonic pickup which allows each string to be independently captured. While not common Hexaphonic guitar pickups were developed in the 80's to allow guitar synthesizers to pickup each string independently allowing for more precise detection instead of decoding all strings from a mono output.</p>\n<p>One can look at it like four independent pickups each with their own pre-amplifier, independent Volume control and output jack.</p>\n<p>A Mono Mix output (post volumes) is also available.</p>\n<p>All outputs are synth level.</p>\n<p>All coils are hand winded by us, they're stacked humbuckers with Alnico 5 slugs, Each is winded to 20.000 turns using 44AWG polyurethane wire measuring aprox. 7.4k Ohms.</p>\n<p>The height of the pickup can be adjusted using the mounting screws.</p>"
     },
     {
       "pageNum": 15,
@@ -192,10 +192,10 @@
       "image": "/addac120s-strings/pages/page-019.png",
       "title": "Page 19",
       "sectionName": null,
-      "content": "ADDAC125 STRINGS MUTE USER'S GUIDE\n\n10HP\n\n100mA on +12V\n\nMay.2026 Revision.01\n\nWelcome to:\n\nWELCOME\n\nThis module is inspired by Fender's Mute system found in some Jaguar and Bass VI guitars where a piece of foam can be engaged to press against the string dampening their natural vibration. while not as intense as a standard palm mute and achieving a diferent tone.\n\nFor this module we use a servo motor that raises and lowers a piece of foam that when pressed against the strings lightly dampens their natural vibration.\n\nWhile not as effective as a standard palm mute it allows a different tone to be automated.\n\nTo be the most effective this module needs to be connected as close to the headstock as possible.\n\nThis is a passive module, to use it one needs to connect its servo to an ADDAC124 Plectrums.\n\nThis module can either replace one of the plectrums servos, disconnecting it to connect this module or connected in parallel with one of the plectrums servos using the provided splitter cable operating both the plectrum and mute at the same time. The Mute is always controlled by the ADDAC124.\n\nThe foam part height can be adjusted.",
+      "content": "ADDAC125 STRINGS MUTE USER'S GUIDE\n\n10HP\n\n100mA on +12V\n\nJune.2026 Revision.01\n\nWelcome to:\n\nWELCOME\n\nThis module is inspired by Fender's Mute system found in some Jaguar and Bass VI guitars where a piece of foam can be engaged to press against the string dampening their natural vibration. while not as intense as a standard palm mute and achieving a diferent tone.\n\nFor this module we use a servo motor that raises and lowers a piece of foam that when pressed against the strings lightly dampens their natural vibration.\n\nWhile not as effective as a standard palm mute it allows a different tone to be automated.\n\nTo be the most effective this module needs to be connected as close to the headstock as possible.\n\nThis is a passive module, to use it one needs to connect its servo to an ADDAC124 Plectrums.\n\nThis module can either replace one of the plectrums servos, disconnecting it to connect this module or connected in parallel with one of the plectrums servos using the provided splitter cable operating both the plectrum and mute at the same time. The Mute is always controlled by the ADDAC124.\n\nThe foam part height can be adjusted.",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC125 STRINGS MUTE USER'S GUIDE</p>\n<p>10HP</p>\n<p>100mA on +12V</p>\n<p>May.2026 Revision.01</p>\n<p>Welcome to:</p>\n<p>WELCOME</p>\n<p>This module is inspired by Fender's Mute system found in some Jaguar and Bass VI guitars where a piece of foam can be engaged to press against the string dampening their natural vibration. while not as intense as a standard palm mute and achieving a diferent tone.</p>\n<p>For this module we use a servo motor that raises and lowers a piece of foam that when pressed against the strings lightly dampens their natural vibration.</p>\n<p>While not as effective as a standard palm mute it allows a different tone to be automated.</p>\n<p>To be the most effective this module needs to be connected as close to the headstock as possible.</p>\n<p>This is a passive module, to use it one needs to connect its servo to an ADDAC124 Plectrums.</p>\n<p>This module can either replace one of the plectrums servos, disconnecting it to connect this module or connected in parallel with one of the plectrums servos using the provided splitter cable operating both the plectrum and mute at the same time. The Mute is always controlled by the ADDAC124.</p>\n<p>The foam part height can be adjusted.</p>"
+      "contentHtml": "<p>ADDAC125 STRINGS MUTE USER'S GUIDE</p>\n<p>10HP</p>\n<p>100mA on +12V</p>\n<p>June.2026 Revision.01</p>\n<p>Welcome to:</p>\n<p>WELCOME</p>\n<p>This module is inspired by Fender's Mute system found in some Jaguar and Bass VI guitars where a piece of foam can be engaged to press against the string dampening their natural vibration. while not as intense as a standard palm mute and achieving a diferent tone.</p>\n<p>For this module we use a servo motor that raises and lowers a piece of foam that when pressed against the strings lightly dampens their natural vibration.</p>\n<p>While not as effective as a standard palm mute it allows a different tone to be automated.</p>\n<p>To be the most effective this module needs to be connected as close to the headstock as possible.</p>\n<p>This is a passive module, to use it one needs to connect its servo to an ADDAC124 Plectrums.</p>\n<p>This module can either replace one of the plectrums servos, disconnecting it to connect this module or connected in parallel with one of the plectrums servos using the provided splitter cable operating both the plectrum and mute at the same time. The Mute is always controlled by the ADDAC124.</p>\n<p>The foam part height can be adjusted.</p>"
     },
     {
       "pageNum": 20,
@@ -212,70 +212,70 @@
       "image": "/addac120s-strings/pages/page-021.png",
       "title": "Page 21",
       "sectionName": null,
-      "content": "May.2026\nUSER’S GUIDE . REV01\nADDAC126\nROTARY\nEXCITER\nINTRODUCING\nFrom Portugal with Love!\nInstruments for Sonic Expression\nEst.2009\n\n-- 1 of 1 --",
+      "content": "June.2026\nUSER’S GUIDE . REV01\nADDAC126\nROTARY\nEXCITER\nINTRODUCING\nFrom Portugal with Love!\nInstruments for Sonic Expression\nEst.2009\n\n-- 1 of 1 --",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>May.2026\nUSER’S GUIDE . REV01\nADDAC126\nROTARY\nEXCITER\nINTRODUCING\nFrom Portugal with Love!\nInstruments for Sonic Expression\nEst.2009</p>\n<p>-- 1 of 1 --</p>"
+      "contentHtml": "<p>June.2026\nUSER’S GUIDE . REV01\nADDAC126\nROTARY\nEXCITER\nINTRODUCING\nFrom Portugal with Love!\nInstruments for Sonic Expression\nEst.2009</p>\n<p>-- 1 of 1 --</p>"
     },
     {
       "pageNum": 22,
       "image": "/addac120s-strings/pages/page-022.png",
       "title": "Page 22",
       "sectionName": null,
-      "content": "ADDAC126 ROTARY EXCITER USER'S GUIDE\n10HP\n100mA on +12V\nMay.2026 Revision.01\n\nWelcome to:\n\nWELCOME\n\nThis module features a 7000 RPM brushless motor that rotates a surface with 4 magnets with opposed magnetic poles inducing a rotating magnetic field that will force the strings to vibrate whenever the rotational speed matches the frequency or harmonics of any of the strings tuning.\n\nA [SPEED] knob and CV input allows non-linear control of the motor speed.",
+      "content": "ADDAC126 ROTARY EXCITER USER'S GUIDE\n10HP\n100mA on +12V\nJune.2026 Revision.01\n\nWelcome to:\n\nWELCOME\n\nThis module features a 7000 RPM brushless motor that rotates a surface with 4 magnets with opposed magnetic poles inducing a rotating magnetic field that will force the strings to vibrate whenever the rotational speed matches the frequency or harmonics of any of the strings tuning.\n\nA [SPEED] knob and CV input allows non-linear control of the motor speed.",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC126 ROTARY EXCITER USER'S GUIDE\n10HP\n100mA on +12V\nMay.2026 Revision.01</p>\n<p>Welcome to:</p>\n<p>WELCOME</p>\n<p>This module features a 7000 RPM brushless motor that rotates a surface with 4 magnets with opposed magnetic poles inducing a rotating magnetic field that will force the strings to vibrate whenever the rotational speed matches the frequency or harmonics of any of the strings tuning.</p>\n<p>A [SPEED] knob and CV input allows non-linear control of the motor speed.</p>"
+      "contentHtml": "<p>ADDAC126 ROTARY EXCITER USER'S GUIDE\n10HP\n100mA on +12V\nJune.2026 Revision.01</p>\n<p>Welcome to:</p>\n<p>WELCOME</p>\n<p>This module features a 7000 RPM brushless motor that rotates a surface with 4 magnets with opposed magnetic poles inducing a rotating magnetic field that will force the strings to vibrate whenever the rotational speed matches the frequency or harmonics of any of the strings tuning.</p>\n<p>A [SPEED] knob and CV input allows non-linear control of the motor speed.</p>"
     },
     {
       "pageNum": 23,
       "image": "/addac120s-strings/pages/page-023.png",
       "title": "Page 23",
       "sectionName": null,
-      "content": "May.2026\n\nUSER'S GUIDE . REV01\n\nADDAC127\n\nEBOW\n\nSLIDER\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "content": "June.2026\n\nUSER'S GUIDE . REV01\n\nADDAC127\n\nEBOW\n\nSLIDER\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>May.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC127</p>\n<p>EBOW</p>\n<p>SLIDER</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "contentHtml": "<p>June.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC127</p>\n<p>EBOW</p>\n<p>SLIDER</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 24,
       "image": "/addac120s-strings/pages/page-024.png",
       "title": "Page 24",
       "sectionName": null,
-      "content": "ADDAC127 EBOW SLIDER USER'S GUIDE\n\n16HP\n\nPassive module\n\nMay.2026   Revision.01\n\nWELCOME\n\nThis module creates a harness and a sliding mechanism for a standard ebow. It allows the user to slide the ebow back and fourth below the strings. The ebow used features the \"PianoBow\" modification (https://ebow.com/diy-mods) where we sand off the Ebow's feet so that it can get closer and avoid touching the strings when sliding it back and fourth.\n\nThe height of the ebow can be raised or lowered using the four thumb screws.\n\nProvided with the Ebow which can be removed and used elsewhere however without its feet, it won't be as easy to use on guitar as a non-modified Ebow.",
+      "content": "ADDAC127 EBOW SLIDER USER'S GUIDE\n\n16HP\n\nPassive module\n\nJune.2026   Revision.01\n\nWELCOME\n\nThis module creates a harness and a sliding mechanism for a standard ebow. It allows the user to slide the ebow back and fourth below the strings. The ebow used features the \"PianoBow\" modification (https://ebow.com/diy-mods) where we sand off the Ebow's feet so that it can get closer and avoid touching the strings when sliding it back and fourth.\n\nThe height of the ebow can be raised or lowered using the four thumb screws.\n\nProvided with the Ebow which can be removed and used elsewhere however without its feet, it won't be as easy to use on guitar as a non-modified Ebow.",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC127 EBOW SLIDER USER'S GUIDE</p>\n<p>16HP</p>\n<p>Passive module</p>\n<p>May.2026   Revision.01</p>\n<p>WELCOME</p>\n<p>This module creates a harness and a sliding mechanism for a standard ebow. It allows the user to slide the ebow back and fourth below the strings. The ebow used features the \"PianoBow\" modification (<a href=\"https://ebow.com/diy-mods\">https://ebow.com/diy-mods</a>) where we sand off the Ebow's feet so that it can get closer and avoid touching the strings when sliding it back and fourth.</p>\n<p>The height of the ebow can be raised or lowered using the four thumb screws.</p>\n<p>Provided with the Ebow which can be removed and used elsewhere however without its feet, it won't be as easy to use on guitar as a non-modified Ebow.</p>"
+      "contentHtml": "<p>ADDAC127 EBOW SLIDER USER'S GUIDE</p>\n<p>16HP</p>\n<p>Passive module</p>\n<p>June.2026   Revision.01</p>\n<p>WELCOME</p>\n<p>This module creates a harness and a sliding mechanism for a standard ebow. It allows the user to slide the ebow back and fourth below the strings. The ebow used features the \"PianoBow\" modification (<a href=\"https://ebow.com/diy-mods\">https://ebow.com/diy-mods</a>) where we sand off the Ebow's feet so that it can get closer and avoid touching the strings when sliding it back and fourth.</p>\n<p>The height of the ebow can be raised or lowered using the four thumb screws.</p>\n<p>Provided with the Ebow which can be removed and used elsewhere however without its feet, it won't be as easy to use on guitar as a non-modified Ebow.</p>"
     },
     {
       "pageNum": 25,
       "image": "/addac120s-strings/pages/page-025.png",
       "title": "Page 25",
       "sectionName": null,
-      "content": "May.2026\n\nUSER'S GUIDE . REV01\n\nADDAC120F\n\nSTRINGS\n\nFRAME\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "content": "June.2026\n\nUSER'S GUIDE . REV01\n\nADDAC120F\n\nSTRINGS\n\nFRAME\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>May.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC120F</p>\n<p>STRINGS</p>\n<p>FRAME</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "contentHtml": "<p>June.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC120F</p>\n<p>STRINGS</p>\n<p>FRAME</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 26,
       "image": "/addac120s-strings/pages/page-026.png",
       "title": "Page 26",
       "sectionName": null,
-      "content": "WELCOME\n\nWe made this frame specifically for our ADDAC12X String modules. This allows for\n\nProtections\n\n90-240V AC Plug with fuse drawer (2 fuses: 1 installed, 1 spare)\n\n122HP\n\n+12V 1.5A\n\n-12V 1.5A\n\n+5V 0.5A (from +12V)",
+      "content": "WELCOME\n\nWe made this frame specifically for our ADDAC12X String modules.\n\nWidth: 122HP\n\nPower Specifications:\n- AC Input: 90v to 240v\n- Output: ±12V\n- Current: 1.5A on the +12V, 1.5A on the -12V\n- Busboards with 19 connectors\n- Our busboards already provide +5V (Draws from +12V, 500mA max. per busboard)\n\nPSU festures shutdown protection for:\n\nOver Current - when maximum current is exceeded (for when a module ribbon cable is reversed)\n\nOver Heating - if the AC Brick is over heating\n\nOver Voltage - if the voltage changes above or below the expected output\n\nIf one of these issues happens then the PSU will enter an intermittent ON/OFF state until the issue is corrected.\n\nThese safety protections will prevent damage to your PSU and consequentially to the modules as well.",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>WELCOME</p>\n<p>We made this frame specifically for our ADDAC12X String modules. This allows for</p>\n<p>Protections</p>\n<p>90-240V AC Plug with fuse drawer (2 fuses: 1 installed, 1 spare)</p>\n<p>122HP</p>\n<p>+12V 1.5A</p>\n<p>-12V 1.5A</p>\n<p>+5V 0.5A (from +12V)</p>"
+      "contentHtml": "<p>WELCOME</p>\n<p>We made this frame specifically for our ADDAC12X String modules.</p>\n<p>Width: 122HP</p>\n<p>Power Specifications:</p>\n<ul>\n<li>AC Input: 90v to 240v</li>\n<li>Output: ±12V</li>\n<li>Current: 1.5A on the +12V, 1.5A on the -12V</li>\n<li>Busboards with 19 connectors</li>\n<li>Our busboards already provide +5V (Draws from +12V, 500mA max. per busboard)</li>\n</ul>\n<p>PSU festures shutdown protection for:</p>\n<p>Over Current - when maximum current is exceeded (for when a module ribbon cable is reversed)</p>\n<p>Over Heating - if the AC Brick is over heating</p>\n<p>Over Voltage - if the voltage changes above or below the expected output</p>\n<p>If one of these issues happens then the PSU will enter an intermittent ON/OFF state until the issue is corrected.</p>\n<p>These safety protections will prevent damage to your PSU and consequentially to the modules as well.</p>"
     },
     {
       "pageNum": 27,
       "image": "/addac120s-strings/pages/page-027.png",
       "title": "Page 27",
       "sectionName": null,
-      "content": "For feedback, comments or problems please contact us at:\n\naddac@addacsystem.com\n\nADDAC120s SERIES USER'S GUIDE\n\nMay.2026 Revision.01",
+      "content": "For feedback, comments or problems please contact us at:\n\naddac@addacsystem.com\n\nADDAC120s SERIES USER'S GUIDE\n\nJune.2026 Revision.01",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>For feedback, comments or problems please contact us at:</p>\n<p><a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC120s SERIES USER'S GUIDE</p>\n<p>May.2026 Revision.01</p>"
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:</p>\n<p><a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC120s SERIES USER'S GUIDE</p>\n<p>June.2026 Revision.01</p>"
     }
   ]
 }
