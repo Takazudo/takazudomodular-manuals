@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "processedAt": "2026-06-17T17:51:46.320Z",
+    "processedAt": "2026-06-19T19:11:19.425Z",
     "language": "ja",
     "translationMethod": "claude-code-subagent-page-by-page",
     "imageFormat": "png",
@@ -12,10 +12,10 @@
       "image": "/addac120s-strings/pages/page-001.png",
       "title": "Page 1",
       "sectionName": null,
-      "content": "May.2026\nUSER'S GUIDE . REV01\n\nADDAC120s\nFOUR STRINGS SERIES\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "content": "June.2026\nUSER'S GUIDE . REV01\n\nADDAC120s\nFOUR STRINGS SERIES\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>May.2026\nUSER'S GUIDE . REV01</p>\n<p>ADDAC120s\nFOUR STRINGS SERIES</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "contentHtml": "<p>June.2026\nUSER'S GUIDE . REV01</p>\n<p>ADDAC120s\nFOUR STRINGS SERIES</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 2,
@@ -52,10 +52,10 @@
       "image": "/addac120s-strings/pages/page-005.png",
       "title": "Page 5",
       "sectionName": null,
-      "content": "STRING SYSTEMS\n\nパックとして販売されている3つのセレクトされたシステムをご紹介します。\nスタンドアロンシステムは組み立て済みの状態で出荷されます。\n\nINTRO STRING SYSTEM（フレームなし）\n\nSTANDALONE STRING SYSTEM #1（フレームあり）\n\nSTANDALONE STRING SYSTEM #2（フレームあり）",
+      "content": "STRING SYSTEMS\n\nここでは、パックとして販売されている3つの厳選システムをご紹介します。\n\nスタンドアロンシステムは組み立て済みの状態で出荷されます。\n\nSTRINGS BASIC SYSTEM（フレームなし）\n\nSTRINGS HUMBUCKER SYSTEM（122HP または 197HP フレーム付き）\n\nSTRINGS QUADRAPHONIC SYSTEM（122HP または 197HP フレーム付き）",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>STRING SYSTEMS</p>\n<p>パックとして販売されている3つのセレクトされたシステムをご紹介します。\nスタンドアロンシステムは組み立て済みの状態で出荷されます。</p>\n<p>INTRO STRING SYSTEM（フレームなし）</p>\n<p>STANDALONE STRING SYSTEM #1（フレームあり）</p>\n<p>STANDALONE STRING SYSTEM #2（フレームあり）</p>"
+      "contentHtml": "<p>STRING SYSTEMS</p>\n<p>ここでは、パックとして販売されている3つの厳選システムをご紹介します。</p>\n<p>スタンドアロンシステムは組み立て済みの状態で出荷されます。</p>\n<p>STRINGS BASIC SYSTEM（フレームなし）</p>\n<p>STRINGS HUMBUCKER SYSTEM（122HP または 197HP フレーム付き）</p>\n<p>STRINGS QUADRAPHONIC SYSTEM（122HP または 197HP フレーム付き）</p>"
     },
     {
       "pageNum": 6,
@@ -142,10 +142,10 @@
       "image": "/addac120s-strings/pages/page-014.png",
       "title": "Page 14",
       "sectionName": null,
-      "content": "ADDAC122 QUADRAPHONIC PICKUP ユーザーズガイド\n\n14HP\n80mA on +12V\n60mA on -12V\nMay.2026　Revision.01\n\nWELCOME\n\nこれは、各弦を独立してキャプチャできるQuadraphonic（4チャンネル）ピックアップです。一般的ではありませんが、Hexaphonicギターピックアップは1980年代に開発されました。モノラル出力からすべての弦をデコードする代わりに、ギターシンセサイザーが各弦を独立して検出できるようにし、より正確な検出を実現するためのものです。\n\n4つの独立したピックアップのように考えることができ、それぞれが独自のプリアンプ、独立したVolumeコントロール、および出力ジャックを備えています。\n\nMono Mix出力（ポストVolume）も利用可能です。\n\nすべての出力はシンセレベルです。\n\nすべてのコイルは手巻きで、Alnico 5スラグを使用したスタック式ハムバッカーです。各コイルは44AWGポリウレタン線を使用して20,000ターン巻かれており、抵抗値は約7.4kΩです。\n\nピックアップの高さは、取り付けネジを使用して調整できます。",
+      "content": "ADDAC122 QUADRAPHONIC PICKUP ユーザーズガイド\n\n14HP\n80mA on +12V\n60mA on -12V\nJune.2026　Revision.01\n\nWELCOME\n\nこれは、各弦を独立してキャプチャできるQuadraphonic（4チャンネル）ピックアップです。一般的ではありませんが、Hexaphonicギターピックアップは1980年代に開発されました。モノラル出力からすべての弦をデコードする代わりに、ギターシンセサイザーが各弦を独立して検出できるようにし、より正確な検出を実現するためのものです。\n\n4つの独立したピックアップのように考えることができ、それぞれが独自のプリアンプ、独立したVolumeコントロール、および出力ジャックを備えています。\n\nMono Mix出力（ポストVolume）も利用可能です。\n\nすべての出力はシンセレベルです。\n\nすべてのコイルは手巻きで、Alnico 5スラグを使用したスタック式ハムバッカーです。各コイルは44AWGポリウレタン線を使用して20,000ターン巻かれており、抵抗値は約7.4kΩです。\n\nピックアップの高さは、取り付けネジを使用して調整できます。",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC122 QUADRAPHONIC PICKUP ユーザーズガイド</p>\n<p>14HP\n80mA on +12V\n60mA on -12V\nMay.2026　Revision.01</p>\n<p>WELCOME</p>\n<p>これは、各弦を独立してキャプチャできるQuadraphonic（4チャンネル）ピックアップです。一般的ではありませんが、Hexaphonicギターピックアップは1980年代に開発されました。モノラル出力からすべての弦をデコードする代わりに、ギターシンセサイザーが各弦を独立して検出できるようにし、より正確な検出を実現するためのものです。</p>\n<p>4つの独立したピックアップのように考えることができ、それぞれが独自のプリアンプ、独立したVolumeコントロール、および出力ジャックを備えています。</p>\n<p>Mono Mix出力（ポストVolume）も利用可能です。</p>\n<p>すべての出力はシンセレベルです。</p>\n<p>すべてのコイルは手巻きで、Alnico 5スラグを使用したスタック式ハムバッカーです。各コイルは44AWGポリウレタン線を使用して20,000ターン巻かれており、抵抗値は約7.4kΩです。</p>\n<p>ピックアップの高さは、取り付けネジを使用して調整できます。</p>"
+      "contentHtml": "<p>ADDAC122 QUADRAPHONIC PICKUP ユーザーズガイド</p>\n<p>14HP\n80mA on +12V\n60mA on -12V\nJune.2026　Revision.01</p>\n<p>WELCOME</p>\n<p>これは、各弦を独立してキャプチャできるQuadraphonic（4チャンネル）ピックアップです。一般的ではありませんが、Hexaphonicギターピックアップは1980年代に開発されました。モノラル出力からすべての弦をデコードする代わりに、ギターシンセサイザーが各弦を独立して検出できるようにし、より正確な検出を実現するためのものです。</p>\n<p>4つの独立したピックアップのように考えることができ、それぞれが独自のプリアンプ、独立したVolumeコントロール、および出力ジャックを備えています。</p>\n<p>Mono Mix出力（ポストVolume）も利用可能です。</p>\n<p>すべての出力はシンセレベルです。</p>\n<p>すべてのコイルは手巻きで、Alnico 5スラグを使用したスタック式ハムバッカーです。各コイルは44AWGポリウレタン線を使用して20,000ターン巻かれており、抵抗値は約7.4kΩです。</p>\n<p>ピックアップの高さは、取り付けネジを使用して調整できます。</p>"
     },
     {
       "pageNum": 15,
@@ -232,10 +232,10 @@
       "image": "/addac120s-strings/pages/page-023.png",
       "title": "Page 23",
       "sectionName": null,
-      "content": "May.2026\n\nUSER'S GUIDE . REV01\n\nADDAC127\n\nEBOW\n\nSLIDER\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "content": "June.2026\n\nUSER'S GUIDE . REV01\n\nADDAC127\n\nEBOW\n\nSLIDER\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>May.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC127</p>\n<p>EBOW</p>\n<p>SLIDER</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "contentHtml": "<p>June.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC127</p>\n<p>EBOW</p>\n<p>SLIDER</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 24,
@@ -252,20 +252,20 @@
       "image": "/addac120s-strings/pages/page-025.png",
       "title": "Page 25",
       "sectionName": null,
-      "content": "May.2026\n\nUSER'S GUIDE . REV01\n\nADDAC120F\n\nSTRINGS\n\nFRAME\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "content": "June.2026\n\nUSER'S GUIDE . REV01\n\nADDAC120F\n\nSTRINGS\n\nFRAME\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>May.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC120F</p>\n<p>STRINGS</p>\n<p>FRAME</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "contentHtml": "<p>June.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC120F</p>\n<p>STRINGS</p>\n<p>FRAME</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 26,
       "image": "/addac120s-strings/pages/page-026.png",
       "title": "Page 26",
       "sectionName": null,
-      "content": "WELCOME\n\nADDAC12X Stringモジュール専用に設計されたフレームです。\n\nProtections\n\n90-240V AC プラグ（ヒューズドロワー付き：1本取り付け済み、1本スペア）\n\n122HP\n\n+12V 1.5A\n\n-12V 1.5A\n\n+5V 0.5A (+12Vより供給)",
+      "content": "WELCOME\n\nADDAC12X Stringモジュール専用に設計されたフレームです。\n\nWidth: 122HP\n\nPower Specifications:\n- AC Input: 90v to 240v\n- Output: ±12V\n- Current: +12Vに1.5A、-12Vに1.5A\n- 19コネクター搭載のBusboards\n- Busboardはすでに+5Vを供給しています（+12Vから供給、Busboardあたり最大500mA）\n\nPSUは以下の状況に対するシャットダウン保護機能を備えています。\n\nOver Current - 最大電流を超えた場合（モジュールのリボンケーブルが逆接続された場合など）\n\nOver Heating - AC Brickが過熱した場合\n\nOver Voltage - 電圧が期待される出力値を上回るか下回る場合\n\nこれらの問題が発生した場合、PSUは問題が解決されるまで断続的なON/OFFの状態に入ります。\n\nこれらの安全保護機能により、PSUへのダメージ、ひいてはモジュールへのダメージを防ぐことができます。",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>WELCOME</p>\n<p>ADDAC12X Stringモジュール専用に設計されたフレームです。</p>\n<p>Protections</p>\n<p>90-240V AC プラグ（ヒューズドロワー付き：1本取り付け済み、1本スペア）</p>\n<p>122HP</p>\n<p>+12V 1.5A</p>\n<p>-12V 1.5A</p>\n<p>+5V 0.5A (+12Vより供給)</p>"
+      "contentHtml": "<p>WELCOME</p>\n<p>ADDAC12X Stringモジュール専用に設計されたフレームです。</p>\n<p>Width: 122HP</p>\n<p>Power Specifications:</p>\n<ul>\n<li>AC Input: 90v to 240v</li>\n<li>Output: ±12V</li>\n<li>Current: +12Vに1.5A、-12Vに1.5A</li>\n<li>19コネクター搭載のBusboards</li>\n<li>Busboardはすでに+5Vを供給しています（+12Vから供給、Busboardあたり最大500mA）</li>\n</ul>\n<p>PSUは以下の状況に対するシャットダウン保護機能を備えています。</p>\n<p>Over Current - 最大電流を超えた場合（モジュールのリボンケーブルが逆接続された場合など）</p>\n<p>Over Heating - AC Brickが過熱した場合</p>\n<p>Over Voltage - 電圧が期待される出力値を上回るか下回る場合</p>\n<p>これらの問題が発生した場合、PSUは問題が解決されるまで断続的なON/OFFの状態に入ります。</p>\n<p>これらの安全保護機能により、PSUへのダメージ、ひいてはモジュールへのダメージを防ぐことができます。</p>"
     },
     {
       "pageNum": 27,
