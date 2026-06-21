@@ -179,13 +179,35 @@ export function PageViewer({
     deactivateZoom();
   }, [deactivateZoom]);
 
-  // Check if image is already loaded on mount (handles cached images).
-  // useLayoutEffect runs before paint, preventing flicker.
+  // Clear the loading overlay for an already-loaded (cached) image. This is the
+  // common path after ManualApp swaps the SSR body for the real PageViewer: the
+  // fresh <img> points at a PNG the browser already cached, so its `load` event
+  // can fire in the gap before Preact's onLoad listener is effective, and
+  // `complete` may not yet be true at this synchronous mount-time snapshot.
+  // Relying on either alone left the overlay stuck at opacity-100 over a fully
+  // loaded image (intermittent "spinner never goes away; reload fixes it").
+  // We check now AND re-check on the next frame as a safety net; onLoad still
+  // covers the genuinely-uncached case. page.image is in the deps so a src
+  // change (client-side navigation) re-evaluates.
   useLayoutEffect(() => {
-    if (imgRef.current?.complete && (imgRef.current?.naturalWidth ?? 0) > 0) {
-      setIsLoading(false);
+    const clearIfComplete = () => {
+      const img = imgRef.current;
+      if (img?.complete && img.naturalWidth > 0) {
+        setIsLoading(false);
+        return true;
+      }
+      return false;
+    };
+    if (clearIfComplete()) return;
+    // Re-check after the current frame. Prefer rAF; fall back to a macrotask in
+    // any environment where rAF is unavailable, so the effect never throws.
+    if (typeof requestAnimationFrame === 'function') {
+      const raf = requestAnimationFrame(clearIfComplete);
+      return () => cancelAnimationFrame(raf);
     }
-  }, [currentPage, manualId]);
+    const timer = setTimeout(clearIfComplete, 0);
+    return () => clearTimeout(timer);
+  }, [currentPage, manualId, page.image]);
 
   // Reset loading state when navigating to a different page
   useEffect(() => {

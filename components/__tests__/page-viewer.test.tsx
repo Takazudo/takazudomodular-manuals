@@ -9,7 +9,7 @@
  * onNavigateHome as callbacks; navigation is owned by the island.
  */
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, render, screen } from '@testing-library/preact';
+import { act, cleanup, fireEvent, render, screen } from '@testing-library/preact';
 import type { ManualPage } from '@/lib/types/manual';
 import { PageViewer } from '../zfb/page-viewer';
 
@@ -193,5 +193,83 @@ describe('PageViewer — scroll reset on navigation', () => {
     );
 
     expect(translationCol.scrollTop).toBe(600);
+  });
+});
+
+describe('PageViewer — loading overlay', () => {
+  const renderPage = () =>
+    render(
+      <PageViewer
+        page={pageWithContent('ja')}
+        lang="ja"
+        currentPage={1}
+        totalPages={10}
+        manualId="oxi-one-mk2"
+        onNavigate={vi.fn()}
+        onNavigateHome={vi.fn()}
+      />,
+    );
+
+  it('clears the loading overlay once the image fires its load event', () => {
+    renderPage();
+    const overlay = screen.getByTestId('page-image-overlay');
+    expect(overlay.className).toContain('opacity-100');
+
+    fireEvent.load(screen.getByTestId('page-image'));
+
+    expect(overlay.className).toContain('opacity-0');
+    expect(overlay.className).not.toContain('opacity-100');
+  });
+
+  // Regression: after ManualApp swaps the SSR body for the real PageViewer, the
+  // fresh <img> points at an already-cached PNG. Its `load` event can fire in
+  // the gap before Preact's onLoad listener is effective, and `complete` may not
+  // yet be true at the synchronous mount-time check — leaving the overlay stuck
+  // at opacity-100 over a fully loaded image. The post-mount rAF re-check must
+  // clear it even though onLoad never fires. (Without the re-check this hangs.)
+  it('clears the loading overlay for a cached image even when onLoad never fires', () => {
+    const proto = window.HTMLImageElement.prototype;
+    const origComplete = Object.getOwnPropertyDescriptor(proto, 'complete');
+    const origNaturalWidth = Object.getOwnPropertyDescriptor(proto, 'naturalWidth');
+    let imgComplete = false;
+    Object.defineProperty(proto, 'complete', { configurable: true, get: () => imgComplete });
+    Object.defineProperty(proto, 'naturalWidth', {
+      configurable: true,
+      get: () => (imgComplete ? 800 : 0),
+    });
+
+    // Capture the scheduled rAF callback so we can fire it deterministically
+    // after flipping the image to "cached/complete" — no onLoad event is ever
+    // dispatched, mirroring the missed-listener race.
+    let rafCb: FrameRequestCallback | null = null;
+    const rafSpy = vi
+      .spyOn(globalThis, 'requestAnimationFrame')
+      .mockImplementation((cb: FrameRequestCallback) => {
+        rafCb = cb;
+        return 1;
+      });
+    const cafSpy = vi.spyOn(globalThis, 'cancelAnimationFrame').mockImplementation(() => {});
+
+    try {
+      renderPage();
+      const overlay = screen.getByTestId('page-image-overlay');
+      // Image not yet complete at mount → overlay still showing, rAF scheduled.
+      expect(overlay.className).toContain('opacity-100');
+      expect(rafCb).not.toBeNull();
+
+      // The cached image becomes complete with no load event firing.
+      imgComplete = true;
+      act(() => {
+        rafCb?.(0);
+      });
+
+      expect(overlay.className).toContain('opacity-0');
+      expect(overlay.className).not.toContain('opacity-100');
+    } finally {
+      rafSpy.mockRestore();
+      cafSpy.mockRestore();
+      if (origComplete) Object.defineProperty(proto, 'complete', origComplete);
+      if (origNaturalWidth) Object.defineProperty(proto, 'naturalWidth', origNaturalWidth);
+    }
   });
 });
