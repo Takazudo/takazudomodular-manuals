@@ -199,8 +199,14 @@ export function PageViewer({
       return false;
     };
     if (clearIfComplete()) return;
-    const raf = requestAnimationFrame(clearIfComplete);
-    return () => cancelAnimationFrame(raf);
+    // Re-check after the current frame. Prefer rAF; fall back to a macrotask in
+    // any environment where rAF is unavailable, so the effect never throws.
+    if (typeof requestAnimationFrame === 'function') {
+      const raf = requestAnimationFrame(clearIfComplete);
+      return () => cancelAnimationFrame(raf);
+    }
+    const timer = setTimeout(clearIfComplete, 0);
+    return () => clearTimeout(timer);
   }, [currentPage, manualId, page.image]);
 
   // Reset loading state when navigating to a different page
