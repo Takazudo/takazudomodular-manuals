@@ -1,8 +1,13 @@
+# script-src must allow https://static.cloudflareinsights.com: Cloudflare
+# auto-injects the Web Analytics beacon (beacon.min.js) at the edge, so it is
+# not in our source. The beacon reports RUM to the same origin (/cdn-cgi/rum),
+# which connect-src 'self' already covers, so only the script host is needed.
+# See https://developers.cloudflare.com/web-analytics/
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-hIolMSvWhopr46DqQi50arv0b3/qeN3LLlH0NTMq3K8='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'sha256-hIolMSvWhopr46DqQi50arv0b3/qeN3LLlH0NTMq3K8='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'
 
 /doc
   ! Content-Security-Policy
