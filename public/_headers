@@ -1,8 +1,5 @@
-# script-src must allow https://static.cloudflareinsights.com: Cloudflare
-# auto-injects the Web Analytics beacon (beacon.min.js) at the edge, so it is
-# not in our source. The beacon reports RUM to the same origin (/cdn-cgi/rum),
-# which connect-src 'self' already covers, so only the script host is needed.
-# See https://developers.cloudflare.com/web-analytics/
+# script-src allows static.cloudflareinsights.com for the edge-injected
+# Cloudflare Web Analytics beacon — rationale in doc/.../infrastructure/csp.md
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff

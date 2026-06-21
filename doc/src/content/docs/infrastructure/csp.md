@@ -13,10 +13,12 @@ The zmanuals site (`manuals.takazudomodular.com`) enforces a Content Security Po
 ## Enforced directive (viewer surface `/*`)
 
 ```
-Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-hIolMSvWhopr46DqQi50arv0b3/qeN3LLlH0NTMq3K8='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'
+Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'sha256-hIolMSvWhopr46DqQi50arv0b3/qeN3LLlH0NTMq3K8='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'
 ```
 
 - `script-src`: uses the SHA-256 hash of `LANG_BOOTSTRAP_SCRIPT` (the only inline script, defined as a build-time constant in `layouts/default.tsx`). When a hash is present browsers ignore `'unsafe-inline'`, so no unsafe token is needed.
+
+- `script-src` also allows `https://static.cloudflareinsights.com`: Cloudflare auto-injects the [Web Analytics](https://developers.cloudflare.com/web-analytics/) beacon (`beacon.min.js`) at the edge — it is not in our source, so a hash cannot cover it and the host must be allow-listed instead. Without this the beacon is blocked and every page logs a `script-src` CSP violation. The beacon reports RUM to the same origin (`/cdn-cgi/rum`), which `connect-src 'self'` already covers, so no `connect-src` change is needed.
 
   The hash was computed from the literal script string:
 
