@@ -434,6 +434,8 @@ After translation drafts exist, run the full post-translation chain in this orde
 
 **Note:** `pdf:manifest` regenerates the manifest from scratch, so if it runs after `pdf:search-index` the `searchIndexVersion` is dropped — it is re-stamped later by the production `pnpm build` (verification phase, Step 12), which runs `pdf:search-index:all`. This matches how every existing manual is built, so no manual re-run is needed.
 
+**REQUIRED before committing — Prettier-format the generated JSON.** `pdf:build` writes `pages-ja.json` / `pages-en.json` via `JSON.stringify`, whose style does **not** match the repo's Prettier config. The CI "Code Quality Checks" gate runs `prettier --check` over `**/*.json` and **will fail** on the new manual's data files otherwise. Run `pnpm format:fix` (or scope it: `pnpm exec prettier --write public/<slug>/data/*.json`) after the build chain and before `git commit`. This is not optional — every new manual hits it.
+
 ### Step 7: Update Manifest with User-Provided Metadata (REQUIRED)
 
 **After manifest creation, update the manifest with brand name, title, productSlug, and updatedAt collected in Step 0:**
