@@ -1,0 +1,35 @@
+{
+  "projectName": "zmanuals-doc",
+  "defaultLang": "en",
+  "colorSchemeMode": "light-dark",
+  "lightScheme": "Default Light",
+  "darkScheme": "Default Dark",
+  "defaultMode": "dark",
+  "respectPrefersColorScheme": true,
+  "features": [
+    "search",
+    "imageEnlarge",
+    "claudeResources",
+    "sidebarResizer",
+    "sidebarToggle",
+    "docHistory",
+    "bodyFootUtil"
+  ],
+  "cjkFriendly": true,
+  "packageManager": "pnpm",
+  "noindex": true,
+  "siteUrl": "https://doc-manuals.takazudomodular.com",
+  "headerRightItems": [
+    { "type": "component", "component": "github-link" },
+    { "type": "component", "component": "theme-toggle" },
+    { "type": "component", "component": "search" }
+  ],
+  "metaTags": {
+    "description": true,
+    "keywords": "",
+    "ogImage": "/img/ogp.png",
+    "ogSiteName": true,
+    "twitterCard": "summary_large_image",
+    "twitterCreator": "@Takazudo"
+  }
+}
