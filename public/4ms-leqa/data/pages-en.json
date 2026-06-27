@@ -1,0 +1,371 @@
+{
+  "metadata": {
+    "processedAt": "2026-06-27T17:47:23.462Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/4ms-leqa/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "Leveling EQ Amplifier\n\n4ms Company\n\nUser Manual 1.0\n\nApril 28th, 2026\n\n4mscompany.com/leqa",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Leveling EQ Amplifier</p>\n<p>4ms Company</p>\n<p>User Manual 1.0</p>\n<p>April 28th, 2026</p>\n<p>4mscompany.com/leqa</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/4ms-leqa/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "Table of Contents\n\nFeatures..............................................................................................4\n\nGetting Started ...................................................................................5\nPlugging in your Leveling EQ Amplifier ..............................5\n\nStereo Width Processor\nMono Mode ........................................................................................7\nHaas Effect .........................................................................7\nMid/Side Processing ..........................................................8\nWidth Control in Mono Mode .............................................8\n\nStereo Mode.....................................................................................10\n\nStereo Width Processor Tips............................................................11\nSummary Chart ................................................................12\n\nEqualizer\nFilters................................................................................................14\nRouting .............................................................................................17\nEQ Frequency Plots..........................................................................18\nEQ tips and tricks .............................................................................24\n\nCompressor\nCompressor tips and tricks ..............................................................32\n\nSystem\nUpgrading Firmware.........................................................................33\nListen IO Connections ......................................................................34\nElectrical and Mechanical Specifications.........................................35\nAcknowledgements ..........................................................................35",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Table of Contents</p>\n<p>Features..............................................................................................4</p>\n<p>Getting Started ...................................................................................5\nPlugging in your Leveling EQ Amplifier ..............................5</p>\n<p>Stereo Width Processor\nMono Mode ........................................................................................7\nHaas Effect .........................................................................7\nMid/Side Processing ..........................................................8\nWidth Control in Mono Mode .............................................8</p>\n<p>Stereo Mode.....................................................................................10</p>\n<p>Stereo Width Processor Tips............................................................11\nSummary Chart ................................................................12</p>\n<p>Equalizer\nFilters................................................................................................14\nRouting .............................................................................................17\nEQ Frequency Plots..........................................................................18\nEQ tips and tricks .............................................................................24</p>\n<p>Compressor\nCompressor tips and tricks ..............................................................32</p>\n<p>System\nUpgrading Firmware.........................................................................33\nListen IO Connections ......................................................................34\nElectrical and Mechanical Specifications.........................................35\nAcknowledgements ..........................................................................35</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/4ms-leqa/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "The Leveling EQ Amplifier is an end-of-chain audio processor designed to polish individual elements of a patch, stereo bus, or full master bus.\n\nInspired by the simple interfaces and pleasing sounds of two iconic cornerstones of mixing, the LA-2A optical compressor and the 1073 EQ, the LEQA combines a compressor, an equalizer, and a modern Stereo Width Processor in one 14HP package.\n\nRather than being fully parametric, pre-defined curves and frequency selections make the art of mixing intuitive. Very little effort is needed for great sounding results.\n\nThe compressor mimics optical compression, a beautifully simple concept that yields incredibly musical mixes.\n\nThe EQ section is built to help accentuate and excite your mix, clear up muddled sounds, and increase the overall headroom.\n\nThe Stereo Width Processor adjusts the stereo image, letting you dial back a wide image into a cohesive sound, or push a normal stereo signal into \"super stereo\" territory. When used with mono sources, it can stereo-ize using a combination of psychoacoustic techniques.\n\nThe Leveling EQ Amplifier excels in live performances, studio work, subtle utility tasks, extreme sonic sculpting, audio \"glue\" to hold a patch together, and as an effect in its own right.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>The Leveling EQ Amplifier is an end-of-chain audio processor designed to polish individual elements of a patch, stereo bus, or full master bus.</p>\n<p>Inspired by the simple interfaces and pleasing sounds of two iconic cornerstones of mixing, the LA-2A optical compressor and the 1073 EQ, the LEQA combines a compressor, an equalizer, and a modern Stereo Width Processor in one 14HP package.</p>\n<p>Rather than being fully parametric, pre-defined curves and frequency selections make the art of mixing intuitive. Very little effort is needed for great sounding results.</p>\n<p>The compressor mimics optical compression, a beautifully simple concept that yields incredibly musical mixes.</p>\n<p>The EQ section is built to help accentuate and excite your mix, clear up muddled sounds, and increase the overall headroom.</p>\n<p>The Stereo Width Processor adjusts the stereo image, letting you dial back a wide image into a cohesive sound, or push a normal stereo signal into \"super stereo\" territory. When used with mono sources, it can stereo-ize using a combination of psychoacoustic techniques.</p>\n<p>The Leveling EQ Amplifier excels in live performances, studio work, subtle utility tasks, extreme sonic sculpting, audio \"glue\" to hold a patch together, and as an effect in its own right.</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/4ms-leqa/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "Features\n\nStereo Width\n\n- Mono to stereo conversion using a unique take on the Haas Effect\n\n- Stereo field manipulation for tightening a stereo image, stereo-to-mono conversion, or larger-than-life super stereo effects\n\n- Knob and CV control over stereo width\n\nEqualization\n\n- Four filters with tailored frequencies for maximum musicality\n\n- Low-shelf, Mid-range bell, and High-shelf filters with boost/cut controls, plus an additional High-pass with selectable frequency\n\n- Flexible routing that allows the EQ to be pre- or post-compressor section, or bypassed\n\n- Global selectable EQ gain for detailed control or drastic effects\n\nCompressor\n\n- Compression and limiting inspired by optical compression from the 1970s, with two ratios: 3:1 (Comp) and 10:1 (Limit)\n\n- Controllable gain reduction and make-up gain\n\n- VU-meter displays gain reduction in real time\n\n- Dry/wet mix control over compression for parallel compression application\n\n- Bypass switch",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Features</p>\n<p>Stereo Width</p>\n<ul>\n<li>\n<p>Mono to stereo conversion using a unique take on the Haas Effect</p>\n</li>\n<li>\n<p>Stereo field manipulation for tightening a stereo image, stereo-to-mono conversion, or larger-than-life super stereo effects</p>\n</li>\n<li>\n<p>Knob and CV control over stereo width</p>\n</li>\n</ul>\n<p>Equalization</p>\n<ul>\n<li>\n<p>Four filters with tailored frequencies for maximum musicality</p>\n</li>\n<li>\n<p>Low-shelf, Mid-range bell, and High-shelf filters with boost/cut controls, plus an additional High-pass with selectable frequency</p>\n</li>\n<li>\n<p>Flexible routing that allows the EQ to be pre- or post-compressor section, or bypassed</p>\n</li>\n<li>\n<p>Global selectable EQ gain for detailed control or drastic effects</p>\n</li>\n</ul>\n<p>Compressor</p>\n<ul>\n<li>\n<p>Compression and limiting inspired by optical compression from the 1970s, with two ratios: 3:1 (Comp) and 10:1 (Limit)</p>\n</li>\n<li>\n<p>Controllable gain reduction and make-up gain</p>\n</li>\n<li>\n<p>VU-meter displays gain reduction in real time</p>\n</li>\n<li>\n<p>Dry/wet mix control over compression for parallel compression application</p>\n</li>\n<li>\n<p>Bypass switch</p>\n</li>\n</ul>"
+    },
+    {
+      "pageNum": 5,
+      "image": "/4ms-leqa/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "Getting Started\n\nPlugging in your Leveling EQ Amplifier\n\n1. Power off your Eurorack system.\n\n2. A 10-to-16-pin ribbon cable is included. Attach the 10-pin end to the Leveling EQ Amplifier with the red stripe towards the bottom of the module (matching the white stripe and the words \"POWER\" and \"-12V\" written on the PCB). Attach the other end to a 16-pin Eurorack power header on your power supply distribution system, making sure the red stripe matches the -12V side on the power distribution board.\n\n3. Using the included M3 screws (or other screws that fit your rails) securely attach the Leveling EQ Amplifier to the rails of your case.\n\n4. Power on your Eurorack system.\n\nNote: The Leveling EQ Amplifier is reverse-polarity protected, but incorrectly connecting any module can damage any other module on the power bus.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Getting Started</p>\n<p>Plugging in your Leveling EQ Amplifier</p>\n<ol>\n<li>\n<p>Power off your Eurorack system.</p>\n</li>\n<li>\n<p>A 10-to-16-pin ribbon cable is included. Attach the 10-pin end to the Leveling EQ Amplifier with the red stripe towards the bottom of the module (matching the white stripe and the words \"POWER\" and \"-12V\" written on the PCB). Attach the other end to a 16-pin Eurorack power header on your power supply distribution system, making sure the red stripe matches the -12V side on the power distribution board.</p>\n</li>\n<li>\n<p>Using the included M3 screws (or other screws that fit your rails) securely attach the Leveling EQ Amplifier to the rails of your case.</p>\n</li>\n<li>\n<p>Power on your Eurorack system.</p>\n</li>\n</ol>\n<p>Note: The Leveling EQ Amplifier is reverse-polarity protected, but incorrectly connecting any module can damage any other module on the power bus.</p>"
+    },
+    {
+      "pageNum": 6,
+      "image": "/4ms-leqa/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "Stereo Width Processor\n\nThe stereo width processor creates a rich stereo field from a stereo or mono signal by applying a combination of psycho-acoustic techniques to the signals. It's controlled by the Width knob and the Width CV jack (0 to +5V).\n\nThe Stereo Width Processor operates in Mono Mode if only the left input jack is patched, or in Stereo Mode if both left and right input jacks are patched. Each mode behaves differently to create effects in the stereo field.\n\nMono Mode　　Stereo Mode",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Stereo Width Processor</p>\n<p>The stereo width processor creates a rich stereo field from a stereo or mono signal by applying a combination of psycho-acoustic techniques to the signals. It's controlled by the Width knob and the Width CV jack (0 to +5V).</p>\n<p>The Stereo Width Processor operates in Mono Mode if only the left input jack is patched, or in Stereo Mode if both left and right input jacks are patched. Each mode behaves differently to create effects in the stereo field.</p>\n<p>Mono Mode　　Stereo Mode</p>"
+    },
+    {
+      "pageNum": 7,
+      "image": "/4ms-leqa/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "Mono Mode\n\nThe LEQA operates in Mono Mode when only the left input jack is patched (right input unpatched). This mode creates a stereo field by combining two stereo processing techniques: the Haas effect, and Mid/Side processing.\n\nHaas Effect\n\nThe Haas Effect is a psychoacoustic mixing technique that creates a sense of stereo width or spatial depth. An audio signal is duplicated and panned hard left and hard right to each speaker. One of the speakers is delayed by a few milliseconds. When the listener is in the center of the stereo field, the difference in time of arrival between the two speakers tricks the brain's attempt at determining the source of the sound, resulting in the perception of a rich stereo signal.\n\nMono input\n\nListening Position\n\nUnaffected dry signal   ~20ms delayed signal\n\nTHE HAAS EFFECT",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Mono Mode</p>\n<p>The LEQA operates in Mono Mode when only the left input jack is patched (right input unpatched). This mode creates a stereo field by combining two stereo processing techniques: the Haas effect, and Mid/Side processing.</p>\n<p>Haas Effect</p>\n<p>The Haas Effect is a psychoacoustic mixing technique that creates a sense of stereo width or spatial depth. An audio signal is duplicated and panned hard left and hard right to each speaker. One of the speakers is delayed by a few milliseconds. When the listener is in the center of the stereo field, the difference in time of arrival between the two speakers tricks the brain's attempt at determining the source of the sound, resulting in the perception of a rich stereo signal.</p>\n<p>Mono input</p>\n<p>Listening Position</p>\n<p>Unaffected dry signal   ~20ms delayed signal</p>\n<p>THE HAAS EFFECT</p>"
+    },
+    {
+      "pageNum": 8,
+      "image": "/4ms-leqa/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "Mid/Side Processing\n\nMid/Side processing is a method of stereo field manipulation that uses differential mixing. This technique combines a stereo signal in two different ways to create two new signals: \"Mid\" and \"Side\". Mid is the sum of the left and right channels (left + right). Side is the difference of the two channels (left - right). Mid/Side processing creates complex phase relationships as the two channels get subtracted from one another in varying amounts.\n\nMid/Side processing controls the balance between how much the sound appears to be coming from the middle of the stereo field versus the sides of the stereo field.\n\nWidth Control in Mono Mode\n\nThe LEQA combines the Haas Effect and Mid/Side processing to create a stereo signal from the mono input. This unique combination can easily extend into experimental territory by creating larger-than-life stereo fields.\n\nThe Width knob and CV crossfade between different mixes and phase relationships of the dry (original) and wet (delayed) signals. The voltage on the CV jack between 0V and +5V adds to the position of the knob.\n\nWhen the Width control is all the way down, the stereo width processor is bypassed and both channels output the dry signal.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Mid/Side Processing</p>\n<p>Mid/Side processing is a method of stereo field manipulation that uses differential mixing. This technique combines a stereo signal in two different ways to create two new signals: \"Mid\" and \"Side\". Mid is the sum of the left and right channels (left + right). Side is the difference of the two channels (left - right). Mid/Side processing creates complex phase relationships as the two channels get subtracted from one another in varying amounts.</p>\n<p>Mid/Side processing controls the balance between how much the sound appears to be coming from the middle of the stereo field versus the sides of the stereo field.</p>\n<p>Width Control in Mono Mode</p>\n<p>The LEQA combines the Haas Effect and Mid/Side processing to create a stereo signal from the mono input. This unique combination can easily extend into experimental territory by creating larger-than-life stereo fields.</p>\n<p>The Width knob and CV crossfade between different mixes and phase relationships of the dry (original) and wet (delayed) signals. The voltage on the CV jack between 0V and +5V adds to the position of the knob.</p>\n<p>When the Width control is all the way down, the stereo width processor is bypassed and both channels output the dry signal.</p>"
+    },
+    {
+      "pageNum": 9,
+      "image": "/4ms-leqa/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "Turning Width up to about 5% fades in the delayed signal on both outputs.\n\nGradually turning up the Width control to 50% makes the panning of the dry and wet signals go from mono to fully stereo (dry signal hard left, delayed signal hard right).\n\nFrom 50% to 100%, the Width control gradually adds in more of the difference signal, which adds gain and interesting phase relationships.\n\nNote: If you use the LEQA in Mono Mode (starting with a mono signal) and then collapse the stereo outputs back to mono, it's recommended to bypass the Stereo Width section by turning the Width control to 0. The reason is that due to the Haas Effect, when the signal is collapsed to mono the overall effect is perceived as a simple delay. In some applications, this might cause phase cancellation issues.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Turning Width up to about 5% fades in the delayed signal on both outputs.</p>\n<p>Gradually turning up the Width control to 50% makes the panning of the dry and wet signals go from mono to fully stereo (dry signal hard left, delayed signal hard right).</p>\n<p>From 50% to 100%, the Width control gradually adds in more of the difference signal, which adds gain and interesting phase relationships.</p>\n<p>Note: If you use the LEQA in Mono Mode (starting with a mono signal) and then collapse the stereo outputs back to mono, it's recommended to bypass the Stereo Width section by turning the Width control to 0. The reason is that due to the Haas Effect, when the signal is collapsed to mono the overall effect is perceived as a simple delay. In some applications, this might cause phase cancellation issues.</p>"
+    },
+    {
+      "pageNum": 10,
+      "image": "/4ms-leqa/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "Stereo Mode\n\nWhen an audio source is plugged into both the left and right jacks, the LEQA operates in Stereo Mode.\n\nIn this mode, the Width knob and CV control the mix and phase relationships of the two channels directly with no use of delay.\n\nFrom 0% to 50%, the Width control gradually fades from a mono sum (left + right) to fully stereo (left→left, right→right).\n\nFrom 50% to 100%, the Width control fades from fully stereo to \"super stereo\" Mid/Side processed signal by gradually increasing the amount of difference signal.\n\nThis gives the perception of larger-than-life stereo.\n\nStereo input\n\nListening Position",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Stereo Mode</p>\n<p>When an audio source is plugged into both the left and right jacks, the LEQA operates in Stereo Mode.</p>\n<p>In this mode, the Width knob and CV control the mix and phase relationships of the two channels directly with no use of delay.</p>\n<p>From 0% to 50%, the Width control gradually fades from a mono sum (left + right) to fully stereo (left→left, right→right).</p>\n<p>From 50% to 100%, the Width control fades from fully stereo to \"super stereo\" Mid/Side processed signal by gradually increasing the amount of difference signal.</p>\n<p>This gives the perception of larger-than-life stereo.</p>\n<p>Stereo input</p>\n<p>Listening Position</p>"
+    },
+    {
+      "pageNum": 11,
+      "image": "/4ms-leqa/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "Stereo Width Processor Tips\n\n- Mono to stereo conversion: A sound in your patch might be a little lackluster on its own. Perhaps you want the mono drum sound you're using to be perceived as larger. Try patching the drum into the stereo width processor and starting with the Width knob at 50%. It will now sound like the drum is all-enveloping and placed in a large room. Adjust to taste to make it sound bigger or smaller.\n\n- Expansion and contraction: A mono sound on its own, like a drone or a mono pad, might be a little boring sitting in the center of your mix. Plugging it into the stereo width processor and modulating the Width CV jack with a slow-moving LFO can make the sound appear to move out to the sides of the speakers and then back to the middle in an organic wave.\n\n- Taming or overemphasizing wide source material: Sometimes modules have stereo outputs with hard left/right relationships. Take, for instance, the 4ms Ensemble Oscillator, which can route each of the 16 oscillators to hard left or hard right. Sometimes you might want to tame this a bit by bringing the channels closer together, or maybe you're looking for an even more extreme stereo effect to really throw the sounds out to the far sides of the speakers. The Width parameter is an excellent utility for exploring the entire spectrum.\n\n- Enhancing an entire mix: Is your whole mix just not wide enough? Start with the Width knob at 50% and slowly begin",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Stereo Width Processor Tips</p>\n<ul>\n<li>\n<p>Mono to stereo conversion: A sound in your patch might be a little lackluster on its own. Perhaps you want the mono drum sound you're using to be perceived as larger. Try patching the drum into the stereo width processor and starting with the Width knob at 50%. It will now sound like the drum is all-enveloping and placed in a large room. Adjust to taste to make it sound bigger or smaller.</p>\n</li>\n<li>\n<p>Expansion and contraction: A mono sound on its own, like a drone or a mono pad, might be a little boring sitting in the center of your mix. Plugging it into the stereo width processor and modulating the Width CV jack with a slow-moving LFO can make the sound appear to move out to the sides of the speakers and then back to the middle in an organic wave.</p>\n</li>\n<li>\n<p>Taming or overemphasizing wide source material: Sometimes modules have stereo outputs with hard left/right relationships. Take, for instance, the 4ms Ensemble Oscillator, which can route each of the 16 oscillators to hard left or hard right. Sometimes you might want to tame this a bit by bringing the channels closer together, or maybe you're looking for an even more extreme stereo effect to really throw the sounds out to the far sides of the speakers. The Width parameter is an excellent utility for exploring the entire spectrum.</p>\n</li>\n<li>\n<p>Enhancing an entire mix: Is your whole mix just not wide enough? Start with the Width knob at 50% and slowly begin</p>\n</li>\n</ul>"
+    },
+    {
+      "pageNum": 12,
+      "image": "/4ms-leqa/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "turning the knob up into the differential range. Sounds will start to expand far beyond their normal stereo relationships.\n\n- Collapsing a stereo sample to mono: Congratulations — you just found a super-rare breakbeat that no one has ever heard, from the early 1970s. Oh no! The drums were panned in a bizarre way, super far apart from one another. Collapse the signal all the way down to mono, and then patch it into your favorite filter and distortion.\n\n- Overemphasizing reverb: Differential processing is incredible at pulling reverb out of a sound. If you have a patch with lots of reverb, or even a field recording that was captured in a very reverberant space, experimenting with the differential ranges on the Width knob can dramatically bring out the sound of the room in the recording.\n\nSummary Chart\n\nMode - Chan. - Width 0% / 50% / 100%\n\nMono\nL: L→L+Delay / L / L + (L-Delay)/2\nR (input not patched): L→L+Delay / Delay / Delay + (Delay-L)/2\n\nStereo\nL: L+R / L / L + (L-R)/2\nR: L+R / R / R + (R-L)/2",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>turning the knob up into the differential range. Sounds will start to expand far beyond their normal stereo relationships.</p>\n<ul>\n<li>\n<p>Collapsing a stereo sample to mono: Congratulations — you just found a super-rare breakbeat that no one has ever heard, from the early 1970s. Oh no! The drums were panned in a bizarre way, super far apart from one another. Collapse the signal all the way down to mono, and then patch it into your favorite filter and distortion.</p>\n</li>\n<li>\n<p>Overemphasizing reverb: Differential processing is incredible at pulling reverb out of a sound. If you have a patch with lots of reverb, or even a field recording that was captured in a very reverberant space, experimenting with the differential ranges on the Width knob can dramatically bring out the sound of the room in the recording.</p>\n</li>\n</ul>\n<p>Summary Chart</p>\n<p>Mode - Chan. - Width 0% / 50% / 100%</p>\n<p>Mono\nL: L→L+Delay / L / L + (L-Delay)/2\nR (input not patched): L→L+Delay / Delay / Delay + (Delay-L)/2</p>\n<p>Stereo\nL: L+R / L / L + (L-R)/2\nR: L+R / R / R + (R-L)/2</p>"
+    },
+    {
+      "pageNum": 13,
+      "image": "/4ms-leqa/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "Equalizer\n\nThe Equalizer section of the Leveling EQ Amplifier boosts and attenuates specific frequencies of the mix. There are four filters that can be adjusted: a low-shelf filter, a mid-range bell filter, a high-shelf filter, and a high-pass filter.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Equalizer</p>\n<p>The Equalizer section of the Leveling EQ Amplifier boosts and attenuates specific frequencies of the mix. There are four filters that can be adjusted: a low-shelf filter, a mid-range bell filter, a high-shelf filter, and a high-pass filter.</p>"
+    },
+    {
+      "pageNum": 14,
+      "image": "/4ms-leqa/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "The frequencies are selected by pressing a button in each section. All selections made with the buttons are saved and restored on the next power-up.\n\nFilters\n\nLow-shelf: The low-shelf filter is a second-order bi-quad filter with four selectable frequencies: 35Hz, 60Hz, 110Hz, and 220Hz. The shape of the filter is very broad, with the slope in the transition band at roughly 6dB per octave. As you turn the knob, the filter shape changes as the band is boosted or cut. The boost/cut range is ±15dB or ±5dB, as set but the EQ dB setting (see below).\n\nMid-range Bell: The mid-range bell filter is a second-order bi-quad filter with six selectable center frequencies: 360Hz, 700Hz, 1.6kHz, 3.2kHz, 4.8kHz, and 7.2kHz. The shape of the filter is very broad, with a slope approaching 6dB/oct on both sides. As you turn the knob, the filter shape changes as the band is boosted or cut. The boost/cut range is ±15dB or ±5dB, as set but the EQ dB setting (see below).",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>The frequencies are selected by pressing a button in each section. All selections made with the buttons are saved and restored on the next power-up.</p>\n<p>Filters</p>\n<p>Low-shelf: The low-shelf filter is a second-order bi-quad filter with four selectable frequencies: 35Hz, 60Hz, 110Hz, and 220Hz. The shape of the filter is very broad, with the slope in the transition band at roughly 6dB per octave. As you turn the knob, the filter shape changes as the band is boosted or cut. The boost/cut range is ±15dB or ±5dB, as set but the EQ dB setting (see below).</p>\n<p>Mid-range Bell: The mid-range bell filter is a second-order bi-quad filter with six selectable center frequencies: 360Hz, 700Hz, 1.6kHz, 3.2kHz, 4.8kHz, and 7.2kHz. The shape of the filter is very broad, with a slope approaching 6dB/oct on both sides. As you turn the knob, the filter shape changes as the band is boosted or cut. The boost/cut range is ±15dB or ±5dB, as set but the EQ dB setting (see below).</p>"
+    },
+    {
+      "pageNum": 15,
+      "image": "/4ms-leqa/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "High-shelf: The high-shelf filter has a fixed frequency of 10 kHz and a slope of roughly 6dB/oct in the transition band. The filter shape changes as this band boosts and cuts when turning the knob. The boost/cut range is ±15dB or ±5dB, as set by the EQ dB setting (see below).\n\nHigh-pass: The high-pass filter cuts low frequencies. The filter has an 18dB/oct cut when EQ dB is set to +15dB, and 6dB/oct when it's set to +5dB. The light indicates the corner frequency of the filter: 50Hz, 80Hz, 160Hz, or 300Hz. When it's disabled, all lights are off.\n\nEQ Level and Clip light: The EQ Level knob attenuates the output signal of the EQ section. At 0%, the output is silenced, and at 100% there is unity gain. The EQ section has hard-limiting output clipping at ±10 V. When the signal reaches the clip threshold, the Clip light will flash.\n\nEQ dB: To toggle between the two EQ gain modes, push and hold the low-frequency select button for 2 seconds. The EQ dB lights will toggle between +5dB and +15dB to indicate the current gain range for all frequency bands. In normal mixing scenarios, a range of +15dB is often used for individual instruments, giving the mix engineer a wide range of tone control. When using an EQ for program material, mastering applications, or",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>High-shelf: The high-shelf filter has a fixed frequency of 10 kHz and a slope of roughly 6dB/oct in the transition band. The filter shape changes as this band boosts and cuts when turning the knob. The boost/cut range is ±15dB or ±5dB, as set by the EQ dB setting (see below).</p>\n<p>High-pass: The high-pass filter cuts low frequencies. The filter has an 18dB/oct cut when EQ dB is set to +15dB, and 6dB/oct when it's set to +5dB. The light indicates the corner frequency of the filter: 50Hz, 80Hz, 160Hz, or 300Hz. When it's disabled, all lights are off.</p>\n<p>EQ Level and Clip light: The EQ Level knob attenuates the output signal of the EQ section. At 0%, the output is silenced, and at 100% there is unity gain. The EQ section has hard-limiting output clipping at ±10 V. When the signal reaches the clip threshold, the Clip light will flash.</p>\n<p>EQ dB: To toggle between the two EQ gain modes, push and hold the low-frequency select button for 2 seconds. The EQ dB lights will toggle between +5dB and +15dB to indicate the current gain range for all frequency bands. In normal mixing scenarios, a range of +15dB is often used for individual instruments, giving the mix engineer a wide range of tone control. When using an EQ for program material, mastering applications, or</p>"
+    },
+    {
+      "pageNum": 16,
+      "image": "/4ms-leqa/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "stereo busses, a gain range of +5dB is often desirable for a more subtle effect on the material. Boosting and cutting frequencies by only 1 dB or 2 dB is not uncommon in these scenarios, as these adjustments can make very broad changes to the mix. The setting will be saved and restored when you next power up.\n\nPre/Post/Bypass: This three-position switch controls where the EQ sits in the signal chain. Pre and Post refer to whether the EQ is before or after the compressor. When set to Bypass, the EQ is completely removed from the signal chain.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>stereo busses, a gain range of +5dB is often desirable for a more subtle effect on the material. Boosting and cutting frequencies by only 1 dB or 2 dB is not uncommon in these scenarios, as these adjustments can make very broad changes to the mix. The setting will be saved and restored when you next power up.</p>\n<p>Pre/Post/Bypass: This three-position switch controls where the EQ sits in the signal chain. Pre and Post refer to whether the EQ is before or after the compressor. When set to Bypass, the EQ is completely removed from the signal chain.</p>"
+    },
+    {
+      "pageNum": 17,
+      "image": "/4ms-leqa/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "Routing\n\nThe EQ filters are routed in series in the following order:\n\nHigh-pass → Low-shelf → Mid-range → High-shelf\n\nPlacing a high-pass filter before a low-shelf might seem a bit strange— why would you need a secondary cut if you can already cut those frequencies? Having a utility high-pass filter before a bass band lets you remove undesired DC or very low frequencies before boosting the entire shelf. This can improve headroom and the overall definition of the sound, as the very low frequencies are no longer competing with higher frequencies in volume when boosts are applied.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Routing</p>\n<p>The EQ filters are routed in series in the following order:</p>\n<p>High-pass → Low-shelf → Mid-range → High-shelf</p>\n<p>Placing a high-pass filter before a low-shelf might seem a bit strange— why would you need a secondary cut if you can already cut those frequencies? Having a utility high-pass filter before a bass band lets you remove undesired DC or very low frequencies before boosting the entire shelf. This can improve headroom and the overall definition of the sound, as the very low frequencies are no longer competing with higher frequencies in volume when boosts are applied.</p>"
+    },
+    {
+      "pageNum": 18,
+      "image": "/4ms-leqa/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "EQ Frequency Plots",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>EQ Frequency Plots</p>"
+    },
+    {
+      "pageNum": 19,
+      "image": "/4ms-leqa/pages/page-019.png",
+      "title": "Page 19",
+      "sectionName": null,
+      "content": "Page \tof 35\t19\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Page \tof 35\t19</p>\n<p>-- 1 of 1 --</p>"
+    },
+    {
+      "pageNum": 20,
+      "image": "/4ms-leqa/pages/page-020.png",
+      "title": "Page 20",
+      "sectionName": null,
+      "content": "Page \tof 35\t20\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Page \tof 35\t20</p>\n<p>-- 1 of 1 --</p>"
+    },
+    {
+      "pageNum": 21,
+      "image": "/4ms-leqa/pages/page-021.png",
+      "title": "Page 21",
+      "sectionName": null,
+      "content": "Page \tof 35\t21\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Page \tof 35\t21</p>\n<p>-- 1 of 1 --</p>"
+    },
+    {
+      "pageNum": 22,
+      "image": "/4ms-leqa/pages/page-022.png",
+      "title": "Page 22",
+      "sectionName": null,
+      "content": "Page \tof 35\t22\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Page \tof 35\t22</p>\n<p>-- 1 of 1 --</p>"
+    },
+    {
+      "pageNum": 23,
+      "image": "/4ms-leqa/pages/page-023.png",
+      "title": "Page 23",
+      "sectionName": null,
+      "content": "Page \tof 35\t23\n\n-- 1 of 1 --",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Page \tof 35\t23</p>\n<p>-- 1 of 1 --</p>"
+    },
+    {
+      "pageNum": 24,
+      "image": "/4ms-leqa/pages/page-024.png",
+      "title": "Page 24",
+      "sectionName": null,
+      "content": "EQ tips and tricks\n\n- EQ Gain: The EQ dB selection is an important and subtle element of the EQ section. Typically, when mastering audio or working at the stereo-bus level, only a few dB of gain on a frequency band is required. When EQ dB is set to +5dB, the user has precise control when finding delicate sweet spots in the mix. At +15dB, intense and dramatic changes can be made to the sound, but it may be harder to dial in small adjustments.\n\n- Adding \"air\" stereo perception: The high-shelf knob is for boosting and cutting very high frequencies of 10kHz and higher. This band is often referred to as the \"air\" band because, when boosted, it overemphasizes the sound of air movement in a room. Turning this band up can make a mix sound significantly brighter. In some scenarios, it can overemphasize reflections in a room or in a reverb, increasing stereo perception.\n\n- DC/low-frequency content and headroom: Very low frequencies (including DC bias) in sound sources can reduce available headroom in a mix. When these signals get summed and compressed with other sounds in a mix, they push the signal closer to the extremes which lowers the overall headroom and reduces the maximum possible loudness. For many sound sources in a mix, frequencies below 50 or 80Hz are irrelevant and only serve to swallow up volume potential. The high-pass filter is designed to solve this problem.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>EQ tips and tricks</p>\n<ul>\n<li>\n<p>EQ Gain: The EQ dB selection is an important and subtle element of the EQ section. Typically, when mastering audio or working at the stereo-bus level, only a few dB of gain on a frequency band is required. When EQ dB is set to +5dB, the user has precise control when finding delicate sweet spots in the mix. At +15dB, intense and dramatic changes can be made to the sound, but it may be harder to dial in small adjustments.</p>\n</li>\n<li>\n<p>Adding \"air\" stereo perception: The high-shelf knob is for boosting and cutting very high frequencies of 10kHz and higher. This band is often referred to as the \"air\" band because, when boosted, it overemphasizes the sound of air movement in a room. Turning this band up can make a mix sound significantly brighter. In some scenarios, it can overemphasize reflections in a room or in a reverb, increasing stereo perception.</p>\n</li>\n<li>\n<p>DC/low-frequency content and headroom: Very low frequencies (including DC bias) in sound sources can reduce available headroom in a mix. When these signals get summed and compressed with other sounds in a mix, they push the signal closer to the extremes which lowers the overall headroom and reduces the maximum possible loudness. For many sound sources in a mix, frequencies below 50 or 80Hz are irrelevant and only serve to swallow up volume potential. The high-pass filter is designed to solve this problem.</p>\n</li>\n</ul>"
+    },
+    {
+      "pageNum": 25,
+      "image": "/4ms-leqa/pages/page-025.png",
+      "title": "Page 25",
+      "sectionName": null,
+      "content": "Enabling this filter can significantly improve your ability to get more volume out of a mix.\n\n- Frequency masking: Frequency masking occurs when two sounds share a similar sonic footprint in a mix. When two or more sounds share the same frequency content, they can compete with one another for clarity, perceived volume, and the listener's attention. Using the EQ to cut competing frequencies between two sound sources is a simple method to create separation and clarity.\n\n- Sweep and cut: Sometimes a signal contains certain resonances that detract from other aspects of the sound. A tom drum might have too much boomy-ness, which takes away from the attack of the drum sound, or a synth bass might have too much of a click, which reduces its underlying bass content. The \"sweep and cut\" method helps pinpoint and remove these problematic frequencies. Start by turning the EQ Level down to protect your ears and your speakers. Turn the associated EQ knob all the way up. Change the frequency selection until the sound you want to remove is loud and overwhelming. Once you have targeted the frequency causing issues, slowly cut it until the problem goes away.\n\n- The \"Pultec trick\": On the Pultec EQP-1A, a highly regarded EQ, engineers often cut a frequency with the high-pass and then boost that same frequency back up with the low-shelf. It may seem strange, but it actually makes a lot of sense: when you first apply the high-pass filter, you are removing \"problematic\" signals from the sound source that were",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Enabling this filter can significantly improve your ability to get more volume out of a mix.</p>\n<ul>\n<li>\n<p>Frequency masking: Frequency masking occurs when two sounds share a similar sonic footprint in a mix. When two or more sounds share the same frequency content, they can compete with one another for clarity, perceived volume, and the listener's attention. Using the EQ to cut competing frequencies between two sound sources is a simple method to create separation and clarity.</p>\n</li>\n<li>\n<p>Sweep and cut: Sometimes a signal contains certain resonances that detract from other aspects of the sound. A tom drum might have too much boomy-ness, which takes away from the attack of the drum sound, or a synth bass might have too much of a click, which reduces its underlying bass content. The \"sweep and cut\" method helps pinpoint and remove these problematic frequencies. Start by turning the EQ Level down to protect your ears and your speakers. Turn the associated EQ knob all the way up. Change the frequency selection until the sound you want to remove is loud and overwhelming. Once you have targeted the frequency causing issues, slowly cut it until the problem goes away.</p>\n</li>\n<li>\n<p>The \"Pultec trick\": On the Pultec EQP-1A, a highly regarded EQ, engineers often cut a frequency with the high-pass and then boost that same frequency back up with the low-shelf. It may seem strange, but it actually makes a lot of sense: when you first apply the high-pass filter, you are removing \"problematic\" signals from the sound source that were</p>\n</li>\n</ul>"
+    },
+    {
+      "pageNum": 26,
+      "image": "/4ms-leqa/pages/page-026.png",
+      "title": "Page 26",
+      "sectionName": null,
+      "content": "previously mentioned. Reinforcing those frequencies with the low-shelf filter restores life to the low end due to the filter's broad range. This boost enhances only what remains, not the problematic artifacts that existed before the high-pass was applied. The LEQA deliberately puts the high-pass filter before the low-shelf for this trick.\n\n- Turn up the subwoofers: The low-shelf band has a broad, gradual curve and can reach all the way down to 35Hz. Turning these frequencies up can give some serious oomph to your low end.\n\n- 1.6kHz – 4.8kHz: The magic sweet spot: The high mid-range in a mix usually contains a lot of sonic information related to definition and clarity. The human ear is naturally sensitive to 2kHz – 5kHz. This was an evolutionary development to better hear baby cries at longer distances. When boosted, this frequency range can give a patch more presence.\n\n- Using the EQ as a filtered distortion: At extreme settings, the Leveling EQ Amplifier can be used as a distortion with tone shaping. Start by flipping the EQ switch to Post and cranking the Gain on the compressor. Once you have a distorted signal, turn the low shelf and high shelf to 0, and turn the mid band all the way up. Select whichever frequency on the mid band you think sounds best.\n\n- Using EQ as a pre-emphasis for compression: If set to Pre, the EQ shapes incoming audio before it hits the compressor. Since a compressor tracks the average amplitude of the",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>previously mentioned. Reinforcing those frequencies with the low-shelf filter restores life to the low end due to the filter's broad range. This boost enhances only what remains, not the problematic artifacts that existed before the high-pass was applied. The LEQA deliberately puts the high-pass filter before the low-shelf for this trick.</p>\n<ul>\n<li>\n<p>Turn up the subwoofers: The low-shelf band has a broad, gradual curve and can reach all the way down to 35Hz. Turning these frequencies up can give some serious oomph to your low end.</p>\n</li>\n<li>\n<p>1.6kHz – 4.8kHz: The magic sweet spot: The high mid-range in a mix usually contains a lot of sonic information related to definition and clarity. The human ear is naturally sensitive to 2kHz – 5kHz. This was an evolutionary development to better hear baby cries at longer distances. When boosted, this frequency range can give a patch more presence.</p>\n</li>\n<li>\n<p>Using the EQ as a filtered distortion: At extreme settings, the Leveling EQ Amplifier can be used as a distortion with tone shaping. Start by flipping the EQ switch to Post and cranking the Gain on the compressor. Once you have a distorted signal, turn the low shelf and high shelf to 0, and turn the mid band all the way up. Select whichever frequency on the mid band you think sounds best.</p>\n</li>\n<li>\n<p>Using EQ as a pre-emphasis for compression: If set to Pre, the EQ shapes incoming audio before it hits the compressor. Since a compressor tracks the average amplitude of the</p>\n</li>\n</ul>"
+    },
+    {
+      "pageNum": 27,
+      "image": "/4ms-leqa/pages/page-027.png",
+      "title": "Page 27",
+      "sectionName": null,
+      "content": "incoming signal with a simple envelope follower, boosting different frequencies is a way of selecting which frequencies cause the audio to duck or \"pump.\" Boosting the bass frequencies will make elements like bass lines and kick drums push the signal down. Boosting high-frequency content works in a similar way to a de-esser, where high-frequency signals are attenuated.\n\n- Processing feedback loops: A useful experimental application for the Leveling EQ Amplifier is using it to both contain and shape the sound of feedback loops. Putting an EQ in the feedback loop allows you to shape which frequencies are emphasized or de-emphasized in the loop, causing massive tonal shifts in the sound. Using a compressor or limiter in the signal chain lets you contain the dynamic range of the feedback so that it doesn't make extreme jumps in volume.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>incoming signal with a simple envelope follower, boosting different frequencies is a way of selecting which frequencies cause the audio to duck or \"pump.\" Boosting the bass frequencies will make elements like bass lines and kick drums push the signal down. Boosting high-frequency content works in a similar way to a de-esser, where high-frequency signals are attenuated.</p>\n<ul>\n<li>Processing feedback loops: A useful experimental application for the Leveling EQ Amplifier is using it to both contain and shape the sound of feedback loops. Putting an EQ in the feedback loop allows you to shape which frequencies are emphasized or de-emphasized in the loop, causing massive tonal shifts in the sound. Using a compressor or limiter in the signal chain lets you contain the dynamic range of the feedback so that it doesn't make extreme jumps in volume.</li>\n</ul>"
+    },
+    {
+      "pageNum": 28,
+      "image": "/4ms-leqa/pages/page-028.png",
+      "title": "Page 28",
+      "sectionName": null,
+      "content": "Compressor\n\nA compressor is used to contain the dynamic range of a sound source. This process makes loud sounds quieter and quiet sounds louder. The compressor section of the Leveling EQ Amplifier is inspired by the LA-2A optical compressor. While not an exact clone, the principle of how the compressor works emulates how an optical compressor behaves.\n\nInside an optical compressor, there is a small incandescent lamp placed in front of a photocell. The overall amplitude of the incoming audio controls the brightness of the lamp: as the input gets louder, the light gets brighter, which makes the audio output get quieter. The reverse is also true, but the attack and release times for the lamp are not equal.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Compressor</p>\n<p>A compressor is used to contain the dynamic range of a sound source. This process makes loud sounds quieter and quiet sounds louder. The compressor section of the Leveling EQ Amplifier is inspired by the LA-2A optical compressor. While not an exact clone, the principle of how the compressor works emulates how an optical compressor behaves.</p>\n<p>Inside an optical compressor, there is a small incandescent lamp placed in front of a photocell. The overall amplitude of the incoming audio controls the brightness of the lamp: as the input gets louder, the light gets brighter, which makes the audio output get quieter. The reverse is also true, but the attack and release times for the lamp are not equal.</p>"
+    },
+    {
+      "pageNum": 29,
+      "image": "/4ms-leqa/pages/page-029.png",
+      "title": "Page 29",
+      "sectionName": null,
+      "content": "The particular physics of an incandescent lamp are exactly why vintage optical compressors are so highly sought after. The charging and discharging of the lightbulb have a very pleasant and organic logarithmic ramp, which causes the envelope responsible for ducking the audio to be very slow. Slow changes in a compressor are usually associated with \"warmth\" and \"vintage\" sounds, whereas fast compression gives a sensation of \"modern\" or \"tight\" sound to the listener. A slow attack time lets more transients pass through before being compressed, and a slow release time makes the compressor hold onto the signal longer before letting go.\n\nThe Amount knob controls the amount of compression to apply by changing the threshold at which the gain reduction will start being applied. With Amount turned down, only the very loud portions of the input signal will cause the compressor to kick in. With Amount turned up, more of the signal will be reduced. Since compression is dependent on the amplitude of the incoming audio, adjusting the volume before the sound hits the compressor (either externally, or with the EQ Level knob if EQ is set to Pre) can add another layer of control over how hard the compressor hits.\n\nThe Gain Reduction graph above the compressor uses nine lights to display the overall gain reduction in dB, ranging from 0dB (far right) to –24 dB (far left). With no lights lit, no compression is applied. With all lights lit, –24 dB of gain reduction is applied. The graph's orientation is",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>The particular physics of an incandescent lamp are exactly why vintage optical compressors are so highly sought after. The charging and discharging of the lightbulb have a very pleasant and organic logarithmic ramp, which causes the envelope responsible for ducking the audio to be very slow. Slow changes in a compressor are usually associated with \"warmth\" and \"vintage\" sounds, whereas fast compression gives a sensation of \"modern\" or \"tight\" sound to the listener. A slow attack time lets more transients pass through before being compressed, and a slow release time makes the compressor hold onto the signal longer before letting go.</p>\n<p>The Amount knob controls the amount of compression to apply by changing the threshold at which the gain reduction will start being applied. With Amount turned down, only the very loud portions of the input signal will cause the compressor to kick in. With Amount turned up, more of the signal will be reduced. Since compression is dependent on the amplitude of the incoming audio, adjusting the volume before the sound hits the compressor (either externally, or with the EQ Level knob if EQ is set to Pre) can add another layer of control over how hard the compressor hits.</p>\n<p>The Gain Reduction graph above the compressor uses nine lights to display the overall gain reduction in dB, ranging from 0dB (far right) to –24 dB (far left). With no lights lit, no compression is applied. With all lights lit, –24 dB of gain reduction is applied. The graph's orientation is</p>"
+    },
+    {
+      "pageNum": 30,
+      "image": "/4ms-leqa/pages/page-030.png",
+      "title": "Page 30",
+      "sectionName": null,
+      "content": "from right to left, the opposite of a typical VU meter signal meter, since the graph is showing amount the signal is reduced, not the overall signal level.\n\nThe Comp/Bypass/Limit switch selects the compression ratio, from 3:1 (Comp) to Limit (10:1). The ratio of a compressor dictates how heavily Gain Reduction is applied at a given threshold. While there are no strict rules for using a compressor, a heavy-handed 10:1 ratio is typically used for individual sound sources, while a gentler 3:1 compression is often used for stereo buses or the entire mix. That said, there's no reason you can't slam an entire mix into a limiter, which is quite popular in many dance music genres. Likewise, a subtle 3:1 ratio can be applied to an individual sound source; it depends entirely on the effect you are trying to accomplish.\n\nThe middle position is Bypass, which removes the compressor from the audio chain.\n\nThe Gain knob provides a maximum boost of +40dB on the output of the compressor. Hard clipping is applied at ±10 V and indicated by the red Clip light. Since the compression stage reduces the gain, the makeup gain stage is typically used to bring the signal level back to a normal value. However, it can also be used as an effect to introduce anything from subtle crunch to harsh distortion.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>from right to left, the opposite of a typical VU meter signal meter, since the graph is showing amount the signal is reduced, not the overall signal level.</p>\n<p>The Comp/Bypass/Limit switch selects the compression ratio, from 3:1 (Comp) to Limit (10:1). The ratio of a compressor dictates how heavily Gain Reduction is applied at a given threshold. While there are no strict rules for using a compressor, a heavy-handed 10:1 ratio is typically used for individual sound sources, while a gentler 3:1 compression is often used for stereo buses or the entire mix. That said, there's no reason you can't slam an entire mix into a limiter, which is quite popular in many dance music genres. Likewise, a subtle 3:1 ratio can be applied to an individual sound source; it depends entirely on the effect you are trying to accomplish.</p>\n<p>The middle position is Bypass, which removes the compressor from the audio chain.</p>\n<p>The Gain knob provides a maximum boost of +40dB on the output of the compressor. Hard clipping is applied at ±10 V and indicated by the red Clip light. Since the compression stage reduces the gain, the makeup gain stage is typically used to bring the signal level back to a normal value. However, it can also be used as an effect to introduce anything from subtle crunch to harsh distortion.</p>"
+    },
+    {
+      "pageNum": 31,
+      "image": "/4ms-leqa/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "content": "The Mix knob is a simple dry/wet crossfader between the uncompressed audio and the compressed audio. Although compressors are typically used as \"inserts\" (a signal chain of preamp → compression → then back to the rest of the signal chain), a technique known as \"parallel compression,\" which became popular with mix engineers in 1990's, is often useful. Parallel compression is simply a term for blending a little of the original program material with the compressed material. This mix technique uses heavy compression to create intensity and body while still retaining the dynamics of the original material. That said, experimenting across the entire gradient of settings is recommended— there are no strict rules!\n\nEnvelope Follower\n\nInput\n\nOut\n\nGain Reduction　Makeup Gain\n\nMix\n\nDry\n\nWet\n\nThreshold (Amount)\n\nCOMPRESSOR",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>The Mix knob is a simple dry/wet crossfader between the uncompressed audio and the compressed audio. Although compressors are typically used as \"inserts\" (a signal chain of preamp → compression → then back to the rest of the signal chain), a technique known as \"parallel compression,\" which became popular with mix engineers in 1990's, is often useful. Parallel compression is simply a term for blending a little of the original program material with the compressed material. This mix technique uses heavy compression to create intensity and body while still retaining the dynamics of the original material. That said, experimenting across the entire gradient of settings is recommended— there are no strict rules!</p>\n<p>Envelope Follower</p>\n<p>Input</p>\n<p>Out</p>\n<p>Gain Reduction　Makeup Gain</p>\n<p>Mix</p>\n<p>Dry</p>\n<p>Wet</p>\n<p>Threshold (Amount)</p>\n<p>COMPRESSOR</p>"
+    },
+    {
+      "pageNum": 32,
+      "image": "/4ms-leqa/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "content": "Compressor tips and tricks\n\n- Contain your entire mix: Run your whole patch into the Leveling EQ Amplifier. Set the switch to Comp, turn the Mix knob all the way up, and turn the Amount knob up slightly. You'll notice this creates a sort of \"pillowy\" sound in the mix, which some people refer to as sonic \"glue.\" Compression tends to make an entire mix sound more unified.\n\n- Crush the mix for maximum volume: Crank the Amount knob and Mix knob to 100%, and adjust the makeup gain to taste. This will completely remove all dynamics from the sound and give you the maximum potential output volume from a sound source.\n\n- Reinforce a bass line: Gentle compression can flatten the volume difference between a transient and a decaying resonance. Sometimes a bass line might have a loud attack or click, while the ring-out of the note underneath is quieter. Turning on subtle compression, and possibly parallel compression, can flatten and fatten out the bass.\n\n- Mangle audio: Apply heavy-handed compression with the switch set to Limit, and Amount turned up. Boost Gain aggressively. The output should be distorted and squashed. Using the EQ before this stage can make certain sounds hit the compressor more intensely, while using the EQ after this stage can shape your mangled audio.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Compressor tips and tricks</p>\n<ul>\n<li>\n<p>Contain your entire mix: Run your whole patch into the Leveling EQ Amplifier. Set the switch to Comp, turn the Mix knob all the way up, and turn the Amount knob up slightly. You'll notice this creates a sort of \"pillowy\" sound in the mix, which some people refer to as sonic \"glue.\" Compression tends to make an entire mix sound more unified.</p>\n</li>\n<li>\n<p>Crush the mix for maximum volume: Crank the Amount knob and Mix knob to 100%, and adjust the makeup gain to taste. This will completely remove all dynamics from the sound and give you the maximum potential output volume from a sound source.</p>\n</li>\n<li>\n<p>Reinforce a bass line: Gentle compression can flatten the volume difference between a transient and a decaying resonance. Sometimes a bass line might have a loud attack or click, while the ring-out of the note underneath is quieter. Turning on subtle compression, and possibly parallel compression, can flatten and fatten out the bass.</p>\n</li>\n<li>\n<p>Mangle audio: Apply heavy-handed compression with the switch set to Limit, and Amount turned up. Boost Gain aggressively. The output should be distorted and squashed. Using the EQ before this stage can make certain sounds hit the compressor more intensely, while using the EQ after this stage can shape your mangled audio.</p>\n</li>\n</ul>"
+    },
+    {
+      "pageNum": 33,
+      "image": "/4ms-leqa/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "content": "System\n\nUpgrading Firmware\n\n1. Firmware update files are posted at https://4mscompany.com/leqa.\nDownload the latest version and save it to your computer or phone.\n\n2. To enter bootloader mode on the LEQA, hold down the low-shelf button (left-most button) while powering up. Release it when you see the lights flash.\n\n3. If the red EQ Level clip light is flashing, tap the low shelf button again to restart the bootloader.\n\n4. Plug your computer/phone into the Left In jack using a mono TS cable (not stereo TRS). Remove any phone case and turn off notifications that might interrupt the process. Set the computer/phone's volume to 50%-75% before playing the file.\n\n5. Start playing the firmware audio file using basic playback software. The Gain Reduction lights should have three green, three yellow, and possibly one red light flickering. Automatic gain compensation is applied, so do not adjust the computer/phone level during playback. You can monitor the audio by listening to the Out Left jack.\n\n6. While the file is playing, you should see the 35, 60, 110, and 220 lights flash.\n\n7. If there's an error (volume changed too much during playback, playback was interrupted, or loose/bad cable), the audio will stop and the red EQ Level Clip light will flash. Press the low-shelf button and try playing the file again from the start.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>System</p>\n<p>Upgrading Firmware</p>\n<ol>\n<li>\n<p>Firmware update files are posted at <a href=\"https://4mscompany.com/leqa\">https://4mscompany.com/leqa</a>.\nDownload the latest version and save it to your computer or phone.</p>\n</li>\n<li>\n<p>To enter bootloader mode on the LEQA, hold down the low-shelf button (left-most button) while powering up. Release it when you see the lights flash.</p>\n</li>\n<li>\n<p>If the red EQ Level clip light is flashing, tap the low shelf button again to restart the bootloader.</p>\n</li>\n<li>\n<p>Plug your computer/phone into the Left In jack using a mono TS cable (not stereo TRS). Remove any phone case and turn off notifications that might interrupt the process. Set the computer/phone's volume to 50%-75% before playing the file.</p>\n</li>\n<li>\n<p>Start playing the firmware audio file using basic playback software. The Gain Reduction lights should have three green, three yellow, and possibly one red light flickering. Automatic gain compensation is applied, so do not adjust the computer/phone level during playback. You can monitor the audio by listening to the Out Left jack.</p>\n</li>\n<li>\n<p>While the file is playing, you should see the 35, 60, 110, and 220 lights flash.</p>\n</li>\n<li>\n<p>If there's an error (volume changed too much during playback, playback was interrupted, or loose/bad cable), the audio will stop and the red EQ Level Clip light will flash. Press the low-shelf button and try playing the file again from the start.</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 34,
+      "image": "/4ms-leqa/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "content": "8. If the file loads successfully, there will be a 1-2 second pause and then you'll see a back-and-forth animation on the Gain Reduction lights. Power cycle the module or press the low shelf button to continue.\n\nWhen powering on, the six mid-range lights flash to show the version:\n\nv1.0: 360 and 3.2k\n\nv1.1 (not released yet): 360 and 4.8k\n\nListen IO Connections\n\nThe LEQA has a 3-pin header on the back that can be used to connect to a 4ms Listen Four, Listen Four Quarters, Listen IO, or WAV Recorder module. A standard 1x3 Audio Jumper cable, or a set of DuPont style square-pin jumper wires, can be used for the connection.\n\nThe header marked OUT (underneath the Out jacks) can be connected to the IN headers of a Listen or WAV Recorder module, and the LEQA's output signal will appear in the other module's mix without needing to patch additional cables. This is useful in a system where the LEQA is always at the end of the chain, right before the output mixer or recorder. Patching cables to the LEQA's Out jacks will not disrupt the connection, so you can still use the LEQA normally.\n\nNote that there is an additional 3-pin header marked IN, which should be left unconnected.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"8\">\n<li>If the file loads successfully, there will be a 1-2 second pause and then you'll see a back-and-forth animation on the Gain Reduction lights. Power cycle the module or press the low shelf button to continue.</li>\n</ol>\n<p>When powering on, the six mid-range lights flash to show the version:</p>\n<p>v1.0: 360 and 3.2k</p>\n<p>v1.1 (not released yet): 360 and 4.8k</p>\n<p>Listen IO Connections</p>\n<p>The LEQA has a 3-pin header on the back that can be used to connect to a 4ms Listen Four, Listen Four Quarters, Listen IO, or WAV Recorder module. A standard 1x3 Audio Jumper cable, or a set of DuPont style square-pin jumper wires, can be used for the connection.</p>\n<p>The header marked OUT (underneath the Out jacks) can be connected to the IN headers of a Listen or WAV Recorder module, and the LEQA's output signal will appear in the other module's mix without needing to patch additional cables. This is useful in a system where the LEQA is always at the end of the chain, right before the output mixer or recorder. Patching cables to the LEQA's Out jacks will not disrupt the connection, so you can still use the LEQA normally.</p>\n<p>Note that there is an additional 3-pin header marked IN, which should be left unconnected.</p>"
+    },
+    {
+      "pageNum": 35,
+      "image": "/4ms-leqa/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "content": "Electrical and Mechanical Specifications\n\nMechanical\n\n- 14HP Eurorack format module\n- 0.98\" (25mm) maximum depth (including power cable)\n\nPower Consumption\n\n- +12V: 120mA max\n- -12V: 10mA max\n- +5V: not used\n\nAudio\n\n- Frequency range (bypassed): 8Hz-24kHz ±0.1dB\n- Maximum amplitude: 19.2Vpp\n\nCV Input\n\n- Voltage range 0V to +5V\n\nDSP\n\n- 96kHz sample rate, 24-bit codec with 32-bit internal processing\n- 1GHz Cortex-A7 processor\n\nAcknowledgements\n\nConception, core code, and UI design: Ross Fish\n\nFirmware, panel, hardware design: Dan Green\n\nPCB layout: Zach D'Agostino\n\nSpecial thanks to James F. Lawrence, the original designer of the LA-2A, and Rupert Neve, the original designer of the 1073. Without their work, the inspiration for this module would not have existed. Thanks also to everyone else on the 4ms team who made this module possible: Thomas Fang, Kira Sassano, Cantrell Hepner-Chapman, Payne Gibson, and Jeannot Quenson",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Electrical and Mechanical Specifications</p>\n<p>Mechanical</p>\n<ul>\n<li>14HP Eurorack format module</li>\n<li>0.98\" (25mm) maximum depth (including power cable)</li>\n</ul>\n<p>Power Consumption</p>\n<ul>\n<li>+12V: 120mA max</li>\n<li>-12V: 10mA max</li>\n<li>+5V: not used</li>\n</ul>\n<p>Audio</p>\n<ul>\n<li>Frequency range (bypassed): 8Hz-24kHz ±0.1dB</li>\n<li>Maximum amplitude: 19.2Vpp</li>\n</ul>\n<p>CV Input</p>\n<ul>\n<li>Voltage range 0V to +5V</li>\n</ul>\n<p>DSP</p>\n<ul>\n<li>96kHz sample rate, 24-bit codec with 32-bit internal processing</li>\n<li>1GHz Cortex-A7 processor</li>\n</ul>\n<p>Acknowledgements</p>\n<p>Conception, core code, and UI design: Ross Fish</p>\n<p>Firmware, panel, hardware design: Dan Green</p>\n<p>PCB layout: Zach D'Agostino</p>\n<p>Special thanks to James F. Lawrence, the original designer of the LA-2A, and Rupert Neve, the original designer of the 1073. Without their work, the inspiration for this module would not have existed. Thanks also to everyone else on the 4ms team who made this module possible: Thomas Fang, Kira Sassano, Cantrell Hepner-Chapman, Payne Gibson, and Jeannot Quenson</p>"
+    },
+    {
+      "pageNum": 36,
+      "image": "/4ms-leqa/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "content": "-- 1 of 1 --",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>-- 1 of 1 --</p>"
+    }
+  ]
+}

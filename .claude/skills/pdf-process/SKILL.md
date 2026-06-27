@@ -424,10 +424,17 @@ function retryFailedPages(failures) {
 
 ### Step 5-6: Final Processing (Run via Bash)
 
-- `pnpm run pdf:build --slug <slug>` - Build final JSON files from translation drafts
-- `pnpm run pdf:manifest --slug <slug>` - Create manifest.json
+After translation drafts exist, run the full post-translation chain in this order (all require `--slug`):
 
-**Note:** Both commands require the --slug parameter to specify which manual to process.
+- `pnpm run pdf:build --slug <slug>` - Build `pages-ja.json` / `pages-en.json` from translation drafts (prefers each draft's `en_clean` for the EN side)
+- `pnpm run pdf:clean-en --slug <slug>` - Belt-and-suspenders EN cleanup metadata. **Essentially a no-op on a fresh run** because the translator already emits `en_clean`. It shells out to the Claude Code CLI with `--dangerously-skip-permissions`, which **fails when running as root** (e.g. Claude Code web) with "cannot be used with root/sudo privileges" — that failure is **non-blocking, skip it**; the EN content is already clean from the translator.
+- `pnpm run pdf:md-to-html --slug <slug>` - **REQUIRED.** Converts each page's `content` markdown to `contentHtml` in both `pages-ja.json` and `pages-en.json`. Without this the viewer has no rendered prose. Run it AFTER `pdf:clean-en` so EN html reflects cleaned content.
+- `pnpm run pdf:search-index --slug <slug>` - Generate `search-index.json` (keyword search). Also stamps a `searchIndexVersion` hash into `manifest.json` when it exists.
+- `pnpm run pdf:manifest --slug <slug>` - Create `manifest.json`.
+
+**Note:** `pdf:manifest` regenerates the manifest from scratch, so if it runs after `pdf:search-index` the `searchIndexVersion` is dropped — it is re-stamped later by the production `pnpm build` (verification phase, Step 12), which runs `pdf:search-index:all`. This matches how every existing manual is built, so no manual re-run is needed.
+
+**REQUIRED before committing — Prettier-format the generated JSON.** `pdf:build` writes `pages-ja.json` / `pages-en.json` via `JSON.stringify`, whose style does **not** match the repo's Prettier config. The CI "Code Quality Checks" gate runs `prettier --check` over `**/*.json` and **will fail** on the new manual's data files otherwise. Run `pnpm format:fix` (or scope it: `pnpm exec prettier --write public/<slug>/data/*.json`) after the build chain and before `git commit`. This is not optional — every new manual hits it.
 
 ### Step 7: Update Manifest with User-Provided Metadata (REQUIRED)
 
@@ -685,6 +692,16 @@ node .claude/skills/verify-translation/scripts/capture-pages.js --slug <slug> --
 - PDF file in `manual-pdf/{slug}/` directory
 - Claude Code CLI installed (for translation subagents)
 - pnpm package manager
+
+## Environment notes (Claude Code web / root container)
+
+The whole pipeline is pure Node + Chromium (split=`pdf-lib`, render=`pdf-to-png-converter`, extract=`pdf-parse`, translate=Task subagents) — **no poppler/`pdftoppm` needed**, so it runs in the web container.
+
+Two gotchas when running as root / on a fresh container:
+
+- **`pnpm install` may abort on the native `canvas` build** ("Package pangocairo was not found"), which leaves `node_modules/.bin` unlinked so `zfb` / `tsc` go missing and `pnpm build` fails with `zfb: not found`. `canvas` is **not used by the pipeline** — re-run `pnpm install --ignore-scripts` to complete linking (modern `esbuild`/`sharp` use prebuilt platform packages, so this is safe).
+- **`pdf:clean-en` fails as root** (Claude CLI `--dangerously-skip-permissions` is blocked for root) — non-blocking, see Step 5-6.
+- **Step 0 Question 3 (productSlug)** auto-detect needs `TAKAZUDO_MODULAR_REPO_PATH`, which is absent on web. Fall back to standalone (omit `productSlug` entirely) — `shik-n32b-slim` ships this way; `brand` is the only required identity field beyond `title`.
 
 ## Output Structure
 
