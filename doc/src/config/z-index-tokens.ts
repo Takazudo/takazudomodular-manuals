@@ -43,6 +43,10 @@ export interface ZIndexTier {
   kind: ZIndexKind;
 }
 
+// prettier-ignore — gen-z-index parser (gen-z-index.mjs) uses a regex that
+// requires double-quoted name strings; preserving double quotes here is
+// a parser contract, not a style choice. Root .prettierrc has singleQuote:true
+// but this file must stay double-quoted to satisfy the parser.
 export const Z_INDEX_TIERS: ZIndexTier[] = [
   {
     name: 'content',

@@ -48,6 +48,7 @@
     "@types/react": "^19.2.0",
     "create-zudo-doc": "^1.2.0",
     "html-validate": "^10.0.0",
-    "pagefind": "^1.4.0"
+    "pagefind": "^1.4.0",
+    "wrangler": "4.85.0"
   }
 }
