@@ -88,7 +88,8 @@ export const settings = {
   htmlPreview: undefined as HtmlPreviewConfig | undefined,
   versions: false as VersionConfig[] | false,
   claudeResources: {
-    claudeDir: '.claude',
+    // doc/ is a subdirectory; .claude lives at the repo root one level up
+    claudeDir: '../.claude',
   } as { claudeDir: string; projectRoot?: string } | false,
   defaultLocaleOnlyPrefixes: [
     '/docs/claude-md/',
@@ -96,6 +97,9 @@ export const settings = {
     '/docs/claude-agents/',
     '/docs/claude-commands/',
   ] as string[],
+  // Opt-in: preset injects package-owned routes (/404, /sitemap.xml, /robots.txt, etc.).
+  // Without this, the preset adds zero routes → empty injected site.
+  packageOwnedRoutes: true,
   footer: false as FooterConfig | false,
   headerNav: [
     { label: 'Architecture', path: '/docs/architecture', categoryMatch: 'architecture' },
