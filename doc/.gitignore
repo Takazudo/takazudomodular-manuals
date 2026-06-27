@@ -2,6 +2,9 @@
 node_modules
 dist
 .zfb
+# Package-owned route staging dir, emitted at build time when
+# packageOwnedRoutes is on (the .zudo-doc.json provenance file stays tracked).
+.zudo-doc/
 
 # macOS
 .DS_Store
