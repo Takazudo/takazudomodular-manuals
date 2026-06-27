@@ -22,3 +22,9 @@ yarn.lock
 
 # Logs
 *.log
+
+# doc/src/styles/global.css contains a GENERATED:Z_INDEX block maintained by
+# gen-z-index.mjs (pnpm -C doc gen:z-index / check:z-index). The generator
+# emits 2-space indentation; Prettier strips it, causing check:z-index drift.
+# Excluding this file prevents the pre-commit hook from breaking that contract.
+doc/src/styles/global.css

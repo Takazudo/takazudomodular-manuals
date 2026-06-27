@@ -74,6 +74,7 @@ export const settings = {
   aiChatAllowedOrigins: [] as string[],
   aiChatGlobalDailyLimit: false as number | false,
   docHistory: true,
+  packageOwnedRoutes: true,
   bodyFootUtilArea: {
     docHistory: true,
     viewSourceLink: false,
@@ -85,10 +86,12 @@ export const settings = {
   sidebarResizer: true as boolean,
   sidebarToggle: true as boolean,
   imageEnlarge: true as boolean,
+  dynamicPageTransition: false as boolean,
   htmlPreview: undefined as HtmlPreviewConfig | undefined,
   versions: false as VersionConfig[] | false,
   claudeResources: {
-    // doc/ is a subdirectory; .claude lives at the repo root one level up
+    // doc/ is a subdirectory of the monorepo; the source .claude dir lives at
+    // the repo root one level up (claude-resources generates from it at build time).
     claudeDir: '../.claude',
   } as { claudeDir: string; projectRoot?: string } | false,
   defaultLocaleOnlyPrefixes: [
@@ -97,9 +100,6 @@ export const settings = {
     '/docs/claude-agents/',
     '/docs/claude-commands/',
   ] as string[],
-  // Opt-in: preset injects package-owned routes (/404, /sitemap.xml, /robots.txt, etc.).
-  // Without this, the preset adds zero routes → empty injected site.
-  packageOwnedRoutes: true,
   footer: false as FooterConfig | false,
   headerNav: [
     { label: 'Architecture', path: '/docs/architecture', categoryMatch: 'architecture' },

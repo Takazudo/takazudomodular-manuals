@@ -1,47 +1,43 @@
 # Template drift allowlist for zmanuals-doc.
 # Generated projects start from create-zudo-doc templates; this file lists
 # intentional divergences from the pinned create-zudo-doc baseline so
-# `check-template-drift.sh` exits 0.
+# `check-template-drift.sh` (pnpm check:template-drift) exits 0.
 #
 # Format: one repo-relative path per line (no leading slash).
 # Blank lines and `#` comments are ignored.
+# Paths are relative to doc/ (the workspace package root).
 #
-# Paths are relative to doc/ (the workspace package root that check-template-drift.sh
-# uses as ROOT_DIR).
+# STATUS (1.2.0 clean-room migration):
+#   All 82 drifted files fall into two categories:
 #
-# STATUS (S3 — completed): All files that were [DIFF] against the create-zudo-doc
-# template were evaluated. None were byte-identical (Category-A), so no auto-
-# deletes were made. All drifted files are allowlisted as KEEP because:
-#   - The project predates create-zudo-doc and carries intentional zmanuals
-#     customizations (SiteTreeNav, MermaidEnlarge, ClientRouterBootstrap, etc.)
-#   - Key config files (i18n.ts, color-schemes.ts, settings-types.ts, etc.)
-#     are project-owned definitions, not package re-exports.
-#   - Island components (sidebar-toggle, sidebar-tree, desktop-sidebar-toggle,
-#     etc.) carry project-specific customizations and are kept as local stubs.
-#   - src/integrations/claude-resources/ is a host-side integration; test-wisdom
-#     keeps it and so does this project.
-# Ejection was not performed for any component — KEEP is the correct default.
+#   A. Prettier reformatting only — The scaffold applies the project's
+#      Prettier config (single-quotes, different line-wrap thresholds) over
+#      the template source which ships with double-quotes. No intentional
+#      code changes; these files ARE the template content, just differently
+#      formatted. If create-zudo-doc adopts single-quote style in a future
+#      release, these entries can be deleted.
+#
+#   B. Intentional project additions — Files where actual content was added
+#      beyond what the template ships (e.g. global.css has the doc-history
+#      diff-viewer styles that were generated into the @slot:feature-styles
+#      placeholder, tsconfig.json has a project-specific exclude list).
+#
+#   C. Build artifact — .zfb/doc-history-meta.json is written at build time;
+#      the template ships {} but production has real metadata.
+#
+# No files here are intentional component FORKS (that would require ejection
+# and an entry in .zudo-doc.json). All differences are either formatting,
+# project-specific content additions, or build artifacts.
 
-# ── Generated / runtime artifact ──────────────────────────────────────────
-# doc-history-meta.json is written at build time by the doc-history plugin
-# (git log over src/content/docs/). The template ships {}, production has
-# real metadata. Excluded because it is a build artifact, not source.
+# ── B. Intentional project additions (content beyond the template) ─────────
+# run-b4push.sh: extended with step 4 (link check via check-links.js)
+# on top of the scaffold's 4-step baseline (check, build, html-validate, smoke).
+scripts/run-b4push.sh
+
+# ── C. Build artifact ─────────────────────────────────────────────────────
 .zfb/doc-history-meta.json
 
-# ── Host customization: zmanuals-specific extra source components ──────────
-# These files exist in doc/src/components/ but have no counterpart in any
-# create-zudo-doc template. They are NOT flagged by check-template-drift.sh
-# (it only checks template files against production, not the reverse), but
-# they are documented here as intentional zmanuals extras for S3 reviewers.
-#
-# src/components/client-router-bootstrap.tsx  — custom island for SPA router
-# src/components/mermaid-enlarge.tsx          — mermaid diagram enlarge-on-click
-# src/components/site-tree-nav.tsx            — custom site-tree navigation island
-
-# ── pages/ — host shell (route layer) ─────────────────────────────────────
-# These files carry zmanuals-specific structure (SiteTreeNav on index,
-# custom BodyEndIslands wiring, etc.) and are the primary host-shell surface.
-# All kept; none are byte-identical to the template.
+# ── A/B. Scaffolded files (Prettier-reformatted + minor slot-fill) ─────────
 pages/_data.ts
 pages/_mdx-components.ts
 pages/index.tsx
@@ -80,12 +76,6 @@ pages/lib/_toc-title.ts
 pages/lib/doc-page-props.ts
 pages/lib/locale-merge.ts
 pages/lib/route-enumerators.ts
-
-# ── src/components/ — island components (kept as local stubs) ─────────────
-# All carry project-level customizations or are zmanuals-specific islands.
-# Local copies win over the package's versions (registry keeps local) when
-# zfb detects a name collision. displayName added to desktop-sidebar-toggle
-# (S3 fix) to stabilize the SSR marker under esbuild function renaming.
 src/components/ai-chat-modal.tsx
 src/components/content/code-group.tsx
 src/components/content/content-admonition.tsx
@@ -96,13 +86,6 @@ src/components/preset-generator.tsx
 src/components/sidebar-toggle.tsx
 src/components/sidebar-tree.tsx
 src/components/tree-nav-shared.tsx
-
-# ── src/config/ — project-owned configuration ─────────────────────────────
-# Project-specific settings; not package re-exports.
-# i18n.ts — imported widely; do NOT trim or replace with package re-export.
-# settings-types.ts — local type definitions (test-wisdom pattern: keep local).
-# color-schemes.ts — named palettes not in package dist.
-# tag-vocabulary*.ts — project tag definitions.
 src/config/color-scheme-utils.ts
 src/config/color-schemes.ts
 src/config/docs-schema.ts
@@ -114,15 +97,13 @@ src/config/sidebars.ts
 src/config/tag-vocabulary-types.ts
 src/config/tag-vocabulary.ts
 src/config/z-index-tokens.ts
-
-# ── src/styles/ ─────────────────────────────────────────────────────────────
+src/integrations/claude-resources/__tests__/escape-for-mdx.test.ts
+src/integrations/claude-resources/__tests__/generate.test.ts
+src/integrations/claude-resources/escape-for-mdx.ts
+src/integrations/claude-resources/generate.ts
 src/styles/global.css
-
-# ── src/types/ ──────────────────────────────────────────────────────────────
-src/types/docs-entry.ts
 src/types/doc-history.ts
-
-# ── src/utils/ ──────────────────────────────────────────────────────────────
+src/types/docs-entry.ts
 src/utils/base.ts
 src/utils/content-files.ts
 src/utils/docs.ts
@@ -133,22 +114,5 @@ src/utils/sidebar.ts
 src/utils/slug.ts
 src/utils/smart-break.tsx
 src/utils/tags.ts
-
-# ── src/integrations/claude-resources/ ────────────────────────────────────
-# Host-side Claude CLAUDE.md + skills integration. test-wisdom keeps its copy;
-# zmanuals-doc keeps its copy. Verified keep.
-src/integrations/claude-resources/__tests__/escape-for-mdx.test.ts
-src/integrations/claude-resources/__tests__/generate.test.ts
-src/integrations/claude-resources/escape-for-mdx.ts
-src/integrations/claude-resources/generate.ts
-
-# ── Project root config files ─────────────────────────────────────────────
 tsconfig.json
 zfb-shim.d.ts
-
-# ── scripts/ — customized b4push gate ──────────────────────────────────────
-# scripts/run-b4push.sh is the full 8-step gate (template-drift + pin-parity +
-# wrangler-pin + check + build + html-validate + link-check + manual smoke),
-# diverging from the leaner create-zudo-doc template default. Mirrors the
-# test-wisdom reference. The new check:* scripts it gates were ported in S1.
-scripts/run-b4push.sh

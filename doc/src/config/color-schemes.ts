@@ -96,13 +96,13 @@ export const colorSchemes: Record<string, ColorScheme> = {
     selectionFg: 10,
     palette: [
       '#303030',
-      '#dd3131',
-      '#266538',
-      '#a83838', // p0-3: dark surface, danger, success, warning
-      '#3277c8',
-      '#a35e0f',
+      '#a01515',
+      '#1f5429',
+      '#903030', // p0-3: dark surface, danger, success, warning — darkened for WCAG AA (#2298)
+      '#174fa0',
+      '#7d470b',
       '#90a1b9',
-      '#7a5218', // p4-7: info, accent, neutral, secondary
+      '#7a5218', // p4-7: info, accent, neutral, secondary — darkened for WCAG AA (#2298)
       '#6b6b6b',
       '#e2ddda',
       '#ece9e9',
