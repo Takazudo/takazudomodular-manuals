@@ -2,9 +2,6 @@
 node_modules
 dist
 .zfb
-# Package-owned route staging dir, emitted at build time when
-# packageOwnedRoutes is on (the .zudo-doc.json provenance file stays tracked).
-.zudo-doc/
 
 # macOS
 .DS_Store
@@ -23,11 +20,11 @@ pnpm-debug.log*
 # Cloudflare Wrangler
 .wrangler/
 
-# Generated doc-lookup skill
-.claude/skills/zmanuals-doc-wisdom/SKILL.md
-.claude/skills/zmanuals-doc-wisdom/docs
+# zudo-doc build artifact (routes-src/ staged here at build time)
+.zudo-doc/
 
-# Generated claude-resources content (build artifacts from claudeResources plugin)
+# Generated claude-resources content (build artifacts from the claudeResources
+# plugin — regenerated from ../.claude on every build; never committed).
 src/content/docs/claude/
 src/content/docs/claude-md/
 src/content/docs/claude-commands/

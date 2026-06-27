@@ -37,18 +37,17 @@ export const settings = {
     darkScheme: 'Default Dark',
     respectPrefersColorScheme: true,
   } satisfies ColorModeConfig as ColorModeConfig | false,
-  siteName: 'zmanuals doc',
-  siteDescription:
-    'Architecture, design system, and infrastructure notes for the takazudomodular manual viewer' as string,
+  siteName: 'Zmanuals Doc',
+  siteDescription: '' as string,
   base: '/',
   trailingSlash: false as boolean,
   noindex: true as boolean,
   editUrl: false as string | false,
-  githubUrl: 'https://github.com/Takazudo/takazudomodular-manuals' as string | false,
+  githubUrl: false as string | false,
   siteUrl: 'https://doc-manuals.takazudomodular.com' as string,
   metaTags: {
     description: true,
-    keywords: false,
+    keywords: '',
     ogImage: '/img/ogp.png',
     ogSiteName: true,
     twitterCard: 'summary_large_image',
@@ -74,6 +73,7 @@ export const settings = {
   aiChatAllowedOrigins: [] as string[],
   aiChatGlobalDailyLimit: false as number | false,
   docHistory: true,
+  packageOwnedRoutes: true,
   bodyFootUtilArea: {
     docHistory: true,
     viewSourceLink: false,
@@ -85,10 +85,12 @@ export const settings = {
   sidebarResizer: true as boolean,
   sidebarToggle: true as boolean,
   imageEnlarge: true as boolean,
+  dynamicPageTransition: false as boolean,
   htmlPreview: undefined as HtmlPreviewConfig | undefined,
   versions: false as VersionConfig[] | false,
   claudeResources: {
-    // doc/ is a subdirectory; .claude lives at the repo root one level up
+    // doc/ is a subdirectory of the monorepo; the source .claude dir lives at
+    // the repo root one level up (claude-resources generates from it at build time).
     claudeDir: '../.claude',
   } as { claudeDir: string; projectRoot?: string } | false,
   defaultLocaleOnlyPrefixes: [
@@ -97,14 +99,10 @@ export const settings = {
     '/docs/claude-agents/',
     '/docs/claude-commands/',
   ] as string[],
-  // Opt-in: preset injects package-owned routes (/404, /sitemap.xml, /robots.txt, etc.).
-  // Without this, the preset adds zero routes → empty injected site.
-  packageOwnedRoutes: true,
   footer: false as FooterConfig | false,
   headerNav: [
-    { label: 'Architecture', path: '/docs/architecture', categoryMatch: 'architecture' },
-    { label: 'Design System', path: '/docs/design-system', categoryMatch: 'design-system' },
-    { label: 'Infrastructure', path: '/docs/infrastructure', categoryMatch: 'infrastructure' },
+    { label: 'Getting Started', path: '/docs/getting-started', categoryMatch: 'getting-started' },
+    { label: 'Claude', path: '/docs/claude', categoryMatch: 'claude' },
   ] satisfies HeaderNavItem[] as HeaderNavItem[],
   headerRightItems: [
     { type: 'component', component: 'github-link' },

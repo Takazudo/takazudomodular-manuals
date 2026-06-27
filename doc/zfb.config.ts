@@ -2,9 +2,9 @@ import { defineConfig } from 'zfb/config';
 import { zudoDocPreset } from '@takazudo/zudo-doc/preset';
 import { settings } from './src/config/settings';
 import { buildDocsSchema } from './src/config/docs-schema';
+import { translations } from './src/config/i18n';
+import { colorSchemes } from './src/config/color-schemes';
 
-// The seven canonical directives registered in pages/_mdx-components.ts.
-// "details" routes to DetailsWrapper — a collapsible, NOT an admonition.
 const directiveVocabulary = {
   note: 'Note',
   tip: 'Tip',
@@ -24,10 +24,7 @@ export default defineConfig({
   tailwind: { enabled: true },
   // Public URL prefix for <link rel="stylesheet"> and <script> tags.
   base: settings.base,
-  // Cloudflare adapter — required for the Workers deploy.
-  adapter: '@takazudo/zfb-adapter-cloudflare',
 
-  // ── Preset-owned fields (content collections, plugins, markdown,
-  //    codeHighlight, resolveMarkdownLinks, trailingSlash, package-owned routes) ──
-  ...zudoDocPreset({ settings, buildDocsSchema, directiveVocabulary }),
+  // ── Preset-owned fields (content collections, plugins, markdown, …) ────────
+  ...zudoDocPreset({ settings, buildDocsSchema, directiveVocabulary, translations, colorSchemes }),
 });

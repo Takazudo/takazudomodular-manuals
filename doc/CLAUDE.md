@@ -1,77 +1,62 @@
-# Documentation (zudo-doc) - CLAUDE.md
+# Zmanuals Doc
 
-zudo-doc documentation system configuration. For project-wide instructions, see the root `CLAUDE.md`.
+Documentation site built with [zudo-doc](https://github.com/zudolab/zudo-doc) — a zfb-based documentation framework with MDX, Tailwind CSS v4, and Preact islands.
 
-## Overview
+## Tech Stack
 
-Project documentation lives in `doc/` and is built with **zudo-doc** — a documentation framework built on zfb (Preact islands), MDX, and Tailwind CSS v4.
+- **zfb** — documentation build framework
+- **MDX** — content format
+- **Tailwind CSS v4** — via `@tailwindcss/vite`
+- **Preact** — for interactive islands only (with compat mode for React API)
+- **syntect** — built-in code highlighting, run by zfb's Rust pipeline at build time (single fixed theme: `base16-ocean-dark`)
 
-- **Content location**: `doc/src/content/docs/`
-- **Categories**: `architecture/`, `design-system/`, `infrastructure/`, plus top-level `index.mdx`
-- **Dark mode**: Default dark theme (respects system preference)
-- **Robots**: noindex/nofollow — self-managed via `doc/public/_headers`, `doc/public/robots.txt`, and `noindex: true` in `doc/src/config/settings.ts`
+## Commands
 
-## Development Commands
+- `pnpm dev` — zfb dev server (port 4321)
+- `pnpm build` — static HTML export to `dist/`
+- `pnpm check` — TypeScript type checking
 
-Run from the **project root** (delegated via `pnpm -C doc`):
-
-```bash
-pnpm doc:dev            # Start zudo-doc dev server (port 4321)
-pnpm doc:build          # Build documentation to doc/dist
-pnpm doc:serve          # Preview the doc build locally
-```
-
-The docs build is **independent** of the main app build (`pnpm build` does not build docs).
-
-## Deployment
-
-Docs deploy independently to a dedicated Cloudflare Worker (`zmanuals-doc`) at:
-
-**https://doc-manuals.takazudomodular.com/**
-
-## Content Structure
+## Key Directories
 
 ```
-doc/src/content/docs/
-├── index.mdx                   # Top-level landing page
-├── architecture/               # Architecture decisions and diagrams
-├── design-system/              # Zudo Design System reference
-│   └── design-system.md        # Tailwind v4 tokens, CSS variables, dark theme
-└── infrastructure/             # Deployment, CI/CD, Cloudflare setup
+src/
+├── components/          # JSX + Preact components
+│   └── admonitions/     # Note, Tip, Info, Warning, Danger
+├── config/              # Settings, color schemes
+├── content/
+│   └── docs/            # MDX content
+├── layouts/             # JSX layouts
+├── pages/               # File-based routing
+└── styles/
+    └── global.css       # Design tokens & Tailwind config
 ```
 
-### Sidebar & Navigation
+## Content Conventions
 
-- Sidebar order: use `sidebar_position` in MDX frontmatter (lower number = higher)
-- Header nav categories: configured in `doc/src/config/settings.ts` (`headerNav` array)
-  - Architecture → `/docs/architecture`
-  - Design System → `/docs/design-system`
-  - Infrastructure → `/docs/infrastructure`
+### Frontmatter
 
-## Project Structure
+- Required: `title` (string)
+- Optional: `description`, `sidebar_position` (number), `category`
+- Sidebar order is driven by `sidebar_position`
 
-```
-doc/
-├── src/
-│   ├── content/docs/       # MDX documentation files
-│   └── config/
-│       └── settings.ts     # Site config (siteName, headerNav, noindex, siteUrl, etc.)
-├── public/                 # Static assets (_headers, robots.txt)
-├── zfb.config.ts           # zfb/zudo-doc build config
-└── package.json            # Doc-specific dependencies
-```
+### Admonitions
 
-## Design System Documentation
+Available in all MDX files without imports: `<Note>`, `<Tip>`, `<Info>`, `<Warning>`, `<Danger>`
+Each accepts an optional `title` prop.
 
-The Zudo Design System documentation is at `doc/src/content/docs/design-system/design-system.md` (served at `/docs/design-system/design-system`). This is the authoritative reference for the custom Tailwind CSS v4 configuration used in the main app.
+### Headings
 
-## Category index convention
+Do NOT use h1 (`#`) in doc content — the page title from frontmatter is rendered as h1. Start content headings from h2 (`##`).
 
-Each category directory has an `index.mdx` that acts as its landing page. The convention is:
+## Components
 
-- **Category index** (`{category}/index.mdx`): contains ONLY a short one-sentence intro + `<CategoryNav category="{slug}" />`. No manual link lists.
-- **Top-level index** (`index.mdx`): uses `<CategoryNav categories={["slug1", "slug2", ...]} />` listing the top-level categories explicitly.
-- **Actual docs** live as `.md` / `.mdx` files directly under the category directory (not nested further).
-- **CategoryNav** is a globally available MDX component — no import needed. It renders each child doc's frontmatter `title` + `description` as cards, ordered by `sidebar_position`.
-- Every doc file should carry a `description:` frontmatter line so CategoryNav cards display useful summaries.
-- Slugs passed to `category=` or `categories={[...]}` must exactly match directory names under `doc/src/content/docs/`.
+- Default to **server-rendered JSX components** (`.tsx`) — zero JS, server-rendered
+- Use **Preact islands** (`client:load`) only when client-side interactivity is needed
+
+## Enabled Features
+
+- **search** — Full-text search via Pagefind
+- **claudeResources** — Auto-generated docs for Claude Code resources
+- **sidebarResizer** — Draggable sidebar width
+- **sidebarToggle** — Show/hide desktop sidebar
+- **docHistory** — Document edit history

@@ -151,7 +151,7 @@ export function isDefaultLocaleOnlyPath(path: string): boolean {
 export function versionedDocsUrl(
   slug: string,
   versionSlug: string,
-  lang: Locale = defaultLocale,
+  lang: Locale | string = defaultLocale,
 ): string {
   const path =
     lang === defaultLocale
