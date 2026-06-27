@@ -43,90 +43,90 @@ export interface ZIndexTier {
   kind: ZIndexKind;
 }
 
-// prettier-ignore — gen-z-index parser (gen-z-index.mjs) uses a regex that
-// requires double-quoted name strings; preserving double quotes here is
-// a parser contract, not a style choice. Root .prettierrc has singleQuote:true
-// but this file must stay double-quoted to satisfy the parser.
+// gen-z-index.mjs parses this file via regex: /name:\s*"([^"]+)"/ — double
+// quotes are a parser contract, not a style choice. prettier-ignore prevents
+// the root singleQuote:true config from reverting them.
+// prettier-ignore
 export const Z_INDEX_TIERS: ZIndexTier[] = [
   {
-    name: 'content',
+    name: "content",
     value: 0,
-    purpose: 'default in-flow content (implicit baseline)',
-    kind: 'global',
+    purpose: "default in-flow content (implicit baseline)",
+    kind: "global",
   },
   {
-    name: 'local-1',
+    name: "local-1",
     value: 1,
-    purpose: 'child promotion inside an isolated parent stacking context',
-    kind: 'local',
+    purpose: "child promotion inside an isolated parent stacking context",
+    kind: "local",
   },
   {
-    name: 'local-2',
+    name: "local-2",
     value: 2,
-    purpose: 'child promotion inside an isolated parent stacking context',
-    kind: 'local',
+    purpose: "child promotion inside an isolated parent stacking context",
+    kind: "local",
   },
   {
-    name: 'local-3',
+    name: "local-3",
     value: 3,
-    purpose: 'child promotion inside an isolated parent stacking context',
-    kind: 'local',
+    purpose: "child promotion inside an isolated parent stacking context",
+    kind: "local",
   },
   {
-    name: 'sidebar',
+    name: "sidebar",
     value: 10,
     purpose:
-      'persistent layout chrome: desktop sidebar, TOC, sidebar-toggle handle, resizer handle',
-    kind: 'global',
+      "persistent layout chrome: desktop sidebar, TOC, sidebar-toggle handle, resizer handle",
+    kind: "global",
   },
   {
-    name: 'toolbar',
+    name: "toolbar",
     value: 20,
-    purpose: 'sticky top header (sits above sidebar chrome)',
-    kind: 'global',
+    purpose: "sticky top header (sits above sidebar chrome)",
+    kind: "global",
   },
   {
-    name: 'dropdown',
+    name: "dropdown",
     value: 30,
-    purpose: 'header menus, version/language switchers',
-    kind: 'global',
+    purpose: "header menus, version/language switchers",
+    kind: "global",
   },
   {
-    name: 'popover',
+    name: "popover",
     value: 40,
-    purpose: 'reserved — inline popovers (canonical scale; not yet used)',
-    kind: 'global',
+    purpose: "reserved — inline popovers (canonical scale; not yet used)",
+    kind: "global",
   },
   {
-    name: 'modal-backdrop',
+    name: "modal-backdrop",
     value: 50,
-    purpose: 'mobile drawer backdrop, <dialog> ::backdrop',
-    kind: 'global',
+    purpose: "mobile drawer backdrop, <dialog> ::backdrop",
+    kind: "global",
   },
   {
-    name: 'modal',
+    name: "modal",
     value: 60,
-    purpose: 'mobile sidebar drawer panel, search <dialog>',
-    kind: 'global',
+    purpose: "mobile sidebar drawer panel, search <dialog>",
+    kind: "global",
   },
   {
-    name: 'toast',
+    name: "toast",
     value: 70,
-    purpose: 'reserved — transient notifications (canonical scale; not yet used)',
-    kind: 'global',
+    purpose: "reserved — transient notifications (canonical scale; not yet used)",
+    kind: "global",
   },
   {
-    name: 'tooltip',
+    name: "tooltip",
     value: 80,
     purpose:
-      'reserved — highest steady UI layer, below only the transient drag tier (canonical scale; not yet used)',
-    kind: 'global',
+      "reserved — highest steady UI layer, below only the transient drag tier (canonical scale; not yet used)",
+    kind: "global",
   },
   {
-    name: 'drag',
+    name: "drag",
     value: 90,
     purpose:
-      'transient drag affordance: sidebar-resizer ghost line (replaces the z-9999 anti-pattern)',
-    kind: 'global',
+      "transient drag affordance: sidebar-resizer ghost line (replaces the z-9999 anti-pattern)",
+    kind: "global",
   },
 ];
