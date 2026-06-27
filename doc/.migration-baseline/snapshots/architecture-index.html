@@ -1,0 +1,1516 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Architecture | zmanuals doc</title><meta name="robots" content="noindex, nofollow"/><style>
+.zfb-route-announcer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	overflow: hidden;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+}
+</style><meta name="zfb-view-transitions-enabled" content="true"/><meta name="zfb-view-transitions-fallback" content="animate"/><meta name="zfb-preserve-html-attrs" content="data-sidebar-hidden data-theme style"/><meta property="og:title" content="Architecture | zmanuals doc"/><meta property="og:type" content="website"/><meta property="og:url" content="https://doc-manuals.takazudomodular.com/docs/architecture"/><meta property="og:image" content="https://doc-manuals.takazudomodular.com/img/ogp.png"/><meta property="og:site_name" content="zmanuals doc"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content="Architecture | zmanuals doc"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="@Takazudo"/><meta name="twitter:image" content="https://doc-manuals.takazudomodular.com/img/ogp.png"/><style>:root {
+  color-scheme: light dark;
+  --zd-bg: light-dark(#e2ddda, #181818);
+  --zd-fg: light-dark(#303030, #b8b8b8);
+  --zd-cursor: light-dark(#90a1b9, #90a1b9);
+  --zd-sel-bg: light-dark(#303030, #383838);
+  --zd-sel-fg: light-dark(#ece9e9, #e0e0e0);
+  --zd-0: light-dark(#303030, #1c1c1c);
+  --zd-1: light-dark(#dd3131, #da6871);
+  --zd-2: light-dark(#266538, #93bb77);
+  --zd-3: light-dark(#a83838, #dfbb77);
+  --zd-4: light-dark(#3277c8, #5caae9);
+  --zd-5: light-dark(#a35e0f, #c074d6);
+  --zd-6: light-dark(#90a1b9, #90a1b9);
+  --zd-7: light-dark(#7a5218, #a0a0a0);
+  --zd-8: light-dark(#6b6b6b, #888888);
+  --zd-9: light-dark(#e2ddda, #181818);
+  --zd-10: light-dark(#ece9e9, #383838);
+  --zd-11: light-dark(#303030, #e0e0e0);
+  --zd-12: light-dark(#5b99dc, #d69a66);
+  --zd-13: light-dark(#b89ee7, #c074d6);
+  --zd-14: light-dark(#8590a0, #a7c0e3);
+  --zd-15: light-dark(#654516, #b8b8b8);
+  --zd-surface: light-dark(#ece9e9, #1c1c1c);
+  --zd-muted: light-dark(#6b6b6b, #888888);
+  --zd-accent: light-dark(#a35e0f, #d69a66);
+  --zd-accent-hover: light-dark(#8590a0, #a7c0e3);
+  --zd-code-bg: light-dark(#ece9e9, #383838);
+  --zd-code-fg: light-dark(#303030, #e0e0e0);
+  --zd-success: light-dark(#266538, #93bb77);
+  --zd-danger: light-dark(#dd3131, #da6871);
+  --zd-warning: light-dark(#a83838, #dfbb77);
+  --zd-info: light-dark(#3277c8, #5caae9);
+  --zd-mermaid-node-bg: light-dark(#e2ddda, #181818);
+  --zd-mermaid-text: light-dark(#303030, #e0e0e0);
+  --zd-mermaid-line: light-dark(#6b6b6b, #888888);
+  --zd-mermaid-label-bg: light-dark(#ece9e9, #383838);
+  --zd-mermaid-note-bg: light-dark(#303030, #1c1c1c);
+  --zd-chat-user-bg: light-dark(#a35e0f, #c074d6);
+  --zd-chat-user-text: light-dark(#e2ddda, #181818);
+  --zd-chat-assistant-bg: light-dark(#e2ddda, #181818);
+  --zd-chat-assistant-text: light-dark(#303030, #e0e0e0);
+  --zd-image-overlay-bg: light-dark(#303030, #1c1c1c);
+  --zd-image-overlay-fg: light-dark(#ece9e9, #e0e0e0);
+  --zd-matched-keyword-bg: light-dark(#fff59d, #fff59d);
+  --zd-matched-keyword-fg: light-dark(#000000, #000000);
+}</style><script>(function(){
+var defaultMode="dark";
+var respectPrefersColorScheme=true;
+var STORAGE_KEY="zudo-doc-theme";
+function getSystemMode(){return window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}
+function applyTheme(mode){document.documentElement.setAttribute("data-theme",mode);document.documentElement.style.colorScheme=mode;}
+function getEffectiveMode(choice){if(choice==="light"||choice==="dark")return choice;return respectPrefersColorScheme?getSystemMode():defaultMode;}
+var stored=null;try{stored=localStorage.getItem(STORAGE_KEY);}catch(e){}
+applyTheme(getEffectiveMode(stored));
+document.addEventListener("zfb:after-swap",function(){var s=null;try{s=localStorage.getItem(STORAGE_KEY);}catch(e){}applyTheme(getEffectiveMode(s));});
+if(respectPrefersColorScheme){window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){var s=null;try{s=localStorage.getItem(STORAGE_KEY);}catch(e){}if(!s)applyTheme(getSystemMode());});}
+})();</script><script>(function(){try{var w=localStorage.getItem("zudo-doc-sidebar-width");if(!w)return;var n=parseFloat(w);if(!isFinite(n))return;if(n<192)n=192;else if(n>448)n=448;document.documentElement.style.setProperty("--zd-sidebar-w",n+"px");}catch(e){}})();</script><link rel="icon" href="/favicon.ico" sizes="any"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/><link rel="canonical" href="https://doc-manuals.takazudomodular.com/docs/architecture"/><link rel="stylesheet" href="/assets/styles-a885766b.css"><script type="module" src="/assets/islands-a996cb7d.js"></script></head><body class="min-h-screen antialiased"><header data-header="true" data-zfb-transition-persist="header-en" class="sticky top-0 z-toolbar flex h-[3.5rem] items-center border-b border-muted bg-surface px-hsp-lg"><div data-zfb-island="SidebarToggle" data-when="visible" data-props="{&quot;nodes&quot;:[{&quot;slug&quot;:&quot;architecture&quot;,&quot;label&quot;:&quot;Architecture&quot;,&quot;position&quot;:0,&quot;href&quot;:&quot;/docs/architecture&quot;,&quot;hasPage&quot;:true,&quot;children&quot;:[{&quot;slug&quot;:&quot;architecture/pdf-processing-architecture&quot;,&quot;label&quot;:&quot;PDF Processing Architecture&quot;,&quot;description&quot;:&quot;End-to-end pipeline from source PDF to JSON data consumed by the zfb application.&quot;,&quot;position&quot;:1,&quot;href&quot;:&quot;/docs/architecture/pdf-processing-architecture&quot;,&quot;hasPage&quot;:true,&quot;children&quot;:[],&quot;sortOrder&quot;:&quot;asc&quot;},{&quot;slug&quot;:&quot;architecture/bilingual-support&quot;,&quot;label&quot;:&quot;Bilingual Support (JA / EN)&quot;,&quot;description&quot;:&quot;Language toggle behaviour, URL conventions, and localStorage persistence for the JA/EN bilingual viewer.&quot;,&quot;position&quot;:2,&quot;href&quot;:&quot;/docs/architecture/bilingual-support&quot;,&quot;hasPage&quot;:true,&quot;children&quot;:[],&quot;sortOrder&quot;:&quot;asc&quot;}],&quot;sortOrder&quot;:&quot;asc&quot;}],&quot;currentSlug&quot;:&quot;architecture&quot;,&quot;rootMenuItems&quot;:[{&quot;label&quot;:&quot;Architecture&quot;,&quot;href&quot;:&quot;/docs/architecture&quot;},{&quot;label&quot;:&quot;Design System&quot;,&quot;href&quot;:&quot;/docs/design-system&quot;},{&quot;label&quot;:&quot;Infrastructure&quot;,&quot;href&quot;:&quot;/docs/infrastructure&quot;}],&quot;backToMenuLabel&quot;:&quot;Back to main menu&quot;,&quot;themeDefaultMode&quot;:&quot;dark&quot;}"><button type="button" aria-label="Open sidebar" aria-expanded="false" class="lg:hidden px-hsp-sm py-vsp-xs -ml-hsp-sm mr-hsp-sm text-muted hover:text-fg"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="h-icon-lg w-icon-lg hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="h-icon-lg w-icon-lg"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></button><div aria-hidden="true" class="fixed inset-0 z-modal-backdrop bg-overlay/30 lg:hidden hidden"></div><aside inert class="
+          fixed top-[3.5rem] left-0 z-modal h-[calc(100vh-3.5rem)] w-[16rem] flex flex-col
+          border-r border-muted bg-bg transition-transform duration-200
+          lg:hidden
+          -translate-x-full
+        "><div class="flex-1 overflow-y-auto"><nav><button type="button" class="lg:hidden flex w-full items-center gap-hsp-xs px-hsp-sm py-vsp-xs text-left text-small text-muted hover:text-fg border-b border-muted"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="h-icon-sm w-icon-sm shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>Back to main menu</button><div class="px-hsp-sm py-vsp-xs"><div class="flex items-center gap-hsp-xs bg-surface rounded px-hsp-sm py-vsp-2xs"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="h-[14px] w-[14px] text-muted shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><input type="text" placeholder="Filter..." value class="bg-transparent text-small outline-none w-full text-fg placeholder:text-muted"/></div></div><div class="border-t border-muted "><div class="relative"><div class="flex w-full items-center text-small font-semibold pt-[0.15rem] bg-fg text-bg"><a href="/docs/architecture" aria-current="page" style="padding-left:calc(clamp(0.4rem, 0.8vw, 1.3rem) + 0.15rem);" class="flex-1 flex items-start gap-hsp-xs py-vsp-xs hover:underline focus:underline break-words text-bg"><span class="flex h-[1lh] items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 103.395 107.049" aria-hidden="true" class="shrink-0 w-[14px] text-bg"><path d="M5.746 5.74 0 11.49l20.987 20.96C34.126 45.572 41.963 53.45 41.948 53.523c-.012.062-9.456 9.544-20.986 21.07L0 95.55l5.714 5.715c3.142 3.143 5.748 5.715 5.79 5.715s2.63-2.563 5.75-5.696l17.939-18.001c21.867-21.94 29.443-29.599 29.443-29.768 0-.114-.665-.804-5.084-5.275C51.872 40.47 11.71.125 11.565.036 11.525.01 8.906 2.578 5.746 5.74m38.345-.066c-3.132 3.13-5.696 5.71-5.696 5.732-.001.022 2.16 2.185 4.8 4.807 2.641 2.623 8.382 8.338 12.758 12.702 15.38 15.337 23.763 23.641 24.314 24.086.19.153.346.336.346.405 0 .07-1.738 1.847-3.887 3.976a17515 17515 0 0 0-20.35 20.264 19555 19555 0 0 1-17.223 17.158c-.416.409-.757.77-.757.8 0 .083 11.415 11.485 11.457 11.445.235-.22 53.542-53.528 53.542-53.543C103.395 53.472 49.891.02 49.837 0c-.028-.01-2.613 2.543-5.746 5.674"></path></svg></span><span>Architecture</span></a><button type="button" aria-expanded="true" aria-label="Collapse Architecture" class="aspect-square flex items-center justify-center w-[1.5rem] border-y border-l hover:underline focus:underline border-bg/30"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" class="h-[0.625rem] w-[0.625rem] shrink-0 transition-transform duration-150 rotate-90 text-bg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></button></div></div><div><div><div class="relative"><div style="left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + clamp(0.2rem, 0.3vw, 0.5rem));top:0px;bottom:0px;" class="absolute border-l border-dashed border-muted"></div><div style="left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + clamp(0.2rem, 0.3vw, 0.5rem));width:clamp(0.4rem, 0.6vw, 1rem);top:calc(var(--spacing-vsp-2xs) + 0.5lh);" class="absolute border-t border-dashed border-muted"></div><a href="/docs/architecture/pdf-processing-architecture" style="padding-left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + 1.25rem + 5px);" class="block py-vsp-2xs pr-[4px] text-small break-words text-muted hover:underline focus:underline"><span>PDF Processing Architecture</span></a></div></div><div class="pb-vsp-md"><div class="relative"><div style="left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + clamp(0.2rem, 0.3vw, 0.5rem));top:0px;bottom:calc(100% - calc(var(--spacing-vsp-2xs) + 0.5lh));" class="absolute border-l border-dashed border-muted"></div><div style="left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + clamp(0.2rem, 0.3vw, 0.5rem));width:clamp(0.4rem, 0.6vw, 1rem);top:calc(var(--spacing-vsp-2xs) + 0.5lh);" class="absolute border-t border-dashed border-muted"></div><a href="/docs/architecture/bilingual-support" style="padding-left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + 1.25rem + 5px);" class="block py-vsp-2xs pr-[4px] text-small break-words text-muted hover:underline focus:underline"><span>Bilingual Support (JA / EN)</span></a></div></div></div></div><div class="lg:hidden flex items-center gap-hsp-md border-t border-muted px-hsp-sm py-vsp-xs pb-[50vh] text-small"><button aria-label="Switch to light mode" class="text-muted hover:text-fg transition-colors p-hsp-sm focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></button></div></nav></div></aside></div><a href="/" data-header-logo="true" class="whitespace-nowrap text-title font-bold text-fg hover:underline focus:underline shrink-0">zmanuals doc</a><nav aria-label="Main" data-header-nav="true" class="relative ml-hsp-xl hidden min-w-0 flex-1 items-center gap-x-hsp-2xs whitespace-nowrap lg:flex"><a href="/docs/architecture" aria-current="page" data-nav-item="true" class="px-hsp-md py-vsp-2xs text-small font-medium transition-colors shrink-0 bg-fg text-bg">Architecture</a><a href="/docs/design-system" data-nav-item="true" class="px-hsp-md py-vsp-2xs text-small font-medium transition-colors shrink-0 text-muted hover:underline focus:underline">Design System</a><a href="/docs/infrastructure" data-nav-item="true" class="px-hsp-md py-vsp-2xs text-small font-medium transition-colors shrink-0 text-muted hover:underline focus:underline">Infrastructure</a><div data-nav-more="true" style="display:none" class="relative shrink-0"><button type="button" data-nav-more-toggle="true" aria-expanded="false" class="px-hsp-md py-vsp-2xs text-small font-medium text-muted hover:underline cursor-pointer">···</button><ul data-nav-more-menu="true" class="absolute right-0 top-full z-dropdown mt-vsp-3xs hidden min-w-[8rem] border border-muted rounded bg-surface shadow-lg whitespace-nowrap"></ul></div></nav><div data-header-right="true" class="ml-auto flex shrink-0 items-center gap-x-hsp-md"><a href="https://github.com/Takazudo/takazudomodular-manuals" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository" class="flex items-center justify-center text-muted transition-colors hover:text-fg"><span class="sr-only">GitHub repository</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.649.5.5 5.649.5 12a11.5 11.5 0 0 0 7.86 10.915c.575.106.785-.25.785-.556 0-.274-.01-1-.016-1.962-3.198.695-3.873-1.541-3.873-1.541-.523-1.327-1.277-1.68-1.277-1.68-1.044-.714.079-.699.079-.699 1.154.082 1.761 1.186 1.761 1.186 1.026 1.758 2.692 1.25 3.348.956.104-.743.401-1.25.73-1.537-2.553-.29-5.238-1.276-5.238-5.682 0-1.255.448-2.282 1.182-3.086-.119-.29-.512-1.458.111-3.04 0 0 .964-.309 3.159 1.18A10.98 10.98 0 0 1 12 6.036c.977.005 1.963.132 2.883.387 2.193-1.49 3.155-1.18 3.155-1.18.625 1.582.232 2.75.114 3.04.736.804 1.18 1.831 1.18 3.086 0 4.417-2.689 5.389-5.25 5.673.412.355.779 1.056.779 2.129 0 1.538-.014 2.778-.014 3.156 0 .31.207.668.79.555A11.502 11.502 0 0 0 23.5 12C23.5 5.649 18.351.5 12 .5Z"></path></svg></a><div class="hidden lg:flex items-center"><div data-zfb-island="ThemeToggle" data-when="load" data-props="{&quot;defaultMode&quot;:&quot;dark&quot;}"><button aria-label="Switch to light mode" class="text-muted hover:text-fg transition-colors p-hsp-sm focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></button></div></div><div><site-search data-base="/" data-result-count-template="{count} results"><button data-open-search="true" type="button" aria-label="Search" class="flex items-center justify-center text-muted transition-colors hover:text-fg"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></button><dialog data-search-dialog="true" class="z-modal m-0 h-full w-full max-w-none border-none bg-transparent p-0 backdrop:z-modal-backdrop backdrop:bg-overlay/60 sm:mx-auto sm:my-[10vh] sm:h-auto sm:max-h-[80vh] sm:max-w-[52rem] sm:rounded-lg"><div class="flex h-full flex-col overflow-hidden bg-surface sm:rounded-lg sm:border sm:border-muted"><div class="flex items-center gap-hsp-sm border-b border-muted px-hsp-lg py-vsp-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0 text-muted"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><input data-search-input="true" type="text" placeholder="Type to search..." autocomplete="off" spellcheck="false" class="w-full bg-transparent text-body text-fg outline-none placeholder:text-muted"/><span data-search-count="true" aria-live="polite" class="hidden shrink-0 text-caption text-muted"></span><button data-close-search="true" type="button" aria-label="Close search" class="shrink-0 text-muted hover:text-fg"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><span data-search-count-narrow="true" aria-live="polite" class="hidden border-b border-muted px-hsp-lg py-vsp-xs text-caption text-muted"></span><div data-search-results="true" aria-live="polite" class="flex-1 overflow-y-auto px-hsp-lg pb-vsp-md"><div data-search-placeholder="true" class="text-small text-muted"><p>Type to search...</p><p class="mt-vsp-md text-caption"><kbd data-kbd-shortcut="true" class="rounded border border-muted bg-bg px-hsp-2xs py-[2px] font-mono text-caption"></kbd> to open search from anywhere</p></div></div></div></dialog></site-search><script>(function () {
+  if (customElements.get("site-search")) return; // guard double-registration
+
+  var PAGE_SIZE = 10;
+
+  // Allowlist-based href sanitizer: only relative paths and http(s) URLs are
+  // permitted. Anything else (e.g. javascript:, data:) falls back to "#" so a
+  // malicious entry in search-index.json cannot turn a result link into a
+  // script-injection vector.
+  function safeHref(url) {
+    if (!url) return "#";
+    var s = String(url);
+    if (s.startsWith("/") || s.startsWith("http://") || s.startsWith("https://")) {
+      return s;
+    }
+    return "#";
+  }
+
+  function escapeHtml(text) {
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function escapeRegExp(text) {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function parseTerms(query) {
+    return query.trim().split(/\s+/).filter(Boolean);
+  }
+
+  // scoreEntry reads pre-lowercased fields (_titleLc, _descLc, _bodyLc)
+  // set by prepareLc() at index-load time. Terms arrive already lowercased
+  // from search() so no per-call toLowerCase() is needed.
+  function scoreEntry(entry, terms) {
+    var score = 0;
+    var titleLc = entry._titleLc;
+    var descLc  = entry._descLc;
+    var bodyLc  = entry._bodyLc;
+    for (var i = 0; i < terms.length; i++) {
+      var t = terms[i];
+      if (titleLc.indexOf(t) !== -1) score += 3;
+      if (descLc.indexOf(t) !== -1)  score += 2;
+      if (bodyLc.indexOf(t) !== -1)  score += 1;
+    }
+    return score;
+  }
+
+  // Pre-lowercase the searched fields on each entry once at load time so that
+  // scoreEntry() does not re-lowercase the entire ~162 KB index on every
+  // debounced keystroke.  Original-case fields are preserved for display.
+  function prepareLc(entries) {
+    for (var i = 0; i < entries.length; i++) {
+      var e = entries[i];
+      e._titleLc = (e.title       || "").toLowerCase();
+      e._descLc  = (e.description || "").toLowerCase();
+      e._bodyLc  = (e.body        || "").toLowerCase();
+    }
+  }
+
+  function highlightTerms(text, terms) {
+    if (!terms.length) return escapeHtml(text);
+    var escaped = terms.map(function(t) { return escapeRegExp(t); });
+    var pattern = new RegExp("(" + escaped.join("|") + ")", "gi");
+    return text.split(pattern).map(function(seg, i) {
+      return i % 2 === 1
+        ? "<mark>" + escapeHtml(seg) + "</mark>"
+        : escapeHtml(seg);
+    }).join("");
+  }
+
+  function truncate(text, query, max) {
+    max = max || 200;
+    if (text.length <= max) return text;
+    var terms = parseTerms(query);
+    var lower = text.toLowerCase();
+    var best = -1;
+    for (var i = 0; i < terms.length; i++) {
+      var idx = lower.indexOf(terms[i].toLowerCase());
+      if (idx !== -1 && (best === -1 || idx < best)) best = idx;
+    }
+    if (best === -1) return text.slice(0, max) + "\u2026";
+    var half = Math.floor(max / 2);
+    var start = Math.max(0, best - half);
+    var end = start + max;
+    if (end > text.length) { end = text.length; start = Math.max(0, end - max); }
+    var result = text.slice(start, end);
+    if (start > 0) result = "\u2026" + result;
+    if (end < text.length) result += "\u2026";
+    return result;
+  }
+
+  customElements.define("site-search", class SiteSearch extends HTMLElement {
+    constructor() {
+      super();
+      this._dialog = null;
+      this._openBtn = null;
+      this._closeBtn = null;
+      this._input = null;
+      this._results = null;
+      this._countWide = null;
+      this._countNarrow = null;
+      this._entries = null;
+      this._loading = false;
+      this._indexUnavailable = false;
+      this._debounce = null;
+      this._currentQuery = "";
+      this._allResults = [];
+      this._shownCount = 0;
+      this._shortcut = "";
+      this._resultCountTemplate = "";
+      this._keydownHandler = null;
+      // Delegated click handler on the results container: closing the dialog
+      // when a result link is activated (epic #2148). Held so disconnectedCallback
+      // can detach it on body swap.
+      this._resultsClickHandler = null;
+      this._observer = null;
+      this._sentinel = null;
+      this._isLoadingBatch = false;
+      // Snapshot of the initial results-area HTML (includes SSR placeholder).
+      // Captured in connectedCallback so we can restore it on input-clear
+      // without re-querying the DOM (the placeholder node is replaced once
+      // search results are rendered).
+      this._placeholderHtml = "";
+      // Held so we can remove the document-level after-navigate listener
+      // in disconnectedCallback. zudolab/zudo-doc#1523 — under Strategy B
+      // SPA navigation a non-persisted <site-search> element would leak
+      // one document listener per nav without this hook.
+      this._afterNavHandler = null;
+    }
+
+    connectedCallback() {
+      this._dialog = this.querySelector("[data-search-dialog]");
+      this._openBtn = this.querySelector("[data-open-search]");
+      this._closeBtn = this.querySelector("[data-close-search]");
+      this._input = this.querySelector("[data-search-input]");
+      this._results = this.querySelector("[data-search-results]");
+      this._countWide = this.querySelector("[data-search-count]");
+      this._countNarrow = this.querySelector("[data-search-count-narrow]");
+      this._resultCountTemplate = this.dataset.resultCountTemplate || "{count} results";
+      // Snapshot the placeholder HTML before any search renders overwrite it.
+      this._placeholderHtml = this._results ? this._results.innerHTML : "";
+
+      // Platform keyboard-shortcut label — injected into [data-kbd-shortcut]
+      var nav = navigator;
+      var isMac = /Mac|iPhone|iPad|iPod/.test(
+        (nav.userAgentData && nav.userAgentData.platform) || nav.userAgent
+      );
+      this._shortcut = isMac ? "\u2318K" : "Ctrl+K";
+      var kbdEl = this.querySelector("[data-kbd-shortcut]");
+      if (kbdEl) kbdEl.textContent = this._shortcut;
+
+      // Wire open/close handlers
+      var self = this;
+      if (this._openBtn) {
+        this._openBtn.addEventListener("click", function() { self.openDialog(); });
+      }
+      if (this._closeBtn) {
+        this._closeBtn.addEventListener("click", function() { self.closeDialog(); });
+      }
+      if (this._dialog) {
+        this._dialog.addEventListener("close", function() {
+          document.documentElement.style.overflow = "";
+        });
+        this._dialog.addEventListener("click", function(e) {
+          if (e.target === self._dialog) self.closeDialog();
+        });
+      }
+      if (this._input) {
+        this._input.addEventListener("input", function() { self.handleInput(); });
+      }
+
+      // Close-on-result-click (epic #2148): result links are created dynamically
+      // in renderResult(), so use one delegated listener on the results container
+      // instead of per-link handlers. We do NOT preventDefault — the link's own
+      // navigation (zfb Strategy-B SPA swap or a plain load) must still proceed;
+      // we only close the <dialog> so it does not linger over the swapped page.
+      // closeDialog() runs synchronously before navigation; the dialog's close
+      // restores documentElement overflow via the existing "close" listener.
+      if (this._results) {
+        this._resultsClickHandler = function(e) {
+          var t = e.target;
+          while (t && t !== self._results) {
+            if (t.tagName === "A") { self.closeDialog(); return; }
+            t = t.parentNode;
+          }
+        };
+        this._results.addEventListener("click", this._resultsClickHandler);
+      }
+
+      // Global keyboard shortcut (⌘K / Ctrl+K to open)
+      this._keydownHandler = function(e) {
+        if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+          e.preventDefault();
+          self.openDialog();
+        }
+      };
+      document.addEventListener("keydown", this._keydownHandler);
+
+      // View-Transitions compat: re-run on the v2 after-navigate event.
+      // Stored on the instance so disconnectedCallback can detach it on
+      // body swap when this element is NOT persisted via
+      // data-zfb-transition-persist (zudolab/zudo-doc#1523).
+      this._afterNavHandler = function() {
+        // Backstop for the original bug (epic #2148): if the dialog is somehow
+        // still open after an SPA body swap (e.g. a nav path that bypassed the
+        // result-click handler), close it so it does not linger / flash over the
+        // newly-swapped page. Safe no-op when already closed.
+        if (self._dialog && self._dialog.open) self.closeDialog();
+        var kbdEl2 = self.querySelector("[data-kbd-shortcut]");
+        if (kbdEl2) kbdEl2.textContent = self._shortcut;
+      };
+      document.addEventListener("zfb:after-swap", this._afterNavHandler);
+    }
+
+    disconnectedCallback() {
+      if (this._keydownHandler) {
+        document.removeEventListener("keydown", this._keydownHandler);
+        this._keydownHandler = null;
+      }
+      if (this._afterNavHandler) {
+        document.removeEventListener("zfb:after-swap", this._afterNavHandler);
+        this._afterNavHandler = null;
+      }
+      if (this._resultsClickHandler && this._results) {
+        this._results.removeEventListener("click", this._resultsClickHandler);
+        this._resultsClickHandler = null;
+      }
+      this.teardownSentinel();
+    }
+
+    openDialog() {
+      if (!this._dialog) return;
+      document.documentElement.style.overflow = "hidden";
+      this._dialog.showModal();
+      if (this._input) {
+        this._input.focus();
+        this._input.select();
+      }
+      if (!this._entries && !this._loading) {
+        this.loadIndex();
+      }
+    }
+
+    closeDialog() {
+      if (!this._dialog) return;
+      this._dialog.close();
+      document.documentElement.style.overflow = "";
+    }
+
+    handleInput() {
+      var self = this;
+      if (this._debounce) clearTimeout(this._debounce);
+      this._debounce = setTimeout(function() { self.search(); }, 150);
+    }
+
+    loadIndex() {
+      if (this._loading) return;
+      this._loading = true;
+      var self = this;
+      var base = this.dataset.base || "/";
+      fetch(base + "search-index.json")
+        .then(function(r) {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.json();
+        })
+        .then(function(data) {
+          self._entries = Array.isArray(data) ? data : (data.entries || []);
+          prepareLc(self._entries);
+          self._loading = false;
+          // Clear the unavailable flag BEFORE re-running search so a successful
+          // retry (e.g. via the openDialog() reload path) fully recovers (#2062).
+          self._indexUnavailable = false;
+          // If user already typed, search now
+          if (self._input && self._input.value.trim()) {
+            self.search();
+          }
+        })
+        .catch(function() {
+          self._loading = false;
+          self._indexUnavailable = true;
+          if (self._results) {
+            self._results.innerHTML = "<p class=\"text-small text-muted\">Search unavailable</p>";
+          }
+        });
+    }
+
+    search() {
+      var query = this._input ? this._input.value.trim() : "";
+      this._currentQuery = query;
+
+      if (!query) {
+        this.teardownSentinel();
+        this._allResults = [];
+        this._shownCount = 0;
+        if (this._results) this._results.innerHTML = this.placeholderHtml();
+        this.updateCount();
+        return;
+      }
+
+      if (!this._entries) {
+        // Index failed to load: show the terminal "Search unavailable" state and
+        // stop — do NOT show "Loading search index…" or refetch on every
+        // keystroke (#2062). The openDialog() reload path is the intended retry
+        // trigger. Clear any stale result state/count/sentinel first.
+        if (this._indexUnavailable) {
+          this.teardownSentinel();
+          this._allResults = [];
+          this._shownCount = 0;
+          if (this._results) {
+            this._results.innerHTML = "<p class=\"text-small text-muted\">Search unavailable</p>";
+          }
+          this.updateCount();
+          return;
+        }
+        if (this._results) {
+          this._results.innerHTML = "<p class=\"text-small text-muted\">Loading search index\u2026</p>";
+        }
+        if (!this._loading) this.loadIndex();
+        return;
+      }
+
+      // Lowercase the query terms once here so scoreEntry() can do plain
+      // indexOf() against pre-lowercased entry fields without repeating
+      // toLowerCase() across the entire index on every keystroke.
+      var terms = parseTerms(query).map(function(t) { return t.toLowerCase(); });
+      var scored = [];
+      for (var i = 0; i < this._entries.length; i++) {
+        var s = scoreEntry(this._entries[i], terms);
+        if (s > 0) scored.push({ entry: this._entries[i], score: s });
+      }
+      scored.sort(function(a, b) { return b.score - a.score; });
+      this._allResults = scored;
+      this._shownCount = 0;
+      this.teardownSentinel();
+      this.updateCount();
+
+      if (!scored.length) {
+        if (this._results) {
+          this._results.innerHTML = "<p class=\"text-small text-muted\">No results found.</p>";
+        }
+        return;
+      }
+
+      if (this._results) this._results.innerHTML = "";
+      this.loadMore();
+      if (this._shownCount < this._allResults.length) {
+        this.setupSentinel();
+      }
+    }
+
+    loadMore() {
+      if (this._isLoadingBatch) return;
+      if (this._shownCount >= this._allResults.length) return;
+      this._isLoadingBatch = true;
+      try {
+        var batch = this._allResults.slice(this._shownCount, this._shownCount + PAGE_SIZE);
+        var self = this;
+        for (var i = 0; i < batch.length; i++) {
+          var article = self.renderResult(batch[i].entry);
+          if (self._sentinel && self._sentinel.parentNode === self._results) {
+            self._results.insertBefore(article, self._sentinel);
+          } else if (self._results) {
+            self._results.appendChild(article);
+          }
+        }
+        this._shownCount += batch.length;
+        if (this._shownCount >= this._allResults.length) {
+          this.teardownSentinel();
+        }
+      } finally {
+        this._isLoadingBatch = false;
+      }
+    }
+
+    setupSentinel() {
+      this.teardownSentinel();
+      if (!this._results) return;
+      var sentinel = document.createElement("div");
+      sentinel.setAttribute("data-search-sentinel", "");
+      sentinel.setAttribute("aria-hidden", "true");
+      sentinel.style.height = "1px";
+      sentinel.style.width = "100%";
+      this._results.appendChild(sentinel);
+      this._sentinel = sentinel;
+      var self = this;
+      this._observer = new IntersectionObserver(function(entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) self.loadMore();
+        }
+      }, { root: this._results, rootMargin: "200px 0px" });
+      this._observer.observe(sentinel);
+    }
+
+    teardownSentinel() {
+      if (this._observer) { this._observer.disconnect(); this._observer = null; }
+      if (this._sentinel) { this._sentinel.remove(); this._sentinel = null; }
+    }
+
+    updateCount() {
+      var count = this._allResults.length;
+      var template = this._resultCountTemplate;
+      var text = count > 0 ? template.replace("{count}", String(count)) : "";
+      var show = !!text;
+      if (this._countWide) {
+        this._countWide.textContent = text;
+        this._countWide.classList.toggle("hidden", !show);
+      }
+      if (this._countNarrow) {
+        this._countNarrow.textContent = text;
+        this._countNarrow.classList.toggle("hidden", !show);
+      }
+    }
+
+    placeholderHtml() {
+      return this._placeholderHtml;
+    }
+
+    renderResult(entry) {
+      var article = document.createElement("article");
+      article.className = "-mx-hsp-lg border-b border-muted";
+      var link = document.createElement("a");
+      link.href = safeHref(entry.url);
+      link.className =
+        "group block px-hsp-lg py-vsp-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+      var title = document.createElement("span");
+      title.className =
+        "font-semibold text-fg group-hover:text-accent group-hover:underline group-focus-visible:underline";
+      var terms = parseTerms(this._currentQuery);
+      title.innerHTML = highlightTerms(entry.title || "", terms);
+      link.appendChild(title);
+      var text = entry.description || entry.body;
+      if (text) {
+        var excerpt = document.createElement("p");
+        excerpt.className =
+          "mt-vsp-2xs text-caption text-muted leading-relaxed group-hover:underline group-focus-visible:underline decoration-muted";
+        var truncated = truncate(text, this._currentQuery, 200);
+        excerpt.innerHTML = highlightTerms(truncated, terms);
+        link.appendChild(excerpt);
+      }
+      article.appendChild(link);
+      return article;
+    }
+  });
+})();</script></div></div><script>(function () {
+  var cleanupNavOverflow = null;
+
+  function trimSlashes(p) {
+    while (p.length > 1 && p.charAt(p.length - 1) === "/") p = p.slice(0, -1);
+    return p || "/";
+  }
+
+  function navPathname(a) {
+    try { return trimSlashes(new URL(a.href, location.href).pathname); }
+    catch (e) { return ""; }
+  }
+
+  function isUnderPath(cur, p) {
+    if (!p) return false;
+    if (cur === p) return true;
+    return p !== "/" && cur.indexOf(p + "/") === 0;
+  }
+
+  // Recompute which header nav item is "active" from the CURRENT URL and
+  // repaint the highlight. SSR sets the active item on first paint, but the
+  // header is persisted across same-locale client-router swaps
+  // (data-zfb-transition-persist), so without this the highlight would stay
+  // frozen on the page where the header was first rendered. Mirrors the
+  // sidebar island's client-side approach (match location.pathname against
+  // each entry's href) and the SSR longest-match + dropdown-parent rules.
+  // URL-based: hrefs and location.pathname both carry the base + locale
+  // prefix, so they compare directly without stripping.
+  function applyActiveNav() {
+    var nav = document.querySelector("[data-header-nav]");
+    if (!nav) return;
+    var topItems = Array.from(nav.querySelectorAll(":scope > [data-nav-item]"));
+    if (topItems.length === 0) return;
+
+    var cur = trimSlashes(location.pathname);
+
+    // Deepest (longest) nav path the current URL lives under, across both
+    // top-level and dropdown-child paths — matches computeActiveNavPath.
+    var activePath = "";
+    topItems.forEach(function (it) {
+      var isDropdown = it.hasAttribute("data-nav-item-dropdown");
+      var topA = isDropdown ? it.querySelector(":scope > a") : it;
+      if (topA) {
+        var tp = navPathname(topA);
+        if (isUnderPath(cur, tp) && tp.length > activePath.length) activePath = tp;
+      }
+      if (isDropdown) {
+        it.querySelectorAll(":scope > div a").forEach(function (c) {
+          var cp = navPathname(c);
+          if (isUnderPath(cur, cp) && cp.length > activePath.length) activePath = cp;
+        });
+      }
+    });
+
+    function setTopActive(a, active) {
+      if (!a) return;
+      if (active) {
+        a.classList.add("bg-fg", "text-bg");
+        a.classList.remove("text-muted", "hover:underline", "focus:underline");
+        a.setAttribute("aria-current", "page");
+      } else {
+        a.classList.remove("bg-fg", "text-bg");
+        a.classList.add("text-muted", "hover:underline", "focus:underline");
+        a.removeAttribute("aria-current");
+      }
+    }
+
+    topItems.forEach(function (it) {
+      var isDropdown = it.hasAttribute("data-nav-item-dropdown");
+      var topA = isDropdown ? it.querySelector(":scope > a") : it;
+      var topActive = false;
+
+      if (isDropdown) {
+        var parentMatch = !!topA && navPathname(topA) === activePath && activePath !== "";
+        var anyChild = false;
+        it.querySelectorAll(":scope > div a").forEach(function (c) {
+          var childActive = navPathname(c) === activePath && activePath !== "";
+          if (childActive) {
+            anyChild = true;
+            c.setAttribute("data-active", "");
+            c.classList.add("font-bold", "text-accent");
+            c.classList.remove("text-fg");
+          } else {
+            c.removeAttribute("data-active");
+            c.classList.remove("font-bold", "text-accent");
+            c.classList.add("text-fg");
+          }
+        });
+        topActive = parentMatch || anyChild;
+        var svg = topA ? topA.querySelector("svg") : null;
+        if (svg) {
+          if (topActive) { svg.classList.add("text-bg"); svg.classList.remove("text-muted"); }
+          else { svg.classList.add("text-muted"); svg.classList.remove("text-bg"); }
+        }
+      } else {
+        topActive = activePath !== "" && navPathname(topA) === activePath;
+      }
+
+      setTopActive(topA, topActive);
+    });
+  }
+
+  function initNavOverflow() {
+    if (cleanupNavOverflow) cleanupNavOverflow();
+
+    // Repaint the active highlight for the current URL before measuring /
+    // cloning, so the overflow "···" menu mirrors the correct active state.
+    applyActiveNav();
+
+    var nav = document.querySelector("[data-header-nav]");
+    var moreContainer = document.querySelector("[data-nav-more]");
+    var moreMenu = document.querySelector("[data-nav-more-menu]");
+    var moreToggle = document.querySelector("[data-nav-more-toggle]");
+    if (!nav || !moreContainer || !moreMenu || !moreToggle) return;
+
+    var items = Array.from(nav.querySelectorAll(":scope > [data-nav-item]"));
+    if (items.length === 0) return;
+
+    var controller = new AbortController();
+
+    function update() {
+      items.forEach(function (el) { el.style.display = ""; });
+      moreContainer.style.display = "";
+      moreMenu.innerHTML = "";
+      moreMenu.classList.add("hidden");
+      moreToggle.setAttribute("aria-expanded", "false");
+
+      var itemWidths = items.map(function (el) { return el.offsetWidth; });
+      var moreWidth = moreContainer.offsetWidth;
+      var navGap = parseFloat(getComputedStyle(nav).columnGap) || 0;
+      var available = nav.clientWidth;
+
+      if (available <= 0) {
+        moreContainer.style.display = "none";
+        return;
+      }
+
+      var total = 0;
+      for (var i = 0; i < itemWidths.length; i++) {
+        total += itemWidths[i] + (i > 0 ? navGap : 0);
+      }
+
+      if (total <= available) {
+        moreContainer.style.display = "none";
+        return;
+      }
+
+      var used = 0;
+      var cutoffIndex = 0;
+
+      for (var i2 = 0; i2 < items.length; i2++) {
+        var w = itemWidths[i2] + (i2 > 0 ? navGap : 0);
+        if (used + w > available - moreWidth - navGap) break;
+        used += w;
+        cutoffIndex = i2 + 1;
+      }
+
+      for (var i3 = cutoffIndex; i3 < items.length; i3++) {
+        items[i3].style.display = "none";
+      }
+
+      for (var i4 = cutoffIndex; i4 < items.length; i4++) {
+        var el = items[i4];
+        var isDropdown = el.hasAttribute("data-nav-item-dropdown");
+
+        if (isDropdown) {
+          var parentLink = el.querySelector(":scope > a");
+          var childLinks = el.querySelectorAll(":scope > div a");
+          if (parentLink) {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href = parentLink.href;
+            var parentText = parentLink.textContent ? parentLink.textContent.trim().replace(/\s+/g, " ") : "";
+            a.textContent = parentText;
+            a.className = "block px-hsp-md py-vsp-2xs text-small font-bold hover:bg-accent/10 hover:underline focus-visible:underline text-fg";
+            if (parentLink.getAttribute("aria-current") === "page") {
+              a.className += " text-accent";
+            }
+            li.appendChild(a);
+            moreMenu.appendChild(li);
+          }
+          childLinks.forEach(function (child) {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href = child.href;
+            a.textContent = child.textContent ? child.textContent.trim() : "";
+            var isChildActive = child.hasAttribute("data-active");
+            a.className = isChildActive
+              ? "block pl-hsp-xl pr-hsp-md py-vsp-2xs text-small font-bold text-accent hover:bg-accent/10 hover:underline focus-visible:underline"
+              : "block pl-hsp-xl pr-hsp-md py-vsp-2xs text-small text-muted hover:bg-accent/10 hover:text-fg hover:underline focus-visible:underline";
+            li.appendChild(a);
+            moreMenu.appendChild(li);
+          });
+        } else {
+          var anchor = el;
+          var li2 = document.createElement("li");
+          var a2 = document.createElement("a");
+          a2.href = anchor.href;
+          a2.textContent = anchor.textContent ? anchor.textContent.trim() : "";
+          a2.className = "block px-hsp-md py-vsp-2xs text-small hover:bg-accent/10 hover:underline focus-visible:underline text-fg";
+          if (anchor.getAttribute("aria-current") === "page") {
+            a2.className += " font-bold text-accent";
+          }
+          li2.appendChild(a2);
+          moreMenu.appendChild(li2);
+        }
+      }
+    }
+
+    moreToggle.addEventListener("click", function () {
+      var isOpen = !moreMenu.classList.contains("hidden");
+      moreMenu.classList.toggle("hidden", isOpen);
+      moreToggle.setAttribute("aria-expanded", String(!isOpen));
+    }, { signal: controller.signal });
+
+    document.addEventListener("click", function (e) {
+      if (!moreContainer.contains(e.target)) {
+        moreMenu.classList.add("hidden");
+        moreToggle.setAttribute("aria-expanded", "false");
+      }
+    }, { signal: controller.signal });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      if (!moreMenu.classList.contains("hidden")) {
+        moreMenu.classList.add("hidden");
+        moreToggle.setAttribute("aria-expanded", "false");
+        moreToggle.focus();
+        return;
+      }
+      var active = document.activeElement;
+      var dropdown = active && active.closest ? active.closest("[data-nav-item-dropdown]") : null;
+      if (dropdown && active && active.blur) {
+        active.blur();
+      }
+    }, { signal: controller.signal });
+
+    var dropdowns = nav.querySelectorAll("[data-nav-item-dropdown]");
+    dropdowns.forEach(function (dd) {
+      var trigger = dd.querySelector(":scope > a");
+      if (!trigger) return;
+      function setExpanded(v) {
+        trigger.setAttribute("aria-expanded", String(v));
+      }
+      dd.addEventListener("mouseenter", function () { setExpanded(true); }, { signal: controller.signal });
+      dd.addEventListener("mouseleave", function () { setExpanded(false); }, { signal: controller.signal });
+      dd.addEventListener("focusin", function () { setExpanded(true); }, { signal: controller.signal });
+      dd.addEventListener("focusout", function (e) {
+        if (!dd.contains(e.relatedTarget)) {
+          setExpanded(false);
+        }
+      }, { signal: controller.signal });
+    });
+
+    var ro = new ResizeObserver(update);
+    ro.observe(nav);
+    controller.signal.addEventListener("abort", function () { ro.disconnect(); });
+
+    document.fonts.ready.then(update);
+
+    update();
+
+    cleanupNavOverflow = function () { controller.abort(); };
+  }
+
+  initNavOverflow();
+  document.addEventListener("zfb:after-swap", initNavOverflow);
+})();</script></header><aside id="desktop-sidebar" aria-label="Documentation sidebar" data-zfb-transition-persist="sidebar-en-architecture" class="hidden lg:block fixed top-[3.5rem] left-0 z-sidebar w-[var(--zd-sidebar-w)] h-[calc(100vh-3.5rem)] overflow-y-auto bg-bg border-r border-muted pb-vsp-xl"><div data-zfb-island="SidebarTree" data-when="load" data-props="{&quot;nodes&quot;:[{&quot;slug&quot;:&quot;architecture&quot;,&quot;label&quot;:&quot;Architecture&quot;,&quot;position&quot;:0,&quot;href&quot;:&quot;/docs/architecture&quot;,&quot;hasPage&quot;:true,&quot;children&quot;:[{&quot;slug&quot;:&quot;architecture/pdf-processing-architecture&quot;,&quot;label&quot;:&quot;PDF Processing Architecture&quot;,&quot;description&quot;:&quot;End-to-end pipeline from source PDF to JSON data consumed by the zfb application.&quot;,&quot;position&quot;:1,&quot;href&quot;:&quot;/docs/architecture/pdf-processing-architecture&quot;,&quot;hasPage&quot;:true,&quot;children&quot;:[],&quot;sortOrder&quot;:&quot;asc&quot;},{&quot;slug&quot;:&quot;architecture/bilingual-support&quot;,&quot;label&quot;:&quot;Bilingual Support (JA / EN)&quot;,&quot;description&quot;:&quot;Language toggle behaviour, URL conventions, and localStorage persistence for the JA/EN bilingual viewer.&quot;,&quot;position&quot;:2,&quot;href&quot;:&quot;/docs/architecture/bilingual-support&quot;,&quot;hasPage&quot;:true,&quot;children&quot;:[],&quot;sortOrder&quot;:&quot;asc&quot;}],&quot;sortOrder&quot;:&quot;asc&quot;}],&quot;currentSlug&quot;:&quot;architecture&quot;,&quot;rootMenuItems&quot;:[{&quot;label&quot;:&quot;Architecture&quot;,&quot;href&quot;:&quot;/docs/architecture&quot;},{&quot;label&quot;:&quot;Design System&quot;,&quot;href&quot;:&quot;/docs/design-system&quot;},{&quot;label&quot;:&quot;Infrastructure&quot;,&quot;href&quot;:&quot;/docs/infrastructure&quot;}],&quot;backToMenuLabel&quot;:&quot;Back to main menu&quot;,&quot;themeDefaultMode&quot;:&quot;dark&quot;}"><nav><button type="button" class="lg:hidden flex w-full items-center gap-hsp-xs px-hsp-sm py-vsp-xs text-left text-small text-muted hover:text-fg border-b border-muted"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="h-icon-sm w-icon-sm shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>Back to main menu</button><div class="px-hsp-sm py-vsp-xs"><div class="flex items-center gap-hsp-xs bg-surface rounded px-hsp-sm py-vsp-2xs"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="h-[14px] w-[14px] text-muted shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><input type="text" placeholder="Filter..." value class="bg-transparent text-small outline-none w-full text-fg placeholder:text-muted"/></div></div><div class="border-t border-muted "><div class="relative"><div class="flex w-full items-center text-small font-semibold pt-[0.15rem] bg-fg text-bg"><a href="/docs/architecture" aria-current="page" style="padding-left:calc(clamp(0.4rem, 0.8vw, 1.3rem) + 0.15rem);" class="flex-1 flex items-start gap-hsp-xs py-vsp-xs hover:underline focus:underline break-words text-bg"><span class="flex h-[1lh] items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 103.395 107.049" aria-hidden="true" class="shrink-0 w-[14px] text-bg"><path d="M5.746 5.74 0 11.49l20.987 20.96C34.126 45.572 41.963 53.45 41.948 53.523c-.012.062-9.456 9.544-20.986 21.07L0 95.55l5.714 5.715c3.142 3.143 5.748 5.715 5.79 5.715s2.63-2.563 5.75-5.696l17.939-18.001c21.867-21.94 29.443-29.599 29.443-29.768 0-.114-.665-.804-5.084-5.275C51.872 40.47 11.71.125 11.565.036 11.525.01 8.906 2.578 5.746 5.74m38.345-.066c-3.132 3.13-5.696 5.71-5.696 5.732-.001.022 2.16 2.185 4.8 4.807 2.641 2.623 8.382 8.338 12.758 12.702 15.38 15.337 23.763 23.641 24.314 24.086.19.153.346.336.346.405 0 .07-1.738 1.847-3.887 3.976a17515 17515 0 0 0-20.35 20.264 19555 19555 0 0 1-17.223 17.158c-.416.409-.757.77-.757.8 0 .083 11.415 11.485 11.457 11.445.235-.22 53.542-53.528 53.542-53.543C103.395 53.472 49.891.02 49.837 0c-.028-.01-2.613 2.543-5.746 5.674"></path></svg></span><span>Architecture</span></a><button type="button" aria-expanded="true" aria-label="Collapse Architecture" class="aspect-square flex items-center justify-center w-[1.5rem] border-y border-l hover:underline focus:underline border-bg/30"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" class="h-[0.625rem] w-[0.625rem] shrink-0 transition-transform duration-150 rotate-90 text-bg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></button></div></div><div><div><div class="relative"><div style="left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + clamp(0.2rem, 0.3vw, 0.5rem));top:0px;bottom:0px;" class="absolute border-l border-dashed border-muted"></div><div style="left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + clamp(0.2rem, 0.3vw, 0.5rem));width:clamp(0.4rem, 0.6vw, 1rem);top:calc(var(--spacing-vsp-2xs) + 0.5lh);" class="absolute border-t border-dashed border-muted"></div><a href="/docs/architecture/pdf-processing-architecture" style="padding-left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + 1.25rem + 5px);" class="block py-vsp-2xs pr-[4px] text-small break-words text-muted hover:underline focus:underline"><span>PDF Processing Architecture</span></a></div></div><div class="pb-vsp-md"><div class="relative"><div style="left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + clamp(0.2rem, 0.3vw, 0.5rem));top:0px;bottom:calc(100% - calc(var(--spacing-vsp-2xs) + 0.5lh));" class="absolute border-l border-dashed border-muted"></div><div style="left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + clamp(0.2rem, 0.3vw, 0.5rem));width:clamp(0.4rem, 0.6vw, 1rem);top:calc(var(--spacing-vsp-2xs) + 0.5lh);" class="absolute border-t border-dashed border-muted"></div><a href="/docs/architecture/bilingual-support" style="padding-left:calc(1 * clamp(0.8rem, 1.2vw, 1.625rem) + 1.25rem + 5px);" class="block py-vsp-2xs pr-[4px] text-small break-words text-muted hover:underline focus:underline"><span>Bilingual Support (JA / EN)</span></a></div></div></div></div><div class="lg:hidden flex items-center gap-hsp-md border-t border-muted px-hsp-sm py-vsp-xs pb-[50vh] text-small"><button aria-label="Switch to light mode" class="text-muted hover:text-fg transition-colors p-hsp-sm focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></button></div></nav></div></aside><script>(function(){try{if(localStorage.getItem('zudo-doc-sidebar-visible')==='false'){document.documentElement.setAttribute('data-sidebar-hidden','');}}catch(e){}})();</script><div data-zfb-island="DesktopSidebarToggle" data-when="load"><button type="button" aria-label="Hide sidebar" aria-pressed="true" data-zfb-transition-persist="desktop-sidebar-toggle" class="zd-desktop-sidebar-toggle hidden lg:flex fixed bottom-vsp-xl z-sidebar items-center justify-center w-[1.5rem] h-[3rem] bg-surface border border-muted border-l-0 rounded-r-DEFAULT text-muted cursor-pointer transition-[left,color] duration-200 ease-in-out hover:text-fg"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="h-icon-sm w-icon-sm"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg></button></div><div class="zd-sidebar-content-wrapper lg:ml-[var(--zd-sidebar-w)]"><div class="flex min-h-[calc(100vh-3.5rem)] justify-center"><div class="zd-doc-content-band flex w-full gap-[clamp(1.5rem,3vw,4rem)] max-w-[clamp(50rem,75vw,90rem)]"><main class="flex-1 min-w-0 px-hsp-xl py-vsp-xl lg:px-hsp-2xl lg:py-vsp-2xl"><nav aria-label="Breadcrumb" class="mb-vsp-md text-small"><ol class="flex flex-wrap items-center gap-x-hsp-xs"><li class="flex items-center gap-x-hsp-xs"><a href="/" class="text-muted underline hover:text-fg flex items-center gap-x-hsp-2xs"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" class="h-[1.575rem] w-[1.575rem] shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"></path></svg></a></li><li class="flex items-center gap-x-hsp-xs"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" class="h-icon-xs w-icon-xs text-muted shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg><span class="text-fg">Architecture</span></li></ol></nav><article class="zd-content max-w-none"><h1 class="text-heading font-bold mb-vsp-xs">Architecture</h1><h1>Architecture</h1><p>Technical architecture of the zmanuals app — how PDFs are processed into web-ready data, and how the bilingual viewer works.</p><nav class="mt-vsp-lg mb-vsp-md grid grid-cols-1 gap-x-hsp-lg gap-y-vsp-md sm:grid-cols-2"><a href="/docs/architecture/pdf-processing-architecture" class="group block rounded border border-muted bg-surface px-hsp-lg py-vsp-md hover:border-accent"><span class="flex items-start gap-hsp-xs font-medium text-accent underline group-hover:underline"><span class="flex h-[1lh] items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 103.395 107.049" aria-hidden="true" class="w-[16px] shrink-0"><path d="M5.746 5.74 0 11.49l20.987 20.96C34.126 45.572 41.963 53.45 41.948 53.523c-.012.062-9.456 9.544-20.986 21.07L0 95.55l5.714 5.715c3.142 3.143 5.748 5.715 5.79 5.715s2.63-2.563 5.75-5.696l17.939-18.001c21.867-21.94 29.443-29.599 29.443-29.768 0-.114-.665-.804-5.084-5.275C51.872 40.47 11.71.125 11.565.036 11.525.01 8.906 2.578 5.746 5.74m38.345-.066c-3.132 3.13-5.696 5.71-5.696 5.732-.001.022 2.16 2.185 4.8 4.807 2.641 2.623 8.382 8.338 12.758 12.702 15.38 15.337 23.763 23.641 24.314 24.086.19.153.346.336.346.405 0 .07-1.738 1.847-3.887 3.976a17515 17515 0 0 0-20.35 20.264 19555 19555 0 0 1-17.223 17.158c-.416.409-.757.77-.757.8 0 .083 11.415 11.485 11.457 11.445.235-.22 53.542-53.528 53.542-53.543C103.395 53.472 49.891.02 49.837 0c-.028-.01-2.613 2.543-5.746 5.674"></path></svg></span>PDF Processing Architecture</span><span class="mt-vsp-2xs block text-small text-muted group-hover:text-accent group-hover:underline group-focus-visible:text-accent group-focus-visible:underline">End-to-end pipeline from source PDF to JSON data consumed by the zfb application.</span></a><a href="/docs/architecture/bilingual-support" class="group block rounded border border-muted bg-surface px-hsp-lg py-vsp-md hover:border-accent"><span class="flex items-start gap-hsp-xs font-medium text-accent underline group-hover:underline"><span class="flex h-[1lh] items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 103.395 107.049" aria-hidden="true" class="w-[16px] shrink-0"><path d="M5.746 5.74 0 11.49l20.987 20.96C34.126 45.572 41.963 53.45 41.948 53.523c-.012.062-9.456 9.544-20.986 21.07L0 95.55l5.714 5.715c3.142 3.143 5.748 5.715 5.79 5.715s2.63-2.563 5.75-5.696l17.939-18.001c21.867-21.94 29.443-29.599 29.443-29.768 0-.114-.665-.804-5.084-5.275C51.872 40.47 11.71.125 11.565.036 11.525.01 8.906 2.578 5.746 5.74m38.345-.066c-3.132 3.13-5.696 5.71-5.696 5.732-.001.022 2.16 2.185 4.8 4.807 2.641 2.623 8.382 8.338 12.758 12.702 15.38 15.337 23.763 23.641 24.314 24.086.19.153.346.336.346.405 0 .07-1.738 1.847-3.887 3.976a17515 17515 0 0 0-20.35 20.264 19555 19555 0 0 1-17.223 17.158c-.416.409-.757.77-.757.8 0 .083 11.415 11.485 11.457 11.445.235-.22 53.542-53.528 53.542-53.543C103.395 53.472 49.891.02 49.837 0c-.028-.01-2.613 2.543-5.746 5.674"></path></svg></span>Bilingual Support (JA / EN)</span><span class="mt-vsp-2xs block text-small text-muted group-hover:text-accent group-hover:underline group-focus-visible:text-accent group-focus-visible:underline">Language toggle behaviour, URL conventions, and localStorage persistence for the JA/EN bilingual viewer.</span></a></nav><nav class="mt-vsp-2xl grid grid-cols-2 gap-hsp-xl"><div></div><a href="/docs/architecture/pdf-processing-architecture" class="group border border-muted rounded-lg p-hsp-lg hover:border-accent text-right"><div class="flex items-center justify-end gap-hsp-xs text-caption text-muted mb-vsp-2xs"><span class="no-underline">Next</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" class="h-[1.125rem] w-[1.125rem]"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></div><p class="text-small font-semibold underline group-hover:text-accent">PDF Processing Architecture</p></a></nav><section aria-label="Document utilities" class="mt-vsp-xl border-t border-muted pt-vsp-md"><h2 class="sr-only">Revision History</h2><div data-zfb-island-skip-ssr="DocHistory" data-when="idle" data-props="{&quot;slug&quot;:&quot;architecture&quot;,&quot;basePath&quot;:&quot;/&quot;}"><div class="sr-only"><span>Claude</span><span>Created: 2026-06-18T15:48:32+00:00</span><span>Updated: 2026-06-18T17:02:18+00:00</span></div></div></section></article></main></div></div><footer data-zfb-transition-persist="footer-en" class="border-t border-muted bg-surface"><div class="mx-auto max-w-[clamp(50rem,75vw,90rem)] px-hsp-xl py-vsp-xl lg:px-hsp-2xl lg:py-vsp-2xl"></div></footer></div><div id="page-loading-overlay" aria-hidden="true" class="page-loading-overlay"><span class="page-loading-spinner"></span></div><script>(function(){
+var id="page-loading-overlay";
+function show(){var el=document.getElementById(id);if(!el)return;el.setAttribute("data-visible","");el.setAttribute("aria-hidden","false");}
+function hide(){var el=document.getElementById(id);if(!el)return;el.removeAttribute("data-visible");el.setAttribute("aria-hidden","true");}
+function setPending(ev){document.querySelectorAll("[data-zd-nav-pending]").forEach(function(el){el.removeAttribute("data-zd-nav-pending");});var src=ev&&ev.sourceElement;if(src&&src instanceof Element)src.setAttribute("data-zd-nav-pending","");}
+function clearPending(){document.querySelectorAll("[data-zd-nav-pending]").forEach(function(el){el.removeAttribute("data-zd-nav-pending");});}
+document.addEventListener("zfb:before-preparation",show);
+document.addEventListener("zfb:after-swap",hide);
+document.addEventListener("zfb:before-preparation",setPending);
+document.addEventListener("zfb:after-swap",clearPending);
+})();</script><div data-zfb-island="ClientRouterBootstrap" data-when="load"></div><div data-zfb-island-skip-ssr="ImageEnlarge" data-when="idle"><dialog style="position:fixed;inset:0;margin:auto;" class="zd-enlarge-dialog z-modal mx-auto max-h-[90vh] max-w-[90vw] overflow-hidden border border-muted bg-surface p-0 backdrop:z-modal-backdrop"></dialog></div><div data-zfb-island-skip-ssr="MermaidEnlarge" data-when="idle"><dialog aria-label="Enlarged diagram" style="position:fixed;inset:0;margin:auto;" class="zd-mermaid-dialog z-modal mx-auto h-[90vh] max-h-[90vh] w-[90vw] max-w-[90vw] overflow-hidden border border-muted bg-surface p-0 backdrop:z-modal-backdrop"></dialog></div><script>(function(){
+  var SIDEBAR_ID="desktop-sidebar";
+  var HANDLE_MARKER="data-sidebar-resizer";
+  var MIN_W=192,MAX_W=448,STEP=10;
+  var LS_KEY="zudo-doc-sidebar-width";
+  var CSS_PROP="--zd-sidebar-w";
+  var ACCENT_BG="var(--zd-accent,rgba(128,128,128,0.3))";
+  var ACCENT_OUTLINE="2px solid var(--zd-accent,rgba(128,128,128,0.5))";
+  var ACCENT_GHOST="var(--zd-accent,rgba(128,128,128,0.5))";
+
+  function initSidebarResizer(){
+    if(typeof document==="undefined")return;
+    var sidebar=document.getElementById(SIDEBAR_ID);
+    if(!sidebar||sidebar.querySelector("["+HANDLE_MARKER+"]"))return;
+    // Only attach to the real fixed desktop panel. On hide_sidebar pages the
+    // aside renders sr-only (position:absolute) purely for the ARIA landmark; a
+    // position:fixed handle would escape sr-only's clip and show a stray strip
+    // (below lg the panel is display:none but still fixed — handle appended, not rendered). zudolab/zudo-doc#1821
+    if(getComputedStyle(sidebar).position!=="fixed")return;
+
+    function readCurrentWidth(){
+      var raw=getComputedStyle(document.documentElement).getPropertyValue(CSS_PROP);
+      return raw?parseFloat(raw)||MIN_W:MIN_W;
+    }
+    var cachedWidth=readCurrentWidth();
+
+    var handle=document.createElement("div");
+    handle.setAttribute(HANDLE_MARKER,"");
+    handle.setAttribute("tabindex","0");
+    handle.setAttribute("role","separator");
+    handle.setAttribute("aria-orientation","vertical");
+    handle.setAttribute("aria-label","Resize sidebar");
+    handle.setAttribute("aria-valuemin",String(MIN_W));
+    handle.setAttribute("aria-valuemax",String(MAX_W));
+    handle.setAttribute("aria-valuenow",String(Math.round(cachedWidth)));
+    // position:fixed (not absolute) pins the handle to the viewport so it spans
+    // the sidebar's full height even while #desktop-sidebar scrolls. As an
+    // absolute child of the overflow-y:auto sidebar it scrolled away with the
+    // content and height:100% only covered the visible padding box. zudolab/zudo-doc#1821
+    // top:3.5rem + left:calc mirror the layout's #desktop-sidebar geometry
+    // (top-[3.5rem], left:0, width:var(--zd-sidebar-w)). 20px hit area > native
+    // y-scrollbar (~12-17px) keeps a draggable strip left of the scrollbar when
+    // the sidebar overflows. zudolab/zudo-doc#1660
+    Object.assign(handle.style,{position:"fixed",top:"3.5rem",bottom:"0",left:"calc(var(--zd-sidebar-w) - 20px)",width:"20px",cursor:"col-resize",zIndex:"var(--z-index-sidebar)",transition:"background 0.15s"});
+
+    var dragging=false,focused=false;
+
+    function applyWidth(w){
+      cachedWidth=Math.max(MIN_W,Math.min(MAX_W,w));
+      document.documentElement.style.setProperty(CSS_PROP,cachedWidth+"px");
+      try{localStorage.setItem(LS_KEY,String(Math.round(cachedWidth)));}catch(e){}
+      handle.setAttribute("aria-valuenow",String(Math.round(cachedWidth)));
+    }
+    function updateHandleVisual(){
+      handle.style.background=(dragging||focused)?ACCENT_BG:"";
+      handle.style.outline=(focused&&!dragging)?ACCENT_OUTLINE:"";
+      handle.style.outlineOffset=(focused&&!dragging)?"1px":"";
+    }
+
+    handle.addEventListener("focus",function(){focused=true;updateHandleVisual();});
+    handle.addEventListener("blur",function(){focused=false;updateHandleVisual();});
+    handle.addEventListener("keydown",function(e){
+      var w=cachedWidth;
+      if(e.key==="ArrowLeft")w=Math.max(MIN_W,w-STEP);
+      else if(e.key==="ArrowRight")w=Math.min(MAX_W,w+STEP);
+      else if(e.key==="Home")w=MIN_W;
+      else if(e.key==="End")w=MAX_W;
+      else return;
+      e.preventDefault();applyWidth(w);
+    });
+    handle.addEventListener("mouseenter",function(){if(!dragging&&!focused)handle.style.background=ACCENT_BG;});
+    handle.addEventListener("mouseleave",function(){if(!dragging&&!focused)handle.style.background="";});
+    handle.addEventListener("pointerdown",function(e){
+      e.preventDefault();handle.setPointerCapture(e.pointerId);
+      dragging=true;updateHandleVisual();
+      document.documentElement.style.cursor="col-resize";
+      document.documentElement.style.userSelect="none";
+      var ghost=document.createElement("div");
+      Object.assign(ghost.style,{position:"fixed",top:"0",width:"2px",height:"100vh",background:ACCENT_GHOST,pointerEvents:"none",zIndex:"var(--z-index-drag)"});
+      var sidebarRect=sidebar.getBoundingClientRect();
+      var sidebarLeft=sidebarRect.left;
+      ghost.style.left=sidebarLeft+sidebarRect.width+"px";
+      document.body.appendChild(ghost);
+      var targetWidth=0;
+      var cleaned=false;
+      function onMove(ev){targetWidth=Math.max(MIN_W,Math.min(MAX_W,ev.clientX-sidebarLeft));ghost.style.left=sidebarLeft+targetWidth+"px";}
+      function cleanup(){
+        if(cleaned)return;cleaned=true;
+        dragging=false;updateHandleVisual();
+        document.documentElement.style.cursor="";
+        document.documentElement.style.userSelect="";
+        ghost.remove();
+        handle.removeEventListener("pointermove",onMove);
+        handle.removeEventListener("pointerup",onUp);
+        handle.removeEventListener("pointercancel",onCancel);
+        handle.removeEventListener("lostpointercapture",onLost);
+      }
+      function commit(){if(targetWidth>0)applyWidth(targetWidth);}
+      // pointerup: normal end-of-drag. Commit then teardown.
+      function onUp(){commit();cleanup();}
+      // lostpointercapture: per spec fires AFTER pointerup, but browsers reorder
+      // these in edge cases (cursor near y-scrollbar, fast drags, OS handoff).
+      // Commit here too so a real drag still applies if pointerup is dropped.
+      // Idempotent with onUp via the cleaned guard.
+      function onLost(){commit();cleanup();}
+      // pointercancel: actual user/OS cancellation (touch interrupted, etc.).
+      // Do NOT commit — caller intent was to abort.
+      function onCancel(){cleanup();}
+      handle.addEventListener("pointermove",onMove);
+      handle.addEventListener("pointerup",onUp);
+      handle.addEventListener("pointercancel",onCancel);
+      handle.addEventListener("lostpointercapture",onLost);
+    });
+    sidebar.appendChild(handle);
+  }
+
+  initSidebarResizer();
+  document.addEventListener("zfb:after-swap",initSidebarResizer);
+})();</script><div aria-live="polite" class="code-block-sr-announce"></div><script>(function () {
+  // Single shared ResizeObserver for all code blocks on the page.
+  var wrapButtons = new Map();
+  var resizeObserver = new ResizeObserver(function (entries) {
+    for (var i = 0; i < entries.length; i++) {
+      var btn = wrapButtons.get(entries[i].target);
+      if (btn) updateWrapVisibility(entries[i].target, btn);
+    }
+  });
+
+  function enhanceCodeBlocks() {
+    // Selector covers two shapes:
+    //   1. pre.syntect-... from the syntect highlighter (the class
+    //      is anchored or merged with other classes).
+    //   2. bare pre inside .tab-panel (TabItem) wrappers where some
+    //      pipelines emit class-less pre elements.
+    // No backticks in this comment: this whole script body lives inside
+    // a template literal in the host .ts module, so an inline backtick
+    // would close the literal and make 'panel' a free identifier.
+    var pres = document.querySelectorAll(
+      'pre[class*="syntect-"], .tab-panel pre',
+    );
+
+    for (var pi = 0; pi < pres.length; pi++) {
+      var pre = pres[pi];
+      if (pre.dataset.enhanced) continue;
+      pre.dataset.enhanced = "true";
+
+      var codeEl = pre.querySelector("code");
+      if (!codeEl) continue;
+      var rawCode = codeEl.textContent || "";
+
+      // Wrap <pre> in a container so buttons stay fixed during horizontal scroll.
+      var wrapper = document.createElement("div");
+      wrapper.className = "code-block-wrapper";
+      var parent = pre.parentNode;
+      if (!parent) continue;
+      parent.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+
+      // Button group (appended to wrapper, not pre).
+      var group = document.createElement("div");
+      group.className = "code-buttons";
+
+      // Word wrap toggle (only shown when content overflows).
+      var wrapBtn = createWrapButton(pre);
+      group.appendChild(wrapBtn);
+
+      // Copy button.
+      var copyBtn = createCopyButton(rawCode);
+      group.appendChild(copyBtn);
+
+      wrapper.appendChild(group);
+
+      // Track and observe for overflow changes.
+      wrapButtons.set(pre, wrapBtn);
+      updateWrapVisibility(pre, wrapBtn);
+      resizeObserver.observe(pre);
+    }
+  }
+
+  function createCopyButton(code) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "code-btn code-btn-copy";
+    btn.setAttribute("aria-label", "Copy code");
+    btn.innerHTML =
+      '<svg class="code-icon code-icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>' +
+        '<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>' +
+      '</svg>' +
+      '<svg class="code-icon code-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<polyline points="20 6 9 17 4 12"/>' +
+      '</svg>';
+
+    var copyTimeout;
+    var announce = document.querySelector(".code-block-sr-announce");
+
+    btn.addEventListener("click", async function () {
+      var success = true;
+      try {
+        await navigator.clipboard.writeText(code);
+      } catch (_) {
+        // Fallback for older browsers.
+        var textarea = document.createElement("textarea");
+        textarea.value = code;
+        textarea.style.cssText = "position:fixed;opacity:0;pointer-events:none";
+        document.body.appendChild(textarea);
+        textarea.select();
+        success = document.execCommand("copy");
+        document.body.removeChild(textarea);
+      }
+      if (success) {
+        btn.classList.add("copied");
+        if (announce) announce.textContent = "Copied!";
+        clearTimeout(copyTimeout);
+        copyTimeout = setTimeout(function () {
+          btn.classList.remove("copied");
+          if (announce) announce.textContent = "";
+        }, 1500);
+      }
+    });
+
+    return btn;
+  }
+
+  function createWrapButton(pre) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "code-btn code-btn-wrap";
+    btn.setAttribute("aria-label", "Toggle word wrap");
+    btn.setAttribute("aria-pressed", "false");
+    btn.innerHTML =
+      '<svg class="code-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<polyline points="17 10 21 6 17 2" />' +
+        '<path d="M3 6h18" />' +
+        '<path d="M21 18H7" />' +
+        '<polyline points="11 22 7 18 11 14" />' +
+      '</svg>';
+
+    btn.addEventListener("click", function () {
+      var isWrapped = pre.classList.toggle("word-wrap");
+      btn.classList.toggle("active", isWrapped);
+      btn.setAttribute("aria-pressed", String(isWrapped));
+    });
+
+    return btn;
+  }
+
+  function updateWrapVisibility(pre, btn) {
+    // Keep visible when active (user needs to toggle back).
+    var isActive = btn.classList.contains("active");
+    btn.style.display = isActive || pre.scrollWidth > pre.clientWidth ? "" : "none";
+  }
+
+  // Clean up stale references before navigating away. Under zfb's
+  // Strategy B SPA navigation the body is replaced in place (head and
+  // html survive), so the OLD pre nodes the ResizeObserver was watching
+  // go away — unobserve them so the observer doesn't keep detached
+  // references, then clear the wrapButtons Map so the next
+  // enhanceCodeBlocks pass can repopulate it cleanly.
+  document.addEventListener("zfb:before-preparation", function () {
+    wrapButtons.forEach(function (_btn, el) {
+      resizeObserver.unobserve(el);
+    });
+    wrapButtons.clear();
+  });
+
+  // Run on initial load.
+  enhanceCodeBlocks();
+
+  // Re-run after every page-navigate-end signal (zfb:after-swap under
+  // Strategy B SPA navigation). The IIFE itself only runs on the first
+  // load — zfb's deselectScripts marks identical inline scripts in
+  // the new body as already-executed — so this listener is the path
+  // by which the new body's <pre> elements get enhanced.
+  document.addEventListener("zfb:after-swap", enhanceCodeBlocks);
+})();</script><script>(function () {
+  var BASE_BTN = "px-hsp-lg py-vsp-xs text-small font-medium border-b-[5px] -mb-px transition-colors";
+  var ACTIVE_BTN = BASE_BTN + " text-accent border-accent";
+  var INACTIVE_BTN = BASE_BTN + " text-muted border-transparent hover:text-fg";
+
+  function activateTab(container, value) {
+    // Update button styles.
+    var buttons = container.querySelectorAll("[data-tab-btn]");
+    for (var i = 0; i < buttons.length; i++) {
+      var btn = buttons[i];
+      var isActive = btn.dataset.tabBtn === value;
+      btn.className = isActive ? ACTIVE_BTN : INACTIVE_BTN;
+      btn.setAttribute("aria-selected", String(isActive));
+    }
+    // Update panel visibility.
+    showPanel(container, value);
+  }
+
+  function showPanel(container, value) {
+    var panels = container.querySelectorAll(".tab-panel");
+    for (var i = 0; i < panels.length; i++) {
+      var panel = panels[i];
+      panel.hidden = panel.dataset.tabValue !== value;
+    }
+  }
+
+  function syncGroup(groupId, value, source) {
+    var others = document.querySelectorAll("[data-tabs][data-group-id=\"" + CSS.escape(groupId) + "\"]");
+    for (var i = 0; i < others.length; i++) {
+      var container = others[i];
+      if (container === source) continue;
+      var hasPanel = container.querySelector(".tab-panel[data-tab-value=\"" + CSS.escape(value) + "\"]");
+      if (hasPanel) activateTab(container, value);
+    }
+  }
+
+  function initTabs() {
+    var containers = document.querySelectorAll("[data-tabs]");
+
+    for (var ci = 0; ci < containers.length; ci++) {
+      var container = containers[ci];
+      if (container.dataset.tabsInit) continue;
+      container.dataset.tabsInit = "true";
+
+      var panels = container.querySelectorAll(".tab-panel");
+      if (panels.length === 0) continue;
+
+      var groupId = container.dataset.groupId;
+
+      // Determine which tab should be active.
+      var activeValue = null;
+
+      if (groupId) {
+        var stored = localStorage.getItem("tabs-group-" + groupId);
+        if (stored) {
+          // Only use stored value if a matching panel exists.
+          for (var pi = 0; pi < panels.length; pi++) {
+            if (panels[pi].dataset.tabValue === stored) {
+              activeValue = stored;
+              break;
+            }
+          }
+        }
+      }
+
+      if (!activeValue) {
+        var defaultPanel = container.querySelector(".tab-panel[data-tab-default]");
+        activeValue = defaultPanel
+          ? defaultPanel.dataset.tabValue
+          : panels[0].dataset.tabValue;
+      }
+
+      // Activate the correct tab (set button styles + show panel).
+      activateTab(container, activeValue);
+
+      // Wire click handlers on the server-rendered buttons.
+      (function (cont, gid) {
+        var buttons = cont.querySelectorAll("[data-tab-btn]");
+        for (var bi = 0; bi < buttons.length; bi++) {
+          (function (btn) {
+            btn.addEventListener("click", function () {
+              var val = btn.dataset.tabBtn;
+              activateTab(cont, val);
+              if (gid) {
+                localStorage.setItem("tabs-group-" + gid, val);
+                syncGroup(gid, val, cont);
+              }
+            });
+          })(buttons[bi]);
+        }
+      })(container, groupId);
+    }
+  }
+
+  // Run on initial load.
+  initTabs();
+
+  // Re-run after every page-navigate-end signal so View Transitions
+  // navigations (which under the zfb runtime are real page loads) see
+  // the tabs initialised on the new page.
+  document.addEventListener("zfb:after-swap", initTabs);
+})();</script><script>(function () {
+  /**
+   * Syntactically pick the matching arg from a CSS `light-dark(a, b)`
+   * value, based on the active theme attribute on `:root`.
+   *
+   * zudolab/zudo-doc#1458: mermaid 11.4.1 ships khroma 2.1.0, which
+   * does not understand the CSS `light-dark()` function. CSS custom
+   * properties on `:root` are written as `light-dark(#hex-light,
+   * #hex-dark)` when colorMode is configured (see
+   * `generateLightDarkCssProperties` in
+   * `src/config/color-scheme-utils.ts`), and `getPropertyValue`
+   * returns them as the literal string. The earlier resolveColor
+   * temp-element trick — assigning the value to `el.style.color` and
+   * reading `getComputedStyle` — was unreliable in production
+   * (depends on browser `light-dark()` support and on
+   * `color-scheme` propagating to the temp element), so we parse
+   * the function syntactically here.
+   *
+   * Returns the picked hex on success, or `null` if the input is not
+   * a `light-dark(...)` value (caller falls back to resolveColor for
+   * `oklch(...)`, `rgb(...)`, etc.). When the theme attribute is
+   * missing — first paint before the color-scheme bootstrap runs, or
+   * a host that does not configure colorMode — returns the light arg
+   * as a deterministic default.
+   */
+  function parseLightDark(raw, theme) {
+    if (!raw) return null;
+    var m = raw.match(/^\s*light-dark\s*\(\s*([^,]+?)\s*,\s*([^)]+?)\s*\)\s*$/);
+    if (!m) return null;
+    return theme === "dark" ? m[2] : m[1];
+  }
+
+  /**
+   * Resolve a CSS value to a hex color (#rrggbb).
+   * CSS custom properties return raw values from getComputedStyle (e.g.
+   * "light-dark(#fff, #000)") which mermaid cannot parse. This uses a
+   * temporary element so the browser resolves any CSS function to a
+   * concrete rgb() value, then converts it to hex.
+   *
+   * `light-dark(...)` is now handled syntactically in
+   * `parseLightDark` above (zudolab/zudo-doc#1458) — this function
+   * remains as a fallback for any other CSS function value
+   * (`oklch(...)`, `rgb(...)`, named colors, etc.).
+   */
+  function resolveColor(value) {
+    if (!value) return value;
+    if (/^#[0-9a-fA-F]{3}$/.test(value)) {
+      return "#" + value[1] + value[1] + value[2] + value[2] + value[3] + value[3];
+    }
+    if (/^#[0-9a-fA-F]{6}$/.test(value)) return value;
+    if (/^#[0-9a-fA-F]{8}$/.test(value)) return value.slice(0, 7);
+    if (/^#[0-9a-fA-F]{4}$/.test(value)) {
+      return "#" + value[1] + value[1] + value[2] + value[2] + value[3] + value[3];
+    }
+    var el = document.createElement("div");
+    el.style.display = "none";
+    el.style.color = value;
+    document.body.appendChild(el);
+    var resolved;
+    try {
+      resolved = getComputedStyle(el).color;
+    } finally {
+      el.remove();
+    }
+    var m = resolved.match(/(d+)/g);
+    if (m && m.length >= 3) {
+      return "#" + m.slice(0, 3).map(function (n) { return Number(n).toString(16).padStart(2, "0"); }).join("");
+    }
+    return value;
+  }
+
+  // The --zd-* tokens the value-reader v() consumes. The observer gate
+  // snapshots their RESOLVED computed values so a :root[style] mutation
+  // that touches none of them correctly no-ops, while one that changes a
+  // tracked token (or data-theme) re-renders (zudolab/zudo-doc#2181).
+  var TRACKED_TOKENS = [
+    "--zd-bg",
+    "--zd-mermaid-node-bg",
+    "--zd-mermaid-text",
+    "--zd-mermaid-line",
+    "--zd-mermaid-note-bg",
+    "--zd-mermaid-label-bg",
+  ];
+
+  /**
+   * Snapshot the active theme state: the data-theme attribute plus the
+   * RESOLVED computed value of every tracked token. getComputedStyle is
+   * read fresh (not the raw style-attribute string) so an unrelated
+   * :root[style] change does not look like a token change, and a real
+   * token change is caught even when written indirectly.
+   */
+  function captureThemeState() {
+    var cs = getComputedStyle(document.documentElement);
+    var tokens = {};
+    TRACKED_TOKENS.forEach(function (name) {
+      tokens[name] = cs.getPropertyValue(name).trim();
+    });
+    return {
+      theme: document.documentElement.getAttribute("data-theme"),
+      tokens: tokens,
+    };
+  }
+
+  /**
+   * Decide whether a genuine theme/token change occurred between two
+   * snapshots. Treats an empty/undefined -> real-value transition as a
+   * change: --zd-bg may be UNSET at first paint (luminance NaN); the
+   * observer is exactly what reinits once ColorSchemeProvider later
+   * populates the tokens, so that first colorization MUST still fire
+   * (zudolab/zudo-doc#2181).
+   */
+  function hasThemeStateChanged(prev, next) {
+    if (!prev) return true;
+    if (prev.theme !== next.theme) return true;
+    for (var i = 0; i < TRACKED_TOKENS.length; i++) {
+      var name = TRACKED_TOKENS[i];
+      if (prev.tokens[name] !== next.tokens[name]) return true;
+    }
+    return false;
+  }
+
+  async function initMermaid() {
+    var els = document.querySelectorAll("[data-mermaid]:not([data-mermaid-rendered])");
+    if (els.length === 0) return;
+
+    try {
+      // Wave 13 (zudolab/zudo-doc#1355 Topic 4): import mermaid from a
+      // public ESM CDN URL because the inline <script> reaches the
+      // browser without a bundler — bare specifiers like "mermaid"
+      // cannot be resolved at runtime. See the file header for the
+      // full trade-off rationale.
+      var mod = await import("https://esm.sh/mermaid@11.15.0");
+      var mermaid = mod.default;
+      var s = getComputedStyle(document.documentElement);
+      // Read the active theme attribute that the color-scheme-provider
+      // bootstrap pins on :root (see
+      // packages/zudo-doc/src/theme/color-scheme-provider.tsx).
+      // parseLightDark uses this to pick the matching arg from
+      // `light-dark(#a, #b)` tokens before they reach mermaid /
+      // khroma (zudolab/zudo-doc#1458).
+      var theme = document.documentElement.getAttribute("data-theme");
+      // Read a custom property, resolve through the temporary-element
+      // round-trip to a hex color, and return undefined when the
+      // property is unset on :root. mermaid.initialize crashes (khroma
+      // "Unsupported color format: ''") if a theme variable is the
+      // empty string, but tolerates undefined as "use the default" —
+      // so unset host tokens fall back to mermaid's own theme palette.
+      var v = function (name) {
+        var raw = s.getPropertyValue(name).trim();
+        if (!raw) return undefined;
+        // light-dark() is parsed syntactically against the active
+        // data-theme attribute — khroma 2.1.0 cannot parse the
+        // function form (zudolab/zudo-doc#1458). Other CSS function
+        // values (oklch(...), rgb(...), etc.) still go through the
+        // temp-element resolveColor path below.
+        var picked = parseLightDark(raw, theme);
+        if (picked) {
+          var resolvedPicked = resolveColor(picked);
+          return resolvedPicked || undefined;
+        }
+        var resolved = resolveColor(raw);
+        return resolved || undefined;
+      };
+      var bg = v("--zd-bg");
+      // Leave luminance as NaN when --zd-bg is not yet on :root. The
+      // Number.isNaN guard below maps NaN to darkMode:true, which is
+      // mermaid's safer default — light text on dark fills survives
+      // the page eventually flipping into dark mode without a
+      // re-render, whereas the inverse produces unreadable diagrams
+      // on dark backgrounds. The MutationObserver on the root style
+      // attribute (registered further down) will reinit with real
+      // luminance once ColorSchemeProvider populates the custom
+      // properties.
+      var luminance = NaN;
+      if (bg && bg.charAt(0) === "#" && bg.length === 7) {
+        var hex = bg.replace("#", "");
+        var r = parseInt(hex.substring(0, 2), 16) / 255;
+        var g = parseInt(hex.substring(2, 4), 16) / 255;
+        var b = parseInt(hex.substring(4, 6), 16) / 255;
+        luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+      }
+      // Build themeVariables dynamically so undefined values don't
+      // reach khroma's color parser. mermaid's defaults fill in the
+      // gaps for any host token that is unset (e.g. when the consumer
+      // has not yet mounted ColorSchemeProvider on :root).
+      var themeVariables = {
+        darkMode: Number.isNaN(luminance) ? true : luminance < 0.5,
+        background: "transparent",
+        fontFamily: "inherit",
+      };
+      function setIfDefined(key, value) {
+        if (value !== undefined) themeVariables[key] = value;
+      }
+      var nodeBg = v("--zd-mermaid-node-bg");
+      var textColor = v("--zd-mermaid-text");
+      var lineColor = v("--zd-mermaid-line");
+      var noteBg = v("--zd-mermaid-note-bg");
+      var labelBg = v("--zd-mermaid-label-bg");
+      setIfDefined("primaryColor", nodeBg);
+      setIfDefined("primaryTextColor", textColor);
+      setIfDefined("primaryBorderColor", lineColor);
+      setIfDefined("lineColor", lineColor);
+      setIfDefined("secondaryColor", noteBg);
+      setIfDefined("tertiaryColor", noteBg);
+      setIfDefined("edgeLabelBackground", labelBg);
+      setIfDefined("labelTextColor", textColor);
+      setIfDefined("transitionColor", lineColor);
+      setIfDefined("transitionLabelColor", textColor);
+      setIfDefined("stateLabelColor", textColor);
+      setIfDefined("noteBkgColor", noteBg);
+      setIfDefined("noteTextColor", textColor);
+      setIfDefined("noteBorderColor", lineColor);
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: "base",
+        themeVariables: themeVariables,
+      });
+      // Cache each diagram's source BEFORE mermaid.run consumes it
+      // (mermaid replaces the graph text with the rendered <svg> and
+      // sets data-processed). Use textContent — the DECODED source
+      // mermaid consumes — NOT innerHTML, which would re-encode/decode
+      // entities and corrupt diagrams containing `-->` arrows or `&`.
+      // Only set when absent so repeated reinits keep the ORIGINAL
+      // source (zudolab/zudo-doc#2181).
+      els.forEach(function (el) {
+        if (!el.hasAttribute("data-mermaid-src")) {
+          el.setAttribute("data-mermaid-src", el.textContent);
+        }
+      });
+      await mermaid.run({ nodes: Array.from(els) });
+      els.forEach(function (el) { el.setAttribute("data-mermaid-rendered", ""); });
+    } catch (e) {
+      console.error("[mermaid-init] Failed to render mermaid diagrams:", e);
+    }
+  }
+
+  /**
+   * Re-render all mermaid diagrams from their cached source text.
+   *
+   * By the time this runs, mermaid.run has already CONSUMED the source
+   * (replaced the graph text with the rendered <svg> and set
+   * data-processed), so clearing data-mermaid-rendered alone leaves the
+   * node permanently blank — initMermaid re-selects it but mermaid.run
+   * skips nodes that still have data-processed, and there is no source
+   * left to regenerate from. Restore the cached source, drop the SVG,
+   * and remove BOTH data-processed AND data-mermaid-rendered so the next
+   * initMermaid pass regenerates cleanly. Keep data-mermaid-src so
+   * repeated theme toggles keep working (zudolab/zudo-doc#2181).
+   */
+  function reinitMermaid() {
+    document.querySelectorAll("[data-mermaid-rendered]").forEach(function (el) {
+      var src = el.getAttribute("data-mermaid-src");
+      if (src !== null) el.textContent = src;
+      var svg = el.querySelector("svg");
+      if (svg) svg.remove();
+      el.removeAttribute("data-processed");
+      el.removeAttribute("data-mermaid-rendered");
+    });
+    // Refresh the theme snapshot now that the genuine change is applied,
+    // so the observer's gate measures the NEXT change against this state.
+    lastThemeState = captureThemeState();
+    initMermaid();
+  }
+
+  // First-paint render — under zfb's Strategy B SPA navigation,
+  // AFTER_NAVIGATE_EVENT (zfb:after-swap) does NOT fire on the initial
+  // page load (only post-swap), so we have to invoke initMermaid()
+  // synchronously at script-evaluation time to render diagrams on the
+  // landing page. The listener below covers the re-render path for
+  // every subsequent SPA hop. zudolab/zudo-doc#1523.
+  initMermaid();
+  document.addEventListener("zfb:after-swap", function () { initMermaid(); });
+
+  // Re-render mermaid when:
+  //   * the color-tweak panel mutates :root[style] (custom properties), or
+  //   * the theme-toggle flips :root[data-theme] between "light" / "dark"
+  //     (zudolab/zudo-doc#1458 — diagram colors are baked into the rendered
+  //     SVG, so we have to clear data-mermaid-rendered and re-run with
+  //     the new theme's hex picks from parseLightDark).
+  // Debounced so a synchronous flip of both attributes triggers a
+  // single re-render.
+  //
+  // zudolab/zudo-doc#2181: gate on a REAL theme/token change. zfb-runtime's
+  // client router (swapRootAttributes) removes+re-adds ALL :root attributes
+  // on every soft navigation, so unchanged data-theme/style still fire
+  // mutations — without this gate the observer reinits ~300ms after every
+  // nav and (combined with the old destructive reinit) blanks every
+  // diagram. New diagrams reached by soft-nav are already handled by the
+  // AFTER_NAVIGATE_EVENT -> initMermaid() listener above, so the observer
+  // only needs to fire for genuine theme/token changes.
+  //
+  // Seed the snapshot at script-eval time — BEFORE ColorSchemeProvider
+  // runs, so the tokens are likely empty. hasThemeStateChanged treats
+  // empty -> real as a change, so the first legitimate colorization still
+  // fires; reinitMermaid then refreshes the snapshot.
+  var lastThemeState = captureThemeState();
+  var tweakTimer;
+  new MutationObserver(function () {
+    var next = captureThemeState();
+    if (!hasThemeStateChanged(lastThemeState, next)) return;
+    lastThemeState = next;
+    clearTimeout(tweakTimer);
+    tweakTimer = setTimeout(reinitMermaid, 300);
+  }).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["style", "data-theme"],
+  });
+})();</script><script>(function(){
+var cleanupController=null;
+function initVersionSwitcher(){
+if(cleanupController)cleanupController.abort();
+cleanupController=new AbortController();
+var signal=cleanupController.signal;
+document.querySelectorAll("[data-version-switcher]").forEach(function(switcher){
+var toggle=switcher.querySelector("[data-version-toggle]");
+var menu=switcher.querySelector("[data-version-menu]");
+if(!toggle||!menu)return;
+toggle.addEventListener("click",function(){
+var isOpen=!menu.classList.contains("hidden");
+menu.classList.toggle("hidden",isOpen);
+toggle.setAttribute("aria-expanded",String(!isOpen));
+},{signal:signal});
+document.addEventListener("click",function(e){
+if(!switcher.contains(e.target)){
+menu.classList.add("hidden");
+toggle.setAttribute("aria-expanded","false");
+}
+},{signal:signal});
+document.addEventListener("keydown",function(e){
+if(e.key==="Escape"&&!menu.classList.contains("hidden")){
+menu.classList.add("hidden");
+toggle.setAttribute("aria-expanded","false");
+toggle.focus();
+}
+},{signal:signal});
+});
+}
+initVersionSwitcher();
+document.addEventListener("zfb:after-swap",initVersionSwitcher);
+})();</script></body></html>
