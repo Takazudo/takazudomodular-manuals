@@ -88,7 +88,8 @@ export const settings = {
   htmlPreview: undefined as HtmlPreviewConfig | undefined,
   versions: false as VersionConfig[] | false,
   claudeResources: {
-    claudeDir: '.claude',
+    // doc/ is a subdirectory; .claude lives at the repo root one level up
+    claudeDir: '../.claude',
   } as { claudeDir: string; projectRoot?: string } | false,
   defaultLocaleOnlyPrefixes: [
     '/docs/claude-md/',
