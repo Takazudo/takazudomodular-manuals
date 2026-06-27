@@ -1,0 +1,4 @@
+/_headers
+/img/logo.svg
+/img/ogp.png
+/robots.txt

@@ -1,0 +1,38 @@
+# Template drift allowlist for zmanuals-doc.
+# Generated projects start from create-zudo-doc templates; this file lists
+# intentional divergences from the pinned create-zudo-doc baseline so
+# `check-template-drift.sh` exits 0.
+#
+# Format: one repo-relative path per line (no leading slash).
+# Blank lines and `#` comments are ignored.
+#
+# Paths are relative to doc/ (the workspace package root that check-template-drift.sh
+# uses as ROOT_DIR).
+#
+# STATUS: This file was seeded at S1 (baseline oracle capture). Most template
+# files currently show [DIFF] because this project was scaffolded from the old
+# @takazudo/zudo-doc pattern before create-zudo-doc templates existed. S3 will
+# reconcile those diffs by replacing production files with template-equivalent
+# content. After S3, only the entries below should remain.
+
+# ── Generated / runtime artifact ──────────────────────────────────────────
+# doc-history-meta.json is written at build time by the doc-history plugin
+# (git log over src/content/docs/). The template ships {}, production has
+# real metadata. Excluded because it is a build artifact, not source.
+.zfb/doc-history-meta.json
+
+# ── Host customization: zmanuals-specific extra source components ──────────
+# These files exist in doc/src/components/ but have no counterpart in any
+# create-zudo-doc template. They are NOT flagged by check-template-drift.sh
+# (it only checks template files against production, not the reverse), but
+# they are documented here as intentional zmanuals extras for S3 reviewers.
+#
+# src/components/client-router-bootstrap.tsx  — custom island for SPA router
+# src/components/mermaid-enlarge.tsx          — mermaid diagram enlarge-on-click
+# src/components/site-tree-nav.tsx            — custom site-tree navigation island
+#
+# ── Host customization: extra plugin files ────────────────────────────────
+# doc/plugins/ (claude-resources-plugin.mjs, doc-history-plugin.mjs,
+# search-index-plugin.mjs, copy-public-plugin.mjs, connect-adapter.mjs) were
+# inlined from @takazudo/zudo-doc pre-migration. After the migration these will
+# be replaced by the package's built-in plugins. Not flagged by the drift check.
