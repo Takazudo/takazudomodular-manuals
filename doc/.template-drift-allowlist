@@ -1,0 +1,118 @@
+# Template drift allowlist for zmanuals-doc.
+# Generated projects start from create-zudo-doc templates; this file lists
+# intentional divergences from the pinned create-zudo-doc baseline so
+# `check-template-drift.sh` (pnpm check:template-drift) exits 0.
+#
+# Format: one repo-relative path per line (no leading slash).
+# Blank lines and `#` comments are ignored.
+# Paths are relative to doc/ (the workspace package root).
+#
+# STATUS (1.2.0 clean-room migration):
+#   All 82 drifted files fall into two categories:
+#
+#   A. Prettier reformatting only — The scaffold applies the project's
+#      Prettier config (single-quotes, different line-wrap thresholds) over
+#      the template source which ships with double-quotes. No intentional
+#      code changes; these files ARE the template content, just differently
+#      formatted. If create-zudo-doc adopts single-quote style in a future
+#      release, these entries can be deleted.
+#
+#   B. Intentional project additions — Files where actual content was added
+#      beyond what the template ships (e.g. global.css has the doc-history
+#      diff-viewer styles that were generated into the @slot:feature-styles
+#      placeholder, tsconfig.json has a project-specific exclude list).
+#
+#   C. Build artifact — .zfb/doc-history-meta.json is written at build time;
+#      the template ships {} but production has real metadata.
+#
+# No files here are intentional component FORKS (that would require ejection
+# and an entry in .zudo-doc.json). All differences are either formatting,
+# project-specific content additions, or build artifacts.
+
+# ── B. Intentional project additions (content beyond the template) ─────────
+# run-b4push.sh: extended with step 4 (link check via check-links.js)
+# on top of the scaffold's 4-step baseline (check, build, html-validate, smoke).
+scripts/run-b4push.sh
+
+# ── C. Build artifact ─────────────────────────────────────────────────────
+.zfb/doc-history-meta.json
+
+# ── A/B. Scaffolded files (Prettier-reformatted + minor slot-fill) ─────────
+pages/_data.ts
+pages/_mdx-components.ts
+pages/index.tsx
+pages/lib/_body-end-islands.tsx
+pages/lib/_category-nav.tsx
+pages/lib/_category-tree-nav.tsx
+pages/lib/_compose-meta-title.ts
+pages/lib/_details.tsx
+pages/lib/_doc-body-end.tsx
+pages/lib/_doc-content-header.tsx
+pages/lib/_doc-history-area.tsx
+pages/lib/_doc-metainfo-area.tsx
+pages/lib/_doc-page-renderer.tsx
+pages/lib/_doc-page-shell.tsx
+pages/lib/_doc-pager.tsx
+pages/lib/_doc-route-entries.ts
+pages/lib/_doc-route-paths.ts
+pages/lib/_doc-tags-area.tsx
+pages/lib/_extract-headings.ts
+pages/lib/_footer-with-defaults.tsx
+pages/lib/_frontmatter-preview-data.ts
+pages/lib/_head-with-defaults.tsx
+pages/lib/_header-with-defaults.tsx
+pages/lib/_inline-version-switcher.tsx
+pages/lib/_math-block.tsx
+pages/lib/_nav-data-prep.ts
+pages/lib/_nav-source-cache.ts
+pages/lib/_nav-source-docs.ts
+pages/lib/_preset-generator.tsx
+pages/lib/_search-widget-script.ts
+pages/lib/_search-widget.tsx
+pages/lib/_sidebar-prepaint.tsx
+pages/lib/_sidebar-with-defaults.tsx
+pages/lib/_site-tree-nav.tsx
+pages/lib/_toc-title.ts
+pages/lib/doc-page-props.ts
+pages/lib/locale-merge.ts
+pages/lib/route-enumerators.ts
+src/components/ai-chat-modal.tsx
+src/components/content/code-group.tsx
+src/components/content/content-admonition.tsx
+src/components/desktop-sidebar-toggle.tsx
+src/components/doc-history.tsx
+src/components/image-enlarge.tsx
+src/components/preset-generator.tsx
+src/components/sidebar-toggle.tsx
+src/components/sidebar-tree.tsx
+src/components/tree-nav-shared.tsx
+src/config/color-scheme-utils.ts
+src/config/color-schemes.ts
+src/config/docs-schema.ts
+src/config/frontmatter-preview-defaults.ts
+src/config/frontmatter-preview-renderers.tsx
+src/config/i18n.ts
+src/config/settings-types.ts
+src/config/sidebars.ts
+src/config/tag-vocabulary-types.ts
+src/config/tag-vocabulary.ts
+src/config/z-index-tokens.ts
+src/integrations/claude-resources/__tests__/escape-for-mdx.test.ts
+src/integrations/claude-resources/__tests__/generate.test.ts
+src/integrations/claude-resources/escape-for-mdx.ts
+src/integrations/claude-resources/generate.ts
+src/styles/global.css
+src/types/doc-history.ts
+src/types/docs-entry.ts
+src/utils/base.ts
+src/utils/content-files.ts
+src/utils/docs.ts
+src/utils/git-info.ts
+src/utils/github.ts
+src/utils/nav-scope.ts
+src/utils/sidebar.ts
+src/utils/slug.ts
+src/utils/smart-break.tsx
+src/utils/tags.ts
+tsconfig.json
+zfb-shim.d.ts

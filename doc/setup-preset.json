@@ -19,6 +19,7 @@
   "packageManager": "pnpm",
   "noindex": true,
   "siteUrl": "https://doc-manuals.takazudomodular.com",
+  "githubUrl": "https://github.com/Takazudo/takazudomodular-manuals",
   "headerRightItems": [
     { "type": "component", "component": "github-link" },
     { "type": "component", "component": "theme-toggle" },

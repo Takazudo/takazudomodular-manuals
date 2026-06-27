@@ -7,15 +7,17 @@ set -euo pipefail
 #   1. Type checking (zfb check)
 #   2. Build (zfb build)
 #   3. HTML validation (html-validate dist/**/*.html)
-#   4. Manual interactive smoke (operator-driven)
+#   4. Link check (check-links.js --strict-broken)
+#   5. Manual interactive smoke (operator-driven)
 #
 # Env overrides for non-interactive use:
 #   B4PUSH_SKIP_HTML_VALIDATE=1  — skip HTML validation (step 3)
+#   B4PUSH_SKIP_LINK_CHECK=1     — skip link check (step 4)
 #   B4PUSH_SKIP_MANUAL_SMOKE=1   — skip the manual interactive smoke
 
 START_TIME=$(date +%s)
 FAILURES=()
-TOTAL_STEPS=4
+TOTAL_STEPS=5
 CURRENT_STEP=0
 
 step() {
@@ -60,7 +62,19 @@ else
   fi
 fi
 
-# ── Step 4: Manual interactive smoke ─────────────────
+# ── Step 4: Link check ───────────────────────────────
+step "Link check (check-links.js)"
+if [[ "${B4PUSH_SKIP_LINK_CHECK:-}" == "1" ]]; then
+  skip "Link check (B4PUSH_SKIP_LINK_CHECK=1)"
+else
+  if (cd "$ROOT_DIR" && pnpm check:links); then
+    pass "Link check passed"
+  else
+    fail "Link check"
+  fi
+fi
+
+# ── Step 5: Manual interactive smoke ─────────────────
 step "Manual interactive smoke"
 if [[ "${B4PUSH_SKIP_MANUAL_SMOKE:-}" == "1" ]]; then
   skip "Manual smoke (B4PUSH_SKIP_MANUAL_SMOKE=1)"
