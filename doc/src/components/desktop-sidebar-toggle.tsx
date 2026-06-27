@@ -21,6 +21,11 @@ function setDataAttribute(isVisible: boolean) {
   }
 }
 
+// Pin the SSR island marker name so it stays "DesktopSidebarToggle" even when
+// the package ships its own DesktopSidebarToggle and esbuild renames the local
+// function to "DesktopSidebarToggle2" at bundle time. Island.captureComponentName
+// reads displayName before .name, so this guarantees the HTML marker matches the
+// registry entry regardless of bundler-level renaming (zudolab/zudo-doc#s3-fix).
 export default function DesktopSidebarToggle() {
   // Initial state must match server render (always `true`) to avoid a
   // hydration mismatch when the persisted preference is "hidden". The
@@ -97,3 +102,7 @@ export default function DesktopSidebarToggle() {
     </button>
   );
 }
+// Explicit displayName keeps the SSR island marker stable even when esbuild
+// renames the function (e.g. DesktopSidebarToggle → DesktopSidebarToggle2)
+// due to a name collision with the package-provided component of the same name.
+(DesktopSidebarToggle as unknown as { displayName: string }).displayName = 'DesktopSidebarToggle';
