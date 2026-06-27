@@ -23,6 +23,10 @@ pnpm-debug.log*
 # zudo-doc build artifact (routes-src/ staged here at build time)
 .zudo-doc/
 
+# Generated doc-lookup skill (written by `pnpm -C doc setup:doc-skill`; never committed)
+.claude/skills/zmanuals-doc-wisdom/SKILL.md
+.claude/skills/zmanuals-doc-wisdom/docs
+
 # Generated claude-resources content (build artifacts from the claudeResources
 # plugin — regenerated from ../.claude on every build; never committed).
 src/content/docs/claude/
