@@ -96,6 +96,9 @@ export const settings = {
     '/docs/claude-agents/',
     '/docs/claude-commands/',
   ] as string[],
+  // Opt-in: preset injects package-owned routes (/404, /sitemap.xml, /robots.txt, etc.).
+  // Without this, the preset adds zero routes → empty injected site.
+  packageOwnedRoutes: true,
   footer: false as FooterConfig | false,
   headerNav: [
     { label: 'Architecture', path: '/docs/architecture', categoryMatch: 'architecture' },
