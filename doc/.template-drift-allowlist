@@ -145,3 +145,10 @@ src/integrations/claude-resources/generate.ts
 # ── Project root config files ─────────────────────────────────────────────
 tsconfig.json
 zfb-shim.d.ts
+
+# ── scripts/ — customized b4push gate ──────────────────────────────────────
+# scripts/run-b4push.sh is the full 8-step gate (template-drift + pin-parity +
+# wrangler-pin + check + build + html-validate + link-check + manual smoke),
+# diverging from the leaner create-zudo-doc template default. Mirrors the
+# test-wisdom reference. The new check:* scripts it gates were ported in S1.
+scripts/run-b4push.sh
