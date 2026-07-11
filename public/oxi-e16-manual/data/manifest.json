@@ -3,16 +3,16 @@
   "brand": "OXI Instruments",
   "productSlug": "oxi-e16",
   "version": "1.0.0",
-  "totalPages": 74,
-  "contentPages": 68,
-  "lastUpdated": "2026-01-11T19:05:44.549Z",
-  "updatedAt": "20260112",
+  "totalPages": 78,
+  "contentPages": 70,
+  "lastUpdated": "2026-07-11T23:48:59.549Z",
+  "updatedAt": "20260712",
   "source": {
     "filename": "OXI E16 - User Manual.pdf",
-    "processedAt": "2026-01-11T19:05:37.506Z",
+    "processedAt": "2026-07-11T23:48:49.216Z",
     "imageDPI": 300,
     "imageFormat": "png"
   },
-  "searchIndexVersion": "2cf5590fb5c07600adbbb8b5bb477d5c5913022d",
-  "hasEnglish": true
+  "hasEnglish": true,
+  "searchIndexVersion": "507b7ebb6200e8bec8e15845628404c954e49d46"
 }
