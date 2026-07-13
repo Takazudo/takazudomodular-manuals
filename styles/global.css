@@ -721,7 +721,7 @@
   border: 1px solid var(--zd-color-white);
 }
 
-/* Magnified view filling the translation column. */
+/* Magnified view filling the page image column. */
 .zoom-panel {
   left: var(--zoom-panel-left, 0);
   top: var(--zoom-panel-top, 0);

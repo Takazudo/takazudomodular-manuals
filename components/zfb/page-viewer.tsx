@@ -64,10 +64,11 @@ export function PageViewer({
   const imageScrollRef = useRef<HTMLDivElement>(null);
 
   // ── Hover-zoom (Amazon-style magnifier) ──────────────────────────────────
-  // Lens overlays the source image; the panel fills the translation column and
+  // Lens overlays the source image; the panel fills the image column and
   // shows the magnified region. Both are `position: fixed` (positioned in
   // viewport coords straight from getBoundingClientRect — no scroll-offset math)
   // and `pointer-events: none` (so the mouse keeps hitting the image, not them).
+  const imageColRef = useRef<HTMLDivElement>(null);
   const contentColRef = useRef<HTMLDivElement>(null);
   const lensRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -88,7 +89,7 @@ export function PageViewer({
     const img = imgRef.current;
     const lens = lensRef.current;
     const panel = panelRef.current;
-    const col = contentColRef.current;
+    const col = imageColRef.current;
     if (!img || !lens || !panel || !col) return;
     const naturalWidth = img.naturalWidth;
     if (naturalWidth === 0) return; // image not loaded yet
@@ -263,7 +264,11 @@ export function PageViewer({
       />
       <div className={viewerContainerStyles}>
         {/* Left Column: PDF Image */}
-        <div className={viewerImageColumnOuterStyles} data-testid="page-image-column">
+        <div
+          ref={imageColRef}
+          className={viewerImageColumnOuterStyles}
+          data-testid="page-image-column"
+        >
           <div
             ref={imageScrollRef}
             className={viewerImageColumnStyles}

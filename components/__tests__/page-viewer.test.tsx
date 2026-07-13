@@ -273,3 +273,57 @@ describe('PageViewer — loading overlay', () => {
     }
   });
 });
+
+describe('PageViewer — hover zoom', () => {
+  const setRect = (el: Element, rect: Pick<DOMRect, 'left' | 'top' | 'width' | 'height'>) => {
+    const fullRect = {
+      ...rect,
+      x: rect.left,
+      y: rect.top,
+      right: rect.left + rect.width,
+      bottom: rect.top + rect.height,
+      toJSON: () => ({}),
+    } as DOMRect;
+    Object.defineProperty(el, 'getBoundingClientRect', {
+      configurable: true,
+      value: () => fullRect,
+    });
+  };
+
+  it('positions the enlarged zoom panel over the left page image column', () => {
+    render(
+      <PageViewer
+        page={pageWithContent('ja')}
+        lang="ja"
+        currentPage={1}
+        totalPages={10}
+        manualId="oxi-one-mk2"
+        onNavigate={vi.fn()}
+        onNavigateHome={vi.fn()}
+        zoomEnabled
+      />,
+    );
+
+    const image = screen.getByTestId('page-image') as HTMLImageElement;
+    const imageColumn = screen.getByTestId('page-image-column');
+    const translationColumn = screen.getByTestId('translation-column');
+    const panel = screen.getByTestId('zoom-panel');
+
+    Object.defineProperty(image, 'naturalWidth', {
+      configurable: true,
+      value: 1200,
+    });
+    setRect(image, { left: 30, top: 40, width: 400, height: 600 });
+    setRect(imageColumn, { left: 10, top: 20, width: 500, height: 700 });
+    setRect(translationColumn, { left: 520, top: 20, width: 500, height: 700 });
+
+    fireEvent.mouseEnter(image, { clientX: 200, clientY: 220 });
+
+    expect(panel.className).toContain('is-active');
+    expect(panel.style.getPropertyValue('--zoom-panel-left')).toBe('10px');
+    expect(panel.style.getPropertyValue('--zoom-panel-top')).toBe('20px');
+    expect(panel.style.getPropertyValue('--zoom-panel-width')).toBe('500px');
+    expect(panel.style.getPropertyValue('--zoom-panel-height')).toBe('700px');
+    expect(panel.style.getPropertyValue('--zoom-panel-left')).not.toBe('520px');
+  });
+});
