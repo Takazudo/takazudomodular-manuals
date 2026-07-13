@@ -262,6 +262,48 @@ test.describe('Viewer UI: Page-mode loading overlay (#180)', () => {
   });
 });
 
+test.describe('Viewer UI: Page-mode hover zoom', () => {
+  test('shows the enlarged image in the left image pane, not the translation pane', async ({
+    page,
+  }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('zmanuals:zoom', '1');
+    });
+    await page.setViewportSize({ width: 2048, height: 1280 });
+    await page.goto('/oxi-e16-quick-start/page/2');
+
+    const image = page.getByTestId('page-image');
+    await expect(image).toBeVisible();
+    await page.waitForFunction(() => {
+      const img = document.querySelector('[data-testid="page-image"]');
+      return img instanceof HTMLImageElement && img.complete && img.naturalWidth > 0;
+    });
+
+    const imageBox = await image.boundingBox();
+    expect(imageBox).not.toBeNull();
+    await page.mouse.move(
+      imageBox!.x + imageBox!.width * 0.62,
+      imageBox!.y + imageBox!.height * 0.3,
+    );
+
+    const panel = page.getByTestId('zoom-panel');
+    await expect(panel).toHaveClass(/is-active/);
+
+    const imageColumnBox = await page.getByTestId('page-image-column').boundingBox();
+    const translationColumnBox = await page.getByTestId('translation-column').boundingBox();
+    const panelBox = await panel.boundingBox();
+    expect(imageColumnBox).not.toBeNull();
+    expect(translationColumnBox).not.toBeNull();
+    expect(panelBox).not.toBeNull();
+
+    expect(panelBox!.x).toBeCloseTo(imageColumnBox!.x, 1);
+    expect(panelBox!.y).toBeCloseTo(imageColumnBox!.y, 1);
+    expect(panelBox!.width).toBeCloseTo(imageColumnBox!.width, 1);
+    expect(panelBox!.height).toBeCloseTo(imageColumnBox!.height, 1);
+    expect(panelBox!.x + panelBox!.width).toBeLessThanOrEqual(translationColumnBox!.x + 1);
+  });
+});
+
 test.describe('Viewer UI: Page-mode scroll reset on navigation', () => {
   test('resets both column scroll positions to the top when navigating pages', async ({ page }) => {
     await page.goto(PAGE_URL); // /oxi-one-mk2/page/5
