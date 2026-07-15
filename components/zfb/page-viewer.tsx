@@ -56,7 +56,6 @@ export function PageViewer({
 }: PageViewerProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const prevPageRef = useRef({ currentPage, manualId });
   const imgRef = useRef<HTMLImageElement>(null);
   // The left image column and right translation column each scroll
   // independently (both are overflow-y-scroll). Refs let us reset them to the
@@ -180,17 +179,24 @@ export function PageViewer({
     deactivateZoom();
   }, [deactivateZoom]);
 
-  // Clear the loading overlay for an already-loaded (cached) image. This is the
-  // common path after ManualApp swaps the SSR body for the real PageViewer: the
-  // fresh <img> points at a PNG the browser already cached, so its `load` event
-  // can fire in the gap before Preact's onLoad listener is effective, and
-  // `complete` may not yet be true at this synchronous mount-time snapshot.
-  // Relying on either alone left the overlay stuck at opacity-100 over a fully
-  // loaded image (intermittent "spinner never goes away; reload fixes it").
-  // We check now AND re-check on the next frame as a safety net; onLoad still
-  // covers the genuinely-uncached case. page.image is in the deps so a src
-  // change (client-side navigation) re-evaluates.
+  // Single source of truth for the loading overlay, evaluated synchronously on
+  // mount and on every page/image change. Splitting "reset to loading" and
+  // "clear when complete" across two effects raced badly: layout effects run
+  // before passive effects, so a passive `setIsLoading(true)` reset always ran
+  // *after* the layout clear — and for a cached image its one-and-only `load`
+  // event (and the rAF clear) could fire before that reset, so the reset stomped
+  // `isLoading` back to true with no further event to clear it. That is the
+  // intermittent "spinner never goes away; reload fixes it" on page change.
+  //
+  // Deciding the state atomically in one layout effect removes the race: it runs
+  // synchronously after Preact updates the <img> src but before any async `load`
+  // of the new src can fire, so `isLoading` is never set true after the image has
+  // already completed. If the (new) image is already complete we clear now;
+  // otherwise we show the loader and let onLoad/onError clear it, with an rAF
+  // re-check as the safety net for a cached image whose onLoad listener was
+  // missed. page.image is in the deps so client-side navigation re-evaluates.
   useLayoutEffect(() => {
+    setHasError(false);
     const clearIfComplete = () => {
       const img = imgRef.current;
       if (img?.complete && img.naturalWidth > 0) {
@@ -200,6 +206,7 @@ export function PageViewer({
       return false;
     };
     if (clearIfComplete()) return;
+    setIsLoading(true);
     // Re-check after the current frame. Prefer rAF; fall back to a macrotask in
     // any environment where rAF is unavailable, so the effect never throws.
     if (typeof requestAnimationFrame === 'function') {
@@ -209,16 +216,6 @@ export function PageViewer({
     const timer = setTimeout(clearIfComplete, 0);
     return () => clearTimeout(timer);
   }, [currentPage, manualId, page.image]);
-
-  // Reset loading state when navigating to a different page
-  useEffect(() => {
-    const prevPage = prevPageRef.current;
-    if (prevPage.currentPage !== currentPage || prevPage.manualId !== manualId) {
-      setIsLoading(true);
-      setHasError(false);
-    }
-    prevPageRef.current = { currentPage, manualId };
-  }, [currentPage, manualId]);
 
   // Reset both scroll columns to the top on every page change. All in-manual
   // navigation (次へ/前へ, the page selector, thumbnails, keyboard, browser

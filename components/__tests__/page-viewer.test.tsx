@@ -272,6 +272,66 @@ describe('PageViewer — loading overlay', () => {
       if (origNaturalWidth) Object.defineProperty(proto, 'naturalWidth', origNaturalWidth);
     }
   });
+
+  // Regression (#268): navigating to a page whose image is already cached must
+  // not leave the overlay stuck. Previously "reset to loading" (passive effect)
+  // and "clear when complete" (layout effect) were split: on page change the
+  // passive reset ran after the layout clear and after the cached image's single
+  // load event, stomping isLoading back to true with no further event to clear
+  // it — the reported "spinner forever on page change" bug. The merged layout
+  // effect decides the state atomically, so a cached target clears immediately.
+  it('does not leave the overlay stuck when navigating to an already-cached page', () => {
+    const proto = window.HTMLImageElement.prototype;
+    const origComplete = Object.getOwnPropertyDescriptor(proto, 'complete');
+    const origNaturalWidth = Object.getOwnPropertyDescriptor(proto, 'naturalWidth');
+    let imgComplete = false;
+    Object.defineProperty(proto, 'complete', { configurable: true, get: () => imgComplete });
+    Object.defineProperty(proto, 'naturalWidth', {
+      configurable: true,
+      get: () => (imgComplete ? 800 : 0),
+    });
+
+    try {
+      const { rerender } = render(
+        <PageViewer
+          page={pageWithContent('ja')}
+          lang="ja"
+          currentPage={1}
+          totalPages={10}
+          manualId="oxi-one-mk2"
+          onNavigate={vi.fn()}
+          onNavigateHome={vi.fn()}
+        />,
+      );
+
+      const overlay = screen.getByTestId('page-image-overlay');
+      // Page 1 finishes loading normally.
+      fireEvent.load(screen.getByTestId('page-image'));
+      expect(overlay.className).toContain('opacity-0');
+
+      // Navigate to page 2 whose image is ALREADY cached (complete) — and whose
+      // load event does NOT fire again (the missed-listener race). The overlay
+      // must clear from the completeness check alone, not stay stuck.
+      imgComplete = true;
+      rerender(
+        <PageViewer
+          page={{ ...pageWithContent('ja'), pageNum: 2, image: '/oxi-one-mk2/pages/page-002.png' }}
+          lang="ja"
+          currentPage={2}
+          totalPages={10}
+          manualId="oxi-one-mk2"
+          onNavigate={vi.fn()}
+          onNavigateHome={vi.fn()}
+        />,
+      );
+
+      expect(overlay.className).toContain('opacity-0');
+      expect(overlay.className).not.toContain('opacity-100');
+    } finally {
+      if (origComplete) Object.defineProperty(proto, 'complete', origComplete);
+      if (origNaturalWidth) Object.defineProperty(proto, 'naturalWidth', origNaturalWidth);
+    }
+  });
 });
 
 describe('PageViewer — hover zoom', () => {
