@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "processedAt": "2026-07-25T22:33:36.976Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/recovery-motion-pictures/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "Motion Pictures Module\n\nCONTROLS:\n\nKnobs\n\nTime: ディレイタイムをコントロールします。時計回りに回すとディレイタイムが長くなり、反時計回りに回すと短くなります\n\nFeedback: リピート(フィードバック)の量をコントロールします\n\nD Level: ディレイのレベルをコントロールします\n\nR Level: リバーブのレベルをコントロールします\n\nTap Tempo Button\n\n希望するディレイタイムになるよう3回以上タップします(この操作はTime設定より優先されます)\n\nInputs\n\nTempo: Tap Tempoボタンと同様にゲート信号に反応します\n\nTime、Feedback、D Level、R Levelの各入力は0-5Vの電圧範囲に反応し、対応するパラメーターをコントロールします\n\nIn LとIn R: 左右チャンネルの入力です\n\nOutputs\n\nOut LとOut Rは、ディレイ信号用のデュアルモノラル出力、およびリバーブ信号用のステレオ出力です\n\nOVERVIEW:\n\nMotion Picturesは、豊かなディレイとリバーブを、直感的でパワフルなコントロールとともに10HPのモジュールに凝縮しています。クリアなデジタルディレイと温かみのあるアナログディレイから選択し、広がりのある大きなホールのステレオリバーブと組み合わせることができます。ディレイとリバーブのレベルはそれぞれ独立して調整できるため、個別に使用することも、組み合わせて使用することもできます。ディレイタイムは、ノブ、タップテンポ、またはCVでコントロールできます。さらに、タップテンポとディレイタイムに互いに逆方向のCV信号を送ることで、グリッチーでピッチベンドするようなリズミックなエフェクトを生み出すこともできます。加えて、CVコントロールはフィードバック、ディレイ、リバーブの各レベルにも対応しており、より高い柔軟性を提供します。Motion Picturesは、コンパクトな設計の中で豊かなアンビエントサウンドを実現し、ディレイとリバーブを1つのモジュールに統合することで、サウンドの深みを保ちながらラックスペースを最適化します。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Motion Pictures Module</p>\n<p>CONTROLS:</p>\n<p>Knobs</p>\n<p>Time: ディレイタイムをコントロールします。時計回りに回すとディレイタイムが長くなり、反時計回りに回すと短くなります</p>\n<p>Feedback: リピート(フィードバック)の量をコントロールします</p>\n<p>D Level: ディレイのレベルをコントロールします</p>\n<p>R Level: リバーブのレベルをコントロールします</p>\n<p>Tap Tempo Button</p>\n<p>希望するディレイタイムになるよう3回以上タップします(この操作はTime設定より優先されます)</p>\n<p>Inputs</p>\n<p>Tempo: Tap Tempoボタンと同様にゲート信号に反応します</p>\n<p>Time、Feedback、D Level、R Levelの各入力は0-5Vの電圧範囲に反応し、対応するパラメーターをコントロールします</p>\n<p>In LとIn R: 左右チャンネルの入力です</p>\n<p>Outputs</p>\n<p>Out LとOut Rは、ディレイ信号用のデュアルモノラル出力、およびリバーブ信号用のステレオ出力です</p>\n<p>OVERVIEW:</p>\n<p>Motion Picturesは、豊かなディレイとリバーブを、直感的でパワフルなコントロールとともに10HPのモジュールに凝縮しています。クリアなデジタルディレイと温かみのあるアナログディレイから選択し、広がりのある大きなホールのステレオリバーブと組み合わせることができます。ディレイとリバーブのレベルはそれぞれ独立して調整できるため、個別に使用することも、組み合わせて使用することもできます。ディレイタイムは、ノブ、タップテンポ、またはCVでコントロールできます。さらに、タップテンポとディレイタイムに互いに逆方向のCV信号を送ることで、グリッチーでピッチベンドするようなリズミックなエフェクトを生み出すこともできます。加えて、CVコントロールはフィードバック、ディレイ、リバーブの各レベルにも対応しており、より高い柔軟性を提供します。Motion Picturesは、コンパクトな設計の中で豊かなアンビエントサウンドを実現し、ディレイとリバーブを1つのモジュールに統合することで、サウンドの深みを保ちながらラックスペースを最適化します。</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/recovery-motion-pictures/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "Tips & Tricks:\n\n- 任意のパラメーターにコントロールボルテージを加えると、対応する物理ノブがスリューコントロールとして機能するようになります。\n\n- TimeとTempoのCVはどちらも実質的にTimeパラメーターをコントロールしますが、Tempo CVは技術的にはゲート信号を想定しており、Time CVは0〜5Vの範囲の電圧を想定しています。それぞれに電圧を加えて実験することで、タイムにスウィングを生じさせ、興味深いリズミックかつグリッチーなエフェクトを作り出すことができます。\n\n- Motion Picturesのディレイはモノラルで、リバーブはステレオです。左右どちらかの入力にモノラル信号を入力すると、出力ではデュアルモノラルのディレイおよび/またはステレオのリバーブが得られます。\n\nTechnical Specs:\n\nWidth: 10HP\nDepth: 31mm\nPower Consumption: +12V 90mA, -12V 5mA, +5V 0mA\n\nrecoveryeffects.com\n\nデモ動画はこちら: recoveryeffects.com\n\nご質問がありますか?\nメールをお送りください: hello@recoveryeffects.com",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Tips &#x26; Tricks:</p>\n<ul>\n<li>\n<p>任意のパラメーターにコントロールボルテージを加えると、対応する物理ノブがスリューコントロールとして機能するようになります。</p>\n</li>\n<li>\n<p>TimeとTempoのCVはどちらも実質的にTimeパラメーターをコントロールしますが、Tempo CVは技術的にはゲート信号を想定しており、Time CVは0〜5Vの範囲の電圧を想定しています。それぞれに電圧を加えて実験することで、タイムにスウィングを生じさせ、興味深いリズミックかつグリッチーなエフェクトを作り出すことができます。</p>\n</li>\n<li>\n<p>Motion Picturesのディレイはモノラルで、リバーブはステレオです。左右どちらかの入力にモノラル信号を入力すると、出力ではデュアルモノラルのディレイおよび/またはステレオのリバーブが得られます。</p>\n</li>\n</ul>\n<p>Technical Specs:</p>\n<p>Width: 10HP\nDepth: 31mm\nPower Consumption: +12V 90mA, -12V 5mA, +5V 0mA</p>\n<p>recoveryeffects.com</p>\n<p>デモ動画はこちら: recoveryeffects.com</p>\n<p>ご質問がありますか?\nメールをお送りください: <a href=\"mailto:hello@recoveryeffects.com\">hello@recoveryeffects.com</a></p>"
+    }
+  ]
+}
