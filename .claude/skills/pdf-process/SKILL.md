@@ -367,10 +367,10 @@ if (failures.length > 0) {
   <parameter name="prompt">Translate page 1 of the OXI CORAL manual.
 
 Source text file:
-/Users/takazudo/repos/personal/zmanuals/public/oxi-coral/processing/extracted/page-001.txt
+/Users/takazudo/repos/personal/zmanuals/temp-processing/oxi-coral/extracted/page-001.txt
 
 Output JSON file:
-/Users/takazudo/repos/personal/zmanuals/public/oxi-coral/processing/translations-draft/page-001.json
+/Users/takazudo/repos/personal/zmanuals/temp-processing/oxi-coral/translations-draft/page-001.json
 
 Page: 1
 Total pages: 46
@@ -389,7 +389,7 @@ function verifyTranslationFiles(slug, totalPages) {
   const failures = [];
   for (let i = 1; i <= totalPages; i++) {
     const pageStr = String(i).padStart(3, '0');
-    const outputFile = `public/${slug}/processing/translations-draft/page-${pageStr}.json`;
+    const outputFile = `temp-processing/${slug}/translations-draft/page-${pageStr}.json`;
 
     if (!fs.existsSync(outputFile)) {
       failures.push(i);
@@ -584,7 +584,7 @@ Look at the PDF image (left side of screenshot) and extract ALL visible English 
 **16.2 Update the extracted text file:**
 
 ```bash
-Write to: public/$SLUG/processing/extracted/page-XXX.txt
+Write to: temp-processing/$SLUG/extracted/page-XXX.txt
 ```
 
 **16.3 Re-translate the page:**
@@ -716,9 +716,8 @@ public/{slug}/                   # Output directory
   ├── pages/                     # Rendered PNG images (300 DPI)
   │   ├── page-001.png
   │   └── ... (page-XXX.png)
-  └── processing/                # Intermediate files (gitignored)
-      ├── extracted/             # Extracted text
-      └── translations-draft/    # Translation drafts
+  └── (intermediates live in /temp-processing/{slug}/, gitignored:
+       extracted/ and translations-draft/)
 ```
 
 ## Configuration

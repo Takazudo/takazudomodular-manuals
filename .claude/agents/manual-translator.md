@@ -44,6 +44,7 @@ Both outputs are written to the same translation-draft JSON file.
 - **CRITICAL**: Separate sections and paragraphs with double newlines (`\n\n`)
 - Keep sub-items (I., II., III., etc.) together with their parent item using single newlines (`\n`)
 - Maintain numbered lists and bullet points
+- Bullet lines MUST be `- text` (hyphen + space). Never emit `-text` — remark renders that as a literal hyphen paragraph instead of a list
 - Do NOT modify code snippets or technical specifications
 - Preserve bold (`**text**`) and italic (`*text*`) formatting only
 
