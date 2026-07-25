@@ -27,7 +27,12 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { resolveManualConfig } from './lib/pdf-config-resolver.js';
-import { serializeSearchIndex } from './lib/search-index.js';
+import {
+  serializeSearchIndex,
+  serializeManifest,
+  sha1,
+  updateManifestSearchIndexVersion,
+} from './lib/search-index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -220,6 +225,17 @@ if (isDirectRun) {
 
     const serialized = serializeSearchIndex(entries);
     writeFileSync(outputPath, serialized);
+
+    // Stamp the content hash into the sibling manifest.json (when it exists),
+    // mirroring pdf-search-index-all.js — a manual processed via the per-slug
+    // flow must not ship without its cache-busting searchIndexVersion.
+    const manifestPath = join(ROOT_DIR, config.output.data, 'manifest.json');
+    if (existsSync(manifestPath)) {
+      const manifest = JSON.parse(readFileSync(manifestPath, 'utf-8'));
+      const updated = updateManifestSearchIndexVersion(manifest, sha1(serialized));
+      writeFileSync(manifestPath, serializeManifest(updated));
+      console.log(`🔖 Stamped searchIndexVersion into manifest.json`);
+    }
 
     const byteLength = Buffer.byteLength(serialized, 'utf-8');
     console.log(`📁 Output: ${outputPath}`);

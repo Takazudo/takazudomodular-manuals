@@ -77,10 +77,18 @@ function buildManifest() {
     // Check whether an English translation file was also produced
     const pagesEnPath = join(dataDir, 'pages-en.json');
 
-    // Build manifest
+    // Merge into the existing manifest instead of rebuilding from scratch:
+    // curated fields (title, brand, productSlug, updatedAt, searchIndexVersion)
+    // are set by hand or by other pipeline steps and must survive a re-run.
+    const existingManifestPath = join(dataDir, 'manifest.json');
+    const existing = existsSync(existingManifestPath)
+      ? JSON.parse(readFileSync(existingManifestPath, 'utf-8'))
+      : {};
+
     const manifest = {
-      title: slugToTitle(config.slug),
-      version: '1.0.0',
+      ...existing,
+      title: existing.title || slugToTitle(config.slug),
+      version: existing.version || '1.0.0',
       totalPages: totalPages,
       contentPages: contentPages,
       lastUpdated: new Date().toISOString(),
