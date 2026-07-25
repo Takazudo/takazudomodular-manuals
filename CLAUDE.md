@@ -69,15 +69,16 @@ All temporary files (reports, screenshots, test outputs, error reports) go to `_
 │   └── oxi-one-mk2/           # OXI ONE MKII manual
 │       ├── data/               # Final JSON files (build time import)
 │       ├── pages/              # Rendered PNG images (150 DPI)
-│       └── processing/         # Intermediate files (gitignored)
+│       └── thumbs/             # Thumbnail images (150px wide)
 ├── manual-pdf/                 # Source PDFs (pages/parts gitignored)
+├── temp-processing/            # Per-slug pipeline intermediates (gitignored)
 ├── scripts/                    # Build and processing scripts
 ├── doc/                        # zudo-doc documentation (deploys independently to doc-manuals.takazudomodular.com)
 ├── worktrees/                  # Git worktrees (gitignored)
 └── __inbox/                    # Temporary files (gitignored)
 ```
 
-Each manual is self-contained under `/public/{manual-id}/` with its own data, images, and processing files.
+Each manual is self-contained under `/public/{manual-id}/` with its own data and images; pipeline intermediates live in `temp-processing/{manual-id}/` (gitignored).
 
 ## Package Manager & Technology Stack
 

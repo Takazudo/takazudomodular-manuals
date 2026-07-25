@@ -21,8 +21,8 @@ Translation output files are **temporary generated files**. What we maintain is 
 
 **Don't maintain (regenerate as needed):**
 
-- `public/oxi-one-mk2/processing/extracted/` - Extracted text files
-- `public/oxi-one-mk2/processing/translations-draft/` - Translation work-in-progress
+- `temp-processing/oxi-one-mk2/extracted/` - Extracted text files
+- `temp-processing/oxi-one-mk2/translations-draft/` - Translation work-in-progress
 - `public/oxi-one-mk2/data/` - Final JSON output
 - `public/oxi-one-mk2/pages/` - Rendered images
 - `manual-pdf/pages/` - Split page PDFs
@@ -107,9 +107,10 @@ public/oxi-one-mk2/
   ├── thumbs/                                   # Thumbnail images (150px wide, generated from pages/)
   │   ├── thumb-001.png
   │   └── ... (thumb-302.png)
-  └── processing/                               # Intermediate files (gitignored)
-      ├── extracted/                            # Extracted text
-      └── translations-draft/                   # Translation drafts
+  └── (no processing/ here — see temp-processing/ below)
+temp-processing/oxi-one-mk2/                    # Intermediate files (gitignored)
+  ├── extracted/                                # Extracted text
+  └── translations-draft/                       # Translation drafts
 ```
 
 ### Configuration
@@ -199,9 +200,11 @@ The system supports multiple PDF manuals with unique slugs. Each manual is self-
   ├── thumbs/                    # Thumbnail images (committed, generated from pages/)
   │   ├── thumb-001.png
   │   └── ... (thumb-XXX.png)
-  └── processing/                # Intermediate files (gitignored)
-      ├── extracted/
-      └── translations-draft/
+  └── (no processing/ here — see temp-processing/ below)
+
+/temp-processing/{slug}/         # Intermediate files (gitignored)
+  ├── extracted/
+  └── translations-draft/
 ```
 
 **URL structure:**
@@ -298,9 +301,9 @@ pnpm run pdf:manifest --slug oxi-coral
 
 **Processing Files are Temporary:**
 
-- Only `data/` and `pages/` directories are committed
-- `processing/` directory is gitignored
-- Can delete processing files after successful deploy
+- Only `data/`, `pages/`, and `thumbs/` directories are committed
+- Intermediates live in `temp-processing/{slug}/` at the repo root (gitignored)
+- Can delete temp-processing files after successful deploy
 
 **Manual Isolation:**
 
