@@ -20,7 +20,7 @@
     "pageNum": 3,
     "title": "Page 3",
     "sectionName": null,
-    "body": "MOMENTARY BUTTON このボタンを使用すると、サウンドを瞬間的にオン/オフできます。Momentary Buttonは、Latching Switchがオフ（下）の位置にあるときのみ機能します。 LATCHING SWITCH このスイッチを使用すると、サウンドのオン/オフをラッチ（保持）できます。上がオン、下がオフです。 CONTROLS CARRIER FREQUENCY CONTROLS 各キャリアは連携して1つの波形を作り出します。通常、ピッチトラッキングに反応するのはCF2ですが、これは設定によって変わることがあります。CF1とCF2は、様々な方法でフォールディングされる2つのサイン波だとお考えください。それぞれに独立したCVを送っても、従来の1V/Octのようなピッチ結果にはならず、ピッチ・テクスチャー・トーンが組み合わさった結果になります。 MODULATOR CONTROLS これらは、CF1とCF2で作成したフォールディング波形のトーンとテクスチャーを形作るために使用します。Modulation",
+    "body": "CONTROLS LATCHING SWITCH このスイッチを使用すると、サウンドのオン/オフをラッチ（保持）できます。上がオン、下がオフです。 MOMENTARY BUTTON このボタンを使用すると、サウンドを瞬間的にオン/オフできます。Momentary Buttonは、Latching Switchがオフ（下）の位置にあるときのみ機能します。 CARRIER FREQUENCY CONTROLS 各キャリアは連携して1つの波形を作り出します。通常、ピッチトラッキングに反応するのはCF2ですが、これは設定によって変わることがあります。CF1とCF2は、様々な方法でフォールディングされる2つのサイン波だとお考えください。それぞれに独立したCVを送っても、従来の1V/Octのようなピッチ結果にはならず、ピッチ・テクスチャー・トーンが組み合わさった結果になります。 MODULATOR CONTROLS これらは、CF1とCF2で作成したフォールディング波形のトーンとテクスチャーを形作るために使用します。Modulation",
     "url": "/recovery-mystic/page/3"
   },
   {
