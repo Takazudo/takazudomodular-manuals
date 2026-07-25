@@ -432,7 +432,7 @@ After translation drafts exist, run the full post-translation chain in this orde
 - `pnpm run pdf:search-index --slug <slug>` - Generate `search-index.json` (keyword search). Also stamps a `searchIndexVersion` hash into `manifest.json` when it exists.
 - `pnpm run pdf:manifest --slug <slug>` - Create `manifest.json`.
 
-**Note:** `pdf:manifest` regenerates the manifest from scratch, so if it runs after `pdf:search-index` the `searchIndexVersion` is dropped — it is re-stamped later by the production `pnpm build` (verification phase, Step 12), which runs `pdf:search-index:all`. This matches how every existing manual is built, so no manual re-run is needed.
+**Note:** `pdf:manifest` merges into the existing manifest (curated fields like `brand`, `productSlug`, `updatedAt`, and `searchIndexVersion` survive a re-run), and the per-slug `pdf:search-index` stamps `searchIndexVersion` into the sibling manifest when it exists. Running search-index after manifest (or a later `pnpm build`, which runs `pdf:search-index:all`) leaves every field consistent.
 
 **REQUIRED before committing — Prettier-format the generated JSON.** `pdf:build` writes `pages-ja.json` / `pages-en.json` via `JSON.stringify`, whose style does **not** match the repo's Prettier config. The CI "Code Quality Checks" gate runs `prettier --check` over `**/*.json` and **will fail** on the new manual's data files otherwise. Run `pnpm format:fix` (or scope it: `pnpm exec prettier --write public/<slug>/data/*.json`) after the build chain and before `git commit`. This is not optional — every new manual hits it.
 

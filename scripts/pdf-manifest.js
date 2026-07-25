@@ -17,6 +17,7 @@ import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { resolveManualConfig } from './lib/pdf-config-resolver.js';
+import { sha1 } from './lib/search-index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -77,10 +78,18 @@ function buildManifest() {
     // Check whether an English translation file was also produced
     const pagesEnPath = join(dataDir, 'pages-en.json');
 
-    // Build manifest
+    // Merge into the existing manifest instead of rebuilding from scratch:
+    // curated fields (title, brand, productSlug, updatedAt, searchIndexVersion)
+    // are set by hand or by other pipeline steps and must survive a re-run.
+    const existingManifestPath = join(dataDir, 'manifest.json');
+    const existing = existsSync(existingManifestPath)
+      ? JSON.parse(readFileSync(existingManifestPath, 'utf-8'))
+      : {};
+
     const manifest = {
-      title: slugToTitle(config.slug),
-      version: '1.0.0',
+      ...existing,
+      title: existing.title || slugToTitle(config.slug),
+      version: existing.version || '1.0.0',
       totalPages: totalPages,
       contentPages: contentPages,
       lastUpdated: new Date().toISOString(),
@@ -93,6 +102,15 @@ function buildManifest() {
       // true when pages-en.json was produced alongside pages-ja.json
       hasEnglish: existsSync(pagesEnPath),
     };
+
+    // Stamp searchIndexVersion from the on-disk index when it exists, so the
+    // documented order (pdf:search-index before pdf:manifest) also yields a
+    // stamped manifest for a brand-new slug. The file bytes ARE the serialized
+    // form the other scripts hash, so sha1(file) matches their hash.
+    const searchIndexPath = join(dataDir, 'search-index.json');
+    if (existsSync(searchIndexPath)) {
+      manifest.searchIndexVersion = sha1(readFileSync(searchIndexPath, 'utf-8'));
+    }
 
     return manifest;
   } catch (error) {
