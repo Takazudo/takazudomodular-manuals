@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "processedAt": "2026-07-25T22:34:55.895Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/recovery-mystic/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "THE MYSTIC (SEMI-MODULAR DESKTOP SYNTH\n\nTHE MYSTIC IS AN EXPERIMENTAL FM SYNTH WITH 2 CARRIER FREQUENCIES, 2 MODULATORS, AND AN ANALOG STYLE DELAY. ALL OF THE SYNTH PARAMETERS ARE CONTROLLABLE VIA CV AS WELL AS TIME CONTROL IN THE DELAY SECTION.\n\nTHE MYSTIC GENERATES COLOSSAL WAVES THAT SWIRL, ECHO, ASCEND, AND PLUNGE INTO AN EVER-CHANGING, SONIC PLAYGROUND. TRANSCEND REALITY AND LET THE MYSTIC GUIDE THE WAY!\n\nOVERVIEW",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>THE MYSTIC (SEMI-MODULAR DESKTOP SYNTH</p>\n<p>THE MYSTIC IS AN EXPERIMENTAL FM SYNTH WITH 2 CARRIER FREQUENCIES, 2 MODULATORS, AND AN ANALOG STYLE DELAY. ALL OF THE SYNTH PARAMETERS ARE CONTROLLABLE VIA CV AS WELL AS TIME CONTROL IN THE DELAY SECTION.</p>\n<p>THE MYSTIC GENERATES COLOSSAL WAVES THAT SWIRL, ECHO, ASCEND, AND PLUNGE INTO AN EVER-CHANGING, SONIC PLAYGROUND. TRANSCEND REALITY AND LET THE MYSTIC GUIDE THE WAY!</p>\n<p>OVERVIEW</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/recovery-mystic/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "POWERING UP\n\nThe Mystic uses a 9VDC, negative-tip, 200ma power supply. It is a standard Boss-style power supply used for most effects pedals.. Power supply sold separately.\n\nOnce plugged in, the Mystic is powered up and ready to go. Simply unplug it from the wall when not in use.\n\nOUTPUT\n\nline level\n\nA NOTE ABOUT THE OUTPUT LEVEL\n\nThe Mystic runs at line level, to be used with pedals and other devices that also run at line level. If using with Eurorack, the output level needs to be converted, just as you would with any guitar pedal. There are several Eurorack modules that do this, but the one we use and recommend is the Strymon AA.1.\n\nOUTPUT JACK\n\nThe Mystic requires a 3.5mm cable to connect the audio output to other devices.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>POWERING UP</p>\n<p>The Mystic uses a 9VDC, negative-tip, 200ma power supply. It is a standard Boss-style power supply used for most effects pedals.. Power supply sold separately.</p>\n<p>Once plugged in, the Mystic is powered up and ready to go. Simply unplug it from the wall when not in use.</p>\n<p>OUTPUT</p>\n<p>line level</p>\n<p>A NOTE ABOUT THE OUTPUT LEVEL</p>\n<p>The Mystic runs at line level, to be used with pedals and other devices that also run at line level. If using with Eurorack, the output level needs to be converted, just as you would with any guitar pedal. There are several Eurorack modules that do this, but the one we use and recommend is the Strymon AA.1.</p>\n<p>OUTPUT JACK</p>\n<p>The Mystic requires a 3.5mm cable to connect the audio output to other devices.</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/recovery-mystic/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "MOMENTARY BUTTON\n\nUse this to momentarily turn sound on and off. The momentary Button only functions when the Latching Switch is in the off (down) position.\n\nLATCHING SWITCH\n\nUse this to latch the sound on and off. Up is on, and down is off.\n\nCONTROLS\n\nCARRIER FREQUENCY CONTROLS\n\nEach carrier works together to build a waveform. Usually it's CF2 that responds to pitch tracking, but that can vary depending on the setting. Think of CF1 and CF2 as 2 sign waves being folded in various ways. Sending independent CV into each one will not get traditional 1 v/oct pitch results, but a combination of pitch, texture and tone.\n\nMODULATOR CONTROLS\n\nThese are used to shape the tone and texture of the folded waveform you've created with CF1 and CF2. Modulation rate will control the speed of the modulation texture.\n\nDELAY TIME CONTROLS\n\nControls the delay / echo time.\n\nDELAY FEEDBACK\n\nControls the number of delay / echo repeats.\n\nDELAY MIX\n\nControls the volume of the delay / echo signal.\n\nVOLUME\n\nControls the overall output volume of the Mystic.\n\nCV CONTROLS\n\nThese will accept CV voltage of up to +5 volts. The parameter you are controlling should be at 12 0'clock to get the most effect from the voltage input.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>MOMENTARY BUTTON</p>\n<p>Use this to momentarily turn sound on and off. The momentary Button only functions when the Latching Switch is in the off (down) position.</p>\n<p>LATCHING SWITCH</p>\n<p>Use this to latch the sound on and off. Up is on, and down is off.</p>\n<p>CONTROLS</p>\n<p>CARRIER FREQUENCY CONTROLS</p>\n<p>Each carrier works together to build a waveform. Usually it's CF2 that responds to pitch tracking, but that can vary depending on the setting. Think of CF1 and CF2 as 2 sign waves being folded in various ways. Sending independent CV into each one will not get traditional 1 v/oct pitch results, but a combination of pitch, texture and tone.</p>\n<p>MODULATOR CONTROLS</p>\n<p>These are used to shape the tone and texture of the folded waveform you've created with CF1 and CF2. Modulation rate will control the speed of the modulation texture.</p>\n<p>DELAY TIME CONTROLS</p>\n<p>Controls the delay / echo time.</p>\n<p>DELAY FEEDBACK</p>\n<p>Controls the number of delay / echo repeats.</p>\n<p>DELAY MIX</p>\n<p>Controls the volume of the delay / echo signal.</p>\n<p>VOLUME</p>\n<p>Controls the overall output volume of the Mystic.</p>\n<p>CV CONTROLS</p>\n<p>These will accept CV voltage of up to +5 volts. The parameter you are controlling should be at 12 0'clock to get the most effect from the voltage input.</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/recovery-mystic/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "Watch the demo:\nrecoveryeffects.com\n\nQuestions?\nSend us an email:\nrecoveryeffects@gmail.com\n\nFAQ\n\nQ: Does The Mystic have an audio input jack?\nA: No, it does not have enough parameters to make an audio input useful. You'd only be able to make use of the delay function, so we didn't think it was necessary.\n\nQ: What is the function of the USB port?\nA: We use the USB port for firmware flashing. No user functionality at this time.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Watch the demo:\nrecoveryeffects.com</p>\n<p>Questions?\nSend us an email:\n<a href=\"mailto:recoveryeffects@gmail.com\">recoveryeffects@gmail.com</a></p>\n<p>FAQ</p>\n<p>Q: Does The Mystic have an audio input jack?\nA: No, it does not have enough parameters to make an audio input useful. You'd only be able to make use of the delay function, so we didn't think it was necessary.</p>\n<p>Q: What is the function of the USB port?\nA: We use the USB port for firmware flashing. No user functionality at this time.</p>"
+    }
+  ]
+}
