@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "processedAt": "2026-07-25T22:33:22.435Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/recovery-cutting-room-floor-v3/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "THE CUTTING ROOM FLOOR WAS DESIGNED TO EMULATE THE SOUND AND FUNCTIONALITY OF VINTAGE REEL-TO-REEL TAPE OVERDRIVE AND ECHO.\n\nThis eurorack module reaches into the 21st century with customized features that traverse the world of modulation and delay. Imagine an abandoned factory with a fluttering tape machine left on repeat.\n\nThe Cutting Room Floor provides beautifully marred saturated tape tone, and ethereal repeats in a streamlined 6hp interface. Other features include a freeze button that traps any tone while still playing and CV control for time.\n\nHand-wired in Seattle, WA. Includes a limited lifetime warranty. 6hp, 43mm deep, 150ma current draw.\n\nCutting Room Floor V3\n\nControls\n\nTAPE LEVEL\nControls how hard the dry signal hits tape. Turning clockwise will increase drive and volume.\n\nDELAY LEVEL\nControls the level of tape delay\n\nDELAY TIME\nControls delay time\n\nWOW\nControls level of melting modulation\n\nFLUTTER\nControls level of tape flutter, to be used in conjunction with Wow\n\nSHAPE\nControls shape of the flutter, from triangle to square wave\n\nIN\nMono audio input\n\nOUT\nMono audio output\n\nCV\nVoltage control for delay time (+/- 5V)\n\nS/R\nSingle or repeat modes for delay signal\n\nSTABILITY\nUp position turns Flutter on, down position turns Flutter off\n\nFREEZE\nMomentary loop playback head. This mode alters the behavior of the Delay Level function and sets 12 O’clock as zero. Rotating to the left models characteristics of Ampex 456 tape. Rotating to the right models characteristics of Ampex 499 tape.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>THE CUTTING ROOM FLOOR WAS DESIGNED TO EMULATE THE SOUND AND FUNCTIONALITY OF VINTAGE REEL-TO-REEL TAPE OVERDRIVE AND ECHO.</p>\n<p>This eurorack module reaches into the 21st century with customized features that traverse the world of modulation and delay. Imagine an abandoned factory with a fluttering tape machine left on repeat.</p>\n<p>The Cutting Room Floor provides beautifully marred saturated tape tone, and ethereal repeats in a streamlined 6hp interface. Other features include a freeze button that traps any tone while still playing and CV control for time.</p>\n<p>Hand-wired in Seattle, WA. Includes a limited lifetime warranty. 6hp, 43mm deep, 150ma current draw.</p>\n<p>Cutting Room Floor V3</p>\n<p>Controls</p>\n<p>TAPE LEVEL\nControls how hard the dry signal hits tape. Turning clockwise will increase drive and volume.</p>\n<p>DELAY LEVEL\nControls the level of tape delay</p>\n<p>DELAY TIME\nControls delay time</p>\n<p>WOW\nControls level of melting modulation</p>\n<p>FLUTTER\nControls level of tape flutter, to be used in conjunction with Wow</p>\n<p>SHAPE\nControls shape of the flutter, from triangle to square wave</p>\n<p>IN\nMono audio input</p>\n<p>OUT\nMono audio output</p>\n<p>CV\nVoltage control for delay time (+/- 5V)</p>\n<p>S/R\nSingle or repeat modes for delay signal</p>\n<p>STABILITY\nUp position turns Flutter on, down position turns Flutter off</p>\n<p>FREEZE\nMomentary loop playback head. This mode alters the behavior of the Delay Level function and sets 12 O’clock as zero. Rotating to the left models characteristics of Ampex 456 tape. Rotating to the right models characteristics of Ampex 499 tape.</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/recovery-cutting-room-floor-v3/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "More Details...\n\nSTABILITY\n\nStability injects flutter, or what is essentially an LFO to the Wow parameter. The level of Wow will determine the amount of flutter. This is a subtle effect. It’s more noticeable on longer delays, ambient or lighter signals. It’s intended to modulate the downward melting Wow, and give it some shape.\n\nDELAY LEVEL\n\nThe delay level increases in volume as moved clockwise, modeling the characteristics of Ampex 499 tape. Engaging the Freeze button moves zero to 12 O’clock. Moving clockwise will increase 499 level, moving counter-clockwise will increase 456 level. This adds interesting and useful elements to live performance.\n\nThe Cutting Room Floor prefers to be powered up without CV interference. If you experience no response in Delay Level or Wow when powering up, simply unplug CV connection to the unit and reboot.\n\nMiscellaneous...\nrecoveryeffects.com",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>More Details...</p>\n<p>STABILITY</p>\n<p>Stability injects flutter, or what is essentially an LFO to the Wow parameter. The level of Wow will determine the amount of flutter. This is a subtle effect. It’s more noticeable on longer delays, ambient or lighter signals. It’s intended to modulate the downward melting Wow, and give it some shape.</p>\n<p>DELAY LEVEL</p>\n<p>The delay level increases in volume as moved clockwise, modeling the characteristics of Ampex 499 tape. Engaging the Freeze button moves zero to 12 O’clock. Moving clockwise will increase 499 level, moving counter-clockwise will increase 456 level. This adds interesting and useful elements to live performance.</p>\n<p>The Cutting Room Floor prefers to be powered up without CV interference. If you experience no response in Delay Level or Wow when powering up, simply unplug CV connection to the unit and reboot.</p>\n<p>Miscellaneous...\nrecoveryeffects.com</p>"
+    }
+  ]
+}
