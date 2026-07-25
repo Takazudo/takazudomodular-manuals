@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "Motion Pictures Module CONTROLS: Knobs Time: ディレイタイムをコントロールします。時計回りに回すとディレイタイムが長くなり、反時計回りに回すと短くなります Feedback: リピート(フィードバック)の量をコントロールします D Level: ディレイのレベルをコントロールします R Level: リバーブのレベルをコントロールします Tap Tempo Button 希望するディレイタイムになるよう3回以上タップします(この操作はTime設定より優先されます) Inputs Tempo: Tap Tempoボタンと同様にゲート信号に反応します Time、Feedback、D Level、R Levelの各入力は0-5Vの電圧範囲に反応し、対応するパラメーターをコントロールします In LとIn R: 左右チャンネルの入力です Outputs Out LとOut Rは、ディレイ信号用のデュアルモノラル出力、およびリバーブ信号用のステレオ出力です OVERVIEW: Motion",
+    "url": "/recovery-motion-pictures/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "Tips & Tricks: 任意のパラメーターにコントロールボルテージを加えると、対応する物理ノブがスリューコントロールとして機能するようになります。 TimeとTempoのCVはどちらも実質的にTimeパラメーターをコントロールしますが、Tempo CVは技術的にはゲート信号を想定しており、Time CVは0〜5Vの範囲の電圧を想定しています。それぞれに電圧を加えて実験することで、タイムにスウィングを生じさせ、興味深いリズミックかつグリッチーなエフェクトを作り出すことができます。 Motion Picturesのディレイはモノラルで、リバーブはステレオです。左右どちらかの入力にモノラル信号を入力すると、出力ではデュアルモノラルのディレイおよび/またはステレオのリバーブが得られます。 Technical Specs: Width: 10HP Depth: 31mm Power Consumption: +12V 90mA, -12V 5mA, +5V 0mA recoveryeffects.com デモ動画はこちら: recoveryeffects.com ご質問がありますか?",
+    "url": "/recovery-motion-pictures/page/2"
+  }
+]

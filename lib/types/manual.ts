@@ -43,6 +43,8 @@ export interface ManualPagesData {
 export interface ManualManifest {
   title: string;
   brand: string;
+  /** Catalog product slug in the takazudomodular repo; consumed by its /l-sync-manual-index, not by this viewer */
+  productSlug?: string;
   version?: string;
   totalPages: number;
   contentPages?: number;

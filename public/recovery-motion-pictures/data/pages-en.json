@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "processedAt": "2026-07-25T22:33:36.976Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/recovery-motion-pictures/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "Motion Pictures Module\n\nCONTROLS:\n\nKnobs\n\nTime: Controls the delay time. Turn clockwise for longer delays and counterclockwise for shorter delays\n\nFeedback: Controls the amount of repeats\n\nD Level: Controls the level of delay\n\nR Level: Controls the level of reverb\n\nTap Tempo Button\n\nTap at least 3 times for the desired time of the delay (this will override the Time setting)\n\nInputs\n\nTempo: Responds to a gate signal in the same way as using the Tap Tempo button\n\nTime, Feedback, D Level and R Level inputs respond to a voltage range of 0-5v to control the corresponding parameters\n\nIn L and In R: Left and right channel inputs\n\nOutputs\n\nOut L and Out R are dual mono outputs for the delay signal and stereo outputs for the reverb signal\n\nOVERVIEW:\n\nMotion Pictures combines lush delay and reverb with intuitive, powerful controls within a 10HP module. Choose between a crisp digital delay or a warm analog delay and pair it with a spacious, large-hall stereo reverb. Delay and reverb levels can be adjusted independently, allowing you to use them separately or together. The delay time can be controlled using a knob, tap tempo, or CV. You can even send opposing CV signals to the tap tempo and delay time for glitchy, pitch-bending, rhythmic effects. Additionally, CV control extends to the feedback, delay, and reverb levels, providing greater flexibility. Motion Pictures offers rich ambient sounds in a compact design, combining delay and reverb in one module to optimize rack space while preserving sonic depth.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Motion Pictures Module</p>\n<p>CONTROLS:</p>\n<p>Knobs</p>\n<p>Time: Controls the delay time. Turn clockwise for longer delays and counterclockwise for shorter delays</p>\n<p>Feedback: Controls the amount of repeats</p>\n<p>D Level: Controls the level of delay</p>\n<p>R Level: Controls the level of reverb</p>\n<p>Tap Tempo Button</p>\n<p>Tap at least 3 times for the desired time of the delay (this will override the Time setting)</p>\n<p>Inputs</p>\n<p>Tempo: Responds to a gate signal in the same way as using the Tap Tempo button</p>\n<p>Time, Feedback, D Level and R Level inputs respond to a voltage range of 0-5v to control the corresponding parameters</p>\n<p>In L and In R: Left and right channel inputs</p>\n<p>Outputs</p>\n<p>Out L and Out R are dual mono outputs for the delay signal and stereo outputs for the reverb signal</p>\n<p>OVERVIEW:</p>\n<p>Motion Pictures combines lush delay and reverb with intuitive, powerful controls within a 10HP module. Choose between a crisp digital delay or a warm analog delay and pair it with a spacious, large-hall stereo reverb. Delay and reverb levels can be adjusted independently, allowing you to use them separately or together. The delay time can be controlled using a knob, tap tempo, or CV. You can even send opposing CV signals to the tap tempo and delay time for glitchy, pitch-bending, rhythmic effects. Additionally, CV control extends to the feedback, delay, and reverb levels, providing greater flexibility. Motion Pictures offers rich ambient sounds in a compact design, combining delay and reverb in one module to optimize rack space while preserving sonic depth.</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/recovery-motion-pictures/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "Tips & Tricks:\n\n- Applying control voltage to any parameter transforms the corresponding physical knob into a slew control.\n\n- Although Time and Tempo CV are essentially both controlling the Time parameter, Tempo CV is technically expecting a gate signal, and Time CV is expecting voltage in the range of 0-5v. You can experiment with applying voltage to each of these, creating time swings for interesting rhythmic and glitchy effects.\n\n- The Motion Pictures' delay is mono, and the reverb is stereo. Inserting a mono signal in either input left or right will result in a dual-mono delay and/or stereo reverb at the output.\n\nTechnical Specs:\n\nWidth: 10HP\nDepth: 31mm\nPower Consumption: +12V 90mA, -12V 5mA, +5V 0mA\n\nrecoveryeffects.com\n\nWatch the demo: recoveryeffects.com\n\nQuestions?\nSend us an email: hello@recoveryeffects.com",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Tips &#x26; Tricks:</p>\n<ul>\n<li>\n<p>Applying control voltage to any parameter transforms the corresponding physical knob into a slew control.</p>\n</li>\n<li>\n<p>Although Time and Tempo CV are essentially both controlling the Time parameter, Tempo CV is technically expecting a gate signal, and Time CV is expecting voltage in the range of 0-5v. You can experiment with applying voltage to each of these, creating time swings for interesting rhythmic and glitchy effects.</p>\n</li>\n<li>\n<p>The Motion Pictures' delay is mono, and the reverb is stereo. Inserting a mono signal in either input left or right will result in a dual-mono delay and/or stereo reverb at the output.</p>\n</li>\n</ul>\n<p>Technical Specs:</p>\n<p>Width: 10HP\nDepth: 31mm\nPower Consumption: +12V 90mA, -12V 5mA, +5V 0mA</p>\n<p>recoveryeffects.com</p>\n<p>Watch the demo: recoveryeffects.com</p>\n<p>Questions?\nSend us an email: <a href=\"mailto:hello@recoveryeffects.com\">hello@recoveryeffects.com</a></p>"
+    }
+  ]
+}
