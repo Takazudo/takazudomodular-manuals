@@ -48,7 +48,7 @@
     "pdf:translate": "echo 'Translation is handled by Claude Code Task subagents during /l-pdf-process execution' && exit 1",
     "pdf:validate": "node scripts/check-page-numbers.js",
     "pdf:fix": "node scripts/fix-page-numbers.js",
-    "pdf:build": "node scripts/check-page-numbers.js && node scripts/pdf-build.js",
+    "pdf:build": "node scripts/pdf-build-chain.js",
     "pdf:search-index": "node scripts/pdf-search-index.js",
     "pdf:search-index:all": "node scripts/pdf-search-index-all.js",
     "pdf:manifest": "node scripts/pdf-manifest.js",

@@ -9,7 +9,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // Parse --slug argument
 const args = process.argv.slice(2);
 const slugIndex = args.indexOf('--slug');
-const slug = slugIndex !== -1 ? args[slugIndex + 1] : 'oxi-one-mk2';
+const slug = slugIndex !== -1 ? args[slugIndex + 1] : null;
+
+if (!slug) {
+  console.error('check-page-numbers: --slug <manual-slug> is required');
+  process.exit(1);
+}
 
 const draftsDir = join(__dirname, `../temp-processing/${slug}/translations-draft`);
 
