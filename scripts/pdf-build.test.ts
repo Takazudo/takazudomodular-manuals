@@ -123,6 +123,30 @@ describe('pdf-build', () => {
       expect(sources).toEqual({ enClean: 0, rawExtract: 1 });
     });
 
+    it('honors a deliberately content-free page (empty translation AND empty en_clean)', () => {
+      // Cruft-only pages (bare page numbers / "-- 1 of 1 --" markers): the
+      // translator emits empty translation and empty en_clean. The raw
+      // extract must NOT leak into the EN output (issue #284).
+      const translationsMap = new Map<number, TranslationDraft>([
+        [
+          21,
+          {
+            pageNum: 21,
+            translation: '',
+            en_clean: '',
+            status: 'completed',
+          },
+        ],
+      ]);
+      const extractedMap = new Map<number, string>([[21, '20\n\n-- 1 of 1 --']]);
+
+      const { pages, sources } = buildEnPages([21], translationsMap, extractedMap, SLUG);
+
+      expect(pages[0].content).toBe('');
+      expect(pages[0].hasContent).toBe(false);
+      expect(sources).toEqual({ enClean: 1, rawExtract: 0 });
+    });
+
     it('falls back to extractedMap when the page has no translation draft at all', () => {
       const translationsMap = new Map<number, TranslationDraft>();
       const extractedMap = new Map<number, string>([[5, 'Orphan extracted page.']]);
