@@ -3,16 +3,16 @@
   "brand": "RYK Modular",
   "productSlug": "ryk-time-slice",
   "version": "1.0.0",
-  "totalPages": 20,
-  "contentPages": 19,
-  "updatedAt": "20260323",
-  "lastUpdated": "2026-03-22T15:51:41.043Z",
+  "totalPages": 24,
+  "contentPages": 22,
+  "updatedAt": "20260729",
+  "lastUpdated": "2026-07-29T05:27:08.317Z",
   "source": {
-    "filename": "TIME-SLICE-MANUAL-V1.pdf",
-    "processedAt": "2026-03-22T15:51:37.588Z",
+    "filename": "TIME-SLICE-MANUAL_Firmware_V1_2.pdf",
+    "processedAt": "2026-07-29T05:27:01.677Z",
     "imageDPI": 300,
     "imageFormat": "png"
   },
-  "searchIndexVersion": "8af4f94892dbcdd1ab186be7bf3f4402248b7edf",
-  "hasEnglish": true
+  "hasEnglish": true,
+  "searchIndexVersion": "1b5505da04d2139ea59c1fc71148b0e704c825ed"
 }

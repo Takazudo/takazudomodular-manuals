@@ -4,7 +4,7 @@
     "pageNum": 1,
     "title": "Page 1",
     "sectionName": null,
-    "body": "TIME SLICE ユーザーマニュアル",
+    "body": "TIME SLICE ユーザーマニュアル V1.2",
     "url": "/ryk-time-slice/page/1"
   },
   {
@@ -12,7 +12,7 @@
     "pageNum": 2,
     "title": "Page 2",
     "sectionName": null,
-    "body": "概要 Time Sliceには4つのTrackがあり、それぞれ独立したオーディオ入力と出力を備えています。オーディオは個別のバッファに録音され、加工して出力に再生することができます。 さらに、各TrackはStereo Mix Outputを通じてステレオミックス出力にミックスすることができます。 Trackは他のTrack出力やMix Outputからオーディオを受信することもでき、リサンプリングや他のTrackに基づくライブパフォーマンスの録音が可能です。 各Trackには独自のFXチェーンがあり、低レイテンシーのPitch Shifter、Tilt Filter、Delay、Wave Folder、Decimator、Reverbが含まれています。 TrackはCVおよびTrigger入力を使用して録音、ループ、操作が可能です。また、Trackをライブのオーディオエフェクトプロセッサーとして使用することもできます。 Time Sliceは、Internal Clockシンク（推奨）、External Clockシンク、またはMIDI Clockシンクを使用できます。",
+    "body": "RYK MODULAR TIME SLICE ユーザーマニュアル ファームウェア V1.2 概要 Time Sliceには4つのTrackがあり、それぞれが独立したオーディオ入力と出力を備えています。オーディオは個別のバッファに録音され、再生や加工を行った上で各Trackの出力へ送ることができます。 さらに、TracksはTRS MIX OUTジャックを通じてStereo Mix出力にミックスすることができます。 Tracksは、他のTrackの出力やMix Outputからオーディオを受け取ることもでき、リサンプリングや、他のTrackに基づいたライブパフォーマンスの録音に利用できます。 各Trackには独自のFX Chainが備わっており、低遅延のPitch Shifter、Tilt Filter、Delay line、Wave Folder、Decimator、Reverbが含まれています。 Time Sliceは、Internal Clock sync(推奨)、External Clock sync、またはMIDI Clock syncを使用できます。",
     "url": "/ryk-time-slice/page/2"
   },
   {
@@ -20,7 +20,7 @@
     "pageNum": 3,
     "title": "Page 3",
     "sectionName": null,
-    "body": "レイアウト S/S LOOP REC MUTE/REV M1 T2/M2 IN OUT T1 CLK/MIDI USBストレージソケット Clock / MIDI入力 Clock / MIDI出力 Stereo Mix Output オーディオ入力 オーディオ出力 Trig1入出力 TRACKレベル / Pan MOD2 CV / Trig2入力 MOD SHIFT JOG WHEEL MOD1 CV入力 Modulation Attenuator TRACK Buttons 2.1 ボタンコンビネーション 2.2 TRACK LED オレンジ: ループ中 グリーン: 編集用にアクティブ レッド: 録音中 Metronome Trackクリア DAWスタイルLoop BOSSスタイルLoop Trackリセット LOOP MUTE/REVERSE RECORD STOP/START",
+    "body": "TIME SLICE S/S LOOP REC MUTE/REV M1 T2/M2 IN IN OUT T1 M1 T2/M2 IN OUT OUT T1 M1 T2/M2 IN MIX OUT OUT T1 M1 T2/M2 IN OUT T1 CLK/MIDI USBストレージソケット Clock / Midi 入力 Clock / Midi 出力 ステレオミックス出力 オーディオ入力 オーディオ出力 Trig1 入力 / 出力 TRACKレベル / パン 2.1 ボタンコンボ 2.2 トラックLED レイアウト MOD2 CV / Trig2 入力 MOD SHIFT JOG WHEEL MOD1 CV入力 モジュレーションアッテネーター TRACKボタン オレンジ: ループ中 メトロノーム クリア トラック DAW スタイル ループ BOSS スタイル ループ トラック リセット LOOP MUTE /REVERSE RECORD STOP /START 緑: 編集中にアクティブ 赤: 録音中",
     "url": "/ryk-time-slice/page/3"
   },
   {
@@ -28,7 +28,7 @@
     "pageNum": 4,
     "title": "Page 4",
     "sectionName": null,
-    "body": "コントロール TRACK Buttons ●●●● - Track設定（Loop長、Modulation、Reverbなど）を編集するTrackを選択するために使用します。アクティブなTrackは、TRACK Buttonの下にあるグリーンLED ● で示されます。 2つのTrackをペアにグループ化する（例：ステレオ用）には、SHIFT Buttonを押しながら2つのTRACK Buttonsを押します。 Trackペアを解除するには、SHIFT Buttonを押しながら、ペアになっているTRACK Buttonsのいずれかを押します。 S/S Button ● - このボタンを使用して内部クロックをStart/Stopします。Loopベースの機能（DAWスタイルループを除く）にはクロックが動作している必要があります。 代替機能: S/S Buttonは、TRACK Button ● を押しながらS/S Button ● を押すことで、Trackの再生をリスタートするために使用できます。これは1-Shot Loopモードのサンプルをリトリガーする際に便利です。 S/S",
+    "body": "コントロール TRACK ボタン ●●●● - トラックを選択し、Loop Length、Modulation、Reverb などの設定を編集するために使用します。アクティブなトラックは、Track ボタンの下にあるグリーン LED ● で示されます。SHIFT ボタン ● を押しながら2つの TRACK ボタンを同時に押すことで、2つのトラックをグループ化してペア（例：ステレオ用）を組むことができます。 SHIFT ボタンを押しながら ●、ペアリングされたトラックを押すと、ペアリングが解除されます。 S/S ボタン ● - このボタンを使用して内部クロックをスタート/ストップします。ループベースの機能を使用するには、クロックが動作している必要があります。 代替機能: S/S ボタン ● は、TRACK ボタン ● を押しながら S/S ボタン ● を押すことで、トラックの再生を再スタートするために使用できます。これは 1-SHOT Loop モードのサンプルを再トリガーする際に便利です。 S/S ボタンは、MUTE ボタン ● を押しながら S/S ボタン ●",
     "url": "/ryk-time-slice/page/4"
   },
   {
@@ -36,7 +36,7 @@
     "pageNum": 5,
     "title": "Page 5",
     "sectionName": null,
-    "body": "S/S Button ● は、REC Button ● を押しながらS/S Button ● を押すことで、DAWスタイルのLoop録音を開始するためにも使用されます。（4.LOOPINGを参照） REC Button ● - REC Buttonを短く押すと、アクティブなTrackの録音が開始されます。TRACK Button ● を押しながらREC Button ● を押すと、録音をロックオンできます。録音中のTrackは、TRACK Buttonの下にあるレッドLED ● で示されます。 代替機能: REC Button ● は、MUTE Button ● を押しながらREC Button ● を押すことで、現在のTrackをクリアするためにも使用できます。 LOOP Button ● - クロックが動作中に、LOOP Buttonを押すことでアクティブなTrackをループさせることができます。ループを解除するには、LOOP Buttonを1秒以上長押しします。ループの詳細については4.LOOPINGセクションを参照してください。",
+    "body": "S/Sボタン●は、RECボタン●を押しながらS/Sボタン●を押すことで、DAWスタイルのループ録音を開始する際にも使用します。(4. LOOPINGの項を参照してください) RECボタン● – RECボタンを押すと、アクティブなトラックの録音を開始します。録音中のトラックは、TRACKボタン●の下の赤色LED●で示されます。 BOSSスタイルのルーピングを使用している場合、RECボタン●を最初に押した時点がループの開始位置となります。 代替機能: RECボタン●は、MUTEボタン●を押しながらRECボタン●を押すことで、現在のトラックをクリアする用途にも使用できます。 LOOPボタン● – クロックが動作している間、アクティブなトラックはLOOPボタンを押すことでループさせることができます。ループ機能は、もう一度ボタンを押すことで解除されます。ループを解除するとオーディオループが失われる点に注意してください。ループの詳細についてはLOOPINGセクションを参照してください。 ループ中のトラックは、TRACKボタンの下のオレンジ色LED●で示されます。",
     "url": "/ryk-time-slice/page/5"
   },
   {
@@ -44,7 +44,7 @@
     "pageNum": 6,
     "title": "Page 6",
     "sectionName": null,
-    "body": "Modulation Attenuator（M1入力の下） - これらのコントロールはM1 CV入力の減衰量を調整します。 M1入力にジャックが挿入されていない場合、モジュレーションコントロールとして使用できます。（MOD1 Modulation Menuを参照） ループ ループのクイックスタートガイド 3つのループスタイル RETROSPECTIVE 録音を開始するには: REC長押し + LOOP押し Loop長: ユーザー定義 BOSS 録音を開始するには: REC長押し + LOOP押し 開始 → ループ完了 Loop長: 自動計算 DAW 録音を開始するには: REC長押し + S/S押し 1小節のプリロール → 開始 → ループ自動完了 Loop長: ユーザー定義",
+    "body": "メニュー項目とそのパラメーター値です。 パラメーター値が太字で表示されている状態でJOGホイールを回すと、値を調整できます。パラメーターによっては、SHIFTボタンまたはMODボタンを押しながら操作することで、代替の調整や微調整を行うことができます(各項目の説明を参照してください)。 NB. JOGホイールには独特のソフトタッチ式プッシュスイッチが搭載されています。作動させるのに強い力は必要ないため、端ではなく中央部分を押すようにしてください。 3つのループスタイル レトロスペクティブ BOSS DAW 録音を開始するには PRESS PRESS PRESS LOOP REC REC PRESS LOOP END START START LOOP END 自動的に終了します ループ長を先に設定 1 BAR プリロール ループ長を先に設定 ループ長をボタン押下時点から設定 ホールドプレス S/S END START",
     "url": "/ryk-time-slice/page/6"
   },
   {
@@ -52,7 +52,7 @@
     "pageNum": 7,
     "title": "Page 7",
     "sectionName": null,
-    "body": "ループ 4.1 ループスタイル Time Sliceでループを有効にする方法は3つあります。デフォルトのループスタイルはRETROSPECTIVE、DAW、BOSSスタイルです。 （5ページの図を参照） メニューに慣れてから、SHIFT Buttonを押してTRACK Menu（TRK）を開きます。 RETROSPECTIVE このスタイルでは、まずLoop長を設定します。 LoopのエンドポイントはLOOP Button ● を押した時点で定義され、スタートポイントはLoop長で定義された時間分だけ遡った時点になります。 Loopのタイムスケールは、テンポベースの時間（小節、拍）または有限時間（ミリ秒）に設定でき、SHIFT Buttonを押しながらJOG Wheelを押すことで切り替えられます。 テンポベースの時間を使用する場合、Loopの開始は常にもっとも近い1/8拍にクォンタイズされます。 停止中の場合、S/S Button ● を押して内部クロックを開始する（推奨）か、動作中の外部クロックを使用します。 Track MenuでLoopの長さを設定し、希望のTRACK",
+    "body": "モジュレーション・アッテニュエーター（M1インプットの下） – これらのコントロールはM1 CVインプットのアッテネーションを調整します。M1インプットにジャックが挿入されていない場合は、モジュレーションコントロールとして使用できます（MOD1 Modulationメニューを参照）。 LOOPING Loopingの機能を使用するには、内部または外部クロックが動作している必要があります。これはS/Sボタンの横にある緑色のLEDが点滅していることで示されます。 S/Sボタン●を押して内部クロックを開始します（推奨）。または、動作中の外部クロックを使用することもできます。 4.1 LOOP STYLES Time Sliceでループを有効にする方法には、RETROSPECTIVE、BOSS、DAWスタイルの3種類があります。（5ページの図を参照） Loop StyleのRETROまたはBOSSは、Settingsメニューで選択できます。（Settings Menuを参照） RETROSPECIVE ループの終了点はLOOPボタン●が押された瞬間で定義され、開始点はLoop",
     "url": "/ryk-time-slice/page/7"
   },
   {
@@ -60,7 +60,7 @@
     "pageNum": 8,
     "title": "Page 8",
     "sectionName": null,
-    "body": "4.2 スライス Sliceは、録音またはロードされたオーディオLoopの小さなセクションです。 オーディオが録音またはロードされた後、Loop長をより短い長さに調整して、オーディオの小さなセクション（SLICE）を再生できます。 メニューパラメーターSLICEは、より長いLoopから再生される特定のSliceを設定します。 例えば、4小節のLoopを録音してからLoop長を1/2小節に調整すると、Sliceの範囲は1〜8になり、元のLoopから8つのSliceのうち1つを選択できます。 Slice番号1はLoopされたオーディオの最初のSliceで、元のLoopの先頭を表します。 負のLoop Slice（-1、-2、-3など）を選択すると、時間を遡ります。 これは同じフレーズのいくつかのバリエーションを演奏したい場合に最適で、Loopを設定した後、時間を遡ってフレーズの異なるバージョンにジャンプできます。 図: LOOPとSLICEの使用例 4小節のLoopを録音 Loop長を1/2小節に変更して8つのSliceを作成 またはLoop長を1小節にして4つのSliceを作成",
+    "body": "DAW DAWループスタイルでは、まずループの長さを設定し、その後ループの長さの間だけタイミングを合わせた録音が行われます。 S/Sボタン●を押してクロックを停止します。 TrackメニューでLOOPに移動し、希望のループ長を設定します。 録音を開始するには、RECボタン●を押し続けてから、S/Sボタン●を1回押します。 クロックはメトロノームの4拍分のプリロールを行い、その後ループ長の間、録音を開始します。 ループ長分の録音が完了すると、ループは自動的に設定され、録音はオフになります。 4.2 スライス 4小節の長さのループを録音し、その後ループ長を1/2小節に変更すると8個のスライスが、あるいはループ長を1小節にすると4個のスライスが作成されます。 1/2 1/2 1/2 1/2 1/2 1/2 1/2 bar SLICE7 1/2 SLICE6 SLICE5 SLICE4 SLICE3 SLICE2 SLICE8 SLICE1 4 bar length LOOP 1 1 1 1 bar SLICE4 SLICE3 SLICE2 SLICE1",
     "url": "/ryk-time-slice/page/8"
   },
   {
@@ -68,7 +68,7 @@
     "pageNum": 9,
     "title": "Page 9",
     "sectionName": null,
-    "body": "マクロ的に操作して、非常に小さなLoopサイズでLoopされたオーディオをスキャンすることもできます。これはGranular合成で使用される手法です。 これを試すには、長めのLoopされたオーディオ（2小節以上）を使用し、Loop長を1/32や100msなどの短い値に設定してから、SLICE番号をスクロールしてこのGranularスキャニングテクニックを聴いてみてください。 XFADE値を調整して、Slice間のフェードを滑らかにします。 CVを使用してSliceをスキャンすることもできます。（モジュレーション入力の使用例を参照） テンポ同期されたブレイクビートのLoop（2小節程度）がある場合、Loop長を1/4や1/8小節などの短い値に設定し、SLICE番号を使ってブレイクビートの異なるパートにジャンプできます。これはドラムンベースの音楽が作られる方法と非常に似ています。 これを試すには、内部メモリから「jazz_breaks.wav」をLOAD TRACKし、Loop長を1/4小節に調整します。SLICE番号を調整してブレイクビートの異なるパートにジャンプしてください。",
+    "body": "Sliceとは、録音またはLoadされたLoopの一部を切り出した、より短いフレーズのことです。 Sliceは通常Loopの長さを基準にしていますが、代わりにオーディオ内に配置されたマーカーを基準にすることもできます(下記のTrack MenuにあるSLICE MODEを参照してください)。 オーディオの録音またはLoadが完了したら、Track MenuでLOOPの長さを元の長さより短く調整することで、オーディオのより小さな部分を再生できます。これをSLICEと呼びます。 メニューパラメーターSLICEは、トラックが新しい短いLoopを再生しているときに聞こえるSlice番号です。 Loopの長さを基準にしたSliceの例を挙げると、4小節の長さのLoopを録音した後、Loopの長さを1/2小節に調整すると、Sliceの範囲は1〜8になり、元のLoopから8つのSliceのうち1つを選択できるようになります。 Slice番号1は、ループされたオーディオの最初のSliceであり、元のLoopの先頭を表します。 マイナスのLoop",
     "url": "/ryk-time-slice/page/9"
   },
   {
@@ -76,7 +76,7 @@
     "pageNum": 10,
     "title": "Page 10",
     "sectionName": null,
-    "body": "メニュー 5.1 TRACK MENU Track Menuでは、Trackのすべてのループ関連設定を調整できます。設定は、TRACK Buttonsの下にあるグリーンLED ● で示される、現在アクティブなTrackに適用されます。 START - ループされたTrackのスタート位置です。ドラムブレイクや1-Shotサンプル再生のループ開始点を微調整するために使用しますが、短いLoop長を使用して長いオーディオをスキャンするためにも使用できます。 クロックが停止している場合、JOG Wheelを使用してループされたオーディオのSTART値をスクラブし、ビートやノートなどの開始位置を見つけます。 LOOP - ループが設定される前と後のLoop長です。RETROまたはDAWスタイルのLoopを作成する前に、まずこれを設定する必要があります。 代替設定: SHIFT Button ● を押しながらJOG Wheelを押して、Loop長の単位を切り替えます。（小節ベース / ms） MOD Button ● を押しながらJOG Wheelを押して、1-SHOTまたはLOOP",
+    "body": "4.3 LOOP MODES 通常のLoop Modeに加えて、他に2種類のLoop Modeがあります。1-SHOTとLIVEです。 Trackメニュー内のLOOP MODEに移動して選択します。 1-SHOT このモードは、Loopが一度だけ再生されて停止する、従来のサンプラーに近い動作をします。このモードを使用するには、WAVサンプルをLOADするか、通常の方法でLoopを録音します。 再生はTRIG入力へのRESETトリガー、またはMIDI CC、あるいはMIDI NOTEによってトリガーされます(Modulation Menuを参照)。 また、TRACKボタン●を押しながらS/Sボタン●を押すことで、手動で再生をトリガーすることもできます。 XFADEの値は減衰量として働き、サンプルの終わりに向かって再生レベルをフェードさせます。[ 0 – フェードなし、50% – サンプルは半分から終わりにかけてフェードする ]",
     "url": "/ryk-time-slice/page/10"
   },
   {
@@ -84,7 +84,7 @@
     "pageNum": 11,
     "title": "Page 11",
     "sectionName": null,
-    "body": "L-TEMPO - Loopが作成された時のテンポ、またはロードされたTrackに保存されたテンポです。 Loopを作成した後にテンポを調整して、Loopのタイミングを微調整できます。これはブレイクビートをより正確にループさせるのに便利です。 ドラムトラックやビートベースの音楽をLoopの入力として使用する場合、通常はBPMをソースの音楽に合わせるのが最善です。（Settings Menuを参照） クロックをS/S（Start/Stop）し、内部Metronomeを使用して、録音とループを進める前にBPMがオーディオのテンポに合っているか確認できます。 LOAD / SAVE - オーディオBuffer、Track、Projectを内部メモリまたはUSBフラッシュドライブにロードおよび保存できます。（Settings MenuのSTORAGEを参照） SHIFT Buttonを押しながらJOG Wheelを押して、BUF、TRK、またはPRJを切り替えます。 BUF - Trackのオーディオのみをロードまたは保存します。 TRK -",
+    "body": "メニュー 5.1 トラックメニュー トラックメニューは、トラックのLoop関連の設定をすべて調整できる場所です。設定は、TRACKボタンの下にある緑色のLED●で示されている現在アクティブなトラックに適用されます。 SLICE MODE – この設定により、SLICEをLoop長の倍数に基づくデフォルトモードから、手動または自動的に配置されるスライスポイントであるMARKERSに変更できます（下記のSLICE EDITを参照）。 LOOP MODE – ここでは、ループ再生モードをNORMAL、1-SHOT、1-SHOT POLY、LIVEモードから選択できます。 LOOP UNIT – ビート/バーベースのループユニットにはQUANTISEDを、ミリ秒単位にはNON QUANTを選択します。 START – これはループされたトラックバッファのStart位置で、ドラムブレイクなどのループ開始点を微調整したり、1-SHOTサンプル再生時に使用したりすることを目的としています。また、短いLoop長を使用しながら、より長いオーディオをスキャンする際にも使用できます。",
     "url": "/ryk-time-slice/page/11"
   },
   {
@@ -92,7 +92,7 @@
     "pageNum": 12,
     "title": "Page 12",
     "sectionName": null,
-    "body": "5.2 FX MENU ここでは、各Trackに適用されるエフェクトチェーンを編集できます。 P-SHIFT - PITCH SHIFTエフェクトは、ハーモニーの作成、サンプルのリチューン、またはタイムストレッチスタイルのエフェクトの作成に使用できます。12半音上げ、または24半音下げることができます。 SHIFT Buttonを押しながらピッチをセント単位で微調整します。 MOD Buttonを押しながらPitch ShiftのDry/Wet MIXを調整します。（注意：DELAY時間が0の場合のみ） SHIFT Buttonを押しながらJOG Wheelを押して、PITCH LOCKモードを切り替えます。 PITCH LOCKは、LoopのテンポやSpeedが調整されてもTrackのピッチを維持し、タイムストレッチエフェクトを作成するために使用できます。 楽器サウンドでのクラシックなハーモナイズエフェクトには、ピッチを-3、-5、-7などの音楽的インターバルに設定し、Mix値を50%に設定します。",
+    "body": "再生中でも操作できますが、再生速度を50%以下に設定しておくと簡単です。 DEL – JOGホイールを使ってマーカーを選択し、JOGホイールを長押しすると、選択したマーカーを削除します。 SPEED – これはループされたトラックの再生速度です。この値は25%、50%、100%、200%、400%に量子化されており、よく使う速度変更にすぐアクセスできます。 これ以外の量子化されていない速度値にするには、SHIFTボタン●を押しながらJOGホイールを調整し、0%まで下げます。 注: パフォーマンスに配慮した速度変更を行うため、量子化された値は「Parameter Sync」という設定を使うことで、小節の境界でのみ更新されるように制限できます(Settings MenuのPARAMETER SYNCを参照)。 ループの速度は「Unlink(リンク解除)」することができ、クロックのテンポの影響を受けなくなります。これはピアノなどピッチを持つ1-Shotサンプルで、クロックテンポの変化に影響されずにサンプルを正しいピッチに保ちたい場合に便利です。",
     "url": "/ryk-time-slice/page/12"
   },
   {
@@ -100,7 +100,7 @@
     "pageNum": 13,
     "title": "Page 13",
     "sectionName": null,
-    "body": "WAVE FOLD - オーディオにWave Folderエフェクトを適用します。 大きな値はユニークなディストーションエフェクトを作成します。バスドラムやシンプルなピッチサウンドに効果的です。 DECIMATE - オーディオ品質を下げるデジタルデグレードエフェクトで、補間スタイル、ビットデプスの削減、サンプルレートの削減を組み合わせて使用します。 5.3 SETTINGS MENU このメニューは、Time SliceモジュールのGlobal設定と、Input Sourceなどの一部のTrackベース設定を調整するために使用されます。 BPM - 内部Clockを使用している場合、テンポを調整できます。外部クロックソースを使用している場合、検出されたテンポがここに表示されます。 TAP BPM - 内部Clockを使用している場合、MOD Buttonを一定の1/4拍で4拍以上タップすることでテンポを設定できます。 ドラムブレイクなどのビートベースのソースから録音する場合、録音前にTap",
+    "body": "高品質なアルゴリズムを使用してオーディオをリサンプルし、ネイティブフォーマットである16bit 48kHzに変換します。 グループ化されていないトラックが選択されている場合、ステレオファイルの左チャンネルのみが読み込まれます。 ステレオファイルを読み込む際、グループ化されたトラックが選択されている場合、左チャンネルは最も左のトラックに読み込まれ、右チャンネルは最も右のトラックに読み込まれます。 モノラルファイルをグループ化されたトラックに読み込む場合、各トラックにはファイルから同じモノラルデータが読み込まれます。 マーカーデータを含むWAVファイルをインポートできます。これによりSLICE Markerオプションが有効になり、ループ内のスライスポイントとしてマーカーを使用できます。 ReaperなどのDAWソフトウェアを使用してマーカーをエクスポートする場合は、エクスポート時に\"markers only\"オプションを選択してください。 ファイルの読み込みと保存では、ディレクトリブラウジングがサポートされています。 Time",
     "url": "/ryk-time-slice/page/13"
   },
   {
@@ -108,7 +108,7 @@
     "pageNum": 14,
     "title": "Page 14",
     "sectionName": null,
-    "body": "RSET TRK - このオプションを使用して、現在選択されているTrackのパラメーターをデフォルト設定にリセットします。すべてのTrack、Modulation、FXパラメーターがリセットされます。 「YES」を選択し、JOG Wheelを1秒間押します。 INPT MON - Input Monitorオプションは、現在選択されているTrackにミックスされるオーディオ入力のプレビューのOn/Offを切り替えます。 STORAGE - ここではTrackやProjectの保存先とロード元を選択できます。内部メモリまたはUSBフラッシュドライブ（お持ちの場合）を選択できます。 注意：USBフラッシュドライブを挿入すると、デバイスが認識される間、ディスプレイが一瞬フリーズします。この間はUSBドライブを抜かないでください。 ロードまたは保存中にUSBドライブを抜かないでください。 CLCK SRC - Clock入力はInternal、External Clock、またはMIDI Clockに設定できます。 最高のオーディオ品質のためにInternal Clockを推奨します。",
+    "body": "+2 や -3 のような音楽的インターバルと、長めのディレイタイムおよび50%のFeedbackを組み合わせることで、単一のノートサウンドから上行または下行するスケールを作り出すことができます。 DELAY UNIT – ビート/バーベースのディレイタイムを使用するQUANTISEDと、ミリ秒単位のNON QUANTのどちらかを選択します。 REVERB – これはREVERBエフェクトへのセンドレベルです。 SHIFTボタンを押しながら操作すると、リバーブエフェクトのSize(空間の大きさ)を調整できます。20以下の値では小さな部屋のような効果になり、60以上の値では大きなホールのような効果になります。 MODボタンを押しながら操作すると、リバーブのドライ/ウェットMIXを調整できます。 FILTER – これはHP/LPティルトフィルターのカットオフ周波数です。 これはクラシックなDJスタイルのティルトフィルターで、カットオフ周波数を調整することでLow PassモードからHigh Passモードへと切り替わります。",
     "url": "/ryk-time-slice/page/14"
   },
   {
@@ -116,7 +116,7 @@
     "pageNum": 15,
     "title": "Page 15",
     "sectionName": null,
-    "body": "5.4 MODULATION MENU このModulation Menuでは、M1、M2入力からのモジュレーションCVやMIDI CCを、Speed、Pitch Shift、Slice、Feedbackなどの目的地に割り当てることができます。 また、T1、T2トリガー入力やMIDI CCを、Reset、Record、Reverse、Muteなどのイベントに割り当てることができます。 T1ジャックは、End of Loop PulseやTransient Detect Pulseのトリガー出力としても使用できます。 Clock INジャックは、External Clockを使用していない場合、モジュレーション用のMIDI INPUTとして使用できます。 MOD Buttonを押してModulation Menuにアクセスし、JOG Wheelを使用してMOD1などのModulation Source（太字のトップメニュー項目）を選択します。次にJOG Wheelを押してパラメーター編集に切り替え、モジュレーションの目的地を選択します。 注意：目的地は、JOG",
+    "body": "5.3 SETTINGS MENU このメニューは、Time Sliceモジュールのグローバル設定を調整するために使用します。また、Input Sourceなど一部のトラック単位の設定もここで行えます。 BPM – 内部クロックを使用している場合、このパラメーターでテンポを調整できます。外部クロックソースを使用している場合は、検出されたテンポがここに表示されます。 TAP BPM – 内部クロックを使用している場合、MODボタンを4拍以上、一定の4分音符のリズムでタップすることでテンポを設定できます。 ドラムブレークのようなビートベースの音源からレコーディングする場合、レコーディング前にTap Tempoを使ってテンポを合わせておくと便利です。メトロノームをオンにし（MuteとS/Sを押す）、タップを開始してください。S/Sボタンでクロックを再スタートさせながら、メトロノームのブリップが曲のビートと一致しているかを確認します。 INPUT – ここでは、現在選択されているトラックのオーディオ入力レベルまたはソースを選択できます。 Audio Inputジャックの場合、レベルはLINE",
     "url": "/ryk-time-slice/page/15"
   },
   {
@@ -124,7 +124,7 @@
     "pageNum": 16,
     "title": "Page 16",
     "sectionName": null,
-    "body": "MIDI CC a-d - 各Trackには4つのアサイン可能なMIDI CCモジュレーションスロットがあります。 SHIFT Buttonを押しながらJog Wheelを押して、選択したMIDI CCモジュレーションスロットのMIDI Learnを有効にします。MIDI Learnがアクティブな間、CCの番号が右上隅に点滅表示されます。 SHIFT Buttonを押しながらJOG Wheelを回すことで、CC番号を選択することもできます。 モジュレーション入力の使用例 Granularスキャニング Track Menuで、Loop長を1小節以上に設定します。オーディオを録音し、Loop Buttonを押してLoopを作成します。 次にLoop長を1/32などの小さな分数に設定します。 Modulation Menuで、MOD1の目的地パラメーターをSLICEに設定し、設定を有効にするためにMOD1オプションに戻ることを忘れないでください。 M1",
+    "body": "注: この値はトラックごとの設定で、トラック番号は右上に表示されます。 PRAMSNC(パラメータシンク)は、SPEEDパラメータの変更を小節境界に量子化します。 例えば、ブレイクビートのスピードを50%に落とし、後で100%に戻したい場合、Parameter SyncをONに設定すると、スピードの変化はブレイクのタイミングを保持したまま小節の1拍目でのみ発生するように制限されます。 STORAGE(ストレージ)では、トラックやプロジェクトの保存・読み込み先を選択できます。内部メモリー、またはお持ちであればUSBフラッシュドライブのいずれかに保存できます。 注: USBフラッシュドライブを挿入すると、デバイスが認識される間、一瞬ディスプレイがフリーズします。この間はUSBドライブを抜かないでください。 読み込みまたは保存中はUSBドライブを抜かないでください。 CLCK SRC(クロックソース)では、クロック入力をInternal(内部)、External Clock(外部クロック)、またはMIDI",
     "url": "/ryk-time-slice/page/16"
   },
   {
@@ -132,7 +132,7 @@
     "pageNum": 17,
     "title": "Page 17",
     "sectionName": null,
-    "body": "TrackのGate出力をTrackのT1入力に接続します。 シーケンサーのピッチ値を使用して異なるSLICEを選択し、異なるドラムサンプルを再生します。Gateがドラムサンプルの再生をトリガーします。 （注意：Loopが再生されるためにはクロックが動作している必要があります） マルチサンプルサンプルプレーヤー Reaperなどのオーディオエディターアプリで、1/4または1/2小節間隔などの等間隔で個々のサンプルサウンドを配置します。 これらはドラムヒットや、ピアノなどの個別にサンプリングされたノートなどです。 基本的なWAV設定（16bit 48kHz）でファイルをエクスポートし、プロジェクトのテンポを覚えておきます。 また、各サウンドの開始点にMarkerを追加し、Marker設定オプションで「markers only」を選択してWAVファイルをエクスポートすることもできます。ファイルをUSBフラッシュドライブに保存し、Time Sliceにドライブを挿入します。 Track MenuでLOADを見つけ、LOAD TRKに切り替え、保存したファイルを見つけてJOG",
+    "body": "成功した場合は、最後にREBOOTを選択してください。作業が終わったらモジュールを再起動してください。 5.4 モジュレーションメニュー このモジュレーションメニューでは、M1、M2入力およびMIDI CCからのモジュレーションCVを、Speed、Pitch Shift、Slice、Feedbackなどのデスティネーションに割り当てることができます。また、T1、T2トリガー入力およびMIDI CCを、Reset、Record、Reverse、Muteなどのイベントに割り当てることもできます。 T1ジャックは、End of Loop PulseやTransient detect pulseのトリガー出力としても使用できます。 Clock INジャックは、外部クロックを使用しない場合、モジュレーション用のMIDI INPUTとして使用できます。 MODボタンを押してモジュレーションメニューにアクセスし、JOGホイールを使ってMOD1などのモジュレーションソースを選択します(トップメニュー項目は太字で表示されます)。次にJOGホイールを押してパラメーター編集に切り替え、モジュレーションデステ",
     "url": "/ryk-time-slice/page/17"
   },
   {
@@ -140,7 +140,7 @@
     "pageNum": 18,
     "title": "Page 18",
     "sectionName": null,
-    "body": "MENU MAP HOLD MOD PRESS START LOOP SLICE SPEED XFADE SOS MIX L-TEMPO LOAD SAVE P-SHIFT DELAY REVERB FILTER WVE FOLD DECIMATE TRK (TRACK MENU) 1-SHOT/LIVE BARS/MS FINE ADJ ALTERNATIVE FUNCTIONS BUF/TRK/PRJ BUF/TRK/PRJ PITCH LOCK BARS/MS OFF/ON WET DRY MIX WET DRY MIX WET DRY MIX FINE ADJ FEEDBACK SIZE RESONANCE FX (EFFECTS MENU) BPM TAP BPM INPUT RSET TRK INPT MON STORAGE CLCK SRC CLCK OUT CLCK DIV MIDI CH BEAT SNC PARM SNC LINE / EURO / HOT EURO / TRK1-4 / MIX OUT NO / YES OFF / ON INT / USB",
+    "body": "TRIG1 OUT – T1ジャックは、EOP(ループ終了パルス)およびTRANSトランジェント検出パルスのトリガー出力としても使用できます。 TRANS80とTRANS50のオプションは、トラックのオーディオレベルが平均値の80%または50%を超えたときに短いパルスを出力します。 EOPは、トラックのループが終端に達して再スタートするたびに短いパルスを出力します。 EOPパルスは、クロックの逓倍や分周も可能で、クロックのようにループごとに複数のパルスを生成したり、2ループ、3ループ、4ループなど一定間隔でパルスを生成したりできます。 MODボタンを押しながらJOG Wheelを操作すると、逓倍・分周の比率を調整できます。 MIDI NOTE – これにより、MIDI NOTEを使用して1-SHOTスタイルのサンプル再生用にループのリセットをトリガーしたり、NOTEの値を使ってSpeedまたはPitch Shift経由でループのピッチをコントロールしたりできます。",
     "url": "/ryk-time-slice/page/18"
   },
   {
@@ -148,7 +148,31 @@
     "pageNum": 19,
     "title": "Page 19",
     "sectionName": null,
-    "body": "START LOOP SLICE SLICE Q SPEED SPEED Q LEVEL PAN FBACK P-SHIFT P-SHFT Q DELAY REVERB FILTER WVEFOLD DECIMATE SPEED + RESET P-SHIFT + RESET SLICE + RESET SPEED MOD (MODULATION MENU) TRIG1 OR TRIG2 MIDI NOTE MIDI VEL MIDI AFT MIDI BEND MIDI CCa MIDI CCb MIDI CCc MIDI CCd REC REC TOG LOOP LOOP BOSS MUTE INVMUTE REV TOG RESET (TRIG 1のみ) TRANS 80 TRANS 50 EOP PRE EOP MOD1 OR MOD2",
+    "body": "デスティネーション。 キーボードまたはシーケンサーのCVをM1インプットに接続し(アッテネーターは最大にする)、GateシグナルをT1ジャックに接続します。キーボードやシーケンサーでノートを演奏すると、サンプルがリトリガーされ、そのピッチがCVによってコントロールされます。 注: 最も低いノートは0V、最も高いノートは3Vになります。 セットアップにエンベロープを追加します。エンベロープの出力をMOD2にパッチし、MOD2のdestinationをLevelに設定してから、LevelトリマーをMinimumまで回します。 エンベロープのGateをキーボードまたはシーケンサーのGateに接続します。 より伝統的なアプローチとしては、MOD1のdestinationをPitchの代わりにSPEED_Qに変更します。FX MenuでP-SHIFTを0に設定します。 Track MenuでSpeedを25%に設定します。 これで、キーボードやシーケンサーを演奏すると、サウンドのスピードとピッチの両方が変化します。 マルチサンプルドラム Track",
     "url": "/ryk-time-slice/page/19"
+  },
+  {
+    "id": "20",
+    "pageNum": 20,
+    "title": "Page 20",
+    "sectionName": null,
+    "body": "キーボードを使用している場合、この値をオフセットするためにSliceパラメーターを調整することができます。 注意: ご使用のキーボードやシーケンサーに合わせて、MIDI CH設定を正しいMIDIチャンネルに設定してください。 また、MIDI入力を使用する場合は、SettingsメニューのClock SourceがINTernalに設定されていることを確認してください。 マルチサンプルファイルの例は、内部メモリの「1-Shot」ディレクトリ内にある「1-shot_piano」などで確認できます。 Live Granular Buffer [ Live Loop ] Track Menuメニューで、LOOP MODEをLIVEに設定します。 クロックが動作していることを確認してください。 LOOP lengthを1/32や1/16などの短い値に設定します。 LOOPボタンを押してループを有効にし、次にRECボタンを押して録音を有効にします。 Modulation Menuで、TRIG1を選択し、destinationをRSTに設定します。",
+    "url": "/ryk-time-slice/page/20"
+  },
+  {
+    "id": "22",
+    "pageNum": 22,
+    "title": "Page 22",
+    "sectionName": null,
+    "body": "メニューマップ HOLD MOD PRESS SLICE EDIT SLICE MODE LOOP MODE LOOP UNIT START LOOP SLICE SPEED XFADE SOS MIX L-TEMPO LOAD/SAVE P-SHIFT DELAY REVERB FILTER WVE FOLD DECIMATE TRK (TRACK MENU) 代替機能 BUF/TRK/PRJ PITCH LOCK WET DRY MIX WET DRY MIX WET DRY MIX FINE ADJ FEEDBACK SIZE RESONANCE FX (EFFECTS MENU) BPM TAP BPM INPUT RSET TRK INPT MON STORAGE CLCK SRC CLCK OUT CLCK DIV MIDI CH BEAT SNC PARM SNC LINE / EURO / HOT EURO / TRK1-4 / MIX OUT NO / YES OFF / ON INT / USB INT / EXT CLOCK / MIDI CLOCK /",
+    "url": "/ryk-time-slice/page/22"
+  },
+  {
+    "id": "23",
+    "pageNum": 23,
+    "title": "Page 23",
+    "sectionName": null,
+    "body": "START LOOP SLICE SLICE Q SPEED SPEED Q LEVEL PAN FBACK P-SHIFT P-SHFT Q DELAY REVERB FILTER WVEFOLD DECIMATE SPEED + RESET P-SHIFT + RESET SLICE + RESET SPEED MOD (MODULATION MENU) TRIG1 OR TRIG2 MIDI NOTE MIDI VEL MIDI AFT MIDI BEND MIDI CCa MIDI CCb MIDI CCc MIDI Ccd REC REC TOG LOOP RETRO LOOP BOSS LOOP DAW MUTE INVMUTE REV TOG RESET (TRIG 1のみ) TRANS 80 TRANS 50 EOP PRE EOP MOD1 OR MOD2 HOLD MOD QUANTISE VALUE QUANTISE VALUE QUANTISE VALUE",
+    "url": "/ryk-time-slice/page/23"
   }
 ]
