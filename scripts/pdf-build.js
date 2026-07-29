@@ -80,8 +80,17 @@ export function buildEnPages(sortedPageNums, translationsMap, extractedMap, slug
   const pages = sortedPageNums.map((pageNum) => {
     const translationData = translationsMap.get(pageNum);
     const cleanEn = translationData?.en_clean;
+    const translation = translationData?.translation;
+    // A draft with BOTH translation and en_clean empty means the translator
+    // deliberately marked the page content-free (cruft-only: bare page
+    // numbers / page markers). Falling back to raw extract would leak the
+    // pdf-parse artifacts the translator dropped (issue #284). The fallback
+    // stays for legacy drafts without en_clean and for the issue-#112
+    // backward-compat case (non-empty translation with empty en_clean).
+    const deliberatelyEmpty =
+      cleanEn === '' && typeof translation === 'string' && translation.trim() === '';
     let content;
-    if (typeof cleanEn === 'string' && cleanEn.length > 0) {
+    if (typeof cleanEn === 'string' && (cleanEn.length > 0 || deliberatelyEmpty)) {
       content = cleanEn;
       enCleanCount += 1;
     } else {
