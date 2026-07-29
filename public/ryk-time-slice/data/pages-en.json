@@ -212,10 +212,10 @@
       "image": "/ryk-time-slice/pages/page-021.png",
       "title": "Page 21",
       "sectionName": null,
-      "content": "20\n\n-- 1 of 1 --",
-      "hasContent": true,
+      "content": "",
+      "hasContent": false,
       "tags": [],
-      "contentHtml": "<p>20</p>\n<p>-- 1 of 1 --</p>"
+      "contentHtml": ""
     },
     {
       "pageNum": 22,
@@ -242,10 +242,10 @@
       "image": "/ryk-time-slice/pages/page-024.png",
       "title": "Page 24",
       "sectionName": null,
-      "content": "-- 1 of 1 --",
-      "hasContent": true,
+      "content": "",
+      "hasContent": false,
       "tags": [],
-      "contentHtml": "<p>-- 1 of 1 --</p>"
+      "contentHtml": ""
     }
   ]
 }
