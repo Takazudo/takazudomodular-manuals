@@ -604,7 +604,7 @@
     "pageNum": 76,
     "title": "Page 76",
     "sectionName": null,
-    "body": "グリッドはトラックのNote offsetに対するステップ値を表します。高いピッチ値は黄色で表示されます。ピッチが高いほど、LEDの輝度が高くなります。低いピッチ値は赤で表示されます。 トリガーされたノートの最終ピッチは、シーケンサーのオクターブ、ルート、トラックのNote offset、ステップのノート値、ステップのオクターブ、および累積インターバルを考慮して計算されます。 INTERVAL（サーモンピンク） Intervalレーンは、このモードで最も興味深い機能のひとつです。静的なピッチ値を定義する代わりに、選択したスケールの次のインターバルまたはポジションを定義する累積値です。 Intervalレーンのトランスポートが動くたびに、ステップのインターバル値がすべてのノートオフセットの影響を受けたノート値に加算されます。累積値がIntervalレーンの設定で定義されたMinimum値（Min）またはMaximum値（Max）に達すると、パラメーターレーンの設定で設定された反対のMinimum（Min）またはMaximum（Max）値に戻ります（またはその逆）。",
+    "body": "グリッドは、トラックのNoteオフセットを基準としたステップ値を表しています。ピッチが高い値ほど黄色で表示され、ピッチが高いほどLEDの輝度も高くなります。ピッチが低い値は赤色で表示されます。 トリガーされるノートの最終的なピッチは、シーケンサーのオクターブ、ルート、トラックのNoteオフセット、ステップのノート値、ステップのオクターブ、そして累積されたインターバルを考慮して計算されます。 INTERVAL(サーモンピンク) インターバルレーンは、このモードの中でも最も興味深い機能の一つです。固定的なピッチ値を定義する代わりに、選択したスケール内の次のインターバル(位置)を定義する累積値として機能します。 インターバルレーンのトランスポートが進むたびに、そのステップのインターバル値が、すべてのノートオフセットを反映したノート値に加算されます。累積値がインターバルレーン設定で定義された最小値(Min)または最大値(Max)に達すると、パラメーターレーン設定で設定された反対側の最小値(Min)または最大値(Max)へジャンプして戻ります。その逆も同様です。",
     "url": "/oxi-one-mk1/page/76"
   },
   {
@@ -612,7 +612,7 @@
     "pageNum": 77,
     "title": "Page 77",
     "sectionName": null,
-    "body": "All pulses ● 最初のパルス/リピートの間だけトリガーします。 First pulse ● トリガーはパルスの全体の持続時間にわたって広がります。この設定では、トリガーが「TIED」になります。 TIED pulse 注：ステップのパルス値が1以外の場合、それらの追加パルスはRLengthの計算に反映されます。 VELOCITY（ターコイズ） VelocityはトリガーされたノートのMIDI velocityを定義します。 Velocity値は、グリッド上の比例した明るさのレベルで表示されます。 OCTAVE（青） ピッチに正または負のオクターブオフセットを追加します。このオフセットが発生する確率をステップ単位で設定できます。 Octave step GATE（紫） 他のSequencerモードと同様に、Gateはノートの長さを定義します。 Gate値は、グリッド上の比例した明るさのレベルで表示されます。",
+    "body": "すべてのパルス 最初のパルス/リピート時のみトリガーします。 最初のパルス トリガーはパルス全体の長さにわたって続きます。この設定では、トリガーは「TIED」になります。 TIEDパルス 注: The VELOCITY(ターコイズ) Velocityは、トリガーされたノートのMIDIベロシティを定義します。 ベロシティの値は、グリッド内で明るさに比例したレベルで表示されます。 OCTAVE(ブルー) ピッチに正または負のオクターブオフセットを加えます。このオフセットが発生する確率をステップごとに設定できます。 Octaveステップ GATE(パープル) 他のシーケンサーモードと同様に、Gateはノートの長さを定義します。 ゲートの値は、グリッド内で明るさに比例したレベルで表示されます。",
     "url": "/oxi-one-mk1/page/77"
   },
   {
@@ -948,7 +948,7 @@
     "pageNum": 119,
     "title": "Page 119",
     "sectionName": null,
-    "body": "ANALOG CLOCK OXI Oneには、入力と出力のクロックポートがそれぞれ1つあります。これにより、モジュラーシンセサイザーや、クロック同期が可能なMIDI以前の機器（KorgやRolandが製造した初期のドラムマシンなど）と接続することができます。OXI Oneはシンクロナイゼーション信号の送受信の両方に対応しています。 入力・出力のクロックポートはいずれもTRSジャックです。クロック信号はTip（先端）に、Start-Stop/Reset信号はジャックコネクターのRing（リング）に配線されています。 Start-Stop/Reset信号の入力・出力は、Configの「Reset/Start-Stop IN/OUT」設定に応じて2通りの動作が可能です： OFF：リセット入力を無視し、リセット出力信号を無効にします。OXI OneのsyncをClkに設定している場合、クロックパルスを受信するとすぐに動作を開始します。Start-Stop/Reset信号を使用しない場合（モノラルTRケーブルを接続する場合など）は、このオプションを設定してください。 PULSE",
+    "body": "ANALOG CLOCK OXI Oneには、クロック用の入力ポートと出力ポートがそれぞれ1つずつ搭載されています。これにより、モジュラーシンセサイザーや、クロック同期が可能なMIDI以前の機材(Korgやローランドが製造していた初期のドラムマシンなど)と接続することができます。OXI Oneは同期信号の送信と受信の両方に対応しています。 入力と出力のクロックポートはどちらもTRSジャックです。クロック信号はジャックコネクターのTip(先端)に、Start-Stop/Reset信号はRing(リング)に配線されています。 Start-Stop/Resetの入力信号と出力信号は、Config内のReset/Start-Stop IN/OUT設定に応じて、2つの異なる動作をします。 OFF: 入力のリセットを無視し、出力のリセット信号を無効化します。OXI Oneの同期がClkに設定されている場合、クロックパルスを受信するとすぐに再生を開始します。Start-Stop/Reset信号を使用しない場合(例えばモノラルTRケーブルでパッチする場合)は、このオプションに設定してください。",
     "url": "/oxi-one-mk1/page/119"
   },
   {
@@ -964,7 +964,7 @@
     "pageNum": 121,
     "title": "Page 121",
     "sectionName": null,
-    "body": "ANALOG ● PPQ Out: OXI Oneがアナログ Clock Outを通じて送信するPPQ（クォーターノートあたりのパルス数）を変更します。（24PPQ、1PP16、2PPQ、1PPQ） ● PPQ In: OXI Oneがアナログ Clock Inで受信するPPQ（クォーターノートあたりのパルス数）を変更します。（24PPQ、1PP16、2PPQ、1PPQ） ● Reset/Start-Stop IN/OUT: アナログのReset/Start-Stop INおよびOUTシグナルの動作を設定します。 ○ OFF: 入力リセットを無視し、出力リセットシグナルを無効にします。OXI OneのSyncがClkに設定されている場合、クロックパルスを受信した時点で動作を開始します。 ○ PULSE RESET: 入力・出力ともにRESETシグナルとして動作します。 ■ Output: OXI Oneが再生を開始または再開する際、最初のクロック出力パルスの前にReset outを通じて短い4msパルスが送信されます。 ■ Input: OXI",
+    "body": "ANALOG PPQ Out。OXI Oneがアナログ Clock Out経由で送信する、4分音符あたりのパルス数を変更します。(24PPQ、1PP16、2PPQ、1PPQ) PPQ In。OXI Oneがアナログ Clock Inで受信する、4分音符あたりのパルス数を変更します。(24PPQ、1PP16、2PPQ、1PPQ) Reset/Start-Stop IN/OUT。アナログ Reset/Start-Stop IN・OUT信号の動作を設定します。 OFFは入力のリセットを無視し、出力のリセット信号を無効化します。OXI OneのSyncがClkに設定されている場合、クロックパルスを受信するとすぐに再生を開始します。 PULSE RESET: 入力と出力の両方がRESET信号として動作します。 出力: STOP時にReset outから4msの短いパルスが送信されます。 入力: OXI Oneの同期がClkに設定されている状態でReset Inにリセットパルスを受信すると、OXI Oneはリセットされます。これはシーケンサーの再生ヘッドをリセットすることを意味します。",
     "url": "/oxi-one-mk1/page/121"
   },
   {
@@ -972,7 +972,7 @@
     "pageNum": 122,
     "title": "Page 122",
     "sectionName": null,
-    "body": "● Keyboard Layout。KeyboardセクションのClassicまたはIsomorphicレイアウトについて説明します。 ● Auto Sync。Autosyncを有効または無効にします。 ● Taps count for tempo。新しいBPM値を計算する際に考慮されるタップ数を設定します。Infiniteは、計算された平均テンポがリセットされないため、よりスムーズなトランジションが可能です。逆に、小さい値を設定するとより即座のテンポ調整が可能になります。 ● Keyb Arp Velocity。PER NOTE PLAYEDの場合、キーボードアルペジエーターはノートが演奏された時のベロシティを適用します。GLOBALの場合、キーボードアルペジエーターはノート演奏時に現在のキーボードベロシティを適用します。 ● Keyb latch when hold is active。内部または外部キーボードから新しいノートが入力され、HOLDがアクティブなときのアルペジエーターの動作を選択します。 ○",
+    "body": "Auto Sync。オートシンクの有効・無効を切り替えます。 Taps count for tempo。新しいBPM値を計算する際に考慮するタップ数を設定します。Infiniteに設定すると、平均計算されたテンポがリセットされなくなり、よりスムーズな遷移が得られます。逆に、値を小さくすると、より即時性の高いテンポ調整が可能になります。 Keyb Arp Velocity。PER NOTE PLAYEDに設定すると、キーボードアルペジエーターは演奏された時点のノートのベロシティを反映します。GLOBALに設定すると、キーボードアルペジエーターはノートを演奏する際に現在のキーボードベロシティを適用します。 Keyb latch when hold is active。内蔵または外部キーボードから新しいノートが入力され、HOLDが有効な場合のアルペジエーターの動作を選択します。 ○ Latched(またはシーケンサーモード)は、ノートバッファが一杯になるまで、パターンに新しいノートを追加し続けます。 ○ Normal(Non",
     "url": "/oxi-one-mk1/page/122"
   },
   {
@@ -980,7 +980,7 @@
     "pageNum": 123,
     "title": "Page 123",
     "sectionName": null,
-    "body": "SYSTEM ● MIDI IN Monitor：受信したMIDIデータのモニターです。 ● LEDs Animations：フェードやその他のLEDエフェクトの量を設定します。 ● LEDs Brightness：2段階の輝度設定です。 ● LEDs Transport bar keyboard：キーボードビューでトランスポートバーを表示します。録音が有効になっている場合は常に表示されます。 ● Screensaver animation：スクリーンセーバーを有効または無効にします。 ● Inactivity Power-Off Time：OXI Oneが未使用時に電源が切れるまでの時間を設定します。 ● Bluetooth ON/OFF。 ● USB Mode ○ Device：OXI OneがUSB MIDI DeviceとしてUSBから電源を受け取ります。 ○ Host+Power：OXI OneがUSB MIDI Hostとして動作し、他のUSBデバイスに電源を供給します。 ○ Host No Power：OXI OneがUSB MIDI",
+    "body": "MIDI IN Monitor。受信したMIDIデータのモニターです。 LEDs Animations。フェード量やその他のLEDエフェクトを設定します。 LEDs Brightness。2段階の明るさ設定です。 LEDs Transport bar keyboard。キーボードビューでトランスポートバーを表示します。録音中は常に表示されます。 Screensaver animation。スクリーンセーバーの有効/無効を切り替えます。 Inactivity Power-Off Time。操作がない場合にOXI Oneが電源オフになるまでの時間を設定します。 Bluetooth ON/OFF。 USB Mode Device: OXI OneはUSB MIDIデバイスとして動作し、USBから電源供給を受けます。 Host+Power: OXI OneはUSB MIDIホストとして動作し、他のUSBデバイスに電源を供給します。 Host No Power: OXI OneはUSB MIDIホストとして動作しますが、電源は供給しません。一部のUSBアダプターではこの設定が必要です。",
     "url": "/oxi-one-mk1/page/123"
   },
   {

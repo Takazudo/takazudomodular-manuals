@@ -2,17 +2,17 @@
   "title": "ADDAC511 VC Stochastic Voltage Generator: Manual",
   "brand": "ADDAC System",
   "productSlug": "addac511",
-  "updatedAt": "20260113",
+  "updatedAt": "20260730",
   "version": "1.0.0",
-  "totalPages": 65,
-  "contentPages": 65,
-  "lastUpdated": "2026-01-12T21:35:03.409Z",
+  "totalPages": 68,
+  "contentPages": 68,
+  "lastUpdated": "2026-07-30T06:31:39.567Z",
   "source": {
-    "filename": "ADDAC511_VCSVGenerator.pdf",
-    "processedAt": "2026-01-12T21:34:56.558Z",
+    "filename": "ADDAC511_VCSVGenerator_FW20.pdf",
+    "processedAt": "2026-07-30T06:31:31.330Z",
     "imageDPI": 300,
     "imageFormat": "png"
   },
-  "searchIndexVersion": "7f90f8fe23572fd857f2a0eb5169cbea6705ea57",
+  "searchIndexVersion": "1d4cba46695d93cab6da453cabf4c8e63e030daf",
   "hasEnglish": true
 }
