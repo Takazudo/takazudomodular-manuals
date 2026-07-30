@@ -145,6 +145,7 @@ pnpm run init-worktree issue-2-project-setup
 ### Skills
 
 - **`/l-pdf-process`** - Run the complete PDF processing pipeline (see `scripts/CLAUDE.md`)
+- **`/l-check-stale-manuals`** - Verify committed manuals against manufacturer-published current releases; propose/run refreshes for stale ones (per-manual source URL registry in `references/manual-sources.md`)
 - **`/l-verify-translation`** - Capture and verify translations against page images
 - **`capture-all-pages`** - Capture screenshots of all manual pages at high resolution
 - **`/l-b4push`** - Run pre-push checks
@@ -166,6 +167,10 @@ pnpm run init-worktree issue-2-project-setup
     ├── capture-all-pages/      # Page screenshot capture
     │   ├── SKILL.md
     │   └── scripts/capture.js
+    ├── l-check-stale-manuals/  # Manual staleness sweep vs manufacturer releases
+    │   ├── SKILL.md
+    │   ├── references/         # manual-sources.md (source URL registry), refresh-procedure.md
+    │   └── scripts/            # inventory, pdf/png diff, page alignment, JSON rebuild helpers
     ├── pdf-process/            # PDF processing pipeline
     │   └── SKILL.md
     └── verify-translation/     # Translation verification
