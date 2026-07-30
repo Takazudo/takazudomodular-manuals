@@ -4,7 +4,7 @@
     "pageNum": 1,
     "title": "Page 1",
     "sectionName": null,
-    "body": "Instruments for Sonic Expression Est.2009 March.2025 USER'S GUIDE . REV12 FIRMWARE 1.9 ADDAC112 VC LOOPER & GRANULAR PROCESSOR はじめに From Portugal with Love!",
+    "body": "Instruments for Sonic Expression Est.2009 April.2026 USER'S GUIDE . REV13 FIRMWARE 2.0 ADDAC112 VC LOOPER & GRANULAR PROCESSOR INTRODUCING ポルトガルより、愛を込めて!",
     "url": "/addac112-looper/page/1"
   },
   {
@@ -12,7 +12,7 @@
     "pageNum": 2,
     "title": "Page 2",
     "sectionName": null,
-    "body": "BOOTLOADER & FIRMWARE UPDATE: Version 1.9 ADDAC112 User's Guide ADDAC SYSTEM V1.9 UPDATEパッケージのダウンロード BootloaderとFirmwareの両方を含む.zipファイルをダウンロードしてください: https://media.addacsystem.com/firmwares/ADDAC112UpdateV19.zip 内容: ADDAC112_UpdateInstructions.txt - 手順書 ADDAC112BootloaderV1.9.bin - 新しいBootloader ADDAC112FirmwareV1.9.bin - 新しい読み書き方式を使用し、使用可能メモリが少なくなります ADDAC112FirmwareV1.9_legacy.bin - 従来の読み書き方式を維持し、同じ使用可能メモリを保ちます 新機能: GRAIN POSITION FOLLOWS LOOP (34ページ) GrainsのPositionをLooperのPlay",
+    "body": "BOOTLOADER & FIRMWARE UPDATE: Version 2.0 ADDAC112 User's Guide ADDAC SYSTEM BOOTLOADER & FIRMWARE 2.0 のご紹介 今回のアップデートでは、まずBootloaderを以下の手順に従ってアップデートしてから、SD Card経由でFirmwareをアップデートする必要があります。Firmwareのみをアップデートすると、モジュールの動作に問題が発生します。 このベータ版は非常に安定していますが、もし不具合を発見された場合はご報告ください。 BOOTLOADER 2.0へのアップデート: Bootloaderをアップデートするには、112Aをフレームから取り外す必要がありますが、リボン電源ケーブルは接続したまま、電源はONの状態にしておいてください。フレームから取り外したら、モジュール右側の2枚のPCBの間にあるMicro USB入力を探してください。そこにケーブルを挿し、コンピューターに接続します。",
     "url": "/addac112-looper/page/2"
   },
   {
@@ -20,7 +20,7 @@
     "pageNum": 3,
     "title": "Page 3",
     "sectionName": null,
-    "body": "WELCOME Granularコンセプトには長い歴史があり、そのコア原理には多くの再解釈が存在します。これは私たちなりの解釈です。 大まかに説明すると、デジタルGranularとは、サウンドファイルの断片が同時に再生され、わずかに異なる、または完全に異なるパラメーターによって、一般的にGranular Cloudと呼ばれるものを生成することを指します。 通常、Granularエンジンが断片を切り出して再生するためのバッファーサイズが存在し、設定されたパラメーターに従って再生されます。このバッファーサイズは通常小さく、グレインが非常に小さいため、可聴域に達し、常に変化する複雑なウェーブテーブルのように聞こえることがあります。これがGranular Synthesisの原理です。 私たちのビジョンでは、最大5分までの長いバッファーサイズの可能性を追加しました。これにより、Granular原理に対する「ソフト」なアプローチが可能になり、わずかな「スタッター」のような「偶発的」なエフェクトから、あらゆる入力オーディオ信号の極端な処理と変換まで生成できるエフェクトとして使用できます。",
+    "body": "PAGE INDEX イントロダクション & 概要 リボンケーブル接続 バンク & プリセット ループ SDカードファイル構造 デビエーション 信号フロー図 ルーパーエンジン ルーパーコントロール 再生 & 録音 特殊機能 ループエディター ピッチシフトモード グラニュラーエンジン グレインコントロール エンベロープ パンニング & トリガー キルオールグレイン オーディオ入出力 & フィードバック CV & トリガー入力 OLEDモニター 最大アクティブグレイン数 & CPU過負荷 インフォ画面 スイッチキャリブレーション メインメニュー オプションメニュー オプションメニュー2.0 クオンタイゼーション 最初のステップ バンクフォルダー プリセット スケール ブートローダー & ファームウェア Welcome to: ADDAC112 VC LOOPER & GRANULAR PROCESSOR ユーザーズガイド 2026年4月 リビジョン.13 New New Edited Edited Edited Edited",
     "url": "/addac112-looper/page/3"
   },
   {
@@ -28,7 +28,7 @@
     "pageNum": 4,
     "title": "Page 4",
     "sectionName": null,
-    "body": "概要 このモジュールには3つの主要なセクションがあります： Looper Engine: Looperは全てのリアルタイム録音が行われる場所です。 オーディオ入力は録音バッファに送られ、複数のコントロールによりループを録音してリストに保存できます。これにより、リスト内のあらゆるサンプルにいつでもアクセスでき、標準的なlooperとして機能します。 Granular Engine: Granularは選択されたLOOPのバッファに作用します。 Output Mix Output mixでは、Dry Input、Looper Volume、Grains Volumeを個別にコントロールできます。 これらのメインセクションに加えて、シンプルなMENUがあり、主にBankのLOADとSAVEに使用されます。複雑なメニュー操作は不要です。 Tech Specs: 32HP + 13HP 4.5cm deep 240mA +12V 70mA -12V Audio Specs: ステレオオーディオ入出力 32-bit floating point DSP Bit Depth: 8または16bit",
+    "body": "ようこそ: ADDAC SYSTEM ようこそ グラニュラーというコンセプトの背景には長い歴史があり、その核となる原理には数多くの再解釈が存在します。これは私たちなりの解釈です。 大まかに言うと、デジタルグラニュラーとは、サウンドファイルの断片を同時に再生し、それぞれにわずかに、あるいはまったく異なるパラメーターを与えることで、一般に「グラニュラークラウド」と呼ばれるものを生み出す手法を指します。 通常、グラニュラーエンジンはバッファサイズから断片を切り出し、設定されたパラメーターに従って再生します。このバッファサイズは通常小さく、グレイン(粒)は可聴帯域に達するほど小さいため、絶えず変化する複雑なウェーブテーブルのように聞こえます。これがグラニュラーシンセシスの原理です。 私たちのビジョンでは、最大5分までの長いバッファサイズを使用できるようにし、グラニュラーの原理をより「ソフト」なアプローチで扱えるようにしました。これにより、わずかな「スタッター」のような「偶発的な」効果から、入力されたオーディオ信号の極端な処理や変形まで、エフェクトとして活用できます。",
     "url": "/addac112-looper/page/4"
   },
   {
@@ -36,7 +36,7 @@
     "pageNum": 5,
     "title": "Page 5",
     "sectionName": null,
-    "body": "リボン接続 !!! 警告 !!! - !!! 全てのコネクタで赤いストライプを下に !!! また、ボックス化されたヘッダーのインデントにも注意してください！ INPUTS TO CONTROLS - A INPUTS TO CONTROLS - B POWER RAILS POWER RAILS",
+    "body": "概要 このモジュールには3つの主要なセクションがあります： Looper Engine: Looperは全てのリアルタイム録音が行われる場所です。 オーディオ入力は録音バッファに送られ、複数のコントロールによりループを録音してリストに保存できます。これにより、リスト内のあらゆるサンプルにいつでもアクセスでき、標準的なlooperとして機能します。 Granular Engine: Granularは選択されたLOOPのバッファに作用します。 Output Mix Output mixでは、Dry Input、Looper Volume、Grains Volumeを個別にコントロールできます。 これらのメインセクションに加えて、シンプルなMENUがあり、主にBankのLOADとSAVEに使用されます。複雑なメニュー操作は不要です。 Tech Specs: 32HP + 13HP 4.5cm deep 240mA +12V 70mA -12V Audio Specs: ステレオオーディオ入出力 32-bit floating point DSP Bit Depth: 8または16bit",
     "url": "/addac112-looper/page/5"
   },
   {
@@ -44,7 +44,7 @@
     "pageNum": 6,
     "title": "Page 6",
     "sectionName": null,
-    "body": "BANKとPRESET BANK: LOAD/SAVEプロセスをシンプルにするため、SDカードからはBANKのみをLOADできます。 BANKにはPRESETのリストとLOOPのリストを含むフォルダが含まれています。 各BANKはSDカード内のフォルダに保存され、フォルダ内には、すべてのPRESET設定を含むドキュメントと共に、すべてのLOOPを個別の.WAVファイルで含む第2のフォルダがあります。 SDカードへのSaveまたはLoadの実行中、オーディオ処理は一時停止されます。フルBANKの保存には最大10秒かかる場合があります。 BANKがメモリにロードされると、LOOP間のジャンプは即座に行われます。 新しいBANKはMENU: NEW BANKを使用していつでも作成できます。 BANKは空のPRESETリストとLOOPリストで初期化されます。 新しいBANKを作成する際、ユーザーは2つのオプションから選択するよう求められます: Current Config、現在のBANK設定を新しいBANKにコピーします Default",
+    "body": "リボン接続 !!! 警告 !!! - !!! 全てのコネクタで赤いストライプを下に !!! また、ボックス化されたヘッダーのインデントにも注意してください！ INPUTS TO CONTROLS - A INPUTS TO CONTROLS - B POWER RAILS POWER RAILS",
     "url": "/addac112-looper/page/6"
   },
   {
@@ -52,7 +52,7 @@
     "pageNum": 7,
     "title": "Page 7",
     "sectionName": null,
-    "body": "LOOPS LOOPS: 1つのBANKにつき最大99個の.WAVファイルのリスト LOOPSはコンピューターを使用してフォルダに追加するか、Looper Engineを使用してリアルタイムに録音することができます。 1つのBANK内の全てのloopに対して約60Mbの最大サンプリング時間が共有されます。 録音時間は選択したSample Rateによって異なります。参考として、44.1Khzの場合、11:40分(MONO)または5:50分(STEREO)の録音が可能です。 モジュールのLooper Engineを使用して録音されたLoopは、MonoまたはStereoのいずれかになり、Sample RateとBit Depthはモジュールのoptionsメニューで選択した設定によって定義されます。デフォルト設定はStereo 44.1K 16 bitです。 録音時間の合計は、次の3つの設定によって決まります：Channels(Mono/Stereo)、Sample Rate、Bit Depth。 LOOPSとPRESETSは、専用の[LOOP SELECT]と[PRESET",
+    "body": "BANKとPRESET BANK: LOAD/SAVEプロセスをシンプルにするため、SDカードからはBANKのみをLOADできます。 BANKにはPRESETのリストとLOOPのリストを含むフォルダが含まれています。 各BANKはSDカード内のフォルダに保存され、フォルダ内には、すべてのPRESET設定を含むドキュメントと共に、すべてのLOOPを個別の.WAVファイルで含む第2のフォルダがあります。 SDカードへのSaveまたはLoadの実行中、オーディオ処理は一時停止されます。フルBANKの保存には最大10秒かかる場合があります。 BANKがメモリにロードされると、LOOP間のジャンプは即座に行われます。 新しいBANKはMENU: NEW BANKを使用していつでも作成できます。 BANKは空のPRESETリストとLOOPリストで初期化されます。 新しいBANKを作成する際、ユーザーは2つのオプションから選択するよう求められます: Current Config、現在のBANK設定を新しいBANKにコピーします Default",
     "url": "/addac112-looper/page/7"
   },
   {
@@ -60,7 +60,7 @@
     "pageNum": 8,
     "title": "Page 8",
     "sectionName": null,
-    "body": "SD CARDファイル構造 SD Cardのルートに「BANK」の後に数字が続く名前のフォルダがあれば、それを読み込むことができます。 SD Card上に新しいBANKを直接作成するには、単に新しいフォルダを作成して名前を付けます。例：BANK1。 次に、このBANK1フォルダの中に「WAV」という名前の別のフォルダを作成し、このWAVフォルダ内に任意の数の.wavファイルを入れることができます。ただし、フォルダ全体が60Mb以下である必要があります。 Loopのインデックスは、ファイル名の先頭にある数字を尊重します。数字がない場合、ファイル名はモジュールによって変更され、先頭に数字が自動的に付与されます。 コンピュータでこれらの数字を手動で変更すると、[LOOP SELECT]で選択される順序が変わります。 BANKフォルダは「BANK」の後に数字が続く名前になっています。数字の後にユーザーは追加の文字を使用してバンクにラベルを付けることができ、モジュールでバンクを読み込む際に識別しやすくなります。 BANK命名の例を以下に示します。",
+    "body": "LOOPS LOOPS: 1つのBANKにつき最大99個の.WAVファイルのリスト LOOPSはコンピューターを使用してフォルダに追加するか、Looper Engineを使用してリアルタイムに録音することができます。 1つのBANK内の全てのloopに対して約60Mbの最大サンプリング時間が共有されます。 録音時間は選択したSample Rateによって異なります。参考として、44.1Khzの場合、11:40分(MONO)または5:50分(STEREO)の録音が可能です。 モジュールのLooper Engineを使用して録音されたLoopは、MonoまたはStereoのいずれかになり、Sample RateとBit Depthはモジュールのoptionsメニューで選択した設定によって定義されます。デフォルト設定はStereo 44.1K 16 bitです。 録音時間の合計は、次の3つの設定によって決まります：Channels(Mono/Stereo)、Sample Rate、Bit Depth。 LOOPSとPRESETSは、専用の[LOOP SELECT]と[PRESET",
     "url": "/addac112-looper/page/8"
   },
   {
@@ -68,7 +68,7 @@
     "pageNum": 9,
     "title": "Page 9",
     "sectionName": null,
-    "body": "DEVIATION ADDAC112 User's Guide DEVIATIONは、このガイド全体を通じてInitial Knobからの偏差を指す用語として使用されます。 この設定には2つの動作モードがあります: RANDOM MODE このモードでは、Deviationはランダム関数として動作し、Initial Knobの設定を中心としたパーセンテージベースの範囲内に保たれます。これにより、すべてのランダム値がKnobのメイン範囲内に収まり、範囲の上限または下限を超えることがなく、「デッドスポット」が排除されます。 以下の例は、この概念を図で示しています: INITIAL POT SETTING: 50% 0% 25% 50% 75% 100% 100% 100% 50% 50% 50% 50% DEVIATION RANGE DEVIATION POT SETTING: 50% FUNCTION RANGE INITIAL KNOB DEVIATION KNOB INITIAL POT SETTING: 80% 0% 25% 50% 75% 80% 100% 100% 100%",
+    "body": "SD CARDファイル構造 SD Cardのルートに「BANK」の後に数字が続く名前のフォルダがあれば、それを読み込むことができます。 SD Card上に新しいBANKを直接作成するには、単に新しいフォルダを作成して名前を付けます。例：BANK1。 次に、このBANK1フォルダの中に「WAV」という名前の別のフォルダを作成し、このWAVフォルダ内に任意の数の.wavファイルを入れることができます。ただし、フォルダ全体が60Mb以下である必要があります。 Loopのインデックスは、ファイル名の先頭にある数字を尊重します。数字がない場合、ファイル名はモジュールによって変更され、先頭に数字が自動的に付与されます。 コンピュータでこれらの数字を手動で変更すると、[LOOP SELECT]で選択される順序が変わります。 BANKフォルダは「BANK」の後に数字が続く名前になっています。数字の後にユーザーは追加の文字を使用してバンクにラベルを付けることができ、モジュールでバンクを読み込む際に識別しやすくなります。 BANK命名の例を以下に示します。",
     "url": "/addac112-looper/page/9"
   },
   {
@@ -76,7 +76,7 @@
     "pageNum": 10,
     "title": "Page 10",
     "sectionName": null,
-    "body": "SPREAD MODE - [GRAIN PLAY HEAD] [GRAIN SIZE] [GRAIN INTERMITENCY] このモードでは、Deviationが各機能をグレインインデックス全体に分散させるための増分値を設定します。 Grain 1は常に初期設定を保持し、増分は適用されません。 このモードは、10秒、20秒、40秒以上の長いループで最も効果的に動作します。 以下の例は、[GRAIN PLAY HEAD]と[GRAIN SIZE]にこのコンセプトを適用した図解です（下図には示されていませんが、[GRAIN INTERMITENCY]も同じ原理に従います）： 例A: Positionを10% - Position Deviationを5% Lengthを10% - Length Deviationを5% 0% 25% 50% 75% 100% LOOP LENGTH GRAIN1 GRAIN2 GRAIN3 GRAIN4 GRAIN5 GRAIN6 ... GRAIN1: POS:10% / LENGTH:10% GRAINX: POS <=> ABSOLUTE(",
+    "body": "DEVIATION ADDAC112 User's Guide DEVIATIONは、このガイド全体を通じてInitial Knobからの偏差を指す用語として使用されます。 この設定には2つの動作モードがあります: RANDOM MODE このモードでは、Deviationはランダム関数として動作し、Initial Knobの設定を中心としたパーセンテージベースの範囲内に保たれます。これにより、すべてのランダム値がKnobのメイン範囲内に収まり、範囲の上限または下限を超えることがなく、「デッドスポット」が排除されます。 以下の例は、この概念を図で示しています: INITIAL POT SETTING: 50% 0% 25% 50% 75% 100% 100% 100% 50% 50% 50% 50% DEVIATION RANGE DEVIATION POT SETTING: 50% FUNCTION RANGE INITIAL KNOB DEVIATION KNOB INITIAL POT SETTING: 80% 0% 25% 50% 75% 80% 100% 100% 100%",
     "url": "/addac112-looper/page/10"
   },
   {
@@ -84,7 +84,7 @@
     "pageNum": 11,
     "title": "Page 11",
     "sectionName": null,
-    "body": "0% 25% 50% 75% 100% VOLUME GRAIN1 GRAIN2 GRAIN3 GRAIN4 GRAIN5 GRAIN6 ... START VOLUME +INC FINAL VOLUME WRAP AROUND 100% 60% 60% 0 60% 75% 15 60% 90% 30 60% 105% 45 5% 20% 35% 50% 60% 120% 60 60% 135% 75 60% 150% 90 DEVIATION SPREAD MODE - [GRAIN VOLUME] このモードでは、[VOLUME DEVIATION]がグレインインデックス全体にわたってボリュームを分散させるために使用されるインクリメントを設定します。 Grain 1は常に[VOLUME MIN]の設定をインクリメントなしで保持します。 [VOLUME DEVIATION]ノブは12時の位置で0%となり、反時計回りに回すと減算、時計回りに回すと加算されます。 例A: Volume Minが60% - Volume Deviationが+15% 例B: Volume Minが90%",
+    "body": "SPREAD MODE - [GRAIN PLAY HEAD] [GRAIN SIZE] [GRAIN INTERMITENCY] このモードでは、Deviationが各機能をグレインインデックス全体に分散させるための増分値を設定します。 Grain 1は常に初期設定を保持し、増分は適用されません。 このモードは、10秒、20秒、40秒以上の長いループで最も効果的に動作します。 以下の例は、[GRAIN PLAY HEAD]と[GRAIN SIZE]にこのコンセプトを適用した図解です（下図には示されていませんが、[GRAIN INTERMITENCY]も同じ原理に従います）： 例A: Positionを10% - Position Deviationを5% Lengthを10% - Length Deviationを5% 0% 25% 50% 75% 100% LOOP LENGTH GRAIN1 GRAIN2 GRAIN3 GRAIN4 GRAIN5 GRAIN6 ... GRAIN1: POS:10% / LENGTH:10% GRAINX: POS <=> ABSOLUTE(",
     "url": "/addac112-looper/page/11"
   },
   {
@@ -92,7 +92,7 @@
     "pageNum": 12,
     "title": "Page 12",
     "sectionName": null,
-    "body": "信号フロー図 LOOP START TRIGGER GRAIN START TRIGGER INS MONO OUTPUT MIX GRAIN PLAY HEAD GRANULAR ENGINE DIVISION: FREE/8/16 POSITION CV INPUT POSITION DEVIATION CV INPUT GRAIN SIZE DIVISION: FREE/8/16 PLAY LENGTH CV INPUT LENGTH DEVIATION CV INPUT GRAIN DIRECTION CV INPUT GRAINS ACTIVE CV INPUT GRAIN ENVELOPE ATTACK CV INPUT DECAY CV INPUT GRAIN PITCH CV INPUT DIVISION: FREE/8/16 GRAIN LOOP DELAY CV INPUT DELAY DEVIATION CV INPUT GRAIN PANNING CV INPUT GRAIN VOLUME CV INPUT VOLUME DEVIATION CV INPUT",
+    "body": "0% 25% 50% 75% 100% VOLUME GRAIN1 GRAIN2 GRAIN3 GRAIN4 GRAIN5 GRAIN6 ... START VOLUME +INC FINAL VOLUME WRAP AROUND 100% 60% 60% 0 60% 75% 15 60% 90% 30 60% 105% 45 5% 20% 35% 50% 60% 120% 60 60% 135% 75 60% 150% 90 DEVIATION SPREAD MODE - [GRAIN VOLUME] このモードでは、[VOLUME DEVIATION]がグレインインデックス全体にわたってボリュームを分散させるために使用されるインクリメントを設定します。 Grain 1は常に[VOLUME MIN]の設定をインクリメントなしで保持します。 [VOLUME DEVIATION]ノブは12時の位置で0%となり、反時計回りに回すと減算、時計回りに回すと加算されます。 例A: Volume Minが60% - Volume Deviationが+15% 例B: Volume Minが90%",
     "url": "/addac112-looper/page/12"
   },
   {
@@ -100,7 +100,7 @@
     "pageNum": 13,
     "title": "Page 13",
     "sectionName": null,
-    "body": "LOOPER ENGINE LOOPER初期化 Looperセクションは、すべてのRecording動作が行われる場所です。 PRESETごとに最大99個のLOOPを記録できます。 LOOPはリストに記録され、[LOOP SELECT] KnobまたはCV入力で選択できます。 Looperの再生音量は[LOOP VOLUME] KNOBまたはCV入力を使用して設定します。 SWITCHES SETTINGS: [RETRIG. / PAUSE]は、LOOP再生中のPLAYの動作を決定します。 [RETRIG.] PLAYを押すとLOOPが最初から再トリガーされます。 [PAUSE]はPlayとPauseの状態をトグルします。 [SYNC REC / UNSYNC]は、Recording Headの動作を決定します。 [SYNC REC] Rec HeadがPlay Headに追従します。 [UNSYNC] 独立したRec Head。 [REC MODE]: [OVERDUB / LOOP / STOP]は、記録終了時の動作を決定します。 [LOOP]はループで連続的に記録します。",
+    "body": "信号フロー図 LOOP START TRIGGER GRAIN START TRIGGER INS MONO OUTPUT MIX GRAIN PLAY HEAD GRANULAR ENGINE DIVISION: FREE/8/16 POSITION CV INPUT POSITION DEVIATION CV INPUT GRAIN SIZE DIVISION: FREE/8/16 PLAY LENGTH CV INPUT LENGTH DEVIATION CV INPUT GRAIN DIRECTION CV INPUT GRAINS ACTIVE CV INPUT GRAIN ENVELOPE ATTACK CV INPUT DECAY CV INPUT GRAIN PITCH CV INPUT DIVISION: FREE/8/16 GRAIN LOOP DELAY CV INPUT DELAY DEVIATION CV INPUT GRAIN PANNING CV INPUT GRAIN VOLUME CV INPUT VOLUME DEVIATION CV INPUT",
     "url": "/addac112-looper/page/13"
   },
   {
@@ -108,7 +108,7 @@
     "pageNum": 14,
     "title": "Page 14",
     "sectionName": null,
-    "body": "LOOPER ENGINE LOOPER CONTROLS: [LOOP VOLUME] LOOPの再生全体の音量を設定します。 [LOOP SELECT] 現在のPRESET内のリストから再生するLOOPを選択します。 [LOOP PITCH] バッファの再生速度を設定し、LOOPのピッチを-2から+3オクターブの範囲で調整します。QUANTIZE設定がこの設定に影響します。 [OVERDUB DECAY] 録音中に、新しいバッファに保持する前のバッファの内容の量を決定します。 CONTINUOUS RECORDING SETTINGS: Continuous recordingは、入力されるオーディオソースにグラニュラーエフェクトを適用するために不可欠です。録音タイミングに不確定性を加えることで非常に興味深い結果が得られるため、ProbabilityとDelayという2つの方法を追加しました。 RECORDING PROBABILITY: [REC PROBABILITY] 録音が実行される確率を決定します。",
+    "body": "LOOPER ENGINE LOOPER初期化 Looperセクションは、すべてのRecording動作が行われる場所です。 PRESETごとに最大99個のLOOPを記録できます。 LOOPはリストに記録され、[LOOP SELECT] KnobまたはCV入力で選択できます。 Looperの再生音量は[LOOP VOLUME] KNOBまたはCV入力を使用して設定します。 SWITCHES SETTINGS: [RETRIG. / PAUSE]は、LOOP再生中のPLAYの動作を決定します。 [RETRIG.] PLAYを押すとLOOPが最初から再トリガーされます。 [PAUSE]はPlayとPauseの状態をトグルします。 [SYNC REC / UNSYNC]は、Recording Headの動作を決定します。 [SYNC REC] Rec HeadがPlay Headに追従します。 [UNSYNC] 独立したRec Head。 [REC MODE]: [OVERDUB / LOOP / STOP]は、記録終了時の動作を決定します。 [LOOP]はループで連続的に記録します。",
     "url": "/addac112-looper/page/14"
   },
   {
@@ -116,7 +116,7 @@
     "pageNum": 15,
     "title": "Page 15",
     "sectionName": null,
-    "body": "LOOPER ENGINE（再生と録音） PLAYBACK & RECORDING 以前のファームウェアリビジョンでは、Loopの再生と録音は排他的でした。 つまり、録音を開始すると再生が停止していました。 現在では、Loopの再生、Grainsプロセッシング、録音は独立しており、 並行して動作します。これにより、ループを再生しながらグラニュラー プロセッシングを行い、同時に新しいループを録音することが可能です。 また、録音される信号はこれらのソースからもフィードできます。 RECORDING INPUTS MIX: 録音される信号は常に3つのソースのミックスとなり、それぞれ個別の ボリュームコントロールがあります： Input audioのボリュームは[INPUT GAIN]プリアンプノブで コントロールされます。[DRY VOLUME]もオプションメニューでPostに 設定されている場合、入力ゲインをコントロールします。 現在再生中のLoopのボリュームは[OVERDUB DECAY]ノブで コントロールされます。 Grainsのボリュームは[GRAINS",
+    "body": "LOOPER ENGINE LOOPER CONTROLS: [LOOP VOLUME] LOOPの再生全体の音量を設定します。 [LOOP SELECT] 現在のPRESET内のリストから再生するLOOPを選択します。 [LOOP PITCH] バッファの再生速度を設定し、LOOPのピッチを-2から+3オクターブの範囲で調整します。QUANTIZE設定がこの設定に影響します。 [OVERDUB DECAY] 録音中に、新しいバッファに保持する前のバッファの内容の量を決定します。 CONTINUOUS RECORDING SETTINGS: Continuous recordingは、入力されるオーディオソースにグラニュラーエフェクトを適用するために不可欠です。録音タイミングに不確定性を加えることで非常に興味深い結果が得られるため、ProbabilityとDelayという2つの方法を追加しました。 RECORDING PROBABILITY: [REC PROBABILITY] 録音が実行される確率を決定します。",
     "url": "/addac112-looper/page/15"
   },
   {
@@ -124,7 +124,7 @@
     "pageNum": 16,
     "title": "Page 16",
     "sectionName": null,
-    "body": "LOOPER ENGINE (特殊機能) SD CARD DUPLICATE LOOP: Loopを複製するには、[MENU]エンコーダーボタンを押し続けてから[NEW REC]を押します。 コピーされたloopは、loop indexの最後の位置に表示されます。 「LOOP DUPLICATED」というメッセージが表示されます。 LOOP SIZE: このショートカットを使用すると、Loop Editorに入ります。詳細はこのガイドの後半で説明します。 CLOCKED MODE: Clocked ModeではStopボタンとそれぞれのtrigger入力がClock Inputとして機能します。 Clocked ModeはLooper Engineのプッシュボタンの動作を変更します。このモードでは、[NEW REC] [REC] [PLAY] [FORWARD/REVERSE]ボタン(およびそれぞれの専用trigger入力)は、すぐにアクションを実行するのではなく、アクティブ化されると有効になり(点滅で表示)、[STOP]ボタンが押されるか、Stop",
+    "body": "LOOPER ENGINE（再生と録音） PLAYBACK & RECORDING 以前のファームウェアリビジョンでは、Loopの再生と録音は排他的でした。 つまり、録音を開始すると再生が停止していました。 現在では、Loopの再生、Grainsプロセッシング、録音は独立しており、 並行して動作します。これにより、ループを再生しながらグラニュラー プロセッシングを行い、同時に新しいループを録音することが可能です。 また、録音される信号はこれらのソースからもフィードできます。 RECORDING INPUTS MIX: 録音される信号は常に3つのソースのミックスとなり、それぞれ個別の ボリュームコントロールがあります： Input audioのボリュームは[INPUT GAIN]プリアンプノブで コントロールされます。[DRY VOLUME]もオプションメニューでPostに 設定されている場合、入力ゲインをコントロールします。 現在再生中のLoopのボリュームは[OVERDUB DECAY]ノブで コントロールされます。 Grainsのボリュームは[GRAINS",
     "url": "/addac112-looper/page/16"
   },
   {
@@ -132,7 +132,7 @@
     "pageNum": 17,
     "title": "Page 17",
     "sectionName": null,
-    "body": "LOOP EDITOR Loop Editorページでは、現在選択されているループを様々な方法でトリミングすることができ、柔軟性と精度を提供します。 すべての設定はリアルタイムで動作するため、精密な編集だけでなく、演奏可能な機能としても使用できます。 エンコーダーで上下にスクロールし、エンコーダーをクリックして値を編集し、もう一度クリックするとパラメーター選択に戻ります。エンコーダーを長押しするとLoop Editorを終了します。 低解像度のループ波形表示、StartポイントとEndポイントは画面下部で確認できます。 値を変更すると、クロスポイントに焦点を当てた動的なズーム表示が現れます。ズーム倍率は各チャンネルで独立しており、画面領域に収まるように継続的に自動調整されます。 TIME ループの合計時間を秒単位で設定します SAMPLES ループの合計時間をサンプル単位で設定します (1サンプル = 1/サンプルレート) BPM ループの合計時間をBPM単位で設定します START 開始位置をサンプル単位で設定します END 終了位置をサンプル単位で設定します EDIT WITH",
+    "body": "LOOPER ENGINE (特殊機能) SD CARD DUPLICATE LOOP: Loopを複製するには、[MENU]エンコーダーボタンを押し続けてから[NEW REC]を押します。 コピーされたloopは、loop indexの最後の位置に表示されます。 「LOOP DUPLICATED」というメッセージが表示されます。 LOOP SIZE: このショートカットを使用すると、Loop Editorに入ります。詳細はこのガイドの後半で説明します。 CLOCKED MODE: Clocked ModeではStopボタンとそれぞれのtrigger入力がClock Inputとして機能します。 Clocked ModeはLooper Engineのプッシュボタンの動作を変更します。このモードでは、[NEW REC] [REC] [PLAY] [FORWARD/REVERSE]ボタン(およびそれぞれの専用trigger入力)は、すぐにアクションを実行するのではなく、アクティブ化されると有効になり(点滅で表示)、[STOP]ボタンが押されるか、Stop",
     "url": "/addac112-looper/page/17"
   },
   {
@@ -140,7 +140,7 @@
     "pageNum": 18,
     "title": "Page 18",
     "sectionName": null,
-    "body": "PITCH SHIFTING MODES Looper Engineには5つの異なるPitch Modesが用意されています。これらは以下から設定できます： MENU > OPTIONS > LOOP PITCH MODE Samplerate: ピッチを変更するためにシンプルなサンプルレート変更アプローチを使用します。このモードでは、ループの長さもピッチによって影響を受けます。 Pitch Shifting: このモードはループの長さを変更せずにピッチのみを変更します。 Time Stretching このモードはピッチを変更せずにループの長さのみを変更します。 Pitch/Time: このモードはピッチとループの長さの両方を変更します。Samplerateオプションと似ていますが、Pitch Shifting/Time Stretching方式を使用します。 Pitch and Time: このモードはピッチとループの長さを個別に変更します。 このモードを選択すると、[LOOP PITCH]がピッチをコントロールし、[REC DELAY DEV.]がtime",
+    "body": "LOOP EDITOR Loop Editorページでは、現在選択されているループを様々な方法でトリミングすることができ、柔軟性と精度を提供します。 すべての設定はリアルタイムで動作するため、精密な編集だけでなく、演奏可能な機能としても使用できます。 エンコーダーで上下にスクロールし、エンコーダーをクリックして値を編集し、もう一度クリックするとパラメーター選択に戻ります。エンコーダーを長押しするとLoop Editorを終了します。 低解像度のループ波形表示、StartポイントとEndポイントは画面下部で確認できます。 値を変更すると、クロスポイントに焦点を当てた動的なズーム表示が現れます。ズーム倍率は各チャンネルで独立しており、画面領域に収まるように継続的に自動調整されます。 TIME ループの合計時間を秒単位で設定します SAMPLES ループの合計時間をサンプル単位で設定します (1サンプル = 1/サンプルレート) BPM ループの合計時間をBPM単位で設定します START 開始位置をサンプル単位で設定します END 終了位置をサンプル単位で設定します EDIT WITH",
     "url": "/addac112-looper/page/18"
   },
   {
@@ -148,7 +148,7 @@
     "pageNum": 19,
     "title": "Page 19",
     "sectionName": null,
-    "body": "GRANULAR ENGINE Granular Engineは、幅広い結果を得るための包括的なコントロールセットを備えています。 フロントパネルですべてのコントロールにアクセスできるよう、完全にハンズオン操作を念頭に設計されました。 一部のマイナーな設定のみが、Save/Load機能と共にメニューに配置されています。 Granular Engineは選択されているLOOPバッファーから供給されるため、各grainのサイズはLOOPサイズに依存します。 すべてのgrainは、初期化時の現在の設定で再生されます。ピッチ以外のパネルコントロールの変更は、既に再生中のgrainには影響しません。grainが終了すると、再度現在の設定を使用して新しいgrainが初期化されます。 GRAINS ACTIVE: [GRAINS ACTIVE] 同時に再生されるgrainの数を決定します 範囲はSAMPLERATEとLOOP PITCH MODEオプションに依存します GRAIN PLAY HEAD: [POSITION] grainのスタートポイントを決定します: 範囲: 0-32 [SIZE",
+    "body": "PITCH SHIFTING MODES Looper Engineには5つの異なるPitch Modesが用意されています。これらは以下から設定できます： MENU > OPTIONS > LOOP PITCH MODE Samplerate: ピッチを変更するためにシンプルなサンプルレート変更アプローチを使用します。このモードでは、ループの長さもピッチによって影響を受けます。 Pitch Shifting: このモードはループの長さを変更せずにピッチのみを変更します。 Time Stretching このモードはピッチを変更せずにループの長さのみを変更します。 Pitch/Time: このモードはピッチとループの長さの両方を変更します。Samplerateオプションと似ていますが、Pitch Shifting/Time Stretching方式を使用します。 Pitch and Time: このモードはピッチとループの長さを個別に変更します。 このモードを選択すると、[LOOP PITCH]がピッチをコントロールし、[REC DELAY DEV.]がtime",
     "url": "/addac112-looper/page/19"
   },
   {
@@ -156,7 +156,7 @@
     "pageNum": 20,
     "title": "Page 20",
     "sectionName": null,
-    "body": "GRANULAR ENGINE GRAIN DIRECTION: [GRAIN DIRECTIONS] Grainの再生方向(Forward/Reverse)の確率を設定します フルレフトの場合はリバースのみ、フルライトの場合はフォワードのみで再生されます GRAIN REPEAT: Grain Repeatは、サンプルが前回再生時とまったく同じ設定で再生されるか、または新しいパラメーターを計算するかを決定します。 [REPEAT MODE]スイッチで選択できる2つのモードがあります [REPEAT MODE] : [PROBABILITY / REPEAT X] この機能には2つのモードがあります [PROBABILITY] リピートの確率を設定します: 0〜100% [REPEAT X] grainをX回リピートします: 0〜16 [PROB.% / REPEAT] 選択したモードの値を設定します。 GRAIN VOLUME: [VOLUME MIN] grainの最小音量を設定します [VOLUME DEVIATION] 最小音量からの偏差量を設定します。 GRAIN",
+    "body": "GRANULAR ENGINE Granular Engineは、幅広い結果を得るための包括的なコントロールセットを備えています。 フロントパネルですべてのコントロールにアクセスできるよう、完全にハンズオン操作を念頭に設計されました。 一部のマイナーな設定のみが、Save/Load機能と共にメニューに配置されています。 Granular Engineは選択されているLOOPバッファーから供給されるため、各grainのサイズはLOOPサイズに依存します。 すべてのgrainは、初期化時の現在の設定で再生されます。ピッチ以外のパネルコントロールの変更は、既に再生中のgrainには影響しません。grainが終了すると、再度現在の設定を使用して新しいgrainが初期化されます。 GRAINS ACTIVE: [GRAINS ACTIVE] 同時に再生されるgrainの数を決定します 範囲はSAMPLERATEとLOOP PITCH MODEオプションに依存します GRAIN PLAY HEAD: [POSITION] grainのスタートポイントを決定します: 範囲: 0-32 [SIZE",
     "url": "/addac112-looper/page/20"
   },
   {
@@ -164,7 +164,7 @@
     "pageNum": 21,
     "title": "Page 21",
     "sectionName": null,
-    "body": "動作方法を要約した図は以下の通りです： GRANULAR ENGINE GRAIN ENVELOPE: EnvelopeはGrain全体の長さに渡って適用されます [ATTACK]はAttackのパーセンテージを設定します [DECAY]はDecayのパーセンテージを設定します GRAINS WORKING METHOD DIAGRAM GRAIN INITIALIZATION CALCULATE PARAMETERS GRAIN POSITION GRAIN LENGTH PLAY DIRECTION PITCH ENVELOPE VOLUME PANNING INTERMITENCY DELAY PLAYS GRAIN REPEAT GRAIN NO YES INTERMITENCY SILENCE DELAY ENVELOPE BEHAVIOUR 0% 25% 50% 75% 100% ATTACK POT SETTING: 50% - DECAY POT SETTING: 50% GRAIN LENGTH 0% 25% 50% 75% 100% ATTACK POT",
+    "body": "GRANULAR ENGINE GRAIN DIRECTION: [GRAIN DIRECTIONS] Grainの再生方向(Forward/Reverse)の確率を設定します フルレフトの場合はリバースのみ、フルライトの場合はフォワードのみで再生されます GRAIN REPEAT: Grain Repeatは、サンプルが前回再生時とまったく同じ設定で再生されるか、または新しいパラメーターを計算するかを決定します。 [REPEAT MODE]スイッチで選択できる2つのモードがあります [REPEAT MODE] : [PROBABILITY / REPEAT X] この機能には2つのモードがあります [PROBABILITY] リピートの確率を設定します: 0〜100% [REPEAT X] grainをX回リピートします: 0〜16 [PROB.% / REPEAT] 選択したモードの値を設定します。 GRAIN VOLUME: [VOLUME MIN] grainの最小音量を設定します [VOLUME DEVIATION] 最小音量からの偏差量を設定します。 GRAIN",
     "url": "/addac112-looper/page/21"
   },
   {
@@ -172,7 +172,7 @@
     "pageNum": 22,
     "title": "Page 22",
     "sectionName": null,
-    "body": "GRANULAR ENGINE GRAIN PANNING MODES Fixed と Travelの2つのパンニングモードがあり、どちらも以下のグラフィックに示すパンニング分布の同じ原理を共有しています。 GRAIN TRIGGERING この機能により、[GRAINS N.] 入力を使用してGrainを起動することができます。この入力はCVとGate信号を区別でき、検出された入力に合わせて自動的に機能を調整します。 CVを使用する場合、入力は通常通りに応答し、CVの振幅と [GRAINS ACTIVE] Knobの位置に応じてGrainを追加/減算します。 Gate信号(最小10ms)を使用する場合、ON信号ごとにGrainカウントが1ずつ増加し、最大Grainカウントに達するまで続きます。このGate検出を有効にするには、[GRAINS ACTIVE] Knobが範囲の1/4未満である必要があります。最も左の位置では永続的なGrainはなく、Gate検出に応じてGrainをトリガーします。Knob範囲の1/4までは、いくつかの永続的なGrainを追加し、さらにGate検出に応じて",
+    "body": "動作方法を要約した図は以下の通りです： GRANULAR ENGINE GRAIN ENVELOPE: EnvelopeはGrain全体の長さに渡って適用されます [ATTACK]はAttackのパーセンテージを設定します [DECAY]はDecayのパーセンテージを設定します GRAINS WORKING METHOD DIAGRAM GRAIN INITIALIZATION CALCULATE PARAMETERS GRAIN POSITION GRAIN LENGTH PLAY DIRECTION PITCH ENVELOPE VOLUME PANNING INTERMITENCY DELAY PLAYS GRAIN REPEAT GRAIN NO YES INTERMITENCY SILENCE DELAY ENVELOPE BEHAVIOUR 0% 25% 50% 75% 100% ATTACK POT SETTING: 50% - DECAY POT SETTING: 50% GRAIN LENGTH 0% 25% 50% 75% 100% ATTACK POT",
     "url": "/addac112-looper/page/22"
   },
   {
@@ -180,7 +180,7 @@
     "pageNum": 23,
     "title": "Page 23",
     "sectionName": null,
-    "body": "GRANULAR ENGINE (特殊機能) KILL ALL GRAINS: [MENU]エンコーダーボタンを押したまま[STOP]を押すと、すべてのgrainが即座に停止します。 メッセージが表示されます：ALL GRAINS STOPPED これは、長いループ上で再生されている長いgrainを即座に停止するのに役立ちます。",
+    "body": "GRANULAR ENGINE GRAIN PANNING MODES Fixed と Travelの2つのパンニングモードがあり、どちらも以下のグラフィックに示すパンニング分布の同じ原理を共有しています。 GRAIN TRIGGERING この機能により、[GRAINS N.] 入力を使用してGrainを起動することができます。この入力はCVとGate信号を区別でき、検出された入力に合わせて自動的に機能を調整します。 CVを使用する場合、入力は通常通りに応答し、CVの振幅と [GRAINS ACTIVE] Knobの位置に応じてGrainを追加/減算します。 Gate信号(最小10ms)を使用する場合、ON信号ごとにGrainカウントが1ずつ増加し、最大Grainカウントに達するまで続きます。このGate検出を有効にするには、[GRAINS ACTIVE] Knobが範囲の1/4未満である必要があります。最も左の位置では永続的なGrainはなく、Gate検出に応じてGrainをトリガーします。Knob範囲の1/4までは、いくつかの永続的なGrainを追加し、さらにGate検出に応じて",
     "url": "/addac112-looper/page/23"
   },
   {
@@ -188,7 +188,7 @@
     "pageNum": 24,
     "title": "Page 24",
     "sectionName": null,
-    "body": "AUDIO INPUTS、OUTPUTS & FEEDBACK INPUTS: ADDAC112Bには2つの入力ペアがあります: 2つのMono入力（Synthレベル）（IN 1はIn 2にノーマル接続されています） 1つのStereo入力（Lineレベル） これらの入力はStereo信号にミックスされ、その後[INPUT GAIN]ノブでLooper Engineに送られる最終的なゲインを設定します。 LEDが設定されたレベルを視覚的に表示します。 すべての入力は[INS MONO OUT]ジャックから出力されるMono信号にもミックスダウンされます。 MAIN OUTPUTS MIX: Master OutputsはLooperとGranular EngineをDry信号と合わせてStereo Outputにまとめます。 [DRY VOLUME] OutputsへのDRY入力の音量を設定します。 [LOOP VOLUME] OutputsへのLOOPER Engineの音量を設定します。 [GRAINS VOLUME] OutputsへのGranular",
+    "body": "GRANULAR ENGINE (特殊機能) KILL ALL GRAINS: [MENU]エンコーダーボタンを押したまま[STOP]を押すと、すべてのgrainが即座に停止します。 メッセージが表示されます：ALL GRAINS STOPPED これは、長いループ上で再生されている長いgrainを即座に停止するのに役立ちます。",
     "url": "/addac112-looper/page/24"
   },
   {
@@ -196,7 +196,7 @@
     "pageNum": 25,
     "title": "Page 25",
     "sectionName": null,
-    "body": "CV & TRIGGER入力 フロントパネルの全てのControlノブには、それぞれ専用のCV入力があります。 左ブロックの全てのControlは、入力モジュール上の同じマトリックス構成で配置されています。 A A 1 1 2 3 4 5 2 3 4 5 B B C C D D 右ブロックの全てのControlは、右上の角から縦方向に配置されています。 Looperコントロール用の全てのTrigger入力は、モジュールの下部にあります。 [CLEAR BUFFER]コントロールは、Trigger入力のない唯一のプッシュボタンです。 EncoderとToggleスイッチにはCV入力はありません。 1 1 3 2 4 5 A A B C D E B C D E 6 7 2 3 4 5 6 7",
+    "body": "AUDIO INPUTS、OUTPUTS & FEEDBACK INPUTS: ADDAC112Bには2つの入力ペアがあります: 2つのMono入力（Synthレベル）（IN 1はIn 2にノーマル接続されています） 1つのStereo入力（Lineレベル） これらの入力はStereo信号にミックスされ、その後[INPUT GAIN]ノブでLooper Engineに送られる最終的なゲインを設定します。 LEDが設定されたレベルを視覚的に表示します。 すべての入力は[INS MONO OUT]ジャックから出力されるMono信号にもミックスダウンされます。 MAIN OUTPUTS MIX: Master OutputsはLooperとGranular EngineをDry信号と合わせてStereo Outputにまとめます。 [DRY VOLUME] OutputsへのDRY入力の音量を設定します。 [LOOP VOLUME] OutputsへのLOOPER Engineの音量を設定します。 [GRAINS VOLUME] OutputsへのGranular",
     "url": "/addac112-looper/page/25"
   },
   {
@@ -204,7 +204,7 @@
     "pageNum": 26,
     "title": "Page 26",
     "sectionName": null,
-    "body": "OLEDモニター メイン画面: メイン画面では、全体的な操作に必要な最も重要な情報を表示します。 LOOPER STATE REC / PLAY / PAUSE / STOP の状態を表示します INPUT VOLUME MONITOR リアルタイムの入力レベルをデシベルで監視します。-5dB以上になると色が反転してクリッピングを示します QUANTIZATION SCALE 選択されたスケール GRAINS ACTIVE アクティブなGrainの数 MONO/STEREO INDICATOR S = ステレオファイル M = モノファイル LOOP SELECTED 現在再生中のループ。 On Loop機能使用時は色が反転して表示され、 現在のループのエンドポイントを越えたらジャンプする ループを示します。 GRAINS VOLUME & DEVIATION 白いバーは[VOLUME MIN]の設定を示します 上部のトレースは[VOLUME DEVIATION]で設定された 最大ランダム値を示します WAVEFORRM REPRESENTATION 波形の低解像度表示 ATTACK",
+    "body": "CV & TRIGGER入力 フロントパネルの全てのControlノブには、それぞれ専用のCV入力があります。 左ブロックの全てのControlは、入力モジュール上の同じマトリックス構成で配置されています。 A A 1 1 2 3 4 5 2 3 4 5 B B C C D D 右ブロックの全てのControlは、右上の角から縦方向に配置されています。 Looperコントロール用の全てのTrigger入力は、モジュールの下部にあります。 [CLEAR BUFFER]コントロールは、Trigger入力のない唯一のプッシュボタンです。 EncoderとToggleスイッチにはCV入力はありません。 1 1 3 2 4 5 A A B C D E B C D E 6 7 2 3 4 5 6 7",
     "url": "/addac112-looper/page/26"
   },
   {
@@ -212,7 +212,7 @@
     "pageNum": 27,
     "title": "Page 27",
     "sectionName": null,
-    "body": "OLED MONITOR OLED MONITOR (特殊機能) PLAY HEAD 再生ヘッドの現在位置を表示します RECORDING HEAD 録音ヘッドの現在位置を表示します GRAINS LENGTH 2番目の縦バーは[LENGTH]で定義された設定を表示します GRAINS POSITION 1番目の縦バーは[POSITION]で定義された設定を表示します GRAINS DISPLAY すべてのアクティブなgrainsを表します X軸：長さ Y軸：パンニング 太さ：ボリューム SMALL DOT このドットが表示されている場合、選択されているloopがSDカードに保存されていないか、SDカードから読み込まれた後に変更されたことを意味します LOOP SELECTED WHITE AREA [On Loop]スイッチ設定が有効な場合、この色反転が表示されます。ユーザーが新しいloopをすでに選択していますが、現在のloopが終了するまで実際にはジャンプしません。 INPUT VOLUME MONITOR WHITE AREA",
+    "body": "OLEDモニター メイン画面: メイン画面では、全体的な操作に必要な最も重要な情報を表示します。 LOOPER STATE REC / PLAY / PAUSE / STOP の状態を表示します INPUT VOLUME MONITOR リアルタイムの入力レベルをデシベルで監視します。-5dB以上になると色が反転してクリッピングを示します QUANTIZATION SCALE 選択されたスケール GRAINS ACTIVE アクティブなGrainの数 MONO/STEREO INDICATOR S = ステレオファイル M = モノファイル LOOP SELECTED 現在再生中のループ。 On Loop機能使用時は色が反転して表示され、 現在のループのエンドポイントを越えたらジャンプする ループを示します。 GRAINS VOLUME & DEVIATION 白いバーは[VOLUME MIN]の設定を示します 上部のトレースは[VOLUME DEVIATION]で設定された 最大ランダム値を示します WAVEFORRM REPRESENTATION 波形の低解像度表示 ATTACK",
     "url": "/addac112-looper/page/27"
   },
   {
@@ -220,7 +220,7 @@
     "pageNum": 28,
     "title": "Page 28",
     "sectionName": null,
-    "body": "最大アクティブGRAINS数とCPU過負荷 CPU過負荷は望ましくないオーディオグリッチを引き起こし、モジュールの応答性を著しく低下させます。CPUを安全なレベルに保つために、アクティブなgrains数を自動的に減らす方法を実装しましたが、一部の状況ではグリッチが発生する場合があります。 CPU警告: CPUの状態を監視するため、CPUが90%を超えると右上隅に警告メッセージが表示されます。 GRAINS ACTIVEの視覚化: このエリアの数値は、KnobとCV入力によって設定されたアクティブgrains設定を常に表示します。ただし、例えばユーザーがgrains数を減らした場合など、表示されている数値はすでに制御の変更を反映していても、grainsがまだ再生中の場合があります。 これが発生すると、エリアの色が反転し、白い背景に黒い数字が表示されます。grains設定が再生中のアクティブgrainsと一致すると、通常の色状態に戻ります。 これは、CPUストールを回避するためにgrainsが自動的に減少された場合にも発生します。 CPU使用率:",
+    "body": "OLED MONITOR OLED MONITOR (特殊機能) PLAY HEAD 再生ヘッドの現在位置を表示します RECORDING HEAD 録音ヘッドの現在位置を表示します GRAINS LENGTH 2番目の縦バーは[LENGTH]で定義された設定を表示します GRAINS POSITION 1番目の縦バーは[POSITION]で定義された設定を表示します GRAINS DISPLAY すべてのアクティブなgrainsを表します X軸：長さ Y軸：パンニング 太さ：ボリューム SMALL DOT このドットが表示されている場合、選択されているloopがSDカードに保存されていないか、SDカードから読み込まれた後に変更されたことを意味します LOOP SELECTED WHITE AREA [On Loop]スイッチ設定が有効な場合、この色反転が表示されます。ユーザーが新しいloopをすでに選択していますが、現在のloopが終了するまで実際にはジャンプしません。 INPUT VOLUME MONITOR WHITE AREA",
     "url": "/addac112-looper/page/28"
   },
   {
@@ -228,7 +228,7 @@
     "pageNum": 29,
     "title": "Page 29",
     "sectionName": null,
-    "body": "情報画面 メイン画面でいつでも[MENU]エンコーダーを回すと、情報画面に移動します。 情報ページ: このページには現在の設定の一般的な情報が表示されます: StereoまたはMono録音 Sample Rate Bit Depth 現在のBank 現在のBank内のLoop数 選択されたLoopのオーディオ設定 選択されたLoopの長さ(秒) 選択されたLoopの長さ(サンプル数) 選択されたLoopの長さ(BPM) 空きメモリ(秒) Master Out dBメーター コントロール1ページ: このページには左側のコントロールのリアルタイム値が表示されます。 Knob/CVの値とスイッチの状態が含まれます。",
+    "body": "最大アクティブGRAINS数とCPU過負荷 CPU過負荷は望ましくないオーディオグリッチを引き起こし、モジュールの応答性を著しく低下させます。CPUを安全なレベルに保つために、アクティブなgrains数を自動的に減らす方法を実装しましたが、一部の状況ではグリッチが発生する場合があります。 CPU警告: CPUの状態を監視するため、CPUが90%を超えると右上隅に警告メッセージが表示されます。 GRAINS ACTIVEの視覚化: このエリアの数値は、KnobとCV入力によって設定されたアクティブgrains設定を常に表示します。ただし、例えばユーザーがgrains数を減らした場合など、表示されている数値はすでに制御の変更を反映していても、grainsがまだ再生中の場合があります。 これが発生すると、エリアの色が反転し、白い背景に黒い数字が表示されます。grains設定が再生中のアクティブgrainsと一致すると、通常の色状態に戻ります。 これは、CPUストールを回避するためにgrainsが自動的に減少された場合にも発生します。 CPU使用率:",
     "url": "/addac112-looper/page/29"
   },
   {
@@ -236,7 +236,7 @@
     "pageNum": 30,
     "title": "Page 30",
     "sectionName": null,
-    "body": "Edited INFO SCREENS CONTROLS 2 PAGE: このページは右側のコントロールのリアルタイム値を表示します。Knob/CVの値とスイッチの状態が含まれます。 SWITCHES CALIBRATION: (New) このページでハイライトされている4つのスイッチは、製品到着時にキャリブレーションが必要な場合があります。1つずつスイッチを切り替えた際に、他のスイッチの値が変化する場合は、スイッチのキャリブレーションを実行してください。 キャリブレーションモードに入るには、[NEW REC] + [PLAY]プッシュボタンを押しながらモジュールを起動します。 起動後、ユーザーは16通りの位置の組み合わせをすべて実行する必要があります。すべての組み合わせが検出されると、新しい設定が保存され、モジュールは使用可能になります。 以下は16通りのバイナリ組み合わせのチートシートです: 16.",
+    "body": "情報画面 メイン画面でいつでも[MENU]エンコーダーを回すと、情報画面に移動します。 情報ページ: このページには現在の設定の一般的な情報が表示されます: StereoまたはMono録音 Sample Rate Bit Depth 現在のBank 現在のBank内のLoop数 選択されたLoopのオーディオ設定 選択されたLoopの長さ(秒) 選択されたLoopの長さ(サンプル数) 選択されたLoopの長さ(BPM) 空きメモリ(秒) Master Out dBメーター コントロール1ページ: このページには左側のコントロールのリアルタイム値が表示されます。 Knob/CVの値とスイッチの状態が含まれます。",
     "url": "/addac112-looper/page/30"
   },
   {
@@ -244,7 +244,7 @@
     "pageNum": 31,
     "title": "Page 31",
     "sectionName": null,
-    "body": "MAIN MENU MENU [MENU]ボタンを押すとメインメニューウィンドウが表示されます: [MENU]ボタンを長押しすると、変更を加えずにメニューを終了します PRESET: NEW - 現在の設定で新しいPresetをPresetsリストに追加します UPDATE - 現在のPresetを現在の設定に更新します ADD LOOPS - Presetは選択的なLoopリストも保存します。これは現在のPresetのLoopリストをメモリ内の利用可能なすべてのLoopに更新します DELETE - 現在のPresetを完全に削除します BANK: NEW - 2つの選択肢で新しい空のBankを作成します CURRENT CONFIG: 現在のすべてのBANK設定を使用します DEFAULT CONFIG: デフォルトのBANK設定を使用します LOAD - SDカードからBankを読み込みます SAVE - BankをSDカードに保存します SAVE IN NEW -",
+    "body": "Edited INFO SCREENS CONTROLS 2 PAGE: このページは右側のコントロールのリアルタイム値を表示します。Knob/CVの値とスイッチの状態が含まれます。 SWITCHES CALIBRATION: (New) このページでハイライトされている4つのスイッチは、製品到着時にキャリブレーションが必要な場合があります。1つずつスイッチを切り替えた際に、他のスイッチの値が変化する場合は、スイッチのキャリブレーションを実行してください。 キャリブレーションモードに入るには、[NEW REC] + [PLAY]プッシュボタンを押しながらモジュールを起動します。 起動後、ユーザーは16通りの位置の組み合わせをすべて実行する必要があります。すべての組み合わせが検出されると、新しい設定が保存され、モジュールは使用可能になります。 以下は16通りのバイナリ組み合わせのチートシートです: 16.",
     "url": "/addac112-looper/page/31"
   },
   {
@@ -252,7 +252,7 @@
     "pageNum": 32,
     "title": "Page 32",
     "sectionName": null,
-    "body": "OPTIONS MENU OPTIONS SUBMENU PAGE 1 - REC SETTINGS MONO/STEREO: Looper EngineをMonoまたはStereo録音用に設定します。 SAMPLERATE: モジュールの心臓部：グローバルサンプルレート設定 8Khz、11khz、16Khz、22khz、32Khz、44.1khz、48khz、96khz BIT DEPTH: ビット深度の解像度： 24 bit：この設定ではサンプリングメモリが50%削減されます 16 Bit 8 Bit ANTI-ALIASING: モダンなピッチシフティング補間アルゴリズムを使用する場合はOnに、補間なしのオールドスクールな味わいを求める場合はOffに設定します。 OPTIONS SUBMENU PAGE 2 - REC OPTIONS OVERDUB ORIGIN: PLAY HEAD - OverdubはPlay Headの位置から行われます REC HEAD - OverdubはRec Headの位置から行われます BOTH -",
+    "body": "MAIN MENU page 1 MENU [MENU]ボタンを押すと、メインメニューウィンドウが表示されます。 [MENU]ボタンを長押しすると、変更を加えずにどのメニューからも抜けます。 PRESET: NEW - 現在の設定でPresetsリストに新しいプリセットを追加します UPDATE - 現在のプリセットを現在の設定に更新します ADD LOOPS - プリセットには選択的なループのリストも保存されます。これはメモリー内で利用可能な全てのループを、現在のプリセットのループリストに追加します DELETE - 現在のプリセットを完全に削除します BANK: NEW - 2つの選択肢で新しい空のBankを作成します CURRENT CONFIG: 現在のBANK設定をすべて使用します DEFAULT CONFIG: デフォルトのBANK設定を使用します LOAD - SDカードからBankを読み込みます SAVE - BankをSDカードに保存します SAVE IN NEW -",
     "url": "/addac112-looper/page/32"
   },
   {
@@ -260,7 +260,7 @@
     "pageNum": 33,
     "title": "Page 33",
     "sectionName": null,
-    "body": "OPTIONSメニュー OPTIONSサブメニュー ページ3 - PITCHオプション LOOP PITCH MODE: SAMPLERATE - サンプルレートの変更によるピッチシフト PITCH SHIFTING - ループの長さを変えずにピッチを変更 TIME STRETCHING - ピッチを変えずにループの長さを変更 PITCH/TIME - SAMPLERATEと同様にピッチと長さを変更 PITCH AND TIME - ループのピッチと長さを独立してコントロール GRAIN PITCH MODE: SAMPLERATE - サンプルレートの変更によるピッチシフト PITCH SHIFTING - 元の長さを変えずにピッチを変更 TIME STRETCHING - ピッチを変えずに長さを変更 *警告: モード2と3は、使用可能なGrainの総数を減少させます PITCH BUFFER SIZE: ピッチシフトとタイムストレッチは、処理を行うためにバッファーを使用します。ここでバッファーのサイズを定義できます。異なるサイズは異なるアルゴリズムの「フレーバー」を持ちます。",
+    "body": "MAIN MENU page 2 INPUT COMPRESSOR: (New) STATE: ON / OFF (デフォルト) ATTACK: アタックタイムを秒単位で設定します RELEASE: リリースタイムを秒単位で設定します RATIO: レシオ係数を設定します THRESHOLD: スレッショルドレベルをdB単位で設定します MAKEUP GAIN: メイクアップゲインをdB単位で設定します SIDECHAIN COMPRESSION: (New 1.7) サイドチェインコンプレッションは、ドライ入力をエンベロープフォロワーに通し、そのシグナルを使ってLoopおよびGrainsのボリュームを圧縮します。 STATE: OFF（デフォルト）: コンプレッションは適用されません LOOP: Loop Volumeにコンプレッションを適用します GRAINS: Grains Volumeにコンプレッションを適用します BOTH: 両方に適用します ATTACK: アタックタイムを秒単位で設定します RELEASE: リリースタイムを秒単位で設定します RATIO:",
     "url": "/addac112-looper/page/33"
   },
   {
@@ -268,7 +268,7 @@
     "pageNum": 34,
     "title": "Page 34",
     "sectionName": null,
-    "body": "OPTIONS MENU OPTIONS SUBMENU PAGE 5 - GRAINS OPTIONS GRAIN DEVIATION MODE: RANDOM / SPREAD - 7～9ページで説明したように、Deviationの動作方法を変更します。 GRAIN PAN MODE: FIXED / TRAVEL - 18ページで説明したように、Panningの動作方法を変更します。 GRAINS PITCH: [GRAIN PITCH] Knobを動かすか、新しいCVが検出されると、Grainのピッチを以下のように設定できます： KEEP - 各Grainは長さが終わるまで初期のピッチを保持します CHANGE - すべてのGrainのピッチを即座に一度に変更します GRAIN TRIGGER: ON / OFF - ONの場合、[GRAINS N.] CV入力を使用してGateを検出し、新しいGateが検出されるたびに新しいGrainが生成されます。 MAX GRAIN DELAY: Grain Intermitencyの最大時間を設定します： LOOP -",
+    "body": "OPTIONS MENU OPTIONS SUBMENU PAGE 1 - REC SETTINGS MONO/STEREO: Looper EngineをMonoまたはStereo録音用に設定します。 SAMPLERATE: モジュールの心臓部：グローバルサンプルレート設定 8Khz、11khz、16Khz、22khz、32Khz、44.1khz、48khz、96khz BIT DEPTH: ビット深度の解像度： 24 bit：この設定ではサンプリングメモリが50%削減されます 16 Bit 8 Bit ANTI-ALIASING: モダンなピッチシフティング補間アルゴリズムを使用する場合はOnに、補間なしのオールドスクールな味わいを求める場合はOffに設定します。 OPTIONS SUBMENU PAGE 2 - REC OPTIONS OVERDUB ORIGIN: PLAY HEAD - OverdubはPlay Headの位置から行われます REC HEAD - OverdubはRec Headの位置から行われます BOTH -",
     "url": "/addac112-looper/page/34"
   },
   {
@@ -276,7 +276,7 @@
     "pageNum": 35,
     "title": "Page 35",
     "sectionName": null,
-    "body": "OPTIONSメニュー OPTIONSサブメニュー ページ6 - SPECIAL MODE CLOCKED MODE: Clocked Modeは、ページ14で説明されているLooperの特別な機能の1つです。有効にするにはONを選択してください。 PITCH DIRECTION CONTROL: ループのピッチコントロールがLooperの再生方向も制御できるようにする特別なモードで、ターンテーブルを操作するような動作になります。0vから+2.5vまでは逆再生となり、ほぼ停止するまでピッチダウンします。+2.5vから+5vまでは順再生となり、選択したレンジ（NarrowまたはWide）で決まるピッチまでピッチアップします。 OFF - 無効 NARROW - 両端でピッチはゼロになります WIDE - 両端でピッチは+12半音になります このモードでは[FORWARD/REVERSE]ボタンはアクティブになりません。代わりに再生方向を監視します。 また、このモードでは1v/octaveは機能しません。",
+    "body": "OPTIONSメニュー OPTIONSサブメニュー ページ3 - PITCHオプション LOOP PITCH MODE: SAMPLERATE - サンプルレートの変更によるピッチシフト PITCH SHIFTING - ループの長さを変えずにピッチを変更 TIME STRETCHING - ピッチを変えずにループの長さを変更 PITCH/TIME - SAMPLERATEと同様にピッチと長さを変更 PITCH AND TIME - ループのピッチと長さを独立してコントロール GRAIN PITCH MODE: SAMPLERATE - サンプルレートの変更によるピッチシフト PITCH SHIFTING - 元の長さを変えずにピッチを変更 TIME STRETCHING - ピッチを変えずに長さを変更 *警告: モード2と3は、使用可能なGrainの総数を減少させます PITCH BUFFER SIZE: ピッチシフトとタイムストレッチは、処理を行うためにバッファーを使用します。ここでバッファーのサイズを定義できます。異なるサイズは異なるアルゴリズムの「フレーバー」を持ちます。",
     "url": "/addac112-looper/page/35"
   },
   {
@@ -284,7 +284,7 @@
     "pageNum": 36,
     "title": "Page 36",
     "sectionName": null,
-    "body": "OPTIONSメニュー OPTIONSサブメニュー ページ7 - その他のオプション SPECIAL FUNCTIONS: ここでは、エンコーダーを操作しながら同じボタンに外部入力を使用している際に誤って起動しないように、特殊機能を有効化/無効化できます。 KILL ALL GRAINS - On/Off - [STOP] ボタン DUPLICATE - On/Off - [NEW REC] ボタン NORMALIZE - On/Off - [REC] ボタン PAUSE MODE: TOGGLE - ポーズと再生を切り替えます MOMENTARY - ボタンが押されている間、またはGATE入力がOnの間ポーズします TRIGGER SIZE: 両方のトリガー出力の長さをミリ秒単位で設定します 1 MS 10 MS 100 MS 500 MS VOL IN PRESETS: プリセットが変更されるたびにボリュームコントロールをプリセットから読み込むか、またはプリセット値を無視してボリュームコントロールノブの状態のみを追跡するかを設定します。プリセット値を読み込む場合はYes、プリセット",
+    "body": "オプションメニュー オプションサブメニュー ページ5 - GRAINS OPTIONS GRAIN DEVIATION MODE: RANDOM / SPREAD - 7～9ページで前述したDeviationの動作方式を変更します。 GRAIN PAN MODE: FIXED / TRAVEL - 18ページで前述したPanningの動作方式を変更します。 GRAINS PITCH: [GRAIN PITCH]ノブが動かされたとき、または新しいCVが検出されたとき、グレインのピッチは次のように設定できます。 KEEP - 各グレインは、その長さが終わるまで初期のピッチを保持します CHANGE - すべてのグレインのピッチを即座に一斉に変更します GRAIN TRIGGER: ON / OFF - ONの場合、[GRAINS N.] CV入力を使ってゲートを検出し、新しいゲートが検出されるたびに新しいグレインが生成されます。 MAX GRAIN DELAY: Grain Intermitencyの最大時間を設定します。 LOOP - 最大時間はループサイズと等しくなります 5 SEC",
     "url": "/addac112-looper/page/36"
   },
   {
@@ -292,7 +292,7 @@
     "pageNum": 37,
     "title": "Page 37",
     "sectionName": null,
-    "body": "QUANTIZATION QUANTIZATION 7つのスケールスロットと固定のOFFポジションがあります。 7つのスロットは、ユーザーが任意の比率にカスタマイズできます。 MENU > OPTIONS > SCALES SET内で、ユーザーはDEFAULTとCUSTOMスケールを選択できます: DEFAULTは、フロントパネルに記載されているデフォルトスケールです CUSTOMは、ユーザーがカスタマイズしたスケールです 私たちは、これら両方のスケールをカスタマイズ可能にし、合計14個のスケールを利用できるようにしました。 QUANTIZATION SCALESファイル: すべてのBANKフォルダにはSCALES.CFGファイルがあり、このファイルにはすべてのスケール比率が含まれており、シンプルなテキストエディタで編集できます。 プログラミングに慣れていない方には、このファイルは少し難解に見えるかもしれません。括弧、カンマ、その他の句読点要素を正しい位置に保つことが重要であることを覚えておいてください。 ファイル構造:",
+    "body": "オプションメニュー オプションサブメニュー ページ6 - スペシャルモード CLOCKED MODE(クロックモード): Clocked Modeは14ページで説明されているLooper Special Functionsの一つで、有効にするにはONを選択します。 PITCH DIRECTION CONTROL(ピッチディレクションコントロール): (編集済み) これは、ループのピッチコントロールでルーパーの再生方向もコントロールできる特殊なモードで、ターンテーブルを操作する感覚に近いものです。0vから+2.5vまではリバース再生を行いながらピッチが下がりほぼ停止に近づき、+2.5vから+5vまでは選択したレンジ(NarrowまたはWide)で決まるピッチまで上昇しながらフォワード再生します。 OFF - 無効 NARROW - 両端でピッチがゼロになります WIDE - 両端でピッチが+12セミトーンになります このモードでは[FORWARD/REVERSE]ボタンは操作できず、代わりに再生方向のモニターとして機能します。 また、このモードには1v/octaveはありません。",
     "url": "/addac112-looper/page/37"
   },
   {
@@ -300,7 +300,7 @@
     "pageNum": 38,
     "title": "Page 38",
     "sectionName": null,
-    "body": "QUANTIZATION ROOT SCALES FILE SDカードのルートにSCALES.CFGファイルがあります。これは、デフォルト設定で新しいバンクを作成する際に使用されるデフォルトテンプレートです。このファイルを編集して、お気に入りのスケールをすべて追加してください。これにより、ユーザーは毎回編集する必要なく、新しいバンクごとにすべてのスケールを利用できるようになります。 新しいバンクが作成されると、SCALES.CFGのコピーがBANKフォルダ内に保存されます。 7つのStandardスケールと7つのCustomスケール、合計14個のスケールをカスタマイズできることを覚えておいてください。 現在の設定で新しいバンクを作成する場合、Scalesファイルはルートファイルではなく、現在のバンクフォルダから取得されます。",
+    "body": "OPTIONSメニュー OPTIONSサブメニュー ページ7 - その他のオプション SPECIAL FUNCTIONS: ここでは、エンコーダーを操作しながら同じボタンに外部入力を使用している際に誤って起動しないように、特殊機能を有効化/無効化できます。 KILL ALL GRAINS - On/Off - [STOP] ボタン DUPLICATE - On/Off - [NEW REC] ボタン NORMALIZE - On/Off - [REC] ボタン PAUSE MODE: TOGGLE - ポーズと再生を切り替えます MOMENTARY - ボタンが押されている間、またはGATE入力がOnの間ポーズします TRIGGER SIZE: 両方のトリガー出力の長さをミリ秒単位で設定します 1 MS 10 MS 100 MS 500 MS VOL IN PRESETS: プリセットが変更されるたびにボリュームコントロールをプリセットから読み込むか、またはプリセット値を無視してボリュームコントロールノブの状態のみを追跡するかを設定します。プリセット値を読み込む場合はYes、プリセット",
     "url": "/addac112-looper/page/38"
   },
   {
@@ -308,7 +308,7 @@
     "pageNum": 39,
     "title": "Page 39",
     "sectionName": null,
-    "body": "はじめの一歩 まず、新しい空のBANKを作成しましょう Menuエンコーダーを押すと画面にMenuが表示されます。BANKを選択し、次にNEWを選択します これで揮発性メモリに新しい空のBankが作成されました ここから行う全ての操作は、モジュールの電源を切ると保存されません。準備ができたり電源を切る際には、Menuを開き、BANKを選択してからSAVEを選択してください。これによりBANKの全ての内容がSD CARDに保存され、起動時に読み込まれます。 [INPUT GAIN]を調整してLEDが反応するのを確認し、[DRY VOLUME]ノブを上げて入力オーディオを聴きます 次に、最初のループを録音しましょう。 Loop indexに「-」= No Loopsと表示されていることに注目してください [NEW REC]または[REC]を押します。ループの長さに満足したら、以下のいずれかを押します： [REC]を押すとOverdubモードに入ります [PLAY]を押すと録音を停止してPlaybackモードに入ります [STOP]を押すと録音と再生を停止します Loop",
+    "body": "OPTIONS MENU 2.0 Firmware 2.0では、小さなメニューの中に隠れていた追加機能へ簡単にアクセスできるよう、新しいOptions Menuを実装しました。従来のMenu > Optionsも引き続き利用可能です。 この新しいOptions Menuにアクセスするには、エンコーダーを左右に回転させて各ページをスクロールするだけです。 項目をスクロールすると、選択した機能を簡単に説明するポップアップメッセージが表示されます。 OPTIONS PAGE 1 - REC SETTINGS MONO/STEREO: Looper EngineをMonoまたはStereo Recordingに設定します SAMPLERATE: モジュールの心臓部となる、グローバルなsample rate設定: 8Khz、11khz、16Khz、22khz、32Khz、44.1khz、48khz、96khz BIT DEPTH: bit depthの解像度: 24 bit 16 Bit 8 Bit ANTI-ALIASING:",
     "url": "/addac112-looper/page/39"
   },
   {
@@ -316,7 +316,7 @@
     "pageNum": 40,
     "title": "Page 40",
     "sectionName": null,
-    "body": "GLOBAL.CFGファイルの構造 SDカードのルートには、GLOBAL.CFGファイルがあります。このファイルは最後に保存されたBANKを記憶し、モジュールの電源投入時に自動的に読み込みます。 GLOBAL.CFGの説明: bank=2 > 最後に保存されたBANK SETTINGS.CFGファイルの構造 各BANKフォルダー内には、SETTINGS.CFGファイルがあります。このファイルには、以下に説明するすべての全体的なBANK設定が保存されています。 これらのファイルは、コンピューター上でシンプルなテキストエディタを使用してユーザーが編集することもできます。プログラミングに慣れていないユーザーにとっては、このファイルは少し暗号のように見えるかもしれませんが、すべての括弧、カンマ、その他の句読点要素を正しい位置に保つことが重要であることを忘れないでください。値のみを変更し、それ以外はすべて同じ状態を保つようにしてください。 これらの設定は、プリセット「-」が選択されている場合に常にアクティブになります。 SETTINGS.CFGの説明: dryvolpre_post=0",
+    "body": "OPTIONS MENU 2.0 OPTIONS PAGE 2 - PITCH SETTINGS PITCH RANGE: ピッチレンジは、より狭い範囲でより細かくピッチをコントロールできるように変更可能です。 1v/octが適用されるのは最初のオプションのみです！ -24 +36 : -2〜+3オクターブ -12 +12 : -1〜+1オクターブ -2 +2 : -2〜+2半音 -INF +24 : 停止から+2オクターブまで* モード2、3、4を有効にするには[QUANTIZE]をOffに設定する必要があります *警告: このモードでは、Grainsのピッチに注意が必要です。-INFに設定するとGrainsは速度ゼロで再生され、Grainsエンジンが停止してしまいます。これを解消するには、メニューオプションのGRAINS PITCHをCHANGEに設定してください。 PITCH (ZERO) NOTCH:",
     "url": "/addac112-looper/page/40"
   },
   {
@@ -324,7 +324,7 @@
     "pageNum": 41,
     "title": "Page 41",
     "sectionName": null,
-    "body": "プリセットファイルの構造 1/2 BANKフォルダ内に、プリセットが作成・保存されている場合のみ、数字と「.CFG」拡張子を持つファイルが存在します。これらのファイルには、以下に説明する全てのプリセット設定が保存されています。 これらのファイルは、コンピューター上でシンプルなテキストエディタを使用してユーザーが編集することも可能です。プログラミングに慣れていないユーザーにとっては、このファイルは少し複雑に見えるかもしれませんが、全てのブラケット、カンマ、その他の句読点要素を正しい位置に保つことが重要です。値のみを変更し、それ以外は全て同じ状態を保つようにしてください。 ユーザーはファイル名を変更してプリセットを並べ替えることもできます。 0.CFG 説明: pos=0.049 pos_quant=0 pos_dev=0.199 length=8969 length_quant=0 length_dev=0.999 delay=0 delay_quant=8 delay_dev=0.000 direction=0.733 repeat_mode=1 repeats=0.000",
+    "body": "OPTIONS MENU 2.0 OPTIONS PAGE 3 - GRAINS SETTINGS GRAIN SAMPLERATE: Grain Samplerateを設定します。これによりグレインエンジンがCPUに与える負荷を軽減し、より多くのグレインを使用できるようになります。 FULL - グローバルのSamplerateと同じ HALF - グローバルのSamplerateの半分 QUARTER - グローバルのSamplerateの4分の1 GRAINS PITCH: [GRAIN PITCH]ノブが動かされた時、または新しいCVが検出された時に、グレインのピッチを次のように設定できます。 KEEP - 各グレインはその長さが終わるまで最初のピッチを保持します CHANGE - すべてのグレインのピッチを即座に変更します GRAIN TRIGGER: ON / OFF - ONの場合、[GRAINS N.] CV入力を使ってGateを検出します。新しいGateが検出されるたびに新しいグレインが生成されます。 GRAINS LENGTH: DEFAULT -",
     "url": "/addac112-looper/page/41"
   },
   {
@@ -332,7 +332,7 @@
     "pageNum": 42,
     "title": "Page 42",
     "sectionName": null,
-    "body": "プリセットファイル構造 2/2 プリセットファイルの最後の項目は、SETTINGS.cfgファイルと同じです。プリセット設定はSettings.cfg設定を上書きします。 0.CFG 説明: dryvolpre_post=0 quant_mode=0 pause_mode=0 overdub_origin=0 scales_set=0 keepgrainpitch=1 samplerate=44100 resampling_pitch=1 pitchrangeoctaves=2.500 clocked_mode=0 triggersizems=10 stereo=1 bit_depth=2 recdiren=0 anti_alias=1 graindevmode=1 grainpanmode=0 loop_list={0,1,2,3,} Dry Volume Pre/Post: 0(pre)、1(post) Quantization Mode: 0から7 Pause Mode: 0(toggle)または1(momentary) Overdub Origin: 0(playback",
+    "body": "OPTIONS MENU 2.0 OPTIONS PAGE 4 - OTHER SETTINGS CLOCKED MODE: Clocked Modeは14ページで説明されているLooper Special Functionsの1つで、ONを選択すると有効になります。 PAUSE MODE: TOGGLE - ポーズと再生を切り替えます MOMENTARY - ボタンが押されている間、またはGATE Inputがオンの間だけ一時停止します TRIGGER SIZE: [LOOP TRIGGER OUTPUT]と[GRAINS TRIGGER OUTPUT]の両方のトリガー出力の長さをミリ秒単位で設定します。 1 MS 10 MS 100 MS 500 MS SPECIAL FUNCTIONS: ここではスペシャルファンクションを有効/無効にできます。これにより、エンコーダーを操作している間、同じボタンに割り当てられた外部入力を使用した際に誤って機能が有効化されるのを防ぎます。 KILL ALL GRAINS - 有効/無効 - ENCODER + [STOP]ボタン",
     "url": "/addac112-looper/page/42"
   },
   {
@@ -340,7 +340,7 @@
     "pageNum": 43,
     "title": "Page 43",
     "sectionName": null,
-    "body": "スケールファイルの構造 SCALES.CFGファイルには、使用されるすべてのクオンタイズスケールが保存されます。 これらのファイルもコンピューター上でシンプルなテキストエディタを使ってユーザーが編集できますが、プログラミングに慣れていないユーザーには少し暗号的に見えるかもしれません。しかし、すべての括弧、カンマ、その他の句読点要素を正しい位置に保って整然と保つことが重要です。値のみを変更し、それ以外はすべて同じ状態を保つようにしてください。 SCALES.CFG 説明: デフォルト CHROMATIC={ratios={1,1.05946,1.12246,1.18921,1.25992,1.33483,1.41421,1.49831,1.58740,1.68179,1.78180,1.88775,},per_octave=1} MAJOR={ratios={1,1.12246,1.25992,1.33483,1.49831,1.68179,1.88775,},per_octave=1}",
+    "body": "QUANTIZATION QUANTIZATION 7つのスケールスロットと固定のOFFポジションがあります。 7つのスロットは、ユーザーが任意の比率にカスタマイズできます。 MENU > OPTIONS > SCALES SET内で、ユーザーはDEFAULTとCUSTOMスケールを選択できます: DEFAULTは、フロントパネルに記載されているデフォルトスケールです CUSTOMは、ユーザーがカスタマイズしたスケールです 私たちは、これら両方のスケールをカスタマイズ可能にし、合計14個のスケールを利用できるようにしました。 QUANTIZATION SCALESファイル: すべてのBANKフォルダにはSCALES.CFGファイルがあり、このファイルにはすべてのスケール比率が含まれており、シンプルなテキストエディタで編集できます。 プログラミングに慣れていない方には、このファイルは少し難解に見えるかもしれません。括弧、カンマ、その他の句読点要素を正しい位置に保つことが重要であることを覚えておいてください。 ファイル構造:",
     "url": "/addac112-looper/page/43"
   },
   {
@@ -348,7 +348,7 @@
     "pageNum": 44,
     "title": "Page 44",
     "sectionName": null,
-    "body": "BOOTLOADER & FIRMWARE: 変更履歴 BOOTLOADER 1.9 一部のユニットで起動時に「Starting」メッセージが表示されたままフリーズするバグを修正 Bootloaderバージョンが起動時に表示されるようになりました \\-------------------------------------------------------------------------------------------------- FIRMWARE 1.9 新機能: GRAIN POSITION FOLLOWS LOOP (34ページ) Grains PositionをLooperのPlay Headに同期させることができます。 Grain Position knobがオフセットとなり(12時の位置でオフセットなし)、deviationが全体的な位置にランダム性を追加します。 SWITCHES CALIBRATION スイッチが正しく反応しない場合のキャリブレーション画面(30ページ) その他の軽微なバグも修正されました。",
+    "body": "QUANTIZATION ROOT SCALES FILE SDカードのルートにSCALES.CFGファイルがあります。これは、デフォルト設定で新しいバンクを作成する際に使用されるデフォルトテンプレートです。このファイルを編集して、お気に入りのスケールをすべて追加してください。これにより、ユーザーは毎回編集する必要なく、新しいバンクごとにすべてのスケールを利用できるようになります。 新しいバンクが作成されると、SCALES.CFGのコピーがBANKフォルダ内に保存されます。 7つのStandardスケールと7つのCustomスケール、合計14個のスケールをカスタマイズできることを覚えておいてください。 現在の設定で新しいバンクを作成する場合、Scalesファイルはルートファイルではなく、現在のバンクフォルダから取得されます。",
     "url": "/addac112-looper/page/44"
   },
   {
@@ -356,7 +356,55 @@
     "pageNum": 45,
     "title": "Page 45",
     "sectionName": null,
-    "body": "フィードバック、コメント、または問題についてはこちらまでご連絡ください: addac@addacsystem.com",
+    "body": "はじめの一歩 まず、新しい空のBANKを作成しましょう Menuエンコーダーを押すと画面にMenuが表示されます。BANKを選択し、次にNEWを選択します これで揮発性メモリに新しい空のBankが作成されました ここから行う全ての操作は、モジュールの電源を切ると保存されません。準備ができたり電源を切る際には、Menuを開き、BANKを選択してからSAVEを選択してください。これによりBANKの全ての内容がSD CARDに保存され、起動時に読み込まれます。 [INPUT GAIN]を調整してLEDが反応するのを確認し、[DRY VOLUME]ノブを上げて入力オーディオを聴きます 次に、最初のループを録音しましょう。 Loop indexに「-」= No Loopsと表示されていることに注目してください [NEW REC]または[REC]を押します。ループの長さに満足したら、以下のいずれかを押します： [REC]を押すとOverdubモードに入ります [PLAY]を押すと録音を停止してPlaybackモードに入ります [STOP]を押すと録音と再生を停止します Loop",
     "url": "/addac112-looper/page/45"
+  },
+  {
+    "id": "46",
+    "pageNum": 46,
+    "title": "Page 46",
+    "sectionName": null,
+    "body": "GLOBAL.CFGファイルの構造 SDカードのルートには、GLOBAL.CFGファイルがあります。このファイルは最後に保存されたBANKを記憶し、モジュールの電源投入時に自動的に読み込みます。 GLOBAL.CFGの説明: bank=2 > 最後に保存されたBANK SETTINGS.CFGファイルの構造 各BANKフォルダー内には、SETTINGS.CFGファイルがあります。このファイルには、以下に説明するすべての全体的なBANK設定が保存されています。 これらのファイルは、コンピューター上でシンプルなテキストエディタを使用してユーザーが編集することもできます。プログラミングに慣れていないユーザーにとっては、このファイルは少し暗号のように見えるかもしれませんが、すべての括弧、カンマ、その他の句読点要素を正しい位置に保つことが重要であることを忘れないでください。値のみを変更し、それ以外はすべて同じ状態を保つようにしてください。 これらの設定は、プリセット「-」が選択されている場合に常にアクティブになります。 SETTINGS.CFGの説明: dryvolpre_post=0",
+    "url": "/addac112-looper/page/46"
+  },
+  {
+    "id": "47",
+    "pageNum": 47,
+    "title": "Page 47",
+    "sectionName": null,
+    "body": "プリセットファイルの構造 1/2 BANKフォルダ内に、プリセットが作成・保存されている場合のみ、数字と「.CFG」拡張子を持つファイルが存在します。これらのファイルには、以下に説明する全てのプリセット設定が保存されています。 これらのファイルは、コンピューター上でシンプルなテキストエディタを使用してユーザーが編集することも可能です。プログラミングに慣れていないユーザーにとっては、このファイルは少し複雑に見えるかもしれませんが、全てのブラケット、カンマ、その他の句読点要素を正しい位置に保つことが重要です。値のみを変更し、それ以外は全て同じ状態を保つようにしてください。 ユーザーはファイル名を変更してプリセットを並べ替えることもできます。 0.CFG 説明: pos=0.049 pos_quant=0 pos_dev=0.199 length=8969 length_quant=0 length_dev=0.999 delay=0 delay_quant=8 delay_dev=0.000 direction=0.733 repeat_mode=1 repeats=0.000",
+    "url": "/addac112-looper/page/47"
+  },
+  {
+    "id": "48",
+    "pageNum": 48,
+    "title": "Page 48",
+    "sectionName": null,
+    "body": "プリセットファイル構造 2/2 プリセットファイルの最後の項目は、SETTINGS.cfgファイルと同じです。プリセット設定はSettings.cfg設定を上書きします。 0.CFG 説明: dryvolpre_post=0 quant_mode=0 pause_mode=0 overdub_origin=0 scales_set=0 keepgrainpitch=1 samplerate=44100 resampling_pitch=1 pitchrangeoctaves=2.500 clocked_mode=0 triggersizems=10 stereo=1 bit_depth=2 recdiren=0 anti_alias=1 graindevmode=1 grainpanmode=0 loop_list={0,1,2,3,} Dry Volume Pre/Post: 0(pre)、1(post) Quantization Mode: 0から7 Pause Mode: 0(toggle)または1(momentary) Overdub Origin: 0(playback",
+    "url": "/addac112-looper/page/48"
+  },
+  {
+    "id": "49",
+    "pageNum": 49,
+    "title": "Page 49",
+    "sectionName": null,
+    "body": "スケールファイルの構造 SCALES.CFGファイルには、使用されるすべてのクオンタイズスケールが保存されます。 これらのファイルもコンピューター上でシンプルなテキストエディタを使ってユーザーが編集できますが、プログラミングに慣れていないユーザーには少し暗号的に見えるかもしれません。しかし、すべての括弧、カンマ、その他の句読点要素を正しい位置に保って整然と保つことが重要です。値のみを変更し、それ以外はすべて同じ状態を保つようにしてください。 SCALES.CFG 説明: デフォルト CHROMATIC={ratios={1,1.05946,1.12246,1.18921,1.25992,1.33483,1.41421,1.49831,1.58740,1.68179,1.78180,1.88775,},per_octave=1} MAJOR={ratios={1,1.12246,1.25992,1.33483,1.49831,1.68179,1.88775,},per_octave=1}",
+    "url": "/addac112-looper/page/49"
+  },
+  {
+    "id": "50",
+    "pageNum": 50,
+    "title": "Page 50",
+    "sectionName": null,
+    "body": "BOOTLOADER & FIRMWARE: CHANGES LOG FIRMWARE 2.0 新機能: Autorec(42ページ) 有効にすると、[NEW REC] または [REC] を押すとボタンが点滅し、入力が検出されるまで待機したのち自動的に録音を開始します。 Motorized Pitch Emulator(42ページ) モーターがピッチをコントロールしているかのようにモデル化された新しいピッチ・ポルタメント/スルー・モードで、変化の速さを制御する加速および減速設定を備えています。 Input Compressor(31ページ) ダイナミクスの大きい入力を抑えるための新しい入力コンプレッサーです。 Switches Calibration(30ページ) ルーパーのスイッチ同士が干渉し、一部の機能が使用できなくなるという報告がいくつかありました。これを修正するため、ユーザーによるキャリブレーション手順を新設しました。 New Options Menu(39ページ) 新しいOptions",
+    "url": "/addac112-looper/page/50"
+  },
+  {
+    "id": "51",
+    "pageNum": 51,
+    "title": "Page 51",
+    "sectionName": null,
+    "body": "ご意見、コメント、不具合等のご連絡は下記までお願いいたします。 addac@addacsystem.com ADDAC112 ユーザーズガイド 2026年4月 Revision.13",
+    "url": "/addac112-looper/page/51"
   }
 ]
