@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-02T09:23:58.412Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "cleanupMethod": "claude-code-subagent",
+    "cleanupModel": "haiku",
+    "cleanedAt": "2026-08-02T09:25:37.527Z"
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ryk-envy-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "RYK ENVY - DIY KIT BUILD GUIDE\n\nThanks very much for purchasing the ENVY DIY KIT.\n\nThe majority of components are already surface mounted onto the PCBS.\n\nThese parts are quite densely placed and some are quite near to the solder points, the build requires skill and precise soldering to complete successfully.\n\nTo build the kit you will need the following:\n\n- Clean high quality 2/3mm tip solder iron [ chisel type recommended ]\n- M2 & M3 Phillips Screwdriver\n- Electrical tape (PVC Insulation Tape)\n\nCONTENTS OF KIT\n\n- 1 x User manual\n- 1 x ENVY MAIN PCB\n- 1 x LED PCB\n- 1 x ENVY 2mm aluminium front panel\n- 1 x USB micro data cable for calibration\n- 1 x Eurorack power cable\n- Screws & Washers for Eurorack case\n\nBAG C\n\n- 12 x RYK Original black jack nuts\n- 12 x Black jack sockets (MONO)\n- 1 x 10pin (5x2) Male Box header\n- 2 x M3 - 8mm Black nylon screws\n- 2 x M2 - 12mm black screws\n- 2 x M2 - 8mm brass spacer\n- 1 x 6 pin Female header\n- 1 x 6 pin Male header\n- 4 x 0.5mm thickness black PVC washer\n\n* There are small parts in this BAG C, please open carefully and make sure they are not hidden inside jack sockets!\n\nBAG D\n\n- 1 x Blue push button\n- 1 x Grey push button\n- 1 x DC Converter\n\nBAG E\n\n- 4 x Rotaly Encoder\n\nBAG F\n\n- 4 x Black plastic knobs\n- 4 x Plastic spacers for Rotaly Encoder",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>RYK ENVY - DIY KIT BUILD GUIDE</p>\n<p>Thanks very much for purchasing the ENVY DIY KIT.</p>\n<p>The majority of components are already surface mounted onto the PCBS.</p>\n<p>These parts are quite densely placed and some are quite near to the solder points, the build requires skill and precise soldering to complete successfully.</p>\n<p>To build the kit you will need the following:</p>\n<ul>\n<li>Clean high quality 2/3mm tip solder iron [ chisel type recommended ]</li>\n<li>M2 &#x26; M3 Phillips Screwdriver</li>\n<li>Electrical tape (PVC Insulation Tape)</li>\n</ul>\n<p>CONTENTS OF KIT</p>\n<ul>\n<li>1 x User manual</li>\n<li>1 x ENVY MAIN PCB</li>\n<li>1 x LED PCB</li>\n<li>1 x ENVY 2mm aluminium front panel</li>\n<li>1 x USB micro data cable for calibration</li>\n<li>1 x Eurorack power cable</li>\n<li>Screws &#x26; Washers for Eurorack case</li>\n</ul>\n<p>BAG C</p>\n<ul>\n<li>12 x RYK Original black jack nuts</li>\n<li>12 x Black jack sockets (MONO)</li>\n<li>1 x 10pin (5x2) Male Box header</li>\n<li>2 x M3 - 8mm Black nylon screws</li>\n<li>2 x M2 - 12mm black screws</li>\n<li>2 x M2 - 8mm brass spacer</li>\n<li>1 x 6 pin Female header</li>\n<li>1 x 6 pin Male header</li>\n<li>4 x 0.5mm thickness black PVC washer</li>\n</ul>\n<ul>\n<li>There are small parts in this BAG C, please open carefully and make sure they are not hidden inside jack sockets!</li>\n</ul>\n<p>BAG D</p>\n<ul>\n<li>1 x Blue push button</li>\n<li>1 x Grey push button</li>\n<li>1 x DC Converter</li>\n</ul>\n<p>BAG E</p>\n<ul>\n<li>4 x Rotaly Encoder</li>\n</ul>\n<p>BAG F</p>\n<ul>\n<li>4 x Black plastic knobs</li>\n<li>4 x Plastic spacers for Rotaly Encoder</li>\n</ul>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/ryk-envy-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "0. Take Main PCB from the bag.\n\nBack　Front",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"0\">\n<li>Take Main PCB from the bag.</li>\n</ol>\n<p>Back　Front</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/ryk-envy-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "1. Insert the 10-Pin Boxed male header and DC converter onto the back of the PCB, you can hold it in place with some sponge (not included) whilst soldering from the front of the PCB. Be careful not to heat too long, as the plastic of the headers can melt easily. Make sure it sits flush against the PCB\n\n2. Then Insert the 6-Pin Female header onto the front of the PCB and solder from behind.\n\nBack\n\nFront\n\nBack\n\nFront",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol>\n<li>\n<p>Insert the 10-Pin Boxed male header and DC converter onto the back of the PCB, you can hold it in place with some sponge (not included) whilst soldering from the front of the PCB. Be careful not to heat too long, as the plastic of the headers can melt easily. Make sure it sits flush against the PCB</p>\n</li>\n<li>\n<p>Then Insert the 6-Pin Female header onto the front of the PCB and solder from behind.</p>\n</li>\n</ol>\n<p>Back</p>\n<p>Front</p>\n<p>Back</p>\n<p>Front</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/ryk-envy-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "3. Insert the 4 Encoders and push them firmly into place, making sure they are flush with the PCB.\n\nNext insert the 2 push button switches [Grey and Blue], making sure they are orientated so the flat edge is aligned with the outline drawing on the PCB.\n\nThen insert the 12 black jack sockets onto the PCB (Please note that jack's orientations are not all the same)",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"3\">\n<li>Insert the 4 Encoders and push them firmly into place, making sure they are flush with the PCB.</li>\n</ol>\n<p>Next insert the 2 push button switches [Grey and Blue], making sure they are orientated so the flat edge is aligned with the outline drawing on the PCB.</p>\n<p>Then insert the 12 black jack sockets onto the PCB (Please note that jack's orientations are not all the same)</p>"
+    },
+    {
+      "pageNum": 5,
+      "image": "/ryk-envy-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "4. Place the panel carefully over the parts, make sure everything fits thought the holes correctly.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"4\">\n<li>Place the panel carefully over the parts, make sure everything fits thought the holes correctly.</li>\n</ol>"
+    },
+    {
+      "pageNum": 6,
+      "image": "/ryk-envy-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "5. Using the 2 x M3 - 8mm black nylon screws, screw the PCB to the panel from behind. Tighten the screws enough to hold the panel tightly against the PCB, do not over tighten\n\n6. Place sponges (not included) when you are soldering Encoders and Push Botton switches, so that these parts are firmly pushed against the PCB.\n\nSolder the 4 Encoders, making sure they are flush with the PCB [ not panel ].\n\nThen solder the two Push Botton switches then 12 Jack sockets, which should be all flush with the PCB.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"5\">\n<li>\n<p>Using the 2 x M3 - 8mm black nylon screws, screw the PCB to the panel from behind. Tighten the screws enough to hold the panel tightly against the PCB, do not over tighten</p>\n</li>\n<li>\n<p>Place sponges (not included) when you are soldering Encoders and Push Botton switches, so that these parts are firmly pushed against the PCB.</p>\n</li>\n</ol>\n<p>Solder the 4 Encoders, making sure they are flush with the PCB [ not panel ].</p>\n<p>Then solder the two Push Botton switches then 12 Jack sockets, which should be all flush with the PCB.</p>"
+    },
+    {
+      "pageNum": 7,
+      "image": "/ryk-envy-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "7. Unscrew the screws for the Front panel, and take off the panel.\n\n8. Place the M2 (Hex) screw through the back of the PCB, and place the 7mm hex spacer on top of the screw on the top side of the PCB. Attach the M2 nut, and tighten the screw from behind with Hex key. Repeat the work on the other hole.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"7\">\n<li>\n<p>Unscrew the screws for the Front panel, and take off the panel.</p>\n</li>\n<li>\n<p>Place the M2 (Hex) screw through the back of the PCB, and place the 7mm hex spacer on top of the screw on the top side of the PCB. Attach the M2 nut, and tighten the screw from behind with Hex key. Repeat the work on the other hole.</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 8,
+      "image": "/ryk-envy-diy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "9. Carefully insert the 6-pin male header into the 6-pin header that is soldered on the front side of the PCB. Place the two thin black washers on each end pin of the pin header.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"9\">\n<li>Carefully insert the 6-pin male header into the 6-pin header that is soldered on the front side of the PCB. Place the two thin black washers on each end pin of the pin header.</li>\n</ol>"
+    },
+    {
+      "pageNum": 9,
+      "image": "/ryk-envy-diy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "10. Place the thin washers on top of the two M2 spacers.\n\n11. Place the LED PCB over the 6-pin header, and push the PCB so that there is no gap between female 6 pin header and male 6 pin head",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"10\">\n<li>\n<p>Place the thin washers on top of the two M2 spacers.</p>\n</li>\n<li>\n<p>Place the LED PCB over the 6-pin header, and push the PCB so that there is no gap between female 6 pin header and male 6 pin head</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 10,
+      "image": "/ryk-envy-diy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "12. Make sure the thin washers are sandwiched neatly underneath the LED PCB. Solder the pins of the header to the LED PCB, making sure to keep the PCB level and flush.\n\n13. Cut the electric tape (not included in kit) enough size to cover 6 pins, and stick neatly over the LED PCB pin header. (This will stop the pins shorting on the aluminium panel)",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"12\">\n<li>\n<p>Make sure the thin washers are sandwiched neatly underneath the LED PCB. Solder the pins of the header to the LED PCB, making sure to keep the PCB level and flush.</p>\n</li>\n<li>\n<p>Cut the electric tape (not included in kit) enough size to cover 6 pins, and stick neatly over the LED PCB pin header. (This will stop the pins shorting on the aluminium panel)</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 11,
+      "image": "/ryk-envy-diy/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "14. Place the panel carefully over the parts, make sure everything fits through the holes, and screw the panel to the PCB again with the 2 x M3 plastic screws\n\n15. Place the small white spacer inside the knobs, and place the knob to all 4 encorders.\n\n16. Finally screw on RYK ORIGINAL Black Jack nuts for all Jacks. ALL DONE!",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"14\">\n<li>\n<p>Place the panel carefully over the parts, make sure everything fits through the holes, and screw the panel to the PCB again with the 2 x M3 plastic screws</p>\n</li>\n<li>\n<p>Place the small white spacer inside the knobs, and place the knob to all 4 encorders.</p>\n</li>\n<li>\n<p>Finally screw on RYK ORIGINAL Black Jack nuts for all Jacks. ALL DONE!</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 12,
+      "image": "/ryk-envy-diy/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "17. Firmware and Calibration\n\nInstall the firmware for the module using the following procedure:\n\nConnect the module to a Eurorack power supply with the 10pin IDC cable to the pin header marked POWER.\n\nTake care to make sure the cable stripe is aligned with the arrow and 'Stripe' text on the PCB. Once connected, power up the module, you will not see any flashing lights yet, as we need to install the calibration firmware.\n\nUsing the supplied USB data cable, carefully connect the module to the micro end of the cable, and connect the other end directly to your computer [ not via a USB Hub ]\n\nOnce connected, on the module push and hold in the 'Firmware' button, whilst pressing once the 'Reset' button then release the 'Firmware' button.\n\nYou should see a USB Disc show up on your computer named \"RPI-RP2\", please copy or drag the \"Envy_Machine_V1_1.uf2\" firmware file into the disk. (You can download this from https://www.ryk-modular.com/kit-construction-documents)\n\nIf successful, the disk will 'eject' automatically, and the module will restart with the firmware.\n\nYou should see the Red LEDs slowly animating upwards (NB. This module takes 20sec to power up.)\n\nHave Modulating!\n\nDon't forget to read manual.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"17\">\n<li>Firmware and Calibration</li>\n</ol>\n<p>Install the firmware for the module using the following procedure:</p>\n<p>Connect the module to a Eurorack power supply with the 10pin IDC cable to the pin header marked POWER.</p>\n<p>Take care to make sure the cable stripe is aligned with the arrow and 'Stripe' text on the PCB. Once connected, power up the module, you will not see any flashing lights yet, as we need to install the calibration firmware.</p>\n<p>Using the supplied USB data cable, carefully connect the module to the micro end of the cable, and connect the other end directly to your computer [ not via a USB Hub ]</p>\n<p>Once connected, on the module push and hold in the 'Firmware' button, whilst pressing once the 'Reset' button then release the 'Firmware' button.</p>\n<p>You should see a USB Disc show up on your computer named \"RPI-RP2\", please copy or drag the \"Envy_Machine_V1_1.uf2\" firmware file into the disk. (You can download this from <a href=\"https://www.ryk-modular.com/kit-construction-documents\">https://www.ryk-modular.com/kit-construction-documents</a>)</p>\n<p>If successful, the disk will 'eject' automatically, and the module will restart with the firmware.</p>\n<p>You should see the Red LEDs slowly animating upwards (NB. This module takes 20sec to power up.)</p>\n<p>Have Modulating!</p>\n<p>Don't forget to read manual.</p>"
+    }
+  ]
+}
