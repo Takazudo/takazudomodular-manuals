@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-02T09:38:00.004Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ryk-algo-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "RYK ALGO - DIY KIT BUILD GUIDE\n\nThanks very much for purchasing the ALGO DIY KIT.\n\nThe majority of components are already surface mounted onto the PCBS.\n\nThese parts are quite densely placed and some are quite near to the solder points, the build requires skill and precise soldering to complete successfully.\n\nTo build the kit you will need the following:\n\n- Two mini clamps\n\n- Clean high quality 2/3mm tip solder iron [ chisel type recommended ]\n\n- Small Phillips screwdriver suitable for M3 pan heads.\n\n- M2 hex-key or hex-driver\n\nCONTENTS OF KIT\n\n1 x User manual\n\n1 x ALGO MAIN PCB\n\n1 x LED PCB\n\n1 x Small White Plastic Tape (about 1 x 2cm)\n\n1 x ALGO 2mm aluminium front panel\n\n1 x 2 channel splitter cable (for stereo input)\n\n1 x USB micro data cable\n\n1 x Eurorack power cable\n\nScrews & Washers for Eurorack case\n\nBAG C\n\n9 x Black jack sockets (MONO)\n\n1 x Green jack socket (STEREO)\n\n10 x RYK Original blackjack nuts\n\n1 x 10pin (5x2) Male Box header\n\n2 x M3 - 8mm Black nylon screws\n\n2 x M2 (Hex) - 12mm black screws\n\n2 x M3 - 7mm white spacer (**2 x M2 - 8.5mm hex copper spacer in newer kit)\n\n2 x M2 Hex nut 1mm thick (**not included in newer kit )\n\n1 x 6 pin Female header\n\n1 x 6 pin Male header\n\n2 x 0.5mm thickness black PVC washer (**not included in newer kit)\n\n* There are small parts in this BAG C, please open carefully and make sure they are not hidden inside jack sockets!\n\nBAG D\n\n1 x Black push button\n\n1 x Red push button\n\n1 x DC Converter\n\nBAG E\n\n5 x Potentiometers 10k\n\n8 x Trimmer potentiometers 10k\n\nBAG F\n\n4 x Black plastic knobs (with white markings)\n\n1 x Black plastic knobs (with red markings)",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>RYK ALGO - DIY KIT BUILD GUIDE</p>\n<p>Thanks very much for purchasing the ALGO DIY KIT.</p>\n<p>The majority of components are already surface mounted onto the PCBS.</p>\n<p>These parts are quite densely placed and some are quite near to the solder points, the build requires skill and precise soldering to complete successfully.</p>\n<p>To build the kit you will need the following:</p>\n<ul>\n<li>\n<p>Two mini clamps</p>\n</li>\n<li>\n<p>Clean high quality 2/3mm tip solder iron [ chisel type recommended ]</p>\n</li>\n<li>\n<p>Small Phillips screwdriver suitable for M3 pan heads.</p>\n</li>\n<li>\n<p>M2 hex-key or hex-driver</p>\n</li>\n</ul>\n<p>CONTENTS OF KIT</p>\n<p>1 x User manual</p>\n<p>1 x ALGO MAIN PCB</p>\n<p>1 x LED PCB</p>\n<p>1 x Small White Plastic Tape (about 1 x 2cm)</p>\n<p>1 x ALGO 2mm aluminium front panel</p>\n<p>1 x 2 channel splitter cable (for stereo input)</p>\n<p>1 x USB micro data cable</p>\n<p>1 x Eurorack power cable</p>\n<p>Screws &#x26; Washers for Eurorack case</p>\n<p>BAG C</p>\n<p>9 x Black jack sockets (MONO)</p>\n<p>1 x Green jack socket (STEREO)</p>\n<p>10 x RYK Original blackjack nuts</p>\n<p>1 x 10pin (5x2) Male Box header</p>\n<p>2 x M3 - 8mm Black nylon screws</p>\n<p>2 x M2 (Hex) - 12mm black screws</p>\n<p>2 x M3 - 7mm white spacer (**2 x M2 - 8.5mm hex copper spacer in newer kit)</p>\n<p>2 x M2 Hex nut 1mm thick (**not included in newer kit )</p>\n<p>1 x 6 pin Female header</p>\n<p>1 x 6 pin Male header</p>\n<p>2 x 0.5mm thickness black PVC washer (**not included in newer kit)</p>\n<ul>\n<li>There are small parts in this BAG C, please open carefully and make sure they are not hidden inside jack sockets!</li>\n</ul>\n<p>BAG D</p>\n<p>1 x Black push button</p>\n<p>1 x Red push button</p>\n<p>1 x DC Converter</p>\n<p>BAG E</p>\n<p>5 x Potentiometers 10k</p>\n<p>8 x Trimmer potentiometers 10k</p>\n<p>BAG F</p>\n<p>4 x Black plastic knobs (with white markings)</p>\n<p>1 x Black plastic knobs (with red markings)</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/ryk-algo-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "Before the assembly, please break off the edge rail from the PCB.\n\n**The new kit includes this type female 6pin header.\n\nBack Front",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Before the assembly, please break off the edge rail from the PCB.</p>\n<p>**The new kit includes this type female 6pin header.</p>\n<p>Back Front</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/ryk-algo-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "1. Insert the 10-Pin Boxed male header onto the back of the PCB, you can hold it in place with some sponge (not included) whilst soldering from the topside of the PCB. Be careful not to heat too long, as the plastic of the headers can melt easily.\n\n2. Then Insert the 6-Pin Female header onto the front of the PCB and solder from behind.\n\n**The new kit includes this type female 6pin header.\n\nBack\n\nFront\n\nBack\n\nFront",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol>\n<li>\n<p>Insert the 10-Pin Boxed male header onto the back of the PCB, you can hold it in place with some sponge (not included) whilst soldering from the topside of the PCB. Be careful not to heat too long, as the plastic of the headers can melt easily.</p>\n</li>\n<li>\n<p>Then Insert the 6-Pin Female header onto the front of the PCB and solder from behind.</p>\n</li>\n</ol>\n<p>**The new kit includes this type female 6pin header.</p>\n<p>Back</p>\n<p>Front</p>\n<p>Back</p>\n<p>Front</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/ryk-algo-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "3. Next take the DC converter [ small black box with 3 legs BAG D] and place on the front of the PCB, and solder from behind. Make sure it sits flush against the PCB, and is aligned within defined box shape on the PCB\n\n4. Insert the 5 potentiometer and 8 trimmer potentiometera into the front of the PCB [BAG E], push them firmly into place, making sure they are flush with the PCB. Next insert the 2 push button switches [BAG D], making sure they are orientated so the flat edge is aligned with the outline drawing on the PCB. Then insert the 9 black jack sockets onto the PCB, as shown, followed by the 1 green jack socket [BAG C].\n\nFront\n\nFront",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"3\">\n<li>\n<p>Next take the DC converter [ small black box with 3 legs BAG D] and place on the front of the PCB, and solder from behind. Make sure it sits flush against the PCB, and is aligned within defined box shape on the PCB</p>\n</li>\n<li>\n<p>Insert the 5 potentiometer and 8 trimmer potentiometera into the front of the PCB [BAG E], push them firmly into place, making sure they are flush with the PCB. Next insert the 2 push button switches [BAG D], making sure they are orientated so the flat edge is aligned with the outline drawing on the PCB. Then insert the 9 black jack sockets onto the PCB, as shown, followed by the 1 green jack socket [BAG C].</p>\n</li>\n</ol>\n<p>Front</p>\n<p>Front</p>"
+    },
+    {
+      "pageNum": 5,
+      "image": "/ryk-algo-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "5. Place the panel carefully over the parts, make sure everything fits thought the holes correctly.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"5\">\n<li>Place the panel carefully over the parts, make sure everything fits thought the holes correctly.</li>\n</ol>"
+    },
+    {
+      "pageNum": 6,
+      "image": "/ryk-algo-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "6. Using the 2 x M3 - 8mm black nylon screws, screw the PCB to the panel from behind. Tighten the screws enough to hold the panel tightly against the PCB, do not over tighten.\n\n7. Place two mini claps on either side of the panel, near the bottom end where the jack sockets are located. Check the panel is firmly holding the jacks in place.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"6\">\n<li>\n<p>Using the 2 x M3 - 8mm black nylon screws, screw the PCB to the panel from behind. Tighten the screws enough to hold the panel tightly against the PCB, do not over tighten.</p>\n</li>\n<li>\n<p>Place two mini claps on either side of the panel, near the bottom end where the jack sockets are located. Check the panel is firmly holding the jacks in place.</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 7,
+      "image": "/ryk-algo-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "8. Solder the 5 potentiometers, Making sure they are flush with the PCB [ not panel ].\n\nThen solder the 8 trimmer potentiometers, which should be flush with the PCB and panel.\n\n9. Cut a strip of the some sponge (not included) wide enough to cover all the push button switches. The sponge needs to be taller than trimmer pots. Place the sponge stripe against the front of the push switches, then lay the unit with the sponge face down on your work-surface. Make sure the layers of sponge are pushing the switches firmly against the PCB. Solder the switches from behind.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"8\">\n<li>Solder the 5 potentiometers, Making sure they are flush with the PCB [ not panel ].</li>\n</ol>\n<p>Then solder the 8 trimmer potentiometers, which should be flush with the PCB and panel.</p>\n<ol start=\"9\">\n<li>Cut a strip of the some sponge (not included) wide enough to cover all the push button switches. The sponge needs to be taller than trimmer pots. Place the sponge stripe against the front of the push switches, then lay the unit with the sponge face down on your work-surface. Make sure the layers of sponge are pushing the switches firmly against the PCB. Solder the switches from behind.</li>\n</ol>"
+    },
+    {
+      "pageNum": 8,
+      "image": "/ryk-algo-diy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "10. Lastly solder the 9 black jack sockets, and the 1 green jack socket.\n\n11. Unscrew the screws for the Front panel, and take off the panel.\n\n12. Place the M2 (Hex) screw through the back of the PCB, and place the 7mm hex spacer on top of the screw on the top side of the PCB. Attach the M2 nut, and tightent the screw from behind with Hex key.\n\n** The new kit includes M2 x 8.5mm copper spacers. Attach both spacers to the front side of the PCB using M2 x 12mm screws from the back (no M2 nuts are needed)",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"10\">\n<li>\n<p>Lastly solder the 9 black jack sockets, and the 1 green jack socket.</p>\n</li>\n<li>\n<p>Unscrew the screws for the Front panel, and take off the panel.</p>\n</li>\n<li>\n<p>Place the M2 (Hex) screw through the back of the PCB, and place the 7mm hex spacer on top of the screw on the top side of the PCB. Attach the M2 nut, and tightent the screw from behind with Hex key.</p>\n</li>\n</ol>\n<p>** The new kit includes M2 x 8.5mm copper spacers. Attach both spacers to the front side of the PCB using M2 x 12mm screws from the back (no M2 nuts are needed)</p>"
+    },
+    {
+      "pageNum": 9,
+      "image": "/ryk-algo-diy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "**The new kit does not include washers",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>**The new kit does not include washers</p>"
+    },
+    {
+      "pageNum": 10,
+      "image": "/ryk-algo-diy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "13. Carefully insert the 6-pin male header into the 6-pin header that is soldered on the top side of the PCB. Make sure it is firmly seated. Place the two thin black washers on each end pin of the pin header.\n\n14. Place the LED PCB over the 6-pin header, and align the other end so the hole in the PCB clicks into place over the protruding end of the M2 screw.\n\n**The new kit does not need washers.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"13\">\n<li>\n<p>Carefully insert the 6-pin male header into the 6-pin header that is soldered on the top side of the PCB. Make sure it is firmly seated. Place the two thin black washers on each end pin of the pin header.</p>\n</li>\n<li>\n<p>Place the LED PCB over the 6-pin header, and align the other end so the hole in the PCB clicks into place over the protruding end of the M2 screw.</p>\n</li>\n</ol>\n<p>**The new kit does not need washers.</p>"
+    },
+    {
+      "pageNum": 11,
+      "image": "/ryk-algo-diy/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "15. Make sure the thin washers are sandwiched neatly underneath the LED PCB. Solder the pins of the header to the LED PCB, making sure to keep the PCB level and flush.\n\n16. Cut the White plastic tape enough size to cover 6 pins, and stick neatly over the LED PCB pin header. (This will stop the pins",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"15\">\n<li>\n<p>Make sure the thin washers are sandwiched neatly underneath the LED PCB. Solder the pins of the header to the LED PCB, making sure to keep the PCB level and flush.</p>\n</li>\n<li>\n<p>Cut the White plastic tape enough size to cover 6 pins, and stick neatly over the LED PCB pin header. (This will stop the pins</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 12,
+      "image": "/ryk-algo-diy/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "(shorting on the aluminium panel)\n\n17. Place the panel carefully over the parts, make sure everything fits thought the holes, and screw the panel to the PCB again with the 2 x M3 plastic screws\n\n18. Turn the 5 potentiometers fully anti-clockwise, then place the white/red dot knobs onto the shafts so that the dot is in the 8 o'clock position. Push knobs firmly onto the shafts.\n\n19. Finally screw on RYK ORIGINAL Black Jack nuts for all Jacks. ALL DONE!",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>(shorting on the aluminium panel)</p>\n<ol start=\"17\">\n<li>\n<p>Place the panel carefully over the parts, make sure everything fits thought the holes, and screw the panel to the PCB again with the 2 x M3 plastic screws</p>\n</li>\n<li>\n<p>Turn the 5 potentiometers fully anti-clockwise, then place the white/red dot knobs onto the shafts so that the dot is in the 8 o'clock position. Push knobs firmly onto the shafts.</p>\n</li>\n<li>\n<p>Finally screw on RYK ORIGINAL Black Jack nuts for all Jacks. ALL DONE!</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 13,
+      "image": "/ryk-algo-diy/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "20. Firmware and Calibration\n\nInstall the firmware for the module using the following procedure:\n\nConnect the module to a Eurorack power supply with the 10pin IDC cable to the pin header marked POWER on the bottom corner of the module.\n\nTake care to make sure the cable stripe is aligned with the arrow and 'Stripe' text on the PCB. Once connected, power up the module, you will not see any flashing lights yet, as we need to install the calibration firmware.\n\nUsing the supplied USB cable, carefully connect the module to the micro end of the cable, and connect the other end directly to your computer [ not via a USB Hub ]\n\nOnce connected, on the module push and hold in the 'Firmware' button, whilst pressing once the 'Reset' button then release the 'Firmware' button.\n\nYou should see a USB Disc show up on your computer named \"RPI-RP2\", please copy or drag the \"ALGO_V1_2_KIT.uf2\" firmware file into the disk.\n\nIf successful, the disk will 'eject' automatically, and the module will restart with the firmware.\n\nPlease set the micro slide switch on the back of the PCB to '0V'\n\nPower up the module whilst holding the Black and Red front panel buttons.\n\nYou should see the Green Range LEDs flash 3 times, release the Black and Red buttons when this happens.\n\nThen only the bottom Green Range LED should lit.\n\nAfter a short time the 2nd to top Green Range LED will also light up.\n\nWhen this happens flip over the module and set the micro slide switch to the '5V' position.\n\nThen press the Black button, only the bottom Green Range LED should be lit.\n\nAfter a short time all the Green Range LEDs will flash.\n\nWhen this happens flip over the module and set the micro slide switch to the 'N' position.\n\nYou will then see all the Algorithm LEDs light up.\n\nPress the Black button, and the module will now start up normally, and check the all the module functions are working properly.\n\nHave Fun!",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"20\">\n<li>Firmware and Calibration</li>\n</ol>\n<p>Install the firmware for the module using the following procedure:</p>\n<p>Connect the module to a Eurorack power supply with the 10pin IDC cable to the pin header marked POWER on the bottom corner of the module.</p>\n<p>Take care to make sure the cable stripe is aligned with the arrow and 'Stripe' text on the PCB. Once connected, power up the module, you will not see any flashing lights yet, as we need to install the calibration firmware.</p>\n<p>Using the supplied USB cable, carefully connect the module to the micro end of the cable, and connect the other end directly to your computer [ not via a USB Hub ]</p>\n<p>Once connected, on the module push and hold in the 'Firmware' button, whilst pressing once the 'Reset' button then release the 'Firmware' button.</p>\n<p>You should see a USB Disc show up on your computer named \"RPI-RP2\", please copy or drag the \"ALGO_V1_2_KIT.uf2\" firmware file into the disk.</p>\n<p>If successful, the disk will 'eject' automatically, and the module will restart with the firmware.</p>\n<p>Please set the micro slide switch on the back of the PCB to '0V'</p>\n<p>Power up the module whilst holding the Black and Red front panel buttons.</p>\n<p>You should see the Green Range LEDs flash 3 times, release the Black and Red buttons when this happens.</p>\n<p>Then only the bottom Green Range LED should lit.</p>\n<p>After a short time the 2nd to top Green Range LED will also light up.</p>\n<p>When this happens flip over the module and set the micro slide switch to the '5V' position.</p>\n<p>Then press the Black button, only the bottom Green Range LED should be lit.</p>\n<p>After a short time all the Green Range LEDs will flash.</p>\n<p>When this happens flip over the module and set the micro slide switch to the 'N' position.</p>\n<p>You will then see all the Algorithm LEDs light up.</p>\n<p>Press the Black button, and the module will now start up normally, and check the all the module functions are working properly.</p>\n<p>Have Fun!</p>"
+    }
+  ]
+}
