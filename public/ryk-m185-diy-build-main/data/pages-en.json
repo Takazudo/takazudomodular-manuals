@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-02T09:32:01.970Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ryk-m185-diy-build-main/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "RYK M185 SEQUENCER\nMAIN PCB V3.775 BUILD INSTRUCTIONS\n\nPlease note these instructions are for V3.775 of the Main PCB. Check the version number on the edge of your PCB. Build docs for older versions are available on the web-shop.\n\nThe build is fairly straightforward, but please follow these instructions carefully.\n\nThis PCB is double sided, which makes removal of components very difficult, and in some cases such as switches, impossible without destroying the component.\n\nSo please work methodically and carefully, checking each item is correctly orientated and seated before soldering in place.\n\nCheck twice, solder once !\n\nSome components are placed on the underside of the board, these are the two DIL Pin Headers, and the SMD 5v regulator. Be aware these do not have screen-print locations on the under-side.\n\nIt is a good idea to print out the BOM and PCB placement documents.\n\nWhilst assembling use a highlight marker pen to indicate on the BOM list and PCB image each component as they are installed.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>RYK M185 SEQUENCER\nMAIN PCB V3.775 BUILD INSTRUCTIONS</p>\n<p>Please note these instructions are for V3.775 of the Main PCB. Check the version number on the edge of your PCB. Build docs for older versions are available on the web-shop.</p>\n<p>The build is fairly straightforward, but please follow these instructions carefully.</p>\n<p>This PCB is double sided, which makes removal of components very difficult, and in some cases such as switches, impossible without destroying the component.</p>\n<p>So please work methodically and carefully, checking each item is correctly orientated and seated before soldering in place.</p>\n<p>Check twice, solder once !</p>\n<p>Some components are placed on the underside of the board, these are the two DIL Pin Headers, and the SMD 5v regulator. Be aware these do not have screen-print locations on the under-side.</p>\n<p>It is a good idea to print out the BOM and PCB placement documents.</p>\n<p>Whilst assembling use a highlight marker pen to indicate on the BOM list and PCB image each component as they are installed.</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/ryk-m185-diy-build-main/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "STAGE 1 - Bag A\n\nSolder all the Resistors, taking care to check their colour c",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STAGE 1 - Bag A</p>\n<p>Solder all the Resistors, taking care to check their colour c</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/ryk-m185-diy-build-main/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "STAGE 2 - Bag B\n\nSolder all the 1N4148 diodes, taking caring to orient the black stripe on the body with the stripe on the PCB silkscreen.\n\nThen solder the 1N5819 [grey body] diodes in place\nThese diodes will need to be soldered vertically, take care to orient the white stripe on the body with the stripe on the PCB silkscreen.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STAGE 2 - Bag B</p>\n<p>Solder all the 1N4148 diodes, taking caring to orient the black stripe on the body with the stripe on the PCB silkscreen.</p>\n<p>Then solder the 1N5819 [grey body] diodes in place\nThese diodes will need to be soldered vertically, take care to orient the white stripe on the body with the stripe on the PCB silkscreen.</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/ryk-m185-diy-build-main/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "STAGE 3 - Bag B\n\nNext solder all the ceramic disc capacitors [ orange ], making sure of the correct values marked on their body.\n\nThen solder all the polypropylene capacitors [ blue ], making sure of the correct values marked on their body.\n\nFinally solder in all the electrolytic capacitors [ black can shape ], making sure they are orientated correctly - the long lead should go into the pad with the '+' symbol.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STAGE 3 - Bag B</p>\n<p>Next solder all the ceramic disc capacitors [ orange ], making sure of the correct values marked on their body.</p>\n<p>Then solder all the polypropylene capacitors [ blue ], making sure of the correct values marked on their body.</p>\n<p>Finally solder in all the electrolytic capacitors [ black can shape ], making sure they are orientated correctly - the long lead should go into the pad with the '+' symbol.</p>"
+    },
+    {
+      "pageNum": 5,
+      "image": "/ryk-m185-diy-build-main/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "STAGE 4 - Bag B\n\nSolder all the transistors. Make sure the orientation of each is correct, by lining up the flat side of the transistor with the flat side of the PCB transistor symbol.\n\nThere are two types of transistor used, BC557, and BC547. Please make sure to use the correct ones as specified in the BOM.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STAGE 4 - Bag B</p>\n<p>Solder all the transistors. Make sure the orientation of each is correct, by lining up the flat side of the transistor with the flat side of the PCB transistor symbol.</p>\n<p>There are two types of transistor used, BC557, and BC547. Please make sure to use the correct ones as specified in the BOM.</p>"
+    },
+    {
+      "pageNum": 6,
+      "image": "/ryk-m185-diy-build-main/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "STAGE 5 - IC TUBE, BAG A\n\nNext locate the ICs, and insert into the PCB, making sure they are correctly orientated.\n\nICs with a slotted end should line up with the slotted shpe end-part of the PCB IC symbol.\n\nICs with a dot on the corner line up with the dotted corner of the PCB IC symbol.\n\nNB for IC2 use the supplied 28pin DIL socket, this is for the programmed PIC chip [ marked M185 V3.3 ] which you should insert when all soldering is finished.\n\nIC1 [ Marked 78L05 found in BAG A ] looks exactly like a transistor, do not get this mixed up with the transistors. It is supplied in Bag A for this reason.\n\nPlease note IC4 has upside down orientation, compared to IC5 and IC6 nearby.\n\nIf you are nervous soldering ICs, then please feel free to use DIL sockets. [ not supplied ]",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STAGE 5 - IC TUBE, BAG A</p>\n<p>Next locate the ICs, and insert into the PCB, making sure they are correctly orientated.</p>\n<p>ICs with a slotted end should line up with the slotted shpe end-part of the PCB IC symbol.</p>\n<p>ICs with a dot on the corner line up with the dotted corner of the PCB IC symbol.</p>\n<p>NB for IC2 use the supplied 28pin DIL socket, this is for the programmed PIC chip [ marked M185 V3.3 ] which you should insert when all soldering is finished.</p>\n<p>IC1 [ Marked 78L05 found in BAG A ] looks exactly like a transistor, do not get this mixed up with the transistors. It is supplied in Bag A for this reason.</p>\n<p>Please note IC4 has upside down orientation, compared to IC5 and IC6 nearby.</p>\n<p>If you are nervous soldering ICs, then please feel free to use DIL sockets. [ not supplied ]</p>"
+    },
+    {
+      "pageNum": 7,
+      "image": "/ryk-m185-diy-build-main/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "STAGE 6 - Bag A. Bag C\n\nNext solder in the two preset trimmers VR1, VR2.\n\nPlease make sure the adjustment screw is facing the edge of the board, to allow easy adjustment during module callibration.\n\nLocate the 5x2 pin header for the Euro power socket, and solder into place on the PCB.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STAGE 6 - Bag A. Bag C</p>\n<p>Next solder in the two preset trimmers VR1, VR2.</p>\n<p>Please make sure the adjustment screw is facing the edge of the board, to allow easy adjustment during module callibration.</p>\n<p>Locate the 5x2 pin header for the Euro power socket, and solder into place on the PCB.</p>"
+    },
+    {
+      "pageNum": 8,
+      "image": "/ryk-m185-diy-build-main/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "STAGE 7 - Bag C\n\nLocate the two 13x2 male pin headers.\n\nThese are to be placed on the UNDERSIDE of the PCB.\n\nFlip the PCB over, and Insert them onto the underside of the PCB.\n\nWhilst applying hand pressure from behind to keep the header flush to the PCB, flip the board back over to the top-side [ component side ]\n\nIf you are building this PCB first then following the instructions below in STEP 2\n\nIf building this PCB second, then insert these headers into the female pin-headers of the Panel PCB board that you have already assembled.\n\nThen insert the headers into the UNDERSIDE of this PCB, and follow the remaining instructions below . [ this technique is useful for making sure both pin headers line up evenly ]\n\nSTEP 2\n\nSolder the opposite corner pins first, then check the underside to make sure the header is perpendicular. If not, heat the pins, and apply gentle pressure to straighten.\n\nThen solder the remaining pins.\n\nCarefully inspect the soldered pins, checking for no shorts or dry joints, [ use a magnifier to help ].",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STAGE 7 - Bag C</p>\n<p>Locate the two 13x2 male pin headers.</p>\n<p>These are to be placed on the UNDERSIDE of the PCB.</p>\n<p>Flip the PCB over, and Insert them onto the underside of the PCB.</p>\n<p>Whilst applying hand pressure from behind to keep the header flush to the PCB, flip the board back over to the top-side [ component side ]</p>\n<p>If you are building this PCB first then following the instructions below in STEP 2</p>\n<p>If building this PCB second, then insert these headers into the female pin-headers of the Panel PCB board that you have already assembled.</p>\n<p>Then insert the headers into the UNDERSIDE of this PCB, and follow the remaining instructions below . [ this technique is useful for making sure both pin headers line up evenly ]</p>\n<p>STEP 2</p>\n<p>Solder the opposite corner pins first, then check the underside to make sure the header is perpendicular. If not, heat the pins, and apply gentle pressure to straighten.</p>\n<p>Then solder the remaining pins.</p>\n<p>Carefully inspect the soldered pins, checking for no shorts or dry joints, [ use a magnifier to help ].</p>"
+    },
+    {
+      "pageNum": 9,
+      "image": "/ryk-m185-diy-build-main/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "STAGE 8 - Bag A\n\nNext locate IC100 [ the SMD voltage regulator ].\n\nThis is a surface mount device, and is to be soldered to the underside of the board.\n\nPlace the IC on the underside of the board, lining up the two small legs with the smaller pads near the edge of the board.\n\nHold the large area of the chip whilst soldering one of the small legs to it's pad. The solder the other small leg to it's pad.\n\nThen apply the iron to the larger edge on the opposite side of the chip to heat up the cip and large pad, whilst applying generous amounts of solder.\n\nThe solder should flow underneath the IC.\n\nCheck it is securely soldered in place.\n\nNow refer to STAGE 12 of the PANEL PCB build for the final assembly instructions.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STAGE 8 - Bag A</p>\n<p>Next locate IC100 [ the SMD voltage regulator ].</p>\n<p>This is a surface mount device, and is to be soldered to the underside of the board.</p>\n<p>Place the IC on the underside of the board, lining up the two small legs with the smaller pads near the edge of the board.</p>\n<p>Hold the large area of the chip whilst soldering one of the small legs to it's pad. The solder the other small leg to it's pad.</p>\n<p>Then apply the iron to the larger edge on the opposite side of the chip to heat up the cip and large pad, whilst applying generous amounts of solder.</p>\n<p>The solder should flow underneath the IC.</p>\n<p>Check it is securely soldered in place.</p>\n<p>Now refer to STAGE 12 of the PANEL PCB build for the final assembly instructions.</p>"
+    }
+  ]
+}
