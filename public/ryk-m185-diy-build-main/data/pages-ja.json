@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "processedAt": "2026-08-02T09:32:01.970Z",
+    "processedAt": "2026-08-02T09:38:38.546Z",
     "language": "ja",
     "translationMethod": "claude-code-subagent-page-by-page",
     "imageFormat": "png",
@@ -22,10 +22,10 @@
       "image": "/ryk-m185-diy-build-main/pages/page-002.png",
       "title": "Page 2",
       "sectionName": null,
-      "content": "STAGE 1 - Bag A\n\n抵抗（レジスター）をすべてはんだ付けします。カラーコードをよく確認しながら作業してください c",
+      "content": "STAGE 1 - Bag A\n\n抵抗（レジスター）をすべてはんだ付けします。カラーコードをよく確認しながら……（原文PDFの本文はこの位置で途切れています）",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>STAGE 1 - Bag A</p>\n<p>抵抗（レジスター）をすべてはんだ付けします。カラーコードをよく確認しながら作業してください c</p>"
+      "contentHtml": "<p>STAGE 1 - Bag A</p>\n<p>抵抗（レジスター）をすべてはんだ付けします。カラーコードをよく確認しながら……（原文PDFの本文はこの位置で途切れています）</p>"
     },
     {
       "pageNum": 3,
