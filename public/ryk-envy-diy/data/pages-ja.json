@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-02T09:23:58.412Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ryk-envy-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "RYK ENVY - DIY KIT BUILD GUIDE\n\nENVY DIY KITをご購入いただき、誠にありがとうございます。\n\nほとんどの部品はあらかじめPCB上に表面実装されています。\n\nこれらの部品は非常に密集して配置されており、はんだ付けポイントのすぐ近くにあるものもあるため、組み立てには熟練した技術と精密なはんだ付けが必要です。\n\nキットの組み立てには、以下のものが必要です。\n\n- 清潔で高品質な2/3mmチップのはんだごて [チゼルタイプ推奨]\n- M2およびM3プラスドライバー\n- 電気絶縁テープ(PVC絶縁テープ)\n\nキットの内容\n\n- ユーザーマニュアル x 1\n- ENVY MAIN PCB x 1\n- LED PCB x 1\n- ENVY 2mmアルミニウムフロントパネル x 1\n- キャリブレーション用USB Microデータケーブル x 1\n- Eurorack電源ケーブル x 1\n- Eurorackケース用ネジ & ワッシャー\n\nBAG C\n\n- RYKオリジナルブラックジャックナット x 12\n- ブラックジャックソケット(MONO) x 12\n- 10pin(5x2)オスボックスヘッダー x 1\n- M3 - 8mmブラックナイロンネジ x 2\n- M2 - 12mmブラックネジ x 2\n- M2 - 8mm真鍮スペーサー x 2\n- 6ピンメスヘッダー x 1\n- 6ピンオスヘッダー x 1\n- 厚さ0.5mmのブラックPVCワッシャー x 4\n\n※このBAG Cには小さな部品が含まれています。開封の際は注意し、ジャックソケットの中に隠れていないか必ず確認してください!\n\nBAG D\n\n- ブループッシュボタン x 1\n- グレープッシュボタン x 1\n- DC Converter x 1\n\nBAG E\n\n- Rotaly Encoder x 4\n\nBAG F\n\n- ブラックプラスチックノブ x 4\n- Rotaly Encoder用プラスチックスペーサー x 4",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>RYK ENVY - DIY KIT BUILD GUIDE</p>\n<p>ENVY DIY KITをご購入いただき、誠にありがとうございます。</p>\n<p>ほとんどの部品はあらかじめPCB上に表面実装されています。</p>\n<p>これらの部品は非常に密集して配置されており、はんだ付けポイントのすぐ近くにあるものもあるため、組み立てには熟練した技術と精密なはんだ付けが必要です。</p>\n<p>キットの組み立てには、以下のものが必要です。</p>\n<ul>\n<li>清潔で高品質な2/3mmチップのはんだごて [チゼルタイプ推奨]</li>\n<li>M2およびM3プラスドライバー</li>\n<li>電気絶縁テープ(PVC絶縁テープ)</li>\n</ul>\n<p>キットの内容</p>\n<ul>\n<li>ユーザーマニュアル x 1</li>\n<li>ENVY MAIN PCB x 1</li>\n<li>LED PCB x 1</li>\n<li>ENVY 2mmアルミニウムフロントパネル x 1</li>\n<li>キャリブレーション用USB Microデータケーブル x 1</li>\n<li>Eurorack電源ケーブル x 1</li>\n<li>Eurorackケース用ネジ &#x26; ワッシャー</li>\n</ul>\n<p>BAG C</p>\n<ul>\n<li>RYKオリジナルブラックジャックナット x 12</li>\n<li>ブラックジャックソケット(MONO) x 12</li>\n<li>10pin(5x2)オスボックスヘッダー x 1</li>\n<li>M3 - 8mmブラックナイロンネジ x 2</li>\n<li>M2 - 12mmブラックネジ x 2</li>\n<li>M2 - 8mm真鍮スペーサー x 2</li>\n<li>6ピンメスヘッダー x 1</li>\n<li>6ピンオスヘッダー x 1</li>\n<li>厚さ0.5mmのブラックPVCワッシャー x 4</li>\n</ul>\n<p>※このBAG Cには小さな部品が含まれています。開封の際は注意し、ジャックソケットの中に隠れていないか必ず確認してください!</p>\n<p>BAG D</p>\n<ul>\n<li>ブループッシュボタン x 1</li>\n<li>グレープッシュボタン x 1</li>\n<li>DC Converter x 1</li>\n</ul>\n<p>BAG E</p>\n<ul>\n<li>Rotaly Encoder x 4</li>\n</ul>\n<p>BAG F</p>\n<ul>\n<li>ブラックプラスチックノブ x 4</li>\n<li>Rotaly Encoder用プラスチックスペーサー x 4</li>\n</ul>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/ryk-envy-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "0. Main PCBをバッグから取り出します。\n\n裏面　表面",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"0\">\n<li>Main PCBをバッグから取り出します。</li>\n</ol>\n<p>裏面　表面</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/ryk-envy-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "1. 10ピンのBoxed male headerとDCコンバーターをPCBの裏面に挿入します。スポンジ(付属していません)などで固定しながら、PCBの表面からはんだ付けすることができます。プラスチック製のヘッダーは熱ですぐに溶けてしまうため、長時間加熱しすぎないよう注意してください。PCBにしっかりと密着していることを確認してください。\n\n2. 次に、6ピンのFemale headerをPCBの表面に挿入し、裏面からはんだ付けします。\n\n裏面\n\n表面\n\n裏面\n\n表面",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol>\n<li>\n<p>10ピンのBoxed male headerとDCコンバーターをPCBの裏面に挿入します。スポンジ(付属していません)などで固定しながら、PCBの表面からはんだ付けすることができます。プラスチック製のヘッダーは熱ですぐに溶けてしまうため、長時間加熱しすぎないよう注意してください。PCBにしっかりと密着していることを確認してください。</p>\n</li>\n<li>\n<p>次に、6ピンのFemale headerをPCBの表面に挿入し、裏面からはんだ付けします。</p>\n</li>\n</ol>\n<p>裏面</p>\n<p>表面</p>\n<p>裏面</p>\n<p>表面</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/ryk-envy-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "3. 4個のEncoderを挿入し、PCBに対してしっかりと密着するまでまっすぐ押し込みます。次に、2個のプッシュボタンスイッチ [グレーとブルー] を挿入します。この際、平らな辺がPCB上のアウトライン図と一致する向きになっているか確認してください。続いて、12個の黒いジャックソケットをPCBに挿入します(ジャックの向きはすべて同じではないのでご注意ください)。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"3\">\n<li>4個のEncoderを挿入し、PCBに対してしっかりと密着するまでまっすぐ押し込みます。次に、2個のプッシュボタンスイッチ [グレーとブルー] を挿入します。この際、平らな辺がPCB上のアウトライン図と一致する向きになっているか確認してください。続いて、12個の黒いジャックソケットをPCBに挿入します(ジャックの向きはすべて同じではないのでご注意ください)。</li>\n</ol>"
+    },
+    {
+      "pageNum": 5,
+      "image": "/ryk-envy-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "4. パネルをパーツの上に慎重に載せ、すべてのパーツが穴に正しく収まっていることを確認してください。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"4\">\n<li>パネルをパーツの上に慎重に載せ、すべてのパーツが穴に正しく収まっていることを確認してください。</li>\n</ol>"
+    },
+    {
+      "pageNum": 6,
+      "image": "/ryk-envy-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "5. 2 x M3 - 8mm ブラックナイロンスクリューを使用して、PCBを裏側からパネルに固定します。パネルがPCBにしっかりと密着するまでスクリューを締めますが、締めすぎないでください。\n\n6. Encoder（エンコーダー)とPush Botton switch（プッシュボタンスイッチ)をハンダ付けする際は、これらのパーツがPCBにしっかりと押し付けられるように、スポンジ（付属しません）を挟んでください。\n\n4個のEncoderをハンダ付けします。この際、Encoderがパネルではなく、PCBに対してフラッシュ（面一）になっていることを確認してください。\n\nその後、2個のPush Botton switchをハンダ付けし、続いて12個のJack socket（ジャックソケット)をハンダ付けします。これらはすべてPCBに対してフラッシュになっている必要があります。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"5\">\n<li>\n<p>2 x M3 - 8mm ブラックナイロンスクリューを使用して、PCBを裏側からパネルに固定します。パネルがPCBにしっかりと密着するまでスクリューを締めますが、締めすぎないでください。</p>\n</li>\n<li>\n<p>Encoder（エンコーダー)とPush Botton switch（プッシュボタンスイッチ)をハンダ付けする際は、これらのパーツがPCBにしっかりと押し付けられるように、スポンジ（付属しません）を挟んでください。</p>\n</li>\n</ol>\n<p>4個のEncoderをハンダ付けします。この際、Encoderがパネルではなく、PCBに対してフラッシュ（面一）になっていることを確認してください。</p>\n<p>その後、2個のPush Botton switchをハンダ付けし、続いて12個のJack socket（ジャックソケット)をハンダ付けします。これらはすべてPCBに対してフラッシュになっている必要があります。</p>"
+    },
+    {
+      "pageNum": 7,
+      "image": "/ryk-envy-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "7. Front panelのネジを外し、パネルを取り外します。\n\n8. M2(Hex)スクリューをPCBの裏側から通し、PCBの表側でスクリューの上に7mm hex spacerを乗せます。M2 nutを取り付け、Hex keyで裏側からスクリューを締めます。反対側の穴でも同じ作業を繰り返します。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"7\">\n<li>\n<p>Front panelのネジを外し、パネルを取り外します。</p>\n</li>\n<li>\n<p>M2(Hex)スクリューをPCBの裏側から通し、PCBの表側でスクリューの上に7mm hex spacerを乗せます。M2 nutを取り付け、Hex keyで裏側からスクリューを締めます。反対側の穴でも同じ作業を繰り返します。</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 8,
+      "image": "/ryk-envy-diy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "9. 6ピンのオスヘッダーを、PCBの表面にはんだ付けされている6ピンヘッダーに慎重に挿入します。ピンヘッダーの両端のピンに、薄い黒のワッシャーを取り付けます。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"9\">\n<li>6ピンのオスヘッダーを、PCBの表面にはんだ付けされている6ピンヘッダーに慎重に挿入します。ピンヘッダーの両端のピンに、薄い黒のワッシャーを取り付けます。</li>\n</ol>"
+    },
+    {
+      "pageNum": 9,
+      "image": "/ryk-envy-diy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "10. 薄型ワッシャーを2つのM2スペーサーの上に置きます。\n\n11. LED PCBを6ピンヘッダーの上にかぶせ、メス側6ピンヘッダーとオス側6ピンヘッダーの間に隙間ができなくなるまでPCBを押し込みます。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"10\">\n<li>\n<p>薄型ワッシャーを2つのM2スペーサーの上に置きます。</p>\n</li>\n<li>\n<p>LED PCBを6ピンヘッダーの上にかぶせ、メス側6ピンヘッダーとオス側6ピンヘッダーの間に隙間ができなくなるまでPCBを押し込みます。</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 10,
+      "image": "/ryk-envy-diy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "12. 薄いワッシャーがLED PCBの下にきれいに挟み込まれていることを確認してください。PCBを水平かつ密着させた状態を保ちながら、ヘッダーのピンをLED PCBにはんだ付けします。\n\n13. 電気絶縁テープ(キットには付属していません)を6ピン分を覆える大きさにカットし、LED PCBのピンヘッダーの上にきれいに貼り付けます。(これにより、ピンがアルミパネルとショートするのを防ぎます)",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"12\">\n<li>\n<p>薄いワッシャーがLED PCBの下にきれいに挟み込まれていることを確認してください。PCBを水平かつ密着させた状態を保ちながら、ヘッダーのピンをLED PCBにはんだ付けします。</p>\n</li>\n<li>\n<p>電気絶縁テープ(キットには付属していません)を6ピン分を覆える大きさにカットし、LED PCBのピンヘッダーの上にきれいに貼り付けます。(これにより、ピンがアルミパネルとショートするのを防ぎます)</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 11,
+      "image": "/ryk-envy-diy/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "14. パネルをパーツの上に慎重に置き、すべてが穴にきちんと収まっていることを確認してから、2 x M3のプラスチックネジでパネルをPCBに再び固定します\n\n15. 小さい白色のスペーサーをノブの内側に入れ、4つすべてのエンコーダーにノブを取り付けます。\n\n16. 最後に、すべてのJackにRYK ORIGINAL Black Jack nutsを取り付けます。これで完成です!",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"14\">\n<li>\n<p>パネルをパーツの上に慎重に置き、すべてが穴にきちんと収まっていることを確認してから、2 x M3のプラスチックネジでパネルをPCBに再び固定します</p>\n</li>\n<li>\n<p>小さい白色のスペーサーをノブの内側に入れ、4つすべてのエンコーダーにノブを取り付けます。</p>\n</li>\n<li>\n<p>最後に、すべてのJackにRYK ORIGINAL Black Jack nutsを取り付けます。これで完成です!</p>\n</li>\n</ol>"
+    },
+    {
+      "pageNum": 12,
+      "image": "/ryk-envy-diy/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "17. ファームウェアとキャリブレーション\n\n以下の手順に従って、モジュールのファームウェアをインストールしてください。\n\nモジュールを、10pin IDCケーブルを使用してPOWERと記載されたピンヘッダーに接続し、Eurorack電源に接続します。\n\nケーブルのストライプがPCB上の矢印と「Stripe」の文字に揃っていることを必ず確認してください。接続したらモジュールの電源を入れますが、この時点ではまだLEDは点滅しません。キャリブレーション用のファームウェアをインストールする必要があるためです。\n\n付属のUSBデータケーブルを使用し、micro側のコネクタをモジュールに慎重に接続し、もう一方の端は直接コンピューターに接続してください[USBハブ経由では接続しないでください]。\n\n接続したら、モジュール上の「Firmware」ボタンを押したまま、「Reset」ボタンを一度押してから、「Firmware」ボタンを離してください。\n\nコンピューター上に「RPI-RP2」という名前のUSBディスクが表示されるはずです。「Envy_Machine_V1_1.uf2」ファームウェアファイルをこのディスクにコピーまたはドラッグしてください。(このファイルはhttps://www.ryk-modular.com/kit-construction-documentsからダウンロードできます。)\n\n成功すると、ディスクは自動的に「イジェクト」され、モジュールはファームウェアと共に再起動します。\n\n赤色のLEDがゆっくりと上方向にアニメーションするのが確認できるはずです。(注: このモジュールは起動に20秒かかります。)\n\nモジュレーションをお楽しみください!\n\nマニュアルを読むことをお忘れなく。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<ol start=\"17\">\n<li>ファームウェアとキャリブレーション</li>\n</ol>\n<p>以下の手順に従って、モジュールのファームウェアをインストールしてください。</p>\n<p>モジュールを、10pin IDCケーブルを使用してPOWERと記載されたピンヘッダーに接続し、Eurorack電源に接続します。</p>\n<p>ケーブルのストライプがPCB上の矢印と「Stripe」の文字に揃っていることを必ず確認してください。接続したらモジュールの電源を入れますが、この時点ではまだLEDは点滅しません。キャリブレーション用のファームウェアをインストールする必要があるためです。</p>\n<p>付属のUSBデータケーブルを使用し、micro側のコネクタをモジュールに慎重に接続し、もう一方の端は直接コンピューターに接続してください[USBハブ経由では接続しないでください]。</p>\n<p>接続したら、モジュール上の「Firmware」ボタンを押したまま、「Reset」ボタンを一度押してから、「Firmware」ボタンを離してください。</p>\n<p>コンピューター上に「RPI-RP2」という名前のUSBディスクが表示されるはずです。「Envy_Machine_V1_1.uf2」ファームウェアファイルをこのディスクにコピーまたはドラッグしてください。(このファイルは<a href=\"https://www.ryk-modular.com/kit-construction-documents\">https://www.ryk-modular.com/kit-construction-documents</a>からダウンロードできます。)</p>\n<p>成功すると、ディスクは自動的に「イジェクト」され、モジュールはファームウェアと共に再起動します。</p>\n<p>赤色のLEDがゆっくりと上方向にアニメーションするのが確認できるはずです。(注: このモジュールは起動に20秒かかります。)</p>\n<p>モジュレーションをお楽しみください!</p>\n<p>マニュアルを読むことをお忘れなく。</p>"
+    }
+  ]
+}
