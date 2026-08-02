@@ -12,7 +12,7 @@
     "pageNum": 2,
     "title": "Page 2",
     "sectionName": null,
-    "body": "M185 Main PCB BOM | 部品 | 表示 | 部品番号 | | --- | --- | --- | | 20k Trimmer | | VR1,VR2 | | 2x13 Pin Header Male | | X1,X2 | | 2x10 pin power header | | SV1 | | 100nF ceramic | 104 | C1,C3,C5,C9,C10,C11 | | 10uF or 22uF | 10uF | C2,C4,C6,C17 | | 1nF ceramic | 102 | C7,C14 | | 100nF poly | 1k100 or 104J | C8,C13 | | 1nF poly | 1n or 102J | C12,C15 | | 100pF | 101 | C16,C18 | | 1N4148 | | D1,D3,D4,D5 | | 1N5819 | | D2,D6 | | 78L05 | 78L05 | IC1 | | 26 Pin DIL IC | | IC2 | | TL074P | | IC3 | | 74HC595N",
+    "body": "M185 Main PCB BOM | 部品 | 表示 | リファレンス記号 | | --- | --- | --- | | 20k Trimmer | | VR1,VR2 | | 2x13 Pin Header Male | | X1,X2 | | 2x10 pin power header | | SV1 | | 100nF ceramic | 104 | C1,C3,C5,C9,C10,C11 | | 10uF or 22uF | 10uF | C2,C4,C6,C17 | | 1nF ceramic | 102 | C7,C14 | | 100nF poly | 1k100 or 104J | C8,C13 | | 1nF poly | 1n or 102J | C12,C15 | | 100pF | 101 | C16,C18 | | 1N4148 | | D1,D3,D4,D5 | | 1N5819 | | D2,D6 | | 78L05 | 78L05 | IC1 | | 26 Pin DIL IC | | IC2 | | TL074P | | IC3 | |",
     "url": "/ryk-m185-diy-bom-main/page/2"
   }
 ]
