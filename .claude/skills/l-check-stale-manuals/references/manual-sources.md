@@ -10,7 +10,7 @@ Where each committed manual's currently-published revision lives, per brand — 
 - [Weston Precision Audio (10)](#weston-precision-audio-10)
 - [OXI Instruments (7)](#oxi-instruments-7)
 - [AI Synthesis (6)](#ai-synthesis-6)
-- [RYK Modular (6)](#ryk-modular-6)
+- [RYK Modular (14)](#ryk-modular-14)
 - [Recovery Effects And Devices (3)](#recovery-effects-and-devices-3)
 - [Single-manual brands (4)](#single-manual-brands-4)
 
@@ -99,7 +99,7 @@ Quick-start vs full manual are SEPARATE catalog entries here — match document 
 
 Known upstream quirk: the AI106 doc opens by calling itself the "AI022 Harmonic Mixer" — a manufacturer copy-paste error present in our committed copy too, NOT a staleness symptom.
 
-## RYK Modular (6)
+## RYK Modular (14)
 
 - **Site**: www.ryk-modular.com — product pages at `www.ryk-modular.com/product/<name>` (confirmed for time-slice in #280; verify the exact page slugs for the others on the next sweep and fill them in here).
 - **Versioning**: firmware-tied for some products (Time Slice manual is titled by firmware, e.g. `TIME-SLICE-MANUAL_Firmware_V1_2.pdf`), plain doc versions for others (`ALGO-Manual-V1.pdf`, `ENVY-MACHINE-MANUAL-V1_4.pdf`).
@@ -113,6 +113,27 @@ Known upstream quirk: the AI106 doc opens by calling itself the "AI022 Harmonic 
 | ryk-night-rider | ryk-modular.com/product/… (verify) | Night-Rider-Manual.pdf |
 | ryk-time-slice | ryk-modular.com/product/time-slice | TIME-SLICE-MANUAL_Firmware_V1_2.pdf |
 | ryk-vector-wave | ryk-modular.com/product/… (verify) | Vector-Wave-Manual.pdf |
+
+### Kit construction documents (8)
+
+- **Hub**: https://www.ryk-modular.com/kit-construction-documents — a third hub alongside `/user-manuals` (table above) and `/firmware-updates`.
+- **Access quirks**:
+  - Dropbox share links need `dl=1` appended to return the raw PDF; without it you get an HTML preview page that will pass a naive size check.
+  - Two link forms coexist on the same page: the legacy `/s/<token>/<filename>` form and the newer `/scl/fi/<id>/<filename>?rlkey=<key>` form. The `rlkey` is required on the latter.
+  - Versioning is embedded in the filename (`_V2`, `_V1S`, `_V3`, `_MKII_S2`, `V3775`) — there is no version printed in a predictable cover position, so filename comparison is the primary staleness signal for this subsection.
+  - **M185 is keyed to PCB revision, not firmware.** The four M185 documents split main-PCB vs e-panel-PCB and build vs BOM, at revisions `V3.775` and `V3.773`–`V3.774`. A PCB respin means new documents, and the four filenames move independently — treat them as four separate staleness checks.
+- **Firmware exclusion**: the hub page also lists `.uf2` firmware binaries (`Envy_Machine_V1_1.uf2`, `ALGO_RELEASE_V1_2.uf2`, `Night_Rider_V1.02_DIY_Kit.uf2`, `VWave_V1_25_KIT_PRESET_CAL_XRA.uf2`, `VWave_V1_25_PRESET_CAL_MCP.uf2`) — these are **deliberately excluded** from this repo and handled on the main website. A future sweep should not "helpfully" ingest them.
+
+| slug | last known committed file | upstream URL |
+| --- | --- | --- |
+| ryk-algo-diy | ALGO-DIY-KIT-manual_V2.pdf | https://www.dropbox.com/scl/fi/bvnyzquhrq6h20pppgvcd/ALGO-DIY-KIT-manual_V2.pdf?rlkey=ha0mjemk06raa8qdro1ui943t |
+| ryk-envy-diy | ENVY-DIY-KIT-manual_V1S.pdf | https://www.dropbox.com/scl/fi/kn5qzubpom695uib8wwtm/ENVY-DIY-KIT-manual_V1S.pdf?rlkey=kazt7y7ab2jrani4ihbofcubp |
+| ryk-night-rider-diy | NIGHT-RIDER-DIY-KITT-manual_V3.pdf | https://www.dropbox.com/scl/fi/rx5j9b20mdont2rdzwdeb/NIGHT-RIDER-DIY-KITT-manual_V3.pdf?rlkey=00wlk8bbynuoycjj0v78slrl0 |
+| ryk-vector-wave-diy | Vector_Wave_kit DIY manual_MKII_S2.pdf | https://www.dropbox.com/s/4qthr8aa7vzkei6/Vector_Wave_kit%20DIY%20manual_MKII_S2.pdf |
+| ryk-m185-diy-build-main | M185_BUILD_MAIN_PCB_V3775.pdf | https://www.dropbox.com/s/hypghy7x3eornua/M185_BUILD_MAIN_PCB_V3775.pdf |
+| ryk-m185-diy-bom-main | M185_BOM_MAIN_PCB_V3775_REV-1.pdf | https://www.dropbox.com/s/y77sd4vzts49v49/M185_BOM_MAIN_PCB_V3775_REV-1.pdf |
+| ryk-m185-diy-build-panel | M185_BUILD_E-PANEL_PCB_V3773-V3774.pdf | https://www.dropbox.com/s/usra63x3qbfvd83/M185_BUILD_E-PANEL_PCB_V3773-V3774.pdf |
+| ryk-m185-diy-bom-panel | M185_BOM_E-PANEL_PCB_V3774.pdf | https://www.dropbox.com/s/clqjkoldul8hfrk/M185_BOM_E-PANEL_PCB_V3774.pdf |
 
 ## Recovery Effects And Devices (3)
 
