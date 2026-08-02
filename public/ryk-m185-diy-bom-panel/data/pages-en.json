@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-02T09:32:06.340Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "cleanupMethod": "claude-code-subagent",
+    "cleanupModel": "haiku",
+    "cleanedAt": "2026-08-02T09:32:54.525Z"
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ryk-m185-diy-bom-panel/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "RYK M185 SEQUENCER\nBILL OF MATERIALS AND COMPONENT POSITIONS FOR E-PANEL PCB V3.774\n\nIMPORTANT !\n\nPlease check the version number of your PCB matches that of this document.\n\nPlease make sure you follow the build instructions carefully, the order of construction is critical on this PCB.\n\nM185 E-Panel PCB V3.774 component positions",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>RYK M185 SEQUENCER\nBILL OF MATERIALS AND COMPONENT POSITIONS FOR E-PANEL PCB V3.774</p>\n<p>IMPORTANT !</p>\n<p>Please check the version number of your PCB matches that of this document.</p>\n<p>Please make sure you follow the build instructions carefully, the order of construction is critical on this PCB.</p>\n<p>M185 E-Panel PCB V3.774 component positions</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/ryk-m185-diy-bom-panel/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "M185 E-Panel PCB BOM\n\n| Component | Designators |\n| --- | --- |\n| 1N4148 | D1-D26 |\n| 2k2 | R1 |\n| 1k | R2 |\n| 220k | R3,R5,R9,R10,R14,R15,R17,R19,R24,R29,R30 |\n| 33k | R4,R18,R20 |\n| 100k | R6,R7,R13,R23,R27,R28 |\n| 47k | R8,R21,R22 |\n| 68k | R11,R25,R26 |\n| 220r | R12 |\n| 470k | R16,R31,R32 |\n| Black jack socket | JK1,JK2,JK3 |\n| Green jack socket | JK4,JK5,JK6 |\n| 3mm LED R/G | LED1-LED8 |\n| Blue push switch | PBS1,PBS2 |\n| Grey push switch | PBS3 |\n| Red push switch | PBS4 |\n| Rotary 8-way switch | RSW1 |\n| 2x13 Pin female header | SV1,SV2 |\n| 4-way slide switch | SW1-SW3 |\n| Micro 2-way switch | SW4,SW5 |\n| 8-way slide switch | SW_A1-A8 |\n| 8-way slide switch | SW_B1-B8 |\n| 50k Potentiometer marked 503 | VR1,VR2,VR4,VR5,VR6,VR7,VR8,VR9,VR10,VR11 |\n| 1M Potentiometer marked 105 | VR3 |\n\nNote: on the original page, each resistor row also shows a colour-band diagram of that resistor between the value and the designators.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>M185 E-Panel PCB BOM</p>\n<div class=\"table-wrapper\"><table>\n<thead>\n<tr>\n<th>Component</th>\n<th>Designators</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1N4148</td>\n<td>D1-D26</td>\n</tr>\n<tr>\n<td>2k2</td>\n<td>R1</td>\n</tr>\n<tr>\n<td>1k</td>\n<td>R2</td>\n</tr>\n<tr>\n<td>220k</td>\n<td>R3,R5,R9,R10,R14,R15,R17,R19,R24,R29,R30</td>\n</tr>\n<tr>\n<td>33k</td>\n<td>R4,R18,R20</td>\n</tr>\n<tr>\n<td>100k</td>\n<td>R6,R7,R13,R23,R27,R28</td>\n</tr>\n<tr>\n<td>47k</td>\n<td>R8,R21,R22</td>\n</tr>\n<tr>\n<td>68k</td>\n<td>R11,R25,R26</td>\n</tr>\n<tr>\n<td>220r</td>\n<td>R12</td>\n</tr>\n<tr>\n<td>470k</td>\n<td>R16,R31,R32</td>\n</tr>\n<tr>\n<td>Black jack socket</td>\n<td>JK1,JK2,JK3</td>\n</tr>\n<tr>\n<td>Green jack socket</td>\n<td>JK4,JK5,JK6</td>\n</tr>\n<tr>\n<td>3mm LED R/G</td>\n<td>LED1-LED8</td>\n</tr>\n<tr>\n<td>Blue push switch</td>\n<td>PBS1,PBS2</td>\n</tr>\n<tr>\n<td>Grey push switch</td>\n<td>PBS3</td>\n</tr>\n<tr>\n<td>Red push switch</td>\n<td>PBS4</td>\n</tr>\n<tr>\n<td>Rotary 8-way switch</td>\n<td>RSW1</td>\n</tr>\n<tr>\n<td>2x13 Pin female header</td>\n<td>SV1,SV2</td>\n</tr>\n<tr>\n<td>4-way slide switch</td>\n<td>SW1-SW3</td>\n</tr>\n<tr>\n<td>Micro 2-way switch</td>\n<td>SW4,SW5</td>\n</tr>\n<tr>\n<td>8-way slide switch</td>\n<td>SW_A1-A8</td>\n</tr>\n<tr>\n<td>8-way slide switch</td>\n<td>SW_B1-B8</td>\n</tr>\n<tr>\n<td>50k Potentiometer marked 503</td>\n<td>VR1,VR2,VR4,VR5,VR6,VR7,VR8,VR9,VR10,VR11</td>\n</tr>\n<tr>\n<td>1M Potentiometer marked 105</td>\n<td>VR3</td>\n</tr>\n</tbody>\n</table></div>\n<p>Note: on the original page, each resistor row also shows a colour-band diagram of that resistor between the value and the designators.</p>"
+    }
+  ]
+}
