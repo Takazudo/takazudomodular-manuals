@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-02T09:41:09.111Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/ryk-m185-diy-bom-main/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "RYK M185 SEQUENCER\n\nメインPCB V3.775 用 部品表および部品配置\n\n重要！\n\nお使いのPCBのバージョン番号が本書のバージョンと一致していることを必ずご確認ください。\n組み立て手順には注意深く従ってください。\n\nM185 Main PCB V3.775 の部品配置図",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>RYK M185 SEQUENCER</p>\n<p>メインPCB V3.775 用 部品表および部品配置</p>\n<p>重要！</p>\n<p>お使いのPCBのバージョン番号が本書のバージョンと一致していることを必ずご確認ください。\n組み立て手順には注意深く従ってください。</p>\n<p>M185 Main PCB V3.775 の部品配置図</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/ryk-m185-diy-bom-main/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "M185 Main PCB BOM\n\n| 部品 | 表示 | リファレンス記号 |\n| --- | --- | --- |\n| 20k Trimmer |  | VR1,VR2 |\n| 2x13 Pin Header Male |  | X1,X2 |\n| 2x10 pin power header |  | SV1 |\n| 100nF ceramic | 104 | C1,C3,C5,C9,C10,C11 |\n| 10uF or 22uF | 10uF | C2,C4,C6,C17 |\n| 1nF ceramic | 102 | C7,C14 |\n| 100nF poly | 1k100 or 104J | C8,C13 |\n| 1nF poly | 1n or 102J | C12,C15 |\n| 100pF | 101 | C16,C18 |\n| 1N4148 |  | D1,D3,D4,D5 |\n| 1N5819 |  | D2,D6 |\n| 78L05 | 78L05 | IC1 |\n| 26 Pin DIL IC |  | IC2 |\n| TL074P |  | IC3 |\n| 74HC595N |  | IC4 |\n| TLC5916 or TLC5917 |  | IC5,IC6 |\n| TL072P |  | IC7 |\n| 4066N |  | IC8 |\n| 6N137 |  | IC9 |\n| 78M05 | 78M05 | IC100 |\n| BC547 | BC547 | Q1,Q3,Q4,Q5,Q6,Q7 |\n| BC557 | BC557 | Q2 |\n| 10k |  | R10,R14,R18,R19,R24,R32,R33,R42,R43 |\n| 100k |  | R2,R3,R4,R6,R7,R8,R13,R25 |\n| 47k |  | R39 |\n| 1k |  | R1,R11,R12,R15,R16,R17,R20,R21,R22,R23,R35,R38 |\n| 220r |  | R9 |\n| 560r |  | R26,R40 |\n| 12k |  | R27 |\n| 120k |  | R28,R34 |\n| 2k2 |  | R29,R37 |\n| 3k3 |  | R30,R36 |\n| 1k5 |  | R31 |",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>M185 Main PCB BOM</p>\n<div class=\"table-wrapper\"><table>\n<thead>\n<tr>\n<th>部品</th>\n<th>表示</th>\n<th>リファレンス記号</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>20k Trimmer</td>\n<td></td>\n<td>VR1,VR2</td>\n</tr>\n<tr>\n<td>2x13 Pin Header Male</td>\n<td></td>\n<td>X1,X2</td>\n</tr>\n<tr>\n<td>2x10 pin power header</td>\n<td></td>\n<td>SV1</td>\n</tr>\n<tr>\n<td>100nF ceramic</td>\n<td>104</td>\n<td>C1,C3,C5,C9,C10,C11</td>\n</tr>\n<tr>\n<td>10uF or 22uF</td>\n<td>10uF</td>\n<td>C2,C4,C6,C17</td>\n</tr>\n<tr>\n<td>1nF ceramic</td>\n<td>102</td>\n<td>C7,C14</td>\n</tr>\n<tr>\n<td>100nF poly</td>\n<td>1k100 or 104J</td>\n<td>C8,C13</td>\n</tr>\n<tr>\n<td>1nF poly</td>\n<td>1n or 102J</td>\n<td>C12,C15</td>\n</tr>\n<tr>\n<td>100pF</td>\n<td>101</td>\n<td>C16,C18</td>\n</tr>\n<tr>\n<td>1N4148</td>\n<td></td>\n<td>D1,D3,D4,D5</td>\n</tr>\n<tr>\n<td>1N5819</td>\n<td></td>\n<td>D2,D6</td>\n</tr>\n<tr>\n<td>78L05</td>\n<td>78L05</td>\n<td>IC1</td>\n</tr>\n<tr>\n<td>26 Pin DIL IC</td>\n<td></td>\n<td>IC2</td>\n</tr>\n<tr>\n<td>TL074P</td>\n<td></td>\n<td>IC3</td>\n</tr>\n<tr>\n<td>74HC595N</td>\n<td></td>\n<td>IC4</td>\n</tr>\n<tr>\n<td>TLC5916 or TLC5917</td>\n<td></td>\n<td>IC5,IC6</td>\n</tr>\n<tr>\n<td>TL072P</td>\n<td></td>\n<td>IC7</td>\n</tr>\n<tr>\n<td>4066N</td>\n<td></td>\n<td>IC8</td>\n</tr>\n<tr>\n<td>6N137</td>\n<td></td>\n<td>IC9</td>\n</tr>\n<tr>\n<td>78M05</td>\n<td>78M05</td>\n<td>IC100</td>\n</tr>\n<tr>\n<td>BC547</td>\n<td>BC547</td>\n<td>Q1,Q3,Q4,Q5,Q6,Q7</td>\n</tr>\n<tr>\n<td>BC557</td>\n<td>BC557</td>\n<td>Q2</td>\n</tr>\n<tr>\n<td>10k</td>\n<td></td>\n<td>R10,R14,R18,R19,R24,R32,R33,R42,R43</td>\n</tr>\n<tr>\n<td>100k</td>\n<td></td>\n<td>R2,R3,R4,R6,R7,R8,R13,R25</td>\n</tr>\n<tr>\n<td>47k</td>\n<td></td>\n<td>R39</td>\n</tr>\n<tr>\n<td>1k</td>\n<td></td>\n<td>R1,R11,R12,R15,R16,R17,R20,R21,R22,R23,R35,R38</td>\n</tr>\n<tr>\n<td>220r</td>\n<td></td>\n<td>R9</td>\n</tr>\n<tr>\n<td>560r</td>\n<td></td>\n<td>R26,R40</td>\n</tr>\n<tr>\n<td>12k</td>\n<td></td>\n<td>R27</td>\n</tr>\n<tr>\n<td>120k</td>\n<td></td>\n<td>R28,R34</td>\n</tr>\n<tr>\n<td>2k2</td>\n<td></td>\n<td>R29,R37</td>\n</tr>\n<tr>\n<td>3k3</td>\n<td></td>\n<td>R30,R36</td>\n</tr>\n<tr>\n<td>1k5</td>\n<td></td>\n<td>R31</td>\n</tr>\n</tbody>\n</table></div>"
+    }
+  ]
+}
