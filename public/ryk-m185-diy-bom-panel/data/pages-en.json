@@ -1,13 +1,10 @@
 {
   "metadata": {
-    "processedAt": "2026-08-02T09:32:06.340Z",
+    "processedAt": "2026-08-02T09:43:47.818Z",
     "language": "en",
     "extractionMethod": "pdf-parse",
     "imageFormat": "png",
-    "imageDPI": 300,
-    "cleanupMethod": "claude-code-subagent",
-    "cleanupModel": "haiku",
-    "cleanedAt": "2026-08-02T09:32:54.525Z"
+    "imageDPI": 300
   },
   "pages": [
     {
