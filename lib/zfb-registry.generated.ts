@@ -58,23 +58,31 @@ import m36 from '@/public/recovery-cutting-room-floor-v3/data/manifest.json';
 import m37 from '@/public/recovery-motion-pictures/data/manifest.json';
 import m38 from '@/public/recovery-mystic/data/manifest.json';
 import m39 from '@/public/ryk-algo/data/manifest.json';
-import m40 from '@/public/ryk-envy/data/manifest.json';
-import m41 from '@/public/ryk-m185/data/manifest.json';
-import m42 from '@/public/ryk-night-rider/data/manifest.json';
-import m43 from '@/public/ryk-time-slice/data/manifest.json';
-import m44 from '@/public/ryk-vector-wave/data/manifest.json';
-import m45 from '@/public/shik-n32b-slim/data/manifest.json';
-import m46 from '@/public/weston-2v2/data/manifest.json';
-import m47 from '@/public/weston-h1/data/manifest.json';
-import m48 from '@/public/weston-hv1/data/manifest.json';
-import m49 from '@/public/weston-m3s/data/manifest.json';
-import m50 from '@/public/weston-pa0/data/manifest.json';
-import m51 from '@/public/weston-se1/data/manifest.json';
-import m52 from '@/public/weston-sf1/data/manifest.json';
-import m53 from '@/public/weston-sv1/data/manifest.json';
-import m54 from '@/public/weston-trivium/data/manifest.json';
-import m55 from '@/public/weston-tz0/data/manifest.json';
-import m56 from '@/public/wingie2/data/manifest.json';
+import m40 from '@/public/ryk-algo-diy/data/manifest.json';
+import m41 from '@/public/ryk-envy/data/manifest.json';
+import m42 from '@/public/ryk-envy-diy/data/manifest.json';
+import m43 from '@/public/ryk-m185/data/manifest.json';
+import m44 from '@/public/ryk-m185-diy-bom-main/data/manifest.json';
+import m45 from '@/public/ryk-m185-diy-bom-panel/data/manifest.json';
+import m46 from '@/public/ryk-m185-diy-build-main/data/manifest.json';
+import m47 from '@/public/ryk-m185-diy-build-panel/data/manifest.json';
+import m48 from '@/public/ryk-night-rider/data/manifest.json';
+import m49 from '@/public/ryk-night-rider-diy/data/manifest.json';
+import m50 from '@/public/ryk-time-slice/data/manifest.json';
+import m51 from '@/public/ryk-vector-wave/data/manifest.json';
+import m52 from '@/public/ryk-vector-wave-diy/data/manifest.json';
+import m53 from '@/public/shik-n32b-slim/data/manifest.json';
+import m54 from '@/public/weston-2v2/data/manifest.json';
+import m55 from '@/public/weston-h1/data/manifest.json';
+import m56 from '@/public/weston-hv1/data/manifest.json';
+import m57 from '@/public/weston-m3s/data/manifest.json';
+import m58 from '@/public/weston-pa0/data/manifest.json';
+import m59 from '@/public/weston-se1/data/manifest.json';
+import m60 from '@/public/weston-sf1/data/manifest.json';
+import m61 from '@/public/weston-sv1/data/manifest.json';
+import m62 from '@/public/weston-trivium/data/manifest.json';
+import m63 from '@/public/weston-tz0/data/manifest.json';
+import m64 from '@/public/wingie2/data/manifest.json';
 
 // ── pages-ja.json (~4MB total) ─────────────────────────────────────────────
 import p0 from '@/public/4ms-leqa/data/pages-ja.json';
@@ -117,23 +125,31 @@ import p36 from '@/public/recovery-cutting-room-floor-v3/data/pages-ja.json';
 import p37 from '@/public/recovery-motion-pictures/data/pages-ja.json';
 import p38 from '@/public/recovery-mystic/data/pages-ja.json';
 import p39 from '@/public/ryk-algo/data/pages-ja.json';
-import p40 from '@/public/ryk-envy/data/pages-ja.json';
-import p41 from '@/public/ryk-m185/data/pages-ja.json';
-import p42 from '@/public/ryk-night-rider/data/pages-ja.json';
-import p43 from '@/public/ryk-time-slice/data/pages-ja.json';
-import p44 from '@/public/ryk-vector-wave/data/pages-ja.json';
-import p45 from '@/public/shik-n32b-slim/data/pages-ja.json';
-import p46 from '@/public/weston-2v2/data/pages-ja.json';
-import p47 from '@/public/weston-h1/data/pages-ja.json';
-import p48 from '@/public/weston-hv1/data/pages-ja.json';
-import p49 from '@/public/weston-m3s/data/pages-ja.json';
-import p50 from '@/public/weston-pa0/data/pages-ja.json';
-import p51 from '@/public/weston-se1/data/pages-ja.json';
-import p52 from '@/public/weston-sf1/data/pages-ja.json';
-import p53 from '@/public/weston-sv1/data/pages-ja.json';
-import p54 from '@/public/weston-trivium/data/pages-ja.json';
-import p55 from '@/public/weston-tz0/data/pages-ja.json';
-import p56 from '@/public/wingie2/data/pages-ja.json';
+import p40 from '@/public/ryk-algo-diy/data/pages-ja.json';
+import p41 from '@/public/ryk-envy/data/pages-ja.json';
+import p42 from '@/public/ryk-envy-diy/data/pages-ja.json';
+import p43 from '@/public/ryk-m185/data/pages-ja.json';
+import p44 from '@/public/ryk-m185-diy-bom-main/data/pages-ja.json';
+import p45 from '@/public/ryk-m185-diy-bom-panel/data/pages-ja.json';
+import p46 from '@/public/ryk-m185-diy-build-main/data/pages-ja.json';
+import p47 from '@/public/ryk-m185-diy-build-panel/data/pages-ja.json';
+import p48 from '@/public/ryk-night-rider/data/pages-ja.json';
+import p49 from '@/public/ryk-night-rider-diy/data/pages-ja.json';
+import p50 from '@/public/ryk-time-slice/data/pages-ja.json';
+import p51 from '@/public/ryk-vector-wave/data/pages-ja.json';
+import p52 from '@/public/ryk-vector-wave-diy/data/pages-ja.json';
+import p53 from '@/public/shik-n32b-slim/data/pages-ja.json';
+import p54 from '@/public/weston-2v2/data/pages-ja.json';
+import p55 from '@/public/weston-h1/data/pages-ja.json';
+import p56 from '@/public/weston-hv1/data/pages-ja.json';
+import p57 from '@/public/weston-m3s/data/pages-ja.json';
+import p58 from '@/public/weston-pa0/data/pages-ja.json';
+import p59 from '@/public/weston-se1/data/pages-ja.json';
+import p60 from '@/public/weston-sf1/data/pages-ja.json';
+import p61 from '@/public/weston-sv1/data/pages-ja.json';
+import p62 from '@/public/weston-trivium/data/pages-ja.json';
+import p63 from '@/public/weston-tz0/data/pages-ja.json';
+import p64 from '@/public/wingie2/data/pages-ja.json';
 
 export const REGISTRY: Record<string, RegistryEntry> = {
   '4ms-leqa': {
@@ -296,72 +312,104 @@ export const REGISTRY: Record<string, RegistryEntry> = {
     manifest: m39 as unknown as ManualManifest,
     pagesJa: p39 as unknown as ManualPagesData,
   },
-  'ryk-envy': {
+  'ryk-algo-diy': {
     manifest: m40 as unknown as ManualManifest,
     pagesJa: p40 as unknown as ManualPagesData,
   },
-  'ryk-m185': {
+  'ryk-envy': {
     manifest: m41 as unknown as ManualManifest,
     pagesJa: p41 as unknown as ManualPagesData,
   },
-  'ryk-night-rider': {
+  'ryk-envy-diy': {
     manifest: m42 as unknown as ManualManifest,
     pagesJa: p42 as unknown as ManualPagesData,
   },
-  'ryk-time-slice': {
+  'ryk-m185': {
     manifest: m43 as unknown as ManualManifest,
     pagesJa: p43 as unknown as ManualPagesData,
   },
-  'ryk-vector-wave': {
+  'ryk-m185-diy-bom-main': {
     manifest: m44 as unknown as ManualManifest,
     pagesJa: p44 as unknown as ManualPagesData,
   },
-  'shik-n32b-slim': {
+  'ryk-m185-diy-bom-panel': {
     manifest: m45 as unknown as ManualManifest,
     pagesJa: p45 as unknown as ManualPagesData,
   },
-  'weston-2v2': {
+  'ryk-m185-diy-build-main': {
     manifest: m46 as unknown as ManualManifest,
     pagesJa: p46 as unknown as ManualPagesData,
   },
-  'weston-h1': {
+  'ryk-m185-diy-build-panel': {
     manifest: m47 as unknown as ManualManifest,
     pagesJa: p47 as unknown as ManualPagesData,
   },
-  'weston-hv1': {
+  'ryk-night-rider': {
     manifest: m48 as unknown as ManualManifest,
     pagesJa: p48 as unknown as ManualPagesData,
   },
-  'weston-m3s': {
+  'ryk-night-rider-diy': {
     manifest: m49 as unknown as ManualManifest,
     pagesJa: p49 as unknown as ManualPagesData,
   },
-  'weston-pa0': {
+  'ryk-time-slice': {
     manifest: m50 as unknown as ManualManifest,
     pagesJa: p50 as unknown as ManualPagesData,
   },
-  'weston-se1': {
+  'ryk-vector-wave': {
     manifest: m51 as unknown as ManualManifest,
     pagesJa: p51 as unknown as ManualPagesData,
   },
-  'weston-sf1': {
+  'ryk-vector-wave-diy': {
     manifest: m52 as unknown as ManualManifest,
     pagesJa: p52 as unknown as ManualPagesData,
   },
-  'weston-sv1': {
+  'shik-n32b-slim': {
     manifest: m53 as unknown as ManualManifest,
     pagesJa: p53 as unknown as ManualPagesData,
   },
-  'weston-trivium': {
+  'weston-2v2': {
     manifest: m54 as unknown as ManualManifest,
     pagesJa: p54 as unknown as ManualPagesData,
   },
-  'weston-tz0': {
+  'weston-h1': {
     manifest: m55 as unknown as ManualManifest,
     pagesJa: p55 as unknown as ManualPagesData,
   },
-  wingie2: {
+  'weston-hv1': {
     manifest: m56 as unknown as ManualManifest,
     pagesJa: p56 as unknown as ManualPagesData,
+  },
+  'weston-m3s': {
+    manifest: m57 as unknown as ManualManifest,
+    pagesJa: p57 as unknown as ManualPagesData,
+  },
+  'weston-pa0': {
+    manifest: m58 as unknown as ManualManifest,
+    pagesJa: p58 as unknown as ManualPagesData,
+  },
+  'weston-se1': {
+    manifest: m59 as unknown as ManualManifest,
+    pagesJa: p59 as unknown as ManualPagesData,
+  },
+  'weston-sf1': {
+    manifest: m60 as unknown as ManualManifest,
+    pagesJa: p60 as unknown as ManualPagesData,
+  },
+  'weston-sv1': {
+    manifest: m61 as unknown as ManualManifest,
+    pagesJa: p61 as unknown as ManualPagesData,
+  },
+  'weston-trivium': {
+    manifest: m62 as unknown as ManualManifest,
+    pagesJa: p62 as unknown as ManualPagesData,
+  },
+  'weston-tz0': {
+    manifest: m63 as unknown as ManualManifest,
+    pagesJa: p63 as unknown as ManualPagesData,
+  },
+  wingie2: {
+    manifest: m64 as unknown as ManualManifest,
+    pagesJa: p64 as unknown as ManualPagesData,
   },
 };
