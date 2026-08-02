@@ -1,0 +1,18 @@
+{
+  "title": "M185: DIY E-Panel PCB Bill of Materials",
+  "brand": "RYK Modular",
+  "productSlug": "ryk-m185-diy",
+  "updatedAt": "20260802",
+  "version": "1.0.0",
+  "totalPages": 2,
+  "contentPages": 2,
+  "lastUpdated": "2026-08-02T09:32:55.706Z",
+  "source": {
+    "filename": "M185_BOM_E-PANEL_PCB_V3774.pdf",
+    "processedAt": "2026-08-02T09:32:06.340Z",
+    "imageDPI": 300,
+    "imageFormat": "png"
+  },
+  "hasEnglish": true,
+  "searchIndexVersion": "4839af3e12a7d9ad008d881fb60e2b01947c3227"
+}

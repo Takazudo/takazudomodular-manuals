@@ -1,0 +1,18 @@
+{
+  "title": "M185: DIY Main PCB Bill of Materials",
+  "version": "1.0.0",
+  "totalPages": 2,
+  "contentPages": 2,
+  "lastUpdated": "2026-08-02T09:29:16.433Z",
+  "source": {
+    "filename": "M185_BOM_MAIN_PCB_V3775_REV-1.pdf",
+    "processedAt": "2026-08-02T09:28:53.555Z",
+    "imageDPI": 300,
+    "imageFormat": "png"
+  },
+  "hasEnglish": true,
+  "searchIndexVersion": "6da6f8608c4bcc955fa23204a707a52e6e8d1f73",
+  "brand": "RYK Modular",
+  "productSlug": "ryk-m185-diy",
+  "updatedAt": "20260802"
+}

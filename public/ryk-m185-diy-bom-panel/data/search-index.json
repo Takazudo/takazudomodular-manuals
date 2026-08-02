@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "pageNum": 1,
+    "title": "Page 1",
+    "sectionName": null,
+    "body": "RYK M185 SEQUENCER E-Panel PCB V3.774 部品表・部品配置図 重要！ お使いのPCBのバージョン番号が、本書に記載されているバージョン番号と一致していることを必ず確認してください。 組み立て手順には必ず注意深く従ってください。このPCBでは、組み立ての順序が極めて重要です。 M185 E-Panel PCB V3.774 部品配置図",
+    "url": "/ryk-m185-diy-bom-panel/page/1"
+  },
+  {
+    "id": "2",
+    "pageNum": 2,
+    "title": "Page 2",
+    "sectionName": null,
+    "body": "M185 E-Panel PCB BOM | 部品 | 回路記号 | | --- | --- | | 1N4148 | D1-D26 | | 2k2 | R1 | | 1k | R2 | | 220k | R3,R5,R9,R10,R14,R15,R17,R19,R24,R29,R30 | | 33k | R4,R18,R20 | | 100k | R6,R7,R13,R23,R27,R28 | | 47k | R8,R21,R22 | | 68k | R11,R25,R26 | | 220r | R12 | | 470k | R16,R31,R32 | | Black jack socket | JK1,JK2,JK3 | | Green jack socket | JK4,JK5,JK6 | | 3mm LED R/G | LED1-LED8 | | Blue push switch | PBS1,PBS2 | | Grey push switch | PBS3 | | Red push switch | PBS4 | | Rotary 8-way switch | RSW1 |",
+    "url": "/ryk-m185-diy-bom-panel/page/2"
+  }
+]
