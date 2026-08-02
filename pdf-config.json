@@ -12,6 +12,30 @@
     },
     "ryk-night-rider": {
       "renderStrategy": "browser"
+    },
+    "ryk-algo-diy": {
+      "renderStrategy": "browser"
+    },
+    "ryk-envy-diy": {
+      "renderStrategy": "browser"
+    },
+    "ryk-night-rider-diy": {
+      "renderStrategy": "browser"
+    },
+    "ryk-vector-wave-diy": {
+      "renderStrategy": "browser"
+    },
+    "ryk-m185-diy-build-main": {
+      "renderStrategy": "browser"
+    },
+    "ryk-m185-diy-bom-main": {
+      "renderStrategy": "browser"
+    },
+    "ryk-m185-diy-build-panel": {
+      "renderStrategy": "browser"
+    },
+    "ryk-m185-diy-bom-panel": {
+      "renderStrategy": "browser"
     }
   }
 }
