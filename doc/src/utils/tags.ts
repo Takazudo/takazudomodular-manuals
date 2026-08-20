@@ -42,8 +42,7 @@ export function resolveTag(raw: string) {
 
 /**
  * Resolve a list of raw tag strings (e.g. from frontmatter) to canonical ids,
- * dropping deprecated-without-redirect entries and preserving order. Duplicates
- * produced by alias collapse are removed.
+ * preserving order and removing duplicates.
  */
 export function resolvePageTags(rawTags: readonly string[]): string[] {
   return _resolvePageTags(rawTags, getVocab(), settings.tagGovernance);
@@ -57,12 +56,11 @@ export function collectTags(
 
   for (const entry of entries) {
     const rawTags = entry.data.tags ?? [];
-    const slug = slugFn(entry.id, entry.data);
+    const slug = slugFn(entry.id ?? entry.slug, entry.data);
 
     const seen = new Set<string>();
     for (const raw of rawTags) {
       const resolved = resolveTag(raw);
-      if (resolved.deprecated) continue;
       if (seen.has(resolved.canonical)) continue;
       seen.add(resolved.canonical);
 

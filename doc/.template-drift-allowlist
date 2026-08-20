@@ -41,6 +41,7 @@ scripts/run-b4push.sh
 pages/_data.ts
 pages/_mdx-components.ts
 pages/index.tsx
+pages/docs/[[...slug]].tsx
 pages/lib/_body-end-islands.tsx
 pages/lib/_category-nav.tsx
 pages/lib/_category-tree-nav.tsx
@@ -73,9 +74,9 @@ pages/lib/_sidebar-prepaint.tsx
 pages/lib/_sidebar-with-defaults.tsx
 pages/lib/_site-tree-nav.tsx
 pages/lib/_toc-title.ts
-pages/lib/doc-page-props.ts
-pages/lib/locale-merge.ts
-pages/lib/route-enumerators.ts
+pages/lib/_doc-page-props.ts
+pages/lib/_locale-merge.ts
+pages/lib/_route-enumerators.ts
 src/components/ai-chat-modal.tsx
 src/components/content/code-group.tsx
 src/components/content/content-admonition.tsx
@@ -114,5 +115,5 @@ src/utils/sidebar.ts
 src/utils/slug.ts
 src/utils/smart-break.tsx
 src/utils/tags.ts
+scripts/check-links.js
 tsconfig.json
-zfb-shim.d.ts

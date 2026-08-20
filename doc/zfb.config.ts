@@ -1,5 +1,5 @@
-import { defineConfig } from 'zfb/config';
-import { zudoDocPreset } from '@takazudo/zudo-doc/preset';
+import { defineConfig } from '@takazudo/zfb/config';
+import { zudoDoc } from '@takazudo/zudo-doc/config';
 import { settings } from './src/config/settings';
 import { buildDocsSchema } from './src/config/docs-schema';
 import { translations } from './src/config/i18n';
@@ -15,16 +15,59 @@ const directiveVocabulary = {
   details: 'Details',
 };
 
-export default defineConfig({
-  // ── Host-owned shell fields ──────────────────────────────────────────────
-  framework: 'preact',
-  // Pin the dev/preview port — zfb defaults to 3000, but the generated
-  // CLAUDE.md and the Tauri dev wrappers assume 4321.
-  port: 4321,
-  tailwind: { enabled: true },
-  // Public URL prefix for <link rel="stylesheet"> and <script> tags.
-  base: settings.base,
-
-  // ── Preset-owned fields (content collections, plugins, markdown, …) ────────
-  ...zudoDocPreset({ settings, buildDocsSchema, directiveVocabulary, translations, colorSchemes }),
-});
+export default defineConfig(
+  zudoDoc({
+    colorScheme: settings.colorScheme,
+    colorMode: settings.colorMode,
+    siteName: settings.siteName,
+    siteDescription: settings.siteDescription,
+    logo: false,
+    base: '/',
+    trailingSlash: false,
+    docsDir: 'src/content/docs',
+    defaultLocale: settings.defaultLocale,
+    locales: {},
+    mermaid: settings.mermaid,
+    noindex: settings.noindex,
+    editUrl: settings.editUrl,
+    githubUrl: settings.githubUrl,
+    siteUrl: settings.siteUrl,
+    metaTags: settings.metaTags,
+    sitemap: settings.sitemap,
+    docMetainfo: settings.docMetainfo,
+    docTags: settings.docTags,
+    tagPlacement: settings.tagPlacement,
+    tagGovernance: settings.tagGovernance,
+    tagVocabulary: settings.tagVocabulary,
+    frontmatterPreview: settings.frontmatterPreview,
+    llmsTxt: settings.llmsTxt,
+    math: settings.math,
+    cjkFriendly: settings.cjkFriendly,
+    onBrokenMarkdownLinks: settings.onBrokenMarkdownLinks,
+    aiAssistant: settings.aiAssistant,
+    aiChatDemoMode: settings.aiChatDemoMode,
+    aiChatAllowedOrigins: settings.aiChatAllowedOrigins,
+    aiChatGlobalDailyLimit: settings.aiChatGlobalDailyLimit,
+    docHistory: settings.docHistory,
+    bodyFootUtilArea: settings.bodyFootUtilArea,
+    designTokenPanel: settings.designTokenPanel,
+    tocMinDepth: settings.tocMinDepth,
+    tocMaxDepth: settings.tocMaxDepth,
+    sidebarResizer: settings.sidebarResizer,
+    sidebarToggle: settings.sidebarToggle,
+    imageEnlarge: settings.imageEnlarge,
+    dynamicPageTransition: settings.dynamicPageTransition,
+    htmlPreview: settings.htmlPreview,
+    versions: settings.versions,
+    claudeResources: settings.claudeResources,
+    defaultLocaleOnlyPrefixes: settings.defaultLocaleOnlyPrefixes,
+    footer: settings.footer,
+    headerNav: settings.headerNav,
+    headerRightItems: settings.headerRightItems,
+    packageOwnedRoutes: settings.packageOwnedRoutes,
+    buildDocsSchema: buildDocsSchema,
+    colorSchemes: colorSchemes,
+    translations: translations,
+    directives: directiveVocabulary,
+  }),
+);

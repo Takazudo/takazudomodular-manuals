@@ -4,7 +4,7 @@ zudo-doc documentation system configuration. For project-wide instructions, see 
 
 ## Overview
 
-Project documentation lives in `doc/` and is built with **zudo-doc 1.2.0** — a documentation framework built on zfb (Preact islands), MDX, and Tailwind CSS v4.
+Project documentation lives in `doc/` and is built with **zudo-doc 5.8.0** — a documentation framework built on zfb (Preact islands), MDX, and Tailwind CSS v4.
 
 As of the 1.2.0 migration, `doc/` is a **single-package consumer** of `@takazudo/zudo-doc`. All pages, layouts, components, and utilities come from the package — there are no local `pages/lib/*` or `src/components/*` forks. Only project-specific config and content live in `doc/`.
 
