@@ -11,11 +11,12 @@
  */
 
 export {
-  type ColorRef,
   type ColorScheme,
-  SEMANTIC_DEFAULTS,
+  type RampRef,
+  type Ramps,
+  SEMANTIC_RAMP_DEFAULTS,
   SEMANTIC_CSS_NAMES,
-  resolveColor,
+  resolveRampRef,
   resolveSemanticColors,
   schemeToCssPairs,
   generateCssCustomProperties as generateCssCustomPropertiesFromScheme,

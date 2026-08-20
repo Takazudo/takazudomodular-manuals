@@ -107,7 +107,7 @@ function navTreeCacheKey(
         category_sort_order,
       } = d.data;
       return JSON.stringify([
-        d.id,
+        d.id ?? d.slug,
         sidebar_position,
         sidebar_label,
         title,
@@ -184,13 +184,9 @@ export function buildNavTree(
   }
 
   const sidebarTree = buildSidebarTree(
-    // Pass `{ id, data }` only — NOT the whole entry. zfb entries carry the
-    // raw, un-index-stripped engine slug on the top-level `slug` field
-    // (e.g. "getting-started/index"), and the shared builder prefers
-    // `entry.slug` over the id-derived form; forwarding it would mint wrong
-    // node paths. Omitting it reproduces the legacy host derivation
-    // `data.slug ?? toRouteSlug(id)` (ids arrive pre-stripped via _data.ts).
-    docs.map((d) => ({ id: d.id, data: d.data })),
+    // The package builder now requires the native zfb `slug` shape. Feed it
+    // the already-normalized host id so nested `/index` suffixes stay stripped.
+    docs.map((d) => ({ slug: d.id ?? d.slug, data: d.data })),
     lang,
     {
       categoryMeta,
@@ -236,7 +232,7 @@ export function buildNavTree(
 function findRootIndexDoc(docs: DocsEntry[]): DocsEntry | undefined {
   let found: DocsEntry | undefined;
   for (const d of docs) {
-    const slug = d.data.slug ?? d.id.replace(/\/index$/, '');
+    const slug = d.data.slug ?? (d.id ?? d.slug).replace(/\/index$/, '');
     if (slug === '') found = d;
   }
   return found;

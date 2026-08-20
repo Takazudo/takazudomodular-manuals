@@ -19,7 +19,7 @@ import { toRouteSlug } from '@/utils/slug';
 import type { DocsEntry } from '@/types/docs-entry';
 import { loadDocs } from '../_data';
 import { resolveNavSource, resolveVersionedLocaleSource } from './_nav-source-docs';
-import { mergeLocaleDocs } from './locale-merge';
+import { mergeLocaleDocs } from './_locale-merge';
 
 export const {
   enumerateDocsRoutes,

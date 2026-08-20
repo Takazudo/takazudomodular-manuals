@@ -16,7 +16,6 @@ import { settings } from '@/config/settings';
 import { defaultLocale, t } from '@/config/i18n';
 import { withBase } from '@/utils/base';
 import { buildNavTree, groupSatelliteNodes } from '@/utils/docs';
-import { resolveNavSource } from './lib/_nav-source-docs';
 import { getCategoryOrder } from '@/utils/nav-scope';
 import { collectTags } from '@/utils/tags';
 import { toRouteSlug } from '@/utils/slug';
@@ -25,11 +24,24 @@ import type { JSX } from 'preact';
 import type { VNode } from 'preact';
 import { Island } from '@takazudo/zfb';
 import { SiteTreeNav } from '@takazudo/zudo-doc/site-tree-nav-island';
-import { FooterWithDefaults } from './lib/_footer-with-defaults';
-import { HeaderWithDefaults } from './lib/_header-with-defaults';
-import { HeadWithDefaults } from './lib/_head-with-defaults';
-import { composeMetaTitle } from './lib/_compose-meta-title';
-import { BodyEndIslands } from './lib/_body-end-islands';
+import { routeContext } from 'virtual:zudo-doc-route-context';
+import { createRouteContext, type RouteContextPayload } from '@takazudo/zudo-doc/route-context';
+import { createChrome } from '@takazudo/zudo-doc/chrome';
+import { defineChromeBindings } from '@takazudo/zudo-doc/chrome-bindings';
+import { DocHistory } from '@takazudo/zudo-doc/doc-history';
+import { chromeBindings } from 'virtual:zudo-doc-chrome-bindings';
+
+const routeCtx = createRouteContext(routeContext as unknown as RouteContextPayload);
+const {
+  FooterWithDefaults,
+  HeaderWithDefaults,
+  HeadWithDefaults,
+  composeMetaTitle,
+  BodyEndIslands,
+} = createChrome(routeCtx, {
+  ...chromeBindings,
+  ...defineChromeBindings({ DocHistory }),
+});
 
 export const frontmatter = { title: 'Home' };
 
@@ -38,7 +50,7 @@ export default function IndexPage(): JSX.Element {
 
   // Identity-stable nav source (draft-filtered, unlisted retained). navDocs is
   // pre-filtered (isNavVisible) and shared with the nav-tree fast-path.
-  const { navDocs, categoryMeta } = resolveNavSource(locale, undefined);
+  const { navDocs, categoryMeta } = routeCtx.resolveNavSource(locale, undefined);
   const tree = buildNavTree(navDocs, locale, categoryMeta);
   const categoryOrder = getCategoryOrder();
   const groupedTree = groupSatelliteNodes(tree, categoryOrder);

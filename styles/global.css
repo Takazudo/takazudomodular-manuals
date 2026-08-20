@@ -17,8 +17,8 @@
 /* zfb's build only bundles the first CSS entry it sees (layouts/default.tsx's
    second `import '../styles/prose.css'` is dropped), so prose.css must be
    inlined here for .zd-prose rules to reach the emitted stylesheet.
-   Path is repo-root-relative: zfb's CSS engine resolves @import from cwd. */
-@import './styles/prose.css';
+   The CSS engine resolves imports relative to this stylesheet. */
+@import './prose.css';
 
 /* ══════════════════════════════════════════════════════════════════════
    Tier 1 — Palette (raw values)
