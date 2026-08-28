@@ -1,0 +1,191 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-28T07:01:14.844Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac701-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": [],
+      "contentHtml": ""
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac701-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "必要な工具：\n\nオシロスコープ\nワイヤーカッター\nプライヤー\nプラスドライバー",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>必要な工具：</p>\n<p>オシロスコープ\nワイヤーカッター\nプライヤー\nプラスドライバー</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac701-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "ステップ1：\n\nPCBを切り離して下側のPCBを取り出し、7805レギュレーターと2個のコンデンサーも用意します。\n\n下図のように配置し、はんだ付けします。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ1：</p>\n<p>PCBを切り離して下側のPCBを取り出し、7805レギュレーターと2個のコンデンサーも用意します。</p>\n<p>下図のように配置し、はんだ付けします。</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac701-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "79L05\n10k\n20k\n78L10\n\nステップ3:\n\n次に、スルーホール型コンデンサー、10kと20kの2個のトリマー（103および203と表示）、および2個のスルーホール型電圧レギュレーターを見つけます。\n\n下図のように配置し、はんだ付けしてください。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>79L05\n10k\n20k\n78L10</p>\n<p>ステップ3:</p>\n<p>次に、スルーホール型コンデンサー、10kと20kの2個のトリマー（103および203と表示）、および2個のスルーホール型電圧レギュレーターを見つけます。</p>\n<p>下図のように配置し、はんだ付けしてください。</p>"
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac701-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "ステップ6：\n\nオスのピンヘッダーを用意し、下図のように配置してはんだ付けします。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ6：</p>\n<p>オスのピンヘッダーを用意し、下図のように配置してはんだ付けします。</p>"
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac701-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "ステップ8：\n\n電源コネクターを用意し、下図のように配置してはんだ付けします。切り欠きが右側を向いていることを確認してください。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ8：</p>\n<p>電源コネクターを用意し、下図のように配置してはんだ付けします。切り欠きが右側を向いていることを確認してください。</p>"
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac701-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "ステップ11:\n\n次に上側のPCBに進みます。上側のPCBとメス型ピンヘッダーを用意し、下図のように配置してはんだ付けしてください。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ11:</p>\n<p>次に上側のPCBに進みます。上側のPCBとメス型ピンヘッダーを用意し、下図のように配置してはんだ付けしてください。</p>"
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac701-diy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "ステップ13：\n\n上側のPCBを手に取り、ドライバーを下側の穴に当てて回し、穴をわずかに広げてV字型にします。これにより、プラスチック製のネジを穴の中へ可能な限り深く沈み込ませることができます。\n\n2つのスペーサーを用意し、上側のPCBの裏側に配置します。\n\nプラスチック製のネジは下側の穴に取り付ける点に注意してください。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ13：</p>\n<p>上側のPCBを手に取り、ドライバーを下側の穴に当てて回し、穴をわずかに広げてV字型にします。これにより、プラスチック製のネジを穴の中へ可能な限り深く沈み込ませることができます。</p>\n<p>2つのスペーサーを用意し、上側のPCBの裏側に配置します。</p>\n<p>プラスチック製のネジは下側の穴に取り付ける点に注意してください。</p>"
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac701-diy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "50k\n100k\n100k\n\n5k\n\nこのトリマーはPCBの反対側に取り付けます\n\nステップ13：\n\n最後に、残りのトリマーを用意し、下図のように配置してはんだ付けします。\n\n502 = 5k\n503 = 50k\n104 = 100k",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>50k\n100k\n100k</p>\n<p>5k</p>\n<p>このトリマーはPCBの反対側に取り付けます</p>\n<p>ステップ13：</p>\n<p>最後に、残りのトリマーを用意し、下図のように配置してはんだ付けします。</p>\n<p>502 = 5k\n503 = 50k\n104 = 100k</p>"
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac701-diy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "ステップ13:\n\n次に、フロントパネルに取り付ける前に、いくつかの部品を準備します。\n\nロータリースイッチを用意し、下図のように中央の端子を切り詰めます。\n\nステップ7:\n\nプラスチックシャフトのトリムポットを用意し、下図のようにペンチを使って端子を平らに伸ばします。\n\nステップ7:\n\n金属シャフトのポットを2個用意し、下図のように中央の端子を切り詰めます。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ13:</p>\n<p>次に、フロントパネルに取り付ける前に、いくつかの部品を準備します。</p>\n<p>ロータリースイッチを用意し、下図のように中央の端子を切り詰めます。</p>\n<p>ステップ7:</p>\n<p>プラスチックシャフトのトリムポットを用意し、下図のようにペンチを使って端子を平らに伸ばします。</p>\n<p>ステップ7:</p>\n<p>金属シャフトのポットを2個用意し、下図のように中央の端子を切り詰めます。</p>"
+    },
+    {
+      "pageNum": 11,
+      "image": "/addac701-diy/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "ステップ13：\n\n次に、以下の注意事項に留意しながら、すべての部品を取り付けます。\n\nすべてのポテンショメーターはB10Kです。\n\nネジ付きジャック\n\nプラスチック製ネジの上に収まるよう、このジャック部品を切断します\n\nネジ付きジャック\n\nネジなしジャック\n\nネジなしジャック\n\n切断\n\n3ポジションスイッチ\n\n向きに注意\n「丸い」側を上に！\n\n2ポジションスイッチ",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ13：</p>\n<p>次に、以下の注意事項に留意しながら、すべての部品を取り付けます。</p>\n<p>すべてのポテンショメーターはB10Kです。</p>\n<p>ネジ付きジャック</p>\n<p>プラスチック製ネジの上に収まるよう、このジャック部品を切断します</p>\n<p>ネジ付きジャック</p>\n<p>ネジなしジャック</p>\n<p>ネジなしジャック</p>\n<p>切断</p>\n<p>3ポジションスイッチ</p>\n<p>向きに注意\n「丸い」側を上に！</p>\n<p>2ポジションスイッチ</p>"
+    },
+    {
+      "pageNum": 12,
+      "image": "/addac701-diy/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "ステップ13：\n\n各部品の上にパネルを載せ、6個のナットを締めます。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ13：</p>\n<p>各部品の上にパネルを載せ、6個のナットを締めます。</p>"
+    },
+    {
+      "pageNum": 13,
+      "image": "/addac701-diy/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "ステップ13:\n\nPCBの高さを調整し、フロントパネルと平行になるようにします。\n\nすべての部品をはんだ付けします。\n\n線が平行になるようにしてください。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ13:</p>\n<p>PCBの高さを調整し、フロントパネルと平行になるようにします。</p>\n<p>すべての部品をはんだ付けします。</p>\n<p>線が平行になるようにしてください。</p>"
+    },
+    {
+      "pageNum": 14,
+      "image": "/addac701-diy/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "ステップ13：\n\n最後に、2枚のPCBを合わせて閉じ、下側の2本のネジを取り付けます。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ13：</p>\n<p>最後に、2枚のPCBを合わせて閉じ、下側の2本のネジを取り付けます。</p>"
+    },
+    {
+      "pageNum": 15,
+      "image": "/addac701-diy/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "ノブを取り付ければ、組み立て作業は完了です！\n\n続いて、キャリブレーション手順に進みます。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ノブを取り付ければ、組み立て作業は完了です！</p>\n<p>続いて、キャリブレーション手順に進みます。</p>"
+    },
+    {
+      "pageNum": 16,
+      "image": "/addac701-diy/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "注意事項\n\nこの作業には、オシロスコープ、チューナー、高精度電圧源が必要です。チューナーと電圧源の精度は、キャリブレーション全体に影響する場合があります。\n\n初期設定\n\n1. まず、「FREQUENCY」ノブを「0」の位置に設定します。\n\n2. 「OCTAVE」ロータリースイッチを「0」の位置に設定します。\n\n3. 「FINE TUNE」ノブを12時の位置に設定します。\n\n4. 「INITIAL FREQUENCY」トリマーを可能な限り低い周波数に設定します。\n\n5. 「INITIAL FREQUENCY」トリマーをC1（32.70Hz）に設定します。\n\n1V/OCTのチューニング\n\nキーボードまたはクオンタイザー（キーボードモードのADDAC207など）から高精度の電圧を出力し、1V/Oct入力に接続します。\n\n1. 0Vを入力します。チューナーの周波数はC1（32.70Hz）になるはずです。\n\n2. 3Vを入力します。チューナーの周波数はC4（261.63Hz）になるはずです。\n\n3. 「SCALE」トリマーを調整し、正確なC4に合わせます。\n\n4. 0Vを入力します。チューナーの周波数がC1になっていれば次の手順を飛ばし、そうでなければ次の手順に進みます。\n\n5. 「FINE TUNE」ノブを調整して正確なC1に合わせ、手順2に戻ります。\n\nこのループ（手順2〜5）を数回繰り返す必要がある場合があります。繰り返すたびに、ずれが徐々に小さくなります。\n\n高周波数域の微調整\n\n1. 0Vを入力します。チューナーの周波数は正確なC1になるはずです。\n\n2. 5Vを入力します。チューナーの周波数が正確なC6になっていれば次の手順を飛ばし、そうでなければ次の手順に進みます。\n\n3. 「HIGH FREQUENCY CALIBRATION」トリマーを調整し、正確なC6に合わせます。\n\nC1のチューニング\n\n「FREQUENCY」ノブを「0」の位置に、「FINE TUNE」ノブを12時の位置に設定します。1V/Oct入力に0Vを入力し、「INITIAL FREQUENCY」トリマーをC1（32.70Hz）に設定します。\n\nレンジスイッチのチューニング\n\n1V/Oct入力に接続されているソースをすべて外し、正確なC1に設定します。\n\n周波数スイッチを「+5」に合わせ、「Range ADJ」トリマーを調整してC6（1046.50Hz）に設定します。\n\nキャリブレーション\n\nINITIAL FREQUENCY（INIT.F.）\n\n1V/Oct（SCALE）\n\nHIGH FREQUENCY CALIBRATION（HIGH F.）\n\nSINE SYMMETRY（S.SYM）\n\nSINE SHAPE（S.SHAPE）\n\nOCTAVE SWITCH（RANGE ADJ.）\n\n下側PCB\n\n上側PCB\n\nトリマーの位置",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>注意事項</p>\n<p>この作業には、オシロスコープ、チューナー、高精度電圧源が必要です。チューナーと電圧源の精度は、キャリブレーション全体に影響する場合があります。</p>\n<p>初期設定</p>\n<ol>\n<li>\n<p>まず、「FREQUENCY」ノブを「0」の位置に設定します。</p>\n</li>\n<li>\n<p>「OCTAVE」ロータリースイッチを「0」の位置に設定します。</p>\n</li>\n<li>\n<p>「FINE TUNE」ノブを12時の位置に設定します。</p>\n</li>\n<li>\n<p>「INITIAL FREQUENCY」トリマーを可能な限り低い周波数に設定します。</p>\n</li>\n<li>\n<p>「INITIAL FREQUENCY」トリマーをC1（32.70Hz）に設定します。</p>\n</li>\n</ol>\n<p>1V/OCTのチューニング</p>\n<p>キーボードまたはクオンタイザー（キーボードモードのADDAC207など）から高精度の電圧を出力し、1V/Oct入力に接続します。</p>\n<ol>\n<li>\n<p>0Vを入力します。チューナーの周波数はC1（32.70Hz）になるはずです。</p>\n</li>\n<li>\n<p>3Vを入力します。チューナーの周波数はC4（261.63Hz）になるはずです。</p>\n</li>\n<li>\n<p>「SCALE」トリマーを調整し、正確なC4に合わせます。</p>\n</li>\n<li>\n<p>0Vを入力します。チューナーの周波数がC1になっていれば次の手順を飛ばし、そうでなければ次の手順に進みます。</p>\n</li>\n<li>\n<p>「FINE TUNE」ノブを調整して正確なC1に合わせ、手順2に戻ります。</p>\n</li>\n</ol>\n<p>このループ（手順2〜5）を数回繰り返す必要がある場合があります。繰り返すたびに、ずれが徐々に小さくなります。</p>\n<p>高周波数域の微調整</p>\n<ol>\n<li>\n<p>0Vを入力します。チューナーの周波数は正確なC1になるはずです。</p>\n</li>\n<li>\n<p>5Vを入力します。チューナーの周波数が正確なC6になっていれば次の手順を飛ばし、そうでなければ次の手順に進みます。</p>\n</li>\n<li>\n<p>「HIGH FREQUENCY CALIBRATION」トリマーを調整し、正確なC6に合わせます。</p>\n</li>\n</ol>\n<p>C1のチューニング</p>\n<p>「FREQUENCY」ノブを「0」の位置に、「FINE TUNE」ノブを12時の位置に設定します。1V/Oct入力に0Vを入力し、「INITIAL FREQUENCY」トリマーをC1（32.70Hz）に設定します。</p>\n<p>レンジスイッチのチューニング</p>\n<p>1V/Oct入力に接続されているソースをすべて外し、正確なC1に設定します。</p>\n<p>周波数スイッチを「+5」に合わせ、「Range ADJ」トリマーを調整してC6（1046.50Hz）に設定します。</p>\n<p>キャリブレーション</p>\n<p>INITIAL FREQUENCY（INIT.F.）</p>\n<p>1V/Oct（SCALE）</p>\n<p>HIGH FREQUENCY CALIBRATION（HIGH F.）</p>\n<p>SINE SYMMETRY（S.SYM）</p>\n<p>SINE SHAPE（S.SHAPE）</p>\n<p>OCTAVE SWITCH（RANGE ADJ.）</p>\n<p>下側PCB</p>\n<p>上側PCB</p>\n<p>トリマーの位置</p>"
+    },
+    {
+      "pageNum": 17,
+      "image": "/addac701-diy/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "Sine Symmetryのキャリブレーション\n\n1. 「Sine Output」をオシロスコープに接続します。\n\n2. 「Sine Symmetry」トリマーは、サイン波の中心位置を調整するOffsetとして機能します。正側と負側が対称な形になるまで調整してください。\n\nSine Shapeのキャリブレーション\n\n3. 「Sine Shape」トリマーは、三角波をリニアからlog/expへ変換するコンバーターとして機能します。調整量が大きすぎると矩形波に近づき、小さすぎると元の三角波に近づきます。一般的なサイン波に近づけるにつれて、不要な高調波が消えていくのが聴き取れます。\n\nこれらのキャリブレーション手順に含まれるほかの指示には非常に厳密な設定値がありますが、Sine Shapeはユーザーが好む音色に合わせてキャリブレーションできます。オシロスコープでサイン波を確認し、ほぼ完全な形状であることを確かめたうえで、耳で最適だと感じるスイートスポットに設定してください。\n\nサイン波のキャリブレーション\n\nSINE SHAPE\nSINE SYMMETRY\n良好\nオーバーシュート\nアンダーシュート\n良好\nオーバーシュート\nアンダーシュート",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Sine Symmetryのキャリブレーション</p>\n<ol>\n<li>\n<p>「Sine Output」をオシロスコープに接続します。</p>\n</li>\n<li>\n<p>「Sine Symmetry」トリマーは、サイン波の中心位置を調整するOffsetとして機能します。正側と負側が対称な形になるまで調整してください。</p>\n</li>\n</ol>\n<p>Sine Shapeのキャリブレーション</p>\n<ol start=\"3\">\n<li>「Sine Shape」トリマーは、三角波をリニアからlog/expへ変換するコンバーターとして機能します。調整量が大きすぎると矩形波に近づき、小さすぎると元の三角波に近づきます。一般的なサイン波に近づけるにつれて、不要な高調波が消えていくのが聴き取れます。</li>\n</ol>\n<p>これらのキャリブレーション手順に含まれるほかの指示には非常に厳密な設定値がありますが、Sine Shapeはユーザーが好む音色に合わせてキャリブレーションできます。オシロスコープでサイン波を確認し、ほぼ完全な形状であることを確かめたうえで、耳で最適だと感じるスイートスポットに設定してください。</p>\n<p>サイン波のキャリブレーション</p>\n<p>SINE SHAPE\nSINE SYMMETRY\n良好\nオーバーシュート\nアンダーシュート\n良好\nオーバーシュート\nアンダーシュート</p>"
+    },
+    {
+      "pageNum": 18,
+      "image": "/addac701-diy/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "ご意見、ご感想、または問題については、以下までお問い合わせください：\naddac@addacsystem.com\n\n2019年10月　リビジョン02",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ご意見、ご感想、または問題については、以下までお問い合わせください：\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>2019年10月　リビジョン02</p>"
+    }
+  ]
+}

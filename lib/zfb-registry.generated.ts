@@ -37,52 +37,54 @@ import m15 from '@/public/addac304-manualgates-diy/data/manifest.json';
 import m16 from '@/public/addac305-latches-diy/data/manifest.json';
 import m17 from '@/public/addac511-svgen/data/manifest.json';
 import m18 from '@/public/addac604-filter/data/manifest.json';
-import m19 from '@/public/addac712-vintpre/data/manifest.json';
-import m20 from '@/public/addac713-stereomix/data/manifest.json';
-import m21 from '@/public/addac714-vintclip/data/manifest.json';
-import m22 from '@/public/ai008-matrix-mixer/data/manifest.json';
-import m23 from '@/public/ai017-low-pass-gate/data/manifest.json';
-import m24 from '@/public/ai018-stereo-matrix-mixer/data/manifest.json';
-import m25 from '@/public/ai022-harmonic-mixer/data/manifest.json';
-import m26 from '@/public/ai026-line-io-interface/data/manifest.json';
-import m27 from '@/public/ai106-west-coast-mixer/data/manifest.json';
-import m28 from '@/public/mordax-data/data/manifest.json';
-import m29 from '@/public/oxi-coral/data/manifest.json';
-import m30 from '@/public/oxi-e16-manual/data/manifest.json';
-import m31 from '@/public/oxi-e16-quick-start/data/manifest.json';
-import m32 from '@/public/oxi-meta/data/manifest.json';
-import m33 from '@/public/oxi-one-mk1/data/manifest.json';
-import m34 from '@/public/oxi-one-mk1-quick-guide/data/manifest.json';
-import m35 from '@/public/oxi-one-mk2/data/manifest.json';
-import m36 from '@/public/recovery-cutting-room-floor-v3/data/manifest.json';
-import m37 from '@/public/recovery-motion-pictures/data/manifest.json';
-import m38 from '@/public/recovery-mystic/data/manifest.json';
-import m39 from '@/public/ryk-algo/data/manifest.json';
-import m40 from '@/public/ryk-algo-diy/data/manifest.json';
-import m41 from '@/public/ryk-envy/data/manifest.json';
-import m42 from '@/public/ryk-envy-diy/data/manifest.json';
-import m43 from '@/public/ryk-m185/data/manifest.json';
-import m44 from '@/public/ryk-m185-diy-bom-main/data/manifest.json';
-import m45 from '@/public/ryk-m185-diy-bom-panel/data/manifest.json';
-import m46 from '@/public/ryk-m185-diy-build-main/data/manifest.json';
-import m47 from '@/public/ryk-m185-diy-build-panel/data/manifest.json';
-import m48 from '@/public/ryk-night-rider/data/manifest.json';
-import m49 from '@/public/ryk-night-rider-diy/data/manifest.json';
-import m50 from '@/public/ryk-time-slice/data/manifest.json';
-import m51 from '@/public/ryk-vector-wave/data/manifest.json';
-import m52 from '@/public/ryk-vector-wave-diy/data/manifest.json';
-import m53 from '@/public/shik-n32b-slim/data/manifest.json';
-import m54 from '@/public/weston-2v2/data/manifest.json';
-import m55 from '@/public/weston-h1/data/manifest.json';
-import m56 from '@/public/weston-hv1/data/manifest.json';
-import m57 from '@/public/weston-m3s/data/manifest.json';
-import m58 from '@/public/weston-pa0/data/manifest.json';
-import m59 from '@/public/weston-se1/data/manifest.json';
-import m60 from '@/public/weston-sf1/data/manifest.json';
-import m61 from '@/public/weston-sv1/data/manifest.json';
-import m62 from '@/public/weston-trivium/data/manifest.json';
-import m63 from '@/public/weston-tz0/data/manifest.json';
-import m64 from '@/public/wingie2/data/manifest.json';
+import m19 from '@/public/addac701-calibration/data/manifest.json';
+import m20 from '@/public/addac701-diy/data/manifest.json';
+import m21 from '@/public/addac712-vintpre/data/manifest.json';
+import m22 from '@/public/addac713-stereomix/data/manifest.json';
+import m23 from '@/public/addac714-vintclip/data/manifest.json';
+import m24 from '@/public/ai008-matrix-mixer/data/manifest.json';
+import m25 from '@/public/ai017-low-pass-gate/data/manifest.json';
+import m26 from '@/public/ai018-stereo-matrix-mixer/data/manifest.json';
+import m27 from '@/public/ai022-harmonic-mixer/data/manifest.json';
+import m28 from '@/public/ai026-line-io-interface/data/manifest.json';
+import m29 from '@/public/ai106-west-coast-mixer/data/manifest.json';
+import m30 from '@/public/mordax-data/data/manifest.json';
+import m31 from '@/public/oxi-coral/data/manifest.json';
+import m32 from '@/public/oxi-e16-manual/data/manifest.json';
+import m33 from '@/public/oxi-e16-quick-start/data/manifest.json';
+import m34 from '@/public/oxi-meta/data/manifest.json';
+import m35 from '@/public/oxi-one-mk1/data/manifest.json';
+import m36 from '@/public/oxi-one-mk1-quick-guide/data/manifest.json';
+import m37 from '@/public/oxi-one-mk2/data/manifest.json';
+import m38 from '@/public/recovery-cutting-room-floor-v3/data/manifest.json';
+import m39 from '@/public/recovery-motion-pictures/data/manifest.json';
+import m40 from '@/public/recovery-mystic/data/manifest.json';
+import m41 from '@/public/ryk-algo/data/manifest.json';
+import m42 from '@/public/ryk-algo-diy/data/manifest.json';
+import m43 from '@/public/ryk-envy/data/manifest.json';
+import m44 from '@/public/ryk-envy-diy/data/manifest.json';
+import m45 from '@/public/ryk-m185/data/manifest.json';
+import m46 from '@/public/ryk-m185-diy-bom-main/data/manifest.json';
+import m47 from '@/public/ryk-m185-diy-bom-panel/data/manifest.json';
+import m48 from '@/public/ryk-m185-diy-build-main/data/manifest.json';
+import m49 from '@/public/ryk-m185-diy-build-panel/data/manifest.json';
+import m50 from '@/public/ryk-night-rider/data/manifest.json';
+import m51 from '@/public/ryk-night-rider-diy/data/manifest.json';
+import m52 from '@/public/ryk-time-slice/data/manifest.json';
+import m53 from '@/public/ryk-vector-wave/data/manifest.json';
+import m54 from '@/public/ryk-vector-wave-diy/data/manifest.json';
+import m55 from '@/public/shik-n32b-slim/data/manifest.json';
+import m56 from '@/public/weston-2v2/data/manifest.json';
+import m57 from '@/public/weston-h1/data/manifest.json';
+import m58 from '@/public/weston-hv1/data/manifest.json';
+import m59 from '@/public/weston-m3s/data/manifest.json';
+import m60 from '@/public/weston-pa0/data/manifest.json';
+import m61 from '@/public/weston-se1/data/manifest.json';
+import m62 from '@/public/weston-sf1/data/manifest.json';
+import m63 from '@/public/weston-sv1/data/manifest.json';
+import m64 from '@/public/weston-trivium/data/manifest.json';
+import m65 from '@/public/weston-tz0/data/manifest.json';
+import m66 from '@/public/wingie2/data/manifest.json';
 
 // ── pages-ja.json (~4MB total) ─────────────────────────────────────────────
 import p0 from '@/public/4ms-leqa/data/pages-ja.json';
@@ -104,52 +106,54 @@ import p15 from '@/public/addac304-manualgates-diy/data/pages-ja.json';
 import p16 from '@/public/addac305-latches-diy/data/pages-ja.json';
 import p17 from '@/public/addac511-svgen/data/pages-ja.json';
 import p18 from '@/public/addac604-filter/data/pages-ja.json';
-import p19 from '@/public/addac712-vintpre/data/pages-ja.json';
-import p20 from '@/public/addac713-stereomix/data/pages-ja.json';
-import p21 from '@/public/addac714-vintclip/data/pages-ja.json';
-import p22 from '@/public/ai008-matrix-mixer/data/pages-ja.json';
-import p23 from '@/public/ai017-low-pass-gate/data/pages-ja.json';
-import p24 from '@/public/ai018-stereo-matrix-mixer/data/pages-ja.json';
-import p25 from '@/public/ai022-harmonic-mixer/data/pages-ja.json';
-import p26 from '@/public/ai026-line-io-interface/data/pages-ja.json';
-import p27 from '@/public/ai106-west-coast-mixer/data/pages-ja.json';
-import p28 from '@/public/mordax-data/data/pages-ja.json';
-import p29 from '@/public/oxi-coral/data/pages-ja.json';
-import p30 from '@/public/oxi-e16-manual/data/pages-ja.json';
-import p31 from '@/public/oxi-e16-quick-start/data/pages-ja.json';
-import p32 from '@/public/oxi-meta/data/pages-ja.json';
-import p33 from '@/public/oxi-one-mk1/data/pages-ja.json';
-import p34 from '@/public/oxi-one-mk1-quick-guide/data/pages-ja.json';
-import p35 from '@/public/oxi-one-mk2/data/pages-ja.json';
-import p36 from '@/public/recovery-cutting-room-floor-v3/data/pages-ja.json';
-import p37 from '@/public/recovery-motion-pictures/data/pages-ja.json';
-import p38 from '@/public/recovery-mystic/data/pages-ja.json';
-import p39 from '@/public/ryk-algo/data/pages-ja.json';
-import p40 from '@/public/ryk-algo-diy/data/pages-ja.json';
-import p41 from '@/public/ryk-envy/data/pages-ja.json';
-import p42 from '@/public/ryk-envy-diy/data/pages-ja.json';
-import p43 from '@/public/ryk-m185/data/pages-ja.json';
-import p44 from '@/public/ryk-m185-diy-bom-main/data/pages-ja.json';
-import p45 from '@/public/ryk-m185-diy-bom-panel/data/pages-ja.json';
-import p46 from '@/public/ryk-m185-diy-build-main/data/pages-ja.json';
-import p47 from '@/public/ryk-m185-diy-build-panel/data/pages-ja.json';
-import p48 from '@/public/ryk-night-rider/data/pages-ja.json';
-import p49 from '@/public/ryk-night-rider-diy/data/pages-ja.json';
-import p50 from '@/public/ryk-time-slice/data/pages-ja.json';
-import p51 from '@/public/ryk-vector-wave/data/pages-ja.json';
-import p52 from '@/public/ryk-vector-wave-diy/data/pages-ja.json';
-import p53 from '@/public/shik-n32b-slim/data/pages-ja.json';
-import p54 from '@/public/weston-2v2/data/pages-ja.json';
-import p55 from '@/public/weston-h1/data/pages-ja.json';
-import p56 from '@/public/weston-hv1/data/pages-ja.json';
-import p57 from '@/public/weston-m3s/data/pages-ja.json';
-import p58 from '@/public/weston-pa0/data/pages-ja.json';
-import p59 from '@/public/weston-se1/data/pages-ja.json';
-import p60 from '@/public/weston-sf1/data/pages-ja.json';
-import p61 from '@/public/weston-sv1/data/pages-ja.json';
-import p62 from '@/public/weston-trivium/data/pages-ja.json';
-import p63 from '@/public/weston-tz0/data/pages-ja.json';
-import p64 from '@/public/wingie2/data/pages-ja.json';
+import p19 from '@/public/addac701-calibration/data/pages-ja.json';
+import p20 from '@/public/addac701-diy/data/pages-ja.json';
+import p21 from '@/public/addac712-vintpre/data/pages-ja.json';
+import p22 from '@/public/addac713-stereomix/data/pages-ja.json';
+import p23 from '@/public/addac714-vintclip/data/pages-ja.json';
+import p24 from '@/public/ai008-matrix-mixer/data/pages-ja.json';
+import p25 from '@/public/ai017-low-pass-gate/data/pages-ja.json';
+import p26 from '@/public/ai018-stereo-matrix-mixer/data/pages-ja.json';
+import p27 from '@/public/ai022-harmonic-mixer/data/pages-ja.json';
+import p28 from '@/public/ai026-line-io-interface/data/pages-ja.json';
+import p29 from '@/public/ai106-west-coast-mixer/data/pages-ja.json';
+import p30 from '@/public/mordax-data/data/pages-ja.json';
+import p31 from '@/public/oxi-coral/data/pages-ja.json';
+import p32 from '@/public/oxi-e16-manual/data/pages-ja.json';
+import p33 from '@/public/oxi-e16-quick-start/data/pages-ja.json';
+import p34 from '@/public/oxi-meta/data/pages-ja.json';
+import p35 from '@/public/oxi-one-mk1/data/pages-ja.json';
+import p36 from '@/public/oxi-one-mk1-quick-guide/data/pages-ja.json';
+import p37 from '@/public/oxi-one-mk2/data/pages-ja.json';
+import p38 from '@/public/recovery-cutting-room-floor-v3/data/pages-ja.json';
+import p39 from '@/public/recovery-motion-pictures/data/pages-ja.json';
+import p40 from '@/public/recovery-mystic/data/pages-ja.json';
+import p41 from '@/public/ryk-algo/data/pages-ja.json';
+import p42 from '@/public/ryk-algo-diy/data/pages-ja.json';
+import p43 from '@/public/ryk-envy/data/pages-ja.json';
+import p44 from '@/public/ryk-envy-diy/data/pages-ja.json';
+import p45 from '@/public/ryk-m185/data/pages-ja.json';
+import p46 from '@/public/ryk-m185-diy-bom-main/data/pages-ja.json';
+import p47 from '@/public/ryk-m185-diy-bom-panel/data/pages-ja.json';
+import p48 from '@/public/ryk-m185-diy-build-main/data/pages-ja.json';
+import p49 from '@/public/ryk-m185-diy-build-panel/data/pages-ja.json';
+import p50 from '@/public/ryk-night-rider/data/pages-ja.json';
+import p51 from '@/public/ryk-night-rider-diy/data/pages-ja.json';
+import p52 from '@/public/ryk-time-slice/data/pages-ja.json';
+import p53 from '@/public/ryk-vector-wave/data/pages-ja.json';
+import p54 from '@/public/ryk-vector-wave-diy/data/pages-ja.json';
+import p55 from '@/public/shik-n32b-slim/data/pages-ja.json';
+import p56 from '@/public/weston-2v2/data/pages-ja.json';
+import p57 from '@/public/weston-h1/data/pages-ja.json';
+import p58 from '@/public/weston-hv1/data/pages-ja.json';
+import p59 from '@/public/weston-m3s/data/pages-ja.json';
+import p60 from '@/public/weston-pa0/data/pages-ja.json';
+import p61 from '@/public/weston-se1/data/pages-ja.json';
+import p62 from '@/public/weston-sf1/data/pages-ja.json';
+import p63 from '@/public/weston-sv1/data/pages-ja.json';
+import p64 from '@/public/weston-trivium/data/pages-ja.json';
+import p65 from '@/public/weston-tz0/data/pages-ja.json';
+import p66 from '@/public/wingie2/data/pages-ja.json';
 
 export const REGISTRY: Record<string, RegistryEntry> = {
   '4ms-leqa': {
@@ -228,188 +232,196 @@ export const REGISTRY: Record<string, RegistryEntry> = {
     manifest: m18 as unknown as ManualManifest,
     pagesJa: p18 as unknown as ManualPagesData,
   },
-  'addac712-vintpre': {
+  'addac701-calibration': {
     manifest: m19 as unknown as ManualManifest,
     pagesJa: p19 as unknown as ManualPagesData,
   },
-  'addac713-stereomix': {
+  'addac701-diy': {
     manifest: m20 as unknown as ManualManifest,
     pagesJa: p20 as unknown as ManualPagesData,
   },
-  'addac714-vintclip': {
+  'addac712-vintpre': {
     manifest: m21 as unknown as ManualManifest,
     pagesJa: p21 as unknown as ManualPagesData,
   },
-  'ai008-matrix-mixer': {
+  'addac713-stereomix': {
     manifest: m22 as unknown as ManualManifest,
     pagesJa: p22 as unknown as ManualPagesData,
   },
-  'ai017-low-pass-gate': {
+  'addac714-vintclip': {
     manifest: m23 as unknown as ManualManifest,
     pagesJa: p23 as unknown as ManualPagesData,
   },
-  'ai018-stereo-matrix-mixer': {
+  'ai008-matrix-mixer': {
     manifest: m24 as unknown as ManualManifest,
     pagesJa: p24 as unknown as ManualPagesData,
   },
-  'ai022-harmonic-mixer': {
+  'ai017-low-pass-gate': {
     manifest: m25 as unknown as ManualManifest,
     pagesJa: p25 as unknown as ManualPagesData,
   },
-  'ai026-line-io-interface': {
+  'ai018-stereo-matrix-mixer': {
     manifest: m26 as unknown as ManualManifest,
     pagesJa: p26 as unknown as ManualPagesData,
   },
-  'ai106-west-coast-mixer': {
+  'ai022-harmonic-mixer': {
     manifest: m27 as unknown as ManualManifest,
     pagesJa: p27 as unknown as ManualPagesData,
   },
-  'mordax-data': {
+  'ai026-line-io-interface': {
     manifest: m28 as unknown as ManualManifest,
     pagesJa: p28 as unknown as ManualPagesData,
   },
-  'oxi-coral': {
+  'ai106-west-coast-mixer': {
     manifest: m29 as unknown as ManualManifest,
     pagesJa: p29 as unknown as ManualPagesData,
   },
-  'oxi-e16-manual': {
+  'mordax-data': {
     manifest: m30 as unknown as ManualManifest,
     pagesJa: p30 as unknown as ManualPagesData,
   },
-  'oxi-e16-quick-start': {
+  'oxi-coral': {
     manifest: m31 as unknown as ManualManifest,
     pagesJa: p31 as unknown as ManualPagesData,
   },
-  'oxi-meta': {
+  'oxi-e16-manual': {
     manifest: m32 as unknown as ManualManifest,
     pagesJa: p32 as unknown as ManualPagesData,
   },
-  'oxi-one-mk1': {
+  'oxi-e16-quick-start': {
     manifest: m33 as unknown as ManualManifest,
     pagesJa: p33 as unknown as ManualPagesData,
   },
-  'oxi-one-mk1-quick-guide': {
+  'oxi-meta': {
     manifest: m34 as unknown as ManualManifest,
     pagesJa: p34 as unknown as ManualPagesData,
   },
-  'oxi-one-mk2': {
+  'oxi-one-mk1': {
     manifest: m35 as unknown as ManualManifest,
     pagesJa: p35 as unknown as ManualPagesData,
   },
-  'recovery-cutting-room-floor-v3': {
+  'oxi-one-mk1-quick-guide': {
     manifest: m36 as unknown as ManualManifest,
     pagesJa: p36 as unknown as ManualPagesData,
   },
-  'recovery-motion-pictures': {
+  'oxi-one-mk2': {
     manifest: m37 as unknown as ManualManifest,
     pagesJa: p37 as unknown as ManualPagesData,
   },
-  'recovery-mystic': {
+  'recovery-cutting-room-floor-v3': {
     manifest: m38 as unknown as ManualManifest,
     pagesJa: p38 as unknown as ManualPagesData,
   },
-  'ryk-algo': {
+  'recovery-motion-pictures': {
     manifest: m39 as unknown as ManualManifest,
     pagesJa: p39 as unknown as ManualPagesData,
   },
-  'ryk-algo-diy': {
+  'recovery-mystic': {
     manifest: m40 as unknown as ManualManifest,
     pagesJa: p40 as unknown as ManualPagesData,
   },
-  'ryk-envy': {
+  'ryk-algo': {
     manifest: m41 as unknown as ManualManifest,
     pagesJa: p41 as unknown as ManualPagesData,
   },
-  'ryk-envy-diy': {
+  'ryk-algo-diy': {
     manifest: m42 as unknown as ManualManifest,
     pagesJa: p42 as unknown as ManualPagesData,
   },
-  'ryk-m185': {
+  'ryk-envy': {
     manifest: m43 as unknown as ManualManifest,
     pagesJa: p43 as unknown as ManualPagesData,
   },
-  'ryk-m185-diy-bom-main': {
+  'ryk-envy-diy': {
     manifest: m44 as unknown as ManualManifest,
     pagesJa: p44 as unknown as ManualPagesData,
   },
-  'ryk-m185-diy-bom-panel': {
+  'ryk-m185': {
     manifest: m45 as unknown as ManualManifest,
     pagesJa: p45 as unknown as ManualPagesData,
   },
-  'ryk-m185-diy-build-main': {
+  'ryk-m185-diy-bom-main': {
     manifest: m46 as unknown as ManualManifest,
     pagesJa: p46 as unknown as ManualPagesData,
   },
-  'ryk-m185-diy-build-panel': {
+  'ryk-m185-diy-bom-panel': {
     manifest: m47 as unknown as ManualManifest,
     pagesJa: p47 as unknown as ManualPagesData,
   },
-  'ryk-night-rider': {
+  'ryk-m185-diy-build-main': {
     manifest: m48 as unknown as ManualManifest,
     pagesJa: p48 as unknown as ManualPagesData,
   },
-  'ryk-night-rider-diy': {
+  'ryk-m185-diy-build-panel': {
     manifest: m49 as unknown as ManualManifest,
     pagesJa: p49 as unknown as ManualPagesData,
   },
-  'ryk-time-slice': {
+  'ryk-night-rider': {
     manifest: m50 as unknown as ManualManifest,
     pagesJa: p50 as unknown as ManualPagesData,
   },
-  'ryk-vector-wave': {
+  'ryk-night-rider-diy': {
     manifest: m51 as unknown as ManualManifest,
     pagesJa: p51 as unknown as ManualPagesData,
   },
-  'ryk-vector-wave-diy': {
+  'ryk-time-slice': {
     manifest: m52 as unknown as ManualManifest,
     pagesJa: p52 as unknown as ManualPagesData,
   },
-  'shik-n32b-slim': {
+  'ryk-vector-wave': {
     manifest: m53 as unknown as ManualManifest,
     pagesJa: p53 as unknown as ManualPagesData,
   },
-  'weston-2v2': {
+  'ryk-vector-wave-diy': {
     manifest: m54 as unknown as ManualManifest,
     pagesJa: p54 as unknown as ManualPagesData,
   },
-  'weston-h1': {
+  'shik-n32b-slim': {
     manifest: m55 as unknown as ManualManifest,
     pagesJa: p55 as unknown as ManualPagesData,
   },
-  'weston-hv1': {
+  'weston-2v2': {
     manifest: m56 as unknown as ManualManifest,
     pagesJa: p56 as unknown as ManualPagesData,
   },
-  'weston-m3s': {
+  'weston-h1': {
     manifest: m57 as unknown as ManualManifest,
     pagesJa: p57 as unknown as ManualPagesData,
   },
-  'weston-pa0': {
+  'weston-hv1': {
     manifest: m58 as unknown as ManualManifest,
     pagesJa: p58 as unknown as ManualPagesData,
   },
-  'weston-se1': {
+  'weston-m3s': {
     manifest: m59 as unknown as ManualManifest,
     pagesJa: p59 as unknown as ManualPagesData,
   },
-  'weston-sf1': {
+  'weston-pa0': {
     manifest: m60 as unknown as ManualManifest,
     pagesJa: p60 as unknown as ManualPagesData,
   },
-  'weston-sv1': {
+  'weston-se1': {
     manifest: m61 as unknown as ManualManifest,
     pagesJa: p61 as unknown as ManualPagesData,
   },
-  'weston-trivium': {
+  'weston-sf1': {
     manifest: m62 as unknown as ManualManifest,
     pagesJa: p62 as unknown as ManualPagesData,
   },
-  'weston-tz0': {
+  'weston-sv1': {
     manifest: m63 as unknown as ManualManifest,
     pagesJa: p63 as unknown as ManualPagesData,
   },
-  wingie2: {
+  'weston-trivium': {
     manifest: m64 as unknown as ManualManifest,
     pagesJa: p64 as unknown as ManualPagesData,
+  },
+  'weston-tz0': {
+    manifest: m65 as unknown as ManualManifest,
+    pagesJa: p65 as unknown as ManualPagesData,
+  },
+  wingie2: {
+    manifest: m66 as unknown as ManualManifest,
+    pagesJa: p66 as unknown as ManualPagesData,
   },
 };
