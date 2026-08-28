@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-28T07:03:52.478Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "cleanupMethod": "claude-code-subagent",
+    "cleanupModel": "haiku",
+    "cleanedAt": "2026-08-28T07:05:23.552Z"
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac701-calibration/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": [],
+      "contentHtml": ""
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac701-calibration/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "CONSIDERATIONS\n\nFor this process you'll need an Oscilloscope, a tuner ans a precision voltage source, the precision of both the tuner and the voltage source may have an impact on the overall calibration process.\n\nINITIAL SETUP\n\n1. Start by setting the \"FREQUENCY\" knob at \"0\"\n\n2. Set the \"OCTAVE\" rotary switch at \"0\"\n\n3. Set \"FINE TUNE\" knob at 12 0'clock\n\n4. Set the \"INITIAL FREQUENCY\" trimmer to the lowest frequency possible.\n\n5. Set the \"INITIAL FREQUENCY\" trimmer to C1 (32.70Hz).\n\nTUNING THE 1V/OCT\n\nWith a precision voltage from a keyboard or a quantizer (such as ADDAC207 in keyboard mode) plug it to the 1v/oct input.\n\n1. Feed 0v, tuner frequency should be C1 (32.70Hz)\n\n2. Feed 3V, tuner frequency should be C4 (261,63Hz)\n\n3. Calibrate the \"SCALE\" trimmer to match a perfect C4.\n\n4. Feed 0v, the tuner frequency should be C1, if so skip next step otherwise follow to the next step.\n\n5. Adjust \"FINE TUNE\" knob to match a perfect C1 and go back to Step 2.\n\nBe aware that you may need to go through this loop, (steps 2 through 5) several times. Each time you'll notice less and less drift.\n\nFINE TUNING HIGHER FREQUENCIES\n\n1. Feed 0v, tuner frequency should be a perfect C1.\n\n2. Feed 5V tuner frequency should be a perfect C6, if so skip next step otherwise follow to the next step.\n\n3. Calibrate the \"HIGH FREQUENCY CALLIBRATION\" trimmer to match a perfect C6.\n\nTUNING C1\n\nSet the \"FREQUENCY\" knob at \"0\" and \"FINE TUNE\" knob at 12 o'clock. Feed 0V to the 1v/oct input and set the \"INITIAL FREQUENCY\" trimmer to C1 (32.70Hz).\n\nTUNING THE RANGE SWITCH\n\nUnplug any source that is connected to the 1v/oct input and set it to a perfect C1.\n\nTurn the frequency switch to \"+5\" and trim the \"Range ADJ\" trimmer to C6 (1046.50Hz).\n\nCalibration\n\nINITIAL FREQUENCY\n(INIT.F.)\n\n1v/Oct\n(SCALE)\n\nHIGH FREQUENCY CALLIBRATION\n(HIGH F.)\n\nSINE SYMMETRY\n(S.SYM)\n\nSINE SHAPE\n(S.SHAPE)\n\nOCTAVE SWITCH\n(RANGE ADJ.)\n\nBOTTOM PCB\n\nTOP PCB\n\nTRIMMER LOCATIONS",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>CONSIDERATIONS</p>\n<p>For this process you'll need an Oscilloscope, a tuner ans a precision voltage source, the precision of both the tuner and the voltage source may have an impact on the overall calibration process.</p>\n<p>INITIAL SETUP</p>\n<ol>\n<li>\n<p>Start by setting the \"FREQUENCY\" knob at \"0\"</p>\n</li>\n<li>\n<p>Set the \"OCTAVE\" rotary switch at \"0\"</p>\n</li>\n<li>\n<p>Set \"FINE TUNE\" knob at 12 0'clock</p>\n</li>\n<li>\n<p>Set the \"INITIAL FREQUENCY\" trimmer to the lowest frequency possible.</p>\n</li>\n<li>\n<p>Set the \"INITIAL FREQUENCY\" trimmer to C1 (32.70Hz).</p>\n</li>\n</ol>\n<p>TUNING THE 1V/OCT</p>\n<p>With a precision voltage from a keyboard or a quantizer (such as ADDAC207 in keyboard mode) plug it to the 1v/oct input.</p>\n<ol>\n<li>\n<p>Feed 0v, tuner frequency should be C1 (32.70Hz)</p>\n</li>\n<li>\n<p>Feed 3V, tuner frequency should be C4 (261,63Hz)</p>\n</li>\n<li>\n<p>Calibrate the \"SCALE\" trimmer to match a perfect C4.</p>\n</li>\n<li>\n<p>Feed 0v, the tuner frequency should be C1, if so skip next step otherwise follow to the next step.</p>\n</li>\n<li>\n<p>Adjust \"FINE TUNE\" knob to match a perfect C1 and go back to Step 2.</p>\n</li>\n</ol>\n<p>Be aware that you may need to go through this loop, (steps 2 through 5) several times. Each time you'll notice less and less drift.</p>\n<p>FINE TUNING HIGHER FREQUENCIES</p>\n<ol>\n<li>\n<p>Feed 0v, tuner frequency should be a perfect C1.</p>\n</li>\n<li>\n<p>Feed 5V tuner frequency should be a perfect C6, if so skip next step otherwise follow to the next step.</p>\n</li>\n<li>\n<p>Calibrate the \"HIGH FREQUENCY CALLIBRATION\" trimmer to match a perfect C6.</p>\n</li>\n</ol>\n<p>TUNING C1</p>\n<p>Set the \"FREQUENCY\" knob at \"0\" and \"FINE TUNE\" knob at 12 o'clock. Feed 0V to the 1v/oct input and set the \"INITIAL FREQUENCY\" trimmer to C1 (32.70Hz).</p>\n<p>TUNING THE RANGE SWITCH</p>\n<p>Unplug any source that is connected to the 1v/oct input and set it to a perfect C1.</p>\n<p>Turn the frequency switch to \"+5\" and trim the \"Range ADJ\" trimmer to C6 (1046.50Hz).</p>\n<p>Calibration</p>\n<p>INITIAL FREQUENCY\n(INIT.F.)</p>\n<p>1v/Oct\n(SCALE)</p>\n<p>HIGH FREQUENCY CALLIBRATION\n(HIGH F.)</p>\n<p>SINE SYMMETRY\n(S.SYM)</p>\n<p>SINE SHAPE\n(S.SHAPE)</p>\n<p>OCTAVE SWITCH\n(RANGE ADJ.)</p>\n<p>BOTTOM PCB</p>\n<p>TOP PCB</p>\n<p>TRIMMER LOCATIONS</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac701-calibration/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "CALIBRATING THE SINE SYMMETRY\n\n1. Connect the \"Sine Output\" to an oscilloscope\n\n2. The \"Sine Symmetry\" trimmer acts like an Offset for the Sine center position adjust it until you have a symetrical shape between the positive and negative side.\n\nCALIBRATING THE SINE SHAPE\n\n3. The \"Sine Shape\" trimmer acts like a linear to log/exp converter from the triangle waveform, too much and you get something close to a square wave, too little becomes closer to the initial triangle. As you tune it closer to the typical sine waveform you'll hear the undesired harmonics disappearing.\n\nWhile all other instructions in these callibration instructions have very precise settings, the Sine Shape can be calibrated to the user's prefered timbre, so look at the sine on the oscilloscope make sure it's close to perfect and leave it at that sweet spot where your ears tell you to.\n\nSine Calibration\n\nSINE SHAPE\n\nSINE SYMMETRY\n\nGOOD\n\nOVERSHOT\n\nUNDERSHOT\n\nGOOD\n\nOVERSHOT\n\nUNDERSHOT",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>CALIBRATING THE SINE SYMMETRY</p>\n<ol>\n<li>\n<p>Connect the \"Sine Output\" to an oscilloscope</p>\n</li>\n<li>\n<p>The \"Sine Symmetry\" trimmer acts like an Offset for the Sine center position adjust it until you have a symetrical shape between the positive and negative side.</p>\n</li>\n</ol>\n<p>CALIBRATING THE SINE SHAPE</p>\n<ol start=\"3\">\n<li>The \"Sine Shape\" trimmer acts like a linear to log/exp converter from the triangle waveform, too much and you get something close to a square wave, too little becomes closer to the initial triangle. As you tune it closer to the typical sine waveform you'll hear the undesired harmonics disappearing.</li>\n</ol>\n<p>While all other instructions in these callibration instructions have very precise settings, the Sine Shape can be calibrated to the user's prefered timbre, so look at the sine on the oscilloscope make sure it's close to perfect and leave it at that sweet spot where your ears tell you to.</p>\n<p>Sine Calibration</p>\n<p>SINE SHAPE</p>\n<p>SINE SYMMETRY</p>\n<p>GOOD</p>\n<p>OVERSHOT</p>\n<p>UNDERSHOT</p>\n<p>GOOD</p>\n<p>OVERSHOT</p>\n<p>UNDERSHOT</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac701-calibration/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-28T07:03:52.478Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac701-calibration/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": [],
+      "contentHtml": ""
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac701-calibration/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "注意事項\n\nこの作業には、オシロスコープ、チューナー、および高精度電圧源が必要です。チューナーと電圧源の精度は、キャリブレーション作業全体に影響する可能性があります。\n\n初期設定\n\n1. まず、“FREQUENCY”ノブを「0」に設定します。\n\n2. “OCTAVE”ロータリースイッチを「0」に設定します。\n\n3. “FINE TUNE”ノブを12時の位置に設定します。\n\n4. “INITIAL FREQUENCY”トリマーを可能な限り低い周波数に設定します。\n\n5. “INITIAL FREQUENCY”トリマーをC1（32.70Hz）に設定します。\n\n1V/OCTのチューニング\n\nキーボードまたはクオンタイザー（キーボードモードのADDAC207など）から高精度な電圧を出力し、1v/oct入力に接続します。\n\n1. 0vを入力します。チューナーの周波数はC1（32.70Hz）になるはずです。\n\n2. 3Vを入力します。チューナーの周波数はC4（261,63Hz）になるはずです。\n\n3. 正確なC4になるように”SCALE”トリマーを調整します。\n\n4. 0vを入力します。チューナーの周波数がC1であれば次のステップを飛ばし、そうでなければ次のステップに進みます。\n\n5. 正確なC1になるように“FINE TUNE”ノブを調整し、ステップ2に戻ります。\n\nこのループ（ステップ2～5）を数回繰り返す必要がある場合があります。繰り返すたびに、ずれが次第に小さくなります。\n\n高周波域の微調整\n\n1. 0vを入力します。チューナーの周波数は正確なC1になるはずです。\n\n2. 5Vを入力します。チューナーの周波数が正確なC6であれば次のステップを飛ばし、そうでなければ次のステップに進みます。\n\n3. 正確なC6になるように“HIGH FREQUENCY CALLIBRATION”トリマーを調整します。\n\nC1のチューニング\n\n”FREQUENCY”ノブを「0」に、“FINE TUNE”ノブを12時の位置に設定します。1v/oct入力に0Vを入力し、“INITIAL FREQUENCY”トリマーをC1（32.70Hz）に設定します。\n\nレンジスイッチのチューニング\n\n1v/oct入力に接続されているソースをすべて取り外し、正確なC1に設定します。\n\n周波数スイッチを「+5」に切り替え、“Range ADJ”トリマーをC6（1046.50Hz）に調整します。\n\nキャリブレーション\n\nINITIAL FREQUENCY\n（INIT.F.）\n\n1v/Oct\n（SCALE）\n\nHIGH FREQUENCY CALLIBRATION\n（HIGH F.）\n\nSINE SYMMETRY\n（S.SYM）\n\nSINE SHAPE\n（S.SHAPE）\n\nOCTAVE SWITCH\n（RANGE ADJ.）\n\n下側PCB\n\n上側PCB\n\nトリマーの位置",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>注意事項</p>\n<p>この作業には、オシロスコープ、チューナー、および高精度電圧源が必要です。チューナーと電圧源の精度は、キャリブレーション作業全体に影響する可能性があります。</p>\n<p>初期設定</p>\n<ol>\n<li>\n<p>まず、“FREQUENCY”ノブを「0」に設定します。</p>\n</li>\n<li>\n<p>“OCTAVE”ロータリースイッチを「0」に設定します。</p>\n</li>\n<li>\n<p>“FINE TUNE”ノブを12時の位置に設定します。</p>\n</li>\n<li>\n<p>“INITIAL FREQUENCY”トリマーを可能な限り低い周波数に設定します。</p>\n</li>\n<li>\n<p>“INITIAL FREQUENCY”トリマーをC1（32.70Hz）に設定します。</p>\n</li>\n</ol>\n<p>1V/OCTのチューニング</p>\n<p>キーボードまたはクオンタイザー（キーボードモードのADDAC207など）から高精度な電圧を出力し、1v/oct入力に接続します。</p>\n<ol>\n<li>\n<p>0vを入力します。チューナーの周波数はC1（32.70Hz）になるはずです。</p>\n</li>\n<li>\n<p>3Vを入力します。チューナーの周波数はC4（261,63Hz）になるはずです。</p>\n</li>\n<li>\n<p>正確なC4になるように”SCALE”トリマーを調整します。</p>\n</li>\n<li>\n<p>0vを入力します。チューナーの周波数がC1であれば次のステップを飛ばし、そうでなければ次のステップに進みます。</p>\n</li>\n<li>\n<p>正確なC1になるように“FINE TUNE”ノブを調整し、ステップ2に戻ります。</p>\n</li>\n</ol>\n<p>このループ（ステップ2～5）を数回繰り返す必要がある場合があります。繰り返すたびに、ずれが次第に小さくなります。</p>\n<p>高周波域の微調整</p>\n<ol>\n<li>\n<p>0vを入力します。チューナーの周波数は正確なC1になるはずです。</p>\n</li>\n<li>\n<p>5Vを入力します。チューナーの周波数が正確なC6であれば次のステップを飛ばし、そうでなければ次のステップに進みます。</p>\n</li>\n<li>\n<p>正確なC6になるように“HIGH FREQUENCY CALLIBRATION”トリマーを調整します。</p>\n</li>\n</ol>\n<p>C1のチューニング</p>\n<p>”FREQUENCY”ノブを「0」に、“FINE TUNE”ノブを12時の位置に設定します。1v/oct入力に0Vを入力し、“INITIAL FREQUENCY”トリマーをC1（32.70Hz）に設定します。</p>\n<p>レンジスイッチのチューニング</p>\n<p>1v/oct入力に接続されているソースをすべて取り外し、正確なC1に設定します。</p>\n<p>周波数スイッチを「+5」に切り替え、“Range ADJ”トリマーをC6（1046.50Hz）に調整します。</p>\n<p>キャリブレーション</p>\n<p>INITIAL FREQUENCY\n（INIT.F.）</p>\n<p>1v/Oct\n（SCALE）</p>\n<p>HIGH FREQUENCY CALLIBRATION\n（HIGH F.）</p>\n<p>SINE SYMMETRY\n（S.SYM）</p>\n<p>SINE SHAPE\n（S.SHAPE）</p>\n<p>OCTAVE SWITCH\n（RANGE ADJ.）</p>\n<p>下側PCB</p>\n<p>上側PCB</p>\n<p>トリマーの位置</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac701-calibration/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "Sineの対称性のキャリブレーション\n\n1. 「Sine Output」をオシロスコープに接続します。\n\n2. 「Sine Symmetry」トリマーは、Sine波の中心位置に対するオフセットとして機能します。正側と負側が対称な波形になるまで調整してください。\n\nSine波形のキャリブレーション\n\n3. 「Sine Shape」トリマーは、三角波の直線的な波形を対数／指数曲線へ変換するコンバーターのように機能します。調整しすぎると矩形波に近づき、調整が足りないと元の三角波に近づきます。典型的なSine波形に近づけて調整するにつれて、不要な倍音が消えていくのを聞き取れます。\n\nこのキャリブレーション手順のほかの項目にはすべて非常に厳密な設定値がありますが、Sine Shapeはユーザーの好みの音色に合わせてキャリブレーションできます。オシロスコープでSine波を確認し、理想的な波形に近いことを確かめたうえで、聴感上最もよいスイートスポットに設定してください。\n\nSineのキャリブレーション\n\nSINE SHAPE\n\nSINE SYMMETRY\n\n良好\n\nオーバーシュート\n\nアンダーシュート\n\n良好\n\nオーバーシュート\n\nアンダーシュート",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Sineの対称性のキャリブレーション</p>\n<ol>\n<li>\n<p>「Sine Output」をオシロスコープに接続します。</p>\n</li>\n<li>\n<p>「Sine Symmetry」トリマーは、Sine波の中心位置に対するオフセットとして機能します。正側と負側が対称な波形になるまで調整してください。</p>\n</li>\n</ol>\n<p>Sine波形のキャリブレーション</p>\n<ol start=\"3\">\n<li>「Sine Shape」トリマーは、三角波の直線的な波形を対数／指数曲線へ変換するコンバーターのように機能します。調整しすぎると矩形波に近づき、調整が足りないと元の三角波に近づきます。典型的なSine波形に近づけて調整するにつれて、不要な倍音が消えていくのを聞き取れます。</li>\n</ol>\n<p>このキャリブレーション手順のほかの項目にはすべて非常に厳密な設定値がありますが、Sine Shapeはユーザーの好みの音色に合わせてキャリブレーションできます。オシロスコープでSine波を確認し、理想的な波形に近いことを確かめたうえで、聴感上最もよいスイートスポットに設定してください。</p>\n<p>Sineのキャリブレーション</p>\n<p>SINE SHAPE</p>\n<p>SINE SYMMETRY</p>\n<p>良好</p>\n<p>オーバーシュート</p>\n<p>アンダーシュート</p>\n<p>良好</p>\n<p>オーバーシュート</p>\n<p>アンダーシュート</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac701-calibration/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "フィードバック、ご意見、または問題については、以下までお問い合わせください：\naddac@addacsystem.com",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>フィードバック、ご意見、または問題については、以下までお問い合わせください：\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>"
+    }
+  ]
+}

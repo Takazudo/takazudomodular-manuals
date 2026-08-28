@@ -1,0 +1,194 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-28T07:11:19.569Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "cleanupMethod": "claude-code-subagent",
+    "cleanupModel": "haiku",
+    "cleanedAt": "2026-08-28T07:16:35.038Z"
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac701-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": [],
+      "contentHtml": ""
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac701-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "Tools Needed:\n\nOscilloscope\nWire cutter\nPliers\nPhilips key",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Tools Needed:</p>\n<p>Oscilloscope\nWire cutter\nPliers\nPhilips key</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac701-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "STEP 1:\n\nBreak the pcbs apart and grab the bottom pcb, also locate the 7805 regulator and the two Capacitors.\n\nPlace and solder them like shown below.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 1:</p>\n<p>Break the pcbs apart and grab the bottom pcb, also locate the 7805 regulator and the two Capacitors.</p>\n<p>Place and solder them like shown below.</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac701-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "79L05\n10k\n20k\n78L10\n\nSTEP 3:\n\nNext locate the thru-hole capacitor, two trimmers 10k and 20k (marked 103 and 203) and the two thru-hole voltage regulators.\n\nPlace them and solder them like shown below.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>79L05\n10k\n20k\n78L10</p>\n<p>STEP 3:</p>\n<p>Next locate the thru-hole capacitor, two trimmers 10k and 20k (marked 103 and 203) and the two thru-hole voltage regulators.</p>\n<p>Place them and solder them like shown below.</p>"
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac701-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "STEP 6:\n\nLocate the male pinheaders, place and solder them like shown below.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 6:</p>\n<p>Locate the male pinheaders, place and solder them like shown below.</p>"
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac701-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "STEP 8:\n\nLocate power connector, place and solder it like shown below, make sure the indent is facing right.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 8:</p>\n<p>Locate power connector, place and solder it like shown below, make sure the indent is facing right.</p>"
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac701-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "STEP 11:\n\nNext we move on to the top pcb, locate it as well as the female pinheaders, place and solder them like shown below.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 11:</p>\n<p>Next we move on to the top pcb, locate it as well as the female pinheaders, place and solder them like shown below.</p>"
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac701-diy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "STEP 13:\n\nGrab the top pcb and with the help of a screwdriver rotate it against the bottom hole to slightly open it creating a V shape. This will allow the plastic screw to sink, as much as possible, into the hole.\n\nLocate and place the two spacers into the back of the top pcb.\n\nPlease note that the plastic screw goes on the bottom hole.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 13:</p>\n<p>Grab the top pcb and with the help of a screwdriver rotate it against the bottom hole to slightly open it creating a V shape. This will allow the plastic screw to sink, as much as possible, into the hole.</p>\n<p>Locate and place the two spacers into the back of the top pcb.</p>\n<p>Please note that the plastic screw goes on the bottom hole.</p>"
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac701-diy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "50k\n100k\n100k\n\n5k\n\nTHIS TRIMMER IS PLACED ON THE OTHER SIDE OF THE PCB\n\nSTEP 13:\n\nLast step, locate, place and solder the remaining trimmers like shown below.\n\n502 = 5k\n503 = 50k\n104 = 100k",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>50k\n100k\n100k</p>\n<p>5k</p>\n<p>THIS TRIMMER IS PLACED ON THE OTHER SIDE OF THE PCB</p>\n<p>STEP 13:</p>\n<p>Last step, locate, place and solder the remaining trimmers like shown below.</p>\n<p>502 = 5k\n503 = 50k\n104 = 100k</p>"
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac701-diy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "STEP 13:\n\nNext we'll need to prepare some parts before adding them to the front panel.\n\nLocate the rotary switch and trim the middle legs like shown below.\n\nSTEP 7:\n\nLocate the two metal shaft pots and trim the middle legs like shown below.\n\nSTEP 7:\n\nGrab the plastic shaft trim pots and flatten out their legs with the help of some pliers, like shown below.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 13:</p>\n<p>Next we'll need to prepare some parts before adding them to the front panel.</p>\n<p>Locate the rotary switch and trim the middle legs like shown below.</p>\n<p>STEP 7:</p>\n<p>Locate the two metal shaft pots and trim the middle legs like shown below.</p>\n<p>STEP 7:</p>\n<p>Grab the plastic shaft trim pots and flatten out their legs with the help of some pliers, like shown below.</p>"
+    },
+    {
+      "pageNum": 11,
+      "image": "/addac701-diy/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "STEP 13:\n\nNow place all parts taking in attention the notes below.\n\nAll pots are B10K.\n\nThreaded Jacks\n\nCut this jack piece to fit on top of plastic screw\n\nThreaded Jacks\n\nNon-threaded Jacks\n\nNon-threaded Jacks\n\ncut\n\n3 Position Switch\n\nNotice Orientation\n\"Round\" side up!\n\n2 Position Switch",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 13:</p>\n<p>Now place all parts taking in attention the notes below.</p>\n<p>All pots are B10K.</p>\n<p>Threaded Jacks</p>\n<p>Cut this jack piece to fit on top of plastic screw</p>\n<p>Threaded Jacks</p>\n<p>Non-threaded Jacks</p>\n<p>Non-threaded Jacks</p>\n<p>cut</p>\n<p>3 Position Switch</p>\n<p>Notice Orientation\n\"Round\" side up!</p>\n<p>2 Position Switch</p>"
+    },
+    {
+      "pageNum": 12,
+      "image": "/addac701-diy/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "STEP 13:\n\nPlace the panel on top of the parts and tighten the six nuts.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 13:</p>\n<p>Place the panel on top of the parts and tighten the six nuts.</p>"
+    },
+    {
+      "pageNum": 13,
+      "image": "/addac701-diy/pages/page-013.png",
+      "title": "Page 13",
+      "sectionName": null,
+      "content": "STEP 13:\n\nAdjust the height of the pcb keeping it parallel to the front panel.\n\nSolder all parts.\n\nKeep lines parallel",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 13:</p>\n<p>Adjust the height of the pcb keeping it parallel to the front panel.</p>\n<p>Solder all parts.</p>\n<p>Keep lines parallel</p>"
+    },
+    {
+      "pageNum": 14,
+      "image": "/addac701-diy/pages/page-014.png",
+      "title": "Page 14",
+      "sectionName": null,
+      "content": "STEP 13:\n\nLast step, close the 2 pcbs together amd place the two bottom screws.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 13:</p>\n<p>Last step, close the 2 pcbs together amd place the two bottom screws.</p>"
+    },
+    {
+      "pageNum": 15,
+      "image": "/addac701-diy/pages/page-015.png",
+      "title": "Page 15",
+      "sectionName": null,
+      "content": "Finish it by placing the knobs and you've finished the assembly process!\n\nProceed to the calibration method.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Finish it by placing the knobs and you've finished the assembly process!</p>\n<p>Proceed to the calibration method.</p>"
+    },
+    {
+      "pageNum": 16,
+      "image": "/addac701-diy/pages/page-016.png",
+      "title": "Page 16",
+      "sectionName": null,
+      "content": "CONSIDERATIONS\n\nFor this process you'll need an Oscilloscope, a tuner ans a precision voltage source, the precision of both the tuner and the voltage source may have an impact on the overall calibration process.\n\nINITIAL SETUP\n\n1. Start by setting the \"FREQUENCY\" knob at \"0\"\n\n2. Set the \"OCTAVE\" rotary switch at \"0\"\n\n3. Set \"FINE TUNE\" knob at 12 0'clock\n\n4. Set the \"INITIAL FREQUENCY\" trimmer to the lowest frequency possible.\n\n5. Set the \"INITIAL FREQUENCY\" trimmer to C1 (32.70Hz).\n\nTUNING THE 1V/OCT\n\nWith a precision voltage from a keyboard or a quantizer (such as ADDAC207 in keyboard mode) plug it to the 1v/oct input.\n\n1. Feed 0v, tuner frequency should be C1 (32.70Hz)\n\n2. Feed 3V, tuner frequency should be C4 (261.63Hz)\n\n3. Calibrate the \"SCALE\" trimmer to match a perfect C4.\n\n4. Feed 0v, the tuner frequency should be C1, if so skip next step otherwise follow to the next step.\n\n5. Adjust \"FINE TUNE\" knob to match a perfect C1 and go back to Step 2.\n\nBe aware that you may need to go through this loop, (steps 2 through 5) several times. Each time you'll notice less and less drift.\n\nFINE TUNING HIGHER FREQUENCIES\n\n1. Feed 0v, tuner frequency should be a perfect C1.\n\n2. Feed 5V tuner frequency should be a perfect C6, if so skip next step otherwise follow to the next step.\n\n3. Calibrate the \"HIGH FREQUENCY CALIBRATION\" trimmer to match a perfect C6.\n\nTUNING C1\n\nSet the \"FREQUENCY\" knob at \"0\" and \"FINE TUNE\" knob at 12 o'clock. Feed 0V to the 1v/oct input and set the \"INITIAL FREQUENCY\" trimmer to C1 (32.70Hz).\n\nTUNING THE RANGE SWITCH\n\nUnplug any source that is connected to the 1v/oct input and set it to a perfect C1.\n\nTurn the frequency switch to \"+5\" and trim the \"Range ADJ\" trimmer to C6 (1046.50Hz).\n\nCalibration\n\nINITIAL FREQUENCY (INIT.F.)\n\n1v/Oct (SCALE)\n\nHIGH FREQUENCY CALIBRATION (HIGH F.)\n\nSINE SYMMETRY (S.SYM)\n\nSINE SHAPE (S.SHAPE)\n\nOCTAVE SWITCH (RANGE ADJ.)\n\nBOTTOM PCB\n\nTOP PCB\n\nTRIMMER LOCATIONS",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>CONSIDERATIONS</p>\n<p>For this process you'll need an Oscilloscope, a tuner ans a precision voltage source, the precision of both the tuner and the voltage source may have an impact on the overall calibration process.</p>\n<p>INITIAL SETUP</p>\n<ol>\n<li>\n<p>Start by setting the \"FREQUENCY\" knob at \"0\"</p>\n</li>\n<li>\n<p>Set the \"OCTAVE\" rotary switch at \"0\"</p>\n</li>\n<li>\n<p>Set \"FINE TUNE\" knob at 12 0'clock</p>\n</li>\n<li>\n<p>Set the \"INITIAL FREQUENCY\" trimmer to the lowest frequency possible.</p>\n</li>\n<li>\n<p>Set the \"INITIAL FREQUENCY\" trimmer to C1 (32.70Hz).</p>\n</li>\n</ol>\n<p>TUNING THE 1V/OCT</p>\n<p>With a precision voltage from a keyboard or a quantizer (such as ADDAC207 in keyboard mode) plug it to the 1v/oct input.</p>\n<ol>\n<li>\n<p>Feed 0v, tuner frequency should be C1 (32.70Hz)</p>\n</li>\n<li>\n<p>Feed 3V, tuner frequency should be C4 (261.63Hz)</p>\n</li>\n<li>\n<p>Calibrate the \"SCALE\" trimmer to match a perfect C4.</p>\n</li>\n<li>\n<p>Feed 0v, the tuner frequency should be C1, if so skip next step otherwise follow to the next step.</p>\n</li>\n<li>\n<p>Adjust \"FINE TUNE\" knob to match a perfect C1 and go back to Step 2.</p>\n</li>\n</ol>\n<p>Be aware that you may need to go through this loop, (steps 2 through 5) several times. Each time you'll notice less and less drift.</p>\n<p>FINE TUNING HIGHER FREQUENCIES</p>\n<ol>\n<li>\n<p>Feed 0v, tuner frequency should be a perfect C1.</p>\n</li>\n<li>\n<p>Feed 5V tuner frequency should be a perfect C6, if so skip next step otherwise follow to the next step.</p>\n</li>\n<li>\n<p>Calibrate the \"HIGH FREQUENCY CALIBRATION\" trimmer to match a perfect C6.</p>\n</li>\n</ol>\n<p>TUNING C1</p>\n<p>Set the \"FREQUENCY\" knob at \"0\" and \"FINE TUNE\" knob at 12 o'clock. Feed 0V to the 1v/oct input and set the \"INITIAL FREQUENCY\" trimmer to C1 (32.70Hz).</p>\n<p>TUNING THE RANGE SWITCH</p>\n<p>Unplug any source that is connected to the 1v/oct input and set it to a perfect C1.</p>\n<p>Turn the frequency switch to \"+5\" and trim the \"Range ADJ\" trimmer to C6 (1046.50Hz).</p>\n<p>Calibration</p>\n<p>INITIAL FREQUENCY (INIT.F.)</p>\n<p>1v/Oct (SCALE)</p>\n<p>HIGH FREQUENCY CALIBRATION (HIGH F.)</p>\n<p>SINE SYMMETRY (S.SYM)</p>\n<p>SINE SHAPE (S.SHAPE)</p>\n<p>OCTAVE SWITCH (RANGE ADJ.)</p>\n<p>BOTTOM PCB</p>\n<p>TOP PCB</p>\n<p>TRIMMER LOCATIONS</p>"
+    },
+    {
+      "pageNum": 17,
+      "image": "/addac701-diy/pages/page-017.png",
+      "title": "Page 17",
+      "sectionName": null,
+      "content": "CALIBRATING THE SINE SYMMETRY\n\n1. Connect the \"Sine Output\" to an oscilloscope\n\n2. The \"Sine Symmetry\" trimmer acts like an Offset for the Sine center position adjust it until you have a symetrical shape between the positive and negative side.\n\nCALIBRATING THE SINE SHAPE\n\n3. The \"Sine Shape\" trimmer acts like a a linear to log/exp converter from the triangle waveform, too much and you get something close to a square wave, too little becomes closer to the initial triangle. As you tune it closer to the typical sine waveform you'll hear the undesired harmonics disappearing.\n\nWhile all other instructions in these callibration instruc-tions have very precise settings, the Sine Shape can be calibrated to the user's prefered timbre, so look at the sine on the oscilloscope make sure it's close to perfect and leave it at that sweet spot where your ears tell you to.\n\nSine Calibration\n\nSINE SHAPE\nSINE SYMMETRY\nGOOD\nOVERSHOT\nUNDERSHOT\nGOOD\nOVERSHOT\nUNDERSHOT",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>CALIBRATING THE SINE SYMMETRY</p>\n<ol>\n<li>\n<p>Connect the \"Sine Output\" to an oscilloscope</p>\n</li>\n<li>\n<p>The \"Sine Symmetry\" trimmer acts like an Offset for the Sine center position adjust it until you have a symetrical shape between the positive and negative side.</p>\n</li>\n</ol>\n<p>CALIBRATING THE SINE SHAPE</p>\n<ol start=\"3\">\n<li>The \"Sine Shape\" trimmer acts like a a linear to log/exp converter from the triangle waveform, too much and you get something close to a square wave, too little becomes closer to the initial triangle. As you tune it closer to the typical sine waveform you'll hear the undesired harmonics disappearing.</li>\n</ol>\n<p>While all other instructions in these callibration instruc-tions have very precise settings, the Sine Shape can be calibrated to the user's prefered timbre, so look at the sine on the oscilloscope make sure it's close to perfect and leave it at that sweet spot where your ears tell you to.</p>\n<p>Sine Calibration</p>\n<p>SINE SHAPE\nSINE SYMMETRY\nGOOD\nOVERSHOT\nUNDERSHOT\nGOOD\nOVERSHOT\nUNDERSHOT</p>"
+    },
+    {
+      "pageNum": 18,
+      "image": "/addac701-diy/pages/page-018.png",
+      "title": "Page 18",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nOctober.2019 Revision.02",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>October.2019 Revision.02</p>"
+    }
+  ]
+}

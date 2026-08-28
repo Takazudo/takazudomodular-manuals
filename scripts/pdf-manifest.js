@@ -136,4 +136,4 @@ console.log('');
 console.log(`📁 Output: ${manifestPath}`);
 console.log('');
 console.log('✅ PDF processing pipeline complete!');
-console.log('   Next.js can now consume this data from public/{slug}/data/');
+console.log('   The zfb manual viewer can now consume this data from public/{slug}/data/');

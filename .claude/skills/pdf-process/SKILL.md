@@ -1,9 +1,9 @@
 ---
 name: l-pdf-process
 description: >-
-  Run the complete PDF processing pipeline to convert the manual PDF into Next.js application data.
-  This command executes all steps automatically: split, render, extract, translate, build, and
-  manifest.
+  Run the complete PDF processing pipeline to convert a source manual PDF into bilingual zfb
+  manual-viewer data. This command executes all steps automatically: split, render, extract,
+  translate, build, and manifest.
 allowed-tools: Bash, Read, Task, TaskOutput
 ---
 

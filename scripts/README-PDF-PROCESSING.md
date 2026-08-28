@@ -1,6 +1,6 @@
 # PDF Processing Automation
 
-Automated workflow for converting the OXI ONE MKII PDF manual into Next.js application data.
+Automated workflow for converting source PDF manuals into bilingual zfb manual-viewer data.
 
 ## Overview
 
@@ -21,7 +21,7 @@ Build JSON files (pdf:build)
   ↓
 Create manifest (pdf:manifest)
   ↓
-Ready for Next.js app!
+Ready for the zfb manual viewer!
 ```
 
 ## Quick Start
@@ -206,7 +206,7 @@ pnpm run pdf:build
 
 **Output:** `public/oxi-one-mk2/data/part-01.json` through `part-10.json`
 
-Combines page translations into part JSON files (28 pages per part) for Next.js. Prefers `translationData.en_clean` when populating `pages-en.json`.
+Combines page translations into part JSON files (28 pages per part) for the zfb viewer. Prefers `translationData.en_clean` when populating `pages-en.json`.
 
 ### 6. Clean English Pages
 
@@ -273,7 +273,7 @@ zmanuals/
 ├── public/
 │   └── manuals/                                # Multi-manual structure
 │       └── oxi-one-mk2/                        # OXI ONE MKII manual
-│           ├── data/                           # Final JSON (for Next.js)
+│           ├── data/                           # Final JSON (for the zfb viewer)
 │           │   ├── manifest.json
 │           │   └── part-*.json
 │           ├── pages/                          # Rendered page images (150 DPI)
