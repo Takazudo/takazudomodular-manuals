@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "processedAt": "2026-08-28T07:01:14.844Z",
+    "processedAt": "2026-08-28T07:11:19.569Z",
     "language": "en",
     "extractionMethod": "pdf-parse",
     "imageFormat": "png",
     "imageDPI": 300,
     "cleanupMethod": "claude-code-subagent",
     "cleanupModel": "haiku",
-    "cleanedAt": "2026-08-28T07:03:48.340Z"
+    "cleanedAt": "2026-08-28T07:16:35.038Z"
   },
   "pages": [
     {
@@ -105,10 +105,10 @@
       "image": "/addac701-diy/pages/page-010.png",
       "title": "Page 10",
       "sectionName": null,
-      "content": "STEP 13:\n\nNext we'll need to prepare some parts before adding them to the front panel.\n\nLocate the rotary switch and trim the middle legs like shown below.\n\nSTEP 7:\n\nGrab the plastic shaft trim pots and flatten out their legs with the help of some pliers, like shown below.\n\nSTEP 7:\n\nLocate the two metal shaft pots and trim the middle legs like shown below.",
+      "content": "STEP 13:\n\nNext we'll need to prepare some parts before adding them to the front panel.\n\nLocate the rotary switch and trim the middle legs like shown below.\n\nSTEP 7:\n\nLocate the two metal shaft pots and trim the middle legs like shown below.\n\nSTEP 7:\n\nGrab the plastic shaft trim pots and flatten out their legs with the help of some pliers, like shown below.",
       "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>STEP 13:</p>\n<p>Next we'll need to prepare some parts before adding them to the front panel.</p>\n<p>Locate the rotary switch and trim the middle legs like shown below.</p>\n<p>STEP 7:</p>\n<p>Grab the plastic shaft trim pots and flatten out their legs with the help of some pliers, like shown below.</p>\n<p>STEP 7:</p>\n<p>Locate the two metal shaft pots and trim the middle legs like shown below.</p>"
+      "contentHtml": "<p>STEP 13:</p>\n<p>Next we'll need to prepare some parts before adding them to the front panel.</p>\n<p>Locate the rotary switch and trim the middle legs like shown below.</p>\n<p>STEP 7:</p>\n<p>Locate the two metal shaft pots and trim the middle legs like shown below.</p>\n<p>STEP 7:</p>\n<p>Grab the plastic shaft trim pots and flatten out their legs with the help of some pliers, like shown below.</p>"
     },
     {
       "pageNum": 11,
