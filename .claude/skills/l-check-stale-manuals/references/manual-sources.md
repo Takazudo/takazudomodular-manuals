@@ -6,7 +6,7 @@ Where each committed manual's currently-published revision lives, per brand — 
 
 ## Table of contents
 
-- [ADDAC System (21)](#addac-system-21)
+- [ADDAC System (23)](#addac-system-23)
 - [Weston Precision Audio (10)](#weston-precision-audio-10)
 - [OXI Instruments (7)](#oxi-instruments-7)
 - [AI Synthesis (6)](#ai-synthesis-6)
@@ -14,7 +14,7 @@ Where each committed manual's currently-published revision lives, per brand — 
 - [Recovery Effects And Devices (3)](#recovery-effects-and-devices-3)
 - [Single-manual brands (4)](#single-manual-brands-4)
 
-## ADDAC System (21)
+## ADDAC System (23)
 
 - **Site**: www.addacsystem.com — custom site (NOT Wix). User manuals are static links under `https://www.addacsystem.com/contents/productdownload/<FILENAME>.pdf`; DIY/assembly guides under `https://media.addacsystem.com/diy_guides/<MODULE>_DIYkit.pdf`.
 - **Versioning — two parallel schemes**: analogue modules print `Revision.NN` on the cover with a letter-generation filename suffix (`A_0`, `A_1`, `B_0`); microcontroller modules (ADDAC112, ADDAC207, ADDAC511) are **firmware-tied** — the product page lists one guide per firmware release (`FW1.6` … `FW2.0`) and keeps ALL older editions online. "Current" must be read from the newest product-page link text, never inferred from a filename.
@@ -41,6 +41,8 @@ Where each committed manual's currently-published revision lives, per brand — 
 | addac305-latches-diy | .../addac300-series/addac305 | media.addacsystem.com/diy_guides/ADDAC305_DIYkit.pdf |
 | addac511-svgen | .../addac500-series/addac511 | contents/productdownload/ADDAC511_VCSVGenerator_FW20.pdf — firmware-tied, newest link wins |
 | addac604-filter | .../addac600-series/addac604 | contents/productdownload/ADDAC604_DualFilter_A_0_3077.pdf |
+| addac701-diy | .../addac700-series/addac701rev2 | media.addacsystem.com/diy_guides/ADDAC701_DIYkit.pdf |
+| addac701-calibration | .../addac700-series/addac701rev2 | contents/productdownload/ADDAC701_Calibration.pdf |
 | addac712-vintpre | .../addac700-series/addac712 | contents/productdownload/ADDAC712_VintagePre_A_1.pdf |
 | addac713-stereomix | .../addac700-series/addac713 | contents/productdownload/ADDAC713_StereoDiscreteMixer_A_2.pdf |
 | addac714-vintclip | .../addac700-series/addac714 | contents/productdownload/ADDAC714_VintageClipper_A_0.pdf |
