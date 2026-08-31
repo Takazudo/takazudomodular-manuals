@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-31T03:16:04.098Z",
+    "language": "ja",
+    "translationMethod": "claude-code-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac104-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": [],
+      "contentHtml": ""
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac104-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": [],
+      "contentHtml": ""
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac104-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "ステップ1：\n\nまず、2個のコンデンサーを見つけ、下図のようにはんだ付けします。PCBのシルク印刷に示された向きに注意してください。\n\nヒント：これらのコンデンサーのはんだ付けは簡単です。まず、右側のパッド（左利きの場合は左側のパッド）にはんだを少量のせます。次に、ピンセットを使ってコンデンサーを所定の位置に置き、コンデンサーを押さえながら、あらかじめ予備はんだしたパッドを再加熱してはんだを溶かします。その後、もう一方のパッドをはんだ付けします。\n\nステップ2：\n\n次に、LM78L05レギュレーターを見つけ、下図のようにはんだ付けします。PCBのシルク印刷に示された向きに注意してください。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ1：</p>\n<p>まず、2個のコンデンサーを見つけ、下図のようにはんだ付けします。PCBのシルク印刷に示された向きに注意してください。</p>\n<p>ヒント：これらのコンデンサーのはんだ付けは簡単です。まず、右側のパッド（左利きの場合は左側のパッド）にはんだを少量のせます。次に、ピンセットを使ってコンデンサーを所定の位置に置き、コンデンサーを押さえながら、あらかじめ予備はんだしたパッドを再加熱してはんだを溶かします。その後、もう一方のパッドをはんだ付けします。</p>\n<p>ステップ2：</p>\n<p>次に、LM78L05レギュレーターを見つけ、下図のようにはんだ付けします。PCBのシルク印刷に示された向きに注意してください。</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac104-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "ステップ3：\n\n次に、4個のトリマーを探し、下図のようにはんだ付けします。PCBのシルク印刷に示された向きに注意してください。\n\nステップ4：\n\n次に、2x5ピンヘッダーを探し、下図のようにはんだ付けします。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ3：</p>\n<p>次に、4個のトリマーを探し、下図のようにはんだ付けします。PCBのシルク印刷に示された向きに注意してください。</p>\n<p>ステップ4：</p>\n<p>次に、2x5ピンヘッダーを探し、下図のようにはんだ付けします。</p>"
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac104-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "ステップ5：\n\n次に、プラスチックシャフト付きトリムポット9個をすべて用意し、下図のようにプライヤーを使って脚を平らに伸ばします。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ5：</p>\n<p>次に、プラスチックシャフト付きトリムポット9個をすべて用意し、下図のようにプライヤーを使って脚を平らに伸ばします。</p>"
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac104-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "ステップ6：\n\n次に、すべての部品をPCBに取り付けます。\n\nポテンショメーターには3種類の値があります。下図のとおりに配置してください。\n\nB105\tB103\nA103",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ6：</p>\n<p>次に、すべての部品をPCBに取り付けます。</p>\n<p>ポテンショメーターには3種類の値があります。下図のとおりに配置してください。</p>\n<p>B105\tB103\nA103</p>"
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac104-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "ステップ7：\n\nすべての部品を取り付けたら、フロントパネルを装着し、すべてのナットを締めます。\n続いて、裏面のすべてのパッドをはんだ付けします。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ7：</p>\n<p>すべての部品を取り付けたら、フロントパネルを装着し、すべてのナットを締めます。\n続いて、裏面のすべてのパッドをはんだ付けします。</p>"
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac104-diy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "ステップ8：\n\n次に、Vactrolを準備します。ロゴを上向きにした状態ですべての脚を下へ曲げ、下図のように約12mmの長さに切ります。\n\nステップ9：\n\nまずVactrolを所定の位置に置き、各脚をPCBに密着させてはんだ付けします。PCB前面でショートするおそれがあるため、Vactrolの脚を奥まで差し込まないでください。下図の向きに合わせ、できるだけPCBに密着させてはんだ付けします。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ステップ8：</p>\n<p>次に、Vactrolを準備します。ロゴを上向きにした状態ですべての脚を下へ曲げ、下図のように約12mmの長さに切ります。</p>\n<p>ステップ9：</p>\n<p>まずVactrolを所定の位置に置き、各脚をPCBに密着させてはんだ付けします。PCB前面でショートするおそれがあるため、Vactrolの脚を奥まで差し込まないでください。下図の向きに合わせ、できるだけPCBに密着させてはんだ付けします。</p>"
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac104-diy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": [],
+      "contentHtml": ""
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac104-diy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "残りのすべてのナットを取り付けて締めれば、完成です！\n続いて、キャリブレーション方法に進みます。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>残りのすべてのナットを取り付けて締めれば、完成です！\n続いて、キャリブレーション方法に進みます。</p>"
+    },
+    {
+      "pageNum": 11,
+      "image": "/addac104-diy/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "キャリブレーション\n\nこの手順では、各チャンネルの周波数レンジをキャリブレーションします。\n\n手順\n\nまずVOICE 1から始めます：\n\n1. Output 1を任意の出力先へパッチします。\n\n2. Trigger/GateをInput 1へパッチします。\n\n3. 「FREQUENCY 1」ノブを最大値に設定します。\n\n4. 「L/M/H」スイッチを中央の位置に設定します。\n\n5. 同じチャンネルの「ATTENUVERTER」ノブを12時の位置に設定します。\n\n6. この時点で、そのボイスの音が聞こえるはずです。\n\n7. 周波数が上がらなくなるまで、トリマーを反時計回りに調整します。\n\n残りのボイスについても同じ手順を繰り返します。\n\nトリマーの位置\n\nVOICE 1\tVOICE 2\nVOICE 3\tVOICE 4",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>キャリブレーション</p>\n<p>この手順では、各チャンネルの周波数レンジをキャリブレーションします。</p>\n<p>手順</p>\n<p>まずVOICE 1から始めます：</p>\n<ol>\n<li>\n<p>Output 1を任意の出力先へパッチします。</p>\n</li>\n<li>\n<p>Trigger/GateをInput 1へパッチします。</p>\n</li>\n<li>\n<p>「FREQUENCY 1」ノブを最大値に設定します。</p>\n</li>\n<li>\n<p>「L/M/H」スイッチを中央の位置に設定します。</p>\n</li>\n<li>\n<p>同じチャンネルの「ATTENUVERTER」ノブを12時の位置に設定します。</p>\n</li>\n<li>\n<p>この時点で、そのボイスの音が聞こえるはずです。</p>\n</li>\n<li>\n<p>周波数が上がらなくなるまで、トリマーを反時計回りに調整します。</p>\n</li>\n</ol>\n<p>残りのボイスについても同じ手順を繰り返します。</p>\n<p>トリマーの位置</p>\n<p>VOICE 1\tVOICE 2\nVOICE 3\tVOICE 4</p>"
+    },
+    {
+      "pageNum": 12,
+      "image": "/addac104-diy/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "ご意見、コメント、または問題がある場合は、以下のアドレスまでお問い合わせください：\naddac@addacsystem.com\n\n2020年3月　Revision.01",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ご意見、コメント、または問題がある場合は、以下のアドレスまでお問い合わせください：\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>2020年3月　Revision.01</p>"
+    }
+  ]
+}

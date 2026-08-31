@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "processedAt": "2026-08-31T03:16:04.098Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300,
+    "cleanupMethod": "claude-code-subagent",
+    "cleanupModel": "haiku",
+    "cleanedAt": "2026-08-31T03:16:49.247Z"
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac104-diy/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": [],
+      "contentHtml": ""
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac104-diy/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": [],
+      "contentHtml": ""
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac104-diy/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "STEP 1:\n\nStart by locating the 2 capacitors and solder them like shown below, notice the orientation on the pcb print.\n\nTip: soldering these caps is easy, just place a dab of solder on the pad on your right (left pad if you're left handed) and then, with the help of a tweezer, put the capacitor in place and reflow the previously tinned pad to reflow the solder while pushing the capacitor down. Then solder the other pad.\n\nSTEP 2:\n\nNext proceed to locate the LM78L05 regulator ans solder it like shown below, notice the orientation on the pcb print.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 1:</p>\n<p>Start by locating the 2 capacitors and solder them like shown below, notice the orientation on the pcb print.</p>\n<p>Tip: soldering these caps is easy, just place a dab of solder on the pad on your right (left pad if you're left handed) and then, with the help of a tweezer, put the capacitor in place and reflow the previously tinned pad to reflow the solder while pushing the capacitor down. Then solder the other pad.</p>\n<p>STEP 2:</p>\n<p>Next proceed to locate the LM78L05 regulator ans solder it like shown below, notice the orientation on the pcb print.</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac104-diy/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "STEP 3:\n\nNext locate the 4 trimmers and solder like shown below, notice the orientation on the pcb print.\n\nSTEP 4:\n\nNext locate the 2x5 pinheader and solder it like shown below.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 3:</p>\n<p>Next locate the 4 trimmers and solder like shown below, notice the orientation on the pcb print.</p>\n<p>STEP 4:</p>\n<p>Next locate the 2x5 pinheader and solder it like shown below.</p>"
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac104-diy/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "STEP 5:\n\nNext locate all 9 plastic shaft trim pots and flatten out their legs with the help of some pliers, like shown below.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 5:</p>\n<p>Next locate all 9 plastic shaft trim pots and flatten out their legs with the help of some pliers, like shown below.</p>"
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac104-diy/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "STEP 6:\n\nNext place all parts in the pcb.\n\nNotice that there are 3 different pot values, place them as shown below.\n\nB105\tB103\nA103",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 6:</p>\n<p>Next place all parts in the pcb.</p>\n<p>Notice that there are 3 different pot values, place them as shown below.</p>\n<p>B105\tB103\nA103</p>"
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac104-diy/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "STEP 7:\n\nAfter all parts are in place, fit the frontpanel in and tighten all the nuts.\n\nProceed by soldering all pads in the back.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 7:</p>\n<p>After all parts are in place, fit the frontpanel in and tighten all the nuts.</p>\n<p>Proceed by soldering all pads in the back.</p>"
+    },
+    {
+      "pageNum": 8,
+      "image": "/addac104-diy/pages/page-008.png",
+      "title": "Page 8",
+      "sectionName": null,
+      "content": "STEP 8:\n\nNext proceed to prepare the vactrols, bend all legs down (logo facing up) and cut them aprox. 12mm like shown below.\n\nSTEP 9:\n\nStart by getting the vactrol in place than solder each leg flush to the pcb, do not insert the vactrol legs all the way down as this may cause shorts on front side of the pcb. Solder them as flush as possible and in the orientation shown below.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>STEP 8:</p>\n<p>Next proceed to prepare the vactrols, bend all legs down (logo facing up) and cut them aprox. 12mm like shown below.</p>\n<p>STEP 9:</p>\n<p>Start by getting the vactrol in place than solder each leg flush to the pcb, do not insert the vactrol legs all the way down as this may cause shorts on front side of the pcb. Solder them as flush as possible and in the orientation shown below.</p>"
+    },
+    {
+      "pageNum": 9,
+      "image": "/addac104-diy/pages/page-009.png",
+      "title": "Page 9",
+      "sectionName": null,
+      "content": "",
+      "hasContent": false,
+      "tags": [],
+      "contentHtml": ""
+    },
+    {
+      "pageNum": 10,
+      "image": "/addac104-diy/pages/page-010.png",
+      "title": "Page 10",
+      "sectionName": null,
+      "content": "Place and tighten all remaining nuts and you're done!\n\nProceed to the calibration method.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Place and tighten all remaining nuts and you're done!</p>\n<p>Proceed to the calibration method.</p>"
+    },
+    {
+      "pageNum": 11,
+      "image": "/addac104-diy/pages/page-011.png",
+      "title": "Page 11",
+      "sectionName": null,
+      "content": "Calibration\n\nThis process will calibrate the each channel frequency range.\n\nPROCEDURE\n\nStart by voice 1:\n\n1. Patch the Output 1 to your prefered output\n\n2. Patch a Trigger/Gate to Input 1\n\n3. Set \"FREQUENCY 1\" knob to Maximum value\n\n4. Set \"L/M/H\" switch to Middle position\n\n5. Set same channel \"ATTENUVERTER\" knob to 12 o'clock\n\n6. At this point you should be hearing the voice's sound\n\n7. Adjust the trimmer counter-clockwise until the frequency stops going up.\n\nRepeat the procedure for the remaining voices.\n\nTRIMMER LOCATIONS\n\nVOICE 1\tVOICE 2\nVOICE 3\tVOICE 4",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Calibration</p>\n<p>This process will calibrate the each channel frequency range.</p>\n<p>PROCEDURE</p>\n<p>Start by voice 1:</p>\n<ol>\n<li>\n<p>Patch the Output 1 to your prefered output</p>\n</li>\n<li>\n<p>Patch a Trigger/Gate to Input 1</p>\n</li>\n<li>\n<p>Set \"FREQUENCY 1\" knob to Maximum value</p>\n</li>\n<li>\n<p>Set \"L/M/H\" switch to Middle position</p>\n</li>\n<li>\n<p>Set same channel \"ATTENUVERTER\" knob to 12 o'clock</p>\n</li>\n<li>\n<p>At this point you should be hearing the voice's sound</p>\n</li>\n<li>\n<p>Adjust the trimmer counter-clockwise until the frequency stops going up.</p>\n</li>\n</ol>\n<p>Repeat the procedure for the remaining voices.</p>\n<p>TRIMMER LOCATIONS</p>\n<p>VOICE 1\tVOICE 2\nVOICE 3\tVOICE 4</p>"
+    },
+    {
+      "pageNum": 12,
+      "image": "/addac104-diy/pages/page-012.png",
+      "title": "Page 12",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nMarch.2020\tRevision.01",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>March.2020\tRevision.01</p>"
+    }
+  ]
+}
