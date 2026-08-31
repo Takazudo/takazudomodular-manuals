@@ -175,6 +175,12 @@ export default function ManualApp({
   const navDisabled = !dataReady || fetchFailed;
 
   // ── Navigation (client-side via history API) ─────────────────────────────
+  const getNavigationPagePath = useCallback(
+    (pageNum: number) =>
+      `${getPagePath(manualId, pageNum)}${window.location.search}${window.location.hash}`,
+    [manualId],
+  );
+
   const navigateToPage = useCallback(
     (pageNum: number) => {
       if (navDisabled) return;
@@ -182,10 +188,10 @@ export default function ManualApp({
         scrollViewerRef.current?.scrollToPage(pageNum);
       } else {
         setCurrentPage(pageNum);
-        window.history.pushState(null, '', getPagePath(manualId, pageNum));
+        window.history.pushState(null, '', getNavigationPagePath(pageNum));
       }
     },
-    [navDisabled, viewMode, manualId],
+    [navDisabled, viewMode, getNavigationPagePath],
   );
 
   const navigateHome = useCallback(() => {
@@ -200,9 +206,9 @@ export default function ManualApp({
   const handleScrollPageChange = useCallback(
     (pageNum: number) => {
       setCurrentPage(pageNum);
-      window.history.replaceState(null, '', getPagePath(manualId, pageNum));
+      window.history.replaceState(null, '', getNavigationPagePath(pageNum));
     },
-    [manualId],
+    [getNavigationPagePath],
   );
 
   // Keep the viewer in sync with browser back/forward. The browser has already

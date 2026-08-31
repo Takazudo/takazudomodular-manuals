@@ -5,9 +5,10 @@ import { test, expect } from '@playwright/test';
  *
  * Exercises the end-to-end flow:
  *   1. Default render is Japanese.
- *   2. Clicking EN switches the translation column to English and adds
+ *   2. Page navigation keeps the default Japanese URL clean.
+ *   3. Clicking EN switches the translation column to English and adds
  *      `?lang=en` to the URL.
- *   3. Reloading the page preserves English (URL-driven persistence).
+ *   4. Page navigation and reload preserve English (URL-driven persistence).
  *
  * The test targets `oxi-coral` page 5 because that manual ships both
  * `pages-ja.json` and `pages-en.json`, so the EN toggle is enabled.
@@ -63,7 +64,15 @@ test.describe('Language toggle: end-to-end', () => {
     // the provider strips the param when switching back to default).
     expect(new URL(page.url()).searchParams.get('lang')).toBeNull();
 
-    // --- Step 2: click EN ---
+    // --- Step 2: default-language navigation keeps the URL clean ---
+    await page.getByTestId('next-page-button').click();
+    await expect(page).toHaveURL('/oxi-coral/page/6');
+    expect(new URL(page.url()).searchParams.get('lang')).toBeNull();
+
+    await page.getByTestId('prev-page-button').click();
+    await expect(page).toHaveURL(PAGE_PATH);
+
+    // --- Step 3: click EN ---
     await enButton.click();
 
     // Translation panel switches to English.
@@ -74,7 +83,11 @@ test.describe('Language toggle: end-to-end', () => {
     // URL now carries `?lang=en`.
     expect(new URL(page.url()).searchParams.get('lang')).toBe('en');
 
-    // --- Step 3: reload keeps EN ---
+    // --- Step 4: navigation and reload keep EN ---
+    await page.getByTestId('next-page-button').click();
+    await expect(page).toHaveURL('/oxi-coral/page/6?lang=en');
+    await expect(translationPanel).toHaveAttribute('lang', 'en');
+
     await page.reload();
 
     await expect(page.locator(TRANSLATION_PANEL)).toHaveAttribute('lang', 'en');

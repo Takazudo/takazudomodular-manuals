@@ -67,12 +67,12 @@ fi
 
 step "Step 4/6: Start production server"
 cleanup
-(cd "$ROOT_DIR" && pnpm dlx serve out -l $SERVE_PORT --no-clipboard) &
+(cd "$ROOT_DIR" && pnpm run serve) &
 
 # ── Step 5: Wait for server ──
 
 step "Step 5/6: Wait for server"
-if wait_for_server "http://localhost:$SERVE_PORT/manuals/"; then
+if wait_for_server "http://localhost:$SERVE_PORT/"; then
   pass "Production server ready on port $SERVE_PORT"
 else
   fail "Production server failed to start within 30s"
