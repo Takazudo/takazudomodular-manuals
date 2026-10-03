@@ -4,7 +4,7 @@
     "pageNum": 1,
     "title": "Page 1",
     "sectionName": null,
-    "body": "V 2.1 USER GUIDE",
+    "body": "ユーザーガイド V 3.0",
     "url": "/oxi-coral/page/1"
   },
   {
@@ -12,7 +12,7 @@
     "pageNum": 2,
     "title": "Page 2",
     "sectionName": null,
-    "body": "© OXI ELECTRONIC INSTRUMENTS SLU – 2023 – All rights reserved. www.oxiinstruments.com 本マニュアルに含まれる情報は予告なく変更されることがあり、OXI ELECTRONIC INSTRUMENTS SLU(以下OXI Instruments)の確約を表すものではありません。本マニュアルに記載されているソフトウェアは、ライセンス契約または秘密保持契約の条件の下で提供されます。ソフトウェアライセンス契約は、その合法的な使用に関する条件を規定しています。購入者の個人的な使用以外の目的で、OXI INSTRUMENTSの書面による明示的な許可なく、本マニュアルのいかなる部分も複製または送信することはできません。本マニュアルに引用されているその他すべての製品、ロゴ、または会社名は、それぞれの所有者の商標または登録商標です。 マニュアルバージョン: 2.1 改訂日: 2025年1月20日 ハードウェアバージョン: OXI CORAL v1.0 製造元: OXI Instruments 仕様変更について:",
+    "body": "© OXI ELECTRONIC INSTRUMENTS S.L. 2026. All rights reserved. www.oxiinstruments.com 本マニュアルに記載されている情報は予告なく変更されることがあり、OXI ELECTRONIC INSTRUMENTS S.L.(以下、OXI Instruments)による確約を意味するものではありません。本マニュアルで説明しているソフトウェアは、使用許諾契約または秘密保持契約の条件に基づいて提供されます。購入者個人の使用以外の目的で、OXI Instruments の書面による明示的な許可なく、本マニュアルのいかなる部分も、いかなる形式または手段によっても複製または送信することはできません。 本マニュアルに記載されているその他すべての製品、ロゴ、会社名は、それぞれの所有者の商標または登録商標です。 マニュアルバージョン:3.0 リビジョン日付:2026年7月19日 ハードウェアバージョン:OXI CORAL v1.0 ファームウェアバージョン:3.0 製造元:OXI Instruments",
     "url": "/oxi-coral/page/2"
   },
   {
@@ -20,7 +20,7 @@
     "pageNum": 3,
     "title": "Page 3",
     "sectionName": null,
-    "body": "WELCOME OXI Coralをご購入いただきありがとうございます。 Mutable Instruments Plaitsモジュールの登場は、コンパクトなマルチエンジン・シンセボイスモジュールとして革命的なものでした。MIのオープンソース貢献に感謝し、私たちは彼らのアルゴリズムの一部を採用し、モジュールの8つの「インスタンス」を含むコンパクトなパッケージにまとめました。さらに、ボイスごとに独立したエンベロープとフィルター、FX、完全なMIDI実装、そしてカラフルで有機的なインターフェースなど、新しい要素を追加しました。加えて、ボイスごとにカスタムウェーブテーブルとサンプルプレイバックエンジンも利用可能です。 しかし、私たちは単なるポリフォニックシンセを作りたかったわけではありません。そこで、各ボイスを最大限に活用できるよう、マルチパートコンセプトを導入しました。これにより、8つのボイスを思い通りに配置・使用できます。8つのモノフォニックパート、8ボイスの1つのポリフォニックパート、またはそれらの任意の組み合わせが可能です。同一モジュール内で、3ボイスずつの2つのポリフォニックパート",
+    "body": "WELCOME OXI Coral をお買い上げいただきありがとうございます。 Mutable Instruments の Plaits モジュールの登場は、コンパクトなマルチエンジン・シンセボイスにおける革命でした。Coral はそのオープンソースの基盤の上に構築されています。14 HP のモジュールに 8 つの独立したボイスを搭載し、各ボイスが独自のエンベロープ、フィルター、エフェクトを備えています。インターフェースはカラフルで有機的です。さらに、ボイスごとにカスタムウェーブテーブルとサンプル再生エンジンを利用できます。 しかし、Coral は単なるポリフォニックシンセではありません。マルチパートのコンセプトにより、8 つのボイスを自由に割り当てられます。8 つのモノフォニックパート、1 つの 8 ボイス・ポリフォニックパート、あるいはその任意の組み合わせが可能です。1 台の Coral が、ポリシンセ、ドラムマシン、グルーヴボックス、そしてサウンド探求用モジュールを同時に兼ねることができます。 Coral ファームウェア 3.0",
     "url": "/oxi-coral/page/3"
   },
   {
@@ -28,7 +28,7 @@
     "pageNum": 4,
     "title": "Page 4",
     "sectionName": null,
-    "body": "INDEX WELCOME 3 INDEX 4 SPECIFICATIONS 7 PANEL OVERVIEW 8 INTRODUCTION 9 POLYPHONIC SYNTH 9 MULTIPART BOX 11 SIGNAL FLOW 12 INTERFACE 13 MAIN VIEW 13 ENGINE SELECTION 13 PRIMARY CONTROLS 14 SECONDARY CONTROLS 15 PART / VOICE SELECTION 17 PART CREATION 19 VOICES-PART RESET 20 CV and MIDI MODULATION 21 CV MODULATION 21 MIDI MODULATION 23 ENGINES 24 VIRTUAL ANALOG 24 WAVESHAPER 24 FM 25 WAVETABLE 25 MDO 25 STRING 26 ADDITIVE DISTORTION 26 ACID 27 HI HAT SYNTH 27 SNARE SYNTH 27 HI HAT / SNARE SYNTH",
+    "body": "HOW TO USE THIS MANUAL このガイドは、指先から出力までの信号の流れに沿って構成されています。第 1 章から第 4 章では、ハードウェア、インターフェース、Coral の演奏方法を説明します。第 5 章では、すべてのエンジンを解説します。第 6 章から第 8 章では、エフェクト、MIDI、SD カードを扱います。第 9 章ではコンパニオン Web アプリを説明します。第 10 章はキャリブレーションです。 初めての方へ:第 1 章を読み、MIDI または Gate/CV のペアを接続して、演奏を始めてください。Coral は、購入直後の状態で 8 ボイスのポリフォニックシンセとして動作します。 NOTE ボックスは、役立つ補足情報を提供します。 CAUTION ボックスは、音が途切れたりデータが失われたりする可能性のある事項を示します。 TIP ボックスは、ショートカットや良い習慣を紹介します。",
     "url": "/oxi-coral/page/4"
   },
   {
@@ -36,7 +36,7 @@
     "pageNum": 5,
     "title": "Page 5",
     "sectionName": null,
-    "body": "SD CARD 36 CALIBRATION 40 ACKNOWLEDGMENT 42 DECLARATION OF CONFORMITY 43 TERMS OF WARRANTY 44",
+    "body": "目次 1 概要 8 1.1 仕様 8 1.2 パネル概要 9 1.3 電源の投入 10 1.4 シグナルフロー 10 2 インターフェースと演奏 11 2.1 メインビュー 11 2.2 プライマリーパラメーターとセカンダリーパラメーター 11 MIDI からコントロールを取り戻す 11 2.3 コントロール 12 2.4 エンジンの選択 12 エンジンを切り替えたときのサウンドの変化 13 2.5 エンコーダーのクリックサイクル 13 2.6 プリセット 14 2.7 オプションメニュー 14 2.8 ドローン 15 ドローンのオン/オフ 15 ドローンの鳴り方 15 制限 16 2.9 ランダマイザー 16 2.10 ボイスとパートのリセット 16 3 マルチパートとボイス 17 3.1 パートのコンセプト 17 3.2 パートとボイスの選択 17 3.3 パートの作成 17 3.4 ボイスとパートのリセット 18 4 CV と MIDI モジュレーション 19 4.1 CV モジュレーション 19 Poly モードと Trigger モード(PolyCV) 19 CV 入力",
     "url": "/oxi-coral/page/5"
   },
   {
@@ -44,7 +44,7 @@
     "pageNum": 6,
     "title": "Page 6",
     "sectionName": null,
-    "body": "このページは意図的に空白のままにされています。",
+    "body": "ADDITIVE 22 5.3 FM 22 2-OP FM 22 FMX7 (DX7) 23 5.4 ウェーブテーブル 23 WAVETABLE 23 DUAL WAVETABLE 23 WAVETABLE SWARM 24 5.5 アシッド 24 ACID 1 24 ACID 2 24 5.6 鍵盤楽器、弦楽器、フィジカルモデル 25 STRING 2 25 PIANOZ 25 STRING 25 MODAL 25 5.7 ノイズとドラム 26 PARTICLE NOISE 26 FILTERED NOISE 26 SNARE / HI-HAT 26 HI-HAT 26 SNARE 26 BASSDRUM 26 5.8 ジェネレーティブ・ドローン 27 STITCHER 27 サンプルの選択 27 FX リング 27 5.9 サンプラー 28 WAVPLAYER 28 6 サウンドエフェクト 29 6.1 Space 29 6.2 Chorus 29 6.3 Delay 29 6.4 ハイパスフィルター 29 7 MIDI インプリメンテーション 30 7.1 パートごとの CC",
     "url": "/oxi-coral/page/6"
   },
   {
@@ -52,7 +52,7 @@
     "pageNum": 7,
     "title": "Page 7",
     "sectionName": null,
-    "body": "SPECIFICATIONS Dimensions 14 Hp 3 cm deep Panel Black anodized aluminum with color silkprint. Consumption +12V - 110 mA -12V - 10 mA +5V - 0 mA Outputs 2x Mono DC coupled outputs (±5 V) Inputs 1x MIDI TRS (Type A and B compatible). 8x CV inputs ±5 V (±10V max). 1x Gate input",
+    "body": "8 SDカードとオプション 32 8.1 フォルダ構成 32 8.2 Wavetable 32 8.3 options.txt 32 ファイルが管理する設定とリングが管理する設定 33 全キー一覧 33 8.4 カード上のプリセット 34 9 コンパニオンWebアプリ 35 9.1 Firmware Updater 35 ステップ1 · Coralをアップデートモードにする 35 ステップ2 · 接続する 35 ステップ3 · ファームウェアをビルドまたは選択する 35 ステップ4 · 書き込む 35 9.2 Preset Manager 35 ステップ1 · ファームウェアレイアウトを設定する 36 ステップ2 · プリセットとパートを作成する 36 ステップ3 · SDカードへの書き込みと読み込み 37 9.3 Waveform Generator 37 10 キャリブレーション 38 A 付録：エンジン一覧 39 B 付録：トラブルシューティング 40 変更履歴 40 返金ポリシー（欧州連合のみ） 44 保証 44",
     "url": "/oxi-coral/page/7"
   },
   {
@@ -60,7 +60,7 @@
     "pageNum": 8,
     "title": "Page 8",
     "sectionName": null,
-    "body": "PANEL OVERVIEW Encoderとプッシュボタン: Engineの選択 長押しでVoice/Part選択 長押し + ノブを回してセカンダリパラメーターを変更 タップしてLoad、Save、CV Assign、Mainビューを切り替え Micro SDカードスロット: 工場出荷時のコンテンツが入ったMicro SDカードを常に挿入しておく必要があります WAVプレーヤーを集中的に使用するには、高速SDカード(クラス10以上)が必要です CV入力: CV入力は選択されたpartに影響します(デフォルトでは全voiceに影響) PartはPart CVまたはCV Assign画面でアドレス指定できます ADSRエンベロープトリマーは、セカンダリ機能でバイポーラCV attenuatorとして機能します LEDリング: モジュールのさまざまな画面の視覚的フィードバックを提供します デフォルトでは、各LEDが各voiceのアンプ値を表します",
+    "body": "1 概要 Coralは、Eurorack用のポリフォニック・マルチパートのシンセサイザーボイスモジュールです。ポリフォニックであり、最大8ノートを同時に発音できます。マルチパートであり、8つのボイスはそれぞれ独自のエンジンを動かし、独自のMIDIチャンネルを受信し、独自のパラメーター値を保持します。 Coralを演奏する最もシンプルな方法は、8ボイスのポリフォニックMIDIシンセとして使うことです。CVからシングルボイスとして演奏することもできます。初めて電源を入れたときは、この動作になっています。Coralの音を確かめるには、GateとCV/Octのペアをパッチしてください。これらが内部エンベロープをトリガーします。 1.1 仕様 | | | | --- | --- | | Dimensions | 14 HP、奥行き3 cm | | Panel | 黒アルマイトアルミニウム、カラーシルク印刷 | | Consumption | +12V: 110 mA · -12V: 10 mA · +5V: 0 mA | | Outputs | 2x モノラルDC結合出力（±5",
     "url": "/oxi-coral/page/8"
   },
   {
@@ -68,7 +68,7 @@
     "pageNum": 9,
     "title": "Page 9",
     "sectionName": null,
-    "body": "INTRODUCTION CORALはポリフォニックマルチパートシンセサイザーです。 ポリフォニックとは、最大8つの異なるボイスまたはノートを同時に演奏できることを意味します。 マルチパートとは、利用可能な8つのボイスそれぞれに異なるエンジン、MIDIチャンネルを設定でき、各パラメーター(フィルター、サウンドコントロール、エンベロープ、エフェクトセンドなど)に対して異なる値のセットを持てることを意味します。 Coralを演奏する最も簡単な方法は、8ボイスのポリフォニックMIDIシンセとして、またはチャンネル1をリスニングするCVを介したシングルボイスとして使用することです。これは、モジュールを初めて起動したときの動作です。基本的な概念を理解するために、ここから始めることをお勧めします。 また、Gate CV/Octシグナルのペアをパッチして内部エンベロープをトリガーし、Coralのサウンドを聴いてみることもできます。 POLYPHONIC SYNTH すべてのポリフォニックシンセと同様に、Coralには複数のボイス(具体的には8つ)があり、異なるノートを演奏できます。",
+    "body": "1.2 パネル概要 図1.1 Coralのパネル。プッシュエンコーダーとLEDリング。各ポットにメインラベルとセカンダリーラベルがあります。HARM、OCT、TIMBRE、MORPHの各ポット。ドライブ付きLPフィルター。AmpとModのADSRコントロールはCVアッテネーターとしても機能します。SDカードスロット。8つのCV入力とGate。MIDI入力。ステレオL/R出力。 プッシュボタン付きエンコーダー。 回すとエンジンを選択します。押し込んだまま回すと、ボイス / パートを選択します。押し込んだままポットを回すと、そのポットのセカンダリーパラメーターを操作できます。クリックすると、LOAD、SAVE、CVルーティング、オプションの各画面を順に切り替えます（第2章）。 Micro SDカード。 常にスロットに挿したままにしてください。負荷の高いサンプラー用途には、高速なカード（Class 10以上）が必要です。 CV入力。 選択中のパートに作用します（デフォルトでは全ボイス）。パートはPart CVジャックまたはCV",
     "url": "/oxi-coral/page/9"
   },
   {
@@ -76,7 +76,7 @@
     "pageNum": 10,
     "title": "Page 10",
     "sectionName": null,
-    "body": "PRIMARY PARAMETERとSECONDARY PARAMETER 各ノブは1つのメインパラメーターと1つのセカンダリーパラメーターを制御します。この戦略により、よりコンパクトなフットプリントに多くの機能を詰め込むことができました。 セカンダリーパラメーターを変更するには、エンコーダーを押しながら対応するノブを回します。 ノブの位置とパラメーター値が一致しない場合があるため、パラメーター値の急激な変化を避けるために、まず保存されている値に「追いつく」必要があります。これはメインパラメーターとセカンダリーパラメーターの両方に適用されます。 ––––––––––––––––––––– メインパラメーターとセカンダリーパラメーター間をスムーズに移動するには、ノブ値の「追いつき」に慣れる必要があります。 ––––––––––––––––––––– プライマリーパラメーターの場合、保存されている値はパラメーターセクションの色で表示され、ノブの現在位置は白色で表示されます: セカンダリーパラメーターの場合、保存されている値は白色で表示され、ノブの現在位置はオレンジ色で表示されます:",
+    "body": "1.3 電源投入 工場出荷時のMicro SDカードが挿入されていることを確認します。 電源の入ったEurorackケースにCoralを取り付けます。リボンケーブルの向きに注意してください（赤いストライプを-12Vに合わせます）。 電源を入れます。メインビューでは、LEDリングにボイスのアクティビティが表示されます。 MIDIチャンネル1でノートを送信します。トリガー入力にGate、OCT入力にCVをパッチして演奏することもできます。 NOTE デフォルトでは、8つのボイスすべてがMIDIチャンネル1を受信し、1つのパートとして割り当てられています。これが最適な出発点です。 1.4 シグナルフロー 図1.2 ボイスごとのシグナルチェーン。EngineとNoiseがFilter、Amp、Panの順に入ります。ModエンベロープとAmpエンベロープがFilterとAmpをコントロールします。各ボイスに独自のChorusインサートがあります。Limiterが8つすべてのボイスをミックスします。Space リバーブはセンド/リターンで、その後ステレオ出力に至ります。",
     "url": "/oxi-coral/page/10"
   },
   {
@@ -84,7 +84,7 @@
     "pageNum": 11,
     "title": "Page 11",
     "sectionName": null,
-    "body": "––––––––––––––––––––– モジュールの起動時には、ノブの位置と保存されたパラメーター値が一致しない場合があるため、メインまたはセカンダリーの値をキャッチアップする必要がある場合があります。 ––––––––––––––––––––– VOICE ALLOCATION どのノートがどのボイスで再生されるかを知るには? Coralが新しいMIDIノートを受信するたびに、利用可能なボイスに割り当てるか、必要に応じてボイスを奪取します。 特定のシンセエンジンでMIDIを使用して正確なボイスにアクセスしたい場合は、特定のMIDIチャンネルを割り当てる必要があり、そのためパートを作成する必要があります(詳細は後述)。 逆に、Trigger patchインプットは、選択したパートのすべてのボイスをトリガーします。詳細は後述します。 MULTIPART BOX PARTSコンセプト Coralで利用可能な8つのボイスは、パートにグループ化できます。戦略としては、同じMIDIチャンネルに設定されたボイスが1つのパートに属します。",
+    "body": "2 インターフェースと演奏 この章では、メインビューと、それぞれ2つの機能を持つポットについて説明します。また、エンジン選択、エンコーダーのクリックサイクル、プリセット、オプションメニュー、ランダマイザーについても説明します。 2.1 メインビュー メインビューでは、LEDリングが各アクティブボイスの振幅を表示します。これがデフォルトの画面です。どのメニューからでも、いずれかのポットを回すとここに戻ります。 図2.1 メインビュー、ボイスの状態：ボイス1、2、4、6がアクティブ。 2.2 プライマリーパラメーターとセカンダリーパラメーター 各ポットは、1つのメインパラメーターと1つのセカンダリーパラメーターをコントロールします。これにより、Coralは小さなパネルに多くのコントロールを詰め込んでいます。セカンダリーパラメーターを変更するには、エンコーダーを押し込んだまま（SHIFTとして機能します）、対応するポットを回します。",
     "url": "/oxi-coral/page/11"
   },
   {
@@ -92,7 +92,7 @@
     "pageNum": 12,
     "title": "Page 12",
     "sectionName": null,
-    "body": "12 MULTIPARTについて理解する Coralは柔軟性を提供するように設計されています。LeadやChordsに何個のボイスを割り当てるかを決められることは素晴らしく、モジュールの広大な音色パレットと組み合わせることで、本当に強力なツールとなります。 しかし、柔軟性には代償が伴います。 最初は、まず1つのパートだけで演奏を始めることをお勧めします。モジュールの使用に慣れてきたら、さらにパートを作成してください。 シンプルに始めましょう。2つのパートを作成し、パート間の切り替えやそれぞれのパラメーターの操作に慣れてください。 例えば、ベースライン用に1ボイスのパートを1つ作成し、残りのボイスでコードやその他のポリフォニック用途に使うパートを作成することができます。 パートを作成するには、まずボイスとパート間のナビゲーション方法を学ぶ必要があります。これについては次の章で説明します。 SIGNAL FLOW",
+    "body": "シーケンサーがCCオートメーションやパラメーターロックをストリーミング送信する場合に適しています。そうした場合、再アームが絶えず発生するとポットが反応しないように感じられてしまうためです。 NOTE エンジンの呼び出しは唯一の例外です。Coralは、セクション2.4で説明するとおり、エンジンごとのサウンドを復元します。ポットは、記憶された位置に正確に到達する必要があります。そうすると、サウンドは保存した状態に正確に一致します。 NOTE HARMとOCTは、セカンダリー機能（それぞれMIDIチャンネルとファインチューン）では動作が異なります。ポットが保存された値を横切った瞬間に引き継ぎます。値に向かってスルーすることはありません。これは従来からの動作です。 2.3 コントロール プライマリー機能とセカンダリー機能は、選択中のボイス、または選択中のパート内のボイスにのみ作用します。HARM、TIMBRE、MORPHは3つのエンジンパラメーターで、エンジンごとに異なる働きをします（第5章を参照）。 | Control | Main function | Secondary (hold",
     "url": "/oxi-coral/page/12"
   },
   {
@@ -100,7 +100,7 @@
     "pageNum": 13,
     "title": "Page 13",
     "sectionName": null,
-    "body": "INTERFACE MAIN VIEW - Voice Status メインビューでは、アクティブなボイスのAMP値がLED Ringに表示されます。 ENGINE SELECTION エンコーダーを回すと、選択したVoiceまたはPartのエンジンを変更できます。新しいエンジンは自動的に適用されます。 選択したPartのアクティブなエンジンは、図のようにピンク色で表示されます。",
+    "body": "図2.2. エンジン選択リング：リング上に10個のエンジンスロットが並び、アクティブなスロットはピンクに点灯し、残りのスロットは暗く表示されます。スロットの内容は、ビルドしたファームウェアによって異なります。 NOTE 10個のエンジンスロットは、Firmware Updater（第9章）で選択した内容によって決まります。このマニュアルに掲載しているリングの例は、あくまで一例のレイアウトです。 エンジンを切り替えたときのサウンドの変化 パート上の各エンジンは、それぞれ独自のトーン設定を保持します。別のエンジンに移動してから戻ると、そのエンジンは最後に操作したときの状態のまま戻ってきます。HARM、TIMBRE、MORPH、フィルターカットオフ、フィルターエンベロープとレゾナンス、両方のエンベロープ、サステイン、ノイズが保持されます。 エフェクトのミックスは変化しません。 Space（リバーブ）、Delay、Chorus の各センドは、エンジンではなくパートに属します。HP",
     "url": "/oxi-coral/page/13"
   },
   {
@@ -108,7 +108,7 @@
     "pageNum": 14,
     "title": "Page 14",
     "sectionName": null,
-    "body": "14 PRIMARY CONTROLS 選択されたVoiceまたは選択されたPart内のvoiceにのみ、primaryまたはsecondary controlsが影響します。 harm 選択されたエンジンの最初のパラメータを制御します。Wav Playerの場合、オーバードライブコントロールとして機能します。 oct サウンドのベースオクターブを設定します。入力されたMIDIノートまたはCV pitch (oct) 入力のオフセットとして機能します。 timbre エンジンの2番目のパラメータです。Wav Playerの場合、サンプル選択となります。 morph エンジンの3番目のパラメータです。Wav Playerの場合、サンプルフォルダの選択となります。 f.env MODulation ADSR envelopeがフィルター周波数に適用される量を設定します。 12時の位置で0%です。 完全に時計回りで100%、 完全に反時計回りで-100%です。 ––––––––––––––––––––– MODulation ADSR",
+    "body": "2.6 プリセット 10個のプリセットスロットに、すべてのパラメーターとボイス構成全体を保存・ロードできます。extended-presets オプションを使うと100スロットになります（第8章）。すべてが保存されるため、プリセットは最後に操作したときの状態そのままに呼び出されます。プリセットは MIDI Program Change メッセージでも呼び出せます。 エンコーダーをタップすると画面間を移動できます。どの画面でもエンコーダーを回すと選択モードに入り、次のタップで確定されます。ポットを回すと、メインビューに戻ります。 図2.3. 画面ナビゲーションの流れ：VOICES から LOAD（青）、SAVE（赤）、CV ASSIGN（紫）へ。 TIP 保存した各プリセットは、それぞれ独自のウェーブテーブルを記憶します。古いプリセットは、グローバルのデフォルトウェーブテーブルにフォールバックします。 2.7 オプションメニュー オプションリングを使うと、コンピューターなしで Coral のパフォーマンス設定を変更できます。LOAD、SAVE、CV",
     "url": "/oxi-coral/page/14"
   },
   {
@@ -116,7 +116,7 @@
     "pageNum": 15,
     "title": "Page 15",
     "sectionName": null,
-    "body": "15 f.reso フィルターのレゾナンスとドライブコントロールを設定します。 amp atk アンプADSRエンベロープのアタックタイムを設定します。 amp dr アンプADSRエンベロープのDecayとReleaseステージのタイムを設定します。 sust アンプとモジュレーションADSRエンベロープのサステインレベルを設定します。 mod atk モジュレーションADSRエンベロープのアタックタイムを設定します。 mod dr モジュレーションADSRエンベロープのDecayとReleaseステージのタイムを設定します。 SECONDARY CONTROLS midi MIDIチャンネルを選択します。 freq ベース周波数を細かく調整します。 12時の位置でデチューンなし。 完全に時計回りで100%。 完全に反時計回りで-100%。 noise ホワイトノイズ内部ソースのレベルをコントロールします。このレベルはボイスレベルの影響を受けないため、独立したノイズソースとして使用できます。",
+    "body": "| LED | Option | 動作 | | --- | --- | --- | | 3 | CV part to engine | Part CV ジャックが、パートではなくエンジンを選択します。 | | 4 | MPE | MPE の入力と出力。 | | 5 | Program Change | 0 はすべて受け付ける、1 はすべて無視する、2 はアクティブなパートチャンネルでのみ受け付ける。番号付きのサブビューが開きます。 | | 6 | Randomizer | エンコーダーを長押しするとサウンドをランダマイズします（セクション2.9）。 | | 7 | High-pass filter | On：SHIFT + MORPH が HP カットオフになります。Off：SHIFT + MORPH が chorus センドになります。 | | 8 | Delay FX | On：SHIFT + TIMBRE が delay センドになります。Off：SHIFT + TIMBRE がノイズレベルになります。 | | 9 | Drone | Drone ピッカーを開きます。Drone",
     "url": "/oxi-coral/page/15"
   },
   {
@@ -124,7 +124,7 @@
     "pageNum": 16,
     "title": "Page 16",
     "sectionName": null,
-    "body": "Delay効果が設定で有効になっている場合(options.txtファイル)、このコントロールはディレイのセンド量を設定します。 ディレイのセンド量はボイスごとに独立して設定できます。 chorus Chorus FXエンジンへのセンド量を設定します。 High Pass Filterが設定で有効になっている場合(options.txtファイル)、このコントロールは代わりにフィルターの周波数を設定します。ボイスごとに独立したHP Filterがあります。 level 最大振幅レベルを設定します。 space Space FXエンジンへのセンド量を設定します。 pan コンスタントパワーパンローに従ってステレオパンを設定します。 cv attenuators エンベロープトリマーの副次的な機能は、その真下にあるCV入力用のバイポーラアッテネーターです。 amp atk: atkdec CVに影響します amp dec: filter CVに影響します sust: harm CVに影響します mod atk: timbre CVに影響します mod dec: morph CVに影響します",
+    "body": "制限事項 各エンジンのボイス数の上限は引き続き適用されます。FMX7 は6ボイス、ACID 2 は4ボイス、STITCHER は1ボイスです。上限を超えたノートは鳴りません。 ドラムエンジン（BASSDRUM、SNARE、HI-HAT、SNARE / HI-HAT）と WAVPLAYER はドローンできません。ドローン中のパートをこれらのいずれかに変更すると、ドローンは止まります。 All Notes Off（MIDI CC 123）はドローン中のノートを止めます。そのパートのドローンはオンのままです。 Smart chord（STRING 2、PIANOZ）使用時、または MPE モードでは、鍵盤を押さえている間、レベルはフルのまま保たれます。指を離すとノートはリリースします。 一部のエンジン（たとえば一部の FMX7 パッチ）は、独自の内部エンベロープを持っています。Drone は Coral の VCA を開いたままにしますが、エンジンのエンベロープを止めることはできません。そのため、これらのサウンドはフェードすることがあります。 TIP",
     "url": "/oxi-coral/page/16"
   },
   {
@@ -132,7 +132,7 @@
     "pageNum": 17,
     "title": "Page 17",
     "sectionName": null,
-    "body": "17 PART / VOICE SELECTION VOICEに同じMIDIチャンネルが割り当てられている場合、それらはPARTとしてグループ化されます。 ––––––––––––––––––––– 8つのvoiceを異なるpartに分割することができます。例えば、ベース用に1つのvoiceで構成される1つのpart、リード用に3つのvoiceで構成される別のpart、そしてコード用に残りの4つのvoiceで構成される別のpart、といった具合です。 ––––––––––––––––––––– 異なるvoiceとpartを移動するには、Encoderを押したまま回します。 モジュールがデフォルト状態の場合(初回起動後またはリセット後)、encoderを0.5秒間押し続けると、LEDリングは次のように表示されます。 これは、1から8までのすべてのvoiceが選択されていることを意味します。コントロール、ポテンショメーター、またはencoderの変更は、すべてのvoiceに適用されます。 Encoderを離すと、メインビューであるvoice AMPの視覚化に戻ります。",
+    "body": "3 MULTIPART AND VOICES Coral には8つのボイスがあります。この章では、それらをパートにグループ化する方法を説明します。これにより、モノのベースライン、モノのリード、ポリフォニックのコードブロックを同時に演奏できます。 3.1 パートの概念 同じ MIDI チャンネルに設定されたボイスは、1つのパートに属します。デフォルトでは8つのボイスすべてが MIDI チャンネル1にあるため、パートは1つだけです。ボイスを別の MIDI チャンネルに割り当てると、すぐに新しいパートが作成されます。各パートは、その MIDI チャンネル、または Part CV ジャックでアドレスできます。 柔軟性には代償があります。 まずは1つのパートから始めることをおすすめします。慣れてきたら2つのパートを作成し、それらを切り替える練習をして、そこから発展させていきましょう。 どのボイスがノートを鳴らすかはどうやってわかるのでしょうか。Coral は、受信したすべての MIDI",
     "url": "/oxi-coral/page/17"
   },
   {
@@ -140,7 +140,7 @@
     "pageNum": 18,
     "title": "Page 18",
     "sectionName": null,
-    "body": "18 8番目のvoiceに到達したら、さらにエンコーダーを時計回りに回すと、選択はAll VOICESに戻り、その後PART選択に移ります。 注意: Voice Nは1から8のN番目のvoiceを意味します 複数のpartが利用可能になると、PART選択は異なるpart間を移動します。例えば、3つのpartがある場合、次のようになります。 ––––––––––––––––––––– エンコーダーを反時計回りに回すと、逆方向に移動できます。 ––––––––––––––––––––– PART CREATION このプロセスを説明するために、次の例を使用します。以下の楽器用に3つの異なるpartを作成しましょう:",
+    "body": "図3.2. PART 選択中の3つのパート：PART 1 Bassline（voice 1）、PART 2 Lead（voice 2）、PART 3 Chords/Pads（voice 3〜8）。 3.4 ボイスとパートのリセット メインビューでエンコーダーを5秒以上長押しします。赤い LED アニメーションが表示されるまで待ちます。これにより、すべてのボイスが MIDI チャンネル1に戻り、すべてのパラメーターが初期値に戻ります。",
     "url": "/oxi-coral/page/18"
   },
   {
@@ -148,7 +148,7 @@
     "pageNum": 19,
     "title": "Page 19",
     "sectionName": null,
-    "body": "1st voice: mono Bassline。MIDIチャンネル1(part 1) 2nd voice: mono Lead。MIDIチャンネル2(part 2) 3から8th voices: 6つのボイスでコード、パッド、またはその他のポリフォニック用途に使用。MIDIチャンネル3(part 3) 簡単にするため、またすべてのボイスのMIDIチャンネルを1つずつ変更する手間を避けるため、すべてのボイスのMIDIチャンネルをチャンネル3に変更しましょう。これを行うには、エンコーダーを押し続けます。 LEDリングは次のように表示され、すべてのボイスが選択されていることを示します。そうでない場合は、エンコーダーを押したまま回して、最初の8つのLEDが青みがかった色で点灯するまで調整します。 次に、harm/midiエンコーダーを回してセカンダリパラメータを調整します。これは実質的にMIDIチャンネルです。 前の値に追いつく必要があるかもしれません。MIDIパラメータのコントロールを取得し、LEDリングが次のようになるまでノブを回します:",
+    "body": "4 CV AND MIDI MODULATION モジュレーションのソースは2つあります。MIDI（CCとPitch Bend）とCV入力です。Coralは、ノブの位置とCV入力を足し合わせてボイスパラメーターの値を決定します。最後に受信したCC値はノブの位置を置き換えます。これは、そのボイスまたはパートにCVがアサインされている場合に適用されます。 ノブの値はユニポーラーです。ただし、バイポーラーのパラメーター（Pan、Filter envelope、Frequency）を除きます。 CVモジュレーションはバイポーラー（±5 V）です。 CCはユニポーラーで、ノブの値を上書きします。 Parameter value = knob (or CC) + CV modulation. 各パートを個別にモジュレーションできるため、より豊かで複雑なサウンドを作れます。 4.1 CV Modulation Atk/Dec、Filter、Harm、Timbre、Morph、Trig、Amp、Oct",
     "url": "/oxi-coral/page/19"
   },
   {
@@ -156,7 +156,7 @@
     "pageNum": 20,
     "title": "Page 20",
     "sectionName": null,
-    "body": "20 エンコーダーを離す必要はありません。harm/midiノブをMIDI channel 1が表示されるまで回すだけです。エンコーダーを離すと、新しいMIDI channelがvoice 1に割り当てられ、別のパートが作成されます。 voice 2でも同じプロセスを繰り返し、このvoiceを選択してMIDI channel 2を割り当てます。 パート選択中、利用可能なパートは次のように表示されます。 VOICES-PART RESET すべてのvoiceがMIDI channel 1に割り当てられ、パラメーターが初期値に設定されたデフォルト状態に、Coralを簡単にリセットできます。 メインビュー(voice status)から、赤色のLEDアニメーションが表示されるまで、エンコーダーを少なくとも5秒間押し続けます。",
+    "body": "ADSRトリマーは、その下にあるCV入力のバイポーラー・アッテネーターとしても機能します。Amp Atk は Atk/Dec CV を、Amp Dec は Filter CV を、Sust は Harm CV を、Mod Atk は Timbre CV を、Mod Dec は Morph CV をそれぞれスケーリングします。 4.2 Part CV Input CVモジュレーションが作用するパートを選ぶ方法の1つが、Part CV ジャックです。0〜+5 Vの範囲のみが有効です。パートが2つある場合、最初のパートは0〜2.5 V、2つ目のパートは2.5〜5 Vで指定されます。境界での値の飛びを避けるため、わずかなヒステリシスがあります。 NOTE オプションリングの LED 3 にある CV part to engine オプションをオンにしてください。すると、Part CV はパートの代わりにエンジンを選択します。 4.3 The CV Assign Screen Part CV ジャックには何も接続しないでください。そうすると、CV Assign",
     "url": "/oxi-coral/page/20"
   },
   {
@@ -164,7 +164,7 @@
     "pageNum": 21,
     "title": "Page 21",
     "sectionName": null,
-    "body": "21 CVとMIDI MODULATION modulationには2つの異なるソースがあります:MIDI CCとPitch Bendメッセージ、そしてCV入力です。 どのvoiceのparameterの結果値も、ノブの位置(または最後に受信したCC値)とCV入力値(CVがこのvoiceまたはpartに割り当てられている場合)を加算することで計算されます。 ノブ値はunipolarです(bipolar parametersの場合を除く:PAN、Filter envelope、Frequency) CV modulationはbipolarです:+-5V CCはunipolarで、parameterのノブ値を上書きします。 Parameter値 = ノブまたは対応するCC値 + CV modulation より豊かで複雑なサウンドを作成するために、各partのparametersを個別にmodulateすることが可能です。 CV MODULATION CV",
+    "body": "5 ENGINES エンジンとは、ボイス内のサウンドジェネレーターです。Coralファームウェア3.0には27種類のエンジンが搭載されています。Firmware Updater（第9章）でファームウェアをビルドする際に、そのうち任意の10種類を選びます。選んだ10種類は、設定した順序でエンジン選択リングの10個のスロットに割り当てられます。この章では、何をロードするか判断できるよう、27種類すべてを解説します。 NOTE サンプラー（WAVPLAYER）は27種類のエンジンのうちの1つであり、独立したモードではありません。エンジンには他より負荷の大きいものがあるため、10種類のどの組み合わせでも収まるわけではありません。UpdaterにはFlashとRAMのメーターがリアルタイムで表示され、ビルド前に知らせてくれます。 The three engine knobs. HARM、TIMBRE、MORPH は Engine Parameter 1、2、3 です。これらの動作はエンジンごとに異なり、以下の各エンジンの項に記載しています。MIDIでは CC 11、12、13 です。 5.1",
     "url": "/oxi-coral/page/21"
   },
   {
@@ -172,7 +172,7 @@
     "pageNum": 22,
     "title": "Page 22",
     "sectionName": null,
-    "body": "22 harm、timbre、morph 正の電圧はこれらのパラメータに正のモジュレーションを適用します。負の電圧は負のモジュレーションを適用します。 trig 内部エンベロープをトリガーします。 amp アンプのレベルをコントロールします。 oct CV/Oct入力。オクターブ(oct)と周波数(freq)ノブパラメータが考慮され、ボイスの最終的なピッチが決定されます。 part このCV入力の電圧は、残りのCV入力によって影響を受けるPartを決定します。 PART CV入力 PARTモジュレーション 外部CVモジュレーションによって影響を受けるpartを選択する1つの方法は、PART CV入力を使用することです。CVモジュレーションによって影響を受けるpartは、PART CV入力でアドレス指定できます。(0から+5Vの電圧のみが考慮されます)。 例: 2つのPARTSがある場合、PART CVの電圧が0から2.5Vの間であれば、最初のpartがアドレス指定されます。 それ以外の場合、電圧が2.5Vから5Vの間であれば、2番目のPARTがアドレス指定されます。 注意:",
+    "body": "MDO Multiple Detuned Oscillator：ボイスごとに8つのデチューンされたオシレーターが、ソウ、スクエア、PWMの間でモーフィングします。 | Knob | Parameter | Does | | --- | --- | --- | | HARM | Engine Parameter 1 | デチューン量 | | TIMBRE | Engine Parameter 2 | 波形のモーフィング（ソウからスクエアへ） | | MORPH | Engine Parameter 3 | スクエア波形のPWM | MDO2 より厚みのあるマルチオシレーターのスウォームです。 | Knob | Parameter | Does | | --- | --- | --- | | HARM | Engine Parameter 1 | デチューンの広がり | | TIMBRE | Engine Parameter 2 | 波形 | | MORPH | Engine Parameter 3 | ボイス数 | OB-VA",
     "url": "/oxi-coral/page/22"
   },
   {
@@ -180,7 +180,7 @@
     "pageNum": 23,
     "title": "Page 23",
     "sectionName": null,
-    "body": "CV ASSIGN SCREEN パートにCVモジュレーションを割り当てる方法は？ Part CVに電圧が送られていない場合、フロントパネルのCVのモジュレーションは、CV Assign画面を使用して特定のPARTにルーティングできます。 メインのデフォルトビューから、セーブ画面の直後にこの画面にアクセスするには、エンコーダーを3回素早くタップします。CV Assign画面（紫色）に入ったら、エンコーダーを回してCVモジュレーションの影響を受けるパートを選択します。再度タップして選択を確定すると、確認アニメーションが表示されます。 注意：Part CVに電圧が印加されている場合、この画面で行った選択は上書きされます。 MIDI MODULATION MIDI CCメッセージを使用すると、Coral内の任意のパラメーターをモジュレートできます。 メッセージはMIDIチャンネルでフィルタリングされ、CC値は同じMIDIチャンネルを持つパートに適用されます。 CCはユニポーラで、ノブの値を上書きします。 詳細については、MIDI Implementationセクションを確認してください。",
+    "body": "5.3 FM 2-OP FM 2つのサイン波オペレーターが互いの位相を変調します。ベル、キー、メタリックなトーンに適しています。 | Knob | Parameter | Does | | --- | --- | --- | | HARM | Engine Parameter 1 | 周波数比 | | TIMBRE | Engine Parameter 2 | モジュレーション・インデックス（FMの深さ） | | MORPH | Engine Parameter 3 | フィードバック：オペレーター2が自身の位相を変調する（12時の位置より先、ざらついた音）か、オペレーター1が変調する（12時の位置より手前、カオティックな音） | FMX7 (DX7) SDカードからDX7の .syx バンクをロードする、本格的な6オペレーターFMエンジンです。 | Knob | Parameter | Does | | --- | --- | --- | | HARM | Engine Parameter 1 | パッチ：回して現在のバンク内のパッチを順に切り替えます | | TIMBRE |",
     "url": "/oxi-coral/page/23"
   },
   {
@@ -188,7 +188,7 @@
     "pageNum": 24,
     "title": "Page 24",
     "sectionName": null,
-    "body": "ENGINES Coralには様々なファームウェアの形で異なるenginesの構成が用意されています。これらはCoralのアップデートウェブサイトからダウンロードできます。 No drumsバージョンのengines構成 Enginesについて次に説明します。 VIRTUAL ANALOG 連続可変の波形を持つ2つのデチューンされたvirtual analogオシレーター。2つ目のオシレーターは1つ目に同期されています クラシックな波形のvirtual-analog合成。 CONTROLS: harm: 予測可能な音楽的インターバルに従った2つのオシレーター間のデチューン。 timbre: 可変square、狭いパルスからフルsquareを経てハードシンクフォルマントまで。 morph: 可変saw、三角波から徐々に広いノッチを持つsawまで。 WAVESHAPER Waveshaperとwavefolderによって処理される非対称三角波。 CONTROLS: harm: waveshaper波形。 timbre: wavefolder量。 morph: 波形の非対称性。",
+    "body": "| | | | --- | --- | | Memory | ウェーブテーブルは電源を切っても保持され、保存した各プリセットはそれぞれ独自のウェーブテーブルを記憶します。 | DUAL WAVETABLE 複雑なリードサウンドのための、2つのデチューンされたウェーブテーブル・オシレーターです。 | Knob | Parameter | Does | | --- | --- | --- | | HARM | Engine Parameter 1 | 2つのオシレーター間のデチューン（音楽的な音程に沿って変化） | | TIMBRE | Engine Parameter 2 | オシレーター1のテーブル位置 | | MORPH | Engine Parameter 3 | オシレーター2のテーブル位置 | WAVETABLE SWARM ウェーブテーブル・ボイスによる、スーパーソウ風のスウォームです。 | Knob | Parameter | Does | | --- | --- | --- | | HARM | Engine Parameter 1 | デチューンの広がり | |",
     "url": "/oxi-coral/page/24"
   },
   {
@@ -196,7 +196,7 @@
     "pageNum": 25,
     "title": "Page 25",
     "sectionName": null,
-    "body": "FM 2つのサイン波オシレーターが互いの位相を変調します。 コントロール: harm: 周波数比。 timbre: 変調インデックス。 morph: フィードバック。オペレーター2が自身の位相を変調する形式(12時より先、ラフ)、またはオペレーター1の位相を変調する形式(12時より前、カオティック)。 WAVETABLE harm、timbre、morphは、ウェーブテーブルの3次元(それぞれZ、X、Y)をナビゲートするために使用されます。3つの波形が組み合わされ、クロスフェードされてサウンドが生成されます。 一度に読み込めるウェーブテーブルは1つだけで、すべてのボイスで同じウェーブテーブルファイルが使用されます。SDカードに複数のウェーブテーブルファイルを保存できますが、読み込まれるのは1つだけです。ウェーブテーブルのファイル名には接頭辞「WAVETABLE」を含め、拡張子は「.wav」である必要があります。 OXI Waveデスクトップアプリを使用して、ウェーブテーブルを作成およびエクスポートできます。モジュールのX、Y、Zコントロールは、アプリの「Grid",
+    "body": "NOTE options.txt（第8章）で devfsh 1 に設定すると Devilfish がオンになり、サブオシレーター、より太いレゾナンス、より熱いドライブが加わります。 5.6 Keys, Strings and Physical Models STRING 2 ストリングマシン系のボイスです。ストリングス、ブラス、オルガン、コーラスを、アンサンブルとフェイザー付きで鳴らせます。ワンフィンガーのスマートコードに対応しています。 | Knob | Parameter | Does | | --- | --- | --- | | HARM | Engine Parameter 1 | レジストレーション | | TIMBRE | Engine Parameter 2 | アンサンブル | | MORPH | Engine Parameter 3 | フェイザー | NOTE スマートコード：オプションリング（LED 10）でオンにします。押さえている最も低い音がキーになります。単音を弾くと、ダイアトニックコードが鳴ります。スケールはエンコーダーの feature stop",
     "url": "/oxi-coral/page/25"
   },
   {
@@ -204,7 +204,7 @@
     "pageNum": 26,
     "title": "Page 26",
     "sectionName": null,
-    "body": "このエンジンでは、wavetableは1次元でナビゲートされます。 ––––––––––––––––––––– MDO MDOは、Multiple Detuned Oscillatorの略です。 各ボイスには、SAW、SQUARE、PWMの間でモーフィングする8つのデチューンされたオシレーターが含まれています。 CONTROLS: harm: デチューン量 timbre: sawからsquareへのwaveformモーフ morph: square waveformのPWM ––––––––––––––––––––– STRING デジタルストリング / レゾネーターモデリング。 CONTROLS: harm: 非調和性の量、またはマテリアル選択。 timbre: エクサイテーションのブライトネスとダストデンシティ。 morph: ディケイタイム(エネルギー吸収)。 ––––––––––––––––––––– ADDITIVE DISTORTION Wavefoldingとダイオードエミュレーションという2種類のディストーションを備えたハーモニック / アディティブシンセシス。",
+    "body": "| Knob | Parameter | Does | | --- | --- | --- | | TIMBRE | Engine Parameter 2 | 励起の明るさ | | MORPH | Engine Parameter 3 | ディケイ／ダンピング | 5.7 Noise and Drums PARTICLE NOISE グラニュラー的なパーティクルとノイズのクラウドです。 | Knob | Parameter | Does | | --- | --- | --- | | HARM | Engine Parameter 1 | 周波数の広がり | | TIMBRE | Engine Parameter 2 | 密度 | | MORPH | Engine Parameter 3 | レゾナンス | FILTERED NOISE チューニング可能なフィルタードノイズです。 | Knob | Parameter | Does | | --- | --- | --- | | HARM | Engine Parameter 1 | ピッチ／モード | | TIMBRE |",
     "url": "/oxi-coral/page/26"
   },
   {
@@ -212,7 +212,7 @@
     "pageNum": 27,
     "title": "Page 27",
     "sectionName": null,
-    "body": "27 3VCO 3つの可変sawバーチャルアナログオシレーターで、Triangle、Saw、Square、Pulseの各波形間をシームレスにモーフィングし、ダイナミックなPWM機能を備えています。3つのオシレーターのうち2つは、メインオシレーターに対してデチューンすることができます。 CONTROLS: harm: 2番目のオシレーターのデチューンを調整します。この設定を操作することで、2番目のオシレーターのピッチを変化させ、メインオシレーターに対してハーモニックまたは不協和な効果を作り出すことができます。 timbre: オシレーターの波形を定義し、triangle、saw、square、PWM(Pulse Width Modulation)波形の範囲を提供します。 morph: 3番目のオシレーターのデチューンを管理します。Harmコントロールと同様ですが、3番目のオシレーター用で、メインオシレーターからデチューンすることで複雑な音響レイヤーを作成できます。 NOTES:",
+    "body": "BASSDRUM アナログ風のキックです。2つのモデルをブレンドします。 | Knob | Parameter | Does | | --- | --- | --- | | HARM | Engine Parameter 1 | アタックの鋭さとオーバードライブ | | TIMBRE | Engine Parameter 2 | 明るさ | | MORPH | Engine Parameter 3 | 2つのモデル間のクロスフェード | ドラムエンジンでは、あらゆるパラメーターに CV モジュレーションを送れます。たとえば、シーケンサーのベロシティ出力やモッド出力を使います。MIDI 経由ではベロシティで演奏できます。Mod decay（SHIFT）は内部エンベロープのディケイを変化させます。Amp decay は振幅を細かく調整します。 5.8 Generative Drone STITCHER ジェネレイティブなドローンルーパーで、独自のルールで動作する唯一のエンジンです。Stitcher",
     "url": "/oxi-coral/page/27"
   },
   {
@@ -220,7 +220,7 @@
     "pageNum": 28,
     "title": "Page 28",
     "sectionName": null,
-    "body": "28 ● これらすべてにCVモジュレーションを入力できます(例えばsequencerのVelまたはMod出力など)。 ● MIDIではベロシティレベルで演奏できます。 HI HAT SYNTH 2つのハイハットモデルがブレンドされます。 harm: メタリックなサウンドとフィルターノイズのバランス。 timbre: ハイパスフィルターのカットオフ。 morph: 両方のモデル間のクロスフェード。 mod dr: サウンドの振幅と特性に全体的な影響を与える内部エンベロープのディケイに影響します。AMPエンベロープはamp drでさらに調整できます。 SNARE SYNTH 2つのアナログスネアドラムモデルがブレンドされます。 harm: ハーモニック成分とノイズ成分のバランス。 timbre: ドラムの異なるサウンド成分(ボディとノイズ)のバランス。 morph: 両方のモデル間のクロスフェード。 mod dr: サウンドの振幅と特性に全体的な影響を与える内部エンベロープのディケイに影響します。AMPエンベロープはamp drでさらに調整できます。 HI HAT / SNARE",
+    "body": "The FX ring 2回目のエンコーダープレスで Stitcher FX ring が開きます。再生中に切り替えられる3つのライブトグルです。スロットがフルブライトならオン、暗ければオフです。設定は本体に保存されるため、再起動後も保持されます。約1秒間長押しすると終了します。そのままにしておくと、約4秒後に自動的に閉じます。 Figure 5.1. Stitcher FX ring：LED1 テープのワウ・フラッター、LED2 スタッターとリトリガーのバースト、LED3 オートモーション。フルブライトがオン、暗いのがオフです。 | LED | FX | What it does | | --- | --- | --- | | 1 | Tape wow and flutter | テープのような、ゆったりしたピッチとスピードの揺れ。 | | 2 | Stutter | アレンジ全体にわたるリトリガーのバースト。 | | 3 | Auto-motion | ビッグノブが自動で回り、アレンジが自動的にリロールされ続けます。 | TIP",
     "url": "/oxi-coral/page/28"
   },
   {
@@ -228,7 +228,7 @@
     "pageNum": 29,
     "title": "Page 29",
     "sectionName": null,
-    "body": "timbre: 明るさ。 morph: 両モデル間のクロスフェード。 mod dr: 内部エンベロープのディケイに影響し、サウンドの振幅と特性に全体的な影響を与えます。AMPエンベロープはamp drでさらに調整できます。 WAV PLAYER あらゆるビット深度、サンプルレート、長さのサンプル(モノまたはステレオ)を再生できます。 サンプルをポリフォニックに再生できます。現在、サンプルを再生する方法はワンショットのみです。 サンプルは10個のフォルダに整理でき、1フォルダあたり最大32サンプルまで保存できます。フォルダが空の場合、Coralはそれを無視します。Firmware 0.7.0以降、フォルダとサンプルはアルファベット順に並べられます。 各ボイスは任意のフォルダから任意のサンプルを使用できます。さらに、サンプルとフォルダの選択はモジュレート可能です。サンプルを変更すると、適切なSDカードを使用した場合でも1〜2msのレイテンシーが発生します。 harm: オーバードライブ。 timbre: サンプル選択。 morph: フォルダ選択。 16 bit、24 bit、32",
+    "body": "6 SOUND EFFECTS エフェクトは3種類あります。Space（リバーブ）、Chorus（アンサンブル）、Delay です。いずれも全ボイス共通のセンドエフェクトで、かかる量は各ボイスのレベルとセンド量によって決まります。 NOTE 3つのセンド量と HP フィルターのカットオフは、パートのエンジンを変更してもそのパートに保持されます。セクション 2.4 を参照してください。ステージ上でエンジンを切り替えても、エフェクトのバランスは保たれます。 6.1 Space Space エンジンは単なるリバーブではなく、ドライ信号のステレオイメージも向上させます。センド量はボイスごとに SHIFT + FILTER で設定します。リバーブのサイズとローパスは MIDI（CC 40 と 41）で設定します。 6.2 Chorus コーラスはボイスごとにかかります。ハイパスフィルターのオプションがオフのとき、センド量は SHIFT + MORPH で設定します。ハイパスフィルターのオプションをオンにすると、SHIFT + MORPH はボイスごとの HP",
     "url": "/oxi-coral/page/29"
   },
   {
@@ -236,7 +236,7 @@
     "pageNum": 30,
     "title": "Page 30",
     "sectionName": null,
-    "body": "ENGINEの構成 CoralウェブサイトのUpdateセクションでは、異なるengineの組み合わせを入手できます。 DRUMSなしバージョン Virtual Analog Waveshape 2op FM Wavetable MDO String Additive oscillator with 2 types of distortion ACID 3 Osc Virtual Analog Wavplayer DRUMSバージョン Virtual Analog Waveshape 2op FM Wavetable MDO Additive oscillator with 2 types of distortion Hihat synth Snare synth 2 Model Bassdrum Synth Wavplayer",
+    "body": "7 MIDI IMPLEMENTATION MIDI CC メッセージで、Coral 内部のあらゆるパラメーターをモジュレーションできます。メッセージは MIDI チャンネルでフィルタリングされ、そのチャンネルのパートに適用されます。CC はユニポーラーで、ノブの値を上書きします。 7.1 Per-Part CC Table これらはパートの MIDI チャンネルで送信してください。CC は現在のノブ位置を上書きします。 | CC | Parameter | | --- | --- | | 1 | Filter cutoff | | 2 | Filter resonance | | 3 | Filter-env amount | | 4 | Level | | 5 | Pan | | 6 | Octave（STITCHER ではビッグノブ） | | 7 | Glide amount | | 8 | Glide mode | | 11 | Engine Param 1 (HARM) | | 12 | Engine Param 2 (TIMBRE) | | 13 | Engine",
     "url": "/oxi-coral/page/30"
   },
   {
@@ -244,7 +244,7 @@
     "pageNum": 31,
     "title": "Page 31",
     "sectionName": null,
-    "body": "DRUMS ACID 3VCO VERSION Virtual Analog Waveshape 2op FM Wavetable MDO ACID 3 Osc Virtual Analog Snare Hihat Synth 2 Model Bassdrum Synth Wavplayer DUAL WAVETABLE (NO DRUMS) Virtual Analog Dual Oscillator Wavetable (各ボイスにつき2つのwavetableオシレーター) 2op FM Wavetable (カスタム波形対応) MDO String Additive oscillator (2タイプのディストーション付き) ACID 3 VCO Virtual Analog Wavplayer",
+    "body": "7.3 CCとパネルのポット CCは、対象となるパラメーターを引き継ぎます。パネルのポットは、再びコントロールを取り戻す前に、その値に追いつく必要があります。ポットを回すと、ポットの位置と値が途中で合流します。詳細はSection 2.2を参照してください。Section 2.2では、CCが連続して送られてもポットを有効に保つ noccxt 設定についても説明しています。 これは、上の表にあるCCのうち、ポットを持つすべてのCCで機能します。Space（リバーブ）とDelayのセンドも含まれます。DAWからセンドをオートメーションし、その後パネルで引き継ぐことができます。 7.4 Program Change 任意のMIDIチャンネルで受信した、値が1～10のProgram Changeメッセージは、プリセット1～10をロードします。これはオプションリング（Program Changeスロット）で変更できます。すべて受け付ける、すべて無視する、またはアクティブなパートのチャンネルでのみ受け付ける、から選べます。 7.5 Pitch Bend Pitch",
     "url": "/oxi-coral/page/31"
   },
   {
@@ -252,7 +252,7 @@
     "pageNum": 32,
     "title": "Page 32",
     "sectionName": null,
-    "body": "SOUND EFFECTS Space/reverb、Chorus/ensemble、Delay（Noiseをオーバーライド）の3つのエフェクトがあります。 すべてのエフェクトはセンドエフェクトとして動作し、全てのボイスに共通です。各エフェクトの量は、各ボイスのレベルとセンド量によって決まります。 Spaceエンジンは単なるreverbではなく、ドライ信号のステレオイメージも改善します。 Chorusの代わりに、ボイスごとに調整可能なHigh Pass filter（ステレオ）を使用できます。これはoptions.txtファイルで有効にできます。詳細についてはoptionsセクションを確認してください。",
+    "body": "8 SDカードとオプション Micro SDカードには工場出荷時のコンテンツが入っています。常にスロットに挿したままにしてください。サンプラーを多用する場合は、読み出し速度が70 MB/s以上のClass 10カードが必要です。より大容量または高速なカードを使用する場合は、FAT32でフォーマットし、工場出荷時のカードからすべてのファイルをコピーしてください。 8.1 フォルダ構成 図8.1. SDカードのフォルダツリー：DX7 Patches、Presets、Samples、Stitcher、System（CALIB.bin、HOUSEKEYS.PCM、LUT.bin、options.txt、RHODES.PCM）、Wavetables。 | Folder | Contents | | --- | --- | | DX7 Patches | FMX7用の.syxバンク。サブフォルダ Group 1～10 に配置します（各フォルダにつき1バンク）。 | | Presets | Preset N.preset ファイル（8ボイス構成の全体）。 | | Samples |",
     "url": "/oxi-coral/page/32"
   },
   {
@@ -260,7 +260,7 @@
     "pageNum": 33,
     "title": "Page 33",
     "sectionName": null,
-    "body": "MIDI IMPLEMENTATION CC'S TABLE MIDI CCメッセージを使用して、Coral内の任意のパラメーターを変調することができます。 メッセージはMIDIチャンネルでフィルタリングされ、CC値は同じMIDIチャンネルを持つPartに適用されます。 CCは単極性で、内部パラメーター値を上書きします。",
+    "body": "8.3 options.txt options.txtはSystemフォルダ内のプレーンテキストファイルで、初回起動時に作成されます。Coralのすべての設定がここにあり、1行につき1設定です。6文字のキー、スペース、そして値（通常はオンが1、オフが0）の順に記述します。順序は問いません。コンピューター上で任意のテキストエディタを使って編集できます。 設定はSDカードが保持します。Coralは起動時にカードから設定を読み込みます。設定を変更できるのはユーザーだけで、このファイルまたはオプションリングで行います。ファームウェアのアップデートが設定を変更することはありません。 ファイルが管理する設定とリングが管理する設定 これらの設定の多くは、Coral本体のオプションリング（Chapter 2）でも変更できます。両者は、1つのシンプルなルールで連携します。 リングのオプションはファイルにも反映されます。 リングでオプションを切り替えるたびに、Coralはoptions.txtを更新して内容を一致させます。演奏中は、リングが優先されます。 ユーザーによる編集が優先されます。",
     "url": "/oxi-coral/page/33"
   },
   {
@@ -268,7 +268,7 @@
     "pageNum": 34,
     "title": "Page 34",
     "sectionName": null,
-    "body": "34 PROGRAM CHANGE MIDIチャンネルから受信した値1〜10のProgram Changeメッセージは、Coralにプリセット1〜10をそれぞれロードさせます。 この機能はoptions.txtファイルで無効にすることができます。 PITCH BEND Pitch Bendは、メッセージのMIDIチャンネルと一致するパートに適用されます。 Pitch Bendの範囲はデフォルトで±2半音です。これはoptionsファイルで変更できます。 GLIDE ボイスのピッチがあるノートから次のノートへスムーズに移行します。 1つのパートに複数のボイスを割り当てることができるポリフォニックモードでは、異なるノートが異なるボイスをトリガーできるため、GLIDE効果が明確でない場合があります。決定論的な方法でglide効果を得たい場合は、シングルボイス(モノ)パートを試してください。 このglide timeを変更するには、MIDI CC値をCC 07に送信してください。 GLIDE MODE 0はglide ALWAYSを選択し、1〜127はMIDI CC 08でglide",
+    "body": "| Key | Setting | Values | | --- | --- | --- | | engcol | エンジンインジケーターの色（ファイル専用） | 1 = エンジンごとにエンジンインジケーターの色を変える · 0 = マゼンタ一色（デフォルト） | NOTE Smart chord（strchd と pnochd）は、単にオンかオフかを切り替えるものです。音階は別途、エンコーダーのfeature stop（Section 5.6）で選択します。 TIP このファイルは自己説明的です。各設定行の末尾には、その設定の働きを示す短いメモが付いています。このマニュアルが手元になくても、カードを編集できます。ファイルにメモがない場合は、Coralが自動的に補います。 NOTE ユーザー自身が書き込んだ内容は保持されます。ご自身のコメント、空行、およびCoralが認識しない行は、入力したとおりそのまま戻ります。Coralがファイルを書き換えるのは、何か変更があった場合のみです。 8.4 カード上のプリセット プリセットは、Presetsフォルダ内に Preset N.preset",
     "url": "/oxi-coral/page/34"
   },
   {
@@ -276,7 +276,7 @@
     "pageNum": 35,
     "title": "Page 35",
     "sectionName": null,
-    "body": "MPE CoralはMPEコントローラーに対応しました! MPEを使用すると、ピッチベンドや水平方向の指の動き、ポリアフタータッチや圧力、スライドや垂直方向の指の動きを、ノートごとに個別にコントロールできます。 アフタータッチは、フィルターカットオフとボリュームをモジュレートするようにマッピングされており、即座に演奏性を発揮できます。 スライドや、コントローラーからの他の表現的な次元を、CoralのCCパラメーターのいずれかにアサインできます。 デバイスでMPEを有効にするには、options.txtファイルに次の行を追加する必要があります: mpeena 1",
+    "body": "9 コンパニオンWebアプリ Coralをサポートする無料のWebアプリが3つあります。Firmware Updater、Preset Manager、Waveformです。すべてブラウザ上で動作します。Firmware Updaterはファームウェアのビルドと書き込みを行い、Preset Managerはプリセットの作成と管理を行い、Waveform Generatorはウェーブテーブルを作成します。 9.1 Firmware Updater Firmware Updaterは3つのことを行います。10個以下のエンジンを選択します。OXIのビルドサーバーがカスタムファームウェアをコンパイルします。それをUSB経由でCoralに書き込みます。WebUSBに対応したChromeまたはEdgeを使用してください。 Step 1 · Coralをアップデートモードにする モジュール内部のDaisyボードにあるBOOTボタンを押したままにします。CoralをUSBでコンピューターに接続します。DFUデバイスとして認識されます。他に何も接続せず、USBのみから電源を供給してください。 Step",
     "url": "/oxi-coral/page/35"
   },
   {
@@ -284,7 +284,7 @@
     "pageNum": 36,
     "title": "Page 36",
     "sectionName": null,
-    "body": "PRESETS モジュールの全てのパラメーターとボイス設定を10個のプリセットスロットに保存およびロード/呼び出しができます。全てが保存されるため、保存した時と全く同じ状態で呼び出すことができます。 プリセットは手動でロードすることも、Program Change MIDIメッセージで呼び出すこともできます。 画面ナビゲーションの順序は以下の通りです。エンコーダーをタップすると、画面間を順次ジャンプします。いずれかの画面でエンコーダーを回すと選択モードが有効になり、次のエンコーダータップで選択が確定します。 いずれかのノブを回すと終了し、メインビュー(ボイスステータス)に戻ります。",
+    "body": "10 キャリブレーション ピッチがずれる場合は、CV/Octトラッキングをキャリブレーションしてください。正確にキャリブレーションされた±1 Vのソースが必要です。 Amp Atk、Amp Dr、Sust、Mod Atk、Mod Dr、F.Resoを時計回りいっぱいに回し、F.Envトリマーを反時計回りいっぱいに回します。 モジュールからすべてのパッチケーブルを抜きます。 リングが緑のパターンを表示するまで、エンコーダーを5秒間長押しします。 エンコーダーをタップします。リングが赤になります。 OCT CV入力にパッチし、正確にキャリブレーションされたソースから-1 Vを送ります。（OXI Oneでは、C1が-1 Vを出力します。） エンコーダーを1回タップします。リングが赤とアンバーで表示されます。 OCT入力に+1 Vを送り、もう一度エンコーダーをタップします。（OXI Oneでは、C3が+1 Vを出力します。） もう一度エンコーダーをタップします。成功すると、緑の確認アニメーションが表示されます。 NOTE 使用する電圧ソースによっては、-1",
     "url": "/oxi-coral/page/36"
   },
   {
@@ -292,7 +292,7 @@
     "pageNum": 37,
     "title": "Page 37",
     "sectionName": null,
-    "body": "SD CARD Micro SDカードには工場出荷時のコンテンツが含まれており、常に挿入されている必要があります。wavプレーヤーを集中的に使用するには、少なくとも70 Mb/sの読み取り速度を持つClass 10以上のカードが必要です。 モジュールに付属のSDカードよりも大容量または高速なSDカードを使用する場合は、FAT32にフォーマットされていることを確認してください。その後、元の工場出荷時のカードからすべてのファイルを新しいカードにコピーしてください。 SDカードに必要なフォルダ構造は次のとおりです: Systemフォルダには、モジュールの適切な動作、キャリブレーション、およびユーザー設定を含むoptions.txtファイルに必要なデータが含まれています。 工場出荷時コンテンツのダウンロード: LINK WAVETABLE Wavetablesフォルダには、少なくとも1つの.wav wavetableファイルが含まれている必要があります。OXI Wave Appを使用して独自のwavetableを作成できます。 命名規則が正しい限り: WAVETABLE +",
+    "body": "A 付録：エンジン一覧 全27エンジンと、各エンジンでHARM、TIMBRE、MORPHが何を行うかの一覧です。Firmware Updaterで任意の10エンジンを選択できます。 | Engine | HARM | TIMBRE | MORPH | | --- | --- | --- | --- | | VIRTUAL ANALOG | Osc detune（オシレーターのデチューン） | Square shape（矩形波の形状） | Saw shape（ノコギリ波の形状） | | WAVESHAPE | Waveform（波形） | Fold amount（フォールド量） | Asymmetry（非対称性） | | 2-OP FM | Ratio（レシオ） | FM depth（FMデプス） | Feedback（フィードバック） | | WAVETABLE | Z axis（Z軸） | X axis（X軸） | Y axis（Y軸） | | DUAL WAVETABLE | Detune（デチューン） | Table pos, osc 1（テーブル位置、osc 1） |",
     "url": "/oxi-coral/page/37"
   },
   {
@@ -300,7 +300,7 @@
     "pageNum": 38,
     "title": "Page 38",
     "sectionName": null,
-    "body": "polycv 「polycv 1」設定が1に設定されている場合、異なるCV pitchの値は異なるvoiceをトリガーし、1 oct CVと1 triggerでCoralをポリフォニックに演奏できるようになります。 「polycv 0」設定が0に設定されている場合、すべてのvoiceがユニゾンで演奏されます。 encpri 「encpri 0」の場合、encoderの回転でengineを選択します(押しながら回転でvoice/part選択) 「encpri 1」の場合、encoderの回転でvoice/partを選択します(押しながら回転でengine選択) cvpart 「cvpart 0」設定が0に設定されている場合、PART CVは上記で説明したように、CVモジュレーションの影響を受けるpartを選択します。 「cvpart 1」設定が1に設定されている場合、PART CVは選択されたengineをモジュレートします。 mpeena CoralでMPEを有効にするには「mpeena 1」を追加してください。それ以外の場合、MPEは無効になります。",
+    "body": "B 付録：トラブルシューティング | Symptom | What to do | | --- | --- | | 電源を入れ直すまでMIDIに反応しなくなるが、音は鳴り続ける | ファームウェア3.0にアップデートしてください。古いファームウェアでは、破損したMIDIバイトが1つあるだけでMIDI入力がロックアップすることがありました。劣化したケーブルやコネクターは、遅かれ早かれ破損バイトを発生させます。オーディオは動き続けるため、ドローンが鳴っている間もモジュールがフリーズしたように見えていました。ファームウェア3.0は、破損したバイトからただちに復帰します。アップデート後も続く場合は、別のMIDIケーブルを試してください。 | | Coralがフリーズし、電源を入れ直さないと復帰しない | SDカードを確認してください。カードは、書き込み禁止の状態、消耗している場合、またはファイルシステムが損傷している場合に、書き込みを拒否することがあります。古いファームウェアでは、その際に設定の保存を延々とリトライし、その間応答しなくなっていました。ファームウェア3.0は、数回試みたところで諦",
     "url": "/oxi-coral/page/38"
   },
   {
@@ -308,7 +308,7 @@
     "pageNum": 39,
     "title": "Page 39",
     "sectionName": null,
-    "body": "39 delena \"delena 1\"の場合、Delayが有効になります。NoiseのセカンダリパラメータはDelay送信量によって上書きされます。 Delayは、options.txtファイルに次の行を追加することで有効にできます: delena 1 vumetr マスターVU Meterを有効にします。LED 9と10がマスターレベルを表します。 VU Meterは、options.txtファイルに次の行を追加することで有効にできます: vumetr 1 ledalw メイン画面で選択されているパートまたはボイスの控えめな表示を示します。options.txtファイルに次の行を追加することで有効にできます: ledalw 1 pcigno \"pcigno 1\"に設定すると、CoralはProgram Change MIDIメッセージを無視します。 extpre \"extpre 1\"に設定すると、10グループに分けられた最大100個のプリセットを有効にします(各グループ10個)。",
+    "body": "CCキャッチアップ：外部CCが、Delay sendを含め、パネルのキャッチアップを正しく開始するようになりました。代わりにポットを常時有効にしておきたい場合は、noccxtを使用してください。 プリセットごとのウェーブテーブルメモリー：extpreを使うと最大100プリセットまで扱えます。 エンジンごとのトーンメモリー：パート上の各エンジンが、それぞれ独自のトーン設定を保持します。リバーブ、ディレイ、コーラスのセンドはパートに紐づいたままなので、エンジンを切り替えてもFXミックスが乱れることはありません。 FMX7：DX7のバンクとパッチがパートごとになりました。複数のFMX7パートで、同時に異なるサウンドを鳴らせます。プリセットはバンクを保存します。 サンプルカードがいっぱいの場合でも起動が高速になり、リストからサンプルが欠落することもなくなりました。 サンプラー：サンプルが本来の終端まで再生されるようになり、リトリガー時のクリックもなくなりました。 新しいファームウェアを書き込んでも設定が変更されることはありません。設定はSDカードが保持します。",
     "url": "/oxi-coral/page/39"
   },
   {
@@ -316,7 +316,7 @@
     "pageNum": 40,
     "title": "Page 40",
     "sectionName": null,
-    "body": "OXI WAVE APP CoralのWavetableエンジンで使用されるwave tableは、カスタムのものに編集・置き換えることができます。この目的のために、WindowsおよびMac用のOXI Waveソフトウェアを使用できます。これはAndrew BeltによるWave Edit AppとDan GreenによるSphere Editをベースにしています。 上部メニューで「Open wavetable」をクリックして、CORAL用に作成されたWavetableを開きます。 ゼロから始める場合は、wavetableを構成する27個すべてのwaveを入力する必要があります。そうしないと、wave table内に無音の領域が発生する可能性があります。 wavetableの編集が完了したら、「Save Wavetable As…」をクリックします。 アプリのGRID VIEWでは、3×3のwaveからなる3つのブロックを視覚化できます。harm、timbre、morphは、それぞれwavetableの3つの次元であるZ、X、Yに対応していることを覚えておいてください。",
+    "body": "謝辞 モジュールをオープンソース化してくださったMutable Instrumentsに特別な感謝を捧げます。一部のエンジンはその成果に基づいています。それがなければ、このモジュールは実現しませんでした。 Coralが生まれたDigimonプラットフォームを提供してくれたNANO Modulesに感謝します。ファームウェアv3.0に関するフィードバックと作業をしてくれたA Thousand Detailsに感謝します。Coral v3.0のすべてのテストと有益なフィードバックをしてくれたEkkomouseとTav Shviに感謝します。フィードバックとバグ探しに協力してくれたベータテスターの皆さんに感謝します。旧Wave Edit Appを作ってくれたAndrew Beltに感謝します。新しいOXI Coral Web Appsのデザインとテストで全面的にサポートしてくれたLutzfireに感謝します。Eurorackの世界を素晴らしいものにしてくれているすべての皆さんに感謝します。そして、当社の製品をご購入いただき、応援してくださったあなたに感謝します。",
     "url": "/oxi-coral/page/40"
   },
   {
@@ -324,7 +324,7 @@
     "pageNum": 41,
     "title": "Page 41",
     "sectionName": null,
-    "body": "CALIBRATION STEP 1 以下のポテンショメーターを完全に時計回りに回してください: Amp atk Amp dr Sust Mod atk Mod dr F reso 以下のTrimmerを完全に反時計回りに回してください: F env STEP 2 モジュールから全てのパッチケーブルを抜いてください。 STEP 3 エンコーダーを5秒間押し続けると、リングが次のように表示されます: STEP 4 再度タップすると、LEDリングが次のように表示されます: STEP 5 OCT CV入力にパッチを接続し、適切に校正されたソースから-1Vを送信してください。",
+    "body": "適合宣言 本製品は、欧州指令2014/53/EUおよび指令2011/65/EUの要件に適合しています。EU適合宣言の全文は www.oxiinstruments.com で入手できます。 環境に関する注意： このシンボル（キャスター付きごみ箱に×印）は、本製品を家庭ごみとして処理してはならないことを示しています。使用済みとなった際は、電気機器のリサイクル用の回収拠点に持ち込む必要があります。鉛、バッテリー、プラスチックを含む製品の適切な廃棄とリサイクルに関する、地域、州、および欧州の規制についてご確認ください。",
     "url": "/oxi-coral/page/41"
   },
   {
@@ -332,39 +332,7 @@
     "pageNum": 42,
     "title": "Page 42",
     "sectionName": null,
-    "body": "電圧ソース(CVシーケンサーまたはキーボード)によって、-1Vは異なるMIDI Noteに対応する場合があります。OXI OneではC1ノートが-1Vを出力します。 STEP 6 エンコーダーを1回タップすると、リングは次のように表示されます: STEP 7 適切にキャリブレーションされたソースからOCT入力に+1Vを送信し、エンコーダーを再度タップします。OXI OneではC3ノートが+1Vを出力します。 STEP 8 エンコーダーを再度タップします。プロセスが正常に完了した場合、確認アニメーションが表示されます:",
+    "body": "保証規定 返金ポリシー（欧州連合のみ） 消費者は、商品の取得から14日以内であれば、全額返金を受けるために商品を返品できます。商品は同じ状態で、すべての付属品が揃っている必要があります。送料はお客様のご負担となります。 保証 OXI Instrumentsは、ハードウェアおよびアクセサリーについて、原購入日から2年間、材料および仕上がりの欠陥に対して保証します。反証がない限り、納品から6か月以内に生じた契約不適合は、納品時から存在していたものと推定されます。保証の対象外となるもの： OXI Coralの誤用（極端な条件下での使用や不適切な使用を含む）。 製品の不適切な取り扱い。 通常の摩耗や劣化、または事故や乱用によって生じた損傷。 OXI Instrumentsが認可していないアクセサリーに起因する故障。 © 2026 OXI ELECTRONIC INSTRUMENTS S.L. All rights reserved. OXI INSTRUMENTSおよびOXIロゴは、EUにおけるOXI INSTRUMENTSの登録商標であり、他の多くの国でも登録されています。OXI",
     "url": "/oxi-coral/page/42"
-  },
-  {
-    "id": "43",
-    "pageNum": 43,
-    "title": "Page 43",
-    "sectionName": null,
-    "body": "ACKNOWLEDGMENT 特別な感謝をMutable Instrumentsに捧げます。彼らがモジュールをオープンソース化してくれたおかげで、いくつかのエンジンをそこから取り入れることができました。それなしにはこのモジュールは実現できませんでした。 DIGIMON(Coralが生まれた開発プラットフォーム)を構築してくれたNANO Modulesに感謝します。 フィードバックとバグハンティングをしてくれたベータテスターの皆様に感謝します。 美しいWave Edit Appを作ってくれたAndrew Beltに感謝します。 Eurorackの世界をこれほど素晴らしいものにすることに貢献してくれているすべての人々に感謝します。",
-    "url": "/oxi-coral/page/43"
-  },
-  {
-    "id": "44",
-    "pageNum": 44,
-    "title": "Page 44",
-    "sectionName": null,
-    "body": "適合宣言 この製品は、欧州指令2014/53/EUおよび指令2011/65/EUの要件に適合しています。 EU適合宣言の全文は、以下のインターネットアドレスで入手できます www.oxiinstruments.com/ 環境問題: このシンボルは、この製品を家庭廃棄物として処理してはならないことを示しています。 製品の耐用年数が終了したら、電気機器のリサイクルのための適切な回収ポイントに持ち込む必要があります。バッテリーと電気機器の適切なリサイクルを通じて、環境の健康と安全に対するリスクを回避することに貢献できます。 製品廃棄に関する注意: この製品が修理不可能なほど損傷した場合、または何らかの理由で耐用年数が終了したとみなされた場合は、鉛、バッテリー、プラスチックなどの材料を含む製品の適切な廃棄とリサイクル、およびこれらの種類の製品の回収ポイントに関する地域、州、欧州の規制について確認してください。",
-    "url": "/oxi-coral/page/44"
-  },
-  {
-    "id": "45",
-    "pageNum": 45,
-    "title": "Page 45",
-    "sectionName": null,
-    "body": "保証条件 返金ポリシー（欧州連合内のみ） 消費者は、製品の購入日から14日間、製品を返品して全額返金を受けることができます。全額返金を受けるためには、製品が元の状態であり、すべてのオリジナルの内容物が揃っている必要があります。 送料はお客様負担となります。 保証 OXI Instrumentsは、同梱されているハードウェア製品およびアクセサリーについて、購入日から2年間、材料および製造上の欠陥に対して保証します。特に反証がない限り、製品の納品から6ヶ月以内に明らかになった不適合は、納品日時点ですでに存在していたものと推定されます。 以下の場合、保証は修理費用をカバーしません： ● OXI Coralの誤用、極端な条件下での使用、または不適切な使用。 ● 製品の不適切な取り扱い。 ● 通常の摩耗、事故または乱用による損傷。 ● OXI Instrumentsが認可していないアクセサリーの使用による故障。",
-    "url": "/oxi-coral/page/45"
-  },
-  {
-    "id": "46",
-    "pageNum": 46,
-    "title": "Page 46",
-    "sectionName": null,
-    "body": "© 2023 OXI ELECTRONIC INSTRUMENTS SLU. All rights reserved. OXI INSTRUMENTSおよびOXIロゴは、EU内におけるOXI INSTRUMENTSの登録商標であり、他の多くの国でも登録されています。OXI CORALはOXI INSTRUMENTSの商標です。デザインおよび仕様は予告なく変更される場合があります。",
-    "url": "/oxi-coral/page/46"
   }
 ]

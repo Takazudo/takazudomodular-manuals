@@ -74,7 +74,7 @@ Where each committed manual's currently-published revision lives, per brand — 
 
 | slug | doc type | Drive file ID (last known) |
 | --- | --- | --- |
-| oxi-coral | user manual | 1Kokdq4KA3HYU9vBRl-gshFKkLov2fAR2 |
+| oxi-coral | user manual — v3.0 / firmware 3.0, visible revision 19 Jul 2026, 42 pp, sha256 `9c57491040d1…72d3`, retrieved 2026-10-03 (embedded PDF title `OXI CORAL User Manual v3.0 (draft)_rev2.docx`; firmware 3.0 release dated 30 Sep 2026 on oxiinstruments.com/support). Superseded v2.1 (20 Jan 2025, 46 pp) was `1Kokdq4KA3HYU9vBRl-gshFKkLov2fAR2` | 1c_xtj-bJgqSQy4lzuR_9yBNRW5MFefpo |
 | oxi-e16-manual | full user manual | 1yZn1i96nRkosn2o6eDlj5wzuErPQEe9N |
 | oxi-e16-quick-start | quick start | 1SxEcILmr1MZrjaKi4wOF50uw0nfB8med |
 | oxi-meta | user manual (committed as `oxi-meta.pdf`, served as `OXI META User Manual.pdf`) | 1y4BZ7m-dTG28XkOYqOYU11DmiV9_A8jz |

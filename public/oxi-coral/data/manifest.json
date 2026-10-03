@@ -3,16 +3,16 @@
   "brand": "OXI Instruments",
   "productSlug": "oxi-coral",
   "version": "1.0.0",
-  "totalPages": 46,
-  "contentPages": 46,
-  "lastUpdated": "2026-01-05T09:09:23.553Z",
-  "updatedAt": "20260112",
+  "totalPages": 42,
+  "contentPages": 42,
+  "lastUpdated": "2026-10-03T06:19:32.241Z",
+  "updatedAt": "20261003",
   "source": {
     "filename": "OXI CORAL User Manual.pdf",
-    "processedAt": "2026-01-05T09:09:06.293Z",
+    "processedAt": "2026-10-03T06:19:30.410Z",
     "imageDPI": 300,
     "imageFormat": "png"
   },
-  "searchIndexVersion": "0d71bac45fd7fb309da0594226d62d6c3e77ddc2",
+  "searchIndexVersion": "6019221c9c808b06040494ed451ec51941ac33bf",
   "hasEnglish": true
 }
