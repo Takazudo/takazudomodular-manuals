@@ -23,7 +23,6 @@ Scripts restored from `main` (pre-migration baseline), verified against the 1.2.
 - `scripts/check-wrangler-pin.mjs` — verifies wrangler pin matches zfb's expectation
 - `scripts/check-template-drift.sh` — template drift detector (adapted: feature list unchanged; sidebarResizer has no template dir so nothing to add)
 - `scripts/setup-doc-skill.sh` — Claude Code skill setup helper
-- `doc/lefthook.yml` — pre-commit MDX formatting hook
 
 `scripts/run-b4push.sh` extended with a step 4 link-check on top of the scaffold's 4-step baseline.
 
