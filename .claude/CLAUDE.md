@@ -180,12 +180,12 @@ pnpm run init-worktree issue-2-project-setup
 
 ## zfb Framework Reference
 
-This project uses `@takazudo/zfb` — a custom static site generator built on Preact islands.
+This project uses `@takazudo/zfb` — a custom static site generator built on zudo-react islands.
 
 - **`/zfb-wisdom`** skill is NOT installed in this project (as of the zfb migration in #126). Use the on-disk docs instead:
   - Framework docs: `/home/takazudo/repos/zp/zfb/docs/src/content/docs/` (getting-started/\*, concepts/routing.mdx, concepts/islands.mdx, concepts/styling.mdx)
   - Example project: `/home/takazudo/repos/zfb-ex/zfb-example-blog/README.md`
 - Key config: `zfb.config.ts` in the project root (base path, plugins, output directory)
 - Pages live in `pages/`, layouts in `layouts/`, interactive islands in `components/zfb/`
-- JSX resolves to Preact: `jsxImportSource: "preact"` in tsconfig.json
-- `react`/`react-dom` path aliases in tsconfig.json and vitest.config.ts map to `preact/compat` for library compatibility
+- Root JSX resolves to `@takazudo/zfb/zudo-react` in tsconfig.json
+- Vitest exercises real SSR/hydration using `@takazudo/zfb/zudo-react/testing`; doc retains its separate Preact runtime

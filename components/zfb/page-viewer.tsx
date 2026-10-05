@@ -1,5 +1,11 @@
-import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'preact/hooks';
-import ctl from './ctl';
+import {
+  computed,
+  getScope,
+  signal,
+  Show,
+  type ReadonlySignal,
+  type Ref,
+} from '@takazudo/zfb/zudo-react';
 import type { ManualPage } from '@/lib/types/manual';
 import type { Lang } from './lang';
 import { withBasePath } from './routing';
@@ -16,31 +22,19 @@ import {
   viewerNavigationWrapperStyles,
 } from './viewer-layout-styles';
 
-const loaderWrapperStyles = ctl(`
-  absolute
-  top-1/2 left-1/2
-  transform -translate-x-1/2 -translate-y-1/2
-  z-10
-`);
+const loaderWrapperStyles = 'absolute top-[50%] left-[50%] centered-loader z-10';
 
 interface PageViewerProps {
-  page: ManualPage;
-  /** Display language — drives the `lang` attribute and empty-state copy. */
-  lang: Lang;
-  currentPage: number;
+  page: ReadonlySignal<ManualPage>;
+  lang: ReadonlySignal<Lang>;
+  currentPage: ReadonlySignal<number>;
   totalPages: number;
   manualId: string;
-  /** Navigate to a page (client-side, owned by the island). */
   onNavigate: (pageNum: number) => void;
-  /** Navigate to the manual top page (left arrow on page 1). */
   onNavigateHome: () => void;
-  /** When true (fetch failed), in-manual nav is disabled. */
-  navDisabled?: boolean;
-  /** When true, hovering the page image shows the Amazon-style magnifier. */
-  zoomEnabled?: boolean;
+  navDisabled?: ReadonlySignal<boolean>;
+  zoomEnabled?: ReadonlySignal<boolean>;
 }
-
-/** Class toggled on the lens/panel to reveal them while hovering. */
 const ZOOM_ACTIVE_CLASS = 'is-active';
 
 export function PageViewer({
@@ -48,43 +42,27 @@ export function PageViewer({
   lang,
   currentPage,
   totalPages,
-  manualId,
   onNavigate,
   onNavigateHome,
-  navDisabled = false,
-  zoomEnabled = false,
+  navDisabled = signal(false),
+  zoomEnabled = signal(false),
 }: PageViewerProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-  // The left image column and right translation column each scroll
-  // independently (both are overflow-y-scroll). Refs let us reset them to the
-  // top whenever the page changes — see the scroll-reset effect below.
-  const imageScrollRef = useRef<HTMLDivElement>(null);
+  const scope = getScope();
+  const isLoading = signal(true);
+  const hasError = signal(false);
+  const imgRef: Ref<HTMLImageElement> = { current: null };
+  const imageScrollRef: Ref<HTMLDivElement> = { current: null };
+  const imageColRef: Ref<HTMLDivElement> = { current: null };
+  const contentColRef: Ref<HTMLDivElement> = { current: null };
+  const lensRef: Ref<HTMLDivElement> = { current: null };
+  const panelRef: Ref<HTMLDivElement> = { current: null };
+  const zoomRafRef = { current: null as number | null };
+  const lastPointerRef = { current: { x: 0, y: 0 } };
+  const image = computed(() => page.value.image);
+  const showImage = computed(() => !!image.value && !hasError.value);
+  const showZoom = computed(() => zoomEnabled.value && showImage.value);
 
-  // ── Hover-zoom (Amazon-style magnifier) ──────────────────────────────────
-  // Lens overlays the source image; the panel fills the image column and
-  // shows the magnified region. Both are `position: fixed` (positioned in
-  // viewport coords straight from getBoundingClientRect — no scroll-offset math)
-  // and `pointer-events: none` (so the mouse keeps hitting the image, not them).
-  const imageColRef = useRef<HTMLDivElement>(null);
-  const contentColRef = useRef<HTMLDivElement>(null);
-  const lensRef = useRef<HTMLDivElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
-  // rAF handle — coalesces the high-frequency mousemove into one paint/frame.
-  const zoomRafRef = useRef<number | null>(null);
-  const lastPointerRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
-
-  const handleImageLoad = useCallback(() => {
-    setIsLoading(false);
-  }, []);
-
-  // Compute and apply the lens + panel geometry for a given viewport pointer.
-  // Geometry is fed in via CSS custom properties (set imperatively here, never
-  // re-rendering); the visual rules live in `.zoom-lens`/`.zoom-panel` in
-  // global.css. This is the standard mechanism for per-frame, data-driven
-  // positioning that Tailwind utility classes cannot express.
-  const applyZoom = useCallback((clientX: number, clientY: number) => {
+  const applyZoom = (clientX: number, clientY: number) => {
     const img = imgRef.current;
     const lens = lensRef.current;
     const panel = panelRef.current;
@@ -126,129 +104,74 @@ export function PageViewer({
       `${imgRect.width * factor}px ${imgRect.height * factor}px`,
     );
     panel.style.setProperty('--zoom-bg-pos', `${-lensX * factor}px ${-lensY * factor}px`);
-  }, []);
+  };
 
-  const deactivateZoom = useCallback(() => {
+  const deactivateZoom = () => {
     if (zoomRafRef.current !== null) {
       cancelAnimationFrame(zoomRafRef.current);
       zoomRafRef.current = null;
     }
     lensRef.current?.classList.remove(ZOOM_ACTIVE_CLASS);
     panelRef.current?.classList.remove(ZOOM_ACTIVE_CLASS);
-  }, []);
-
-  const activateZoom = useCallback(() => {
-    const panel = panelRef.current;
-    if (panel && page.image) {
-      // Same asset as the <img> src; set once per activation.
-      panel.style.setProperty('--zoom-image', `url("${withBasePath(page.image)}")`);
-    }
+  };
+  const activateZoom = () => {
+    if (image.value)
+      panelRef.current?.style.setProperty('--zoom-image', `url("${withBasePath(image.value)}")`);
     lensRef.current?.classList.add(ZOOM_ACTIVE_CLASS);
     panelRef.current?.classList.add(ZOOM_ACTIVE_CLASS);
-  }, [page.image]);
-
-  const eligibleForZoom = useCallback(
-    () => zoomEnabled && !hasError && !!page.image && (imgRef.current?.naturalWidth ?? 0) > 0,
-    [zoomEnabled, hasError, page.image],
-  );
-
-  const handleZoomEnter = useCallback(
-    (e: MouseEvent) => {
+  };
+  const eligibleForZoom = () => showZoom.value && (imgRef.current?.naturalWidth ?? 0) > 0;
+  const handleZoomEnter = (e: MouseEvent) => {
+    if (!eligibleForZoom()) return;
+    activateZoom();
+    applyZoom(e.clientX, e.clientY);
+  };
+  const handleZoomMove = (e: MouseEvent) => {
+    if (!eligibleForZoom()) return;
+    lastPointerRef.current = { x: e.clientX, y: e.clientY };
+    if (zoomRafRef.current !== null) return;
+    zoomRafRef.current = requestAnimationFrame(() => {
+      zoomRafRef.current = null;
       if (!eligibleForZoom()) return;
       activateZoom();
-      applyZoom(e.clientX, e.clientY);
-    },
-    [eligibleForZoom, activateZoom, applyZoom],
-  );
+      applyZoom(lastPointerRef.current.x, lastPointerRef.current.y);
+    });
+  };
 
-  const handleZoomMove = useCallback(
-    (e: MouseEvent) => {
-      if (!eligibleForZoom()) return;
-      lastPointerRef.current = { x: e.clientX, y: e.clientY };
-      if (zoomRafRef.current !== null) return;
-      zoomRafRef.current = requestAnimationFrame(() => {
-        zoomRafRef.current = null;
-        activateZoom();
-        applyZoom(lastPointerRef.current.x, lastPointerRef.current.y);
-      });
-    },
-    [eligibleForZoom, activateZoom, applyZoom],
-  );
-
-  const handleZoomLeave = useCallback(() => {
-    deactivateZoom();
-  }, [deactivateZoom]);
-
-  // Single source of truth for the loading overlay, evaluated synchronously on
-  // mount and on every page/image change. Splitting "reset to loading" and
-  // "clear when complete" across two effects raced badly: layout effects run
-  // before passive effects, so a passive `setIsLoading(true)` reset always ran
-  // *after* the layout clear — and for a cached image its one-and-only `load`
-  // event (and the rAF clear) could fire before that reset, so the reset stomped
-  // `isLoading` back to true with no further event to clear it. That is the
-  // intermittent "spinner never goes away; reload fixes it" on page change.
-  //
-  // Deciding the state atomically in one layout effect removes the race: it runs
-  // synchronously after Preact updates the <img> src but before any async `load`
-  // of the new src can fire, so `isLoading` is never set true after the image has
-  // already completed. If the (new) image is already complete we clear now;
-  // otherwise we show the loader and let onLoad/onError clear it, with an rAF
-  // re-check as the safety net for a cached image whose onLoad listener was
-  // missed. page.image is in the deps so client-side navigation re-evaluates.
-  useLayoutEffect(() => {
-    setHasError(false);
+  // Effects run after live src bindings commit. Decide loading atomically and
+  // recheck next frame for a cached asset whose load event preceded activation.
+  scope.effect(() => {
+    void currentPage.value;
+    void image.value;
+    hasError.value = false;
     const clearIfComplete = () => {
       const img = imgRef.current;
       if (img?.complete && img.naturalWidth > 0) {
-        setIsLoading(false);
+        isLoading.value = false;
         return true;
       }
       return false;
     };
     if (clearIfComplete()) return;
-    setIsLoading(true);
-    // Re-check after the current frame. Prefer rAF; fall back to a macrotask in
-    // any environment where rAF is unavailable, so the effect never throws.
+    isLoading.value = true;
     if (typeof requestAnimationFrame === 'function') {
-      const raf = requestAnimationFrame(clearIfComplete);
-      return () => cancelAnimationFrame(raf);
+      const frame = requestAnimationFrame(clearIfComplete);
+      return () => cancelAnimationFrame(frame);
     }
     const timer = setTimeout(clearIfComplete, 0);
     return () => clearTimeout(timer);
-  }, [currentPage, manualId, page.image]);
-
-  // Reset both scroll columns to the top on every page change. All in-manual
-  // navigation (次へ/前へ, the page selector, thumbnails, keyboard, browser
-  // back/forward) flows through `currentPage`, so this one effect covers every
-  // path. Without it the columns keep the previous page's scroll offset and the
-  // new page appears mid-scrolled (#180-adjacent). useLayoutEffect runs after
-  // the DOM updates but before paint, so there is no flash of the old position.
-  // Mirrors ScrollViewer's translation-column reset; page mode only.
-  useLayoutEffect(() => {
+  });
+  scope.effect(() => {
+    void currentPage.value;
     if (contentColRef.current) contentColRef.current.scrollTop = 0;
     if (imageScrollRef.current) imageScrollRef.current.scrollTop = 0;
-  }, [currentPage, manualId]);
-
-  // Disabling zoom mid-hover must hide the UI immediately.
-  useEffect(() => {
-    if (!zoomEnabled) deactivateZoom();
-  }, [zoomEnabled, deactivateZoom]);
-
-  // A new page swaps the image: drop any active zoom and the stale background
-  // (re-set lazily on the next hover from the new page's src).
-  useEffect(() => {
     deactivateZoom();
     panelRef.current?.style.removeProperty('--zoom-image');
-  }, [currentPage, manualId, deactivateZoom]);
-
-  // Cancel a pending frame on unmount so the rAF callback never touches a
-  // torn-down element.
-  useEffect(
-    () => () => {
-      if (zoomRafRef.current !== null) cancelAnimationFrame(zoomRafRef.current);
-    },
-    [],
-  );
+  });
+  scope.effect(() => {
+    if (!zoomEnabled.value) deactivateZoom();
+  });
+  scope.onActivate(() => deactivateZoom);
 
   return (
     <>
@@ -259,73 +182,74 @@ export function PageViewer({
         onNavigateHome={onNavigateHome}
         navDisabled={navDisabled}
       />
-      <div className={viewerContainerStyles}>
-        {/* Left Column: PDF Image */}
-        <div
-          ref={imageColRef}
-          className={viewerImageColumnOuterStyles}
-          data-testid="page-image-column"
-        >
-          <div
-            ref={imageScrollRef}
-            className={viewerImageColumnStyles}
-            data-testid="page-image-scroll"
-          >
-            <div className={viewerImageWrapperStyles} data-testid="page-image-wrapper">
-              {hasError ? (
-                <div className={loaderWrapperStyles} data-testid="page-image-error">
-                  <div className="text-zd-red text-center">
-                    <p className="text-lg font-bold mb-vgap-xs">画像の読み込みに失敗しました</p>
-                    <p className="text-sm text-zd-gray6">ページ {currentPage}</p>
+      <div class={viewerContainerStyles}>
+        <div ref={imageColRef} class={viewerImageColumnOuterStyles} data-testid="page-image-column">
+          <div ref={imageScrollRef} class={viewerImageColumnStyles} data-testid="page-image-scroll">
+            <div class={viewerImageWrapperStyles} data-testid="page-image-wrapper">
+              <Show
+                when={hasError}
+                fallback={() => (
+                  <Show
+                    when={computed(() => !!image.value)}
+                    fallback={() => (
+                      <div class={loaderWrapperStyles} data-testid="page-image-missing">
+                        <div class="text-zd-gray6 text-center">
+                          <p class="text-lg mb-vgap-xs">画像がありません</p>
+                          <p class="text-sm">ページ {currentPage}</p>
+                        </div>
+                      </div>
+                    )}
+                  >
+                    {() => (
+                      <img
+                        ref={imgRef}
+                        src={computed(() => withBasePath(image.value))}
+                        alt={computed(() => `Page ${currentPage.value}: ${page.value.title}`)}
+                        class="w-full h-auto"
+                        on:load={() => {
+                          isLoading.value = false;
+                        }}
+                        on:error={() => {
+                          isLoading.value = false;
+                          hasError.value = true;
+                        }}
+                        on:mouseenter={handleZoomEnter}
+                        on:mousemove={handleZoomMove}
+                        on:mouseleave={deactivateZoom}
+                        data-testid="page-image"
+                      />
+                    )}
+                  </Show>
+                )}
+              >
+                {() => (
+                  <div class={loaderWrapperStyles} data-testid="page-image-error">
+                    <div class="text-center">
+                      <p class="text-lg font-bold mb-vgap-xs">画像の読み込みに失敗しました</p>
+                      <p class="text-sm text-zd-gray6">ページ {currentPage}</p>
+                    </div>
                   </div>
-                </div>
-              ) : !page.image ? (
-                <div className={loaderWrapperStyles} data-testid="page-image-missing">
-                  <div className="text-zd-gray6 text-center">
-                    <p className="text-lg mb-vgap-xs">画像がありません</p>
-                    <p className="text-sm">ページ {currentPage}</p>
-                  </div>
-                </div>
-              ) : (
-                <img
-                  ref={imgRef}
-                  src={withBasePath(page.image)}
-                  alt={`Page ${currentPage}: ${page.title}`}
-                  className="w-full h-auto"
-                  onLoad={handleImageLoad}
-                  onError={() => {
-                    setIsLoading(false);
-                    setHasError(true);
-                  }}
-                  onMouseEnter={zoomEnabled ? handleZoomEnter : undefined}
-                  onMouseMove={zoomEnabled ? handleZoomMove : undefined}
-                  onMouseLeave={zoomEnabled ? handleZoomLeave : undefined}
-                  data-testid="page-image"
-                />
-              )}
+                )}
+              </Show>
             </div>
           </div>
-          {/* Loading overlay — sibling of the scroll container (not inside it) so it
-              covers the visible pane and is unaffected by scroll position (#180).
-              Fades out when the image loads. */}
-          {!hasError && page.image && (
-            <div
-              className={`absolute inset-0 bg-white z-10 flex items-center justify-center transition-opacity duration-300 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-              aria-hidden="true"
-              data-testid="page-image-overlay"
-            >
-              <div className="page-image-loader" />
-            </div>
-          )}
+          <Show when={showImage}>
+            {() => (
+              <div
+                class={computed(
+                  () =>
+                    `absolute inset-0 bg-white z-10 flex items-center justify-center transition-opacity duration-300 ${isLoading.value ? 'opacity-100' : 'opacity-0 pointer-events-none'}`,
+                )}
+                aria-hidden="true"
+                data-testid="page-image-overlay"
+              >
+                <div class="page-image-loader" />
+              </div>
+            )}
+          </Show>
         </div>
-
-        {/* Right Column: Translation */}
-        <div
-          ref={contentColRef}
-          className={viewerContentColumnStyles}
-          data-testid="translation-column"
-        >
-          <div className={viewerNavigationWrapperStyles} data-testid="page-navigation-wrapper">
+        <div ref={contentColRef} class={viewerContentColumnStyles} data-testid="translation-column">
+          <div class={viewerNavigationWrapperStyles} data-testid="page-navigation-wrapper">
             <PageNavigation
               currentPage={currentPage}
               totalPages={totalPages}
@@ -333,20 +257,17 @@ export function PageViewer({
               navDisabled={navDisabled}
             />
           </div>
-
           <ProseContent page={page} lang={lang} />
         </div>
       </div>
-
-      {/* Hover-zoom overlays. Mounted whenever the feature is on (so the refs
-          exist before the first hover) but hidden until `.is-active` is toggled
-          on mouseenter. Both are fixed + pointer-events:none — see global.css. */}
-      {zoomEnabled && page.image && !hasError && (
-        <>
-          <div ref={lensRef} className="zoom-lens" aria-hidden="true" data-testid="zoom-lens" />
-          <div ref={panelRef} className="zoom-panel" aria-hidden="true" data-testid="zoom-panel" />
-        </>
-      )}
+      <Show when={showZoom}>
+        {() => (
+          <>
+            <div ref={lensRef} class="zoom-lens" aria-hidden="true" data-testid="zoom-lens" />
+            <div ref={panelRef} class="zoom-panel" aria-hidden="true" data-testid="zoom-panel" />
+          </>
+        )}
+      </Show>
     </>
   );
 }

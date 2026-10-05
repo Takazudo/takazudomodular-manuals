@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'preact/hooks';
+import { getScope, signal, type Signal } from '@takazudo/zfb/zudo-react';
 import {
   DEFAULT_LANG,
   readPersistedLang,
@@ -9,30 +9,16 @@ import {
   type Lang,
 } from './lang';
 
-/**
- * Shared lang state hook used by both ManualApp and LandingLangIsland.
- *
- * SSR-safe: state initializes to DEFAULT_LANG ("ja") on first render so
- * SSR and hydration always agree. The real persisted preference is read
- * from localStorage/URL in a useEffect, avoiding hydration mismatches.
- *
- * Returns [lang, setLang] mirroring useState ergonomics.
- */
-export function useLang(): [Lang, (next: Lang) => void] {
-  const [lang, setLangState] = useState<Lang>(DEFAULT_LANG);
-
-  useEffect(() => {
-    const persisted = readPersistedLang();
-    if (persisted !== DEFAULT_LANG) {
-      setLangState(persisted);
-    }
-  }, []);
-
-  const setLang = useCallback((next: Lang) => {
-    setLangState(next);
+/** Deterministic SSR state; resolve browser preferences only after activation. */
+export function useLang(): [Signal<Lang>, (next: Lang) => void] {
+  const lang = signal<Lang>(DEFAULT_LANG);
+  getScope().onActivate(() => {
+    lang.value = readPersistedLang();
+  });
+  const setLang = (next: Lang) => {
+    lang.value = next;
     writeLangToStorage(next);
     syncLangToUrl(next);
-  }, []);
-
+  };
   return [lang, setLang];
 }

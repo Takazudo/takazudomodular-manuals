@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'preact/hooks';
+import { getScope, signal, type ReadonlySignal } from '@takazudo/zfb/zudo-react';
 
 const DEFAULT_THRESHOLDS = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
 
@@ -10,8 +10,8 @@ interface UseIntersectionPagesOptions {
 
 interface UseIntersectionPagesReturn {
   observerRef: (node: HTMLElement | null, pageNum: number) => void;
-  currentPage: number;
-  visiblePages: Set<number>;
+  currentPage: ReadonlySignal<number>;
+  visiblePages: ReadonlySignal<Set<number>>;
 }
 
 /**
@@ -19,28 +19,27 @@ interface UseIntersectionPagesReturn {
  * Observes page elements and determines which page is most visible
  * based on intersection ratios (highest ratio = current page).
  *
- * Ported verbatim from `components/viewer/use-intersection-pages.ts` with
- * preact/hooks imports; the logic is framework-agnostic.
+ * Registers browser resources with the current component scope.
  */
 export function useIntersectionPages(
   options: UseIntersectionPagesOptions = {},
 ): UseIntersectionPagesReturn {
   const { rootMargin = '0px', threshold = DEFAULT_THRESHOLDS, initialPage = 1 } = options;
 
-  const [currentPage, setCurrentPage] = useState(initialPage);
+  const currentPage = signal(initialPage);
   // visiblePages tracked as ref to avoid unnecessary re-renders on every scroll
-  const visiblePagesRef = useRef<Set<number>>(new Set());
+  const visiblePages = signal(new Set<number>());
 
   // element -> pageNum mapping for observer callback lookups
-  const nodeMapRef = useRef<Map<HTMLElement, number>>(new Map());
+  const nodeMapRef = { current: new Map<HTMLElement, number>() };
   // pageNum -> intersectionRatio for current page detection
-  const ratiosRef = useRef<Map<number, number>>(new Map());
-  const observerInstanceRef = useRef<IntersectionObserver | null>(null);
-  const rafRef = useRef(0);
+  const ratiosRef = { current: new Map<number, number>() };
+  const observerInstanceRef = { current: null as IntersectionObserver | null };
+  const rafRef = { current: 0 };
   // Stable reference for threshold to avoid useEffect re-runs
-  const thresholdRef = useRef(threshold);
+  const thresholdRef = { current: threshold };
 
-  useEffect(() => {
+  getScope().onActivate(() => {
     let mounted = true;
 
     const observer = new IntersectionObserver(
@@ -56,7 +55,7 @@ export function useIntersectionPages(
           }
         }
 
-        visiblePagesRef.current = new Set(ratiosRef.current.keys());
+        visiblePages.value = new Set(ratiosRef.current.keys());
 
         // Debounce current page detection via requestAnimationFrame
         cancelAnimationFrame(rafRef.current);
@@ -72,7 +71,7 @@ export function useIntersectionPages(
             }
           }
           if (maxPage > 0) {
-            setCurrentPage(maxPage);
+            currentPage.value = maxPage;
           }
         });
       },
@@ -92,10 +91,10 @@ export function useIntersectionPages(
       cancelAnimationFrame(rafRef.current);
       observerInstanceRef.current = null;
     };
-  }, [rootMargin]);
+  });
 
   // Callback to register/unregister page elements with the observer
-  const observerRef = useCallback((node: HTMLElement | null, pageNum: number) => {
+  const observerRef = (node: HTMLElement | null, pageNum: number) => {
     // Remove any previous element mapped to this pageNum.
     // Use Array.from to avoid mutating Map during iteration.
     for (const [el, num] of Array.from(nodeMapRef.current)) {
@@ -111,7 +110,7 @@ export function useIntersectionPages(
         observerInstanceRef.current?.observe(node);
       }
     }
-  }, []);
+  };
 
-  return { observerRef, currentPage, visiblePages: visiblePagesRef.current };
+  return { observerRef, currentPage, visiblePages };
 }

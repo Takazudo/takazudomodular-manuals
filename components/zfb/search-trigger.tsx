@@ -1,5 +1,4 @@
-import { useCallback, useEffect, useState } from 'preact/hooks';
-import ctl from './ctl';
+import { computed, getScope, signal } from '@takazudo/zfb/zudo-react';
 import { SearchDialog } from './search-dialog';
 
 export interface SearchTriggerProps {
@@ -9,34 +8,14 @@ export interface SearchTriggerProps {
   onNavigate: (pageNum: number) => void;
 }
 
-const wrapperStyles = ctl(`
-  relative
-`);
+const wrapperStyles = 'relative';
 
 // Visually matches the 32x32 utility buttons; `after:-inset-[6px]` expands the
 // effective tap target to 44x44 per WCAG 2.5.5.
-const buttonStyles = ctl(`
-  relative
-  flex items-center justify-center gap-[4px]
-  h-[32px] min-w-[32px] px-[6px]
-  bg-zd-gray3 hover:bg-zd-gray4
-  border border-zd-gray4
-  text-zd-white
-  rounded-sm
-  transition-colors
-  cursor-pointer
-  active:bg-zd-gray5
-  after:content-['']
-  after:absolute after:-inset-[6px]
-`);
+const buttonStyles =
+  'relative flex items-center justify-center gap-[4px] h-[32px] min-w-[32px] px-[6px] bg-zd-gray3 hover:bg-zd-gray4 border border-zd-gray4 text-zd-white rounded-sm transition-colors cursor-pointer active:bg-zd-gray5 search-trigger-button after:absolute after:-inset-[6px]';
 
-const shortcutStyles = ctl(`
-  hidden md:inline
-  text-zd-gray6
-  text-[11px] leading-none
-  font-mono
-  pl-[2px]
-`);
+const shortcutStyles = 'hidden md:inline text-zd-gray6 text-[11px] leading-none font-mono pl-[2px]';
 
 /**
  * Lucide-style magnifying glass icon, inlined to avoid pulling in an icon
@@ -51,9 +30,9 @@ function SearchIcon({ size = 18 }: { size?: number }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      stroke-width={2}
+      stroke-linecap="round"
+      stroke-linejoin="round"
       aria-hidden="true"
       focusable="false"
     >
@@ -90,40 +69,37 @@ function detectIsMac(): boolean {
  * as a sibling.
  */
 export function SearchTrigger({ manualId, searchIndexVersion, onNavigate }: SearchTriggerProps) {
-  const [open, setOpen] = useState(false);
-  const [isMac, setIsMac] = useState(false);
+  const scope = getScope();
+  const open = signal(false);
+  const isMac = signal(false);
+  const shortcut = computed(() => (isMac.value ? '⌘K' : 'Ctrl+K'));
+  const toggle = () => {
+    open.value = !open.value;
+  };
+  const close = () => {
+    open.value = false;
+  };
 
-  // Resolve platform after mount to avoid SSR/hydration mismatch on the
-  // shortcut label (⌘K vs Ctrl+K).
-  useEffect(() => {
-    setIsMac(detectIsMac());
-  }, []);
-
-  const toggle = useCallback(() => setOpen((prev) => !prev), []);
-  const close = useCallback(() => setOpen(false), []);
-
-  // Global Cmd+K (Mac) / Ctrl+K (others) shortcut. We require modifier
-  // exclusivity so e.g. Cmd+Ctrl+K doesn't accidentally trigger.
-  useEffect(() => {
+  scope.onActivate(() => {
+    isMac.value = detectIsMac();
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key !== 'k' && e.key !== 'K') return;
-      const modifierMatches = isMac
+      const modifierMatches = isMac.value
         ? e.metaKey && !e.ctrlKey && !e.altKey
         : e.ctrlKey && !e.metaKey && !e.altKey;
       if (!modifierMatches) return;
       e.preventDefault();
-      setOpen((prev) => !prev);
+      toggle();
     }
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isMac]);
+  });
 
   return (
-    <div className={wrapperStyles}>
-      <button type="button" className={buttonStyles} onClick={toggle} aria-label="検索">
+    <div class={wrapperStyles}>
+      <button type="button" class={buttonStyles} on:click={toggle} aria-label="検索">
         <SearchIcon size={18} />
-        <span className={shortcutStyles}>{isMac ? '⌘K' : 'Ctrl+K'}</span>
+        <span class={shortcutStyles}>{shortcut}</span>
       </button>
       <SearchDialog
         manualId={manualId}

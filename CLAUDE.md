@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a zfb-based manual viewer for hardware synthesizer manuals. The site provides a bilingual viewing experience (original English PDF pages + Japanese translations) with continuous page numbering. Built with Preact islands for fast static pages with selective interactivity.
+This is a zfb-based manual viewer for hardware synthesizer manuals. The site provides a bilingual viewing experience (original English PDF pages + Japanese translations) with continuous page numbering. Built with zudo-react islands for fast static pages with selective interactivity.
 
 **Project Goal**: Create a web-based manual viewer that displays PDF page images alongside Japanese translations in a user-friendly, searchable interface.
 
@@ -61,10 +61,10 @@ All temporary files (reports, screenshots, test outputs, error reports) go to `_
 ├── pages/                      # zfb page templates (static generation)
 │   └── [manualId]/             # Per-manual page templates
 ├── layouts/                    # zfb layout wrappers
-├── components/                 # Preact components
+├── components/                 # zudo-react components
 │   └── zfb/                    # zfb-specific islands and utilities
 ├── lib/                        # Utilities and libraries
-├── styles/                     # Global CSS (Tailwind / Zudo Design System)
+├── styles/                     # Global CSS (zudo-wind / Zudo Design System)
 ├── public/                     # Static assets
 │   └── oxi-one-mk2/           # OXI ONE MKII manual
 │       ├── data/               # Final JSON files (build time import)
@@ -84,8 +84,8 @@ Each manual is self-contained under `/public/{manual-id}/` with its own data and
 
 This project uses **pnpm** (workspace in `pnpm-workspace.yaml`).
 
-- **zfb** (Preact islands, static site generation) | **Preact** (via `preact/compat`) | **TypeScript**
-- **Tailwind CSS v4** with Zudo Design System | **zudo-doc 5.27.0** (`@takazudo/zudo-doc` single-package consumer) for docs
+- **zfb 3** (zudo-react islands, static site generation) | **TypeScript**
+- **zudo-wind** with Zudo Design System and authored CSS | **zudo-doc 5.27.0** for docs, retained independently on zfb 2.20.2 / Preact / Tailwind
 - **JSON** for translation data | **PNG** for rendered PDF pages (150 DPI)
 
 ## Development Commands
@@ -137,7 +137,7 @@ For details on PDF processing steps and configuration, see `scripts/CLAUDE.md`.
 
 ## Design System (Zudo Design System)
 
-Custom Tailwind CSS v4 config: all defaults disabled, only Zudo tokens. CSS variables in `:root`, semantic naming (`hgap`/`vgap`), dark theme enforced. See `doc/src/content/docs/design-system/design-system.md` (served at `/docs/design-system/design-system`).
+Root utility tokens live in `zfb.config.ts`; raw CSS variables and authored rules live in `styles/global.css`. Semantic spacing (`hgap`/`vgap`) and the dark theme are preserved. The deferred documentation describes its existing Tailwind stack.
 
 ## Coding Standards
 
@@ -145,17 +145,17 @@ Custom Tailwind CSS v4 config: all defaults disabled, only Zudo tokens. CSS vari
 
 - Strict type checking, define interfaces for all data structures, avoid `any`
 
-### Preact Components
+### zudo-react Components
 
-- Functional components with hooks, proper prop types/interfaces, single-purpose
-- JSX uses `jsxImportSource: "preact"` — imports resolve to Preact automatically
+- Setup-once components with signals, computed values and owned scopes; pass signals for live child props
+- JSX uses `jsxImportSource: "@takazudo/zfb/zudo-react"`, HTML-spelled attributes and native `on:event` listeners
 - Interactive UI lives in `components/zfb/` as islands (`*-island.tsx` files)
 
 ### Styling
 
-- **NEVER use inline styles** - Always use Tailwind CSS classes
+- **NEVER use inline styles** - Use zudo-wind utility classes or authored CSS
 - Use Zudo design system tokens exclusively
-- For long className strings, use `ctl` from `@netlify/classnames-template-literals`
+- Keep utility candidates in direct class strings or traced plain string constants; run `pnpm exec zfb wind audit --fail-on error`
 
 ### File Naming
 

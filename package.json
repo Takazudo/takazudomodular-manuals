@@ -10,7 +10,6 @@
     "oxi-one-mkii",
     "synthesizer",
     "zfb",
-    "preact",
     "japanese"
   ],
   "engines": {
@@ -87,21 +86,15 @@
     "prepare": "pnpm dlx husky"
   },
   "dependencies": {
-    "@netlify/classnames-template-literals": "^1.0.3",
-    "@takazudo/zfb": "2.20.2",
-    "@takazudo/zfb-runtime": "2.20.2",
-    "@takazudo/zfb-adapter-cloudflare": "2.20.2",
-    "minisearch": "^7.2.0",
-    "preact": "^10.22.0",
-    "preact-render-to-string": "^6.5.0"
+    "@takazudo/zfb": "3.2.0",
+    "@takazudo/zfb-runtime": "3.2.0",
+    "@takazudo/zfb-adapter-cloudflare": "3.2.0",
+    "minisearch": "^7.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.58.2",
-    "@preact/preset-vite": "^2.10.5",
-    "@tailwindcss/postcss": "^4.2.2",
     "@testing-library/dom": "^10.4.1",
-    "@testing-library/preact": "^3.2.4",
     "@testing-library/user-event": "^14.6.1",
     "@types/node": "25.5.0",
     "@typescript-eslint/eslint-plugin": "^8.57.2",
@@ -109,7 +102,6 @@
     "canvas": "^3.2.2",
     "eslint": "^10.1.0",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.1.1",
     "glob": "^13.0.6",
     "image-size": "^2.0.2",
     "jsdom": "^29.0.1",
@@ -126,12 +118,12 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.1.0",
     "vitest": "^1.6.1",
-    "wrangler": "4.85.0"
+    "wrangler": "4.85.0",
+    "happy-dom": "20.14.5"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,mjs}": [

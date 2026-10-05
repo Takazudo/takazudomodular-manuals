@@ -45,6 +45,13 @@ else
   fail "Code quality checks"
 fi
 
+step "Wind audit"
+if (cd "$ROOT_DIR" && pnpm exec zfb wind audit --fail-on error); then
+  pass "Wind audit passed"
+else
+  fail "Wind audit"
+fi
+
 # ── Step 2: Unit tests ──
 
 step "Step 2/6: Unit tests"

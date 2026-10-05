@@ -1,48 +1,8 @@
-/**
- * Tests for components/zfb/search-dialog.tsx (Preact, prop-based).
- *
- * Decision (#135): re-pointed at the zfb equivalent now. The original
- * components/search/search-dialog.tsx (Next-coupled, reads getManifest
- * internally, uses useRouter) is deleted in #137.
- *
- * Key API differences from the original:
- *   - searchIndexVersion is passed as a prop (no getManifest inside)
- *   - onNavigate prop replaces useRouter().push
- *   - No next/navigation mock needed
- *   - No manual-registry mock needed
- */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/preact';
+import { signal } from '@takazudo/zfb/zudo-react';
+import { createIslandTest } from '@takazudo/zfb/zudo-react/testing';
 import { SearchDialog, __clearSearchIndexCacheForTests } from '@/components/zfb/search-dialog';
 import { highlightTerms, makeExcerpt } from '@/components/zfb/search-highlight';
-
-// jsdom does not implement the native <dialog> element. Polyfill just enough
-// surface (`showModal`, `close`, the `open` property, the `close` event) so
-// the dialog behaves as a closable modal during tests.
-function installDialogPolyfill() {
-  const proto = HTMLDialogElement.prototype;
-
-  proto.showModal = function showModal(this: HTMLDialogElement) {
-    this.setAttribute('open', '');
-    (this as unknown as { open: boolean }).open = true;
-  };
-
-  proto.close = function close(this: HTMLDialogElement) {
-    this.removeAttribute('open');
-    (this as unknown as { open: boolean }).open = false;
-    this.dispatchEvent(new Event('close'));
-  };
-}
-
-// IntersectionObserver is not available in jsdom. Stub it.
-class FakeIntersectionObserver {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
-  }
-}
 
 const fixtureDocs = [
   {
@@ -67,175 +27,318 @@ const fixtureDocs = [
     body: 'Send control voltage to modular synths; each output is configurable.',
   },
 ];
-
+const active: Array<ReturnType<typeof createIslandTest>> = [];
+let intersection: IntersectionObserverCallback;
+const disconnect = vi.fn();
 beforeEach(() => {
   __clearSearchIndexCacheForTests();
-  installDialogPolyfill();
-  (
-    globalThis as unknown as { IntersectionObserver: typeof IntersectionObserver }
-  ).IntersectionObserver = FakeIntersectionObserver as unknown as typeof IntersectionObserver;
-  // Fetch returns the hand-made fixture index.
-  (globalThis as unknown as { fetch: typeof fetch }).fetch = vi.fn(async () => {
-    return new Response(JSON.stringify(fixtureDocs), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }) as unknown as typeof fetch;
+  disconnect.mockClear();
+  vi.spyOn(HTMLDialogElement.prototype, 'showModal').mockImplementation(function (
+    this: HTMLDialogElement,
+  ) {
+    this.open = true;
+  });
+  vi.spyOn(HTMLDialogElement.prototype, 'close').mockImplementation(function (
+    this: HTMLDialogElement,
+  ) {
+    this.open = false;
+    this.dispatchEvent(new Event('close'));
+  });
+  vi.stubGlobal(
+    'IntersectionObserver',
+    class {
+      constructor(callback: IntersectionObserverCallback) {
+        intersection = callback;
+      }
+      observe() {}
+      disconnect = disconnect;
+    },
+  );
+  vi.stubGlobal(
+    'fetch',
+    vi.fn(async () => new Response(JSON.stringify(fixtureDocs), { status: 200 })),
+  );
 });
-
 afterEach(() => {
-  cleanup();
+  for (const test of active) test.dispose();
+  active.length = 0;
   vi.restoreAllMocks();
+  vi.unstubAllGlobals();
 });
-
-// No next/navigation mock needed — the zfb SearchDialog receives onNavigate
-// as a prop; no useRouter inside.
-// No manual-registry mock needed — searchIndexVersion is passed as a prop.
-
-const TEST_VERSION = '0123456789abcdef0123456789abcdef01234567';
-
+async function renderDialog(initialOpen = true, searchIndexVersion?: string) {
+  const open = signal(initialOpen);
+  const onClose = vi.fn(() => {
+    open.value = false;
+  });
+  const onNavigate = vi.fn();
+  function TestDialog() {
+    return (
+      <SearchDialog
+        manualId="oxi-one-mk2"
+        searchIndexVersion={searchIndexVersion}
+        open={open}
+        onClose={onClose}
+        onNavigate={onNavigate}
+      />
+    );
+  }
+  const test = createIslandTest(TestDialog, {}, { document });
+  active.push(test);
+  const before = test.host.querySelector('dialog');
+  expect(test.hydrate()).not.toBeNull();
+  await test.flush();
+  expect(test.host.querySelector('dialog')).toBe(before);
+  expect(test.diagnostics).toEqual([]);
+  const input = test.host.querySelector<HTMLInputElement>('input')!;
+  const dialog = test.host.querySelector('dialog')!;
+  return { test, open, onClose, onNavigate, input, dialog };
+}
+function type(input: HTMLInputElement, value: string) {
+  input.value = value;
+  input.dispatchEvent(new InputEvent('input', { bubbles: true }));
+}
+async function settleSearch(
+  test: ReturnType<typeof createIslandTest>,
+  input: HTMLInputElement,
+  value: string,
+) {
+  type(input, value);
+  await vi.waitFor(
+    async () => {
+      await test.flush();
+      expect(test.host.querySelector('[aria-live]')?.textContent).toMatch(/件の結果|該当なし/);
+    },
+    { timeout: 2000 },
+  );
+}
 describe('SearchDialog', () => {
-  it('renders a native <dialog> element with the expected aria-label', () => {
-    render(
-      <SearchDialog manualId="oxi-one-mk2" open={false} onClose={() => {}} onNavigate={vi.fn()} />,
-    );
-    const dialog = screen.getByLabelText('検索') as HTMLDialogElement;
-    expect(dialog.tagName).toBe('DIALOG');
+  it('hydrates a native accessible dialog without fetching while closed', async () => {
+    const { dialog } = await renderDialog(false);
+    expect(dialog.getAttribute('aria-label')).toBe('検索');
+    expect(dialog.open).toBe(false);
+    expect(fetch).not.toHaveBeenCalled();
   });
-
-  it('fetches the index from a withBasePath-prefixed, version-busted URL when opened', async () => {
-    const fetchSpy = globalThis.fetch as unknown as ReturnType<typeof vi.fn>;
-    const { rerender } = render(
-      <SearchDialog
-        manualId="oxi-one-mk2"
-        searchIndexVersion={TEST_VERSION}
-        open={false}
-        onClose={() => {}}
-        onNavigate={vi.fn()}
-      />,
+  it('fetches a version-busted withBasePath URL on first open and caches subsequent opens', async () => {
+    const { test, open } = await renderDialog(false, '0123456789abcdef0123456789abcdef01234567');
+    open.value = true;
+    await test.flush();
+    await vi.waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
+    expect(vi.mocked(fetch).mock.calls[0][0]).toMatch(
+      /^\/oxi-one-mk2\/data\/search-index\.json\?v=[0-9a-f]{40}$/,
     );
-
-    rerender(
-      <SearchDialog
-        manualId="oxi-one-mk2"
-        searchIndexVersion={TEST_VERSION}
-        open={true}
-        onClose={() => {}}
-        onNavigate={vi.fn()}
-      />,
-    );
-
-    await waitFor(() => {
-      expect(fetchSpy).toHaveBeenCalled();
-    });
-    const call = fetchSpy.mock.calls[0];
-    // Robust against future hash rotations: anchor on the shape, not the exact
-    // digest. 40-hex char suffix matches a SHA-1 hex digest.
-    expect(call[0]).toMatch(/^\/oxi-one-mk2\/data\/search-index\.json\?v=[0-9a-f]{40}$/);
+    open.value = false;
+    await test.flush();
+    open.value = true;
+    await test.flush();
+    expect(fetch).toHaveBeenCalledTimes(1);
   });
-
-  it('fetches the index without a ?v= query string when no searchIndexVersion is passed', async () => {
-    // No searchIndexVersion prop → unversioned fallback URL.
-    const fetchSpy = globalThis.fetch as unknown as ReturnType<typeof vi.fn>;
-    render(
-      <SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} onNavigate={vi.fn()} />,
-    );
-
-    await waitFor(() => {
-      expect(fetchSpy).toHaveBeenCalled();
-    });
-    const call = fetchSpy.mock.calls[0];
-    expect(call[0]).toBe('/oxi-one-mk2/data/search-index.json');
-    expect(String(call[0])).not.toContain('?');
+  it('fetches an unversioned URL when the manifest has no hash', async () => {
+    await renderDialog();
+    expect(vi.mocked(fetch).mock.calls[0][0]).toBe('/oxi-one-mk2/data/search-index.json');
   });
-
-  it('filters results based on the typed query and highlights the match', async () => {
-    const fetchSpy = globalThis.fetch as unknown as ReturnType<typeof vi.fn>;
-    render(
-      <SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} onNavigate={vi.fn()} />,
+  it('filters and highlights a settled query, then updates highlights for another query', async () => {
+    const { test, input } = await renderDialog();
+    await settleSearch(test, input, 'sequencer');
+    expect(test.host.querySelector('[aria-label="ページ 10"]')).not.toBeNull();
+    expect(test.host.querySelector('[aria-label="ページ 77"]')).toBeNull();
+    expect(test.host.querySelector('mark')?.textContent?.toLowerCase()).toBe('sequencer');
+    type(input, 'MIDI');
+    await vi.waitFor(async () => {
+      await test.flush();
+      expect(test.host.querySelector('[aria-label="ページ 42"]')).not.toBeNull();
+    });
+    expect(test.host.querySelector('[aria-label="ページ 10"]')).toBeNull();
+    expect(test.host.querySelector('mark')?.textContent).toBe('MIDI');
+  });
+  it('reports fetch failure and retries successfully', async () => {
+    vi.mocked(fetch).mockResolvedValueOnce(new Response('not found', { status: 404 }));
+    const error = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const { test } = await renderDialog();
+    await vi.waitFor(async () => {
+      await test.flush();
+      expect(test.host.textContent).toContain('検索インデックスを読み込めませんでした');
+    });
+    const retry = Array.from(test.host.querySelectorAll('button')).find(
+      (button) => button.textContent === '再試行',
+    )!;
+    expect(retry).toBeTruthy();
+    retry.click();
+    await vi.waitFor(async () => {
+      await test.flush();
+      expect(test.host.textContent).not.toContain('検索インデックスを読み込めませんでした');
+    });
+    expect(fetch).toHaveBeenCalledTimes(2);
+    expect(error).toHaveBeenCalledTimes(1);
+  });
+  it('navigates and closes on click and keyboard activation', async () => {
+    const { test, input, onNavigate, onClose } = await renderDialog();
+    await settleSearch(test, input, 'sequencer');
+    const result = test.host.querySelector('[aria-label="ページ 10"]')!.closest('button')!;
+    result.click();
+    expect(onNavigate).toHaveBeenCalledWith(10);
+    expect(onClose).toHaveBeenCalled();
+    onNavigate.mockClear();
+    result.dispatchEvent(
+      new KeyboardEvent('keydown', { key: ' ', bubbles: true, cancelable: true }),
     );
-
-    // Wait for the fetch + index load to complete (idle → loading → ready).
-    await waitFor(() => {
-      expect(fetchSpy).toHaveBeenCalled();
-    });
-    await waitFor(() => {
-      expect(screen.queryByText('検索インデックスを読み込み中...')).toBeNull();
-    });
-
-    const input = screen.getByPlaceholderText('検索キーワードを入力...') as HTMLInputElement;
-
-    await act(async () => {
-      // The zfb SearchDialog uses `onInput` (Preact maps this to the native
-      // `input` event). Use fireEvent.input, not fireEvent.change.
-      fireEvent.input(input, { target: { value: 'sequencer' } });
-    });
-
-    // Wait for the debounced search + render to produce a result row for the
-    // Sequencer doc (pageNum 10).
-    await waitFor(
-      () => {
-        expect(screen.queryByLabelText('ページ 10')).not.toBeNull();
+    expect(onNavigate).toHaveBeenCalledTimes(1);
+    expect(onNavigate).toHaveBeenCalledWith(10);
+  });
+  it('bridges native dialog close to owner state', async () => {
+    const { test, dialog, open, onClose } = await renderDialog();
+    dialog.close();
+    await test.flush();
+    expect(open.value).toBe(false);
+    expect(onClose).toHaveBeenCalledOnce();
+  });
+  it('preserves composing text and searches the final committed edit', async () => {
+    const { test, input } = await renderDialog();
+    input.focus();
+    input.dispatchEvent(new CompositionEvent('compositionstart', { bubbles: true }));
+    input.value = 'シー';
+    input.dispatchEvent(new InputEvent('input', { bubbles: true, isComposing: true }));
+    await test.flush();
+    expect(input.value).toBe('シー');
+    input.value = 'sequencer';
+    input.dispatchEvent(
+      new CompositionEvent('compositionend', { bubbles: true, data: 'sequencer' }),
+    );
+    await vi.waitFor(
+      async () => {
+        await test.flush();
+        expect(test.host.querySelector('[aria-label="ページ 10"]')).not.toBeNull();
       },
       { timeout: 2000 },
     );
-    // The CV doc (pageNum 77) should not match "sequencer".
-    expect(screen.queryByLabelText('ページ 77')).toBeNull();
-
-    // At least one <mark> element should wrap the matched term.
-    const marks = document.querySelectorAll('[data-search-dialog] mark');
-    expect(marks.length).toBeGreaterThan(0);
+    expect(input.value).toBe('sequencer');
   });
-
-  it('shows the error state when the fetch fails', async () => {
-    (globalThis as unknown as { fetch: typeof fetch }).fetch = vi.fn(async () => {
-      return new Response('not found', { status: 404 });
-    }) as unknown as typeof fetch;
-    // The component logs the failure via console.error; silence it here so
-    // the test output stays clean while still asserting the UI state.
-    const errSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-
-    render(
-      <SearchDialog manualId="oxi-one-mk2" open={true} onClose={() => {}} onNavigate={vi.fn()} />,
+  it('aborts an in-flight request and disconnects observers on disposal', async () => {
+    vi.mocked(fetch).mockImplementation(() => new Promise(() => {}));
+    const { test } = await renderDialog();
+    const signal = vi.mocked(fetch).mock.calls[0][1]?.signal;
+    expect(signal?.aborted).toBe(false);
+    test.dispose();
+    expect(signal?.aborted).toBe(true);
+    expect(disconnect).toHaveBeenCalledOnce();
+  });
+  it('reuses the index across remounts but fetches again for a new content version', async () => {
+    const first = await renderDialog(true, 'version-a');
+    await settleSearch(first.test, first.input, 'sequencer');
+    first.test.dispose();
+    const second = await renderDialog(true, 'version-a');
+    await settleSearch(second.test, second.input, 'MIDI');
+    expect(second.test.host.querySelector('[aria-label="ページ 42"]')).not.toBeNull();
+    expect(fetch).toHaveBeenCalledTimes(1);
+    second.test.dispose();
+    const third = await renderDialog(true, 'version-b');
+    await settleSearch(third.test, third.input, 'sequencer');
+    expect(fetch).toHaveBeenCalledTimes(2);
+    expect(vi.mocked(fetch).mock.calls[1][0]).toBe(
+      '/oxi-one-mk2/data/search-index.json?v=version-b',
     );
-
-    await waitFor(() => {
-      // The error message appears in two places: the sr-only live region and
-      // the visible status paragraph. Use getAllByText to assert both are present.
-      expect(screen.getAllByText('検索インデックスを読み込めませんでした').length).toBeGreaterThan(
-        0,
-      );
+  });
+  it('keeps the query and cached index when closed and reopened', async () => {
+    const { test, input, open, dialog } = await renderDialog();
+    await settleSearch(test, input, 'sequencer');
+    dialog.close();
+    await test.flush();
+    open.value = true;
+    await test.flush();
+    expect(input.value).toBe('sequencer');
+    expect(test.host.querySelector('[aria-label="ページ 10"]')).not.toBeNull();
+    expect(fetch).toHaveBeenCalledTimes(1);
+  });
+  it('loads every batch for successive queries while the sentinel remains in view', async () => {
+    // Native observers report an initial intersection after each observe(),
+    // even when the target never crosses the margin between query changes.
+    vi.stubGlobal(
+      'IntersectionObserver',
+      class {
+        private active = true;
+        constructor(private callback: IntersectionObserverCallback) {}
+        observe() {
+          queueMicrotask(() => {
+            if (this.active)
+              this.callback(
+                [{ isIntersecting: true } as IntersectionObserverEntry],
+                this as unknown as IntersectionObserver,
+              );
+          });
+        }
+        disconnect() {
+          this.active = false;
+        }
+      },
+    );
+    const docs = ['sequencer', 'routing'].flatMap((title, group) =>
+      Array.from({ length: 23 }, (_, index) => ({
+        id: `${title}-${index}`,
+        pageNum: group * 100 + index + 1,
+        title,
+        sectionName: '',
+        body: title,
+      })),
+    );
+    vi.mocked(fetch).mockResolvedValue(new Response(JSON.stringify(docs), { status: 200 }));
+    const { test, input } = await renderDialog();
+    type(input, 'sequencer');
+    await vi.waitFor(async () => {
+      await test.flush();
+      expect(test.host.querySelectorAll('[aria-label^="ページ "]')).toHaveLength(23);
+      expect(test.host.querySelector('[aria-label="ページ 23"]')).not.toBeNull();
     });
-    expect(screen.getByRole('button', { name: '再試行' })).toBeTruthy();
-    errSpy.mockRestore();
+    type(input, 'routing');
+    await vi.waitFor(async () => {
+      await test.flush();
+      expect(test.host.querySelectorAll('[aria-label^="ページ "]')).toHaveLength(23);
+      expect(test.host.querySelector('[aria-label="ページ 123"]')).not.toBeNull();
+      expect(test.host.querySelector('[aria-label="ページ 23"]')).toBeNull();
+    });
+  });
+  it('appends another batch of results when the sentinel enters the viewport', async () => {
+    vi.mocked(fetch).mockResolvedValue(
+      new Response(
+        JSON.stringify(
+          Array.from({ length: 23 }, (_, index) => ({
+            ...fixtureDocs[0],
+            id: `doc-${index}`,
+            pageNum: index + 1,
+          })),
+        ),
+        { status: 200 },
+      ),
+    );
+    const { test, input } = await renderDialog();
+    await settleSearch(test, input, 'sequencer');
+    expect(test.host.querySelectorAll('[aria-label^="ページ "]')).toHaveLength(10);
+    intersection(
+      [{ isIntersecting: true } as IntersectionObserverEntry],
+      {} as IntersectionObserver,
+    );
+    await test.flush();
+    expect(test.host.querySelectorAll('[aria-label^="ページ "]')).toHaveLength(20);
   });
 });
-
 describe('highlight helpers', () => {
-  it('highlightTerms wraps matched tokens case-insensitively', () => {
-    const nodes = highlightTerms('Hello World', 'world');
-    // Expect at least one node to be a React element with type "mark".
-    const hasMark = nodes.some((n) => {
-      if (typeof n !== 'object' || n === null) return false;
-      return (n as { type?: unknown }).type === 'mark';
-    });
-    expect(hasMark).toBe(true);
+  it('wraps case-insensitive matches in mark descriptions', () => {
+    expect(
+      highlightTerms('Hello World', 'world').some(
+        (node) =>
+          typeof node === 'object' && node !== null && 'type' in node && node.type === 'mark',
+      ),
+    ).toBe(true);
   });
-
-  it('highlightTerms returns the original text when query is empty', () => {
+  it('returns the text unchanged for an empty query', () => {
     expect(highlightTerms('Hello', '')).toEqual(['Hello']);
   });
-
-  it('makeExcerpt centers around the first match and adds ellipses', () => {
-    const body = `${'A '.repeat(50)}target ${'B '.repeat(50)}`;
-    const excerpt = makeExcerpt(body, 'target', 40);
-    expect(excerpt.length).toBeLessThanOrEqual(42); // +2 for possible ellipses
+  it('centers the excerpt on a match', () => {
+    const excerpt = makeExcerpt(`${'A '.repeat(50)}target ${'B '.repeat(50)}`, 'target', 40);
+    expect(excerpt.length).toBeLessThanOrEqual(42);
     expect(excerpt).toContain('target');
     expect(excerpt.startsWith('…')).toBe(true);
     expect(excerpt.endsWith('…')).toBe(true);
   });
-
-  it('makeExcerpt returns the whole body when it is short enough', () => {
+  it('keeps short bodies intact', () => {
     expect(makeExcerpt('short body', 'anything', 160)).toBe('short body');
   });
 });

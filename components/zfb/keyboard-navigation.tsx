@@ -1,15 +1,15 @@
-import { useEffect, useRef } from 'preact/hooks';
+import { getScope, signal, type ReadonlySignal } from '@takazudo/zfb/zudo-react';
 import { getNavigationState } from './routing';
 
 interface KeyboardNavigationProps {
-  currentPage: number;
+  currentPage: ReadonlySignal<number>;
   totalPages: number;
   /** Navigate to the given page (client-side, owned by the island). */
   onNavigate: (pageNum: number) => void;
   /** Navigate back to the manual's top/index page (left arrow on page 1). */
   onNavigateHome: () => void;
   /** When true (fetch failed), arrow-key navigation is suppressed. */
-  navDisabled?: boolean;
+  navDisabled?: ReadonlySignal<boolean>;
 }
 
 /**
@@ -27,16 +27,9 @@ export function KeyboardNavigation({
   totalPages,
   onNavigate,
   onNavigateHome,
-  navDisabled = false,
+  navDisabled = signal(false),
 }: KeyboardNavigationProps) {
-  // Keep latest values in a ref so the keydown listener is installed once but
-  // always reads current state — mirrors the original's stateRef pattern.
-  const stateRef = useRef({ currentPage, totalPages, onNavigate, onNavigateHome, navDisabled });
-  useEffect(() => {
-    stateRef.current = { currentPage, totalPages, onNavigate, onNavigateHome, navDisabled };
-  }, [currentPage, totalPages, onNavigate, onNavigateHome, navDisabled]);
-
-  useEffect(() => {
+  getScope().onActivate(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Ignore if user is typing in an input/textarea/select or contentEditable element
       const target = e.target;
@@ -52,14 +45,11 @@ export function KeyboardNavigation({
         return;
       }
 
-      const {
-        currentPage: page,
-        totalPages: total,
-        onNavigate: navigate,
-        onNavigateHome: navigateHome,
-        navDisabled: disabled,
-      } = stateRef.current;
-      if (disabled) return;
+      const page = currentPage.value;
+      const total = totalPages;
+      const navigate = onNavigate;
+      const navigateHome = onNavigateHome;
+      if (navDisabled.value) return;
 
       const { canGoToPrev, canGoToNext } = getNavigationState(page, total);
 
@@ -80,7 +70,7 @@ export function KeyboardNavigation({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []); // Listener installed once; reads live state via stateRef.
+  });
 
   return null;
 }

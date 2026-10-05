@@ -8,9 +8,8 @@
 // alongside params. Component receives { params: { manualId, pageNum }, ...props }
 // at the top level — NOT { params, props: {...} }.
 //
-// SSR strategy: always renders JA content as the island's children.
-// The mega-island (ManualApp) captures-and-reinjects this SSR body on
-// hydration, then fetches both JA and EN data post-mount.
+// SSR strategy: transport the initial JA page as JSON, then render the same
+// owned shell on server and client until the full page collections load.
 //
 // Bundle-size note: zfb-registry.ts statically imports only pages-ja.json
 // for all 52 manuals (~4MB total), keeping the V8 bundle under the ~10MB
@@ -22,7 +21,6 @@
 import { Island } from '@takazudo/zfb';
 import DefaultLayout from '../../../layouts/default';
 import ManualApp from '../../../components/zfb/manual-app';
-import { ViewerShell } from '../../../components/zfb/viewer-shell';
 import { getAvailableManuals, getManifest, getPagesJa, hasEnglish } from '@/lib/zfb-registry';
 import type { ManualPage } from '@/lib/types/manual';
 import type { ManualAppManifest } from '../../../components/zfb/manual-app-types';
@@ -97,7 +95,7 @@ export default function ViewerPage({
   const pageTitle = `${currentPageTitle} (Page ${currentPageNum}) - ${appManifest.title}`;
   const manualHref = `/${manualId}`;
 
-  // Reconstruct the ManualPage object for ViewerShell (server-render only).
+  // The JSON-safe initial page renders identically on the server and client.
   const currentPage: ManualPage = {
     pageNum: currentPageNum,
     title: currentPageTitle,
@@ -110,22 +108,15 @@ export default function ViewerPage({
 
   return (
     <DefaultLayout title={pageTitle} manualTitle={appManifest.title} manualHref={manualHref}>
-      {/* The mega-island wraps both the utility bar (HeaderUtilityBar) and the
-          viewer body. Its children are the SSR'd page shell, which the island
-          captures-and-reinjects on hydration for a seamless first-paint. */}
       <Island when="load">
         <ManualApp
           manualId={manualId}
           initialPageNum={currentPageNum}
+          initialPage={currentPage}
           totalPages={totalPages}
           availableLangs={availableLangs}
           manifest={appManifest}
-        >
-          {/* SSR'd current page body — image column + translation column.
-              Visible immediately in HTML before JS hydrates. The ManualApp
-              island captures this via BODY_MARKER_ATTR and reinjects it. */}
-          <ViewerShell page={currentPage} pageNum={currentPageNum} totalPages={totalPages} />
-        </ManualApp>
+        />
       </Island>
     </DefaultLayout>
   );

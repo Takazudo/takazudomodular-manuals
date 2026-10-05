@@ -70,6 +70,9 @@ jobs:
           pnpm run typecheck
           echo "✅ Type checking passed"
 
+      - name: Audit Wind utilities
+        run: pnpm exec zfb wind audit --fail-on error
+
       - name: Run ESLint
         run: |
           echo "🔍 Running ESLint..."
