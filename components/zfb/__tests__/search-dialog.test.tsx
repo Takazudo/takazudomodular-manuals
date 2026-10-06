@@ -65,7 +65,11 @@ afterEach(() => {
   vi.restoreAllMocks();
   vi.unstubAllGlobals();
 });
-async function renderDialog(initialOpen = true, searchIndexVersion?: string) {
+async function renderDialog(
+  initialOpen = true,
+  searchIndexVersion?: string,
+  beforeHydrate?: (input: HTMLInputElement) => void,
+) {
   const open = signal(initialOpen);
   const onClose = vi.fn(() => {
     open.value = false;
@@ -85,6 +89,7 @@ async function renderDialog(initialOpen = true, searchIndexVersion?: string) {
   const test = createIslandTest(TestDialog, {}, { document });
   active.push(test);
   const before = test.host.querySelector('dialog');
+  beforeHydrate?.(test.host.querySelector<HTMLInputElement>('input')!);
   expect(test.hydrate()).not.toBeNull();
   await test.flush();
   expect(test.host.querySelector('dialog')).toBe(before);
@@ -190,6 +195,17 @@ describe('SearchDialog', () => {
     await test.flush();
     expect(open.value).toBe(false);
     expect(onClose).toHaveBeenCalledOnce();
+  });
+  it('preserves an edit made before hydration and searches that live input', async () => {
+    const { test, input } = await renderDialog(true, undefined, (field) => {
+      field.value = 'sequencer';
+    });
+    expect(input.value).toBe('sequencer');
+    await vi.waitFor(async () => {
+      await test.flush();
+      expect(test.host.querySelector('[aria-label="ページ 10"]')).not.toBeNull();
+    });
+    expect(test.diagnostics).toEqual([]);
   });
   it('preserves composing text and searches the final committed edit', async () => {
     const { test, input } = await renderDialog();

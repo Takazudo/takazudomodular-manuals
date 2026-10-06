@@ -84,7 +84,7 @@ Each manual is self-contained under `/public/{manual-id}/` with its own data and
 
 This project uses **pnpm** (workspace in `pnpm-workspace.yaml`).
 
-- **zfb 3** (zudo-react islands, static site generation) | **TypeScript**
+- **zfb 4** (zudo-react islands, static site generation) | **TypeScript**
 - **zudo-wind** with Zudo Design System and authored CSS | **zudo-doc 5.27.0** for docs, retained independently on zfb 2.20.2 / Preact / Tailwind
 - **JSON** for translation data | **PNG** for rendered PDF pages (150 DPI)
 

@@ -1,6 +1,6 @@
 # zmanuals
 
-A static manual viewer for hardware synthesizer manuals built with zfb 3 (zudo-react islands). Provides a bilingual viewing experience with original PDF page images alongside Japanese translations, supporting 40+ manuals.
+A static manual viewer for hardware synthesizer manuals built with zfb 4 (zudo-react islands). Provides a bilingual viewing experience with original PDF page images alongside Japanese translations, supporting 40+ manuals.
 
 ## Features
 
@@ -24,7 +24,7 @@ A static manual viewer for hardware synthesizer manuals built with zfb 3 (zudo-r
 
 ## Tech Stack
 
-- **Framework**: zfb 3 (zudo-react islands, static site generation)
+- **Framework**: zfb 4 (zudo-react islands, static site generation)
 - **UI**: zudo-react (signals, owned scopes, native events)
 - **Styling**: zudo-wind utilities and authored CSS (Zudo Design System)
 - **Language**: TypeScript
