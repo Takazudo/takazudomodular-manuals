@@ -403,7 +403,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     needs: quality-checks
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    # Verification-only rollouts can opt out before pushing without skipping checks.
+    if: github.event.pull_request.head.repo.full_name == github.repository && !contains(github.event.pull_request.labels.*.name, 'no-preview')
 
     permissions:
       contents: read
