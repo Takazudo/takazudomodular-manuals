@@ -1,6 +1,6 @@
 # zmanuals
 
-A static manual viewer for hardware synthesizer manuals built with zfb (Preact islands). Provides a bilingual viewing experience with original PDF page images alongside Japanese translations, supporting 40+ manuals.
+A static manual viewer for hardware synthesizer manuals built with zfb 4 (zudo-react islands). Provides a bilingual viewing experience with original PDF page images alongside Japanese translations, supporting 40+ manuals.
 
 ## Features
 
@@ -24,13 +24,13 @@ A static manual viewer for hardware synthesizer manuals built with zfb (Preact i
 
 ## Tech Stack
 
-- **Framework**: zfb (Preact islands, static site generation)
-- **UI**: Preact (via preact/compat — JSX compatible with React syntax)
-- **Styling**: Tailwind CSS v4 (Zudo Design System)
+- **Framework**: zfb 4 (zudo-react islands, static site generation)
+- **UI**: zudo-react (signals, owned scopes, native events)
+- **Styling**: zudo-wind utilities and authored CSS (Zudo Design System)
 - **Language**: TypeScript
 - **Package Manager**: pnpm
 - **Deployment**: Cloudflare Workers (static assets)
-- **Documentation**: zudo-doc (zfb + MDX + Tailwind CSS v4)
+- **Documentation**: zudo-doc on its independent zfb 2.20.2 / Preact / Tailwind stack (migration deferred)
 - **Unit Tests**: Vitest
 - **E2E Tests**: Playwright
 
@@ -258,7 +258,7 @@ cd worktrees/issue-X-feature-name
 ├── pages/                      # zfb page templates (static generation)
 │   └── [manualId]/             # Per-manual pages
 ├── layouts/                    # zfb layout wrappers
-├── components/                 # Preact components
+├── components/                 # zudo-react components
 │   └── zfb/                    # zfb-specific islands and utilities
 ├── lib/                        # Utilities and data loading
 │   ├── manual-data.ts          # Data loading logic

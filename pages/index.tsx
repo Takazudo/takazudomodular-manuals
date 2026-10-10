@@ -7,57 +7,55 @@
 
 import { getAvailableManuals, getManifest } from '@/lib/zfb-registry';
 import DefaultLayout from '../layouts/default';
-import ctl from '../components/zfb/ctl';
 
 export const meta = {
   title: 'Manual Index | Takazudo Modular',
   description: 'Browse all available translated manuals',
 };
 
-const pageStyles = ctl(`
+const pageStyles = `
   min-h-screen pt-[60px]
-  bg-zd-gray1
   flex items-center justify-center
-`);
+`;
 
-const headingStyles = ctl(`
+const headingStyles = `
   text-2xl font-bold mb-vgap-md
   text-zd-white
   font-futura
-`);
+`;
 
-const listStyles = ctl(`
+const listStyles = `
   list-disc list-inside
   text-lg
-`);
+`;
 
-const listItemStyles = ctl(`
+const listItemStyles = `
   mb-vgap-xs
-`);
+`;
 
-const linkStyles = ctl(`
+const linkStyles = `
   text-zd-white
   zd-invert-color-link
   no-underline
   px-[4px] py-[2px]
   -mx-[4px] -my-[2px]
   rounded-xs
-`);
+`;
 
 export default function IndexPage() {
   const manualIds = getAvailableManuals();
 
   return (
     <DefaultLayout title="Manual Index | Takazudo Modular">
-      <main className={pageStyles}>
+      <main class={pageStyles}>
         <div>
-          <h1 className={headingStyles}>Manual Index</h1>
-          <ul className={listStyles}>
+          <h1 class={headingStyles}>Manual Index</h1>
+          <ul class={listStyles}>
             {manualIds.map((manualId) => {
               const manifest = getManifest(manualId);
               return (
-                <li key={manualId} className={listItemStyles}>
-                  <a href={`/${manualId}`} className={linkStyles}>
+                <li class={listItemStyles}>
+                  <a href={`/${manualId}`} class={linkStyles}>
                     {manifest.title}
                   </a>
                 </li>

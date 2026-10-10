@@ -1,6 +1,5 @@
 'use client';
 
-import { useCallback } from 'preact/hooks';
 import { SearchTrigger } from './search-trigger';
 import { getPagePath } from './routing';
 
@@ -18,12 +17,9 @@ export default function LandingSearchIsland({
   manualId,
   searchIndexVersion,
 }: LandingSearchIslandProps) {
-  const handleNavigate = useCallback(
-    (pageNum: number) => {
-      window.location.href = getPagePath(manualId, pageNum);
-    },
-    [manualId],
-  );
+  const handleNavigate = (pageNum: number) => {
+    window.location.href = getPagePath(manualId, pageNum);
+  };
 
   return (
     <SearchTrigger
