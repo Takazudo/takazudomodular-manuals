@@ -30,7 +30,7 @@ A static manual viewer for hardware synthesizer manuals built with zfb 4 (zudo-r
 - **Language**: TypeScript
 - **Package Manager**: pnpm
 - **Deployment**: Cloudflare Workers (static assets)
-- **Documentation**: zudo-doc on its independent zfb 2.20.2 / Preact / Tailwind stack (migration deferred)
+- **Documentation**: zudo-doc 7 on ZFB 4.5.2 / zudo-react / Wind; built independently
 - **Unit Tests**: Vitest
 - **E2E Tests**: Playwright
 

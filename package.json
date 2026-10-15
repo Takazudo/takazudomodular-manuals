@@ -13,7 +13,7 @@
     "japanese"
   ],
   "engines": {
-    "node": ">=22.0.0",
+    "node": ">=24 <25",
     "pnpm": ">=10.0.0"
   },
   "packageManager": "pnpm@10.32.0",
@@ -86,9 +86,9 @@
     "prepare": "pnpm dlx husky"
   },
   "dependencies": {
-    "@takazudo/zfb": "4.3.0",
-    "@takazudo/zfb-runtime": "4.3.0",
-    "@takazudo/zfb-adapter-cloudflare": "4.3.0",
+    "@takazudo/zfb": "4.5.2",
+    "@takazudo/zfb-runtime": "4.5.2",
+    "@takazudo/zfb-adapter-cloudflare": "4.5.2",
     "minisearch": "^7.2.0"
   },
   "devDependencies": {

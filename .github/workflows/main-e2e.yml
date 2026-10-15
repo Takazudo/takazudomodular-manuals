@@ -38,7 +38,7 @@ jobs:
       - name: Build zfb application
         uses: ./.github/actions/build-zfb
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Resolve Playwright version
         id: pw

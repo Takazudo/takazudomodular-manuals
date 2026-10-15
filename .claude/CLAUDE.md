@@ -188,4 +188,4 @@ This project uses `@takazudo/zfb` — a custom static site generator built on zu
 - Key config: `zfb.config.ts` in the project root (base path, plugins, output directory)
 - Pages live in `pages/`, layouts in `layouts/`, interactive islands in `components/zfb/`
 - Root JSX resolves to `@takazudo/zfb/zudo-react` in tsconfig.json
-- Vitest exercises real SSR/hydration using `@takazudo/zfb/zudo-react/testing`; doc retains its separate Preact runtime
+- Vitest exercises real SSR/hydration using `@takazudo/zfb/zudo-react/testing`; doc uses the same engine family with the zudo-doc 7 preset

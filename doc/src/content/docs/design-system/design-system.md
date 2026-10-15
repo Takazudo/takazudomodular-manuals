@@ -1,140 +1,59 @@
 ---
 title: Zudo Design System
 description: >-
-  Reference for the Zudo Design System — custom Tailwind CSS v4 tokens, semantic spacing
-  (hgap/vgap), color palette, and typography used in this project.
+  Root application Wind tokens, authored CSS, semantic spacing (hgap/vgap), colors, and typography,
+  with the separate documentation preset described explicitly.
 sidebar_position: 1
 ---
 
 # Zudo Design System
 
-This document describes the Zudo Design System used in this project, including spacing conventions, color system, and typography.
+The manual viewer uses zudo-wind and authored CSS. Utility mappings, breakpoints,
+and the reset live in `zfb.config.ts`; their CSS variable values and authored
+classes live in `styles/global.css`. Prose rules live in `styles/prose.css`.
+The former Tailwind and PostCSS configuration files are no longer used.
 
-## Design System Philosophy
+## Token and cascade contract
 
-**All Tailwind CSS defaults are disabled.** Only the tokens defined in the Zudo Design System are available for use.
-
-This ensures that:
-
-- No default Tailwind utilities like `h-4`, `text-sm`, `bg-gray-500` can be used
-- Only explicitly defined design tokens are available
-- Design consistency is enforced at the build level
-- Accidental use of non-design-system values is prevented
-
-## Architectural Rule: Using Design Tokens vs Arbitrary Values
-
-When styling components, follow this decision-making process:
-
-### 1. Use Design Tokens First (Preferred)
-
-Always try to use defined design tokens first:
+Use semantic tokens first. JSX uses HTML-spelled `class` attributes:
 
 ```tsx
-// Good — using design tokens
-<div className="px-hgap-md py-vgap-sm bg-zd-black text-zd-white">
+<div class="px-hgap-md py-vgap-sm bg-zd-black text-zd-white" />
 ```
 
-### 2. If No Token Matches
+A new semantic utility needs both its raw CSS variable and a mapping in
+`wind.tokens`. For example, `spacing['hgap-md']` maps to
+`var(--zd-spacing-hgap-md)`. Adding a CSS variable alone does not register a
+utility. Supported arbitrary values such as `w-[85%]` and `pt-[20px]` are useful
+for one-off geometry; prefer authored CSS for unsupported syntax.
 
-When no design token matches your needs, you have **two options**:
+The root uses `reset: 'owned-v1'`, `strict: true`, and
+`utilities.placement: 'before-authored'`. Authored declarations follow generated
+utilities, but specificity still decides which declaration wins. Do not assume
+that putting a rule in a layer makes it outrank unlayered utilities.
 
-#### Option A: Consider Adding a Token
+Keep complete utility candidates in direct class strings or traced plain string
+constants. Check them with `pnpm exec zfb wind audit --fail-on error`; verify
+computed styles in a browser as well. `text-xs` and `text-sm` are valid because
+this project explicitly maps them. The old Tailwind wildcard resets and
+`@theme`, `@apply`, `@utility`, and `@source` directives must not be reintroduced.
 
-If this value will be reused or is semantically meaningful:
+## Responsive breakpoints
 
-```css
-/* Add to global.css */
---zd-spacing-custom-value: 32px;
-```
-
-#### Option B: Use Arbitrary Values (Allowed)
-
-**Arbitrary values ARE allowed** in Tailwind v4. Use them for one-off, specific cases:
-
-```tsx
-// Good — arbitrary values for specific needs
-<div className="w-[85%] pt-[20px] px-[32px]">
-<div className="max-w-[400px] bg-[#custom-color]">
-```
-
-### When to Use Each Approach
-
-**Use design tokens when:**
-
-- The value is reused across multiple components
-- The value has semantic meaning (e.g., "standard button padding")
-- You want consistency across the design system
-
-**Use arbitrary values when:**
-
-- The value is unique to one specific component
-- The value is mathematically calculated or component-specific
-- Adding a token would create unnecessary abstraction
-
-### NEVER Use Numeric Tailwind Classes
-
-Avoid Tailwind's default numeric classes — these are **not** design system tokens:
-
-```tsx
-// Bad — numeric Tailwind defaults
-<div className="p-4 m-8 gap-2">
-
-// Good — use design tokens instead
-<div className="p-vgap-xs m-vgap-sm gap-hgap-xs">
-```
-
-**Why?** Numeric classes (`p-4`, `m-8`) reference Tailwind's default spacing scale, which is disabled in our design system. They should be replaced with semantic spacing tokens (`hgap-*`, `vgap-*`).
-
-## Architecture
-
-### Configuration Files
-
-1. **`/app/globals.css`** — Contains all design system definitions:
-   - `:root` variables — Zudo Design System token definitions (`--zd-*`)
-   - `@theme` block — Maps Zudo tokens to Tailwind theme variables (disables Tailwind defaults)
-
-2. **`/tailwind.config.cjs`** — Minimal configuration (content paths, custom plugins only)
-
-3. **`/postcss.config.cjs`** — PostCSS configuration (Tailwind CSS v4 PostCSS plugin)
-
-### How It Works
-
-```css
-/* global.css */
-
-/* 1. Define Zudo tokens in :root */
-:root {
-  --zd-spacing-hgap-md: 40px;
-  --zd-color-black: rgb(28, 25, 23);
-  /* ... */
-}
-
-/* 2. Reset Tailwind defaults, then define custom tokens */
-@theme {
-  /* STEP 1: Reset all Tailwind defaults using wildcard patterns */
-  --spacing-*: initial;
-  --color-*: initial;
-  --text-*: initial;
-  --font-*: initial;
-  --shadow-*: initial;
-  /* ... all namespace wildcards ... */
-
-  /* STEP 2: Define ONLY Zudo Design System tokens */
-  --spacing-0: 0;
-  --spacing-hgap-md: var(--zd-spacing-hgap-md);
-  --color-zd-black: var(--zd-color-black);
-  --font-futura: Futura, Jost, 'Century Gothic', sans-serif;
-  /* ... */
-}
-```
-
-**Key Pattern**: First use **wildcard resets** (`--namespace-*: initial`) to remove ALL Tailwind default utilities, then define only custom Zudo tokens.
+| Variant | Minimum width |
+| --- | --- |
+| `sm` | 580px |
+| `md` | 740px |
+| `lg` | 980px |
+| `xl` | 1280px |
+| `2xl` | 1630px |
+| `3xl` | 1800px |
 
 ## Layout Spacing
 
 ### Spacing Philosophy
 
-The Zudo Design System uses a semantic spacing system with **vgap** (vertical gaps) and **hgap** (horizontal gaps) instead of Tailwind's default numeric spacing scale.
+The Zudo Design System uses a semantic spacing system with **vgap** (vertical gaps) and **hgap** (horizontal gaps) with explicitly registered Wind tokens.
 
 ### Spacing Definitions
 
@@ -193,13 +112,13 @@ The Zudo Design System uses a semantic spacing system with **vgap** (vertical ga
 
 ```jsx
 // DO: Use vgap for vertical spacing
-<div className="mt-vgap-md mb-vgap-lg">
+<div class="mt-vgap-md mb-vgap-lg">
 
 // DO: Use hgap for horizontal spacing
-<div className="mx-hgap-md pl-hgap-sm">
+<div class="mx-hgap-md pl-hgap-sm">
 
 // DON'T: Use default Tailwind numeric spacing
-<div className="px-4 py-8">        // Will NOT compile
+<div class="px-4 py-8">        // Use the semantic tokens above
 ```
 
 ## Color System
@@ -255,10 +174,10 @@ The Zudo Design System uses a semantic spacing system with **vgap** (vertical ga
 ### Usage
 
 ```jsx
-<h1 className="text-5xl">
-<h2 className="text-4xl">
-<h3 className="text-3xl">
-<p className="text-base">
+<h1 class="text-5xl">
+<h2 class="text-4xl">
+<h3 class="text-3xl">
+<p class="text-base">
 ```
 
 ## Custom Utilities
@@ -266,55 +185,47 @@ The Zudo Design System uses a semantic spacing system with **vgap** (vertical ga
 ### Text Shadows
 
 ```jsx
-<h1 className="text-shadow-md">
-<span className="text-shadow-none">
+<h1 class="text-shadow-md">
+<span class="text-shadow-none">
 ```
 
 ### Link Styles
 
 ```jsx
 // Standard inverted link (for use on dark backgrounds)
-<a href="#" className="zd-invert-color-link">
+<a href="#" class="zd-invert-color-link">
 
 // Inverted link for inline text
-<a href="#" className="zd-invert-color-link-inline">
+<a href="#" class="zd-invert-color-link-inline">
 ```
 
 ### Gradients
 
 ```jsx
-<div className="zd-gradient-black-to-transparent">
-<div className="zd-gradient-white-to-transparent">
+<div class="zd-gradient-black-to-transparent">
+<div class="zd-gradient-white-to-transparent">
 ```
 
-## Migration Guide
+## Documentation host
 
-### Before (Default Tailwind)
+`doc/` uses zudo-doc 7 on the same ZFB 4.5.2 engine family, with the preset's
+own Wind manifest and `hsp`/`vsp` token names. Its `sm`/`lg`/`xl` breakpoints
+are 640/1024/1280px; they are independent of the root viewer's breakpoints.
+`doc/zfb.config.ts` sets `wind.sources.rootPackage: false` so the unrelated
+root viewer's tokens are not scanned into the documentation stylesheet.
 
-```jsx
-<div className="px-4 py-6 mt-8 mb-10">
-  <div className="gap-5">
-```
+`doc/src/styles/global.css` imports the public package styles and retains the
+host's token values as ordinary `:root` declarations. The semantic z-index
+values come from `doc/src/config/z-index-tokens.ts`; run
+`pnpm --dir doc gen:z-index` after editing them and
+`pnpm --dir doc check:z-index` to check the generated block. Do not edit that
+block manually.
 
-### After (Zudo Design System)
+## Verification
 
-```jsx
-<div className="px-hgap-xs py-vgap-sm mt-vgap-sm mb-vgap-md">
-  <div className="gap-hgap-2xs">
-```
-
-## Prohibited Utilities (Will Not Compile)
-
-Due to wildcard resets in the `@theme` block, the following Tailwind default utilities are **completely removed** and will cause build errors if used:
-
-- `h-1` through `h-96`, `w-1` through `w-96`
-- `p-1`, `px-4`, `py-8`, `m-1`, `mx-4`, `my-8`
-- `gap-1`, `gap-x-4`, `gap-y-8`
-- `bg-gray-*`, `text-blue-*`, `border-red-*` (all Tailwind color palette)
-- `text-xs`, `text-sm` (Tailwind defaults)
-
-## Related Files
-
-- **All design system configuration**: `/app/globals.css`
-- **Minimal Tailwind config**: `/tailwind.config.cjs`
-- **PostCSS config**: `/postcss.config.cjs`
+Run root quality/unit checks and `pnpm b4push`. For documentation changes run
+`pnpm --dir doc check`, `check:pin-parity`, `check:wrangler-pin`,
+`check:template-drift`, `check:z-index`, and `b4push`. Browser checks must cover
+actual hydration, navigation, search, theme controls, and responsive layout.
+Noto Sans JP is loaded through Google Fonts by the root layout; fallback-font
+screenshots do not establish intended-font visual parity.

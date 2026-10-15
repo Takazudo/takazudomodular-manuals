@@ -1,113 +1,10 @@
-/* Cascade-layer order for the flow-space fix (zudolab/zudo-doc#2082 / #2109):
- *   zd-preflight  — Tailwind's preflight reset (incl. `* { margin: 0 }`)
- *   zd-flow       — the .zd-content flow-space margin-top rule (below)
- *   (unlayered)   — `tailwindcss/utilities` (mt-* etc.) — highest priority
- * Unlayered always beats any layer, so `mt-*` utilities win over the flow
- * rule; the flow rule (zd-flow) sits above zd-preflight so it still beats the
- * preflight `margin: 0` reset and the .zd-content vertical rhythm is preserved.
- * Preflight is the de-facto lowest-priority origin already, so moving it into
- * the lowest layer is observably inert for every other author rule (which stay
- * unlayered and continue to outrank it). */
-@layer zd-preflight, zd-flow;
-@import 'tailwindcss/preflight' layer(zd-preflight);
-@import 'tailwindcss/utilities';
-
-/* ========================================
- * @takazudo/zudo-doc package safelist
- *
- * The package ships a build-generated safelist at `dist/safelist.css`
- * (zudolab/zudo-doc#1993). Importing it via the module resolver is
- * reliable across all consumer environments — the same module-resolver
- * code path used for any feature stylesheet injected at the
- * `@slot:global-css:feature-styles` anchor below.
- *
- * Why not @source the package dist/ glob? The old approach
- * (`@source "../../node_modules/@takazudo/zudo-doc/dist/**"`) was
- * unreliable: pnpm stores packages in a content-addressable store and
- * surfaces them to node_modules via symlinks. Tailwind v4's file
- * scanner does not reliably traverse those symlinks, so arbitrary-value
- * candidates (e.g. `w-[var(--zd-sidebar-w)]`, `h-[calc(100vh-3.5rem)]`)
- * were intermittently dropped across rebuilds (zudolab/zudo-doc#1971,
- * #1989). The package-generated `@source inline()` in dist/safelist.css
- * contains the full set, extracted at package build time — no drift, no
- * symlink traversal, auto-syncs on package upgrade (zudolab/zudo-doc#1994).
- * ======================================== */
-
-@import '@takazudo/zudo-doc/safelist.css';
-
-/* Content typography (`.zd-content` rules + admonitions + mermaid layout).
-   Shipped by @takazudo/zudo-doc as the single source of truth — do not inline
-   these rules here (they used to live here and drifted; see
-   zudolab/zudo-doc#2188). The @layer zd-flow order it relies on is declared
-   above (line 11); the safelist import above generates the component utilities
-   its headings/links/etc. depend on. */
+@layer zw-reset, zd-flow;
+@import '@takazudo/zudo-doc/theme.css';
 @import '@takazudo/zudo-doc/content.css';
-/* Non-island feature CSS (code block buttons, syntect light-dark token rule,
-   .zd-html-preview-code, KaTeX, sidebar toggle geometry, view-transition chrome,
-   .ai-chat-md, .zd-enlarge*, .zd-mermaid*).
-   Shipped by @takazudo/zudo-doc as single source of truth. See zudolab/zudo-doc#2331. */
+@import '@takazudo/zudo-doc/page-loading.css';
 @import '@takazudo/zudo-doc/features.css';
 
-/* ========================================
- * Tailwind v4 content sources
- *
- * Without a `.git` directory in the project root Tailwind v4's content
- * scanner falls back to explicit @source directives for class detection.
- * Builds that run outside a git checkout (E2E fixtures, CI containers
- * that copy the source tree without history, etc.) hit this fallback,
- * and zfb's default content roots only cover `pages/`. Components live
- * outside pages/, so these directives ensure the consumer's own code is
- * always scanned for utility classes. The package's utilities are now
- * covered by the @import above — these directives cover consumer code only.
- * ======================================== */
-
-@source "src/components/**/*.{tsx,ts,jsx,js,mdx,md}";
-@source "src/content/**/*.{mdx,md}";
-@source "src/hooks/**/*.{tsx,ts,jsx,js}";
-@source "src/utils/**/*.{tsx,ts,jsx,js}";
-@source "pages/**/*.{tsx,ts,jsx,js}";
-
-/* ========================================
- * Design Token System
- *
- * Tight token strategy: import preflight + utilities only (no default theme).
- * Only project-specific tokens are available.
- *
- * Raw palette: --zd-0 to --zd-15 + bg/fg/sel (injected by ColorSchemeProvider)
- * Tailwind tokens: registered below via @theme
- *
- * Palette slots:
- *   0/8:  black / bright-black (surfaces, muted text, borders)
- *   1/9:  red / bright-red
- *   2/10: green / bright-green
- *   3/11: yellow / bright-yellow
- *   4/12: blue / bright-blue
- *   5/13: magenta / bright-magenta
- *   6/14: cyan / bright-cyan
- *   7/15: white / bright-white
- * ======================================== */
-
-@theme {
-  /* ========================================
-   * Project tight-token color reset
-   *
-   * Wipes all Tailwind default color tokens (`--color-*`) so only
-   * project-defined palette and semantic tokens remain. This enforces the
-   * tight-token policy: "NEVER use Tailwind default colors" (per Color Rules
-   * in src/CLAUDE.md). Project color tokens (defined below) are added back
-   * after this reset.
-   *
-   * The upstream split-import fix (zfb#159 / 9e37551, shipped in f68a9ba)
-   * eliminated the original leak cause (zfb no longer prepends the full
-   * @import "tailwindcss" bundle). The reset is retained as an explicit
-   * design guardrail — it prevents accidental default palette bleed from any
-   * future upstream change and keeps the project's color surface intentional.
-   *
-   * NOT reset: `--spacing` (the base spacing scale, default 0.25rem).
-   * Tailwind spacing utilities compute as calc(var(--spacing) * N); wiping
-   * `--spacing` collapses them to zero (observed in Wave 4 Sub-7 #1403).
-   * ======================================== */
-  --color-*: initial;
+:root {
 
   /* ========================================
    * Colors — Three-tier token system
@@ -116,8 +13,8 @@
   /* ── Base ── */
   --color-bg: var(--zd-bg);
   --color-fg: var(--zd-fg);
-  --color-sel-bg: var(--zd-sel-bg);
-  --color-sel-fg: var(--zd-sel-fg);
+  --color-sel-bg: var(--zd-selection-bg);
+  --color-sel-fg: var(--zd-selection-fg);
 
   /* ── Raw palette (p0–p15) ── */
   --color-p0: var(--zd-0);
@@ -152,7 +49,7 @@
   --color-overlay: #000;
   /* The page-loading overlay scrim token is feature-gated: the dynamicPageTransition
      feature injects it into @slot:global-css:theme-tokens when enabled, so it is
-     intentionally absent from this base @theme block (the host showcase global.css
+     intentionally absent from this base token block (the host showcase global.css
      carries it inline only because the host is fully featured). Do not re-add it here. */
   --color-image-overlay-bg: var(--zd-image-overlay-bg);
   --color-image-overlay-fg: var(--zd-image-overlay-fg);
@@ -203,11 +100,11 @@
   --spacing-image-overlay-inset: 0.5rem; /* 8px — overlay button corner inset + internal padding */
 
   /* ========================================
-   * Elevation — the tight `@import "tailwindcss/utilities"` (no default
-   * @theme) drops Tailwind's default shadow scale, so `shadow-*` utilities
+   * Elevation — the tight utility set (no default
+   * theme) drops Tailwind's default shadow scale, so `shadow-*` utilities
    * generate nothing. Re-add the one elevation the components use: header
    * and version-switcher dropdown panels apply `shadow-lg`. Value is
-   * Tailwind v4's default shadow-lg; the black is intentionally
+   * the existing shadow-lg; the black is intentionally
    * theme-independent (a drop shadow is absence of light, not a themed color).
    * ======================================== */
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -259,18 +156,18 @@
 /* ========================================
  * Z-index tiers — semantic, single-namespace scale.
  *
- * The @theme block below is GENERATED from src/config/z-index-tokens.ts
- * (the single source of truth) by `pnpm gen:z-index`. Tailwind v4 reads the
- * --z-index-<name> theme key and generates a `z-<name>` utility, so e.g.
+ * The :root block below is GENERATED from src/config/z-index-tokens.ts
+ * (the single source of truth) by `pnpm gen:z-index`. Wind tokens reference the
+ * --z-index-<name> variable to generate a `z-<name>` utility, so e.g.
  * --z-index-toolbar: 20 produces `.z-toolbar { z-index: 20 }`; raw CSS can
  * also reference `z-index: var(--z-index-<name>)`. `pnpm check:z-index` fails
  * on drift. Do NOT hand-edit between the BEGIN/END markers.
  * ======================================== */
   /* GENERATED:Z_INDEX_BEGIN
    * GENERATED:Z_INDEX — do not hand-edit; run pnpm gen:z-index.
-   * Source of truth: src/config/z-index-tokens.ts. Tailwind v4 reads the
-   * --z-index-<name> theme key and generates a z-<name> utility. */
-  @theme {
+   * Source of truth: src/config/z-index-tokens.ts. zudo-wind reads the
+   * --z-index-<name> custom property and generates a z-<name> utility. */
+  :root {
     --z-index-content: 0;
     --z-index-local-1: 1;
     --z-index-local-2: 2;

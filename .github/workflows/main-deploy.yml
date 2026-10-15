@@ -51,7 +51,7 @@ jobs:
       - name: Build zfb application
         uses: ./.github/actions/build-zfb
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Cache site build output
         uses: actions/cache/save@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5

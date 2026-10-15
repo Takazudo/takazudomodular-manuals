@@ -37,6 +37,23 @@ test.describe('OXI ONE MKII Manual Viewer', () => {
       await expect(readLink).toBeVisible();
     });
 
+    test('landing footer preserves the original typography', async ({ page }) => {
+      await page.goto(`/${MANUAL_ID}`);
+      const footer = page.locator('main p').filter({ hasText: 'Navigation:' });
+      await expect(footer).toBeVisible();
+      const lineHeights = await footer.evaluate((element) => {
+        const footerStyle = getComputedStyle(element);
+        const keyStyle = getComputedStyle(element.querySelector('code')!);
+        return {
+          footer: parseFloat(footerStyle.lineHeight) / parseFloat(footerStyle.fontSize),
+          key: parseFloat(keyStyle.lineHeight) / parseFloat(keyStyle.fontSize),
+        };
+      });
+      // Measured from the original v2 production CSS, independent of font availability.
+      expect(lineHeights.footer).toBeCloseTo(1.625);
+      expect(lineHeights.key).toBeCloseTo(1.375);
+    });
+
     test('manuals index should load', async ({ page }) => {
       // Root / serves the manual index directly (no /manuals prefix)
       await page.goto('/');

@@ -4,9 +4,9 @@ zudo-doc documentation system configuration. For project-wide instructions, see 
 
 ## Overview
 
-Project documentation lives in `doc/` and is built with **zudo-doc 5.27.0** — a documentation framework built on zfb (Preact islands), MDX, and Tailwind CSS v4.
+Project documentation lives in `doc/` and is built with **zudo-doc 7.0.0** on ZFB 4.5.2, zudo-react islands, MDX and Wind. Node 24 LTS is required.
 
-As of the 1.2.0 migration, `doc/` is a **single-package consumer** of `@takazudo/zudo-doc`. All pages, layouts, components, and utilities come from the package — there are no local `pages/lib/*` or `src/components/*` forks. Only project-specific config and content live in `doc/`.
+As of the 1.2.0 migration, `doc/` is a **single-package consumer** of `@takazudo/zudo-doc`. Shared layouts and interactive components come from the package. The authored home page and thin documentation route remain in `pages/`; the history route uses `DocHistoryBoundary`. Obsolete `pages/lib/*` and `src/components/*` scaffold copies were removed. Project config, content, tokens, and tooling remain local.
 
 - **Content location**: `doc/src/content/docs/`
 - **Categories**: `architecture/`, `design-system/`, `infrastructure/`, plus top-level `index.mdx`
@@ -46,7 +46,7 @@ doc/src/content/docs/
 ├── index.mdx                   # Top-level landing page
 ├── architecture/               # Architecture decisions and diagrams
 ├── design-system/              # Zudo Design System reference
-│   └── design-system.md        # Tailwind v4 tokens, CSS variables, dark theme
+│   └── design-system.md        # Wind tokens, CSS variables, dark theme
 └── infrastructure/             # Deployment, CI/CD, Cloudflare setup
 ```
 
@@ -88,7 +88,7 @@ In this single-package setup:
 
 ## Design System Documentation
 
-The Zudo Design System documentation is at `doc/src/content/docs/design-system/design-system.md` (served at `/docs/design-system/design-system`). This is the authoritative reference for the custom Tailwind CSS v4 configuration used in the main app.
+The Zudo Design System documentation is at `doc/src/content/docs/design-system/design-system.md` (served at `/docs/design-system/design-system`). This is the authoritative reference for the root app's Wind tokens and authored CSS, including the separate doc preset contract.
 
 ## Category index convention
 

@@ -37,7 +37,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -158,7 +158,7 @@ jobs:
       - name: Build zfb application
         uses: ./.github/actions/build-zfb
         with:
-          node-version: '22'
+          node-version: '24'
 
       # Only persist the ~880 MB build artifact where it is actually consumed:
       # the page-smoke-crawler job runs on preview/* branches ONLY. On every other
@@ -207,7 +207,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -334,7 +334,7 @@ jobs:
       - name: Build zfb application
         uses: ./.github/actions/build-zfb
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Resolve Playwright version
         id: pw
@@ -420,7 +420,7 @@ jobs:
       - name: Build zfb application
         uses: ./.github/actions/build-zfb
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Prepare dist for deployment
         run: |

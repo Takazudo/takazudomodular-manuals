@@ -124,9 +124,11 @@ export default defineConfig({
       lineHeights: {
         none: 'var(--zd-lineHeight-none)',
         tight: 'var(--zd-lineHeight-tight)',
-        snug: 'var(--zd-lineHeight-snug)',
+        // Preserve the v2 rendered utility values; authored CSS still uses
+        // the separate --zd-lineHeight-* tokens.
+        snug: '1.375',
         normal: 'var(--zd-lineHeight-normal)',
-        relaxed: 'var(--zd-lineHeight-relaxed)',
+        relaxed: '1.625',
         loose: 'var(--zd-lineHeight-loose)',
       },
       radii: {

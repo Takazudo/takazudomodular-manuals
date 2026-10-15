@@ -85,7 +85,7 @@ Each manual is self-contained under `/public/{manual-id}/` with its own data and
 This project uses **pnpm** (workspace in `pnpm-workspace.yaml`).
 
 - **zfb 4** (zudo-react islands, static site generation) | **TypeScript**
-- **zudo-wind** with Zudo Design System and authored CSS | **zudo-doc 5.27.0** for docs, retained independently on zfb 2.20.2 / Preact / Tailwind
+- **zudo-wind** with Zudo Design System and authored CSS | **zudo-doc 7.0.0** for docs on the same ZFB 4.5.2 family; Node 24 LTS is required
 - **JSON** for translation data | **PNG** for rendered PDF pages (150 DPI)
 
 ## Development Commands
@@ -137,7 +137,7 @@ For details on PDF processing steps and configuration, see `scripts/CLAUDE.md`.
 
 ## Design System (Zudo Design System)
 
-Root utility tokens live in `zfb.config.ts`; raw CSS variables and authored rules live in `styles/global.css`. Semantic spacing (`hgap`/`vgap`) and the dark theme are preserved. The deferred documentation describes its existing Tailwind stack.
+Root utility tokens live in `zfb.config.ts`; raw CSS variables and authored rules live in `styles/global.css`. Semantic spacing (`hgap`/`vgap`) and the dark theme are preserved. The documentation uses its own preset Wind manifest and hsp/vsp tokens; its source scan excludes the unrelated root package.
 
 ## Coding Standards
 
