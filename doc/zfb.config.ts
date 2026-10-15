@@ -17,6 +17,7 @@ const directiveVocabulary = {
 
 export default defineConfig(
   zudoDoc({
+    wind: { sources: { rootPackage: false } },
     colorScheme: settings.colorScheme,
     colorMode: settings.colorMode,
     siteName: settings.siteName,

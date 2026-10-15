@@ -1,5 +1,3 @@
-/** @jsxRuntime automatic */
-/** @jsxImportSource preact */
 // Locked manifest (#2653 Decision 4): a SELF-CONTAINED doc-route stub —
 // REQUIRED because the injected DYNAMIC `/docs/[[...slug]]` route 404s in
 // `zfb dev` (real pre-existing gap in zfb's dev-mode dynamic-route rendering,
@@ -26,12 +24,12 @@
 // DesignTokenPanelBootstrap, which the package auto-defaults), so without
 // that patch the doc-history button never hydrates on this route.
 
-import type { JSX } from 'preact';
+import type { JSX } from '@takazudo/zfb/zudo-react/jsx-runtime';
 import { routeContext } from 'virtual:zudo-doc-route-context';
 import { createRouteContext, type RouteContextPayload } from '@takazudo/zudo-doc/route-context';
 import { createChrome } from '@takazudo/zudo-doc/chrome';
 import { defineChromeBindings } from '@takazudo/zudo-doc/chrome-bindings';
-import { DocHistory } from '@takazudo/zudo-doc/doc-history';
+import { DocHistoryBoundary as DocHistory } from '@takazudo/zudo-doc/doc-history-area';
 import { chromeBindings } from 'virtual:zudo-doc-chrome-bindings';
 
 const ctx = routeContext as unknown as RouteContextPayload;

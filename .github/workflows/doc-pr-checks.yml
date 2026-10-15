@@ -55,13 +55,26 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Check docs and published package pins
+        run: |
+          pnpm --dir doc check
+          pnpm --dir doc check:pin-parity
+          pnpm --dir doc check:wrangler-pin
+          pnpm --dir doc check:z-index
+          pnpm --dir doc check:template-drift
+
       - name: Build docs
         run: pnpm run doc:build
+
+      - name: Validate generated docs
+        run: |
+          pnpm --dir doc check:html
+          pnpm --dir doc check:links
 
   # ---------------------------------------------------------------------------
   # Job 2: Preview Deploy — build docs and deploy to Cloudflare Workers
@@ -71,7 +84,7 @@ jobs:
     name: Docs Preview Deploy (Cloudflare Workers)
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    if: github.event.pull_request.head.repo.full_name == github.repository && !contains(github.event.pull_request.labels.*.name, 'no-preview')
 
     permissions:
       contents: read
@@ -91,7 +104,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

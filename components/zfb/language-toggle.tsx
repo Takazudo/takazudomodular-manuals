@@ -1,9 +1,9 @@
-import ctl from './ctl';
+import { computed, type ReadonlySignal } from '@takazudo/zfb/zudo-react';
 import type { Lang } from './lang';
 import { langTooltipStyles } from './tooltip-styles';
 
 export interface LanguageToggleProps {
-  lang: Lang;
+  lang: ReadonlySignal<Lang>;
   setLang: (next: Lang) => void;
   /** Languages this manual supports; EN segment is disabled when "en" is absent. */
   availableLangs: readonly Lang[];
@@ -14,41 +14,19 @@ export interface LanguageToggleProps {
  * neighbouring utility buttons so the segmented toggle visually blends into
  * the utility bar.
  */
-const wrapperStyles = ctl(`
-  inline-flex items-stretch
-  h-[32px]
-  bg-zd-gray3
-  border border-zd-gray4
-  rounded-sm
-  overflow-hidden
-  font-futura
-`);
+const wrapperStyles =
+  'inline-flex items-stretch h-[32px] bg-zd-gray3 border border-zd-gray4 rounded-sm overflow-hidden font-futura';
 
-const segmentBaseStyles = ctl(`
-  min-w-[32px] px-[8px]
-  flex items-center justify-center
-  text-zd-white text-xs leading-none
-  transition-colors
-  cursor-pointer
-  focus:outline-none
-  focus-visible:ring-1 focus-visible:ring-zd-white
-`);
+const segmentBaseStyles =
+  'min-w-[32px] px-[8px] flex items-center justify-center text-zd-white text-xs leading-none transition-colors cursor-pointer focus:outline-none language-toggle-segment';
 
-const segmentInactiveStyles = ctl(`
-  bg-zd-gray3 hover:bg-zd-gray4 active:bg-zd-gray5
-`);
+const segmentInactiveStyles = 'bg-zd-gray3 hover:bg-zd-gray4 active:bg-zd-gray5';
 
-const segmentActiveStyles = ctl(`
-  bg-zd-gray5
-`);
+const segmentActiveStyles = 'bg-zd-gray5';
 
-const segmentDisabledStyles = ctl(`
-  bg-zd-gray3 opacity-40 cursor-not-allowed
-`);
+const segmentDisabledStyles = 'bg-zd-gray3 opacity-40 cursor-not-allowed';
 
-const tooltipWrapperStyles = ctl(`
-  relative group flex
-`);
+const tooltipWrapperStyles = 'relative group flex';
 
 function cx(...classes: Array<string | false | undefined>) {
   return classes.filter(Boolean).join(' ');
@@ -62,8 +40,8 @@ function cx(...classes: Array<string | false | undefined>) {
  */
 export function LanguageToggle({ lang, setLang, availableLangs }: LanguageToggleProps) {
   const enAvailable = availableLangs.includes('en');
-  const jaActive = lang === 'ja';
-  const enActive = lang === 'en';
+  const jaActive = computed(() => lang.value === 'ja');
+  const enActive = computed(() => lang.value === 'en');
 
   const handleJaClick = () => {
     setLang('ja');
@@ -74,35 +52,44 @@ export function LanguageToggle({ lang, setLang, availableLangs }: LanguageToggle
     setLang('en');
   };
 
-  const enClassName = cx(
-    segmentBaseStyles,
-    !enAvailable ? segmentDisabledStyles : enActive ? segmentActiveStyles : segmentInactiveStyles,
+  const enClassName = computed(() =>
+    cx(
+      segmentBaseStyles,
+      !enAvailable
+        ? segmentDisabledStyles
+        : enActive.value
+          ? segmentActiveStyles
+          : segmentInactiveStyles,
+    ),
+  );
+  const jaClassName = computed(() =>
+    cx(segmentBaseStyles, jaActive.value ? segmentActiveStyles : segmentInactiveStyles),
   );
 
   return (
-    <div className={wrapperStyles} role="group" aria-label="言語切り替え">
+    <div class={wrapperStyles} role="group" aria-label="言語切り替え">
       <button
         type="button"
-        className={cx(segmentBaseStyles, jaActive ? segmentActiveStyles : segmentInactiveStyles)}
+        class={jaClassName}
         aria-pressed={jaActive}
         aria-label="日本語表示"
-        onClick={handleJaClick}
+        on:click={handleJaClick}
       >
         JA
       </button>
-      <div className={tooltipWrapperStyles}>
+      <div class={tooltipWrapperStyles}>
         <button
           type="button"
-          className={enClassName}
+          class={enClassName}
           aria-pressed={enActive}
           aria-disabled={!enAvailable}
           aria-label="English"
-          onClick={handleEnClick}
+          on:click={handleEnClick}
         >
           EN
         </button>
         {!enAvailable && (
-          <span className={langTooltipStyles} role="tooltip">
+          <span class={langTooltipStyles} role="tooltip">
             この資料は日本語のみ対応です
           </span>
         )}

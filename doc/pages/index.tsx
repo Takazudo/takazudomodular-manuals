@@ -1,5 +1,3 @@
-/** @jsxRuntime automatic */
-/** @jsxImportSource preact */
 // Page module for the site index route.
 //
 // Default-locale (EN) site index. Static route — no paths() export needed.
@@ -15,20 +13,16 @@
 import { settings } from '@/config/settings';
 import { defaultLocale, t } from '@/config/i18n';
 import { withBase } from '@/utils/base';
-import { buildNavTree, groupSatelliteNodes } from '@/utils/docs';
-import { getCategoryOrder } from '@/utils/nav-scope';
-import { collectTags } from '@/utils/tags';
-import { toRouteSlug } from '@/utils/slug';
 import { DocLayoutWithDefaults } from '@takazudo/zudo-doc/doclayout';
-import type { JSX } from 'preact';
-import type { VNode } from 'preact';
+import type { JSX } from '@takazudo/zfb/zudo-react/jsx-runtime';
+import { prepareHomeData } from '@takazudo/zudo-doc/home-page';
 import { Island } from '@takazudo/zfb';
 import { SiteTreeNav } from '@takazudo/zudo-doc/site-tree-nav-island';
 import { routeContext } from 'virtual:zudo-doc-route-context';
 import { createRouteContext, type RouteContextPayload } from '@takazudo/zudo-doc/route-context';
 import { createChrome } from '@takazudo/zudo-doc/chrome';
 import { defineChromeBindings } from '@takazudo/zudo-doc/chrome-bindings';
-import { DocHistory } from '@takazudo/zudo-doc/doc-history';
+import { DocHistoryBoundary as DocHistory } from '@takazudo/zudo-doc/doc-history-area';
 import { chromeBindings } from 'virtual:zudo-doc-chrome-bindings';
 
 const routeCtx = createRouteContext(routeContext as unknown as RouteContextPayload);
@@ -48,19 +42,7 @@ export const frontmatter = { title: 'Home' };
 export default function IndexPage(): JSX.Element {
   const locale = defaultLocale;
 
-  // Identity-stable nav source (draft-filtered, unlisted retained). navDocs is
-  // pre-filtered (isNavVisible) and shared with the nav-tree fast-path.
-  const { navDocs, categoryMeta } = routeCtx.resolveNavSource(locale, undefined);
-  const tree = buildNavTree(navDocs, locale, categoryMeta);
-  const categoryOrder = getCategoryOrder();
-  const groupedTree = groupSatelliteNodes(tree, categoryOrder);
-
-  // Drop category_no_page index files so the count matches the number of tag
-  // pages actually built (the tag routes exclude them too).
-  const tagCount = collectTags(
-    navDocs.filter((d) => !d.data.category_no_page),
-    (id, data) => data.slug ?? toRouteSlug(id),
-  ).size;
+  const { tree: groupedTree, categoryOrder, tagCount } = prepareHomeData(routeCtx, locale);
 
   const ctaNav = settings.headerNav[0] ?? null;
   const overview = ctaNav ? withBase(ctaNav.path) : null;
@@ -94,7 +76,7 @@ export default function IndexPage(): JSX.Element {
           <div
             class="w-[320px] max-w-full aspect-[1200/630] bg-fg shrink-0"
             style={{
-              WebkitMask: `url(${logoUrl}) center/contain no-repeat`,
+              '-webkit-mask': `url(${logoUrl}) center/contain no-repeat`,
               mask: `url(${logoUrl}) center/contain no-repeat`,
             }}
             aria-hidden="true"
@@ -149,18 +131,13 @@ export default function IndexPage(): JSX.Element {
           The Astro reference used <Island when="idle"><SiteTreeNav ...></Island>.
           DocsSitemap (vertical <details> list) was incorrect; SiteTreeNav gives
           the responsive multi-column grid the reference renders. */}
-      {
-        Island({
-          when: 'idle',
-          children: (
-            <SiteTreeNav
-              tree={groupedTree}
-              categoryOrder={categoryOrder}
-              categoryIgnore={['inbox', 'develop']}
-            />
-          ),
-        }) as unknown as VNode
-      }
+      <Island when="idle">
+        <SiteTreeNav
+          tree={groupedTree}
+          categoryOrder={categoryOrder}
+          categoryIgnore={['inbox', 'develop']}
+        />
+      </Island>
 
       {settings.docTags && tagCount > 0 && (
         <section class="mt-vsp-xl">

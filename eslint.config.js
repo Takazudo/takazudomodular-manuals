@@ -2,7 +2,6 @@ import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
 
 export default [
   // Base configuration
@@ -62,7 +61,6 @@ export default [
     },
     plugins: {
       react,
-      'react-hooks': reactHooks,
     },
     settings: {
       react: {
@@ -75,8 +73,6 @@ export default [
       'react/prop-types': 'off',
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
 
       // General rules
       'no-console': 'off',
@@ -127,7 +123,7 @@ export default [
     },
   },
 
-  // TypeScript files — zfb app (Preact JSX, tsconfig.json with preact paths)
+  // TypeScript files — zfb app (zudo-react JSX)
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
@@ -144,7 +140,6 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
       react,
-      'react-hooks': reactHooks,
     },
     settings: {
       react: {
@@ -182,13 +177,11 @@ export default [
       'no-undef': 'off',
       'no-unused-vars': 'off',
 
-      // React/Preact rules
+      // Shared JSX variable-use rules
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
 
       // General rules (same as JS)
       'no-console': 'off',

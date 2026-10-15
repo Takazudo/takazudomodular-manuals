@@ -16,7 +16,6 @@ import DefaultLayout from '../../layouts/default';
 import { ArrowLink } from '../../components/zfb/arrow-link';
 import LandingLangIsland from '../../components/zfb/landing-lang-island';
 import LandingSearchIsland from '../../components/zfb/landing-search-island';
-import ctl from '../../components/zfb/ctl';
 import type { Lang } from '../../components/zfb/lang';
 
 export function paths() {
@@ -49,54 +48,53 @@ interface LandingPageInput {
   availableLangs: Lang[];
 }
 
-const pageStyles = ctl(`
+const pageStyles = `
   min-h-screen pt-[60px]
-  bg-zd-gray1
   flex items-center justify-center
   overflow-x-hidden
-`);
+`;
 
-const headingStyles = ctl(`
+const headingStyles = `
   pb-vgap-lg
   font-futura
-`);
+`;
 
-const brandStyles = ctl(`
+const brandStyles = `
   block text-xl sm:text-2xl md:text-3xl lg:text-4xl pb-vgap-sm
-`);
+`;
 
-const titleStyles = ctl(`
+const titleStyles = `
   block text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-`);
+`;
 
-const subtitleStyles = ctl(`
+const subtitleStyles = `
   block text-lg sm:text-xl md:text-2xl lg:text-3xl pt-vgap-sm
-`);
+`;
 
-const navStyles = ctl(`
+const navStyles = `
   flex flex-col gap-vgap-sm
-`);
+`;
 
-const footerStyles = ctl(`
+const footerStyles = `
   text-lg pt-vgap-md
   leading-relaxed
   font-futura
   border-t border-zd-white
   mt-vgap-lg
   flex justify-between
-`);
+`;
 
-const codeStyles = ctl(`
+const codeStyles = `
   inline-block
   font-mono bg-zd-gray2 px-[.5em] py-[.1em] rounded
   leading-snug
   border border-zd-white
-`);
+`;
 
-const utilityBarStyles = ctl(`
+const utilityBarStyles = `
   flex items-center gap-[6px]
   pt-vgap-sm
-`);
+`;
 
 /** Format YYYYMMDD to YYYY/MM/DD */
 function formatUpdatedAt(dateStr: string | undefined): string {
@@ -126,15 +124,15 @@ export default function ManualLandingPage({
 
   return (
     <DefaultLayout title={pageTitle} manualTitle={manifestTitle} manualHref={manualHref}>
-      <main className={pageStyles}>
-        <div className="max-w-[80%] mx-auto lg:-mx-hgap-2xl">
-          <h1 className={headingStyles}>
-            <span className={brandStyles}>{manifestBrand}:</span>
-            <span className={titleStyles}>{manifestTitle}</span>
-            <span className={subtitleStyles}>Japanese Translation（日本語訳）</span>
+      <main class={pageStyles}>
+        <div class="max-w-[80%] mx-auto lg:-mx-hgap-2xl">
+          <h1 class={headingStyles}>
+            <span class={brandStyles}>{manifestBrand}:</span>
+            <span class={titleStyles}>{manifestTitle}</span>
+            <span class={subtitleStyles}>Japanese Translation（日本語訳）</span>
           </h1>
 
-          <nav className={navStyles}>
+          <nav class={navStyles}>
             <ArrowLink href={readerHref}>日本語訳付きマニュアルを読む</ArrowLink>
             <ArrowLink href={pdfHref} external>
               英語版オリジナル（PDF）
@@ -144,7 +142,7 @@ export default function ManualLandingPage({
           {/* Landing-page utility bar: LanguageToggle + SearchTrigger as small
               standalone islands. The mega-island only mounts on detail pages,
               so these cover language/search UX on the landing page. */}
-          <div className={utilityBarStyles}>
+          <div class={utilityBarStyles}>
             <Island when="idle">
               <LandingLangIsland availableLangs={availableLangs} />
             </Island>
@@ -153,10 +151,9 @@ export default function ManualLandingPage({
             </Island>
           </div>
 
-          <p className={footerStyles}>
+          <p class={footerStyles}>
             <span>
-              Navigation: <code className={codeStyles}>←</code>{' '}
-              <code className={codeStyles}>→</code> key
+              Navigation: <code class={codeStyles}>←</code> <code class={codeStyles}>→</code> key
             </span>
             {updatedAt && <span>Updated: {formatUpdatedAt(updatedAt)}</span>}
           </p>

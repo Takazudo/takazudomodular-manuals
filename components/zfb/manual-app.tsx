@@ -1,8 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks';
-import type { ComponentChildren } from 'preact';
-import ctl from './ctl';
+import { computed, getScope, Show, signal, type Ref } from '@takazudo/zfb/zudo-react';
 import type { ManualPage } from '@/lib/types/manual';
 import type { Lang } from './lang';
 import type { ManualAppProps, ViewMode } from './manual-app-types';
@@ -14,292 +12,126 @@ import { PageViewer } from './page-viewer';
 import { ScrollViewer, type ScrollViewerHandle } from './scroll-viewer';
 import { SidebarThumbs } from './sidebar-thumbs';
 import { ThumbsModal } from './thumbs-modal';
+import { ViewerShell } from './viewer-shell';
 
-/**
- * Marker the SSR'd current-page body is rendered into. On the client's first
- * (hydration) render we capture this element's innerHTML and re-inject it via
- * dangerouslySetInnerHTML so Preact's hydrate matches the existing DOM exactly
- * (Preact skips child-diffing an element carrying dangerouslySetInnerHTML —
- * verified against preact 10.29 diff/index.js). This preserves the SSR'd page
- * for the fetch window and the fetch-failure case. See README/log for detail.
- */
-const BODY_MARKER_ATTR = 'data-manual-body';
-
-const outerStyles = ctl(`
-  flex
-  h-screen
-  pt-[60px]
-`);
-
-const errorBannerStyles = ctl(`
-  fixed top-[60px] left-0 right-0 z-40
-  flex items-center justify-center gap-hgap-sm
-  px-hgap-sm py-vgap-xs
-  bg-zd-red/90
-  text-zd-white text-sm
-`);
-
-const retryButtonStyles = ctl(`
-  px-hgap-sm py-vgap-2xs
-  bg-zd-white/10 hover:bg-zd-white/20
-  border border-zd-white/40
-  rounded-sm
-  transition-colors
-`);
-
+const outerStyles = `flex h-screen pt-[60px]`;
+const errorBannerStyles = `fixed top-[60px] left-0 right-0 z-40
+  flex items-center justify-center gap-hgap-sm px-hgap-sm py-vgap-xs text-zd-white text-sm`;
+const retryButtonStyles = `px-hgap-sm py-vgap-2xs bg-zd-white/10 hover:bg-zd-white/20
+  border border-zd-white/40 rounded-sm transition-colors`;
 type PagesData = { pages: ManualPage[] };
 
-/**
- * Capture the SSR'd body innerHTML once, synchronously, during the first
- * client render — before Preact reconciles the body element's children.
- * Returns null on the server (no document) and on subsequent renders we keep
- * the captured value via useState's initializer-once semantics.
- */
-function useCapturedSsrBody(): string | null {
-  const [captured] = useState<string | null>(() => {
-    if (typeof document === 'undefined') return null;
-    const el = document.querySelector(`[${BODY_MARKER_ATTR}]`);
-    return el ? el.innerHTML : null;
-  });
-  return captured;
-}
-
+/** Own both the deterministic SSR body and its later interactive replacement. */
 export default function ManualApp({
   manualId,
   initialPageNum,
+  initialPage,
   totalPages,
   availableLangs,
   manifest,
-  children,
-}: ManualAppProps & { children?: ComponentChildren }) {
-  // ── Language (no React context; resolved post-mount) ─────────────────────
-  // Deterministic SSR default = "ja". Real preference resolved in an effect to
-  // avoid a hydration mismatch on the first paint. See useLang() for details.
+}: ManualAppProps) {
+  const scope = getScope();
   const [lang, setLang] = useLang();
-
-  // ── View mode + chrome toggles ───────────────────────────────────────────
-  const [viewMode, setViewMode] = useState<ViewMode>('page');
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [thumbsModalOpen, setThumbsModalOpen] = useState(false);
-
-  // Hover-zoom (Amazon-style page magnifier) — page mode only. Persisted, but
-  // SSR-safe: defaults to off until the post-mount effect reads localStorage.
   const [zoomEnabled, toggleZoom] = useZoom();
+  const viewMode = signal<ViewMode>('page');
+  const sidebarOpen = signal(false);
+  const thumbsModalOpen = signal(false);
+  const currentPage = signal(initialPageNum);
+  const scrollViewerRef: Ref<ScrollViewerHandle> = { current: null };
+  const pagesJa = signal<ManualPage[] | null>(null);
+  const pagesEn = signal<ManualPage[] | null>(null);
+  const fetchFailed = signal(false);
+  const fetchNonce = signal(0);
 
-  const toggleViewMode = useCallback(() => {
-    setViewMode((prev) => (prev === 'page' ? 'scroll' : 'page'));
-  }, []);
-  const toggleSidebar = useCallback(() => setSidebarOpen((prev) => !prev), []);
-  const openThumbsModal = useCallback(() => setThumbsModalOpen(true), []);
-  const closeThumbsModal = useCallback(() => setThumbsModalOpen(false), []);
-
-  // ── Current page (in-manual SPA nav) ─────────────────────────────────────
-  const [currentPage, setCurrentPage] = useState<number>(initialPageNum);
-  const scrollViewerRef = useRef<ScrollViewerHandle>(null);
-
-  // ── Page data, fetched on mount for both languages ───────────────────────
-  const [pagesJa, setPagesJa] = useState<ManualPage[] | null>(null);
-  const [pagesEn, setPagesEn] = useState<ManualPage[] | null>(null);
-  const [fetchFailed, setFetchFailed] = useState(false);
-  // Bumped by the retry button to re-trigger the fetch effect.
-  const [fetchNonce, setFetchNonce] = useState(0);
-
-  useEffect(() => {
-    let cancelled = false;
-    setFetchFailed(false);
-
-    // Route through withBasePath so the fetch URLs survive any future base-path
-    // change (consistent with search-dialog.tsx); at base `/` this is a no-op.
+  // Each retry owns its requests. Disposing the island or retrying cancels old
+  // work; the JSON-backed SSR shell remains owned and visible until JA is ready.
+  scope.effect(() => {
+    void fetchNonce.value;
+    const controller = new AbortController();
+    const abort = () => controller.abort();
+    scope.abortSignal.addEventListener('abort', abort, { once: true });
+    fetchFailed.value = false;
     const baseHref = withBasePath(`/${manualId}/data`);
-    const wantEn = availableLangs.includes('en');
-
-    // JA is required — its failure is fatal (error banner + disabled nav).
-    const jaFetch = fetch(`${baseHref}/pages-ja.json`).then((r) => {
-      if (!r.ok) throw new Error(`pages-ja.json ${r.status}`);
-      return r.json() as Promise<PagesData>;
-    });
-    // EN is optional — a failed/missing pages-en.json (e.g. a JA-only manual)
-    // must NOT break the JA viewer. Swallow EN errors to null; the derived
-    // effectiveLang already falls back to JA when pagesEn is absent.
-    const enFetch: Promise<PagesData | null> = wantEn
-      ? fetch(`${baseHref}/pages-en.json`)
-          .then((r) => {
-            if (!r.ok) throw new Error(`pages-en.json ${r.status}`);
-            return r.json() as Promise<PagesData>;
-          })
-          .catch((err) => {
-            console.warn('[ManualApp] EN page data unavailable; EN disabled', err);
-            return null;
-          })
-      : Promise.resolve(null);
-
-    Promise.all([jaFetch, enFetch])
-      .then(([ja, en]) => {
-        if (cancelled) return;
-        setPagesJa(ja.pages);
-        if (en) setPagesEn(en.pages);
-      })
-      .catch((err) => {
-        // Only a JA failure reaches here (EN errors are swallowed above).
-        if (cancelled) return;
-        console.error('[ManualApp] page data fetch failed', err);
-        setFetchFailed(true);
+    const fetchPages = async (language: Lang): Promise<PagesData> => {
+      const response = await fetch(`${baseHref}/pages-${language}.json`, {
+        signal: controller.signal,
       });
-
-    return () => {
-      cancelled = true;
+      if (!response.ok) throw new Error(`pages-${language}.json ${response.status}`);
+      return response.json();
     };
-  }, [manualId, availableLangs, fetchNonce]);
+    const enFetch = availableLangs.includes('en')
+      ? fetchPages('en').catch((error) => {
+          if (!controller.signal.aborted)
+            console.warn('[ManualApp] EN page data unavailable; EN disabled', error);
+          return null;
+        })
+      : Promise.resolve(null);
+    Promise.all([fetchPages('ja'), enFetch])
+      .then(([ja, en]) => {
+        if (controller.signal.aborted) return;
+        pagesJa.value = ja.pages;
+        pagesEn.value = en?.pages ?? null;
+      })
+      .catch((error) => {
+        if (controller.signal.aborted) return;
+        console.error('[ManualApp] page data fetch failed', error);
+        fetchFailed.value = true;
+      });
+    return () => {
+      controller.abort();
+      scope.abortSignal.removeEventListener('abort', abort);
+    };
+  });
 
-  const handleRetry = useCallback(() => {
-    setFetchNonce((n) => n + 1);
-  }, []);
-
-  // ── Derived language / page list ─────────────────────────────────────────
-  // Falls back to JA when EN is requested but unavailable (the toggle UI
-  // prevents this path; defensive guard).
-  const effectiveLang: Lang = lang === 'en' && pagesEn ? 'en' : 'ja';
-  const effectivePages = useMemo<ManualPage[] | null>(
-    () => (effectiveLang === 'en' && pagesEn ? pagesEn : pagesJa),
-    [effectiveLang, pagesJa, pagesEn],
+  const effectiveLang = computed<Lang>(() => (lang.value === 'en' && pagesEn.value ? 'en' : 'ja'));
+  const effectivePages = computed(
+    () => (effectiveLang.value === 'en' ? pagesEn.value : pagesJa.value) ?? [],
   );
-
-  const currentPageObject = useMemo(
-    () => effectivePages?.find((p) => p.pageNum === currentPage) ?? effectivePages?.[0] ?? null,
-    [effectivePages, currentPage],
+  const currentPageObject = computed(
+    () =>
+      effectivePages.value.find((page) => page.pageNum === currentPage.value) ??
+      effectivePages.value[0] ??
+      initialPage,
   );
+  const dataReady = computed(() => pagesJa.value !== null && effectivePages.value.length > 0);
+  const navDisabled = computed(() => !dataReady.value || fetchFailed.value);
+  const thumbPages = computed(() => pagesJa.value ?? []);
+  const showSidebar = computed(() => sidebarOpen.value && pagesJa.value !== null);
+  const showThumbs = computed(() => thumbsModalOpen.value && pagesJa.value !== null);
+  const scrollMode = computed(() => viewMode.value === 'scroll');
 
-  // Data is hydrated once the JA list is present. Until then (and on failure)
-  // the SSR'd body stays visible and in-manual nav is disabled.
-  const dataReady = pagesJa !== null;
-  const navDisabled = !dataReady || fetchFailed;
-
-  // ── Navigation (client-side via history API) ─────────────────────────────
-  const getNavigationPagePath = useCallback(
-    (pageNum: number) =>
-      `${getPagePath(manualId, pageNum)}${window.location.search}${window.location.hash}`,
-    [manualId],
-  );
-
-  const navigateToPage = useCallback(
-    (pageNum: number) => {
-      if (navDisabled) return;
-      if (viewMode === 'scroll') {
-        scrollViewerRef.current?.scrollToPage(pageNum);
-      } else {
-        setCurrentPage(pageNum);
-        window.history.pushState(null, '', getNavigationPagePath(pageNum));
-      }
-    },
-    [navDisabled, viewMode, getNavigationPagePath],
-  );
-
-  const navigateHome = useCallback(() => {
-    // The manual landing is a SEPARATE zfb template, not a route this island
-    // can render. Use a full navigation (not history.pushState) so the landing
-    // page actually loads — pushState alone would change the URL while leaving
-    // the viewer painted, desyncing reload/back-forward.
+  const getNavigationPagePath = (pageNum: number) =>
+    `${getPagePath(manualId, pageNum)}${window.location.search}${window.location.hash}`;
+  const navigateToPage = (pageNum: number) => {
+    if (navDisabled.value) return;
+    if (viewMode.value === 'scroll') {
+      scrollViewerRef.current?.scrollToPage(pageNum);
+    } else {
+      currentPage.value = pageNum;
+      window.history.pushState(null, '', getNavigationPagePath(pageNum));
+    }
+  };
+  const navigateHome = () => {
     window.location.href = getManualBasePath(manualId);
-  }, [manualId]);
-
-  // Scroll mode updates the URL silently as the visible page changes.
-  const handleScrollPageChange = useCallback(
-    (pageNum: number) => {
-      setCurrentPage(pageNum);
-      window.history.replaceState(null, '', getNavigationPagePath(pageNum));
-    },
-    [getNavigationPagePath],
-  );
-
-  // Keep the viewer in sync with browser back/forward. The browser has already
-  // changed the URL (that's what popstate means), so we never touch history
-  // here. We always update currentPage first, then additionally smooth-scroll
-  // in scroll mode:
-  //   - currentPage is the source of truth for the page body (page mode) and
-  //     for ScrollViewer's initialPage. Setting it unconditionally is also the
-  //     fallback that survives the data-loading window: if a scroll-mode
-  //     popstate fires before ScrollViewer has mounted (JSON still loading),
-  //     scrollViewerRef is null and the jump below no-ops, but the updated
-  //     currentPage becomes ScrollViewer's initialPage so it snaps to the right
-  //     page on mount instead of the stale one (which would otherwise let the
-  //     observer replaceState the URL back, undoing the navigation).
-  //   - scroll mode (mounted): route through the gated smooth-jump
-  //     (scrollToPage). The observer then re-syncs currentPage + replaceState
-  //     as the scroll settles. Without this the URL changes but the viewport
-  //     stays put (#165); the snap effect alone won't move it because it's
-  //     gated to mount + explicit jump only (#154).
-  useEffect(() => {
+  };
+  const handleScrollPageChange = (pageNum: number) => {
+    currentPage.value = pageNum;
+    window.history.replaceState(null, '', getNavigationPagePath(pageNum));
+  };
+  scope.onActivate(() => {
     const onPopState = () => {
       const match = window.location.pathname.match(/\/page\/(\d+)/);
-      if (match) {
-        const n = parseInt(match[1], 10);
-        if (n >= 1 && n <= totalPages) {
-          setCurrentPage(n);
-          if (viewMode === 'scroll') {
-            scrollViewerRef.current?.scrollToPage(n);
-          }
-        }
-      }
+      if (!match) return;
+      const next = Number(match[1]);
+      if (next < 1 || next > totalPages) return;
+      // Always record the route, including before the data fetch completes.
+      // A newly mounted ScrollViewer then captures this as its initial target.
+      currentPage.value = next;
+      if (viewMode.value === 'scroll') scrollViewerRef.current?.scrollToPage(next);
     };
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
-  }, [totalPages, viewMode]);
-
-  // Thumbnails always use the JA list (language-independent page numbers).
-  const thumbPages = pagesJa;
-
-  // ── SSR body capture-and-reinject ────────────────────────────────────────
-  const capturedBody = useCapturedSsrBody();
-
-  // Body slot rendering. The marker div is ONE element across SSR and the
-  // client's first render so Preact hydrates it cleanly:
-  //   - SSR:                 marker renders {children} (page module's SSR body).
-  //   - Client first render: marker uses dangerouslySetInnerHTML with the
-  //     captured SSR innerHTML → Preact skips child-diff, DOM is preserved.
-  //   - Data ready:          marker renders the real viewer VDOM (post-hydration
-  //     update — replacing dangerouslySetInnerHTML content is a normal swap).
-  const showRealViewer = dataReady && currentPageObject !== null && effectivePages !== null;
-
-  const realViewer =
-    showRealViewer && currentPageObject && effectivePages ? (
-      viewMode === 'scroll' ? (
-        <ScrollViewer
-          ref={scrollViewerRef}
-          pages={effectivePages}
-          lang={effectiveLang}
-          initialPage={currentPage}
-          totalPages={totalPages}
-          manualId={manualId}
-          onCurrentPageChange={handleScrollPageChange}
-        />
-      ) : (
-        <PageViewer
-          page={currentPageObject}
-          lang={effectiveLang}
-          currentPage={currentPage}
-          totalPages={totalPages}
-          manualId={manualId}
-          onNavigate={navigateToPage}
-          onNavigateHome={navigateHome}
-          navDisabled={navDisabled}
-          zoomEnabled={zoomEnabled}
-        />
-      )
-    ) : null;
-
-  // When not showing the real viewer and we have captured the SSR body on the
-  // client, inject it onto the marker div itself (no extra wrapper) so the DOM
-  // structure matches SSR exactly. On the server (or before capture) the marker
-  // renders {children} instead.
-  const markerInnerHtml = !showRealViewer && capturedBody !== null ? capturedBody : null;
-
-  const markerProps: Record<string, unknown> = {
-    className: 'flex-1 min-w-0',
-    [BODY_MARKER_ATTR]: '',
-  };
-  if (markerInnerHtml !== null) {
-    markerProps.dangerouslySetInnerHTML = { __html: markerInnerHtml };
-  }
+  });
 
   return (
     <>
@@ -307,9 +139,15 @@ export default function ManualApp({
         manualId={manualId}
         isDetailPage
         viewMode={viewMode}
-        onToggleViewMode={toggleViewMode}
-        onToggleSidebar={toggleSidebar}
-        onOpenThumbsModal={openThumbsModal}
+        onToggleViewMode={() => {
+          viewMode.value = viewMode.value === 'page' ? 'scroll' : 'page';
+        }}
+        onToggleSidebar={() => {
+          sidebarOpen.value = !sidebarOpen.value;
+        }}
+        onOpenThumbsModal={() => {
+          thumbsModalOpen.value = true;
+        }}
         zoomEnabled={zoomEnabled}
         onToggleZoom={toggleZoom}
         lang={lang}
@@ -318,36 +156,83 @@ export default function ManualApp({
         searchIndexVersion={manifest.searchIndexVersion}
         onNavigate={navigateToPage}
       />
-
-      {fetchFailed && (
-        <div className={errorBannerStyles} role="alert" data-testid="manual-app-fetch-error">
-          <span>ページデータの読み込みに失敗しました。ページ移動は無効です。</span>
-          <button type="button" onClick={handleRetry} className={retryButtonStyles}>
-            再試行
-          </button>
-        </div>
-      )}
-
-      {thumbsModalOpen && thumbPages && (
-        <ThumbsModal
-          pages={thumbPages}
-          currentPage={currentPage}
-          isOpen={thumbsModalOpen}
-          onClose={closeThumbsModal}
-          onPageSelect={navigateToPage}
-        />
-      )}
-
-      <div className={outerStyles}>
-        {sidebarOpen && thumbPages && (
-          <SidebarThumbs
+      <Show when={fetchFailed}>
+        {() => (
+          <div class={errorBannerStyles} role="alert" data-testid="manual-app-fetch-error">
+            <span>ページデータの読み込みに失敗しました。ページ移動は無効です。</span>
+            <button
+              type="button"
+              on:click={() => {
+                fetchNonce.value += 1;
+              }}
+              class={retryButtonStyles}
+            >
+              再試行
+            </button>
+          </div>
+        )}
+      </Show>
+      <Show when={showThumbs}>
+        {() => (
+          <ThumbsModal
             pages={thumbPages}
             currentPage={currentPage}
+            onClose={() => {
+              thumbsModalOpen.value = false;
+            }}
             onPageSelect={navigateToPage}
           />
         )}
-
-        <div {...markerProps}>{markerInnerHtml === null ? (realViewer ?? children) : null}</div>
+      </Show>
+      <div class={outerStyles}>
+        <Show when={showSidebar}>
+          {() => (
+            <SidebarThumbs
+              pages={thumbPages}
+              currentPage={currentPage}
+              onPageSelect={navigateToPage}
+            />
+          )}
+        </Show>
+        <div class="flex-1 min-w-0" data-manual-body="">
+          <Show
+            when={dataReady}
+            fallback={() => (
+              <ViewerShell page={initialPage} pageNum={initialPageNum} totalPages={totalPages} />
+            )}
+          >
+            {() => (
+              <Show
+                when={scrollMode}
+                fallback={() => (
+                  <PageViewer
+                    page={currentPageObject}
+                    lang={effectiveLang}
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    manualId={manualId}
+                    onNavigate={navigateToPage}
+                    onNavigateHome={navigateHome}
+                    navDisabled={navDisabled}
+                    zoomEnabled={zoomEnabled}
+                  />
+                )}
+              >
+                {() => (
+                  <ScrollViewer
+                    handleRef={scrollViewerRef}
+                    pages={effectivePages}
+                    lang={effectiveLang}
+                    initialPage={currentPage.value}
+                    totalPages={totalPages}
+                    manualId={manualId}
+                    onCurrentPageChange={handleScrollPageChange}
+                  />
+                )}
+              </Show>
+            )}
+          </Show>
+        </div>
       </div>
     </>
   );

@@ -1,33 +1,32 @@
-import type { ComponentChildren } from 'preact';
-import ctl from './ctl';
+import type { Child } from '@takazudo/zfb/zudo-react';
 
-const linkStyles = ctl(`
+const linkStyles = `
   inline-flex items-center
   text-xl
   zd-invert-color-link
   underline
-`);
+`;
 
-const arrowStyles = ctl(`
+const arrowStyles = `
   w-[18px] md:w-[24px]
   align-baseline inline-block
   relative top-px
-`);
+`;
 
 interface ArrowLinkProps {
   href: string;
-  children: ComponentChildren;
+  children: Child;
   external?: boolean;
 }
 
 /** Inline SVG arrow — replaces the @svgr/webpack ArrowRight import. */
-function ArrowRightSvg({ className }: { className: string }) {
+function ArrowRightSvg({ class: classes }: { class: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 103.3949 107.0495"
-      className={className}
+      class={classes}
       aria-hidden="true"
     >
       <path
@@ -45,8 +44,8 @@ function ArrowRightSvg({ className }: { className: string }) {
 export function ArrowLink({ href, children, external }: ArrowLinkProps) {
   const content = (
     <>
-      <span className="pr-[12px]">
-        <ArrowRightSvg className={arrowStyles} />
+      <span class="pr-[12px]">
+        <ArrowRightSvg class={arrowStyles} />
       </span>
       <span>{children}</span>
     </>
@@ -54,8 +53,8 @@ export function ArrowLink({ href, children, external }: ArrowLinkProps) {
 
   if (external) {
     return (
-      <span className="inline-block">
-        <a href={href} className={linkStyles} target="_blank" rel="noopener noreferrer">
+      <span class="inline-block">
+        <a href={href} class={linkStyles} target="_blank" rel="noopener noreferrer">
           {content}
         </a>
       </span>
@@ -63,8 +62,8 @@ export function ArrowLink({ href, children, external }: ArrowLinkProps) {
   }
 
   return (
-    <span className="inline-block">
-      <a href={href} className={linkStyles}>
+    <span class="inline-block">
+      <a href={href} class={linkStyles}>
         {content}
       </a>
     </span>

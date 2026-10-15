@@ -1,112 +1,181 @@
-/**
- * Regression test for components/zfb/scroll-viewer.tsx (#154).
- *
- * Bug: the mount-snap `useLayoutEffect` had deps `[initialPage]`, and
- * manual-app passes `initialPage={currentPage}` (live parent state). In scroll
- * mode the IntersectionObserver updates `currentPage` on every page detection,
- * which re-passed a new `initialPage` and re-fired the effect — re-snapping
- * `scrollTop` and interrupting continuous scroll / smooth thumbnail jumps.
- *
- * Fix: capture the initial page once on mount and run the snap effect with
- * empty deps. This test asserts the snap write fires once (mount) and NOT
- * again when `initialPage` changes after mount.
- *
- * NOTE: jsdom has no layout (offsetTop is 0, no smooth scrolling), so this can
- * only prove the effect no longer re-fires — the "uninterrupted smooth jump"
- * acceptance criterion is verified by the manager in a real browser.
- */
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { cleanup, render } from '@testing-library/preact';
-import { ScrollViewer } from '@/components/zfb/scroll-viewer';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { signal, type Ref } from '@takazudo/zfb/zudo-react';
+import { createIslandTest } from '@takazudo/zfb/zudo-react/testing';
+import { ScrollViewer, type ScrollViewerHandle } from '../scroll-viewer';
 import type { ManualPage } from '@/lib/types/manual';
+import type { Lang } from '../lang';
 
-// IntersectionObserver is not available in jsdom. Stub it as an inert observer
-// so neither page-detection nor lazy-load observers do anything during the test.
+const observers: FakeIntersectionObserver[] = [];
 class FakeIntersectionObserver {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
+  nodes = new Set<Element>();
+  disconnected = false;
+  constructor(readonly callback: IntersectionObserverCallback) {
+    observers.push(this);
+  }
+  observe(element: Element) {
+    this.nodes.add(element);
+  }
+  unobserve(element: Element) {
+    this.nodes.delete(element);
+  }
+  disconnect() {
+    this.disconnected = true;
+    this.nodes.clear();
+  }
+  emit(element: Element, ratio = 1) {
+    this.callback(
+      [
+        {
+          target: element,
+          isIntersecting: ratio > 0,
+          intersectionRatio: ratio,
+        } as IntersectionObserverEntry,
+      ],
+      this as unknown as IntersectionObserver,
+    );
+  }
+}
+const makePage = (pageNum: number): ManualPage => ({
+  pageNum,
+  image: `/oxi-one-mk2/pages/page-${String(pageNum).padStart(3, '0')}.png`,
+  title: `Page ${pageNum}`,
+  sectionName: null,
+  content: `Content ${pageNum}`,
+  contentHtml: `<p>Content ${pageNum}</p>`,
+  hasContent: true,
+});
+const active: ReturnType<typeof createIslandTest>[] = [];
+let writes: number[] = [];
+const frames = new Map<number, FrameRequestCallback>();
+beforeEach(() => {
+  writes = [];
+  observers.length = 0;
+  frames.clear();
+  vi.stubGlobal('IntersectionObserver', FakeIntersectionObserver);
+  let nextFrame = 0;
+  vi.spyOn(globalThis, 'requestAnimationFrame').mockImplementation((callback) => {
+    frames.set(++nextFrame, callback);
+    return nextFrame;
+  });
+  vi.spyOn(globalThis, 'cancelAnimationFrame').mockImplementation((id) => {
+    frames.delete(id);
+  });
+  const scroll = new WeakMap<HTMLElement, number>();
+  vi.spyOn(HTMLElement.prototype, 'scrollTop', 'get').mockImplementation(function (
+    this: HTMLElement,
+  ) {
+    return scroll.get(this) ?? 0;
+  });
+  vi.spyOn(HTMLElement.prototype, 'scrollTop', 'set').mockImplementation(function (
+    this: HTMLElement,
+    value: number,
+  ) {
+    scroll.set(this, value);
+    if (this.dataset.testid === 'scroll-image-column') writes.push(value);
+  });
+  vi.spyOn(HTMLElement.prototype, 'offsetTop', 'get').mockImplementation(function (
+    this: HTMLElement,
+  ) {
+    return Number(this.dataset.page ?? 0) * 100;
+  });
+});
+afterEach(() => {
+  for (const test of active.splice(0)) test.dispose();
+  vi.restoreAllMocks();
+  vi.unstubAllGlobals();
+});
+async function mountViewer() {
+  const pages = signal(Array.from({ length: 10 }, (_, i) => makePage(i + 1)));
+  const lang = signal<Lang>('ja');
+  const detected = signal(2);
+  const handleRef: Ref<ScrollViewerHandle> = { current: null };
+  function Viewer() {
+    return (
+      <ScrollViewer
+        pages={pages}
+        lang={lang}
+        initialPage={detected.value}
+        totalPages={10}
+        manualId="oxi-one-mk2"
+        handleRef={handleRef}
+        onCurrentPageChange={(page) => {
+          detected.value = page;
+        }}
+      />
+    );
+  }
+  const test = createIslandTest(Viewer, {}, { document });
+  active.push(test);
+  expect(test.hydrate()).not.toBeNull();
+  await test.flush();
+  expect(test.diagnostics).toEqual([]);
+  const get = (selector: string) => {
+    const node = test.host.querySelector<HTMLElement>(selector);
+    if (!node) throw new Error(`Missing ${selector}`);
+    return node;
+  };
+  return { test, pages, lang, detected, handleRef, get };
+}
+function runFrames() {
+  for (const [id, callback] of [...frames]) {
+    frames.delete(id);
+    callback(0);
   }
 }
 
-function makePage(pageNum: number): ManualPage {
-  return {
-    pageNum,
-    image: `/oxi-one-mk2/pages/page-${String(pageNum).padStart(3, '0')}.png`,
-    title: `Page ${pageNum}`,
-    sectionName: null,
-    content: `Content ${pageNum}`,
-    hasContent: true,
-  };
-}
-
-const pages = [makePage(1), makePage(2), makePage(3), makePage(4), makePage(5)];
-
-// Tracks every assignment to `.scrollTop` on the scroll container so we can
-// count mount-snap writes. jsdom's default scrollTop is a writable own/proto
-// property; we redefine it on the element prototype to record writes.
-let scrollTopWrites: number[] = [];
-
-beforeEach(() => {
-  scrollTopWrites = [];
-
-  (
-    globalThis as unknown as { IntersectionObserver: typeof IntersectionObserver }
-  ).IntersectionObserver = FakeIntersectionObserver as unknown as typeof IntersectionObserver;
-
-  // Instrument scrollTop on HTMLElement so writes from the snap effect are
-  // recorded. We only record writes to elements flagged as the scroll column.
-  Object.defineProperty(HTMLElement.prototype, 'scrollTop', {
-    configurable: true,
-    get() {
-      return (this as { _scrollTop?: number })._scrollTop ?? 0;
-    },
-    set(value: number) {
-      (this as { _scrollTop?: number })._scrollTop = value;
-      if ((this as HTMLElement).dataset?.testid === 'scroll-image-column') {
-        scrollTopWrites.push(value);
-      }
-    },
+describe('ScrollViewer mount snap and lazy observer', () => {
+  it('snaps once and never re-snaps after observer-driven parent page updates (#154)', async () => {
+    const { get, test, detected } = await mountViewer();
+    expect(writes).toEqual([200]);
+    observers[0].emit(get('[data-page="4"]'));
+    runFrames();
+    await test.flush();
+    expect(detected.value).toBe(4);
+    expect(writes).toEqual([200]);
+    expect(get('[data-testid="scroll-translation-panel"]').textContent).toBe('Content 4');
   });
-});
-
-afterEach(() => {
-  cleanup();
-  delete (HTMLElement.prototype as { scrollTop?: unknown }).scrollTop;
-});
-
-describe('ScrollViewer mount-snap (#154)', () => {
-  it('does NOT re-snap scrollTop when initialPage changes after mount', () => {
-    const { rerender } = render(
-      <ScrollViewer
-        pages={pages}
-        lang="ja"
-        initialPage={2}
-        totalPages={pages.length}
-        manualId="oxi-one-mk2"
-      />,
-    );
-
-    // Exactly one mount snap (offsetTop is 0 in jsdom, so the value is 0; we
-    // assert the count of writes, not the value).
-    const writesAfterMount = scrollTopWrites.length;
-    expect(writesAfterMount).toBe(1);
-
-    // Simulate the parent re-passing a new initialPage (what happens when the
-    // observer detects a page change in scroll mode). The snap effect must NOT
-    // fire again.
-    rerender(
-      <ScrollViewer
-        pages={pages}
-        lang="ja"
-        initialPage={4}
-        totalPages={pages.length}
-        manualId="oxi-one-mk2"
-      />,
-    );
-
-    expect(scrollTopWrites.length).toBe(writesAfterMount);
+  it('keeps image DOM and scroll offset across live language changes', async () => {
+    const { get, pages, lang, test } = await mountViewer();
+    const image = get('[data-testid="scroll-page-image-2"]');
+    get('[data-testid="scroll-image-column"]').scrollTop = 350;
+    pages.value = pages.value.map((page) => ({
+      ...page,
+      contentHtml: `<p>English ${page.pageNum}</p>`,
+    }));
+    lang.value = 'en';
+    await test.flush();
+    expect(get('[data-testid="scroll-page-image-2"]')).toBe(image);
+    expect(get('[data-testid="scroll-image-column"]').scrollTop).toBe(350);
+    expect(get('[data-testid="scroll-translation-panel"]').textContent).toBe('English 2');
+    expect(get('[data-testid="scroll-translation-panel"]').getAttribute('lang')).toBe('en');
+  });
+  it('preloads the jump target while suppressing intermediate lazy entries until scrollend', async () => {
+    const { get, test, handleRef } = await mountViewer();
+    const container = get('[data-testid="scroll-image-column"]');
+    const scroll = vi.spyOn(container, 'scrollTo').mockImplementation(() => {});
+    handleRef.current?.scrollToPage(10);
+    await test.flush();
+    expect(scroll).toHaveBeenCalledWith({ top: 1000, behavior: 'smooth' });
+    expect(get('[data-testid="scroll-page-image-10"]')).toBeTruthy();
+    observers[1].emit(get('[data-page="6"]'));
+    await test.flush();
+    expect(test.host.querySelector('[data-testid="scroll-page-image-6"]')).toBeNull();
+    container.dispatchEvent(new Event('scrollend'));
+    observers[1].emit(get('[data-page="6"]'));
+    await test.flush();
+    expect(get('[data-testid="scroll-page-image-6"]')).toBeTruthy();
+  });
+  it('disconnects both observers, cancels pending frames and clears the jump timer on disposal', async () => {
+    const { get, test, handleRef } = await mountViewer();
+    vi.spyOn(get('[data-testid="scroll-image-column"]'), 'scrollTo').mockImplementation(() => {});
+    const clearTimer = vi.spyOn(globalThis, 'clearTimeout');
+    handleRef.current?.scrollToPage(10);
+    observers[0].emit(get('[data-page="8"]'));
+    expect(frames.size).toBe(1);
+    test.dispose();
+    expect(observers.every((observer) => observer.disconnected)).toBe(true);
+    expect(handleRef.current).toBeNull();
+    expect(frames.size).toBe(0);
+    expect(clearTimer).toHaveBeenCalled();
   });
 });

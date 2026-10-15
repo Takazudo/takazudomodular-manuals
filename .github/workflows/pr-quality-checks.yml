@@ -37,7 +37,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -69,6 +69,9 @@ jobs:
           echo "🔍 Running TypeScript type checking..."
           pnpm run typecheck
           echo "✅ Type checking passed"
+
+      - name: Audit Wind utilities
+        run: pnpm exec zfb wind audit --fail-on error
 
       - name: Run ESLint
         run: |
@@ -155,7 +158,7 @@ jobs:
       - name: Build zfb application
         uses: ./.github/actions/build-zfb
         with:
-          node-version: '22'
+          node-version: '24'
 
       # Only persist the ~880 MB build artifact where it is actually consumed:
       # the page-smoke-crawler job runs on preview/* branches ONLY. On every other
@@ -204,7 +207,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -331,7 +334,7 @@ jobs:
       - name: Build zfb application
         uses: ./.github/actions/build-zfb
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Resolve Playwright version
         id: pw
@@ -400,7 +403,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     needs: quality-checks
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    # Verification-only rollouts can opt out before pushing without skipping checks.
+    if: github.event.pull_request.head.repo.full_name == github.repository && !contains(github.event.pull_request.labels.*.name, 'no-preview')
 
     permissions:
       contents: read
@@ -416,7 +420,7 @@ jobs:
       - name: Build zfb application
         uses: ./.github/actions/build-zfb
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Prepare dist for deployment
         run: |

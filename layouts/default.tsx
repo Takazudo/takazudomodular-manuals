@@ -2,20 +2,15 @@
 //
 // Imports global.css so the Zudo design-system tokens and base styles are
 // injected into every rendered page's stylesheet (picked up by zfb-css).
-// prose.css is also imported here so .zd-prose styles are always available.
+// global.css includes prose.css so .zd-prose styles are always available.
 //
 // Noto Sans JP is loaded via Google Fonts <link> (replaces next/font/google).
 // The --font-noto CSS variable is defined in styles/global.css and wires the
-// Tailwind `font-noto` utility, keeping existing component class usage intact.
+// Wind `font-noto` utility, keeping existing component class usage intact.
 //
 // The logo CSS mask references /img/takazudo-logo.svg served from public/img/.
-// zfb's link rewriter handles the base prefix automatically for CSS embedded
-// in <style> tags. The mask-image arbitrary Tailwind class writes the URL into
-// the stylesheet. At base `/` the path is simply `/img/takazudo-logo.svg`.
-import type { ComponentChildren } from 'preact';
+import type { Child } from '@takazudo/zfb/zudo-react';
 import '../styles/global.css';
-import '../styles/prose.css';
-import ctl from '../components/zfb/ctl';
 
 // Google Fonts URL for Noto Sans JP. Includes weights 300/400/500/700 to
 // match the Next.js next/font/google config in app/layout.tsx. The `display=swap`
@@ -38,17 +33,16 @@ const LANG_BOOTSTRAP_SCRIPT = `(function(){try{var l=localStorage.getItem('zmanu
 // On viewer pages, HeaderUtilityBar (manual-app.tsx) renders a separate
 // `fixed top-0 right-0 z-50` cluster. Removing `justify-between` keeps the
 // brand link away from the right edge so the two fixed elements do not collide.
-const headerStyles = ctl(`
+const headerStyles = `
   fixed top-0 left-0 right-0 z-50
-  bg-zd-gray1
   px-hgap-sm
   h-[60px]
   flex items-center gap-hgap-md
-  shadow-lg shadow-zd-white/5
+  site-header-shadow
   font-futura
-`);
+`;
 
-const titleStyles = ctl(`
+const titleStyles = `
   text-lg font-normal
   text-zd-white
   zd-invert-color-link
@@ -56,9 +50,9 @@ const titleStyles = ctl(`
   px-[8px] py-[4px]
   -mx-[8px] -my-[4px]
   rounded-xs
-`);
+`;
 
-const navLinkStyles = ctl(`
+const navLinkStyles = `
   text-sm font-normal
   text-zd-white
   zd-invert-color-link
@@ -67,20 +61,14 @@ const navLinkStyles = ctl(`
   px-[8px] py-[4px]
   -mx-[8px] -my-[4px]
   rounded-xs
-`);
+`;
 
-// CSS mask logo. The site is deployed at the domain root (/), so the asset
-// lives at /img/takazudo-logo.svg. zfb's link rewriter does not touch
-// arbitrary Tailwind values embedded in the stylesheet, but at base `/` there
-// is nothing to prepend — the root-relative path resolves correctly as-is.
-const logoStyles = ctl(`
+// Authored CSS mask preserves the root-relative logo asset.
+const logoStyles = `
   w-[1.2em] h-[1.2em]
   bg-current
-  [mask-image:url('/img/takazudo-logo.svg')]
-  [mask-size:contain]
-  [mask-repeat:no-repeat]
-  [mask-position:center]
-`);
+  zd-logo-mask
+`;
 
 type Props = {
   title?: string;
@@ -88,7 +76,7 @@ type Props = {
   manualTitle?: string;
   /** Optional href for the manual title link. */
   manualHref?: string;
-  children: ComponentChildren;
+  children: Child;
 };
 
 export default function DefaultLayout({
@@ -100,7 +88,7 @@ export default function DefaultLayout({
   return (
     <html lang="ja" data-scroll-behavior="smooth">
       <head>
-        <meta charSet="utf-8" />
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
         {/* Favicon: the site is deployed at the domain root, so the favicon
@@ -108,26 +96,26 @@ export default function DefaultLayout({
         <link rel="icon" href="/favicon.ico" />
         {/* Google Fonts: Noto Sans JP, replaces next/font/google. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
         <link rel="stylesheet" href={GOOGLE_FONTS_URL} />
         {/* Apply lang preference before paint to prevent toggle FOUC. */}
-        <script dangerouslySetInnerHTML={{ __html: LANG_BOOTSTRAP_SCRIPT }} />
+        <script rawHtml={LANG_BOOTSTRAP_SCRIPT} />
       </head>
       <body>
-        <header className={headerStyles}>
+        <header class={headerStyles}>
           {/* Manual title / site root link (left side). */}
           {manualTitle && manualHref ? (
-            <a href={manualHref} className={titleStyles}>
+            <a href={manualHref} class={titleStyles}>
               {manualTitle}
             </a>
           ) : (
-            <a href="/" className={titleStyles}>
+            <a href="/" class={titleStyles}>
               Manual Index
             </a>
           )}
           {/* Takazudo Modular logo + site link (right side). */}
-          <a href="https://takazudomodular.com" className={navLinkStyles}>
-            <span className={logoStyles} aria-hidden="true" />
+          <a href="https://takazudomodular.com" class={navLinkStyles}>
+            <span class={logoStyles} aria-hidden="true" />
             Takazudo Modular
           </a>
         </header>

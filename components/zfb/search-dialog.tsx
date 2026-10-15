@@ -1,7 +1,13 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks';
-import type { JSX } from 'preact';
+import {
+  computed,
+  For,
+  getScope,
+  Show,
+  signal,
+  type ReadonlySignal,
+  type Ref,
+} from '@takazudo/zfb/zudo-react';
 import MiniSearch, { type SearchResult } from 'minisearch';
-import ctl from './ctl';
 import { withBasePath } from './routing';
 import { highlightTerms, makeExcerpt } from './search-highlight';
 
@@ -9,7 +15,7 @@ export interface SearchDialogProps {
   manualId: string;
   /** Search-index content hash from the manifest; appended as `?v=` cache-bust. */
   searchIndexVersion?: string;
-  open: boolean;
+  open: ReadonlySignal<boolean>;
   onClose: () => void;
   /** Navigate to a page (client-side, owned by the island). */
   onNavigate: (pageNum: number) => void;
@@ -67,123 +73,45 @@ function createMiniSearch(): MiniSearch<SearchDoc> {
 
 // ─── Styles ─────────────────────────────────────────────────────────────────
 
-const dialogStyles = ctl(`
-  w-full h-full
-  sm:w-[80vw] sm:h-[80vh] sm:max-w-[80rem]
-  sm:mx-auto sm:my-[10vh]
-  sm:rounded-lg
-  bg-zd-black
-  text-zd-white
-  border border-zd-gray4
-  p-0
-  m-0
-`);
+const dialogStyles =
+  'w-full h-full sm:w-[80vw] sm:h-[80vh] sm:max-w-[80rem] sm:mx-auto sm:my-[10vh] sm:rounded-lg bg-zd-black text-zd-white border border-zd-gray4 p-0 m-0';
 
-const rootStyles = ctl(`
-  flex flex-col
-  w-full h-full
-  overflow-hidden
-`);
+const rootStyles = 'flex flex-col w-full h-full overflow-hidden';
 
-const headerStyles = ctl(`
-  flex items-center gap-hgap-xs
-  px-hgap-sm py-vgap-xs
-  border-b border-zd-gray4
-`);
+const headerStyles = 'flex items-center gap-hgap-xs px-hgap-sm py-vgap-xs border-b border-zd-gray4';
 
-const searchIconStyles = ctl(`
-  flex-none
-  text-zd-gray6
-`);
+const searchIconStyles = 'flex-none text-zd-gray6';
 
-const inputStyles = ctl(`
-  flex-1
-  bg-zd-black text-zd-white
-  border-0
-  outline-none
-  text-lg
-  py-vgap-xs
-  placeholder:text-zd-gray6
-`);
+const inputStyles =
+  'flex-1 bg-zd-black text-zd-white border-0 outline-none text-lg py-vgap-xs placeholder:text-zd-gray6';
 
-const hitCountStyles = ctl(`
-  hidden sm:block
-  flex-none
-  text-sm text-zd-gray6
-`);
+const hitCountStyles = 'hidden sm:block flex-none text-sm text-zd-gray6';
 
-const closeButtonStyles = ctl(`
-  flex-none
-  flex items-center justify-center
-  w-[32px] h-[32px]
-  rounded-md
-  text-zd-gray6
-  hover:text-zd-white hover:bg-zd-gray3
-  focus:outline-2 focus:outline-zd-outline
-`);
+const closeButtonStyles =
+  'flex-none flex items-center justify-center w-[32px] h-[32px] rounded-md text-zd-gray6 hover:text-zd-white hover:bg-zd-gray3 focus:outline-2 focus:outline-zd-outline';
 
-const resultsListStyles = ctl(`
-  flex-1
-  overflow-y-auto
-  overscroll-contain
-`);
+const resultsListStyles = 'flex-1 overflow-y-auto overscroll-contain';
 
-const resultItemStyles = ctl(`
-  w-full text-left
-  block
-  px-hgap-sm py-vgap-xs
-  border-b border-zd-gray4
-  hover:bg-zd-gray2
-  focus:outline-2 focus:outline-zd-outline
-  focus:bg-zd-gray2
-  cursor-pointer
-`);
+const resultItemStyles =
+  'w-full text-left block px-hgap-sm py-vgap-xs border-b border-zd-gray4 hover:bg-zd-gray2 focus:outline-2 focus:outline-zd-outline focus:bg-zd-gray2 cursor-pointer';
 
-const resultRowStyles = ctl(`
-  flex items-start gap-hgap-xs
-`);
+const resultRowStyles = 'flex items-start gap-hgap-xs';
 
-const resultTextStyles = ctl(`
-  flex-1 min-w-0
-`);
+const resultTextStyles = 'flex-1 min-w-0';
 
-const resultTitleStyles = ctl(`
-  font-semibold text-zd-white
-`);
+const resultTitleStyles = 'font-semibold text-zd-white';
 
-const resultSectionStyles = ctl(`
-  text-sm text-zd-gray6
-`);
+const resultSectionStyles = 'text-sm text-zd-gray6';
 
-const resultExcerptStyles = ctl(`
-  text-sm text-zd-gray7
-  mt-vgap-2xs
-`);
+const resultExcerptStyles = 'text-sm text-zd-gray7 mt-vgap-2xs';
 
-const pageBadgeStyles = ctl(`
-  flex-none
-  text-xs text-zd-gray6
-  px-hgap-xs py-vgap-2xs
-  border border-zd-gray4
-  rounded-sm
-`);
+const pageBadgeStyles =
+  'flex-none text-xs text-zd-gray6 px-hgap-xs py-vgap-2xs border border-zd-gray4 rounded-sm';
 
-const statusStyles = ctl(`
-  px-hgap-sm py-vgap-sm
-  text-zd-gray6
-  text-sm
-`);
+const statusStyles = 'px-hgap-sm py-vgap-sm text-zd-gray6 text-sm';
 
-const errorButtonStyles = ctl(`
-  mt-vgap-xs
-  inline-flex items-center
-  px-hgap-xs py-vgap-2xs
-  border border-zd-gray4
-  rounded-md
-  text-zd-white
-  hover:bg-zd-gray2
-  focus:outline-2 focus:outline-zd-outline
-`);
+const errorButtonStyles =
+  'mt-vgap-xs inline-flex items-center px-hgap-xs py-vgap-2xs border border-zd-gray4 rounded-md text-zd-white hover:bg-zd-gray2 focus:outline-2 focus:outline-zd-outline';
 
 // ─── Component ──────────────────────────────────────────────────────────────
 
@@ -194,290 +122,237 @@ export function SearchDialog({
   onClose,
   onNavigate,
 }: SearchDialogProps) {
-  const dialogRef = useRef<HTMLDialogElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const sentinelRef = useRef<HTMLDivElement>(null);
-  const listRef = useRef<HTMLDivElement>(null);
-
-  const [loadState, setLoadState] = useState<LoadState>('idle');
-  const [query, setQuery] = useState('');
-  const [debouncedQuery, setDebouncedQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
-  const [indexInstance, setIndexInstance] = useState<MiniSearch<SearchDoc> | null>(
-    () => indexCache.get(getIndexCacheKey(manualId, searchIndexVersion)) ?? null,
+  const scope = getScope();
+  const dialogRef: Ref<HTMLDialogElement> = { current: null };
+  const inputRef: Ref<HTMLInputElement> = { current: null };
+  const sentinelRef: Ref<HTMLDivElement> = { current: null };
+  const listRef: Ref<HTMLDivElement> = { current: null };
+  const loadState = signal<LoadState>('idle');
+  const query = signal('');
+  const debouncedQuery = signal('');
+  const visibleCount = signal(BATCH_SIZE);
+  const indexInstance = signal<MiniSearch<SearchDoc> | null>(null);
+  const results = computed(() => {
+    const index = indexInstance.value;
+    const q = debouncedQuery.value.trim();
+    return index && q ? index.search(q) : [];
+  });
+  const hasQuery = computed(() => debouncedQuery.value.trim().length > 0);
+  const hitCountLabel = computed(() => `${results.value.length}件の結果`);
+  const readyQuery = computed(() => loadState.value === 'ready' && hasQuery.value);
+  // Include the settled query in each key: highlighting belongs to that query,
+  // while increasing the batch size keeps the existing result buttons intact.
+  const visibleResults = computed(() =>
+    readyQuery.value
+      ? results.value.slice(0, visibleCount.value).map((hit) => ({
+          key: `${debouncedQuery.value}::${hit.id}`,
+          hit: hit as SearchResult & SearchDoc,
+          query: debouncedQuery.value,
+        }))
+      : [],
   );
+  const liveStatusText = computed(() => {
+    if (loadState.value === 'loading') return '検索インデックスを読み込み中...';
+    if (loadState.value === 'error') return '検索インデックスを読み込めませんでした';
+    if (readyQuery.value) return results.value.length === 0 ? '該当なし' : hitCountLabel.value;
+    return '';
+  });
 
-  // ── Dialog open/close (imperative) ───────────────────────────────────────
-  useEffect(() => {
+  scope.effect(() => {
     const dialog = dialogRef.current;
     if (!dialog) return;
-
-    if (open) {
-      if (!dialog.open) {
-        dialog.showModal();
-      }
-      requestAnimationFrame(() => {
-        inputRef.current?.focus();
-      });
-    } else {
-      if (dialog.open) {
-        dialog.close();
-      }
+    if (open.value) {
+      if (!dialog.open) dialog.showModal();
+      const frame = requestAnimationFrame(() => inputRef.current?.focus());
+      return () => cancelAnimationFrame(frame);
     }
-  }, [open]);
+    if (dialog.open) dialog.close();
+  });
 
-  // ── Bridge native close event (ESC, backdrop click) to onClose ───────────
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    const handleClose = () => onClose();
-    dialog.addEventListener('close', handleClose);
-    return () => dialog.removeEventListener('close', handleClose);
-  }, [onClose]);
-
-  // ── Lazy-load the search index on first open ─────────────────────────────
-  const loadIndex = useCallback(async () => {
+  const loadIndex = async () => {
     const cacheKey = getIndexCacheKey(manualId, searchIndexVersion);
     const cached = indexCache.get(cacheKey);
     if (cached) {
-      setIndexInstance(cached);
-      setLoadState('ready');
+      indexInstance.value = cached;
+      loadState.value = 'ready';
       return;
     }
-
-    setLoadState('loading');
+    loadState.value = 'loading';
     try {
       const path = searchIndexVersion
         ? `/${manualId}/data/search-index.json?v=${searchIndexVersion}`
         : `/${manualId}/data/search-index.json`;
-      const url = withBasePath(path);
-      const res = await fetch(url);
-      if (!res.ok) {
-        throw new Error(`Failed to fetch search index: ${res.status}`);
-      }
+      const res = await fetch(withBasePath(path), { signal: scope.abortSignal });
+      if (!res.ok) throw new Error(`Failed to fetch search index: ${res.status}`);
       const docs = (await res.json()) as SearchDoc[];
+      if (scope.abortSignal.aborted) return;
       const instance = createMiniSearch();
       instance.addAll(docs);
       indexCache.set(cacheKey, instance);
-      setIndexInstance(instance);
-      setLoadState('ready');
+      indexInstance.value = instance;
+      loadState.value = 'ready';
     } catch (err) {
+      if (scope.abortSignal.aborted) return;
       console.error('[SearchDialog] index load failed', err);
-      setLoadState('error');
+      loadState.value = 'error';
     }
-  }, [manualId, searchIndexVersion]);
-
-  useEffect(() => {
-    if (!open) return;
-    if (loadState === 'idle') {
-      void loadIndex();
-    }
-  }, [open, loadState, loadIndex]);
-
-  // ── Debounce query input ─────────────────────────────────────────────────
-  useEffect(() => {
-    const id = setTimeout(() => {
-      setDebouncedQuery(query);
+  };
+  scope.effect(() => {
+    if (open.value && loadState.value === 'idle') void loadIndex();
+  });
+  scope.effect(() => {
+    const next = query.value;
+    const timer = setTimeout(() => {
+      debouncedQuery.value = next;
     }, DEBOUNCE_MS);
-    return () => clearTimeout(id);
-  }, [query]);
-
-  // ── Run search when debouncedQuery / index changes ───────────────────────
-  useEffect(() => {
-    if (!indexInstance) {
-      setResults([]);
-      return;
-    }
-    const q = debouncedQuery.trim();
-    if (!q) {
-      setResults([]);
-      return;
-    }
-    const hits = indexInstance.search(q);
-    setResults(hits);
-    setVisibleCount(BATCH_SIZE);
-    if (listRef.current) {
-      listRef.current.scrollTop = 0;
-    }
-  }, [debouncedQuery, indexInstance]);
-
-  // ── Infinite scroll via IntersectionObserver ─────────────────────────────
-  useEffect(() => {
+    return () => clearTimeout(timer);
+  });
+  scope.effect(() => {
+    // Reset pagination and scroll for each settled result set.
+    void results.value;
+    visibleCount.value = BATCH_SIZE;
+    if (listRef.current) listRef.current.scrollTop = 0;
+  });
+  scope.effect(() => {
+    // A query or appended batch can leave the sentinel inside the observer's
+    // margin without crossing it. Re-observe after either update so a tall
+    // viewport can request the next batch without requiring a new crossing.
+    const total = results.value.length;
+    const count = visibleCount.value;
     const sentinel = sentinelRef.current;
     const list = listRef.current;
-    if (!sentinel || !list) return;
-    if (typeof IntersectionObserver === 'undefined') return;
-
+    if (!sentinel || !list || typeof IntersectionObserver === 'undefined') return;
+    let active = true;
     const observer = new IntersectionObserver(
       (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setVisibleCount((prev) => {
-              if (prev >= results.length) return prev;
-              return Math.min(prev + BATCH_SIZE, results.length);
-            });
-          }
+        if (active && count < total && entries.some((entry) => entry.isIntersecting)) {
+          visibleCount.value = Math.min(count + BATCH_SIZE, total);
         }
       },
       { root: list, rootMargin: '200px 0px' },
     );
     observer.observe(sentinel);
-    return () => observer.disconnect();
-  }, [results.length]);
+    return () => {
+      active = false;
+      observer.disconnect();
+    };
+  });
 
-  // ── Handlers ─────────────────────────────────────────────────────────────
-  const handleInputChange = useCallback((e: JSX.TargetedEvent<HTMLInputElement>) => {
-    setQuery(e.currentTarget.value);
-  }, []);
-
-  const handleCloseClick = useCallback(() => {
-    dialogRef.current?.close();
-  }, []);
-
-  const handleResultActivate = useCallback(
-    (pageNum: number) => {
-      onNavigate(pageNum);
-      onClose();
-    },
-    [onNavigate, onClose],
-  );
-
-  const handleResultKeyDown = useCallback(
-    (e: JSX.TargetedKeyboardEvent<HTMLButtonElement>, pageNum: number) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        handleResultActivate(pageNum);
-      }
-    },
-    [handleResultActivate],
-  );
-
-  const handleRetry = useCallback(() => {
-    setLoadState('idle');
-  }, []);
-
-  // ── Derived render state ─────────────────────────────────────────────────
-  const visibleResults = useMemo(() => results.slice(0, visibleCount), [results, visibleCount]);
-
-  const hasQuery = debouncedQuery.trim().length > 0;
-  const hitCountLabel = `${results.length}件の結果`;
-
-  // Single persistent live-region text — covers all states so screen readers
-  // always hear exactly one announcement per settled query (no per-keystroke
-  // re-announcement of the whole list).
-  let liveStatusText = '';
-  if (loadState === 'loading') {
-    liveStatusText = '検索インデックスを読み込み中...';
-  } else if (loadState === 'error') {
-    liveStatusText = '検索インデックスを読み込めませんでした';
-  } else if (loadState === 'ready' && hasQuery) {
-    liveStatusText = results.length === 0 ? '該当なし' : hitCountLabel;
-  }
+  const handleResultActivate = (pageNum: number) => {
+    onNavigate(pageNum);
+    onClose();
+  };
+  const handleResultKeyDown = (event: KeyboardEvent, pageNum: number) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleResultActivate(pageNum);
+    }
+  };
 
   return (
-    <dialog ref={dialogRef} className={dialogStyles} aria-label="検索" data-search-dialog>
-      {/* Single persistent live region — announces only count/status text,
-          not the result list itself. Lives outside the scroll container so
-          it is never re-rendered by list updates. */}
-      <span className="sr-only" aria-live="polite" aria-atomic="true">
+    <dialog
+      ref={dialogRef}
+      class={dialogStyles}
+      aria-label="検索"
+      data-search-dialog
+      on:close={onClose}
+    >
+      <span class="sr-only" aria-live="polite" aria-atomic="true">
         {liveStatusText}
       </span>
-      <div className={rootStyles}>
-        {/* Header row ------------------------------------------------------ */}
-        <div className={headerStyles}>
-          <span className={searchIconStyles} aria-hidden="true">
+      <div class={rootStyles}>
+        <div class={headerStyles}>
+          <span class={searchIconStyles} aria-hidden="true">
             🔍
           </span>
           <input
             ref={inputRef}
             type="search"
-            value={query}
-            onInput={handleInputChange}
+            modelValue={query}
             placeholder="検索キーワードを入力..."
-            className={inputStyles}
+            class={inputStyles}
             aria-label="検索キーワード"
-            autoComplete="off"
+            autocomplete="off"
             spellcheck={false}
           />
-          {hasQuery && loadState === 'ready' ? (
-            <span className={hitCountStyles} aria-hidden="true">
-              {hitCountLabel}
-            </span>
-          ) : null}
+          <Show when={readyQuery}>
+            {() => (
+              <span class={hitCountStyles} aria-hidden="true">
+                {hitCountLabel}
+              </span>
+            )}
+          </Show>
           <button
             type="button"
-            onClick={handleCloseClick}
-            className={closeButtonStyles}
+            on:click={() => dialogRef.current?.close()}
+            class={closeButtonStyles}
             aria-label="閉じる"
           >
             ✕
           </button>
         </div>
-
-        {/* Results region -------------------------------------------------- */}
-        <div ref={listRef} className={resultsListStyles}>
-          {loadState === 'loading' ? (
-            <div className={statusStyles}>検索インデックスを読み込み中...</div>
-          ) : null}
-
-          {loadState === 'error' ? (
-            <div className={statusStyles}>
-              <p>検索インデックスを読み込めませんでした</p>
-              <button type="button" onClick={handleRetry} className={errorButtonStyles}>
-                再試行
-              </button>
-            </div>
-          ) : null}
-
-          {loadState === 'ready' && !hasQuery ? (
-            <div className={statusStyles}>検索キーワードを入力...</div>
-          ) : null}
-
-          {loadState === 'ready' && hasQuery && results.length === 0 ? (
-            <div className={statusStyles}>該当なし</div>
-          ) : null}
-
-          {loadState === 'ready' && hasQuery && results.length > 0 ? (
-            <>
-              {visibleResults.map((hit) => {
-                const doc = hit as unknown as SearchResult & SearchDoc;
-                const excerpt = makeExcerpt(doc.body ?? '', debouncedQuery);
-                return (
-                  <button
-                    key={String(hit.id)}
-                    type="button"
-                    className={resultItemStyles}
-                    onClick={() => handleResultActivate(doc.pageNum)}
-                    onKeyDown={(e) => handleResultKeyDown(e, doc.pageNum)}
-                  >
-                    <div className={resultRowStyles}>
-                      <div className={resultTextStyles}>
-                        <div className={resultTitleStyles}>
-                          {highlightTerms(doc.title ?? '', debouncedQuery)}
-                        </div>
-                        {doc.sectionName ? (
-                          <div className={resultSectionStyles}>
-                            {highlightTerms(doc.sectionName, debouncedQuery)}
-                          </div>
-                        ) : null}
-                        {excerpt ? (
-                          <div className={resultExcerptStyles}>
-                            {highlightTerms(excerpt, debouncedQuery)}
-                          </div>
-                        ) : null}
+        <div ref={listRef} class={resultsListStyles}>
+          <Show when={computed(() => loadState.value === 'loading')}>
+            {() => <div class={statusStyles}>検索インデックスを読み込み中...</div>}
+          </Show>
+          <Show when={computed(() => loadState.value === 'error')}>
+            {() => (
+              <div class={statusStyles}>
+                <p>検索インデックスを読み込めませんでした</p>
+                <button
+                  type="button"
+                  on:click={() => {
+                    loadState.value = 'idle';
+                  }}
+                  class={errorButtonStyles}
+                >
+                  再試行
+                </button>
+              </div>
+            )}
+          </Show>
+          <Show when={computed(() => loadState.value === 'ready' && !hasQuery.value)}>
+            {() => <div class={statusStyles}>検索キーワードを入力...</div>}
+          </Show>
+          <Show when={computed(() => readyQuery.value && results.value.length === 0)}>
+            {() => <div class={statusStyles}>該当なし</div>}
+          </Show>
+          <For each={visibleResults} by={(item) => item.key}>
+            {(item) => {
+              const { hit: doc, query: settledQuery } = item.value;
+              const excerpt = makeExcerpt(doc.body ?? '', settledQuery);
+              return (
+                <button
+                  type="button"
+                  class={resultItemStyles}
+                  on:click={() => handleResultActivate(doc.pageNum)}
+                  on:keydown={(event) => handleResultKeyDown(event, doc.pageNum)}
+                >
+                  <div class={resultRowStyles}>
+                    <div class={resultTextStyles}>
+                      <div class={resultTitleStyles}>
+                        {highlightTerms(doc.title ?? '', settledQuery)}
                       </div>
-                      <span className={pageBadgeStyles} aria-label={`ページ ${doc.pageNum}`}>
-                        p.{doc.pageNum}
-                      </span>
+                      {doc.sectionName ? (
+                        <div class={resultSectionStyles}>
+                          {highlightTerms(doc.sectionName, settledQuery)}
+                        </div>
+                      ) : null}
+                      {excerpt ? (
+                        <div class={resultExcerptStyles}>
+                          {highlightTerms(excerpt, settledQuery)}
+                        </div>
+                      ) : null}
                     </div>
-                  </button>
-                );
-              })}
-              <div ref={sentinelRef} aria-hidden="true" />
-            </>
-          ) : null}
+                    <span class={pageBadgeStyles} aria-label={`ページ ${doc.pageNum}`}>
+                      p.{doc.pageNum}
+                    </span>
+                  </div>
+                </button>
+              );
+            }}
+          </For>
+          <div ref={sentinelRef} aria-hidden="true" />
         </div>
       </div>
     </dialog>

@@ -1,5 +1,4 @@
-import { h } from 'preact';
-import type { ComponentChild } from 'preact';
+import { h, type Child } from '@takazudo/zfb/zudo-react';
 
 /**
  * Escape a string so it can be safely used inside a RegExp literal.
@@ -21,9 +20,9 @@ function splitTerms(query: string): string[] {
 /**
  * Wrap all occurrences of any query term in `text` with <mark> elements.
  * Matching is case-insensitive and literal (not fuzzy).
- * Returns a flat list of Preact nodes suitable for rendering as children.
+ * Returns a flat list of zudo-react descriptions suitable for rendering as children.
  */
-export function highlightTerms(text: string, query: string): ComponentChild[] {
+export function highlightTerms(text: string, query: string): Child[] {
   const terms = splitTerms(query);
   if (terms.length === 0 || text.length === 0) {
     return [text];
@@ -31,7 +30,7 @@ export function highlightTerms(text: string, query: string): ComponentChild[] {
 
   const pattern = new RegExp(`(${terms.map(escapeRegex).join('|')})`, 'gi');
   const parts = text.split(pattern);
-  const nodes: ComponentChild[] = [];
+  const nodes: Child[] = [];
 
   for (let i = 0; i < parts.length; i += 1) {
     const part = parts[i];

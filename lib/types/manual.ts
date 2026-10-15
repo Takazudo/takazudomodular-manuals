@@ -9,7 +9,7 @@ export interface ManualPage {
    * Pre-rendered HTML of `content`, produced at build time by
    * `scripts/pdf-md-to-html.js` (hljs highlight classes, tables wrapped in
    * `<div class="table-wrapper">`). The zfb island injects this via
-   * `dangerouslySetInnerHTML` inside a `.zd-prose` container, shipping zero
+   * `rawHtml` inside a `.zd-prose` container, shipping zero
    * markdown JS to the client. Optional because data predating the
    * md-to-html build step lacks it. The `.zd-prose` wrapper is NOT baked in.
    */

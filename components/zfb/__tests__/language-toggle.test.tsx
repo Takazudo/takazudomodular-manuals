@@ -1,97 +1,84 @@
-/**
- * Tests for components/zfb/language-toggle.tsx (Preact, prop-based).
- *
- * Decision (#135): re-pointed at the zfb equivalent now. The original
- * components/language/language-toggle.tsx (Next-coupled, context-based) is
- * deleted in #137.
- *
- * The zfb LanguageToggle is a pure presentational component — it receives
- * `lang`, `setLang`, and `availableLangs` as props. No LanguageProvider
- * wrapper, no manual-registry mock, no next/navigation.
- */
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, fireEvent, render, screen } from '@testing-library/preact';
+import { signal } from '@takazudo/zfb/zudo-react';
+import { createIslandTest } from '@takazudo/zfb/zudo-react/testing';
 import { LanguageToggle } from '@/components/zfb/language-toggle';
 import type { Lang } from '@/components/zfb/lang';
 
-const ALL_LANGS: readonly Lang[] = ['ja', 'en'];
-const JA_ONLY: readonly Lang[] = ['ja'];
-
+const active: Array<ReturnType<typeof createIslandTest>> = [];
 afterEach(() => {
-  cleanup();
+  for (const test of active) test.dispose();
+  active.length = 0;
 });
-
-describe('LanguageToggle — default state', () => {
-  it('shows JA as the active option when lang is "ja"', () => {
-    render(<LanguageToggle lang="ja" setLang={vi.fn()} availableLangs={ALL_LANGS} />);
-
-    const jaButton = screen.getByRole('button', { name: '日本語表示' });
-    const enButton = screen.getByRole('button', { name: 'English' });
-
-    expect(jaButton.getAttribute('aria-pressed')).toBe('true');
-    expect(enButton.getAttribute('aria-pressed')).toBe('false');
+function renderToggle(initial: Lang = 'ja', availableLangs: readonly Lang[] = ['ja', 'en']) {
+  const lang = signal<Lang>(initial);
+  const setLang = vi.fn((next: Lang) => {
+    lang.value = next;
   });
-
-  it('shows EN as the active option when lang is "en"', () => {
-    render(<LanguageToggle lang="en" setLang={vi.fn()} availableLangs={ALL_LANGS} />);
-
-    const jaButton = screen.getByRole('button', { name: '日本語表示' });
-    const enButton = screen.getByRole('button', { name: 'English' });
-
-    expect(enButton.getAttribute('aria-pressed')).toBe('true');
-    expect(jaButton.getAttribute('aria-pressed')).toBe('false');
+  function TestToggle() {
+    return <LanguageToggle lang={lang} setLang={setLang} availableLangs={availableLangs} />;
+  }
+  const test = createIslandTest(TestToggle, {}, { document });
+  active.push(test);
+  const before = test.host.querySelector('button');
+  expect(test.hydrate()).not.toBeNull();
+  expect(test.host.querySelector('button')).toBe(before);
+  expect(test.diagnostics).toEqual([]);
+  const ja = test.host.querySelector<HTMLButtonElement>('[aria-label="日本語表示"]')!;
+  const en = test.host.querySelector<HTMLButtonElement>('[aria-label="English"]')!;
+  return { test, lang, setLang, ja, en };
+}
+describe('LanguageToggle', () => {
+  it('shows JA active initially', () => {
+    const { ja, en } = renderToggle();
+    expect(ja.getAttribute('aria-pressed')).toBe('true');
+    expect(en.getAttribute('aria-pressed')).toBe('false');
   });
-});
-
-describe('LanguageToggle — interaction', () => {
-  it('calls setLang("en") when the EN button is clicked', () => {
-    const setLang = vi.fn();
-    render(<LanguageToggle lang="ja" setLang={setLang} availableLangs={ALL_LANGS} />);
-
-    fireEvent.click(screen.getByRole('button', { name: 'English' }));
-
+  it('shows EN active initially', () => {
+    const { ja, en } = renderToggle('en');
+    expect(en.getAttribute('aria-pressed')).toBe('true');
+    expect(ja.getAttribute('aria-pressed')).toBe('false');
+  });
+  it('calls setLang once and updates pressed state and appearance when EN is clicked', async () => {
+    const { test, ja, en, setLang } = renderToggle();
+    const before = en.className;
+    en.click();
+    await test.flush();
+    expect(setLang).toHaveBeenCalledTimes(1);
     expect(setLang).toHaveBeenCalledWith('en');
-    expect(setLang).toHaveBeenCalledTimes(1);
+    expect(en.getAttribute('aria-pressed')).toBe('true');
+    expect(ja.getAttribute('aria-pressed')).toBe('false');
+    expect(en.className).not.toBe(before);
   });
-
-  it('calls setLang("ja") when the JA button is clicked', () => {
-    const setLang = vi.fn();
-    render(<LanguageToggle lang="en" setLang={setLang} availableLangs={ALL_LANGS} />);
-
-    fireEvent.click(screen.getByRole('button', { name: '日本語表示' }));
-
+  it('calls setLang once and updates pressed state when JA is clicked', async () => {
+    const { test, ja, en, setLang } = renderToggle('en');
+    ja.click();
+    await test.flush();
+    expect(setLang).toHaveBeenCalledTimes(1);
     expect(setLang).toHaveBeenCalledWith('ja');
-    expect(setLang).toHaveBeenCalledTimes(1);
+    expect(ja.getAttribute('aria-pressed')).toBe('true');
+    expect(en.getAttribute('aria-pressed')).toBe('false');
   });
-});
-
-describe('LanguageToggle — EN unavailable', () => {
-  it('marks the EN button aria-disabled and ignores clicks when EN not in availableLangs', () => {
-    const setLang = vi.fn();
-    render(<LanguageToggle lang="ja" setLang={setLang} availableLangs={JA_ONLY} />);
-
-    const jaButton = screen.getByRole('button', { name: '日本語表示' });
-    const enButton = screen.getByRole('button', { name: 'English' });
-
-    expect(enButton.getAttribute('aria-disabled')).toBe('true');
-    // aria-pressed still reflects state, not availability.
-    expect(enButton.getAttribute('aria-pressed')).toBe('false');
-    expect(jaButton.getAttribute('aria-pressed')).toBe('true');
-
-    fireEvent.click(enButton);
-
-    // Click is a no-op when EN is unavailable.
+  it('disables English and ignores its clicks for Japanese-only manuals', () => {
+    const { en, ja, setLang } = renderToggle('ja', ['ja']);
+    expect(en.getAttribute('aria-disabled')).toBe('true');
+    expect(en.getAttribute('aria-pressed')).toBe('false');
+    expect(ja.getAttribute('aria-pressed')).toBe('true');
+    en.click();
     expect(setLang).not.toHaveBeenCalled();
   });
-
-  it('shows the Japanese-only tooltip when EN is unavailable', () => {
-    render(<LanguageToggle lang="ja" setLang={vi.fn()} availableLangs={JA_ONLY} />);
-
-    expect(screen.getByRole('tooltip').textContent).toBe('この資料は日本語のみ対応です');
+  it('explains unavailable English with a tooltip', () => {
+    const { test } = renderToggle('ja', ['ja']);
+    expect(test.host.querySelector('[role="tooltip"]')?.textContent).toBe(
+      'この資料は日本語のみ対応です',
+    );
   });
-
-  it('does not render the tooltip when EN is available', () => {
-    render(<LanguageToggle lang="ja" setLang={vi.fn()} availableLangs={ALL_LANGS} />);
-    expect(screen.queryByRole('tooltip')).toBeNull();
+  it('omits the tooltip when English is available', () => {
+    expect(renderToggle().test.host.querySelector('[role="tooltip"]')).toBeNull();
+  });
+  it('releases button listeners on disposal', () => {
+    const { test, en, setLang } = renderToggle();
+    test.dispose();
+    en.click();
+    expect(setLang).not.toHaveBeenCalled();
   });
 });
