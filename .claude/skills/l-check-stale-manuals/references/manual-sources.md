@@ -77,7 +77,7 @@ Where each committed manual's currently-published revision lives, per brand — 
 
 | slug | doc type | Drive file ID (last known) |
 | --- | --- | --- |
-| oxi-coral | user manual — cover still "USER GUIDE V 3.0", 42 pp. Drive id unchanged. As of 2026-10-29 the file sha256 is `955c4314eb8f…df15`; the 2026-10-03 file `9c57491040d1…72d3` is no longer what this id serves | 1c_xtj-bJgqSQy4lzuR_9yBNRW5MFefpo |
+| oxi-coral | user manual — cover still "USER GUIDE V 3.0", 42 pp. Drive id unchanged. As of 2026-10-29 the file sha256 is `955c4314eb8f…df15`; the 2026-10-03 file `9c57491040d1…72d3` is no longer what this id serves. Superseded v2.1 (20 Jan 2025, 46 pp) was `1Kokdq4KA3HYU9vBRl-gshFKkLov2fAR2` | 1c_xtj-bJgqSQy4lzuR_9yBNRW5MFefpo |
 | oxi-e16-manual | full user manual — cover "Official User Manual 1.3.0a", 138 pp (committed copy was v 0.6.1c, 78 pp). Drive id moved 2026-10-29 | 1bgwWzm3tE2K5uFbUXNGZo0DHjOaIeDW8 |
 | oxi-e16-quick-start | quick start — support-page label "OXI E16 QUICK GUIDE", 6 pp, body prints Version 1.3.0. Drive id moved 2026-10-29 | 1FP8lVvEXtWyX2H0Wseh2P4lcXTkKgi0l |
 | oxi-meta | user manual (committed as `oxi-meta.pdf`, served as `OXI META User Manual.pdf`) | 1y4BZ7m-dTG28XkOYqOYU11DmiV9_A8jz |
