@@ -2,17 +2,17 @@
   "title": "ADDAC120S Four Strings Series: Manual",
   "brand": "ADDAC System",
   "productSlug": "addac120s",
-  "updatedAt": "20260620",
+  "updatedAt": "20261029",
   "version": "1.0.0",
-  "totalPages": 27,
-  "contentPages": 24,
-  "lastUpdated": "2026-06-19T19:13:31.000Z",
+  "totalPages": 42,
+  "contentPages": 39,
+  "lastUpdated": "2026-10-28T23:26:18.063Z",
   "source": {
-    "filename": "ADDAC120s_FourStringsSeries_8672.pdf",
-    "processedAt": "2026-06-19T19:13:31.000Z",
+    "filename": "ADDAC12X_Strings_REV02_8113_4253.pdf",
+    "processedAt": "2026-10-28T23:26:01.875Z",
     "imageDPI": 300,
     "imageFormat": "png"
   },
   "hasEnglish": true,
-  "searchIndexVersion": "13dae8e9709b8ac225ddaba0a70346b73e2b93b3"
+  "searchIndexVersion": "e2cd77ba8274d6a02e46b01b80390cd61d55b17d"
 }

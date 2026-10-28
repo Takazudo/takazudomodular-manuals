@@ -4,7 +4,7 @@
     "pageNum": 1,
     "title": "Page 1",
     "sectionName": null,
-    "body": "June.2026 USER'S GUIDE . REV01 ADDAC120s FOUR STRINGS SERIES INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
+    "body": "ADDAC System Instruments for Sonic Expression Est.2009 INTRODUCING ADDAC120s FOUR STRINGS SERIES USER’S GUIDE . REV02 August.2026 From Portugal with Love!",
     "url": "/addac120s-strings/page/1"
   },
   {
@@ -12,7 +12,7 @@
     "pageNum": 2,
     "title": "Page 2",
     "sectionName": null,
-    "body": "ようこそ WELCOME この新しいモジュールセットをご紹介できることを嬉しく思います。このモジュールは、ユーザーがさまざまな視点から物理的な弦を探求・体験し、創造的な実験を促進できるオープンなキャンバスとして設計されています。 このコンセプトは、ラップスチールギターやダルシマーのように、物理的な弦をEurorackに組み込みたいという思いから生まれました。どのようなEurorackフレームにもシームレスに統合できます。このデザインにはフレットボードがなく、いくつかの制限はありますが、弦の下に他のモジュールを設置して使用することができます。 まずヘッドストックとブリッジを開発し、弦を十分に持ち上げて下部に他のモジュールを収納できるクリアランスを確保しました。次に、エレキギターと同様に弦の音をキャプチャできるハムバッカーモジュールを開発しました。標準的なハムバッカーの限界から、各弦に1つのピックアップを持つクアドラフォニック構成の独自ピックアップを開発し、弦ごとの独立したボリュームコントロールを実現しました。",
+    "body": "Welcome to: ADDAC120s FOUR STRINGS SERIES USER’S GUIDE Revision.02 August.2026 WELCOME さまざまな視点から物理的な弦に触れ、創造的な実験を促すオープンなキャンバスとして設計された、この新しいモジュールセットをご紹介します。 このコンセプトは、ラップスチールギターやダルシマーのように、物理的な弦をEurorackへ取り込み、どのEurorackフレームにもシームレスに組み込めるようにしたいという思いから生まれました。このデザインにはフレットボードがなく、いくつかの制約はありますが、弦の下に他のモジュールを取り付けて使用できます。 まずヘッドストックとブリッジを開発し、下に他のモジュールを置けるだけのクリアランスができるように弦を十分に持ち上げました。その後、エレキギターと同じように弦の音を捉えられるHumbuckerモジュールを開発しました。標準的なHumbuckerの制約から、弦ごとに1つのピックアップを持つクアドラフォニック構成の独自ピックアップを開発し、弦ごとの音量を独立してコントロールできるよう",
     "url": "/addac120s-strings/page/2"
   },
   {
@@ -20,7 +20,7 @@
     "pageNum": 3,
     "title": "Page 3",
     "sectionName": null,
-    "body": "モジュール概要 ADDAC120 HEADSTOCK & BRIDGE これはStringモジュールシリーズの基盤となるモジュールで、Headstock & Bridgeモジュールです。ゲージが0.055までの弦に対応しています。 より太い弦を使用したい場合は、穴を広げることも可能です。 両パネルは強度確保のため2mmのステンレス鋼製です。 Headstockには4つのロッキングチューナーを搭載しており、弦の取り付けが容易です。 ADDAC121 HUMBUCKER シンプルなHumbuckerピックアップモジュールです。ToneコントロールとVolumeコントロール、そしてサチュレーション用のLOW/HIGHゲインスイッチを備えています。 内蔵プリアンプによって音量がシンセレベルまで引き上げられます。 ピックアップの高さはマウントスクリューで調整可能です。 ピックアップを取り外して手持ちで使用することもできます。 ADDAC122 QUADRAPHONIC PICKUP Quadraphonic",
+    "body": "ADDAC120s Four Strings System User’s Guide MODULES BRIEF INTRODUCTION ADDAC120 HEADSTOCK & BRIDGE ADDAC120B BASS HEADSTOCK & BRIDGE これは当社のStringモジュールの基礎となる、Headstock & Bridgeモジュールで、0.055または0.110までの弦ゲージに対応します。 より太い弦に合うよう、これらの穴を大きくすることもできます。 両方のパネルは強度のため2mmのステンレス鋼です。 ADDAC120のヘッドストックには、弦の取り付けを容易にする4つのロッキングチューナーがあります。 ADDAC121 HUMBUCKER これはシンプルなHumbuckerピックアップモジュールです。 ToneとVolumeのコントロールに加え、サチュレーション用のLOW/HIGHゲインスイッチを備えています。 内蔵プリアンプが音量をシンセレベルまで持ち上げます。 ピックアップの高さは取り付けネジで調整できます。",
     "url": "/addac120s-strings/page/3"
   },
   {
@@ -28,7 +28,7 @@
     "pageNum": 4,
     "title": "Page 4",
     "sectionName": null,
-    "body": "MODULES BRIEF INTRODUCTION ADDAC126 ROTARY EXCITER このモジュールは、7000 RPMのブラシレスモーターを搭載しており、対向した磁極を持つ4つのマグネットが取り付けられた面を回転させます。これにより回転磁場が生成され、回転速度がいずれかの弦の調律周波数またはその倍音と一致したとき、弦が振動します。 ADDAC127 EBOW SLIDER このモジュールは、標準的なEBowを固定するハーネスとスライド機構を備えています。ユーザーはEBowを弦の下で前後にスライドさせることができます。使用するEBowには「PianoBow」改造（https://ebow.com/diy-mods）が施されており、弦の下をスライドさせる際に弦に触れないよう、EBowの脚部を削り取ってより近づけられるようにしています。 EBowの高さは、4つのサムスクリューを使って上下に調整することができます。",
+    "body": "ADDAC120s Four Strings System User’s Guide MODULES BRIEF INTRODUCTION ADDAC126 ROTARY EXCITER このモジュールは7000 RPMのブラシレスモーターを備え、対向する磁極を持つ4つの磁石が付いた面を回転させます。生じる回転磁場は、回転速度がいずれかの弦のチューニングの周波数または倍音と一致すると、弦を振動させます。 ADDAC127 EBOW SLIDER このモジュールは、標準的なEbow用のハーネスとスライド機構を作ります。弦の下でEbowを前後にスライドできます。使用するEbowは「PianoBow」改造（https://ebow.com/diy-mods）を施したもので、Ebowの足を削り、より近づけつつ、前後にスライドするときに弦へ触れないようにしています。 Ebowの高さは4本のサムスクリューで上げ下げできます。 ADDAC128 FRETS & ADDAC128M MICROTONAL",
     "url": "/addac120s-strings/page/4"
   },
   {
@@ -36,7 +36,7 @@
     "pageNum": 5,
     "title": "Page 5",
     "sectionName": null,
-    "body": "STRING SYSTEMS ここでは、パックとして販売されている3つの厳選システムをご紹介します。 スタンドアロンシステムは組み立て済みの状態で出荷されます。 STRINGS BASIC SYSTEM（フレームなし） STRINGS HUMBUCKER SYSTEM（122HP または 197HP フレーム付き） STRINGS QUADRAPHONIC SYSTEM（122HP または 197HP フレーム付き）",
+    "body": "ADDAC120s Four Strings System User’s Guide",
     "url": "/addac120s-strings/page/5"
   },
   {
@@ -44,7 +44,7 @@
     "pageNum": 6,
     "title": "Page 6",
     "sectionName": null,
-    "body": "ADDAC120 HEADSTOCK & BRIDGE INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
+    "body": "STRING SYSTEMS ここでは、パックとして販売されている3つの厳選システムをご紹介します。 スタンドアロンシステムは組み立て済みの状態で出荷されます。 STRINGS BASIC SYSTEM（フレームなし） STRINGS HUMBUCKER SYSTEM（122HP または 197HP フレーム付き） STRINGS QUADRAPHONIC SYSTEM（122HP または 197HP フレーム付き）",
     "url": "/addac120s-strings/page/6"
   },
   {
@@ -52,7 +52,7 @@
     "pageNum": 7,
     "title": "Page 7",
     "sectionName": null,
-    "body": "WELCOME これは私たちのStringモジュールの基盤となるHeadstock & Bridgeモジュールです。.055までのゲージのストリングに対応しています。 ストリングはギターと同様の方法でインストールします。ユーザーはどのストリングを使用するか、またどのチューニングを使用するかを自由に選択できます。 Headstockには4つのロッキングチューナーが搭載されており、ストリングのインストールが容易です。 より太いストリングを取り付けるために、ストリングホールを大きくすることもできます。 両パネルは強度のために2mmのステンレス鋼製です。 同梱の追加パーツ ストリングセット .010 〜 .046 Bow Archアタッチメント Small resonators HEADSTOCK 17HP BRIDGE 6HP",
+    "body": "ADDAC120 HEADSTOCK & BRIDGE INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
     "url": "/addac120s-strings/page/7"
   },
   {
@@ -60,7 +60,7 @@
     "pageNum": 8,
     "title": "Page 8",
     "sectionName": null,
-    "body": "BOW ARCH ATTACHMENT このアタッチメントは2本の中央の弦を持ち上げることで、弓が各弦に個別に届くようにします。",
+    "body": "WELCOME これは私たちのStringモジュールの基盤となるHeadstock & Bridgeモジュールです。.055までのゲージのストリングに対応しています。 ストリングはギターと同様の方法でインストールします。ユーザーはどのストリングを使用するか、またどのチューニングを使用するかを自由に選択できます。 Headstockには4つのロッキングチューナーが搭載されており、ストリングのインストールが容易です。 より太いストリングを取り付けるために、ストリングホールを大きくすることもできます。 両パネルは強度のために2mmのステンレス鋼製です。 同梱の追加パーツ ストリングセット .010 〜 .046 Bow Archアタッチメント Small resonators HEADSTOCK 17HP BRIDGE 6HP",
     "url": "/addac120s-strings/page/8"
   },
   {
@@ -68,7 +68,7 @@
     "pageNum": 9,
     "title": "Page 9",
     "sectionName": null,
-    "body": "SMALL RESONATORS これらは非常にシンプルながら、巻きのない弦にハーモニクスを加える点において非常に効果的です。弦に取り付けられたResonatorの数だけ新しい倍音が追加され、ピースを増やすほど倍音が増え、音色はより複雑になっていきます。 各ハーモニクスの調律は、弦上のResonatorの位置によって決まります。 得られるサウンドは非常に驚くべきもので、ベルのような音によく似ています。",
+    "body": "BOW ARCH ATTACHMENT このアタッチメントは2本の中央の弦を持ち上げることで、弓が各弦に個別に届くようにします。",
     "url": "/addac120s-strings/page/9"
   },
   {
@@ -76,7 +76,7 @@
     "pageNum": 10,
     "title": "Page 10",
     "sectionName": null,
-    "body": "UNDER STRINGS CLEARENCE システムを設計する際、弦の下に標準的なモジュールを収納するための十分なクリアランスを確保できる高さに弦の位置を設定しました。",
+    "body": "SMALL RESONATORS これらは非常にシンプルながら、巻きのない弦にハーモニクスを加える点において非常に効果的です。弦に取り付けられたResonatorの数だけ新しい倍音が追加され、ピースを増やすほど倍音が増え、音色はより複雑になっていきます。 各ハーモニクスの調律は、弦上のResonatorの位置によって決まります。 得られるサウンドは非常に驚くべきもので、ベルのような音によく似ています。",
     "url": "/addac120s-strings/page/10"
   },
   {
@@ -84,7 +84,7 @@
     "pageNum": 11,
     "title": "Page 11",
     "sectionName": null,
-    "body": "ADDAC121 HUMBUCKER INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
+    "body": "UNDER STRINGS CLEARENCE システムを設計する際、弦の下に標準的なモジュールを収納するための十分なクリアランスを確保できる高さに弦の位置を設定しました。",
     "url": "/addac120s-strings/page/11"
   },
   {
@@ -92,15 +92,23 @@
     "pageNum": 12,
     "title": "Page 12",
     "sectionName": null,
-    "body": "WELCOME これはシンプルなHumbuckerピックアップモジュールです。 ToneとVolumeコントロール、およびサチュレーション用のLOW/HIGH gainスイッチを備えています。 内蔵プリアンプにより、音量をシンセサイザーレベルまで増幅します。 ピックアップの高さは取り付けスクリューで調整できます。 ピックアップは取り外して手で使用することもできます。 10HP +12Vで30mA -12Vで30mA",
+    "body": "ADDAC System Instruments for Sonic Expression Est.2009 INTRODUCING ADDAC120B BASS HEADSTOCK & BRIDGE USER’S GUIDE . REV01 August.2026 From Portugal with Love!",
     "url": "/addac120s-strings/page/12"
+  },
+  {
+    "id": "13",
+    "pageNum": 13,
+    "title": "Page 13",
+    "sectionName": null,
+    "body": "Welcome to: ADDAC120B BASS HEADSTOCK & BRIDGE USER’S GUIDE Revision.01 August.2026 WELCOME これは当社のStringモジュールの基礎となる、Headstock & Bridgeモジュールで、.110までの弦ゲージに対応します。 弦は一般的なギターと同じように取り付けます。どの弦を取り付け、どのチューニングを使うかは自由に選べます。 ヘッドストックには4つのベースチューナーがあります。 両方のパネルは強度のため2mmのステンレス鋼です。 Extra Parts Provided String set .045 to .100 Bow Arch attachment HEADSTOCK 17HP BRIDGE 6HP",
+    "url": "/addac120s-strings/page/13"
   },
   {
     "id": "14",
     "pageNum": 14,
     "title": "Page 14",
     "sectionName": null,
-    "body": "ADDAC122 QUADRAPHONIC PICKUP ユーザーズガイド 14HP 80mA on +12V 60mA on -12V June.2026 Revision.01 WELCOME これは、各弦を独立してキャプチャできるQuadraphonic（4チャンネル）ピックアップです。一般的ではありませんが、Hexaphonicギターピックアップは1980年代に開発されました。モノラル出力からすべての弦をデコードする代わりに、ギターシンセサイザーが各弦を独立して検出できるようにし、より正確な検出を実現するためのものです。 4つの独立したピックアップのように考えることができ、それぞれが独自のプリアンプ、独立したVolumeコントロール、および出力ジャックを備えています。 Mono Mix出力（ポストVolume）も利用可能です。 すべての出力はシンセレベルです。 すべてのコイルは手巻きで、Alnico 5スラグを使用したスタック式ハムバッカーです。各コイルは44AWGポリウレタン線を使用して20,000ターン巻かれており、抵抗値は約7.4kΩです。",
+    "body": "ADDAC121 HUMBUCKER INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
     "url": "/addac120s-strings/page/14"
   },
   {
@@ -108,23 +116,15 @@
     "pageNum": 15,
     "title": "Page 15",
     "sectionName": null,
-    "body": "ADDAC124 PLECTRUMS INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
+    "body": "WELCOME これはシンプルなHumbuckerピックアップモジュールです。 ToneとVolumeコントロール、およびサチュレーション用のLOW/HIGH gainスイッチを備えています。 内蔵プリアンプにより、音量をシンセサイザーレベルまで増幅します。 ピックアップの高さは取り付けスクリューで調整できます。 ピックアップは取り外して手で使用することもできます。 10HP +12Vで30mA -12Vで30mA",
     "url": "/addac120s-strings/page/15"
-  },
-  {
-    "id": "16",
-    "pageNum": 16,
-    "title": "Page 16",
-    "sectionName": null,
-    "body": "WELCOME これはPlectrumモジュールです。各弦に1つのサーボを搭載しており、専用のプッシュボタン、トリガー入力、またはMIDIを通じて各弦を独立してはじくことができます。 Pluck（ピッキング）モードでは、サーボが約20度動き、弦を効果的にはじきます。 Harmonic（ハーモニクス）モードでは、サーボは約10度のみ動き、弦を軽くタップするために垂直位置で止まります。これによりハーモニクスが聴こえるようになります。このモードを有効にするには、弦の長さの半分、2/3、または3/4など、特定の位置にモジュールを配置する必要があります。 効果的な使用のために、最大3台のモジュールをデイジーチェーン接続することができます。1台が弦をはじき、他の2台が異なるハーモニクスを担当します。 モード切り替えのために4つのスイッチが3つの状態を持ちます: UP: トリガーとMIDI入力を無効にしますが、プッシュボタンによるPLECTRUMのトリガーは引き続き可能です。 MIDDLE: Pluck モード。すべての入力が有効です。 DOWN: Harmonic",
-    "url": "/addac120s-strings/page/16"
   },
   {
     "id": "17",
     "pageNum": 17,
     "title": "Page 17",
     "sectionName": null,
-    "body": "MIDI TO PLECTRUMS MIDIデバイスに接続すると、モジュールはNOTEまたはCCメッセージを受信して、目的のプレクトラムをトリガーすることができます。 単一のMIDIを使用して最大3つのモジュールをデイジーチェーン接続することが可能で、すべてのモジュールをトリガーできます。 モジュールは、付属のケーブルを使用して背面のピンヘッダーで接続します。 すべてのMIDIチャンネルが有効です。 CCメッセージはCC1からCC12まで有効です。 MIDI NOTEはすべて有効で、どのオクターブの同じNOTEでも同じプレクトラムをトリガーします。 ADDAC124 MIDI IMPLEMENTATION MIDI IMPLEMENTATION SERVO 1 MODULE #1（1st in Chain） SERVO 2 SERVO 3 SERVO 4 MIDI CC: 1 / 2 / 3 / 4 MIDI NOTE（任意のオクターブ）: C / C# / D / D# SERVO 1 MODULE #2（2nd in Chain） SERVO 2 SERVO 3 SERVO 4",
+    "body": "ADDAC122 QUADRAPHONIC PICKUP ユーザーズガイド 14HP 80mA on +12V 60mA on -12V June.2026 Revision.01 WELCOME これは、各弦を独立してキャプチャできるQuadraphonic（4チャンネル）ピックアップです。一般的ではありませんが、Hexaphonicギターピックアップは1980年代に開発されました。モノラル出力からすべての弦をデコードする代わりに、ギターシンセサイザーが各弦を独立して検出できるようにし、より正確な検出を実現するためのものです。 4つの独立したピックアップのように考えることができ、それぞれが独自のプリアンプ、独立したVolumeコントロール、および出力ジャックを備えています。 Mono Mix出力（ポストVolume）も利用可能です。 すべての出力はシンセレベルです。 すべてのコイルは手巻きで、Alnico 5スラグを使用したスタック式ハムバッカーです。各コイルは44AWGポリウレタン線を使用して20,000ターン巻かれており、抵抗値は約7.4kΩです。",
     "url": "/addac120s-strings/page/17"
   },
   {
@@ -132,7 +132,7 @@
     "pageNum": 18,
     "title": "Page 18",
     "sectionName": null,
-    "body": "ADDAC125 STRINGS MUTE INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
+    "body": "ADDAC124 PLECTRUMS INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
     "url": "/addac120s-strings/page/18"
   },
   {
@@ -140,39 +140,39 @@
     "pageNum": 19,
     "title": "Page 19",
     "sectionName": null,
-    "body": "ADDAC125 STRINGS MUTE ユーザーズガイド 10HP 100mA on +12V 2026年5月 リビジョン01 ようこそ: WELCOME このモジュールは、FenderのJaguarおよびBass VIギターの一部に見られるミュートシステムからインスパイアされています。フォームの一片を弦に押し当てることで弦の自然な振動を減衰させる仕組みで、標準的なパームミュートほど強くはありませんが、異なるトーンを実現します。 このモジュールでは、サーボモーターを使用してフォームの一片を上下させます。弦に軽く押し当てることで、弦の自然な振動をわずかに減衰させます。 標準的なパームミュートほど効果的ではありませんが、異なるトーンを自動化することが可能です。 最大限の効果を得るため、このモジュールはできるだけヘッドストックに近い位置に取り付ける必要があります。 これはパッシブモジュールです。使用するには、サーボをADDAC124 Plectrumsに接続する必要があります。",
+    "body": "WELCOME これはPlectrumモジュールです。各弦に1つのサーボを搭載しており、専用のプッシュボタン、トリガー入力、またはMIDIを通じて各弦を独立してはじくことができます。 Pluck（ピッキング）モードでは、サーボが約20度動き、弦を効果的にはじきます。 Harmonic（ハーモニクス）モードでは、サーボは約10度のみ動き、弦を軽くタップするために垂直位置で止まります。これによりハーモニクスが聴こえるようになります。このモードを有効にするには、弦の長さの半分、2/3、または3/4など、特定の位置にモジュールを配置する必要があります。 効果的な使用のために、最大3台のモジュールをデイジーチェーン接続することができます。1台が弦をはじき、他の2台が異なるハーモニクスを担当します。 モード切り替えのために4つのスイッチが3つの状態を持ちます: UP: トリガーとMIDI入力を無効にしますが、プッシュボタンによるPLECTRUMのトリガーは引き続き可能です。 MIDDLE: Pluck モード。すべての入力が有効です。 DOWN: Harmonic",
     "url": "/addac120s-strings/page/19"
+  },
+  {
+    "id": "20",
+    "pageNum": 20,
+    "title": "Page 20",
+    "sectionName": null,
+    "body": "MIDI TO PLECTRUMS MIDIデバイスに接続すると、モジュールはNOTEまたはCCメッセージを受信して、目的のプレクトラムをトリガーすることができます。 単一のMIDIを使用して最大3つのモジュールをデイジーチェーン接続することが可能で、すべてのモジュールをトリガーできます。 モジュールは、付属のケーブルを使用して背面のピンヘッダーで接続します。 すべてのMIDIチャンネルが有効です。 CCメッセージはCC1からCC12まで有効です。 MIDI NOTEはすべて有効で、どのオクターブの同じNOTEでも同じプレクトラムをトリガーします。 ADDAC124 MIDI IMPLEMENTATION MIDI IMPLEMENTATION SERVO 1 MODULE #1（1st in Chain） SERVO 2 SERVO 3 SERVO 4 MIDI CC: 1 / 2 / 3 / 4 MIDI NOTE（任意のオクターブ）: C / C# / D / D# SERVO 1 MODULE #2（2nd in Chain） SERVO 2 SERVO 3 SERVO 4",
+    "url": "/addac120s-strings/page/20"
+  },
+  {
+    "id": "21",
+    "pageNum": 21,
+    "title": "Page 21",
+    "sectionName": null,
+    "body": "ADDAC125 STRINGS MUTE INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
+    "url": "/addac120s-strings/page/21"
   },
   {
     "id": "22",
     "pageNum": 22,
     "title": "Page 22",
     "sectionName": null,
-    "body": "ADDAC126 ROTARY EXCITER ユーザーズガイド 10HP +12V 100mA 2026年5月 改訂版01 ようこそ: WELCOME このモジュールは7000 RPMのブラシレスモーターを搭載しており、対向する磁極を持つ4つのマグネットが取り付けられたサーフェスを回転させます。これにより回転磁場が生成され、回転速度がいずれかの弦のチューニングの周波数またはその倍音と一致するたびに、弦を振動させます。 [SPEED]ノブとCV入力により、モーター速度の非線形コントロールが可能です。",
+    "body": "ADDAC125 STRINGS MUTE ユーザーズガイド 10HP 100mA on +12V 2026年5月 リビジョン01 ようこそ: WELCOME このモジュールは、FenderのJaguarおよびBass VIギターの一部に見られるミュートシステムからインスパイアされています。フォームの一片を弦に押し当てることで弦の自然な振動を減衰させる仕組みで、標準的なパームミュートほど強くはありませんが、異なるトーンを実現します。 このモジュールでは、サーボモーターを使用してフォームの一片を上下させます。弦に軽く押し当てることで、弦の自然な振動をわずかに減衰させます。 標準的なパームミュートほど効果的ではありませんが、異なるトーンを自動化することが可能です。 最大限の効果を得るため、このモジュールはできるだけヘッドストックに近い位置に取り付ける必要があります。 これはパッシブモジュールです。使用するには、サーボをADDAC124 Plectrumsに接続する必要があります。",
     "url": "/addac120s-strings/page/22"
-  },
-  {
-    "id": "23",
-    "pageNum": 23,
-    "title": "Page 23",
-    "sectionName": null,
-    "body": "June.2026 USER'S GUIDE . REV01 ADDAC127 EBOW SLIDER INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
-    "url": "/addac120s-strings/page/23"
-  },
-  {
-    "id": "24",
-    "pageNum": 24,
-    "title": "Page 24",
-    "sectionName": null,
-    "body": "ADDAC127 EBOW SLIDER ユーザーズガイド 16HP パッシブモジュール 2026年5月 リビジョン.01 WELCOME このモジュールは、標準的なebowのハーネスとスライド機構を作成します。ユーザーが弦の下でebowを前後にスライドさせることができます。使用するebowには「PianoBow」改造（https://ebow.com/diy-mods）が施されており、弦の上をスライドさせる際に接触しないよう、ebowの足をサンドペーパーで削って低くし、弦に近づけるようにしています。 ebowの高さは、4つのつまみネジを使って上げ下げすることができます。 ebowはモジュールから取り外して別の用途に使用することもできますが、足がない状態では、通常のebowほどギターでの使用が容易ではありません。",
-    "url": "/addac120s-strings/page/24"
   },
   {
     "id": "25",
     "pageNum": 25,
     "title": "Page 25",
     "sectionName": null,
-    "body": "June.2026 USER'S GUIDE . REV01 ADDAC120F STRINGS FRAME INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
+    "body": "ADDAC126 ROTARY EXCITER ユーザーズガイド 10HP +12V 100mA 2026年5月 改訂版01 ようこそ: WELCOME このモジュールは7000 RPMのブラシレスモーターを搭載しており、対向する磁極を持つ4つのマグネットが取り付けられたサーフェスを回転させます。これにより回転磁場が生成され、回転速度がいずれかの弦のチューニングの周波数またはその倍音と一致するたびに、弦を振動させます。 [SPEED]ノブとCV入力により、モーター速度の非線形コントロールが可能です。",
     "url": "/addac120s-strings/page/25"
   },
   {
@@ -180,7 +180,7 @@
     "pageNum": 26,
     "title": "Page 26",
     "sectionName": null,
-    "body": "WELCOME ADDAC12X Stringモジュール専用に設計されたフレームです。 Width: 122HP Power Specifications: AC Input: 90v to 240v Output: ±12V Current: +12Vに1.5A、-12Vに1.5A 19コネクター搭載のBusboards Busboardはすでに+5Vを供給しています（+12Vから供給、Busboardあたり最大500mA） PSUは以下の状況に対するシャットダウン保護機能を備えています。 Over Current - 最大電流を超えた場合（モジュールのリボンケーブルが逆接続された場合など） Over Heating - AC Brickが過熱した場合 Over Voltage - 電圧が期待される出力値を上回るか下回る場合 これらの問題が発生した場合、PSUは問題が解決されるまで断続的なON/OFFの状態に入ります。 これらの安全保護機能により、PSUへのダメージ、ひいてはモジュールへのダメージを防ぐことができます。",
+    "body": "June.2026 USER'S GUIDE . REV01 ADDAC127 EBOW SLIDER INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
     "url": "/addac120s-strings/page/26"
   },
   {
@@ -188,7 +188,127 @@
     "pageNum": 27,
     "title": "Page 27",
     "sectionName": null,
-    "body": "フィードバック、コメント、または問題については、以下のアドレスまでお問い合わせください： addac@addacsystem.com ADDAC120s SERIES ユーザーガイド 2026年5月 Revision.01",
+    "body": "ADDAC127 EBOW SLIDER ユーザーズガイド 16HP パッシブモジュール 2026年5月 リビジョン.01 WELCOME このモジュールは、標準的なebowのハーネスとスライド機構を作成します。ユーザーが弦の下でebowを前後にスライドさせることができます。使用するebowには「PianoBow」改造（https://ebow.com/diy-mods）が施されており、弦の上をスライドさせる際に接触しないよう、ebowの足をサンドペーパーで削って低くし、弦に近づけるようにしています。 ebowの高さは、4つのつまみネジを使って上げ下げすることができます。 ebowはモジュールから取り外して別の用途に使用することもできますが、足がない状態では、通常のebowほどギターでの使用が容易ではありません。",
     "url": "/addac120s-strings/page/27"
+  },
+  {
+    "id": "28",
+    "pageNum": 28,
+    "title": "Page 28",
+    "sectionName": null,
+    "body": "ADDAC System Instruments for Sonic Expression Est.2009 INTRODUCING ADDAC128 FRETS USER’S GUIDE . REV01 August.2026 From Portugal with Love!",
+    "url": "/addac120s-strings/page/28"
+  },
+  {
+    "id": "29",
+    "pageNum": 29,
+    "title": "Page 29",
+    "sectionName": null,
+    "body": "Welcome to: ADDAC128 FRETS USER’S GUIDE Revision.01 August.2026 3HP Passive module WELCOME このモジュールは、フレーム上の任意の位置にフレット位置を作ります。意図したピッチの正しい位置へ置くにはチューナーが必要です。より多くの音のために、複数のモジュールを置けます。 各モジュールの高さは、前面の2本のネジで較正します。バズらないようにするには、各フレットを前のものよりわずかに低くする必要があります。プラスチックはわずかに変形し、最初のセットアップから戻らないことがあるため、最初に順序と高さを設定したら、次回以降も同じ順序を保ってください。このためのラベル用サークルを付属しています。",
+    "url": "/addac120s-strings/page/29"
+  },
+  {
+    "id": "30",
+    "pageNum": 30,
+    "title": "Page 30",
+    "sectionName": null,
+    "body": "ADDAC128 User’s Guide",
+    "url": "/addac120s-strings/page/30"
+  },
+  {
+    "id": "31",
+    "pageNum": 31,
+    "title": "Page 31",
+    "sectionName": null,
+    "body": "ADDAC System Instruments for Sonic Expression Est.2009 INTRODUCING ADDAC128M MICROTONAL FRETS USER’S GUIDE . REV01 August.2026 From Portugal with Love!",
+    "url": "/addac120s-strings/page/31"
+  },
+  {
+    "id": "32",
+    "pageNum": 32,
+    "title": "Page 32",
+    "sectionName": null,
+    "body": "Welcome to: ADDAC128M MICROTONAL FRETS USER’S GUIDE Revision.01 August.2026 3HP Passive module WELCOME このモジュールは、フレーム上の任意の位置にフレット位置を作ります。各モジュールには弦ごとの4つの独立したフレットがあり、2mm間隔の溝へ置けます。各フレットはスロットへ押し込む必要があり、意図したピッチの正しい位置にするにはチューナーが必要です。 複数のモジュールを使う場合、各モジュール全体の高さは前面の2本のネジで較正します。バズらないようにするには、各モジュールを前のものよりわずかに低くする必要があります。プラスチックはわずかに変形し、最初のセットアップから戻らないことがあるため、最初に順序と高さを設定したら、次回以降も同じ順序を保ってください。このためのラベル用サークルを付属しています。 Setup photo shown using ADDAC128 Frets",
+    "url": "/addac120s-strings/page/32"
+  },
+  {
+    "id": "33",
+    "pageNum": 33,
+    "title": "Page 33",
+    "sectionName": null,
+    "body": "ADDAC128M User’s Guide Setup photos shown using ADDAC128 Frets",
+    "url": "/addac120s-strings/page/33"
+  },
+  {
+    "id": "34",
+    "pageNum": 34,
+    "title": "Page 34",
+    "sectionName": null,
+    "body": "ADDAC System Instruments for Sonic Expression Est.2009 INTRODUCING ADDAC129 RESONATOR USER’S GUIDE . REV02 September.2026 From Portugal with Love!",
+    "url": "/addac120s-strings/page/34"
+  },
+  {
+    "id": "35",
+    "pageNum": 35,
+    "title": "Page 35",
+    "sectionName": null,
+    "body": "Welcome to: ADDAC129 RESONATOR USER’S GUIDE Revision.01 September.2026 0HP External Power Supply WELCOME ADDAC129は、Four String Seriesを物理的なレゾネーターへ拡張します。 トランスデューサー（振動スピーカー）がブリッジ端のレバーにスライドし、任意の音を弦へ伝え、それをピックアップが捉えます。 振動スピーカーは小さなモノアンプで駆動され、入力は任意の入力（synth/line）を受けます。 Volumeノブは入力オーディオを減衰します。使用するレベルには常に注意してください。ゲインステージングは重要で、大きい音量が必ずしもより良い出力になるわけではありません。経験則として、入力音量を下げ、ピックアップのゲインを上げる方がよい場合が一般的です。 入力にはADDAC121/122のピックアップ出力を入れてフィードバックシステムを作れます。外部オーディオを入れるとシステムはオーディオプロセッサーになり、外部ミキシングで両方を混ぜることもできます。",
+    "url": "/addac120s-strings/page/35"
+  },
+  {
+    "id": "36",
+    "pageNum": 36,
+    "title": "Page 36",
+    "sectionName": null,
+    "body": "ADDAC129 User’s Guide",
+    "url": "/addac120s-strings/page/36"
+  },
+  {
+    "id": "37",
+    "pageNum": 37,
+    "title": "Page 37",
+    "sectionName": null,
+    "body": "ADDAC System Instruments for Sonic Expression Est.2009 INTRODUCING ADDAC120PR PALM REST USER’S GUIDE . REV02 September.2026 From Portugal with Love!",
+    "url": "/addac120s-strings/page/37"
+  },
+  {
+    "id": "38",
+    "pageNum": 38,
+    "title": "Page 38",
+    "sectionName": null,
+    "body": "Welcome to: ADDAC120PR PALM REST USER’S GUIDE Revision.01 September.2026 6HP Passive module WELCOME このモジュールは、弦をフィンガーピッキングするときに手のひらを休められます。 モジュールはブリッジモジュールの上に置かれ、追加のHPスペースを取りません。",
+    "url": "/addac120s-strings/page/38"
+  },
+  {
+    "id": "39",
+    "pageNum": 39,
+    "title": "Page 39",
+    "sectionName": null,
+    "body": "ADDAC120PR User’s Guide",
+    "url": "/addac120s-strings/page/39"
+  },
+  {
+    "id": "40",
+    "pageNum": 40,
+    "title": "Page 40",
+    "sectionName": null,
+    "body": "June.2026 USER'S GUIDE . REV01 ADDAC120F STRINGS FRAME INTRODUCING From Portugal with Love! Instruments for Sonic Expression Est.2009",
+    "url": "/addac120s-strings/page/40"
+  },
+  {
+    "id": "41",
+    "pageNum": 41,
+    "title": "Page 41",
+    "sectionName": null,
+    "body": "WELCOME ADDAC12X Stringモジュール専用に設計されたフレームです。 Width: 122HP Power Specifications: AC Input: 90v to 240v Output: ±12V Current: +12Vに1.5A、-12Vに1.5A 19コネクター搭載のBusboards Busboardはすでに+5Vを供給しています（+12Vから供給、Busboardあたり最大500mA） PSUは以下の状況に対するシャットダウン保護機能を備えています。 Over Current - 最大電流を超えた場合（モジュールのリボンケーブルが逆接続された場合など） Over Heating - AC Brickが過熱した場合 Over Voltage - 電圧が期待される出力値を上回るか下回る場合 これらの問題が発生した場合、PSUは問題が解決されるまで断続的なON/OFFの状態に入ります。 これらの安全保護機能により、PSUへのダメージ、ひいてはモジュールへのダメージを防ぐことができます。",
+    "url": "/addac120s-strings/page/41"
+  },
+  {
+    "id": "42",
+    "pageNum": 42,
+    "title": "Page 42",
+    "sectionName": null,
+    "body": "フィードバック、コメント、または問題については、以下のアドレスまでお問い合わせください： addac@addacsystem.com ADDAC120s SERIES ユーザーガイド 2026年5月 Revision.01",
+    "url": "/addac120s-strings/page/42"
   }
 ]

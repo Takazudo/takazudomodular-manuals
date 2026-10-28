@@ -3,16 +3,16 @@
   "brand": "OXI Instruments",
   "productSlug": "oxi-e16",
   "version": "1.0.0",
-  "totalPages": 2,
-  "contentPages": 2,
-  "lastUpdated": "2026-07-11T23:49:29.189Z",
-  "updatedAt": "20260712",
+  "totalPages": 6,
+  "contentPages": 4,
+  "lastUpdated": "2026-10-28T23:21:29.031Z",
+  "updatedAt": "20261029",
   "source": {
     "filename": "OXI E16 - Quick Start.pdf",
-    "processedAt": "2026-07-11T23:49:27.487Z",
+    "processedAt": "2026-10-28T23:21:23.338Z",
     "imageDPI": 300,
     "imageFormat": "png"
   },
   "hasEnglish": true,
-  "searchIndexVersion": "cfd3b6d9a4fdf22d74f18eb07033386d8ee52b76"
+  "searchIndexVersion": "fabbfb645045391177ae0eff36e86f931d260959"
 }
