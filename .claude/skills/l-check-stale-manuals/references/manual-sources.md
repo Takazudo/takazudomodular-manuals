@@ -2,11 +2,11 @@
 
 Where each committed manual's currently-published revision lives, per brand — with access quirks and versioning schemes. Compiled from the issue #286 sweep (2026-07-30) and the RYK pass (#280–#283, 2026-07-29).
 
-**This registry is maintenance data, not gospel.** Manufacturers move files, change CMSes, and rename products. Whenever a sweep finds a URL dead, moved, or superseded, UPDATE THIS FILE in the same session — the corrected URL is as much a deliverable of the sweep as the verdict table. Every URL below carries an implicit "last verified" date of the sweep date above unless noted.
+**This registry is maintenance data, not gospel.** Manufacturers move files, change CMSes, and rename products. Whenever a sweep finds a URL dead, moved, or superseded, UPDATE THIS FILE in the same session — the corrected URL is as much a deliverable of the sweep as the verdict table. Every URL below carries an implicit "last verified" date of the sweep date above unless noted. Re-verified 2026-10-29 (issue #330); rows changed that day say so.
 
 ## Table of contents
 
-- [ADDAC System (23)](#addac-system-23)
+- [ADDAC System (25)](#addac-system-25)
 - [Weston Precision Audio (10)](#weston-precision-audio-10)
 - [OXI Instruments (7)](#oxi-instruments-7)
 - [AI Synthesis (6)](#ai-synthesis-6)
@@ -14,7 +14,7 @@ Where each committed manual's currently-published revision lives, per brand — 
 - [Recovery Effects And Devices (3)](#recovery-effects-and-devices-3)
 - [Single-manual brands (4)](#single-manual-brands-4)
 
-## ADDAC System (23)
+## ADDAC System (25)
 
 - **Site**: www.addacsystem.com — custom site (NOT Wix). User manuals are static links under `https://www.addacsystem.com/contents/productdownload/<FILENAME>.pdf`; DIY/assembly guides under `https://media.addacsystem.com/diy_guides/<MODULE>_DIYkit.pdf`.
 - **Versioning — two parallel schemes**: analogue modules print `Revision.NN` on the cover with a letter-generation filename suffix (`A_0`, `A_1`, `B_0`); microcontroller modules (ADDAC112, ADDAC207, ADDAC511) are **firmware-tied** — the product page lists one guide per firmware release (`FW1.6` … `FW2.0`) and keeps ALL older editions online. "Current" must be read from the newest product-page link text, never inferred from a filename.
@@ -24,12 +24,14 @@ Where each committed manual's currently-published revision lives, per brand — 
 | slug | product page | manual PDF (last known) |
 | --- | --- | --- |
 | addac104-tnetw | addacsystem.com/en/products/modules/addac100-series/addac104 | contents/productdownload/ADDAC104_VCTNet_A_1.pdf |
+| addac104-diy | same product page (addac-urls.json key `ADDAC104`) | media.addacsystem.com/diy_guides/ADDAC104_DIYkit.pdf — DIY guide, not the user's guide |
 | addac106-tnoise | .../addac100-series/addac106 | contents/productdownload/ADDAC106_TNoise_A_0.pdf |
 | addac107-acids | .../addac100-series/addac107 | contents/productdownload/ADDAC107_AcidSource_B_0.pdf |
 | addac112-looper | .../addac100-series/addac112 (siblings: addac112s, addac112sf share the guide) | contents/productdownload/ADDAC112_Granular_FW2.0.pdf — firmware-tied, newest link wins |
-| addac120s-strings | .../addac120-series/addac120qs (shared across 120QS/HS/MQS/MHS/BS) | contents/productdownload/ADDAC120s_FourStringsSeries_4854.pdf (alias suffix varies per page) |
+| addac120s-strings | .../addac120-series/addac120qs (120, 120F, 122, 124, and 125 each link this series user's guide) | contents/productdownload/ADDAC12X_Strings_REV02_8113_4253.pdf — REV02, August 2026 (was REV01 June 2026). `_4253` (120QS) and `_6311` (addac120) are the same bytes. The other pages use different trailing numbers on `REV02_8113`; those copies were not hashed |
+| addac120s-strings-summer | no `ADDAC120` key in addac-urls.json (local copy read 2026-10-29; the map was available and simply has no 120 entry). 120QS and the sibling pages it links do not expose a Summer Updates PDF | none — do not guess `ADDAC12X_Strings_SummerUpdates.pdf` |
 | addac200pi-pedal-diy | .../addac200-series/addac200pi | media.addacsystem.com/diy_guides/ADDAC200PI_DIYkit.pdf |
-| addac207-quantizer | .../addac200-series/addac207 | contents/productdownload/ADDAC_207_Quantizer_REV05.pdf — page also links superseded REV2/REV3 |
+| addac207-quantizer | .../addac200-series/addac207 | contents/productdownload/ADDAC_207_Quantizer_REV05.pdf — the user's guide. Page also links superseded REV2/REV3 and a different file, media.addacsystem.com/firmwares/ADDAC207_Firmware_Rev5.pdf (firmware doc, not this manual) |
 | addac210-open-heart | .../addac200-series/addac210 | contents/productdownload/ADDAC210_UsersGuide_web.pdf |
 | addac215-sh | .../addac200-series/addac215 | contents/productdownload/ADDAC215_S&H_A_1.pdf |
 | addac216-sumdiff | .../addac200-series/addac216 | contents/productdownload/ADDAC216_Sum&Dif_A_0.pdf (page also has a separate SignalFlow PDF — different doc, not ours) |
@@ -70,13 +72,14 @@ Where each committed manual's currently-published revision lives, per brand — 
 
 - **Site**: oxiinstruments.com — behind a **Cloudflare managed challenge**: plain curl and WebFetch get HTTP 403 ("Just a moment..."). Extract links by driving headless Chromium (Playwright) through the challenge. The PDFs themselves are ALL on **Google Drive** (not challenged) — download with curl via `https://drive.usercontent.google.com/download?id=<ID>&export=download&confirm=t`.
 - **Hub**: `oxiinstruments.com/support` carries every manual link; per-product pages (e.g. `/oxi-one/manual/`) mirror the same Drive IDs (occasionally different IDs pointing at byte-identical files).
-- **Versioning**: firmware/SW version + revision date printed on the title page, with an in-document changelog table. **Trap**: manuals are live Google Docs re-exported on demand — content can change with NO version bump (happened to oxi-one-mk1, 2026-05). The printed version alone is not a staleness signal; Drive `Last-Modified` and the PDF `Producer` (Skia milestone) reveal re-export recency.
+- **Versioning**: firmware/SW version + revision date printed on the title page, with an in-document changelog table. **Trap**: manuals are live Google Docs re-exported on demand — content can change with NO version bump (happened to oxi-one-mk1, 2026-05, and again to oxi-coral on 2026-10-29: cover still "USER GUIDE V 3.0", 31 pages of text differ). The printed version alone is not a staleness signal; Drive `Last-Modified` and the PDF `Producer` (Skia milestone) reveal re-export recency.
+- **Trap (2026-10-29)**: each support tab's full manual is the "DOWNLOAD PDF" link. Separate quick-guide links are different documents and are not the committed full manuals: MKII quick guide Drive `1gHs4WMUMcjbNVtf-sOKLEqMRWFSNsgKT` (no committed slug), Coral quick guide `172x4xSrMcH_UCIiH_4G5wBdlzqiNmZc5` (no committed slug).
 
 | slug | doc type | Drive file ID (last known) |
 | --- | --- | --- |
-| oxi-coral | user manual — v3.0 / firmware 3.0, visible revision 19 Jul 2026, 42 pp, sha256 `9c57491040d1…72d3`, retrieved 2026-10-03 (embedded PDF title `OXI CORAL User Manual v3.0 (draft)_rev2.docx`; firmware 3.0 release dated 30 Sep 2026 on oxiinstruments.com/support). Superseded v2.1 (20 Jan 2025, 46 pp) was `1Kokdq4KA3HYU9vBRl-gshFKkLov2fAR2` | 1c_xtj-bJgqSQy4lzuR_9yBNRW5MFefpo |
-| oxi-e16-manual | full user manual | 1yZn1i96nRkosn2o6eDlj5wzuErPQEe9N |
-| oxi-e16-quick-start | quick start | 1SxEcILmr1MZrjaKi4wOF50uw0nfB8med |
+| oxi-coral | user manual — cover still "USER GUIDE V 3.0", 42 pp. Drive id unchanged. As of 2026-10-29 the file sha256 is `955c4314eb8f…df15`; the 2026-10-03 file `9c57491040d1…72d3` is no longer what this id serves. Superseded v2.1 (20 Jan 2025, 46 pp) was `1Kokdq4KA3HYU9vBRl-gshFKkLov2fAR2` | 1c_xtj-bJgqSQy4lzuR_9yBNRW5MFefpo |
+| oxi-e16-manual | full user manual — cover "Official User Manual 1.3.0a", 138 pp (committed copy was v 0.6.1c, 78 pp). Drive id moved 2026-10-29 | 1bgwWzm3tE2K5uFbUXNGZo0DHjOaIeDW8 |
+| oxi-e16-quick-start | quick start — support-page label "OXI E16 QUICK GUIDE", 6 pp, body prints Version 1.3.0. Drive id moved 2026-10-29 | 1FP8lVvEXtWyX2H0Wseh2P4lcXTkKgi0l |
 | oxi-meta | user manual (committed as `oxi-meta.pdf`, served as `OXI META User Manual.pdf`) | 1y4BZ7m-dTG28XkOYqOYU11DmiV9_A8jz |
 | oxi-one-mk1-quick-guide | quick guide | 14zNjeBv3MyhB3nutKB2_0IouJcKF0Ing (product page uses a second, byte-identical ID) |
 | oxi-one-mk1 | full user manual | 18S9YaR88RzGbJc3eaflH6dNYpyFURrpj |
@@ -103,18 +106,18 @@ Known upstream quirk: the AI106 doc opens by calling itself the "AI022 Harmonic 
 
 ## RYK Modular (14)
 
-- **Site**: www.ryk-modular.com — product pages at `www.ryk-modular.com/product/<name>` (confirmed for time-slice in #280; verify the exact page slugs for the others on the next sweep and fill them in here).
+- **Site**: www.ryk-modular.com — product pages at `www.ryk-modular.com/product/<name>`. User-manual PDFs are not on those pages; they are Dropbox links on `/user-manuals`.
 - **Versioning**: firmware-tied for some products (Time Slice manual is titled by firmware, e.g. `TIME-SLICE-MANUAL_Firmware_V1_2.pdf`), plain doc versions for others (`ALGO-Manual-V1.pdf`, `ENVY-MACHINE-MANUAL-V1_4.pdf`).
-- **History**: verified 2026-07-29 in #280–#282; Time Slice was found a full revision stale (V1 20p → FW V1.2 24p) and refreshed in PR #283.
+- **History**: verified 2026-07-29 in #280–#282; Time Slice was found a full revision stale (V1 20p → FW V1.2 24p) and refreshed in PR #283. On 2026-10-29 the hub had renamed several files (`ALGO-_Manual_V1_S.pdf`, `NIGHT_RIDER_MANUAL_V1.pdf`, `Vector_Wave_Manual_V1.24.pdf`, `M185_Euro_Manual_V414.pdf`) but each sha256 matched the committed PDF. An unlabeled extra link `m185_euro_manual_v414.pdf` is a different file; the labeled "M185 Eurorack User Manual" is the matching one. The System 100m manual is a different document.
 
 | slug | product page | last known committed file |
 | --- | --- | --- |
-| ryk-algo | ryk-modular.com/product/… (verify) | ALGO-Manual-V1.pdf |
-| ryk-envy | ryk-modular.com/product/… (verify) | ENVY-MACHINE-MANUAL-V1_4.pdf |
-| ryk-m185 | ryk-modular.com/product/… (verify) | M185-Euro-Manual.pdf |
-| ryk-night-rider | ryk-modular.com/product/… (verify) | Night-Rider-Manual.pdf |
+| ryk-algo | ryk-modular.com/product/algo | ALGO-Manual-V1.pdf (hub file is now `ALGO-_Manual_V1_S.pdf`; bytes matched 2026-10-29) |
+| ryk-envy | ryk-modular.com/product/envy-machine | ENVY-MACHINE-MANUAL-V1_4.pdf |
+| ryk-m185 | ryk-modular.com/product/m185-sequencer-eurorack-module | M185-Euro-Manual.pdf (hub file is `M185_Euro_Manual_V414.pdf`; bytes matched 2026-10-29) |
+| ryk-night-rider | ryk-modular.com/product/night-rider-quad-sequential-resonator | Night-Rider-Manual.pdf (hub file is `NIGHT_RIDER_MANUAL_V1.pdf`; bytes matched 2026-10-29) |
 | ryk-time-slice | ryk-modular.com/product/time-slice | TIME-SLICE-MANUAL_Firmware_V1_2.pdf |
-| ryk-vector-wave | ryk-modular.com/product/… (verify) | Vector-Wave-Manual.pdf |
+| ryk-vector-wave | ryk-modular.com/product/vector-wave | Vector-Wave-Manual.pdf (hub file is `Vector_Wave_Manual_V1.24.pdf`; bytes matched 2026-10-29) |
 
 ### Kit construction documents (8)
 
@@ -155,6 +158,6 @@ Known upstream quirk: the AI106 doc opens by calling itself the "AI022 Harmonic 
 | slug | brand | source | versioning / notes |
 | --- | --- | --- | --- |
 | 4ms-leqa | 4ms | 4mscompany.com/leqa → 4mscompany.com/media/LEQA/Leveling-EQ-Amplifier-Manual-v1.0.pdf | Doc revision in filename + cover date. Large file (8.3 MB) — the server is slow; use `--max-time 500` and verify `size_download` against `Content-Length` (a 120 s timeout produced a silently truncated file once) |
-| wingie2 | Meng Qi | mengqimusic.com/wingie2-manual → `/s/Wingie2-Manual-v31-EN.pdf` (Squarespace, resolves to static1.squarespace.com) | Manual version tracks firmware (v3.1 ↔ FW V3.1, see mengqimusic.com/wingie2-firmware). Separate EN/CN editions — ours is EN. Image-based PDF: text extraction yields ~nothing, hash is the only comparison |
+| wingie2 | Meng Qi | mengqimusic.com/wingie2-manual now redirects to wingpinger.com/unlock (password gate). meng-qi-music.squarespace.com is expired. The old static1 v3.1 EN asset 404s (2026-10-29) | No current PDF could be downloaded. GitHub mengqimusic/Wingie2 publishes firmware v4.30 (2026-10-03) plus `MANUAL.en.md` / `MANUAL.zh.md`, not a PDF. Image-based committed PDF: do not treat empty text as content-equivalent. Ours is the EN edition |
 | mordax-data | Mordax | **mordax.net** (mordax.com is dead) — www.mordax.net/products/data → short link mordax.link/DATA_User_Guide → Google Drive ID 1DSUlA0fNyNqyg5bpD2xeuHEKmYQqyJry | Firmware-tied + date-stamped: cover prints `SYS V. / BOOT V. / Updated: YYMMDD`; product page names the current guide version ("Version 230310") next to the firmware version |
-| shik-n32b-slim | SHIK | shik.tech/n32b-resources/ → GitHub raw: github.com/Shik-Tech/public-resources → `N32B Slim MIDI Controller User Manual.pdf` (HEAD of main) | Unversioned document; freshness = whatever is at GitHub HEAD. The official site links the GitHub repo, so GitHub counts as manufacturer-official |
+| shik-n32b-slim | SHIK | shik.tech/n32b-resources/ is 404 (2026-10-29). The homepage "Manuals & Firmware Updates" link `/?page_id=7234` is also 404. GitHub raw still serves the file: `https://raw.githubusercontent.com/Shik-Tech/public-resources/main/N32B%20Slim%20MIDI%20Controller%20User%20Manual.pdf` (HEAD of main; repo listing confirms this filename, not the non-Slim manual beside it) | Unversioned document; freshness = whatever is at GitHub HEAD. Byte-identical to the committed PDF on 2026-10-29 |
