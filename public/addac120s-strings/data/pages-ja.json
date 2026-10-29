@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "processedAt": "2026-06-19T19:11:19.425Z",
+    "processedAt": "2026-10-28T23:26:01.875Z",
     "language": "ja",
     "translationMethod": "claude-code-subagent-page-by-page",
     "imageFormat": "png",
@@ -12,269 +12,419 @@
       "image": "/addac120s-strings/pages/page-001.png",
       "title": "Page 1",
       "sectionName": null,
-      "content": "June.2026\nUSER'S GUIDE . REV01\n\nADDAC120s\nFOUR STRINGS SERIES\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>June.2026\nUSER'S GUIDE . REV01</p>\n<p>ADDAC120s\nFOUR STRINGS SERIES</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "content": "ADDAC System\n\nInstruments for Sonic Expression\nEst.2009\n\nINTRODUCING\n\nADDAC120s\nFOUR STRINGS\nSERIES\n\nUSER’S GUIDE . REV02\nAugust.2026\n\nFrom Portugal with Love!",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC System</p>\n<p>Instruments for Sonic Expression\nEst.2009</p>\n<p>INTRODUCING</p>\n<p>ADDAC120s\nFOUR STRINGS\nSERIES</p>\n<p>USER’S GUIDE . REV02\nAugust.2026</p>\n<p>From Portugal with Love!</p>"
     },
     {
       "pageNum": 2,
       "image": "/addac120s-strings/pages/page-002.png",
       "title": "Page 2",
       "sectionName": null,
-      "content": "ようこそ\n\nWELCOME\n\nこの新しいモジュールセットをご紹介できることを嬉しく思います。このモジュールは、ユーザーがさまざまな視点から物理的な弦を探求・体験し、創造的な実験を促進できるオープンなキャンバスとして設計されています。\n\nこのコンセプトは、ラップスチールギターやダルシマーのように、物理的な弦をEurorackに組み込みたいという思いから生まれました。どのようなEurorackフレームにもシームレスに統合できます。このデザインにはフレットボードがなく、いくつかの制限はありますが、弦の下に他のモジュールを設置して使用することができます。\n\nまずヘッドストックとブリッジを開発し、弦を十分に持ち上げて下部に他のモジュールを収納できるクリアランスを確保しました。次に、エレキギターと同様に弦の音をキャプチャできるハムバッカーモジュールを開発しました。標準的なハムバッカーの限界から、各弦に1つのピックアップを持つクアドラフォニック構成の独自ピックアップを開発し、弦ごとの独立したボリュームコントロールを実現しました。\n\nその後、機械的なオートメーションの探求に移り、各弦を独立してはじくことができるプレクトラムモジュールを開発しました。この開発過程で、Fenderミュートやパームミュートのようにギターで行うのと同様に弦の自然な振動を抑制するミュートモジュールも制作しました。このモジュールは機械的なオートメーションも可能です。\n\n次に、弦エキサイターの探求に移り、モーターの回転速度と同じ周波数の弦を励振する回転磁場を生成するロータリーエキサイターを開発しました。\n\n最後に、Ebow スライダーはEbowを使用して任意の弦を励振するためのハーネスとスライド機構を作成します。\n\nこの過程で、他にもいくつかの便利なアタッチメントも設計しました。\n\nヘッドストックアーチはヘッドストックに取り付けて中央の2本の弦を持ち上げ、ボウを使って全ての弦に個別にアクセスできるようにします。\n\n小さなプラスチック製のレゾネーターを弦に取り付けることで、複雑なベル系の音に近い新しいハーモニクスを生み出します。\n\nまた、これらすべてのモジュールを収容できる新しい122HPフレームも設計し、システム全体が独立して動作できるようにしました。このフレームに専用の電源を内蔵することで、モーターが発生する可能性のある残留ノイズによる汚染を防ぎます。\n\nこのシステムはDIYプロジェクトにも対応しており、フレームの代替を自作することも可能です。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ようこそ</p>\n<p>WELCOME</p>\n<p>この新しいモジュールセットをご紹介できることを嬉しく思います。このモジュールは、ユーザーがさまざまな視点から物理的な弦を探求・体験し、創造的な実験を促進できるオープンなキャンバスとして設計されています。</p>\n<p>このコンセプトは、ラップスチールギターやダルシマーのように、物理的な弦をEurorackに組み込みたいという思いから生まれました。どのようなEurorackフレームにもシームレスに統合できます。このデザインにはフレットボードがなく、いくつかの制限はありますが、弦の下に他のモジュールを設置して使用することができます。</p>\n<p>まずヘッドストックとブリッジを開発し、弦を十分に持ち上げて下部に他のモジュールを収納できるクリアランスを確保しました。次に、エレキギターと同様に弦の音をキャプチャできるハムバッカーモジュールを開発しました。標準的なハムバッカーの限界から、各弦に1つのピックアップを持つクアドラフォニック構成の独自ピックアップを開発し、弦ごとの独立したボリュームコントロールを実現しました。</p>\n<p>その後、機械的なオートメーションの探求に移り、各弦を独立してはじくことができるプレクトラムモジュールを開発しました。この開発過程で、Fenderミュートやパームミュートのようにギターで行うのと同様に弦の自然な振動を抑制するミュートモジュールも制作しました。このモジュールは機械的なオートメーションも可能です。</p>\n<p>次に、弦エキサイターの探求に移り、モーターの回転速度と同じ周波数の弦を励振する回転磁場を生成するロータリーエキサイターを開発しました。</p>\n<p>最後に、Ebow スライダーはEbowを使用して任意の弦を励振するためのハーネスとスライド機構を作成します。</p>\n<p>この過程で、他にもいくつかの便利なアタッチメントも設計しました。</p>\n<p>ヘッドストックアーチはヘッドストックに取り付けて中央の2本の弦を持ち上げ、ボウを使って全ての弦に個別にアクセスできるようにします。</p>\n<p>小さなプラスチック製のレゾネーターを弦に取り付けることで、複雑なベル系の音に近い新しいハーモニクスを生み出します。</p>\n<p>また、これらすべてのモジュールを収容できる新しい122HPフレームも設計し、システム全体が独立して動作できるようにしました。このフレームに専用の電源を内蔵することで、モーターが発生する可能性のある残留ノイズによる汚染を防ぎます。</p>\n<p>このシステムはDIYプロジェクトにも対応しており、フレームの代替を自作することも可能です。</p>"
+      "content": "Welcome to:\n\nADDAC120s FOUR STRINGS SERIES　USER’S GUIDE\n\nRevision.02　August.2026\n\nWELCOME\n\nさまざまな視点から物理的な弦に触れ、創造的な実験を促すオープンなキャンバスとして設計された、この新しいモジュールセットをご紹介します。\n\nこのコンセプトは、ラップスチールギターやダルシマーのように、物理的な弦をEurorackへ取り込み、どのEurorackフレームにもシームレスに組み込めるようにしたいという思いから生まれました。このデザインにはフレットボードがなく、いくつかの制約はありますが、弦の下に他のモジュールを取り付けて使用できます。\n\nまずヘッドストックとブリッジを開発し、下に他のモジュールを置けるだけのクリアランスができるように弦を十分に持ち上げました。その後、エレキギターと同じように弦の音を捉えられるHumbuckerモジュールを開発しました。標準的なHumbuckerの制約から、弦ごとに1つのピックアップを持つクアドラフォニック構成の独自ピックアップを開発し、弦ごとの音量を独立してコントロールできるようにしました。\n\n次に機械的なオートメーションの探求へ進み、各弦を独立して弾けるPlectrumモジュールを開発しました。その開発中に、ギターのFender muteやパームミュートのように弦の自然な振動を抑えつつ、機械的なオートメーションを可能にするMuteモジュールも作りました。\n\nさらに弦のエキサイターの探求へ進み、モーターの回転速度と同じ周波数にある弦を励起する、回転する磁場を発生させるRotary Exciterを開発しました。\n\n最後に、Ebow Sliderはハーネスとスライド機構を作り、Ebowで任意の弦を励起できるようにします。\n\nその過程で、他にもいくつかの便利なアタッチメントを設計しました。\nヘッドストックアーチはヘッドストックに取り付け、中央の2本の弦を持ち上げ、弓ですべての弦に個別に届くようにします。\n小さなプラスチックのレゾネーターは弦に取り付け、複雑なベル系の音色に近い新しい倍音を作ります。\n\nこれらすべてのモジュールを収められる新しい122HPフレームも作り、システム全体を独立して動作させられるようにしました。このフレームに専用電源を内蔵することで、モーターが発生しうる残留ノイズの混入を防ぐのに役立ちます。\n\nこのシステムはDIYのビルドプロジェクトとしても実装でき、フレームに代わる独自の構成を作れます。",
+      "hasContent": true,
+      "contentHtml": "<p>Welcome to:</p>\n<p>ADDAC120s FOUR STRINGS SERIES　USER’S GUIDE</p>\n<p>Revision.02　August.2026</p>\n<p>WELCOME</p>\n<p>さまざまな視点から物理的な弦に触れ、創造的な実験を促すオープンなキャンバスとして設計された、この新しいモジュールセットをご紹介します。</p>\n<p>このコンセプトは、ラップスチールギターやダルシマーのように、物理的な弦をEurorackへ取り込み、どのEurorackフレームにもシームレスに組み込めるようにしたいという思いから生まれました。このデザインにはフレットボードがなく、いくつかの制約はありますが、弦の下に他のモジュールを取り付けて使用できます。</p>\n<p>まずヘッドストックとブリッジを開発し、下に他のモジュールを置けるだけのクリアランスができるように弦を十分に持ち上げました。その後、エレキギターと同じように弦の音を捉えられるHumbuckerモジュールを開発しました。標準的なHumbuckerの制約から、弦ごとに1つのピックアップを持つクアドラフォニック構成の独自ピックアップを開発し、弦ごとの音量を独立してコントロールできるようにしました。</p>\n<p>次に機械的なオートメーションの探求へ進み、各弦を独立して弾けるPlectrumモジュールを開発しました。その開発中に、ギターのFender muteやパームミュートのように弦の自然な振動を抑えつつ、機械的なオートメーションを可能にするMuteモジュールも作りました。</p>\n<p>さらに弦のエキサイターの探求へ進み、モーターの回転速度と同じ周波数にある弦を励起する、回転する磁場を発生させるRotary Exciterを開発しました。</p>\n<p>最後に、Ebow Sliderはハーネスとスライド機構を作り、Ebowで任意の弦を励起できるようにします。</p>\n<p>その過程で、他にもいくつかの便利なアタッチメントを設計しました。\nヘッドストックアーチはヘッドストックに取り付け、中央の2本の弦を持ち上げ、弓ですべての弦に個別に届くようにします。\n小さなプラスチックのレゾネーターは弦に取り付け、複雑なベル系の音色に近い新しい倍音を作ります。</p>\n<p>これらすべてのモジュールを収められる新しい122HPフレームも作り、システム全体を独立して動作させられるようにしました。このフレームに専用電源を内蔵することで、モーターが発生しうる残留ノイズの混入を防ぐのに役立ちます。</p>\n<p>このシステムはDIYのビルドプロジェクトとしても実装でき、フレームに代わる独自の構成を作れます。</p>"
     },
     {
       "pageNum": 3,
       "image": "/addac120s-strings/pages/page-003.png",
       "title": "Page 3",
       "sectionName": null,
-      "content": "モジュール概要\n\nADDAC120 HEADSTOCK & BRIDGE\n\nこれはStringモジュールシリーズの基盤となるモジュールで、Headstock & Bridgeモジュールです。ゲージが0.055までの弦に対応しています。\n\nより太い弦を使用したい場合は、穴を広げることも可能です。\n\n両パネルは強度確保のため2mmのステンレス鋼製です。\n\nHeadstockには4つのロッキングチューナーを搭載しており、弦の取り付けが容易です。\n\nADDAC121 HUMBUCKER\n\nシンプルなHumbuckerピックアップモジュールです。ToneコントロールとVolumeコントロール、そしてサチュレーション用のLOW/HIGHゲインスイッチを備えています。\n\n内蔵プリアンプによって音量がシンセレベルまで引き上げられます。\n\nピックアップの高さはマウントスクリューで調整可能です。\n\nピックアップを取り外して手持ちで使用することもできます。\n\nADDAC122 QUADRAPHONIC PICKUP\n\nQuadraphonic PickupモジュールはQuadraphonic方式のピックアップで、4つの独立したピックアップを備えています。それぞれに専用のプリアンプ、独立したVolumeコントロール、および出力ジャックが付いています。\n\nMono Mix出力（Volumeポスト）も利用可能です。\n\nすべての出力はシンセレベルです。\n\nピックアップの高さはマウントスクリューで調整可能です。\n\nADDAC124 PLECTRUMS\n\nPlectrumモジュールは弦ごとにサーボモーターを搭載しており、各弦を個別にはじくことができます。専用のプッシュボタン、入力トリガー、またはMIDIで操作可能です。\n\nADDAC125 STRINGS MUTE\n\nこのモジュールはFenderのMuteシステムからインスピレーションを得たもので、一部のJaguarおよびBass VIギターに採用されているシステムです。フォームを弦に押し当てることで、弦の自然な振動を減衰させます。\n\nこのモジュールではサーボモーターを使用してフォームを上下させ、弦に軽く押し当てることで自然な振動を適度に減衰させます。\n\n通常のパームミュートほど効果的ではありませんが、自動化できる異なるトーンを実現することができます。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>モジュール概要</p>\n<p>ADDAC120 HEADSTOCK &#x26; BRIDGE</p>\n<p>これはStringモジュールシリーズの基盤となるモジュールで、Headstock &#x26; Bridgeモジュールです。ゲージが0.055までの弦に対応しています。</p>\n<p>より太い弦を使用したい場合は、穴を広げることも可能です。</p>\n<p>両パネルは強度確保のため2mmのステンレス鋼製です。</p>\n<p>Headstockには4つのロッキングチューナーを搭載しており、弦の取り付けが容易です。</p>\n<p>ADDAC121 HUMBUCKER</p>\n<p>シンプルなHumbuckerピックアップモジュールです。ToneコントロールとVolumeコントロール、そしてサチュレーション用のLOW/HIGHゲインスイッチを備えています。</p>\n<p>内蔵プリアンプによって音量がシンセレベルまで引き上げられます。</p>\n<p>ピックアップの高さはマウントスクリューで調整可能です。</p>\n<p>ピックアップを取り外して手持ちで使用することもできます。</p>\n<p>ADDAC122 QUADRAPHONIC PICKUP</p>\n<p>Quadraphonic PickupモジュールはQuadraphonic方式のピックアップで、4つの独立したピックアップを備えています。それぞれに専用のプリアンプ、独立したVolumeコントロール、および出力ジャックが付いています。</p>\n<p>Mono Mix出力（Volumeポスト）も利用可能です。</p>\n<p>すべての出力はシンセレベルです。</p>\n<p>ピックアップの高さはマウントスクリューで調整可能です。</p>\n<p>ADDAC124 PLECTRUMS</p>\n<p>Plectrumモジュールは弦ごとにサーボモーターを搭載しており、各弦を個別にはじくことができます。専用のプッシュボタン、入力トリガー、またはMIDIで操作可能です。</p>\n<p>ADDAC125 STRINGS MUTE</p>\n<p>このモジュールはFenderのMuteシステムからインスピレーションを得たもので、一部のJaguarおよびBass VIギターに採用されているシステムです。フォームを弦に押し当てることで、弦の自然な振動を減衰させます。</p>\n<p>このモジュールではサーボモーターを使用してフォームを上下させ、弦に軽く押し当てることで自然な振動を適度に減衰させます。</p>\n<p>通常のパームミュートほど効果的ではありませんが、自動化できる異なるトーンを実現することができます。</p>"
+      "content": "ADDAC120s Four Strings System User’s Guide\n\nMODULES BRIEF INTRODUCTION\n\nADDAC120 HEADSTOCK & BRIDGE\nADDAC120B BASS HEADSTOCK & BRIDGE\n\nこれは当社のStringモジュールの基礎となる、Headstock & Bridgeモジュールで、0.055または0.110までの弦ゲージに対応します。\nより太い弦に合うよう、これらの穴を大きくすることもできます。\n両方のパネルは強度のため2mmのステンレス鋼です。\nADDAC120のヘッドストックには、弦の取り付けを容易にする4つのロッキングチューナーがあります。\n\nADDAC121 HUMBUCKER\n\nこれはシンプルなHumbuckerピックアップモジュールです。\nToneとVolumeのコントロールに加え、サチュレーション用のLOW/HIGHゲインスイッチを備えています。\n内蔵プリアンプが音量をシンセレベルまで持ち上げます。\nピックアップの高さは取り付けネジで調整できます。\nピックアップは取り外して、手で使うこともできます。\n\nADDAC122 QUADRAPHONIC PICKUP\n\nこれはクアドラフォニックピックアップで、それぞれ独自のプリアンプ、独立したVolumeコントロール、出力ジャックを持つ4つの独立したピックアップです。\nMono Mix出力（ボリューム後）も利用できます。\nすべての出力はシンセレベルです。\nピックアップの高さは取り付けネジで調整できます。\n\nADDAC124 PLECTRUMS\n\nこれはPlectrumモジュールで、弦ごとにサーボを備え、専用のプッシュボタン、入力トリガー、またはMIDIから各弦を独立して弾けます。\n\nADDAC125 STRINGS MUTE\n\nこのモジュールは、一部のJaguarおよびBass VIギターにあるFenderのMuteシステムに着想を得ています。そこではフォームを弦に押し当て、自然な振動を抑えられます。\nこのモジュールではサーボモーターを使い、フォームを上下させます。弦に押し当てると、自然な振動を軽く抑えます。\n標準的なパームミュートほど効果的ではありませんが、別の音色を自動化できます。",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC120s Four Strings System User’s Guide</p>\n<p>MODULES BRIEF INTRODUCTION</p>\n<p>ADDAC120 HEADSTOCK &#x26; BRIDGE\nADDAC120B BASS HEADSTOCK &#x26; BRIDGE</p>\n<p>これは当社のStringモジュールの基礎となる、Headstock &#x26; Bridgeモジュールで、0.055または0.110までの弦ゲージに対応します。\nより太い弦に合うよう、これらの穴を大きくすることもできます。\n両方のパネルは強度のため2mmのステンレス鋼です。\nADDAC120のヘッドストックには、弦の取り付けを容易にする4つのロッキングチューナーがあります。</p>\n<p>ADDAC121 HUMBUCKER</p>\n<p>これはシンプルなHumbuckerピックアップモジュールです。\nToneとVolumeのコントロールに加え、サチュレーション用のLOW/HIGHゲインスイッチを備えています。\n内蔵プリアンプが音量をシンセレベルまで持ち上げます。\nピックアップの高さは取り付けネジで調整できます。\nピックアップは取り外して、手で使うこともできます。</p>\n<p>ADDAC122 QUADRAPHONIC PICKUP</p>\n<p>これはクアドラフォニックピックアップで、それぞれ独自のプリアンプ、独立したVolumeコントロール、出力ジャックを持つ4つの独立したピックアップです。\nMono Mix出力（ボリューム後）も利用できます。\nすべての出力はシンセレベルです。\nピックアップの高さは取り付けネジで調整できます。</p>\n<p>ADDAC124 PLECTRUMS</p>\n<p>これはPlectrumモジュールで、弦ごとにサーボを備え、専用のプッシュボタン、入力トリガー、またはMIDIから各弦を独立して弾けます。</p>\n<p>ADDAC125 STRINGS MUTE</p>\n<p>このモジュールは、一部のJaguarおよびBass VIギターにあるFenderのMuteシステムに着想を得ています。そこではフォームを弦に押し当て、自然な振動を抑えられます。\nこのモジュールではサーボモーターを使い、フォームを上下させます。弦に押し当てると、自然な振動を軽く抑えます。\n標準的なパームミュートほど効果的ではありませんが、別の音色を自動化できます。</p>"
     },
     {
       "pageNum": 4,
       "image": "/addac120s-strings/pages/page-004.png",
       "title": "Page 4",
       "sectionName": null,
-      "content": "MODULES BRIEF INTRODUCTION\n\nADDAC126 ROTARY EXCITER\n\nこのモジュールは、7000 RPMのブラシレスモーターを搭載しており、対向した磁極を持つ4つのマグネットが取り付けられた面を回転させます。これにより回転磁場が生成され、回転速度がいずれかの弦の調律周波数またはその倍音と一致したとき、弦が振動します。\n\nADDAC127 EBOW SLIDER\n\nこのモジュールは、標準的なEBowを固定するハーネスとスライド機構を備えています。ユーザーはEBowを弦の下で前後にスライドさせることができます。使用するEBowには「PianoBow」改造（https://ebow.com/diy-mods）が施されており、弦の下をスライドさせる際に弦に触れないよう、EBowの脚部を削り取ってより近づけられるようにしています。\n\nEBowの高さは、4つのサムスクリューを使って上下に調整することができます。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>MODULES BRIEF INTRODUCTION</p>\n<p>ADDAC126 ROTARY EXCITER</p>\n<p>このモジュールは、7000 RPMのブラシレスモーターを搭載しており、対向した磁極を持つ4つのマグネットが取り付けられた面を回転させます。これにより回転磁場が生成され、回転速度がいずれかの弦の調律周波数またはその倍音と一致したとき、弦が振動します。</p>\n<p>ADDAC127 EBOW SLIDER</p>\n<p>このモジュールは、標準的なEBowを固定するハーネスとスライド機構を備えています。ユーザーはEBowを弦の下で前後にスライドさせることができます。使用するEBowには「PianoBow」改造（<a href=\"https://ebow.com/diy-mods\">https://ebow.com/diy-mods</a>）が施されており、弦の下をスライドさせる際に弦に触れないよう、EBowの脚部を削り取ってより近づけられるようにしています。</p>\n<p>EBowの高さは、4つのサムスクリューを使って上下に調整することができます。</p>"
+      "content": "ADDAC120s Four Strings System User’s Guide\n\nMODULES BRIEF INTRODUCTION\n\nADDAC126 ROTARY EXCITER\n\nこのモジュールは7000 RPMのブラシレスモーターを備え、対向する磁極を持つ4つの磁石が付いた面を回転させます。生じる回転磁場は、回転速度がいずれかの弦のチューニングの周波数または倍音と一致すると、弦を振動させます。\n\nADDAC127 EBOW SLIDER\n\nこのモジュールは、標準的なEbow用のハーネスとスライド機構を作ります。弦の下でEbowを前後にスライドできます。使用するEbowは「PianoBow」改造（https://ebow.com/diy-mods）を施したもので、Ebowの足を削り、より近づけつつ、前後にスライドするときに弦へ触れないようにしています。\nEbowの高さは4本のサムスクリューで上げ下げできます。\n\nADDAC128 FRETS & ADDAC128M MICROTONAL\n\nこれらのモジュールは、フレーム上の任意の位置にフレット位置を作ります。意図したピッチの正しい位置へ置くにはチューナーが必要です。より多くの音のために、複数のモジュールを置けます。\n\nADDAC129 RESONATOR\n\nADDAC129は、Four String Seriesを物理的なレゾネーターへ拡張します。\n振動スピーカーがブリッジ端のレバーにスライドし、任意の音を弦へ伝え、それをピックアップが捉えます。\n振動スピーカーは小さなモノアンプで駆動され、入力は任意の入力（synth/line）を受けます。Volumeノブは入力オーディオを減衰します。\n\nADDAC120PR PALM REST\n\nこのモジュールは、弦をフィンガーピッキングするときに手のひらを休められます。\nモジュールは、他のモジュールの上を含め、フレーム上の任意の位置に置けます。",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC120s Four Strings System User’s Guide</p>\n<p>MODULES BRIEF INTRODUCTION</p>\n<p>ADDAC126 ROTARY EXCITER</p>\n<p>このモジュールは7000 RPMのブラシレスモーターを備え、対向する磁極を持つ4つの磁石が付いた面を回転させます。生じる回転磁場は、回転速度がいずれかの弦のチューニングの周波数または倍音と一致すると、弦を振動させます。</p>\n<p>ADDAC127 EBOW SLIDER</p>\n<p>このモジュールは、標準的なEbow用のハーネスとスライド機構を作ります。弦の下でEbowを前後にスライドできます。使用するEbowは「PianoBow」改造（<a href=\"https://ebow.com/diy-mods\">https://ebow.com/diy-mods</a>）を施したもので、Ebowの足を削り、より近づけつつ、前後にスライドするときに弦へ触れないようにしています。\nEbowの高さは4本のサムスクリューで上げ下げできます。</p>\n<p>ADDAC128 FRETS &#x26; ADDAC128M MICROTONAL</p>\n<p>これらのモジュールは、フレーム上の任意の位置にフレット位置を作ります。意図したピッチの正しい位置へ置くにはチューナーが必要です。より多くの音のために、複数のモジュールを置けます。</p>\n<p>ADDAC129 RESONATOR</p>\n<p>ADDAC129は、Four String Seriesを物理的なレゾネーターへ拡張します。\n振動スピーカーがブリッジ端のレバーにスライドし、任意の音を弦へ伝え、それをピックアップが捉えます。\n振動スピーカーは小さなモノアンプで駆動され、入力は任意の入力（synth/line）を受けます。Volumeノブは入力オーディオを減衰します。</p>\n<p>ADDAC120PR PALM REST</p>\n<p>このモジュールは、弦をフィンガーピッキングするときに手のひらを休められます。\nモジュールは、他のモジュールの上を含め、フレーム上の任意の位置に置けます。</p>"
     },
     {
       "pageNum": 5,
       "image": "/addac120s-strings/pages/page-005.png",
       "title": "Page 5",
       "sectionName": null,
-      "content": "STRING SYSTEMS\n\nここでは、パックとして販売されている3つの厳選システムをご紹介します。\n\nスタンドアロンシステムは組み立て済みの状態で出荷されます。\n\nSTRINGS BASIC SYSTEM（フレームなし）\n\nSTRINGS HUMBUCKER SYSTEM（122HP または 197HP フレーム付き）\n\nSTRINGS QUADRAPHONIC SYSTEM（122HP または 197HP フレーム付き）",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>STRING SYSTEMS</p>\n<p>ここでは、パックとして販売されている3つの厳選システムをご紹介します。</p>\n<p>スタンドアロンシステムは組み立て済みの状態で出荷されます。</p>\n<p>STRINGS BASIC SYSTEM（フレームなし）</p>\n<p>STRINGS HUMBUCKER SYSTEM（122HP または 197HP フレーム付き）</p>\n<p>STRINGS QUADRAPHONIC SYSTEM（122HP または 197HP フレーム付き）</p>"
+      "content": "ADDAC120s Four Strings System User’s Guide",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC120s Four Strings System User’s Guide</p>"
     },
     {
       "pageNum": 6,
       "image": "/addac120s-strings/pages/page-006.png",
       "title": "Page 6",
       "sectionName": null,
-      "content": "ADDAC120\n\nHEADSTOCK & BRIDGE\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC120</p>\n<p>HEADSTOCK &#x26; BRIDGE</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "content": "STRING SYSTEMS\n\nここでは、パックとして販売されている3つの厳選システムをご紹介します。\n\nスタンドアロンシステムは組み立て済みの状態で出荷されます。\n\nSTRINGS BASIC SYSTEM（フレームなし）\n\nSTRINGS HUMBUCKER SYSTEM（122HP または 197HP フレーム付き）\n\nSTRINGS QUADRAPHONIC SYSTEM（122HP または 197HP フレーム付き）",
+      "hasContent": true,
+      "contentHtml": "<p>STRING SYSTEMS</p>\n<p>ここでは、パックとして販売されている3つの厳選システムをご紹介します。</p>\n<p>スタンドアロンシステムは組み立て済みの状態で出荷されます。</p>\n<p>STRINGS BASIC SYSTEM（フレームなし）</p>\n<p>STRINGS HUMBUCKER SYSTEM（122HP または 197HP フレーム付き）</p>\n<p>STRINGS QUADRAPHONIC SYSTEM（122HP または 197HP フレーム付き）</p>"
     },
     {
       "pageNum": 7,
       "image": "/addac120s-strings/pages/page-007.png",
       "title": "Page 7",
       "sectionName": null,
-      "content": "WELCOME\n\nこれは私たちのStringモジュールの基盤となるHeadstock & Bridgeモジュールです。.055までのゲージのストリングに対応しています。\n\nストリングはギターと同様の方法でインストールします。ユーザーはどのストリングを使用するか、またどのチューニングを使用するかを自由に選択できます。\n\nHeadstockには4つのロッキングチューナーが搭載されており、ストリングのインストールが容易です。\n\nより太いストリングを取り付けるために、ストリングホールを大きくすることもできます。\n\n両パネルは強度のために2mmのステンレス鋼製です。\n\n同梱の追加パーツ\n\nストリングセット .010 〜 .046\n\nBow Archアタッチメント\n\nSmall resonators\n\nHEADSTOCK 17HP\n\nBRIDGE 6HP",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>WELCOME</p>\n<p>これは私たちのStringモジュールの基盤となるHeadstock &#x26; Bridgeモジュールです。.055までのゲージのストリングに対応しています。</p>\n<p>ストリングはギターと同様の方法でインストールします。ユーザーはどのストリングを使用するか、またどのチューニングを使用するかを自由に選択できます。</p>\n<p>Headstockには4つのロッキングチューナーが搭載されており、ストリングのインストールが容易です。</p>\n<p>より太いストリングを取り付けるために、ストリングホールを大きくすることもできます。</p>\n<p>両パネルは強度のために2mmのステンレス鋼製です。</p>\n<p>同梱の追加パーツ</p>\n<p>ストリングセット .010 〜 .046</p>\n<p>Bow Archアタッチメント</p>\n<p>Small resonators</p>\n<p>HEADSTOCK 17HP</p>\n<p>BRIDGE 6HP</p>"
+      "content": "ADDAC120\n\nHEADSTOCK & BRIDGE\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC120</p>\n<p>HEADSTOCK &#x26; BRIDGE</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 8,
       "image": "/addac120s-strings/pages/page-008.png",
       "title": "Page 8",
       "sectionName": null,
-      "content": "BOW ARCH ATTACHMENT\n\nこのアタッチメントは2本の中央の弦を持ち上げることで、弓が各弦に個別に届くようにします。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>BOW ARCH ATTACHMENT</p>\n<p>このアタッチメントは2本の中央の弦を持ち上げることで、弓が各弦に個別に届くようにします。</p>"
+      "content": "WELCOME\n\nこれは私たちのStringモジュールの基盤となるHeadstock & Bridgeモジュールです。.055までのゲージのストリングに対応しています。\n\nストリングはギターと同様の方法でインストールします。ユーザーはどのストリングを使用するか、またどのチューニングを使用するかを自由に選択できます。\n\nHeadstockには4つのロッキングチューナーが搭載されており、ストリングのインストールが容易です。\n\nより太いストリングを取り付けるために、ストリングホールを大きくすることもできます。\n\n両パネルは強度のために2mmのステンレス鋼製です。\n\n同梱の追加パーツ\n\nストリングセット .010 〜 .046\n\nBow Archアタッチメント\n\nSmall resonators\n\nHEADSTOCK 17HP\n\nBRIDGE 6HP",
+      "hasContent": true,
+      "contentHtml": "<p>WELCOME</p>\n<p>これは私たちのStringモジュールの基盤となるHeadstock &#x26; Bridgeモジュールです。.055までのゲージのストリングに対応しています。</p>\n<p>ストリングはギターと同様の方法でインストールします。ユーザーはどのストリングを使用するか、またどのチューニングを使用するかを自由に選択できます。</p>\n<p>Headstockには4つのロッキングチューナーが搭載されており、ストリングのインストールが容易です。</p>\n<p>より太いストリングを取り付けるために、ストリングホールを大きくすることもできます。</p>\n<p>両パネルは強度のために2mmのステンレス鋼製です。</p>\n<p>同梱の追加パーツ</p>\n<p>ストリングセット .010 〜 .046</p>\n<p>Bow Archアタッチメント</p>\n<p>Small resonators</p>\n<p>HEADSTOCK 17HP</p>\n<p>BRIDGE 6HP</p>"
     },
     {
       "pageNum": 9,
       "image": "/addac120s-strings/pages/page-009.png",
       "title": "Page 9",
       "sectionName": null,
-      "content": "SMALL RESONATORS\n\nこれらは非常にシンプルながら、巻きのない弦にハーモニクスを加える点において非常に効果的です。弦に取り付けられたResonatorの数だけ新しい倍音が追加され、ピースを増やすほど倍音が増え、音色はより複雑になっていきます。\n\n各ハーモニクスの調律は、弦上のResonatorの位置によって決まります。\n\n得られるサウンドは非常に驚くべきもので、ベルのような音によく似ています。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>SMALL RESONATORS</p>\n<p>これらは非常にシンプルながら、巻きのない弦にハーモニクスを加える点において非常に効果的です。弦に取り付けられたResonatorの数だけ新しい倍音が追加され、ピースを増やすほど倍音が増え、音色はより複雑になっていきます。</p>\n<p>各ハーモニクスの調律は、弦上のResonatorの位置によって決まります。</p>\n<p>得られるサウンドは非常に驚くべきもので、ベルのような音によく似ています。</p>"
+      "content": "BOW ARCH ATTACHMENT\n\nこのアタッチメントは2本の中央の弦を持ち上げることで、弓が各弦に個別に届くようにします。",
+      "hasContent": true,
+      "contentHtml": "<p>BOW ARCH ATTACHMENT</p>\n<p>このアタッチメントは2本の中央の弦を持ち上げることで、弓が各弦に個別に届くようにします。</p>"
     },
     {
       "pageNum": 10,
       "image": "/addac120s-strings/pages/page-010.png",
       "title": "Page 10",
       "sectionName": null,
-      "content": "UNDER STRINGS CLEARENCE\n\nシステムを設計する際、弦の下に標準的なモジュールを収納するための十分なクリアランスを確保できる高さに弦の位置を設定しました。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>UNDER STRINGS CLEARENCE</p>\n<p>システムを設計する際、弦の下に標準的なモジュールを収納するための十分なクリアランスを確保できる高さに弦の位置を設定しました。</p>"
+      "content": "SMALL RESONATORS\n\nこれらは非常にシンプルながら、巻きのない弦にハーモニクスを加える点において非常に効果的です。弦に取り付けられたResonatorの数だけ新しい倍音が追加され、ピースを増やすほど倍音が増え、音色はより複雑になっていきます。\n\n各ハーモニクスの調律は、弦上のResonatorの位置によって決まります。\n\n得られるサウンドは非常に驚くべきもので、ベルのような音によく似ています。",
+      "hasContent": true,
+      "contentHtml": "<p>SMALL RESONATORS</p>\n<p>これらは非常にシンプルながら、巻きのない弦にハーモニクスを加える点において非常に効果的です。弦に取り付けられたResonatorの数だけ新しい倍音が追加され、ピースを増やすほど倍音が増え、音色はより複雑になっていきます。</p>\n<p>各ハーモニクスの調律は、弦上のResonatorの位置によって決まります。</p>\n<p>得られるサウンドは非常に驚くべきもので、ベルのような音によく似ています。</p>"
     },
     {
       "pageNum": 11,
       "image": "/addac120s-strings/pages/page-011.png",
       "title": "Page 11",
       "sectionName": null,
-      "content": "ADDAC121 HUMBUCKER\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC121 HUMBUCKER</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "content": "UNDER STRINGS CLEARENCE\n\nシステムを設計する際、弦の下に標準的なモジュールを収納するための十分なクリアランスを確保できる高さに弦の位置を設定しました。",
+      "hasContent": true,
+      "contentHtml": "<p>UNDER STRINGS CLEARENCE</p>\n<p>システムを設計する際、弦の下に標準的なモジュールを収納するための十分なクリアランスを確保できる高さに弦の位置を設定しました。</p>"
     },
     {
       "pageNum": 12,
       "image": "/addac120s-strings/pages/page-012.png",
       "title": "Page 12",
       "sectionName": null,
-      "content": "WELCOME\n\nこれはシンプルなHumbuckerピックアップモジュールです。\n\nToneとVolumeコントロール、およびサチュレーション用のLOW/HIGH gainスイッチを備えています。\n\n内蔵プリアンプにより、音量をシンセサイザーレベルまで増幅します。\n\nピックアップの高さは取り付けスクリューで調整できます。\n\nピックアップは取り外して手で使用することもできます。\n\n10HP\n\n+12Vで30mA\n\n-12Vで30mA",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>WELCOME</p>\n<p>これはシンプルなHumbuckerピックアップモジュールです。</p>\n<p>ToneとVolumeコントロール、およびサチュレーション用のLOW/HIGH gainスイッチを備えています。</p>\n<p>内蔵プリアンプにより、音量をシンセサイザーレベルまで増幅します。</p>\n<p>ピックアップの高さは取り付けスクリューで調整できます。</p>\n<p>ピックアップは取り外して手で使用することもできます。</p>\n<p>10HP</p>\n<p>+12Vで30mA</p>\n<p>-12Vで30mA</p>"
+      "content": "ADDAC System\n\nInstruments for Sonic Expression\nEst.2009\n\nINTRODUCING\n\nADDAC120B\nBASS\nHEADSTOCK\n& BRIDGE\n\nUSER’S GUIDE . REV01\nAugust.2026\n\nFrom Portugal with Love!",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC System</p>\n<p>Instruments for Sonic Expression\nEst.2009</p>\n<p>INTRODUCING</p>\n<p>ADDAC120B\nBASS\nHEADSTOCK\n&#x26; BRIDGE</p>\n<p>USER’S GUIDE . REV01\nAugust.2026</p>\n<p>From Portugal with Love!</p>"
     },
     {
       "pageNum": 13,
       "image": "/addac120s-strings/pages/page-013.png",
       "title": "Page 13",
       "sectionName": null,
-      "content": "",
-      "hasContent": false,
       "tags": [],
-      "contentHtml": ""
+      "content": "Welcome to:\n\nADDAC120B BASS HEADSTOCK & BRIDGE　USER’S GUIDE\n\nRevision.01　August.2026\n\nWELCOME\n\nこれは当社のStringモジュールの基礎となる、Headstock & Bridgeモジュールで、.110までの弦ゲージに対応します。\n弦は一般的なギターと同じように取り付けます。どの弦を取り付け、どのチューニングを使うかは自由に選べます。\nヘッドストックには4つのベースチューナーがあります。\n両方のパネルは強度のため2mmのステンレス鋼です。\n\nExtra Parts Provided\nString set .045 to .100\nBow Arch attachment\n\nHEADSTOCK\n17HP\n\nBRIDGE\n6HP",
+      "hasContent": true,
+      "contentHtml": "<p>Welcome to:</p>\n<p>ADDAC120B BASS HEADSTOCK &#x26; BRIDGE　USER’S GUIDE</p>\n<p>Revision.01　August.2026</p>\n<p>WELCOME</p>\n<p>これは当社のStringモジュールの基礎となる、Headstock &#x26; Bridgeモジュールで、.110までの弦ゲージに対応します。\n弦は一般的なギターと同じように取り付けます。どの弦を取り付け、どのチューニングを使うかは自由に選べます。\nヘッドストックには4つのベースチューナーがあります。\n両方のパネルは強度のため2mmのステンレス鋼です。</p>\n<p>Extra Parts Provided\nString set .045 to .100\nBow Arch attachment</p>\n<p>HEADSTOCK\n17HP</p>\n<p>BRIDGE\n6HP</p>"
     },
     {
       "pageNum": 14,
       "image": "/addac120s-strings/pages/page-014.png",
       "title": "Page 14",
       "sectionName": null,
-      "content": "ADDAC122 QUADRAPHONIC PICKUP ユーザーズガイド\n\n14HP\n80mA on +12V\n60mA on -12V\nJune.2026　Revision.01\n\nWELCOME\n\nこれは、各弦を独立してキャプチャできるQuadraphonic（4チャンネル）ピックアップです。一般的ではありませんが、Hexaphonicギターピックアップは1980年代に開発されました。モノラル出力からすべての弦をデコードする代わりに、ギターシンセサイザーが各弦を独立して検出できるようにし、より正確な検出を実現するためのものです。\n\n4つの独立したピックアップのように考えることができ、それぞれが独自のプリアンプ、独立したVolumeコントロール、および出力ジャックを備えています。\n\nMono Mix出力（ポストVolume）も利用可能です。\n\nすべての出力はシンセレベルです。\n\nすべてのコイルは手巻きで、Alnico 5スラグを使用したスタック式ハムバッカーです。各コイルは44AWGポリウレタン線を使用して20,000ターン巻かれており、抵抗値は約7.4kΩです。\n\nピックアップの高さは、取り付けネジを使用して調整できます。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC122 QUADRAPHONIC PICKUP ユーザーズガイド</p>\n<p>14HP\n80mA on +12V\n60mA on -12V\nJune.2026　Revision.01</p>\n<p>WELCOME</p>\n<p>これは、各弦を独立してキャプチャできるQuadraphonic（4チャンネル）ピックアップです。一般的ではありませんが、Hexaphonicギターピックアップは1980年代に開発されました。モノラル出力からすべての弦をデコードする代わりに、ギターシンセサイザーが各弦を独立して検出できるようにし、より正確な検出を実現するためのものです。</p>\n<p>4つの独立したピックアップのように考えることができ、それぞれが独自のプリアンプ、独立したVolumeコントロール、および出力ジャックを備えています。</p>\n<p>Mono Mix出力（ポストVolume）も利用可能です。</p>\n<p>すべての出力はシンセレベルです。</p>\n<p>すべてのコイルは手巻きで、Alnico 5スラグを使用したスタック式ハムバッカーです。各コイルは44AWGポリウレタン線を使用して20,000ターン巻かれており、抵抗値は約7.4kΩです。</p>\n<p>ピックアップの高さは、取り付けネジを使用して調整できます。</p>"
+      "content": "ADDAC121 HUMBUCKER\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC121 HUMBUCKER</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 15,
       "image": "/addac120s-strings/pages/page-015.png",
       "title": "Page 15",
       "sectionName": null,
-      "content": "ADDAC124 PLECTRUMS\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC124 PLECTRUMS</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "content": "WELCOME\n\nこれはシンプルなHumbuckerピックアップモジュールです。\n\nToneとVolumeコントロール、およびサチュレーション用のLOW/HIGH gainスイッチを備えています。\n\n内蔵プリアンプにより、音量をシンセサイザーレベルまで増幅します。\n\nピックアップの高さは取り付けスクリューで調整できます。\n\nピックアップは取り外して手で使用することもできます。\n\n10HP\n\n+12Vで30mA\n\n-12Vで30mA",
+      "hasContent": true,
+      "contentHtml": "<p>WELCOME</p>\n<p>これはシンプルなHumbuckerピックアップモジュールです。</p>\n<p>ToneとVolumeコントロール、およびサチュレーション用のLOW/HIGH gainスイッチを備えています。</p>\n<p>内蔵プリアンプにより、音量をシンセサイザーレベルまで増幅します。</p>\n<p>ピックアップの高さは取り付けスクリューで調整できます。</p>\n<p>ピックアップは取り外して手で使用することもできます。</p>\n<p>10HP</p>\n<p>+12Vで30mA</p>\n<p>-12Vで30mA</p>"
     },
     {
       "pageNum": 16,
       "image": "/addac120s-strings/pages/page-016.png",
       "title": "Page 16",
       "sectionName": null,
-      "content": "WELCOME\n\nこれはPlectrumモジュールです。各弦に1つのサーボを搭載しており、専用のプッシュボタン、トリガー入力、またはMIDIを通じて各弦を独立してはじくことができます。\n\nPluck（ピッキング）モードでは、サーボが約20度動き、弦を効果的にはじきます。\n\nHarmonic（ハーモニクス）モードでは、サーボは約10度のみ動き、弦を軽くタップするために垂直位置で止まります。これによりハーモニクスが聴こえるようになります。このモードを有効にするには、弦の長さの半分、2/3、または3/4など、特定の位置にモジュールを配置する必要があります。\n\n効果的な使用のために、最大3台のモジュールをデイジーチェーン接続することができます。1台が弦をはじき、他の2台が異なるハーモニクスを担当します。\n\nモード切り替えのために4つのスイッチが3つの状態を持ちます:\n\nUP: トリガーとMIDI入力を無効にしますが、プッシュボタンによるPLECTRUMのトリガーは引き続き可能です。\n\nMIDDLE: Pluck モード。すべての入力が有効です。\n\nDOWN: Harmonic モード。すべての入力が有効です。\n\nPlectrum Height Calibration（プレクトラム高さのキャリブレーション）\n\nユーザーはネジでプレクトラムの高さを調整できます。Pluck モードではかなり低く設定する必要があり、Harmonicモードでは約4mm高く上げる必要があります。\n\nPlectrum Calibration（プレクトラムのキャリブレーション）\n\nプッシュボタンを2秒以上押し続けるとキャリブレーション状態に入り、プレクトラムが自動的に前後に動き始めます。その後、プッシュボタンをタップするたびに動作が2度ずつオフセットされます。希望の位置に達したらボタンを2秒間押し続けると現在の位置が保存され、キャリブレーション状態を終了します。\n\n予備のプレクトラムが12個付属しています。（.stl 3D印刷ファイルはリクエストに応じて提供可能です）\n\nこのモジュールの消費電流は標準的なモジュールとは異なります。アイドル時の消費電流は+12Vで約120mAです。サーボが動作すると電流が瞬間的に200mA増加し、すべてのサーボが同時に動作する場合、瞬間的なピークは約920mAに達します。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>WELCOME</p>\n<p>これはPlectrumモジュールです。各弦に1つのサーボを搭載しており、専用のプッシュボタン、トリガー入力、またはMIDIを通じて各弦を独立してはじくことができます。</p>\n<p>Pluck（ピッキング）モードでは、サーボが約20度動き、弦を効果的にはじきます。</p>\n<p>Harmonic（ハーモニクス）モードでは、サーボは約10度のみ動き、弦を軽くタップするために垂直位置で止まります。これによりハーモニクスが聴こえるようになります。このモードを有効にするには、弦の長さの半分、2/3、または3/4など、特定の位置にモジュールを配置する必要があります。</p>\n<p>効果的な使用のために、最大3台のモジュールをデイジーチェーン接続することができます。1台が弦をはじき、他の2台が異なるハーモニクスを担当します。</p>\n<p>モード切り替えのために4つのスイッチが3つの状態を持ちます:</p>\n<p>UP: トリガーとMIDI入力を無効にしますが、プッシュボタンによるPLECTRUMのトリガーは引き続き可能です。</p>\n<p>MIDDLE: Pluck モード。すべての入力が有効です。</p>\n<p>DOWN: Harmonic モード。すべての入力が有効です。</p>\n<p>Plectrum Height Calibration（プレクトラム高さのキャリブレーション）</p>\n<p>ユーザーはネジでプレクトラムの高さを調整できます。Pluck モードではかなり低く設定する必要があり、Harmonicモードでは約4mm高く上げる必要があります。</p>\n<p>Plectrum Calibration（プレクトラムのキャリブレーション）</p>\n<p>プッシュボタンを2秒以上押し続けるとキャリブレーション状態に入り、プレクトラムが自動的に前後に動き始めます。その後、プッシュボタンをタップするたびに動作が2度ずつオフセットされます。希望の位置に達したらボタンを2秒間押し続けると現在の位置が保存され、キャリブレーション状態を終了します。</p>\n<p>予備のプレクトラムが12個付属しています。（.stl 3D印刷ファイルはリクエストに応じて提供可能です）</p>\n<p>このモジュールの消費電流は標準的なモジュールとは異なります。アイドル時の消費電流は+12Vで約120mAです。サーボが動作すると電流が瞬間的に200mA増加し、すべてのサーボが同時に動作する場合、瞬間的なピークは約920mAに達します。</p>"
+      "content": "",
+      "hasContent": false,
+      "contentHtml": ""
     },
     {
       "pageNum": 17,
       "image": "/addac120s-strings/pages/page-017.png",
       "title": "Page 17",
       "sectionName": null,
-      "content": "MIDI TO PLECTRUMS\n\nMIDIデバイスに接続すると、モジュールはNOTEまたはCCメッセージを受信して、目的のプレクトラムをトリガーすることができます。\n\n単一のMIDIを使用して最大3つのモジュールをデイジーチェーン接続することが可能で、すべてのモジュールをトリガーできます。\n\nモジュールは、付属のケーブルを使用して背面のピンヘッダーで接続します。\n\nすべてのMIDIチャンネルが有効です。\n\nCCメッセージはCC1からCC12まで有効です。\n\nMIDI NOTEはすべて有効で、どのオクターブの同じNOTEでも同じプレクトラムをトリガーします。\n\nADDAC124 MIDI IMPLEMENTATION\n\nMIDI IMPLEMENTATION\n\nSERVO 1　MODULE #1（1st in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 1 / 2 / 3 / 4\nMIDI NOTE（任意のオクターブ）: C / C# / D / D#\n\nSERVO 1　MODULE #2（2nd in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 5 / 6 / 7 / 8\nMIDI NOTE（任意のオクターブ）: E / F / F# / G\n\nSERVO 1　MODULE #3（3rd in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 9 / 10 / 11 / 12\nMIDI NOTE（任意のオクターブ）: G# / A / A# / B\n\nINCOMING USB\n\nMODULE #1: CC 1 to 4 / NOTE C to D#\nMODULE #2: CC 5 to 8 / NOTE E to G\nMODULE #3: CC 9 to 12 / NOTE G# to B",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>MIDI TO PLECTRUMS</p>\n<p>MIDIデバイスに接続すると、モジュールはNOTEまたはCCメッセージを受信して、目的のプレクトラムをトリガーすることができます。</p>\n<p>単一のMIDIを使用して最大3つのモジュールをデイジーチェーン接続することが可能で、すべてのモジュールをトリガーできます。</p>\n<p>モジュールは、付属のケーブルを使用して背面のピンヘッダーで接続します。</p>\n<p>すべてのMIDIチャンネルが有効です。</p>\n<p>CCメッセージはCC1からCC12まで有効です。</p>\n<p>MIDI NOTEはすべて有効で、どのオクターブの同じNOTEでも同じプレクトラムをトリガーします。</p>\n<p>ADDAC124 MIDI IMPLEMENTATION</p>\n<p>MIDI IMPLEMENTATION</p>\n<p>SERVO 1　MODULE #1（1st in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 1 / 2 / 3 / 4\nMIDI NOTE（任意のオクターブ）: C / C# / D / D#</p>\n<p>SERVO 1　MODULE #2（2nd in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 5 / 6 / 7 / 8\nMIDI NOTE（任意のオクターブ）: E / F / F# / G</p>\n<p>SERVO 1　MODULE #3（3rd in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 9 / 10 / 11 / 12\nMIDI NOTE（任意のオクターブ）: G# / A / A# / B</p>\n<p>INCOMING USB</p>\n<p>MODULE #1: CC 1 to 4 / NOTE C to D#\nMODULE #2: CC 5 to 8 / NOTE E to G\nMODULE #3: CC 9 to 12 / NOTE G# to B</p>"
+      "content": "ADDAC122 QUADRAPHONIC PICKUP ユーザーズガイド\n\n14HP\n80mA on +12V\n60mA on -12V\nJune.2026　Revision.01\n\nWELCOME\n\nこれは、各弦を独立してキャプチャできるQuadraphonic（4チャンネル）ピックアップです。一般的ではありませんが、Hexaphonicギターピックアップは1980年代に開発されました。モノラル出力からすべての弦をデコードする代わりに、ギターシンセサイザーが各弦を独立して検出できるようにし、より正確な検出を実現するためのものです。\n\n4つの独立したピックアップのように考えることができ、それぞれが独自のプリアンプ、独立したVolumeコントロール、および出力ジャックを備えています。\n\nMono Mix出力（ポストVolume）も利用可能です。\n\nすべての出力はシンセレベルです。\n\nすべてのコイルは手巻きで、Alnico 5スラグを使用したスタック式ハムバッカーです。各コイルは44AWGポリウレタン線を使用して20,000ターン巻かれており、抵抗値は約7.4kΩです。\n\nピックアップの高さは、取り付けネジを使用して調整できます。",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC122 QUADRAPHONIC PICKUP ユーザーズガイド</p>\n<p>14HP\n80mA on +12V\n60mA on -12V\nJune.2026　Revision.01</p>\n<p>WELCOME</p>\n<p>これは、各弦を独立してキャプチャできるQuadraphonic（4チャンネル）ピックアップです。一般的ではありませんが、Hexaphonicギターピックアップは1980年代に開発されました。モノラル出力からすべての弦をデコードする代わりに、ギターシンセサイザーが各弦を独立して検出できるようにし、より正確な検出を実現するためのものです。</p>\n<p>4つの独立したピックアップのように考えることができ、それぞれが独自のプリアンプ、独立したVolumeコントロール、および出力ジャックを備えています。</p>\n<p>Mono Mix出力（ポストVolume）も利用可能です。</p>\n<p>すべての出力はシンセレベルです。</p>\n<p>すべてのコイルは手巻きで、Alnico 5スラグを使用したスタック式ハムバッカーです。各コイルは44AWGポリウレタン線を使用して20,000ターン巻かれており、抵抗値は約7.4kΩです。</p>\n<p>ピックアップの高さは、取り付けネジを使用して調整できます。</p>"
     },
     {
       "pageNum": 18,
       "image": "/addac120s-strings/pages/page-018.png",
       "title": "Page 18",
       "sectionName": null,
-      "content": "ADDAC125 STRINGS MUTE\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC125 STRINGS MUTE</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "content": "ADDAC124 PLECTRUMS\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC124 PLECTRUMS</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 19,
       "image": "/addac120s-strings/pages/page-019.png",
       "title": "Page 19",
       "sectionName": null,
-      "content": "ADDAC125 STRINGS MUTE ユーザーズガイド\n\n10HP\n\n100mA on +12V\n\n2026年5月　リビジョン01\n\nようこそ:\n\nWELCOME\n\nこのモジュールは、FenderのJaguarおよびBass VIギターの一部に見られるミュートシステムからインスパイアされています。フォームの一片を弦に押し当てることで弦の自然な振動を減衰させる仕組みで、標準的なパームミュートほど強くはありませんが、異なるトーンを実現します。\n\nこのモジュールでは、サーボモーターを使用してフォームの一片を上下させます。弦に軽く押し当てることで、弦の自然な振動をわずかに減衰させます。\n\n標準的なパームミュートほど効果的ではありませんが、異なるトーンを自動化することが可能です。\n\n最大限の効果を得るため、このモジュールはできるだけヘッドストックに近い位置に取り付ける必要があります。\n\nこれはパッシブモジュールです。使用するには、サーボをADDAC124 Plectrumsに接続する必要があります。\n\nこのモジュールは、Plectrumsのサーボのいずれか一方を置き換える形で（そのサーボを外してこのモジュールを接続する）、または付属のスプリッターケーブルを使用してPlectrumsのサーボと並列接続し、PlectrumとMuteを同時に動作させることができます。MuteはADDAC124によって常に制御されます。\n\nフォームパーツの高さは調整可能です。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC125 STRINGS MUTE ユーザーズガイド</p>\n<p>10HP</p>\n<p>100mA on +12V</p>\n<p>2026年5月　リビジョン01</p>\n<p>ようこそ:</p>\n<p>WELCOME</p>\n<p>このモジュールは、FenderのJaguarおよびBass VIギターの一部に見られるミュートシステムからインスパイアされています。フォームの一片を弦に押し当てることで弦の自然な振動を減衰させる仕組みで、標準的なパームミュートほど強くはありませんが、異なるトーンを実現します。</p>\n<p>このモジュールでは、サーボモーターを使用してフォームの一片を上下させます。弦に軽く押し当てることで、弦の自然な振動をわずかに減衰させます。</p>\n<p>標準的なパームミュートほど効果的ではありませんが、異なるトーンを自動化することが可能です。</p>\n<p>最大限の効果を得るため、このモジュールはできるだけヘッドストックに近い位置に取り付ける必要があります。</p>\n<p>これはパッシブモジュールです。使用するには、サーボをADDAC124 Plectrumsに接続する必要があります。</p>\n<p>このモジュールは、Plectrumsのサーボのいずれか一方を置き換える形で（そのサーボを外してこのモジュールを接続する）、または付属のスプリッターケーブルを使用してPlectrumsのサーボと並列接続し、PlectrumとMuteを同時に動作させることができます。MuteはADDAC124によって常に制御されます。</p>\n<p>フォームパーツの高さは調整可能です。</p>"
+      "content": "WELCOME\n\nこれはPlectrumモジュールです。各弦に1つのサーボを搭載しており、専用のプッシュボタン、トリガー入力、またはMIDIを通じて各弦を独立してはじくことができます。\n\nPluck（ピッキング）モードでは、サーボが約20度動き、弦を効果的にはじきます。\n\nHarmonic（ハーモニクス）モードでは、サーボは約10度のみ動き、弦を軽くタップするために垂直位置で止まります。これによりハーモニクスが聴こえるようになります。このモードを有効にするには、弦の長さの半分、2/3、または3/4など、特定の位置にモジュールを配置する必要があります。\n\n効果的な使用のために、最大3台のモジュールをデイジーチェーン接続することができます。1台が弦をはじき、他の2台が異なるハーモニクスを担当します。\n\nモード切り替えのために4つのスイッチが3つの状態を持ちます:\n\nUP: トリガーとMIDI入力を無効にしますが、プッシュボタンによるPLECTRUMのトリガーは引き続き可能です。\n\nMIDDLE: Pluck モード。すべての入力が有効です。\n\nDOWN: Harmonic モード。すべての入力が有効です。\n\nPlectrum Height Calibration（プレクトラム高さのキャリブレーション）\n\nユーザーはネジでプレクトラムの高さを調整できます。Pluck モードではかなり低く設定する必要があり、Harmonicモードでは約4mm高く上げる必要があります。\n\nPlectrum Calibration（プレクトラムのキャリブレーション）\n\nプッシュボタンを2秒以上押し続けるとキャリブレーション状態に入り、プレクトラムが自動的に前後に動き始めます。その後、プッシュボタンをタップするたびに動作が2度ずつオフセットされます。希望の位置に達したらボタンを2秒間押し続けると現在の位置が保存され、キャリブレーション状態を終了します。\n\n予備のプレクトラムが12個付属しています。（.stl 3D印刷ファイルはリクエストに応じて提供可能です）\n\nこのモジュールの消費電流は標準的なモジュールとは異なります。アイドル時の消費電流は+12Vで約120mAです。サーボが動作すると電流が瞬間的に200mA増加し、すべてのサーボが同時に動作する場合、瞬間的なピークは約920mAに達します。",
+      "hasContent": true,
+      "contentHtml": "<p>WELCOME</p>\n<p>これはPlectrumモジュールです。各弦に1つのサーボを搭載しており、専用のプッシュボタン、トリガー入力、またはMIDIを通じて各弦を独立してはじくことができます。</p>\n<p>Pluck（ピッキング）モードでは、サーボが約20度動き、弦を効果的にはじきます。</p>\n<p>Harmonic（ハーモニクス）モードでは、サーボは約10度のみ動き、弦を軽くタップするために垂直位置で止まります。これによりハーモニクスが聴こえるようになります。このモードを有効にするには、弦の長さの半分、2/3、または3/4など、特定の位置にモジュールを配置する必要があります。</p>\n<p>効果的な使用のために、最大3台のモジュールをデイジーチェーン接続することができます。1台が弦をはじき、他の2台が異なるハーモニクスを担当します。</p>\n<p>モード切り替えのために4つのスイッチが3つの状態を持ちます:</p>\n<p>UP: トリガーとMIDI入力を無効にしますが、プッシュボタンによるPLECTRUMのトリガーは引き続き可能です。</p>\n<p>MIDDLE: Pluck モード。すべての入力が有効です。</p>\n<p>DOWN: Harmonic モード。すべての入力が有効です。</p>\n<p>Plectrum Height Calibration（プレクトラム高さのキャリブレーション）</p>\n<p>ユーザーはネジでプレクトラムの高さを調整できます。Pluck モードではかなり低く設定する必要があり、Harmonicモードでは約4mm高く上げる必要があります。</p>\n<p>Plectrum Calibration（プレクトラムのキャリブレーション）</p>\n<p>プッシュボタンを2秒以上押し続けるとキャリブレーション状態に入り、プレクトラムが自動的に前後に動き始めます。その後、プッシュボタンをタップするたびに動作が2度ずつオフセットされます。希望の位置に達したらボタンを2秒間押し続けると現在の位置が保存され、キャリブレーション状態を終了します。</p>\n<p>予備のプレクトラムが12個付属しています。（.stl 3D印刷ファイルはリクエストに応じて提供可能です）</p>\n<p>このモジュールの消費電流は標準的なモジュールとは異なります。アイドル時の消費電流は+12Vで約120mAです。サーボが動作すると電流が瞬間的に200mA増加し、すべてのサーボが同時に動作する場合、瞬間的なピークは約920mAに達します。</p>"
     },
     {
       "pageNum": 20,
       "image": "/addac120s-strings/pages/page-020.png",
       "title": "Page 20",
       "sectionName": null,
-      "content": "",
-      "hasContent": false,
       "tags": [],
-      "contentHtml": ""
+      "content": "MIDI TO PLECTRUMS\n\nMIDIデバイスに接続すると、モジュールはNOTEまたはCCメッセージを受信して、目的のプレクトラムをトリガーすることができます。\n\n単一のMIDIを使用して最大3つのモジュールをデイジーチェーン接続することが可能で、すべてのモジュールをトリガーできます。\n\nモジュールは、付属のケーブルを使用して背面のピンヘッダーで接続します。\n\nすべてのMIDIチャンネルが有効です。\n\nCCメッセージはCC1からCC12まで有効です。\n\nMIDI NOTEはすべて有効で、どのオクターブの同じNOTEでも同じプレクトラムをトリガーします。\n\nADDAC124 MIDI IMPLEMENTATION\n\nMIDI IMPLEMENTATION\n\nSERVO 1　MODULE #1（1st in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 1 / 2 / 3 / 4\nMIDI NOTE（任意のオクターブ）: C / C# / D / D#\n\nSERVO 1　MODULE #2（2nd in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 5 / 6 / 7 / 8\nMIDI NOTE（任意のオクターブ）: E / F / F# / G\n\nSERVO 1　MODULE #3（3rd in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 9 / 10 / 11 / 12\nMIDI NOTE（任意のオクターブ）: G# / A / A# / B\n\nINCOMING USB\n\nMODULE #1: CC 1 to 4 / NOTE C to D#\nMODULE #2: CC 5 to 8 / NOTE E to G\nMODULE #3: CC 9 to 12 / NOTE G# to B",
+      "hasContent": true,
+      "contentHtml": "<p>MIDI TO PLECTRUMS</p>\n<p>MIDIデバイスに接続すると、モジュールはNOTEまたはCCメッセージを受信して、目的のプレクトラムをトリガーすることができます。</p>\n<p>単一のMIDIを使用して最大3つのモジュールをデイジーチェーン接続することが可能で、すべてのモジュールをトリガーできます。</p>\n<p>モジュールは、付属のケーブルを使用して背面のピンヘッダーで接続します。</p>\n<p>すべてのMIDIチャンネルが有効です。</p>\n<p>CCメッセージはCC1からCC12まで有効です。</p>\n<p>MIDI NOTEはすべて有効で、どのオクターブの同じNOTEでも同じプレクトラムをトリガーします。</p>\n<p>ADDAC124 MIDI IMPLEMENTATION</p>\n<p>MIDI IMPLEMENTATION</p>\n<p>SERVO 1　MODULE #1（1st in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 1 / 2 / 3 / 4\nMIDI NOTE（任意のオクターブ）: C / C# / D / D#</p>\n<p>SERVO 1　MODULE #2（2nd in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 5 / 6 / 7 / 8\nMIDI NOTE（任意のオクターブ）: E / F / F# / G</p>\n<p>SERVO 1　MODULE #3（3rd in Chain）\nSERVO 2\nSERVO 3\nSERVO 4\nMIDI CC: 9 / 10 / 11 / 12\nMIDI NOTE（任意のオクターブ）: G# / A / A# / B</p>\n<p>INCOMING USB</p>\n<p>MODULE #1: CC 1 to 4 / NOTE C to D#\nMODULE #2: CC 5 to 8 / NOTE E to G\nMODULE #3: CC 9 to 12 / NOTE G# to B</p>"
     },
     {
       "pageNum": 21,
       "image": "/addac120s-strings/pages/page-021.png",
       "title": "Page 21",
       "sectionName": null,
-      "content": "",
-      "hasContent": false,
       "tags": [],
-      "contentHtml": ""
+      "content": "ADDAC125 STRINGS MUTE\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC125 STRINGS MUTE</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 22,
       "image": "/addac120s-strings/pages/page-022.png",
       "title": "Page 22",
       "sectionName": null,
-      "content": "ADDAC126 ROTARY EXCITER ユーザーズガイド\n10HP\n+12V 100mA\n2026年5月 改訂版01\n\nようこそ:\n\nWELCOME\n\nこのモジュールは7000 RPMのブラシレスモーターを搭載しており、対向する磁極を持つ4つのマグネットが取り付けられたサーフェスを回転させます。これにより回転磁場が生成され、回転速度がいずれかの弦のチューニングの周波数またはその倍音と一致するたびに、弦を振動させます。\n\n[SPEED]ノブとCV入力により、モーター速度の非線形コントロールが可能です。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC126 ROTARY EXCITER ユーザーズガイド\n10HP\n+12V 100mA\n2026年5月 改訂版01</p>\n<p>ようこそ:</p>\n<p>WELCOME</p>\n<p>このモジュールは7000 RPMのブラシレスモーターを搭載しており、対向する磁極を持つ4つのマグネットが取り付けられたサーフェスを回転させます。これにより回転磁場が生成され、回転速度がいずれかの弦のチューニングの周波数またはその倍音と一致するたびに、弦を振動させます。</p>\n<p>[SPEED]ノブとCV入力により、モーター速度の非線形コントロールが可能です。</p>"
+      "content": "ADDAC125 STRINGS MUTE ユーザーズガイド\n\n10HP\n\n100mA on +12V\n\n2026年5月　リビジョン01\n\nようこそ:\n\nWELCOME\n\nこのモジュールは、FenderのJaguarおよびBass VIギターの一部に見られるミュートシステムからインスパイアされています。フォームの一片を弦に押し当てることで弦の自然な振動を減衰させる仕組みで、標準的なパームミュートほど強くはありませんが、異なるトーンを実現します。\n\nこのモジュールでは、サーボモーターを使用してフォームの一片を上下させます。弦に軽く押し当てることで、弦の自然な振動をわずかに減衰させます。\n\n標準的なパームミュートほど効果的ではありませんが、異なるトーンを自動化することが可能です。\n\n最大限の効果を得るため、このモジュールはできるだけヘッドストックに近い位置に取り付ける必要があります。\n\nこれはパッシブモジュールです。使用するには、サーボをADDAC124 Plectrumsに接続する必要があります。\n\nこのモジュールは、Plectrumsのサーボのいずれか一方を置き換える形で（そのサーボを外してこのモジュールを接続する）、または付属のスプリッターケーブルを使用してPlectrumsのサーボと並列接続し、PlectrumとMuteを同時に動作させることができます。MuteはADDAC124によって常に制御されます。\n\nフォームパーツの高さは調整可能です。",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC125 STRINGS MUTE ユーザーズガイド</p>\n<p>10HP</p>\n<p>100mA on +12V</p>\n<p>2026年5月　リビジョン01</p>\n<p>ようこそ:</p>\n<p>WELCOME</p>\n<p>このモジュールは、FenderのJaguarおよびBass VIギターの一部に見られるミュートシステムからインスパイアされています。フォームの一片を弦に押し当てることで弦の自然な振動を減衰させる仕組みで、標準的なパームミュートほど強くはありませんが、異なるトーンを実現します。</p>\n<p>このモジュールでは、サーボモーターを使用してフォームの一片を上下させます。弦に軽く押し当てることで、弦の自然な振動をわずかに減衰させます。</p>\n<p>標準的なパームミュートほど効果的ではありませんが、異なるトーンを自動化することが可能です。</p>\n<p>最大限の効果を得るため、このモジュールはできるだけヘッドストックに近い位置に取り付ける必要があります。</p>\n<p>これはパッシブモジュールです。使用するには、サーボをADDAC124 Plectrumsに接続する必要があります。</p>\n<p>このモジュールは、Plectrumsのサーボのいずれか一方を置き換える形で（そのサーボを外してこのモジュールを接続する）、または付属のスプリッターケーブルを使用してPlectrumsのサーボと並列接続し、PlectrumとMuteを同時に動作させることができます。MuteはADDAC124によって常に制御されます。</p>\n<p>フォームパーツの高さは調整可能です。</p>"
     },
     {
       "pageNum": 23,
       "image": "/addac120s-strings/pages/page-023.png",
       "title": "Page 23",
       "sectionName": null,
-      "content": "June.2026\n\nUSER'S GUIDE . REV01\n\nADDAC127\n\nEBOW\n\nSLIDER\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>June.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC127</p>\n<p>EBOW</p>\n<p>SLIDER</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "content": "",
+      "hasContent": false,
+      "contentHtml": ""
     },
     {
       "pageNum": 24,
       "image": "/addac120s-strings/pages/page-024.png",
       "title": "Page 24",
       "sectionName": null,
-      "content": "ADDAC127 EBOW SLIDER ユーザーズガイド\n\n16HP\n\nパッシブモジュール\n\n2026年5月　リビジョン.01\n\nWELCOME\n\nこのモジュールは、標準的なebowのハーネスとスライド機構を作成します。ユーザーが弦の下でebowを前後にスライドさせることができます。使用するebowには「PianoBow」改造（https://ebow.com/diy-mods）が施されており、弦の上をスライドさせる際に接触しないよう、ebowの足をサンドペーパーで削って低くし、弦に近づけるようにしています。\n\nebowの高さは、4つのつまみネジを使って上げ下げすることができます。\n\nebowはモジュールから取り外して別の用途に使用することもできますが、足がない状態では、通常のebowほどギターでの使用が容易ではありません。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>ADDAC127 EBOW SLIDER ユーザーズガイド</p>\n<p>16HP</p>\n<p>パッシブモジュール</p>\n<p>2026年5月　リビジョン.01</p>\n<p>WELCOME</p>\n<p>このモジュールは、標準的なebowのハーネスとスライド機構を作成します。ユーザーが弦の下でebowを前後にスライドさせることができます。使用するebowには「PianoBow」改造（<a href=\"https://ebow.com/diy-mods\">https://ebow.com/diy-mods</a>）が施されており、弦の上をスライドさせる際に接触しないよう、ebowの足をサンドペーパーで削って低くし、弦に近づけるようにしています。</p>\n<p>ebowの高さは、4つのつまみネジを使って上げ下げすることができます。</p>\n<p>ebowはモジュールから取り外して別の用途に使用することもできますが、足がない状態では、通常のebowほどギターでの使用が容易ではありません。</p>"
+      "content": "",
+      "hasContent": false,
+      "contentHtml": ""
     },
     {
       "pageNum": 25,
       "image": "/addac120s-strings/pages/page-025.png",
       "title": "Page 25",
       "sectionName": null,
-      "content": "June.2026\n\nUSER'S GUIDE . REV01\n\nADDAC120F\n\nSTRINGS\n\nFRAME\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>June.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC120F</p>\n<p>STRINGS</p>\n<p>FRAME</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+      "content": "ADDAC126 ROTARY EXCITER ユーザーズガイド\n10HP\n+12V 100mA\n2026年5月 改訂版01\n\nようこそ:\n\nWELCOME\n\nこのモジュールは7000 RPMのブラシレスモーターを搭載しており、対向する磁極を持つ4つのマグネットが取り付けられたサーフェスを回転させます。これにより回転磁場が生成され、回転速度がいずれかの弦のチューニングの周波数またはその倍音と一致するたびに、弦を振動させます。\n\n[SPEED]ノブとCV入力により、モーター速度の非線形コントロールが可能です。",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC126 ROTARY EXCITER ユーザーズガイド\n10HP\n+12V 100mA\n2026年5月 改訂版01</p>\n<p>ようこそ:</p>\n<p>WELCOME</p>\n<p>このモジュールは7000 RPMのブラシレスモーターを搭載しており、対向する磁極を持つ4つのマグネットが取り付けられたサーフェスを回転させます。これにより回転磁場が生成され、回転速度がいずれかの弦のチューニングの周波数またはその倍音と一致するたびに、弦を振動させます。</p>\n<p>[SPEED]ノブとCV入力により、モーター速度の非線形コントロールが可能です。</p>"
     },
     {
       "pageNum": 26,
       "image": "/addac120s-strings/pages/page-026.png",
       "title": "Page 26",
       "sectionName": null,
-      "content": "WELCOME\n\nADDAC12X Stringモジュール専用に設計されたフレームです。\n\nWidth: 122HP\n\nPower Specifications:\n- AC Input: 90v to 240v\n- Output: ±12V\n- Current: +12Vに1.5A、-12Vに1.5A\n- 19コネクター搭載のBusboards\n- Busboardはすでに+5Vを供給しています（+12Vから供給、Busboardあたり最大500mA）\n\nPSUは以下の状況に対するシャットダウン保護機能を備えています。\n\nOver Current - 最大電流を超えた場合（モジュールのリボンケーブルが逆接続された場合など）\n\nOver Heating - AC Brickが過熱した場合\n\nOver Voltage - 電圧が期待される出力値を上回るか下回る場合\n\nこれらの問題が発生した場合、PSUは問題が解決されるまで断続的なON/OFFの状態に入ります。\n\nこれらの安全保護機能により、PSUへのダメージ、ひいてはモジュールへのダメージを防ぐことができます。",
-      "hasContent": true,
       "tags": [],
-      "contentHtml": "<p>WELCOME</p>\n<p>ADDAC12X Stringモジュール専用に設計されたフレームです。</p>\n<p>Width: 122HP</p>\n<p>Power Specifications:</p>\n<ul>\n<li>AC Input: 90v to 240v</li>\n<li>Output: ±12V</li>\n<li>Current: +12Vに1.5A、-12Vに1.5A</li>\n<li>19コネクター搭載のBusboards</li>\n<li>Busboardはすでに+5Vを供給しています（+12Vから供給、Busboardあたり最大500mA）</li>\n</ul>\n<p>PSUは以下の状況に対するシャットダウン保護機能を備えています。</p>\n<p>Over Current - 最大電流を超えた場合（モジュールのリボンケーブルが逆接続された場合など）</p>\n<p>Over Heating - AC Brickが過熱した場合</p>\n<p>Over Voltage - 電圧が期待される出力値を上回るか下回る場合</p>\n<p>これらの問題が発生した場合、PSUは問題が解決されるまで断続的なON/OFFの状態に入ります。</p>\n<p>これらの安全保護機能により、PSUへのダメージ、ひいてはモジュールへのダメージを防ぐことができます。</p>"
+      "content": "June.2026\n\nUSER'S GUIDE . REV01\n\nADDAC127\n\nEBOW\n\nSLIDER\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "hasContent": true,
+      "contentHtml": "<p>June.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC127</p>\n<p>EBOW</p>\n<p>SLIDER</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
     },
     {
       "pageNum": 27,
       "image": "/addac120s-strings/pages/page-027.png",
       "title": "Page 27",
       "sectionName": null,
+      "tags": [],
+      "content": "ADDAC127 EBOW SLIDER ユーザーズガイド\n\n16HP\n\nパッシブモジュール\n\n2026年5月　リビジョン.01\n\nWELCOME\n\nこのモジュールは、標準的なebowのハーネスとスライド機構を作成します。ユーザーが弦の下でebowを前後にスライドさせることができます。使用するebowには「PianoBow」改造（https://ebow.com/diy-mods）が施されており、弦の上をスライドさせる際に接触しないよう、ebowの足をサンドペーパーで削って低くし、弦に近づけるようにしています。\n\nebowの高さは、4つのつまみネジを使って上げ下げすることができます。\n\nebowはモジュールから取り外して別の用途に使用することもできますが、足がない状態では、通常のebowほどギターでの使用が容易ではありません。",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC127 EBOW SLIDER ユーザーズガイド</p>\n<p>16HP</p>\n<p>パッシブモジュール</p>\n<p>2026年5月　リビジョン.01</p>\n<p>WELCOME</p>\n<p>このモジュールは、標準的なebowのハーネスとスライド機構を作成します。ユーザーが弦の下でebowを前後にスライドさせることができます。使用するebowには「PianoBow」改造（<a href=\"https://ebow.com/diy-mods\">https://ebow.com/diy-mods</a>）が施されており、弦の上をスライドさせる際に接触しないよう、ebowの足をサンドペーパーで削って低くし、弦に近づけるようにしています。</p>\n<p>ebowの高さは、4つのつまみネジを使って上げ下げすることができます。</p>\n<p>ebowはモジュールから取り外して別の用途に使用することもできますが、足がない状態では、通常のebowほどギターでの使用が容易ではありません。</p>"
+    },
+    {
+      "pageNum": 28,
+      "image": "/addac120s-strings/pages/page-028.png",
+      "title": "Page 28",
+      "sectionName": null,
+      "tags": [],
+      "content": "ADDAC System\n\nInstruments for Sonic Expression\nEst.2009\n\nINTRODUCING\n\nADDAC128\nFRETS\n\nUSER’S GUIDE . REV01\nAugust.2026\n\nFrom Portugal with Love!",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC System</p>\n<p>Instruments for Sonic Expression\nEst.2009</p>\n<p>INTRODUCING</p>\n<p>ADDAC128\nFRETS</p>\n<p>USER’S GUIDE . REV01\nAugust.2026</p>\n<p>From Portugal with Love!</p>"
+    },
+    {
+      "pageNum": 29,
+      "image": "/addac120s-strings/pages/page-029.png",
+      "title": "Page 29",
+      "sectionName": null,
+      "tags": [],
+      "content": "Welcome to:\n\nADDAC128 FRETS　USER’S GUIDE\n\nRevision.01　August.2026\n\n3HP\nPassive module\n\nWELCOME\n\nこのモジュールは、フレーム上の任意の位置にフレット位置を作ります。意図したピッチの正しい位置へ置くにはチューナーが必要です。より多くの音のために、複数のモジュールを置けます。\n\n各モジュールの高さは、前面の2本のネジで較正します。バズらないようにするには、各フレットを前のものよりわずかに低くする必要があります。プラスチックはわずかに変形し、最初のセットアップから戻らないことがあるため、最初に順序と高さを設定したら、次回以降も同じ順序を保ってください。このためのラベル用サークルを付属しています。",
+      "hasContent": true,
+      "contentHtml": "<p>Welcome to:</p>\n<p>ADDAC128 FRETS　USER’S GUIDE</p>\n<p>Revision.01　August.2026</p>\n<p>3HP\nPassive module</p>\n<p>WELCOME</p>\n<p>このモジュールは、フレーム上の任意の位置にフレット位置を作ります。意図したピッチの正しい位置へ置くにはチューナーが必要です。より多くの音のために、複数のモジュールを置けます。</p>\n<p>各モジュールの高さは、前面の2本のネジで較正します。バズらないようにするには、各フレットを前のものよりわずかに低くする必要があります。プラスチックはわずかに変形し、最初のセットアップから戻らないことがあるため、最初に順序と高さを設定したら、次回以降も同じ順序を保ってください。このためのラベル用サークルを付属しています。</p>"
+    },
+    {
+      "pageNum": 30,
+      "image": "/addac120s-strings/pages/page-030.png",
+      "title": "Page 30",
+      "sectionName": null,
+      "tags": [],
+      "content": "ADDAC128 User’s Guide",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC128 User’s Guide</p>"
+    },
+    {
+      "pageNum": 31,
+      "image": "/addac120s-strings/pages/page-031.png",
+      "title": "Page 31",
+      "sectionName": null,
+      "tags": [],
+      "content": "ADDAC System\n\nInstruments for Sonic Expression\nEst.2009\n\nINTRODUCING\n\nADDAC128M\nMICROTONAL\nFRETS\n\nUSER’S GUIDE . REV01\nAugust.2026\n\nFrom Portugal with Love!",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC System</p>\n<p>Instruments for Sonic Expression\nEst.2009</p>\n<p>INTRODUCING</p>\n<p>ADDAC128M\nMICROTONAL\nFRETS</p>\n<p>USER’S GUIDE . REV01\nAugust.2026</p>\n<p>From Portugal with Love!</p>"
+    },
+    {
+      "pageNum": 32,
+      "image": "/addac120s-strings/pages/page-032.png",
+      "title": "Page 32",
+      "sectionName": null,
+      "tags": [],
+      "content": "Welcome to:\n\nADDAC128M MICROTONAL FRETS　USER’S GUIDE\n\nRevision.01　August.2026\n\n3HP\nPassive module\n\nWELCOME\n\nこのモジュールは、フレーム上の任意の位置にフレット位置を作ります。各モジュールには弦ごとの4つの独立したフレットがあり、2mm間隔の溝へ置けます。各フレットはスロットへ押し込む必要があり、意図したピッチの正しい位置にするにはチューナーが必要です。\n\n複数のモジュールを使う場合、各モジュール全体の高さは前面の2本のネジで較正します。バズらないようにするには、各モジュールを前のものよりわずかに低くする必要があります。プラスチックはわずかに変形し、最初のセットアップから戻らないことがあるため、最初に順序と高さを設定したら、次回以降も同じ順序を保ってください。このためのラベル用サークルを付属しています。\n\nSetup photo shown using ADDAC128 Frets",
+      "hasContent": true,
+      "contentHtml": "<p>Welcome to:</p>\n<p>ADDAC128M MICROTONAL FRETS　USER’S GUIDE</p>\n<p>Revision.01　August.2026</p>\n<p>3HP\nPassive module</p>\n<p>WELCOME</p>\n<p>このモジュールは、フレーム上の任意の位置にフレット位置を作ります。各モジュールには弦ごとの4つの独立したフレットがあり、2mm間隔の溝へ置けます。各フレットはスロットへ押し込む必要があり、意図したピッチの正しい位置にするにはチューナーが必要です。</p>\n<p>複数のモジュールを使う場合、各モジュール全体の高さは前面の2本のネジで較正します。バズらないようにするには、各モジュールを前のものよりわずかに低くする必要があります。プラスチックはわずかに変形し、最初のセットアップから戻らないことがあるため、最初に順序と高さを設定したら、次回以降も同じ順序を保ってください。このためのラベル用サークルを付属しています。</p>\n<p>Setup photo shown using ADDAC128 Frets</p>"
+    },
+    {
+      "pageNum": 33,
+      "image": "/addac120s-strings/pages/page-033.png",
+      "title": "Page 33",
+      "sectionName": null,
+      "tags": [],
+      "content": "ADDAC128M User’s Guide\n\nSetup photos shown using ADDAC128 Frets",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC128M User’s Guide</p>\n<p>Setup photos shown using ADDAC128 Frets</p>"
+    },
+    {
+      "pageNum": 34,
+      "image": "/addac120s-strings/pages/page-034.png",
+      "title": "Page 34",
+      "sectionName": null,
+      "tags": [],
+      "content": "ADDAC System\n\nInstruments for Sonic Expression\nEst.2009\n\nINTRODUCING\n\nADDAC129\nRESONATOR\n\nUSER’S GUIDE . REV02\nSeptember.2026\n\nFrom Portugal with Love!",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC System</p>\n<p>Instruments for Sonic Expression\nEst.2009</p>\n<p>INTRODUCING</p>\n<p>ADDAC129\nRESONATOR</p>\n<p>USER’S GUIDE . REV02\nSeptember.2026</p>\n<p>From Portugal with Love!</p>"
+    },
+    {
+      "pageNum": 35,
+      "image": "/addac120s-strings/pages/page-035.png",
+      "title": "Page 35",
+      "sectionName": null,
+      "tags": [],
+      "content": "Welcome to:\n\nADDAC129 RESONATOR　USER’S GUIDE\n\nRevision.01　September.2026\n\n0HP\nExternal Power Supply\n\nWELCOME\n\nADDAC129は、Four String Seriesを物理的なレゾネーターへ拡張します。\nトランスデューサー（振動スピーカー）がブリッジ端のレバーにスライドし、任意の音を弦へ伝え、それをピックアップが捉えます。\n振動スピーカーは小さなモノアンプで駆動され、入力は任意の入力（synth/line）を受けます。\nVolumeノブは入力オーディオを減衰します。使用するレベルには常に注意してください。ゲインステージングは重要で、大きい音量が必ずしもより良い出力になるわけではありません。経験則として、入力音量を下げ、ピックアップのゲインを上げる方がよい場合が一般的です。\n\n入力にはADDAC121/122のピックアップ出力を入れてフィードバックシステムを作れます。外部オーディオを入れるとシステムはオーディオプロセッサーになり、外部ミキシングで両方を混ぜることもできます。\n生成されるエフェクトには常に弦の自然なディケイがあり、スプリングリバーブにやや似ます。このシステムにはバックグラウンドノイズがないという利点があります。\n\n弦のチューニングは、入力オーディオと共鳴する全体の音色と倍音に大きく影響します。短いオーディオのバーストは濃い倍音の塊へ減衰することがあります。ドローンは、弦のチューニングによって「フィルター」され、複雑なリバーブのような倍音を励起します。\n個々の弦を手動でミュートし、任意に共鳴させることができます。\n\nスピーカーはカプラーに取り付けられ、振動ダンパーを介してアンプボックスにも接続されるため、スピーカーから隔離されています。カプラーはヘッドストック端のレバーへきつくスライドし、取り付けと取り外しが容易です。このスタンドアロンの解決策はラックスペースを取りません。\n外部電源が付属します。\n\nCoupler slides into\nBridge lever",
+      "hasContent": true,
+      "contentHtml": "<p>Welcome to:</p>\n<p>ADDAC129 RESONATOR　USER’S GUIDE</p>\n<p>Revision.01　September.2026</p>\n<p>0HP\nExternal Power Supply</p>\n<p>WELCOME</p>\n<p>ADDAC129は、Four String Seriesを物理的なレゾネーターへ拡張します。\nトランスデューサー（振動スピーカー）がブリッジ端のレバーにスライドし、任意の音を弦へ伝え、それをピックアップが捉えます。\n振動スピーカーは小さなモノアンプで駆動され、入力は任意の入力（synth/line）を受けます。\nVolumeノブは入力オーディオを減衰します。使用するレベルには常に注意してください。ゲインステージングは重要で、大きい音量が必ずしもより良い出力になるわけではありません。経験則として、入力音量を下げ、ピックアップのゲインを上げる方がよい場合が一般的です。</p>\n<p>入力にはADDAC121/122のピックアップ出力を入れてフィードバックシステムを作れます。外部オーディオを入れるとシステムはオーディオプロセッサーになり、外部ミキシングで両方を混ぜることもできます。\n生成されるエフェクトには常に弦の自然なディケイがあり、スプリングリバーブにやや似ます。このシステムにはバックグラウンドノイズがないという利点があります。</p>\n<p>弦のチューニングは、入力オーディオと共鳴する全体の音色と倍音に大きく影響します。短いオーディオのバーストは濃い倍音の塊へ減衰することがあります。ドローンは、弦のチューニングによって「フィルター」され、複雑なリバーブのような倍音を励起します。\n個々の弦を手動でミュートし、任意に共鳴させることができます。</p>\n<p>スピーカーはカプラーに取り付けられ、振動ダンパーを介してアンプボックスにも接続されるため、スピーカーから隔離されています。カプラーはヘッドストック端のレバーへきつくスライドし、取り付けと取り外しが容易です。このスタンドアロンの解決策はラックスペースを取りません。\n外部電源が付属します。</p>\n<p>Coupler slides into\nBridge lever</p>"
+    },
+    {
+      "pageNum": 36,
+      "image": "/addac120s-strings/pages/page-036.png",
+      "title": "Page 36",
+      "sectionName": null,
+      "tags": [],
+      "content": "ADDAC129 User’s Guide",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC129 User’s Guide</p>"
+    },
+    {
+      "pageNum": 37,
+      "image": "/addac120s-strings/pages/page-037.png",
+      "title": "Page 37",
+      "sectionName": null,
+      "tags": [],
+      "content": "ADDAC System\n\nInstruments for Sonic Expression\nEst.2009\n\nINTRODUCING\n\nADDAC120PR\nPALM\nREST\n\nUSER’S GUIDE . REV02\nSeptember.2026\n\nFrom Portugal with Love!",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC System</p>\n<p>Instruments for Sonic Expression\nEst.2009</p>\n<p>INTRODUCING</p>\n<p>ADDAC120PR\nPALM\nREST</p>\n<p>USER’S GUIDE . REV02\nSeptember.2026</p>\n<p>From Portugal with Love!</p>"
+    },
+    {
+      "pageNum": 38,
+      "image": "/addac120s-strings/pages/page-038.png",
+      "title": "Page 38",
+      "sectionName": null,
+      "tags": [],
+      "content": "Welcome to:\n\nADDAC120PR PALM REST　USER’S GUIDE\n\nRevision.01　September.2026\n\n6HP\nPassive module\n\nWELCOME\n\nこのモジュールは、弦をフィンガーピッキングするときに手のひらを休められます。\nモジュールはブリッジモジュールの上に置かれ、追加のHPスペースを取りません。",
+      "hasContent": true,
+      "contentHtml": "<p>Welcome to:</p>\n<p>ADDAC120PR PALM REST　USER’S GUIDE</p>\n<p>Revision.01　September.2026</p>\n<p>6HP\nPassive module</p>\n<p>WELCOME</p>\n<p>このモジュールは、弦をフィンガーピッキングするときに手のひらを休められます。\nモジュールはブリッジモジュールの上に置かれ、追加のHPスペースを取りません。</p>"
+    },
+    {
+      "pageNum": 39,
+      "image": "/addac120s-strings/pages/page-039.png",
+      "title": "Page 39",
+      "sectionName": null,
+      "tags": [],
+      "content": "ADDAC120PR User’s Guide",
+      "hasContent": true,
+      "contentHtml": "<p>ADDAC120PR User’s Guide</p>"
+    },
+    {
+      "pageNum": 40,
+      "image": "/addac120s-strings/pages/page-040.png",
+      "title": "Page 40",
+      "sectionName": null,
+      "tags": [],
+      "content": "June.2026\n\nUSER'S GUIDE . REV01\n\nADDAC120F\n\nSTRINGS\n\nFRAME\n\nINTRODUCING\n\nFrom Portugal with Love!\n\nInstruments for Sonic Expression\n\nEst.2009",
+      "hasContent": true,
+      "contentHtml": "<p>June.2026</p>\n<p>USER'S GUIDE . REV01</p>\n<p>ADDAC120F</p>\n<p>STRINGS</p>\n<p>FRAME</p>\n<p>INTRODUCING</p>\n<p>From Portugal with Love!</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>"
+    },
+    {
+      "pageNum": 41,
+      "image": "/addac120s-strings/pages/page-041.png",
+      "title": "Page 41",
+      "sectionName": null,
+      "tags": [],
+      "content": "WELCOME\n\nADDAC12X Stringモジュール専用に設計されたフレームです。\n\nWidth: 122HP\n\nPower Specifications:\n- AC Input: 90v to 240v\n- Output: ±12V\n- Current: +12Vに1.5A、-12Vに1.5A\n- 19コネクター搭載のBusboards\n- Busboardはすでに+5Vを供給しています（+12Vから供給、Busboardあたり最大500mA）\n\nPSUは以下の状況に対するシャットダウン保護機能を備えています。\n\nOver Current - 最大電流を超えた場合（モジュールのリボンケーブルが逆接続された場合など）\n\nOver Heating - AC Brickが過熱した場合\n\nOver Voltage - 電圧が期待される出力値を上回るか下回る場合\n\nこれらの問題が発生した場合、PSUは問題が解決されるまで断続的なON/OFFの状態に入ります。\n\nこれらの安全保護機能により、PSUへのダメージ、ひいてはモジュールへのダメージを防ぐことができます。",
+      "hasContent": true,
+      "contentHtml": "<p>WELCOME</p>\n<p>ADDAC12X Stringモジュール専用に設計されたフレームです。</p>\n<p>Width: 122HP</p>\n<p>Power Specifications:</p>\n<ul>\n<li>AC Input: 90v to 240v</li>\n<li>Output: ±12V</li>\n<li>Current: +12Vに1.5A、-12Vに1.5A</li>\n<li>19コネクター搭載のBusboards</li>\n<li>Busboardはすでに+5Vを供給しています（+12Vから供給、Busboardあたり最大500mA）</li>\n</ul>\n<p>PSUは以下の状況に対するシャットダウン保護機能を備えています。</p>\n<p>Over Current - 最大電流を超えた場合（モジュールのリボンケーブルが逆接続された場合など）</p>\n<p>Over Heating - AC Brickが過熱した場合</p>\n<p>Over Voltage - 電圧が期待される出力値を上回るか下回る場合</p>\n<p>これらの問題が発生した場合、PSUは問題が解決されるまで断続的なON/OFFの状態に入ります。</p>\n<p>これらの安全保護機能により、PSUへのダメージ、ひいてはモジュールへのダメージを防ぐことができます。</p>"
+    },
+    {
+      "pageNum": 42,
+      "image": "/addac120s-strings/pages/page-042.png",
+      "title": "Page 42",
+      "sectionName": null,
+      "tags": [],
       "content": "フィードバック、コメント、または問題については、以下のアドレスまでお問い合わせください：\n\naddac@addacsystem.com\n\nADDAC120s SERIES ユーザーガイド\n\n2026年5月　Revision.01",
       "hasContent": true,
-      "tags": [],
       "contentHtml": "<p>フィードバック、コメント、または問題については、以下のアドレスまでお問い合わせください：</p>\n<p><a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC120s SERIES ユーザーガイド</p>\n<p>2026年5月　Revision.01</p>"
     }
   ]

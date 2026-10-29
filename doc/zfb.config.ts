@@ -20,6 +20,7 @@ export default defineConfig(
     wind: { sources: { rootPackage: false } },
     colorScheme: settings.colorScheme,
     colorMode: settings.colorMode,
+    themePack: 'default',
     siteName: settings.siteName,
     siteDescription: settings.siteDescription,
     logo: false,
