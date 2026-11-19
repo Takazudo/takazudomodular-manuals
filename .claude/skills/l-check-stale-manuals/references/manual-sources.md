@@ -6,7 +6,7 @@ Where each committed manual's currently-published revision lives, per brand — 
 
 ## Table of contents
 
-- [ADDAC System (25)](#addac-system-25)
+- [ADDAC System (27)](#addac-system-27)
 - [Weston Precision Audio (10)](#weston-precision-audio-10)
 - [OXI Instruments (7)](#oxi-instruments-7)
 - [AI Synthesis (6)](#ai-synthesis-6)
@@ -14,7 +14,7 @@ Where each committed manual's currently-published revision lives, per brand — 
 - [Recovery Effects And Devices (3)](#recovery-effects-and-devices-3)
 - [Single-manual brands (4)](#single-manual-brands-4)
 
-## ADDAC System (25)
+## ADDAC System (27)
 
 - **Site**: www.addacsystem.com — custom site (NOT Wix). User manuals are static links under `https://www.addacsystem.com/contents/productdownload/<FILENAME>.pdf`; DIY/assembly guides under `https://media.addacsystem.com/diy_guides/<MODULE>_DIYkit.pdf`.
 - **Versioning — two parallel schemes**: analogue modules print `Revision.NN` on the cover with a letter-generation filename suffix (`A_0`, `A_1`, `B_0`); microcontroller modules (ADDAC112, ADDAC207, ADDAC511) are **firmware-tied** — the product page lists one guide per firmware release (`FW1.6` … `FW2.0`) and keeps ALL older editions online. "Current" must be read from the newest product-page link text, never inferred from a filename.
@@ -23,6 +23,8 @@ Where each committed manual's currently-published revision lives, per brand — 
 
 | slug | product page | manual PDF (last known) |
 | --- | --- | --- |
+| addac006-rotary-exciter | https://www.addacsystem.com/en/products/standalone/rotary-exciter | contents/productdownload/ADDAC006_RotaryClamp_A_0.pdf — REV01, October 2026; 4 pages; user-provided PDF verified 2026-11-19. Standalone ADDAC006, not Eurorack ADDAC126 |
+| addac007-resonator | https://www.addacsystem.com/en/products/standalone/resonator | contents/productdownload/ADDAC007_ResonatorClamp.pdf — REV01, October 2026; 7 pages; user-provided PDF verified 2026-11-19. Covers ADDAC007 and ADDAC007W, not Eurorack ADDAC129 |
 | addac104-tnetw | addacsystem.com/en/products/modules/addac100-series/addac104 | contents/productdownload/ADDAC104_VCTNet_A_1.pdf |
 | addac104-diy | same product page (addac-urls.json key `ADDAC104`) | media.addacsystem.com/diy_guides/ADDAC104_DIYkit.pdf — DIY guide, not the user's guide |
 | addac106-tnoise | .../addac100-series/addac106 | contents/productdownload/ADDAC106_TNoise_A_0.pdf |
@@ -48,6 +50,11 @@ Where each committed manual's currently-published revision lives, per brand — 
 | addac712-vintpre | .../addac700-series/addac712 | contents/productdownload/ADDAC712_VintagePre_A_1.pdf |
 | addac713-stereomix | .../addac700-series/addac713 | contents/productdownload/ADDAC713_StereoDiscreteMixer_A_2.pdf |
 | addac714-vintclip | .../addac700-series/addac714 | contents/productdownload/ADDAC714_VintageClipper_A_0.pdf |
+
+### Standalone clamp source notes (2026-11-19)
+
+- **ADDAC006:** The supplied REV01 PDF's physical page 2 still says `from XX to YYmm thick`. Preserve that unresolved placeholder in EN/JA; do not silently substitute the product page's separate `up to 60mm` specification. The product page does not identify that dimension as width or thickness. Source SHA-256: `d2d83fad7209c9a252921059e30b9931ee6d2d704d16063e2aefc75fcabc321a`.
+- **ADDAC007 / ADDAC007W:** The contact page is physical page 5; setup diagrams continue on physical pages 6 and 7. Both final pages incorrectly print `page 4` in their footers. Keep all seven pages in physical order; the two setup pages are different and must not be deduplicated. Preserve the original gain wording rather than replacing it with an interpretation from the ADDAC129 documentation. Source SHA-256: `1d0c6ce277a28d2f099a647e37b7371721159b6acc74ab62e1372ec766003068`.
 
 ## Weston Precision Audio (10)
 

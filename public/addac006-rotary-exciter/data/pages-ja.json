@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "processedAt": "2026-11-19T13:04:58.520Z",
+    "language": "ja",
+    "translationMethod": "chatgpt-subagent-page-by-page",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac006-rotary-exciter/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "ADDAC System\n\n音による表現のための楽器\n\n2009年創業\n\nADDAC006 ROTARY EXCITER CLAMPのご紹介\n\nユーザーガイド . REV01\n\n2026年10月\n\nポルトガルから愛を込めて！",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ADDAC System</p>\n<p>音による表現のための楽器</p>\n<p>2009年創業</p>\n<p>ADDAC006 ROTARY EXCITER CLAMPのご紹介</p>\n<p>ユーザーガイド . REV01</p>\n<p>2026年10月</p>\n<p>ポルトガルから愛を込めて！</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac006-rotary-exciter/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "ADDAC006 ROTARY EXCITER CLAMPユーザーガイドへようこそ\n\nRevision.01 2026年10月\n\n概要\n\n本製品はADDAC126 Rotary Exciterのスタンドアロン版です。ギター用に設計されており、どのギターのネックにも簡単に取り付けられるクランプ式を採用しています。ADDAC006は厚さXX〜YYmmのネックで使用できます。\n\n7000 RPMのブラシレスモーターを搭載し、磁極を互いに逆向きにした2個の磁石を備えた面を回転させます。これによって回転磁界を生み出し、回転速度がいずれかの弦のチューニングに対応する周波数または倍音と一致すると、その弦を振動させます。\n\n[SPEED]ノブでモーターの回転速度を非線形に制御できます。\n\n電源には、9v DC 200mA、センターマイナスのギターペダル用電源アダプターを使用できます。\n\nペダルボードから離れた場所でも給電できるよう、5メートルの電源延長ケーブルが付属しています。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ADDAC006 ROTARY EXCITER CLAMPユーザーガイドへようこそ</p>\n<p>Revision.01 2026年10月</p>\n<p>概要</p>\n<p>本製品はADDAC126 Rotary Exciterのスタンドアロン版です。ギター用に設計されており、どのギターのネックにも簡単に取り付けられるクランプ式を採用しています。ADDAC006は厚さXX〜YYmmのネックで使用できます。</p>\n<p>7000 RPMのブラシレスモーターを搭載し、磁極を互いに逆向きにした2個の磁石を備えた面を回転させます。これによって回転磁界を生み出し、回転速度がいずれかの弦のチューニングに対応する周波数または倍音と一致すると、その弦を振動させます。</p>\n<p>[SPEED]ノブでモーターの回転速度を非線形に制御できます。</p>\n<p>電源には、9v DC 200mA、センターマイナスのギターペダル用電源アダプターを使用できます。</p>\n<p>ペダルボードから離れた場所でも給電できるよう、5メートルの電源延長ケーブルが付属しています。</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac006-rotary-exciter/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "取り付け\n\nクランプを取り付けるには、ネックに配置して大きなネジを締めます。締めすぎないようにしてください。",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>取り付け</p>\n<p>クランプを取り付けるには、ネックに配置して大きなネジを締めます。締めすぎないようにしてください。</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac006-rotary-exciter/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "ご感想、ご意見、不具合については、以下の連絡先までお問い合わせください。\naddac@addacsystem.com\n\nADDAC006 ユーザーガイド\n\nRevision.01 2026年10月",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ご感想、ご意見、不具合については、以下の連絡先までお問い合わせください。\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC006 ユーザーガイド</p>\n<p>Revision.01 2026年10月</p>"
+    }
+  ]
+}

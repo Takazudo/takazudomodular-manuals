@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "processedAt": "2026-11-19T13:04:59.112Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac007-resonator/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "ADDAC System\n\nInstruments for Sonic Expression\n\nEst.2009\n\nINTRODUCING\n\nADDAC007 & ADDAC007W RESONATOR CLAMPS\n\nUSER’S GUIDE . REV01\n\nOctober.2026\n\nFrom Portugal with Love!",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ADDAC System</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>\n<p>INTRODUCING</p>\n<p>ADDAC007 &#x26; ADDAC007W RESONATOR CLAMPS</p>\n<p>USER’S GUIDE . REV01</p>\n<p>October.2026</p>\n<p>From Portugal with Love!</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac007-resonator/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "Welcome to:\n\nADDAC007 & ADDAC007W RESONATOR CLAMPS USER’S GUIDE\n\nRevision.01 October.2026\n\nDESCRIPTION\n\nThese are standalone versions of our ADDAC129 Resonator, specifically made for guitars using a clamp format to make it easier to attach to any guitar headstock. ADDAC007 can be used on any headstock up to 20mm thick, ADDAC007W is wider and can be used on any surface up to 45mm. The system is comprised of an amplifier box and the resonator clamp. The amplifier has a 3.5mm mono jack input with an attenuator knob and a mono 3.5mm jack output to connect the transducer. A 9v-12V DC 3Amp power adapter provides current to the system. The input accepts any signal modular/line level.\n\nOnce in place, the transducer (vibration speaker) transports any sound through the strings making them resonate and capture their vibration with the guitar pickup.\n\nThe volume knob attenuates the incoming audio. Always be mindful of the level used, gain staging is crucial and loud doesn't always translates to better output, as a rule of thumb is typically better practice to lower the input volume and raising the input gain.\n\nThe input can be fed by any external audio which turns the system into an audio processor, the effect generated will always have the natural decay of the strings which can somewhat resemble a spring reverb with the upside that in this system there's no background noise.\n\nThe strings tuning will greatly influence the overall tone and harmonics that will resonate with the incoming audio. Short bursts of audio can decay into dense harmonics clusters, Drones will excite complex reverb-like harmonics as they are \"filtered\" by the strings tuning. Users can manually mute individual strings allowing them to resonate at will.\n\nFelt pads at the clamping points protect the guitar from damage.\n\nAn external 9v DC 3Amp power supply is provided to power the amplifier box.\n\nDo not overtighten the clamp.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Welcome to:</p>\n<p>ADDAC007 &#x26; ADDAC007W RESONATOR CLAMPS USER’S GUIDE</p>\n<p>Revision.01 October.2026</p>\n<p>DESCRIPTION</p>\n<p>These are standalone versions of our ADDAC129 Resonator, specifically made for guitars using a clamp format to make it easier to attach to any guitar headstock. ADDAC007 can be used on any headstock up to 20mm thick, ADDAC007W is wider and can be used on any surface up to 45mm. The system is comprised of an amplifier box and the resonator clamp. The amplifier has a 3.5mm mono jack input with an attenuator knob and a mono 3.5mm jack output to connect the transducer. A 9v-12V DC 3Amp power adapter provides current to the system. The input accepts any signal modular/line level.</p>\n<p>Once in place, the transducer (vibration speaker) transports any sound through the strings making them resonate and capture their vibration with the guitar pickup.</p>\n<p>The volume knob attenuates the incoming audio. Always be mindful of the level used, gain staging is crucial and loud doesn't always translates to better output, as a rule of thumb is typically better practice to lower the input volume and raising the input gain.</p>\n<p>The input can be fed by any external audio which turns the system into an audio processor, the effect generated will always have the natural decay of the strings which can somewhat resemble a spring reverb with the upside that in this system there's no background noise.</p>\n<p>The strings tuning will greatly influence the overall tone and harmonics that will resonate with the incoming audio. Short bursts of audio can decay into dense harmonics clusters, Drones will excite complex reverb-like harmonics as they are \"filtered\" by the strings tuning. Users can manually mute individual strings allowing them to resonate at will.</p>\n<p>Felt pads at the clamping points protect the guitar from damage.</p>\n<p>An external 9v DC 3Amp power supply is provided to power the amplifier box.</p>\n<p>Do not overtighten the clamp.</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac007-resonator/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "INSTALATION AND CONNECTIVITY\n\nTo install the clamp just place it on the headstock and tighten the big screw without over tighten it.\n\nConnect the audio source to the amplifier input and the amplifier output to the clamp input.\n\nConnect the power adapter to the power input.\n\nAdjust the amplifier gain level and you’re all set.\n\nMONO AUDIO INPUT\nMODULAR / LINE LEVEL\n\nTRANSDUCER CONNECTION\n\nPOWER ADAPTER\n\nMONO INPUT\n\nGAIN ATTENUATOR\n\nMONO OUTPUT\n\nCLAMP INPUT",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>INSTALATION AND CONNECTIVITY</p>\n<p>To install the clamp just place it on the headstock and tighten the big screw without over tighten it.</p>\n<p>Connect the audio source to the amplifier input and the amplifier output to the clamp input.</p>\n<p>Connect the power adapter to the power input.</p>\n<p>Adjust the amplifier gain level and you’re all set.</p>\n<p>MONO AUDIO INPUT\nMODULAR / LINE LEVEL</p>\n<p>TRANSDUCER CONNECTION</p>\n<p>POWER ADAPTER</p>\n<p>MONO INPUT</p>\n<p>GAIN ATTENUATOR</p>\n<p>MONO OUTPUT</p>\n<p>CLAMP INPUT</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac007-resonator/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "I/O FLOW DIAGRAM",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>I/O FLOW DIAGRAM</p>"
+    },
+    {
+      "pageNum": 5,
+      "image": "/addac007-resonator/pages/page-005.png",
+      "title": "Page 5",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nADDAC007 & ADDAC007W USER’S GUIDE\n\nRevision.01 October.2026",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC007 &#x26; ADDAC007W USER’S GUIDE</p>\n<p>Revision.01 October.2026</p>"
+    },
+    {
+      "pageNum": 6,
+      "image": "/addac007-resonator/pages/page-006.png",
+      "title": "Page 6",
+      "sectionName": null,
+      "content": "SETUP CONFIGURATIONS\n\nEXTERNAL FX\n\nCLAMP\n\nOPTIONAL FX CHAIN\n\nDAW\n\nAUDIO PROCESSING\n\nCLAMP\n\nDAW\n\nFX CHAIN\n\nCOMPRESSOR\n(helps preventing extreme feedback)\n\nVOLUME PEDAL\n(Controls Resonator intensity)\n\nFEEDBACK SYSTEM\n( POST FX )\n\nCLAMP\n\nSPLITTER\n\nFX CHAIN\n\nVOLUME PEDAL\n(Controls Resonator intensity)\n\nFEEDBACK SYSTEM\n( PRE FX )\n\nCLAMP\n\nSPLITTER\n\nFX CHAIN\n\nCOMPRESSOR\n(prevents extreme feedback)\n\nVOLUME PEDAL\n(Controls Resonator intensity)\n\nAUDIO PROCESSING\n\nCLAMP\n\nFX CHAIN\n\nAUDIO PROCESSING\n\nCLAMP\n\nDAW\n\nFX CHAIN",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>SETUP CONFIGURATIONS</p>\n<p>EXTERNAL FX</p>\n<p>CLAMP</p>\n<p>OPTIONAL FX CHAIN</p>\n<p>DAW</p>\n<p>AUDIO PROCESSING</p>\n<p>CLAMP</p>\n<p>DAW</p>\n<p>FX CHAIN</p>\n<p>COMPRESSOR\n(helps preventing extreme feedback)</p>\n<p>VOLUME PEDAL\n(Controls Resonator intensity)</p>\n<p>FEEDBACK SYSTEM\n( POST FX )</p>\n<p>CLAMP</p>\n<p>SPLITTER</p>\n<p>FX CHAIN</p>\n<p>VOLUME PEDAL\n(Controls Resonator intensity)</p>\n<p>FEEDBACK SYSTEM\n( PRE FX )</p>\n<p>CLAMP</p>\n<p>SPLITTER</p>\n<p>FX CHAIN</p>\n<p>COMPRESSOR\n(prevents extreme feedback)</p>\n<p>VOLUME PEDAL\n(Controls Resonator intensity)</p>\n<p>AUDIO PROCESSING</p>\n<p>CLAMP</p>\n<p>FX CHAIN</p>\n<p>AUDIO PROCESSING</p>\n<p>CLAMP</p>\n<p>DAW</p>\n<p>FX CHAIN</p>"
+    },
+    {
+      "pageNum": 7,
+      "image": "/addac007-resonator/pages/page-007.png",
+      "title": "Page 7",
+      "sectionName": null,
+      "content": "SETUP CONFIGURATIONS\n\nDAW EXTERNAL FX\n( SEND / RETURN )\n\nCLAMP\n\nUsing a sound card and a DAW, send any signal through any guitar and record it just like any external fx unit. The guitar doesn’t need to be played at all it can be just resting on a stand.\n\nOPTIONAL FX CHAIN\n\nDAW\n\nFEEDBACK SYSTEM\n( POST FX )\n\nCLAMP\n\nSPLITTER\n\nFX CHAIN\n\nCOMPRESSOR\n(prevents extreme feedback)\n\nVOLUME PEDAL\n(Controls Resonator intensity)\n\nFEEDBACK SYSTEM\n( PRE FX )\n\nCLAMP\n\nSPLITTER\n\nFX CHAIN\n\nCOMPRESSOR\n(prevents extreme feedback)\n\nVOLUME PEDAL\n(Controls Resonator intensity)\n\nIn feedback setups having a Volume pedal and compressor greatly helps controlling the resonating system.\n\nUsing a mixer one has an easy way to just process audio using the resonator or play the guitar and use it as a feedback system.\n\nPARALLEL FX & FEEDBACK\n\nSEND\n\nDAW\n\nCLAMP\n\nSEND\n\nMIXER\n\nTO INPUT\n\nPARALLEL FX & FEEDBACK\n(FX CHAIN & VOLUME CONTROL)\n\nCLAMP\n\nCOMPRESSOR\n(helps preventing extreme feedback)\n\nDAW\n\nVOLUME PEDAL\n(controls resonator intensity)\n\nSEND\n\nTO INPUT\n\nOPTIONAL FX CHAIN\n\nMIXER",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>SETUP CONFIGURATIONS</p>\n<p>DAW EXTERNAL FX\n( SEND / RETURN )</p>\n<p>CLAMP</p>\n<p>Using a sound card and a DAW, send any signal through any guitar and record it just like any external fx unit. The guitar doesn’t need to be played at all it can be just resting on a stand.</p>\n<p>OPTIONAL FX CHAIN</p>\n<p>DAW</p>\n<p>FEEDBACK SYSTEM\n( POST FX )</p>\n<p>CLAMP</p>\n<p>SPLITTER</p>\n<p>FX CHAIN</p>\n<p>COMPRESSOR\n(prevents extreme feedback)</p>\n<p>VOLUME PEDAL\n(Controls Resonator intensity)</p>\n<p>FEEDBACK SYSTEM\n( PRE FX )</p>\n<p>CLAMP</p>\n<p>SPLITTER</p>\n<p>FX CHAIN</p>\n<p>COMPRESSOR\n(prevents extreme feedback)</p>\n<p>VOLUME PEDAL\n(Controls Resonator intensity)</p>\n<p>In feedback setups having a Volume pedal and compressor greatly helps controlling the resonating system.</p>\n<p>Using a mixer one has an easy way to just process audio using the resonator or play the guitar and use it as a feedback system.</p>\n<p>PARALLEL FX &#x26; FEEDBACK</p>\n<p>SEND</p>\n<p>DAW</p>\n<p>CLAMP</p>\n<p>SEND</p>\n<p>MIXER</p>\n<p>TO INPUT</p>\n<p>PARALLEL FX &#x26; FEEDBACK\n(FX CHAIN &#x26; VOLUME CONTROL)</p>\n<p>CLAMP</p>\n<p>COMPRESSOR\n(helps preventing extreme feedback)</p>\n<p>DAW</p>\n<p>VOLUME PEDAL\n(controls resonator intensity)</p>\n<p>SEND</p>\n<p>TO INPUT</p>\n<p>OPTIONAL FX CHAIN</p>\n<p>MIXER</p>"
+    }
+  ]
+}
