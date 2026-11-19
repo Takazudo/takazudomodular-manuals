@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "processedAt": "2026-11-19T13:04:58.520Z",
+    "language": "en",
+    "extractionMethod": "pdf-parse",
+    "imageFormat": "png",
+    "imageDPI": 300
+  },
+  "pages": [
+    {
+      "pageNum": 1,
+      "image": "/addac006-rotary-exciter/pages/page-001.png",
+      "title": "Page 1",
+      "sectionName": null,
+      "content": "ADDAC System\n\nInstruments for Sonic Expression\n\nEst.2009\n\nINTRODUCING ADDAC006 ROTARY EXCITER CLAMP\n\nUSER’S GUIDE . REV01\n\nOctober.2026\n\nFrom Portugal with Love!",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>ADDAC System</p>\n<p>Instruments for Sonic Expression</p>\n<p>Est.2009</p>\n<p>INTRODUCING ADDAC006 ROTARY EXCITER CLAMP</p>\n<p>USER’S GUIDE . REV01</p>\n<p>October.2026</p>\n<p>From Portugal with Love!</p>"
+    },
+    {
+      "pageNum": 2,
+      "image": "/addac006-rotary-exciter/pages/page-002.png",
+      "title": "Page 2",
+      "sectionName": null,
+      "content": "Welcome to: ADDAC006 ROTARY EXCITER CLAMP USER’S GUIDE\n\nRevision.01 October.2026\n\nDESCRIPTION\n\nThese are standalone versions of our ADDAC126 Rotary Exciter, specifically made for guitars using a clamp format to make it easier to attach to any guitar neck. ADDAC006 can be used on any neck from XX to YYmm thick,\n\nIt features a 7000 RPM brushless motor that rotates a surface with 2 magnets with opposed magnetic poles inducing a rotating magnetic field that will force the strings to vibrate whenever the rotational speed matches the frequency or harmonics of any of the strings tuning.\n\nA [SPEED] knob allows non-linear control of the motor speed.\n\nPower can be provided from any guitar pedal power adapter, 9v DC 200mA with center negative polarity.\n\nWe provide a 5 meter extension power cable to allow a fairly good distance when powering it from a floorboard.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>Welcome to: ADDAC006 ROTARY EXCITER CLAMP USER’S GUIDE</p>\n<p>Revision.01 October.2026</p>\n<p>DESCRIPTION</p>\n<p>These are standalone versions of our ADDAC126 Rotary Exciter, specifically made for guitars using a clamp format to make it easier to attach to any guitar neck. ADDAC006 can be used on any neck from XX to YYmm thick,</p>\n<p>It features a 7000 RPM brushless motor that rotates a surface with 2 magnets with opposed magnetic poles inducing a rotating magnetic field that will force the strings to vibrate whenever the rotational speed matches the frequency or harmonics of any of the strings tuning.</p>\n<p>A [SPEED] knob allows non-linear control of the motor speed.</p>\n<p>Power can be provided from any guitar pedal power adapter, 9v DC 200mA with center negative polarity.</p>\n<p>We provide a 5 meter extension power cable to allow a fairly good distance when powering it from a floorboard.</p>"
+    },
+    {
+      "pageNum": 3,
+      "image": "/addac006-rotary-exciter/pages/page-003.png",
+      "title": "Page 3",
+      "sectionName": null,
+      "content": "INSTALATION\n\nTo install the clamp just place it on the neck and tighten the big screw without over tighten it.",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>INSTALATION</p>\n<p>To install the clamp just place it on the neck and tighten the big screw without over tighten it.</p>"
+    },
+    {
+      "pageNum": 4,
+      "image": "/addac006-rotary-exciter/pages/page-004.png",
+      "title": "Page 4",
+      "sectionName": null,
+      "content": "For feedback, comments or problems please contact us at:\naddac@addacsystem.com\n\nADDAC006 USER’S GUIDE\n\nRevision.01 October.2026",
+      "hasContent": true,
+      "tags": [],
+      "contentHtml": "<p>For feedback, comments or problems please contact us at:\n<a href=\"mailto:addac@addacsystem.com\">addac@addacsystem.com</a></p>\n<p>ADDAC006 USER’S GUIDE</p>\n<p>Revision.01 October.2026</p>"
+    }
+  ]
+}
